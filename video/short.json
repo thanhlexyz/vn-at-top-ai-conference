@@ -19,8 +19,8 @@
     },
     {
       "frame": "neurips",
-      "vi": "Mà đó mới là người đã có bài. Ai nộp mà chưa có bài nào được nhận thì chưa được tính, nên số lần nộp thật còn nhiều hơn.",
-      "en": "And that is only people with an accepted paper. Those who submitted but have none yet are not counted, so the real number of attempts is higher."
+      "vi": "Trong số đó, {no_accept} người đã nộp mà chưa có bài nào được nhận. Và ngoài ICLR, bài trượt không ai thấy, nên số lần nộp thật còn nhiều hơn.",
+      "en": "Of them, {no_accept} have submitted but have no accepted paper yet. And outside ICLR nobody sees the rejections, so the real number of attempts is higher."
     },
     {
       "frame": "authors",

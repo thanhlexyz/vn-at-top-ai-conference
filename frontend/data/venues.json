@@ -10,11 +10,11 @@
   "venues": {
    "iclr": {
     "accepted": 13,
-    "rejected": 29,
-    "withdrawn": 20,
-    "desk_rejected": 2,
-    "not_accepted": 51,
-    "submitted": 64,
+    "rejected": 36,
+    "withdrawn": 28,
+    "desk_rejected": 5,
+    "not_accepted": 69,
+    "submitted": 82,
     "own_page": 0,
     "official": 13
    },
@@ -205,10 +205,10 @@
      "iclr": {
       "accepted": 1,
       "rejected": 2,
-      "withdrawn": 1,
+      "withdrawn": 3,
       "desk_rejected": 0,
-      "not_accepted": 3,
-      "submitted": 4,
+      "not_accepted": 5,
+      "submitted": 6,
       "own_page": 0,
       "official": 1,
       "available": true,
@@ -274,10 +274,10 @@
      "iclr": {
       "accepted": 1,
       "rejected": 1,
-      "withdrawn": 0,
+      "withdrawn": 1,
       "desk_rejected": 0,
-      "not_accepted": 1,
-      "submitted": 2,
+      "not_accepted": 2,
+      "submitted": 3,
       "own_page": 0,
       "official": 1,
       "available": true,
@@ -342,11 +342,11 @@
     "venues": {
      "iclr": {
       "accepted": 1,
-      "rejected": 3,
-      "withdrawn": 3,
+      "rejected": 5,
+      "withdrawn": 4,
       "desk_rejected": 1,
-      "not_accepted": 7,
-      "submitted": 8,
+      "not_accepted": 10,
+      "submitted": 11,
       "own_page": 0,
       "official": 1,
       "available": true,
@@ -411,11 +411,11 @@
     "venues": {
      "iclr": {
       "accepted": 5,
-      "rejected": 10,
-      "withdrawn": 8,
-      "desk_rejected": 0,
-      "not_accepted": 18,
-      "submitted": 23,
+      "rejected": 12,
+      "withdrawn": 10,
+      "desk_rejected": 1,
+      "not_accepted": 23,
+      "submitted": 28,
       "own_page": 0,
       "official": 5,
       "available": true,
@@ -480,11 +480,11 @@
     "venues": {
      "iclr": {
       "accepted": 5,
-      "rejected": 13,
-      "withdrawn": 7,
-      "desk_rejected": 1,
-      "not_accepted": 21,
-      "submitted": 26,
+      "rejected": 16,
+      "withdrawn": 9,
+      "desk_rejected": 3,
+      "not_accepted": 28,
+      "submitted": 33,
       "own_page": 0,
       "official": 5,
       "available": true,
@@ -674,6 +674,14 @@
      {
       "slug": "huynh-thi-thanh-binh",
       "name": "Huynh Thi Thanh Binh"
+     },
+     {
+      "slug": "nguyen-thi-hanh",
+      "name": "Nguyen Thi Hanh"
+     },
+     {
+      "slug": "son-van-nguyen",
+      "name": "Son Van Nguyen"
      }
     ]
    },
@@ -828,6 +836,10 @@
      {
       "slug": "danh-le-phuoc",
       "name": "Danh Le-Phuoc"
+     },
+     {
+      "slug": "son-ha-xuan",
+      "name": "Son Ha Xuan"
      }
     ]
    },
@@ -850,6 +862,50 @@
      {
       "slug": "dung-d-le",
       "name": "Dung D. Le"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "GraDA: Gradient-Guided Knowledge Distillation for Domain Adaptation",
+    "url": "https://openreview.net/forum?id=s9cqFuiD2v",
+    "status": "withdrawn",
+    "status_label": "withdrawn",
+    "pres": "",
+    "authors": "Ba Hung Ngo, Doanh C. Bui, Nhat-Tuong Do-Tran, Tae Jong Choi",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "doanh-cao-bui",
+      "name": "Doanh Cao Bui"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "Integrating Selective State-Space Models and Bayesian Graph Attention for Uncertainty-aware Time-Series Analysis",
+    "url": "https://openreview.net/forum?id=KqCU5rfcMm",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Quang-Vinh Dang, SonAn Nguyen Ngoc",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "quang-vinh-dang",
+      "name": "Quang-Vinh Dang"
      }
     ]
    },
@@ -920,6 +976,54 @@
      {
       "slug": "minh-do",
       "name": "Minh Do"
+     },
+     {
+      "slug": "thanh-trung-huynh",
+      "name": "Thanh Trung Huynh"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "OptSHAP: Explaining Dimensionality Reduction-based Models for Tabular Data via Optimization",
+    "url": "https://openreview.net/forum?id=FrRL2jy5Ao",
+    "status": "withdrawn",
+    "status_label": "withdrawn",
+    "pres": "",
+    "authors": "Tuan L. Vo, Xuan Hoang Nguyen, Mazouz Alaa Eddine, Binh T. Nguyen, Mehwish Alam, Pavlo Mozharovskyi, Van-Tam Nguyen",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "thanh-binh-nguyen",
+      "name": "Thanh-Binh Nguyen"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "PolypDB: A Curated Multi-Center Dataset for Development of AI Algorithms in Colonoscopy",
+    "url": "https://openreview.net/forum?id=zZj48KOY3M",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Debesh Jha, Nikhil Kumar Tomar, Vanshali Sharma, Quoc-Huy Trinh, Koushik Biswas, Hongyi Pan, Gorkem Durak, Alexander Hann, Jonas Varkey, Hang Viet Dao, Long Dao Van, Binh Nguyen Phuc, Nikolaos Papachrysos, Brandon Rieders, Mark Enrik Geissler, Tyler M. Berzin, Pål Halvorsen, Michael Alexander Riegler, Thomas de Lange, Ulas Bagci",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "long-dao-van",
+      "name": "Long Dao Van"
      }
     ]
    },
@@ -942,6 +1046,62 @@
      {
       "slug": "ngo-van-linh",
       "name": "Ngo Van Linh"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "Region in Context: Text-Conditioned Image Editing with Human-Like Semantic Reasoning",
+    "url": "https://openreview.net/forum?id=SxV9sPAfkO",
+    "status": "desk_rejected",
+    "status_label": "desk-rejected",
+    "pres": "",
+    "authors": "Thuy Phuong Vu, Dinh-Cuong Hoang, Minhhuy Le, Phan Xuan Tan",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "dinh-cuong-hoang",
+      "name": "Dinh-Cuong Hoang"
+     },
+     {
+      "slug": "minhhuy-le",
+      "name": "Minhhuy Le"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "SPKGDiag: Learning Symptom-Linked Patient Knowledge Graphs via Multi-Hop Similarity Message Passing for Automatic Diagnosis",
+    "url": "https://openreview.net/forum?id=Kh950JEY88",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Nguyen Minh Thao Phan, Cong-Tinh Dao, Ling Chen, Hai Thanh Nguyen, Wen-Chih Peng",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "cong-tinh-dao",
+      "name": "Cong-Tinh Dao"
+     },
+     {
+      "slug": "hai-thanh-nguyen",
+      "name": "Hai Thanh Nguyen"
+     },
+     {
+      "slug": "thao-nguyen-minh-phan",
+      "name": "Thao Nguyen Minh Phan"
      }
     ]
    },
@@ -1056,6 +1216,10 @@
      {
       "slug": "binh-t-nguyen",
       "name": "Binh T. Nguyen"
+     },
+     {
+      "slug": "hong-t-m-chu",
+      "name": "Hong T.M. Chu"
      }
     ]
    },
@@ -1126,6 +1290,28 @@
     ]
    },
    {
+    "year": 2026,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "VM14K: First Vietnamese Medical Benchmark",
+    "url": "https://openreview.net/forum?id=HUMYHrWHmR",
+    "status": "desk_rejected",
+    "status_label": "desk-rejected",
+    "pres": "",
+    "authors": "Minh Tran",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "minh-tran",
+      "name": "Minh Tran"
+     }
+    ]
+   },
+   {
     "year": 2025,
     "venue": "iclr",
     "venue_name": "ICLR",
@@ -1148,6 +1334,28 @@
      {
       "slug": "minh-do",
       "name": "Minh Do"
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "Black-Box Adversarial Attack on Dialogue Generation via Multi-Objective Optimization",
+    "url": "https://openreview.net/forum?id=GnBBSlUb0S",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Le Gia Khang, Ngoc Hoang Luong",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "ngoc-hoang-luong",
+      "name": "Ngoc Hoang Luong"
      }
     ]
    },
@@ -1243,6 +1451,32 @@
     "year": 2025,
     "venue": "iclr",
     "venue_name": "ICLR",
+    "title": "Crafting Zero-Cost Proxy Metrics for Neural Architecture Search via Symbolic Regression",
+    "url": "https://openreview.net/forum?id=ludEV7dK9G",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Quan Minh Phan, Ngoc Hoang Luong",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "ngoc-hoang-luong",
+      "name": "Ngoc Hoang Luong"
+     },
+     {
+      "slug": "quan-minh-phan",
+      "name": "Quan Minh Phan"
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "iclr",
+    "venue_name": "ICLR",
     "title": "DPaI: Differentiable Pruning at Initialization with Node-Path Balance Principle",
     "url": "https://openreview.net/forum?id=hvLBTpiDt3",
     "status": "accepted",
@@ -1258,6 +1492,28 @@
      {
       "slug": "than-quang-khoat",
       "name": "Than Quang Khoat"
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "Enhancement of In-Context Reasoning in LLMs through Inductive Rule Learning",
+    "url": "https://openreview.net/forum?id=3x4vpeAclU",
+    "status": "desk_rejected",
+    "status_label": "desk-rejected",
+    "pres": "",
+    "authors": "Tien-Dat Nguyen, Hai-Toan Nguyen, Nguyen Viet Ha",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "nguyen-viet-ha",
+      "name": "Nguyen Viet Ha"
      }
     ]
    },
@@ -1368,6 +1624,10 @@
      {
       "slug": "khoa-d-doan",
       "name": "Khoa D. Doan"
+     },
+     {
+      "slug": "thanh-binh-nguyen",
+      "name": "Thanh-Binh Nguyen"
      }
     ]
    },
@@ -1420,6 +1680,32 @@
      {
       "slug": "danh-le-phuoc",
       "name": "Danh Le-Phuoc"
+     },
+     {
+      "slug": "thanh-binh-nguyen",
+      "name": "Thanh-Binh Nguyen"
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "Pruning Deep Convolutional Neural Network Using Conditional Mutual Information",
+    "url": "https://openreview.net/forum?id=N0vzm0vwyR",
+    "status": "withdrawn",
+    "status_label": "withdrawn",
+    "pres": "",
+    "authors": "Tien Vu-Van, Dat Du Thanh, Nguyen Ho, Mai Vu",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "tien-vu-van",
+      "name": "Tien Vu-Van"
      }
     ]
    },
@@ -1530,6 +1816,28 @@
      {
       "slug": "khoa-d-doan",
       "name": "Khoa D. Doan"
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "TOWARDS LAYER-WISE PERSONALIZED FEDERATED LEARNING: ADAPTIVE LAYER DISENTANGLEMENT VIA CONFLICTING GRADIENTS",
+    "url": "https://openreview.net/forum?id=qH6pzxPZ0d",
+    "status": "withdrawn",
+    "status_label": "withdrawn",
+    "pres": "",
+    "authors": "Duong Minh Nguyen, Le Nam Khanh, Khoi Hoang Do, Nguyen H. Tran, Van Duc Nguyen, Zhaohui Yang, Trinh Van Chien",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "van-duc-nguyen",
+      "name": "Van Duc Nguyen"
      }
     ]
    },
@@ -1669,6 +1977,54 @@
     "year": 2024,
     "venue": "iclr",
     "venue_name": "ICLR",
+    "title": "Autonomous Catheterization with Open-source Simulator and Expert Trajectory",
+    "url": "https://openreview.net/forum?id=QFo2wxQEW6",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Tudor Jianu, Baoru Huang, Tuan Van Vo, Minh Nhat VU, Jingxuan Kang, Hoan Cong Nguyen, Olatunji Mumini Omisore, Pierre Berthet-rayne, Sebastiano Fichera, Anh Nguyen",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "hoan-cong-nguyen",
+      "name": "Hoan Cong Nguyen"
+     }
+    ]
+   },
+   {
+    "year": 2024,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "Efficient Multi-Fidelity NAS with Zero-Cost Proxy-Guided Local Search",
+    "url": "https://openreview.net/forum?id=PKZJX0LSZ1",
+    "status": "withdrawn",
+    "status_label": "withdrawn",
+    "pres": "",
+    "authors": "Quan Minh Phan, Ngoc Hoang Luong",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "ngoc-hoang-luong",
+      "name": "Ngoc Hoang Luong"
+     },
+     {
+      "slug": "quan-minh-phan",
+      "name": "Quan Minh Phan"
+     }
+    ]
+   },
+   {
+    "year": 2024,
+    "venue": "iclr",
+    "venue_name": "ICLR",
     "title": "Enriching Time Series Representation: Integrating a Noise-Resilient Sampling Strategy with an Efficient Encoder Architecture",
     "url": "https://openreview.net/forum?id=KKZaj2QS3G",
     "status": "withdrawn",
@@ -1783,6 +2139,28 @@
     "year": 2024,
     "venue": "iclr",
     "venue_name": "ICLR",
+    "title": "REVISITING LARS FOR LARGE BATCH TRAINING GENERALIZATION OF NEURAL NETWORKS",
+    "url": "https://openreview.net/forum?id=HANfmG6tQK",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Khoi Hoang Do, Duong Minh Nguyen, Hoa Tien Nguyen, Long Tran-Thanh, Viet Quoc Pham",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "hoa-tien-nguyen",
+      "name": "Hoa Tien Nguyen"
+     }
+    ]
+   },
+   {
+    "year": 2024,
+    "venue": "iclr",
+    "venue_name": "ICLR",
     "title": "SENSITIVITY-INFORMED REGULARIZATION FOR OFFLINE BLACK-BOX OPTIMIZATION",
     "url": "https://openreview.net/forum?id=XCVuT5Stl5",
     "status": "withdrawn",
@@ -1820,6 +2198,28 @@
      {
       "slug": "khoa-d-doan",
       "name": "Khoa D. Doan"
+     }
+    ]
+   },
+   {
+    "year": 2023,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "FedMEKT: Split Multimodal Embedding Knowledge Transfer in Federated Learning",
+    "url": "https://openreview.net/forum?id=vFK6PhTxKHR7",
+    "status": "withdrawn",
+    "status_label": "withdrawn",
+    "pres": "",
+    "authors": "Huy Quang Le, Minh N. H. Nguyen, Choong Seon Hong",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "minh-n-h-nguyen",
+      "name": "Minh N. H. Nguyen"
      }
     ]
    },
@@ -1937,6 +2337,50 @@
     "year": 2022,
     "venue": "iclr",
     "venue_name": "ICLR",
+    "title": "Incorporating User-Item Similarity in Hybrid Neighborhood-based Recommendation System",
+    "url": "https://openreview.net/forum?id=0lSoIruExF",
+    "status": "withdrawn",
+    "status_label": "withdrawn",
+    "pres": "",
+    "authors": "Nghia Duong Tan, Giang Do Truong, Nam Doan Nguyen, Nghia Cao Tuan, Hoang Tran Manh, Minh Nguyen Duc, Hieu Dang Quang",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "nghia-duong-tan",
+      "name": "Nghia Duong Tan"
+     }
+    ]
+   },
+   {
+    "year": 2022,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "Topological Vanilla Transfer Learning",
+    "url": "https://openreview.net/forum?id=3kK8x_92hnD",
+    "status": "withdrawn",
+    "status_label": "withdrawn",
+    "pres": "",
+    "authors": "Nicholas George Bishop, Lau Truong Nguyen, Hieu Trung Thai, Thomas Davies, Long Tran-Thanh",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "hieu-trung-thai",
+      "name": "Hieu Trung Thai"
+     }
+    ]
+   },
+   {
+    "year": 2022,
+    "venue": "iclr",
+    "venue_name": "ICLR",
     "title": "Transformer with a Mixture of Gaussian Keys",
     "url": "https://openreview.net/forum?id=i1ogYhs0ByT",
     "status": "rejected",
@@ -1984,9 +2428,9 @@
   "name": "NeurIPS",
   "full_name": "Conference on Neural Information Processing Systems",
   "rejections": "partial",
-  "accepted": 50,
+  "accepted": 55,
   "own_page": 4,
-  "official": 46,
+  "official": 51,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -1999,14 +2443,14 @@
     "official": 0
    },
    "neurips": {
-    "accepted": 50,
+    "accepted": 55,
     "rejected": 4,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 4,
-    "submitted": 54,
+    "submitted": 59,
     "own_page": 4,
-    "official": 46
+    "official": 51
    },
    "icml": {
     "accepted": 0,
@@ -2264,14 +2708,14 @@
       "provisional": false
      },
      "neurips": {
-      "accepted": 2,
+      "accepted": 3,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 2,
+      "submitted": 3,
       "own_page": 0,
-      "official": 2,
+      "official": 3,
       "available": true,
       "provisional": false
      },
@@ -2312,9 +2756,9 @@
       "provisional": false
      }
     },
-    "accepted": 2,
+    "accepted": 3,
     "own_page": 0,
-    "official": 2
+    "official": 3
    },
    {
     "year": 2024,
@@ -2333,14 +2777,14 @@
       "provisional": false
      },
      "neurips": {
-      "accepted": 2,
+      "accepted": 3,
       "rejected": 1,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 1,
-      "submitted": 3,
+      "submitted": 4,
       "own_page": 0,
-      "official": 2,
+      "official": 3,
       "available": true,
       "provisional": false
      },
@@ -2381,9 +2825,9 @@
       "provisional": false
      }
     },
-    "accepted": 2,
+    "accepted": 3,
     "own_page": 0,
-    "official": 2
+    "official": 3
    },
    {
     "year": 2025,
@@ -2402,14 +2846,14 @@
       "provisional": false
      },
      "neurips": {
-      "accepted": 11,
+      "accepted": 13,
       "rejected": 3,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 3,
-      "submitted": 14,
+      "submitted": 16,
       "own_page": 0,
-      "official": 11,
+      "official": 13,
       "available": true,
       "provisional": false
      },
@@ -2450,9 +2894,9 @@
       "provisional": false
      }
     },
-    "accepted": 11,
+    "accepted": 13,
     "own_page": 0,
-    "official": 11
+    "official": 13
    },
    {
     "year": 2026,
@@ -2471,14 +2915,14 @@
       "provisional": false
      },
      "neurips": {
-      "accepted": 31,
+      "accepted": 32,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 31,
+      "submitted": 32,
       "own_page": 4,
-      "official": 27,
+      "official": 28,
       "available": true,
       "provisional": true
      },
@@ -2519,9 +2963,9 @@
       "provisional": false
      }
     },
-    "accepted": 31,
+    "accepted": 32,
     "own_page": 4,
-    "official": 27
+    "official": 28
    }
   ],
   "papers": [
@@ -2544,6 +2988,10 @@
      {
       "slug": "huynh-thi-thanh-binh",
       "name": "Huynh Thi Thanh Binh"
+     },
+     {
+      "slug": "bui-trong-duc",
+      "name": "Bui Trong Duc"
      }
     ]
    },
@@ -2610,6 +3058,10 @@
      {
       "slug": "huynh-thi-thanh-binh",
       "name": "Huynh Thi Thanh Binh"
+     },
+     {
+      "slug": "bui-trong-duc",
+      "name": "Bui Trong Duc"
      }
     ]
    },
@@ -3004,6 +3456,10 @@
      {
       "slug": "minh-do",
       "name": "Minh Do"
+     },
+     {
+      "slug": "thanh-trung-huynh",
+      "name": "Thanh Trung Huynh"
      }
     ]
    },
@@ -3033,6 +3489,28 @@
     "year": 2026,
     "venue": "neurips",
     "venue_name": "NeurIPS",
+    "title": "Probe-Guided Gradient Balancing for Multimodal Learning",
+    "url": "https://openreview.net/forum?id=sx31kS8xCo",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Vu Vo, Haytham Fayek, Thuy T Nguyen",
+    "match": "name and affiliation",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "thuy-t-nguyen",
+      "name": "Thuy T. Nguyen"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "neurips",
+    "venue_name": "NeurIPS",
     "title": "Raw-Routed Mixture of Adapters: A Causal Intervention for Routing Collapse in Time Series Foundation Models",
     "url": "https://openreview.net/forum?id=YOHVtj0IBk",
     "status": "accepted",
@@ -3048,6 +3526,10 @@
      {
       "slug": "nhat-quang-tran",
       "name": "Nhat-Quang Tran"
+     },
+     {
+      "slug": "thuy-t-nguyen",
+      "name": "Thuy T. Nguyen"
      }
     ]
    },
@@ -3235,6 +3717,50 @@
     "year": 2025,
     "venue": "neurips",
     "venue_name": "NeurIPS",
+    "title": "A Unified Framework for Variable Selection in Model-Based Clustering with Missing Not at Random",
+    "url": "https://openreview.net/forum?id=n7yVbKH7c3",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Binh Huu Ho, Long Nguyen Chi, TrungTin Nguyen, Van Ha Hoang, Binh T. Nguyen, Christopher Drovandi",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "thanh-binh-nguyen",
+      "name": "Thanh-Binh Nguyen"
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "neurips",
+    "venue_name": "NeurIPS",
+    "title": "Directed-Tokens: A Robust Multi-Modality Alignment Approach to Large Language-Vision Models",
+    "url": "https://openreview.net/forum?id=iBwW1DxQaa",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Thanh-Dat Truong, Huu-Thien Tran, Tran Thai Son, Bhiksha Raj, Khoa Luu",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "tran-thai-son",
+      "name": "Tran Thai Son"
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "neurips",
+    "venue_name": "NeurIPS",
     "title": "Dynamical Properties of Tokens in Self-Attention and Effects of Positional Encoding",
     "url": "https://openreview.net/forum?id=i9Vn8vV99g",
     "status": "accepted",
@@ -3316,6 +3842,10 @@
      {
       "slug": "phi-le-nguyen",
       "name": "Phi Le Nguyen"
+     },
+     {
+      "slug": "thanh-trung-huynh",
+      "name": "Thanh Trung Huynh"
      }
     ]
    },
@@ -3340,12 +3870,12 @@
       "name": "Khoa D. Doan"
      },
      {
-      "slug": "binh-t-nguyen",
-      "name": "Binh T. Nguyen"
-     },
-     {
       "slug": "an-mai",
       "name": "An Mai"
+     },
+     {
+      "slug": "thanh-binh-nguyen",
+      "name": "Thanh-Binh Nguyen"
      }
     ]
    },
@@ -3551,6 +4081,28 @@
     "year": 2024,
     "venue": "neurips",
     "venue_name": "NeurIPS",
+    "title": "Accelerating Transformers with Spectrum-Preserving Token Merging",
+    "url": "https://openreview.net/forum?id=PPdJPIO3mV",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Hoai-Chau Tran, Duy Minh Ho Nguyen, Manh-Duy Nguyen, TrungTin Nguyen, Ngan Hoang Le, Pengtao Xie, Daniel Sonntag, James Zou, Binh T. Nguyen, Mathias Niepert",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "thanh-binh-nguyen",
+      "name": "Thanh-Binh Nguyen"
+     }
+    ]
+   },
+   {
+    "year": 2024,
+    "venue": "neurips",
+    "venue_name": "NeurIPS",
     "title": "Distributional Monte-Carlo Planning with Thompson Sampling in Stochastic Environments",
     "url": "https://openreview.net/forum?id=CECVgSZbLW",
     "status": "rejected",
@@ -3632,6 +4184,28 @@
      {
       "slug": "khoa-d-doan",
       "name": "Khoa D. Doan"
+     }
+    ]
+   },
+   {
+    "year": 2023,
+    "venue": "neurips",
+    "venue_name": "NeurIPS",
+    "title": "LVM-Med: Learning Large-Scale Self-Supervised Vision Models for Medical Imaging via Second-order Graph Matching",
+    "url": "https://openreview.net/forum?id=xE7oH5iVGK",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Duy Minh Ho Nguyen, Hoang Nguyen, Nghiem Tuong Diep, Tan Ngoc Pham, Tri Cao, Binh T. Nguyen, Paul Swoboda, Nhat Ho, Shadi Albarqouni, Pengtao Xie, Daniel Sonntag, Mathias Niepert",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "thanh-binh-nguyen",
+      "name": "Thanh-Binh Nguyen"
      }
     ]
    },
@@ -3752,9 +4326,9 @@
   "name": "ICML",
   "full_name": "International Conference on Machine Learning",
   "rejections": "none",
-  "accepted": 19,
+  "accepted": 20,
   "own_page": 0,
-  "official": 19,
+  "official": 20,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -3777,14 +4351,14 @@
     "official": 0
    },
    "icml": {
-    "accepted": 19,
+    "accepted": 20,
     "rejected": 0,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 0,
-    "submitted": 19,
+    "submitted": 20,
     "own_page": 0,
-    "official": 19
+    "official": 20
    },
    "cvpr": {
     "accepted": 0,
@@ -4251,14 +4825,14 @@
       "provisional": true
      },
      "icml": {
-      "accepted": 11,
+      "accepted": 12,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 11,
+      "submitted": 12,
       "own_page": 0,
-      "official": 11,
+      "official": 12,
       "available": true,
       "provisional": false
      },
@@ -4287,9 +4861,9 @@
       "provisional": false
      }
     },
-    "accepted": 11,
+    "accepted": 12,
     "own_page": 0,
-    "official": 11
+    "official": 12
    }
   ],
   "papers": [
@@ -4312,6 +4886,28 @@
      {
       "slug": "ngo-van-linh",
       "name": "Ngo Van Linh"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "icml",
+    "venue_name": "ICML",
+    "title": "Automatic Unsupervised Ensemble Outlier Model Selection",
+    "url": "https://openreview.net/forum?id=BgNkAHzveU",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Hong-Phuc Phan, Tuan-Anh Vu, Tung Kieu, Son Ha Xuan, Bin Yang, Christian S. Jensen",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "son-ha-xuan",
+      "name": "Son Ha Xuan"
      }
     ]
    },
@@ -5434,6 +6030,10 @@
      {
       "slug": "khoa-d-doan",
       "name": "Khoa D. Doan"
+     },
+     {
+      "slug": "thanh-binh-nguyen",
+      "name": "Thanh-Binh Nguyen"
      }
     ]
    },
@@ -6334,6 +6934,10 @@
      {
       "slug": "ngo-van-linh",
       "name": "Ngo Van Linh"
+     },
+     {
+      "slug": "dinh-viet-sang",
+      "name": "Dinh Viet Sang"
      }
     ]
    },
@@ -6466,6 +7070,10 @@
      {
       "slug": "ngo-van-linh",
       "name": "Ngo Van Linh"
+     },
+     {
+      "slug": "dinh-viet-sang",
+      "name": "Dinh Viet Sang"
      }
     ]
    }

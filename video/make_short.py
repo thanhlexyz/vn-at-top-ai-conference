@@ -132,6 +132,7 @@ def compute():
     built = datetime.datetime.fromtimestamp((DATA / "blog.json").stat().st_mtime, datetime.timezone.utc).date()
     raw = {
         "people": blog["pooled"]["professors"],
+        "no_accept": sum(1 for p in profs if not p["accepted"]),
         "iclr_submitted": iclr["submitted"], "iclr_accepted": iclr["accepted"], "iclr_not_accepted": iclr["not_accepted"],
         "iclr_per_accept": pooled_ratio,
         "neurips_2026": len(neurips), "neurips_2026_unofficial": sum(p["unofficial"] for p in neurips),
@@ -480,7 +481,7 @@ Cách tính:
 - NeurIPS 2026: {f['neurips_2026']} bài được nhận ({f['neurips_2026_unofficial']} bài mới có trên trang cá nhân). Số bài không được nhận phía sau là ước tính: {f['rejections_low']} theo kết quả ICLR của từng người (cách tính trên trang web), {f['rejections_high']} theo tỉ lệ ICLR chung của nhóm.
 - Tác giả: {f['judged']} trong {f['accepted_total']} bài được nhận ở 5 hội nghị (2020–2026) có ghi đơn vị của từng tác giả. Trong đó {f['first_own']} bài có tác giả đầu cùng trường với giảng viên, {f['majority_own']} bài có đa số tác giả cùng trường, {f['majority_abroad']} bài có đa số tác giả ở nước ngoài; {f['with_abroad']} bài có ít nhất một đồng tác giả ở nước ngoài. Mỗi bài có trung bình {f['authors_mean']} tác giả, nhiều nhất {f['authors_max']}; một bài có nhiều người trong danh sách được tính cho từng người, nên {f['accepted_total']} bài thành {f['person_credits']} lượt.
 
-Lưu ý: danh sách do người làm trang web tự chọn, không phải mẫu đại diện; chỉ gồm người đã có ít nhất một bài được nhận, nên tổng số lần nộp thật còn cao hơn; đơn vị là công ty không cho biết tác giả ở nước nào; chỉ ICLR công khai đầy đủ bài bị từ chối; bài được gán cho từng người theo hồ sơ OpenReview và theo tên, có thể sót hoặc nhầm; đếm bài không nói lên chất lượng bài.
+Lưu ý: danh sách do người làm trang web tự chọn, không phải mẫu đại diện; gồm cả {f['no_accept']} người đã nộp mà chưa có bài nào được nhận, nhưng chỉ ICLR cho thấy bài bị từ chối, nên tổng số lần nộp thật còn cao hơn; đơn vị là công ty không cho biết tác giả ở nước nào; chỉ ICLR công khai đầy đủ bài bị từ chối; bài được gán cho từng người theo hồ sơ OpenReview và theo tên, có thể sót hoặc nhầm; đếm bài không nói lên chất lượng bài.
 
 Số liệu đầy đủ và cách tính: {SITE}
 
@@ -494,7 +495,7 @@ Kịch bản và hình được soạn với sự hỗ trợ của một mô hì
 
 Method: ICLR is the only one of the five conferences that publishes every submission with its outcome. NeurIPS rejections are estimated from the group's own ICLR record: {e['rejections_low']} using each person's record (the website's method), {e['rejections_high']} using the group's pooled ICLR ratio. Author figures cover the {e['judged']} of {e['accepted_total']} accepted papers (five conferences, 2020–2026) whose lists give every author's affiliation: first author at the lecturer's university on {e['first_own']}, most authors at the lecturer's university on {e['majority_own']}, most authors abroad on {e['majority_abroad']}; {e['authors_mean']} authors per paper on average, {e['authors_max']} at most.
 
-Caveats: hand-picked list, not a representative sample; only people with at least one accepted paper are listed, so total attempts are higher; a company affiliation does not say which country an author is in; rejections are fully visible at ICLR only; papers are matched by OpenReview profile and name; counting papers says nothing about their quality.
+Caveats: hand-picked list, not a representative sample; {e['no_accept']} of the people have submitted but have no accepted paper yet, and rejections show at ICLR only, so total attempts are higher; a company affiliation does not say which country an author is in; rejections are fully visible at ICLR only; papers are matched by OpenReview profile and name; counting papers says nothing about their quality.
 
 Full data and method: {SITE}
 

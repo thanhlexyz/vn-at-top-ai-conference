@@ -869,8 +869,8 @@ def main():
                                                       shared.get(person["slug"], ()))
         mark_later_acceptance(recs, acc)
         counted, excluded = apply_rules(person, recs)
-        if not any(r["status"] == "accepted" for r in counted):
-            hidden.append(person["name"])  # on the roster, but shown only once a paper is accepted
+        if not counted:
+            hidden.append(person["name"])  # on the roster, but shown only once they have a counted submission
             continue
         # without a record of their own, only what a colleague's record happens to show is known
         partial = source == "none" and any(r.get("borrowed") and r["venue"] == "iclr" for r in counted)
@@ -915,7 +915,9 @@ def main():
             "excluded_papers": [page_entry(r) for r in sorted(excluded, key=paper_order)],
         })
         all_counted += [{**r, "_who": person} for r in counted]
-    professors.sort(key=lambda p: (-p["accepted"], -p["venues"]["iclr"]["submitted"], p["name"]))
+    # most accepted first; people with none accepted yet come last, most submissions first
+    professors.sort(key=lambda p: (-p["accepted"], -p["venues"]["iclr"]["submitted"] if p["accepted"]
+                                   else -sum(v.get("submitted", 0) for v in p["venues"].values()), p["name"]))
 
     # a paper shared by two professors is one paper for an institution, a venue and the paper list
     owners = collections.defaultdict(list)
@@ -966,13 +968,25 @@ def main():
     # people whose papers name no university (VinAI, FPT, Vingroup, Viettel...) are not lecturers or
     # professors, so they go to the Not tracked page instead of waiting as candidates
     found = [{**c, "papers": int(c["papers"]), "senior_author": int(c["senior_author"])} for c in read_csv(CANDIDATES)]
-    candidates = [c for c in found if c["at_university"] == "yes"]
+    # people whose only papers are at NeurIPS 2026: that year's papers are not on OpenReview yet, so the
+    # profile behind the name cannot be checked; they wait on the Not tracked page until they can be
+    def neurips_2026_only(c):
+        return c["first_year"] == c["last_year"] == "2026" and c["venues"].startswith("NeurIPS ") and "," not in c["venues"]
+
+    candidates = [c for c in found if c["at_university"] == "yes" and not neurips_2026_only(c)]
     companies = [c for c in found if c["at_university"] != "yes"]
+    unconfirmed = [c for c in found if c["at_university"] == "yes" and neurips_2026_only(c)]
     shown = candidates[:MAX_CANDIDATES_ON_SITE]
     waiting = [{"name": p["name"], "institution": p["institution_short"], "to_confirm": p["to_confirm"]}
                for p in roster if p["approved"] != "yes" and p["approved"] != "no"]
 
     write_json(DATA / "overview.json", overview(professors, acc))
+    # people in Vietnam with ICLR submissions but no accepted paper (find_iclr_only.py), for the local
+    # Candidates page; kept in a separate, git-ignored file because these lists name people who are not on the site
+    on_roster = {i for p in roster for i in p["openreview_ids"]}
+    attempted = [{**r, "not_accepted": int(r["not_accepted"])} for r in read_csv(BACKEND / "iclr_only.csv")
+                 if r["openreview_id"] not in on_roster and not set(r["openreview_id"].split(";")) & on_roster]
+    write_json(DATA / "attempted.json", {"people": attempted})
     now = datetime.datetime.now(datetime.timezone.utc)  # UTC, so the data does not show where it was built
     write_json(DATA / "professors.json", professors)
     write_json(DATA / "institutions.json", institutions)
@@ -987,7 +1001,7 @@ def main():
                 for p in roster if p["approved"] == "no"]
     write_json(DATA / "candidates.json", {"people": shown, "total": len(candidates), "review": pending,
                                          "waiting": waiting, "excluded": excluded,
-                                         "companies": companies})
+                                         "companies": companies, "unconfirmed": unconfirmed})
     write_json(DATA / "meta.json", {
         "generated": now.strftime("%Y-%m-%d %H:%M %Z"), "generated_date": now.strftime("%Y-%m-%d"),
         "first_year": YEARS[0], "last_year": YEARS[-1], "years": YEARS,
@@ -1011,7 +1025,7 @@ def main():
               + f"{p['accepted']:7d}  {p['openreview_source']}")
     print(f"\n{len(professors)} professors, {len(papers)} papers -> {DATA.relative_to(BACKEND.parent)}/")
     if hidden:
-        print(f"not shown until a paper is accepted: {', '.join(hidden)}")
+        print(f"not shown until they have a counted submission: {', '.join(hidden)}")
     if pending:
         print(f"{len(pending)} uncertain matches wait for a yes/no in {REVIEW.name} ({len(new)} new)")
     if skipped:

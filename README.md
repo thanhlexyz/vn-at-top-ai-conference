@@ -56,7 +56,7 @@ publish, so nothing should be committed to it by hand.
 
 | column | meaning |
 |---|---|
-| `approved` | `yes` puts the person on the site once they have an accepted paper, `no` keeps them off for good (they are listed on the local Not tracked page, with `notes` as the reason), empty means waiting |
+| `approved` | `yes` puts the person on the site once they have a counted submission, accepted or not, `no` keeps them off for good (they are listed on the local Not tracked page, with `notes` as the reason), empty means waiting |
 | `display_name`, `name_variants` | every spelling and word order the person publishes under, separated by `;` |
 | `institution`, `institution_short` | used to check the affiliation printed on a paper |
 | `rank` | shown on the person's page |

@@ -167,6 +167,15 @@ class FakeNote:
 
 
 class OpenReviewFetch(unittest.TestCase):
+    def test_authors_given_as_objects(self):
+        # since 2026 some notes give one object per author and leave authorids empty
+        content = {"authors": {"value": [{"username": "~Thuy_T._Nguyen1", "fullname": "Thuy T. Nguyen",
+                                          "institutions": [{"name": "RMIT International University Vietnam"}]}]},
+                   "authorids": {"value": []}}
+        self.assertEqual(fetch_openreview.split_authors(content), (["Thuy T. Nguyen"], ["~Thuy_T._Nguyen1"]))
+        plain = {"authors": ["A B", "C D"], "authorids": ["~A_B1", "c@d.org"]}
+        self.assertEqual(fetch_openreview.split_authors(plain), (["A B", "C D"], ["~A_B1", "c@d.org"]))
+
     """fetch_person against stand-ins shaped like the two OpenReview API versions."""
 
     def test_fetch_person(self):

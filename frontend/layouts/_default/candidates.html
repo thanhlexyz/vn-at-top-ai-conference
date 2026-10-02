@@ -44,6 +44,32 @@
 <p>None.</p>
 {{- end }}
 
+{{- with hugo.Data.attempted }}{{ with .people }}
+<h2>Attempted, not accepted yet ({{ len . }})</h2>
+<p>
+	People whose current OpenReview post is in Vietnam, with ICLR submissions that were not accepted and no accepted paper at the five venues, from <code>backend/find_iclr_only.py</code>.
+	Lecturers and professors come first. A "same name" note means an accepted paper carries the same name, which may be them or a namesake.
+	This table is only in the local build: the list is not committed to the repository.
+</p>
+<div class="scroll">
+<table>
+	<thead><tr><th class="l">Name</th><th class="l">Position</th><th class="l">Institution</th><th>Not accepted</th><th>Years</th><th class="l">Latest submission</th></tr></thead>
+	<tbody>
+	{{- range . }}
+	<tr>
+		<td class="l"><a href="{{ .profile }}">{{ .name }}</a>{{ with .same_name_accepted }}<br><span class="note">same name accepted: {{ . }}</span>{{ end }}</td>
+		<td class="l">{{ .position }}</td>
+		<td class="l">{{ .institution }}</td>
+		<td>{{ .not_accepted }}</td>
+		<td>{{ .years }}</td>
+		<td class="l"><a href="{{ .sample_url }}">{{ .sample_paper }}</a></td>
+	</tr>
+	{{- end }}
+	</tbody>
+</table>
+</div>
+{{- end }}{{ end }}
+
 <h2>People found, not on the roster ({{ $c.total }})</h2>
 <p>
 	Authors who list a Vietnamese university on an accepted main-track paper, ordered by the number of those papers. Most are students. Authors whose papers name only a company or institute are on the Not tracked page.

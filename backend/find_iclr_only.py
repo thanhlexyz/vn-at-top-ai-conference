@@ -32,7 +32,7 @@ import time
 
 from common import (ACCEPTED, BACKEND, LAST_YEAR, OPENREVIEW_RAW, YEARS, classify_status, load_roster, name_key,
                     read_jsonl_gz, same_institution, vn_institution, vn_institutions, write_csv)
-from fetch_openreview import profile_summary, val, vietnam_post
+from fetch_openreview import profile_summary, split_authors, val, vietnam_post
 
 OUT = BACKEND / "iclr_only.csv"
 FIELDS = ["name", "openreview_id", "profile", "position", "institution", "since", "faculty", "not_accepted",
@@ -77,9 +77,9 @@ def cached(path, refresh, download):
 
 def record(n, status):
     c = n.content
+    authors, ids = split_authors(c)
     return {"forum": n.forum, "title": str(val(c.get("title")) or ""), "status": status,
-            "authorids": [a for a in (val(c.get("authorids")) or []) if isinstance(a, str)],
-            "authors": [a for a in (val(c.get("authors")) or []) if isinstance(a, str)]}
+            "authorids": [a for a in ids if isinstance(a, str)], "authors": authors}
 
 
 def decision(n):

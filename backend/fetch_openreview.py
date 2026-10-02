@@ -27,6 +27,7 @@ import datetime
 import getpass
 import json
 import os
+import re
 import sys
 import time
 
@@ -44,13 +45,28 @@ def login():
                   file=sys.stderr)
     user = user or input("OpenReview username: ")
     pw = pw or getpass.getpass("OpenReview password: ")
-    v2 = openreview.api.OpenReviewClient(baseurl="https://api2.openreview.net", username=user, password=pw)
+    v2 = with_retry(openreview.api.OpenReviewClient, baseurl="https://api2.openreview.net", username=user, password=pw)
     try:
-        v1 = openreview.Client(baseurl="https://api.openreview.net", username=user, password=pw)
+        v1 = with_retry(openreview.Client, baseurl="https://api.openreview.net", username=user, password=pw)
     except Exception as e:  # API v1 holds the conferences up to 2023
         print(f"warning: API v1 login failed ({e}); submissions before 2024 will be missing", file=sys.stderr)
         v1 = None
     return v2, v1
+
+
+def with_retry(call, *args, **kwargs):
+    """OpenReview allows three logins a minute and answers 429 above that; wait as long as it asks."""
+    for _ in range(6):
+        try:
+            return call(*args, **kwargs)
+        except Exception as e:
+            m = re.search(r"try again in (\d+) seconds", str(e))
+            if "RateLimit" not in str(e):
+                raise
+            wait = int(m.group(1)) + 2 if m else 30
+            print(f"  OpenReview rate limit, waiting {wait} s", file=sys.stderr)
+            time.sleep(wait)
+    return call(*args, **kwargs)
 
 
 def val(x):
@@ -77,14 +93,27 @@ def vietnam_post(summary):
     return max(posts, key=lambda h: (h["end"] is None, h["end"] or 0, h["start"] or 0)) if posts else None
 
 
+def split_authors(content):
+    """Author names and profile IDs of a note. Older notes keep them in two parallel lists; since 2026 some
+    notes give one object per author ({"username", "fullname", "institutions"}) and leave authorids empty."""
+    authors = val(content.get("authors")) or []
+    if not isinstance(authors, list):
+        authors = [str(authors)]
+    ids = val(content.get("authorids")) or []
+    if any(isinstance(a, dict) for a in authors):
+        ids = [a.get("username") or "" for a in authors if isinstance(a, dict)] if not ids else ids
+        authors = [a.get("fullname") or a.get("username") or "" if isinstance(a, dict) else str(a) for a in authors]
+    return authors, ids
+
+
 def note_record(n):
     c = n.content
     invitations = getattr(n, "invitations", None) or [getattr(n, "invitation", "") or ""]
-    authors = val(c.get("authors")) or []
+    authors, authorids = split_authors(c)
     return {"id": n.id, "forum": n.forum, "invitations": invitations,
             "venue": str(val(c.get("venue")) or ""), "venueid": str(val(c.get("venueid")) or ""),
-            "title": str(val(c.get("title")) or ""), "authors": authors if isinstance(authors, list) else [str(authors)],
-            "authorids": val(c.get("authorids")) or [], "primary_area": str(val(c.get("primary_area")) or ""),
+            "title": str(val(c.get("title")) or ""), "authors": authors,
+            "authorids": authorids, "primary_area": str(val(c.get("primary_area")) or ""),
             "keywords": val(c.get("keywords")) or [], "cdate": getattr(n, "cdate", None), "decision": ""}
 
 
