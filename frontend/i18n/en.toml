@@ -432,3 +432,12 @@ other = "Citations per year, as shown on Google Scholar on the day of the snapsh
 
 [tip_scholar]
 other = "From each Google Scholar profile, as on 2026-10-02; Scholar counts every publication"
+
+[seo_professor]
+other = "{{ .Name }} ({{ .Inst }}): {{ .Accepted }} papers accepted at ICLR, NeurIPS, ICML, CVPR and ACL; {{ .Submitted }} ICLR submissions, {{ .Rejected }} rejected."
+
+[seo_institution]
+other = "{{ .Name }}: {{ .Profs }} professors, {{ .Accepted }} papers accepted at ICLR, NeurIPS, ICML, CVPR and ACL; {{ .Submitted }} ICLR submissions, {{ .Rejected }} rejected."
+
+[seo_venue]
+other = "{{ .Name }}: papers submitted, accepted and rejected by professors and lecturers in Vietnam since 2020; {{ .Accepted }} accepted."

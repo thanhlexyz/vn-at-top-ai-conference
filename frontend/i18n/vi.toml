@@ -427,3 +427,12 @@ other = "Số trích dẫn theo năm, theo Google Scholar tại ngày ghi nhận
 
 [tip_scholar]
 other = "Theo hồ sơ Google Scholar của từng giảng viên, ghi nhận ngày 2026-10-02; Google Scholar thống kê toàn bộ công bố"
+
+[seo_professor]
+other = "{{ .Name }} ({{ .Inst }}): {{ .Accepted }} bài được chấp nhận tại ICLR, NeurIPS, ICML, CVPR và ACL; {{ .Submitted }} bài nộp ICLR, {{ .Rejected }} bài bị từ chối."
+
+[seo_institution]
+other = "{{ .Name }}: {{ .Profs }} giảng viên, {{ .Accepted }} bài được chấp nhận tại ICLR, NeurIPS, ICML, CVPR và ACL; {{ .Submitted }} bài nộp ICLR, {{ .Rejected }} bài bị từ chối."
+
+[seo_venue]
+other = "{{ .Name }}: số bài nộp, được chấp nhận và bị từ chối của giảng viên tại Việt Nam từ năm 2020; {{ .Accepted }} bài được chấp nhận."

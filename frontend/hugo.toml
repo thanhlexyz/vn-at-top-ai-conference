@@ -3,7 +3,7 @@ defaultContentLanguage = 'vi'
 # Vietnamese at /, English at /en/
 defaultContentLanguageInSubdir = false
 title = 'Việt Nam tại các hội nghị AI hàng đầu'
-disableKinds = ['taxonomy', 'term', 'rss', 'sitemap']
+disableKinds = ['taxonomy', 'term', 'rss']
 
 [params]
   description = 'Papers submitted, accepted and rejected at ICLR, NeurIPS, ICML, CVPR and ACL by professors and lecturers in Vietnam since 2020.'

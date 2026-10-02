@@ -6,7 +6,27 @@
 	<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
 	<script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 	<link rel="stylesheet" type="text/css" href="{{ "style.css" | relURL }}">
-	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+	{{- $desc := partial "description.html" . }}
+	{{- $image := "" }}
+	{{- if and (eq .Section "professors") .Params.key }}{{ with index (where hugo.Data.professors "slug" .Params.key) 0 }}{{ $image = .image }}{{ end }}{{ end }}
+	{{- if and (eq .Section "institutions") .Params.key }}{{ with index (where hugo.Data.institutions "slug" .Params.key) 0 }}{{ $image = .image }}{{ end }}{{ end }}
+	{{- if and (eq .Section "venues") .Params.key }}{{ with index (where hugo.Data.venues "key" .Params.key) 0 }}{{ $image = .image }}{{ end }}{{ end }}
+	<meta name="description" content="{{ $desc }}">
+	<link rel="canonical" href="{{ .Permalink }}">
+	<meta property="og:site_name" content="{{ site.Title }}">
+	<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+	<meta property="og:description" content="{{ $desc }}">
+	<meta property="og:url" content="{{ .Permalink }}">
+	<meta property="og:type" content="{{ if eq .Section "professors" }}profile{{ else }}website{{ end }}">
+	<meta property="og:locale" content="{{ cond (eq site.Language.Lang "vi") "vi_VN" "en_US" }}">
+	{{- with $image }}
+	<meta property="og:image" content="{{ . | absURL }}">
+	{{- end }}
+	<meta name="twitter:card" content="summary">
+	{{- with site.Params.googleSiteVerification }}{{ if not site.Params.local }}
+	<meta name="google-site-verification" content="{{ . }}">
+	{{- end }}{{ end }}
+	{{- partial "jsonld.html" . }}
 	<meta name="robots" content="{{ if site.Params.local }}noindex, nofollow{{ else }}index, follow{{ end }}">
 	{{- range .AllTranslations }}
 	<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
