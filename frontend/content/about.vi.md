@@ -1,12 +1,6 @@
 ---
 title: "Giới thiệu"
 ---
-
-## Tác giả
-
-Trang thông tin này do **Thanh Le** ([thanhle.xyz](https://thanhle.xyz)) thực hiện. Mã nguồn và dữ liệu được công khai tại [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Kính mong quý thầy cô và anh chị góp ý qua trang [Góp ý](../feedback/).
-
-
 ## Phạm vi thống kê
 
 - **Hội nghị:** ICLR, NeurIPS, ICML, CVPR và ACL, từ năm 2020. Năm được ghi là năm diễn ra hội nghị; chẳng hạn, một bài tại ICLR 2026 được nộp vào mùa thu năm 2025.
@@ -108,3 +102,7 @@ Dữ liệu được cập nhật bằng lệnh `make data` trong thư mục d�
 ## Lượt truy cập
 
 Trang công khai thống kê lượt truy cập bằng [GoatCounter](https://www.goatcounter.com/). Công cụ này không sử dụng cookie và không lưu dữ liệu cá nhân của người truy cập; thông tin được ghi nhận chỉ gồm trang được xem, trang dẫn tới, trình duyệt, kích thước màn hình và quốc gia (suy ra từ địa chỉ mạng, địa chỉ này không được lưu lại).
+
+## Tác giả
+
+Trang thông tin này do **Lê Thành** ([thanhle.xyz](https://thanhle.xyz)) thực hiện. Mã nguồn và dữ liệu được công khai tại [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Kính mong quý thầy cô và anh chị góp ý qua trang [Góp ý](../feedback/).

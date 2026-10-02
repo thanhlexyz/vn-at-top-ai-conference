@@ -1,12 +1,6 @@
 ---
 title: "About"
 ---
-
-## Author
-
-This site is made by **Thanh Le** ([thanhle.xyz](https://thanhle.xyz)). The code and data are public on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Corrections are warmly welcome on the [Feedback](../feedback/) page.
-
-
 ## What is counted
 
 - **Venues:** ICLR, NeurIPS, ICML, CVPR and ACL, from 2020 on. Years are conference years, so an ICLR 2026 paper was submitted in autumn 2025.
@@ -108,3 +102,7 @@ The data is rebuilt with `make data` in the project folder. `make openreview` fe
 ## Visitors
 
 The public site counts visits with [GoatCounter](https://www.goatcounter.com/), which sets no cookies and keeps no personal data about visitors: only the page, the referring site, the browser, the screen size and the country derived from the address, which is not stored.
+
+## Author
+
+This site is made by **Thanh Le** ([thanhle.xyz](https://thanhle.xyz)). The code and data are public on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Corrections are warmly welcome on the [Feedback](../feedback/) page.
