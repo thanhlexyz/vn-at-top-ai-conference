@@ -487,14 +487,14 @@ def distinct_people(names):
     return keys
 
 
-def collaboration(person, counted):
+def collaboration(person, counted, workshop=()):
     """Co-author and topic figures over every counted paper of a person, accepted or not.
 
     Papers that were not accepted come from OpenReview, which gives author names but no affiliations.
 
     Foreign and other-institution co-authors can only be told apart where the accepted list prints an
     affiliation for each author, and topics only where the conference labels its papers, so each figure
-    comes with the number of papers it is based on.
+    comes with the number of papers it is based on. Workshop papers enter only the maximum.
     """
     papers = list(counted)
     accepted_sizes = []  # the minimum is taken over accepted papers only, the maximum over every submission
@@ -526,9 +526,15 @@ def collaboration(person, counted):
     def mean(xs):
         return f"{sum(xs) / len(xs):.1f}" if xs else ""
 
+    widest = list(sizes)
+    for r in workshop:   # OpenReview names only: leave the professor out by name
+        names = [a["name"] for a in r["people"]]
+        mine = sum(1 for a in names if norm_name(a) in person["variants"])
+        widest.append(len(names) - max(mine, 1) if names else 0)
+
     return {
         "papers": len(papers), "avg_coauthors": mean(sizes), "distinct_coauthors": len(everyone),
-        "min_coauthors": min(accepted_sizes) if accepted_sizes else "", "max_coauthors": max(sizes) if sizes else "",
+        "min_coauthors": min(accepted_sizes) if accepted_sizes else "", "max_coauthors": max(widest) if widest else "",
         "papers_with_affiliations": len(foreign), "avg_foreign": mean(foreign),
         "avg_same_institution": mean(own), "avg_other_vietnam": mean(other_vn),
         "elsewhere": len(elsewhere) if foreign else "", "elsewhere_abroad": len(elsewhere & abroad),
@@ -1000,7 +1006,7 @@ def main():
             "rank": person["rank"], "homepage": person["homepage"], "vn_since": person["vn_since"] or 0,
             "openreview_ids": person["openreview_ids"], "openreview_source": source, "openreview_fetched": fetched,
             "links": person_links(person),
-            "iclr_complete": complete, "flags": flags, **s, "collab": collaboration(person, counted), "authorship": authorship(counted, person),
+            "iclr_complete": complete, "flags": flags, **s, "collab": collaboration(person, counted, workshop), "authorship": authorship(counted, person),
             "accepted_papers": [page_entry(r) for r in sorted(counted, key=paper_order) if r["status"] == "accepted"],
             "not_accepted_papers": [page_entry(r) for r in sorted(counted, key=paper_order)
                                     if r["status"] != "accepted"],
