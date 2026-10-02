@@ -2,6 +2,11 @@
 title: "Giới thiệu"
 ---
 
+## Tác giả
+
+Trang thông tin này do **Thanh Le** ([thanhle.xyz](https://thanhle.xyz)) thực hiện. Mã nguồn và dữ liệu được công khai tại [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Kính mong quý thầy cô và anh chị góp ý qua trang [Góp ý](../feedback/).
+
+
 ## Phạm vi thống kê
 
 - **Hội nghị:** ICLR, NeurIPS, ICML, CVPR và ACL, từ năm 2020. Năm được ghi là năm diễn ra hội nghị; chẳng hạn, một bài tại ICLR 2026 được nộp vào mùa thu năm 2025.

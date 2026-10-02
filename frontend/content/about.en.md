@@ -2,6 +2,11 @@
 title: "About"
 ---
 
+## Author
+
+This site is made by **Thanh Le** ([thanhle.xyz](https://thanhle.xyz)). The code and data are public on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Corrections are warmly welcome on the [Feedback](../feedback/) page.
+
+
 ## What is counted
 
 - **Venues:** ICLR, NeurIPS, ICML, CVPR and ACL, from 2020 on. Years are conference years, so an ICLR 2026 paper was submitted in autumn 2025.
