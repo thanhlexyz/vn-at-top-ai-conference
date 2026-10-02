@@ -11,6 +11,7 @@
 		<th colspan="3">ICLR</th>
 		<th colspan="4">{{ T "th_accepted_at" }}</th>
 		<th colspan="3">{{ T "th_total" }}</th>
+		<th rowspan="2" title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
 	</tr>
 	<tr>
 		<th>{{ T "th_submitted" }}</th>
@@ -45,6 +46,7 @@
 		{{- else }}
 		{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}
 		{{- end }}
+		{{ partial "num.html" (.workshop | default 0) }}
 	</tr>
 	{{- end }}
 	</tbody>

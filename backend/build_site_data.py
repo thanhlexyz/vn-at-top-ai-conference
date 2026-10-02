@@ -1043,6 +1043,11 @@ def main():
                              "professors": [m["slug"] for m in members],
                              "iclr_complete": all(m["iclr_complete"] for m in members),
                              **summary(recs, acc)})
+    by_slug = {p["slug"]: p for p in professors}
+    for i in institutions:
+        # workshop papers of its professors, for reference only; a paper of two of them is one paper
+        i["workshop"] = len({(w["venue"], w["year"], norm_title(w["title"]))
+                             for m in i["professors"] for w in by_slug[m]["workshop_papers"]})
     for i in institutions:
         # the same estimate as for a professor, from the institution's own ICLR record, so a paper shared by two
         # of its professors counts once: recorded ICLR rejections plus the hidden rejections behind its other papers
