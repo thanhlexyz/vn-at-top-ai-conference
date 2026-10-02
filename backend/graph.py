@@ -89,6 +89,40 @@ def declutter(pos, labels, rounds=300):
     return pos
 
 
+def clear_edges(pos, edges, gap=26, rounds=200):
+    """Moves a node sideways when a line between two other nodes passes through or close to it, so every line
+    can be followed from end to end. Nodes in a straight row are the usual case."""
+    edges = [e for e in edges if e[0] in pos and e[1] in pos]
+    for _ in range(rounds):
+        moved = False
+        for (a, b) in edges:
+            (ax, ay), (bx, by) = pos[a], pos[b]
+            dx, dy = bx - ax, by - ay
+            length2 = dx * dx + dy * dy
+            if length2 < 1:
+                continue
+            for c, (cx, cy) in pos.items():
+                if c in (a, b):
+                    continue
+                t = ((cx - ax) * dx + (cy - ay) * dy) / length2
+                if not 0.05 < t < 0.95:
+                    continue
+                px, py = ax + t * dx, ay + t * dy
+                d = math.hypot(cx - px, cy - py)
+                if d >= gap:
+                    continue
+                # push the node away from the line, along the perpendicular (either side if it sits on it)
+                nx, ny = (-dy, dx) if d < 0.5 else (cx - px, cy - py)
+                norm = math.hypot(nx, ny)
+                step = (gap - d) * 0.6 + 0.5
+                pos[c][0] += nx / norm * step
+                pos[c][1] += ny / norm * step
+                moved = True
+        if not moved:
+            break
+    return pos
+
+
 def layout(nodes, edges, labels):
     """{id: (x, y)} and the drawing's height. The largest group is drawn with a force layout across the full
     width; smaller groups go underneath in a grid, each a short column, so their labels never collide."""
@@ -102,7 +136,10 @@ def layout(nodes, edges, labels):
     span_x, span_y = max(max(xs) - min(xs), 1), max(max(ys) - min(ys), 1)
     s = min((W - 260) / span_x, 640 / span_y)
     pos = {i: [40 + (p[0] - min(xs)) * s, 40 + (p[1] - min(ys)) * s] for i, p in pos.items()}
-    pos = declutter(pos, labels)
+    for _ in range(4):   # alternate: lines clear of circles, labels clear of each other
+        pos = clear_edges(pos, edges)
+        pos = declutter(pos, labels)
+    pos = clear_edges(pos, edges)
     xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
     shift_x = (W - (max(xs) - min(xs)) - max(7.4 * len(labels[i]) for i in pos)) / 2 - min(xs)
     shift_y = 40 - min(ys)
