@@ -34,3 +34,9 @@ Caveats: hand-picked list, not a representative sample; 22 of the people have su
 Full data and method: https://thanhlexyz.github.io/vn-at-top-ai-conference/
 
 Script and graphics were drafted with the help of a language model (Claude); the figures come from the website's data.
+
+## Music credit (paste at the end of the description)
+
+Nhạc nền / Music: "Local Forecast - Elevator" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/

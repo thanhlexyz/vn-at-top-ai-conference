@@ -269,7 +269,7 @@ def frame_html(name, n, index):
                  f'<div class="chart">{chart_neurips(n)}</div>'
                  f'<div class="key"><span class="k"><span class="dot acc-bg"></span>được nhận</span>'
                  f'<span class="k"><span class="dot not-bg"></span>trượt</span><span class="k"><span class="dot dash"></span>ước tính cao</span></div>'
-                 f'<div class="note">* chưa tính người chưa có bài nào được nhận</div>')
+                 f'<div class="note">* ước tính từ tỉ lệ ICLR; ngoài ICLR không thấy bài trượt</div>')
     elif name == "authors":
         inner = (f'<div class="pill">Ai viết các bài được nhận? ✍️</div>'
                  f'<div class="lead small">{f["judged"]}/{f["accepted_total"]} bài có ghi đơn vị · 5 hội nghị · 2020–2026</div>'
