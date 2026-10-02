@@ -1,6 +1,6 @@
 {
  "width": 1000,
- "height": 1030,
+ "height": 1126,
  "nodes": [
   {
    "name": "Khoa D. Doan",
@@ -241,12 +241,15 @@
    "group": "Phenikaa",
    "id": "tuan-do",
    "papers": 5,
-   "x": null,
-   "y": null,
-   "linked": false,
+   "x": 548,
+   "y": 970.1,
+   "linked": true,
    "r": 13.0,
    "color": "c3",
-   "degree": 0
+   "degree": 1,
+   "lx": 565.0,
+   "ly": 975.1,
+   "anchor": "start"
   },
   {
    "name": "Minh Do",
@@ -371,13 +374,13 @@
    "group": "RMIT",
    "id": "thuy-t-nguyen",
    "papers": 3,
-   "x": 548,
+   "x": 798,
    "y": 970.1,
    "linked": true,
    "r": 12.1,
    "color": "c0",
    "degree": 1,
-   "lx": 564.1,
+   "lx": 814.1,
    "ly": 975.1,
    "anchor": "start"
   },
@@ -757,6 +760,23 @@
    "anchor": "start"
   },
   {
+   "name": "Nguyen Tu Uyen",
+   "name_vi": "Nguyen Tu Uyen",
+   "url": "professors/nguyen-tu-uyen/",
+   "group": "NEU",
+   "id": "nguyen-tu-uyen",
+   "papers": 1,
+   "x": 530,
+   "y": 924.1,
+   "linked": true,
+   "r": 10.8,
+   "color": "c0",
+   "degree": 1,
+   "lx": 544.8,
+   "ly": 929.1,
+   "anchor": "start"
+  },
+  {
    "name": "Nguyen Viet Ha",
    "name_vi": "Nguyễn Việt Hà",
    "url": "professors/nguyen-viet-ha/",
@@ -777,13 +797,13 @@
    "group": "RMIT",
    "id": "nhat-quang-tran",
    "papers": 1,
-   "x": 530,
+   "x": 780,
    "y": 924.1,
    "linked": true,
    "r": 10.8,
    "color": "c0",
    "degree": 1,
-   "lx": 544.8,
+   "lx": 794.8,
    "ly": 929.1,
    "anchor": "start"
   },
@@ -870,14 +890,14 @@
    "group": "HUST",
    "id": "trinh-van-chien",
    "papers": 1,
-   "x": 780,
-   "y": 924.1,
+   "x": 30,
+   "y": 1020.1,
    "linked": true,
    "r": 10.8,
    "color": "c1",
    "degree": 1,
-   "lx": 794.8,
-   "ly": 929.1,
+   "lx": 44.8,
+   "ly": 1025.1,
    "anchor": "start"
   },
   {
@@ -887,14 +907,14 @@
    "group": "HUST",
    "id": "van-duc-nguyen",
    "papers": 1,
-   "x": 798,
-   "y": 970.1,
+   "x": 48,
+   "y": 1066.1,
    "linked": true,
    "r": 10.8,
    "color": "c1",
    "degree": 1,
-   "lx": 812.8,
-   "ly": 975.1,
+   "lx": 62.8,
+   "ly": 1071.1,
    "anchor": "start"
   }
  ],
@@ -1362,12 +1382,26 @@
    "b_name_vi": "Nguyễn Văn Sơn"
   },
   {
-   "a": "nhat-quang-tran",
-   "b": "thuy-t-nguyen",
+   "a": "nguyen-tu-uyen",
+   "b": "tuan-do",
    "weight": 1,
    "x1": 530,
    "y1": 924.1,
    "x2": 548,
+   "y2": 970.1,
+   "width": 1.0,
+   "a_name": "Nguyen Tu Uyen",
+   "b_name": "Tuan Do",
+   "a_name_vi": "Nguyen Tu Uyen",
+   "b_name_vi": "Tuan Do"
+  },
+  {
+   "a": "nhat-quang-tran",
+   "b": "thuy-t-nguyen",
+   "weight": 1,
+   "x1": 780,
+   "y1": 924.1,
+   "x2": 798,
    "y2": 970.1,
    "width": 1.0,
    "a_name": "Nhat-Quang Tran",
@@ -1379,10 +1413,10 @@
    "a": "trinh-van-chien",
    "b": "van-duc-nguyen",
    "weight": 1,
-   "x1": 780,
-   "y1": 924.1,
-   "x2": 798,
-   "y2": 970.1,
+   "x1": 30,
+   "y1": 1020.1,
+   "x2": 48,
+   "y2": 1066.1,
    "width": 1.0,
    "a_name": "Trinh Van Chien",
    "b_name": "Van Duc Nguyen",
@@ -1413,5 +1447,5 @@
   }
  ],
  "papers": 224,
- "shared": 41
+ "shared": 42
 }
