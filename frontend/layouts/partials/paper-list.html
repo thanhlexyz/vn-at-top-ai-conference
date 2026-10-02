@@ -8,7 +8,7 @@
 		{{- if .unofficial }}<span class="tag own">{{ T "unofficial" }}</span>{{ end }}
 		{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
 		{{- with .reason }}<br><span class="note">{{ T "not_counted" (dict "Reason" (partial "reason.html" .)) }}</span>{{ end }}
-		{{- with .note }}<br><span class="note">{{ . }}</span>{{ end }}
+		{{- if site.Params.local }}{{ with .note }}<br><span class="note">{{ . }}</span>{{ end }}{{ end }}
 		{{- with .later }}<br><span class="note">{{ T "later_accepted" . }}</span>{{ end }}
 		{{- if .unofficial }}<br><span class="note">{{ T "unofficial_because" .match }}</span>{{ end }}
 		<br><span class="authors">{{ .authors }}
