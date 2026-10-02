@@ -19,6 +19,7 @@ import collections
 import csv
 import datetime
 import charts
+import graph
 import difflib
 import html
 import json
@@ -957,7 +958,7 @@ def main():
     shared = shared_notes(approved, legacy)
     queue, warnings, skipped = [], [], []
 
-    professors, all_counted, hidden = [], [], []
+    professors, all_counted, hidden, graph_recs = [], [], [], []
     for person in approved:
         recs, source, fetched, stale = person_records(person, acc, legacy, decisions, queue, warnings, skipped,
                                                       own_pages.get(person["slug"], ()),
@@ -1014,6 +1015,9 @@ def main():
             "workshop_papers": [page_entry(r) for r in sorted(workshop, key=paper_order)],
         })
         all_counted += [{**r, "_who": person} for r in counted]
+        # the collaboration graphs use workshop papers too, from the years in Vietnam
+        graph_recs += [(r, person["slug"]) for r in counted]
+        graph_recs += [(r, person["slug"]) for r in workshop if in_vietnam(person, r["year"])]
     # most accepted first; people with none accepted yet come last, most submissions first
     professors.sort(key=lambda p: (-p["accepted"], -p["venues"]["iclr"]["submitted"] if p["accepted"]
                                    else -sum(v.get("submitted", 0) for v in p["venues"].values()), p["name"]))
@@ -1145,6 +1149,10 @@ def main():
             if y["counts"]:
                 y["rejected_estimated"] = estimated(v["key"], y["venues"][v["key"]])
     write_json(DATA / "venues.json", venues)
+    shown_by_slug = {p["slug"]: p for p in professors}
+    recs_for_graph = [(r, shown_by_slug[s]) for r, s in graph_recs if s in shown_by_slug]
+    write_json(DATA / "graph_people.json", graph.researcher_graph(professors, recs_for_graph))
+    write_json(DATA / "graph_institutions.json", graph.institution_graph(professors, recs_for_graph))
     write_json(DATA / "papers.json", [with_owners(r) for r in sorted(papers, key=paper_order)])
     for r in papers:
         r["_owners"] = [{"slug": p["slug"]} for p in owners[(r["venue"], r["year"], norm_title(r["title"]))]]

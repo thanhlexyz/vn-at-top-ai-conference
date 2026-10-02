@@ -1,0 +1,9 @@
+---
+title: "Institution graph"
+layout: "graph"
+node_label: "Institution"
+data: "graph_institutions"
+description: "Which institutions in Vietnam share papers: accepted, rejected and workshop papers."
+---
+
+Each circle is an institution in Vietnam; a line joins two institutions that share papers, and the number on a line is how many. A paper links the institutions of the people on the list who wrote it, plus the Vietnamese institutions printed on the paper where the source lists affiliations (accepted papers at ICLR, NeurIPS, ICML and most of CVPR). Rejected and workshop papers have no affiliations, so for them only the institutions of people on the list are known. Institutions abroad are left out.

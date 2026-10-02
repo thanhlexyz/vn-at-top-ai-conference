@@ -1,0 +1,49 @@
+{{ define "main" -}}
+{{- /* A collaboration graph from data/<page param "data">.json, laid out by backend/graph.py. */ -}}
+{{- $g := index hugo.Data .Params.data }}
+{{- $vi := eq site.Language.Lang "vi" }}
+{{ .Content }}
+<p class="note">{{ T "graph_summary" (dict "Nodes" (len (where $g.nodes "linked" true)) "Edges" (len $g.edges) "Shared" $g.shared "Papers" $g.papers) }}</p>
+<ul class="graph-legend">
+	{{- range $g.legend }}
+	<li><span class="dot {{ .color }}"></span>{{ if eq .label "" }}{{ T "graph_other" }}{{ else if eq .label "roster" }}{{ T "graph_roster" }}{{ else if eq .label "other" }}{{ T "graph_not_roster" }}{{ else }}{{ .label }}{{ end }}</li>
+	{{- end }}
+	<li><span class="line-key"></span>{{ T "graph_edge_key" }}</li>
+</ul>
+<figure class="graph">
+<svg class="net" viewBox="0 0 {{ $g.width }} {{ $g.height }}" role="img" aria-label="{{ .Title }}">
+	{{- range $g.edges }}
+	<line class="edge" data-a="{{ .a }}" data-b="{{ .b }}" x1="{{ .x1 }}" y1="{{ .y1 }}" x2="{{ .x2 }}" y2="{{ .y2 }}" stroke-width="{{ .width }}"><title>{{ if $vi }}{{ .a_name_vi }} – {{ .b_name_vi }}{{ else }}{{ .a_name }} – {{ .b_name }}{{ end }}: {{ T "graph_papers" .weight }}</title></line>
+	{{- end }}
+	{{- range $g.edges }}{{ if ge (int .weight) 2 }}
+	<text class="ew" data-a="{{ .a }}" data-b="{{ .b }}" x="{{ div (add .x1 .x2) 2 }}" y="{{ add (div (add .y1 .y2) 2) 4 }}" text-anchor="middle">{{ .weight }}</text>
+	{{- end }}{{ end }}
+	{{- range where $g.nodes "linked" true }}
+	{{- $label := cond (and $vi .name_vi) .name_vi .name }}
+	<a {{ with .url }}href="{{ . | relLangURL }}"{{ end }} class="node {{ .color }}" data-id="{{ .id }}">
+		<circle cx="{{ .x }}" cy="{{ .y }}" r="{{ .r }}"/>
+		<text x="{{ .lx }}" y="{{ .ly }}" text-anchor="{{ .anchor }}">{{ $label }}</text>
+		<title>{{ $label }}{{ with .full }} ({{ . }}){{ end }}: {{ T "graph_papers" .papers }}, {{ T "graph_degree" .degree }}</title>
+	</a>
+	{{- end }}
+</svg>
+<figcaption class="note">{{ T "graph_caption" }}</figcaption>
+</figure>
+
+{{- with where $g.nodes "linked" false }}
+<p class="note">{{ T "graph_isolated" }}
+{{- range $k, $n := . }}{{ if $k }},{{ end }} {{ if $n.url }}<a href="{{ $n.url | relLangURL }}">{{ cond (and $vi $n.name_vi) $n.name_vi $n.name }}</a>{{ else }}{{ $n.name }}{{ end }}{{ end }}.</p>
+{{- end }}
+
+<h2>{{ T "graph_pairs" }}</h2>
+<div class="scroll">
+<table>
+	<thead><tr><th class="l">{{ .Params.node_label }}</th><th class="l">{{ .Params.node_label }}</th><th>{{ T "graph_together" }}</th></tr></thead>
+	<tbody>
+	{{- range $g.edges }}
+	<tr><td class="l">{{ if $vi }}{{ .a_name_vi }}{{ else }}{{ .a_name }}{{ end }}</td><td class="l">{{ if $vi }}{{ .b_name_vi }}{{ else }}{{ .b_name }}{{ end }}</td><td>{{ .weight }}</td></tr>
+	{{- end }}
+	</tbody>
+</table>
+</div>
+{{- end }}

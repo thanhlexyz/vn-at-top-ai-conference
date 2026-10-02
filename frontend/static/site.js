@@ -127,3 +127,31 @@
 	if (media && media.addEventListener) media.addEventListener("change", show);
 	show();
 })();
+
+// Collaboration graphs: hovering or focusing a circle highlights its links and the people or institutions it
+// links to; everything else fades. The graph is complete without this.
+(function () {
+	document.querySelectorAll("svg.net").forEach(function (svg) {
+		function clear() {
+			svg.classList.remove("focus");
+			svg.querySelectorAll(".hl").forEach(function (el) { el.classList.remove("hl"); });
+		}
+		function focus(id) {
+			clear();
+			svg.classList.add("focus");
+			svg.querySelectorAll('.node[data-id="' + id + '"]').forEach(function (n) { n.classList.add("hl"); });
+			svg.querySelectorAll(".edge, .ew").forEach(function (e) {
+				var other = e.dataset.a === id ? e.dataset.b : e.dataset.b === id ? e.dataset.a : null;
+				if (other === null) return;
+				e.classList.add("hl");
+				svg.querySelectorAll('.node[data-id="' + other + '"]').forEach(function (n) { n.classList.add("hl"); });
+			});
+		}
+		svg.querySelectorAll(".node").forEach(function (n) {
+			n.addEventListener("mouseenter", function () { focus(n.dataset.id); });
+			n.addEventListener("focus", function () { focus(n.dataset.id); });
+			n.addEventListener("mouseleave", clear);
+			n.addEventListener("blur", clear);
+		});
+	});
+})();

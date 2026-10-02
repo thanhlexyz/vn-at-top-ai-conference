@@ -452,3 +452,27 @@ other = "{{ .Name }}: papers submitted, accepted and rejected by professors and 
 
 [also_published_as]
 other = "Also published as: {{ . }}"
+
+# ---------------------------------------------------------------- collaboration graphs
+[graph_summary]
+other = "{{ .Nodes }} connected, {{ .Edges }} links; {{ .Shared }} of {{ .Papers }} papers are shared."
+[graph_other]
+other = "other"
+[graph_roster]
+other = "institution of someone on the list"
+[graph_not_roster]
+other = "other institution in Vietnam"
+[graph_edge_key]
+other = "line width and number: papers together"
+[graph_papers]
+other = "{{ . }} papers"
+[graph_degree]
+other = "{{ . }} links"
+[graph_caption]
+other = "Hover over a circle to highlight its links; hover over a line for the pair and the number of papers."
+[graph_isolated]
+other = "No shared paper with anyone else here:"
+[graph_pairs]
+other = "Pairs by papers together"
+[graph_together]
+other = "Papers together"

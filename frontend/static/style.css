@@ -397,3 +397,24 @@ img.mini { height: 1.4em ; width: auto ; max-width: 3.5em ; vertical-align: midd
 /* the logo column of the Institutions and Venues lists */
 td.logo-col, th.logo-col { text-align: center ; vertical-align: middle ; width: 4em ; padding: 0.15em 0.4em ; }
 td.logo-col img.mini { height: 1.8em ; max-width: 3.6em ; margin: 0 ; }
+
+/* ---------------------------------------------------------------- collaboration graphs (backend/graph.py) */
+.graph { margin: 1em 0 ; }
+svg.net { width: 100% ; height: auto ; display: block ; max-width: 1000px ; }
+svg.net .edge { stroke: var(--axis) ; stroke-linecap: round ; transition: opacity .15s ; }
+svg.net .ew { font-size: 13px ; font-weight: 700 ; fill: var(--chart-value) ; paint-order: stroke ; stroke: var(--bg) ; stroke-width: 4px ; pointer-events: none ; }
+svg.net .node circle { stroke: var(--bg) ; stroke-width: 2px ; }
+svg.net .node text { font-size: 14px ; fill: var(--fg) ; paint-order: stroke ; stroke: var(--bg) ; stroke-width: 4px ; stroke-linejoin: round ; }
+svg.net .node { cursor: pointer ; transition: opacity .15s ; }
+svg.net a.node:not([href]) { cursor: default ; }
+svg.net.focus .edge:not(.hl), svg.net.focus .ew:not(.hl), svg.net.focus .node:not(.hl) { opacity: 0.12 ; }
+svg.net.focus .edge.hl { stroke: var(--chart-value) ; }
+.c1 circle, .dot.c1 { fill: #2a78d6 ; background: #2a78d6 ; }
+.c2 circle, .dot.c2 { fill: #eb6834 ; background: #eb6834 ; }
+.c3 circle, .dot.c3 { fill: #1baf7a ; background: #1baf7a ; }
+.c4 circle, .dot.c4 { fill: #eda100 ; background: #eda100 ; }
+.c0 circle, .dot.c0 { fill: #9a9890 ; background: #9a9890 ; }
+.graph-legend { list-style: none ; padding: 0 ; display: flex ; flex-wrap: wrap ; gap: 6px 18px ; font-size: 0.9em ; }
+.graph-legend li { display: inline-flex ; align-items: center ; gap: 6px ; }
+.graph-legend .dot { display: inline-block ; width: 12px ; height: 12px ; border-radius: 50% ; }
+.graph-legend .line-key { display: inline-block ; width: 22px ; height: 4px ; border-radius: 2px ; background: var(--axis) ; }
