@@ -22,6 +22,7 @@
 	{{- $label := cond (and $vi .name_vi) .name_vi .name }}
 	<a {{ with .url }}href="{{ . | relLangURL }}"{{ end }} class="node {{ .color }}" data-id="{{ .id }}">
 		<circle cx="{{ .x }}" cy="{{ .y }}" r="{{ .r }}"/>
+		<text class="deg" x="{{ .x }}" y="{{ add .y 4 }}" text-anchor="middle">{{ .degree }}</text>
 		<text x="{{ .lx }}" y="{{ .ly }}" text-anchor="{{ .anchor }}">{{ $label }}</text>
 		<title>{{ $label }}{{ with .full }} ({{ . }}){{ end }}: {{ T "graph_papers" .papers }}, {{ T "graph_degree" .degree }}</title>
 	</a>

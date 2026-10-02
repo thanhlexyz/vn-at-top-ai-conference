@@ -405,6 +405,8 @@ svg.net .edge { stroke: var(--axis) ; stroke-linecap: round ; transition: opacit
 svg.net .ew { font-size: 13px ; font-weight: 700 ; fill: var(--chart-value) ; paint-order: stroke ; stroke: var(--bg) ; stroke-width: 4px ; pointer-events: none ; }
 svg.net .node circle { stroke: var(--bg) ; stroke-width: 2px ; }
 svg.net .node text { font-size: 14px ; fill: var(--fg) ; paint-order: stroke ; stroke: var(--bg) ; stroke-width: 4px ; stroke-linejoin: round ; }
+svg.net .node text.deg { font-size: 12px ; font-weight: 700 ; fill: #ffffff ; stroke: none ; pointer-events: none ; }
+svg.net .node.c4 text.deg, svg.net .node.c0 text.deg { fill: #1d1d1f ; }
 svg.net .node { cursor: pointer ; transition: opacity .15s ; }
 svg.net a.node:not([href]) { cursor: default ; }
 svg.net.focus .edge:not(.hl), svg.net.focus .ew:not(.hl), svg.net.focus .node:not(.hl) { opacity: 0.12 ; }

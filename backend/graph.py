@@ -108,8 +108,8 @@ def layout(nodes, edges, labels):
     shift_y = 40 - min(ys)
     out = {i: [p[0] + shift_x, p[1] + shift_y] for i, p in pos.items()}
     top = max(p[1] for p in out.values()) + 70
-    # small groups: columns of nodes 34 px apart, laid out in cells across the width
-    cell_w, step = 250, 34
+    # small groups: columns of nodes 46 px apart, laid out in cells across the width
+    cell_w, step = 250, 46
     cols = max(1, W // cell_w)
     row_y, col, row_h = top, 0, 0
     for g in rest:
@@ -198,7 +198,7 @@ def build(nodes, papers_of, color_of, legend):
             continue
         x, y = pos.get(i, (None, None))
         out_nodes.append({**n, "id": i, "papers": count[i], "x": x, "y": y, "linked": i in linked,
-                          "r": round(5 + 2.2 * math.sqrt(count[i]), 1), "color": color_of(n),
+                          "r": round(9 + 1.8 * math.sqrt(count[i]), 1), "color": color_of(n),
                           "degree": sum(1 for e in edges if i in e)})
     radius = {n["id"]: n["r"] for n in out_nodes if n["linked"]}
     spots = place_labels(list(radius), pos, radius, list(edges), {i: nodes[i]["name"] for i in radius}, edges)
