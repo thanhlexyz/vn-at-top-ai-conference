@@ -252,8 +252,27 @@ class Counting(unittest.TestCase):
         recs, source, _, stale = build.person_records(self.person, self.acc, {}, decisions or {}, queue,
                                                       self.warnings, skipped)
         self.assertEqual((source, stale), ("openreview", False))
-        counted, excluded = build.apply_rules(self.person, recs)
+        counted, excluded, _ = build.apply_rules(self.person, recs)
         return counted, excluded, queue, skipped
+
+    def test_workshop_papers_listed_not_counted(self):
+        wid = "ICLR.cc/2025/Workshop/ICBINB"
+        notes = [{"forum": "w1", "title": "Accepted at ICLR", "venue": "ICBINB 2025 Poster", "venueid": wid,
+                  "invitations": [f"{wid}/-/Submission"], "authors": ["A B", "C D"], "decision": ""},
+                 {"forum": "acc1", "title": "Accepted at ICLR", "venue": "ICLR 2025 Poster",
+                  "venueid": "ICLR.cc/2025/Conference", "invitations": ["ICLR.cc/2025/Conference/-/Submission"],
+                  "authors": ["A B", "C D"], "decision": ""}]
+        (self.raw / "a-b.json").write_text(json.dumps({"notes": notes, "queried_ids": ["~A_B1"],
+                                                       "fetched_at": "2026-10-01T00:00:00"}))
+        recs, *_ = build.person_records(self.person, self.acc, {}, {}, [], [], [])
+        counted, excluded, workshop = build.apply_rules(self.person, recs)
+        # the workshop version is listed on its own; the conference version with the same title still counts
+        iclr = [r for r in counted if r["venue"] == "iclr"]
+        self.assertEqual([(r["title"], r["track"]) for r in iclr], [("Accepted at ICLR", "main")])
+        self.assertFalse(any(r["track"] == "workshop" for r in counted))
+        self.assertEqual([(w["title"], w["workshop"], w["status"]) for w in workshop],
+                         [("Accepted at ICLR", "ICBINB", "accepted")])
+        self.assertFalse(any(r["track"] == "workshop" for r in excluded))
 
     def test_rules(self):
         def note(forum, title, year, venue="", venueid="", decision=""):
@@ -328,7 +347,7 @@ class Counting(unittest.TestCase):
         ]
         queue, warnings, skipped = [], [], []
         recs, _, _, _ = build.person_records(self.person, self.acc, {}, {}, queue, warnings, skipped, rows)
-        counted, excluded = build.apply_rules(self.person, recs)
+        counted, excluded, _ = build.apply_rules(self.person, recs)
         got = {r["title"]: bool(r.get("unofficial")) for r in counted}
         self.assertEqual(got["Announced last week"], True)
         self.assertEqual(got["With a colleague"], True)

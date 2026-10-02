@@ -34,7 +34,8 @@ CONTENT = FRONTEND / "content"
 REVIEW_FIELDS = ["decision", "professor", "venue", "year", "title", "matched_name", "affiliation", "reason", "url",
                  "note"]
 SELF_REPORTED = BACKEND / "self_reported.csv"  # hand-kept: what professors list on their own pages
-# Tracks that are left out on purpose and listed under "Not counted". Workshops are dropped silently.
+# Tracks that are left out on purpose and listed under "Not counted". Workshop papers have a list of their own
+# on the professor's page (workshop_papers), also never counted.
 TRACK_REASON = {"datasets_benchmarks": "Datasets & Benchmarks track", "position": "position-paper track",
                 "findings": "Findings track", "journal": "journal track", "blog": "blog-post track",
                 "tiny_papers": "Tiny Papers track"}
@@ -194,6 +195,15 @@ def same_title(a, b):
     return a == b or difflib.SequenceMatcher(None, a, b).ratio() >= 0.9
 
 
+def workshop_name(n):
+    """Short name of the workshop of an OpenReview note, from its group ID ('ICLR.cc/2025/Workshop/ICBINB')."""
+    for s in [n.get("venueid") or "", *(n.get("invitations") or [])]:
+        m = re.search(r"/Workshop/([^/]+)", s)
+        if m:
+            return m.group(1).replace("_", " ")
+    return (n.get("venue") or "").strip()
+
+
 def same_paper(a, b):
     """same_title, or the same name before the colon ('UniCon: ...'), which a retitled paper keeps."""
     short_a, short_b = norm_title(a.partition(":")[0]), norm_title(b.partition(":")[0])
@@ -205,16 +215,26 @@ def person_records(person, acc, legacy, decisions, queue, warnings, skipped, own
     notes, source, fetched, stale, own_ids = load_openreview(person, legacy)
     recs = []
 
-    def existing(venue, year, title):
-        return next((r for r in recs if (r["venue"], r["year"]) == (venue, year) and same_title(r["title"], title)),
-                    None)
+    def existing(venue, year, title, workshop=False):
+        # a workshop version and a conference version of the same paper are two different records
+        return next((r for r in recs if (r["venue"], r["year"]) == (venue, year) and same_title(r["title"], title)
+                     and (r["track"] == "workshop") == workshop), None)
 
     def add_note(n, match, own_ids, borrowed=False):
         v = note_venue(n)
-        if v is None or v[1] not in YEARS or v[2] in ("workshop", "other"):
+        if v is None or v[1] not in YEARS or v[2] == "other":
             return
         venue, year, track = v
         status = classify_status(n.get("venue"), n.get("venueid"), n.get("invitations"), n.get("decision"))
+        if track == "workshop":   # listed for reference only: no official list to check, no outcome inferred
+            if existing(venue, year, n["title"], workshop=True):
+                return
+            recs.append({"venue": venue, "year": year, "track": track, "title": n["title"].strip(), "status": status,
+                         "note": "", "pres": "", "workshop": workshop_name(n),
+                         "url": f"https://openreview.net/forum?id={n['forum']}" if n.get("forum") else "",
+                         "authors": n.get("authors") or [], "match": match, "borrowed": borrowed,
+                         "people": [{"name": a, "aff": ""} for a in n.get("authors") or []], "self": None, "topic": ""})
+            return
         official = acc.official(venue, year, n["title"], n.get("forum", "")) if track == "main" else None
         note = ""
         if official:
@@ -363,9 +383,12 @@ def person_records(person, acc, legacy, decisions, queue, warnings, skipped, own
 
 
 def apply_rules(person, recs):
-    counted, excluded = [], []
+    """(counted, excluded, workshop): counted papers, papers listed as not counted, and workshop papers."""
+    counted, excluded, workshop = [], [], []
     for r in recs:
-        if r["track"] != "main":
+        if r["track"] == "workshop":
+            workshop.append(r)
+        elif r["track"] != "main":
             if r["track"] in TRACK_REASON:
                 excluded.append({**r, "reason": TRACK_REASON[r["track"]]})
         elif not in_vietnam(person, r["year"]):
@@ -374,7 +397,7 @@ def apply_rules(person, recs):
             excluded.append({**r, "reason": "outcome not known yet"})
         else:
             counted.append(r)
-    return counted, excluded
+    return counted, excluded, workshop
 
 
 def mark_later_acceptance(recs, acc):
@@ -549,7 +572,8 @@ def page_entry(r, people=None):
     e = {"year": r["year"], "venue": r["venue"], "venue_name": VENUE_NAME[r["venue"]], "title": r["title"],
          "url": r["url"], "status": r["status"], "status_label": STATUS_LABEL[r["status"]], "pres": r["pres"],
          "authors": ", ".join(r["authors"]), "match": r["match"], "note": r.get("note", ""),
-         "reason": r.get("reason", ""), "later": r.get("later", ""), "unofficial": bool(r.get("unofficial"))}
+         "reason": r.get("reason", ""), "later": r.get("later", ""), "unofficial": bool(r.get("unofficial")),
+         "workshop": r.get("workshop", "")}
     if people is not None:
         e["professors"] = people
     return e
@@ -933,7 +957,7 @@ def main():
                                                       own_pages.get(person["slug"], ()),
                                                       shared.get(person["slug"], ()))
         mark_later_acceptance(recs, acc)
-        counted, excluded = apply_rules(person, recs)
+        counted, excluded, workshop = apply_rules(person, recs)
         if not counted:
             hidden.append(person["name"])  # on the roster, but shown only once they have a counted submission
             continue
@@ -981,6 +1005,7 @@ def main():
             "not_accepted_papers": [page_entry(r) for r in sorted(counted, key=paper_order)
                                     if r["status"] != "accepted"],
             "excluded_papers": [page_entry(r) for r in sorted(excluded, key=paper_order)],
+            "workshop_papers": [page_entry(r) for r in sorted(workshop, key=paper_order)],
         })
         all_counted += [{**r, "_who": person} for r in counted]
     # most accepted first; people with none accepted yet come last, most submissions first

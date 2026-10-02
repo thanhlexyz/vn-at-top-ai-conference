@@ -274,11 +274,7 @@ other = "Các bài nộp không được chấp nhận."
 [not_main_track]
 other = "Không thuộc nhánh chính"
 [not_main_track_note]
-other = "Các bài thuộc Findings, Datasets & Benchmarks, nhánh tạp chí và các nhánh khác; những bài này không được tính trong thống kê."
-[workshop_papers]
-other = "Bài workshop ({{ . }})"
-[workshop_note]
-other = "Các bài ở workshop của ICLR, NeurIPS và ICML có trong hồ sơ OpenReview của người này, chỉ để tham khảo. Bài workshop không được tính ở bất kỳ đâu trên trang này."
+other = "Các bài thuộc workshop, Findings, Datasets & Benchmarks, nhánh tạp chí và các nhánh khác; những bài này không được tính trong thống kê."
 [before_vietnam]
 other = "Trước khi về công tác tại Việt Nam"
 [before_vietnam_note]

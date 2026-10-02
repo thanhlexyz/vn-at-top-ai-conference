@@ -189,4 +189,15 @@
 {{- end }}
 {{- end }}
 {{- end }}
+
+{{- /* workshop papers: for reference only, never counted */}}
+{{- with $p.workshop_papers }}
+<h2>{{ T "workshop_papers" (len .) }}</h2>
+<p class="note">{{ T "workshop_note" }}</p>
+{{- if site.Params.showNonAcceptedTitles }}
+{{ partial "paper-list.html" (dict "papers" .) }}
+{{- else }}
+{{ partial "paper-list.html" (dict "papers" (where . "status" "accepted")) }}
+{{- end }}
+{{- end }}
 {{- end }}

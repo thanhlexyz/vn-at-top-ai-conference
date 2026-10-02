@@ -3,7 +3,7 @@
 <ul class="papers">
 	{{- range .papers }}
 	<li>
-		<span class="tag {{ .status }}">{{ .venue_name }} {{ .year }}{{ if ne .status "accepted" }}, {{ T (printf "status_%s" .status) }}{{ end }}</span>
+		<span class="tag {{ .status }}">{{ .venue_name }} {{ .year }}{{ with .workshop }} · workshop {{ . }}{{ end }}{{ if ne .status "accepted" }}, {{ T (printf "status_%s" .status) }}{{ end }}</span>
 		{{- with .pres }}<span class="tag other">{{ . }}</span>{{ end }}
 		{{- if .unofficial }}<span class="tag own">{{ T "unofficial" }}</span>{{ end }}
 		{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}

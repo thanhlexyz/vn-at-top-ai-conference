@@ -279,11 +279,7 @@ other = "Submissions that were not accepted."
 [not_main_track]
 other = "Not main track"
 [not_main_track_note]
-other = "Findings, Datasets & Benchmarks, journal and other tracks, which the site does not count."
-[workshop_papers]
-other = "Workshop papers ({{ . }})"
-[workshop_note]
-other = "Papers at the workshops of ICLR, NeurIPS and ICML found in this person's OpenReview record, listed for reference only. Workshop papers are not counted anywhere on this site."
+other = "Workshops, Findings, Datasets & Benchmarks, journal and other tracks, which the site does not count."
 [before_vietnam]
 other = "Before joining a Vietnamese institution"
 [before_vietnam_note]
