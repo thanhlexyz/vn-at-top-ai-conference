@@ -944,6 +944,13 @@ def main():
                              "professors": [m["slug"] for m in members],
                              "iclr_complete": all(m["iclr_complete"] for m in members),
                              **summary(recs, acc)})
+    for i in institutions:
+        # the same estimate as for a professor, from the institution's own ICLR record, so a paper shared by two
+        # of its professors counts once: recorded ICLR rejections plus the hidden rejections behind its other papers
+        iclr = i["venues"]["iclr"]
+        ratio = (iclr["submitted"] + 1) / (iclr["accepted"] + 1)
+        elsewhere = i["accepted"] - iclr["accepted"]
+        i["rejected_estimated"] = round(iclr["not_accepted"] + elsewhere * (ratio - 1)) if i["accepted"] or iclr["submitted"] else None
     institutions.sort(key=lambda i: (-i["accepted"], i["name"]))
 
     def with_owners(r):
@@ -994,6 +1001,22 @@ def main():
     now = datetime.datetime.now(datetime.timezone.utc)  # UTC, so the data does not show where it was built
     write_json(DATA / "professors.json", professors)
     write_json(DATA / "institutions.json", institutions)
+    # rejections behind each venue's accepted papers: counted at ICLR; elsewhere estimated from the ICLR record
+    # of everyone listed, (ICLR submitted + 1) / (ICLR accepted + 1) submissions per accepted paper
+    pooled = next(v for v in venues if v["key"] == "iclr")["venues"]["iclr"]
+    ratio = (pooled["submitted"] + 1) / (pooled["accepted"] + 1)
+
+    def estimated(key, counts):
+        if key == "iclr":
+            return counts["not_accepted"]
+        return round(max(counts["not_accepted"], counts["accepted"] * (ratio - 1)))
+
+    for v in venues:
+        v["ratio"] = f"{ratio:.1f}"
+        v["rejected_estimated"] = estimated(v["key"], v["venues"][v["key"]])
+        for y in v["years"]:
+            if y["counts"]:
+                y["rejected_estimated"] = estimated(v["key"], y["venues"][v["key"]])
     write_json(DATA / "venues.json", venues)
     write_json(DATA / "papers.json", [with_owners(r) for r in sorted(papers, key=paper_order)])
     for r in papers:

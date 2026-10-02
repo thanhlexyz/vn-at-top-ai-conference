@@ -5,6 +5,7 @@
 	{{ len $i.professors }} {{ if eq (len $i.professors) 1 }}professor{{ else }}professors{{ end }} listed,
 	{{ $i.accepted }} accepted {{ if eq (int $i.accepted) 1 }}paper{{ else }}papers{{ end }} at the five venues{{ if gt (int $i.own_page) 0 }}, {{ $i.own_page }} of them known only from personal pages (unofficial){{ end }}.
 	ICLR: {{ $iclr.submitted }} submitted, {{ $iclr.accepted }} accepted, {{ $iclr.not_accepted }} rejected.
+	{{- with $i.rejected_estimated }} Counting the rejections hidden at the other venues, estimated from this ICLR record, about {{ . }} papers were rejected in all.{{ end }}
 	A paper with several professors of this institution is counted once.
 </p>
 {{- if not $i.iclr_complete }}

@@ -19,6 +19,9 @@
 	{{- end }}
 </p>
 
+{{- if ne $v.rejections "full" }}
+<p class="note">Rejected, estimated (orange): {{ $v.name }} does not publish its rejections, so they are estimated from the ICLR record of everyone listed, {{ $v.ratio }} submissions per accepted paper. It is an estimate, not a count.</p>
+{{- end }}
 <h2>By year</h2>
 <div class="scroll">
 <table>
@@ -28,6 +31,7 @@
 		{{- if eq $v.rejections "full" }}<th>Submitted</th>{{ end }}
 		<th class="good">Accepted</th>
 		{{- if ne $v.rejections "none" }}<th class="bad">Rejected{{ if eq $v.rejections "partial" }} (public){{ end }}</th>{{ end }}
+		{{- if ne $v.rejections "full" }}<th class="est" title="estimated from the ICLR record of everyone listed">Rejected, estimated</th>{{ end }}
 	</tr>
 	</thead>
 	<tbody>
@@ -36,11 +40,12 @@
 	<tr>
 		<td>{{ .year }}</td>
 		{{- if not $c.available }}
-		<td class="na l" colspan="3">not published yet</td>
+		<td class="na l" colspan="4">not published yet</td>
 		{{- else }}
 		{{- if eq $v.rejections "full" }}{{ partial "num.html" $c.submitted }}{{ end }}
 		{{ partial "acc.html" (merge $c (dict "cls" "good")) }}
 		{{- if ne $v.rejections "none" }}{{ partial "numc.html" (dict "v" $c.not_accepted "cls" "bad") }}{{ end }}
+		{{- if ne $v.rejections "full" }}{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "est") }}{{ end }}
 		{{- end }}
 	</tr>
 	{{- end }}
@@ -49,6 +54,7 @@
 		{{- if eq $v.rejections "full" }}<td>{{ $t.submitted }}</td>{{ end }}
 		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
 		{{- if ne $v.rejections "none" }}<td class="bad">{{ $t.not_accepted }}</td>{{ end }}
+		{{- if ne $v.rejections "full" }}<td class="est">{{ $v.rejected_estimated }}</td>{{ end }}
 	</tr>
 	</tbody>
 </table>

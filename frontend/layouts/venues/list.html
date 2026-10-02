@@ -9,6 +9,7 @@
 		<th>Submitted</th>
 		<th class="good">Accepted</th>
 		<th class="bad">Rejected</th>
+		<th class="est" title="counted at ICLR; estimated elsewhere from the ICLR record of everyone listed">Rejected, estimated</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -32,6 +33,7 @@
 		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
 		<td class="na bad">&ndash;</td>
 		{{- end }}
+		{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}
 	</tr>
 	{{- end }}
 	</tbody>
@@ -39,6 +41,7 @@
 </div>
 <p class="note">
 	Papers of the listed professors only. A paper with several listed professors is counted once.
+	Rejected, estimated (orange) is the count at ICLR; for the other venues it applies the ICLR record of everyone listed to their accepted papers. It is an estimate, not a count.
 	+N after a number means N more papers known only from personal pages, which are unofficial.
 </p>
 {{- end }}

@@ -127,7 +127,8 @@
     },
     "accepted": 0,
     "own_page": 0,
-    "official": 0
+    "official": 0,
+    "rejected_estimated": 0
    },
    {
     "year": 2021,
@@ -196,7 +197,8 @@
     },
     "accepted": 0,
     "own_page": 0,
-    "official": 0
+    "official": 0,
+    "rejected_estimated": 1
    },
    {
     "year": 2022,
@@ -265,7 +267,8 @@
     },
     "accepted": 1,
     "own_page": 0,
-    "official": 1
+    "official": 1,
+    "rejected_estimated": 5
    },
    {
     "year": 2023,
@@ -334,7 +337,8 @@
     },
     "accepted": 1,
     "own_page": 0,
-    "official": 1
+    "official": 1,
+    "rejected_estimated": 2
    },
    {
     "year": 2024,
@@ -403,7 +407,8 @@
     },
     "accepted": 1,
     "own_page": 0,
-    "official": 1
+    "official": 1,
+    "rejected_estimated": 10
    },
    {
     "year": 2025,
@@ -472,7 +477,8 @@
     },
     "accepted": 5,
     "own_page": 0,
-    "official": 5
+    "official": 5,
+    "rejected_estimated": 23
    },
    {
     "year": 2026,
@@ -541,7 +547,8 @@
     },
     "accepted": 5,
     "own_page": 0,
-    "official": 5
+    "official": 5,
+    "rejected_estimated": 28
    }
   ],
   "papers": [
@@ -2421,7 +2428,9 @@
      }
     ]
    }
-  ]
+  ],
+  "ratio": "5.9",
+  "rejected_estimated": 69
  },
  {
   "key": "neurips",
@@ -2551,7 +2560,8 @@
     },
     "accepted": 0,
     "own_page": 0,
-    "official": 0
+    "official": 0,
+    "rejected_estimated": 0
    },
    {
     "year": 2021,
@@ -2620,7 +2630,8 @@
     },
     "accepted": 1,
     "own_page": 0,
-    "official": 1
+    "official": 1,
+    "rejected_estimated": 5
    },
    {
     "year": 2022,
@@ -2689,7 +2700,8 @@
     },
     "accepted": 3,
     "own_page": 0,
-    "official": 3
+    "official": 3,
+    "rejected_estimated": 15
    },
    {
     "year": 2023,
@@ -2758,7 +2770,8 @@
     },
     "accepted": 3,
     "own_page": 0,
-    "official": 3
+    "official": 3,
+    "rejected_estimated": 15
    },
    {
     "year": 2024,
@@ -2827,7 +2840,8 @@
     },
     "accepted": 3,
     "own_page": 0,
-    "official": 3
+    "official": 3,
+    "rejected_estimated": 15
    },
    {
     "year": 2025,
@@ -2896,7 +2910,8 @@
     },
     "accepted": 13,
     "own_page": 0,
-    "official": 13
+    "official": 13,
+    "rejected_estimated": 64
    },
    {
     "year": 2026,
@@ -2965,7 +2980,8 @@
     },
     "accepted": 32,
     "own_page": 4,
-    "official": 28
+    "official": 28,
+    "rejected_estimated": 158
    }
   ],
   "papers": [
@@ -4319,7 +4335,9 @@
      }
     ]
    }
-  ]
+  ],
+  "ratio": "5.9",
+  "rejected_estimated": 271
  },
  {
   "key": "icml",
@@ -4449,7 +4467,8 @@
     },
     "accepted": 1,
     "own_page": 0,
-    "official": 1
+    "official": 1,
+    "rejected_estimated": 5
    },
    {
     "year": 2021,
@@ -4518,7 +4537,8 @@
     },
     "accepted": 0,
     "own_page": 0,
-    "official": 0
+    "official": 0,
+    "rejected_estimated": 0
    },
    {
     "year": 2022,
@@ -4587,7 +4607,8 @@
     },
     "accepted": 1,
     "own_page": 0,
-    "official": 1
+    "official": 1,
+    "rejected_estimated": 5
    },
    {
     "year": 2023,
@@ -4656,7 +4677,8 @@
     },
     "accepted": 0,
     "own_page": 0,
-    "official": 0
+    "official": 0,
+    "rejected_estimated": 0
    },
    {
     "year": 2024,
@@ -4725,7 +4747,8 @@
     },
     "accepted": 1,
     "own_page": 0,
-    "official": 1
+    "official": 1,
+    "rejected_estimated": 5
    },
    {
     "year": 2025,
@@ -4794,7 +4817,8 @@
     },
     "accepted": 5,
     "own_page": 0,
-    "official": 5
+    "official": 5,
+    "rejected_estimated": 25
    },
    {
     "year": 2026,
@@ -4863,7 +4887,8 @@
     },
     "accepted": 12,
     "own_page": 0,
-    "official": 12
+    "official": 12,
+    "rejected_estimated": 59
    }
   ],
   "papers": [
@@ -5327,7 +5352,9 @@
      }
     ]
    }
-  ]
+  ],
+  "ratio": "5.9",
+  "rejected_estimated": 99
  },
  {
   "key": "cvpr",
@@ -5457,7 +5484,8 @@
     },
     "accepted": 0,
     "own_page": 0,
-    "official": 0
+    "official": 0,
+    "rejected_estimated": 0
    },
    {
     "year": 2021,
@@ -5526,7 +5554,8 @@
     },
     "accepted": 2,
     "own_page": 0,
-    "official": 2
+    "official": 2,
+    "rejected_estimated": 10
    },
    {
     "year": 2022,
@@ -5595,7 +5624,8 @@
     },
     "accepted": 0,
     "own_page": 0,
-    "official": 0
+    "official": 0,
+    "rejected_estimated": 0
    },
    {
     "year": 2023,
@@ -5664,7 +5694,8 @@
     },
     "accepted": 1,
     "own_page": 0,
-    "official": 1
+    "official": 1,
+    "rejected_estimated": 5
    },
    {
     "year": 2024,
@@ -5733,7 +5764,8 @@
     },
     "accepted": 3,
     "own_page": 0,
-    "official": 3
+    "official": 3,
+    "rejected_estimated": 15
    },
    {
     "year": 2025,
@@ -5802,7 +5834,8 @@
     },
     "accepted": 2,
     "own_page": 0,
-    "official": 2
+    "official": 2,
+    "rejected_estimated": 10
    },
    {
     "year": 2026,
@@ -5871,7 +5904,8 @@
     },
     "accepted": 7,
     "own_page": 0,
-    "official": 7
+    "official": 7,
+    "rejected_estimated": 34
    }
   ],
   "papers": [
@@ -6345,7 +6379,9 @@
      }
     ]
    }
-  ]
+  ],
+  "ratio": "5.9",
+  "rejected_estimated": 74
  },
  {
   "key": "acl",
@@ -6475,7 +6511,8 @@
     },
     "accepted": 0,
     "own_page": 0,
-    "official": 0
+    "official": 0,
+    "rejected_estimated": 0
    },
    {
     "year": 2021,
@@ -6544,7 +6581,8 @@
     },
     "accepted": 0,
     "own_page": 0,
-    "official": 0
+    "official": 0,
+    "rejected_estimated": 0
    },
    {
     "year": 2022,
@@ -6613,7 +6651,8 @@
     },
     "accepted": 0,
     "own_page": 0,
-    "official": 0
+    "official": 0,
+    "rejected_estimated": 0
    },
    {
     "year": 2023,
@@ -6682,7 +6721,8 @@
     },
     "accepted": 0,
     "own_page": 0,
-    "official": 0
+    "official": 0,
+    "rejected_estimated": 0
    },
    {
     "year": 2024,
@@ -6751,7 +6791,8 @@
     },
     "accepted": 0,
     "own_page": 0,
-    "official": 0
+    "official": 0,
+    "rejected_estimated": 0
    },
    {
     "year": 2025,
@@ -6820,7 +6861,8 @@
     },
     "accepted": 1,
     "own_page": 0,
-    "official": 1
+    "official": 1,
+    "rejected_estimated": 5
    },
    {
     "year": 2026,
@@ -6889,7 +6931,8 @@
     },
     "accepted": 7,
     "own_page": 0,
-    "official": 7
+    "official": 7,
+    "rejected_estimated": 34
    }
   ],
   "papers": [
@@ -7077,6 +7120,8 @@
      }
     ]
    }
-  ]
+  ],
+  "ratio": "5.9",
+  "rejected_estimated": 39
  }
 ]
