@@ -4,6 +4,7 @@
 <table>
 	<thead>
 	<tr>
+		<th class="logo-col"></th>
 		<th class="l">{{ T "th_venue" }}</th>
 		<th class="l">{{ T "th_public" }}</th>
 		<th>{{ T "th_Submitted" }}</th>
@@ -16,7 +17,8 @@
 	{{- range hugo.Data.venues }}
 	{{- $t := index .venues .key }}
 	<tr>
-		<td class="l">{{ with .image }}<img class="mini" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}<a href="{{ printf "venues/%s/" .key | relLangURL }}">{{ .name }}</a></td>
+		<td class="logo-col">{{ with .image }}<img class="mini" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}</td>
+		<td class="l"><a href="{{ printf "venues/%s/" .key | relLangURL }}">{{ .name }}</a></td>
 		{{- if eq .rejections "full" }}
 		<td class="l">{{ T "venue_public_full" }}</td>
 		{{ partial "num.html" $t.submitted }}

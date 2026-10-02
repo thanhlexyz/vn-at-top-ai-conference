@@ -6,8 +6,6 @@
 <p>
 	{{ with $p.rank }}{{ . }}, {{ end }}<a href="{{ printf "institutions/%s/" $p.institution_slug | relLangURL }}">{{ $p.institution }}</a>
 	{{- if $p.vn_since }}. {{ T "prof_since" $p.vn_since }}{{ end }}.
-	{{- with $p.homepage }} <a href="{{ . }}">{{ T "prof_homepage" }}</a>{{ end }}
-	{{- range $p.openreview_ids }} <a href="https://openreview.net/profile?id={{ . }}">OpenReview {{ . }}</a>{{ end }}
 </p>
 {{- with $p.flags }}
 <ul class="flags">
@@ -23,6 +21,15 @@
 	{{ T "prof_iclr_summary" (dict "Submitted" $iclr.submitted "Accepted" $iclr.accepted "Rejected" $iclr.not_accepted "Reviewers" $iclr.rejected "Withdrawn" $iclr.withdrawn "Desk" $iclr.desk_rejected) }}
 	{{- end }}
 </p>
+
+{{- with $p.links }}
+<h2>{{ T "links" }}</h2>
+<ol class="links">
+	{{- range . }}
+	<li>{{ T (printf "link_%s" .kind) }}{{ with .label }} ({{ . }}){{ end }}: <a href="{{ .url }}">{{ replaceRE "^https?://(www\\.)?" "" .url | strings.TrimSuffix "/" }}</a></li>
+	{{- end }}
+</ol>
+{{- end }}
 
 <h2>{{ T "by_year" }}</h2>
 {{ partial "year-table.html" (dict "years" $p.years "venues" $p.venues "official" $p.official "own_page" $p.own_page "complete" $p.iclr_complete) }}

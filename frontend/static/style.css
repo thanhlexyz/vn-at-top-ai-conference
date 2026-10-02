@@ -393,3 +393,7 @@ figure.portrait img { width: 160px ; height: 160px ; object-fit: cover ; border-
 figure.logo img { max-width: 180px ; max-height: 120px ; width: auto ; }
 img.mini { height: 1.4em ; width: auto ; max-width: 3.5em ; vertical-align: middle ; margin-right: 0.5em ; object-fit: contain ; }
 @media (max-width: 600px) { figure.portrait img { width: 110px ; height: 110px ; } figure.logo img { max-width: 120px ; } }
+
+/* the logo column of the Institutions and Venues lists */
+td.logo-col, th.logo-col { text-align: center ; vertical-align: middle ; width: 4em ; padding: 0.15em 0.4em ; }
+td.logo-col img.mini { height: 1.8em ; max-width: 3.6em ; margin: 0 ; }

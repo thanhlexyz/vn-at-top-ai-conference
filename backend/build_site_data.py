@@ -859,6 +859,48 @@ def projection_svg(name, rows, lang="en"):
 
 # ---------------------------------------------------------------- outputs
 
+def person_links(person):
+    """Every public page known for a professor, one entry each: their homepage and other sites, staff and
+    publication pages from the roster, each OpenReview profile (merged usernames count as one profile), and
+    the DBLP and homepage links their OpenReview profiles give."""
+    links, seen = [], set()
+
+    def kind_of(url):
+        u = url.lower()
+        for pattern, kind in (("aclanthology.org", "acl"), ("dblp.org", "dblp"), ("scholar.google", "scholar"),
+                              ("researchgate.net", "researchgate"),
+                              ("openreview.net", "openreview"), ("publication", "publications")):
+            if pattern in u:
+                return kind
+        if re.search(r"github\.io|sites\.google|users\.soict|/~|wordpress\.com|\.me/?$|\.info/?$|\.xyz/?$|haxuanson|trongld|khoadoan", u):
+            return "homepage"
+        return "staff" if re.search(r"\.edu\.vn|vinuni|rmit\.edu|/people/|/staff|/giang-vien|soict\.hust|math\.ac\.vn", u) else "website"
+
+    def add(url, kind=None, label=""):
+        key = re.sub(r"^https?://(www\.)?|/+$", "", (url or "").strip().lower())
+        if not key or key in seen:
+            return
+        seen.add(key)
+        links.append({"kind": kind or kind_of(url), "url": url.strip(), "label": label})
+
+    add(person["homepage"], {"website": "homepage"}.get(kind_of(person["homepage"] or ""), None))
+    f = OPENREVIEW_RAW / f"{person['slug']}.json"
+    profiles = json.loads(f.read_text(encoding="utf-8")).get("profiles", []) if f.exists() else []
+    known = set()
+    for pr in profiles:
+        add(f"https://openreview.net/profile?id={pr['id']}", "openreview", pr["id"])
+        known |= set(pr.get("usernames", []))
+    for pid in person["openreview_ids"]:
+        if pid not in known:
+            add(f"https://openreview.net/profile?id={pid}", "openreview", pid)
+    for page in person["pages"]:
+        add(page)
+    for pr in profiles:
+        add(pr.get("homepage"), "homepage" if kind_of(pr.get("homepage") or "") == "website" else None)
+        add(pr.get("dblp"), "dblp")
+    return links
+
+
 def write_stubs(section, items):
     """One content file per page. Everything shown comes from data/, the stub only creates the URL.
 
@@ -932,6 +974,7 @@ def main():
             "institution_short": person["institution_short"], "institution_slug": inst_slug,
             "rank": person["rank"], "homepage": person["homepage"], "vn_since": person["vn_since"] or 0,
             "openreview_ids": person["openreview_ids"], "openreview_source": source, "openreview_fetched": fetched,
+            "links": person_links(person),
             "iclr_complete": complete, "flags": flags, **s, "collab": collaboration(person, counted), "authorship": authorship(counted, person),
             "accepted_papers": [page_entry(r) for r in sorted(counted, key=paper_order) if r["status"] == "accepted"],
             "not_accepted_papers": [page_entry(r) for r in sorted(counted, key=paper_order)
