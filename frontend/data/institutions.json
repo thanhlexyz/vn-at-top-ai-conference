@@ -72,22 +72,22 @@
      "year": 2026,
      "venues": {
       "iclr": 0,
-      "neurips": 4,
+      "neurips": 7,
       "icml": 4,
       "cvpr": 0,
       "acl": 0
      },
-     "total": 8
+     "total": 11
     }
    ],
    "venues": {
     "iclr": 0,
-    "neurips": 5,
+    "neurips": 8,
     "icml": 5,
     "cvpr": 0,
     "acl": 0
    },
-   "total": 10
+   "total": 13
   },
   "first_author": {
    "years": [
@@ -161,25 +161,25 @@
      "year": 2026,
      "venues": {
       "iclr": 0,
-      "neurips": 5,
+      "neurips": 7,
       "icml": 6,
       "cvpr": 0,
       "acl": 0
      },
-     "total": 11
+     "total": 13
     }
    ],
    "venues": {
     "iclr": 1,
-    "neurips": 7,
+    "neurips": 9,
     "icml": 10,
     "cvpr": 0,
     "acl": 0
    },
-   "total": 18
+   "total": 20
   },
-  "judged": 33,
-  "unknown": 14,
+  "judged": 37,
+  "unknown": 9,
   "slug": "hust",
   "name": "Hanoi University of Science and Technology",
   "short": "HUST",
@@ -192,9 +192,9 @@
    "huynh-thi-thanh-binh"
   ],
   "iclr_complete": true,
-  "accepted": 47,
-  "own_page": 5,
-  "official": 42,
+  "accepted": 46,
+  "own_page": 0,
+  "official": 46,
   "venues": {
    "iclr": {
     "accepted": 5,
@@ -207,14 +207,14 @@
     "official": 5
    },
    "neurips": {
-    "accepted": 20,
+    "accepted": 19,
     "rejected": 2,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 2,
-    "submitted": 22,
-    "own_page": 5,
-    "official": 15
+    "submitted": 21,
+    "own_page": 0,
+    "official": 19
    },
    "icml": {
     "accepted": 13,
@@ -679,14 +679,14 @@
       "provisional": false
      },
      "neurips": {
-      "accepted": 13,
+      "accepted": 12,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 13,
-      "own_page": 5,
-      "official": 8,
+      "submitted": 12,
+      "own_page": 0,
+      "official": 12,
       "available": true,
       "provisional": true
      },
@@ -727,9 +727,9 @@
       "provisional": false
      }
     },
-    "accepted": 30,
-    "own_page": 5,
-    "official": 25
+    "accepted": 29,
+    "own_page": 0,
+    "official": 29
    }
   ]
  },
@@ -913,7 +913,7 @@
    "total": 12
   },
   "judged": 26,
-  "unknown": 6,
+  "unknown": 5,
   "slug": "vinuni",
   "name": "VinUniversity",
   "short": "VinUni",
@@ -924,12 +924,11 @@
    "minh-do",
    "danh-le-phuoc",
    "hieu-pham",
-   "an-thai-le",
-   "ngoc-nam-pham"
+   "an-thai-le"
   ],
   "iclr_complete": true,
-  "accepted": 32,
-  "own_page": 4,
+  "accepted": 31,
+  "own_page": 3,
   "official": 28,
   "venues": {
    "iclr": {
@@ -943,13 +942,13 @@
     "official": 6
    },
    "neurips": {
-    "accepted": 18,
+    "accepted": 17,
     "rejected": 2,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 2,
-    "submitted": 20,
-    "own_page": 4,
+    "submitted": 19,
+    "own_page": 3,
     "official": 14
    },
    "icml": {
@@ -1415,13 +1414,13 @@
       "provisional": false
      },
      "neurips": {
-      "accepted": 12,
+      "accepted": 11,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 12,
-      "own_page": 4,
+      "submitted": 11,
+      "own_page": 3,
       "official": 8,
       "available": true,
       "provisional": true
@@ -1463,8 +1462,8 @@
       "provisional": false
      }
     },
-    "accepted": 20,
-    "own_page": 4,
+    "accepted": 19,
+    "own_page": 3,
     "official": 16
    }
   ]
@@ -1631,25 +1630,25 @@
      "year": 2026,
      "venues": {
       "iclr": 0,
-      "neurips": 1,
+      "neurips": 0,
       "icml": 0,
       "cvpr": 0,
       "acl": 0
      },
-     "total": 1
+     "total": 0
     }
    ],
    "venues": {
     "iclr": 0,
-    "neurips": 1,
+    "neurips": 0,
     "icml": 0,
     "cvpr": 0,
     "acl": 0
    },
-   "total": 1
+   "total": 0
   },
-  "judged": 10,
-  "unknown": 2,
+  "judged": 9,
+  "unknown": 3,
   "slug": "ptit",
   "name": "Posts and Telecommunications Institute of Technology",
   "short": "PTIT",
@@ -1659,8 +1658,8 @@
   ],
   "iclr_complete": true,
   "accepted": 12,
-  "own_page": 0,
-  "official": 12,
+  "own_page": 1,
+  "official": 11,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -1679,8 +1678,8 @@
     "desk_rejected": 0,
     "not_accepted": 0,
     "submitted": 3,
-    "own_page": 0,
-    "official": 3
+    "own_page": 1,
+    "official": 2
    },
    "icml": {
     "accepted": 1,
@@ -2151,8 +2150,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 2,
-      "own_page": 0,
-      "official": 2,
+      "own_page": 1,
+      "official": 1,
       "available": true,
       "provisional": true
      },
@@ -2194,8 +2193,8 @@
      }
     },
     "accepted": 5,
-    "own_page": 0,
-    "official": 5
+    "own_page": 1,
+    "official": 4
    }
   ]
  },
@@ -2378,8 +2377,8 @@
    },
    "total": 1
   },
-  "judged": 2,
-  "unknown": 4,
+  "judged": 5,
+  "unknown": 1,
   "slug": "phenikaa",
   "name": "Phenikaa University",
   "short": "Phenikaa",
@@ -2389,8 +2388,8 @@
   ],
   "iclr_complete": true,
   "accepted": 6,
-  "own_page": 3,
-  "official": 3,
+  "own_page": 0,
+  "official": 6,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -2409,8 +2408,8 @@
     "desk_rejected": 0,
     "not_accepted": 0,
     "submitted": 4,
-    "own_page": 3,
-    "official": 1
+    "own_page": 0,
+    "official": 4
    },
    "icml": {
     "accepted": 1,
@@ -2881,8 +2880,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 3,
-      "own_page": 3,
-      "official": 0,
+      "own_page": 0,
+      "official": 3,
       "available": true,
       "provisional": true
      },
@@ -2924,8 +2923,8 @@
      }
     },
     "accepted": 5,
-    "own_page": 3,
-    "official": 2
+    "own_page": 0,
+    "official": 5
    }
   ]
  },

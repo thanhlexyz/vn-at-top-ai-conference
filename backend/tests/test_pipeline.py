@@ -117,6 +117,9 @@ class Sources(unittest.TestCase):
         paper = {"name": "P", "authors": [{"fullname": "X"}]}
         self.assertTrue(fetch_accepted.is_provisional(json.dumps({"results": [paper]})))
         self.assertFalse(fetch_accepted.is_provisional(json.dumps({"results": [dict(paper, starttime="2025-12-03")]})))
+        # a schedule for a few sessions only: the list is still being filled
+        partly = [dict(paper, starttime="2026-12-03")] + [paper] * 9
+        self.assertTrue(fetch_accepted.is_provisional(json.dumps({"results": partly})))
 
     def test_virtual_site_listing(self):
         src = "https://openreview.net/group?id=NeurIPS.cc/2025/"

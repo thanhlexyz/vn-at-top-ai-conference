@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-01 12:07 UTC",
- "generated_date": "2026-10-01",
+ "generated": "2026-10-02 03:41 UTC",
+ "generated_date": "2026-10-02",
  "first_year": 2020,
  "last_year": 2026,
  "years": [
@@ -421,15 +421,16 @@
   {
    "venue": "neurips",
    "year": 2026,
-   "papers": 5403,
+   "papers": 5513,
    "sources": [
     "neurips.cc"
    ],
    "with_affiliation": 98,
    "other_tracks": {
-    "datasets_benchmarks": 658,
-    "position": 113,
-    "journal": 68
+    "datasets_benchmarks": 715,
+    "journal": 70,
+    "position": 67,
+    "other": 15
    },
    "provisional": true
   },
@@ -470,11 +471,11 @@
    "provisional": false
   }
  ],
- "professors": 26,
- "papers": 163,
- "accepted": 105,
+ "professors": 25,
+ "papers": 161,
+ "accepted": 103,
  "preliminary": true,
- "pending_review": 1,
+ "pending_review": 2,
  "provisional": [
   {
    "venue": "neurips",

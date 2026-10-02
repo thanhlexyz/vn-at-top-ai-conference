@@ -112,7 +112,7 @@
 {{- else }}
 <ul>
 	<li>
-		{{ $c.avg_coauthors }} co-authors per paper on average, accepted or not (fewest {{ $c.min_coauthors }}, most {{ $c.max_coauthors }}), {{ $c.distinct_coauthors }} different co-authors over {{ $c.papers }} {{ if eq (int $c.papers) 1 }}paper{{ else }}papers{{ end }}.
+		{{ $c.avg_coauthors }} co-authors per paper on average, accepted or not (fewest on an accepted paper {{ $c.min_coauthors }}, most on any submission {{ $c.max_coauthors }}), {{ $c.distinct_coauthors }} different co-authors over {{ $c.papers }} {{ if eq (int $c.papers) 1 }}paper{{ else }}papers{{ end }}.
 	</li>
 	{{- if $c.papers_with_affiliations }}
 	<li>

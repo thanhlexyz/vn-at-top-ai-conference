@@ -15,7 +15,7 @@ title: "About"
 These figures are taken over all of a professor's counted papers, accepted or not. Papers that were not accepted come from OpenReview, which gives author names but no affiliations, so they enter the first figure only.
 
 - **Co-authors per paper:** the average number of other authors on a paper.
-- **Min and max:** the fewest and the most co-authors on a single paper. A minimum of 0 means a paper written alone.
+- **Min and max:** the fewest co-authors on a single accepted paper, and the most co-authors on a single paper, accepted or not. A minimum of 0 means a paper written alone.
 - **Foreign co-authors per paper:** the average number of other authors whose affiliation on the paper names no Vietnamese institution. An author who lists both a Vietnamese and a foreign institution is not foreign.
 - **Co-authors at other institutions:** the number of different co-authors whose affiliation on the paper is not the professor's own institution, in Vietnam or abroad.
 - **Topic areas:** the number of different top-level areas among the topic labels the conference gave the papers, for example "Deep Learning" or "Reinforcement Learning".

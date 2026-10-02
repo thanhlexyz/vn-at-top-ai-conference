@@ -12,15 +12,14 @@
    "~Khoa_Doan1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
-   "1 outcome(s) inferred because OpenReview had no decision on record.",
-   "1 accepted paper(s) are taken from personal pages and are not in an official list yet. They are unofficial until the conference publishes them."
+   "1 outcome(s) inferred because OpenReview had no decision on record."
   ],
   "accepted": 16,
-  "own_page": 1,
-  "official": 15,
+  "own_page": 0,
+  "official": 16,
   "venues": {
    "iclr": {
     "accepted": 3,
@@ -39,8 +38,8 @@
     "desk_rejected": 0,
     "not_accepted": 2,
     "submitted": 11,
-    "own_page": 1,
-    "official": 8
+    "own_page": 0,
+    "official": 9
    },
    "icml": {
     "accepted": 3,
@@ -511,8 +510,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 4,
-      "own_page": 1,
-      "official": 3,
+      "own_page": 0,
+      "official": 4,
       "available": true,
       "provisional": true
      },
@@ -554,22 +553,22 @@
      }
     },
     "accepted": 8,
-    "own_page": 1,
-    "official": 7
+    "own_page": 0,
+    "official": 8
    }
   ],
   "collab": {
    "papers": 30,
    "avg_coauthors": "5.6",
-   "distinct_coauthors": 99,
+   "distinct_coauthors": 98,
    "min_coauthors": 2,
    "max_coauthors": 22,
-   "papers_with_affiliations": 14,
-   "avg_foreign": "3.9",
-   "avg_same_institution": "1.6",
-   "avg_other_vietnam": "1.0",
-   "elsewhere": 55,
-   "elsewhere_abroad": 42,
+   "papers_with_affiliations": 15,
+   "avg_foreign": "4.0",
+   "avg_same_institution": "1.7",
+   "avg_other_vietnam": "0.9",
+   "elsewhere": 57,
+   "elsewhere_abroad": 44,
    "elsewhere_vietnam": 13,
    "papers_with_topic": 8,
    "topic_areas": 3,
@@ -787,25 +786,25 @@
       "year": 2026,
       "venues": {
        "iclr": 0,
-       "neurips": 3,
+       "neurips": 4,
        "icml": 1,
        "cvpr": 0,
        "acl": 0
       },
-      "total": 4
+      "total": 5
      }
     ],
     "venues": {
      "iclr": 2,
-     "neurips": 6,
+     "neurips": 7,
      "icml": 1,
      "cvpr": 0,
      "acl": 0
     },
-    "total": 9
+    "total": 10
    },
-   "judged": 14,
-   "unknown": 2
+   "judged": 15,
+   "unknown": 1
   },
   "accepted_papers": [
    {
@@ -845,16 +844,16 @@
     "venue": "neurips",
     "venue_name": "NeurIPS",
     "title": "On the Primacy Bias in RLVR Training",
-    "url": "https://mail-research.com/publications/",
+    "url": "https://openreview.net/forum?id=iYqWuTaHph",
     "status": "accepted",
     "status_label": "accepted",
     "pres": "",
-    "authors": "Khoa D. Doan, Phuc M Nguyen, Ngoc-Hieu Nguyen, Parshin Shojaee, Chinh D La, Duy MH Nguyen, Rui Zhang, Ting Hua, Nitesh V Chawla",
-    "match": "listed on their own page; not in the official list yet",
+    "authors": "Nguyen Phuc, Ngoc-Hieu Nguyen, Parshin Shojaee, Chinh D La, Duy M. H. Nguyen, Rui Zhang, Khoa D Doan, Ting Hua, Nitesh Chawla",
+    "match": "name, and listed on their own page",
     "note": "",
     "reason": "",
     "later": "",
-    "unofficial": true
+    "unofficial": false
    },
    {
     "year": 2026,
@@ -865,7 +864,7 @@
     "status": "accepted",
     "status_label": "accepted",
     "pres": "",
-    "authors": "Thinh T Nguyen, Sze Jue Yang, Khoa D Doan, Chee Seng Chan, Kok-Seng Wong",
+    "authors": "Thinh Nguyen, Sze Jue Yang, Khoa D Doan, Chee Seng Chan, Kok-Seng Wong",
     "match": "name, and listed on their own page",
     "note": "",
     "reason": "",
@@ -1416,14 +1415,14 @@
    "~Ngo_Van_Linh1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
    "Still to confirm: OpenReview IDs: two usernames found by a name search."
   ],
-  "accepted": 15,
+  "accepted": 14,
   "own_page": 0,
-  "official": 15,
+  "official": 14,
   "venues": {
    "iclr": {
     "accepted": 1,
@@ -1436,14 +1435,14 @@
     "official": 1
    },
    "neurips": {
-    "accepted": 4,
+    "accepted": 3,
     "rejected": 0,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 0,
-    "submitted": 4,
+    "submitted": 3,
     "own_page": 0,
-    "official": 4
+    "official": 3
    },
    "icml": {
     "accepted": 3,
@@ -1908,14 +1907,14 @@
       "provisional": false
      },
      "neurips": {
-      "accepted": 2,
+      "accepted": 1,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 2,
+      "submitted": 1,
       "own_page": 0,
-      "official": 2,
+      "official": 1,
       "available": true,
       "provisional": true
      },
@@ -1956,24 +1955,24 @@
       "provisional": false
      }
     },
-    "accepted": 12,
+    "accepted": 11,
     "own_page": 0,
-    "official": 12
+    "official": 11
    }
   ],
   "collab": {
-   "papers": 19,
+   "papers": 18,
    "avg_coauthors": "5.5",
-   "distinct_coauthors": 52,
-   "min_coauthors": 3,
+   "distinct_coauthors": 51,
+   "min_coauthors": 4,
    "max_coauthors": 9,
-   "papers_with_affiliations": 8,
+   "papers_with_affiliations": 7,
    "avg_foreign": "3.1",
    "avg_same_institution": "1.1",
-   "avg_other_vietnam": "0.8",
-   "elsewhere": 21,
+   "avg_other_vietnam": "0.7",
+   "elsewhere": 20,
    "elsewhere_abroad": 15,
-   "elsewhere_vietnam": 6,
+   "elsewhere_vietnam": 5,
    "papers_with_topic": 6,
    "topic_areas": 4,
    "areas": [
@@ -2184,24 +2183,24 @@
       "year": 2026,
       "venues": {
        "iclr": 0,
-       "neurips": 1,
+       "neurips": 0,
        "icml": 3,
        "cvpr": 0,
        "acl": 0
       },
-      "total": 4
+      "total": 3
      }
     ],
     "venues": {
      "iclr": 0,
-     "neurips": 1,
+     "neurips": 0,
      "icml": 3,
      "cvpr": 0,
      "acl": 0
     },
-    "total": 4
+    "total": 3
    },
-   "judged": 8,
+   "judged": 7,
    "unknown": 7
   },
   "accepted_papers": [
@@ -2216,22 +2215,6 @@
     "pres": "",
     "authors": "Van-Anh Nguyen, Mehrtash Harandi, Thanh-Toan Do, Linh Ngo Van, Dinh Phung, Trung Le",
     "match": "OpenReview profile",
-    "note": "",
-    "reason": "",
-    "later": "",
-    "unofficial": false
-   },
-   {
-    "year": 2026,
-    "venue": "neurips",
-    "venue_name": "NeurIPS",
-    "title": "Conflict-Aware Logit Adapters for Utility-Preserving Anti-Distillation",
-    "url": "https://openreview.net/forum?id=Sc1RFFLbFC",
-    "status": "accepted",
-    "status_label": "accepted",
-    "pres": "",
-    "authors": "Quoc P Dao, Binh Anh Nguyen, Linh Ngo, Thanh-Toan Do, Mehrtash Harandi, Trung Le",
-    "match": "name and affiliation",
     "note": "",
     "reason": "",
     "later": "",
@@ -2535,10 +2518,10 @@
    "ratio": "3.0",
    "ratio_submitted": 5,
    "ratio_accepted": 1,
-   "accepted": 15,
-   "total": "47",
-   "estimated": "28",
-   "svg": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers submitted and accepted per year by Ngo Van Linh; the numbers are in the table below\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"140\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"158\" y=\"18\">Not accepted at ICLR</text><rect class=\"est\" x=\"310\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"328\" y=\"18\">Not accepted elsewhere, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M406.0,270.0 V264.4 Q406.0,264.4 406.0,264.4 H430.0 Q430.0,264.4 430.0,264.4 V270.0 Z\"><title>2024: 1 accepted</title></path><path class=\"est\" d=\"M406.0,262.4 V257.2 Q406.0,253.2 410.0,253.2 H426.0 Q430.0,253.2 430.0,257.2 V262.4 Z\"><title>2024: about 2 not accepted elsewhere (estimate)</title></path><text class=\"value\" x=\"418.0\" y=\"247.2\" text-anchor=\"middle\">about 3</text><text class=\"tick\" x=\"502.0\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M490.0,270.0 V258.8 Q490.0,258.8 490.0,258.8 H514.0 Q514.0,258.8 514.0,258.8 V270.0 Z\"><title>2025: 2 accepted</title></path><path class=\"not\" d=\"M490.0,256.8 V253.2 Q490.0,253.2 490.0,253.2 H514.0 Q514.0,253.2 514.0,253.2 V256.8 Z\"><title>2025: 1 not accepted at ICLR</title></path><path class=\"est\" d=\"M490.0,251.2 V234.8 Q490.0,230.8 494.0,230.8 H510.0 Q514.0,230.8 514.0,234.8 V251.2 Z\"><title>2025: about 4 not accepted elsewhere (estimate)</title></path><text class=\"value\" x=\"502.0\" y=\"224.8\" text-anchor=\"middle\">about 7</text><text class=\"tick\" x=\"586.0\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M574.0,270.0 V202.8 Q574.0,202.8 574.0,202.8 H598.0 Q598.0,202.8 598.0,202.8 V270.0 Z\"><title>2026: 12 accepted</title></path><path class=\"not\" d=\"M574.0,200.8 V186.0 Q574.0,186.0 574.0,186.0 H598.0 Q598.0,186.0 598.0,186.0 V200.8 Z\"><title>2026: 3 not accepted at ICLR</title></path><path class=\"est\" d=\"M574.0,184.0 V66.8 Q574.0,62.8 578.0,62.8 H594.0 Q598.0,62.8 598.0,66.8 V184.0 Z\"><title>2026: about 22 not accepted elsewhere (estimate)</title></path><text class=\"value\" x=\"586.0\" y=\"56.8\" text-anchor=\"middle\">about 37</text></svg>",
+   "accepted": 14,
+   "total": "44",
+   "estimated": "26",
+   "svg": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers submitted and accepted per year by Ngo Van Linh; the numbers are in the table below\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"140\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"158\" y=\"18\">Not accepted at ICLR</text><rect class=\"est\" x=\"310\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"328\" y=\"18\">Not accepted elsewhere, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M406.0,270.0 V264.4 Q406.0,264.4 406.0,264.4 H430.0 Q430.0,264.4 430.0,264.4 V270.0 Z\"><title>2024: 1 accepted</title></path><path class=\"est\" d=\"M406.0,262.4 V257.2 Q406.0,253.2 410.0,253.2 H426.0 Q430.0,253.2 430.0,257.2 V262.4 Z\"><title>2024: about 2 not accepted elsewhere (estimate)</title></path><text class=\"value\" x=\"418.0\" y=\"247.2\" text-anchor=\"middle\">about 3</text><text class=\"tick\" x=\"502.0\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M490.0,270.0 V258.8 Q490.0,258.8 490.0,258.8 H514.0 Q514.0,258.8 514.0,258.8 V270.0 Z\"><title>2025: 2 accepted</title></path><path class=\"not\" d=\"M490.0,256.8 V253.2 Q490.0,253.2 490.0,253.2 H514.0 Q514.0,253.2 514.0,253.2 V256.8 Z\"><title>2025: 1 not accepted at ICLR</title></path><path class=\"est\" d=\"M490.0,251.2 V234.8 Q490.0,230.8 494.0,230.8 H510.0 Q514.0,230.8 514.0,234.8 V251.2 Z\"><title>2025: about 4 not accepted elsewhere (estimate)</title></path><text class=\"value\" x=\"502.0\" y=\"224.8\" text-anchor=\"middle\">about 7</text><text class=\"tick\" x=\"586.0\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M574.0,270.0 V208.4 Q574.0,208.4 574.0,208.4 H598.0 Q598.0,208.4 598.0,208.4 V270.0 Z\"><title>2026: 11 accepted</title></path><path class=\"not\" d=\"M574.0,206.4 V191.6 Q574.0,191.6 574.0,191.6 H598.0 Q598.0,191.6 598.0,191.6 V206.4 Z\"><title>2026: 3 not accepted at ICLR</title></path><path class=\"est\" d=\"M574.0,189.6 V83.6 Q574.0,79.6 578.0,79.6 H594.0 Q598.0,79.6 598.0,83.6 V189.6 Z\"><title>2026: about 20 not accepted elsewhere (estimate)</title></path><text class=\"value\" x=\"586.0\" y=\"73.6\" text-anchor=\"middle\">about 34</text></svg>",
    "rows": [
     {
      "year": 2020,
@@ -2591,10 +2574,10 @@
     {
      "year": 2026,
      "counts": true,
-     "accepted": 12,
+     "accepted": 11,
      "iclr_not_accepted": 3,
-     "estimated": "22",
-     "total": "37"
+     "estimated": "20",
+     "total": "34"
     }
    ]
   }
@@ -2612,15 +2595,16 @@
    "~Cuong_Pham1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
    "Still to confirm: rank and start year: from the OpenReview profile only; not checked against a staff page.",
-   "1 outcome(s) inferred because OpenReview had no decision on record."
+   "1 outcome(s) inferred because OpenReview had no decision on record.",
+   "1 accepted paper(s) are taken from personal pages and are not in an official list yet. They are unofficial until the conference publishes them."
   ],
   "accepted": 12,
-  "own_page": 0,
-  "official": 12,
+  "own_page": 1,
+  "official": 11,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -2639,8 +2623,8 @@
     "desk_rejected": 0,
     "not_accepted": 0,
     "submitted": 3,
-    "own_page": 0,
-    "official": 3
+    "own_page": 1,
+    "official": 2
    },
    "icml": {
     "accepted": 1,
@@ -3111,8 +3095,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 2,
-      "own_page": 0,
-      "official": 2,
+      "own_page": 1,
+      "official": 1,
       "available": true,
       "provisional": true
      },
@@ -3154,23 +3138,23 @@
      }
     },
     "accepted": 5,
-    "own_page": 0,
-    "official": 5
+    "own_page": 1,
+    "official": 4
    }
   ],
   "collab": {
    "papers": 15,
    "avg_coauthors": "4.5",
-   "distinct_coauthors": 36,
-   "min_coauthors": 2,
+   "distinct_coauthors": 37,
+   "min_coauthors": 3,
    "max_coauthors": 7,
-   "papers_with_affiliations": 10,
+   "papers_with_affiliations": 9,
    "avg_foreign": "2.0",
-   "avg_same_institution": "0.3",
-   "avg_other_vietnam": "2.1",
-   "elsewhere": 26,
+   "avg_same_institution": "0.1",
+   "avg_other_vietnam": "2.2",
+   "elsewhere": 25,
    "elsewhere_abroad": 14,
-   "elsewhere_vietnam": 12,
+   "elsewhere_vietnam": 11,
    "papers_with_topic": 1,
    "topic_areas": 1,
    "areas": [
@@ -3349,25 +3333,25 @@
       "year": 2026,
       "venues": {
        "iclr": 0,
-       "neurips": 1,
+       "neurips": 0,
        "icml": 0,
        "cvpr": 0,
        "acl": 0
       },
-      "total": 1
+      "total": 0
      }
     ],
     "venues": {
      "iclr": 0,
-     "neurips": 1,
+     "neurips": 0,
      "icml": 0,
      "cvpr": 0,
      "acl": 0
     },
-    "total": 1
+    "total": 0
    },
-   "judged": 10,
-   "unknown": 2
+   "judged": 9,
+   "unknown": 3
   },
   "accepted_papers": [
    {
@@ -3375,16 +3359,16 @@
     "venue": "neurips",
     "venue_name": "NeurIPS",
     "title": "ControlJEPA: Principled Trajectory Regularization via Lyapunov Tube Loss",
-    "url": "https://openreview.net/forum?id=pw4nMbt6SR",
+    "url": "",
     "status": "accepted",
     "status_label": "accepted",
     "pres": "",
-    "authors": "Khanh T Nguyen, Yen N Pham, Uyen N.B. Vo, Thieu Vo, Cuong Pham, Tan Nguyen",
-    "match": "name, and listed on their own page",
+    "authors": "Cuong Pham, Thai Khanh Nguyen, Yen Nhi Pham, Vo Ngoc Bich Uyen, Thieu Vo, Tan Minh Nguyen",
+    "match": "listed on an announcement of the Faculty of Information Technology 1, PTIT (backend/unofficial_news.txt); not in the official list yet",
     "note": "",
     "reason": "",
     "later": "",
-    "unofficial": false
+    "unofficial": true
    },
    {
     "year": 2026,
@@ -3696,14 +3680,12 @@
    "~Tuan_Quang_Dam1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
-  "flags": [
-   "2 accepted paper(s) are taken from personal pages and are not in an official list yet. They are unofficial until the conference publishes them."
-  ],
+  "flags": [],
   "accepted": 12,
-  "own_page": 2,
-  "official": 10,
+  "own_page": 0,
+  "official": 12,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -3722,8 +3704,8 @@
     "desk_rejected": 0,
     "not_accepted": 1,
     "submitted": 7,
-    "own_page": 2,
-    "official": 4
+    "own_page": 0,
+    "official": 6
    },
    "icml": {
     "accepted": 6,
@@ -4194,8 +4176,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 5,
-      "own_page": 2,
-      "official": 3,
+      "own_page": 0,
+      "official": 5,
       "available": true,
       "provisional": true
      },
@@ -4237,23 +4219,23 @@
      }
     },
     "accepted": 8,
-    "own_page": 2,
-    "official": 6
+    "own_page": 0,
+    "official": 8
    }
   ],
   "collab": {
    "papers": 15,
    "avg_coauthors": "2.3",
-   "distinct_coauthors": 24,
+   "distinct_coauthors": 25,
    "min_coauthors": 0,
    "max_coauthors": 5,
-   "papers_with_affiliations": 10,
-   "avg_foreign": "1.1",
-   "avg_same_institution": "0.8",
+   "papers_with_affiliations": 12,
+   "avg_foreign": "0.9",
+   "avg_same_institution": "1.2",
    "avg_other_vietnam": "0.2",
-   "elsewhere": 13,
+   "elsewhere": 14,
    "elsewhere_abroad": 11,
-   "elsewhere_vietnam": 2,
+   "elsewhere_vietnam": 3,
    "papers_with_topic": 4,
    "topic_areas": 2,
    "areas": [
@@ -4352,22 +4334,22 @@
       "year": 2026,
       "venues": {
        "iclr": 0,
-       "neurips": 3,
+       "neurips": 5,
        "icml": 2,
        "cvpr": 0,
        "acl": 0
       },
-      "total": 5
+      "total": 7
      }
     ],
     "venues": {
      "iclr": 0,
-     "neurips": 4,
+     "neurips": 6,
      "icml": 3,
      "cvpr": 0,
      "acl": 0
     },
-    "total": 7
+    "total": 9
    },
    "first_author": {
     "years": [
@@ -4441,25 +4423,25 @@
       "year": 2026,
       "venues": {
        "iclr": 0,
-       "neurips": 3,
+       "neurips": 5,
        "icml": 2,
        "cvpr": 0,
        "acl": 0
       },
-      "total": 5
+      "total": 7
      }
     ],
     "venues": {
      "iclr": 0,
-     "neurips": 4,
+     "neurips": 6,
      "icml": 5,
      "cvpr": 0,
      "acl": 0
     },
-    "total": 9
+    "total": 11
    },
-   "judged": 10,
-   "unknown": 2
+   "judged": 12,
+   "unknown": 0
   },
   "accepted_papers": [
    {
@@ -4498,33 +4480,33 @@
     "year": 2026,
     "venue": "neurips",
     "venue_name": "NeurIPS",
-    "title": "Graph-Based Stochastic Power-UCT: Monte-Carlo Graph Search with Power Mean Estimation",
-    "url": "https://sites.google.com/view/taduyhoang/publications",
+    "title": "Graph-Based Stochastic-Power-UCT: Monte-Carlo Graph Search with Power Mean Estimation",
+    "url": "https://openreview.net/forum?id=C61SqbC0JZ",
     "status": "accepted",
     "status_label": "accepted",
     "pres": "",
-    "authors": "Hoang Ta, Tung Tran, Mai Viet Bao, Tuan Quang Dam",
-    "match": "listed on the page of Hoang Ta, as co-author; not in the official list yet",
+    "authors": "Tung Tran, Viet Bao, Hoang Ta, Tuan Dam",
+    "match": "name and affiliation",
     "note": "",
     "reason": "",
     "later": "",
-    "unofficial": true
+    "unofficial": false
    },
    {
     "year": 2026,
     "venue": "neurips",
     "venue_name": "NeurIPS",
     "title": "Nearly Optimal Fixed-Confidence Best-Arm Identification with 1-Bit Feedback",
-    "url": "https://sites.google.com/view/taduyhoang/publications",
+    "url": "https://openreview.net/forum?id=6ZgRA8gi3F",
     "status": "accepted",
     "status_label": "accepted",
-    "pres": "",
-    "authors": "Hoang Ta, Khang Luong, Dinh Thai Son, Hung The Tran, Tuan Quang Dam",
-    "match": "listed on the page of Hoang Ta, as co-author; not in the official list yet",
+    "pres": "spotlight",
+    "authors": "Khang Luong, Thai Son Dinh, Hoang Ta, Hung TRAN, Tuan Dam",
+    "match": "name and affiliation",
     "note": "",
     "reason": "",
     "later": "",
-    "unofficial": true
+    "unofficial": false
    },
    {
     "year": 2026,
@@ -4805,15 +4787,14 @@
    "~Phi_Le_Nguyen2"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
-   "3 outcome(s) inferred because OpenReview had no decision on record.",
-   "2 accepted paper(s) are taken from personal pages and are not in an official list yet. They are unofficial until the conference publishes them."
+   "3 outcome(s) inferred because OpenReview had no decision on record."
   ],
   "accepted": 11,
-  "own_page": 2,
-  "official": 9,
+  "own_page": 0,
+  "official": 11,
   "venues": {
    "iclr": {
     "accepted": 1,
@@ -4832,8 +4813,8 @@
     "desk_rejected": 0,
     "not_accepted": 0,
     "submitted": 6,
-    "own_page": 2,
-    "official": 4
+    "own_page": 0,
+    "official": 6
    },
    "icml": {
     "accepted": 2,
@@ -5304,8 +5285,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 3,
-      "own_page": 2,
-      "official": 1,
+      "own_page": 0,
+      "official": 3,
       "available": true,
       "provisional": true
      },
@@ -5347,22 +5328,22 @@
      }
     },
     "accepted": 6,
-    "own_page": 2,
-    "official": 4
+    "own_page": 0,
+    "official": 6
    }
   ],
   "collab": {
    "papers": 22,
    "avg_coauthors": "5.5",
    "distinct_coauthors": 68,
-   "min_coauthors": 1,
+   "min_coauthors": 3,
    "max_coauthors": 13,
-   "papers_with_affiliations": 7,
-   "avg_foreign": "3.0",
-   "avg_same_institution": "0.7",
+   "papers_with_affiliations": 9,
+   "avg_foreign": "3.7",
+   "avg_same_institution": "0.6",
    "avg_other_vietnam": "0.3",
-   "elsewhere": 16,
-   "elsewhere_abroad": 14,
+   "elsewhere": 26,
+   "elsewhere_abroad": 24,
    "elsewhere_vietnam": 2,
    "papers_with_topic": 6,
    "topic_areas": 4,
@@ -5596,8 +5577,8 @@
     },
     "total": 4
    },
-   "judged": 7,
-   "unknown": 4
+   "judged": 9,
+   "unknown": 2
   },
   "accepted_papers": [
    {
@@ -5621,32 +5602,32 @@
     "venue": "neurips",
     "venue_name": "NeurIPS",
     "title": "MAGE: Towards Generalizable Multi-timescale EEG Representations",
-    "url": "",
+    "url": "https://openreview.net/forum?id=cBtjuprKBt",
     "status": "accepted",
     "status_label": "accepted",
     "pres": "",
-    "authors": "Phi Le Nguyen, Tuan-Kiet Doan, Van-Chien Nguyen, Trung-Hieu Tran, Quang Hung Pham, Ngoc-Son Vu, Huy Phan, Duc Han LE, Nikola Simidjievski, Van-Tam Nguyen",
-    "match": "listed on an unofficial list of NeurIPS 2026 acceptances (backend/unofficial_news.txt); not in the official list yet",
+    "authors": "Tuan-Kiet Doan, Van Chien Nguyen, Trung-Hieu Tran, Quang Hung Pham, Ngoc-Son Vu, Huy Phan, Phi Le Nguyen, Duc-Han LE, Nikola Simidjievski, Van-Tam Nguyen",
+    "match": "name, and listed on their own page",
     "note": "",
     "reason": "",
     "later": "",
-    "unofficial": true
+    "unofficial": false
    },
    {
     "year": 2026,
     "venue": "neurips",
     "venue_name": "NeurIPS",
     "title": "Nonparametric Distribution Matching for Self-Supervised Whole-Slide Image Condensation",
-    "url": "",
+    "url": "https://openreview.net/forum?id=Ml03ueObjM",
     "status": "accepted",
     "status_label": "accepted",
     "pres": "",
-    "authors": "Phi Le Nguyen, Duong M. Nguyen, Trong Nghia Hoang, Hang Thi Nguyen, Thanh Trung Huynh, Minh N. Do",
-    "match": "listed on an unofficial list of NeurIPS 2026 acceptances (backend/unofficial_news.txt); not in the official list yet",
+    "authors": "Duong Nguyen, Nghia Hoang, Hang T Nguyen, Thanh Trung Huynh, Phi Le Nguyen, Minh Do",
+    "match": "name, and listed on their own page",
     "note": "",
     "reason": "",
     "later": "",
-    "unofficial": true
+    "unofficial": false
    },
    {
     "year": 2026,
@@ -6057,16 +6038,16 @@
    "~Dung_Duy_Le1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
    "Still to confirm: OpenReview IDs: three usernames found by a name search.",
    "1 outcome(s) inferred because OpenReview had no decision on record.",
-   "2 accepted paper(s) are taken from personal pages and are not in an official list yet. They are unofficial until the conference publishes them."
+   "3 accepted paper(s) are taken from personal pages and are not in an official list yet. They are unofficial until the conference publishes them."
   ],
   "accepted": 8,
-  "own_page": 2,
-  "official": 6,
+  "own_page": 3,
+  "official": 5,
   "venues": {
    "iclr": {
     "accepted": 1,
@@ -6085,8 +6066,8 @@
     "desk_rejected": 0,
     "not_accepted": 0,
     "submitted": 4,
-    "own_page": 2,
-    "official": 2
+    "own_page": 3,
+    "official": 1
    },
    "icml": {
     "accepted": 2,
@@ -6557,8 +6538,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 3,
-      "own_page": 2,
-      "official": 1,
+      "own_page": 3,
+      "official": 0,
       "available": true,
       "provisional": true
      },
@@ -6600,23 +6581,23 @@
      }
     },
     "accepted": 5,
-    "own_page": 2,
-    "official": 3
+    "own_page": 3,
+    "official": 2
    }
   ],
   "collab": {
    "papers": 17,
    "avg_coauthors": "4.4",
-   "distinct_coauthors": 52,
+   "distinct_coauthors": 50,
    "min_coauthors": 2,
    "max_coauthors": 7,
-   "papers_with_affiliations": 5,
-   "avg_foreign": "2.4",
-   "avg_same_institution": "0.4",
-   "avg_other_vietnam": "2.4",
-   "elsewhere": 22,
-   "elsewhere_abroad": 11,
-   "elsewhere_vietnam": 11,
+   "papers_with_affiliations": 4,
+   "avg_foreign": "2.8",
+   "avg_same_institution": "0.2",
+   "avg_other_vietnam": "2.8",
+   "elsewhere": 20,
+   "elsewhere_abroad": 10,
+   "elsewhere_vietnam": 10,
    "papers_with_topic": 3,
    "topic_areas": 2,
    "areas": [
@@ -6821,8 +6802,8 @@
     },
     "total": 0
    },
-   "judged": 5,
-   "unknown": 3
+   "judged": 4,
+   "unknown": 4
   },
   "accepted_papers": [
    {
@@ -6862,16 +6843,16 @@
     "venue": "neurips",
     "venue_name": "NeurIPS",
     "title": "MulCLIP: A Multi-level Alignment Framework for Enhancing Fine-grained Long-context CLIP",
-    "url": "https://openreview.net/forum?id=qD0McGAhI2",
+    "url": "https://andrew-dungle.github.io/",
     "status": "accepted",
     "status_label": "accepted",
     "pres": "",
-    "authors": "Chau T Hoang, Hieu Ta, Zhenzhen Liu, Dung Le",
-    "match": "name, and listed on their own page",
+    "authors": "Dung D. Le, Chau Truong Vinh Hoang, Hieu Ta Quang, Zhenzhen Liu",
+    "match": "listed on their own page; not in the official list yet",
     "note": "",
     "reason": "",
     "later": "",
-    "unofficial": false
+    "unofficial": true
    },
    {
     "year": 2026,
@@ -7122,16 +7103,16 @@
     "venue": "neurips",
     "venue_name": "NeurIPS",
     "title": "HERO: A Heterogeneity-Aware Benchmark Library for Federated Continual Learning",
-    "url": "https://andrew-dungle.github.io/",
+    "url": "https://openreview.net/forum?id=UgjTgBmVgZ",
     "status": "accepted",
     "status_label": "accepted",
     "pres": "",
-    "authors": "Dung D. Le, Thinh Nguyen, Le-Tuan Nguyen, Minh-Duong Nguyen, Nhi Trinh, Anh Tran Nam Nguyet, Kok-Seng Wong",
-    "match": "listed on their own page; not in the official list yet",
+    "authors": "Thinh Nguyen, Le-Tuan Nguyen, Minh-Duong Nguyen, Nhi Trinh, Anh T Nguyet, Dung Le, Kok-Seng Wong",
+    "match": "name, and listed on their own page",
     "note": "",
     "reason": "Datasets & Benchmarks track",
     "later": "",
-    "unofficial": true
+    "unofficial": false
    },
    {
     "year": 2024,
@@ -7228,7 +7209,7 @@
    "~Khoat_Than1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [],
   "accepted": 8,
@@ -7775,7 +7756,7 @@
    "papers": 15,
    "avg_coauthors": "3.9",
    "distinct_coauthors": 44,
-   "min_coauthors": 1,
+   "min_coauthors": 2,
    "max_coauthors": 8,
    "papers_with_affiliations": 7,
    "avg_foreign": "3.1",
@@ -8332,7 +8313,7 @@
    "~Binh_Nguyen2"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [],
   "accepted": 5,
@@ -9378,15 +9359,14 @@
    "~Tuan_Do3"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
-   "Still to confirm: rank and institution: from his OpenReview profile (Researcher at Phenikaa University since 2025); not checked against a Phenikaa staff page.",
-   "3 accepted paper(s) are taken from personal pages and are not in an official list yet. They are unofficial until the conference publishes them."
+   "Still to confirm: rank and institution: from his OpenReview profile (Researcher at Phenikaa University since 2025); not checked against a Phenikaa staff page."
   ],
   "accepted": 5,
-  "own_page": 3,
-  "official": 2,
+  "own_page": 0,
+  "official": 5,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -9405,8 +9385,8 @@
     "desk_rejected": 0,
     "not_accepted": 0,
     "submitted": 3,
-    "own_page": 3,
-    "official": 0
+    "own_page": 0,
+    "official": 3
    },
    "icml": {
     "accepted": 1,
@@ -9877,8 +9857,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 3,
-      "own_page": 3,
-      "official": 0,
+      "own_page": 0,
+      "official": 3,
       "available": true,
       "provisional": true
      },
@@ -9920,23 +9900,23 @@
      }
     },
     "accepted": 5,
-    "own_page": 3,
-    "official": 2
+    "own_page": 0,
+    "official": 5
    }
   ],
   "collab": {
    "papers": 5,
    "avg_coauthors": "7.2",
-   "distinct_coauthors": 18,
+   "distinct_coauthors": 17,
    "min_coauthors": 5,
    "max_coauthors": 9,
-   "papers_with_affiliations": 1,
-   "avg_foreign": "3.0",
-   "avg_same_institution": "2.0",
-   "avg_other_vietnam": "1.0",
-   "elsewhere": 4,
-   "elsewhere_abroad": 3,
-   "elsewhere_vietnam": 1,
+   "papers_with_affiliations": 4,
+   "avg_foreign": "5.0",
+   "avg_same_institution": "0.8",
+   "avg_other_vietnam": "2.0",
+   "elsewhere": 13,
+   "elsewhere_abroad": 8,
+   "elsewhere_vietnam": 5,
    "papers_with_topic": 1,
    "topic_areas": 1,
    "areas": [
@@ -10132,8 +10112,8 @@
     },
     "total": 1
    },
-   "judged": 1,
-   "unknown": 4
+   "judged": 4,
+   "unknown": 1
   },
   "accepted_papers": [
    {
@@ -10141,48 +10121,48 @@
     "venue": "neurips",
     "venue_name": "NeurIPS",
     "title": "Learning in Policy Transparency Games: Wedge Structure and Adaptive Certification",
-    "url": "",
+    "url": "https://openreview.net/forum?id=Qcd3vQCm5h",
     "status": "accepted",
     "status_label": "accepted",
     "pres": "",
-    "authors": "Tuan Do, Nguyen Tu Uyen, Khanh Nguyen Quoc, Duc Hai Nguyen, Ngoc Mai Vu, Mai Phan Quoc Hung, Luong Doan, Le Vu Quynh Trang, Trang Pham, Nhung Duong",
-    "match": "listed on an announcement of the Intelligent Computing and Networking Lab at Phenikaa University; not in the official list yet",
+    "authors": "Nguyen T Uyen, Khanh N Quoc, Duc H Nguyen, Ngoc Mai Vu, Phan Quoc Hung Mai, Luong Doan, Trang Le Vu Quynh, Trang Pham, Nhung Duong, Tuan Do",
+    "match": "name, and listed on their own page",
     "note": "",
     "reason": "",
     "later": "",
-    "unofficial": true
+    "unofficial": false
    },
    {
     "year": 2026,
     "venue": "neurips",
     "venue_name": "NeurIPS",
     "title": "Spectral Identifiability for World Models: Polynomial Projectors, Resolvent Stability, and a Krylov Bottleneck",
-    "url": "",
+    "url": "https://openreview.net/forum?id=pByZKc2Y2m",
     "status": "accepted",
     "status_label": "accepted",
     "pres": "",
-    "authors": "Tuan Do, Mai Phan Quoc Hung, Duc Hai Nguyen, Luong Doan, Ngoc Mai Vu, Khanh Nguyen Quoc, Nhung Duong, Naeem Ul Islam",
-    "match": "listed on an announcement of the Intelligent Computing and Networking Lab at Phenikaa University; not in the official list yet",
+    "authors": "Phan Quoc Hung Mai, Duc H Nguyen, Luong Doan, Ngoc Mai Vu, Khanh N Quoc, Nhung Duong, Naeem Ul Islam, Tuan Do",
+    "match": "name, and listed on their own page",
     "note": "",
     "reason": "",
     "later": "",
-    "unofficial": true
+    "unofficial": false
    },
    {
     "year": 2026,
     "venue": "neurips",
     "venue_name": "NeurIPS",
     "title": "SympFNO: Structure-Preserving Fourier Neural Operators for Physical Surrogate Modeling",
-    "url": "",
+    "url": "https://openreview.net/forum?id=TtVLwbWHCn",
     "status": "accepted",
     "status_label": "accepted",
     "pres": "",
-    "authors": "Tuan Do, Luong Doan, Duc Hai Nguyen, Khanh Nguyen Quoc, Mai Phan Quoc Hung, Ngoc Mai Vu, Bui Tri Hieu, Nhung Duong, Phong Ho, Long Hoang Dang",
-    "match": "listed on an announcement of the Intelligent Computing and Networking Lab at Phenikaa University; not in the official list yet",
+    "authors": "Luong Doan, Duc H Nguyen, Khanh N Quoc, Phan Quoc Hung Mai, Ngoc Mai Vu, Bui T Hieu, Nhung Duong, Phong Ho, Long H Dang, Tuan Do",
+    "match": "name, and listed on their own page",
     "note": "",
     "reason": "",
     "later": "",
-    "unofficial": true
+    "unofficial": false
    },
    {
     "year": 2026,
@@ -10302,7 +10282,7 @@
    "~Man_Ngo1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
    "Still to confirm: rank: from his OpenReview profile only; not checked against an HCMUS staff page."
@@ -11197,14 +11177,12 @@
    "~Hoang_Ta2"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
-  "flags": [
-   "2 accepted paper(s) are taken from personal pages and are not in an official list yet. They are unofficial until the conference publishes them."
-  ],
+  "flags": [],
   "accepted": 3,
-  "own_page": 2,
-  "official": 1,
+  "own_page": 0,
+  "official": 3,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -11223,8 +11201,8 @@
     "desk_rejected": 0,
     "not_accepted": 0,
     "submitted": 2,
-    "own_page": 2,
-    "official": 0
+    "own_page": 0,
+    "official": 2
    },
    "icml": {
     "accepted": 1,
@@ -11695,8 +11673,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 2,
-      "own_page": 2,
-      "official": 0,
+      "own_page": 0,
+      "official": 2,
       "available": true,
       "provisional": true
      },
@@ -11738,8 +11716,8 @@
      }
     },
     "accepted": 3,
-    "own_page": 2,
-    "official": 1
+    "own_page": 0,
+    "official": 3
    }
   ],
   "collab": {
@@ -11748,13 +11726,13 @@
    "distinct_coauthors": 8,
    "min_coauthors": 3,
    "max_coauthors": 4,
-   "papers_with_affiliations": 1,
-   "avg_foreign": "1.0",
+   "papers_with_affiliations": 3,
+   "avg_foreign": "0.3",
    "avg_same_institution": "3.0",
-   "avg_other_vietnam": "0.0",
-   "elsewhere": 1,
+   "avg_other_vietnam": "0.3",
+   "elsewhere": 2,
    "elsewhere_abroad": 1,
-   "elsewhere_vietnam": 0,
+   "elsewhere_vietnam": 1,
    "papers_with_topic": 1,
    "topic_areas": 1,
    "areas": [
@@ -11844,22 +11822,22 @@
       "year": 2026,
       "venues": {
        "iclr": 0,
-       "neurips": 0,
+       "neurips": 2,
        "icml": 1,
        "cvpr": 0,
        "acl": 0
       },
-      "total": 1
+      "total": 3
      }
     ],
     "venues": {
      "iclr": 0,
-     "neurips": 0,
+     "neurips": 2,
      "icml": 1,
      "cvpr": 0,
      "acl": 0
     },
-    "total": 1
+    "total": 3
    },
    "first_author": {
     "years": [
@@ -11933,58 +11911,58 @@
       "year": 2026,
       "venues": {
        "iclr": 0,
-       "neurips": 0,
+       "neurips": 2,
        "icml": 1,
        "cvpr": 0,
        "acl": 0
       },
-      "total": 1
+      "total": 3
      }
     ],
     "venues": {
      "iclr": 0,
-     "neurips": 0,
+     "neurips": 2,
      "icml": 1,
      "cvpr": 0,
      "acl": 0
     },
-    "total": 1
+    "total": 3
    },
-   "judged": 1,
-   "unknown": 2
+   "judged": 3,
+   "unknown": 0
   },
   "accepted_papers": [
    {
     "year": 2026,
     "venue": "neurips",
     "venue_name": "NeurIPS",
-    "title": "Graph-Based Stochastic Power-UCT: Monte-Carlo Graph Search with Power Mean Estimation",
-    "url": "https://sites.google.com/view/taduyhoang/publications",
+    "title": "Graph-Based Stochastic-Power-UCT: Monte-Carlo Graph Search with Power Mean Estimation",
+    "url": "https://openreview.net/forum?id=C61SqbC0JZ",
     "status": "accepted",
     "status_label": "accepted",
     "pres": "",
-    "authors": "Hoang Ta, Tung Tran, Mai Viet Bao, Tuan Quang Dam",
-    "match": "listed on their own page; not in the official list yet",
+    "authors": "Tung Tran, Viet Bao, Hoang Ta, Tuan Dam",
+    "match": "name, and listed on their own page",
     "note": "",
     "reason": "",
     "later": "",
-    "unofficial": true
+    "unofficial": false
    },
    {
     "year": 2026,
     "venue": "neurips",
     "venue_name": "NeurIPS",
     "title": "Nearly Optimal Fixed-Confidence Best-Arm Identification with 1-Bit Feedback",
-    "url": "https://sites.google.com/view/taduyhoang/publications",
+    "url": "https://openreview.net/forum?id=6ZgRA8gi3F",
     "status": "accepted",
     "status_label": "accepted",
-    "pres": "",
-    "authors": "Hoang Ta, Khang Luong, Dinh Thai Son, Hung The Tran, Tuan Quang Dam",
-    "match": "listed on their own page; not in the official list yet",
+    "pres": "spotlight",
+    "authors": "Khang Luong, Thai Son Dinh, Hoang Ta, Hung TRAN, Tuan Dam",
+    "match": "name, and listed on their own page",
     "note": "",
     "reason": "",
     "later": "",
-    "unofficial": true
+    "unofficial": false
    },
    {
     "year": 2026,
@@ -12069,12 +12047,11 @@
   "iclr_complete": true,
   "flags": [
    "Still to confirm: main post: his OpenReview profile (~Minh_N._Do1) says Professor at UIUC since 2002 and Honorary Vice Provost at VinUniversity since 2020. The ID is left out of openreview_ids, so only papers that name VinUniversity are counted.",
-   "Their own OpenReview records have not been fetched. The ICLR papers that were not accepted come from the records of co-authors on this site, so there may be more.",
-   "1 accepted paper(s) are taken from personal pages and are not in an official list yet. They are unofficial until the conference publishes them."
+   "Their own OpenReview records have not been fetched. The ICLR papers that were not accepted come from the records of co-authors on this site, so there may be more."
   ],
   "accepted": 2,
-  "own_page": 1,
-  "official": 1,
+  "own_page": 0,
+  "official": 2,
   "venues": {
    "iclr": {
     "accepted": 1,
@@ -12093,8 +12070,8 @@
     "desk_rejected": 0,
     "not_accepted": 0,
     "submitted": 1,
-    "own_page": 1,
-    "official": 0
+    "own_page": 0,
+    "official": 1
    },
    "icml": {
     "accepted": 0,
@@ -12565,8 +12542,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 1,
-      "own_page": 1,
-      "official": 0,
+      "own_page": 0,
+      "official": 1,
       "available": true,
       "provisional": true
      },
@@ -12608,23 +12585,23 @@
      }
     },
     "accepted": 2,
-    "own_page": 1,
-    "official": 1
+    "own_page": 0,
+    "official": 2
    }
   ],
   "collab": {
    "papers": 4,
    "avg_coauthors": "3.5",
-   "distinct_coauthors": 10,
+   "distinct_coauthors": 11,
    "min_coauthors": 2,
    "max_coauthors": 5,
-   "papers_with_affiliations": 1,
-   "avg_foreign": "2.0",
-   "avg_same_institution": "0.0",
-   "avg_other_vietnam": "0.0",
-   "elsewhere": 2,
-   "elsewhere_abroad": 2,
-   "elsewhere_vietnam": 0,
+   "papers_with_affiliations": 2,
+   "avg_foreign": "2.5",
+   "avg_same_institution": "0.5",
+   "avg_other_vietnam": "0.5",
+   "elsewhere": 6,
+   "elsewhere_abroad": 5,
+   "elsewhere_vietnam": 1,
    "papers_with_topic": 1,
    "topic_areas": 1,
    "areas": [
@@ -12820,8 +12797,8 @@
     },
     "total": 0
    },
-   "judged": 1,
-   "unknown": 1
+   "judged": 2,
+   "unknown": 0
   },
   "accepted_papers": [
    {
@@ -12845,16 +12822,16 @@
     "venue": "neurips",
     "venue_name": "NeurIPS",
     "title": "Nonparametric Distribution Matching for Self-Supervised Whole-Slide Image Condensation",
-    "url": "",
+    "url": "https://openreview.net/forum?id=Ml03ueObjM",
     "status": "accepted",
     "status_label": "accepted",
     "pres": "",
-    "authors": "Phi Le Nguyen, Duong M. Nguyen, Trong Nghia Hoang, Hang Thi Nguyen, Thanh Trung Huynh, Minh N. Do",
-    "match": "listed on the page of Phi Le Nguyen, as co-author; not in the official list yet",
+    "authors": "Duong Nguyen, Nghia Hoang, Hang T Nguyen, Thanh Trung Huynh, Phi Le Nguyen, Minh Do",
+    "match": "listed on an unofficial list of NeurIPS 2026 acceptances (backend/unofficial_news.txt)",
     "note": "",
     "reason": "",
     "later": "",
-    "unofficial": true
+    "unofficial": false
    }
   ],
   "not_accepted_papers": [
@@ -12974,7 +12951,7 @@
    "~Hoang-Son_Do1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
    "Still to confirm: rank and start year: from the OpenReview profile only; not checked against a staff page."
@@ -13846,15 +13823,14 @@
    "~Huynh_Thi_Thanh_Binh1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
-   "Still to confirm: rank: the SoICT staff list says Prof., the biography on her page says Associate Professor.",
-   "1 accepted paper(s) are taken from personal pages and are not in an official list yet. They are unofficial until the conference publishes them."
+   "Still to confirm: rank: the SoICT staff list says Prof., the biography on her page says Associate Professor."
   ],
   "accepted": 2,
-  "own_page": 1,
-  "official": 1,
+  "own_page": 0,
+  "official": 2,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -13873,8 +13849,8 @@
     "desk_rejected": 0,
     "not_accepted": 0,
     "submitted": 2,
-    "own_page": 1,
-    "official": 1
+    "own_page": 0,
+    "official": 2
    },
    "icml": {
     "accepted": 0,
@@ -14345,8 +14321,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 2,
-      "own_page": 1,
-      "official": 1,
+      "own_page": 0,
+      "official": 2,
       "available": true,
       "provisional": true
      },
@@ -14388,8 +14364,8 @@
      }
     },
     "accepted": 2,
-    "own_page": 1,
-    "official": 1
+    "own_page": 0,
+    "official": 2
    }
   ],
   "collab": {
@@ -14398,13 +14374,13 @@
    "distinct_coauthors": 8,
    "min_coauthors": 1,
    "max_coauthors": 6,
-   "papers_with_affiliations": 1,
+   "papers_with_affiliations": 2,
    "avg_foreign": "0.0",
-   "avg_same_institution": "1.0",
-   "avg_other_vietnam": "0.0",
-   "elsewhere": 0,
+   "avg_same_institution": "1.5",
+   "avg_other_vietnam": "0.5",
+   "elsewhere": 1,
    "elsewhere_abroad": 0,
-   "elsewhere_vietnam": 0,
+   "elsewhere_vietnam": 1,
    "papers_with_topic": 0,
    "topic_areas": "",
    "areas": [],
@@ -14483,22 +14459,22 @@
       "year": 2026,
       "venues": {
        "iclr": 0,
-       "neurips": 1,
+       "neurips": 2,
        "icml": 0,
        "cvpr": 0,
        "acl": 0
       },
-      "total": 1
+      "total": 2
      }
     ],
     "venues": {
      "iclr": 0,
-     "neurips": 1,
+     "neurips": 2,
      "icml": 0,
      "cvpr": 0,
      "acl": 0
     },
-    "total": 1
+    "total": 2
    },
    "first_author": {
     "years": [
@@ -14572,25 +14548,25 @@
       "year": 2026,
       "venues": {
        "iclr": 0,
-       "neurips": 1,
+       "neurips": 2,
        "icml": 0,
        "cvpr": 0,
        "acl": 0
       },
-      "total": 1
+      "total": 2
      }
     ],
     "venues": {
      "iclr": 0,
-     "neurips": 1,
+     "neurips": 2,
      "icml": 0,
      "cvpr": 0,
      "acl": 0
     },
-    "total": 1
+    "total": 2
    },
-   "judged": 1,
-   "unknown": 1
+   "judged": 2,
+   "unknown": 0
   },
   "accepted_papers": [
    {
@@ -14602,7 +14578,7 @@
     "status": "accepted",
     "status_label": "accepted",
     "pres": "",
-    "authors": "Bui T Duc, Huynh Thi Thanh Binh",
+    "authors": "Bui Trong Duc, Huynh Thi Thanh Binh",
     "match": "name and affiliation",
     "note": "",
     "reason": "",
@@ -14614,16 +14590,16 @@
     "venue": "neurips",
     "venue_name": "NeurIPS",
     "title": "COMPASS: Composable Policy-Amortized Structured Search for LLM-Based Optimization Modeling",
-    "url": "https://duccuong12.github.io/",
+    "url": "https://openreview.net/forum?id=jF68qSbugj",
     "status": "accepted",
     "status_label": "accepted",
     "pres": "",
-    "authors": "Huynh Thi Thanh Binh, Nguyen Le Minh Hoang, Van Duc Cuong, Bui Trong Duc",
-    "match": "listed on the page of her co-author Van Duc Cuong; not in the official list yet",
+    "authors": "Nguyen Le Minh Hoang, Van D Cuong, Bui Trong Duc, Huynh Thi Thanh Binh",
+    "match": "name, and listed on their own page",
     "note": "",
     "reason": "",
     "later": "",
-    "unofficial": true
+    "unofficial": false
    }
   ],
   "not_accepted_papers": [
@@ -14727,7 +14703,7 @@
    "~Duc-Trong_Le1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [],
   "accepted": 2,
@@ -15588,7 +15564,7 @@
    "~Nhan-Phu_Chung1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
    "Still to confirm: rank and start year: from the OpenReview profile only; not checked against a staff page."
@@ -16454,14 +16430,15 @@
    "~Vo_Ngoc_Bich_Uyen1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
-   "Still to confirm: rank and start year: from the OpenReview profile only; not checked against a staff page."
+   "Still to confirm: rank and start year: from the OpenReview profile only; not checked against a staff page.",
+   "1 accepted paper(s) are taken from personal pages and are not in an official list yet. They are unofficial until the conference publishes them."
   ],
   "accepted": 2,
-  "own_page": 0,
-  "official": 2,
+  "own_page": 1,
+  "official": 1,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -16480,8 +16457,8 @@
     "desk_rejected": 0,
     "not_accepted": 0,
     "submitted": 1,
-    "own_page": 0,
-    "official": 1
+    "own_page": 1,
+    "official": 0
    },
    "icml": {
     "accepted": 1,
@@ -16952,8 +16929,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 1,
-      "own_page": 0,
-      "official": 1,
+      "own_page": 1,
+      "official": 0,
       "available": true,
       "provisional": true
      },
@@ -16995,8 +16972,8 @@
      }
     },
     "accepted": 2,
-    "own_page": 0,
-    "official": 2
+    "own_page": 1,
+    "official": 1
    }
   ],
   "collab": {
@@ -17005,13 +16982,13 @@
    "distinct_coauthors": 6,
    "min_coauthors": 4,
    "max_coauthors": 5,
-   "papers_with_affiliations": 2,
+   "papers_with_affiliations": 1,
    "avg_foreign": "3.0",
-   "avg_same_institution": "0.5",
+   "avg_same_institution": "0.0",
    "avg_other_vietnam": "1.0",
-   "elsewhere": 5,
+   "elsewhere": 4,
    "elsewhere_abroad": 3,
-   "elsewhere_vietnam": 2,
+   "elsewhere_vietnam": 1,
    "papers_with_topic": 1,
    "topic_areas": 1,
    "areas": [
@@ -17190,25 +17167,25 @@
       "year": 2026,
       "venues": {
        "iclr": 0,
-       "neurips": 1,
+       "neurips": 0,
        "icml": 0,
        "cvpr": 0,
        "acl": 0
       },
-      "total": 1
+      "total": 0
      }
     ],
     "venues": {
      "iclr": 0,
-     "neurips": 1,
+     "neurips": 0,
      "icml": 0,
      "cvpr": 0,
      "acl": 0
     },
-    "total": 1
+    "total": 0
    },
-   "judged": 2,
-   "unknown": 0
+   "judged": 1,
+   "unknown": 1
   },
   "accepted_papers": [
    {
@@ -17216,16 +17193,16 @@
     "venue": "neurips",
     "venue_name": "NeurIPS",
     "title": "ControlJEPA: Principled Trajectory Regularization via Lyapunov Tube Loss",
-    "url": "https://openreview.net/forum?id=pw4nMbt6SR",
+    "url": "",
     "status": "accepted",
     "status_label": "accepted",
     "pres": "",
-    "authors": "Khanh T Nguyen, Yen N Pham, Uyen N.B. Vo, Thieu Vo, Cuong Pham, Tan Nguyen",
-    "match": "name and affiliation",
+    "authors": "Cuong Pham, Thai Khanh Nguyen, Yen Nhi Pham, Vo Ngoc Bich Uyen, Thieu Vo, Tan Minh Nguyen",
+    "match": "listed on the page of Cuong Pham, as co-author; not in the official list yet",
     "note": "",
     "reason": "",
     "later": "",
-    "unofficial": false
+    "unofficial": true
    },
    {
     "year": 2026,
@@ -17308,7 +17285,7 @@
    "~Danh_Le_Phuoc1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
    "Still to confirm: rank and start year: from the OpenReview profile only; not checked against a staff page."
@@ -18168,7 +18145,7 @@
    "~Hieu_Pham6"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
    "Still to confirm: OpenReview ID: taken from a web search result."
@@ -19060,7 +19037,7 @@
    "~Canh_V._Pham1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
    "Still to confirm: rank: from his OpenReview profile only; not checked against a Phenikaa staff page."
@@ -19609,7 +19586,7 @@
    "papers": 2,
    "avg_coauthors": "4.0",
    "distinct_coauthors": 7,
-   "min_coauthors": 3,
+   "min_coauthors": 5,
    "max_coauthors": 5,
    "papers_with_affiliations": 1,
    "avg_foreign": "4.0",
@@ -19935,7 +19912,7 @@
    "~Cuong_Viet_TA1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [],
   "accepted": 1,
@@ -20808,7 +20785,7 @@
    "~An_Mai1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
    "Still to confirm: rank and start year: from the OpenReview profile only; not checked against a staff page."
@@ -21655,7 +21632,7 @@
    "~An_Thai_Le1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [],
   "accepted": 1,
@@ -22528,851 +22505,6 @@
   }
  },
  {
-  "slug": "ngoc-nam-pham",
-  "name": "Ngoc Nam Pham",
-  "institution": "VinUniversity",
-  "institution_short": "VinUni",
-  "institution_slug": "vinuni",
-  "rank": "Associate Professor",
-  "homepage": "https://vinuni.edu.vn/people/pham-ngoc-nam-2/",
-  "vn_since": 0,
-  "openreview_ids": [
-   "~Pham_Ngoc_Nam1"
-  ],
-  "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
-  "iclr_complete": true,
-  "flags": [],
-  "accepted": 1,
-  "own_page": 0,
-  "official": 1,
-  "venues": {
-   "iclr": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "neurips": {
-    "accepted": 1,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 1,
-    "own_page": 0,
-    "official": 1
-   },
-   "icml": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "cvpr": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "acl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   }
-  },
-  "years": [
-   {
-    "year": 2020,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2021,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2022,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2023,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2024,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2025,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2026,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 1,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 1,
-      "own_page": 0,
-      "official": 1,
-      "available": true,
-      "provisional": true
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "provisional": false
-     }
-    },
-    "accepted": 1,
-    "own_page": 0,
-    "official": 1
-   }
-  ],
-  "collab": {
-   "papers": 1,
-   "avg_coauthors": "3.0",
-   "distinct_coauthors": 3,
-   "min_coauthors": 3,
-   "max_coauthors": 3,
-   "papers_with_affiliations": 1,
-   "avg_foreign": "2.0",
-   "avg_same_institution": "1.0",
-   "avg_other_vietnam": "0.0",
-   "elsewhere": 2,
-   "elsewhere_abroad": 2,
-   "elsewhere_vietnam": 0,
-   "papers_with_topic": 0,
-   "topic_areas": "",
-   "areas": [],
-   "topics": []
-  },
-  "authorship": {
-   "majority": {
-    "years": [
-     {
-      "year": 2020,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "acl": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2021,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "acl": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2022,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "acl": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2023,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "acl": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2024,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "acl": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2025,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "acl": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2026,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "acl": 0
-      },
-      "total": 0
-     }
-    ],
-    "venues": {
-     "iclr": 0,
-     "neurips": 0,
-     "icml": 0,
-     "cvpr": 0,
-     "acl": 0
-    },
-    "total": 0
-   },
-   "first_author": {
-    "years": [
-     {
-      "year": 2020,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "acl": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2021,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "acl": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2022,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "acl": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2023,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "acl": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2024,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "acl": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2025,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "acl": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2026,
-      "venues": {
-       "iclr": 0,
-       "neurips": 1,
-       "icml": 0,
-       "cvpr": 0,
-       "acl": 0
-      },
-      "total": 1
-     }
-    ],
-    "venues": {
-     "iclr": 0,
-     "neurips": 1,
-     "icml": 0,
-     "cvpr": 0,
-     "acl": 0
-    },
-    "total": 1
-   },
-   "judged": 1,
-   "unknown": 0
-  },
-  "accepted_papers": [
-   {
-    "year": 2026,
-    "venue": "neurips",
-    "venue_name": "NeurIPS",
-    "title": "Modeling quantum neural network gradient with reinforcement learning",
-    "url": "https://openreview.net/forum?id=lfrvu8xfsh",
-    "status": "accepted",
-    "status_label": "accepted",
-    "pres": "",
-    "authors": "Nhan Luu, Trung D Luu, Ngoc Nam Pham, Thang C Truong",
-    "match": "name and affiliation",
-    "note": "",
-    "reason": "",
-    "later": "",
-    "unofficial": false
-   }
-  ],
-  "not_accepted_papers": [],
-  "excluded_papers": [],
-  "projection": {
-   "basis": "none",
-   "ratio": "1.0",
-   "ratio_submitted": 0,
-   "ratio_accepted": 0,
-   "accepted": 1,
-   "total": "1",
-   "estimated": "0",
-   "svg": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers submitted and accepted per year by Ngoc Nam Pham; the numbers are in the table below\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"140\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"158\" y=\"18\">Not accepted at ICLR</text><rect class=\"est\" x=\"310\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"328\" y=\"18\">Not accepted elsewhere, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick\" x=\"82.0\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"288\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"502.0\" y=\"288\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"586.0\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M574.0,270.0 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V270.0 Z\"><title>2026: 1 accepted</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">1</text></svg>",
-   "rows": [
-    {
-     "year": 2020,
-     "counts": true,
-     "accepted": 0,
-     "iclr_not_accepted": 0,
-     "estimated": "0",
-     "total": "0"
-    },
-    {
-     "year": 2021,
-     "counts": true,
-     "accepted": 0,
-     "iclr_not_accepted": 0,
-     "estimated": "0",
-     "total": "0"
-    },
-    {
-     "year": 2022,
-     "counts": true,
-     "accepted": 0,
-     "iclr_not_accepted": 0,
-     "estimated": "0",
-     "total": "0"
-    },
-    {
-     "year": 2023,
-     "counts": true,
-     "accepted": 0,
-     "iclr_not_accepted": 0,
-     "estimated": "0",
-     "total": "0"
-    },
-    {
-     "year": 2024,
-     "counts": true,
-     "accepted": 0,
-     "iclr_not_accepted": 0,
-     "estimated": "0",
-     "total": "0"
-    },
-    {
-     "year": 2025,
-     "counts": true,
-     "accepted": 0,
-     "iclr_not_accepted": 0,
-     "estimated": "0",
-     "total": "0"
-    },
-    {
-     "year": 2026,
-     "counts": true,
-     "accepted": 1,
-     "iclr_not_accepted": 0,
-     "estimated": "0",
-     "total": "1"
-    }
-   ]
-  }
- },
- {
   "slug": "nhat-quang-tran",
   "name": "Nhat-Quang Tran",
   "institution": "RMIT University Vietnam",
@@ -23385,7 +22517,7 @@
    "~Nhat-Quang_Tran1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
    "Still to confirm: rank and start year: from the OpenReview profile only; not checked against a staff page."
@@ -24220,7 +23352,7 @@
    "~Pham_Thi_Quynh_Trang1"
   ],
   "openreview_source": "openreview",
-  "openreview_fetched": "2026-09-30",
+  "openreview_fetched": "2026-10-02",
   "iclr_complete": true,
   "flags": [
    "Still to confirm: rank: her OpenReview profile says PhD student at VNU-UET since 2021, the staff page lists her as ThS.."

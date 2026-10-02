@@ -125,13 +125,15 @@ def is_provisional(data):
     """True for a virtual-site list that has no schedule yet (only meaningful for the current year).
 
     Such a list was put up between the decisions and the conference and is still being filled: in
-    September 2026 the NeurIPS 2026 list lacked papers that their authors had already announced.
+    September 2026 the NeurIPS 2026 list lacked papers that their authors had already announced. The
+    schedule is added a few sessions at a time (on 2026-10-02, 22 of 9,236 entries had a time while
+    announced papers were still missing), so the list counts as final only once most entries have one.
     """
     try:
         rows = json.loads(data).get("results", [])
     except (ValueError, AttributeError):
         return False
-    return bool(rows) and not any(r.get("starttime") for r in rows)
+    return bool(rows) and 2 * sum(1 for r in rows if r.get("starttime")) < len(rows)
 
 
 # ---------------------------------------------------------------- CVF open access

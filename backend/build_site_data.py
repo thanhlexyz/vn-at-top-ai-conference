@@ -474,6 +474,7 @@ def collaboration(person, counted):
     comes with the number of papers it is based on.
     """
     papers = list(counted)
+    accepted_sizes = []  # the minimum is taken over accepted papers only, the maximum over every submission
     sizes, foreign, own, other_vn, everyone, elsewhere, abroad = [], [], [], [], set(), set(), set()
     areas, topics = collections.Counter(), collections.Counter()
     who = distinct_people([a["name"] for r in papers for a in r["people"]])
@@ -483,6 +484,8 @@ def collaboration(person, counted):
             me = next((i for i, a in enumerate(r["people"]) if norm_name(a["name"]) in person["variants"]), None)
         others = [a for i, a in enumerate(r["people"]) if i != me]
         sizes.append(len(others) if me is not None else max(len(others) - 1, 0))
+        if r["status"] == "accepted":
+            accepted_sizes.append(sizes[-1])
         if me is not None:
             everyone.update(who[a["name"]] for a in others)
         if me is not None and any(a["aff"] for a in r["people"]):
@@ -502,7 +505,7 @@ def collaboration(person, counted):
 
     return {
         "papers": len(papers), "avg_coauthors": mean(sizes), "distinct_coauthors": len(everyone),
-        "min_coauthors": min(sizes) if sizes else "", "max_coauthors": max(sizes) if sizes else "",
+        "min_coauthors": min(accepted_sizes) if accepted_sizes else "", "max_coauthors": max(sizes) if sizes else "",
         "papers_with_affiliations": len(foreign), "avg_foreign": mean(foreign),
         "avg_same_institution": mean(own), "avg_other_vietnam": mean(other_vn),
         "elsewhere": len(elsewhere) if foreign else "", "elsewhere_abroad": len(elsewhere & abroad),
