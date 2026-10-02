@@ -1,4 +1,4 @@
 ---
 title: "FPT University"
-key: "fpt-university"
+key: "fptu"
 ---
