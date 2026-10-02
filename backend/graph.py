@@ -89,7 +89,7 @@ def declutter(pos, labels, rounds=300):
     return pos
 
 
-def clear_edges(pos, edges, gap=26, rounds=200):
+def clear_edges(pos, edges, gap=36, rounds=200):
     """Moves a node sideways when a line between two other nodes passes through or close to it, so every line
     can be followed from end to end. Nodes in a straight row are the usual case."""
     edges = [e for e in edges if e[0] in pos and e[1] in pos]
@@ -123,6 +123,157 @@ def clear_edges(pos, edges, gap=26, rounds=200):
     return pos
 
 
+def crosses(p1, p2, p3, p4):
+    """True if segment p1-p2 properly crosses segment p3-p4."""
+    def side(a, b, c):
+        return (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0])
+    d1, d2 = side(p3, p4, p1), side(p3, p4, p2)
+    d3, d4 = side(p1, p2, p3), side(p1, p2, p4)
+    return d1 * d2 < 0 and d3 * d4 < 0
+
+
+def crossings(pos, edges):
+    edges = [e for e in edges if e[0] in pos and e[1] in pos]
+    return sum(1 for (a, b), (x, y) in itertools.combinations(edges, 2)
+               if len({a, b, x, y}) == 4 and crosses(pos[a], pos[b], pos[x], pos[y]))
+
+
+def planar_start(ids, edges):
+    """A crossing-free starting layout when the group can be drawn without crossings (needs networkx; without
+    it, None). The force layout cannot always find one, for example when a node has to sit inside a triangle."""
+    try:
+        import networkx as nx
+    except ImportError:
+        return None
+    G = nx.Graph([e for e in edges if e[0] in ids and e[1] in ids])
+    if not nx.check_planarity(G)[0]:
+        return None
+    p = nx.planar_layout(G)
+    xs, ys = [v[0] for v in p.values()], [v[1] for v in p.values()]
+    s = min((W - 260) / max(max(xs) - min(xs), 1e-9), 640 / max(max(ys) - min(ys), 1e-9))
+    return {i: [40 + (p[i][0] - min(xs)) * s, 40 + (p[i][1] - min(ys)) * s] for i in ids}
+
+
+def relax_planar(pos, edges, steps=400):
+    """Spreads a crossing-free layout with the usual spring forces, taking only the moves that keep it free of
+    crossings, so a stiff planar starting point turns into an even drawing."""
+    edges = [e for e in edges if e[0] in pos and e[1] in pos]
+    ids = list(pos)
+    k = math.sqrt((W - 260) * 640 / len(ids)) * 0.7
+    temp = k
+
+    def creates_crossing(i, xy):
+        mine = [e for e in edges if i in e]
+        trial = dict(pos)
+        trial[i] = xy
+        return any(len({a, b, x, y}) == 4 and crosses(trial[a], trial[b], trial[x], trial[y])
+                   for (a, b) in mine for (x, y) in edges)
+    for _ in range(steps):
+        for i in ids:
+            fx = fy = 0.0
+            for j in ids:
+                if j == i:
+                    continue
+                dx, dy = pos[i][0] - pos[j][0], pos[i][1] - pos[j][1]
+                d = max(math.hypot(dx, dy), 0.01)
+                fx += dx / d * k * k / d
+                fy += dy / d * k * k / d
+            for (a, b) in edges:
+                if i in (a, b):
+                    j = b if a == i else a
+                    dx, dy = pos[i][0] - pos[j][0], pos[i][1] - pos[j][1]
+                    d = max(math.hypot(dx, dy), 0.01)
+                    fx -= dx / d * d * d / k
+                    fy -= dy / d * d * d / k
+            d = max(math.hypot(fx, fy), 0.01)
+            step = min(d, temp)
+            for scale in (1.0, 0.5, 0.25):
+                xy = [pos[i][0] + fx / d * step * scale, pos[i][1] + fy / d * step * scale]
+                if not creates_crossing(i, xy):
+                    pos[i] = xy
+                    break
+        temp = max(temp * 0.985, 1.0)
+    xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
+    s = min((W - 260) / max(max(xs) - min(xs), 1), 640 / max(max(ys) - min(ys), 1))
+    return {i: [40 + (p[0] - min(xs)) * s, 40 + (p[1] - min(ys)) * s] for i, p in pos.items()}
+
+
+def untangle(pos, edges, labels, rounds=40, gap=40):
+    """Drawing rules, enforced by a local search that moves one node at a time to the nearby spot that breaks the
+    fewest of them, in this order of weight: no two lines cross; no line passes through a circle it does not end
+    at; no two labels overlap. Small moves are preferred."""
+    edges = [e for e in edges if e[0] in pos and e[1] in pos]
+    box = {i: (18 + 8.4 * len(labels[i]), 24) for i in pos}
+
+    def cost(p, ids=None):
+        c = 0.0
+        for (a, b), (x, y) in itertools.combinations(edges, 2):
+            if len({a, b, x, y}) == 4 and crosses(p[a], p[b], p[x], p[y]):
+                c += 100000
+        for (a, b) in edges:
+            (ax, ay), (bx, by) = p[a], p[b]
+            dx, dy = bx - ax, by - ay
+            l2 = dx * dx + dy * dy or 1
+            for n, (cx, cy) in p.items():
+                if n in (a, b):
+                    continue
+                t = ((cx - ax) * dx + (cy - ay) * dy) / l2
+                if 0 < t < 1 and math.hypot(cx - ax - t * dx, cy - ay - t * dy) < gap:
+                    c += 300
+        for a, b in itertools.combinations(p, 2):
+            (ax, ay), (bx, by) = p[a], p[b]
+            left, right = (a, b) if ax <= bx else (b, a)
+            if p[left][0] + box[left][0] > p[right][0] and abs(ay - by) < 24:
+                c += 100
+            if math.hypot(ax - bx, ay - by) < 40:   # circles too close to read
+                c += 100
+        return c
+
+    current = cost(pos)
+    home = {i: tuple(v) for i, v in pos.items()}
+    degree = collections.Counter(n for e in edges for n in e)
+    # a node moves together with the neighbours that hang on it alone, so it can cross to another side
+    leaves = {i: [b if a == i else a for a, b in edges if i in (a, b) and degree[b if a == i else a] == 1]
+              for i in pos}
+    for _ in range(rounds):
+        improved = False
+        for i in sorted(pos):
+            best, best_xy = current, None
+            ox, oy = pos[i]
+            carried = {j: list(pos[j]) for j in leaves[i]}
+            spots = [(ox + r * math.cos(k * math.pi / 8), oy + r * math.sin(k * math.pi / 8))
+                     for r in (15, 30, 50, 75, 110, 150, 210, 280, 360) for k in range(16)]
+            # a node at the end of a crossing line can also jump to its mirror image across the other line
+            for (a, b) in edges:
+                if i not in (a, b):
+                    continue
+                for (x, y) in edges:
+                    if len({a, b, x, y}) == 4 and crosses(pos[a], pos[b], pos[x], pos[y]):
+                        (x1, y1), (x2, y2) = pos[x], pos[y]
+                        dx, dy = x2 - x1, y2 - y1
+                        t = ((ox - x1) * dx + (oy - y1) * dy) / (dx * dx + dy * dy or 1)
+                        fx, fy = x1 + t * dx, y1 + t * dy
+                        for push in (1.0, 1.4, 2.0):
+                            spots.append((fx + (fx - ox) * push, fy + (fy - oy) * push))
+            for nx, ny in spots:
+                if True:
+                    pos[i] = [nx, ny]
+                    for j, (jx, jy) in carried.items():
+                        pos[j] = [jx + nx - ox, jy + ny - oy]
+                    c = cost(pos) + 0.05 * math.hypot(nx - home[i][0], ny - home[i][1])
+                    if c < best - 1:
+                        best, best_xy = c, (nx, ny)
+            pos[i] = [ox, oy] if best_xy is None else list(best_xy)
+            for j, (jx, jy) in carried.items():
+                pos[j] = [jx, jy] if best_xy is None else [jx + best_xy[0] - ox, jy + best_xy[1] - oy]
+            if best_xy is not None:
+                current = cost(pos)
+                improved = True
+        if not improved or current == 0:
+            break
+    return pos
+
+
 def layout(nodes, edges, labels):
     """{id: (x, y)} and the drawing's height. The largest group is drawn with a force layout across the full
     width; smaller groups go underneath in a grid, each a short column, so their labels never collide."""
@@ -130,16 +281,36 @@ def layout(nodes, edges, labels):
     if not groups:
         return {}, 200
     main, rest = groups[0], groups[1:]
-    pos = force(main, edges, size=95)
-    # scale the main group to the width, keeping its proportions, then remove label overlaps
-    xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
-    span_x, span_y = max(max(xs) - min(xs), 1), max(max(ys) - min(ys), 1)
-    s = min((W - 260) / span_x, 640 / span_y)
-    pos = {i: [40 + (p[0] - min(xs)) * s, 40 + (p[1] - min(ys)) * s] for i, p in pos.items()}
-    for _ in range(4):   # alternate: lines clear of circles, labels clear of each other
+    def attempt(seed):
+        pos = force(main, edges, size=95, seed=seed)
+        # scale the main group to the width, keeping its proportions, then remove label overlaps
+        xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
+        span_x, span_y = max(max(xs) - min(xs), 1), max(max(ys) - min(ys), 1)
+        s = min((W - 260) / span_x, 640 / span_y)
+        pos = {i: [40 + (p[0] - min(xs)) * s, 40 + (p[1] - min(ys)) * s] for i, p in pos.items()}
+        for _ in range(4):   # alternate: lines clear of circles, labels clear of each other
+            pos = clear_edges(pos, edges)
+            pos = declutter(pos, labels)
         pos = clear_edges(pos, edges)
-        pos = declutter(pos, labels)
-    pos = clear_edges(pos, edges)
+        return untangle(pos, edges, labels)
+
+    # a few starting layouts; the first with no crossing lines wins, else the one with the fewest
+    best = None
+    for seed in (7, 11, 23, 42, 101, 211):
+        pos = attempt(seed)
+        n = crossings(pos, edges)
+        if best is None or n < best[0]:
+            best = (n, pos)
+        if n == 0:
+            break
+    if best[0]:
+        planar = planar_start(main, edges)
+        if planar:
+            pos = untangle(relax_planar(planar, edges), edges, labels)
+            n = crossings(pos, edges)
+            if n < best[0]:
+                best = (n, pos)
+    pos = best[1]
     xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
     shift_x = (W - (max(xs) - min(xs)) - max(7.4 * len(labels[i]) for i in pos)) / 2 - min(xs)
     shift_y = 40 - min(ys)
@@ -194,8 +365,8 @@ def place_labels(nodes, pos, radius, edges, labels, weights=None):
     segs = [(pos[a][0], pos[a][1], pos[b][0], pos[b][1], a, b) for a, b in edges]
     out = {}
     # the weight printed in the middle of a line counts as a label already there
-    placed = [((pos[a][0] + pos[b][0]) / 2 - 8, (pos[a][1] + pos[b][1]) / 2 - 9,
-               (pos[a][0] + pos[b][0]) / 2 + 8, (pos[a][1] + pos[b][1]) / 2 + 7)
+    placed = [((pos[a][0] + pos[b][0]) / 2 - 13, (pos[a][1] + pos[b][1]) / 2 - 12,
+               (pos[a][0] + pos[b][0]) / 2 + 13, (pos[a][1] + pos[b][1]) / 2 + 10)
               for (a, b) in edges if (weights or {}).get((a, b), 1) >= 2]
     for i in sorted(nodes, key=lambda i: -radius[i]):
         x, y, r, w = pos[i][0], pos[i][1], radius[i], CHAR * len(labels[i])

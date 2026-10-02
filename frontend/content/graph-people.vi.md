@@ -1,5 +1,5 @@
 ---
-title: "Đồ thị giảng viên"
+title: "Giảng viên hợp tác"
 layout: "graph"
 node_label: "Người"
 data: "graph_people"

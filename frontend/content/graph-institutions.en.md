@@ -1,5 +1,5 @@
 ---
-title: "Institution graph"
+title: "Institution collaboration"
 layout: "graph"
 node_label: "Institution"
 data: "graph_institutions"

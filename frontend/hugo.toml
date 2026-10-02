@@ -52,12 +52,12 @@ disableKinds = ['taxonomy', 'term', 'rss']
   pageRef = '/papers'
   weight = 4
 [[languages.en.menus.main]]
-  name = 'Researcher graph'
+  name = 'Researcher collaboration'
   identifier = 'graph-people'
   pageRef = '/graph-people'
   weight = 5
 [[languages.en.menus.main]]
-  name = 'Institution graph'
+  name = 'Institution collaboration'
   identifier = 'graph-institutions'
   pageRef = '/graph-institutions'
   weight = 5
@@ -88,12 +88,12 @@ disableKinds = ['taxonomy', 'term', 'rss']
   pageRef = '/papers'
   weight = 4
 [[languages.vi.menus.main]]
-  name = 'Đồ thị giảng viên'
+  name = 'Giảng viên hợp tác'
   identifier = 'graph-people'
   pageRef = '/graph-people'
   weight = 5
 [[languages.vi.menus.main]]
-  name = 'Đồ thị trường'
+  name = 'Trường hợp tác'
   identifier = 'graph-institutions'
   pageRef = '/graph-institutions'
   weight = 5

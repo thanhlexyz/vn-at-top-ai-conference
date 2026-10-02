@@ -1,5 +1,5 @@
 ---
-title: "Đồ thị trường"
+title: "Trường hợp tác"
 layout: "graph"
 node_label: "Đơn vị"
 data: "graph_institutions"

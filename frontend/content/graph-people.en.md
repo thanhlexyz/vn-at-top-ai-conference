@@ -1,5 +1,5 @@
 ---
-title: "Researcher graph"
+title: "Researcher collaboration"
 layout: "graph"
 node_label: "Researcher"
 data: "graph_people"
