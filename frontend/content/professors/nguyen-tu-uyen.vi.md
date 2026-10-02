@@ -1,4 +1,4 @@
 ---
-title: "Nguyen Tu Uyen"
+title: "Nguyễn Tú Uyên"
 key: "nguyen-tu-uyen"
 ---
