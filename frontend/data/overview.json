@@ -1,0 +1,60 @@
+{
+ "total": {
+  "accepted": 120,
+  "recorded": 56,
+  "estimated": 217
+ },
+ "rows": [
+  {
+   "year": 2020,
+   "accepted": 1,
+   "recorded": 0,
+   "estimated": 2
+  },
+  {
+   "year": 2021,
+   "accepted": 3,
+   "recorded": 1,
+   "estimated": 8
+  },
+  {
+   "year": 2022,
+   "accepted": 5,
+   "recorded": 3,
+   "estimated": 9
+  },
+  {
+   "year": 2023,
+   "accepted": 4,
+   "recorded": 1,
+   "estimated": 9
+  },
+  {
+   "year": 2024,
+   "accepted": 7,
+   "recorded": 8,
+   "estimated": 16
+  },
+  {
+   "year": 2025,
+   "accepted": 28,
+   "recorded": 20,
+   "estimated": 46
+  },
+  {
+   "year": 2026,
+   "accepted": 72,
+   "recorded": 23,
+   "estimated": 127
+  }
+ ],
+ "provisional": [
+  2026
+ ],
+ "provisional_lists": [
+  "NeurIPS 2026"
+ ],
+ "submissions": 393,
+ "pie": "<svg class=\"chart\" viewBox=\"0 0 640 190\" role=\"img\" aria-label=\"Accepted, recorded rejected and estimated rejected papers, all listed professors\"><text class=\"value\" x=\"4.0\" y=\"16\">All years and venues</text><path class=\"acc slice\" d=\"M74.0,104.0 L74.0,34.0 A70,70 0 0 1 139.8,127.9 Z\"><title>All years and venues: 120 accepted, 31%</title></path><rect class=\"acc\" x=\"162.0\" y=\"72.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"82.0\">120 (31%)</text><text x=\"180.0\" y=\"97.0\">accepted</text><path class=\"not slice\" d=\"M74.0,104.0 L139.8,127.9 A70,70 0 0 1 96.5,170.3 Z\"><title>All years and venues: 56 rejected at ICLR, recorded, 14%</title></path><rect class=\"not\" x=\"162.0\" y=\"112.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"122.0\">56 (14%)</text><text x=\"180.0\" y=\"137.0\">rejected at ICLR, recorded</text><path class=\"est slice\" d=\"M74.0,104.0 L96.5,170.3 A70,70 0 1 1 74.0,34.0 Z\"><title>All years and venues: 217 rejected elsewhere, estimated, 55%</title></path><rect class=\"est\" x=\"162.0\" y=\"152.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"162.0\">217 (55%)</text><text x=\"180.0\" y=\"177.0\">rejected elsewhere, estimated</text></svg>",
+ "stack": "<svg class=\"chart\" viewBox=\"0 0 640 258\" role=\"img\" aria-label=\"Accepted, recorded rejected and estimated rejected papers per year\"><rect class=\"acc\" x=\"34\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"52\" y=\"16\">accepted</text><rect class=\"not\" x=\"115.2\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"133.2\" y=\"16\">rejected at ICLR, recorded</text><rect class=\"est\" x=\"311.6\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"329.6\" y=\"16\">rejected elsewhere, estimated</text><line class=\"axis\" x1=\"34\" y1=\"234.0\" x2=\"520\" y2=\"234.0\"/><text x=\"28\" y=\"238.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"34\" y1=\"194.0\" x2=\"520\" y2=\"194.0\"/><text x=\"28\" y=\"198.0\" text-anchor=\"end\">50</text><line class=\"grid\" x1=\"34\" y1=\"154.0\" x2=\"520\" y2=\"154.0\"/><text x=\"28\" y=\"158.0\" text-anchor=\"end\">100</text><line class=\"grid\" x1=\"34\" y1=\"114.0\" x2=\"520\" y2=\"114.0\"/><text x=\"28\" y=\"118.0\" text-anchor=\"end\">150</text><line class=\"grid\" x1=\"34\" y1=\"74.0\" x2=\"520\" y2=\"74.0\"/><text x=\"28\" y=\"78.0\" text-anchor=\"end\">200</text><line class=\"grid\" x1=\"34\" y1=\"34.0\" x2=\"520\" y2=\"34.0\"/><text x=\"28\" y=\"38.0\" text-anchor=\"end\">250</text><text x=\"34.0\" y=\"251\" text-anchor=\"middle\">2020</text><text x=\"115.0\" y=\"251\" text-anchor=\"middle\">2021</text><text x=\"196.0\" y=\"251\" text-anchor=\"middle\">2022</text><text x=\"277.0\" y=\"251\" text-anchor=\"middle\">2023</text><text x=\"358.0\" y=\"251\" text-anchor=\"middle\">2024</text><text x=\"439.0\" y=\"251\" text-anchor=\"middle\">2025</text><text x=\"520.0\" y=\"251\" text-anchor=\"middle\">2026*</text><polygon class=\"band acc\" points=\"34.0,233.2 115.0,231.6 196.0,230.0 277.0,230.8 358.0,228.4 439.0,211.6 520.0,176.4 520.0,234.0 439.0,234.0 358.0,234.0 277.0,234.0 196.0,234.0 115.0,234.0 34.0,234.0\"/><polygon class=\"band not\" points=\"34.0,233.2 115.0,230.8 196.0,227.6 277.0,230.0 358.0,222.0 439.0,195.6 520.0,158.0 520.0,176.4 439.0,211.6 358.0,228.4 277.0,230.8 196.0,230.0 115.0,231.6 34.0,233.2\"/><polygon class=\"band est\" points=\"34.0,231.6 115.0,224.4 196.0,220.4 277.0,222.8 358.0,209.2 439.0,158.8 520.0,56.4 520.0,158.0 439.0,195.6 358.0,222.0 277.0,230.0 196.0,227.6 115.0,230.8 34.0,233.2\"/><polyline class=\"gap\" points=\"34.0,233.2 115.0,231.6 196.0,230.0 277.0,230.8 358.0,228.4 439.0,211.6 520.0,176.4\"/><polyline class=\"edge acc\" points=\"34.0,233.2 115.0,231.6 196.0,230.0 277.0,230.8 358.0,228.4 439.0,211.6 520.0,176.4\"/><polyline class=\"gap\" points=\"34.0,233.2 115.0,230.8 196.0,227.6 277.0,230.0 358.0,222.0 439.0,195.6 520.0,158.0\"/><polyline class=\"edge not\" points=\"34.0,233.2 115.0,230.8 196.0,227.6 277.0,230.0 358.0,222.0 439.0,195.6 520.0,158.0\"/><polyline class=\"edge est\" points=\"34.0,231.6 115.0,224.4 196.0,220.4 277.0,222.8 358.0,209.2 439.0,158.8 520.0,56.4\"/><text x=\"528.0\" y=\"209.2\"><tspan class=\"value\">72</tspan> accepted</text><text x=\"528.0\" y=\"171.2\"><tspan class=\"value\">23</tspan> recorded</text><text x=\"528.0\" y=\"111.2\"><tspan class=\"value\">127</tspan> estimated</text><rect class=\"hit\" x=\"34.0\" y=\"34\" width=\"40.5\" height=\"200\"><title>2020: 1 accepted, 0 rejected at ICLR, recorded, 2 rejected elsewhere, estimated; total 3</title></rect><rect class=\"hit\" x=\"74.5\" y=\"34\" width=\"81.0\" height=\"200\"><title>2021: 3 accepted, 1 rejected at ICLR, recorded, 8 rejected elsewhere, estimated; total 12</title></rect><rect class=\"hit\" x=\"155.5\" y=\"34\" width=\"81.0\" height=\"200\"><title>2022: 5 accepted, 3 rejected at ICLR, recorded, 9 rejected elsewhere, estimated; total 17</title></rect><rect class=\"hit\" x=\"236.5\" y=\"34\" width=\"81.0\" height=\"200\"><title>2023: 4 accepted, 1 rejected at ICLR, recorded, 9 rejected elsewhere, estimated; total 14</title></rect><rect class=\"hit\" x=\"317.5\" y=\"34\" width=\"81.0\" height=\"200\"><title>2024: 7 accepted, 8 rejected at ICLR, recorded, 16 rejected elsewhere, estimated; total 31</title></rect><rect class=\"hit\" x=\"398.5\" y=\"34\" width=\"81.0\" height=\"200\"><title>2025: 28 accepted, 20 rejected at ICLR, recorded, 46 rejected elsewhere, estimated; total 94</title></rect><rect class=\"hit\" x=\"479.5\" y=\"34\" width=\"40.5\" height=\"200\"><title>2026 (list still being completed): 72 accepted, 23 rejected at ICLR, recorded, 127 rejected elsewhere, estimated; total 222</title></rect></svg>"
+}

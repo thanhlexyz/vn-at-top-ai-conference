@@ -10,11 +10,11 @@
   "venues": {
    "iclr": {
     "accepted": 13,
-    "rejected": 27,
-    "withdrawn": 19,
+    "rejected": 29,
+    "withdrawn": 20,
     "desk_rejected": 2,
-    "not_accepted": 48,
-    "submitted": 61,
+    "not_accepted": 51,
+    "submitted": 64,
     "own_page": 0,
     "official": 13
    },
@@ -411,11 +411,11 @@
     "venues": {
      "iclr": {
       "accepted": 5,
-      "rejected": 8,
-      "withdrawn": 7,
+      "rejected": 10,
+      "withdrawn": 8,
       "desk_rejected": 0,
-      "not_accepted": 15,
-      "submitted": 20,
+      "not_accepted": 18,
+      "submitted": 23,
       "own_page": 0,
       "official": 5,
       "available": true,
@@ -1221,6 +1221,28 @@
     "year": 2025,
     "venue": "iclr",
     "venue_name": "ICLR",
+    "title": "ConceptFlow: Unified Framework for Personalized Image Generation",
+    "url": "https://openreview.net/forum?id=EhSUM1FcJw",
+    "status": "withdrawn",
+    "status_label": "withdrawn",
+    "pres": "",
+    "authors": "Trong-Vu Hoang, Quang-Binh Nguyen, Thanh-Toan Do, Tam V. Nguyen, Minh-Triet Tran, Trung-Nghia Le",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "minh-triet-tran",
+      "name": "Minh-Triet Tran"
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "iclr",
+    "venue_name": "ICLR",
     "title": "DPaI: Differentiable Pruning at Initialization with Node-Path Balance Principle",
     "url": "https://openreview.net/forum?id=hvLBTpiDt3",
     "status": "accepted",
@@ -1302,6 +1324,28 @@
      {
       "slug": "phi-le-nguyen",
       "name": "Phi Le Nguyen"
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "Improving Resistance to Noisy Label Fitting by Reweighting Gradient in SAM",
+    "url": "https://openreview.net/forum?id=x3lE88YkUl",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Hoang-Chau Luong, Thuc Nguyen-Quang, Minh-Triet Tran",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "minh-triet-tran",
+      "name": "Minh-Triet Tran"
      }
     ]
    },
@@ -1398,6 +1442,28 @@
      {
       "slug": "man-ngo",
       "name": "Man Ngo"
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "Rethinking Attentions in Zero-Shot Real Image Editing",
+    "url": "https://openreview.net/forum?id=kn2OZa8rOf",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Dinh-Khoi Vo, Thanh-Toan Do, Tam V. Nguyen, Minh-Triet Tran, Trung-Nghia Le",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "minh-triet-tran",
+      "name": "Minh-Triet Tran"
      }
     ]
    },
@@ -4672,9 +4738,9 @@
   "name": "CVPR",
   "full_name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
   "rejections": "none",
-  "accepted": 13,
+  "accepted": 15,
   "own_page": 0,
-  "official": 13,
+  "official": 15,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -4707,14 +4773,14 @@
     "official": 0
    },
    "cvpr": {
-    "accepted": 13,
+    "accepted": 15,
     "rejected": 6,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 6,
-    "submitted": 19,
+    "submitted": 21,
     "own_page": 0,
-    "official": 13
+    "official": 15
    },
    "acl": {
     "accepted": 0,
@@ -4838,14 +4904,14 @@
       "provisional": false
      },
      "cvpr": {
-      "accepted": 0,
+      "accepted": 2,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 0,
+      "submitted": 2,
       "own_page": 0,
-      "official": 0,
+      "official": 2,
       "available": true,
       "provisional": false
      },
@@ -4862,9 +4928,9 @@
       "provisional": false
      }
     },
-    "accepted": 0,
+    "accepted": 2,
     "own_page": 0,
-    "official": 0
+    "official": 2
    },
    {
     "year": 2022,
@@ -5632,6 +5698,50 @@
      {
       "slug": "cuong-pham",
       "name": "Cuong Pham"
+     }
+    ]
+   },
+   {
+    "year": 2021,
+    "venue": "cvpr",
+    "venue_name": "CVPR",
+    "title": "Dictionary-Guided Scene Text Recognition",
+    "url": "https://openaccess.thecvf.com/content/CVPR2021/html/Nguyen_Dictionary-Guided_Scene_Text_Recognition_CVPR_2021_paper.html",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Nguyen Nguyen, Thu Nguyen, Vinh Tran, Minh-Triet Tran, Thanh Duc Ngo, Thien Huu Nguyen, Minh Hoai",
+    "match": "name, confirmed by hand",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "minh-triet-tran",
+      "name": "Minh-Triet Tran"
+     }
+    ]
+   },
+   {
+    "year": 2021,
+    "venue": "cvpr",
+    "venue_name": "CVPR",
+    "title": "DyGLIP: A Dynamic Graph Model With Link Prediction for Accurate Multi-Camera Multiple Object Tracking",
+    "url": "https://openaccess.thecvf.com/content/CVPR2021/html/Quach_DyGLIP_A_Dynamic_Graph_Model_With_Link_Prediction_for_Accurate_CVPR_2021_paper.html",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Kha Gia Quach, Pha Nguyen, Huu Le, Thanh-Dat Truong, Chi Nhan Duong, Minh-Triet Tran, Khoa Luu",
+    "match": "name, confirmed by hand",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "professors": [
+     {
+      "slug": "minh-triet-tran",
+      "name": "Minh-Triet Tran"
      }
     ]
    }

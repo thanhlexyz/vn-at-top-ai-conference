@@ -9,6 +9,8 @@ disableKinds = ['taxonomy', 'term', 'rss', 'sitemap']
   showNonAcceptedTitles = true
   # A local build asks search engines not to index it. publish.toml turns this off for the public site.
   local = true
+  # GitHub repository (account/name) that the Feedback form opens an issue in
+  repository = 'thanhlexyz/vn-at-top-ai-conference'
 
 [[menus.main]]
   name = 'Professors'

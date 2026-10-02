@@ -33,4 +33,39 @@ Conference papers by professors and lecturers in Vietnam, {{ hugo.Data.meta.firs
 	Both need a paper list with affiliations, and topic areas need the conference's own topic labels, which exist for ICLR, NeurIPS and ICML from 2023 or 2024 on.
 	Each professor's page says how many papers a figure is based on.
 </p>
+
+{{- with hugo.Data.overview }}
+<h2>Accepted and rejected, all listed professors</h2>
+<p>
+	{{ .total.accepted }} accepted papers stand for about {{ .submissions }} submissions:
+	{{ .total.recorded }} rejected or withdrawn at ICLR, where every submission is public, and about {{ .total.estimated }} more estimated for the other venues.
+</p>
+<figure>
+{{ .pie | safeHTML }}
+<figcaption>Fig. 1. Accepted papers against papers not accepted, recorded at ICLR and estimated elsewhere, over all years and venues.</figcaption>
+</figure>
+<figure>
+{{ .stack | safeHTML }}
+<figcaption>Fig. 2. The same per year, stacked: accepted at the bottom, rejected at ICLR (recorded) above it, rejected elsewhere (estimated) on top.{{ with .provisional_lists }} * The official {{ delimit . ", " }} list is not complete yet.{{ end }}</figcaption>
+</figure>
+<details>
+<summary>The numbers behind the figures</summary>
+<div class="scroll">
+<table>
+	<thead><tr><th>Year</th><th>Accepted</th><th>Rejected at ICLR, recorded</th><th>Rejected elsewhere, estimated</th><th>Total</th></tr></thead>
+	<tbody>
+	{{- range .rows }}
+	<tr><td>{{ .year }}</td>{{ partial "num.html" .accepted }}{{ partial "num.html" .recorded }}{{ partial "num.html" .estimated }}<td class="total">{{ add .accepted .recorded .estimated }}</td></tr>
+	{{- end }}
+	<tr class="total"><td>Total</td><td>{{ .total.accepted }}</td><td>{{ .total.recorded }}</td><td>{{ .total.estimated }}</td><td>{{ .submissions }}</td></tr>
+	</tbody>
+</table>
+</div>
+</details>
+<p class="note">
+	Only ICLR publishes every submission with its outcome. For NeurIPS, ICML, CVPR and ACL the rejected papers are estimated from each professor's own ICLR record:
+	submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1). A professor without ICLR submissions adds no estimate.
+	A paper of two listed professors is counted for each, as on their own pages, and a paper sent to several conferences counts once per submission.
+</p>
+{{- end }}
 {{- end }}

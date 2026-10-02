@@ -12,21 +12,28 @@ which appends them to roster.csv with `approved` left empty. Then open roster.cs
 Only sources that give an affiliation per author can be searched: ICLR, NeurIPS and ICML (all years)
 and CVPR from 2023. People who publish only at ACL, or at CVPR before 2023, have to be added by hand.
 
-If `python fetch_openreview.py --candidates` has been run, their OpenReview position is shown too.
+If `python fetch_openreview.py --candidates` has been run, their OpenReview position is shown too, and
+`openreview_url` links the one profile at an institution named on their papers. With no such profile, or
+several, it links an OpenReview search for the name instead, and `openreview_ids` lists only profiles at
+that institution: a name search alone returns every namesake.
 """
 import argparse
 import collections
 import csv
 import json
+import re
 import sys
+import urllib.parse
 
-from common import (ACCEPTED, BACKEND, CANDIDATES, FIRST_YEAR, OPENREVIEW_RAW, ROSTER, ROSTER_FIELDS, VENUE_KEYS,
+from common import (ACCEPTED, BACKEND, CANDIDATES, FIRST_YEAR, OPENREVIEW_RAW, PARENT, ROSTER, ROSTER_FIELDS, VENUE_KEYS,
                     VENUE_NAME, load_roster, name_key, norm_name, read_csv, read_jsonl_gz, slugify, vn_institution,
+                    vn_institutions,
                     write_csv)
 
 EVIDENCE_FIELDS = ["papers", "senior_author", "first_year", "last_year", "venues", "at_university",
                    "faculty_page", "faculty_rank", "faculty_match",
-                   "affiliations", "openreview_position", "sample_paper", "sample_url", "first_paper", "first_url"]
+                   "affiliations", "openreview_position", "sample_paper", "sample_url", "first_paper", "first_url",
+                   "openreview_url", "openreview_match"]
 PROFILES = OPENREVIEW_RAW / "_candidates.json"  # written by fetch_openreview.py --candidates
 FACULTY = BACKEND / "faculty.csv"  # hand-kept: names and titles copied from the universities' faculty pages
 MATCH_ORDER = {"exact": 0, "likely": 1, "possible": 2}
@@ -90,29 +97,42 @@ def find(accepted, roster):
         names = [n for n, _ in c["names"].most_common()]
         if key in known or any(norm_name(n) in known for n in names):
             continue
-        (full, short, _), _ = c["inst"].most_common(1)[0]
+        (full, short, uni), _ = c["inst"].most_common(1)[0]
         years = [y for _, y, _ in c["papers"]]
         venues = collections.Counter(v for v, _, _ in c["papers"])
         latest = max(c["papers"], key=lambda p: (p[1], p[2]))
         oldest = min(c["papers"], key=lambda p: (p[1], p[2]))
         prof = profiles.get(key, [])
+        # a name search returns every namesake; only a profile at an institution named on the papers is theirs
+        shorts = {short for (_, short, _) in c["inst"]}
+        shorts |= {PARENT[x] for x in shorts if x in PARENT}
+        keys = {name_key(n) for n in names}
+        mine = [p for p in prof if name_key(re.sub(r"\d+$", "", p["id"].lstrip("~")).replace("_", " ")) in keys
+                and any(x in shorts or PARENT.get(x) in shorts for _, x, _ in vn_institutions(p.get("institution")))]
         listed = faculty_match(names, {short for (_, short, _) in c["inst"]}, faculty)
         rows.append({
             "faculty_page": f"{listed[0]['name']} ({listed[0]['institution_short']})" if listed else "",
             "faculty_rank": listed[0]["rank"] if listed else "", "faculty_match": listed[1] if listed else "",
             "approved": "", "display_name": names[0], "name_variants": "; ".join(names[1:]),
             "institution": full, "institution_short": short,
-            "rank": "; ".join(sorted({p["position"] for p in prof if p.get("position")})),
-            "vn_since": "", "openreview_ids": ";".join(p["id"] for p in prof), "homepage": "",
+            "rank": "; ".join(sorted({p["position"] for p in mine if p.get("position")})),
+            "vn_since": "", "openreview_ids": ";".join(p["id"] for p in mine), "homepage": "",
             "to_confirm": "rank, vn_since and OpenReview ID", "notes": "", "slug": slugify(names[0]),
             "papers": len(c["papers"]), "senior_author": len(c["senior"]),
             "first_year": min(years), "last_year": max(years),
             "venues": ", ".join(f"{VENUE_NAME[v]} {venues[v]}" for v in VENUE_KEYS if venues[v]),
-            "at_university": "yes" if any(uni for (_, _, uni) in c["inst"]) else "no",
+            # judged by the institution named most often: a VinAI resident who once lists a university is
+            # still at VinAI, and goes to the Not tracked page
+            "at_university": "yes" if uni else "no",
             "affiliations": " | ".join(a for a, _ in c["raw"].most_common(3)),
             "openreview_position": "; ".join(
                 f"{p['id']}: {p.get('position') or '?'} at {p.get('institution') or '?'}" for p in prof),
             "sample_paper": f"{latest[2]} ({VENUE_NAME[latest[0]]} {latest[1]})", "sample_url": c["papers"][latest],
+            "openreview_url": f"https://openreview.net/profile?id={mine[0]['id']}" if len(mine) == 1 else
+            "https://openreview.net/search?" + urllib.parse.urlencode(
+                {"term": names[0], "group": "all", "content": "all", "source": "all"}),
+            "openreview_match": "profile" if len(mine) == 1 else f"{len(mine)} profiles at the institution" if mine
+            else "search",
             "first_paper": f"{oldest[2]} ({VENUE_NAME[oldest[0]]} {oldest[1]})", "first_url": c["papers"][oldest],
         })
     rows.sort(key=lambda r: (-r["papers"], -r["senior_author"], r["display_name"]))

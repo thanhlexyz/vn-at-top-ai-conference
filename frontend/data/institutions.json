@@ -3108,25 +3108,26 @@
    "total": 0
   },
   "judged": 4,
-  "unknown": 0,
+  "unknown": 2,
   "slug": "hcmus",
   "name": "University of Science, VNU-HCM",
   "short": "HCMUS",
   "professors": [
-   "man-ngo"
+   "man-ngo",
+   "minh-triet-tran"
   ],
   "iclr_complete": true,
-  "accepted": 4,
+  "accepted": 6,
   "own_page": 0,
-  "official": 4,
+  "official": 6,
   "venues": {
    "iclr": {
     "accepted": 3,
-    "rejected": 0,
-    "withdrawn": 0,
+    "rejected": 2,
+    "withdrawn": 1,
     "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 3,
+    "not_accepted": 3,
+    "submitted": 6,
     "own_page": 0,
     "official": 3
    },
@@ -3151,14 +3152,14 @@
     "official": 0
    },
    "cvpr": {
-    "accepted": 0,
+    "accepted": 2,
     "rejected": 0,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 0,
-    "submitted": 0,
+    "submitted": 2,
     "own_page": 0,
-    "official": 0
+    "official": 2
    },
    "acl": {
     "accepted": 0,
@@ -3282,14 +3283,14 @@
       "provisional": false
      },
      "cvpr": {
-      "accepted": 0,
+      "accepted": 2,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 0,
+      "submitted": 2,
       "own_page": 0,
-      "official": 0,
+      "official": 2,
       "available": true,
       "provisional": false
      },
@@ -3306,9 +3307,9 @@
       "provisional": false
      }
     },
-    "accepted": 0,
+    "accepted": 2,
     "own_page": 0,
-    "official": 0
+    "official": 2
    },
    {
     "year": 2022,
@@ -3523,11 +3524,11 @@
     "venues": {
      "iclr": {
       "accepted": 1,
-      "rejected": 0,
-      "withdrawn": 0,
+      "rejected": 2,
+      "withdrawn": 1,
       "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 1,
+      "not_accepted": 3,
+      "submitted": 4,
       "own_page": 0,
       "official": 1,
       "available": true,

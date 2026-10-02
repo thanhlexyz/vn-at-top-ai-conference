@@ -19,7 +19,13 @@
 	{{- with site.GetPage "/candidates" }}
 	<a href="{{ .RelPermalink }}"{{ if eq $.RelPermalink .RelPermalink }} class="current"{{ end }}>Candidates</a>
 	{{- end }}
+	{{- with site.GetPage "/not-tracked" }}
+	<a href="{{ .RelPermalink }}"{{ if eq $.RelPermalink .RelPermalink }} class="current"{{ end }}>Not tracked</a>
+	{{- end }}
 	<a href="https://youtube.com/shorts/zlGdDmkTTrk">Video</a>
+	{{- with site.GetPage "/feedback" }}
+	<a href="{{ .RelPermalink }}"{{ if eq $.RelPermalink .RelPermalink }} class="current"{{ end }}>Feedback</a>
+	{{- end }}
 	</span>
 </nav>
 <main>

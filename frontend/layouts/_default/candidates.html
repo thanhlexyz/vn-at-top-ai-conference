@@ -46,9 +46,8 @@
 
 <h2>People found, not on the roster ({{ $c.total }})</h2>
 <p>
-	Authors who list a Vietnamese institution on an accepted main-track paper, ordered by the number of those papers. Most are students.
+	Authors who list a Vietnamese university on an accepted main-track paper, ordered by the number of those papers. Most are students. Authors whose papers name only a company or institute are on the Not tracked page.
 	"Last author" counts the papers where the person is the last of several authors, a common sign of a supervisor.
-	The faculty-page column is filled for VinUniversity (CECS), HUST (SoICT), VNU-UET (Faculty of IT) and HCMUT (CSE), whose staff lists are in <code>backend/faculty.csv</code>.
 	{{- if gt $c.total (len $c.people) }} The first {{ len $c.people }} are shown; the full list is in <code>backend/candidates.csv</code>.{{ end }}
 </p>
 <div class="scroll">
@@ -61,7 +60,6 @@
 		<th>Last author</th>
 		<th>Years</th>
 		<th class="l">Venues</th>
-		<th class="l">On a faculty page as</th>
 		<th class="l">Oldest paper</th>
 		<th class="l">Latest paper</th>
 	</tr>
@@ -69,16 +67,12 @@
 	<tbody>
 	{{- range $c.people }}
 	<tr>
-		<td class="l">{{ .display_name }}{{ with .name_variants }}<br><span class="note">also: {{ . }}</span>{{ end }}</td>
-		<td class="l">{{ .institution_short }}{{ if ne .at_university "yes" }}<br><span class="note">not a university</span>{{ end }}</td>
+		<td class="l"><a href="{{ .openreview_url }}"{{ if ne .openreview_match "profile" }} title="OpenReview search for this name ({{ .openreview_match }})"{{ end }}>{{ .display_name }}</a>{{ if ne .openreview_match "profile" }} <span class="note">search</span>{{ end }}{{ with .name_variants }}<br><span class="note">also: {{ . }}</span>{{ end }}</td>
+		<td class="l">{{ .institution_short }}</td>
 		<td>{{ .papers }}</td>
 		{{ partial "num.html" .senior_author }}
 		<td>{{ .first_year }}{{ if ne .first_year .last_year }}&ndash;{{ .last_year }}{{ end }}</td>
 		<td class="l">{{ .venues }}</td>
-		<td class="l">
-			{{- if .faculty_page }}{{ .faculty_rank }}: {{ .faculty_page }}{{ if ne .faculty_match "exact" }}<br><span class="note">{{ .faculty_match }} name match</span>{{ end }}{{ end }}
-			{{- with .openreview_position }}<br><span class="note">OpenReview: {{ . }}</span>{{ end -}}
-		</td>
 		<td class="l">{{ if .first_url }}<a href="{{ .first_url }}">{{ .first_paper }}</a>{{ else }}{{ .first_paper }}{{ end }}</td>
 		<td class="l">{{ if .sample_url }}<a href="{{ .sample_url }}">{{ .sample_paper }}</a>{{ else }}{{ .sample_paper }}{{ end }}</td>
 	</tr>

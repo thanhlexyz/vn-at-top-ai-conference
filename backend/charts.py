@@ -174,3 +174,65 @@ def lines(label, years, series):
             out.append(f'<circle class="dot {cls}" cx="{x:.1f}" cy="{y:.1f}" r="4"><title>{_esc(name)} {year}: {v}</title></circle>')
     out.append("</svg>")
     return "".join(out)
+
+
+def stacked_area(label, years, series, provisional=(), short=None):
+    """Stacked areas over the years, the first series at the bottom, with a legend on top, each band
+    named at its right end, and a hover column per year whose <title> gives that year's numbers.
+
+    series: [(css class, name, [value per year])]. The band classes are styled in style.css; a 2px
+    surface line separates the bands. Years in `provisional` are still being counted and say so.
+    `short` gives shorter band names for the labels at the right end; the legend keeps the full names.
+    """
+    left, right, top, plot_h, bottom = 34, 120, 34, 200, 24
+    totals = [sum(values[k] for _, _, values in series) for k in range(len(years))]
+    peak = max(totals, default=0) or 1
+    step = next(s for s in (1, 2, 5, 10, 20, 25, 50, 100, 200, 500, 1000) if peak / s <= 5)
+    top_value = step * -(-peak // step)
+    base, plot_w = top + plot_h, WIDTH - left - right
+    xs = [left + plot_w * k / (len(years) - 1) for k in range(len(years))] if len(years) > 1 else [left]
+
+    def y_of(v):
+        return base - v / top_value * plot_h
+
+    out = [f'<svg class="chart" viewBox="0 0 {WIDTH} {base + bottom}" role="img" aria-label="{_esc(label)}">',
+           _legend([(cls, name) for cls, name, _ in series], x=left)]
+    value = 0
+    while value <= top_value:
+        y = y_of(value)
+        out.append(f'<line class="{"axis" if value == 0 else "grid"}" x1="{left}" y1="{y:.1f}" x2="{left + plot_w}" '
+                   f'y2="{y:.1f}"/><text x="{left - 6}" y="{y + 4:.1f}" text-anchor="end">{value}</text>')
+        value += step
+    for x, year in zip(xs, years):
+        out.append(f'<text x="{x:.1f}" y="{base + 17}" text-anchor="middle">{year}{"*" if year in provisional else ""}</text>')
+
+    lower = [0.0] * len(years)
+    edges, ends = [], []
+    for cls, name, values in series:
+        upper = [lo + v for lo, v in zip(lower, values)]
+        pts = [f"{x:.1f},{y_of(v):.1f}" for x, v in zip(xs, upper)]
+        back = [f"{x:.1f},{y_of(v):.1f}" for x, v in reversed(list(zip(xs, lower)))]
+        out.append(f'<polygon class="band {cls}" points="{" ".join(pts + back)}"/>')
+        edges.append((cls, " ".join(pts)))
+        ends.append([(short or {}).get(name, name), (y_of(lower[-1]) + y_of(upper[-1])) / 2, values[-1]])
+        lower = upper
+    for k, (cls, pts) in enumerate(edges):  # surface gap between bands, then the band's own top edge
+        if k < len(edges) - 1:
+            out.append(f'<polyline class="gap" points="{pts}"/>')
+        out.append(f'<polyline class="edge {cls}" points="{pts}"/>')
+
+    # names at the right end, pushed apart so that thin bands do not overlap their neighbours
+    for k in range(1, len(ends)):
+        ends[k][1] = min(ends[k][1], ends[k - 1][1] - 15)
+    for name, y, last in ends:
+        out.append(f'<text x="{xs[-1] + 8:.1f}" y="{y + 4:.1f}"><tspan class="value">{_fmt(last)}</tspan> {_esc(name)}</text>')
+
+    band = plot_w / max(len(years) - 1, 1)
+    for k, (x, year) in enumerate(zip(xs, years)):
+        parts = ", ".join(f"{_fmt(values[k])} {name}" for _, name, values in series)
+        note = " (list still being completed)" if year in provisional else ""
+        out.append(f'<rect class="hit" x="{max(x - band / 2, left):.1f}" y="{top}" '
+                   f'width="{min(band, x + band / 2 - left, left + plot_w - x + band / 2):.1f}" height="{plot_h}">'
+                   f'<title>{year}{note}: {parts}; total {_fmt(totals[k])}</title></rect>')
+    out.append("</svg>")
+    return "".join(out)

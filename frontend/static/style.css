@@ -276,3 +276,49 @@ ul.papers .authors {
         font-size: 1.3em ;
     }
 }
+
+/* Feedback form */
+form.feedback {
+    display: grid ;
+    gap: 0.4em ;
+    max-width: 40rem ;
+    margin: 1.2em 0 ;
+}
+
+form.feedback label {
+    font-weight: bold ;
+    margin-top: 0.6em ;
+}
+
+form.feedback input,
+form.feedback textarea {
+    font: inherit ;
+    padding: 0.4em ;
+    border: 1px solid #000 ;
+    width: 100% ;
+    box-sizing: border-box ;
+}
+
+form.feedback button {
+    justify-self: start ;
+    font: inherit ;
+    margin-top: 0.8em ;
+    padding: 0.4em 1em ;
+    border: 1px solid #000 ;
+    background: #fff ;
+    cursor: pointer ;
+}
+
+form.feedback button:hover {
+    background: #f0f0f0 ;
+}
+
+/* Stacked areas (front page) */
+.chart .band.acc { fill: var(--accepted) ; }
+.chart .band.not { fill: var(--not-accepted) ; }
+.chart .band.est { fill: var(--not-accepted) ; fill-opacity: 0.18 ; stroke: none ; }
+.chart .edge { fill: none ; stroke: none ; }
+.chart .edge.est { stroke: var(--not-accepted) ; stroke-width: 1.5 ; stroke-linejoin: round ; }
+.chart .gap { fill: none ; stroke: #ffffff ; stroke-width: 2 ; stroke-linejoin: round ; }
+.chart .hit { fill: transparent ; }
+.chart .hit:hover { fill: #000000 ; fill-opacity: 0.04 ; }

@@ -747,6 +747,37 @@ def projection(p):
     return out
 
 
+def overview(professors, acc):
+    """The front-page figures: accepted papers and the papers behind them, all listed professors together.
+
+    The per-professor estimates (see `projection`) are added up, so a paper of two listed professors is
+    counted for each, as on their own pages."""
+    years = {y: {"accepted": 0, "recorded": 0, "estimated": 0.0} for y in YEARS}
+    for p in professors:
+        for r in (p["projection"] or {}).get("rows", []):
+            if r["counts"]:
+                years[r["year"]]["accepted"] += r["accepted"]
+                years[r["year"]]["recorded"] += r["iclr_not_accepted"]
+                years[r["year"]]["estimated"] += float(r["estimated"])
+    rows = [{"year": y, **v, "estimated": round(v["estimated"])} for y, v in years.items()]
+    total = {k: sum(r[k] for r in rows) for k in ("accepted", "recorded", "estimated")}
+    provisional = sorted({y for v, y in acc.provisional})
+    series = [("acc", "accepted"), ("not", "rejected at ICLR, recorded"), ("est", "rejected elsewhere, estimated")]
+    keys = ["accepted", "recorded", "estimated"]
+    return {
+        "total": total, "rows": rows, "provisional": provisional,
+        "provisional_lists": [f"{VENUE_NAME[v]} {y}" for v, y in sorted(acc.provisional)],
+        "submissions": sum(total.values()),
+        "pie": charts.pies("Accepted, recorded rejected and estimated rejected papers, all listed professors",
+                           [("All years and venues", [(c, n, total[k]) for (c, n), k in zip(series, keys)])]),
+        "stack": charts.stacked_area("Accepted, recorded rejected and estimated rejected papers per year",
+                                     YEARS, [(c, n, [r[k] for r in rows]) for (c, n), k in zip(series, keys)],
+                                     provisional=provisional,
+                                     short={"rejected at ICLR, recorded": "recorded",
+                                            "rejected elsewhere, estimated": "estimated"}),
+    }
+
+
 def projection_svg(name, rows):
     """One stacked column per year: accepted, not accepted at ICLR (counted), not accepted elsewhere (estimated).
 
@@ -932,12 +963,16 @@ def main():
     names = {p["slug"]: p["name"] for p in roster}
     pending = [{**q, "professor_name": names[q["professor"]], "venue_name": VENUE_NAME[q["venue"]]} for q in queue]
 
-    candidates = read_csv(CANDIDATES)
-    shown = [{**c, "papers": int(c["papers"]), "senior_author": int(c["senior_author"])}
-             for c in candidates[:MAX_CANDIDATES_ON_SITE]]
+    # people whose papers name no university (VinAI, FPT, Vingroup, Viettel...) are not lecturers or
+    # professors, so they go to the Not tracked page instead of waiting as candidates
+    found = [{**c, "papers": int(c["papers"]), "senior_author": int(c["senior_author"])} for c in read_csv(CANDIDATES)]
+    candidates = [c for c in found if c["at_university"] == "yes"]
+    companies = [c for c in found if c["at_university"] != "yes"]
+    shown = candidates[:MAX_CANDIDATES_ON_SITE]
     waiting = [{"name": p["name"], "institution": p["institution_short"], "to_confirm": p["to_confirm"]}
                for p in roster if p["approved"] != "yes" and p["approved"] != "no"]
 
+    write_json(DATA / "overview.json", overview(professors, acc))
     now = datetime.datetime.now(datetime.timezone.utc)  # UTC, so the data does not show where it was built
     write_json(DATA / "professors.json", professors)
     write_json(DATA / "institutions.json", institutions)
@@ -946,8 +981,13 @@ def main():
     for r in papers:
         r["_owners"] = [{"slug": p["slug"]} for p in owners[(r["venue"], r["year"], norm_title(r["title"]))]]
     write_json(DATA / "blog.json", blog_data(professors, papers, acc, own_pages, announced))
+    # approved = no: checked and left off for good; `notes` says why
+    excluded = [{"name": p["name"], "institution": p["institution_short"], "reason": p["notes"],
+                 "homepage": p["homepage"], "openreview_ids": p["openreview_ids"]}
+                for p in roster if p["approved"] == "no"]
     write_json(DATA / "candidates.json", {"people": shown, "total": len(candidates), "review": pending,
-                                         "waiting": waiting})
+                                         "waiting": waiting, "excluded": excluded,
+                                         "companies": companies})
     write_json(DATA / "meta.json", {
         "generated": now.strftime("%Y-%m-%d %H:%M %Z"), "generated_date": now.strftime("%Y-%m-%d"),
         "first_year": YEARS[0], "last_year": YEARS[-1], "years": YEARS,
