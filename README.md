@@ -3,8 +3,10 @@
 A static site that shows, for a hand-approved list of professors and lecturers in Vietnam, how many papers they
 submitted, had accepted and had rejected at ICLR, NeurIPS, ICML, CVPR and ACL since 2020.
 
+**Website: <https://thanhlexyz.github.io/vn-at-top-ai-conference/>**
+
 - `backend/` Python scripts that collect the records and write the site's data files.
-- `frontend/` Hugo site (own layouts, no theme, no JavaScript) that renders those files.
+- `frontend/` Hugo site (own layouts, no theme; one small script for sorting and keyboard scrolling) that renders those files.
 
 Needs Python 3.10+, Hugo 0.156+ and, for the OpenReview step only, `pip install openreview-py`.
 
