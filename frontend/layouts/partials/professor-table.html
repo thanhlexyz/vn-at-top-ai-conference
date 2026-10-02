@@ -8,6 +8,7 @@
 		<th colspan="3">ICLR</th>
 		<th colspan="4">{{ T "th_accepted_at" }}</th>
 		<th colspan="3">{{ T "th_total" }}</th>
+		<th rowspan="2" class="ws" title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
 		<th colspan="2" title="{{ T "tip_own_institution" }}">{{ T "th_own_institution" }}</th>
 		<th colspan="5">{{ T "th_coauthors" }}</th>
 		<th rowspan="2">{{ T "th_topic_areas" }}</th>
@@ -62,6 +63,7 @@
 		{{- else }}
 		{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}
 		{{- end }}
+		{{ partial "num.html" (len (.workshop_papers | default slice)) }}
 		{{ partial "num.html" .authorship.majority.total }}
 		{{ partial "num.html" .authorship.first_author.total }}
 		{{- range slice .collab.avg_coauthors .collab.min_coauthors .collab.max_coauthors .collab.avg_foreign .collab.elsewhere .collab.topic_areas }}
