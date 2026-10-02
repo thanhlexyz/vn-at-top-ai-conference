@@ -38,7 +38,6 @@
 	{{- with site.GetPage "/not-tracked" }}
 	<a href="{{ .RelPermalink }}"{{ if eq $.RelPermalink .RelPermalink }} class="current"{{ end }}>{{ T "nav_not_tracked" }}</a>
 	{{- end }}
-	<a href="https://youtube.com/shorts/q6lOxftXi-U">{{ T "nav_video" }}</a>
 	{{- with site.GetPage "/feedback" }}
 	<a href="{{ .RelPermalink }}"{{ if eq $.RelPermalink .RelPermalink }} class="current"{{ end }}>{{ T "nav_feedback" }}</a>
 	{{- end }}
