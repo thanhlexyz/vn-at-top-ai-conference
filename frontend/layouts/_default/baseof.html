@@ -41,5 +41,8 @@
 	<a href="{{ "about/" | relURL }}">Sources and limits</a>
 </footer>
 <script src="{{ "site.js" | relURL }}" defer></script>
+{{- with site.Params.goatcounter }}{{ if not site.Params.local }}
+<script data-goatcounter="https://{{ . }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+{{- end }}{{ end }}
 </body>
 </html>

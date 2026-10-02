@@ -99,3 +99,7 @@ A page that only announces a number ("five papers accepted") adds nothing to the
 ## Updating
 
 The data is rebuilt with `make data` in the project folder. `make openreview` fetches the OpenReview records and needs a login. The README describes both.
+
+## Visitors
+
+The public site counts visits with [GoatCounter](https://www.goatcounter.com/), which sets no cookies and keeps no personal data about visitors: only the page, the referring site, the browser, the screen size and the country derived from the address, which is not stored.

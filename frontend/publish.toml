@@ -7,3 +7,6 @@ baseURL = 'https://thanhlexyz.github.io/vn-at-top-ai-conference/'
   local = false
   # the public site lists the titles of rejected and withdrawn papers; false shows the counts only
   showNonAcceptedTitles = true
+  # visitor counts with GoatCounter (no cookies, no personal data): the account code, e.g. "vn-at-top-ai" for
+  # https://vn-at-top-ai.goatcounter.com; empty means no analytics
+  goatcounter = 'thanhlexyz'
