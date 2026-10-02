@@ -367,11 +367,11 @@ other = "e.g. Missing NeurIPS 2026 paper of Nguyen Van A"
 [fb_details]
 other = "Details"
 [fb_details_placeholder]
-other = "What is wrong or missing, on which page, and a link that shows it."
+other = "What is incorrect or missing, on which page, and a link that shows it, if available."
 [fb_submit]
 other = "Continue on GitHub"
 [fb_note]
-other = "Issues are public. Please do not include private contact details. You can also <a href=\"{{ . }}\">browse the existing issues</a>."
+other = "Feedback on GitHub is public, so we kindly ask you not to include private contact details. You are also welcome to <a href=\"{{ . }}\">read the feedback already received</a>."
 
 # ---------------------------------------------------------------- about page table
 [cov_no_aff]
