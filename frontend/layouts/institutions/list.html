@@ -31,7 +31,7 @@
 	{{- $i := . }}
 	<tr>
 		<td class="logo-col">{{ with .image }}<img class="mini" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}</td>
-		<td class="l"><a href="{{ printf "institutions/%s/" .slug | relLangURL }}">{{ .name }}</a></td>
+		<td class="l"><a href="{{ printf "institutions/%s/" .slug | relLangURL }}">{{ partial "iname.html" .name }}</a></td>
 		<td>{{ len .professors }}</td>
 		{{ partial "num.html" .venues.iclr.submitted }}
 		{{ partial "acc.html" (merge .venues.iclr (dict "cls" "good")) }}

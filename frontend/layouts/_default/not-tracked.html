@@ -14,7 +14,7 @@
 			{{- else if .openreview_ids }}<a href="https://openreview.net/profile?id={{ index .openreview_ids 0 }}">{{ .name }}</a>
 			{{- else }}<a href="https://openreview.net/search?term={{ .name | urlquery }}&amp;group=all&amp;content=all&amp;source=all">{{ .name }}</a> <span class="note">search</span>{{ end -}}
 		</td>
-		<td class="l">{{ .institution }}</td>
+		<td class="l">{{ partial "iname.html" .institution }}</td>
 		<td class="l">{{ .reason }}</td>
 	</tr>
 	{{- end }}

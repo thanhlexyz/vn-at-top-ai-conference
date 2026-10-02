@@ -1060,6 +1060,11 @@ def main():
         elsewhere = i["accepted"] - iclr["accepted"]
         i["rejected_estimated"] = round(iclr["not_accepted"] + elsewhere * (ratio - 1)) if i["accepted"] or iclr["submitted"] else None
     institutions.sort(key=lambda i: (-i["accepted"], i["name"]))
+    # Vietnamese names, confirmed by hand (institution_names.csv); the Vietnamese site shows them
+    names_vi = {r["name"]: r["name_vi"] for r in read_csv(BACKEND / "institution_names.csv")}
+    for i in institutions:
+        i["name_vi"] = names_vi.get(i["name"], i["name"])
+    write_json(DATA / "institution_names.json", names_vi)
 
     def with_owners(r):
         who = owners[(r["venue"], r["year"], norm_title(r["title"]))]
@@ -1181,7 +1186,7 @@ def main():
         "provisional": [{"venue": v, "name": VENUE_NAME[v], "year": y} for v, y in sorted(acc.provisional)],
     })
     write_stubs("professors", [(p["slug"], p["name"], p["name_vi"]) for p in professors])
-    write_stubs("institutions", [(i["slug"], i["name"]) for i in institutions])
+    write_stubs("institutions", [(i["slug"], i["name"], i["name_vi"]) for i in institutions])
     write_stubs("venues", [(v["key"], v["name"]) for v in venues])
 
     (WORK / "build_report.txt").write_text("\n".join(warnings + skipped) + "\n", encoding="utf-8")

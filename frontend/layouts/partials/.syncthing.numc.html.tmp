@@ -1,0 +1,2 @@
+{{- /* A number cell with a CSS class. Context: dict "v" (the number) "cls" (the class). */ -}}
+<td class="{{ .cls }}{{ if eq (int .v) 0 }} zero{{ end }}">{{ .v }}</td>

@@ -1,4 +1,4 @@
 ---
-title: "Can Tho University"
+title: "Đại học Cần Thơ"
 key: "ctu"
 ---

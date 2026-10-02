@@ -1,4 +1,4 @@
 ---
-title: "University of Economics Ho Chi Minh City"
+title: "Đại học Kinh tế TP. Hồ Chí Minh"
 key: "ueh"
 ---

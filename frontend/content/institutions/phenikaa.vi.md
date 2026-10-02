@@ -1,4 +1,4 @@
 ---
-title: "Phenikaa University"
+title: "Trường Đại học Phenikaa"
 key: "phenikaa"
 ---

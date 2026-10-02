@@ -1,4 +1,4 @@
 ---
-title: "National Economics University"
+title: "Đại học Kinh tế Quốc dân"
 key: "neu"
 ---

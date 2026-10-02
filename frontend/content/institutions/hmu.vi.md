@@ -1,4 +1,4 @@
 ---
-title: "Hanoi Medical University"
+title: "Trường Đại học Y Hà Nội"
 key: "hmu"
 ---

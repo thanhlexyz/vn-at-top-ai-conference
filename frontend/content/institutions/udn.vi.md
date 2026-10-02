@@ -1,4 +1,4 @@
 ---
-title: "University of Danang"
+title: "Đại học Đà Nẵng"
 key: "udn"
 ---

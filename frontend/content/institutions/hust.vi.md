@@ -1,4 +1,4 @@
 ---
-title: "Hanoi University of Science and Technology"
+title: "Đại học Bách khoa Hà Nội"
 key: "hust"
 ---

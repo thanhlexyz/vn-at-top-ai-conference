@@ -1,4 +1,4 @@
 ---
-title: "VNU University of Engineering and Technology"
+title: "Trường Đại học Công nghệ, ĐHQGHN"
 key: "vnu-uet"
 ---

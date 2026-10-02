@@ -1,0 +1,3 @@
+{{- /* An institution's name in the page's language. Context: its English name, as in data/institutions.json.
+       The Vietnamese names are in data/institution_names.json (from backend/institution_names.csv). */ -}}
+{{- if eq site.Language.Lang "vi" }}{{ with index hugo.Data.institution_names . }}{{ . }}{{ else }}{{ $ }}{{ end }}{{ else }}{{ . }}{{ end -}}

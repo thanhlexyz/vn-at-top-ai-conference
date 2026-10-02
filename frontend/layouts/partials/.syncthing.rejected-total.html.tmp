@@ -1,0 +1,5 @@
+{{- /* Known rejected, withdrawn and desk-rejected papers over all venues, as a red total cell.
+       Context: a map of venue -> counts (with "not_accepted"). ICLR publishes every rejection; the other venues only
+       the ones their authors make public, so this is a lower bound. */ -}}
+{{- $r := 0 }}{{ range . }}{{ $r = add $r (int .not_accepted) }}{{ end -}}
+<td class="total bad{{ if eq $r 0 }} zero{{ end }}" title="{{ T "tip_rejected_where_public" }}">{{ $r }}</td>

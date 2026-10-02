@@ -18,7 +18,7 @@
 		{{- if eq $section "institutions" }}
 		<td class="logo-col">{{ with .image }}<img class="mini" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}</td>
 		{{- end }}
-		<td class="l"><a href="{{ printf "%s/%s/" $section .slug | relLangURL }}">{{ if eq $section "professors" }}{{ partial "pname.html" . }}{{ else }}{{ .name }}{{ end }}</a>{{ if eq $section "professors" }} <span class="note">{{ .institution_short }}</span>{{ end }}</td>
+		<td class="l"><a href="{{ printf "%s/%s/" $section .slug | relLangURL }}">{{ if eq $section "professors" }}{{ partial "pname.html" . }}{{ else }}{{ partial "iname.html" .name }}{{ end }}</a>{{ if eq $section "professors" }} <span class="note">{{ .institution_short }}</span>{{ end }}</td>
 		{{- range slice "iclr" "neurips" "icml" "cvpr" "acl" }}
 		{{ partial "num.html" (index $t.venues .) }}
 		{{- end }}

@@ -1,0 +1,11 @@
+{{- /* Structured data (schema.org): a Person for each professor page, a Dataset for the front page. */ -}}
+{{- if and (eq .Section "professors") .Params.key }}
+{{- $p := index (where hugo.Data.professors "slug" .Params.key) 0 }}
+{{- $same := slice }}{{ range $p.links }}{{ $same = $same | append .url }}{{ end }}
+{{- $person := dict "@context" "https://schema.org" "@type" "Person" "name" $p.name "alternateName" (uniq (slice $p.name_vi | append $p.aliases)) "url" .Permalink "jobTitle" $p.rank "affiliation" (dict "@type" "CollegeOrUniversity" "name" $p.institution) "sameAs" $same }}
+{{- with $p.image }}{{ $person = merge $person (dict "image" (. | absURL)) }}{{ end }}
+<script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>
+{{- else if .IsHome }}
+{{- $data := dict "@context" "https://schema.org" "@type" "Dataset" "name" site.Title "description" site.Params.description "url" .Permalink "inLanguage" site.Language.Lang "isAccessibleForFree" true "creator" (dict "@type" "Person" "name" "thanhlexyz" "url" "https://github.com/thanhlexyz") "temporalCoverage" (printf "%d/%d" (int hugo.Data.meta.first_year) (int hugo.Data.meta.last_year)) "keywords" (slice "ICLR" "NeurIPS" "ICML" "CVPR" "ACL" "Vietnam" "artificial intelligence") "distribution" (dict "@type" "DataDownload" "encodingFormat" "application/json" "contentUrl" "https://github.com/thanhlexyz/vn-at-top-ai-conference/tree/main/frontend/data") }}
+<script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+{{- end }}

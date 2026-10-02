@@ -1,4 +1,4 @@
 ---
-title: "Quy Nhon University"
+title: "Trường Đại học Quy Nhơn"
 key: "qnu"
 ---

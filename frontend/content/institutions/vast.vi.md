@@ -1,4 +1,4 @@
 ---
-title: "Vietnam Academy of Science and Technology"
+title: "Viện Hàn lâm Khoa học và Công nghệ Việt Nam"
 key: "vast"
 ---
