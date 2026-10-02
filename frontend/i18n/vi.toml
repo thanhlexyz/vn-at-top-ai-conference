@@ -10,7 +10,7 @@ other = "Video"
 [nav_feedback]
 other = "Góp ý"
 [footer_data]
-other = "Số liệu đến ngày {{ .Date }}, giai đoạn {{ .First }}&ndash;{{ .Last }}."
+other = "Số liệu cập nhật đến ngày {{ .Date }}, giai đoạn {{ .First }}&ndash;{{ .Last }}."
 [footer_sources]
 other = "Nguồn và giới hạn"
 [lang_switch]
@@ -20,9 +20,9 @@ other = "Ngôn ngữ"
 [venues_five]
 other = "năm hội nghị"
 [none]
-other = "Không có."
+other = "Chưa có."
 [titles_hidden]
-other = "Không hiển thị tên bài."
+other = "Tiêu đề bài không được hiển thị."
 [unofficial]
 other = "chưa chính thức"
 [status_accepted]
@@ -40,17 +40,17 @@ other = "danh sách chưa công bố"
 [not_yet_in_vietnam]
 other = "chưa công tác tại Việt Nam"
 [incomplete_star]
-other = "hồ sơ chưa đầy đủ hoặc chưa xác nhận, xem trang của giảng viên"
+other = "Hồ sơ chưa đầy đủ hoặc đang chờ xác nhận; chi tiết xin xem tại trang của giảng viên"
 [own_page_more]
-other = "thêm {{ .Count }} bài từ trang cá nhân, chưa có trong danh sách chính thức"
+other = "Thêm {{ .Count }} bài được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm, chưa có trong danh sách chính thức"
 [reason_before]
-other = "trước năm {{ .Year }}, khi người này về công tác tại Việt Nam"
+other = "công bố trước năm {{ .Year }}, thời điểm giảng viên về công tác tại Việt Nam"
 [reason_track]
 other = "nhánh {{ .Track }}"
 [not_counted]
 other = "Không tính: {{ .Reason }}."
 [later_accepted]
-other = "Bài cùng tên sau đó được nhận tại {{ . }}."
+other = "Bài có cùng tiêu đề sau đó đã được chấp nhận tại {{ . }}."
 [unofficial_because]
 other = "Chưa chính thức: {{ . }}."
 
@@ -169,41 +169,41 @@ other = "bị từ chối, rút bài hoặc bị loại sơ bộ, nếu công kh
 [home_title]
 other = "Bài báo tại các hội nghị AI hàng đầu của giảng viên ở Việt Nam, {{ .First }}&ndash;{{ .Last }}"
 [home_flag_incomplete]
-other = "Một số hồ sơ chưa đầy đủ hoặc còn chờ xác nhận. Những giảng viên đó được đánh dấu * và trang của họ ghi rõ còn thiếu gì."
+other = "Một số hồ sơ hiện chưa đầy đủ hoặc đang chờ xác nhận. Các giảng viên này được đánh dấu * và trang của từng giảng viên có ghi rõ những thông tin còn thiếu."
 [home_flag_pending]
-other = "{{ .Count }} trường hợp khớp tên chưa chắc chắn đang chờ xác nhận, xem <a href=\"{{ .URL }}\">Ứng viên</a>."
+other = "Hiện có {{ .Count }} trường hợp trùng tên chưa được xác nhận, xin xem tại trang <a href=\"{{ .URL }}\">Ứng viên</a>."
 [home_note_table]
-other = """Cột bị từ chối của ICLR gồm bài bị từ chối, rút bài và bị loại sơ bộ.
-Tổng bị từ chối cộng mọi bài bị từ chối ở ICLR với các bài bị từ chối mà tác giả tự công khai ở hội nghị khác (một số bài NeurIPS), nên đây là con số tối thiểu.
-Tổng bị từ chối, ước tính (màu cam) cộng thêm phần ước tính cho các hội nghị không công khai bài bị từ chối, theo kết quả ICLR của chính giảng viên: số bài nộp cho mỗi bài được nhận = (số bài nộp ICLR + 1) / (số bài được nhận ở ICLR + 1). Đây là ước tính, không phải số đếm.
-Dấu &ndash; nghĩa là chưa lấy được hồ sơ OpenReview của giảng viên đó.
-Chỉ tính nhánh chính (main track); không tính workshop, Findings, bài position và nhánh Datasets &amp; Benchmarks của NeurIPS.
-Giảng viên được xếp theo tổng số bài được nhận."""
+other = """Cột "bị từ chối" của ICLR bao gồm các bài bị từ chối sau phản biện, bài rút và bài bị loại sơ bộ.
+Tổng số bài bị từ chối được tính bằng toàn bộ số bài bị từ chối tại ICLR cộng với các bài bị từ chối mà tác giả tự công khai tại hội nghị khác (một số bài tại NeurIPS); do đó, đây là con số tối thiểu.
+Tổng số bài bị từ chối ước tính (màu cam) bổ sung phần ước tính cho các hội nghị không công khai bài bị từ chối, dựa trên kết quả ICLR của chính giảng viên, theo công thức: số lần nộp cho mỗi bài được chấp nhận = (số bài nộp ICLR + 1) / (số bài được nhận tại ICLR + 1). Đây là số liệu ước tính, không phải số liệu thống kê trực tiếp.
+Dấu &ndash; cho biết hồ sơ OpenReview của giảng viên chưa được thu thập.
+Số liệu chỉ bao gồm nhánh chính (main track); không tính workshop, Findings, bài position và nhánh Datasets &amp; Benchmarks của NeurIPS.
+Danh sách giảng viên được sắp xếp theo tổng số bài được chấp nhận."""
 [home_note_provisional]
-other = """Danh sách chính thức {{ .Name }} {{ .Year }} được công bố trước hội nghị và chưa đầy đủ.
-Riêng với danh sách này, bài được liệt kê trên trang cá nhân của giảng viên cũng được tính. Các bài đó hiện dưới dạng <span class="own">+N</span> sau con số chính thức và là chưa chính thức cho đến khi hội nghị công bố."""
+other = """Danh sách chính thức của {{ .Name }} {{ .Year }} được công bố trước khi hội nghị diễn ra và hiện chưa đầy đủ.
+Riêng đối với danh sách này, các bài được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm cũng được tính. Các bài này được thể hiện dưới dạng <span class="own">+N</span> sau số liệu chính thức và được xem là chưa chính thức cho đến khi hội nghị công bố."""
 [home_note_coauthors]
-other = """Các cột đồng tác giả và lĩnh vực tính trên mọi bài được tính, kể cả bài bị từ chối.
-Nước ngoài nghĩa là đơn vị ghi trên bài ở ngoài Việt Nam; đơn vị khác là số đồng tác giả khác nhau không cùng trường với giảng viên.
-Cả hai cần danh sách bài có ghi đơn vị, còn lĩnh vực cần nhãn chủ đề của chính hội nghị, chỉ có ở ICLR, NeurIPS và ICML từ 2023 hoặc 2024.
-Trang của từng giảng viên ghi rõ mỗi con số dựa trên bao nhiêu bài."""
+other = """Các cột về đồng tác giả và lĩnh vực được tính trên toàn bộ các bài được thống kê, bao gồm cả bài bị từ chối.
+"Nước ngoài" chỉ các đồng tác giả có đơn vị công tác ghi trên bài ở ngoài Việt Nam; "đơn vị khác" là số đồng tác giả khác nhau không cùng trường với giảng viên.
+Hai chỉ số này chỉ tính được với danh sách bài có ghi đơn vị công tác của tác giả; chỉ số lĩnh vực dựa trên nhãn chủ đề do hội nghị gán, chỉ có tại ICLR, NeurIPS và ICML từ năm 2023 hoặc 2024.
+Trang của từng giảng viên có ghi rõ mỗi chỉ số được tính trên bao nhiêu bài."""
 [home_overview]
 other = "Được nhận và bị từ chối, tất cả giảng viên trong danh sách"
 [home_overview_text]
-other = """{{ .Accepted }} bài được nhận ứng với khoảng {{ .Submissions }} lần nộp:
-{{ .Recorded }} bài bị từ chối hoặc rút ở ICLR, nơi mọi bài nộp đều công khai, và khoảng {{ .Estimated }} bài nữa ước tính cho các hội nghị khác."""
+other = """{{ .Accepted }} bài được chấp nhận tương ứng với khoảng {{ .Submissions }} lần nộp bài:
+{{ .Recorded }} bài bị từ chối hoặc rút tại ICLR, nơi mọi bài nộp đều được công khai, và khoảng {{ .Estimated }} bài được ước tính cho các hội nghị còn lại."""
 [home_fig1]
-other = "Hình 1. Bài được nhận so với bài bị từ chối, đếm được ở ICLR và ước tính ở nơi khác, cho mọi năm và hội nghị."
+other = "Hình 1. Số bài được chấp nhận so với số bài bị từ chối (thống kê tại ICLR và ước tính tại các hội nghị khác), tính chung cho mọi năm và mọi hội nghị."
 [home_fig2]
-other = "Hình 2. Như trên theo từng năm, xếp chồng: được nhận ở dưới, bị từ chối ở ICLR (đếm được) ở giữa, bị từ chối ở nơi khác (ước tính) ở trên."
+other = "Hình 2. Số liệu tương tự theo từng năm, dạng xếp chồng: phần dưới là bài được chấp nhận, phần giữa là bài bị từ chối tại ICLR (thống kê), phần trên là bài bị từ chối tại các hội nghị khác (ước tính)."
 [home_fig2_provisional]
-other = " * Danh sách chính thức {{ . }} chưa đầy đủ."
+other = " * Danh sách chính thức của {{ . }} hiện chưa đầy đủ."
 [home_numbers]
 other = "Số liệu của hai hình"
 [home_note_estimate]
-other = """Chỉ ICLR công khai mọi bài nộp cùng kết quả. Với NeurIPS, ICML, CVPR và ACL, số bài bị từ chối được ước tính theo kết quả ICLR của chính từng giảng viên:
-số bài nộp cho mỗi bài được nhận = (số bài nộp ICLR + 1) / (số bài được nhận ở ICLR + 1). Giảng viên chưa nộp ICLR thì không cộng thêm ước tính.
-Một bài có hai giảng viên trong danh sách được tính cho cả hai, như trên trang của từng người, và một bài nộp nhiều hội nghị được tính mỗi lần nộp."""
+other = """Trong năm hội nghị, chỉ ICLR công khai toàn bộ bài nộp cùng kết quả. Đối với NeurIPS, ICML, CVPR và ACL, số bài bị từ chối được ước tính dựa trên kết quả ICLR của từng giảng viên,
+theo công thức: số lần nộp cho mỗi bài được chấp nhận = (số bài nộp ICLR + 1) / (số bài được nhận tại ICLR + 1). Với giảng viên chưa có bài nộp ICLR, không có phần ước tính bổ sung.
+Một bài có hai giảng viên trong danh sách được tính cho cả hai người, tương tự như trên trang của từng giảng viên; một bài nộp nhiều hội nghị được tính theo từng lần nộp."""
 
 # ---------------------------------------------------------------- professor page
 [prof_since]
@@ -211,118 +211,118 @@ other = "Công tác tại Việt Nam từ năm {{ . }}"
 [prof_homepage]
 other = "Trang cá nhân"
 [prof_accepted_summary]
-other = "{{ .Count }} bài được nhận ở năm hội nghị từ năm {{ .Year }}"
+other = "Từ năm {{ .Year }}, giảng viên có {{ .Count }} bài được chấp nhận tại năm hội nghị"
 [prof_own_page_part]
-other = ": {{ .Official }} bài trong danh sách chính thức và {{ .Own }} bài chỉ có trên trang cá nhân, hiện là +{{ .Own }} và gắn nhãn \"chưa chính thức\" bên dưới"
+other = ", trong đó {{ .Official }} bài có trong danh sách chính thức và {{ .Own }} bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm (thể hiện dưới dạng +{{ .Own }} và được gắn nhãn \"chưa chính thức\" bên dưới)"
 [prof_iclr_summary]
-other = "ICLR: nộp {{ .Submitted }} bài, được nhận {{ .Accepted }}, bị từ chối {{ .Rejected }} ({{ .Reviewers }} bị phản biện từ chối, {{ .Withdrawn }} rút bài, {{ .Desk }} bị loại sơ bộ)."
+other = "Tại ICLR: {{ .Submitted }} bài nộp, {{ .Accepted }} bài được chấp nhận, {{ .Rejected }} bài bị từ chối (trong đó {{ .Reviewers }} bài bị từ chối sau phản biện, {{ .Withdrawn }} bài rút, {{ .Desk }} bài bị loại sơ bộ)."
 [by_year]
 other = "Theo năm"
 [prof_note_year]
-other = """Cột bị từ chối của ICLR gồm bài bị từ chối, rút bài và bị loại sơ bộ.
-Chỉ ICLR công khai mọi bài nộp, nên các hội nghị khác chỉ có số bài được nhận."""
+other = """Cột "bị từ chối" của ICLR bao gồm các bài bị từ chối sau phản biện, bài rút và bài bị loại sơ bộ.
+Do chỉ ICLR công khai toàn bộ bài nộp, các hội nghị còn lại chỉ có số liệu về bài được chấp nhận."""
 [prof_note_neurips_public]
-other = "NeurIPS: {{ .Count }} bài bị từ chối hoặc rút được tác giả tự công khai và có trong danh sách bên dưới."
+other = "Tại NeurIPS, có {{ .Count }} bài bị từ chối hoặc rút được tác giả tự công khai; các bài này được liệt kê bên dưới."
 [majority_title]
 other = "Bài có đa số tác giả thuộc {{ . }}"
 [majority_note]
-other = """Bài được nhận có hơn một nửa tác giả ghi đơn vị {{ .Inst }}.
-Chỉ xét được bài từ danh sách có ghi đơn vị của từng tác giả: {{ .Judged }} bài."""
+other = """Các bài được chấp nhận có hơn một nửa số tác giả ghi đơn vị công tác là {{ .Inst }}.
+Chỉ có thể xét các bài trong danh sách có ghi đơn vị công tác của từng tác giả: {{ .Judged }} bài."""
 [majority_left_out]
-other = " {{ .Count }} bài được nhận còn lại không có trong bảng này và bảng sau."
+other = " {{ .Count }} bài được chấp nhận còn lại không được đưa vào bảng này và bảng tiếp theo."
 [first_title]
 other = "Bài có tác giả đầu thuộc {{ . }}"
 [first_note]
-other = "Bài được nhận có tác giả đầu ghi đơn vị {{ . }}."
+other = "Các bài được chấp nhận có tác giả đứng đầu ghi đơn vị công tác là {{ . }}."
 [chart_title]
 other = "Số bài nộp và được nhận theo năm"
 [chart_note]
-other = """Bài được nhận và bài bị từ chối ở ICLR là số đếm.
-Bài không được NeurIPS, ICML, CVPR và ACL nhận thì không công khai, nên phần đó của mỗi cột là ước tính."""
+other = """Số bài được chấp nhận và số bài bị từ chối tại ICLR là số liệu thống kê trực tiếp.
+Do NeurIPS, ICML, CVPR và ACL không công khai các bài không được chấp nhận, phần tương ứng trên mỗi cột là số liệu ước tính."""
 [chart_note_own]
-other = """Ước tính lấy từ kết quả ICLR của chính giảng viên này: nộp {{ .Submitted }}, được nhận {{ .Accepted }}:
-({{ .Submitted }} + 1) / ({{ .Accepted }} + 1) = {{ .Ratio }} lần nộp cho mỗi bài được nhận ở hội nghị khác.
-Cộng 1 ở cả hai vế để hồ sơ ngắn không cho ra con số cực đoan.
-Ước tính vẫn còn thô, và một bài nộp nhiều hội nghị được tính mỗi lần."""
+other = """Phần ước tính được tính từ kết quả ICLR của chính giảng viên: {{ .Submitted }} bài nộp, {{ .Accepted }} bài được chấp nhận,
+tức ({{ .Submitted }} + 1) / ({{ .Accepted }} + 1) = {{ .Ratio }} lần nộp cho mỗi bài được chấp nhận tại các hội nghị khác.
+Việc cộng 1 vào cả tử số và mẫu số giúp tránh các giá trị cực đoan khi số liệu còn ít.
+Đây vẫn là ước tính sơ bộ, và một bài nộp tại nhiều hội nghị được tính theo từng lần nộp."""
 [chart_note_own_page]
-other = "Số bài được nhận có {{ . }} bài chỉ biết từ trang cá nhân."
+other = "Trong số bài được chấp nhận có {{ . }} bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm."
 [chart_note_no_iclr]
-other = "Giảng viên này chưa nộp ICLR, nên không biết gì về bài bị từ chối, và biểu đồ không cộng thêm."
+other = "Giảng viên chưa có bài nộp tại ICLR nên chưa có thông tin về bài bị từ chối; biểu đồ không bổ sung phần ước tính."
 [chart_note_not_fetched]
-other = "Chưa lấy được hồ sơ OpenReview của giảng viên này, nên không biết bài bị từ chối nào, và biểu đồ không cộng thêm."
+other = "Hồ sơ OpenReview của giảng viên chưa được thu thập nên chưa có thông tin về bài bị từ chối; biểu đồ không bổ sung phần ước tính."
 [coauthors_title]
 other = "Đồng tác giả và lĩnh vực"
 [coauthors_none]
-other = "Không có bài để tính."
+other = "Chưa có bài để tính các chỉ số này."
 [coauthors_avg]
-other = "Trung bình {{ .Avg }} đồng tác giả mỗi bài, kể cả bài bị từ chối (ít nhất trên một bài được nhận {{ .Min }}, nhiều nhất trên một bài nộp {{ .Max }}), {{ .Distinct }} đồng tác giả khác nhau trên {{ .Papers }} bài."
+other = "Trung bình mỗi bài có {{ .Avg }} đồng tác giả, tính cả bài bị từ chối (ít nhất {{ .Min }} trên một bài được chấp nhận, nhiều nhất {{ .Max }} trên một bài nộp); tổng cộng {{ .Distinct }} đồng tác giả khác nhau trên {{ .Papers }} bài."
 [coauthors_foreign]
-other = "Trung bình {{ . }} đồng tác giả nước ngoài mỗi bài: đồng tác giả ghi đơn vị ngoài Việt Nam trên bài."
+other = "Trung bình mỗi bài có {{ . }} đồng tác giả nước ngoài, tức đồng tác giả ghi đơn vị công tác ngoài Việt Nam."
 [coauthors_elsewhere]
-other = "{{ .Count }} đồng tác giả khác nhau ở trường hoặc đơn vị khác {{ .Inst }} ({{ .Abroad }} ở nước ngoài, {{ .Vietnam }} ở Việt Nam)."
+other = "Có {{ .Count }} đồng tác giả khác nhau công tác tại trường hoặc đơn vị khác ngoài {{ .Inst }} ({{ .Abroad }} người ở nước ngoài, {{ .Vietnam }} người ở Việt Nam)."
 [coauthors_partial]
-other = "Hai con số trên dùng {{ .With }} trên {{ .Papers }} bài có danh sách ghi đơn vị của từng tác giả."
+other = "Hai chỉ số trên được tính trên {{ .With }}/{{ .Papers }} bài có danh sách ghi đơn vị công tác của từng tác giả."
 [coauthors_no_aff]
-other = "Không danh sách bài nào ghi đơn vị, nên không đếm được đồng tác giả nước ngoài hay ở đơn vị khác."
+other = "Các danh sách bài báo không ghi đơn vị công tác, nên không thể thống kê đồng tác giả nước ngoài hoặc ở đơn vị khác."
 [topics_line]
-other = "{{ .Count }} lĩnh vực, theo nhãn của hội nghị trên {{ .With }} trong {{ .Papers }} bài:"
+other = "{{ .Count }} lĩnh vực, theo nhãn chủ đề do hội nghị gán cho {{ .With }}/{{ .Papers }} bài:"
 [topics_none]
-other = "Không bài nào có nhãn chủ đề của hội nghị."
+other = "Chưa có bài nào được hội nghị gán nhãn chủ đề."
 [accepted_papers]
 other = "Bài được nhận ({{ . }})"
 [rejected_papers]
 other = "Bị từ chối ({{ . }})"
 [rejected_note]
-other = "Bài bị từ chối, rút bài và bị loại sơ bộ; nhãn sau mỗi tên bài ghi rõ loại nào."
+other = "Bao gồm các bài bị từ chối sau phản biện, bài rút và bài bị loại sơ bộ; nhãn sau mỗi tiêu đề cho biết trường hợp cụ thể."
 [not_main_track]
 other = "Không thuộc nhánh chính"
 [not_main_track_note]
-other = "Workshop, Findings, Datasets & Benchmarks, nhánh tạp chí và các nhánh khác, trang này không tính."
+other = "Các bài thuộc workshop, Findings, Datasets & Benchmarks, nhánh tạp chí và các nhánh khác; những bài này không được tính trong thống kê."
 [before_vietnam]
 other = "Trước khi về công tác tại Việt Nam"
 [before_vietnam_note]
-other = "Bài từ trước năm người này bắt đầu công tác tại Việt Nam, trang này không tính."
+other = "Các bài công bố trước năm giảng viên về công tác tại Việt Nam; những bài này không được tính trong thống kê."
 
 # ---------------------------------------------------------------- professors list page
 [prof_list_majority]
 other = "Bài có đa số tác giả cùng trường với giảng viên"
 [prof_list_majority_note]
-other = """Bài được nhận có hơn một nửa tác giả ghi đơn vị là trường hiện tại của giảng viên.
-Chỉ xét được bài từ danh sách có ghi đơn vị của từng tác giả; bài còn lại tính ở cột "Không xác định" và không có trong bảng này và bảng sau."""
+other = """Các bài được chấp nhận có hơn một nửa số tác giả ghi đơn vị công tác là trường hiện tại của giảng viên.
+Chỉ có thể xét các bài trong danh sách có ghi đơn vị công tác của từng tác giả; các bài còn lại được thống kê ở cột "Không xác định" và không được đưa vào bảng này và bảng tiếp theo."""
 [prof_list_first]
 other = "Bài có tác giả đầu cùng trường với giảng viên"
 [prof_list_first_note]
-other = "Bài được nhận có tác giả đầu ghi đơn vị là trường hiện tại của giảng viên."
+other = "Các bài được chấp nhận có tác giả đứng đầu ghi đơn vị công tác là trường hiện tại của giảng viên."
 
 # ---------------------------------------------------------------- institutions
 [inst_list_table]
 other = "Bài của các giảng viên trong danh sách"
 [inst_list_note]
-other = """Một bài có nhiều giảng viên cùng trường chỉ tính một lần.
-Bị từ chối, ước tính (màu cam) cộng thêm số bài bị từ chối không công khai ở NeurIPS, ICML, CVPR và ACL, ước tính theo kết quả ICLR của chính trường: số bài nộp cho mỗi bài được nhận = (số bài nộp ICLR + 1) / (số bài được nhận ở ICLR + 1). Đây là ước tính, không phải số đếm.
-+N sau một con số nghĩa là thêm N bài chỉ có trên trang cá nhân, chưa chính thức.
-* nghĩa là chưa lấy được hồ sơ OpenReview của ít nhất một giảng viên, nên số bài nộp và bị từ chối ở ICLR thấp hơn thực tế."""
+other = """Một bài có nhiều giảng viên cùng trường chỉ được tính một lần.
+Cột bị từ chối ước tính (màu cam) bổ sung số bài bị từ chối không được công khai tại NeurIPS, ICML, CVPR và ACL, ước tính dựa trên kết quả ICLR của chính trường theo công thức: số lần nộp cho mỗi bài được chấp nhận = (số bài nộp ICLR + 1) / (số bài được nhận tại ICLR + 1). Đây là số liệu ước tính, không phải số liệu thống kê trực tiếp.
+Ký hiệu +N sau một số liệu cho biết có thêm N bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm, chưa chính thức.
+Dấu * cho biết hồ sơ OpenReview của ít nhất một giảng viên chưa được thu thập, nên số bài nộp và số bài bị từ chối tại ICLR thấp hơn thực tế."""
 [inst_list_majority]
 other = "Bài có đa số tác giả thuộc trường"
 [inst_list_majority_note]
-other = """Bài được nhận có hơn một nửa tác giả ghi đơn vị là trường.
-Chỉ xét được bài từ danh sách có ghi đơn vị của từng tác giả; bài còn lại tính ở cột "Không xác định" và không có trong bảng này và bảng sau."""
+other = """Các bài được chấp nhận có hơn một nửa số tác giả ghi đơn vị công tác là trường.
+Chỉ có thể xét các bài trong danh sách có ghi đơn vị công tác của từng tác giả; các bài còn lại được thống kê ở cột "Không xác định" và không được đưa vào bảng này và bảng tiếp theo."""
 [inst_list_first]
 other = "Bài có tác giả đầu thuộc trường"
 [inst_list_first_note]
-other = "Bài được nhận có tác giả đầu ghi đơn vị là trường."
+other = "Các bài được chấp nhận có tác giả đứng đầu ghi đơn vị công tác là trường."
 [inst_summary]
-other = "{{ .Profs }} giảng viên trong danh sách, {{ .Accepted }} bài được nhận ở năm hội nghị"
+other = "Trường có {{ .Profs }} giảng viên trong danh sách, với {{ .Accepted }} bài được chấp nhận tại năm hội nghị"
 [inst_summary_own]
-other = ", trong đó {{ . }} bài chỉ có trên trang cá nhân (chưa chính thức)"
+other = ", trong đó {{ . }} bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm (chưa chính thức)"
 [inst_iclr]
-other = "ICLR: nộp {{ .Submitted }} bài, được nhận {{ .Accepted }}, bị từ chối {{ .Rejected }}."
+other = "Tại ICLR: {{ .Submitted }} bài nộp, {{ .Accepted }} bài được chấp nhận, {{ .Rejected }} bài bị từ chối."
 [inst_estimated]
-other = " Tính cả số bài bị từ chối không công khai ở các hội nghị khác, ước tính theo kết quả ICLR này, tổng cộng khoảng {{ . }} bài bị từ chối."
+other = " Nếu tính cả số bài bị từ chối không được công khai tại các hội nghị khác (ước tính dựa trên kết quả ICLR nêu trên), tổng số bài bị từ chối vào khoảng {{ . }} bài."
 [inst_once]
-other = "Một bài có nhiều giảng viên của trường chỉ tính một lần."
+other = "Một bài có nhiều giảng viên của trường chỉ được tính một lần."
 [inst_incomplete]
-other = "Chưa lấy được hồ sơ OpenReview của ít nhất một giảng viên, nên số bài nộp và bị từ chối ở ICLR thấp hơn thực tế."
+other = "Hồ sơ OpenReview của ít nhất một giảng viên chưa được thu thập, nên số bài nộp và số bài bị từ chối tại ICLR thấp hơn thực tế."
 [inst_professors]
 other = "Giảng viên"
 
@@ -336,21 +336,21 @@ other = "không"
 [venue_n_public]
 other = "{{ . }} công khai"
 [venue_list_note]
-other = """Chỉ tính bài của các giảng viên trong danh sách. Một bài có nhiều giảng viên trong danh sách chỉ tính một lần.
-Bị từ chối, ước tính (màu cam) là số đếm ở ICLR; ở các hội nghị khác là áp kết quả ICLR của tất cả những người trong danh sách vào số bài được nhận. Đây là ước tính, không phải số đếm.
-+N sau một con số nghĩa là thêm N bài chỉ có trên trang cá nhân, chưa chính thức."""
+other = """Số liệu chỉ bao gồm bài của các giảng viên trong danh sách; một bài có nhiều giảng viên trong danh sách chỉ được tính một lần.
+Cột bị từ chối ước tính (màu cam) là số liệu thống kê đối với ICLR; đối với các hội nghị khác, số liệu được ước tính bằng cách áp dụng kết quả ICLR chung của toàn bộ danh sách vào số bài được chấp nhận. Đây là số liệu ước tính, không phải số liệu thống kê trực tiếp.
+Ký hiệu +N sau một số liệu cho biết có thêm N bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm, chưa chính thức."""
 [venue_full]
-other = "{{ . }} công khai mọi bài nộp cùng kết quả trên OpenReview, nên đếm được bài nộp và bài bị từ chối."
+other = "{{ . }} công khai toàn bộ bài nộp cùng kết quả trên OpenReview, do đó có thể thống kê số bài nộp và số bài bị từ chối."
 [venue_partial]
-other = "{{ . }} công khai bài được nhận. Bài bị từ chối chỉ công khai khi tác giả chọn công khai, nên số bài bị từ chối dưới đây là con số tối thiểu và không có số bài nộp."
+other = "{{ . }} công khai các bài được chấp nhận. Bài bị từ chối chỉ được công khai khi tác giả lựa chọn, vì vậy số bài bị từ chối dưới đây là con số tối thiểu và không có số liệu về số bài nộp."
 [venue_none]
-other = "{{ . }} chỉ công khai bài được nhận. Không đếm được bài nộp và bài bị từ chối."
+other = "{{ . }} chỉ công khai các bài được chấp nhận, do đó không thể thống kê số bài nộp và số bài bị từ chối."
 [venue_once]
-other = "Số liệu tính cho các giảng viên trong danh sách; một bài có nhiều người trong số họ chỉ tính một lần."
+other = "Số liệu được tính cho các giảng viên trong danh sách; một bài có nhiều giảng viên trong danh sách chỉ được tính một lần."
 [venue_own_page]
-other = "{{ .Count }} bài được nhận chỉ biết từ trang cá nhân. Các bài đó hiện là +{{ .Count }}, gắn nhãn \"chưa chính thức\" trong danh sách, cho đến khi hội nghị công bố."
+other = "Có {{ .Count }} bài được chấp nhận chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm. Các bài này được thể hiện dưới dạng +{{ .Count }} và gắn nhãn \"chưa chính thức\" trong danh sách cho đến khi hội nghị công bố."
 [venue_estimate_note]
-other = "Bị từ chối, ước tính (màu cam): {{ .Name }} không công khai bài bị từ chối, nên con số được ước tính theo kết quả ICLR của tất cả những người trong danh sách, {{ .Ratio }} lần nộp cho mỗi bài được nhận. Đây là ước tính, không phải số đếm."
+other = "Cột bị từ chối ước tính (màu cam): do {{ .Name }} không công khai bài bị từ chối, số liệu được ước tính dựa trên kết quả ICLR chung của toàn bộ danh sách, tương ứng {{ .Ratio }} lần nộp cho mỗi bài được chấp nhận. Đây là số liệu ước tính, không phải số liệu thống kê trực tiếp."
 [tip_estimated_venue_year]
 other = "ước tính theo kết quả ICLR của tất cả những người trong danh sách"
 

@@ -2,4 +2,4 @@
 title: "Trường"
 ---
 
-Tổng số liệu của từng trường, cộng trên các giảng viên của trường trong danh sách.
+Số liệu tổng hợp của từng trường, tính trên các giảng viên của trường có trong danh sách.
