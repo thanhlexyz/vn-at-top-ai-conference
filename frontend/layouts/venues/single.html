@@ -5,6 +5,7 @@
 {{- $v := index (where hugo.Data.venues "key" .Params.key) 0 }}
 {{- $key := $v.key }}
 {{- $t := index $v.venues $key }}
+{{ partial "picture.html" (dict "src" $v.image "source" $v.image_source "alt" $v.name "cls" "logo") }}
 <p>
 	{{- if eq $v.rejections "full" }}
 	{{ T "venue_full" $v.name }}

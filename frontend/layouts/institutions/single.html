@@ -1,6 +1,7 @@
 {{ define "main" -}}
 {{- $i := index (where hugo.Data.institutions "slug" .Params.key) 0 }}
 {{- $iclr := $i.venues.iclr }}
+{{ partial "picture.html" (dict "src" $i.image "source" $i.image_source "alt" $i.name "cls" "logo") }}
 <p>
 	{{ T "inst_summary" (dict "Profs" (len $i.professors) "Accepted" $i.accepted) }}{{ if gt (int $i.own_page) 0 }}{{ T "inst_summary_own" $i.own_page }}{{ end }}.
 	{{ T "inst_iclr" (dict "Submitted" $iclr.submitted "Accepted" $iclr.accepted "Rejected" $iclr.not_accepted) }}

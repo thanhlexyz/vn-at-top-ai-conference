@@ -1015,6 +1015,14 @@ def main():
     waiting = [{"name": p["name"], "institution": p["institution_short"], "to_confirm": p["to_confirm"]}
                for p in roster if p["approved"] != "yes" and p["approved"] != "no"]
 
+    # pictures checked by hand (images.csv, copied into static/img by fetch_images.py --apply)
+    for kind, items, key in (("person", professors, "slug"), ("institution", institutions, "slug"), ("venue", venues, "key")):
+        found = {r["key"]: r for r in read_csv(BACKEND / "images.csv") if r["kind"] == kind and r["approved"] == "yes"}
+        folder = FRONTEND / "static" / "img" / {"person": "people", "institution": "institutions", "venue": "venues"}[kind]
+        for item in items:
+            files = sorted(folder.glob(f"{item[key]}.*")) if item[key] in found else []
+            item["image"] = f"img/{folder.name}/{files[0].name}" if files else ""
+            item["image_source"] = found[item[key]]["source_page"] if files else ""
     write_json(DATA / "overview.json", overview(professors, acc))
     # people in Vietnam with ICLR submissions but no accepted paper (find_iclr_only.py), for the local
     # Candidates page; kept in a separate, git-ignored file because these lists name people who are not on the site

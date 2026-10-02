@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
+	<script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 	<link rel="stylesheet" type="text/css" href="{{ "style.css" | relURL }}">
 	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 	<meta name="robots" content="{{ if site.Params.local }}noindex, nofollow{{ else }}index, follow{{ end }}">
@@ -23,6 +24,7 @@
 	{{- range $page.AllTranslations }}{{ if eq .Language.Lang $lang }}{{ $target = . }}{{ end }}{{ end }}
 	<a href="{{ $target.RelPermalink }}" hreflang="{{ $lang }}" lang="{{ $lang }}"{{ if eq $lang site.Language.Lang }} class="current" aria-current="true"{{ end }}>{{ if eq $lang "vi" }}🇻🇳 VI{{ else }}🇬🇧 EN{{ end }}</a>
 	{{- end }}
+	<button class="theme" type="button" title="{{ T "theme_toggle" }}" aria-label="{{ T "theme_toggle" }}">🌙</button>
 	</span>
 	<a class="site" href="{{ "" | relLangURL }}">{{ site.Title }}</a>
 	<span class="links">

@@ -28,7 +28,7 @@
 	{{- range hugo.Data.institutions }}
 	{{- $i := . }}
 	<tr>
-		<td class="l"><a href="{{ printf "institutions/%s/" .slug | relLangURL }}">{{ .name }}</a>{{ if not .iclr_complete }}<sup title="{{ T "tip_iclr_missing" }}">*</sup>{{ end }}</td>
+		<td class="l">{{ with .image }}<img class="mini" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}<a href="{{ printf "institutions/%s/" .slug | relLangURL }}">{{ .name }}</a>{{ if not .iclr_complete }}<sup title="{{ T "tip_iclr_missing" }}">*</sup>{{ end }}</td>
 		<td>{{ len .professors }}</td>
 		{{ partial "num.html" .venues.iclr.submitted }}
 		{{ partial "acc.html" (merge .venues.iclr (dict "cls" "good")) }}

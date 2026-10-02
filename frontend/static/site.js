@@ -108,3 +108,22 @@
 		});
 	});
 })();
+
+// Day / night: the button next to the language switch flips the colours and remembers the choice in this
+// browser. Without a stored choice the page follows the system setting (prefers-color-scheme in style.css).
+(function () {
+	var button = document.querySelector("nav .theme");
+	if (!button) return;
+	var root = document.documentElement;
+	var media = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+	function current() { return root.dataset.theme || (media && media.matches ? "dark" : "light"); }
+	function show() { button.textContent = current() === "dark" ? "☀️" : "🌙"; }
+	button.addEventListener("click", function () {
+		var next = current() === "dark" ? "light" : "dark";
+		root.dataset.theme = next;
+		try { localStorage.setItem("theme", next); } catch (e) {}
+		show();
+	});
+	if (media && media.addEventListener) media.addEventListener("change", show);
+	show();
+})();

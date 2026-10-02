@@ -2,6 +2,7 @@
 {{- $p := index (where hugo.Data.professors "slug" .Params.key) 0 }}
 {{- $meta := hugo.Data.meta }}
 {{- $iclr := $p.venues.iclr }}
+{{ partial "picture.html" (dict "src" $p.image "source" $p.image_source "alt" (partial "pname.html" $p) "cls" "portrait") }}
 <p>
 	{{ with $p.rank }}{{ . }}, {{ end }}<a href="{{ printf "institutions/%s/" $p.institution_slug | relLangURL }}">{{ $p.institution }}</a>
 	{{- if $p.vn_since }}. {{ T "prof_since" $p.vn_since }}{{ end }}.

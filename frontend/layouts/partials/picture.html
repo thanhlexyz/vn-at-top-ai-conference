@@ -1,0 +1,7 @@
+{{- /* A hand-checked picture at the top right of a page, linking to the page it was taken from.
+       Context: dict "src" (path under static), "source" (page it comes from), "alt", "cls" ("portrait" or "logo"). */ -}}
+{{- with .src }}
+<figure class="picture {{ $.cls }}">
+	<a href="{{ $.source }}" title="{{ T "img_source" }}"><img src="{{ . | relURL }}" alt="{{ $.alt }}" loading="lazy"></a>
+</figure>
+{{- end }}

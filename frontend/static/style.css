@@ -1,17 +1,50 @@
+/* Colours. Light by default; dark when the reader's system asks for it, or when they choose it with the
+   switch at the top right (site.js sets data-theme on <html> and remembers the choice). The chart hues,
+   accepted green and rejected red, stay the same in both modes: they were checked on both surfaces. */
+:root {
+    color-scheme: light ;
+    --bg: #ffffff ; --fg: #000000 ; --link: #0645ad ; --line: #000000 ; --muted: #555555 ; --faint: #999999 ;
+    --th: #f0f0f0 ; --before: #fafafa ; --flag: #fff8dc ; --tag: #eeeeee ;
+    --good: #e2f0d9 ; --bad: #f8e0e0 ; --est: #fde3cf ;
+    --grid: #e1e0d9 ; --axis: #c3c2b7 ; --chart-text: #52514e ; --chart-value: #0b0b0b ;
+}
+:root[data-theme="dark"] {
+    color-scheme: dark ;
+    --bg: #1a1a19 ; --fg: #e8e6e3 ; --link: #8ab4f8 ; --line: #6b6a66 ; --muted: #b3b1ac ; --faint: #8a8885 ;
+    --th: #2a2a28 ; --before: #222220 ; --flag: #3a3420 ; --tag: #333331 ;
+    --good: #1e3a29 ; --bad: #4a2325 ; --est: #4a3220 ;
+    --grid: #3a3a37 ; --axis: #5a5955 ; --chart-text: #c9c7c2 ; --chart-value: #f2f0ed ;
+}
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        color-scheme: dark ;
+        --bg: #1a1a19 ; --fg: #e8e6e3 ; --link: #8ab4f8 ; --line: #6b6a66 ; --muted: #b3b1ac ; --faint: #8a8885 ;
+        --th: #2a2a28 ; --before: #222220 ; --flag: #3a3420 ; --tag: #333331 ;
+        --good: #1e3a29 ; --bad: #4a2325 ; --est: #4a3220 ;
+        --grid: #3a3a37 ; --axis: #5a5955 ; --chart-text: #c9c7c2 ; --chart-value: #f2f0ed ;
+    }
+}
+/* logos keep a light card behind them in dark mode, since most are drawn for a white page */
+:root[data-theme="dark"] figure.logo img, :root[data-theme="dark"] img.mini { background: #ffffff ; padding: 4px ; border-radius: 4px ; }
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) figure.logo img, :root:not([data-theme="light"]) img.mini { background: #ffffff ; padding: 4px ; border-radius: 4px ; }
+}
+nav .theme { background: none ; border: 1px solid var(--line) ; color: var(--fg) ; font: inherit ; cursor: pointer ; border-radius: 4px ; padding: 0 0.4em ; margin-left: 0.8em ; }
+
 body {
     font-family: sans-serif ;
-    background: #ffffff ;
-    color: #000 ;
+    background: var(--bg) ;
+    color: var(--fg) ;
     margin: 0 ;
     line-height: 1.45 ;
 }
 
 a {
-    color: #0645ad ;
+    color: var(--link) ;
 }
 
 nav {
-    border-bottom: 1px solid black ;
+    border-bottom: 1px solid var(--line) ;
     padding: 0.7em 1em ;
 }
 
@@ -23,7 +56,7 @@ nav a {
 
 nav a.site {
     font-weight: bold ;
-    color: #000 ;
+    color: var(--fg) ;
 }
 
 nav a.current {
@@ -51,7 +84,7 @@ footer {
     margin: 3em auto 2em auto ;
     padding: 0 1em ;
     font-size: 0.85em ;
-    color: #555 ;
+    color: var(--muted) ;
 }
 
 /* Tables */
@@ -61,11 +94,11 @@ footer {
 
 table {
     border-collapse: collapse ;
-    border: 1px solid black ;
+    border: 1px solid var(--line) ;
 }
 
 td, th {
-    border: 1px solid black ;
+    border: 1px solid var(--line) ;
     padding: 0.25em 0.6em ;
     text-align: right ;
     font-variant-numeric: tabular-nums ;
@@ -73,7 +106,7 @@ td, th {
 }
 
 th {
-    background: #f0f0f0 ;
+    background: var(--th) ;
     text-align: center ;
 }
 
@@ -86,12 +119,12 @@ td.total, tr.total td {
 }
 
 td.zero, td.na {
-    color: #999 ;
+    color: var(--faint) ;
 }
 
 tr.before td {
-    color: #999 ;
-    background: #fafafa ;
+    color: var(--faint) ;
+    background: var(--before) ;
 }
 
 code {
@@ -163,7 +196,7 @@ figure {
 }
 
 .chart .dot {
-    stroke: #ffffff ;
+    stroke: var(--bg) ;
     stroke-width: 2 ;
 }
 
@@ -172,29 +205,29 @@ figure {
 }
 
 .chart .slice {
-    stroke: #ffffff ;
+    stroke: var(--bg) ;
     stroke-width: 2 ;
 }
 
 .chart .grid {
-    stroke: #e1e0d9 ;
+    stroke: var(--grid) ;
 }
 
 .chart .axis {
-    stroke: #c3c2b7 ;
+    stroke: var(--axis) ;
 }
 
 .chart text {
     font-size: 12px ;
-    fill: #52514e ;
+    fill: var(--chart-text) ;
 }
 
 .chart text.value {
-    fill: #0b0b0b ;
+    fill: var(--chart-value) ;
 }
 
 .chart text.off {
-    fill: #898781 ;
+    fill: var(--faint) ;
 }
 
 .chart path:hover {
@@ -204,18 +237,18 @@ figure {
 /* Notes and small labels */
 .note {
     font-size: 0.9em ;
-    color: #444 ;
+    color: var(--muted) ;
 }
 
 .flags {
-    border: 1px solid black ;
-    background: #fff8dc ;
+    border: 1px solid var(--line) ;
+    background: var(--flag) ;
     padding: 0.5em 1em 0.5em 2em ;
 }
 
 .tag {
     display: inline-block ;
-    border: 1px solid black ;
+    border: 1px solid var(--line) ;
     font-size: 0.8em ;
     padding: 0 0.4em ;
     margin-right: 0.3em ;
@@ -223,25 +256,25 @@ figure {
 }
 
 .tag.accepted {
-    background: #e2f0d9 ;
+    background: var(--good) ;
 }
 
 .tag.rejected, .tag.withdrawn, .tag.desk_rejected {
-    background: #f8e0e0 ;
+    background: var(--bad) ;
 }
 
 .tag.other {
-    background: #eee ;
+    background: var(--tag) ;
 }
 
 /* papers known only from a personal page: unofficial, so set apart from the official numbers */
 .tag.own {
-    background: #fff ;
+    background: var(--bg) ;
     border-style: dashed ;
 }
 
 .own {
-    color: #666 ;
+    color: var(--muted) ;
     font-weight: normal ;
     white-space: nowrap ;
 }
@@ -257,7 +290,7 @@ ul.papers li {
 
 ul.papers .authors {
     font-size: 0.85em ;
-    color: #555 ;
+    color: var(--muted) ;
 }
 
 /* Media Queries for Responsiveness */
@@ -294,7 +327,7 @@ form.feedback input,
 form.feedback textarea {
     font: inherit ;
     padding: 0.4em ;
-    border: 1px solid #000 ;
+    border: 1px solid var(--line) ;
     width: 100% ;
     box-sizing: border-box ;
 }
@@ -304,13 +337,13 @@ form.feedback button {
     font: inherit ;
     margin-top: 0.8em ;
     padding: 0.4em 1em ;
-    border: 1px solid #000 ;
-    background: #fff ;
+    border: 1px solid var(--line) ;
+    background: var(--bg) ;
     cursor: pointer ;
 }
 
 form.feedback button:hover {
-    background: #f0f0f0 ;
+    background: var(--th) ;
 }
 
 /* Stacked areas (front page) */
@@ -319,13 +352,13 @@ form.feedback button:hover {
 .chart .band.est { fill: var(--not-accepted) ; fill-opacity: 0.18 ; stroke: none ; }
 .chart .edge { fill: none ; stroke: none ; }
 .chart .edge.est { stroke: var(--not-accepted) ; stroke-width: 1.5 ; stroke-linejoin: round ; }
-.chart .gap { fill: none ; stroke: #ffffff ; stroke-width: 2 ; stroke-linejoin: round ; }
+.chart .gap { fill: none ; stroke: var(--bg) ; stroke-width: 2 ; stroke-linejoin: round ; }
 .chart .hit { fill: transparent ; }
-.chart .hit:hover { fill: #000000 ; fill-opacity: 0.04 ; }
+.chart .hit:hover { fill: var(--fg) ; fill-opacity: 0.04 ; }
 
 /* ICLR columns: accepted green, rejected red, as on the paper tags */
-td.good, th.good { background: #e2f0d9 ; }
-td.bad, th.bad { background: #f8e0e0 ; }
+td.good, th.good { background: var(--good) ; }
+td.bad, th.bad { background: var(--bad) ; }
 
 /* Wide tables: the scrollbar sits on top (the box is flipped, and the table flipped back), and the first two
    columns stay in place while the rest scrolls. Borders are drawn with shadows, since collapsed borders
@@ -334,11 +367,11 @@ td.bad, th.bad { background: #f8e0e0 ; }
 .scroll.top > table { transform: rotateX(180deg) ; }
 .scroll.pinned > table { border-collapse: separate ; border-spacing: 0 ; border-width: 1px 0 0 1px ; }
 .scroll.pinned td, .scroll.pinned th { border-width: 0 1px 1px 0 ; }
-.scroll.pinned .pin1, .scroll.pinned .pin2 { position: sticky ; z-index: 1 ; background: #ffffff ; }
-.scroll.pinned th.pin1, .scroll.pinned th.pin2 { background: #f0f0f0 ; }
+.scroll.pinned .pin1, .scroll.pinned .pin2 { position: sticky ; z-index: 1 ; background: var(--bg) ; }
+.scroll.pinned th.pin1, .scroll.pinned th.pin2 { background: var(--th) ; }
 .scroll.pinned .pin1 { left: 0 ; min-width: 9em ; max-width: 9em ; }
-.scroll.pinned .pin2 { left: calc(9em + 1.2em + 1px) ; box-shadow: 2px 0 0 #000000 ; }
-td.est, th.est { background: #fde3cf ; }  /* orange: estimated */
+.scroll.pinned .pin2 { left: calc(9em + 1.2em + 1px) ; box-shadow: 2px 0 0 var(--line) ; }
+td.est, th.est { background: var(--est) ; }  /* orange: estimated */
 
 /* Sortable headings (site.js) */
 th.sortable { cursor: pointer ; }
@@ -352,3 +385,11 @@ nav .lang { order: 3 ; margin-left: auto ; white-space: nowrap ; }
 nav .lang a { margin-right: 0 ; margin-left: 0.6em ; }
 nav .site { order: 1 ; }
 nav .links { order: 2 ; }
+
+/* Pictures: a portrait or logo at the top right of a page, small logos in the lists */
+figure.picture { float: right ; margin: 0 0 1em 1.5em ; }
+figure.picture img { display: block ; max-width: 100% ; height: auto ; }
+figure.portrait img { width: 160px ; height: 160px ; object-fit: cover ; border-radius: 50% ; border: 1px solid var(--axis) ; }
+figure.logo img { max-width: 180px ; max-height: 120px ; width: auto ; }
+img.mini { height: 1.4em ; width: auto ; max-width: 3.5em ; vertical-align: middle ; margin-right: 0.5em ; object-fit: contain ; }
+@media (max-width: 600px) { figure.portrait img { width: 110px ; height: 110px ; } figure.logo img { max-width: 120px ; } }
