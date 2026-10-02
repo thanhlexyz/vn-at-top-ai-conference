@@ -105,4 +105,4 @@ The public site counts visits with [GoatCounter](https://www.goatcounter.com/), 
 
 ## Author
 
-This site is made by **Thanh Le** ([thanhle.xyz](https://thanhle.xyz)). The code and data are public on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Corrections are warmly welcome on the [Feedback](../feedback/) page.
+This site was built by an AI, [Claude](https://www.anthropic.com/claude), under the direction of **Thanh Le** ([thanhle.xyz](https://thanhle.xyz)). The code and data are public on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Corrections are warmly welcome on the [Feedback](../feedback/) page.
