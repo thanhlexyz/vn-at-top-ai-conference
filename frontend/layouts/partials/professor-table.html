@@ -37,7 +37,7 @@
 	{{- $p := . }}
 	{{- $iclr := .venues.iclr }}
 	<tr>
-		<td class="l pin1"><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ partial "pname.html" . }}</a>{{ if .flags }}<sup title="{{ T "incomplete_star" }}">*</sup>{{ end }}</td>
+		<td class="l pin1"><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ partial "pname.html" . }}</a></td>
 		<td class="l pin2"><a href="{{ printf "institutions/%s/" .institution_slug | relLangURL }}">{{ .institution_short }}</a></td>
 		{{- if .iclr_complete }}
 		{{ partial "num.html" $iclr.submitted }}

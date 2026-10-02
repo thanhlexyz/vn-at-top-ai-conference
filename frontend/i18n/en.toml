@@ -304,8 +304,7 @@ other = "Papers of the listed professors"
 [inst_list_note]
 other = """A paper with several professors of the same institution is counted once.
 Rejected, estimated (orange) adds the rejections hidden at NeurIPS, ICML, CVPR and ACL, estimated from the institution's own ICLR record: submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1). It is an estimate, not a count.
-+N after a number means N more papers known only from personal pages, which are unofficial.
-* means the OpenReview records of at least one professor have not been fetched, so the ICLR submitted and rejected numbers are too low."""
++N after a number means N more papers known only from personal pages, which are unofficial."""
 [inst_list_majority]
 other = "Papers with a majority of authors from the institution"
 [inst_list_majority_note]

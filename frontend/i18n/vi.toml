@@ -299,8 +299,7 @@ other = "Bài của các giảng viên trong danh sách"
 [inst_list_note]
 other = """Một bài có nhiều giảng viên cùng trường chỉ được tính một lần.
 Cột bị từ chối ước tính (màu cam) bổ sung số bài bị từ chối không được công khai tại NeurIPS, ICML, CVPR và ACL, ước tính dựa trên kết quả ICLR của chính trường theo công thức: số lần nộp cho mỗi bài được chấp nhận = (số bài nộp ICLR + 1) / (số bài được nhận tại ICLR + 1). Đây là số liệu ước tính, không phải số liệu thống kê trực tiếp.
-Ký hiệu +N sau một số liệu cho biết có thêm N bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm, chưa chính thức.
-Dấu * cho biết hồ sơ OpenReview của ít nhất một giảng viên chưa được thu thập, nên số bài nộp và số bài bị từ chối tại ICLR thấp hơn thực tế."""
+Ký hiệu +N sau một số liệu cho biết có thêm N bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm, chưa chính thức."""
 [inst_list_majority]
 other = "Bài có đa số tác giả thuộc trường"
 [inst_list_majority_note]

@@ -7,13 +7,6 @@
 	{{ with $p.rank }}{{ . }}, {{ end }}<a href="{{ printf "institutions/%s/" $p.institution_slug | relLangURL }}">{{ $p.institution }}</a>
 	{{- if $p.vn_since }}. {{ T "prof_since" $p.vn_since }}{{ end }}.
 </p>
-{{- with $p.flags }}
-<ul class="flags">
-	{{- range . }}
-	<li>{{ . }}</li>
-	{{- end }}
-</ul>
-{{- end }}
 <p>
 	{{ T "prof_accepted_summary" (dict "Count" (int $p.accepted) "Year" (cond (gt $p.vn_since $meta.first_year) $p.vn_since $meta.first_year)) }}
 	{{- if gt (int $p.own_page) 0 }}{{ T "prof_own_page_part" (dict "Official" $p.official "Own" $p.own_page) }}{{ end }}.

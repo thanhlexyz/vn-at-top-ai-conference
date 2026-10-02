@@ -1119,6 +1119,8 @@ def main():
                                          "companies": companies, "unconfirmed": unconfirmed,
                                          # hand-kept: faculty in Vietnam known in the press as AI/ML pioneers
                                          "pioneers": read_csv(BACKEND / "pioneers.csv"),
+                                         # notes on a professor's record (inferred outcomes, missing records, ...): local only
+                                         "flags": [{"slug": p["slug"], "name": p["name"], "text": f} for p in professors for f in p["flags"]],
                                          "to_confirm": [{"slug": p["slug"], "name": p["name"], "institution": p["institution_short"],
                                                          "text": p["to_confirm"]} for p in roster
                                                         if p["approved"] == "yes" and p["to_confirm"]]})

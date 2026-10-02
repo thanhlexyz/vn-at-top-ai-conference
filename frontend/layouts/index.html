@@ -4,15 +4,13 @@
 {{ define "main" -}}
 {{ .Content }}
 {{- $meta := hugo.Data.meta }}
-{{- if $meta.preliminary }}
+{{- /* notes on the records are kept on the local Candidates page; only a local build links to it */}}
+{{- with site.GetPage "/candidates" }}
+{{- if $meta.pending_review }}
 <ul class="flags">
-	<li>{{ T "home_flag_incomplete" }}</li>
-	{{- with site.GetPage "/candidates" }}
-	{{- if $meta.pending_review }}
 	<li>{{ T "home_flag_pending" (dict "Count" $meta.pending_review "URL" .RelPermalink) | safeHTML }}</li>
-	{{- end }}
-	{{- end }}
 </ul>
+{{- end }}
 {{- end }}
 {{ partial "professor-table.html" hugo.Data.professors }}
 <p class="note">{{ T "home_note_table" | safeHTML }}</p>

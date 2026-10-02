@@ -44,6 +44,21 @@
 <p>None.</p>
 {{- end }}
 
+{{- with $c.flags }}
+<h2>Notes on the records ({{ len . }})</h2>
+<p>Notes the build writes about a professor's record, such as outcomes inferred without an OpenReview decision or records that were not fetched. They are not shown on the public pages.</p>
+<div class="scroll">
+<table>
+	<thead><tr><th class="l">Professor</th><th class="l">Note</th></tr></thead>
+	<tbody>
+	{{- range . }}
+	<tr><td class="l"><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ .name }}</a></td><td class="l">{{ .text }}</td></tr>
+	{{- end }}
+	</tbody>
+</table>
+</div>
+{{- end }}
+
 {{- with $c.to_confirm }}
 <h2>Still to confirm on the roster ({{ len . }})</h2>
 <p>Notes from the <code>to_confirm</code> column of <code>backend/roster.csv</code>. They are not shown on the public pages; clear a note once it has been checked.</p>

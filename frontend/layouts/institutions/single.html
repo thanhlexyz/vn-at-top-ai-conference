@@ -8,11 +8,6 @@
 	{{- with $i.rejected_estimated }}{{ T "inst_estimated" . }}{{ end }}
 	{{ T "inst_once" }}
 </p>
-{{- if not $i.iclr_complete }}
-<ul class="flags">
-	<li>{{ T "inst_incomplete" }}</li>
-</ul>
-{{- end }}
 
 <h2>{{ T "by_year" }}</h2>
 {{ partial "year-table.html" (dict "years" $i.years "venues" $i.venues "official" $i.official "own_page" $i.own_page "complete" true) }}
