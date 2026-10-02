@@ -940,9 +940,7 @@ def main():
         # without a record of their own, only what a colleague's record happens to show is known
         partial = source == "none" and any(r.get("borrowed") and r["venue"] == "iclr" for r in counted)
         complete = source != "none" or partial
-        flags = []
-        if person["to_confirm"]:
-            flags.append(f"Still to confirm: {person['to_confirm']}.")
+        flags = []   # what is still to confirm is listed on the local Candidates page, not on the public page
         if partial:
             flags.append("Their own OpenReview records have not been fetched. The rejected ICLR papers "
                          "come from the records of co-authors on this site, so there may be more.")
@@ -1058,6 +1056,21 @@ def main():
     waiting = [{"name": p["name"], "institution": p["institution_short"], "to_confirm": p["to_confirm"]}
                for p in roster if p["approved"] != "yes" and p["approved"] != "no"]
 
+    # Google Scholar: a one-time snapshot (fetch_scholar.py), shown as it was on the day it was read
+    scholar = json.loads((BACKEND / "scholar.json").read_text(encoding="utf-8")) if (BACKEND / "scholar.json").exists() else {}
+    for p in professors:
+        s = scholar.get(p["slug"])
+        if not s:
+            p["scholar"] = None
+            continue
+        years = list(s["by_year"])
+        values = [s["by_year"][y] for y in years]
+        p["scholar"] = {**{k: v for k, v in s.items() if k != "by_year"},
+                        "svg": charts.columns(f"Citations per year, Google Scholar, {s['fetched']}", years, values, "{year}: {n} citations"),
+                        "svg_vi": charts.columns(f"Số trích dẫn theo năm, Google Scholar, {s['fetched']}", years, values, "{year}: {n} trích dẫn")}
+        if not any(l["kind"] == "scholar" for l in p["links"]):
+            p["links"].append({"kind": "scholar", "url": s["url"], "label": ""})
+
     # pictures checked by hand (images.csv, copied into static/img by fetch_images.py --apply)
     for kind, items, key in (("person", professors, "slug"), ("institution", institutions, "slug"), ("venue", venues, "key")):
         found = {r["key"]: r for r in read_csv(BACKEND / "images.csv") if r["kind"] == kind and r["approved"] == "yes"}
@@ -1105,7 +1118,10 @@ def main():
                                          "waiting": waiting, "excluded": excluded,
                                          "companies": companies, "unconfirmed": unconfirmed,
                                          # hand-kept: faculty in Vietnam known in the press as AI/ML pioneers
-                                         "pioneers": read_csv(BACKEND / "pioneers.csv")})
+                                         "pioneers": read_csv(BACKEND / "pioneers.csv"),
+                                         "to_confirm": [{"slug": p["slug"], "name": p["name"], "institution": p["institution_short"],
+                                                         "text": p["to_confirm"]} for p in roster
+                                                        if p["approved"] == "yes" and p["to_confirm"]]})
     write_json(DATA / "meta.json", {
         "generated": now.strftime("%Y-%m-%d %H:%M %Z"), "generated_date": now.strftime("%Y-%m-%d"),
         "first_year": YEARS[0], "last_year": YEARS[-1], "years": YEARS,

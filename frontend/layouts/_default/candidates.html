@@ -44,6 +44,21 @@
 <p>None.</p>
 {{- end }}
 
+{{- with $c.to_confirm }}
+<h2>Still to confirm on the roster ({{ len . }})</h2>
+<p>Notes from the <code>to_confirm</code> column of <code>backend/roster.csv</code>. They are not shown on the public pages; clear a note once it has been checked.</p>
+<div class="scroll">
+<table>
+	<thead><tr><th class="l">Professor</th><th class="l">Institution</th><th class="l">Still to confirm</th></tr></thead>
+	<tbody>
+	{{- range . }}
+	<tr><td class="l"><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ .name }}</a></td><td class="l">{{ .institution }}</td><td class="l">{{ .text }}</td></tr>
+	{{- end }}
+	</tbody>
+</table>
+</div>
+{{- end }}
+
 {{- with $c.pioneers }}
 <h2>Known in the press as AI pioneers ({{ len . }})</h2>
 <p>

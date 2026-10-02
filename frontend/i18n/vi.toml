@@ -30,9 +30,9 @@ other = "được nhận"
 [status_rejected]
 other = "bị từ chối"
 [status_withdrawn]
-other = "rút bài"
+other = "bị từ chối"
 [status_desk_rejected]
-other = "bị loại sơ bộ"
+other = "bị từ chối"
 [not_published_yet]
 other = "chưa công bố"
 [list_not_published]
@@ -215,12 +215,11 @@ other = "Từ năm {{ .Year }}, giảng viên có {{ .Count }} bài được ch�
 [prof_own_page_part]
 other = ", trong đó {{ .Official }} bài có trong danh sách chính thức và {{ .Own }} bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm (thể hiện dưới dạng +{{ .Own }} và được gắn nhãn \"chưa chính thức\" bên dưới)"
 [prof_iclr_summary]
-other = "Tại ICLR: {{ .Submitted }} bài nộp, {{ .Accepted }} bài được chấp nhận, {{ .Rejected }} bài bị từ chối (trong đó {{ .Reviewers }} bài bị từ chối sau phản biện, {{ .Withdrawn }} bài rút, {{ .Desk }} bài bị loại sơ bộ)."
+other = "Tại ICLR: {{ .Submitted }} bài nộp, {{ .Accepted }} bài được chấp nhận, {{ .Rejected }} bài bị từ chối."
 [by_year]
 other = "Theo năm"
 [prof_note_year]
-other = """Cột "bị từ chối" của ICLR bao gồm các bài bị từ chối sau phản biện, bài rút và bài bị loại sơ bộ.
-Do chỉ ICLR công khai toàn bộ bài nộp, các hội nghị còn lại chỉ có số liệu về bài được chấp nhận."""
+other = """Do chỉ ICLR công khai toàn bộ bài nộp, các hội nghị còn lại chỉ có số liệu về bài được chấp nhận."""
 [prof_note_neurips_public]
 other = "Tại NeurIPS, có {{ .Count }} bài bị từ chối hoặc rút được tác giả tự công khai; các bài này được liệt kê bên dưới."
 [majority_title]
@@ -273,7 +272,7 @@ other = "Bài được nhận ({{ . }})"
 [rejected_papers]
 other = "Bị từ chối ({{ . }})"
 [rejected_note]
-other = "Bao gồm các bài bị từ chối sau phản biện, bài rút và bài bị loại sơ bộ; nhãn sau mỗi tiêu đề cho biết trường hợp cụ thể."
+other = "Các bài nộp không được chấp nhận."
 [not_main_track]
 other = "Không thuộc nhánh chính"
 [not_main_track_note]
@@ -407,3 +406,24 @@ other = "Google Scholar"
 
 [link_researchgate]
 other = "ResearchGate"
+
+[scholar_note]
+other = "Số liệu được ghi lại từ <a href=\"{{ .URL }}\">hồ sơ Google Scholar</a> vào ngày {{ .Date }} và không được cập nhật tự động. Google Scholar thống kê toàn bộ công bố, không chỉ riêng năm hội nghị."
+
+[scholar_all]
+other = "Tất cả"
+
+[scholar_since]
+other = "Từ năm {{ . }}"
+
+[scholar_citations]
+other = "Trích dẫn"
+
+[scholar_h]
+other = "Chỉ số h"
+
+[scholar_i10]
+other = "Chỉ số i10"
+
+[scholar_chart]
+other = "Số trích dẫn theo năm, theo Google Scholar tại ngày ghi nhận."

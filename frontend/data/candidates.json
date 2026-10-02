@@ -5940,5 +5940,289 @@
    "note": "AI and soft computing, about 11,800 citations; known in the press for his number of ISI papers",
    "five_venues": "none since 2020"
   }
+ ],
+ "to_confirm": [
+  {
+   "slug": "huynh-thi-thanh-binh",
+   "name": "Huynh Thi Thanh Binh",
+   "institution": "HUST",
+   "text": "rank: the SoICT staff list says Prof., the biography on her page says Associate Professor"
+  },
+  {
+   "slug": "ngo-van-linh",
+   "name": "Ngo Van Linh",
+   "institution": "HUST",
+   "text": "OpenReview IDs: two usernames found by a name search"
+  },
+  {
+   "slug": "hieu-pham",
+   "name": "Hieu Pham",
+   "institution": "VinUni",
+   "text": "OpenReview ID: taken from a web search result"
+  },
+  {
+   "slug": "dung-d-le",
+   "name": "Dung D. Le",
+   "institution": "VinUni",
+   "text": "OpenReview IDs: three usernames found by a name search"
+  },
+  {
+   "slug": "minh-do",
+   "name": "Minh Do",
+   "institution": "VinUni",
+   "text": "main post: his OpenReview profile (~Minh_N._Do1) says Professor at UIUC since 2002 and Honorary Vice Provost at VinUniversity since 2020. The ID is left out of openreview_ids, so only papers that name VinUniversity are counted"
+  },
+  {
+   "slug": "quynh-trang-pham-thi",
+   "name": "Quynh-Trang Pham Thi",
+   "institution": "VNU-UET",
+   "text": "rank: her OpenReview profile says PhD student at VNU-UET since 2021, the staff page lists her as ThS."
+  },
+  {
+   "slug": "nguyen-thi-hanh",
+   "name": "Nguyen Thi Hanh",
+   "institution": "Phenikaa",
+   "text": "institution and rank: taken from a web search summary (lecturer at the Faculty of Interdisciplinary Digital Technology, Phenikaa University); vn_since"
+  },
+  {
+   "slug": "tuan-do",
+   "name": "Tuan Do",
+   "institution": "Phenikaa",
+   "text": "rank and institution: from his OpenReview profile (Researcher at Phenikaa University since 2025); not checked against a Phenikaa staff page"
+  },
+  {
+   "slug": "man-ngo",
+   "name": "Man Ngo",
+   "institution": "HCMUS",
+   "text": "rank: from his OpenReview profile only; not checked against an HCMUS staff page"
+  },
+  {
+   "slug": "canh-v-pham",
+   "name": "Canh V. Pham",
+   "institution": "Phenikaa",
+   "text": "rank: from his OpenReview profile only; not checked against a Phenikaa staff page"
+  },
+  {
+   "slug": "cuong-pham",
+   "name": "Cuong Pham",
+   "institution": "PTIT",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "hoang-son-do",
+   "name": "Hoang-Son Do",
+   "institution": "VAST",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "nhan-phu-chung",
+   "name": "Nhan-Phu Chung",
+   "institution": "UEH",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "uyen-n-b-vo",
+   "name": "Uyen N.B. Vo",
+   "institution": "PTIT",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "danh-le-phuoc",
+   "name": "Danh Le-Phuoc",
+   "institution": "VinUni",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "nhat-quang-tran",
+   "name": "Nhat-Quang Tran",
+   "institution": "RMIT Vietnam",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "an-mai",
+   "name": "An Mai",
+   "institution": "HCMIU",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "minh-triet-tran",
+   "name": "Minh-Triet Tran",
+   "institution": "HCMUS",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "thuy-t-nguyen",
+   "name": "Thuy T. Nguyen",
+   "institution": "RMIT Vietnam",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "bui-trong-duc",
+   "name": "Bui Trong Duc",
+   "institution": "HUST",
+   "text": "rank and start year: from the OpenReview profile only; not checked against the SoICT staff page"
+  },
+  {
+   "slug": "thanh-trung-huynh",
+   "name": "Thanh Trung Huynh",
+   "institution": "VinUni",
+   "text": "vn_since: the VinUniversity page gives no start date; 2025 is from his OpenReview profile and the end of his EPFL postdoc"
+  },
+  {
+   "slug": "thanh-binh-nguyen",
+   "name": "Thanh-Binh Nguyen",
+   "institution": "HCMUS",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "son-ha-xuan",
+   "name": "Son Ha Xuan",
+   "institution": "RMIT Vietnam",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "tran-thai-son",
+   "name": "Tran Thai Son",
+   "institution": "HCMUS",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "son-van-nguyen",
+   "name": "Son Van Nguyen",
+   "institution": "Phenikaa",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "ngoc-hoang-luong",
+   "name": "Ngoc Hoang Luong",
+   "institution": "UIT",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "quan-minh-phan",
+   "name": "Quan Minh Phan",
+   "institution": "UIT",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "thinh-pham",
+   "name": "Thinh Pham",
+   "institution": "VinUni",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "cong-tinh-dao",
+   "name": "Cong-Tinh Dao",
+   "institution": "CTU",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "dinh-cuong-hoang",
+   "name": "Dinh-Cuong Hoang",
+   "institution": "FPT University",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "doanh-cao-bui",
+   "name": "Doanh Cao Bui",
+   "institution": "UIT",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "hai-thanh-nguyen",
+   "name": "Hai Thanh Nguyen",
+   "institution": "CTU",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "hieu-trung-thai",
+   "name": "Hieu Trung Thai",
+   "institution": "Quy Nhon University",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "hoa-tien-nguyen",
+   "name": "Hoa Tien Nguyen",
+   "institution": "HUST",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "hoan-cong-nguyen",
+   "name": "Hoan Cong Nguyen",
+   "institution": "UIT",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "hong-t-m-chu",
+   "name": "Hong T.M. Chu",
+   "institution": "VinUni",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "minh-n-h-nguyen",
+   "name": "Minh N. H. Nguyen",
+   "institution": "UDN",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "minh-tran",
+   "name": "Minh Tran",
+   "institution": "FTU",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "minhhuy-le",
+   "name": "Minhhuy Le",
+   "institution": "Phenikaa",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "nghia-duong-tan",
+   "name": "Nghia Duong Tan",
+   "institution": "HUST",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "nguyen-viet-ha",
+   "name": "Nguyen Viet Ha",
+   "institution": "VNU-UET",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "quang-vinh-dang",
+   "name": "Quang-Vinh Dang",
+   "institution": "British University Vietnam",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "thao-nguyen-minh-phan",
+   "name": "Thao Nguyen Minh Phan",
+   "institution": "CTU",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "tien-vu-van",
+   "name": "Tien Vu-Van",
+   "institution": "HCMUT",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "van-duc-nguyen",
+   "name": "Van Duc Nguyen",
+   "institution": "HUST",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  },
+  {
+   "slug": "dinh-viet-sang",
+   "name": "Dinh Viet Sang",
+   "institution": "HUST",
+   "text": "rank and start year: from the OpenReview profile; his page is on the SoICT server"
+  },
+  {
+   "slug": "long-dao-van",
+   "name": "Long Dao Van",
+   "institution": "HMU",
+   "text": "rank and start year: from the OpenReview profile only; not checked against a staff page"
+  }
  ]
 }

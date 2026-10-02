@@ -238,3 +238,38 @@ def stacked_area(label, years, series, provisional=(), short=None, words=None):
                    f'<title>{year}{note}: {parts}; {total_word} {_fmt(totals[k])}</title></rect>')
     out.append("</svg>")
     return "".join(out)
+
+
+def columns(label, years, values, tip):
+    """One column per year with its value on top (as on a Google Scholar profile).
+
+    years, values: lists of the same length. tip: a format string with {year} and {n} for the hover text.
+    """
+    left, right, top, plot_h, bottom = 34, 10, 24, 160, 24
+    peak = max(values, default=0) or 1
+    step = next(s for s in (1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 5000, 10000) if peak / s <= 5)
+    top_value = step * -(-peak // step)
+    base, plot_w = top + plot_h, WIDTH - left - right
+    band = plot_w / max(len(years), 1)
+    bar = min(28, band * 0.6)
+    out = [f'<svg class="chart" viewBox="0 0 {WIDTH} {base + bottom}" role="img" aria-label="{_esc(label)}">']
+    value = 0
+    while value <= top_value:
+        y = base - value / top_value * plot_h
+        out.append(f'<line class="{"axis" if value == 0 else "grid"}" x1="{left}" y1="{y:.1f}" x2="{WIDTH - right}" y2="{y:.1f}"/>'
+                   f'<text x="{left - 6}" y="{y + 4:.1f}" text-anchor="end">{value}</text>')
+        value += step
+    for k, (year, n) in enumerate(zip(years, values)):
+        cx = left + band * (k + 0.5)
+        h = n / top_value * plot_h
+        if n:
+            r = min(4, h)
+            x, y = cx - bar / 2, base - h
+            d = (f"M{x:.1f},{base} V{y + r:.1f} Q{x:.1f},{y:.1f} {x + r:.1f},{y:.1f} H{x + bar - r:.1f} "
+                 f"Q{x + bar:.1f},{y:.1f} {x + bar:.1f},{y + r:.1f} V{base} Z")
+            out.append(f'<path class="v1" d="{d}"><title>{_esc(tip.format(year=year, n=n))}</title></path>')
+            out.append(f'<text class="value" x="{cx:.1f}" y="{y - 5:.1f}" text-anchor="middle">{n}</text>')
+        if len(years) <= 14 or k % 2 == len(years) % 2 - 1 or k == len(years) - 1:
+            out.append(f'<text x="{cx:.1f}" y="{base + 17}" text-anchor="middle">{year}</text>')
+    out.append("</svg>")
+    return "".join(out)

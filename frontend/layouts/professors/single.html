@@ -31,6 +31,25 @@
 </ol>
 {{- end }}
 
+{{- with $p.scholar }}
+<h2>Google Scholar</h2>
+<p class="note">{{ T "scholar_note" (dict "Date" .fetched "URL" .url) | safeHTML }}</p>
+<div class="scroll">
+<table class="scholar">
+	<thead><tr><th></th><th>{{ T "scholar_all" }}</th><th>{{ T "scholar_since" .since }}</th></tr></thead>
+	<tbody>
+	<tr><td class="l">{{ T "scholar_citations" }}</td><td>{{ .citations }}</td><td>{{ .citations_since }}</td></tr>
+	<tr><td class="l">{{ T "scholar_h" }}</td><td>{{ .h_index }}</td><td>{{ .h_index_since }}</td></tr>
+	<tr><td class="l">{{ T "scholar_i10" }}</td><td>{{ .i10_index }}</td><td>{{ .i10_index_since }}</td></tr>
+	</tbody>
+</table>
+</div>
+<figure>
+{{ index . (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
+<figcaption class="note">{{ T "scholar_chart" }}</figcaption>
+</figure>
+{{- end }}
+
 <h2>{{ T "by_year" }}</h2>
 {{ partial "year-table.html" (dict "years" $p.years "venues" $p.venues "official" $p.official "own_page" $p.own_page "complete" $p.iclr_complete) }}
 <p class="note">

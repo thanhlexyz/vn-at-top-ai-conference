@@ -31,9 +31,9 @@ other = "accepted"
 [status_rejected]
 other = "rejected"
 [status_withdrawn]
-other = "withdrawn"
+other = "rejected"
 [status_desk_rejected]
-other = "desk-rejected"
+other = "rejected"
 [not_published_yet]
 other = "not published yet"
 [list_not_published]
@@ -218,12 +218,11 @@ other = "{{ .Count }} accepted papers at the five venues since {{ .Year }}"
 [prof_own_page_part]
 other = ": {{ .Official }} in the official lists and {{ .Own }} known only from personal pages, shown as +{{ .Own }} and tagged \"unofficial\" below"
 [prof_iclr_summary]
-other = "ICLR: {{ .Submitted }} submitted, {{ .Accepted }} accepted, {{ .Rejected }} rejected ({{ .Reviewers }} by reviewers, {{ .Withdrawn }} withdrawn, {{ .Desk }} desk-rejected)."
+other = "ICLR: {{ .Submitted }} submitted, {{ .Accepted }} accepted, {{ .Rejected }} rejected."
 [by_year]
 other = "By year"
 [prof_note_year]
-other = """ICLR rejected counts rejected, withdrawn and desk-rejected submissions.
-Only ICLR publishes every submission, so the other venues show accepted papers only."""
+other = """Only ICLR publishes every submission, so the other venues show accepted papers only."""
 [prof_note_neurips_public]
 one = "NeurIPS: {{ .Count }} rejected or withdrawn paper was made public by the authors and is listed below."
 other = "NeurIPS: {{ .Count }} rejected or withdrawn papers were made public by the authors and are listed below."
@@ -278,7 +277,7 @@ other = "Accepted papers ({{ . }})"
 [rejected_papers]
 other = "Rejected ({{ . }})"
 [rejected_note]
-other = "Rejected, withdrawn and desk-rejected submissions; the tag after each title says which."
+other = "Submissions that were not accepted."
 [not_main_track]
 other = "Not main track"
 [not_main_track_note]
@@ -412,3 +411,24 @@ other = "Google Scholar"
 
 [link_researchgate]
 other = "ResearchGate"
+
+[scholar_note]
+other = "A snapshot of the <a href=\"{{ .URL }}\">Google Scholar profile</a> taken on {{ .Date }}; it is not updated. Google Scholar counts every publication, not only the five conferences."
+
+[scholar_all]
+other = "All"
+
+[scholar_since]
+other = "Since {{ . }}"
+
+[scholar_citations]
+other = "Citations"
+
+[scholar_h]
+other = "h-index"
+
+[scholar_i10]
+other = "i10-index"
+
+[scholar_chart]
+other = "Citations per year, as shown on Google Scholar on the day of the snapshot."
