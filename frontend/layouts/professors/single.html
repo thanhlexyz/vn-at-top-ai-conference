@@ -20,15 +20,15 @@
 	{{- if gt $p.vn_since $meta.first_year }} since {{ $p.vn_since }}{{ else }} since {{ $meta.first_year }}{{ end }}
 	{{- if gt (int $p.own_page) 0 }}: {{ $p.official }} in the official lists and {{ $p.own_page }} known only from personal pages, shown as +{{ $p.own_page }} and tagged "unofficial" below{{ end }}.
 	{{- if $p.iclr_complete }}
-	ICLR: {{ $iclr.submitted }} submitted, {{ $iclr.accepted }} accepted, {{ $iclr.not_accepted }} not accepted
-	({{ $iclr.rejected }} rejected, {{ $iclr.withdrawn }} withdrawn, {{ $iclr.desk_rejected }} desk-rejected).
+	ICLR: {{ $iclr.submitted }} submitted, {{ $iclr.accepted }} accepted, {{ $iclr.not_accepted }} rejected
+	({{ $iclr.rejected }} by reviewers, {{ $iclr.withdrawn }} withdrawn, {{ $iclr.desk_rejected }} desk-rejected).
 	{{- end }}
 </p>
 
 <h2>By year</h2>
 {{ partial "year-table.html" (dict "years" $p.years "venues" $p.venues "official" $p.official "own_page" $p.own_page "complete" $p.iclr_complete) }}
 <p class="note">
-	sub = submitted, acc = accepted, not = not accepted (rejected, withdrawn or desk-rejected).
+	ICLR rejected counts rejected, withdrawn and desk-rejected submissions.
 	Only ICLR publishes every submission, so the other venues show accepted papers only.
 	{{- with $p.venues.neurips.not_accepted }}
 	NeurIPS: {{ . }} rejected or withdrawn {{ if eq (int .) 1 }}paper was{{ else }}papers were{{ end }} made public by the authors and {{ if eq (int .) 1 }}is{{ else }}are{{ end }} listed below.
@@ -53,7 +53,7 @@
 <figure>
 	{{ .svg | safeHTML }}
 	<figcaption class="note">
-		Accepted papers and ICLR papers that were not accepted are counted.
+		Accepted papers and rejected ICLR papers are counted.
 		Papers that NeurIPS, ICML, CVPR and ACL did not accept are not public, so that part of each column is an estimate.
 		{{- if eq .basis "own" }}
 		It comes from this professor's own ICLR record of {{ .ratio_submitted }} submitted and {{ .ratio_accepted }} accepted:
@@ -64,9 +64,9 @@
 		The accepted papers include {{ $p.own_page }} known only from personal pages.
 		{{- end }}
 		{{- else if $p.iclr_complete }}
-		This professor has no ICLR submissions, so nothing is known about papers that were not accepted, and the chart adds none.
+		This professor has no ICLR submissions, so nothing is known about rejected papers, and the chart adds none.
 		{{- else }}
-		The OpenReview records of this professor have not been fetched, so no papers that were not accepted are known, and the chart adds none.
+		The OpenReview records of this professor have not been fetched, so no rejected papers are known, and the chart adds none.
 		{{- end }}
 	</figcaption>
 </figure>
@@ -76,8 +76,8 @@
 	<tr>
 		<th>Year</th>
 		<th>Accepted</th>
-		<th>Not accepted at ICLR</th>
-		<th>Not accepted elsewhere, estimated</th>
+		<th>Rejected at ICLR</th>
+		<th>Rejected elsewhere, estimated</th>
 		<th>Submitted, estimated</th>
 	</tr>
 	</thead>
@@ -159,7 +159,8 @@
 {{- end }}
 
 {{- if $p.not_accepted_papers }}
-<h2>Not accepted ({{ len $p.not_accepted_papers }})</h2>
+<h2>Rejected ({{ len $p.not_accepted_papers }})</h2>
+<p class="note">Rejected, withdrawn and desk-rejected submissions; the tag after each title says which.</p>
 {{- if site.Params.showNonAcceptedTitles }}
 {{ partial "paper-list.html" (dict "papers" $p.not_accepted_papers) }}
 {{- else }}
@@ -167,12 +168,18 @@
 {{- end }}
 {{- end }}
 
-{{- if $p.excluded_papers }}
-<h2>Not counted ({{ len $p.excluded_papers }})</h2>
+{{- /* papers left out of the counts: other tracks, and papers from before the person came to Vietnam */}}
+{{- $before := slice }}{{ $track := slice }}
+{{- range $p.excluded_papers }}{{ if hasPrefix .reason "before" }}{{ $before = $before | append . }}{{ else }}{{ $track = $track | append . }}{{ end }}{{ end }}
+{{- range $group := slice (dict "title" "Not main track" "papers" $track "note" "Workshops, Findings, Datasets & Benchmarks, journal and other tracks, which the site does not count.") (dict "title" "Before joining a Vietnamese institution" "papers" $before "note" "Papers from before the year this person's post in Vietnam began, which the site does not count.") }}
+{{- with $group.papers }}
+<h2>{{ $group.title }} ({{ len . }})</h2>
+<p class="note">{{ $group.note }}</p>
 {{- if site.Params.showNonAcceptedTitles }}
-{{ partial "paper-list.html" (dict "papers" $p.excluded_papers) }}
+{{ partial "paper-list.html" (dict "papers" .) }}
 {{- else }}
-{{ partial "paper-list.html" (dict "papers" (where $p.excluded_papers "status" "accepted")) }}
+{{ partial "paper-list.html" (dict "papers" (where . "status" "accepted")) }}
+{{- end }}
 {{- end }}
 {{- end }}
 {{- end }}

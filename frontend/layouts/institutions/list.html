@@ -9,16 +9,18 @@
 		<th rowspan="2">Professors</th>
 		<th colspan="3">ICLR</th>
 		<th colspan="4">Accepted at</th>
-		<th rowspan="2">Total accepted</th>
+		<th colspan="2">Total</th>
 	</tr>
 	<tr>
-		<th title="submitted">sub</th>
-		<th title="accepted">acc</th>
-		<th title="not accepted: rejected, withdrawn or desk-rejected">not</th>
+		<th title="submitted">submitted</th>
+		<th class="good" title="accepted">accepted</th>
+		<th class="bad" title="rejected, withdrawn or desk-rejected">rejected</th>
 		<th>NeurIPS</th>
 		<th>ICML</th>
 		<th>CVPR</th>
 		<th>ACL</th>
+		<th class="good">accepted</th>
+		<th class="bad" title="rejected, withdrawn or desk-rejected, where public: all of ICLR, and the papers authors made public elsewhere">rejected</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -28,12 +30,13 @@
 		<td class="l"><a href="{{ printf "institutions/%s/" .slug | relURL }}">{{ .name }}</a>{{ if not .iclr_complete }}<sup title="ICLR submissions are missing for some professors">*</sup>{{ end }}</td>
 		<td>{{ len .professors }}</td>
 		{{ partial "num.html" .venues.iclr.submitted }}
-		{{ partial "acc.html" .venues.iclr }}
-		{{ partial "num.html" .venues.iclr.not_accepted }}
+		{{ partial "acc.html" (merge .venues.iclr (dict "cls" "good")) }}
+		{{ partial "numc.html" (dict "v" .venues.iclr.not_accepted "cls" "bad") }}
 		{{- range slice "neurips" "icml" "cvpr" "acl" }}
 		{{ partial "acc.html" (index $i.venues .) }}
 		{{- end }}
-		<td class="total">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ .own_page }} more from personal pages, not in the official list yet">+{{ .own_page }}</span>{{ end }}</td>
+		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ .own_page }} more from personal pages, not in the official list yet">+{{ .own_page }}</span>{{ end }}</td>
+		{{ partial "rejected-total.html" .venues }}
 	</tr>
 	{{- end }}
 	</tbody>
@@ -42,7 +45,7 @@
 <p class="note">
 	A paper with several professors of the same institution is counted once.
 	+N after a number means N more papers known only from personal pages, which are unofficial.
-	* means the OpenReview records of at least one professor have not been fetched, so the ICLR submitted and not-accepted numbers are too low.
+	* means the OpenReview records of at least one professor have not been fetched, so the ICLR submitted and rejected numbers are too low.
 </p>
 
 <h2>Papers with a majority of authors from the institution</h2>

@@ -1,25 +1,28 @@
 {{- /* One row per professor. Context: a list of entries from data/professors.json. */ -}}
-<div class="scroll">
+<div class="scroll pinned top">
 <table>
 	<thead>
 	<tr>
-		<th rowspan="2" class="l">Professor</th>
-		<th rowspan="2" class="l">Institution</th>
+		<th rowspan="2" class="l pin1">Professor</th>
+		<th rowspan="2" class="l pin2">Institution</th>
 		<th colspan="3">ICLR</th>
 		<th colspan="4">Accepted at</th>
-		<th rowspan="2">Total accepted</th>
+		<th colspan="3">Total</th>
 		<th colspan="2" title="accepted papers judged against the professor's current institution; papers whose source prints no affiliation per author are left out">From own institution</th>
 		<th colspan="5">Co-authors</th>
 		<th rowspan="2">Topic areas</th>
 	</tr>
 	<tr>
-		<th title="submitted">sub</th>
-		<th title="accepted">acc</th>
-		<th title="not accepted: rejected, withdrawn or desk-rejected">not</th>
+		<th title="submitted">submitted</th>
+		<th class="good" title="accepted">accepted</th>
+		<th class="bad" title="rejected, withdrawn or desk-rejected">rejected</th>
 		<th>NeurIPS</th>
 		<th>ICML</th>
 		<th>CVPR</th>
 		<th>ACL</th>
+		<th class="good">accepted</th>
+		<th class="bad" title="rejected, withdrawn or desk-rejected, where public: all of ICLR, and the papers authors made public elsewhere">rejected</th>
+		<th class="est" title="rejected at ICLR plus the papers estimated to have been rejected at the other venues, from each professor's own ICLR record (see About)">rejected, estimated</th>
 		<th title="accepted papers on which more than half of the authors are at the professor's institution">majority</th>
 		<th title="accepted papers whose first author is at the professor's institution">1st author</th>
 		<th title="average number of co-authors per paper, accepted or not">per paper</th>
@@ -34,21 +37,27 @@
 	{{- $p := . }}
 	{{- $iclr := .venues.iclr }}
 	<tr>
-		<td class="l"><a href="{{ printf "professors/%s/" .slug | relURL }}">{{ .name }}</a>{{ if .flags }}<sup title="incomplete or unconfirmed, see the professor's page">*</sup>{{ end }}</td>
-		<td class="l"><a href="{{ printf "institutions/%s/" .institution_slug | relURL }}">{{ .institution_short }}</a></td>
+		<td class="l pin1"><a href="{{ printf "professors/%s/" .slug | relURL }}">{{ .name }}</a>{{ if .flags }}<sup title="incomplete or unconfirmed, see the professor's page">*</sup>{{ end }}</td>
+		<td class="l pin2"><a href="{{ printf "institutions/%s/" .institution_slug | relURL }}">{{ .institution_short }}</a></td>
 		{{- if .iclr_complete }}
 		{{ partial "num.html" $iclr.submitted }}
-		{{ partial "acc.html" $iclr }}
-		{{ partial "num.html" $iclr.not_accepted }}
+		{{ partial "acc.html" (merge $iclr (dict "cls" "good")) }}
+		{{ partial "numc.html" (dict "v" $iclr.not_accepted "cls" "bad") }}
 		{{- else }}
 		<td class="na">&ndash;</td>
-		{{ partial "acc.html" $iclr }}
+		{{ partial "acc.html" (merge $iclr (dict "cls" "good")) }}
 		<td class="na">&ndash;</td>
 		{{- end }}
 		{{- range slice "neurips" "icml" "cvpr" "acl" }}
 		{{ partial "acc.html" (index $p.venues .) }}
 		{{- end }}
-		<td class="total">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ .own_page }} more from personal pages, not in the official list yet">+{{ .own_page }}</span>{{ end }}</td>
+		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ .own_page }} more from personal pages, not in the official list yet">+{{ .own_page }}</span>{{ end }}</td>
+		{{ partial "rejected-total.html" .venues }}
+		{{- if eq .rejected_estimated nil }}
+		<td class="na est">&ndash;</td>
+		{{- else }}
+		{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}
+		{{- end }}
 		{{ partial "num.html" .authorship.majority.total }}
 		{{ partial "num.html" .authorship.first_author.total }}
 		{{- range slice .collab.avg_coauthors .collab.min_coauthors .collab.max_coauthors .collab.avg_foreign .collab.elsewhere .collab.topic_areas }}

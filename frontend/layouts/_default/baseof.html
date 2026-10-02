@@ -40,5 +40,6 @@
 	{{ with hugo.Data.meta }}Data as of {{ .generated_date }}, covering {{ .first_year }}&ndash;{{ .last_year }}.{{ end }}
 	<a href="{{ "about/" | relURL }}">Sources and limits</a>
 </footer>
+<script src="{{ "site.js" | relURL }}" defer></script>
 </body>
 </html>

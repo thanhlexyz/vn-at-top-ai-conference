@@ -45,15 +45,15 @@
 {{- end }}
 
 {{- with hugo.Data.attempted }}{{ with .people }}
-<h2>Attempted, not accepted yet ({{ len . }})</h2>
+<h2>Attempted, no accepted paper yet ({{ len . }})</h2>
 <p>
-	People whose current OpenReview post is in Vietnam, with ICLR submissions that were not accepted and no accepted paper at the five venues, from <code>backend/find_iclr_only.py</code>.
+	People whose current OpenReview post is in Vietnam, with rejected ICLR submissions and no accepted paper at the five venues, from <code>backend/find_iclr_only.py</code>.
 	Lecturers and professors come first. A "same name" note means an accepted paper carries the same name, which may be them or a namesake.
 	This table is only in the local build: the list is not committed to the repository.
 </p>
 <div class="scroll">
 <table>
-	<thead><tr><th class="l">Name</th><th class="l">Position</th><th class="l">Institution</th><th>Not accepted</th><th>Years</th><th class="l">Latest submission</th></tr></thead>
+	<thead><tr><th class="l">Name</th><th class="l">Position</th><th class="l">Institution</th><th>Rejected</th><th>Years</th><th class="l">Latest submission</th></tr></thead>
 	<tbody>
 	{{- range . }}
 	<tr>

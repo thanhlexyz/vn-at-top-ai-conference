@@ -7,8 +7,8 @@
 		<th class="l">Venue</th>
 		<th class="l">Rejected papers public?</th>
 		<th>Submitted</th>
-		<th>Accepted</th>
-		<th>Not accepted</th>
+		<th class="good">Accepted</th>
+		<th class="bad">Rejected</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -19,18 +19,18 @@
 		{{- if eq .rejections "full" }}
 		<td class="l">yes, every submission</td>
 		{{ partial "num.html" $t.submitted }}
-		{{ partial "acc.html" $t }}
-		{{ partial "num.html" $t.not_accepted }}
+		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
+		{{ partial "numc.html" (dict "v" $t.not_accepted "cls" "bad") }}
 		{{- else if eq .rejections "partial" }}
 		<td class="l">only when the authors opt in</td>
 		<td class="na">&ndash;</td>
-		{{ partial "acc.html" $t }}
-		<td>{{ $t.not_accepted }} public</td>
+		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
+		<td class="bad">{{ $t.not_accepted }} public</td>
 		{{- else }}
 		<td class="l">no</td>
 		<td class="na">&ndash;</td>
-		{{ partial "acc.html" $t }}
-		<td class="na">&ndash;</td>
+		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
+		<td class="na bad">&ndash;</td>
 		{{- end }}
 	</tr>
 	{{- end }}

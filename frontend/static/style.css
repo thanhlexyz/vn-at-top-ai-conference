@@ -110,7 +110,7 @@ figure {
     max-width: 640px ;
     min-width: 520px ;
     height: auto ;
-    --accepted: #2a78d6 ;
+    --accepted: #2e8b57 ;  /* green, checked against the red with the palette validator */
     --not-accepted: #e34948 ;
 }
 
@@ -322,3 +322,26 @@ form.feedback button:hover {
 .chart .gap { fill: none ; stroke: #ffffff ; stroke-width: 2 ; stroke-linejoin: round ; }
 .chart .hit { fill: transparent ; }
 .chart .hit:hover { fill: #000000 ; fill-opacity: 0.04 ; }
+
+/* ICLR columns: accepted green, rejected red, as on the paper tags */
+td.good, th.good { background: #e2f0d9 ; }
+td.bad, th.bad { background: #f8e0e0 ; }
+
+/* Wide tables: the scrollbar sits on top (the box is flipped, and the table flipped back), and the first two
+   columns stay in place while the rest scrolls. Borders are drawn with shadows, since collapsed borders
+   would scroll away from sticky cells. */
+.scroll.top { transform: rotateX(180deg) ; }
+.scroll.top > table { transform: rotateX(180deg) ; }
+.scroll.pinned > table { border-collapse: separate ; border-spacing: 0 ; border-width: 1px 0 0 1px ; }
+.scroll.pinned td, .scroll.pinned th { border-width: 0 1px 1px 0 ; }
+.scroll.pinned .pin1, .scroll.pinned .pin2 { position: sticky ; z-index: 1 ; background: #ffffff ; }
+.scroll.pinned th.pin1, .scroll.pinned th.pin2 { background: #f0f0f0 ; }
+.scroll.pinned .pin1 { left: 0 ; min-width: 9em ; max-width: 9em ; }
+.scroll.pinned .pin2 { left: calc(9em + 1.2em + 1px) ; box-shadow: 2px 0 0 #000000 ; }
+td.est, th.est { background: #fde3cf ; }  /* orange: estimated */
+
+/* Sortable headings (site.js) */
+th.sortable { cursor: pointer ; }
+th.sortable:hover { text-decoration: underline ; }
+th[aria-sort="descending"]::after { content: " \25BC" ; font-size: 0.7em ; }
+th[aria-sort="ascending"]::after { content: " \25B2" ; font-size: 0.7em ; }

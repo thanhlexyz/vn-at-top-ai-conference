@@ -581,7 +581,7 @@ def blog_charts(pooled, rows, by_venue):
     hidden = pooled["projected_submissions"] - pooled["projected_accepted"]
     return {
         "outcomes": charts.pies(
-            "Accepted and not accepted: ICLR as counted, all five venues as estimated",
+            "Accepted and rejected: ICLR as counted, all five venues as estimated",
             [("ICLR, counted", [("s1", "accepted", i["accepted"]), ("not", "rejected or withdrawn", i["not_accepted"])]),
              ("All five venues, estimated", [("s1", "accepted", pooled["projected_accepted"]),
                                              ("not", "rejected or withdrawn", hidden)])]),
@@ -600,7 +600,7 @@ def blog_charts(pooled, rows, by_venue):
             "Accepted papers and the submissions behind them, per professor",
             [(r["name"], [r["projection"]["accepted"], r["iclr"]["not_accepted"] if r["iclr_complete"] else 0,
                           int(r["projection"]["estimated"])]) for r in busy],
-            [("s1", "accepted"), ("not", "not accepted at ICLR"), ("hollow", "not accepted elsewhere, estimated")]),
+            [("s1", "accepted"), ("not", "rejected at ICLR"), ("hollow", "rejected elsewhere, estimated")]),
     }
 
 
@@ -796,8 +796,8 @@ def projection_svg(name, rows):
 
     out = [f'<svg class="chart" viewBox="0 0 {width} {height}" role="img" aria-label="Papers submitted and accepted '
            f'per year by {html.escape(name)}; the numbers are in the table below">']
-    for k, (cls, label) in enumerate([("acc", "Accepted"), ("not", "Not accepted at ICLR"),
-                                      ("est", "Not accepted elsewhere, estimated")]):
+    for k, (cls, label) in enumerate([("acc", "Accepted"), ("not", "Rejected at ICLR"),
+                                      ("est", "Rejected elsewhere, estimated")]):
         x = left + (0, 100, 270)[k]
         out.append(f'<rect class="{cls}" x="{x}" y="8" width="12" height="12"/>'
                    f'<text class="label" x="{x + 18}" y="18">{label}</text>')
@@ -817,8 +817,8 @@ def projection_svg(name, rows):
             continue
         parts = [(cls, v, text) for cls, v, text in [
             ("acc", r["accepted"], f"{r['accepted']} accepted"),
-            ("not", r["iclr_not_accepted"], f"{r['iclr_not_accepted']} not accepted at ICLR"),
-            ("est", r["estimated"], f"about {r['estimated']:.0f} not accepted elsewhere (estimate)")] if v > 0]
+            ("not", r["iclr_not_accepted"], f"{r['iclr_not_accepted']} rejected at ICLR"),
+            ("est", r["estimated"], f"about {r['estimated']:.0f} rejected elsewhere (estimate)")] if v > 0]
         low = base
         for n, (cls, v, text) in enumerate(parts):
             high = low - v / top_value * plot_h
@@ -879,8 +879,8 @@ def main():
         if person["to_confirm"]:
             flags.append(f"Still to confirm: {person['to_confirm']}.")
         if partial:
-            flags.append("Their own OpenReview records have not been fetched. The ICLR papers that were not "
-                         "accepted come from the records of co-authors on this site, so there may be more.")
+            flags.append("Their own OpenReview records have not been fetched. The rejected ICLR papers "
+                         "come from the records of co-authors on this site, so there may be more.")
         elif source == "none":
             flags.append("No OpenReview records fetched yet, so only accepted papers are known: "
                          "ICLR submissions and rejections are missing.")
@@ -930,6 +930,10 @@ def main():
 
     for p in professors:
         p["projection"] = projection(p)
+        # every rejection behind the accepted papers: the ones recorded at ICLR plus the estimate for the other venues
+        p["rejected_estimated"] = (round(sum(r["iclr_not_accepted"] + float(r["estimated"])
+                                             for r in p["projection"]["rows"] if r["counts"]))
+                                   if p["projection"] else None)
 
     institutions = []
     for slug in sorted({p["institution_slug"] for p in professors}):

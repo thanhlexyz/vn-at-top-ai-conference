@@ -4,12 +4,12 @@
 <p>
 	{{ len $i.professors }} {{ if eq (len $i.professors) 1 }}professor{{ else }}professors{{ end }} listed,
 	{{ $i.accepted }} accepted {{ if eq (int $i.accepted) 1 }}paper{{ else }}papers{{ end }} at the five venues{{ if gt (int $i.own_page) 0 }}, {{ $i.own_page }} of them known only from personal pages (unofficial){{ end }}.
-	ICLR: {{ $iclr.submitted }} submitted, {{ $iclr.accepted }} accepted, {{ $iclr.not_accepted }} not accepted.
+	ICLR: {{ $iclr.submitted }} submitted, {{ $iclr.accepted }} accepted, {{ $iclr.not_accepted }} rejected.
 	A paper with several professors of this institution is counted once.
 </p>
 {{- if not $i.iclr_complete }}
 <ul class="flags">
-	<li>The OpenReview records of at least one professor have not been fetched, so the ICLR submitted and not-accepted numbers are too low.</li>
+	<li>The OpenReview records of at least one professor have not been fetched, so the ICLR submitted and rejected numbers are too low.</li>
 </ul>
 {{- end }}
 

@@ -16,7 +16,9 @@ Conference papers by professors and lecturers in Vietnam, {{ hugo.Data.meta.firs
 {{- end }}
 {{ partial "professor-table.html" hugo.Data.professors }}
 <p class="note">
-	sub = submitted, acc = accepted, not = not accepted (rejected, withdrawn or desk-rejected).
+	ICLR rejected counts rejected, withdrawn and desk-rejected submissions.
+	Total rejected adds every ICLR rejection to the rejections authors made public at other venues (some NeurIPS papers), so it is a lower bound.
+	Total rejected, estimated (orange) adds an estimate for the venues that hide their rejections, from each professor's own ICLR record: submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1). It is an estimate, not a count.
 	&ndash; means the OpenReview records of that professor have not been fetched.
 	Main conference track only; workshops, Findings, position papers and the NeurIPS Datasets &amp; Benchmarks track are left out.
 	Professors are ordered by total accepted papers.
@@ -42,7 +44,7 @@ Conference papers by professors and lecturers in Vietnam, {{ hugo.Data.meta.firs
 </p>
 <figure>
 {{ .pie | safeHTML }}
-<figcaption>Fig. 1. Accepted papers against papers not accepted, recorded at ICLR and estimated elsewhere, over all years and venues.</figcaption>
+<figcaption>Fig. 1. Accepted papers against rejected papers, recorded at ICLR and estimated elsewhere, over all years and venues.</figcaption>
 </figure>
 <figure>
 {{ .stack | safeHTML }}
