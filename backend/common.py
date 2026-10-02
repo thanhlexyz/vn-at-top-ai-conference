@@ -304,6 +304,7 @@ def load_roster(path=ROSTER):
                 "slug": (row.get("slug") or "").strip() or slugify(name),
                 "name": name,
                 "variants": sorted({norm_name(v) for v in [name, *_split(row.get("name_variants"))]}),
+                "name_forms": [name, *_split(row.get("name_variants"))],   # as written, for display
                 "institution": (row.get("institution") or "").strip(),
                 "institution_short": (row.get("institution_short") or "").strip()
                 or (row.get("institution") or "").strip(),

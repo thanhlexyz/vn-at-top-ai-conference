@@ -441,3 +441,6 @@ other = "{{ .Name }}: {{ .Profs }} professors, {{ .Accepted }} papers accepted a
 
 [seo_venue]
 other = "{{ .Name }}: papers submitted, accepted and rejected by professors and lecturers in Vietnam since 2020; {{ .Accepted }} accepted."
+
+[also_published_as]
+other = "Also published as: {{ . }}"

@@ -436,3 +436,6 @@ other = "{{ .Name }}: {{ .Profs }} giảng viên, {{ .Accepted }} bài được 
 
 [seo_venue]
 other = "{{ .Name }}: số bài nộp, được chấp nhận và bị từ chối của giảng viên tại Việt Nam từ năm 2020; {{ .Accepted }} bài được chấp nhận."
+
+[also_published_as]
+other = "Tên khác trên các bài báo: {{ . }}"

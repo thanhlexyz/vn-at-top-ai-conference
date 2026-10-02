@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
+	<title>{{ partial "page-title.html" . }}</title>
 	<script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 	<link rel="stylesheet" type="text/css" href="{{ "style.css" | relURL }}">
 	{{- $desc := partial "description.html" . }}

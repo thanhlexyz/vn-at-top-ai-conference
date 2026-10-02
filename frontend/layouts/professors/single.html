@@ -6,6 +6,8 @@
 <p>
 	{{ with $p.rank }}{{ . }}, {{ end }}<a href="{{ printf "institutions/%s/" $p.institution_slug | relLangURL }}">{{ $p.institution }}</a>
 	{{- if $p.vn_since }}. {{ T "prof_since" $p.vn_since }}{{ end }}.
+	{{- $names := slice }}{{ if ne (partial "pname.html" $p) $p.name }}{{ $names = $names | append $p.name }}{{ else if ne $p.name_vi $p.name }}{{ $names = $names | append $p.name_vi }}{{ end }}
+	{{- with ($names | append $p.aliases) }}<br><span class="note">{{ T "also_published_as" (delimit . ", ") }}</span>{{ end }}
 </p>
 <p>
 	{{ T "prof_accepted_summary" (dict "Count" (int $p.accepted) "Year" (cond (gt $p.vn_since $meta.first_year) $p.vn_since $meta.first_year)) }}

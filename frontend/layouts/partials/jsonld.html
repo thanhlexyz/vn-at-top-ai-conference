@@ -2,7 +2,7 @@
 {{- if and (eq .Section "professors") .Params.key }}
 {{- $p := index (where hugo.Data.professors "slug" .Params.key) 0 }}
 {{- $same := slice }}{{ range $p.links }}{{ $same = $same | append .url }}{{ end }}
-{{- $person := dict "@context" "https://schema.org" "@type" "Person" "name" $p.name "alternateName" $p.name_vi "url" .Permalink "jobTitle" $p.rank "affiliation" (dict "@type" "CollegeOrUniversity" "name" $p.institution) "sameAs" $same }}
+{{- $person := dict "@context" "https://schema.org" "@type" "Person" "name" $p.name "alternateName" (uniq (slice $p.name_vi | append $p.aliases)) "url" .Permalink "jobTitle" $p.rank "affiliation" (dict "@type" "CollegeOrUniversity" "name" $p.institution) "sameAs" $same }}
 {{- with $p.image }}{{ $person = merge $person (dict "image" (. | absURL)) }}{{ end }}
 <script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>
 {{- else if .IsHome }}

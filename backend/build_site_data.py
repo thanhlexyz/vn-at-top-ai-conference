@@ -968,6 +968,9 @@ def main():
         s = summary(counted, acc, person["vn_since"])
         professors.append({
             "slug": person["slug"], "name": person["name"], "name_vi": person["name_vi"] or person["name"],
+            # the name forms used on papers, shown as "also published as" and given to search engines
+            "aliases": [a for a in dict.fromkeys(person["name_forms"]) if norm_name(a) not in
+                        {norm_name(person["name"]), norm_name(person["name_vi"] or "")}],
             "institution": person["institution"],
             "institution_short": person["institution_short"], "institution_slug": inst_slug,
             "rank": person["rank"], "homepage": person["homepage"], "vn_since": person["vn_since"] or 0,
