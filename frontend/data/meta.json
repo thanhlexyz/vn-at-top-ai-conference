@@ -1,0 +1,485 @@
+{
+ "generated": "2026-10-01 12:07 UTC",
+ "generated_date": "2026-10-01",
+ "first_year": 2020,
+ "last_year": 2026,
+ "years": [
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025,
+  2026
+ ],
+ "venues": [
+  {
+   "key": "iclr",
+   "name": "ICLR",
+   "full_name": "International Conference on Learning Representations",
+   "rejections": "full"
+  },
+  {
+   "key": "neurips",
+   "name": "NeurIPS",
+   "full_name": "Conference on Neural Information Processing Systems",
+   "rejections": "partial"
+  },
+  {
+   "key": "icml",
+   "name": "ICML",
+   "full_name": "International Conference on Machine Learning",
+   "rejections": "none"
+  },
+  {
+   "key": "cvpr",
+   "name": "CVPR",
+   "full_name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+   "rejections": "none"
+  },
+  {
+   "key": "acl",
+   "name": "ACL",
+   "full_name": "Annual Meeting of the Association for Computational Linguistics",
+   "rejections": "none"
+  }
+ ],
+ "coverage": [
+  {
+   "venue": "iclr",
+   "year": 2020,
+   "papers": 687,
+   "sources": [
+    "iclr.cc"
+   ],
+   "with_affiliation": 89,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "neurips",
+   "year": 2020,
+   "papers": 1899,
+   "sources": [
+    "neurips.cc"
+   ],
+   "with_affiliation": 100,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "icml",
+   "year": 2020,
+   "papers": 1084,
+   "sources": [
+    "icml.cc"
+   ],
+   "with_affiliation": 100,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "cvpr",
+   "year": 2020,
+   "papers": 1466,
+   "sources": [
+    "openaccess.thecvf.com"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "acl",
+   "year": 2020,
+   "papers": 778,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "iclr",
+   "year": 2021,
+   "papers": 860,
+   "sources": [
+    "iclr.cc"
+   ],
+   "with_affiliation": 93,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "neurips",
+   "year": 2021,
+   "papers": 2334,
+   "sources": [
+    "neurips.cc"
+   ],
+   "with_affiliation": 98,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "icml",
+   "year": 2021,
+   "papers": 1183,
+   "sources": [
+    "icml.cc"
+   ],
+   "with_affiliation": 100,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "cvpr",
+   "year": 2021,
+   "papers": 1660,
+   "sources": [
+    "openaccess.thecvf.com"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "acl",
+   "year": 2021,
+   "papers": 710,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "iclr",
+   "year": 2022,
+   "papers": 1095,
+   "sources": [
+    "iclr.cc"
+   ],
+   "with_affiliation": 96,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "neurips",
+   "year": 2022,
+   "papers": 2675,
+   "sources": [
+    "neurips.cc"
+   ],
+   "with_affiliation": 98,
+   "other_tracks": {
+    "other": 48,
+    "datasets_benchmarks": 163,
+    "journal": 67
+   },
+   "provisional": false
+  },
+  {
+   "venue": "icml",
+   "year": 2022,
+   "papers": 1233,
+   "sources": [
+    "icml.cc"
+   ],
+   "with_affiliation": 99,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "cvpr",
+   "year": 2022,
+   "papers": 2074,
+   "sources": [
+    "openaccess.thecvf.com"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "acl",
+   "year": 2022,
+   "papers": 700,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "iclr",
+   "year": 2023,
+   "papers": 1574,
+   "sources": [
+    "iclr.cc"
+   ],
+   "with_affiliation": 98,
+   "other_tracks": {
+    "journal": 10
+   },
+   "provisional": false
+  },
+  {
+   "venue": "neurips",
+   "year": 2023,
+   "papers": 3218,
+   "sources": [
+    "neurips.cc"
+   ],
+   "with_affiliation": 99,
+   "other_tracks": {
+    "datasets_benchmarks": 322,
+    "journal": 44
+   },
+   "provisional": false
+  },
+  {
+   "venue": "icml",
+   "year": 2023,
+   "papers": 1828,
+   "sources": [
+    "icml.cc"
+   ],
+   "with_affiliation": 97,
+   "other_tracks": {
+    "journal": 37
+   },
+   "provisional": false
+  },
+  {
+   "venue": "cvpr",
+   "year": 2023,
+   "papers": 2359,
+   "sources": [
+    "cvpr.thecvf.com"
+   ],
+   "with_affiliation": 88,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "acl",
+   "year": 2023,
+   "papers": 1075,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "iclr",
+   "year": 2024,
+   "papers": 2260,
+   "sources": [
+    "iclr.cc"
+   ],
+   "with_affiliation": 98,
+   "other_tracks": {
+    "journal": 36
+   },
+   "provisional": false
+  },
+  {
+   "venue": "neurips",
+   "year": 2024,
+   "papers": 4035,
+   "sources": [
+    "neurips.cc"
+   ],
+   "with_affiliation": 98,
+   "other_tracks": {
+    "journal": 43,
+    "datasets_benchmarks": 459
+   },
+   "provisional": false
+  },
+  {
+   "venue": "icml",
+   "year": 2024,
+   "papers": 2535,
+   "sources": [
+    "icml.cc"
+   ],
+   "with_affiliation": 98,
+   "other_tracks": {
+    "position": 75,
+    "journal": 24
+   },
+   "provisional": false
+  },
+  {
+   "venue": "cvpr",
+   "year": 2024,
+   "papers": 2716,
+   "sources": [
+    "cvpr.thecvf.com"
+   ],
+   "with_affiliation": 92,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "acl",
+   "year": 2024,
+   "papers": 940,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "iclr",
+   "year": 2025,
+   "papers": 3708,
+   "sources": [
+    "iclr.cc"
+   ],
+   "with_affiliation": 98,
+   "other_tracks": {
+    "blog": 49,
+    "journal": 73
+   },
+   "provisional": false
+  },
+  {
+   "venue": "neurips",
+   "year": 2025,
+   "papers": 5287,
+   "sources": [
+    "neurips.cc"
+   ],
+   "with_affiliation": 99,
+   "other_tracks": {
+    "position": 40,
+    "datasets_benchmarks": 497,
+    "journal": 34
+   },
+   "provisional": false
+  },
+  {
+   "venue": "icml",
+   "year": 2025,
+   "papers": 3258,
+   "sources": [
+    "icml.cc"
+   ],
+   "with_affiliation": 98,
+   "other_tracks": {
+    "position": 73,
+    "journal": 8
+   },
+   "provisional": false
+  },
+  {
+   "venue": "cvpr",
+   "year": 2025,
+   "papers": 2871,
+   "sources": [
+    "cvpr.thecvf.com"
+   ],
+   "with_affiliation": 98,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "acl",
+   "year": 2025,
+   "papers": 1699,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "iclr",
+   "year": 2026,
+   "papers": 5353,
+   "sources": [
+    "iclr.cc"
+   ],
+   "with_affiliation": 98,
+   "other_tracks": {
+    "blog": 58,
+    "journal": 57
+   },
+   "provisional": false
+  },
+  {
+   "venue": "neurips",
+   "year": 2026,
+   "papers": 5403,
+   "sources": [
+    "neurips.cc"
+   ],
+   "with_affiliation": 98,
+   "other_tracks": {
+    "datasets_benchmarks": 658,
+    "position": 113,
+    "journal": 68
+   },
+   "provisional": true
+  },
+  {
+   "venue": "icml",
+   "year": 2026,
+   "papers": 6356,
+   "sources": [
+    "icml.cc"
+   ],
+   "with_affiliation": 98,
+   "other_tracks": {
+    "position": 213,
+    "journal": 74
+   },
+   "provisional": false
+  },
+  {
+   "venue": "cvpr",
+   "year": 2026,
+   "papers": 4042,
+   "sources": [
+    "openaccess.thecvf.com"
+   ],
+   "with_affiliation": 3,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "acl",
+   "year": 2026,
+   "papers": 2296,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  }
+ ],
+ "professors": 26,
+ "papers": 163,
+ "accepted": 105,
+ "preliminary": true,
+ "pending_review": 1,
+ "provisional": [
+  {
+   "venue": "neurips",
+   "name": "NeurIPS",
+   "year": 2026
+  }
+ ]
+}

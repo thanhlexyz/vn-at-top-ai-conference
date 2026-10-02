@@ -1,0 +1,36 @@
+{{- /* Accepted main-track papers per venue and year that the pipeline has read. */ -}}
+{{- $meta := hugo.Data.meta }}
+<div class="scroll">
+<table>
+	<thead>
+	<tr>
+		<th class="l">Venue</th>
+		{{- range $meta.years }}
+		<th>{{ . }}</th>
+		{{- end }}
+		<th class="l">Source of the accepted list</th>
+	</tr>
+	</thead>
+	<tbody>
+	{{- range $meta.venues }}
+	{{- $key := .key }}
+	{{- $rows := where $meta.coverage "venue" $key }}
+	<tr>
+		<td class="l">{{ .name }}</td>
+		{{- range $rows }}
+		{{- if .papers }}
+		<td{{ if lt .with_affiliation 50 }} title="no affiliations in this list"{{ end }}>{{ .papers }}{{ if lt .with_affiliation 50 }}&dagger;{{ end }}{{ if .provisional }}&Dagger;{{ end }}</td>
+		{{- else }}
+		<td class="na">&ndash;</td>
+		{{- end }}
+		{{- end }}
+		<td class="l">
+			{{- $sources := slice }}
+			{{- range $rows }}{{ range .sources }}{{ $sources = $sources | append . }}{{ end }}{{ end }}
+			{{- delimit ($sources | uniq) ", " }}
+		</td>
+	</tr>
+	{{- end }}
+	</tbody>
+</table>
+</div>

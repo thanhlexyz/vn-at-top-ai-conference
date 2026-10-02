@@ -1,0 +1,178 @@
+{{ define "main" -}}
+{{- $p := index (where hugo.Data.professors "slug" .Params.key) 0 }}
+{{- $meta := hugo.Data.meta }}
+{{- $iclr := $p.venues.iclr }}
+<p>
+	{{ with $p.rank }}{{ . }}, {{ end }}<a href="{{ printf "institutions/%s/" $p.institution_slug | relURL }}">{{ $p.institution }}</a>
+	{{- if $p.vn_since }}. At a Vietnamese institution since {{ $p.vn_since }}{{ end }}.
+	{{- with $p.homepage }} <a href="{{ . }}">Homepage</a>{{ end }}
+	{{- range $p.openreview_ids }} <a href="https://openreview.net/profile?id={{ . }}">OpenReview {{ . }}</a>{{ end }}
+</p>
+{{- with $p.flags }}
+<ul class="flags">
+	{{- range . }}
+	<li>{{ . }}</li>
+	{{- end }}
+</ul>
+{{- end }}
+<p>
+	{{ $p.accepted }} accepted {{ if eq (int $p.accepted) 1 }}paper{{ else }}papers{{ end }} at the five venues
+	{{- if gt $p.vn_since $meta.first_year }} since {{ $p.vn_since }}{{ else }} since {{ $meta.first_year }}{{ end }}
+	{{- if gt (int $p.own_page) 0 }}: {{ $p.official }} in the official lists and {{ $p.own_page }} known only from personal pages, shown as +{{ $p.own_page }} and tagged "unofficial" below{{ end }}.
+	{{- if $p.iclr_complete }}
+	ICLR: {{ $iclr.submitted }} submitted, {{ $iclr.accepted }} accepted, {{ $iclr.not_accepted }} not accepted
+	({{ $iclr.rejected }} rejected, {{ $iclr.withdrawn }} withdrawn, {{ $iclr.desk_rejected }} desk-rejected).
+	{{- end }}
+</p>
+
+<h2>By year</h2>
+{{ partial "year-table.html" (dict "years" $p.years "venues" $p.venues "official" $p.official "own_page" $p.own_page "complete" $p.iclr_complete) }}
+<p class="note">
+	sub = submitted, acc = accepted, not = not accepted (rejected, withdrawn or desk-rejected).
+	Only ICLR publishes every submission, so the other venues show accepted papers only.
+	{{- with $p.venues.neurips.not_accepted }}
+	NeurIPS: {{ . }} rejected or withdrawn {{ if eq (int .) 1 }}paper was{{ else }}papers were{{ end }} made public by the authors and {{ if eq (int .) 1 }}is{{ else }}are{{ end }} listed below.
+	{{- end }}
+</p>
+
+{{- with $p.projection }}
+{{- $a := $p.authorship }}
+<h2>Papers with a majority of authors from {{ $p.institution_short }}</h2>
+<p class="note">
+	Accepted papers on which more than half of the authors list {{ $p.institution_short }}.
+	Only papers from a list that prints an affiliation for each author can be judged: {{ $a.judged }} here.
+	{{- if $a.unknown }} The other {{ $a.unknown }} accepted {{ if eq (int $a.unknown) 1 }}paper is{{ else }}papers are{{ end }} left out of this table and the next.{{ end }}
+</p>
+{{ partial "venue-year-table.html" $a.majority }}
+
+<h2>Papers with a first author from {{ $p.institution_short }}</h2>
+<p class="note">Accepted papers whose first author lists {{ $p.institution_short }}.</p>
+{{ partial "venue-year-table.html" $a.first_author }}
+
+<h2>Submitted and accepted per year</h2>
+<figure>
+	{{ .svg | safeHTML }}
+	<figcaption class="note">
+		Accepted papers and ICLR papers that were not accepted are counted.
+		Papers that NeurIPS, ICML, CVPR and ACL did not accept are not public, so that part of each column is an estimate.
+		{{- if eq .basis "own" }}
+		It comes from this professor's own ICLR record of {{ .ratio_submitted }} submitted and {{ .ratio_accepted }} accepted:
+		({{ .ratio_submitted }} + 1) / ({{ .ratio_accepted }} + 1) = {{ .ratio }} submissions for each paper accepted elsewhere.
+		Adding 1 on both sides keeps a short record from giving an extreme number.
+		The estimate is still rough, and a paper sent to several conferences is counted each time.
+		{{- if gt (int $p.own_page) 0 }}
+		The accepted papers include {{ $p.own_page }} known only from personal pages.
+		{{- end }}
+		{{- else if $p.iclr_complete }}
+		This professor has no ICLR submissions, so nothing is known about papers that were not accepted, and the chart adds none.
+		{{- else }}
+		The OpenReview records of this professor have not been fetched, so no papers that were not accepted are known, and the chart adds none.
+		{{- end }}
+	</figcaption>
+</figure>
+<div class="scroll">
+<table>
+	<thead>
+	<tr>
+		<th>Year</th>
+		<th>Accepted</th>
+		<th>Not accepted at ICLR</th>
+		<th>Not accepted elsewhere, estimated</th>
+		<th>Submitted, estimated</th>
+	</tr>
+	</thead>
+	<tbody>
+	{{- range .rows }}
+	{{- if .counts }}
+	<tr>
+		<td>{{ .year }}</td>
+		{{ partial "num.html" .accepted }}
+		{{ partial "num.html" .iclr_not_accepted }}
+		<td{{ if eq .estimated "0" }} class="zero"{{ end }}>{{ .estimated }}</td>
+		<td{{ if eq .total "0" }} class="zero"{{ end }}>{{ .total }}</td>
+	</tr>
+	{{- end }}
+	{{- end }}
+	<tr class="total">
+		<td>Total</td>
+		<td>{{ .accepted }}</td>
+		<td>{{ if $p.iclr_complete }}{{ $p.venues.iclr.not_accepted }}{{ else }}&ndash;{{ end }}</td>
+		<td>{{ .estimated }}</td>
+		<td>{{ .total }}</td>
+	</tr>
+	</tbody>
+</table>
+</div>
+{{- end }}
+
+<h2>Co-authors and topics</h2>
+{{- $c := $p.collab }}
+{{- if not $c.papers }}
+<p>No papers to compute these from.</p>
+{{- else }}
+<ul>
+	<li>
+		{{ $c.avg_coauthors }} co-authors per paper on average, accepted or not (fewest {{ $c.min_coauthors }}, most {{ $c.max_coauthors }}), {{ $c.distinct_coauthors }} different co-authors over {{ $c.papers }} {{ if eq (int $c.papers) 1 }}paper{{ else }}papers{{ end }}.
+	</li>
+	{{- if $c.papers_with_affiliations }}
+	<li>
+		{{ $c.avg_foreign }} foreign co-authors per paper on average: co-authors whose affiliation on the paper is outside Vietnam.
+	</li>
+	<li>
+		{{ $c.elsewhere }} different co-authors are at another university or institution than {{ $p.institution_short }}
+		({{ $c.elsewhere_abroad }} abroad, {{ $c.elsewhere_vietnam }} in Vietnam).
+	</li>
+	{{- if lt (int $c.papers_with_affiliations) (int $c.papers) }}
+	<li class="note">The last two figures use the {{ $c.papers_with_affiliations }} of {{ $c.papers }} papers whose list prints an affiliation for each author.</li>
+	{{- end }}
+	{{- else }}
+	<li class="note">None of the paper lists prints affiliations, so foreign and other-institution co-authors cannot be counted.</li>
+	{{- end }}
+	{{- if $c.papers_with_topic }}
+	<li>
+		{{ $c.topic_areas }} topic {{ if eq (int $c.topic_areas) 1 }}area{{ else }}areas{{ end }}, from the conference's own label on {{ $c.papers_with_topic }} of {{ $c.papers }} papers:
+		{{ range $n, $a := $c.areas }}{{ if $n }}, {{ end }}{{ $a.area }} ({{ $a.papers }}){{ end }}.
+	</li>
+	{{- else }}
+	<li class="note">None of the papers carries a topic label from its conference.</li>
+	{{- end }}
+</ul>
+{{- if $c.topics }}
+<div class="scroll">
+<table>
+	<thead><tr><th class="l">Topic area</th><th class="l">Topic</th><th>Papers</th></tr></thead>
+	<tbody>
+	{{- range $c.topics }}
+	<tr><td class="l">{{ .area }}</td><td class="l">{{ with .topic }}{{ . }}{{ else }}&ndash;{{ end }}</td><td>{{ .papers }}</td></tr>
+	{{- end }}
+	</tbody>
+</table>
+</div>
+{{- end }}
+{{- end }}
+
+<h2>Accepted papers ({{ len $p.accepted_papers }})</h2>
+{{- if $p.accepted_papers }}
+{{ partial "paper-list.html" (dict "papers" $p.accepted_papers) }}
+{{- else }}
+<p>None.</p>
+{{- end }}
+
+{{- if $p.not_accepted_papers }}
+<h2>Not accepted ({{ len $p.not_accepted_papers }})</h2>
+{{- if site.Params.showNonAcceptedTitles }}
+{{ partial "paper-list.html" (dict "papers" $p.not_accepted_papers) }}
+{{- else }}
+<p class="note">Titles are not shown.</p>
+{{- end }}
+{{- end }}
+
+{{- if $p.excluded_papers }}
+<h2>Not counted ({{ len $p.excluded_papers }})</h2>
+{{- if site.Params.showNonAcceptedTitles }}
+{{ partial "paper-list.html" (dict "papers" $p.excluded_papers) }}
+{{- else }}
+{{ partial "paper-list.html" (dict "papers" (where $p.excluded_papers "status" "accepted")) }}
+{{- end }}
+{{- end }}
+{{- end }}

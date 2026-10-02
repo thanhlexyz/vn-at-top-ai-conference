@@ -1,0 +1,9 @@
+# Laid over hugo.toml by `make publish`: hugo --config hugo.toml,publish.toml
+# GitHub Pages serves a project site under the repository name.
+baseURL = 'https://thanhlexyz.github.io/vn-at-top-ai-conference/'
+
+[params]
+  # lets search engines index the public site
+  local = false
+  # the public site lists the titles of rejected and withdrawn papers; false shows the counts only
+  showNonAcceptedTitles = true

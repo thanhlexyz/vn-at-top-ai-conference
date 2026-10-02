@@ -1,0 +1,28 @@
+{{- /* Accepted papers per year and venue. Context: a map with "years", "venues" and "total". */ -}}
+{{- $t := . }}
+<div class="scroll">
+<table>
+	<thead>
+	<tr><th>Year</th><th>ICLR</th><th>NeurIPS</th><th>ICML</th><th>CVPR</th><th>ACL</th><th>Total</th></tr>
+	</thead>
+	<tbody>
+	{{- range .years }}
+	{{- $y := . }}
+	<tr>
+		<td>{{ .year }}</td>
+		{{- range slice "iclr" "neurips" "icml" "cvpr" "acl" }}
+		{{ partial "num.html" (index $y.venues .) }}
+		{{- end }}
+		<td class="total">{{ .total }}</td>
+	</tr>
+	{{- end }}
+	<tr class="total">
+		<td>Total</td>
+		{{- range slice "iclr" "neurips" "icml" "cvpr" "acl" }}
+		<td>{{ index $t.venues . }}</td>
+		{{- end }}
+		<td>{{ .total }}</td>
+	</tr>
+	</tbody>
+</table>
+</div>

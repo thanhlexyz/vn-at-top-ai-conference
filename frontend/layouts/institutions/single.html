@@ -1,0 +1,33 @@
+{{ define "main" -}}
+{{- $i := index (where hugo.Data.institutions "slug" .Params.key) 0 }}
+{{- $iclr := $i.venues.iclr }}
+<p>
+	{{ len $i.professors }} {{ if eq (len $i.professors) 1 }}professor{{ else }}professors{{ end }} listed,
+	{{ $i.accepted }} accepted {{ if eq (int $i.accepted) 1 }}paper{{ else }}papers{{ end }} at the five venues{{ if gt (int $i.own_page) 0 }}, {{ $i.own_page }} of them known only from personal pages (unofficial){{ end }}.
+	ICLR: {{ $iclr.submitted }} submitted, {{ $iclr.accepted }} accepted, {{ $iclr.not_accepted }} not accepted.
+	A paper with several professors of this institution is counted once.
+</p>
+{{- if not $i.iclr_complete }}
+<ul class="flags">
+	<li>The OpenReview records of at least one professor have not been fetched, so the ICLR submitted and not-accepted numbers are too low.</li>
+</ul>
+{{- end }}
+
+<h2>By year</h2>
+{{ partial "year-table.html" (dict "years" $i.years "venues" $i.venues "official" $i.official "own_page" $i.own_page "complete" true) }}
+
+<h2>Papers with a majority of authors from {{ $i.short }}</h2>
+<p class="note">
+	Accepted papers on which more than half of the authors list {{ $i.short }}.
+	Only papers from a list that prints an affiliation for each author can be judged: {{ $i.judged }} here.
+	{{- if $i.unknown }} The other {{ $i.unknown }} accepted {{ if eq (int $i.unknown) 1 }}paper is{{ else }}papers are{{ end }} left out of this table and the next.{{ end }}
+</p>
+{{ partial "venue-year-table.html" $i.majority }}
+
+<h2>Papers with a first author from {{ $i.short }}</h2>
+<p class="note">Accepted papers whose first author lists {{ $i.short }}.</p>
+{{ partial "venue-year-table.html" $i.first_author }}
+
+<h2>Professors</h2>
+{{ partial "professor-table.html" (where hugo.Data.professors "institution_slug" $i.slug) }}
+{{- end }}

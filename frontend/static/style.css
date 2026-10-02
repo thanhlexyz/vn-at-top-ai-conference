@@ -1,0 +1,278 @@
+body {
+    font-family: sans-serif ;
+    background: #ffffff ;
+    color: #000 ;
+    margin: 0 ;
+    line-height: 1.45 ;
+}
+
+a {
+    color: #0645ad ;
+}
+
+nav {
+    border-bottom: 1px solid black ;
+    padding: 0.7em 1em ;
+}
+
+nav a {
+    margin-right: 1em ;
+    text-decoration: none ;
+    white-space: nowrap ;
+}
+
+nav a.site {
+    font-weight: bold ;
+    color: #000 ;
+}
+
+nav a.current {
+    text-decoration: underline ;
+}
+
+main {
+    max-width: 72rem ;
+    margin: auto ;
+    padding: 0 1em ;
+}
+
+header h1 {
+    font-size: 1.6em ;
+    margin: 1em 0 0.4em 0 ;
+}
+
+h2 {
+    font-size: 1.2em ;
+    margin-top: 1.8em ;
+}
+
+footer {
+    max-width: 72rem ;
+    margin: 3em auto 2em auto ;
+    padding: 0 1em ;
+    font-size: 0.85em ;
+    color: #555 ;
+}
+
+/* Tables */
+.scroll {
+    overflow-x: auto ;
+}
+
+table {
+    border-collapse: collapse ;
+    border: 1px solid black ;
+}
+
+td, th {
+    border: 1px solid black ;
+    padding: 0.25em 0.6em ;
+    text-align: right ;
+    font-variant-numeric: tabular-nums ;
+    vertical-align: top ;
+}
+
+th {
+    background: #f0f0f0 ;
+    text-align: center ;
+}
+
+td.l, th.l {
+    text-align: left ;
+}
+
+td.total, tr.total td {
+    font-weight: bold ;
+}
+
+td.zero, td.na {
+    color: #999 ;
+}
+
+tr.before td {
+    color: #999 ;
+    background: #fafafa ;
+}
+
+code {
+    white-space: nowrap ;
+}
+
+/* Chart on a professor's page. The two hues were checked with a colour-blindness validator on white. */
+figure {
+    margin: 1em 0 ;
+    overflow-x: auto ;
+}
+
+.chart {
+    display: block ;
+    width: 100% ;
+    max-width: 640px ;
+    min-width: 520px ;
+    height: auto ;
+    --accepted: #2a78d6 ;
+    --not-accepted: #e34948 ;
+}
+
+.chart .acc {
+    fill: var(--accepted) ;
+}
+
+.chart .not {
+    fill: var(--not-accepted) ;
+}
+
+.chart .est {
+    fill: var(--not-accepted) ;
+    fill-opacity: 0.18 ;
+    stroke: var(--not-accepted) ;
+    stroke-width: 1.5 ;
+}
+
+.chart .s1 {
+    fill: var(--accepted) ;
+}
+
+.chart .s2 {
+    fill: #eb6834 ;
+}
+
+.chart .s3 {
+    fill: #1baf7a ;
+}
+
+.chart .hollow {
+    fill: var(--not-accepted) ;
+    fill-opacity: 0.18 ;
+    stroke: var(--not-accepted) ;
+    stroke-width: 1.5 ;
+}
+
+/* the five conferences, in the fixed order of the palette */
+.chart .v1 { fill: #2a78d6 ; stroke: #2a78d6 ; }
+.chart .v2 { fill: #eb6834 ; stroke: #eb6834 ; }
+.chart .v3 { fill: #1baf7a ; stroke: #1baf7a ; }
+.chart .v4 { fill: #eda100 ; stroke: #eda100 ; }
+.chart .v5 { fill: #e87ba4 ; stroke: #e87ba4 ; }
+
+.chart .line {
+    fill: none ;
+    stroke-width: 2 ;
+    stroke-linejoin: round ;
+    stroke-linecap: round ;
+}
+
+.chart .dot {
+    stroke: #ffffff ;
+    stroke-width: 2 ;
+}
+
+.chart rect.v1, .chart rect.v2, .chart rect.v3, .chart rect.v4, .chart rect.v5 {
+    stroke: none ;
+}
+
+.chart .slice {
+    stroke: #ffffff ;
+    stroke-width: 2 ;
+}
+
+.chart .grid {
+    stroke: #e1e0d9 ;
+}
+
+.chart .axis {
+    stroke: #c3c2b7 ;
+}
+
+.chart text {
+    font-size: 12px ;
+    fill: #52514e ;
+}
+
+.chart text.value {
+    fill: #0b0b0b ;
+}
+
+.chart text.off {
+    fill: #898781 ;
+}
+
+.chart path:hover {
+    opacity: 0.75 ;
+}
+
+/* Notes and small labels */
+.note {
+    font-size: 0.9em ;
+    color: #444 ;
+}
+
+.flags {
+    border: 1px solid black ;
+    background: #fff8dc ;
+    padding: 0.5em 1em 0.5em 2em ;
+}
+
+.tag {
+    display: inline-block ;
+    border: 1px solid black ;
+    font-size: 0.8em ;
+    padding: 0 0.4em ;
+    margin-right: 0.3em ;
+    white-space: nowrap ;
+}
+
+.tag.accepted {
+    background: #e2f0d9 ;
+}
+
+.tag.rejected, .tag.withdrawn, .tag.desk_rejected {
+    background: #f8e0e0 ;
+}
+
+.tag.other {
+    background: #eee ;
+}
+
+/* papers known only from a personal page: unofficial, so set apart from the official numbers */
+.tag.own {
+    background: #fff ;
+    border-style: dashed ;
+}
+
+.own {
+    color: #666 ;
+    font-weight: normal ;
+    white-space: nowrap ;
+}
+
+ul.papers {
+    list-style: none ;
+    padding-left: 0 ;
+}
+
+ul.papers li {
+    margin-bottom: 0.6em ;
+}
+
+ul.papers .authors {
+    font-size: 0.85em ;
+    color: #555 ;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav a.site {
+        display: block ;
+        margin-bottom: 0.4em ;
+    }
+
+    td, th {
+        padding: 0.2em 0.35em ;
+        font-size: 0.9em ;
+    }
+
+    header h1 {
+        font-size: 1.3em ;
+    }
+}

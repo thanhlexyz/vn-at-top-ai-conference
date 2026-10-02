@@ -1,0 +1,28 @@
+{{- /* One row per institution or professor, accepted papers per venue for one way of counting.
+       Context: a map with "rows" (hugo.Data.institutions or hugo.Data.professors), "section"
+       ("institutions" or "professors") and "key" ("majority" or "first_author"). Professors keep
+       these counts under "authorship", institutions at the top level. */ -}}
+{{- $key := .key }}
+{{- $section := .section }}
+{{- $path := cond (eq $section "professors") (printf "authorship.%s.total" $key) (printf "%s.total" $key) }}
+<div class="scroll">
+<table>
+	<thead>
+	<tr><th class="l">{{ cond (eq $section "professors") "Professor" "Institution" }}</th><th>ICLR</th><th>NeurIPS</th><th>ICML</th><th>CVPR</th><th>ACL</th><th>Total</th><th title="accepted papers without an affiliation for each author, left out">Not judged</th></tr>
+	</thead>
+	<tbody>
+	{{- range sort .rows $path "desc" }}
+	{{- $a := cond (eq $section "professors") .authorship . }}
+	{{- $t := index $a $key }}
+	<tr>
+		<td class="l"><a href="{{ printf "%s/%s/" $section .slug | relURL }}">{{ .name }}</a>{{ if eq $section "professors" }} <span class="note">{{ .institution_short }}</span>{{ end }}</td>
+		{{- range slice "iclr" "neurips" "icml" "cvpr" "acl" }}
+		{{ partial "num.html" (index $t.venues .) }}
+		{{- end }}
+		<td class="total">{{ $t.total }}</td>
+		{{ partial "num.html" $a.unknown }}
+	</tr>
+	{{- end }}
+	</tbody>
+</table>
+</div>

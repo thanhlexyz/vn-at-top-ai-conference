@@ -1,0 +1,73 @@
+{{ define "title" -}}
+{{- $v := index (where hugo.Data.venues "key" .Params.key) 0 }}{{ $v.name }}: {{ $v.full_name }}
+{{- end }}
+{{ define "main" -}}
+{{- $v := index (where hugo.Data.venues "key" .Params.key) 0 }}
+{{- $key := $v.key }}
+{{- $t := index $v.venues $key }}
+<p>
+	{{- if eq $v.rejections "full" }}
+	{{ $v.name }} publishes every submission and its outcome on OpenReview, so submitted and not-accepted papers can be counted.
+	{{- else if eq $v.rejections "partial" }}
+	{{ $v.name }} publishes accepted papers. A rejected paper is public only when its authors chose to make it so, which means the not-accepted numbers below are a lower bound and submitted numbers cannot be given.
+	{{- else }}
+	{{ $v.name }} publishes accepted papers only. Submitted and rejected papers cannot be counted.
+	{{- end }}
+	The numbers cover the listed professors; a paper with several of them is counted once.
+	{{- if gt (int $t.own_page) 0 }}
+	{{ $t.own_page }} accepted {{ if eq (int $t.own_page) 1 }}paper is{{ else }}papers are{{ end }} known only from personal pages. They are shown as +{{ $t.own_page }}, tagged "unofficial" in the list, and stay so until the conference publishes them.
+	{{- end }}
+</p>
+
+<h2>By year</h2>
+<div class="scroll">
+<table>
+	<thead>
+	<tr>
+		<th>Year</th>
+		{{- if eq $v.rejections "full" }}<th>Submitted</th>{{ end }}
+		<th>Accepted</th>
+		{{- if ne $v.rejections "none" }}<th>Not accepted{{ if eq $v.rejections "partial" }} (public){{ end }}</th>{{ end }}
+	</tr>
+	</thead>
+	<tbody>
+	{{- range $v.years }}
+	{{- $c := index .venues $key }}
+	<tr>
+		<td>{{ .year }}</td>
+		{{- if not $c.available }}
+		<td class="na l" colspan="3">not published yet</td>
+		{{- else }}
+		{{- if eq $v.rejections "full" }}{{ partial "num.html" $c.submitted }}{{ end }}
+		{{ partial "acc.html" $c }}
+		{{- if ne $v.rejections "none" }}{{ partial "num.html" $c.not_accepted }}{{ end }}
+		{{- end }}
+	</tr>
+	{{- end }}
+	<tr class="total">
+		<td>Total</td>
+		{{- if eq $v.rejections "full" }}<td>{{ $t.submitted }}</td>{{ end }}
+		{{ partial "acc.html" $t }}
+		{{- if ne $v.rejections "none" }}<td>{{ $t.not_accepted }}</td>{{ end }}
+	</tr>
+	</tbody>
+</table>
+</div>
+
+{{- $accepted := where $v.papers "status" "accepted" }}
+{{- $other := where $v.papers "status" "ne" "accepted" }}
+<h2>Accepted papers ({{ len $accepted }})</h2>
+{{- if $accepted }}
+{{ partial "paper-list.html" (dict "papers" $accepted "owners" true) }}
+{{- else }}
+<p>None.</p>
+{{- end }}
+{{- if $other }}
+<h2>Not accepted ({{ len $other }})</h2>
+{{- if site.Params.showNonAcceptedTitles }}
+{{ partial "paper-list.html" (dict "papers" $other "owners" true) }}
+{{- else }}
+<p class="note">Titles are not shown.</p>
+{{- end }}
+{{- end }}
+{{- end }}

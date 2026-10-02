@@ -1,0 +1,44 @@
+{{ define "main" -}}
+{{ .Content }}
+<div class="scroll">
+<table>
+	<thead>
+	<tr>
+		<th class="l">Venue</th>
+		<th class="l">Rejected papers public?</th>
+		<th>Submitted</th>
+		<th>Accepted</th>
+		<th>Not accepted</th>
+	</tr>
+	</thead>
+	<tbody>
+	{{- range hugo.Data.venues }}
+	{{- $t := index .venues .key }}
+	<tr>
+		<td class="l"><a href="{{ printf "venues/%s/" .key | relURL }}">{{ .name }}</a></td>
+		{{- if eq .rejections "full" }}
+		<td class="l">yes, every submission</td>
+		{{ partial "num.html" $t.submitted }}
+		{{ partial "acc.html" $t }}
+		{{ partial "num.html" $t.not_accepted }}
+		{{- else if eq .rejections "partial" }}
+		<td class="l">only when the authors opt in</td>
+		<td class="na">&ndash;</td>
+		{{ partial "acc.html" $t }}
+		<td>{{ $t.not_accepted }} public</td>
+		{{- else }}
+		<td class="l">no</td>
+		<td class="na">&ndash;</td>
+		{{ partial "acc.html" $t }}
+		<td class="na">&ndash;</td>
+		{{- end }}
+	</tr>
+	{{- end }}
+	</tbody>
+</table>
+</div>
+<p class="note">
+	Papers of the listed professors only. A paper with several listed professors is counted once.
+	+N after a number means N more papers known only from personal pages, which are unofficial.
+</p>
+{{- end }}

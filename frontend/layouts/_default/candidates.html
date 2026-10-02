@@ -1,0 +1,89 @@
+{{ define "main" -}}
+{{- $c := hugo.Data.candidates }}
+{{ .Content }}
+
+{{- if $c.waiting }}
+<h2>On the roster, waiting for approval ({{ len $c.waiting }})</h2>
+<div class="scroll">
+<table>
+	<thead><tr><th class="l">Name</th><th class="l">Institution</th><th class="l">Still to confirm</th></tr></thead>
+	<tbody>
+	{{- range $c.waiting }}
+	<tr><td class="l">{{ .name }}</td><td class="l">{{ .institution }}</td><td class="l">{{ .to_confirm }}</td></tr>
+	{{- end }}
+	</tbody>
+</table>
+</div>
+{{- end }}
+
+<h2>Uncertain matches ({{ len $c.review }})</h2>
+{{- if $c.review }}
+<p>
+	These papers carry the name of a listed professor, but the source does not confirm it is the same person.
+	They are not counted until you write <code>yes</code> or <code>no</code> in the <code>decision</code> column of <code>backend/review.csv</code>.
+</p>
+<div class="scroll">
+<table>
+	<thead>
+	<tr><th class="l">Professor</th><th class="l">Venue</th><th class="l">Paper</th><th class="l">Name on the paper</th><th class="l">Why it is uncertain</th></tr>
+	</thead>
+	<tbody>
+	{{- range $c.review }}
+	<tr>
+		<td class="l"><a href="{{ printf "professors/%s/" .professor | relURL }}">{{ .professor_name }}</a></td>
+		<td class="l">{{ .venue_name }} {{ .year }}</td>
+		<td class="l">{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</td>
+		<td class="l">{{ .matched_name }}{{ with .affiliation }} ({{ . }}){{ end }}</td>
+		<td class="l">{{ .reason }}</td>
+	</tr>
+	{{- end }}
+	</tbody>
+</table>
+</div>
+{{- else }}
+<p>None.</p>
+{{- end }}
+
+<h2>People found, not on the roster ({{ $c.total }})</h2>
+<p>
+	Authors who list a Vietnamese institution on an accepted main-track paper, ordered by the number of those papers. Most are students.
+	"Last author" counts the papers where the person is the last of several authors, a common sign of a supervisor.
+	The faculty-page column is filled for VinUniversity (CECS), HUST (SoICT), VNU-UET (Faculty of IT) and HCMUT (CSE), whose staff lists are in <code>backend/faculty.csv</code>.
+	{{- if gt $c.total (len $c.people) }} The first {{ len $c.people }} are shown; the full list is in <code>backend/candidates.csv</code>.{{ end }}
+</p>
+<div class="scroll">
+<table>
+	<thead>
+	<tr>
+		<th class="l">Name</th>
+		<th class="l">Institution</th>
+		<th>Papers</th>
+		<th>Last author</th>
+		<th>Years</th>
+		<th class="l">Venues</th>
+		<th class="l">On a faculty page as</th>
+		<th class="l">Oldest paper</th>
+		<th class="l">Latest paper</th>
+	</tr>
+	</thead>
+	<tbody>
+	{{- range $c.people }}
+	<tr>
+		<td class="l">{{ .display_name }}{{ with .name_variants }}<br><span class="note">also: {{ . }}</span>{{ end }}</td>
+		<td class="l">{{ .institution_short }}{{ if ne .at_university "yes" }}<br><span class="note">not a university</span>{{ end }}</td>
+		<td>{{ .papers }}</td>
+		{{ partial "num.html" .senior_author }}
+		<td>{{ .first_year }}{{ if ne .first_year .last_year }}&ndash;{{ .last_year }}{{ end }}</td>
+		<td class="l">{{ .venues }}</td>
+		<td class="l">
+			{{- if .faculty_page }}{{ .faculty_rank }}: {{ .faculty_page }}{{ if ne .faculty_match "exact" }}<br><span class="note">{{ .faculty_match }} name match</span>{{ end }}{{ end }}
+			{{- with .openreview_position }}<br><span class="note">OpenReview: {{ . }}</span>{{ end -}}
+		</td>
+		<td class="l">{{ if .first_url }}<a href="{{ .first_url }}">{{ .first_paper }}</a>{{ else }}{{ .first_paper }}{{ end }}</td>
+		<td class="l">{{ if .sample_url }}<a href="{{ .sample_url }}">{{ .sample_paper }}</a>{{ else }}{{ .sample_paper }}{{ end }}</td>
+	</tr>
+	{{- end }}
+	</tbody>
+</table>
+</div>
+{{- end }}

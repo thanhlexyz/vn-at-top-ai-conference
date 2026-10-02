@@ -1,0 +1,51 @@
+Unofficial news of NeurIPS 2026 acceptances, kept as received (2026-10-01).
+Not read by the pipeline. Papers not in the official list yet are counted from backend/self_reported.csv.
+Checked on 2026-10-01: all six are on the site. 2, 3, 4 and 6 are in the official NeurIPS 2026 list;
+1 and 5 are not yet, and are counted as unofficial from Hoang Ta's publication page.
+Item 6 has no title in the news; it is "Kernelized Activation Steering" (Than Quang Khoat's publication page, official list).
+
+1. Khang Luong, Dinh Thai Son, Hoang Ta, Hung The Tran, Tuan Quang Dam. "Nearly Optimal Fixed-Confidence Best-Arm Identification with 1-Bit Feedback". NeurIPS 2026. (Spotlights)
+2. Nam Nguyen, Tuan Quang Dam. "Sharp Non-Asymptotic Analysis of the Penalized Challenger in β-EB-TCI for Bernoulli Bandits". NeurIPS 2026.
+3. Gia-Hung Pham, Tuan Quang Dam. "Graph Topology Augmentation for Prioritized Sweeping in Non-stationary Reinforcement Learning". NeurIPS 2026.
+4. Quynh Trinh, Trung Nguyen, Nam Nguyen, Tuan Quang Dam. "Beyond Expected Values: Risk-Sensitive Planning with Distributional Monte-Carlo Tree Search". NeurIPS 2026.
+5. Tung Tran, Viet Bao Mai, Hoang Ta, Tuan Quang Dam. "Graph-Based Stochastic-Power-UCT: Monte-Carlo Graph Search with Power Mean Estimation". NeurIPS 2026.
+6. Laziz Abdullaev, Minh-Hieu Pham, Bach Do, Khoat Than, Tan Minh Nguyen.
+
+Added on 2026-10-01. Checked the same day: CoupledFlow is in the official NeurIPS 2026 list and already on the site
+(Phi Le Nguyen); the other two are not in the official list yet and are counted as unofficial from
+backend/self_reported.csv (Nonparametric Distribution Matching for Phi Le Nguyen and Minh Do, MAGE for Phi Le Nguyen).
+
+7. Duong M. Nguyen, Trong Nghia Hoang, Hang Thi Nguyen, Thanh Trung Huynh, Phi Le Nguyen, Minh N. Do, "Nonparametric Distribution Matching for Self-Supervised Whole-Slide Image Condensation", NeurIPS 2026.
+8. T. Khiem Tran, Long Minh Bui, Phi Le Nguyen, Mrinal K Sen, Sanjay Srinivasan, Trong Nghia Hoang, Jana Doppa, "CoupledFlow: One-Step Neural Operators for Coupled Multi-Physics PDEs", NeurIPS 2026.
+9. Tuan-Kiet Doan, Van-Chien Nguyen, Trung-Hieu Tran, Quang Hung Pham, Ngoc-Son Vu, Huy Phan, Phi Le Nguyen, Duc Han LE, Nikola Simidjievski, Van-Tam Nguyen, "MAGE: Towards Generalizable Multi-timescale EEG Representations", NeurIPS 2026.
+
+Added on 2026-10-01: announcement of the Faculty of Information Technology 1, PTIT (in Vietnamese; three NeurIPS 2026 papers).
+Checked the same day: ControlJEPA and FlashControl are in the official NeurIPS 2026 list (no affiliations printed);
+SympFNO is not yet and is already counted as unofficial for Tuan Do (Phenikaa lab announcement).
+ControlJEPA was already counted for Uyen N.B. Vo; both ControlJEPA and FlashControl are now credited to Cuong Pham
+through backend/self_reported.csv.
+
+10. Thai Khanh Nguyen, Yen Nhi Pham, Vo Ngoc Bich Uyen, Thieu Vo, Cuong Pham, Tan Minh Nguyen. "ControlJEPA: Principled Trajectory Regularization via Lyapunov Tube Loss". NeurIPS 2026.
+11. Ngan Nguyen, Dung Nguyen, Quan Dao, Dimitris N. Metaxas, Minh Hoai, Cuong Pham, Anh Tuan Tran. "FlashControl: One-Step Controllable Generator via Distillation-Friendly Single-Stream Teachers". NeurIPS 2026.
+12. Luong Doan, Duc Hai Nguyen, Khanh Nguyen Quoc, Mai Phan Quoc Hung, Ngoc Mai Vu, Bui Tri Hieu, Nhung Duong, Phong Ho, Long Hoang Dang, Tuan Do. "SympFNO: Structure-Preserving Fourier Neural Operators for Physical Surrogate Modeling". NeurIPS 2026.
+
+Added on 2026-10-01: announcement of the Faculty of Information Technology, VNU University of Engineering and Technology
+(in Vietnamese; two NeurIPS 2026 papers of DS&KTLab). Checked the same day: the first is in the official NeurIPS 2026
+main-track list and already counted for Duc-Trong Le and Quynh-Trang Pham Thi. The second is in the Evaluations &
+Datasets track, which the site does not count, and none of its authors is on the list.
+
+13. Mac Quang Dat, Pham Thi Quynh Trang, Dang Thanh Hai, Le Duc Trong (and others). "Disentangling Optimization Geometry via Hierarchical Polar Adapters for Class-Incremental Learning". NeurIPS 2026, poster, main track.
+14. Tran Dang Duat, Nguyen Anh Khang, Tran Quoc Bao, Can Duy Cat, Le Hoang Quynh (and others). "A Scientific Claim Stability Framework for Evaluating MRI Morphometry Pipelines". NeurIPS 2026, poster, Evaluations & Datasets track.
+
+Added on 2026-10-01: announcement of the Faculty of Information Technology, University of Science, VNU-HCM
+(FIT@HCMUS, in Vietnamese; five NeurIPS 2026 papers by undergraduate students of the AI programme, 2023 intake).
+Checked the same day: 15-18 are in the official NeurIPS 2026 main-track list, 19 is in the Evaluations & Datasets
+track, which the site does not count. No author is on the tracking list: the authors are students, and the senior
+co-author Long Tran-Thanh has his main post at the University of Warwick (visiting professor at VNU-HCM), so no
+count changes.
+
+15. Phu-Quy Nguyen-Lam, Phu-Hoa Pham, Dao Sy Duy Minh, Tran Chi Nguyen, Trung-Kiet Huynh, Long Tran-Thanh. "Unlocking Compositional Generalization in Continual Few-Shot Learning (COMPOSE)". NeurIPS 2026, main track, poster. https://arxiv.org/abs/2605.11710
+16. Phu-Hoa Pham, Tran Chi Nguyen, Phu-Quy Nguyen-Lam, Dao Sy Duy Minh, Trung-Kiet Huynh, Long Tran-Thanh. "MIST: Reliable Streaming Decision Trees for Online Class-Incremental Learning via McDiarmid Bound". NeurIPS 2026, main track, poster. https://arxiv.org/abs/2605.11617
+17. Tran Chi Nguyen, Dao Sy Duy Minh, Trung-Kiet Huynh, Phu-Hoa Pham, Phu-Quy Nguyen-Lam, Long Tran-Thanh. "Weather-Robust Cross-View Geo-Localization via Prototype-Based Semantic Part Discovery (SkyPart)". NeurIPS 2026, main track, poster. https://arxiv.org/abs/2605.11654
+18. Dao Sy Duy Minh, Trung-Kiet Huynh, Tran Chi Nguyen, Phu-Quy Nguyen-Lam, Phu-Hoa Pham, Tuan Nguyen, The Anh Han, Long Tran-Thanh. "Training-Free Cultural Alignment of Large Language Models via Persona Disagreement (DISCA)". NeurIPS 2026, main track, poster. https://arxiv.org/abs/2605.10843
+19. Marius Schneider, Joe S Canzano, Yuchen Hou, Jing Peng, Anjali Deepu, Utsab Karan, Phu-Hoa Pham, Tran Chi Nguyen, Dao Sy Duy Minh, Phu-Quy Nguyen-Lam, Trung-Kiet Huynh, Simone Azeglio, Spencer Smith, Michael Beyeler. "Visual Robustness and Neural Alignment in a Shared Foraging Task: The Mouse vs. AI Benchmark". NeurIPS 2026, Evaluations and Datasets track, poster.

@@ -1,0 +1,4 @@
+{{- /* A figure from data/blog.json by dotted path, e.g. {{< stat "pooled.iclr.submitted" >}} */ -}}
+{{- $v := hugo.Data.blog -}}
+{{- range split (.Get 0) "." }}{{ $v = index $v . }}{{ end -}}
+{{- $v -}}

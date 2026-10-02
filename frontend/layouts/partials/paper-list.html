@@ -1,0 +1,18 @@
+{{- /* A list of papers. Context: dict "papers" and optionally "owners" (true to name the professors). */ -}}
+{{- $owners := .owners }}
+<ul class="papers">
+	{{- range .papers }}
+	<li>
+		<span class="tag {{ .status }}">{{ .venue_name }} {{ .year }}{{ if ne .status "accepted" }}, {{ .status_label }}{{ end }}</span>
+		{{- with .pres }}<span class="tag other">{{ . }}</span>{{ end }}
+		{{- if .unofficial }}<span class="tag own">unofficial</span>{{ end }}
+		{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+		{{- with .reason }}<br><span class="note">Not counted: {{ . }}.</span>{{ end }}
+		{{- with .note }}<br><span class="note">{{ . }}</span>{{ end }}
+		{{- with .later }}<br><span class="note">The same title was accepted at {{ . }}.</span>{{ end }}
+		{{- if .unofficial }}<br><span class="note">Unofficial: {{ .match }}.</span>{{ end }}
+		<br><span class="authors">{{ .authors }}
+		{{- if $owners }}{{ range .professors }} &middot; <a href="{{ printf "professors/%s/" .slug | relURL }}">{{ .name }}</a>{{ end }}{{ end }}</span>
+	</li>
+	{{- end }}
+</ul>

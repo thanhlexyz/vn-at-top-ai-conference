@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
+	<link rel="stylesheet" type="text/css" href="{{ "style.css" | relURL }}">
+	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+	<meta name="robots" content="{{ if site.Params.local }}noindex, nofollow{{ else }}index, follow{{ end }}">
+</head>
+<body>
+<nav>
+	<a class="site" href="{{ "" | relURL }}">{{ site.Title }}</a>
+	<span class="links">
+	{{- range site.Menus.main }}
+	{{- $current := cond (eq .Identifier "professors") (or $.IsHome (eq $.Section "professors")) (hasPrefix $.RelPermalink .URL) }}
+	<a href="{{ .URL }}"{{ if $current }} class="current"{{ end }}>{{ .Name }}</a>
+	{{- end }}
+	{{- with site.GetPage "/candidates" }}
+	<a href="{{ .RelPermalink }}"{{ if eq $.RelPermalink .RelPermalink }} class="current"{{ end }}>Candidates</a>
+	{{- end }}
+	<a href="https://youtube.com/shorts/zlGdDmkTTrk">Video</a>
+	</span>
+</nav>
+<main>
+<header><h1>{{ block "title" . }}{{ .Title }}{{ end }}</h1></header>
+<article>
+{{ block "main" . }}
+{{ .Content }}
+{{ end }}
+</article>
+</main>
+<footer>
+	{{ with hugo.Data.meta }}Data as of {{ .generated_date }}, covering {{ .first_year }}&ndash;{{ .last_year }}.{{ end }}
+	<a href="{{ "about/" | relURL }}">Sources and limits</a>
+</footer>
+</body>
+</html>

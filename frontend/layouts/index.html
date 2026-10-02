@@ -1,0 +1,36 @@
+{{ define "title" -}}
+Conference papers by professors and lecturers in Vietnam, {{ hugo.Data.meta.first_year }}&ndash;{{ hugo.Data.meta.last_year }}
+{{- end }}
+{{ define "main" -}}
+{{ .Content }}
+{{- $meta := hugo.Data.meta }}
+{{- if $meta.preliminary }}
+<ul class="flags">
+	<li>Some records are incomplete or still to be confirmed. Those professors are marked with * and their pages say what is missing.</li>
+	{{- with site.GetPage "/candidates" }}
+	{{- if $meta.pending_review }}
+	<li>{{ $meta.pending_review }} uncertain matches wait for a decision, see <a href="{{ .RelPermalink }}">Candidates</a>.</li>
+	{{- end }}
+	{{- end }}
+</ul>
+{{- end }}
+{{ partial "professor-table.html" hugo.Data.professors }}
+<p class="note">
+	sub = submitted, acc = accepted, not = not accepted (rejected, withdrawn or desk-rejected).
+	&ndash; means the OpenReview records of that professor have not been fetched.
+	Main conference track only; workshops, Findings, position papers and the NeurIPS Datasets &amp; Benchmarks track are left out.
+	Professors are ordered by total accepted papers.
+</p>
+{{- range $meta.provisional }}
+<p class="note">
+	The official {{ .name }} {{ .year }} list was published before the conference and is not complete yet.
+	For that list only, papers that a professor's own page lists are counted as well. They are shown as <span class="own">+N</span> after the official number and are unofficial until the conference publishes them.
+</p>
+{{- end }}
+<p class="note">
+	The co-author and topic columns are taken over all counted papers, accepted or not.
+	Foreign means the affiliation printed on the paper is outside Vietnam; other institutions counts the different co-authors whose affiliation is not the professor's own institution.
+	Both need a paper list with affiliations, and topic areas need the conference's own topic labels, which exist for ICLR, NeurIPS and ICML from 2023 or 2024 on.
+	Each professor's page says how many papers a figure is based on.
+</p>
+{{- end }}

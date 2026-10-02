@@ -1,0 +1,15 @@
+{{ define "main" -}}
+{{ .Content }}
+{{ partial "professor-table.html" hugo.Data.professors }}
+
+<h2>Papers with a majority of authors from the professor's institution</h2>
+<p class="note">
+	Accepted papers on which more than half of the authors list the professor's current institution.
+	Only papers from a list that prints an affiliation for each author can be judged; the others are counted under "Not judged" and left out of this table and the next.
+</p>
+{{ partial "institution-venue-table.html" (dict "rows" hugo.Data.professors "section" "professors" "key" "majority") }}
+
+<h2>Papers with a first author from the professor's institution</h2>
+<p class="note">Accepted papers whose first author lists the professor's current institution.</p>
+{{ partial "institution-venue-table.html" (dict "rows" hugo.Data.professors "section" "professors" "key" "first_author") }}
+{{- end }}

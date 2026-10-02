@@ -1,0 +1,31 @@
+{{ define "main" -}}
+{{ .Content }}
+{{- $papers := hugo.Data.papers }}
+{{- if not site.Params.showNonAcceptedTitles }}{{ $papers = where $papers "status" "accepted" }}{{ end }}
+<div class="scroll">
+<table>
+	<thead>
+	<tr>
+		<th>Year</th>
+		<th class="l">Venue</th>
+		<th class="l">Outcome</th>
+		<th class="l">Title</th>
+		<th class="l">Professors</th>
+	</tr>
+	</thead>
+	<tbody>
+	{{- range $papers }}
+	<tr>
+		<td>{{ .year }}</td>
+		<td class="l">{{ .venue_name }}</td>
+		<td class="l"><span class="tag {{ .status }}">{{ .status_label }}</span>{{ with .pres }} {{ . }}{{ end }}{{ if .unofficial }} <span class="tag own" title="{{ .match }}">unofficial</span>{{ end }}</td>
+		<td class="l">{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</td>
+		<td class="l">
+			{{- range $n, $o := .professors }}{{ if $n }}, {{ end }}<a href="{{ printf "professors/%s/" $o.slug | relURL }}">{{ $o.name }}</a>{{ end -}}
+		</td>
+	</tr>
+	{{- end }}
+	</tbody>
+</table>
+</div>
+{{- end }}

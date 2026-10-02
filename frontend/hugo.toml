@@ -1,0 +1,37 @@
+baseURL = '/'
+locale = 'en-us'
+title = 'Vietnam at top AI conferences'
+disableKinds = ['taxonomy', 'term', 'rss', 'sitemap']
+
+[params]
+  description = 'Papers submitted, accepted and rejected at ICLR, NeurIPS, ICML, CVPR and ACL by professors and lecturers in Vietnam since 2020.'
+  # Titles of rejected and withdrawn papers. Set to false to show the counts only.
+  showNonAcceptedTitles = true
+  # A local build asks search engines not to index it. publish.toml turns this off for the public site.
+  local = true
+
+[[menus.main]]
+  name = 'Professors'
+  identifier = 'professors'
+  pageRef = '/'
+  weight = 1
+[[menus.main]]
+  name = 'Institutions'
+  identifier = 'institutions'
+  pageRef = '/institutions'
+  weight = 2
+[[menus.main]]
+  name = 'Venues'
+  identifier = 'venues'
+  pageRef = '/venues'
+  weight = 3
+[[menus.main]]
+  name = 'Papers'
+  identifier = 'papers'
+  pageRef = '/papers'
+  weight = 4
+[[menus.main]]
+  name = 'About'
+  identifier = 'about'
+  pageRef = '/about'
+  weight = 6
