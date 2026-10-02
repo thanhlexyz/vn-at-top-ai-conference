@@ -3,33 +3,33 @@
 <table>
 	<thead>
 	<tr>
-		<th rowspan="2" class="l pin1">Professor</th>
-		<th rowspan="2" class="l pin2">Institution</th>
+		<th rowspan="2" class="l pin1">{{ T "th_professor" }}</th>
+		<th rowspan="2" class="l pin2">{{ T "th_institution" }}</th>
 		<th colspan="3">ICLR</th>
-		<th colspan="4">Accepted at</th>
-		<th colspan="3">Total</th>
-		<th colspan="2" title="accepted papers judged against the professor's current institution; papers whose source prints no affiliation per author are left out">From own institution</th>
-		<th colspan="5">Co-authors</th>
-		<th rowspan="2">Topic areas</th>
+		<th colspan="4">{{ T "th_accepted_at" }}</th>
+		<th colspan="3">{{ T "th_total" }}</th>
+		<th colspan="2" title="{{ T "tip_own_institution" }}">{{ T "th_own_institution" }}</th>
+		<th colspan="5">{{ T "th_coauthors" }}</th>
+		<th rowspan="2">{{ T "th_topic_areas" }}</th>
 	</tr>
 	<tr>
-		<th title="submitted">submitted</th>
-		<th class="good" title="accepted">accepted</th>
-		<th class="bad" title="rejected, withdrawn or desk-rejected">rejected</th>
+		<th>{{ T "th_submitted" }}</th>
+		<th class="good">{{ T "th_accepted" }}</th>
+		<th class="bad" title="{{ T "tip_rejected" }}">{{ T "th_rejected" }}</th>
 		<th>NeurIPS</th>
 		<th>ICML</th>
 		<th>CVPR</th>
 		<th>ACL</th>
-		<th class="good">accepted</th>
-		<th class="bad" title="rejected, withdrawn or desk-rejected, where public: all of ICLR, and the papers authors made public elsewhere">rejected</th>
-		<th class="est" title="rejected at ICLR plus the papers estimated to have been rejected at the other venues, from each professor's own ICLR record (see About)">rejected, estimated</th>
-		<th title="accepted papers on which more than half of the authors are at the professor's institution">majority</th>
-		<th title="accepted papers whose first author is at the professor's institution">1st author</th>
-		<th title="average number of co-authors per paper, accepted or not">per paper</th>
-		<th title="fewest co-authors on one accepted paper">min</th>
-		<th title="most co-authors on one paper, accepted or not">max</th>
-		<th title="average number of co-authors per paper who are at an institution outside Vietnam">foreign per paper</th>
-		<th title="number of different co-authors who are at another university or institution">other institutions</th>
+		<th class="good">{{ T "th_accepted" }}</th>
+		<th class="bad" title="{{ T "tip_rejected_total" }}">{{ T "th_rejected" }}</th>
+		<th class="est" title="{{ T "tip_rejected_est" }}">{{ T "th_rejected_est" }}</th>
+		<th title="{{ T "tip_majority" }}">{{ T "th_majority" }}</th>
+		<th title="{{ T "tip_first_author" }}">{{ T "th_first_author" }}</th>
+		<th title="{{ T "tip_per_paper" }}">{{ T "th_per_paper" }}</th>
+		<th title="{{ T "tip_min" }}">{{ T "th_min" }}</th>
+		<th title="{{ T "tip_max" }}">{{ T "th_max" }}</th>
+		<th title="{{ T "tip_foreign" }}">{{ T "th_foreign" }}</th>
+		<th title="{{ T "tip_other_institutions" }}">{{ T "th_other_institutions" }}</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -37,8 +37,8 @@
 	{{- $p := . }}
 	{{- $iclr := .venues.iclr }}
 	<tr>
-		<td class="l pin1"><a href="{{ printf "professors/%s/" .slug | relURL }}">{{ .name }}</a>{{ if .flags }}<sup title="incomplete or unconfirmed, see the professor's page">*</sup>{{ end }}</td>
-		<td class="l pin2"><a href="{{ printf "institutions/%s/" .institution_slug | relURL }}">{{ .institution_short }}</a></td>
+		<td class="l pin1"><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ partial "pname.html" . }}</a>{{ if .flags }}<sup title="{{ T "incomplete_star" }}">*</sup>{{ end }}</td>
+		<td class="l pin2"><a href="{{ printf "institutions/%s/" .institution_slug | relLangURL }}">{{ .institution_short }}</a></td>
 		{{- if .iclr_complete }}
 		{{ partial "num.html" $iclr.submitted }}
 		{{ partial "acc.html" (merge $iclr (dict "cls" "good")) }}
@@ -51,7 +51,7 @@
 		{{- range slice "neurips" "icml" "cvpr" "acl" }}
 		{{ partial "acc.html" (index $p.venues .) }}
 		{{- end }}
-		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ .own_page }} more from personal pages, not in the official list yet">+{{ .own_page }}</span>{{ end }}</td>
+		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" .own_page) }}">+{{ .own_page }}</span>{{ end }}</td>
 		{{ partial "rejected-total.html" .venues }}
 		{{- if eq .rejected_estimated nil }}
 		<td class="na est">&ndash;</td>

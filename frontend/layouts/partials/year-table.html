@@ -5,21 +5,21 @@
 <table>
 	<thead>
 	<tr>
-		<th rowspan="2">Year</th>
+		<th rowspan="2">{{ T "th_year" }}</th>
 		<th colspan="3">ICLR</th>
-		<th colspan="4">Accepted at</th>
-		<th colspan="2">Total</th>
+		<th colspan="4">{{ T "th_accepted_at" }}</th>
+		<th colspan="2">{{ T "th_total" }}</th>
 	</tr>
 	<tr>
-		<th title="submitted">submitted</th>
-		<th class="good" title="accepted">accepted</th>
-		<th class="bad" title="rejected, withdrawn or desk-rejected">rejected</th>
+		<th>{{ T "th_submitted" }}</th>
+		<th class="good">{{ T "th_accepted" }}</th>
+		<th class="bad" title="{{ T "tip_rejected" }}">{{ T "th_rejected" }}</th>
 		<th>NeurIPS</th>
 		<th>ICML</th>
 		<th>CVPR</th>
 		<th>ACL</th>
-		<th class="good">accepted</th>
-		<th class="bad" title="rejected, withdrawn or desk-rejected, where public: all of ICLR, and the papers authors made public elsewhere">rejected</th>
+		<th class="good">{{ T "th_accepted" }}</th>
+		<th class="bad" title="{{ T "tip_rejected_total" }}">{{ T "th_rejected" }}</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -30,7 +30,7 @@
 	<tr>
 		<td>{{ .year }}</td>
 		{{- if not $iclr.available }}
-		<td class="na" colspan="3">not published yet</td>
+		<td class="na" colspan="3">{{ T "not_published_yet" }}</td>
 		{{- else if $complete }}
 		{{ partial "num.html" $iclr.submitted }}
 		{{ partial "acc.html" (merge $iclr (dict "cls" "good")) }}
@@ -45,7 +45,7 @@
 		{{- if $v.available }}
 		{{ partial "acc.html" $v }}
 		{{- else }}
-		<td class="na" title="list not published yet">&hellip;</td>
+		<td class="na" title="{{ T "list_not_published" }}">&hellip;</td>
 		{{- end }}
 		{{- end }}
 		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own">+{{ .own_page }}</span>{{ end }}</td>
@@ -54,14 +54,14 @@
 	{{- else }}
 	<tr class="before">
 		<td>{{ .year }}</td>
-		<td class="l" colspan="9">not yet at a Vietnamese institution</td>
+		<td class="l" colspan="9">{{ T "not_yet_in_vietnam" }}</td>
 	</tr>
 	{{- end }}
 	{{- end }}
 	{{- $iclr := .venues.iclr }}
 	{{- $venues := .venues }}
 	<tr class="total">
-		<td>Total</td>
+		<td>{{ T "th_total" }}</td>
 		{{- if $complete }}
 		<td>{{ $iclr.submitted }}</td>
 		{{ partial "acc.html" (merge $iclr (dict "cls" "good")) }}

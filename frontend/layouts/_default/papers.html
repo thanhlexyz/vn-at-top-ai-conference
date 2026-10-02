@@ -6,11 +6,11 @@
 <table>
 	<thead>
 	<tr>
-		<th>Year</th>
-		<th class="l">Venue</th>
-		<th class="l">Outcome</th>
-		<th class="l">Title</th>
-		<th class="l">Professors</th>
+		<th>{{ T "th_year" }}</th>
+		<th class="l">{{ T "th_venue" }}</th>
+		<th class="l">{{ T "th_outcome" }}</th>
+		<th class="l">{{ T "th_title" }}</th>
+		<th class="l">{{ T "th_professors" }}</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -18,10 +18,10 @@
 	<tr>
 		<td>{{ .year }}</td>
 		<td class="l">{{ .venue_name }}</td>
-		<td class="l"><span class="tag {{ .status }}">{{ .status_label }}</span>{{ with .pres }} {{ . }}{{ end }}{{ if .unofficial }} <span class="tag own" title="{{ .match }}">unofficial</span>{{ end }}</td>
+		<td class="l"><span class="tag {{ .status }}">{{ T (printf "status_%s" .status) }}</span>{{ with .pres }} {{ . }}{{ end }}{{ if .unofficial }} <span class="tag own" title="{{ .match }}">{{ T "unofficial" }}</span>{{ end }}</td>
 		<td class="l">{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</td>
 		<td class="l">
-			{{- range $n, $o := .professors }}{{ if $n }}, {{ end }}<a href="{{ printf "professors/%s/" $o.slug | relURL }}">{{ $o.name }}</a>{{ end -}}
+			{{- range $n, $o := .professors }}{{ if $n }}, {{ end }}<a href="{{ printf "professors/%s/" $o.slug | relLangURL }}">{{ partial "pname.html" $o }}</a>{{ end -}}
 		</td>
 	</tr>
 	{{- end }}

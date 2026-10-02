@@ -1,34 +1,34 @@
 {{ define "main" -}}
 {{ .Content }}
-<h2>Papers of the listed professors</h2>
+<h2>{{ T "inst_list_table" }}</h2>
 <div class="scroll">
 <table>
 	<thead>
 	<tr>
-		<th rowspan="2" class="l">Institution</th>
-		<th rowspan="2">Professors</th>
+		<th rowspan="2" class="l">{{ T "th_institution" }}</th>
+		<th rowspan="2">{{ T "th_professors" }}</th>
 		<th colspan="3">ICLR</th>
-		<th colspan="4">Accepted at</th>
-		<th colspan="3">Total</th>
+		<th colspan="4">{{ T "th_accepted_at" }}</th>
+		<th colspan="3">{{ T "th_total" }}</th>
 	</tr>
 	<tr>
-		<th title="submitted">submitted</th>
-		<th class="good" title="accepted">accepted</th>
-		<th class="bad" title="rejected, withdrawn or desk-rejected">rejected</th>
+		<th>{{ T "th_submitted" }}</th>
+		<th class="good">{{ T "th_accepted" }}</th>
+		<th class="bad" title="{{ T "tip_rejected" }}">{{ T "th_rejected" }}</th>
 		<th>NeurIPS</th>
 		<th>ICML</th>
 		<th>CVPR</th>
 		<th>ACL</th>
-		<th class="good">accepted</th>
-		<th class="bad" title="rejected, withdrawn or desk-rejected, where public: all of ICLR, and the papers authors made public elsewhere">rejected</th>
-		<th class="est" title="rejected at ICLR plus the papers estimated to have been rejected at the other venues, from the institution's own ICLR record">rejected, estimated</th>
+		<th class="good">{{ T "th_accepted" }}</th>
+		<th class="bad" title="{{ T "tip_rejected_total" }}">{{ T "th_rejected" }}</th>
+		<th class="est" title="{{ T "tip_rejected_est_inst" }}">{{ T "th_rejected_est" }}</th>
 	</tr>
 	</thead>
 	<tbody>
 	{{- range hugo.Data.institutions }}
 	{{- $i := . }}
 	<tr>
-		<td class="l"><a href="{{ printf "institutions/%s/" .slug | relURL }}">{{ .name }}</a>{{ if not .iclr_complete }}<sup title="ICLR submissions are missing for some professors">*</sup>{{ end }}</td>
+		<td class="l"><a href="{{ printf "institutions/%s/" .slug | relLangURL }}">{{ .name }}</a>{{ if not .iclr_complete }}<sup title="{{ T "tip_iclr_missing" }}">*</sup>{{ end }}</td>
 		<td>{{ len .professors }}</td>
 		{{ partial "num.html" .venues.iclr.submitted }}
 		{{ partial "acc.html" (merge .venues.iclr (dict "cls" "good")) }}
@@ -36,7 +36,7 @@
 		{{- range slice "neurips" "icml" "cvpr" "acl" }}
 		{{ partial "acc.html" (index $i.venues .) }}
 		{{- end }}
-		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ .own_page }} more from personal pages, not in the official list yet">+{{ .own_page }}</span>{{ end }}</td>
+		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" .own_page) }}">+{{ .own_page }}</span>{{ end }}</td>
 		{{ partial "rejected-total.html" .venues }}
 		{{- if eq .rejected_estimated nil }}
 		<td class="na est">&ndash;</td>
@@ -48,21 +48,13 @@
 	</tbody>
 </table>
 </div>
-<p class="note">
-	A paper with several professors of the same institution is counted once.
-	Rejected, estimated (orange) adds the rejections hidden at NeurIPS, ICML, CVPR and ACL, estimated from the institution's own ICLR record: submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1). It is an estimate, not a count.
-	+N after a number means N more papers known only from personal pages, which are unofficial.
-	* means the OpenReview records of at least one professor have not been fetched, so the ICLR submitted and rejected numbers are too low.
-</p>
+<p class="note">{{ T "inst_list_note" }}</p>
 
-<h2>Papers with a majority of authors from the institution</h2>
-<p class="note">
-	Accepted papers on which more than half of the authors list the institution.
-	Only papers from a list that prints an affiliation for each author can be judged; the others are counted under "Not judged" and left out of this table and the next.
-</p>
+<h2>{{ T "inst_list_majority" }}</h2>
+<p class="note">{{ T "inst_list_majority_note" }}</p>
 {{ partial "institution-venue-table.html" (dict "rows" hugo.Data.institutions "section" "institutions" "key" "majority") }}
 
-<h2>Papers with a first author from the institution</h2>
-<p class="note">Accepted papers whose first author lists the institution.</p>
+<h2>{{ T "inst_list_first" }}</h2>
+<p class="note">{{ T "inst_list_first_note" }}</p>
 {{ partial "institution-venue-table.html" (dict "rows" hugo.Data.institutions "section" "institutions" "key" "first_author") }}
 {{- end }}

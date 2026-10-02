@@ -2,4 +2,4 @@
        Papers known only from a personal page are shown apart, as +N, because they are unofficial. */ -}}
 {{- $cls := slice }}{{ with .cls }}{{ $cls = $cls | append . }}{{ end }}
 {{- if and (eq (int .official) 0) (eq (int .own_page) 0) }}{{ $cls = $cls | append "zero" }}{{ end -}}
-<td{{ with $cls }} class="{{ delimit . " " }}"{{ end }}>{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ .own_page }} more from personal pages, not in the official list yet">+{{ .own_page }}</span>{{ end }}</td>
+<td{{ with $cls }} class="{{ delimit . " " }}"{{ end }}>{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" .own_page) }}">+{{ .own_page }}</span>{{ end }}</td>

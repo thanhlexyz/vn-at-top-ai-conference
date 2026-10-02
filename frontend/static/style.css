@@ -345,3 +345,10 @@ th.sortable { cursor: pointer ; }
 th.sortable:hover { text-decoration: underline ; }
 th[aria-sort="descending"]::after { content: " \25BC" ; font-size: 0.7em ; }
 th[aria-sort="ascending"]::after { content: " \25B2" ; font-size: 0.7em ; }
+
+/* Language switch, top right of the navigation bar */
+nav { display: flex ; flex-wrap: wrap ; align-items: baseline ; gap: 0 1em ; }
+nav .lang { order: 3 ; margin-left: auto ; white-space: nowrap ; }
+nav .lang a { margin-right: 0 ; margin-left: 0.6em ; }
+nav .site { order: 1 ; }
+nav .links { order: 2 ; }

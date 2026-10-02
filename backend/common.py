@@ -281,7 +281,8 @@ def presentation(text):
 # ---------------------------------------------------------------- roster
 
 ROSTER_FIELDS = ["approved", "display_name", "name_variants", "institution", "institution_short", "rank",
-                 "vn_since", "openreview_ids", "homepage", "pages", "to_confirm", "notes", "slug"]
+                 "vn_since", "openreview_ids", "homepage", "pages", "to_confirm", "notes", "slug",
+                 "name_vi"]  # the name in Vietnamese, with diacritics, shown on the Vietnamese site
 
 
 def _split(value):
@@ -314,6 +315,7 @@ def load_roster(path=ROSTER):
                 "approved": (row.get("approved") or "").strip().lower(),
                 "to_confirm": (row.get("to_confirm") or "").strip(),
                 "notes": (row.get("notes") or "").strip(),
+                "name_vi": (row.get("name_vi") or "").strip(),
             })
     return people
 

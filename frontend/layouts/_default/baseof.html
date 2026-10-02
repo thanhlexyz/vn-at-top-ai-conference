@@ -7,24 +7,38 @@
 	<link rel="stylesheet" type="text/css" href="{{ "style.css" | relURL }}">
 	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 	<meta name="robots" content="{{ if site.Params.local }}noindex, nofollow{{ else }}index, follow{{ end }}">
+	{{- range .AllTranslations }}
+	<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+	{{- end }}
 </head>
 <body>
 <nav>
-	<a class="site" href="{{ "" | relURL }}">{{ site.Title }}</a>
+	{{- /* language switch: the same page in the other language, or that language's front page when the page
+	       has no translation (the local-only Candidates and Not tracked pages) */}}
+	{{- $page := . }}
+	<span class="lang" aria-label="{{ T "lang_switch" }}">
+	{{- range site.Home.AllTranslations }}
+	{{- $lang := .Language.Lang }}
+	{{- $target := . }}
+	{{- range $page.AllTranslations }}{{ if eq .Language.Lang $lang }}{{ $target = . }}{{ end }}{{ end }}
+	<a href="{{ $target.RelPermalink }}" hreflang="{{ $lang }}" lang="{{ $lang }}"{{ if eq $lang site.Language.Lang }} class="current" aria-current="true"{{ end }}>{{ if eq $lang "vi" }}🇻🇳 VI{{ else }}🇬🇧 EN{{ end }}</a>
+	{{- end }}
+	</span>
+	<a class="site" href="{{ "" | relLangURL }}">{{ site.Title }}</a>
 	<span class="links">
 	{{- range site.Menus.main }}
 	{{- $current := cond (eq .Identifier "professors") (or $.IsHome (eq $.Section "professors")) (hasPrefix $.RelPermalink .URL) }}
 	<a href="{{ .URL }}"{{ if $current }} class="current"{{ end }}>{{ .Name }}</a>
 	{{- end }}
 	{{- with site.GetPage "/candidates" }}
-	<a href="{{ .RelPermalink }}"{{ if eq $.RelPermalink .RelPermalink }} class="current"{{ end }}>Candidates</a>
+	<a href="{{ .RelPermalink }}"{{ if eq $.RelPermalink .RelPermalink }} class="current"{{ end }}>{{ T "nav_candidates" }}</a>
 	{{- end }}
 	{{- with site.GetPage "/not-tracked" }}
-	<a href="{{ .RelPermalink }}"{{ if eq $.RelPermalink .RelPermalink }} class="current"{{ end }}>Not tracked</a>
+	<a href="{{ .RelPermalink }}"{{ if eq $.RelPermalink .RelPermalink }} class="current"{{ end }}>{{ T "nav_not_tracked" }}</a>
 	{{- end }}
-	<a href="https://youtube.com/shorts/q6lOxftXi-U">Video</a>
+	<a href="https://youtube.com/shorts/q6lOxftXi-U">{{ T "nav_video" }}</a>
 	{{- with site.GetPage "/feedback" }}
-	<a href="{{ .RelPermalink }}"{{ if eq $.RelPermalink .RelPermalink }} class="current"{{ end }}>Feedback</a>
+	<a href="{{ .RelPermalink }}"{{ if eq $.RelPermalink .RelPermalink }} class="current"{{ end }}>{{ T "nav_feedback" }}</a>
 	{{- end }}
 	</span>
 </nav>
@@ -37,8 +51,8 @@
 </article>
 </main>
 <footer>
-	{{ with hugo.Data.meta }}Data as of {{ .generated_date }}, covering {{ .first_year }}&ndash;{{ .last_year }}.{{ end }}
-	<a href="{{ "about/" | relURL }}">Sources and limits</a>
+	{{ with hugo.Data.meta }}{{ T "footer_data" (dict "Date" .generated_date "First" .first_year "Last" .last_year) | safeHTML }}{{ end }}
+	<a href="{{ "about/" | relLangURL }}">{{ T "footer_sources" }}</a>
 </footer>
 <script src="{{ "site.js" | relURL }}" defer></script>
 {{- with site.Params.goatcounter }}{{ if not site.Params.local }}

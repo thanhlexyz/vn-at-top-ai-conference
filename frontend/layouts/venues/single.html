@@ -7,31 +7,31 @@
 {{- $t := index $v.venues $key }}
 <p>
 	{{- if eq $v.rejections "full" }}
-	{{ $v.name }} publishes every submission and its outcome on OpenReview, so submitted and rejected papers can be counted.
+	{{ T "venue_full" $v.name }}
 	{{- else if eq $v.rejections "partial" }}
-	{{ $v.name }} publishes accepted papers. A rejected paper is public only when its authors chose to make it so, which means the rejected numbers below are a lower bound and submitted numbers cannot be given.
+	{{ T "venue_partial" $v.name }}
 	{{- else }}
-	{{ $v.name }} publishes accepted papers only. Submitted and rejected papers cannot be counted.
+	{{ T "venue_none" $v.name }}
 	{{- end }}
-	The numbers cover the listed professors; a paper with several of them is counted once.
+	{{ T "venue_once" }}
 	{{- if gt (int $t.own_page) 0 }}
-	{{ $t.own_page }} accepted {{ if eq (int $t.own_page) 1 }}paper is{{ else }}papers are{{ end }} known only from personal pages. They are shown as +{{ $t.own_page }}, tagged "unofficial" in the list, and stay so until the conference publishes them.
+	{{ T "venue_own_page" (dict "Count" $t.own_page) }}
 	{{- end }}
 </p>
 
 {{- if ne $v.rejections "full" }}
-<p class="note">Rejected, estimated (orange): {{ $v.name }} does not publish its rejections, so they are estimated from the ICLR record of everyone listed, {{ $v.ratio }} submissions per accepted paper. It is an estimate, not a count.</p>
+<p class="note">{{ T "venue_estimate_note" (dict "Name" $v.name "Ratio" $v.ratio) }}</p>
 {{- end }}
-<h2>By year</h2>
+<h2>{{ T "by_year" }}</h2>
 <div class="scroll">
 <table>
 	<thead>
 	<tr>
-		<th>Year</th>
-		{{- if eq $v.rejections "full" }}<th>Submitted</th>{{ end }}
-		<th class="good">Accepted</th>
-		{{- if ne $v.rejections "none" }}<th class="bad">Rejected{{ if eq $v.rejections "partial" }} (public){{ end }}</th>{{ end }}
-		{{- if ne $v.rejections "full" }}<th class="est" title="estimated from the ICLR record of everyone listed">Rejected, estimated</th>{{ end }}
+		<th>{{ T "th_year" }}</th>
+		{{- if eq $v.rejections "full" }}<th>{{ T "th_Submitted" }}</th>{{ end }}
+		<th class="good">{{ T "th_Accepted" }}</th>
+		{{- if ne $v.rejections "none" }}<th class="bad">{{ if eq $v.rejections "partial" }}{{ T "th_Rejected_public" }}{{ else }}{{ T "th_Rejected" }}{{ end }}</th>{{ end }}
+		{{- if ne $v.rejections "full" }}<th class="est" title="{{ T "tip_estimated_venue_year" }}">{{ T "th_Rejected_est" }}</th>{{ end }}
 	</tr>
 	</thead>
 	<tbody>
@@ -40,7 +40,7 @@
 	<tr>
 		<td>{{ .year }}</td>
 		{{- if not $c.available }}
-		<td class="na l" colspan="4">not published yet</td>
+		<td class="na l" colspan="4">{{ T "not_published_yet" }}</td>
 		{{- else }}
 		{{- if eq $v.rejections "full" }}{{ partial "num.html" $c.submitted }}{{ end }}
 		{{ partial "acc.html" (merge $c (dict "cls" "good")) }}
@@ -50,7 +50,7 @@
 	</tr>
 	{{- end }}
 	<tr class="total">
-		<td>Total</td>
+		<td>{{ T "th_total" }}</td>
 		{{- if eq $v.rejections "full" }}<td>{{ $t.submitted }}</td>{{ end }}
 		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
 		{{- if ne $v.rejections "none" }}<td class="bad">{{ $t.not_accepted }}</td>{{ end }}
@@ -62,18 +62,18 @@
 
 {{- $accepted := where $v.papers "status" "accepted" }}
 {{- $other := where $v.papers "status" "ne" "accepted" }}
-<h2>Accepted papers ({{ len $accepted }})</h2>
+<h2>{{ T "accepted_papers" (len $accepted) }}</h2>
 {{- if $accepted }}
 {{ partial "paper-list.html" (dict "papers" $accepted "owners" true) }}
 {{- else }}
-<p>None.</p>
+<p>{{ T "none" }}</p>
 {{- end }}
 {{- if $other }}
-<h2>Rejected ({{ len $other }})</h2>
+<h2>{{ T "rejected_papers" (len $other) }}</h2>
 {{- if site.Params.showNonAcceptedTitles }}
 {{ partial "paper-list.html" (dict "papers" $other "owners" true) }}
 {{- else }}
-<p class="note">Titles are not shown.</p>
+<p class="note">{{ T "titles_hidden" }}</p>
 {{- end }}
 {{- end }}
 {{- end }}

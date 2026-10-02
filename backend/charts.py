@@ -176,7 +176,7 @@ def lines(label, years, series):
     return "".join(out)
 
 
-def stacked_area(label, years, series, provisional=(), short=None):
+def stacked_area(label, years, series, provisional=(), short=None, words=None):
     """Stacked areas over the years, the first series at the bottom, with a legend on top, each band
     named at its right end, and a hover column per year whose <title> gives that year's numbers.
 
@@ -230,9 +230,11 @@ def stacked_area(label, years, series, provisional=(), short=None):
     band = plot_w / max(len(years) - 1, 1)
     for k, (x, year) in enumerate(zip(xs, years)):
         parts = ", ".join(f"{_fmt(values[k])} {name}" for _, name, values in series)
-        note = " (list still being completed)" if year in provisional else ""
+        words = words or {"total": "total", "incomplete": "list still being completed"}
+        note = " ({})".format(words["incomplete"]) if year in provisional else ""
+        total_word = words["total"]
         out.append(f'<rect class="hit" x="{max(x - band / 2, left):.1f}" y="{top}" '
                    f'width="{min(band, x + band / 2 - left, left + plot_w - x + band / 2):.1f}" height="{plot_h}">'
-                   f'<title>{year}{note}: {parts}; total {_fmt(totals[k])}</title></rect>')
+                   f'<title>{year}{note}: {parts}; {total_word} {_fmt(totals[k])}</title></rect>')
     out.append("</svg>")
     return "".join(out)

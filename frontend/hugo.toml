@@ -1,6 +1,8 @@
 baseURL = '/'
-locale = 'en-us'
-title = 'Vietnam at top AI conferences'
+defaultContentLanguage = 'vi'
+# Vietnamese at /, English at /en/
+defaultContentLanguageInSubdir = false
+title = 'Việt Nam tại các hội nghị AI hàng đầu'
 disableKinds = ['taxonomy', 'term', 'rss', 'sitemap']
 
 [params]
@@ -12,28 +14,71 @@ disableKinds = ['taxonomy', 'term', 'rss', 'sitemap']
   # GitHub repository (account/name) that the Feedback form opens an issue in
   repository = 'thanhlexyz/vn-at-top-ai-conference'
 
-[[menus.main]]
+
+[languages]
+  [languages.en]
+    label = 'English'
+    locale = 'en-us'
+    weight = 2
+    title = 'Vietnam at top AI conferences'
+    [languages.en.params]
+      description = 'Papers submitted, accepted and rejected at ICLR, NeurIPS, ICML, CVPR and ACL by professors and lecturers in Vietnam since 2020.'
+  [languages.vi]
+    label = 'Tiếng Việt'
+    locale = 'vi-vn'
+    weight = 1
+    title = 'Việt Nam tại các hội nghị AI hàng đầu'
+    [languages.vi.params]
+      description = 'Số bài nộp, được nhận và bị từ chối ở ICLR, NeurIPS, ICML, CVPR và ACL của giảng viên tại Việt Nam từ năm 2020.'
+
+[[languages.en.menus.main]]
   name = 'Professors'
   identifier = 'professors'
   pageRef = '/'
   weight = 1
-[[menus.main]]
+[[languages.en.menus.main]]
   name = 'Institutions'
   identifier = 'institutions'
   pageRef = '/institutions'
   weight = 2
-[[menus.main]]
+[[languages.en.menus.main]]
   name = 'Venues'
   identifier = 'venues'
   pageRef = '/venues'
   weight = 3
-[[menus.main]]
+[[languages.en.menus.main]]
   name = 'Papers'
   identifier = 'papers'
   pageRef = '/papers'
   weight = 4
-[[menus.main]]
+[[languages.en.menus.main]]
   name = 'About'
+  identifier = 'about'
+  pageRef = '/about'
+  weight = 6
+
+[[languages.vi.menus.main]]
+  name = 'Giảng viên'
+  identifier = 'professors'
+  pageRef = '/'
+  weight = 1
+[[languages.vi.menus.main]]
+  name = 'Trường'
+  identifier = 'institutions'
+  pageRef = '/institutions'
+  weight = 2
+[[languages.vi.menus.main]]
+  name = 'Hội nghị'
+  identifier = 'venues'
+  pageRef = '/venues'
+  weight = 3
+[[languages.vi.menus.main]]
+  name = 'Bài báo'
+  identifier = 'papers'
+  pageRef = '/papers'
+  weight = 4
+[[languages.vi.menus.main]]
+  name = 'Giới thiệu'
   identifier = 'about'
   pageRef = '/about'
   weight = 6

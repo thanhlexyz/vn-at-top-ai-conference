@@ -3,7 +3,7 @@
 <div class="scroll">
 <table>
 	<thead>
-	<tr><th>Year</th><th>ICLR</th><th>NeurIPS</th><th>ICML</th><th>CVPR</th><th>ACL</th><th>Total</th></tr>
+	<tr><th>{{ T "th_year" }}</th><th>ICLR</th><th>NeurIPS</th><th>ICML</th><th>CVPR</th><th>ACL</th><th>{{ T "th_total" }}</th></tr>
 	</thead>
 	<tbody>
 	{{- range .years }}
@@ -17,7 +17,7 @@
 	</tr>
 	{{- end }}
 	<tr class="total">
-		<td>Total</td>
+		<td>{{ T "th_total" }}</td>
 		{{- range slice "iclr" "neurips" "icml" "cvpr" "acl" }}
 		<td>{{ index $t.venues . }}</td>
 		{{- end }}

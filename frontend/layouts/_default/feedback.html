@@ -2,14 +2,11 @@
 {{ .Content }}
 {{- /* A plain GET form: GitHub's /issues/new page reads `title` and `body` from the address, so no script is needed. */}}
 <form class="feedback" action="https://github.com/{{ site.Params.repository }}/issues/new" method="get">
-	<label for="title">Title</label>
-	<input id="title" name="title" type="text" required maxlength="200" placeholder="e.g. Missing NeurIPS 2026 paper of Nguyen Van A">
-	<label for="body">Details</label>
-	<textarea id="body" name="body" rows="10" required placeholder="What is wrong or missing, on which page, and a link that shows it."></textarea>
-	<button type="submit">Continue on GitHub</button>
+	<label for="title">{{ T "fb_title" }}</label>
+	<input id="title" name="title" type="text" required maxlength="200" placeholder="{{ T "fb_title_placeholder" }}">
+	<label for="body">{{ T "fb_details" }}</label>
+	<textarea id="body" name="body" rows="10" required placeholder="{{ T "fb_details_placeholder" }}"></textarea>
+	<button type="submit">{{ T "fb_submit" }}</button>
 </form>
-<p class="note">
-	Issues are public. Please do not include private contact details.
-	You can also <a href="https://github.com/{{ site.Params.repository }}/issues">browse the existing issues</a>.
-</p>
+<p class="note">{{ T "fb_note" (printf "https://github.com/%s/issues" site.Params.repository) | safeHTML }}</p>
 {{- end }}

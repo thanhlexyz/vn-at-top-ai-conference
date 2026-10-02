@@ -1,0 +1,378 @@
+# Interface text, English. The Vietnamese version is vi.toml; keep the two in step.
+# Values with HTML are printed with safeHTML in the templates.
+
+# ---------------------------------------------------------------- frame
+[nav_candidates]
+other = "Candidates"
+[nav_not_tracked]
+other = "Not tracked"
+[nav_video]
+other = "Video"
+[nav_feedback]
+other = "Feedback"
+[footer_data]
+other = "Data as of {{ .Date }}, covering {{ .First }}&ndash;{{ .Last }}."
+[footer_sources]
+other = "Sources and limits"
+[lang_switch]
+other = "Language"
+
+# ---------------------------------------------------------------- shared words
+[venues_five]
+other = "the five venues"
+[none]
+other = "None."
+[titles_hidden]
+other = "Titles are not shown."
+[unofficial]
+other = "unofficial"
+[status_accepted]
+other = "accepted"
+[status_rejected]
+other = "rejected"
+[status_withdrawn]
+other = "withdrawn"
+[status_desk_rejected]
+other = "desk-rejected"
+[not_published_yet]
+other = "not published yet"
+[list_not_published]
+other = "list not published yet"
+[not_yet_in_vietnam]
+other = "not yet at a Vietnamese institution"
+[incomplete_star]
+other = "incomplete or unconfirmed, see the professor's page"
+[own_page_more]
+other = "{{ .Count }} more from personal pages, not in the official list yet"
+[reason_before]
+other = "before {{ .Year }}, when they joined a Vietnamese institution"
+[reason_track]
+other = "{{ .Track }} track"
+[not_counted]
+other = "Not counted: {{ .Reason }}."
+[later_accepted]
+other = "The same title was accepted at {{ . }}."
+[unofficial_because]
+other = "Unofficial: {{ . }}."
+
+# ---------------------------------------------------------------- table headings
+[th_professor]
+other = "Professor"
+[th_professors]
+other = "Professors"
+[th_institution]
+other = "Institution"
+[th_year]
+other = "Year"
+[th_venue]
+other = "Venue"
+[th_title]
+other = "Title"
+[th_outcome]
+other = "Outcome"
+[th_accepted_at]
+other = "Accepted at"
+[th_total]
+other = "Total"
+[th_own_institution]
+other = "From own institution"
+[th_coauthors]
+other = "Co-authors"
+[th_topic_areas]
+other = "Topic areas"
+[th_topic_area]
+other = "Topic area"
+[th_topic]
+other = "Topic"
+[th_papers]
+other = "Papers"
+[th_submitted]
+other = "submitted"
+[th_accepted]
+other = "accepted"
+[th_rejected]
+other = "rejected"
+[th_rejected_est]
+other = "rejected, estimated"
+[th_Submitted]
+other = "Submitted"
+[th_Accepted]
+other = "Accepted"
+[th_Rejected]
+other = "Rejected"
+[th_Rejected_public]
+other = "Rejected (public)"
+[th_Rejected_est]
+other = "Rejected, estimated"
+[th_rejected_iclr]
+other = "Rejected at ICLR"
+[th_rejected_iclr_recorded]
+other = "Rejected at ICLR, recorded"
+[th_rejected_elsewhere_est]
+other = "Rejected elsewhere, estimated"
+[th_submitted_est]
+other = "Submitted, estimated"
+[th_majority]
+other = "majority"
+[th_first_author]
+other = "1st author"
+[th_per_paper]
+other = "per paper"
+[th_min]
+other = "min"
+[th_max]
+other = "max"
+[th_foreign]
+other = "foreign per paper"
+[th_other_institutions]
+other = "other institutions"
+[th_not_judged]
+other = "Not judged"
+[th_public]
+other = "Rejected papers public?"
+[th_list_source]
+other = "Source of the accepted list"
+
+# hover text of the headings
+[tip_rejected]
+other = "rejected, withdrawn or desk-rejected"
+[tip_rejected_total]
+other = "rejected, withdrawn or desk-rejected, where public: all of ICLR, and the papers authors made public elsewhere"
+[tip_rejected_est]
+other = "rejected at ICLR plus the papers estimated to have been rejected at the other venues, from each professor's own ICLR record (see About)"
+[tip_rejected_est_inst]
+other = "rejected at ICLR plus the papers estimated to have been rejected at the other venues, from the institution's own ICLR record"
+[tip_rejected_est_venue]
+other = "counted at ICLR; estimated elsewhere from the ICLR record of everyone listed"
+[tip_own_institution]
+other = "accepted papers judged against the professor's current institution; papers whose source prints no affiliation per author are left out"
+[tip_majority]
+other = "accepted papers on which more than half of the authors are at the professor's institution"
+[tip_first_author]
+other = "accepted papers whose first author is at the professor's institution"
+[tip_per_paper]
+other = "average number of co-authors per paper, accepted or not"
+[tip_min]
+other = "fewest co-authors on one accepted paper"
+[tip_max]
+other = "most co-authors on one paper, accepted or not"
+[tip_foreign]
+other = "average number of co-authors per paper who are at an institution outside Vietnam"
+[tip_other_institutions]
+other = "number of different co-authors who are at another university or institution"
+[tip_not_judged]
+other = "accepted papers without an affiliation for each author, left out"
+[tip_iclr_missing]
+other = "ICLR submissions are missing for some professors"
+[tip_rejected_where_public]
+other = "rejected, withdrawn or desk-rejected, where public"
+
+# ---------------------------------------------------------------- front page
+[home_title]
+other = "Conference papers by professors and lecturers in Vietnam, {{ .First }}&ndash;{{ .Last }}"
+[home_flag_incomplete]
+other = "Some records are incomplete or still to be confirmed. Those professors are marked with * and their pages say what is missing."
+[home_flag_pending]
+other = "{{ .Count }} uncertain matches wait for a decision, see <a href=\"{{ .URL }}\">Candidates</a>."
+[home_note_table]
+other = """ICLR rejected counts rejected, withdrawn and desk-rejected submissions.
+Total rejected adds every ICLR rejection to the rejections authors made public at other venues (some NeurIPS papers), so it is a lower bound.
+Total rejected, estimated (orange) adds an estimate for the venues that hide their rejections, from each professor's own ICLR record: submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1). It is an estimate, not a count.
+&ndash; means the OpenReview records of that professor have not been fetched.
+Main conference track only; workshops, Findings, position papers and the NeurIPS Datasets &amp; Benchmarks track are left out.
+Professors are ordered by total accepted papers."""
+[home_note_provisional]
+other = """The official {{ .Name }} {{ .Year }} list was published before the conference and is not complete yet.
+For that list only, papers that a professor's own page lists are counted as well. They are shown as <span class="own">+N</span> after the official number and are unofficial until the conference publishes them."""
+[home_note_coauthors]
+other = """The co-author and topic columns are taken over all counted papers, accepted or not.
+Foreign means the affiliation printed on the paper is outside Vietnam; other institutions counts the different co-authors whose affiliation is not the professor's own institution.
+Both need a paper list with affiliations, and topic areas need the conference's own topic labels, which exist for ICLR, NeurIPS and ICML from 2023 or 2024 on.
+Each professor's page says how many papers a figure is based on."""
+[home_overview]
+other = "Accepted and rejected, all listed professors"
+[home_overview_text]
+other = """{{ .Accepted }} accepted papers stand for about {{ .Submissions }} submissions:
+{{ .Recorded }} rejected or withdrawn at ICLR, where every submission is public, and about {{ .Estimated }} more estimated for the other venues."""
+[home_fig1]
+other = "Fig. 1. Accepted papers against rejected papers, recorded at ICLR and estimated elsewhere, over all years and venues."
+[home_fig2]
+other = "Fig. 2. The same per year, stacked: accepted at the bottom, rejected at ICLR (recorded) above it, rejected elsewhere (estimated) on top."
+[home_fig2_provisional]
+other = " * The official {{ . }} list is not complete yet."
+[home_numbers]
+other = "The numbers behind the figures"
+[home_note_estimate]
+other = """Only ICLR publishes every submission with its outcome. For NeurIPS, ICML, CVPR and ACL the rejected papers are estimated from each professor's own ICLR record:
+submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1). A professor without ICLR submissions adds no estimate.
+A paper of two listed professors is counted for each, as on their own pages, and a paper sent to several conferences counts once per submission."""
+
+# ---------------------------------------------------------------- professor page
+[prof_since]
+other = "At a Vietnamese institution since {{ . }}"
+[prof_homepage]
+other = "Homepage"
+[prof_accepted_summary]
+one = "{{ .Count }} accepted paper at the five venues since {{ .Year }}"
+other = "{{ .Count }} accepted papers at the five venues since {{ .Year }}"
+[prof_own_page_part]
+other = ": {{ .Official }} in the official lists and {{ .Own }} known only from personal pages, shown as +{{ .Own }} and tagged \"unofficial\" below"
+[prof_iclr_summary]
+other = "ICLR: {{ .Submitted }} submitted, {{ .Accepted }} accepted, {{ .Rejected }} rejected ({{ .Reviewers }} by reviewers, {{ .Withdrawn }} withdrawn, {{ .Desk }} desk-rejected)."
+[by_year]
+other = "By year"
+[prof_note_year]
+other = """ICLR rejected counts rejected, withdrawn and desk-rejected submissions.
+Only ICLR publishes every submission, so the other venues show accepted papers only."""
+[prof_note_neurips_public]
+one = "NeurIPS: {{ .Count }} rejected or withdrawn paper was made public by the authors and is listed below."
+other = "NeurIPS: {{ .Count }} rejected or withdrawn papers were made public by the authors and are listed below."
+[majority_title]
+other = "Papers with a majority of authors from {{ . }}"
+[majority_note]
+other = """Accepted papers on which more than half of the authors list {{ .Inst }}.
+Only papers from a list that prints an affiliation for each author can be judged: {{ .Judged }} here."""
+[majority_left_out]
+one = " The other {{ .Count }} accepted paper is left out of this table and the next."
+other = " The other {{ .Count }} accepted papers are left out of this table and the next."
+[first_title]
+other = "Papers with a first author from {{ . }}"
+[first_note]
+other = "Accepted papers whose first author lists {{ . }}."
+[chart_title]
+other = "Submitted and accepted per year"
+[chart_note]
+other = """Accepted papers and rejected ICLR papers are counted.
+Papers that NeurIPS, ICML, CVPR and ACL did not accept are not public, so that part of each column is an estimate."""
+[chart_note_own]
+other = """It comes from this professor's own ICLR record of {{ .Submitted }} submitted and {{ .Accepted }} accepted:
+({{ .Submitted }} + 1) / ({{ .Accepted }} + 1) = {{ .Ratio }} submissions for each paper accepted elsewhere.
+Adding 1 on both sides keeps a short record from giving an extreme number.
+The estimate is still rough, and a paper sent to several conferences is counted each time."""
+[chart_note_own_page]
+other = "The accepted papers include {{ . }} known only from personal pages."
+[chart_note_no_iclr]
+other = "This professor has no ICLR submissions, so nothing is known about rejected papers, and the chart adds none."
+[chart_note_not_fetched]
+other = "The OpenReview records of this professor have not been fetched, so no rejected papers are known, and the chart adds none."
+[coauthors_title]
+other = "Co-authors and topics"
+[coauthors_none]
+other = "No papers to compute these from."
+[coauthors_avg]
+other = "{{ .Avg }} co-authors per paper on average, accepted or not (fewest on an accepted paper {{ .Min }}, most on any submission {{ .Max }}), {{ .Distinct }} different co-authors over {{ .Papers }} papers."
+[coauthors_foreign]
+other = "{{ . }} foreign co-authors per paper on average: co-authors whose affiliation on the paper is outside Vietnam."
+[coauthors_elsewhere]
+other = "{{ .Count }} different co-authors are at another university or institution than {{ .Inst }} ({{ .Abroad }} abroad, {{ .Vietnam }} in Vietnam)."
+[coauthors_partial]
+other = "The last two figures use the {{ .With }} of {{ .Papers }} papers whose list prints an affiliation for each author."
+[coauthors_no_aff]
+other = "None of the paper lists prints affiliations, so foreign and other-institution co-authors cannot be counted."
+[topics_line]
+other = "{{ .Count }} topic areas, from the conference's own label on {{ .With }} of {{ .Papers }} papers:"
+[topics_none]
+other = "None of the papers carries a topic label from its conference."
+[accepted_papers]
+other = "Accepted papers ({{ . }})"
+[rejected_papers]
+other = "Rejected ({{ . }})"
+[rejected_note]
+other = "Rejected, withdrawn and desk-rejected submissions; the tag after each title says which."
+[not_main_track]
+other = "Not main track"
+[not_main_track_note]
+other = "Workshops, Findings, Datasets & Benchmarks, journal and other tracks, which the site does not count."
+[before_vietnam]
+other = "Before joining a Vietnamese institution"
+[before_vietnam_note]
+other = "Papers from before the year this person's post in Vietnam began, which the site does not count."
+
+# ---------------------------------------------------------------- professors list page
+[prof_list_majority]
+other = "Papers with a majority of authors from the professor's institution"
+[prof_list_majority_note]
+other = """Accepted papers on which more than half of the authors list the professor's current institution.
+Only papers from a list that prints an affiliation for each author can be judged; the others are counted under "Not judged" and left out of this table and the next."""
+[prof_list_first]
+other = "Papers with a first author from the professor's institution"
+[prof_list_first_note]
+other = "Accepted papers whose first author lists the professor's current institution."
+
+# ---------------------------------------------------------------- institutions
+[inst_list_table]
+other = "Papers of the listed professors"
+[inst_list_note]
+other = """A paper with several professors of the same institution is counted once.
+Rejected, estimated (orange) adds the rejections hidden at NeurIPS, ICML, CVPR and ACL, estimated from the institution's own ICLR record: submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1). It is an estimate, not a count.
++N after a number means N more papers known only from personal pages, which are unofficial.
+* means the OpenReview records of at least one professor have not been fetched, so the ICLR submitted and rejected numbers are too low."""
+[inst_list_majority]
+other = "Papers with a majority of authors from the institution"
+[inst_list_majority_note]
+other = """Accepted papers on which more than half of the authors list the institution.
+Only papers from a list that prints an affiliation for each author can be judged; the others are counted under "Not judged" and left out of this table and the next."""
+[inst_list_first]
+other = "Papers with a first author from the institution"
+[inst_list_first_note]
+other = "Accepted papers whose first author lists the institution."
+[inst_summary]
+other = "{{ .Profs }} professors listed, {{ .Accepted }} accepted papers at the five venues"
+[inst_summary_own]
+other = ", {{ . }} of them known only from personal pages (unofficial)"
+[inst_iclr]
+other = "ICLR: {{ .Submitted }} submitted, {{ .Accepted }} accepted, {{ .Rejected }} rejected."
+[inst_estimated]
+other = " Counting the rejections hidden at the other venues, estimated from this ICLR record, about {{ . }} papers were rejected in all."
+[inst_once]
+other = "A paper with several professors of this institution is counted once."
+[inst_incomplete]
+other = "The OpenReview records of at least one professor have not been fetched, so the ICLR submitted and rejected numbers are too low."
+[inst_professors]
+other = "Professors"
+
+# ---------------------------------------------------------------- venues
+[venue_public_full]
+other = "yes, every submission"
+[venue_public_partial]
+other = "only when the authors opt in"
+[venue_public_none]
+other = "no"
+[venue_n_public]
+other = "{{ . }} public"
+[venue_list_note]
+other = """Papers of the listed professors only. A paper with several listed professors is counted once.
+Rejected, estimated (orange) is the count at ICLR; for the other venues it applies the ICLR record of everyone listed to their accepted papers. It is an estimate, not a count.
++N after a number means N more papers known only from personal pages, which are unofficial."""
+[venue_full]
+other = "{{ . }} publishes every submission and its outcome on OpenReview, so submitted and rejected papers can be counted."
+[venue_partial]
+other = "{{ . }} publishes accepted papers. A rejected paper is public only when its authors chose to make it so, which means the rejected numbers below are a lower bound and submitted numbers cannot be given."
+[venue_none]
+other = "{{ . }} publishes accepted papers only. Submitted and rejected papers cannot be counted."
+[venue_once]
+other = "The numbers cover the listed professors; a paper with several of them is counted once."
+[venue_own_page]
+other = "{{ .Count }} accepted papers are known only from personal pages. They are shown as +{{ .Count }}, tagged \"unofficial\" in the list, and stay so until the conference publishes them."
+[venue_estimate_note]
+other = "Rejected, estimated (orange): {{ .Name }} does not publish its rejections, so they are estimated from the ICLR record of everyone listed, {{ .Ratio }} submissions per accepted paper. It is an estimate, not a count."
+[tip_estimated_venue_year]
+other = "estimated from the ICLR record of everyone listed"
+
+# ---------------------------------------------------------------- feedback form
+[fb_title]
+other = "Title"
+[fb_title_placeholder]
+other = "e.g. Missing NeurIPS 2026 paper of Nguyen Van A"
+[fb_details]
+other = "Details"
+[fb_details_placeholder]
+other = "What is wrong or missing, on which page, and a link that shows it."
+[fb_submit]
+other = "Continue on GitHub"
+[fb_note]
+other = "Issues are public. Please do not include private contact details. You can also <a href=\"{{ . }}\">browse the existing issues</a>."
+
+# ---------------------------------------------------------------- about page table
+[cov_no_aff]
+other = "no affiliations in this list"

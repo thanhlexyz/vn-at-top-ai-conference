@@ -2,4 +2,4 @@
        Context: a map of venue -> counts (with "not_accepted"). ICLR publishes every rejection; the other venues only
        the ones their authors make public, so this is a lower bound. */ -}}
 {{- $r := 0 }}{{ range . }}{{ $r = add $r (int .not_accepted) }}{{ end -}}
-<td class="total bad{{ if eq $r 0 }} zero{{ end }}" title="rejected, withdrawn or desk-rejected, where public">{{ $r }}</td>
+<td class="total bad{{ if eq $r 0 }} zero{{ end }}" title="{{ T "tip_rejected_where_public" }}">{{ $r }}</td>

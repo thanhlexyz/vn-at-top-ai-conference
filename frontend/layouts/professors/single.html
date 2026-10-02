@@ -3,9 +3,9 @@
 {{- $meta := hugo.Data.meta }}
 {{- $iclr := $p.venues.iclr }}
 <p>
-	{{ with $p.rank }}{{ . }}, {{ end }}<a href="{{ printf "institutions/%s/" $p.institution_slug | relURL }}">{{ $p.institution }}</a>
-	{{- if $p.vn_since }}. At a Vietnamese institution since {{ $p.vn_since }}{{ end }}.
-	{{- with $p.homepage }} <a href="{{ . }}">Homepage</a>{{ end }}
+	{{ with $p.rank }}{{ . }}, {{ end }}<a href="{{ printf "institutions/%s/" $p.institution_slug | relLangURL }}">{{ $p.institution }}</a>
+	{{- if $p.vn_since }}. {{ T "prof_since" $p.vn_since }}{{ end }}.
+	{{- with $p.homepage }} <a href="{{ . }}">{{ T "prof_homepage" }}</a>{{ end }}
 	{{- range $p.openreview_ids }} <a href="https://openreview.net/profile?id={{ . }}">OpenReview {{ . }}</a>{{ end }}
 </p>
 {{- with $p.flags }}
@@ -16,57 +16,49 @@
 </ul>
 {{- end }}
 <p>
-	{{ $p.accepted }} accepted {{ if eq (int $p.accepted) 1 }}paper{{ else }}papers{{ end }} at the five venues
-	{{- if gt $p.vn_since $meta.first_year }} since {{ $p.vn_since }}{{ else }} since {{ $meta.first_year }}{{ end }}
-	{{- if gt (int $p.own_page) 0 }}: {{ $p.official }} in the official lists and {{ $p.own_page }} known only from personal pages, shown as +{{ $p.own_page }} and tagged "unofficial" below{{ end }}.
+	{{ T "prof_accepted_summary" (dict "Count" (int $p.accepted) "Year" (cond (gt $p.vn_since $meta.first_year) $p.vn_since $meta.first_year)) }}
+	{{- if gt (int $p.own_page) 0 }}{{ T "prof_own_page_part" (dict "Official" $p.official "Own" $p.own_page) }}{{ end }}.
 	{{- if $p.iclr_complete }}
-	ICLR: {{ $iclr.submitted }} submitted, {{ $iclr.accepted }} accepted, {{ $iclr.not_accepted }} rejected
-	({{ $iclr.rejected }} by reviewers, {{ $iclr.withdrawn }} withdrawn, {{ $iclr.desk_rejected }} desk-rejected).
+	{{ T "prof_iclr_summary" (dict "Submitted" $iclr.submitted "Accepted" $iclr.accepted "Rejected" $iclr.not_accepted "Reviewers" $iclr.rejected "Withdrawn" $iclr.withdrawn "Desk" $iclr.desk_rejected) }}
 	{{- end }}
 </p>
 
-<h2>By year</h2>
+<h2>{{ T "by_year" }}</h2>
 {{ partial "year-table.html" (dict "years" $p.years "venues" $p.venues "official" $p.official "own_page" $p.own_page "complete" $p.iclr_complete) }}
 <p class="note">
-	ICLR rejected counts rejected, withdrawn and desk-rejected submissions.
-	Only ICLR publishes every submission, so the other venues show accepted papers only.
+	{{ T "prof_note_year" }}
 	{{- with $p.venues.neurips.not_accepted }}
-	NeurIPS: {{ . }} rejected or withdrawn {{ if eq (int .) 1 }}paper was{{ else }}papers were{{ end }} made public by the authors and {{ if eq (int .) 1 }}is{{ else }}are{{ end }} listed below.
+	{{ T "prof_note_neurips_public" (dict "Count" (int .)) }}
 	{{- end }}
 </p>
 
 {{- with $p.projection }}
 {{- $a := $p.authorship }}
-<h2>Papers with a majority of authors from {{ $p.institution_short }}</h2>
+<h2>{{ T "majority_title" $p.institution_short }}</h2>
 <p class="note">
-	Accepted papers on which more than half of the authors list {{ $p.institution_short }}.
-	Only papers from a list that prints an affiliation for each author can be judged: {{ $a.judged }} here.
-	{{- if $a.unknown }} The other {{ $a.unknown }} accepted {{ if eq (int $a.unknown) 1 }}paper is{{ else }}papers are{{ end }} left out of this table and the next.{{ end }}
+	{{ T "majority_note" (dict "Inst" $p.institution_short "Judged" $a.judged) }}
+	{{- if $a.unknown }}{{ T "majority_left_out" (dict "Count" (int $a.unknown)) }}{{ end }}
 </p>
 {{ partial "venue-year-table.html" $a.majority }}
 
-<h2>Papers with a first author from {{ $p.institution_short }}</h2>
-<p class="note">Accepted papers whose first author lists {{ $p.institution_short }}.</p>
+<h2>{{ T "first_title" $p.institution_short }}</h2>
+<p class="note">{{ T "first_note" $p.institution_short }}</p>
 {{ partial "venue-year-table.html" $a.first_author }}
 
-<h2>Submitted and accepted per year</h2>
+<h2>{{ T "chart_title" }}</h2>
 <figure>
-	{{ .svg | safeHTML }}
+	{{ index . (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
 	<figcaption class="note">
-		Accepted papers and rejected ICLR papers are counted.
-		Papers that NeurIPS, ICML, CVPR and ACL did not accept are not public, so that part of each column is an estimate.
+		{{ T "chart_note" }}
 		{{- if eq .basis "own" }}
-		It comes from this professor's own ICLR record of {{ .ratio_submitted }} submitted and {{ .ratio_accepted }} accepted:
-		({{ .ratio_submitted }} + 1) / ({{ .ratio_accepted }} + 1) = {{ .ratio }} submissions for each paper accepted elsewhere.
-		Adding 1 on both sides keeps a short record from giving an extreme number.
-		The estimate is still rough, and a paper sent to several conferences is counted each time.
+		{{ T "chart_note_own" (dict "Submitted" .ratio_submitted "Accepted" .ratio_accepted "Ratio" .ratio) }}
 		{{- if gt (int $p.own_page) 0 }}
-		The accepted papers include {{ $p.own_page }} known only from personal pages.
+		{{ T "chart_note_own_page" $p.own_page }}
 		{{- end }}
 		{{- else if $p.iclr_complete }}
-		This professor has no ICLR submissions, so nothing is known about rejected papers, and the chart adds none.
+		{{ T "chart_note_no_iclr" }}
 		{{- else }}
-		The OpenReview records of this professor have not been fetched, so no rejected papers are known, and the chart adds none.
+		{{ T "chart_note_not_fetched" }}
 		{{- end }}
 	</figcaption>
 </figure>
@@ -74,11 +66,11 @@
 <table>
 	<thead>
 	<tr>
-		<th>Year</th>
-		<th>Accepted</th>
-		<th>Rejected at ICLR</th>
-		<th>Rejected elsewhere, estimated</th>
-		<th>Submitted, estimated</th>
+		<th>{{ T "th_year" }}</th>
+		<th>{{ T "th_Accepted" }}</th>
+		<th>{{ T "th_rejected_iclr" }}</th>
+		<th>{{ T "th_rejected_elsewhere_est" }}</th>
+		<th>{{ T "th_submitted_est" }}</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -94,7 +86,7 @@
 	{{- end }}
 	{{- end }}
 	<tr class="total">
-		<td>Total</td>
+		<td>{{ T "th_total" }}</td>
 		<td>{{ .accepted }}</td>
 		<td>{{ if $p.iclr_complete }}{{ $p.venues.iclr.not_accepted }}{{ else }}&ndash;{{ end }}</td>
 		<td>{{ .estimated }}</td>
@@ -105,42 +97,35 @@
 </div>
 {{- end }}
 
-<h2>Co-authors and topics</h2>
+<h2>{{ T "coauthors_title" }}</h2>
 {{- $c := $p.collab }}
 {{- if not $c.papers }}
-<p>No papers to compute these from.</p>
+<p>{{ T "coauthors_none" }}</p>
 {{- else }}
 <ul>
-	<li>
-		{{ $c.avg_coauthors }} co-authors per paper on average, accepted or not (fewest on an accepted paper {{ $c.min_coauthors }}, most on any submission {{ $c.max_coauthors }}), {{ $c.distinct_coauthors }} different co-authors over {{ $c.papers }} {{ if eq (int $c.papers) 1 }}paper{{ else }}papers{{ end }}.
-	</li>
+	<li>{{ T "coauthors_avg" (dict "Avg" $c.avg_coauthors "Min" $c.min_coauthors "Max" $c.max_coauthors "Distinct" $c.distinct_coauthors "Papers" $c.papers) }}</li>
 	{{- if $c.papers_with_affiliations }}
-	<li>
-		{{ $c.avg_foreign }} foreign co-authors per paper on average: co-authors whose affiliation on the paper is outside Vietnam.
-	</li>
-	<li>
-		{{ $c.elsewhere }} different co-authors are at another university or institution than {{ $p.institution_short }}
-		({{ $c.elsewhere_abroad }} abroad, {{ $c.elsewhere_vietnam }} in Vietnam).
-	</li>
+	<li>{{ T "coauthors_foreign" $c.avg_foreign }}</li>
+	<li>{{ T "coauthors_elsewhere" (dict "Count" $c.elsewhere "Inst" $p.institution_short "Abroad" $c.elsewhere_abroad "Vietnam" $c.elsewhere_vietnam) }}</li>
 	{{- if lt (int $c.papers_with_affiliations) (int $c.papers) }}
-	<li class="note">The last two figures use the {{ $c.papers_with_affiliations }} of {{ $c.papers }} papers whose list prints an affiliation for each author.</li>
+	<li class="note">{{ T "coauthors_partial" (dict "With" $c.papers_with_affiliations "Papers" $c.papers) }}</li>
 	{{- end }}
 	{{- else }}
-	<li class="note">None of the paper lists prints affiliations, so foreign and other-institution co-authors cannot be counted.</li>
+	<li class="note">{{ T "coauthors_no_aff" }}</li>
 	{{- end }}
 	{{- if $c.papers_with_topic }}
 	<li>
-		{{ $c.topic_areas }} topic {{ if eq (int $c.topic_areas) 1 }}area{{ else }}areas{{ end }}, from the conference's own label on {{ $c.papers_with_topic }} of {{ $c.papers }} papers:
+		{{ T "topics_line" (dict "Count" $c.topic_areas "With" $c.papers_with_topic "Papers" $c.papers) }}
 		{{ range $n, $a := $c.areas }}{{ if $n }}, {{ end }}{{ $a.area }} ({{ $a.papers }}){{ end }}.
 	</li>
 	{{- else }}
-	<li class="note">None of the papers carries a topic label from its conference.</li>
+	<li class="note">{{ T "topics_none" }}</li>
 	{{- end }}
 </ul>
 {{- if $c.topics }}
 <div class="scroll">
 <table>
-	<thead><tr><th class="l">Topic area</th><th class="l">Topic</th><th>Papers</th></tr></thead>
+	<thead><tr><th class="l">{{ T "th_topic_area" }}</th><th class="l">{{ T "th_topic" }}</th><th>{{ T "th_papers" }}</th></tr></thead>
 	<tbody>
 	{{- range $c.topics }}
 	<tr><td class="l">{{ .area }}</td><td class="l">{{ with .topic }}{{ . }}{{ else }}&ndash;{{ end }}</td><td>{{ .papers }}</td></tr>
@@ -151,27 +136,27 @@
 {{- end }}
 {{- end }}
 
-<h2>Accepted papers ({{ len $p.accepted_papers }})</h2>
+<h2>{{ T "accepted_papers" (len $p.accepted_papers) }}</h2>
 {{- if $p.accepted_papers }}
 {{ partial "paper-list.html" (dict "papers" $p.accepted_papers) }}
 {{- else }}
-<p>None.</p>
+<p>{{ T "none" }}</p>
 {{- end }}
 
 {{- if $p.not_accepted_papers }}
-<h2>Rejected ({{ len $p.not_accepted_papers }})</h2>
-<p class="note">Rejected, withdrawn and desk-rejected submissions; the tag after each title says which.</p>
+<h2>{{ T "rejected_papers" (len $p.not_accepted_papers) }}</h2>
+<p class="note">{{ T "rejected_note" }}</p>
 {{- if site.Params.showNonAcceptedTitles }}
 {{ partial "paper-list.html" (dict "papers" $p.not_accepted_papers) }}
 {{- else }}
-<p class="note">Titles are not shown.</p>
+<p class="note">{{ T "titles_hidden" }}</p>
 {{- end }}
 {{- end }}
 
 {{- /* papers left out of the counts: other tracks, and papers from before the person came to Vietnam */}}
 {{- $before := slice }}{{ $track := slice }}
 {{- range $p.excluded_papers }}{{ if hasPrefix .reason "before" }}{{ $before = $before | append . }}{{ else }}{{ $track = $track | append . }}{{ end }}{{ end }}
-{{- range $group := slice (dict "title" "Not main track" "papers" $track "note" "Workshops, Findings, Datasets & Benchmarks, journal and other tracks, which the site does not count.") (dict "title" "Before joining a Vietnamese institution" "papers" $before "note" "Papers from before the year this person's post in Vietnam began, which the site does not count.") }}
+{{- range $group := slice (dict "title" (T "not_main_track") "papers" $track "note" (T "not_main_track_note")) (dict "title" (T "before_vietnam") "papers" $before "note" (T "before_vietnam_note")) }}
 {{- with $group.papers }}
 <h2>{{ $group.title }} ({{ len . }})</h2>
 <p class="note">{{ $group.note }}</p>

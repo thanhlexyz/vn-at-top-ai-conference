@@ -741,7 +741,7 @@ def projection(p):
            "ratio_submitted": submitted, "ratio_accepted": accepted,
            "accepted": sum(r["accepted"] for r in counted), "total": f"{sum(r['total'] for r in counted):.0f}",
            "estimated": f"{sum(r['estimated'] for r in counted):.0f}",
-           "svg": projection_svg(p["name"], rows)}
+           "svg": projection_svg(p["name"], rows), "svg_vi": projection_svg(p["name"], rows, "vi")}
     out["rows"] = [{**r, "estimated": f"{r['estimated']:.0f}", "total": f"{r['total']:.0f}"} if r["counts"] else r
                    for r in rows]
     return out
@@ -762,23 +762,43 @@ def overview(professors, acc):
     rows = [{"year": y, **v, "estimated": round(v["estimated"])} for y, v in years.items()]
     total = {k: sum(r[k] for r in rows) for k in ("accepted", "recorded", "estimated")}
     provisional = sorted({y for v, y in acc.provisional})
-    series = [("acc", "accepted"), ("not", "rejected at ICLR, recorded"), ("est", "rejected elsewhere, estimated")]
     keys = ["accepted", "recorded", "estimated"]
-    return {
+    out = {
         "total": total, "rows": rows, "provisional": provisional,
         "provisional_lists": [f"{VENUE_NAME[v]} {y}" for v, y in sorted(acc.provisional)],
         "submissions": sum(total.values()),
-        "pie": charts.pies("Accepted, recorded rejected and estimated rejected papers, all listed professors",
-                           [("All years and venues", [(c, n, total[k]) for (c, n), k in zip(series, keys)])]),
-        "stack": charts.stacked_area("Accepted, recorded rejected and estimated rejected papers per year",
-                                     YEARS, [(c, n, [r[k] for r in rows]) for (c, n), k in zip(series, keys)],
-                                     provisional=provisional,
-                                     short={"rejected at ICLR, recorded": "recorded",
-                                            "rejected elsewhere, estimated": "estimated"}),
     }
+    for lang, suffix in (("en", ""), ("vi", "_vi")):
+        w = CHART_TEXT[lang]
+        named = [("acc", w["s_acc"]), ("not", w["s_not"]), ("est", w["s_est"])]
+        out["pie" + suffix] = charts.pies(w["pie_label"], [(w["pie_title"], [(c, n, total[k]) for (c, n), k in zip(named, keys)])])
+        out["stack" + suffix] = charts.stacked_area(
+            w["stack_label"], YEARS, [(c, n, [r[k] for r in rows]) for (c, n), k in zip(named, keys)],
+            provisional=provisional, short={w["s_not"]: w["short_not"], w["s_est"]: w["short_est"]},
+            words={"total": w["total"], "incomplete": w["incomplete"]})
+    return out
 
 
-def projection_svg(name, rows):
+# the words drawn inside the charts, per site language
+CHART_TEXT = {
+    "en": {"aria": "Papers submitted and accepted per year by {name}; the numbers are in the table below",
+           "acc": "Accepted", "not": "Rejected at ICLR", "est": "Rejected elsewhere, estimated",
+           "tip_acc": "{n} accepted", "tip_not": "{n} rejected at ICLR", "tip_est": "about {n} rejected elsewhere (estimate)",
+           "about": "about ", "pie_label": "Accepted, recorded rejected and estimated rejected papers, all listed professors",
+           "pie_title": "All years and venues", "stack_label": "Accepted, recorded rejected and estimated rejected papers per year",
+           "s_acc": "accepted", "s_not": "rejected at ICLR, recorded", "s_est": "rejected elsewhere, estimated",
+           "short_not": "recorded", "short_est": "estimated", "total": "total", "incomplete": "list still being completed"},
+    "vi": {"aria": "Số bài nộp và được nhận theo năm của {name}; số liệu ở bảng bên dưới",
+           "acc": "Được nhận", "not": "Bị từ chối ở ICLR", "est": "Bị từ chối ở nơi khác, ước tính",
+           "tip_acc": "{n} bài được nhận", "tip_not": "{n} bài bị từ chối ở ICLR", "tip_est": "khoảng {n} bài bị từ chối ở nơi khác (ước tính)",
+           "about": "~", "pie_label": "Bài được nhận, bị từ chối đếm được và bị từ chối ước tính, tất cả giảng viên trong danh sách",
+           "pie_title": "Mọi năm và hội nghị", "stack_label": "Bài được nhận, bị từ chối đếm được và ước tính theo năm",
+           "s_acc": "được nhận", "s_not": "bị từ chối ở ICLR, đếm được", "s_est": "bị từ chối ở nơi khác, ước tính",
+           "short_not": "đếm được", "short_est": "ước tính", "total": "tổng", "incomplete": "danh sách còn đang bổ sung"},
+}
+
+
+def projection_svg(name, rows, lang="en"):
     """One stacked column per year: accepted, not accepted at ICLR (counted), not accepted elsewhere (estimated).
 
     The colours are classes styled in static/style.css; every segment carries a <title>, which browsers
@@ -794,13 +814,13 @@ def projection_svg(name, rows):
     def y_of(value):
         return base - value / top_value * plot_h
 
-    out = [f'<svg class="chart" viewBox="0 0 {width} {height}" role="img" aria-label="Papers submitted and accepted '
-           f'per year by {html.escape(name)}; the numbers are in the table below">']
-    for k, (cls, label) in enumerate([("acc", "Accepted"), ("not", "Rejected at ICLR"),
-                                      ("est", "Rejected elsewhere, estimated")]):
-        x = left + (0, 100, 270)[k]
+    w = CHART_TEXT[lang]
+    out = [f'<svg class="chart" viewBox="0 0 {width} {height}" role="img" aria-label="{html.escape(w["aria"].format(name=name))}">']
+    x = left
+    for cls in ("acc", "not", "est"):
         out.append(f'<rect class="{cls}" x="{x}" y="8" width="12" height="12"/>'
-                   f'<text class="label" x="{x + 18}" y="18">{label}</text>')
+                   f'<text class="label" x="{x + 18}" y="18">{w[cls]}</text>')
+        x += 30 + 6.4 * len(w[cls])
     value = 0
     while value <= top_value:
         y = y_of(value)
@@ -816,9 +836,9 @@ def projection_svg(name, rows):
         if not r["counts"]:
             continue
         parts = [(cls, v, text) for cls, v, text in [
-            ("acc", r["accepted"], f"{r['accepted']} accepted"),
-            ("not", r["iclr_not_accepted"], f"{r['iclr_not_accepted']} rejected at ICLR"),
-            ("est", r["estimated"], f"about {r['estimated']:.0f} rejected elsewhere (estimate)")] if v > 0]
+            ("acc", r["accepted"], w["tip_acc"].format(n=r["accepted"])),
+            ("not", r["iclr_not_accepted"], w["tip_not"].format(n=r["iclr_not_accepted"])),
+            ("est", r["estimated"], w["tip_est"].format(n=f"{r['estimated']:.0f}"))] if v > 0]
         low = base
         for n, (cls, v, text) in enumerate(parts):
             high = low - v / top_value * plot_h
@@ -830,7 +850,7 @@ def projection_svg(name, rows):
             out.append(f'<path class="{cls}" d="{shape}"><title>{r["year"]}: {text}</title></path>')
             low = high
         if r["total"]:
-            mark = "" if not r["estimated"] else "about "
+            mark = "" if not r["estimated"] else w["about"]
             out.append(f'<text class="value" x="{cx:.1f}" y="{low - 6:.1f}" text-anchor="middle">'
                        f'{mark}{r["total"]:.0f}</text>')
     out.append("</svg>")
@@ -840,15 +860,18 @@ def projection_svg(name, rows):
 # ---------------------------------------------------------------- outputs
 
 def write_stubs(section, items):
-    """One content file per page. Everything shown comes from data/, the stub only creates the URL."""
+    """One content file per page. Everything shown comes from data/, the stub only creates the URL.
+
+    items: (key, title) or (key, title, Vietnamese title)."""
     folder = CONTENT / section
     folder.mkdir(parents=True, exist_ok=True)
     for old in folder.glob("*.md"):
-        if old.name != "_index.md":
+        if not old.name.startswith("_index."):
             old.unlink()
-    for key, title in items:
-        (folder / f"{key}.md").write_text(f"---\ntitle: {json.dumps(title, ensure_ascii=False)}\n"
-                                          f"key: {json.dumps(key)}\n---\n", encoding="utf-8")
+    for key, title, *vi in items:
+        for suffix, name in ((".vi.md", vi[0] if vi else title), (".en.md", title)):   # Vietnamese at /, English at /en/
+            stub = f"---\ntitle: {json.dumps(name, ensure_ascii=False)}\nkey: {json.dumps(key)}\n---\n"
+            (folder / f"{key}{suffix}").write_text(stub, encoding="utf-8")
 
 
 def main():
@@ -904,7 +927,8 @@ def main():
         inst_slug = slugify(person["institution_short"])
         s = summary(counted, acc, person["vn_since"])
         professors.append({
-            "slug": person["slug"], "name": person["name"], "institution": person["institution"],
+            "slug": person["slug"], "name": person["name"], "name_vi": person["name_vi"] or person["name"],
+            "institution": person["institution"],
             "institution_short": person["institution_short"], "institution_slug": inst_slug,
             "rank": person["rank"], "homepage": person["homepage"], "vn_since": person["vn_since"] or 0,
             "openreview_ids": person["openreview_ids"], "openreview_source": source, "openreview_fetched": fetched,
@@ -955,7 +979,7 @@ def main():
 
     def with_owners(r):
         who = owners[(r["venue"], r["year"], norm_title(r["title"]))]
-        return page_entry(r, [{"slug": p["slug"], "name": p["name"]} for p in who])
+        return page_entry(r, [{"slug": p["slug"], "name": p["name"], "name_vi": p["name_vi"]} for p in who])
 
     venues = []
     for v in VENUES:
@@ -1028,7 +1052,9 @@ def main():
                 for p in roster if p["approved"] == "no"]
     write_json(DATA / "candidates.json", {"people": shown, "total": len(candidates), "review": pending,
                                          "waiting": waiting, "excluded": excluded,
-                                         "companies": companies, "unconfirmed": unconfirmed})
+                                         "companies": companies, "unconfirmed": unconfirmed,
+                                         # hand-kept: faculty in Vietnam known in the press as AI/ML pioneers
+                                         "pioneers": read_csv(BACKEND / "pioneers.csv")})
     write_json(DATA / "meta.json", {
         "generated": now.strftime("%Y-%m-%d %H:%M %Z"), "generated_date": now.strftime("%Y-%m-%d"),
         "first_year": YEARS[0], "last_year": YEARS[-1], "years": YEARS,
@@ -1038,7 +1064,7 @@ def main():
         "preliminary": any(p["flags"] for p in professors), "pending_review": len(pending),
         "provisional": [{"venue": v, "name": VENUE_NAME[v], "year": y} for v, y in sorted(acc.provisional)],
     })
-    write_stubs("professors", [(p["slug"], p["name"]) for p in professors])
+    write_stubs("professors", [(p["slug"], p["name"], p["name_vi"]) for p in professors])
     write_stubs("institutions", [(i["slug"], i["name"]) for i in institutions])
     write_stubs("venues", [(v["key"], v["name"]) for v in venues])
 

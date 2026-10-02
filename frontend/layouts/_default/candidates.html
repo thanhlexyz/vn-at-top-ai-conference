@@ -30,7 +30,7 @@
 	<tbody>
 	{{- range $c.review }}
 	<tr>
-		<td class="l"><a href="{{ printf "professors/%s/" .professor | relURL }}">{{ .professor_name }}</a></td>
+		<td class="l"><a href="{{ printf "professors/%s/" .professor | relLangURL }}">{{ .professor_name }}</a></td>
 		<td class="l">{{ .venue_name }} {{ .year }}</td>
 		<td class="l">{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</td>
 		<td class="l">{{ .matched_name }}{{ with .affiliation }} ({{ . }}){{ end }}</td>
@@ -42,6 +42,32 @@
 </div>
 {{- else }}
 <p>None.</p>
+{{- end }}
+
+{{- with $c.pioneers }}
+<h2>Known in the press as AI pioneers ({{ len . }})</h2>
+<p>
+	Faculty teaching at a Vietnamese university who are presented in Vietnamese newspapers as pioneers or leading figures in AI and machine learning,
+	from <code>backend/pioneers.csv</code> (kept by hand). Most have no paper at the five venues since 2020, which is why they are not on the roster.
+	Pioneers who work abroad or outside a university (for example at VIASM, VAST or a company) are left out.
+</p>
+<div class="scroll">
+<table>
+	<thead><tr><th class="l">Name</th><th class="l">Institution</th><th class="l">Rank</th><th class="l">Google Scholar</th><th class="l">Five venues since 2020</th><th class="l">Note</th></tr></thead>
+	<tbody>
+	{{- range . }}
+	<tr>
+		<td class="l">{{ .name_vi }}{{ with .press }}<br><span class="note"><a href="{{ . }}">source</a></span>{{ end }}</td>
+		<td class="l">{{ .institution }}</td>
+		<td class="l">{{ .rank }}</td>
+		<td class="l">{{ with .scholar }}<a href="{{ . }}">profile</a>{{ else }}<span class="note">not found</span>{{ end }}</td>
+		<td class="l">{{ .five_venues }}</td>
+		<td class="l">{{ .note }}</td>
+	</tr>
+	{{- end }}
+	</tbody>
+</table>
+</div>
 {{- end }}
 
 {{- with hugo.Data.attempted }}{{ with .people }}

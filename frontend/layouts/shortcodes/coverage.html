@@ -4,11 +4,11 @@
 <table>
 	<thead>
 	<tr>
-		<th class="l">Venue</th>
+		<th class="l">{{ T "th_venue" }}</th>
 		{{- range $meta.years }}
 		<th>{{ . }}</th>
 		{{- end }}
-		<th class="l">Source of the accepted list</th>
+		<th class="l">{{ T "th_list_source" }}</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -19,7 +19,7 @@
 		<td class="l">{{ .name }}</td>
 		{{- range $rows }}
 		{{- if .papers }}
-		<td{{ if lt .with_affiliation 50 }} title="no affiliations in this list"{{ end }}>{{ .papers }}{{ if lt .with_affiliation 50 }}&dagger;{{ end }}{{ if .provisional }}&Dagger;{{ end }}</td>
+		<td{{ if lt .with_affiliation 50 }} title="{{ T "cov_no_aff" }}"{{ end }}>{{ .papers }}{{ if lt .with_affiliation 50 }}&dagger;{{ end }}{{ if .provisional }}&Dagger;{{ end }}</td>
 		{{- else }}
 		<td class="na">&ndash;</td>
 		{{- end }}
