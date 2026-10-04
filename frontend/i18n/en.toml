@@ -204,7 +204,8 @@ other = """<ul>
 {{ .Eq }}
 Submitted, estimated is accepted plus rejected, estimated. Both are estimates, not counts.</li>
 <li>&ndash; means the OpenReview records of that professor have not been fetched.</li>
-<li>Main conference track only; workshops, position papers and the NeurIPS Datasets &amp; Benchmarks track are left out. A paper placed in Findings counts as rejected and as a workshop paper.</li>
+<li>All counts are for the main conference track only; workshops, position papers and the NeurIPS Datasets &amp; Benchmarks track are left out.</li>
+<li>A paper placed in Findings was not accepted to the main track, so it counts as rejected from the main track; it is also listed with the workshop papers.</li>
 <li>Professors are ordered by total accepted papers.</li>
 </ul>"""
 [home_note_provisional]
