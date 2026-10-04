@@ -209,8 +209,7 @@ Submitted, estimated is accepted plus rejected, estimated. Both are estimates, n
 <li>Professors are ordered by total accepted papers.</li>
 </ul>"""
 [home_note_provisional]
-other = """The official {{ .Name }} {{ .Year }} list was published before the conference and is not complete yet.
-For that list only, papers that a professor's own page lists are counted as well. They are shown as <span class="own">+N</span> after the official number and are unofficial until the conference publishes them."""
+other = "The official {{ .Name }} {{ .Year }} list is not complete yet, so papers listed on professors' own pages count too; they are shown as <span class=\"own\">+N</span> and are unofficial until the conference publishes them."
 [home_note_coauthors]
 other = """<ul>
 <li>The co-author and topic columns are taken over all counted papers, accepted or not.</li>
@@ -226,7 +225,7 @@ other = """{{ .Accepted }} accepted papers stand for about {{ .Submissions }} su
 [home_fig1]
 other = "Fig. 1a. Accepted papers against rejected papers, recorded and estimated, over all years and venues."
 [home_fig2]
-other = "Fig. 1b. The same per year, stacked: accepted at the bottom, rejected and on record above it, rejected elsewhere (estimated) on top."
+other = "Fig. 1b. The same per year."
 [home_fig2_provisional]
 other = " * The official {{ . }} list is not complete yet."
 [home_numbers]
@@ -311,7 +310,7 @@ other = "Datasets & Benchmarks, journal and other tracks, which the site does no
 [workshop_papers]
 other = "Workshop papers ({{ . }})"
 [workshop_note]
-other = "Papers at the workshops of ICLR, NeurIPS and ICML found in this person's OpenReview record, and papers placed in Findings, listed for reference only. Workshop papers are not counted in the totals; a Findings paper also counts as a rejection from the main track."
+other = "Workshop papers found on OpenReview and papers placed in Findings, for reference; not counted, except that a Findings paper counts as a main-track rejection (see About)."
 [before_vietnam]
 other = "Before joining a Vietnamese institution"
 [before_vietnam_note]
@@ -321,8 +320,7 @@ other = "Papers from before the year this person's post in Vietnam began, which 
 [prof_list_majority]
 other = "Papers with a majority of authors from the professor's institution"
 [prof_list_majority_note]
-other = """Accepted papers on which more than half of the authors list the professor's current institution.
-Only papers from a list that prints an affiliation for each author can be judged; the others are counted under "Not judged" and left out of this table and the next."""
+other = "Accepted papers on which more than half of the authors list the professor's current institution; papers without an affiliation for each author are left out of this table and the next."
 [prof_list_first]
 other = "Papers with a first author from the professor's institution"
 [prof_list_first_note]
@@ -373,9 +371,7 @@ other = "no"
 [venue_n_public]
 other = "{{ . }} public"
 [venue_list_note]
-other = """Papers of the listed professors only. A paper with several listed professors is counted once.
-Rejected, estimated (orange) is the count at ICLR; for the other venues it applies the ICLR record of everyone listed to their accepted papers. It is an estimate, not a count.
-+N after a number means N more papers known only from personal pages, which are unofficial."""
+other = "Papers of the listed professors; a paper with several of them counts once. Rejected, estimated is counted at ICLR and estimated elsewhere (see About). +N: papers known only from personal pages, unofficial."
 [venue_full]
 other = "{{ . }} publishes every submission and its outcome on OpenReview, so submitted and rejected papers can be counted."
 [venue_partial]
@@ -387,7 +383,7 @@ other = "The numbers cover the listed professors; a paper with several of them i
 [venue_own_page]
 other = "{{ .Count }} accepted papers are known only from personal pages. They are shown as +{{ .Count }}, tagged \"unofficial\" in the list, and stay so until the conference publishes them."
 [venue_estimate_note]
-other = "Rejected, estimated (orange): {{ .Name }} does not publish its rejections, so they are estimated from the ICLR record of everyone listed, {{ .Ratio }} submissions per accepted paper. It is an estimate, not a count."
+other = "{{ .Name }} does not publish its rejections, so they are estimated from the ICLR record of everyone listed: {{ .Ratio }} submissions per accepted paper (see About)."
 [tip_estimated_venue_year]
 other = "estimated from the ICLR record of everyone listed"
 
@@ -420,7 +416,7 @@ other = "Switch between day and night mode"
 [author_charts_title]
 other = "Accepted papers per year by where the authors are"
 [author_charts_note]
-other = "Each column is one year's accepted papers. Blue: the first author (first chart) or most authors (second chart) list {{ . }}. Orange: they list another institution. Grey: no affiliations known yet, for papers known only from announcements or personal pages before the official list."
+other = "Each column is one year's accepted papers; grey papers are known only from announcements or personal pages."
 [coauthor_institutions]
 other = "Co-author institutions"
 [coauthor_institutions_note]
@@ -519,7 +515,7 @@ other = "No shared paper with anyone else here:"
 [inst_list_charts]
 other = "Accepted papers by where the authors are"
 [inst_list_charts_note]
-other = "One bar per institution, as long as its accepted papers, the most blue first; the number at the end is blue / all. Blue: the first author (first chart) or more than half of the authors (second chart) list the institution. Orange: they list another institution. Grey: no affiliations known yet, for papers known only from announcements or personal pages before the official list."
+other = "One bar per institution, as long as its accepted papers, the most blue first; the number at the end is blue / all. Grey papers are known only from announcements or personal pages."
 [inst_list_charts_none]
 other = "No accepted paper yet: {{ . }}."
 

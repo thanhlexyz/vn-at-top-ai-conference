@@ -207,8 +207,7 @@ Cột đã nộp ước tính bằng số bài được nhận cộng số bài 
 <li>Giảng viên được sắp xếp theo tổng số bài được chấp nhận.</li>
 </ul>"""
 [home_note_provisional]
-other = """Danh sách chính thức của {{ .Name }} {{ .Year }} được công bố trước khi hội nghị diễn ra và hiện chưa đầy đủ.
-Riêng đối với danh sách này, các bài được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm cũng được tính. Các bài này được thể hiện dưới dạng <span class="own">+N</span> sau số liệu chính thức và được xem là chưa chính thức cho đến khi hội nghị công bố."""
+other = "Danh sách chính thức của {{ .Name }} {{ .Year }} chưa đầy đủ, nên các bài có trên trang của giảng viên cũng được tính; các bài này hiện dưới dạng <span class=\"own\">+N</span> và chưa chính thức cho đến khi hội nghị công bố."
 [home_note_coauthors]
 other = """<ul>
 <li>Các cột về đồng tác giả và lĩnh vực được tính trên toàn bộ các bài được thống kê, kể cả bài bị từ chối.</li>
@@ -224,7 +223,7 @@ other = """{{ .Accepted }} bài được chấp nhận tương ứng với kho�
 [home_fig1]
 other = "Hình 1a. Số bài được chấp nhận so với số bài bị từ chối (đếm được và ước tính), tính chung cho mọi năm và mọi hội nghị."
 [home_fig2]
-other = "Hình 1b. Số liệu tương tự theo từng năm, dạng xếp chồng: phần dưới là bài được chấp nhận, phần giữa là bài bị từ chối có ghi nhận (đếm được), phần trên là bài bị từ chối ở nơi khác (ước tính)."
+other = "Hình 1b. Số liệu như hình 1a, theo từng năm."
 [home_fig2_provisional]
 other = " * Danh sách chính thức của {{ . }} hiện chưa đầy đủ."
 [home_numbers]
@@ -306,7 +305,7 @@ other = "Các bài thuộc Datasets & Benchmarks, nhánh tạp chí và các nh�
 [workshop_papers]
 other = "Bài workshop ({{ . }})"
 [workshop_note]
-other = "Các bài ở workshop của ICLR, NeurIPS và ICML có trong hồ sơ OpenReview của người này, cùng các bài được xếp vào Findings, chỉ để tham khảo. Bài workshop không được tính vào tổng số; riêng bài Findings đồng thời được tính là bị từ chối ở nhánh chính."
+other = "Bài workshop có trên OpenReview và bài được xếp vào Findings, chỉ để tham khảo; không được tính, riêng bài Findings được tính là bị từ chối ở nhánh chính (xem trang Giới thiệu)."
 [before_vietnam]
 other = "Trước khi về công tác tại Việt Nam"
 [before_vietnam_note]
@@ -316,8 +315,7 @@ other = "Các bài công bố trước năm giảng viên về công tác tại 
 [prof_list_majority]
 other = "Bài có đa số tác giả cùng trường với giảng viên"
 [prof_list_majority_note]
-other = """Các bài được chấp nhận có hơn một nửa số tác giả ghi đơn vị công tác là trường hiện tại của giảng viên.
-Chỉ có thể xét các bài trong danh sách có ghi đơn vị công tác của từng tác giả; các bài còn lại được thống kê ở cột "Không xác định" và không được đưa vào bảng này và bảng tiếp theo."""
+other = "Bài được nhận có hơn một nửa số tác giả ghi đơn vị là trường hiện tại của giảng viên; bài không có đơn vị của từng tác giả không được tính ở bảng này và bảng sau."
 [prof_list_first]
 other = "Bài có tác giả đầu cùng trường với giảng viên"
 [prof_list_first_note]
@@ -368,9 +366,7 @@ other = "không"
 [venue_n_public]
 other = "{{ . }} công khai"
 [venue_list_note]
-other = """Số liệu chỉ bao gồm bài của các giảng viên trong danh sách; một bài có nhiều giảng viên trong danh sách chỉ được tính một lần.
-Cột bị từ chối ước tính (màu cam) là số liệu thống kê đối với ICLR; đối với các hội nghị khác, số liệu được ước tính bằng cách áp dụng kết quả ICLR chung của toàn bộ danh sách vào số bài được chấp nhận. Đây là số liệu ước tính, không phải số liệu thống kê trực tiếp.
-Ký hiệu +N sau một số liệu cho biết có thêm N bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm, chưa chính thức."""
+other = "Chỉ tính bài của các giảng viên trong danh sách; bài có nhiều giảng viên chỉ tính một lần. Cột bị từ chối ước tính là số đếm tại ICLR và số ước tính ở các hội nghị khác (xem trang Giới thiệu). +N: bài chỉ biết qua trang cá nhân, chưa chính thức."
 [venue_full]
 other = "{{ . }} công khai toàn bộ bài nộp cùng kết quả trên OpenReview, do đó có thể thống kê số bài nộp và số bài bị từ chối."
 [venue_partial]
@@ -382,7 +378,7 @@ other = "Số liệu được tính cho các giảng viên trong danh sách; m�
 [venue_own_page]
 other = "Có {{ .Count }} bài được chấp nhận chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm. Các bài này được thể hiện dưới dạng +{{ .Count }} và gắn nhãn \"chưa chính thức\" trong danh sách cho đến khi hội nghị công bố."
 [venue_estimate_note]
-other = "Cột bị từ chối ước tính (màu cam): do {{ .Name }} không công khai bài bị từ chối, số liệu được ước tính dựa trên kết quả ICLR chung của toàn bộ danh sách, tương ứng {{ .Ratio }} lần nộp cho mỗi bài được chấp nhận. Đây là số liệu ước tính, không phải số liệu thống kê trực tiếp."
+other = "{{ .Name }} không công khai bài bị từ chối, nên số này được ước tính từ kết quả ICLR chung của cả danh sách: {{ .Ratio }} lần nộp cho mỗi bài được nhận (xem trang Giới thiệu)."
 [tip_estimated_venue_year]
 other = "ước tính theo kết quả ICLR của tất cả những người trong danh sách"
 
@@ -415,7 +411,7 @@ other = "Chuyển giữa giao diện sáng và tối"
 [author_charts_title]
 other = "Bài được nhận theo năm, theo đơn vị của tác giả"
 [author_charts_note]
-other = "Mỗi cột là số bài được nhận trong một năm. Màu xanh: tác giả đầu (biểu đồ thứ nhất) hoặc đa số tác giả (biểu đồ thứ hai) ghi đơn vị {{ . }}. Màu cam: ghi đơn vị khác. Màu xám: không rõ đơn vị: bài mới biết qua thông báo hoặc trang cá nhân, chưa có trong danh sách chính thức."
+other = "Mỗi cột là số bài được nhận trong một năm; phần xám là bài mới biết qua thông báo hoặc trang cá nhân."
 [coauthor_institutions]
 other = "Đơn vị đồng tác giả"
 [coauthor_institutions_note]
@@ -513,7 +509,7 @@ other = "Không có bài chung với ai khác ở đây:"
 [inst_list_charts]
 other = "Bài được nhận theo nơi công tác của tác giả"
 [inst_list_charts_note]
-other = "Mỗi trường một thanh, dài bằng số bài được nhận, xếp theo phần xanh; số ở cuối là xanh / tổng. Xanh: tác giả đầu (biểu đồ thứ nhất) hoặc hơn một nửa số tác giả (biểu đồ thứ hai) ghi đơn vị là trường. Cam: họ ghi đơn vị khác. Xám: không rõ đơn vị: bài mới biết qua thông báo hoặc trang cá nhân, chưa có trong danh sách chính thức."
+other = "Mỗi trường một thanh, dài bằng số bài được nhận, xếp theo phần xanh; số ở cuối là xanh / tổng. Phần xám là bài mới biết qua thông báo hoặc trang cá nhân."
 [inst_list_charts_none]
 other = "Chưa có bài được nhận: {{ . }}."
 
