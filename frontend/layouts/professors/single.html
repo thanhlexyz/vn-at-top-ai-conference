@@ -12,6 +12,7 @@
 <p>
 	{{ T "prof_accepted_summary" (dict "Count" (int $p.accepted) "Year" (cond (gt $p.vn_since $meta.first_year) $p.vn_since $meta.first_year)) }}
 	{{- if gt (int $p.own_page) 0 }}{{ T "prof_own_page_part" (dict "Official" $p.official "Own" $p.own_page) }}{{ end }}.
+	{{ partial "split-sentence.html" $p }}
 	{{- if $p.iclr_complete }}
 	{{ T "prof_iclr_summary" (dict "Submitted" $iclr.submitted "Accepted" $iclr.accepted "Rejected" $iclr.not_accepted "Reviewers" $iclr.rejected "Withdrawn" $iclr.withdrawn "Desk" $iclr.desk_rejected) }}
 	{{- end }}

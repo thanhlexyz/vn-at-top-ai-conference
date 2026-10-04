@@ -1,0 +1,4 @@
+{{- /* "N accepted before 2026, M from 2026." Context: an entry with "years", "official" and "own_page". */ -}}
+{{- $last := hugo.Data.meta.last_year }}
+{{- $y := index (where .years "year" $last) 0 }}
+{{- T "split_sentence" (dict "Before" (sub (int .accepted) (int $y.accepted)) "From" $y.accepted "Year" $last) -}}

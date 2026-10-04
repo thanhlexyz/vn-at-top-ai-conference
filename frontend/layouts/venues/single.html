@@ -15,6 +15,7 @@
 	{{ T "venue_none" $v.name }}
 	{{- end }}
 	{{ T "venue_once" }}
+	{{ partial "split-sentence.html" $v }}
 	{{- if gt (int $t.own_page) 0 }}
 	{{ T "venue_own_page" (dict "Count" $t.own_page) }}
 	{{- end }}

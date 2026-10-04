@@ -10,7 +10,7 @@
 		<th rowspan="2">{{ T "th_professors" }}</th>
 		<th colspan="3">ICLR</th>
 		<th colspan="{{ sub (len hugo.Data.meta.venues) 1 }}">{{ T "th_accepted_at" }}</th>
-		<th colspan="3">{{ T "th_total" }}</th>
+		<th colspan="5">{{ T "th_total" }}</th>
 		<th rowspan="2" title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
 	</tr>
 	<tr>
@@ -19,6 +19,7 @@
 		<th class="bad" title="{{ T "tip_rejected" }}">{{ T "th_rejected" }}</th>
 		{{- range after 1 hugo.Data.meta.venues }}<th>{{ .name }}</th>{{ end }}
 		<th class="good">{{ T "th_accepted" }}</th>
+		{{ partial "split-heads.html" . }}
 		<th class="bad" title="{{ T "tip_rejected_total" }}">{{ T "th_rejected" }}</th>
 		<th class="est" title="{{ T "tip_rejected_est_inst" }}">{{ T "th_rejected_est" }}</th>
 	</tr>
@@ -37,6 +38,7 @@
 		{{ partial "acc.html" (index $i.venues .) }}
 		{{- end }}
 		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" .own_page) }}">+{{ .own_page }}</span>{{ end }}</td>
+		{{ partial "split-cells.html" . }}
 		{{ partial "rejected-total.html" .venues }}
 		{{- if eq .rejected_estimated nil }}
 		<td class="na est">&ndash;</td>

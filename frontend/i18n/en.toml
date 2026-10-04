@@ -72,6 +72,8 @@ other = "Title"
 other = "Outcome"
 [th_accepted_at]
 other = "Accepted at"
+[split_sentence]
+other = "{{ .Before }} accepted before {{ .Year }}, {{ .From }} from {{ .Year }}."
 [th_accepted_before]
 other = "before {{ . }}"
 [tip_accepted_before]

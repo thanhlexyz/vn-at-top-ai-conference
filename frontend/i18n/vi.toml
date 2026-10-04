@@ -71,6 +71,8 @@ other = "Tên bài"
 other = "Kết quả"
 [th_accepted_at]
 other = "Được nhận tại"
+[split_sentence]
+other = "{{ .Before }} bài được nhận trước năm {{ .Year }}, {{ .From }} bài từ năm {{ .Year }}."
 [th_accepted_before]
 other = "trước {{ . }}"
 [tip_accepted_before]

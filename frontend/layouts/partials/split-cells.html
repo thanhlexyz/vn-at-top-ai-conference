@@ -1,0 +1,7 @@
+{{- /* Accepted papers before the latest year and from it, as two cells. Context: an entry with "years",
+       "official" and "own_page" (a professor, an institution or a venue). */ -}}
+{{- $last := hugo.Data.meta.last_year }}
+{{- $y := index (where .years "year" $last) 0 }}
+{{- $before := sub (int .official) (int $y.official) }}{{ $before_own := sub (int .own_page) (int $y.own_page) }}
+<td class="good">{{ $before }}{{ if gt $before_own 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" $before_own) }}">+{{ $before_own }}</span>{{ end }}</td>
+<td class="good">{{ $y.official }}{{ if gt (int $y.own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" $y.own_page) }}">+{{ $y.own_page }}</span>{{ end }}</td>

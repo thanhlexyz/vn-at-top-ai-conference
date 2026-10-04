@@ -9,6 +9,7 @@
 		<th class="l">{{ T "th_public" }}</th>
 		<th>{{ T "th_Submitted" }}</th>
 		<th class="good">{{ T "th_Accepted" }}</th>
+		{{ partial "split-heads.html" . }}
 		<th class="bad">{{ T "th_Rejected" }}</th>
 		<th class="est" title="{{ T "tip_rejected_est_venue" }}">{{ T "th_Rejected_est" }}</th>
 	</tr>
@@ -23,16 +24,19 @@
 		<td class="l">{{ T "venue_public_full" }}</td>
 		{{ partial "num.html" $t.submitted }}
 		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
+		{{ partial "split-cells.html" . }}
 		{{ partial "numc.html" (dict "v" $t.not_accepted "cls" "bad") }}
 		{{- else if eq .rejections "partial" }}
 		<td class="l">{{ T "venue_public_partial" }}</td>
 		<td class="na">&ndash;</td>
 		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
+		{{ partial "split-cells.html" . }}
 		<td class="bad">{{ T "venue_n_public" $t.not_accepted }}</td>
 		{{- else }}
 		<td class="l">{{ T "venue_public_none" }}</td>
 		<td class="na">&ndash;</td>
 		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
+		{{ partial "split-cells.html" . }}
 		<td class="na bad">&ndash;</td>
 		{{- end }}
 		{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}

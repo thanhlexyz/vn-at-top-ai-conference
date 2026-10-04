@@ -4,6 +4,7 @@
 {{ partial "picture.html" (dict "src" $i.image "source" $i.image_source "alt" $i.name "cls" "logo") }}
 <p>
 	{{ T "inst_summary" (dict "Profs" (len $i.professors) "Accepted" $i.accepted) }}{{ if gt (int $i.own_page) 0 }}{{ T "inst_summary_own" $i.own_page }}{{ end }}.
+	{{ partial "split-sentence.html" $i }}
 	{{ T "inst_iclr" (dict "Submitted" $iclr.submitted "Accepted" $iclr.accepted "Rejected" $iclr.not_accepted) }}
 	{{- with $i.rejected_estimated }}{{ T "inst_estimated" . }}{{ end }}
 	{{ T "inst_once" }}
