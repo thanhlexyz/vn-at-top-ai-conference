@@ -359,7 +359,7 @@ other = "không"
 [venue_n_public]
 other = "{{ . }} công khai"
 [venue_list_note]
-other = "Chỉ tính bài của các giảng viên trong danh sách; bài có nhiều giảng viên chỉ tính một lần. Cột bị từ chối ước tính là số đếm tại ICLR và số ước tính ở các hội nghị khác (xem trang Giới thiệu). +N: bài chỉ biết qua trang cá nhân, chưa chính thức."
+other = "Chỉ tính bài của các giảng viên trong danh sách; bài có nhiều giảng viên chỉ tính một lần. Cột bị từ chối ước tính là số đếm tại ICLR và số ước tính ở các hội nghị khác (xem trang Giới thiệu). +N: bài chỉ biết qua trang cá nhân, chưa chính thức. * Giảng viên trong danh sách / hội nghị công bố: số thứ nhất là số đếm tại ICLR và số ước tính (~) ở nơi khác; số thứ hai là tỉ lệ nhánh chính do hội nghị công bố, gộp các năm."
 [venue_full]
 other = "{{ . }} công khai toàn bộ bài nộp cùng kết quả trên OpenReview, do đó có thể thống kê số bài nộp và số bài bị từ chối."
 [venue_partial]
@@ -553,7 +553,7 @@ other = "số bài được nhận chia cho số bài đã nộp ước tính; l
 other = "Chưa có bài nộp ICLR nên không ước tính được số bài bị từ chối; tỉ lệ này không so sánh được và được xếp cuối"
 
 [th_rate_venue]
-other = "Tỉ lệ được nhận: giảng viên trong danh sách / hội nghị công bố"
+other = "Tỉ lệ được nhận*"
 [tip_rate_venue]
 other = "Số thứ nhất: bài của các giảng viên trong danh sách, số bài được nhận chia số bài đã nộp; tại ICLR là số đếm, ở nơi khác là số ước tính (~) theo kết quả ICLR của các tác giả trong danh sách của từng bài, không tính bài mà tác giả chưa từng nộp ICLR. Số thứ hai: tỉ lệ nhánh chính do hội nghị công bố, gộp các năm."
 
