@@ -27,7 +27,8 @@ OUT = BACKEND / "work" / "affiliation_check.csv"
 DOMAINS = {"HUST": ["hust.edu.vn"], "VinUni": ["vinuni.edu.vn"], "PTIT": ["ptit.edu.vn"], "HCMUS": ["hcmus.edu.vn"],
            "VNU-UET": ["vnu.edu.vn"], "RMIT": ["rmit.edu.vn"], "UEH": ["ueh.edu.vn"], "VAST": ["math.ac.vn", "vast.vn"],
            "HCMIU": ["hcmiu.edu.vn"], "NEU": ["neu.edu.vn"], "Phenikaa": ["phenikaa-uni.edu.vn"], "CTU": ["ctu.edu.vn"],
-           "UIT": ["uit.edu.vn"], "FPTU": ["fpt.edu.vn"], "UDN": ["udn.vn"], "HCMUT": ["hcmut.edu.vn"]}
+           "UIT": ["uit.edu.vn"], "FPTU": ["fpt.edu.vn"], "UDN": ["udn.vn"], "HCMUT": ["hcmut.edu.vn"],
+           "HaUI": ["haui.edu.vn"]}
 
 
 def first_page(path):

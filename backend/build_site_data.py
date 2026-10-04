@@ -150,8 +150,15 @@ def load_self_reported(roster):
                 announced[slug][(r["venue"], int(r["year"]))] = r
             continue
         coauthors = [c.strip() for c in r["coauthors"].split(";") if c.strip()]
+        # the professor's own name among the co-authors gives their place in the author order; else they come first
+        own = {v for p in roster if p["slug"] == slug for v in p["variants"]} | {norm_name(names[slug])}
+        if any(norm_name(c) in own for c in coauthors):
+            authors = [names[slug] if norm_name(c) in own else c for c in coauthors]
+            coauthors = [c for c in coauthors if norm_name(c) not in own]
+        else:
+            authors = [names[slug], *coauthors]
         row = {**r, "year": int(r["year"]), "track": r["track"].strip() or "main", "owner": names[slug],
-               "authors": [names[slug], *coauthors], "label": (r.get("source_label") or "").strip() or "their own page"}
+               "authors": authors, "label": (r.get("source_label") or "").strip() or "their own page"}
         papers[slug].append({**row, "role": "own"})
         for name in coauthors:
             other = by_variant.get(norm_name(name))

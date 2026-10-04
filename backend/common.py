@@ -122,6 +122,8 @@ VN_INSTITUTIONS = [
      "Hanoi University of Science and Technology", "HUST", True),
     (r"university of science and technology of ha ?noi|\busth\b",
      "University of Science and Technology of Hanoi", "USTH", True),
+    (r"ha ?noi university of industry|\bhaui\b|dai hoc cong nghiep ha ?noi",
+     "Hanoi University of Industry", "HaUI", True),
     (r"ha ?noi university of science\b(?! (and |& )?tech)|vnu university of science|vnu\W+hus\b",
      "VNU University of Science, Hanoi", "VNU-HUS", True),
     (r"ho chi minh (city )?university of technology and education|university of technical education\W+ho chi minh",
