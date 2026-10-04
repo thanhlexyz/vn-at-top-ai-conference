@@ -5,7 +5,7 @@
 {{- $v := index (where hugo.Data.venues "key" .Params.key) 0 }}
 {{- $key := $v.key }}
 {{- $t := index $v.venues $key }}
-{{ partial "picture.html" (dict "src" $v.image "source" $v.image_source "alt" $v.name "cls" "logo") }}
+{{ partial "picture.html" (dict "src" $v.image "source" $v.image_source "alt" $v.name "cls" "logo venue") }}
 <p>
 	{{- if eq $v.rejections "full" }}
 	{{ T "venue_full" $v.name }}
@@ -25,44 +25,10 @@
 <p class="note">{{ T "venue_estimate_note" (dict "Name" $v.name "Ratio" $v.ratio) }}</p>
 {{- end }}
 <h2>{{ T "by_year" }}</h2>
-<div class="scroll">
-<table>
-	<thead>
-	<tr>
-		<th>{{ T "th_year" }}</th>
-		{{- if eq $v.rejections "full" }}<th>{{ T "th_Submitted" }}</th>{{ end }}
-		<th class="good">{{ T "th_Accepted" }}</th>
-		{{- if ne $v.rejections "none" }}<th class="bad">{{ if eq $v.rejections "partial" }}{{ T "th_Rejected_public" }}{{ else }}{{ T "th_Rejected" }}{{ end }}</th>{{ end }}
-		{{- if ne $v.rejections "full" }}<th class="est" title="{{ T "tip_estimated_venue_year" }}">{{ T "th_Rejected_est" }}</th>{{ end }}
-	</tr>
-	</thead>
-	<tbody>
-	{{- range $v.years }}
-	{{- $c := index .venues $key }}
-	<tr>
-		<td>{{ .year }}</td>
-		{{- if not $c.held }}
-		<td class="na l" colspan="4">{{ T "not_held" }}</td>
-		{{- else if not $c.available }}
-		<td class="na l" colspan="4">{{ T "not_published_yet" }}</td>
-		{{- else }}
-		{{- if eq $v.rejections "full" }}{{ partial "num.html" $c.submitted }}{{ end }}
-		{{ partial "acc.html" (merge $c (dict "cls" "good")) }}
-		{{- if ne $v.rejections "none" }}{{ partial "numc.html" (dict "v" $c.not_accepted "cls" "bad") }}{{ end }}
-		{{- if ne $v.rejections "full" }}{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "est") }}{{ end }}
-		{{- end }}
-	</tr>
-	{{- end }}
-	<tr class="total">
-		<td>{{ T "th_total" }}</td>
-		{{- if eq $v.rejections "full" }}<td>{{ $t.submitted }}</td>{{ end }}
-		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
-		{{- if ne $v.rejections "none" }}<td class="bad">{{ $t.not_accepted }}</td>{{ end }}
-		{{- if ne $v.rejections "full" }}<td class="est">{{ $v.rejected_estimated }}</td>{{ end }}
-	</tr>
-	</tbody>
-</table>
-</div>
+<figure>
+{{ index $v.chart site.Language.Lang | safeHTML }}
+<figcaption class="note">{{ T "venue_chart_note" }}</figcaption>
+</figure>
 
 {{- $accepted := where $v.papers "status" "accepted" }}
 {{- $other := where $v.papers "status" "ne" "accepted" }}

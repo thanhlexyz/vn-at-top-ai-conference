@@ -275,6 +275,9 @@ figure {
     white-space: nowrap ;
 }
 
+a.tag-link { color: inherit ; text-decoration: none ; }
+a.tag-link:hover .tag { text-decoration: underline ; border-color: var(--fg) ; }
+
 .tag.accepted {
     background: var(--good) ;
 }
@@ -416,8 +419,10 @@ figure.picture { float: right ; margin: 0 0 1em 1.5em ; }
 figure.picture img { display: block ; max-width: 100% ; height: auto ; }
 figure.portrait img { width: 160px ; height: 160px ; object-fit: cover ; border-radius: 50% ; border: 1px solid var(--axis) ; }
 figure.logo img { max-width: 180px ; max-height: 120px ; width: auto ; }
+/* conference logos differ in shape and in their own size: each is fitted into the same box */
+figure.logo.venue img { width: 260px ; height: 110px ; max-width: none ; max-height: none ; object-fit: contain ; object-position: right center ; }
 img.mini { height: 1.4em ; width: auto ; max-width: 3.5em ; vertical-align: middle ; margin-right: 0.5em ; object-fit: contain ; }
-@media (max-width: 600px) { figure.portrait img { width: 110px ; height: 110px ; } figure.logo img { max-width: 120px ; } }
+@media (max-width: 600px) { figure.portrait img { width: 110px ; height: 110px ; } figure.logo img { max-width: 120px ; } figure.logo.venue img { width: 150px ; height: 70px ; } }
 
 /* the logo column of the Institutions and Venues lists */
 td.logo-col, th.logo-col { text-align: center ; vertical-align: middle ; width: 4em ; padding: 0.15em 0.4em ; }

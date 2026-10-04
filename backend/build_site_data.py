@@ -751,7 +751,7 @@ def page_entry(r, people=None):
          "url": r["url"], "status": r["status"], "status_label": STATUS_LABEL[r["status"]], "pres": r["pres"],
          "authors": ", ".join(r["authors"]), "match": r["match"], "note": r.get("note", ""),
          "reason": r.get("reason", ""), "later": r.get("later", ""), "unofficial": bool(r.get("unofficial")),
-         "workshop": r.get("workshop", "")}
+         "workshop": r.get("workshop", ""), "_authors": list(r["authors"])}
     if people is not None:
         e["professors"] = people
     return e
@@ -1000,7 +1000,17 @@ CHART_TEXT = {
 }
 
 
-def projection_svg(name, rows, lang="en"):
+# the same chart on a venue page, where the recorded rejections are that venue's own
+VENUE_CHART_TEXT = {
+    "en": {"aria": "Papers accepted and rejected per year at {name}", "not": "Rejected, recorded",
+           "est": "Rejected, estimated", "tip_not": "{n} rejected, recorded", "tip_est": "about {n} rejected (estimate)"},
+    "vi": {"aria": "Số bài được nhận và bị từ chối theo năm tại {name}", "not": "Bị từ chối, đếm được",
+           "est": "Bị từ chối, ước tính", "tip_not": "{n} bài bị từ chối, đếm được",
+           "tip_est": "khoảng {n} bài bị từ chối (ước tính)"},
+}
+
+
+def projection_svg(name, rows, lang="en", words=None):
     """One stacked column per year: accepted, not accepted at ICLR (counted), not accepted elsewhere (estimated).
 
     The colours are classes styled in static/style.css; every segment carries a <title>, which browsers
@@ -1016,10 +1026,13 @@ def projection_svg(name, rows, lang="en"):
     def y_of(value):
         return base - value / top_value * plot_h
 
-    w = CHART_TEXT[lang]
+    w = {**CHART_TEXT[lang], **(words or {})}
     out = [f'<svg class="chart" viewBox="0 0 {width} {height}" role="img" aria-label="{html.escape(w["aria"].format(name=name))}">']
     x = left
+    field = {"acc": "accepted", "not": "iclr_not_accepted", "est": "estimated"}
     for cls in ("acc", "not", "est"):
+        if cls != "acc" and not any(r["counts"] and r[field[cls]] for r in rows):
+            continue   # a series that is zero every year is left out of the legend
         out.append(f'<rect class="{cls}" x="{x}" y="8" width="12" height="12"/>'
                    f'<text class="label" x="{x + 18}" y="18">{w[cls]}</text>')
         x += 30 + 6.4 * len(w[cls])
@@ -1193,6 +1206,20 @@ def main():
     professors.sort(key=lambda p: (-p["accepted"], -p["venues"]["iclr"]["submitted"] if p["accepted"]
                                    else -sum(v.get("submitted", 0) for v in p["venues"].values()), p["name"]))
 
+    # authors on a professor's page link to the person when that person is on the site and has the same paper in
+    # their own record, so a namesake at another institution is never linked
+    variants = {p["slug"]: p["variants"] for p in approved}
+    lists = ("accepted_papers", "not_accepted_papers", "excluded_papers", "workshop_papers")
+    holders = collections.defaultdict(set)
+    for p in professors:
+        for e in (e for k in lists for e in p[k]):
+            holders[(e["venue"], e["year"], norm_title(e["title"]))].add(p["slug"])
+    for p in professors:
+        for e in (e for k in lists for e in p[k]):
+            mine = holders[(e["venue"], e["year"], norm_title(e["title"]))]
+            e["author_links"] = [{"name": a, "slug": next((s for s in sorted(mine) if norm_name(a) in variants[s]), "")}
+                                 for a in e.pop("_authors")]
+
     # a paper shared by two professors is one paper for an institution, a venue and the paper list
     owners = collections.defaultdict(list)
     for r in all_counted:
@@ -1243,7 +1270,9 @@ def main():
 
     def with_owners(r):
         who = owners[(r["venue"], r["year"], norm_title(r["title"]))]
-        return page_entry(r, [{"slug": p["slug"], "name": p["name"], "name_vi": p["name_vi"]} for p in who])
+        e = page_entry(r, [{"slug": p["slug"], "name": p["name"], "name_vi": p["name_vi"]} for p in who])
+        del e["_authors"]
+        return e
 
     venues = []
     for v in VENUES:
@@ -1325,9 +1354,19 @@ def main():
     for v in venues:
         v["ratio"] = f"{ratio:.1f}"
         v["rejected_estimated"] = estimated(v["key"], v["venues"][v["key"]])
+        rows = []
         for y in v["years"]:
+            c = y["venues"][v["key"]]
             if y["counts"]:
                 y["rejected_estimated"] = estimated(v["key"], y["venues"][v["key"]])
+            if not (c.get("held", True) and c.get("available", True)):
+                rows.append({"year": y["year"], "counts": False})
+                continue
+            recorded = c["not_accepted"] if v["rejections"] != "none" else 0
+            guess = max(y.get("rejected_estimated", 0) - recorded, 0)
+            rows.append({"year": y["year"], "counts": True, "accepted": c["accepted"], "iclr_not_accepted": recorded,
+                         "estimated": guess, "total": c["accepted"] + recorded + guess})
+        v["chart"] = {lang: projection_svg(v["name"], rows, lang, VENUE_CHART_TEXT[lang]) for lang in ("en", "vi")}
     write_json(DATA / "venues.json", venues)
     shown_by_slug = {p["slug"]: p for p in professors}
     recs_for_graph = [(r, shown_by_slug[s]) for r, s in graph_recs if s in shown_by_slug]

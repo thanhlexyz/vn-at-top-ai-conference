@@ -24,7 +24,7 @@
 	{{- range hugo.Data.institutions }}
 	{{- $i := . }}
 	<tr>
-		<td class="logo-col pin1">{{ with .image }}<img class="mini" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}</td>
+		<td class="logo-col pin1">{{ with .image }}<a href="{{ printf "institutions/%s/" $i.slug | relLangURL }}" tabindex="-1"><img class="mini" src="{{ . | relURL }}" alt="{{ $i.short }}" loading="lazy"></a>{{ end }}</td>
 		<td class="l pin2"><span class="cup"></span><a href="{{ printf "institutions/%s/" .slug | relLangURL }}">{{ partial "iname.html" .name }}</a></td>
 		<td>{{ len .professors }}</td>
 		{{ partial "group-cells.html" .venues }}

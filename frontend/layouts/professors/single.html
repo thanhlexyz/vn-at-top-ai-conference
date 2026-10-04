@@ -166,7 +166,7 @@
 
 <h2>{{ T "accepted_papers" (len $p.accepted_papers) }}</h2>
 {{- if $p.accepted_papers }}
-{{ partial "paper-list.html" (dict "papers" $p.accepted_papers) }}
+{{ partial "paper-list.html" (dict "self" $p.slug "papers" $p.accepted_papers) }}
 {{- else }}
 <p>{{ T "none" }}</p>
 {{- end }}
@@ -175,7 +175,7 @@
 <h2>{{ T "rejected_papers" (len $p.not_accepted_papers) }}</h2>
 <p class="note">{{ T "rejected_note" }}</p>
 {{- if site.Params.showNonAcceptedTitles }}
-{{ partial "paper-list.html" (dict "papers" $p.not_accepted_papers) }}
+{{ partial "paper-list.html" (dict "self" $p.slug "papers" $p.not_accepted_papers) }}
 {{- else }}
 <p class="note">{{ T "titles_hidden" }}</p>
 {{- end }}
@@ -189,9 +189,9 @@
 <h2>{{ $group.title }} ({{ len . }})</h2>
 <p class="note">{{ $group.note }}</p>
 {{- if site.Params.showNonAcceptedTitles }}
-{{ partial "paper-list.html" (dict "papers" .) }}
+{{ partial "paper-list.html" (dict "self" $p.slug "papers" .) }}
 {{- else }}
-{{ partial "paper-list.html" (dict "papers" (where . "status" "accepted")) }}
+{{ partial "paper-list.html" (dict "self" $p.slug "papers" (where . "status" "accepted")) }}
 {{- end }}
 {{- end }}
 {{- end }}
@@ -201,9 +201,9 @@
 <h2>{{ T "workshop_papers" (len .) }}</h2>
 <p class="note">{{ T "workshop_note" }}</p>
 {{- if site.Params.showNonAcceptedTitles }}
-{{ partial "paper-list.html" (dict "papers" .) }}
+{{ partial "paper-list.html" (dict "self" $p.slug "papers" .) }}
 {{- else }}
-{{ partial "paper-list.html" (dict "papers" (where . "status" "accepted")) }}
+{{ partial "paper-list.html" (dict "self" $p.slug "papers" (where . "status" "accepted")) }}
 {{- end }}
 {{- end }}
 {{- end }}

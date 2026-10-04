@@ -17,9 +17,10 @@
 	<tbody>
 	{{- /* most accepted papers first */}}
 	{{- range sort hugo.Data.venues "accepted" "desc" }}
+	{{- $v := . }}
 	{{- $t := index .venues .key }}
 	<tr>
-		<td class="logo-col">{{ with .image }}<img class="mini" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}</td>
+		<td class="logo-col">{{ with .image }}<a href="{{ printf "venues/%s/" $v.key | relLangURL }}" tabindex="-1"><img class="mini" src="{{ . | relURL }}" alt="{{ $v.name }}" loading="lazy"></a>{{ end }}</td>
 		<td class="l"><a href="{{ printf "venues/%s/" .key | relLangURL }}">{{ .name }}</a></td>
 		{{- if eq .rejections "full" }}
 		<td class="l">{{ T "venue_public_full" }}</td>

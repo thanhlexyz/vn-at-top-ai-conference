@@ -1,9 +1,10 @@
-{{- /* A list of papers. Context: dict "papers" and optionally "owners" (true to name the professors). */ -}}
-{{- $owners := .owners }}
+{{- /* A list of papers. Context: dict "papers", optionally "owners" (true to name the professors) and "self" (the
+       slug of the professor whose page it is: their name is shown in bold, other people on the site are linked). */ -}}
+{{- $owners := .owners }}{{ $self := .self }}
 <ul class="papers">
 	{{- range .papers }}
 	<li>
-		<span class="tag {{ .status }}">{{ .venue_name }} {{ .year }}{{ with .workshop }} · {{ if eq . "Findings" }}Findings{{ else }}workshop {{ . }}{{ end }}{{ end }}{{ if ne .status "accepted" }}, {{ T (printf "status_%s" .status) }}{{ end }}</span>
+		<a class="tag-link" href="{{ printf "venues/%s/" .venue | relLangURL }}"><span class="tag {{ .status }}">{{ .venue_name }} {{ .year }}{{ with .workshop }} · {{ if eq . "Findings" }}Findings{{ else }}workshop {{ . }}{{ end }}{{ end }}{{ if ne .status "accepted" }}, {{ T (printf "status_%s" .status) }}{{ end }}</span></a>
 		{{- with .pres }}<span class="tag other">{{ . }}</span>{{ end }}
 		{{- if .unofficial }}<span class="tag own">{{ T "unofficial" }}</span>{{ end }}
 		{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
@@ -11,7 +12,9 @@
 		{{- if site.Params.local }}{{ with .note }}<br><span class="note">{{ . }}</span>{{ end }}{{ end }}
 		{{- with .later }}<br><span class="note">{{ T "later_accepted" . }}</span>{{ end }}
 		{{- if .unofficial }}<br><span class="note">{{ T "unofficial_because" .match }}</span>{{ end }}
-		<br><span class="authors">{{ .authors }}
+		<br><span class="authors">
+		{{- with .author_links }}{{ range $k, $a := . }}{{ if $k }}, {{ end }}{{ if and $self (eq $a.slug $self) }}<strong>{{ $a.name }}</strong>{{ else if $a.slug }}<a href="{{ printf "professors/%s/" $a.slug | relLangURL }}">{{ $a.name }}</a>{{ else }}{{ $a.name }}{{ end }}{{ end }}
+		{{- else }}{{ .authors }}{{ end }}
 		{{- if $owners }}{{ range .professors }} &middot; <a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ partial "pname.html" . }}</a>{{ end }}{{ end }}</span>
 	</li>
 	{{- end }}
