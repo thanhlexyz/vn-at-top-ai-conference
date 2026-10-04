@@ -1,5 +1,0 @@
-{{- /* Why a paper is not counted, in the page's language. Context: the English reason from the data, such as
-       "before 2025, when they joined a Vietnamese institution" or "Findings track". */ -}}
-{{- if hasPrefix . "before " }}{{ T "reason_before" (dict "Year" (index (findRE `\d{4}` . 1) 0)) }}
-{{- else if hasSuffix . " track" }}{{ T "reason_track" (dict "Track" (strings.TrimSuffix " track" .)) }}
-{{- else }}{{ . }}{{ end -}}

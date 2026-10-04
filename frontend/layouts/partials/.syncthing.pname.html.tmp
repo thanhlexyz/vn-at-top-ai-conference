@@ -1,3 +1,0 @@
-{{- /* A professor's name in the page's language: the Vietnamese name with diacritics on the Vietnamese site
-       when the roster has one. Context: an entry with "name" and optionally "name_vi". */ -}}
-{{- if and (eq site.Language.Lang "vi") .name_vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end -}}

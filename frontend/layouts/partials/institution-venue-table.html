@@ -8,7 +8,7 @@
 <div class="scroll">
 <table>
 	<thead>
-	<tr>{{ if eq $section "institutions" }}<th class="logo-col"></th>{{ end }}<th class="l">{{ cond (eq $section "professors") (T "th_professor") (T "th_institution") }}</th><th>ICLR</th><th>NeurIPS</th><th>ICML</th><th>CVPR</th><th>ACL</th><th>{{ T "th_total" }}</th><th title="{{ T "tip_not_judged" }}">{{ T "th_not_judged" }}</th></tr>
+	<tr>{{ if eq $section "institutions" }}<th class="logo-col"></th>{{ end }}<th class="l">{{ cond (eq $section "professors") (T "th_professor") (T "th_institution") }}</th><th>ICLR</th>{{- range after 1 hugo.Data.meta.venues }}<th>{{ .name }}</th>{{ end }}<th>{{ T "th_total" }}</th><th title="{{ T "tip_not_judged" }}">{{ T "th_not_judged" }}</th></tr>
 	</thead>
 	<tbody>
 	{{- range sort .rows $path "desc" }}
@@ -19,7 +19,7 @@
 		<td class="logo-col">{{ with .image }}<img class="mini" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}</td>
 		{{- end }}
 		<td class="l"><a href="{{ printf "%s/%s/" $section .slug | relLangURL }}">{{ if eq $section "professors" }}{{ partial "pname.html" . }}{{ else }}{{ partial "iname.html" .name }}{{ end }}</a>{{ if eq $section "professors" }} <span class="note">{{ .institution_short }}</span>{{ end }}</td>
-		{{- range slice "iclr" "neurips" "icml" "cvpr" "acl" }}
+		{{- range hugo.Data.meta.venue_keys }}
 		{{ partial "num.html" (index $t.venues .) }}
 		{{- end }}
 		<td class="total">{{ $t.total }}</td>

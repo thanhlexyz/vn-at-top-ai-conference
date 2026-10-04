@@ -15,7 +15,7 @@ BACKEND = Path(__file__).resolve().parent
 FRONTEND = BACKEND.parent / "frontend"
 RAW = BACKEND / "raw"  # downloaded source files, re-creatable
 WORK = BACKEND / "work"  # intermediate files, re-creatable
-ACCEPTED = WORK / "accepted.jsonl.gz"  # every accepted paper of the five venues, normalized
+ACCEPTED = WORK / "accepted.jsonl.gz"  # every accepted paper of the tracked venues, normalized
 OPENREVIEW_RAW = RAW / "openreview"  # one <slug>.json per person, written by fetch_openreview.py
 LEGACY_PAPERS = BACKEND / "iclr_cache" / "papers.csv"  # cache of the old iclr_author_stats.py
 
@@ -40,10 +40,19 @@ VENUES = [
      "rejections": "none"},
     {"key": "cvpr", "name": "CVPR", "full_name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
      "rejections": "none"},
+    {"key": "iccv", "name": "ICCV", "full_name": "IEEE/CVF International Conference on Computer Vision",
+     "rejections": "none"},
     {"key": "acl", "name": "ACL", "full_name": "Annual Meeting of the Association for Computational Linguistics",
+     "rejections": "none"},
+    {"key": "emnlp", "name": "EMNLP", "full_name": "Conference on Empirical Methods in Natural Language Processing",
      "rejections": "none"},
 ]
 VENUE_KEYS = [v["key"] for v in VENUES]
+
+
+def held(venue, year):
+    """False for a year in which the conference does not take place (ICCV is held in odd years only)."""
+    return not (venue == "iccv" and year % 2 == 0)
 VENUE_NAME = {v["key"]: v["name"] for v in VENUES}
 
 NOT_ACCEPTED = ("rejected", "withdrawn", "desk_rejected")  # shown together as "not accepted"
@@ -205,13 +214,14 @@ def virtual_track(title, sourceurl, event_type, file_has_source):
     return "other"
 
 
-_OR_GROUP = re.compile(r"(ICLR\.cc|NeurIPS\.cc|ICML\.cc|thecvf\.com/CVPR|aclweb\.org/ACL)/(\d{4})/([A-Za-z_]+)(/[A-Za-z_]+)?")
+_OR_GROUP = re.compile(r"(ICLR\.cc|NeurIPS\.cc|ICML\.cc|thecvf\.com/CVPR|thecvf\.com/ICCV|aclweb\.org/ACL|(?<![\w/])EMNLP)"
+                       r"/(\d{4})/([A-Za-z_]+)(/[A-Za-z_]+)?")
 _OR_VENUE = {"ICLR.cc": "iclr", "NeurIPS.cc": "neurips", "ICML.cc": "icml",
-             "thecvf.com/CVPR": "cvpr", "aclweb.org/ACL": "acl"}
+             "thecvf.com/CVPR": "cvpr", "thecvf.com/ICCV": "iccv", "aclweb.org/ACL": "acl", "EMNLP": "emnlp"}
 
 
 def openreview_venue(invitations, venueid=""):
-    """(venue key, year, track) of an OpenReview note, or None if it is not one of the five venues."""
+    """(venue key, year, track) of an OpenReview note, or None if it is not one of the tracked venues."""
     for s in [*(invitations or []), venueid or ""]:
         m = _OR_GROUP.search(s or "")
         if not m:

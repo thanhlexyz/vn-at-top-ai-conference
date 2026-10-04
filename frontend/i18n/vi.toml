@@ -16,7 +16,7 @@ other = "Ngôn ngữ"
 
 # ---------------------------------------------------------------- shared words
 [venues_five]
-other = "năm hội nghị"
+other = "bảy hội nghị"
 [none]
 other = "Chưa có."
 [titles_hidden]
@@ -31,6 +31,8 @@ other = "bị từ chối"
 other = "bị từ chối"
 [status_desk_rejected]
 other = "bị từ chối"
+[not_held]
+other = "không tổ chức năm này"
 [not_published_yet]
 other = "chưa công bố"
 [list_not_published]
@@ -211,7 +213,7 @@ other = " * Danh sách chính thức của {{ . }} hiện chưa đầy đủ."
 [home_numbers]
 other = "Số liệu của hai hình"
 [home_note_estimate]
-other = """Trong năm hội nghị, chỉ ICLR công khai toàn bộ bài nộp cùng kết quả. Đối với NeurIPS, ICML, CVPR và ACL, số bài bị từ chối được ước tính dựa trên kết quả ICLR của từng giảng viên,
+other = """Trong bảy hội nghị, chỉ ICLR công khai toàn bộ bài nộp cùng kết quả. Đối với NeurIPS, ICML, CVPR, ICCV, ACL và EMNLP, số bài bị từ chối được ước tính dựa trên kết quả ICLR của từng giảng viên,
 theo công thức: số lần nộp cho mỗi bài được chấp nhận = (số bài nộp ICLR + 1) / (số bài được nhận tại ICLR + 1). Với giảng viên chưa có bài nộp ICLR, không có phần ước tính bổ sung.
 Một bài có hai giảng viên trong danh sách được tính cho cả hai người, tương tự như trên trang của từng giảng viên; một bài nộp nhiều hội nghị được tính theo từng lần nộp."""
 
@@ -221,7 +223,7 @@ other = "Công tác tại Việt Nam từ năm {{ . }}"
 [prof_homepage]
 other = "Trang cá nhân"
 [prof_accepted_summary]
-other = "Từ năm {{ .Year }}, giảng viên có {{ .Count }} bài được chấp nhận tại năm hội nghị"
+other = "Từ năm {{ .Year }}, giảng viên có {{ .Count }} bài được chấp nhận tại bảy hội nghị"
 [prof_own_page_part]
 other = ", trong đó {{ .Official }} bài có trong danh sách chính thức và {{ .Own }} bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm (thể hiện dưới dạng +{{ .Own }} và được gắn nhãn \"chưa chính thức\" bên dưới)"
 [prof_iclr_summary]
@@ -247,7 +249,7 @@ other = "Các bài được chấp nhận có tác giả đứng đầu ghi đơ
 other = "Số bài nộp và được nhận theo năm"
 [chart_note]
 other = """Số bài được chấp nhận và số bài bị từ chối tại ICLR là số liệu thống kê trực tiếp.
-Do NeurIPS, ICML, CVPR và ACL không công khai các bài không được chấp nhận, phần tương ứng trên mỗi cột là số liệu ước tính."""
+Do NeurIPS, ICML, CVPR, ICCV, ACL và EMNLP không công khai các bài không được chấp nhận, phần tương ứng trên mỗi cột là số liệu ước tính."""
 [chart_note_own]
 other = """Phần ước tính được tính từ kết quả ICLR của chính giảng viên: {{ .Submitted }} bài nộp, {{ .Accepted }} bài được chấp nhận,
 tức ({{ .Submitted }} + 1) / ({{ .Accepted }} + 1) = {{ .Ratio }} lần nộp cho mỗi bài được chấp nhận tại các hội nghị khác.
@@ -312,7 +314,7 @@ other = "Các bài được chấp nhận có tác giả đứng đầu ghi đơ
 other = "Bài của các giảng viên trong danh sách"
 [inst_list_note]
 other = """Một bài có nhiều giảng viên cùng trường chỉ được tính một lần.
-Cột bị từ chối ước tính (màu cam) bổ sung số bài bị từ chối không được công khai tại NeurIPS, ICML, CVPR và ACL, ước tính dựa trên kết quả ICLR của chính trường theo công thức: số lần nộp cho mỗi bài được chấp nhận = (số bài nộp ICLR + 1) / (số bài được nhận tại ICLR + 1). Đây là số liệu ước tính, không phải số liệu thống kê trực tiếp.
+Cột bị từ chối ước tính (màu cam) bổ sung số bài bị từ chối không được công khai tại NeurIPS, ICML, CVPR, ICCV, ACL và EMNLP, ước tính dựa trên kết quả ICLR của chính trường theo công thức: số lần nộp cho mỗi bài được chấp nhận = (số bài nộp ICLR + 1) / (số bài được nhận tại ICLR + 1). Đây là số liệu ước tính, không phải số liệu thống kê trực tiếp.
 Ký hiệu +N sau một số liệu cho biết có thêm N bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm, chưa chính thức."""
 [inst_list_majority]
 other = "Bài có đa số tác giả thuộc trường"
@@ -324,7 +326,7 @@ other = "Bài có tác giả đầu thuộc trường"
 [inst_list_first_note]
 other = "Các bài được chấp nhận có tác giả đứng đầu ghi đơn vị công tác là trường."
 [inst_summary]
-other = "Trường có {{ .Profs }} giảng viên trong danh sách, với {{ .Accepted }} bài được chấp nhận tại năm hội nghị"
+other = "Trường có {{ .Profs }} giảng viên trong danh sách, với {{ .Accepted }} bài được chấp nhận tại bảy hội nghị"
 [inst_summary_own]
 other = ", trong đó {{ . }} bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm (chưa chính thức)"
 [inst_iclr]
@@ -421,7 +423,7 @@ other = "Google Scholar"
 other = "ResearchGate"
 
 [scholar_note]
-other = "Số liệu được ghi lại từ <a href=\"{{ .URL }}\">hồ sơ Google Scholar</a> vào ngày {{ .Date }} và không được cập nhật tự động. Google Scholar thống kê toàn bộ công bố, không chỉ riêng năm hội nghị."
+other = "Số liệu được ghi lại từ <a href=\"{{ .URL }}\">hồ sơ Google Scholar</a> vào ngày {{ .Date }} và không được cập nhật tự động. Google Scholar thống kê toàn bộ công bố, không chỉ riêng bảy hội nghị."
 
 [scholar_all]
 other = "Tất cả"
@@ -445,10 +447,10 @@ other = "Số trích dẫn theo năm, theo Google Scholar tại ngày ghi nhận
 other = "Theo hồ sơ Google Scholar của từng giảng viên, ghi nhận ngày 2026-10-02; Google Scholar thống kê toàn bộ công bố"
 
 [seo_professor]
-other = "{{ .Name }} ({{ .Inst }}): {{ .Accepted }} bài được chấp nhận tại ICLR, NeurIPS, ICML, CVPR và ACL; {{ .Submitted }} bài nộp ICLR, {{ .Rejected }} bài bị từ chối."
+other = "{{ .Name }} ({{ .Inst }}): {{ .Accepted }} bài được chấp nhận tại ICLR, NeurIPS, ICML, CVPR, ICCV, ACL và EMNLP; {{ .Submitted }} bài nộp ICLR, {{ .Rejected }} bài bị từ chối."
 
 [seo_institution]
-other = "{{ .Name }}: {{ .Profs }} giảng viên, {{ .Accepted }} bài được chấp nhận tại ICLR, NeurIPS, ICML, CVPR và ACL; {{ .Submitted }} bài nộp ICLR, {{ .Rejected }} bài bị từ chối."
+other = "{{ .Name }}: {{ .Profs }} giảng viên, {{ .Accepted }} bài được chấp nhận tại ICLR, NeurIPS, ICML, CVPR, ICCV, ACL và EMNLP; {{ .Submitted }} bài nộp ICLR, {{ .Rejected }} bài bị từ chối."
 
 [seo_venue]
 other = "{{ .Name }}: số bài nộp, được chấp nhận và bị từ chối của giảng viên tại Việt Nam từ năm 2020; {{ .Accepted }} bài được chấp nhận."

@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-02 19:19 UTC",
- "generated_date": "2026-10-02",
+ "generated": "2026-10-04 06:33 UTC",
+ "generated_date": "2026-10-04",
  "first_year": 2020,
  "last_year": 2026,
  "years": [
@@ -38,11 +38,32 @@
    "rejections": "none"
   },
   {
+   "key": "iccv",
+   "name": "ICCV",
+   "full_name": "IEEE/CVF International Conference on Computer Vision",
+   "rejections": "none"
+  },
+  {
    "key": "acl",
    "name": "ACL",
    "full_name": "Annual Meeting of the Association for Computational Linguistics",
    "rejections": "none"
+  },
+  {
+   "key": "emnlp",
+   "name": "EMNLP",
+   "full_name": "Conference on Empirical Methods in Natural Language Processing",
+   "rejections": "none"
   }
+ ],
+ "venue_keys": [
+  "iclr",
+  "neurips",
+  "icml",
+  "cvpr",
+  "iccv",
+  "acl",
+  "emnlp"
  ],
  "coverage": [
   {
@@ -93,6 +114,26 @@
    "venue": "acl",
    "year": 2020,
    "papers": 778,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "iccv",
+   "year": 2020,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "emnlp",
+   "year": 2020,
+   "papers": 751,
    "sources": [
     "aclanthology.org"
    ],
@@ -156,6 +197,28 @@
    "provisional": false
   },
   {
+   "venue": "iccv",
+   "year": 2021,
+   "papers": 1612,
+   "sources": [
+    "openaccess.thecvf.com"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "emnlp",
+   "year": 2021,
+   "papers": 847,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
    "venue": "iclr",
    "year": 2022,
    "papers": 1095,
@@ -207,6 +270,26 @@
    "venue": "acl",
    "year": 2022,
    "papers": 700,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "iccv",
+   "year": 2022,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "emnlp",
+   "year": 2022,
+   "papers": 828,
    "sources": [
     "aclanthology.org"
    ],
@@ -277,6 +360,28 @@
    "provisional": false
   },
   {
+   "venue": "iccv",
+   "year": 2023,
+   "papers": 2156,
+   "sources": [
+    "openaccess.thecvf.com"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "emnlp",
+   "year": 2023,
+   "papers": 1047,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
    "venue": "iclr",
    "year": 2024,
    "papers": 2260,
@@ -332,6 +437,26 @@
    "venue": "acl",
    "year": 2024,
    "papers": 940,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "iccv",
+   "year": 2024,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "emnlp",
+   "year": 2024,
+   "papers": 1268,
    "sources": [
     "aclanthology.org"
    ],
@@ -405,6 +530,28 @@
    "provisional": false
   },
   {
+   "venue": "iccv",
+   "year": 2025,
+   "papers": 2701,
+   "sources": [
+    "iccv.thecvf.com"
+   ],
+   "with_affiliation": 100,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "emnlp",
+   "year": 2025,
+   "papers": 1809,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
    "venue": "iclr",
    "year": 2026,
    "papers": 5353,
@@ -469,13 +616,31 @@
    "with_affiliation": 0,
    "other_tracks": {},
    "provisional": false
+  },
+  {
+   "venue": "iccv",
+   "year": 2026,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "emnlp",
+   "year": 2026,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
   }
  ],
  "professors": 57,
- "papers": 190,
- "accepted": 111,
+ "papers": 194,
+ "accepted": 121,
  "preliminary": true,
- "pending_review": 2,
+ "pending_review": 7,
  "provisional": [
   {
    "venue": "neurips",

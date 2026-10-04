@@ -7,17 +7,14 @@
 	<tr>
 		<th rowspan="2">{{ T "th_year" }}</th>
 		<th colspan="3">ICLR</th>
-		<th colspan="4">{{ T "th_accepted_at" }}</th>
+		<th colspan="{{ sub (len hugo.Data.meta.venues) 1 }}">{{ T "th_accepted_at" }}</th>
 		<th colspan="2">{{ T "th_total" }}</th>
 	</tr>
 	<tr>
 		<th>{{ T "th_submitted" }}</th>
 		<th class="good">{{ T "th_accepted" }}</th>
 		<th class="bad" title="{{ T "tip_rejected" }}">{{ T "th_rejected" }}</th>
-		<th>NeurIPS</th>
-		<th>ICML</th>
-		<th>CVPR</th>
-		<th>ACL</th>
+		{{- range after 1 hugo.Data.meta.venues }}<th>{{ .name }}</th>{{ end }}
 		<th class="good">{{ T "th_accepted" }}</th>
 		<th class="bad" title="{{ T "tip_rejected_total" }}">{{ T "th_rejected" }}</th>
 	</tr>
@@ -40,9 +37,11 @@
 		{{ partial "acc.html" (merge $iclr (dict "cls" "good")) }}
 		<td class="na">&ndash;</td>
 		{{- end }}
-		{{- range slice "neurips" "icml" "cvpr" "acl" }}
+		{{- range after 1 hugo.Data.meta.venue_keys }}
 		{{- $v := index $y.venues . }}
-		{{- if $v.available }}
+		{{- if not $v.held }}
+		<td class="na" title="{{ T "not_held" }}">&ndash;</td>
+		{{- else if $v.available }}
 		{{ partial "acc.html" $v }}
 		{{- else }}
 		<td class="na" title="{{ T "list_not_published" }}">&hellip;</td>
@@ -54,7 +53,7 @@
 	{{- else }}
 	<tr class="before">
 		<td>{{ .year }}</td>
-		<td class="l" colspan="9">{{ T "not_yet_in_vietnam" }}</td>
+		<td class="l" colspan="{{ add (len hugo.Data.meta.venues) 4 }}">{{ T "not_yet_in_vietnam" }}</td>
 	</tr>
 	{{- end }}
 	{{- end }}
@@ -71,7 +70,7 @@
 		{{ partial "acc.html" (merge $iclr (dict "cls" "good")) }}
 		<td class="na">&ndash;</td>
 		{{- end }}
-		{{- range slice "neurips" "icml" "cvpr" "acl" }}
+		{{- range after 1 hugo.Data.meta.venue_keys }}
 		{{ partial "acc.html" (index $venues .) }}
 		{{- end }}
 		<td class="good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own">+{{ .own_page }}</span>{{ end }}</td>

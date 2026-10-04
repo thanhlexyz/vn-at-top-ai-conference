@@ -420,3 +420,5 @@ svg.net.focus .edge.hl { stroke: var(--chart-value) ; }
 .graph-legend li { display: inline-flex ; align-items: center ; gap: 6px ; }
 .graph-legend .dot { display: inline-block ; width: 12px ; height: 12px ; border-radius: 50% ; }
 .graph-legend .line-key { display: inline-block ; width: 22px ; height: 4px ; border-radius: 2px ; background: var(--axis) ; }
+.chart .v6 { fill: #8a63d2 ; stroke: #8a63d2 ; }
+.chart .v7 { fill: #6b6a66 ; stroke: #6b6a66 ; }

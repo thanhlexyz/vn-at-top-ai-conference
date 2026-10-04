@@ -3,14 +3,14 @@
 <div class="scroll">
 <table>
 	<thead>
-	<tr><th>{{ T "th_year" }}</th><th>ICLR</th><th>NeurIPS</th><th>ICML</th><th>CVPR</th><th>ACL</th><th>{{ T "th_total" }}</th></tr>
+	<tr><th>{{ T "th_year" }}</th><th>ICLR</th>{{- range after 1 hugo.Data.meta.venues }}<th>{{ .name }}</th>{{ end }}<th>{{ T "th_total" }}</th></tr>
 	</thead>
 	<tbody>
 	{{- range .years }}
 	{{- $y := . }}
 	<tr>
 		<td>{{ .year }}</td>
-		{{- range slice "iclr" "neurips" "icml" "cvpr" "acl" }}
+		{{- range hugo.Data.meta.venue_keys }}
 		{{ partial "num.html" (index $y.venues .) }}
 		{{- end }}
 		<td class="total">{{ .total }}</td>
@@ -18,7 +18,7 @@
 	{{- end }}
 	<tr class="total">
 		<td>{{ T "th_total" }}</td>
-		{{- range slice "iclr" "neurips" "icml" "cvpr" "acl" }}
+		{{- range hugo.Data.meta.venue_keys }}
 		<td>{{ index $t.venues . }}</td>
 		{{- end }}
 		<td>{{ .total }}</td>

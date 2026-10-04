@@ -4,7 +4,7 @@
 Inputs
     roster.csv                    who is on the site (hand-edited; only rows with approved = yes count)
     review.csv                    uncertain matches; this script appends rows, you fill in `decision`
-    work/accepted.jsonl.gz        accepted papers of the five venues        (fetch_accepted.py)
+    work/accepted.jsonl.gz        accepted papers of the seven venues        (fetch_accepted.py)
     raw/openreview/<slug>.json    every OpenReview submission of a person   (fetch_openreview.py)
     candidates.csv                people not on the roster yet              (find_candidates.py)
 
@@ -26,7 +26,7 @@ import json
 import re
 
 from common import (ACCEPTED, BACKEND, CANDIDATES, FRONTEND, LEGACY_PAPERS, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
-                    STATUS_LABEL, VENUE_KEYS, VENUE_NAME, VENUES, WORK, YEARS, classify_status, in_vietnam,
+                    STATUS_LABEL, VENUE_KEYS, VENUE_NAME, VENUES, WORK, YEARS, classify_status, held, in_vietnam,
                     load_roster, name_key, norm_name, norm_title, openreview_venue, presentation, read_csv,
                     read_jsonl_gz, same_institution, slugify, vn_institutions, write_json)
 
@@ -212,7 +212,7 @@ def same_paper(a, b):
 
 
 def person_records(person, acc, legacy, decisions, queue, warnings, skipped, own=(), borrowed=()):
-    """Every paper of one person at the five venues, before the counting rules are applied."""
+    """Every paper of one person at the seven venues, before the counting rules are applied."""
     notes, source, fetched, stale, own_ids = load_openreview(person, legacy)
     recs = []
 
@@ -227,6 +227,8 @@ def person_records(person, acc, legacy, decisions, queue, warnings, skipped, own
             return
         venue, year, track = v
         status = classify_status(n.get("venue"), n.get("venueid"), n.get("invitations"), n.get("decision"))
+        if re.search(r"\bFindings\b", n.get("venue") or ""):   # "EMNLP 2023 Findings": accepted, but not main track
+            track, status = "findings", "accepted"
         if track == "workshop":   # listed for reference only: no official list to check, no outcome inferred
             if existing(venue, year, n["title"], workshop=True):
                 return
@@ -402,7 +404,7 @@ def apply_rules(person, recs):
 
 
 def mark_later_acceptance(recs, acc):
-    """Note on each not-accepted paper whether the same title was accepted later at one of the five venues.
+    """Note on each not-accepted paper whether the same title was accepted later at one of the seven venues.
 
     Titles often change between submissions, so this finds only some of the resubmissions.
     """
@@ -447,6 +449,7 @@ def summary(records, acc, counts_from=None):
         t = tally(in_year)
         for v in VENUE_KEYS:
             t[v]["available"] = (v, y) in acc.available
+            t[v]["held"] = held(v, y)
             t[v]["provisional"] = (v, y) in acc.provisional
         own = sum(v["own_page"] for v in t.values())
         accepted = sum(r["status"] == "accepted" for r in in_year)
@@ -612,9 +615,9 @@ def blog_charts(pooled, rows, by_venue):
     hidden = pooled["projected_submissions"] - pooled["projected_accepted"]
     return {
         "outcomes": charts.pies(
-            "Accepted and rejected: ICLR as counted, all five venues as estimated",
+            "Accepted and rejected: ICLR as counted, all seven venues as estimated",
             [("ICLR, counted", [("s1", "accepted", i["accepted"]), ("not", "rejected or withdrawn", i["not_accepted"])]),
-             ("All five venues, estimated", [("s1", "accepted", pooled["projected_accepted"]),
+             ("All seven venues, estimated", [("s1", "accepted", pooled["projected_accepted"]),
                                              ("not", "rejected or withdrawn", hidden)])]),
         "iclr_each": charts.stacked_rows(
             "ICLR submissions per professor by outcome",
@@ -1179,7 +1182,7 @@ def main():
     write_json(DATA / "meta.json", {
         "generated": now.strftime("%Y-%m-%d %H:%M %Z"), "generated_date": now.strftime("%Y-%m-%d"),
         "first_year": YEARS[0], "last_year": YEARS[-1], "years": YEARS,
-        "venues": VENUES, "coverage": coverage,
+        "venues": VENUES, "venue_keys": VENUE_KEYS, "coverage": coverage,
         "professors": len(professors), "papers": len(papers),
         "accepted": sum(r["status"] == "accepted" for r in papers),
         "preliminary": any(p["flags"] for p in professors), "pending_review": len(pending),

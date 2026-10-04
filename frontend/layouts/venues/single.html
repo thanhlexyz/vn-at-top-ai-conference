@@ -40,7 +40,9 @@
 	{{- $c := index .venues $key }}
 	<tr>
 		<td>{{ .year }}</td>
-		{{- if not $c.available }}
+		{{- if not $c.held }}
+		<td class="na l" colspan="4">{{ T "not_held" }}</td>
+		{{- else if not $c.available }}
 		<td class="na l" colspan="4">{{ T "not_published_yet" }}</td>
 		{{- else }}
 		{{- if eq $v.rejections "full" }}{{ partial "num.html" $c.submitted }}{{ end }}

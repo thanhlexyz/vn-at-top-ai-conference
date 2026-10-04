@@ -2,7 +2,7 @@
 title: "Giảng viên"
 ---
 
-Trang thông tin này thống kê số bài mỗi giảng viên đã nộp tại ICLR, cùng số bài được chấp nhận tại ICLR, NeurIPS, ICML, CVPR và ACL.
+Trang thông tin này thống kê số bài mỗi giảng viên đã nộp tại ICLR, cùng số bài được chấp nhận tại ICLR, NeurIPS, ICML, CVPR, ICCV, ACL và EMNLP.
 Bài báo được tính từ năm giảng viên về công tác tại một đơn vị ở Việt Nam.
 Do chỉ ICLR công khai toàn bộ bài nộp, số bài nộp và số bài bị từ chối chỉ có đối với ICLR.
 

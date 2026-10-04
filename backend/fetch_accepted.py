@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Download the public accepted-paper lists of ICLR, NeurIPS, ICML, CVPR and ACL and normalize them.
+"""Download the public accepted-paper lists of ICLR, NeurIPS, ICML, CVPR, ICCV, ACL and EMNLP and normalize them.
 
 No login needed. Sources:
-    iclr.cc / neurips.cc / icml.cc / cvpr.thecvf.com  virtual-site JSON (authors with affiliations)
-    openaccess.thecvf.com                             CVPR paper lists (author names only)
-    aclanthology.org                                  ACL main-conference volumes (author names only)
+    iclr.cc / neurips.cc / icml.cc / cvpr.thecvf.com / iccv.thecvf.com   virtual-site JSON (authors with affiliations)
+    openaccess.thecvf.com                             CVPR and ICCV paper lists (author names only)
+    aclanthology.org                                  ACL and EMNLP main-conference volumes (author names only);
+                                                      Findings, industry and demo volumes are left out
 
 Downloads are kept in raw/ and reused; pass --refresh to download again (for example after a
 conference publishes its list). The result is work/accepted.jsonl.gz, one paper per line:
@@ -26,12 +27,12 @@ import unicodedata
 import urllib.error
 import urllib.request
 
-from common import (ACCEPTED, LAST_YEAR, RAW, WORK, YEARS, norm_title, presentation, virtual_track, write_json,
+from common import (ACCEPTED, LAST_YEAR, RAW, WORK, YEARS, held, norm_title, presentation, virtual_track, write_json,
                     write_jsonl_gz)
 
 USER_AGENT = "vn-conference-stats/1.0 (personal research script)"
 VIRTUAL_SITE = {"iclr": "https://iclr.cc", "neurips": "https://neurips.cc", "icml": "https://icml.cc",
-                "cvpr": "https://cvpr.thecvf.com"}
+                "cvpr": "https://cvpr.thecvf.com", "iccv": "https://iccv.thecvf.com"}
 CVPR2020_DAYS = ["2020-06-16", "2020-06-17", "2020-06-18"]  # the 2020 list has no "all days" page
 PRES_ORDER = {"": 0, "highlight": 1, "spotlight": 1, "oral": 2}
 
@@ -138,14 +139,14 @@ def is_provisional(data):
 
 # ---------------------------------------------------------------- CVF open access
 
-def parse_cvf(year, page):
+def parse_cvf(year, page, venue="cvpr"):
     out = []
     for block in page.split('<dt class="ptitle">')[1:]:
         m = re.search(r'<a href="([^"]+)">(.*?)</a>', block, re.S)
         if not m:
             continue
         names = re.findall(r'name="query_author" value="([^"]*)"', block.split("<dt", 1)[0])
-        out.append({"venue": "cvpr", "year": year, "track": "main",
+        out.append({"venue": venue, "year": year, "track": "main",
                     "title": html.unescape(re.sub(r"\s+", " ", m.group(2))).strip(),
                     "authors": [{"name": html.unescape(n).strip(), "aff": ""} for n in names if n.strip()],
                     "url": "https://openaccess.thecvf.com" + m.group(1), "forum": "", "pres": "",
@@ -229,7 +230,7 @@ def bib_fields(entry):
         i = entry.find(",", i) + 1 if entry[i:i + 3].lstrip().startswith(",") else i
 
 
-def parse_acl_bib(year, text):
+def parse_acl_bib(year, text, venue="acl"):
     out = []
     for entry in re.split(r"\n(?=@)", text):
         if not entry.startswith("@inproceedings"):
@@ -241,7 +242,7 @@ def parse_acl_bib(year, text):
         for a in re.split(r"\s+and\s+", fields["author"]):
             last, _, first = debib(a).partition(",")
             authors.append({"name": f"{first.strip()} {last.strip()}".strip(), "aff": ""})
-        out.append({"venue": "acl", "year": year, "track": "main", "title": debib(fields["title"]),
+        out.append({"venue": venue, "year": year, "track": "main", "title": debib(fields["title"]),
                     "authors": authors, "url": fields.get("url", ""), "forum": "", "pres": "",
                     "topic": "", "source": "aclanthology.org"})
     return out
@@ -288,6 +289,22 @@ def collect(years, refresh=False):
             bib = fetch(f"https://aclanthology.org/volumes/{vol}.bib", f"acl/{vol}.bib", refresh)
             rows += parse_acl_bib(year, bib.decode("utf-8", "replace")) if bib else []
         add("acl", year, rows, ["aclanthology.org"] if rows else [])
+
+        # ICCV is held in odd years; only 2025 has a virtual site with affiliations
+        if year % 2 == 1:
+            data = fetch(f"{VIRTUAL_SITE['iccv']}/static/virtual/data/iccv-{year}-orals-posters.json",
+                         f"virtual/iccv-{year}.json", refresh)
+            virtual = parse_virtual("iccv", year, data) if data else []
+            page = fetch(f"https://openaccess.thecvf.com/ICCV{year}?day=all", f"cvf/iccv-{year}-all.html", refresh)
+            cvf = parse_cvf(year, page.decode("utf-8", "replace"), "iccv") if page else []
+            rows = merge_cvpr(virtual, cvf)
+        else:
+            rows = []
+        add("iccv", year, rows, sorted({p["source"] for p in rows}))
+
+        bib = fetch(f"https://aclanthology.org/volumes/{year}.emnlp-main.bib", f"acl/{year}.emnlp-main.bib", refresh)
+        rows = parse_acl_bib(year, bib.decode("utf-8", "replace"), "emnlp") if bib else []
+        add("emnlp", year, rows, ["aclanthology.org"] if rows else [])
     return papers, coverage
 
 
@@ -302,7 +319,7 @@ def main():
 
     print(f"{'venue':8s}{'year':>5s}{'main':>7s}{'affil%':>8s}  other tracks / note")
     for c in coverage:
-        note = ", ".join(f"{k} {v}" for k, v in sorted(c["other_tracks"].items())) if c["papers"] else "not published yet"
+        note = ", ".join(f"{k} {v}" for k, v in sorted(c["other_tracks"].items())) if c["papers"] else ("not held" if not held(c["venue"], c["year"]) else "not published yet")
         note += "  (no schedule yet: the list may be incomplete)" if c["provisional"] else ""
         print(f"{c['venue']:8s}{c['year']:5d}{c['papers']:7d}{c['with_affiliation']:7d}%  {note}")
     print(f"\n{sum(c['papers'] for c in coverage)} main-track papers -> {ACCEPTED}")

@@ -1,4 +1,0 @@
----
-title: "VinUniversity"
-key: "vinuni"
----

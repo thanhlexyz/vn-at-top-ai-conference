@@ -1,8 +1,0 @@
-{{- /* The <title>: on a professor page the name in both forms and the institution, so that searches for
-       either form match it; elsewhere the page title and the site name. */ -}}
-{{- if and (eq .Section "professors") .Params.key }}
-{{- $p := index (where hugo.Data.professors "slug" .Params.key) 0 }}
-{{- $other := cond (eq site.Language.Lang "vi") $p.name $p.name_vi }}
-{{- .Title }}{{ if ne $other .Title }} ({{ $other }}){{ end }} – {{ $p.institution_short }} | {{ site.Title }}
-{{- else if .IsHome }}{{ site.Title }}
-{{- else }}{{ .Title }} | {{ site.Title }}{{ end -}}
