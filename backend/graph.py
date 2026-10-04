@@ -400,12 +400,13 @@ def layout(nodes, edges, labels, prefer="weights"):
     pos = best[1]
     xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
     # the local search can push nodes outward; shrink evenly to the width, which keeps every crossing as it is
-    room = W - 60 - max(7.4 * len(labels[i]) for i in pos)
+    margin = 20 + max(7.4 * len(labels[i]) for i in pos) / 2   # a label centred over an edge node still fits
+    room = W - 2 * margin
     if max(xs) - min(xs) > room:
         s = room / (max(xs) - min(xs))
         pos = {i: [min(xs) + (p[0] - min(xs)) * s, min(ys) + (p[1] - min(ys)) * s] for i, p in pos.items()}
         xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
-    shift_x = (W - (max(xs) - min(xs)) - max(7.4 * len(labels[i]) for i in pos)) / 2 - min(xs)
+    shift_x = (W - (max(xs) - min(xs))) / 2 - min(xs)
     shift_y = 70 - min(ys)   # room for a label above the top circle
     out = {i: [p[0] + shift_x, p[1] + shift_y] for i, p in pos.items()}
     top = max(p[1] for p in out.values()) + 70
@@ -474,7 +475,7 @@ def place_labels(nodes, pos, radius, edges, labels, weights=None):
             cost += 10 * sum(1 for j in nodes if j != i and bx0 - radius[j] < pos[j][0] < bx1 + radius[j]
                              and by0 - radius[j] < pos[j][1] < by1 + radius[j])
             cost += 10 * sum(1 for p in placed if not (box[2] < p[0] or p[2] < box[0] or box[3] < p[1] or p[3] < box[1]))
-            cost += 20 * (box[0] < 0 or box[2] > W)
+            cost += 1000 * (box[0] < 0 or box[2] > W)   # never off the drawing
             cost += k * 0.5   # prefer the right, then the left
             if best is None or cost < best[0]:
                 best = (cost, anchor, lx, ly, box)
@@ -492,7 +493,9 @@ def build(nodes, papers_of, color_of, legend):
         for a, b in itertools.combinations(sorted(members), 2):
             edges[(a, b)] += 1
     linked = {m for e in edges for m in e}
-    pos, height = layout(linked, edges, {i: nodes[i]["name"] for i in linked})
+    # a label is as wide as the longer of its English and Vietnamese forms, so neither site clips or overlaps it
+    text = {i: max(nodes[i]["name"], nodes[i].get("name_vi") or "", key=len) for i in nodes}
+    pos, height = layout(linked, edges, {i: text[i] for i in linked})
     out_nodes = []
     for i, n in nodes.items():
         if not count[i]:
@@ -502,7 +505,7 @@ def build(nodes, papers_of, color_of, legend):
                           "r": round(9 + 1.8 * math.sqrt(count[i]), 1), "color": color_of(n),
                           "degree": sum(1 for e in edges if i in e)})
     radius = {n["id"]: n["r"] for n in out_nodes if n["linked"]}
-    spots = place_labels(list(radius), pos, radius, list(edges), {i: nodes[i]["name"] for i in radius}, edges)
+    spots = place_labels(list(radius), pos, radius, list(edges), {i: text[i] for i in radius}, edges)
     for n in out_nodes:
         if n["id"] in spots:
             n["lx"], n["ly"], n["anchor"] = spots[n["id"]]
@@ -519,6 +522,9 @@ def build(nodes, papers_of, color_of, legend):
 
 
 PALETTE = ["c1", "c2", "c3", "c4"]   # classes styled in style.css; the rest are "c0" (other)
+# institutions drawn in the main colour of their logo; the next largest groups take the colours left after these
+BRAND = {"HUST": "c-red", "VinUni": "c-blue", "HCMUS": "c-cyan"}
+REST_COLORS = ["c3", "c4"]   # green, amber: clear of red, blue and cyan
 
 
 def researcher_graph(professors, records):
@@ -529,8 +535,11 @@ def researcher_graph(professors, records):
     nodes = {p["slug"]: {"name": p["name"], "name_vi": p.get("name_vi") or p["name"], "url": f"professors/{p['slug']}/",
                          "group": p["institution_short"]} for p in professors}
     size = collections.Counter(p["institution_short"] for p in professors if any(p["slug"] in m for m in papers_of.values()))
-    top = [g for g, _ in size.most_common(len(PALETTE))]
-    color = {g: PALETTE[k] for k, g in enumerate(top)}
+    ranked = [g for g, _ in size.most_common()]
+    top = [g for g in ranked if g in BRAND] + [g for g in ranked if g not in BRAND][:len(REST_COLORS)]
+    top.sort(key=ranked.index)
+    others = iter(REST_COLORS)
+    color = {g: BRAND[g] if g in BRAND else next(others) for g in top}
     legend = [{"label": g, "color": color[g]} for g in top] + [{"label": "", "color": "c0"}]
     return build(nodes, papers_of, lambda n: color.get(n["group"], "c0"), legend)
 

@@ -429,7 +429,7 @@ svg.net .ew { font-size: 13px ; font-weight: 700 ; fill: var(--chart-value) ; pa
 svg.net .node circle { stroke: var(--bg) ; stroke-width: 2px ; }
 svg.net .node text { font-size: 14px ; fill: var(--fg) ; paint-order: stroke ; stroke: var(--bg) ; stroke-width: 4px ; stroke-linejoin: round ; }
 svg.net .node text.deg { font-size: 12px ; font-weight: 700 ; fill: #ffffff ; stroke: none ; pointer-events: none ; }
-svg.net .node.c4 text.deg, svg.net .node.c0 text.deg { fill: #1d1d1f ; }
+svg.net .node.c4 text.deg, svg.net .node.c0 text.deg, svg.net .node.c-cyan text.deg { fill: #1d1d1f ; }
 svg.net .node { cursor: pointer ; transition: opacity .15s ; }
 svg.net a.node:not([href]) { cursor: default ; }
 svg.net.focus .edge:not(.hl), svg.net.focus .ew:not(.hl), svg.net.focus .node:not(.hl) { opacity: 0.12 ; }
@@ -439,6 +439,10 @@ svg.net.focus .edge.hl { stroke: var(--chart-value) ; }
 .c3 circle, .dot.c3 { fill: #1baf7a ; background: #1baf7a ; }
 .c4 circle, .dot.c4 { fill: #eda100 ; background: #eda100 ; }
 .c0 circle, .dot.c0 { fill: #9a9890 ; background: #9a9890 ; }
+/* logo colours of HUST, VinUni and HCMUS on the researcher graph */
+.c-red circle, .dot.c-red { fill: #d7263d ; background: #d7263d ; }
+.c-blue circle, .dot.c-blue { fill: #1f5fbf ; background: #1f5fbf ; }
+.c-cyan circle, .dot.c-cyan { fill: #1fb5d6 ; background: #1fb5d6 ; }
 .graph-legend { list-style: none ; padding: 0 ; display: flex ; flex-wrap: wrap ; gap: 6px 18px ; font-size: 0.9em ; }
 .graph-legend li { display: inline-flex ; align-items: center ; gap: 6px ; }
 .graph-legend .dot { display: inline-block ; width: 12px ; height: 12px ; border-radius: 50% ; }
