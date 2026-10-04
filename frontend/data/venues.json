@@ -10271,9 +10271,9 @@
   "name": "ACL",
   "full_name": "Annual Meeting of the Association for Computational Linguistics",
   "rejections": "none",
-  "accepted": 9,
+  "accepted": 8,
   "own_page": 0,
-  "official": 9,
+  "official": 8,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -10336,14 +10336,14 @@
     "official": 0
    },
    "acl": {
-    "accepted": 9,
+    "accepted": 8,
     "rejected": 3,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 3,
-    "submitted": 12,
+    "submitted": 11,
     "own_page": 0,
-    "official": 9
+    "official": 8
    },
    "emnlp": {
     "accepted": 0,
@@ -11124,14 +11124,14 @@
       "provisional": false
      },
      "acl": {
-      "accepted": 8,
+      "accepted": 7,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 8,
+      "submitted": 7,
       "own_page": 0,
-      "official": 8,
+      "official": 7,
       "available": true,
       "held": true,
       "provisional": false
@@ -11150,10 +11150,10 @@
       "provisional": false
      }
     },
-    "accepted": 8,
+    "accepted": 7,
     "own_page": 0,
-    "official": 8,
-    "rejected_estimated": 39
+    "official": 7,
+    "rejected_estimated": 34
    }
   ],
   "papers": [
@@ -11178,30 +11178,6 @@
       "slug": "tuan-do",
       "name": "Tuan Do",
       "name_vi": ""
-     }
-    ]
-   },
-   {
-    "year": 2026,
-    "venue": "acl",
-    "venue_name": "ACL",
-    "title": "Layer-Wise High-Impact Parameter Ratio Optimization in Post-Training Quantization for Large Language Models",
-    "url": "https://aclanthology.org/2026.acl-long.2092/",
-    "status": "accepted",
-    "status_label": "accepted",
-    "pres": "",
-    "authors": "Cuong Pham, Anh Dung Hoang, Cuong C. Nguyen, Trung Le, Gustavo Carneiro, Thanh-Toan Do",
-    "match": "name, confirmed by hand",
-    "note": "",
-    "reason": "",
-    "later": "",
-    "unofficial": false,
-    "workshop": "",
-    "professors": [
-     {
-      "slug": "cuong-pham",
-      "name": "Cuong Pham",
-      "name_vi": "Phạm Văn Cường"
      }
     ]
    },
@@ -11459,16 +11435,16 @@
   "image": "img/venues/acl.svg",
   "image_source": "https://en.wikipedia.org/wiki/Association%20for%20Computational%20Linguistics",
   "ratio": "5.9",
-  "rejected_estimated": 44
+  "rejected_estimated": 39
  },
  {
   "key": "emnlp",
   "name": "EMNLP",
   "full_name": "Conference on Empirical Methods in Natural Language Processing",
   "rejections": "none",
-  "accepted": 9,
+  "accepted": 8,
   "own_page": 1,
-  "official": 8,
+  "official": 7,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -11541,14 +11517,14 @@
     "official": 0
    },
    "emnlp": {
-    "accepted": 9,
+    "accepted": 8,
     "rejected": 2,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 2,
-    "submitted": 11,
+    "submitted": 10,
     "own_page": 1,
-    "official": 8
+    "official": 7
    }
   },
   "years": [
@@ -11648,23 +11624,23 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 1,
+      "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 1,
+      "submitted": 0,
       "own_page": 0,
-      "official": 1,
+      "official": 0,
       "available": true,
       "held": true,
       "provisional": false
      }
     },
-    "accepted": 1,
+    "accepted": 0,
     "own_page": 0,
-    "official": 1,
-    "rejected_estimated": 5
+    "official": 0,
+    "rejected_estimated": 0
    },
    {
     "year": 2021,
@@ -12596,35 +12572,11 @@
       "name_vi": "Lê Duy Dũng"
      }
     ]
-   },
-   {
-    "year": 2020,
-    "venue": "emnlp",
-    "venue_name": "EMNLP",
-    "title": "Introducing a New Dataset for Event Detection in Cybersecurity Texts",
-    "url": "https://aclanthology.org/2020.emnlp-main.433/",
-    "status": "accepted",
-    "status_label": "accepted",
-    "pres": "",
-    "authors": "Hieu Man Duc Trong, Duc Trong Le, Amir Pouran Ben Veyseh, Thuat Nguyen, Thien Huu Nguyen",
-    "match": "name, confirmed by hand",
-    "note": "",
-    "reason": "",
-    "later": "",
-    "unofficial": false,
-    "workshop": "",
-    "professors": [
-     {
-      "slug": "duc-trong-le",
-      "name": "Duc-Trong Le",
-      "name_vi": "Lê Đức Trọng"
-     }
-    ]
    }
   ],
   "image": "img/venues/emnlp.png",
   "image_source": "https://2026.emnlp.org/",
   "ratio": "5.9",
-  "rejected_estimated": 44
+  "rejected_estimated": 39
  }
 ]

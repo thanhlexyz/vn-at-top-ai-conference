@@ -37,7 +37,8 @@
 	{{- range . }}
 	{{- $other := cond (eq .a $p.slug) .b .a }}
 	{{- $name := cond (eq .a $p.slug) (cond $vi .b_name_vi .b_name) (cond $vi .a_name_vi .a_name) }}
-	<li><a href="{{ printf "professors/%s/" $other | relLangURL }}">{{ $name }}</a>: {{ T "graph_papers" (int .weight) }}</li>
+	{{- $o := index (where hugo.Data.professors "slug" $other) 0 }}
+	<li><a href="{{ printf "professors/%s/" $other | relLangURL }}">{{ $name }}</a> (<span title="{{ partial "iname.html" $o.institution }}">{{ $o.institution_short }}</span>): {{ T "graph_papers" (int .weight) }}</li>
 	{{- end }}
 </ol>
 <p class="note">{{ T "coauthors_on_site_note" }}</p>
