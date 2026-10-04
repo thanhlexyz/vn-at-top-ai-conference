@@ -31,9 +31,7 @@
 		{{- range after 1 hugo.Data.meta.venues }}<th>{{ .name }}</th>{{ end }}
 		{{- end }}
 		{{- if $compact }}
-		{{- range hugo.Data.meta.venue_groups }}
-		<th title="{{ delimit .names ", " }}">{{ .name }}</th>
-		{{- end }}
+		{{ partial "group-heads.html" . }}
 		{{- end }}
 		<th class="good">{{ T "th_accepted" }}</th>
 		{{ partial "split-heads.html" . }}
@@ -75,11 +73,7 @@
 		{{- end }}
 		{{- end }}
 		{{- if $compact }}
-		{{- range hugo.Data.meta.venue_groups }}
-		{{- $off := 0 }}{{ $own := 0 }}
-		{{- range .venues }}{{ $v := index $p.venues . }}{{ $off = add $off (int $v.official) }}{{ $own = add $own (int $v.own_page) }}{{ end }}
-		<td>{{ if or $off $own }}{{ $off }}{{ else }}<span class="na">0</span>{{ end }}{{ if gt $own 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" $own) }}">+{{ $own }}</span>{{ end }}</td>
-		{{- end }}
+		{{ partial "group-cells.html" .venues }}
 		{{- end }}
 		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" .own_page) }}">+{{ .own_page }}</span>{{ end }}</td>
 		{{ partial "split-cells.html" . }}

@@ -1,0 +1,8 @@
+{{- /* Accepted papers per field (AI/ML, CV, NLP), +N for the unofficial ones. Context: a map of venue tallies
+       (an entry's "venues"). */ -}}
+{{- $venues := . }}
+{{- range hugo.Data.meta.venue_groups }}
+{{- $off := 0 }}{{ $own := 0 }}
+{{- range .venues }}{{ $v := index $venues . }}{{ $off = add $off (int $v.official) }}{{ $own = add $own (int $v.own_page) }}{{ end }}
+<td>{{ if or $off $own }}{{ $off }}{{ else }}<span class="na">0</span>{{ end }}{{ if gt $own 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" $own) }}">+{{ $own }}</span>{{ end }}</td>
+{{- end }}

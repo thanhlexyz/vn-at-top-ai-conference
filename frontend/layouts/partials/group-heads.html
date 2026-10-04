@@ -1,0 +1,4 @@
+{{- /* One header cell per field (AI/ML, CV, NLP); the title lists its conferences. */ -}}
+{{- range hugo.Data.meta.venue_groups }}
+<th title="{{ delimit .names ", " }}">{{ .name }}</th>
+{{- end }}

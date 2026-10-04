@@ -8,16 +8,12 @@
 		<th rowspan="2" class="logo-col pin1"></th>
 		<th rowspan="2" class="l pin2">{{ T "th_institution" }}</th>
 		<th rowspan="2">{{ T "th_professors" }}</th>
-		<th colspan="3">ICLR</th>
-		<th colspan="{{ sub (len hugo.Data.meta.venues) 1 }}">{{ T "th_accepted_at" }}</th>
+		<th colspan="{{ len hugo.Data.meta.venue_groups }}">{{ T "th_accepted_at" }}</th>
 		<th colspan="5">{{ T "th_total" }}</th>
 		<th rowspan="2" title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
 	</tr>
 	<tr>
-		<th>{{ T "th_submitted" }}</th>
-		<th class="good">{{ T "th_accepted" }}</th>
-		<th class="bad" title="{{ T "tip_rejected" }}">{{ T "th_rejected" }}</th>
-		{{- range after 1 hugo.Data.meta.venues }}<th>{{ .name }}</th>{{ end }}
+		{{ partial "group-heads.html" . }}
 		<th class="good">{{ T "th_accepted" }}</th>
 		{{ partial "split-heads.html" . }}
 		<th class="bad" title="{{ T "tip_rejected_total" }}">{{ T "th_rejected" }}</th>
@@ -31,12 +27,7 @@
 		<td class="logo-col pin1">{{ with .image }}<img class="mini" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}</td>
 		<td class="l pin2"><a href="{{ printf "institutions/%s/" .slug | relLangURL }}">{{ partial "iname.html" .name }}</a></td>
 		<td>{{ len .professors }}</td>
-		{{ partial "num.html" .venues.iclr.submitted }}
-		{{ partial "acc.html" (merge .venues.iclr (dict "cls" "good")) }}
-		{{ partial "numc.html" (dict "v" .venues.iclr.not_accepted "cls" "bad") }}
-		{{- range after 1 hugo.Data.meta.venue_keys }}
-		{{ partial "acc.html" (index $i.venues .) }}
-		{{- end }}
+		{{ partial "group-cells.html" .venues }}
 		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" .own_page) }}">+{{ .own_page }}</span>{{ end }}</td>
 		{{ partial "split-cells.html" . }}
 		{{ partial "rejected-total.html" .venues }}

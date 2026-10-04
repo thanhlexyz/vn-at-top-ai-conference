@@ -25,5 +25,5 @@
 {{ partial "venue-year-table.html" $i.first_author }}
 
 <h2>{{ T "inst_professors" }}</h2>
-{{ partial "professor-table.html" (where hugo.Data.professors "institution_slug" $i.slug) }}
+{{ partial "professor-table.html" (dict "rows" (where hugo.Data.professors "institution_slug" $i.slug) "compact" true) }}
 {{- end }}
