@@ -2,7 +2,7 @@
 title: "Giảng viên"
 ---
 
-Trang thông tin này thống kê số bài mỗi giảng viên đã nộp tại ICLR, cùng số bài được chấp nhận tại AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP và NAACL.
+Trang thông tin này thống kê số bài mỗi giảng viên đã nộp tại ICLR, cùng số bài được chấp nhận tại mười một hội nghị, chia nhóm theo cách của [CSRankings](https://csrankings.org/): AI (AAAI, IJCAI), ML (ICLR, NeurIPS, ICML), CV (CVPR, ICCV, ECCV) và NLP (ACL, EMNLP, NAACL).
 Bài báo được tính từ năm giảng viên về công tác tại một đơn vị ở Việt Nam.
 Do chỉ ICLR công khai toàn bộ bài nộp, số bài nộp và số bài bị từ chối chỉ có đối với ICLR.
 

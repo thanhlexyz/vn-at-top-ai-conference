@@ -2,7 +2,7 @@
 title: "Professors"
 ---
 
-How many papers each professor submitted to ICLR, and how many were accepted at AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP and NAACL.
+How many papers each professor submitted to ICLR, and how many were accepted at eleven conferences, grouped as [CSRankings](https://csrankings.org/) groups them: AI (AAAI, IJCAI), ML (ICLR, NeurIPS, ICML), CV (CVPR, ICCV, ECCV) and NLP (ACL, EMNLP, NAACL).
 Papers count from the year the professor joined a Vietnamese institution.
 Only ICLR publishes every submission, so only ICLR has submitted and rejected numbers.
 
