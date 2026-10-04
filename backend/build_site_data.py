@@ -948,12 +948,7 @@ def projection(p):
            "accepted": sum(r["accepted"] for r in counted), "total": f"{sum(r['total'] for r in counted):.0f}",
            "estimated": f"{sum(r['estimated'] for r in counted):.0f}",
            "svg": projection_svg(p["name"], rows), "svg_vi": projection_svg(p["name"], rows, "vi")}
-    # all years together, as a pie beside the chart
     out["recorded"] = sum(r["iclr_not_accepted"] for r in counted)
-    parts = [("acc", "s_acc", out["accepted"]), ("not", "s_not", out["recorded"]), ("est", "s_est", round(float(out["estimated"])))]
-    for lang, suffix in (("en", ""), ("vi", "_vi")):
-        w = CHART_TEXT[lang]
-        out["pie" + suffix] = charts.pies(w["pie_label"], [(w["pie_title"], [(c, w[k], v) for c, k, v in parts])], fit=True)
     out["rows"] = [{**r, "estimated": f"{r['estimated']:.0f}", "total": f"{r['total']:.0f}"} if r["counts"] else r
                    for r in rows]
     return out
@@ -1257,6 +1252,19 @@ def main():
         p["rejected_estimated"] = (round(sum(r["iclr_not_accepted"] + float(r["estimated"])
                                              for r in p["projection"]["rows"] if r["counts"]))
                                    if p["projection"] else None)
+        # all years together: the pie beside the chart and the estimated acceptance rate use the same rounded
+        # numbers as the front table, so the three always agree
+        p["acceptance_rate"] = None
+        if p["projection"]:
+            pr = p["projection"]
+            pr["estimated"] = str(p["rejected_estimated"] - pr["recorded"])
+            pr["total"] = str(p["accepted"] + p["rejected_estimated"])
+            parts = [("acc", "s_acc", p["accepted"]), ("not", "s_not", pr["recorded"]), ("est", "s_est", int(pr["estimated"]))]
+            for lang, suffix in (("en", ""), ("vi", "_vi")):
+                w = CHART_TEXT[lang]
+                pr["pie" + suffix] = charts.pies(w["pie_label"], [(w["pie_title"], [(c, w[k], v) for c, k, v in parts])], fit=True)
+            if int(pr["total"]):
+                p["acceptance_rate"] = round(100 * p["accepted"] / int(pr["total"]))
 
     institutions = []
     for slug in sorted({p["institution_slug"] for p in professors}):

@@ -16,7 +16,7 @@
 		{{- if $compact }}
 		<th colspan="{{ len hugo.Data.meta.venue_groups }}">{{ T "th_accepted_at" }}</th>
 		{{- end }}
-		<th colspan="6">{{ T "th_total" }}</th>
+		<th colspan="7">{{ T "th_total" }}</th>
 		<th rowspan="2" class="ws" title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
 		<th colspan="2" title="{{ T "tip_own_institution" }}">{{ T "th_own_institution" }}</th>
 		<th colspan="7">{{ T "th_coauthors" }}</th>
@@ -37,7 +37,8 @@
 		{{ partial "split-heads.html" . }}
 		<th class="bad" title="{{ T "tip_rejected_total" }}">{{ T "th_rejected" }}</th>
 		<th class="est" title="{{ T "tip_rejected_est" }}">{{ T "th_rejected_est" }}</th>
-		<th class="est" title="{{ T "tip_submitted_est" }}">{{ T "th_submitted_est_col" }}</th>
+		<th class="sub" title="{{ T "tip_submitted_est" }}">{{ T "th_submitted_est_col" }}</th>
+		<th class="rate" title="{{ T "tip_rate_est" }}">{{ T "th_rate_est" }}</th>
 		<th title="{{ T "tip_majority" }}">{{ T "th_majority" }}</th>
 		<th title="{{ T "tip_first_author" }}">{{ T "th_first_author" }}</th>
 		<th title="{{ T "tip_per_paper" }}">{{ T "th_per_paper" }}</th>
@@ -81,10 +82,12 @@
 		{{ partial "rejected-total.html" .venues }}
 		{{- if eq .rejected_estimated nil }}
 		<td class="na est">&ndash;</td>
-		<td class="na est">&ndash;</td>
+		<td class="na sub">&ndash;</td>
+		<td class="na rate">&ndash;</td>
 		{{- else }}
 		{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}
-		{{ partial "numc.html" (dict "v" (add (int .accepted) (int .rejected_estimated)) "cls" "total est") }}
+		{{ partial "numc.html" (dict "v" (add (int .accepted) (int .rejected_estimated)) "cls" "total sub") }}
+		{{- if eq .acceptance_rate nil }}<td class="na rate">&ndash;</td>{{ else }}<td class="rate">{{ .acceptance_rate }}%</td>{{ end }}
 		{{- end }}
 		{{ partial "num.html" (len (.workshop_papers | default slice)) }}
 		{{ partial "num.html" .authorship.majority.total }}

@@ -200,7 +200,7 @@ other = "{{ .Count }} uncertain matches wait for a decision, see <a href=\"{{ .U
 other = """<ul>
 <li>Rejected counts rejected, withdrawn and desk-rejected submissions; the count per conference is on each professor's page and on the Professors page.</li>
 <li>Total rejected adds every ICLR rejection to the rejections authors made public at other venues (some NeurIPS papers), so it is a lower bound.</li>
-<li>Rejected, estimated and submitted, estimated (orange) are estimates; see <a href="{{ .About }}">About</a>.</li>
+<li>Rejected, estimated (orange), submitted, estimated (grey) and acceptance rate, estimated (blue, accepted divided by submitted) are estimates; see <a href="{{ .About }}">About</a>.</li>
 <li>&ndash; means the OpenReview records of that professor have not been fetched.</li>
 <li>All counts are for the main conference track only; workshops, position papers and the NeurIPS Datasets &amp; Benchmarks track are left out.</li>
 <li>A paper placed in Findings was not accepted to the main track, so it counts as rejected from the main track; it is also listed with the workshop papers.</li>
@@ -549,3 +549,8 @@ other = "Rejected and on record at other venues (public rejections and papers pl
 
 [role_source]
 other = "Source of this role"
+
+[th_rate_est]
+other = "acceptance rate, estimated"
+[tip_rate_est]
+other = "accepted divided by submitted, estimated: an estimate, since most venues hide their rejections (see About)"
