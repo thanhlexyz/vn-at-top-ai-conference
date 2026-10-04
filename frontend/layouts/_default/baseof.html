@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{ partial "page-title.html" . }}</title>
 	<script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
-	<link rel="stylesheet" type="text/css" href="{{ "style.css" | relURL }}">
+	{{- /* the file's hash in the address, so a browser never keeps an old copy after a change */}}
+	<link rel="stylesheet" type="text/css" href="{{ "style.css" | relURL }}?v={{ readFile "static/style.css" | md5 | truncate 10 "" }}">
 	{{- $desc := partial "description.html" . }}
 	{{- $image := "" }}
 	{{- if and (eq .Section "professors") .Params.key }}{{ with index (where hugo.Data.professors "slug" .Params.key) 0 }}{{ $image = .image }}{{ end }}{{ end }}
@@ -75,7 +76,7 @@
 	{{ with hugo.Data.meta }}{{ T "footer_data" (dict "Date" .generated_date "First" .first_year "Last" .last_year) | safeHTML }}{{ end }}
 	<a href="{{ "about/" | relLangURL }}">{{ T "footer_sources" }}</a>
 </footer>
-<script src="{{ "site.js" | relURL }}" defer></script>
+<script src="{{ "site.js" | relURL }}?v={{ readFile "static/site.js" | md5 | truncate 10 "" }}" defer></script>
 {{- with site.Params.goatcounter }}{{ if not site.Params.local }}
 <script data-goatcounter="https://{{ . }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 {{- end }}{{ end }}
