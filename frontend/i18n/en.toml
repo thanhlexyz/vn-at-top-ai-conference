@@ -271,19 +271,15 @@ other = "Accepted papers whose first author lists {{ . }}."
 [chart_title]
 other = "Submitted and accepted per year"
 [chart_note]
-other = """Accepted papers and rejections on record are counted: every ICLR rejection, public NeurIPS rejections and papers placed in Findings.
-The other papers that NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP did not accept are not public, so that part of each column is an estimate."""
+other = "Accepted papers and rejections on record (ICLR, public NeurIPS rejections, Findings) are counted; the light part estimates the rejections the other venues do not publish."
 [chart_note_own]
-other = """It comes from this professor's own ICLR record of {{ .Submitted }} submitted and {{ .Accepted }} accepted:
-({{ .Submitted }} + 1) / ({{ .Accepted }} + 1) = {{ .Ratio }} submissions for each paper accepted elsewhere.
-Adding 1 on both sides keeps a short record from giving an extreme number.
-The estimate is still rough, and a paper sent to several conferences is counted each time."""
+other = "The estimate uses this professor's ICLR record: {{ .Ratio }} submissions per accepted paper (see About)."
 [chart_note_own_page]
-other = "The accepted papers include {{ . }} known only from personal pages."
+other = "{{ . }} of the accepted papers are known only from personal pages."
 [chart_note_no_iclr]
-other = "This professor has no ICLR submissions, so nothing is known about rejected papers, and the chart adds none."
+other = "No ICLR submissions, so no estimate is added."
 [chart_note_not_fetched]
-other = "The OpenReview records of this professor have not been fetched, so no rejected papers are known, and the chart adds none."
+other = "OpenReview records not fetched yet, so no estimate is added."
 [coauthors_title]
 other = "Co-authors and topics"
 [coauthors_none]
@@ -561,3 +557,6 @@ other = "All years: {{ .Accepted }} accepted, {{ .Recorded }} rejected and on re
 
 [prof_other_rejected]
 other = "Rejected and on record at other venues (public rejections and papers placed in Findings): {{ . }}."
+
+[role_source]
+other = "Source of this role"

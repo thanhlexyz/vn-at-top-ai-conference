@@ -4,7 +4,8 @@
 {{- $iclr := $p.venues.iclr }}
 {{ partial "picture.html" (dict "src" $p.image "source" $p.image_source "alt" (partial "pname.html" $p) "cls" "portrait") }}
 <p>
-	{{ with $p.rank }}{{ . }}, {{ end }}<a href="{{ printf "institutions/%s/" $p.institution_slug | relLangURL }}">{{ partial "iname.html" $p.institution }}</a>
+	{{ with $p.rank }}{{ . }}, {{ end }}
+	{{- with $p.role }}{{ $role := cond (eq site.Language.Lang "vi") $p.role_vi . }}{{ with $p.role_source }}<a href="{{ . }}" title="{{ T "role_source" }}">{{ $role }}</a>{{ else }}{{ $role }}{{ end }}, {{ end }}<a href="{{ printf "institutions/%s/" $p.institution_slug | relLangURL }}">{{ partial "iname.html" $p.institution }}</a>
 	{{- if $p.vn_since }}. {{ T "prof_since" $p.vn_since }}{{ end }}.
 	{{- $names := slice }}{{ if ne (partial "pname.html" $p) $p.name }}{{ $names = $names | append $p.name }}{{ else if ne $p.name_vi $p.name }}{{ $names = $names | append $p.name_vi }}{{ end }}
 	{{- with ($names | append $p.aliases) }}<br><span class="note">{{ T "also_published_as" (delimit . ", ") }}</span>{{ end }}

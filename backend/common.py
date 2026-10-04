@@ -326,7 +326,10 @@ def load_roster(path=ROSTER):
                 "institution": (row.get("institution") or "").strip(),
                 "institution_short": (row.get("institution_short") or "").strip()
                 or (row.get("institution") or "").strip(),
-                "rank": (row.get("rank") or "").strip(),
+                "rank": (row.get("rank") or "").strip(),   # as given on OpenReview
+                # a leadership role found on university or lab pages, shown as extra information with its source
+                "role": (row.get("role") or "").strip(), "role_vi": (row.get("role_vi") or "").strip(),
+                "role_source": (row.get("role_source") or "").strip(),
                 "vn_since": int(since) if since.isdigit() else None,
                 "openreview_ids": _split(row.get("openreview_ids")),
                 "homepage": (row.get("homepage") or "").strip(),
