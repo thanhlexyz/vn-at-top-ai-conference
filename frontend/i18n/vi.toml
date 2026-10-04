@@ -69,6 +69,10 @@ other = "Tên bài"
 other = "Kết quả"
 [th_accepted_at]
 other = "Được nhận tại"
+[th_accepted_year]
+other = "được nhận {{ . }}"
+[tip_accepted_year]
+other = "số bài được nhận trong năm {{ . }}"
 [th_total]
 other = "Tổng"
 [th_own_institution]
@@ -175,7 +179,7 @@ other = "Một số hồ sơ hiện chưa đầy đủ hoặc đang chờ xác n
 [home_flag_pending]
 other = "Hiện có {{ .Count }} trường hợp trùng tên chưa được xác nhận, xin xem tại trang <a href=\"{{ .URL }}\">Ứng viên</a>."
 [home_note_table]
-other = """Cột "bị từ chối" của ICLR bao gồm các bài bị từ chối sau phản biện, bài rút và bài bị loại sơ bộ.
+other = """Số bài bị từ chối bao gồm các bài bị từ chối sau phản biện, bài rút và bài bị loại sơ bộ. Số liệu theo từng hội nghị có ở trang của từng giảng viên và trang Giảng viên.
 Tổng số bài bị từ chối được tính bằng toàn bộ số bài bị từ chối tại ICLR cộng với các bài bị từ chối mà tác giả tự công khai tại hội nghị khác (một số bài tại NeurIPS); do đó, đây là con số tối thiểu.
 Tổng số bài bị từ chối ước tính (màu cam) bổ sung phần ước tính cho các hội nghị không công khai bài bị từ chối, dựa trên kết quả ICLR của chính giảng viên, theo công thức: số lần nộp cho mỗi bài được chấp nhận = (số bài nộp ICLR + 1) / (số bài được nhận tại ICLR + 1). Đây là số liệu ước tính, không phải số liệu thống kê trực tiếp.
 Dấu &ndash; cho biết hồ sơ OpenReview của giảng viên chưa được thu thập.

@@ -1,13 +1,19 @@
-{{- /* One row per professor. Context: a list of entries from data/professors.json. */ -}}
+{{- /* One row per professor. Context: a list of entries from data/professors.json, or a dict with "rows" (that
+       list) and "compact" (true on the front page: no per-venue columns, accepted in the latest year added). */ -}}
+{{- $rows := . }}{{ $compact := false }}
+{{- if reflect.IsMap . }}{{ $rows = .rows }}{{ $compact = .compact }}{{ end }}
+{{- $last := hugo.Data.meta.last_year }}
 <div class="scroll pinned top">
 <table>
 	<thead>
 	<tr>
 		<th rowspan="2" class="l pin1">{{ T "th_professor" }}</th>
 		<th rowspan="2" class="l pin2">{{ T "th_institution" }}</th>
+		{{- if not $compact }}
 		<th colspan="3">ICLR</th>
 		<th colspan="4">{{ T "th_accepted_at" }}</th>
-		<th colspan="3">{{ T "th_total" }}</th>
+		{{- end }}
+		<th colspan="{{ cond $compact 4 3 }}">{{ T "th_total" }}</th>
 		<th rowspan="2" class="ws" title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
 		<th colspan="2" title="{{ T "tip_own_institution" }}">{{ T "th_own_institution" }}</th>
 		<th colspan="5">{{ T "th_coauthors" }}</th>
@@ -15,6 +21,7 @@
 		<th colspan="3" title="{{ T "tip_scholar" }}">Google Scholar</th>
 	</tr>
 	<tr>
+		{{- if not $compact }}
 		<th>{{ T "th_submitted" }}</th>
 		<th class="good">{{ T "th_accepted" }}</th>
 		<th class="bad" title="{{ T "tip_rejected" }}">{{ T "th_rejected" }}</th>
@@ -22,7 +29,11 @@
 		<th>ICML</th>
 		<th>CVPR</th>
 		<th>ACL</th>
+		{{- end }}
 		<th class="good">{{ T "th_accepted" }}</th>
+		{{- if $compact }}
+		<th class="good" title="{{ T "tip_accepted_year" $last }}">{{ T "th_accepted_year" $last }}</th>
+		{{- end }}
 		<th class="bad" title="{{ T "tip_rejected_total" }}">{{ T "th_rejected" }}</th>
 		<th class="est" title="{{ T "tip_rejected_est" }}">{{ T "th_rejected_est" }}</th>
 		<th title="{{ T "tip_majority" }}">{{ T "th_majority" }}</th>
@@ -38,12 +49,13 @@
 	</tr>
 	</thead>
 	<tbody>
-	{{- range . }}
+	{{- range $rows }}
 	{{- $p := . }}
 	{{- $iclr := .venues.iclr }}
 	<tr>
 		<td class="l pin1"><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ partial "pname.html" . }}</a></td>
 		<td class="l pin2"><a href="{{ printf "institutions/%s/" .institution_slug | relLangURL }}">{{ .institution_short }}</a></td>
+		{{- if not $compact }}
 		{{- if .iclr_complete }}
 		{{ partial "num.html" $iclr.submitted }}
 		{{ partial "acc.html" (merge $iclr (dict "cls" "good")) }}
@@ -56,7 +68,12 @@
 		{{- range slice "neurips" "icml" "cvpr" "acl" }}
 		{{ partial "acc.html" (index $p.venues .) }}
 		{{- end }}
+		{{- end }}
 		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" .own_page) }}">+{{ .own_page }}</span>{{ end }}</td>
+		{{- if $compact }}
+		{{- $y := index (where .years "year" $last) 0 }}
+		<td class="good">{{ $y.official }}{{ if gt (int $y.own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" $y.own_page) }}">+{{ $y.own_page }}</span>{{ end }}</td>
+		{{- end }}
 		{{ partial "rejected-total.html" .venues }}
 		{{- if eq .rejected_estimated nil }}
 		<td class="na est">&ndash;</td>

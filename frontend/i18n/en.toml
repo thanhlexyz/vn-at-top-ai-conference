@@ -70,6 +70,10 @@ other = "Title"
 other = "Outcome"
 [th_accepted_at]
 other = "Accepted at"
+[th_accepted_year]
+other = "accepted {{ . }}"
+[tip_accepted_year]
+other = "accepted papers in {{ . }}"
 [th_total]
 other = "Total"
 [th_own_institution]
@@ -177,7 +181,7 @@ other = "Some records are incomplete or still to be confirmed. Those professors 
 [home_flag_pending]
 other = "{{ .Count }} uncertain matches wait for a decision, see <a href=\"{{ .URL }}\">Candidates</a>."
 [home_note_table]
-other = """ICLR rejected counts rejected, withdrawn and desk-rejected submissions.
+other = """Rejected counts rejected, withdrawn and desk-rejected submissions. The count per conference is on each professor's page and on the Professors page.
 Total rejected adds every ICLR rejection to the rejections authors made public at other venues (some NeurIPS papers), so it is a lower bound.
 Total rejected, estimated (orange) adds an estimate for the venues that hide their rejections, from each professor's own ICLR record: submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1). It is an estimate, not a count.
 &ndash; means the OpenReview records of that professor have not been fetched.
