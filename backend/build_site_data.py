@@ -1286,7 +1286,14 @@ def main():
         iclr = i["venues"]["iclr"]
         ratio = (iclr["submitted"] + 1) / (iclr["accepted"] + 1)
         elsewhere = i["accepted"] - iclr["accepted"]
-        i["rejected_estimated"] = round(iclr["not_accepted"] + elsewhere * (ratio - 1)) if i["accepted"] or iclr["submitted"] else None
+        # rejections on record at the other venues (public NeurIPS rejections, Findings) count, and are not
+        # estimated a second time
+        other = sum(c["not_accepted"] for v, c in i["venues"].items() if v != "iclr")
+        i["rejected_estimated"] = (round(iclr["not_accepted"] + other + max(elsewhere * (ratio - 1) - other, 0))
+                                   if i["accepted"] or iclr["submitted"] or other else None)
+        total = i["accepted"] + (i["rejected_estimated"] or 0)
+        i["acceptance_rate"] = round(100 * i["accepted"] / total) if i["rejected_estimated"] is not None and total else None
+        i["rate_trivial"] = not iclr["submitted"]   # nothing to estimate the hidden rejections from
     for i in institutions:
         i["author_charts"] = authorship_charts(i, i["short"])
     institutions.sort(key=lambda i: (-i["accepted"], i["name"]))

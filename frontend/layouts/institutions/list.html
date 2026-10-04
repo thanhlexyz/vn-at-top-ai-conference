@@ -9,7 +9,7 @@
 		<th rowspan="2" class="l pin2">{{ T "th_institution" }}</th>
 		<th rowspan="2">{{ T "th_professors" }}</th>
 		<th colspan="{{ len hugo.Data.meta.venue_groups }}">{{ T "th_accepted_at" }}</th>
-		<th colspan="5">{{ T "th_total" }}</th>
+		<th colspan="7">{{ T "th_total" }}</th>
 		<th rowspan="2" title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
 	</tr>
 	<tr>
@@ -18,6 +18,8 @@
 		{{ partial "split-heads.html" . }}
 		<th class="bad" title="{{ T "tip_rejected_total" }}">{{ T "th_rejected" }}</th>
 		<th class="est" title="{{ T "tip_rejected_est_inst" }}">{{ T "th_rejected_est" }}</th>
+		<th class="sub" title="{{ T "tip_submitted_est" }}">{{ T "th_submitted_est_col" }}</th>
+		<th class="rate" title="{{ T "tip_rate_est" }}">{{ T "th_rate_est" }}</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -33,8 +35,14 @@
 		{{ partial "rejected-total.html" .venues }}
 		{{- if eq .rejected_estimated nil }}
 		<td class="na est">&ndash;</td>
+		<td class="na sub">&ndash;</td>
+		<td class="na rate">&ndash;</td>
 		{{- else }}
 		{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}
+		{{ partial "numc.html" (dict "v" (add (int .accepted) (int .rejected_estimated)) "cls" "total sub") }}
+		{{- if eq .acceptance_rate nil }}<td class="na rate">&ndash;</td>
+		{{- else if .rate_trivial }}<td class="rate trivial" data-last title="{{ T "tip_rate_trivial" }}">{{ .acceptance_rate }}%</td>
+		{{- else }}<td class="rate">{{ .acceptance_rate }}%</td>{{ end }}
 		{{- end }}
 		{{ partial "num.html" (.workshop | default 0) }}
 	</tr>

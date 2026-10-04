@@ -327,7 +327,7 @@ other = "Papers of the listed professors"
 [inst_list_note]
 other = """<ul>
 <li>A paper with several professors of the same institution is counted once.</li>
-<li>Rejected, estimated (orange) is an estimate; see <a href="{{ .About }}">About</a>.</li>
+<li>Rejected, estimated (orange), submitted, estimated (grey) and acceptance rate, estimated (blue, accepted divided by submitted) are estimates from the institution's own ICLR record; see <a href="{{ .About }}">About</a>.</li>
 <li>+N after a number means N more papers known only from personal pages, which are unofficial.</li>
 </ul>"""
 [inst_list_majority]
