@@ -454,3 +454,11 @@ svg.net.focus .edge.hl { stroke: var(--chart-value) ; }
 .chart .own-inst { fill: #2a78d6 ; }
 .chart .other-inst { fill: #eb6834 ; }
 .chart .unjudged { fill: var(--grid) ; stroke: var(--axis) ; stroke-width: 1 ; }
+
+/* cups for the top three rows of the front-page table (site.js); the slot is there on every row so sorting
+   never changes the column width */
+.cup { display: inline-block ; width: 1.1em ; height: 1em ; margin-right: 0.3em ; vertical-align: -0.12em ; }
+.cup svg { width: 1em ; height: 1em ; display: block ; }
+.cup.gold svg { fill: #e0a800 ; }
+.cup.silver svg { fill: #9aa4ae ; }
+.cup.bronze svg { fill: #c06b2c ; }

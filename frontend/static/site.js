@@ -92,7 +92,39 @@
 		cell.setAttribute("aria-sort", order);
 		values.forEach(function (v) { body.appendChild(v.tr); });
 		totals.forEach(function (tr) { body.appendChild(tr); });
+		podium(table, numeric ? column : null);
 	}
+
+	// Cups for the first three rows of a .podium table, in the order shown: gold, silver, bronze. Sorted by a
+	// number column, rows tied with a cup winner share its cup; sorted by text, there are no cups.
+	var CUP = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v2h3v3a4 4 0 0 1-4 4h-.3A5 5 0 0 1 13 14.9V18h3v2H8v-2h3v-3.1A5 5 0 0 1 8.3 12H8a4 4 0 0 1-4-4V5h3V3zm0 4H6v1a2 2 0 0 0 1 1.7V7zm10 0v2.7A2 2 0 0 0 18 8V7h-1z"/></svg>';
+	var PLACES = ["gold", "silver", "bronze"];
+	function podium(table, column) {
+		if (!table.classList.contains("podium")) return;
+		var rows = Array.prototype.filter.call(table.tBodies[0].rows, function (tr) { return !tr.classList.contains("total"); });
+		var place = -1, last = null;
+		rows.forEach(function (tr, k) {
+			var slot = tr.querySelector(".cup");
+			if (!slot) return;
+			var key = column === undefined ? k : column === null ? null : number(tr.cells[column].textContent);
+			if (key === null && column !== undefined) { place = 99; }
+			else if (k === 0 || key !== last) { place = k; }
+			last = key;
+			slot.className = "cup";
+			slot.innerHTML = "";
+			slot.removeAttribute("title");
+			if (place < 3) {
+				slot.classList.add(PLACES[place]);
+				slot.innerHTML = CUP;
+				slot.title = "#" + (place + 1);
+			}
+		});
+	}
+	// before any sorting the rows are in order of total accepted papers, the column marked data-podium
+	document.querySelectorAll("table.podium").forEach(function (table) {
+		var start = leafHeadings(table.tHead).filter(function (pair) { return pair[0].hasAttribute("data-podium"); })[0];
+		podium(table, start ? start[1] : undefined);
+	});
 
 	document.querySelectorAll("table").forEach(function (table) {
 		if (!table.tHead || !table.tBodies[0] || table.tBodies[0].rows.length < 3) return;

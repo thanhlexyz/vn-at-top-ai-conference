@@ -5,7 +5,7 @@
 {{ .Content }}
 {{- $meta := hugo.Data.meta }}
 {{- /* notes on the records and uncertain matches are kept on the local Candidates page */}}
-{{ partial "professor-table.html" (dict "rows" hugo.Data.professors "compact" true) }}
+{{ partial "professor-table.html" (dict "rows" hugo.Data.professors "compact" true "podium" true) }}
 <p class="note">{{ T "home_note_table" | safeHTML }}</p>
 {{- range $meta.provisional }}
 <p class="note">{{ T "home_note_provisional" (dict "Name" .name "Year" .year) | safeHTML }}</p>
