@@ -2485,8 +2485,8 @@
    },
    "total": 0
   },
-  "judged": 12,
-  "unknown": 3,
+  "judged": 13,
+  "unknown": 4,
   "slug": "ptit",
   "name": "Posts and Telecommunications Institute of Technology",
   "short": "PTIT",
@@ -2495,9 +2495,9 @@
    "uyen-n-b-vo"
   ],
   "iclr_complete": true,
-  "accepted": 15,
+  "accepted": 17,
   "own_page": 1,
-  "official": 14,
+  "official": 16,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -2550,6 +2550,16 @@
     "official": 2
    },
    "eccv": {
+    "accepted": 2,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 2,
+    "own_page": 0,
+    "official": 2
+   },
+   "acl": {
     "accepted": 1,
     "rejected": 0,
     "withdrawn": 0,
@@ -2558,16 +2568,6 @@
     "submitted": 1,
     "own_page": 0,
     "official": 1
-   },
-   "acl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
    },
    "emnlp": {
     "accepted": 0,
@@ -3103,14 +3103,14 @@
       "provisional": false
      },
      "eccv": {
-      "accepted": 0,
+      "accepted": 1,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 0,
+      "submitted": 1,
       "own_page": 0,
-      "official": 0,
+      "official": 1,
       "available": true,
       "held": true,
       "provisional": false
@@ -3142,9 +3142,9 @@
       "provisional": false
      }
     },
-    "accepted": 3,
+    "accepted": 4,
     "own_page": 0,
-    "official": 3
+    "official": 4
    },
    {
     "year": 2025,
@@ -3342,14 +3342,14 @@
       "provisional": false
      },
      "acl": {
-      "accepted": 0,
+      "accepted": 1,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 0,
+      "submitted": 1,
       "own_page": 0,
-      "official": 0,
+      "official": 1,
       "available": true,
       "held": true,
       "provisional": false
@@ -3368,13 +3368,13 @@
       "provisional": false
      }
     },
-    "accepted": 6,
+    "accepted": 7,
     "own_page": 1,
-    "official": 5
+    "official": 6
    }
   ],
   "workshop": 1,
-  "rejected_estimated": 32,
+  "rejected_estimated": 36,
   "name_vi": "Học viện Công nghệ Bưu chính Viễn thông",
   "image": "img/institutions/ptit.png",
   "image_source": "https://commons.wikimedia.org/wiki/File:Logo_PTIT_University.png"

@@ -63,14 +63,14 @@
    "url": "institutions/ptit/",
    "group": "roster",
    "id": "ptit",
-   "papers": 20,
+   "papers": 22,
    "x": 704.7,
    "y": 475.5,
    "linked": true,
-   "r": 17.0,
+   "r": 17.4,
    "color": "c1",
    "degree": 4,
-   "lx": 725.7,
+   "lx": 726.1,
    "ly": 480.5,
    "anchor": "start"
   },
@@ -81,14 +81,14 @@
    "url": "",
    "group": "other",
    "id": "x-vinai",
-   "papers": 19,
+   "papers": 20,
    "x": 840.4,
    "y": 130.4,
    "linked": true,
-   "r": 16.8,
+   "r": 17.0,
    "color": "c2",
    "degree": 4,
-   "lx": 861.2,
+   "lx": 861.4,
    "ly": 135.4,
    "anchor": "start"
   },
@@ -390,12 +390,12 @@
   {
    "a": "ptit",
    "b": "x-vinai",
-   "weight": 11,
+   "weight": 12,
    "x1": 704.7,
    "y1": 475.5,
    "x2": 840.4,
    "y2": 130.4,
-   "width": 6.1,
+   "width": 6.3,
    "a_name": "PTIT",
    "b_name": "VinAI",
    "a_name_vi": "PTIT",
@@ -678,6 +678,6 @@
    "color": "c2"
   }
  ],
- "papers": 250,
- "shared": 61
+ "papers": 252,
+ "shared": 62
 }

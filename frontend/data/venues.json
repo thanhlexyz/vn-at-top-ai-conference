@@ -9230,9 +9230,9 @@
   "name": "ECCV",
   "full_name": "European Conference on Computer Vision",
   "rejections": "none",
-  "accepted": 5,
+  "accepted": 6,
   "own_page": 0,
-  "official": 5,
+  "official": 6,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -9285,14 +9285,14 @@
     "official": 0
    },
    "eccv": {
-    "accepted": 5,
+    "accepted": 6,
     "rejected": 0,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 0,
-    "submitted": 5,
+    "submitted": 6,
     "own_page": 0,
-    "official": 5
+    "official": 6
    },
    "acl": {
     "accepted": 0,
@@ -9842,14 +9842,14 @@
       "provisional": false
      },
      "eccv": {
-      "accepted": 2,
+      "accepted": 3,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 2,
+      "submitted": 3,
       "own_page": 0,
-      "official": 2,
+      "official": 3,
       "available": true,
       "held": true,
       "provisional": false
@@ -9881,10 +9881,10 @@
       "provisional": false
      }
     },
-    "accepted": 2,
+    "accepted": 3,
     "own_page": 0,
-    "official": 2,
-    "rejected_estimated": 10
+    "official": 3,
+    "rejected_estimated": 15
    },
    {
     "year": 2025,
@@ -10235,21 +10235,45 @@
       "name_vi": "Đoàn Đăng Khoa"
      }
     ]
+   },
+   {
+    "year": 2024,
+    "venue": "eccv",
+    "venue_name": "ECCV",
+    "title": "SwiftBrush v2: Make Your One-step Diffusion Model Better Than Its Teacher",
+    "url": "https://eccv.ecva.net/virtual/2024/poster/1422",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Trung Dao, Thuan Nguyen, Thanh Van Le, Duc H Vu, Khoi Nguyen, Cuong Pham, Anh Tran",
+    "match": "name, confirmed by hand",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "cuong-pham",
+      "name": "Cuong Pham",
+      "name_vi": "Phạm Văn Cường"
+     }
+    ]
    }
   ],
   "image": "",
   "image_source": "",
   "ratio": "5.9",
-  "rejected_estimated": 25
+  "rejected_estimated": 30
  },
  {
   "key": "acl",
   "name": "ACL",
   "full_name": "Annual Meeting of the Association for Computational Linguistics",
   "rejections": "none",
-  "accepted": 8,
+  "accepted": 9,
   "own_page": 0,
-  "official": 8,
+  "official": 9,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -10312,14 +10336,14 @@
     "official": 0
    },
    "acl": {
-    "accepted": 8,
+    "accepted": 9,
     "rejected": 3,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 3,
-    "submitted": 11,
+    "submitted": 12,
     "own_page": 0,
-    "official": 8
+    "official": 9
    },
    "emnlp": {
     "accepted": 0,
@@ -11100,14 +11124,14 @@
       "provisional": false
      },
      "acl": {
-      "accepted": 7,
+      "accepted": 8,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 7,
+      "submitted": 8,
       "own_page": 0,
-      "official": 7,
+      "official": 8,
       "available": true,
       "held": true,
       "provisional": false
@@ -11126,10 +11150,10 @@
       "provisional": false
      }
     },
-    "accepted": 7,
+    "accepted": 8,
     "own_page": 0,
-    "official": 7,
-    "rejected_estimated": 34
+    "official": 8,
+    "rejected_estimated": 39
    }
   ],
   "papers": [
@@ -11154,6 +11178,30 @@
       "slug": "tuan-do",
       "name": "Tuan Do",
       "name_vi": ""
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "acl",
+    "venue_name": "ACL",
+    "title": "Layer-Wise High-Impact Parameter Ratio Optimization in Post-Training Quantization for Large Language Models",
+    "url": "https://aclanthology.org/2026.acl-long.2092/",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Cuong Pham, Anh Dung Hoang, Cuong C. Nguyen, Trung Le, Gustavo Carneiro, Thanh-Toan Do",
+    "match": "name, confirmed by hand",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "cuong-pham",
+      "name": "Cuong Pham",
+      "name_vi": "Phạm Văn Cường"
      }
     ]
    },
@@ -11411,7 +11459,7 @@
   "image": "img/venues/acl.svg",
   "image_source": "https://en.wikipedia.org/wiki/Association%20for%20Computational%20Linguistics",
   "ratio": "5.9",
-  "rejected_estimated": 39
+  "rejected_estimated": 44
  },
  {
   "key": "emnlp",

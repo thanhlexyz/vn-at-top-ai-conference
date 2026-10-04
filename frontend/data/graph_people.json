@@ -54,6 +54,23 @@
    "anchor": "start"
   },
   {
+   "name": "Cuong Pham",
+   "name_vi": "Phạm Văn Cường",
+   "url": "professors/cuong-pham/",
+   "group": "PTIT",
+   "id": "cuong-pham",
+   "papers": 20,
+   "x": 530,
+   "y": 750.0,
+   "linked": true,
+   "r": 17.0,
+   "color": "c0",
+   "degree": 1,
+   "lx": 551.0,
+   "ly": 755.0,
+   "anchor": "start"
+  },
+  {
    "name": "Ngo Van Linh",
    "name_vi": "Ngô Văn Linh",
    "url": "professors/ngo-van-linh/",
@@ -68,23 +85,6 @@
    "degree": 3,
    "lx": 350.6,
    "ly": 497.6,
-   "anchor": "start"
-  },
-  {
-   "name": "Cuong Pham",
-   "name_vi": "Phạm Văn Cường",
-   "url": "professors/cuong-pham/",
-   "group": "PTIT",
-   "id": "cuong-pham",
-   "papers": 18,
-   "x": 530,
-   "y": 750.0,
-   "linked": true,
-   "r": 16.6,
-   "color": "c0",
-   "degree": 1,
-   "lx": 550.6,
-   "ly": 755.0,
    "anchor": "start"
   },
   {
@@ -1446,6 +1446,6 @@
    "color": "c0"
   }
  ],
- "papers": 250,
+ "papers": 252,
  "shared": 44
 }
