@@ -16,8 +16,8 @@
 	</tr>
 	</thead>
 	<tbody>
-	{{- /* most accepted papers first */}}
-	{{- range sort hugo.Data.venues "accepted" "desc" }}
+	{{- /* most official accepted papers first, then unofficial ones */}}
+	{{- range sort (sort hugo.Data.venues "own_page" "desc") "official" "desc" }}
 	{{- $v := . }}
 	{{- $t := index .venues .key }}
 	<tr>

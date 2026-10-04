@@ -204,10 +204,10 @@ other = """<ul>
 <li>&ndash; means the OpenReview records of that professor have not been fetched.</li>
 <li>All counts are for the main conference track only; workshops, position papers and the NeurIPS Datasets &amp; Benchmarks track are left out.</li>
 <li>A paper placed in Findings was not accepted to the main track, so it counts as rejected from the main track; it is also listed with the workshop papers.</li>
-<li>Professors are ordered by total accepted papers.</li>
+<li>Professors are ordered by official accepted papers, then unofficial ones.</li>
 </ul>"""
 [home_note_provisional]
-other = "The official {{ .Name }} {{ .Year }} list is not complete yet, so papers listed on professors' own pages count too; they are shown as <span class=\"own\">+N</span> and are unofficial until the conference publishes them."
+other = "The official {{ .Name }} {{ .Year }} list is not complete yet, and its authors cannot be confirmed on OpenReview until the conference; its papers, and those listed on professors' own pages, count as unofficial and are shown as <span class=\"own\">+N</span>."
 [home_note_coauthors]
 other = """<ul>
 <li>The co-author and topic columns are taken over all counted papers, accepted or not.</li>

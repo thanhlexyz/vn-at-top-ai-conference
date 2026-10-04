@@ -500,3 +500,6 @@ div.note li { margin: 0.25em 0 ; }
 /* a finding worth noticing, set apart from the notes around it */
 aside.callout { margin: 1.5em 0 ; padding: 0.8em 1.1em ; background: var(--callout) ; border-left: 4px solid var(--callout-bar) ; border-radius: 0 6px 6px 0 ; max-width: 48rem ; }
 aside.callout p { margin: 0 ; line-height: 1.55 ; }
+
+/* a number and its unofficial "+N" stay on one line */
+td:not(.l) { white-space: nowrap ; }

@@ -422,10 +422,19 @@ def person_records(person, acc, legacy, decisions, queue, warnings, skipped, own
     return recs, source, fetched, stale
 
 
+# venue-years whose accepted papers are taken as unofficial unless the person's own OpenReview record confirms them:
+# the list is out, but the submissions and their author IDs are not public on OpenReview yet
+UNVERIFIED = {("neurips", 2026)}
+
+
 def apply_rules(person, recs):
     """(counted, excluded, workshop): counted papers, papers listed as not counted, and workshop papers."""
     counted, excluded, workshop = [], [], []
     for r in recs:
+        if ((r["venue"], r["year"]) in UNVERIFIED and r["status"] == "accepted" and not r.get("unofficial")
+                and not r["match"].startswith("OpenReview profile")):
+            r = {**r, "unofficial": True,
+                 "match": f"{r['match']}; in the {VENUE_NAME[r['venue']]} {r['year']} list, not yet confirmable on OpenReview"}
         if r["track"] == "findings":   # a rejection from the main track, and a paper like a workshop paper
             workshop.append({**r, "track": "workshop", "status": "accepted", "workshop": "Findings"})
             r = {**r, "track": "main", "status": "rejected", "note": FINDINGS_NOTE}
@@ -1249,7 +1258,8 @@ def main():
         graph_recs += [(r, person["slug"]) for r in counted]
         graph_recs += [(r, person["slug"]) for r in workshop if in_vietnam(person, r["year"])]
     # most accepted first; people with none accepted yet come last, most submissions first
-    professors.sort(key=lambda p: (-p["accepted"], -p["venues"]["iclr"]["submitted"] if p["accepted"]
+    # official accepted papers first, then unofficial ones, as the tables sort them
+    professors.sort(key=lambda p: (-p["official"], -p["own_page"], -p["venues"]["iclr"]["submitted"] if p["accepted"]
                                    else -sum(v.get("submitted", 0) for v in p["venues"].values()), p["name"]))
 
     # authors on a professor's page link to the person when that person is on the site and has the same paper in
@@ -1336,7 +1346,7 @@ def main():
         i["rate_trivial"] = not iclr["submitted"]   # nothing to estimate the hidden rejections from
     for i in institutions:
         i["author_charts"] = authorship_charts(i, i["short"])
-    institutions.sort(key=lambda i: (-i["accepted"], i["name"]))
+    institutions.sort(key=lambda i: (-i["official"], -i["own_page"], i["name"]))
     # Vietnamese names, confirmed by hand (institution_names.csv); the Vietnamese site shows them
     names_vi = {r["name"]: r["name_vi"] for r in read_csv(BACKEND / "institution_names.csv")}
     for i in institutions:

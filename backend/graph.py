@@ -552,7 +552,9 @@ def researcher_graph(professors, records):
 
 def institution_graph(professors, records):
     """Institutions in Vietnam: the roster institution of every listed author on a paper, plus the Vietnamese
-    institutions printed on the paper where the source gives affiliations. Institutions abroad are left out."""
+    institutions printed on the paper that have nobody on the list (companies, institutes, other universities).
+    An institution with professors on the list takes part in a paper only through one of them, so its shared
+    papers are always among its own professors' papers. Institutions abroad are left out."""
     roster = {}
     for p in professors:
         roster.setdefault(p["institution_slug"], {"name": p["institution"], "short": p["institution_short"]})
@@ -571,10 +573,11 @@ def institution_graph(professors, records):
             for full, short, _ in vn_institutions(a.get("aff") or ""):
                 if full == short:   # a generic match ("University of ... Vietnam"), not a known institution
                     continue
-                s = resolve(full, short)
-                if s is None:
-                    s = "x-" + slugify(short)
-                    nodes.setdefault(s, {"name": short, "name_vi": short, "full": full, "url": "", "group": "other"})
+                # on the list, or the national university one of them belongs to: it joins through its own professors only
+                if resolve(full, short) is not None or any(PARENT.get(i["short"]) == short for i in roster.values()):
+                    continue
+                s = "x-" + slugify(short)
+                nodes.setdefault(s, {"name": short, "name_vi": short, "full": full, "url": "", "group": "other"})
                 members.add(s)
     for members in papers_of.values():   # "University of Science, VNU-HCM" is one institution, not two
         shorts = {nodes[m]["name"] for m in members}
