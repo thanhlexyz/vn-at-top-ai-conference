@@ -424,7 +424,7 @@ other = "Switch between day and night mode"
 [author_charts_title]
 other = "Accepted papers per year by where the authors are"
 [author_charts_note]
-other = "Each column is one year's accepted papers. Blue: the first author (top chart) or most authors (bottom chart) list {{ . }}. Orange: they list another institution. Grey: no affiliations known yet, for papers known only from announcements or personal pages before the official list."
+other = "Each column is one year's accepted papers. Blue: the first author (first chart) or most authors (second chart) list {{ . }}. Orange: they list another institution. Grey: no affiliations known yet, for papers known only from announcements or personal pages before the official list."
 [coauthor_institutions]
 other = "Co-author institutions"
 [coauthor_institutions_note]
@@ -555,3 +555,6 @@ other = "The decision on OpenReview"
 other = "Topics"
 [tip_topics]
 other = "different topic labels the conference gave the papers, as in the topic table on each professor's page"
+
+[prof_pie_caption]
+other = "All years: {{ .Accepted }} accepted, {{ .Recorded }} rejected at ICLR and about {{ .Estimated }} rejected elsewhere (estimate), so about {{ .Total }} submissions."

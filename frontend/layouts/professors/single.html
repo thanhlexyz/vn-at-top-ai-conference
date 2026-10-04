@@ -65,6 +65,11 @@
 
 {{- with $p.projection }}
 <h2>{{ T "chart_title" }}</h2>
+<div class="fig-row">
+<figure>
+	<div class="fill">{{ index . (cond (eq site.Language.Lang "vi") "pie_vi" "pie") | safeHTML }}</div>
+	<figcaption class="note">{{ T "prof_pie_caption" (dict "Accepted" .accepted "Recorded" .recorded "Estimated" .estimated "Total" .total) }}</figcaption>
+</figure>
 <figure>
 	{{ index . (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
 	<figcaption class="note">
@@ -81,48 +86,18 @@
 		{{- end }}
 	</figcaption>
 </figure>
-<div class="scroll">
-<table>
-	<thead>
-	<tr>
-		<th>{{ T "th_year" }}</th>
-		<th>{{ T "th_Accepted" }}</th>
-		<th>{{ T "th_rejected_iclr" }}</th>
-		<th>{{ T "th_rejected_elsewhere_est" }}</th>
-		<th>{{ T "th_submitted_est" }}</th>
-	</tr>
-	</thead>
-	<tbody>
-	{{- range .rows }}
-	{{- if .counts }}
-	<tr>
-		<td>{{ .year }}</td>
-		{{ partial "num.html" .accepted }}
-		{{ partial "num.html" .iclr_not_accepted }}
-		<td{{ if eq .estimated "0" }} class="zero"{{ end }}>{{ .estimated }}</td>
-		<td{{ if eq .total "0" }} class="zero"{{ end }}>{{ .total }}</td>
-	</tr>
-	{{- end }}
-	{{- end }}
-	<tr class="total">
-		<td>{{ T "th_total" }}</td>
-		<td>{{ .accepted }}</td>
-		<td>{{ if $p.iclr_complete }}{{ $p.venues.iclr.not_accepted }}{{ else }}&ndash;{{ end }}</td>
-		<td>{{ .estimated }}</td>
-		<td>{{ .total }}</td>
-	</tr>
-	</tbody>
-</table>
 </div>
 {{- end }}
 
 <h2>{{ T "author_charts_title" $p.institution_short }}</h2>
+<div class="fig-row">
 <figure>
 {{ index $p.author_charts.first (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
 </figure>
 <figure>
 {{ index $p.author_charts.majority (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
 </figure>
+</div>
 <p class="note">{{ T "author_charts_note" $p.institution_short }}</p>
 
 <h2>{{ T "coauthors_title" }}</h2>

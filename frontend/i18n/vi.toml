@@ -419,7 +419,7 @@ other = "Chuyển giữa giao diện sáng và tối"
 [author_charts_title]
 other = "Bài được nhận theo năm, theo đơn vị của tác giả"
 [author_charts_note]
-other = "Mỗi cột là số bài được nhận trong một năm. Màu xanh: tác giả đầu (biểu đồ trên) hoặc đa số tác giả (biểu đồ dưới) ghi đơn vị {{ . }}. Màu cam: ghi đơn vị khác. Màu xám: không rõ đơn vị: bài mới biết qua thông báo hoặc trang cá nhân, chưa có trong danh sách chính thức."
+other = "Mỗi cột là số bài được nhận trong một năm. Màu xanh: tác giả đầu (biểu đồ thứ nhất) hoặc đa số tác giả (biểu đồ thứ hai) ghi đơn vị {{ . }}. Màu cam: ghi đơn vị khác. Màu xám: không rõ đơn vị: bài mới biết qua thông báo hoặc trang cá nhân, chưa có trong danh sách chính thức."
 [coauthor_institutions]
 other = "Đơn vị đồng tác giả"
 [coauthor_institutions_note]
@@ -549,3 +549,6 @@ other = "Quyết định trên OpenReview"
 other = "Số chủ đề"
 [tip_topics]
 other = "số nhãn chủ đề khác nhau mà hội nghị gán cho bài, như bảng chủ đề trên trang của từng giảng viên"
+
+[prof_pie_caption]
+other = "Mọi năm: {{ .Accepted }} bài được nhận, {{ .Recorded }} bài bị từ chối ở ICLR và khoảng {{ .Estimated }} bài bị từ chối ở nơi khác (ước tính), tức khoảng {{ .Total }} lần nộp."

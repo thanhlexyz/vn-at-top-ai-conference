@@ -945,6 +945,12 @@ def projection(p):
            "accepted": sum(r["accepted"] for r in counted), "total": f"{sum(r['total'] for r in counted):.0f}",
            "estimated": f"{sum(r['estimated'] for r in counted):.0f}",
            "svg": projection_svg(p["name"], rows), "svg_vi": projection_svg(p["name"], rows, "vi")}
+    # all years together, as a pie beside the chart
+    out["recorded"] = sum(r["iclr_not_accepted"] for r in counted)
+    parts = [("acc", "s_acc", out["accepted"]), ("not", "s_not", out["recorded"]), ("est", "s_est", round(float(out["estimated"])))]
+    for lang, suffix in (("en", ""), ("vi", "_vi")):
+        w = CHART_TEXT[lang]
+        out["pie" + suffix] = charts.pies(w["pie_label"], [(w["pie_title"], [(c, w[k], v) for c, k, v in parts])], fit=True)
     out["rows"] = [{**r, "estimated": f"{r['estimated']:.0f}", "total": f"{r['total']:.0f}"} if r["counts"] else r
                    for r in rows]
     return out

@@ -30,12 +30,14 @@
 {{ partial "professor-table.html" (dict "rows" (where hugo.Data.professors "institution_slug" $i.slug) "compact" true) }}
 
 <h2>{{ T "author_charts_title" $i.short }}</h2>
+<div class="fig-row">
 <figure>
 {{ index $i.author_charts.first (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
 </figure>
 <figure>
 {{ index $i.author_charts.majority (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
 </figure>
+</div>
 <p class="note">{{ T "author_charts_note" $i.short }}</p>
 
 
