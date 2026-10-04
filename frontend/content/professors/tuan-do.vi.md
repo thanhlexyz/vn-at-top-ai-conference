@@ -1,4 +1,4 @@
 ---
-title: "Tuan Do"
+title: "Đỗ Ngọc Tuấn"
 key: "tuan-do"
 ---
