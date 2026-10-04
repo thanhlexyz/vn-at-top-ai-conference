@@ -63,12 +63,40 @@ Do not stop at a passing build: say what changed in numbers, and anything uncert
   only at a company or institute (e.g. Qualcomm AI Research, which is the former VinAI) does not count. Papers that
   print no affiliation (unofficial ones, lists without affiliations) count.
 - **Unofficial:** a paper known only from a personal page or announcement counts while the official list is
-  provisional or not published; shown as `+N` and tagged unofficial.
+  provisional or not published; shown as `+N` and tagged unofficial. A paper in an official list is unofficial too while
+  the venue-year is in `UNVERIFIED` in `build_site_data.py` (today NeurIPS 2026): its authors cannot be confirmed on
+  OpenReview until the submissions are public, so only a paper from the person's own OpenReview record is official.
+  Remove the venue-year from `UNVERIFIED` once OpenReview publishes it (then refresh and run `verify_affiliations.py`).
 - Rejections: complete only for ICLR; public NeurIPS rejections and Findings are also "on record". Hidden rejections
   are estimated per professor from their own ICLR record, `(submitted + 1) / (accepted + 1)`; papers of people with
   no ICLR submissions add no estimate and their acceptance rate is greyed and sorted last. Venue estimates average the
   ratios of each paper's listed authors who have an ICLR record.
 - A paper shared by several professors counts for each person, once for an institution or venue.
+- **Institution collaboration** (graph and the co-author institutions on institution pages): a paper links the roster
+  institutions of its listed professors, plus Vietnamese institutions printed on it that have nobody on the list
+  (companies, institutes such as VinAI or FPT). An institution with professors on the list joins a paper only through
+  one of them, never through a student or untracked co-author, so its shared papers are always among its own
+  professors' papers.
+
+## Tables, sorting and cups (`frontend/static/site.js`, `partials/professor-table.html`)
+
+- "x +y" (official, unofficial) sorts as x + y; among equal totals, more official papers first. The default order of
+  the professor, institution and venue tables follows the same rule (`professors.sort`, `institutions.sort`, and the
+  sort in `venues/list.html`), so the cups match the order on load.
+- Cups (gold, silver, bronze) go to the top three distinct values of the sorted column; ties share a cup and the next
+  value takes the next cup. Sorted largest first, zero gets none; sorted smallest first, zero is the best value.
+  Sorted by a text column, there are none. Institution pages show cups only with at least 4 professors; the front
+  page and institution pages always show the pinned `#` column.
+- Cells marked `data-last` always sort to the bottom and get no cup: the acceptance rate of people with no ICLR
+  submissions, and the co-author and own-institution columns of people with no accepted paper (shown greyed).
+- Numbers never wrap (`td:not(.l)`); captions and notes stay short and refer to About for definitions.
+
+## Professor pages
+
+- Links come from `homepage`, `pages` and the OpenReview profile; `person_links` labels each by its address
+  (staff page, Scholar, DBLP, LinkedIn, ...).
+- `page_note` / `page_note_vi` (roster, Markdown) show a box of sourced facts under the links. Facts only, each with
+  its source; never a characterisation or a suspicion about a person.
 
 ## Common requests
 
