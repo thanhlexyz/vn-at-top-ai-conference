@@ -224,6 +224,3 @@ frontend/public/
 frontend/resources/
 frontend/.hugo_build.lock
 __pycache__/
-# people with rejected ICLR submissions who are not on the site, see find_iclr_only.py
-backend/iclr_only.csv
-frontend/data/attempted.json
