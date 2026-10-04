@@ -11470,8 +11470,8 @@
   "name": "EMNLP",
   "full_name": "Conference on Empirical Methods in Natural Language Processing",
   "rejections": "none",
-  "accepted": 8,
-  "own_page": 1,
+  "accepted": 9,
+  "own_page": 2,
   "official": 7,
   "venues": {
    "iclr": {
@@ -11545,13 +11545,13 @@
     "official": 0
    },
    "emnlp": {
-    "accepted": 8,
-    "rejected": 2,
+    "accepted": 9,
+    "rejected": 3,
     "withdrawn": 0,
     "desk_rejected": 0,
-    "not_accepted": 2,
-    "submitted": 10,
-    "own_page": 1,
+    "not_accepted": 3,
+    "submitted": 12,
+    "own_page": 2,
     "official": 7
    }
   },
@@ -12336,23 +12336,23 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 1,
-      "rejected": 1,
+      "accepted": 2,
+      "rejected": 2,
       "withdrawn": 0,
       "desk_rejected": 0,
-      "not_accepted": 1,
-      "submitted": 2,
-      "own_page": 1,
+      "not_accepted": 2,
+      "submitted": 4,
+      "own_page": 2,
       "official": 0,
       "available": false,
       "held": true,
       "provisional": false
      }
     },
-    "accepted": 1,
-    "own_page": 1,
+    "accepted": 2,
+    "own_page": 2,
     "official": 0,
-    "rejected_estimated": 5
+    "rejected_estimated": 10
    }
   ],
   "papers": [
@@ -12377,6 +12377,54 @@
       "slug": "huynh-thi-thanh-binh",
       "name": "Huynh Thi Thanh Binh",
       "name_vi": "Huỳnh Thị Thanh Bình"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "Athena: Vulnerability-Affected Library Identification via Knowledge Graph Completion",
+    "url": "https://thanhlc.net/publications/",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Huynh Quyet Thang, Phong Trinh Duy, Trang Dang Yen, Huu Hung Nguyen, Bach Le, Dieu Hoang Vu, David Lo, Thanh Le-Cong",
+    "match": "listed on the publication page of his co-author Thanh Le-Cong; not in the official list yet",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": true,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "huynh-quyet-thang",
+      "name": "Huynh Quyet Thang",
+      "name_vi": "Huỳnh Quyết Thắng"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "Perish or Flourish? A Holistic Evaluation of Large Language Models for Code Generation in Functional Programming",
+    "url": "https://thanhlc.net/publications/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Huynh Quyet Thang, Nguyet-Anh H. Lang, Eric Lang, Bach Le, Thanh Le-Cong",
+    "match": "listed on the publication page of his co-author Thanh Le-Cong; not in the official list yet",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": true,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "huynh-quyet-thang",
+      "name": "Huynh Quyet Thang",
+      "name_vi": "Huỳnh Quyết Thắng"
      }
     ]
    },
@@ -12605,7 +12653,7 @@
   "image": "img/venues/emnlp.png",
   "image_source": "https://2026.emnlp.org/",
   "ratio": "5.9",
-  "rejected_estimated": 39,
+  "rejected_estimated": 44,
   "chart": {
    "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at EMNLP\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"est\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">20</text><text class=\"tick\" x=\"82.0\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M322.0,270.0 V236.4 Q322.0,236.4 322.0,236.4 H346.0 Q346.0,236.4 346.0,236.4 V270.0 Z\"><title>2023: 3 accepted</title></path><path class=\"not\" d=\"M322.0,234.4 V225.2 Q322.0,225.2 322.0,225.2 H346.0 Q346.0,225.2 346.0,225.2 V234.4 Z\"><title>2023: 1 rejected, recorded</title></path><path class=\"est\" d=\"M322.0,223.2 V72.4 Q322.0,68.4 326.0,68.4 H342.0 Q346.0,68.4 346.0,72.4 V223.2 Z\"><title>2023: about 14 rejected (estimate)</title></path><text class=\"value\" x=\"334.0\" y=\"62.4\" text-anchor=\"middle\">about 18</text><text class=\"tick\" x=\"418.0\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M406.0,270.0 V236.4 Q406.0,236.4 406.0,236.4 H430.0 Q430.0,236.4 430.0,236.4 V270.0 Z\"><title>2024: 3 accepted</title></path><path class=\"est\" d=\"M406.0,234.4 V72.4 Q406.0,68.4 410.0,68.4 H426.0 Q430.0,68.4 430.0,72.4 V234.4 Z\"><title>2024: about 15 rejected (estimate)</title></path><text class=\"value\" x=\"418.0\" y=\"62.4\" text-anchor=\"middle\">about 18</text><text class=\"tick\" x=\"502.0\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M490.0,270.0 V258.8 Q490.0,258.8 490.0,258.8 H514.0 Q514.0,258.8 514.0,258.8 V270.0 Z\"><title>2025: 1 accepted</title></path><path class=\"est\" d=\"M490.0,256.8 V206.8 Q490.0,202.8 494.0,202.8 H510.0 Q514.0,202.8 514.0,206.8 V256.8 Z\"><title>2025: about 5 rejected (estimate)</title></path><text class=\"value\" x=\"502.0\" y=\"196.8\" text-anchor=\"middle\">about 6</text><text class=\"tick off\" x=\"586.0\" y=\"288\" text-anchor=\"middle\">2026</text></svg>",
    "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại EMNLP\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"est\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">20</text><text class=\"tick\" x=\"82.0\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M322.0,270.0 V236.4 Q322.0,236.4 322.0,236.4 H346.0 Q346.0,236.4 346.0,236.4 V270.0 Z\"><title>2023: 3 bài được nhận</title></path><path class=\"not\" d=\"M322.0,234.4 V225.2 Q322.0,225.2 322.0,225.2 H346.0 Q346.0,225.2 346.0,225.2 V234.4 Z\"><title>2023: 1 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M322.0,223.2 V72.4 Q322.0,68.4 326.0,68.4 H342.0 Q346.0,68.4 346.0,72.4 V223.2 Z\"><title>2023: khoảng 14 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"334.0\" y=\"62.4\" text-anchor=\"middle\">~18</text><text class=\"tick\" x=\"418.0\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M406.0,270.0 V236.4 Q406.0,236.4 406.0,236.4 H430.0 Q430.0,236.4 430.0,236.4 V270.0 Z\"><title>2024: 3 bài được nhận</title></path><path class=\"est\" d=\"M406.0,234.4 V72.4 Q406.0,68.4 410.0,68.4 H426.0 Q430.0,68.4 430.0,72.4 V234.4 Z\"><title>2024: khoảng 15 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"418.0\" y=\"62.4\" text-anchor=\"middle\">~18</text><text class=\"tick\" x=\"502.0\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M490.0,270.0 V258.8 Q490.0,258.8 490.0,258.8 H514.0 Q514.0,258.8 514.0,258.8 V270.0 Z\"><title>2025: 1 bài được nhận</title></path><path class=\"est\" d=\"M490.0,256.8 V206.8 Q490.0,202.8 494.0,202.8 H510.0 Q514.0,202.8 514.0,206.8 V256.8 Z\"><title>2025: khoảng 5 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"502.0\" y=\"196.8\" text-anchor=\"middle\">~6</text><text class=\"tick off\" x=\"586.0\" y=\"288\" text-anchor=\"middle\">2026</text></svg>"
