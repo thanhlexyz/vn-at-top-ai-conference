@@ -34,8 +34,15 @@ def components(ids, edges):
     return sorted(groups.values(), key=lambda g: (-len(g), sorted(g)))
 
 
+def pull(w):
+    """Spring strength of a line with w shared papers; the resting length goes as w ** (-0.8 / 3)."""
+    return w ** 0.8
+
+
 def force(ids, edges, size, seed=7, steps=700):
-    """Fruchterman-Reingold positions for one connected group, in arbitrary units."""
+    """Fruchterman-Reingold positions for one connected group, in arbitrary units. A line pulls in proportion to
+    PULL(papers together), so two nodes with many shared papers settle close and a single shared paper keeps them
+    far apart, as in Obsidian's graph view."""
     rng = random.Random(seed)
     n = len(ids)
     pos = {i: [math.cos(2 * math.pi * k / n) * 100 + rng.uniform(-3, 3),
@@ -54,7 +61,7 @@ def force(ids, edges, size, seed=7, steps=700):
         for (a, b), w in mine.items():
             dx, dy = pos[a][0] - pos[b][0], pos[a][1] - pos[b][1]
             d = max(math.hypot(dx, dy), 0.01)
-            f = d * d / k * (1 + 0.5 * math.log(w))
+            f = d * d / k * pull(w)
             disp[a][0] -= dx / d * f; disp[a][1] -= dy / d * f
             disp[b][0] += dx / d * f; disp[b][1] += dy / d * f
         for i in pos:
@@ -138,36 +145,80 @@ def crossings(pos, edges):
                if len({a, b, x, y}) == 4 and crosses(pos[a], pos[b], pos[x], pos[y]))
 
 
-def planar_start(ids, edges):
-    """A crossing-free starting layout when the group can be drawn without crossings (needs networkx; without
-    it, None). The force layout cannot always find one, for example when a node has to sit inside a triangle."""
+def planar_starts(ids, edges):
+    """[(layout, lines it keeps)]: crossing-free starting layouts (needs networkx; without it, none). For a group that
+    can be drawn without crossings, one layout of all of it; else one for each line whose removal makes the rest
+    drawable, which then comes back across it. The force layout cannot always find these, for example when a node
+    has to sit inside a triangle."""
+    try:
+        import networkx as nx
+    except ImportError:
+        return []
+    G = nx.Graph([e for e in edges if e[0] in ids and e[1] in ids])
+    if nx.check_planarity(G)[0]:
+        graphs = [G]
+    else:
+        graphs = []
+        for e in G.edges():
+            H = G.copy()
+            H.remove_edge(*e)
+            if nx.check_planarity(H)[0]:
+                graphs.append(H)
+    out = []
+    for H in graphs:
+        p = nx.planar_layout(H)
+        xs, ys = [v[0] for v in p.values()], [v[1] for v in p.values()]
+        sc = min((W - 260) / max(max(xs) - min(xs), 1e-9), 640 / max(max(ys) - min(ys), 1e-9))
+        out.append(({i: [40 + (p[i][0] - min(xs)) * sc, 40 + (p[i][1] - min(ys)) * sc] for i in ids}, set(H.edges())))
+    return out
+
+
+def rest_length(w):
+    """Target length in px of a line with w shared papers."""
+    return REST * pull(w) ** (-1 / 3)
+
+
+def kk_start(ids, edges):
+    """Kamada-Kawai layout that aims every line at rest_length(papers together) (needs networkx)."""
     try:
         import networkx as nx
     except ImportError:
         return None
-    G = nx.Graph([e for e in edges if e[0] in ids and e[1] in ids])
-    if not nx.check_planarity(G)[0]:
-        return None
-    p = nx.planar_layout(G)
-    xs, ys = [v[0] for v in p.values()], [v[1] for v in p.values()]
-    s = min((W - 260) / max(max(xs) - min(xs), 1e-9), 640 / max(max(ys) - min(ys), 1e-9))
-    return {i: [40 + (p[i][0] - min(xs)) * s, 40 + (p[i][1] - min(ys)) * s] for i in ids}
+    G = nx.Graph()
+    for (a, b), w in edges.items():
+        if a in ids and b in ids:
+            G.add_edge(a, b, length=rest_length(w))
+    p = nx.kamada_kawai_layout(G, weight="length")
+    return {i: list(p[i]) for i in ids}
 
 
-def relax_planar(pos, edges, steps=400):
-    """Spreads a crossing-free layout with the usual spring forces, taking only the moves that keep it free of
-    crossings, so a stiff planar starting point turns into an even drawing."""
+def stress(pos, edges):
+    """How far line lengths are from rest_length, after the best overall scale: 0 is a perfect match."""
+    pairs = [(math.dist(pos[a], pos[b]), rest_length(w)) for (a, b), w in edges.items() if a in pos and b in pos]
+    if not pairs:
+        return 0.0
+    s = sum(d * l for d, l in pairs) / max(sum(d * d for d, _ in pairs), 1e-9)
+    return sum((s * d - l) ** 2 for d, l in pairs) / sum(l * l for _, l in pairs)
+
+
+def relax_planar(pos, edges, steps=400, weights=None):
+    """Spreads a crossing-free layout with spring forces (stronger for more shared papers), taking only the moves
+    that add no crossing over all lines, so a stiff planar starting point turns into an even drawing. `edges` may
+    be a Counter of every line; a line left out of the planar start already crosses and may keep doing so."""
+    weights = weights if weights is not None else (edges if hasattr(edges, "items") else {})
     edges = [e for e in edges if e[0] in pos and e[1] in pos]
     ids = list(pos)
     k = math.sqrt((W - 260) * 640 / len(ids)) * 0.7
     temp = k
 
+    def mine_crossing(p, i):
+        return sum(1 for (a, b) in edges if i in (a, b) for (x, y) in edges
+                   if len({a, b, x, y}) == 4 and crosses(p[a], p[b], p[x], p[y]))
+
     def creates_crossing(i, xy):
-        mine = [e for e in edges if i in e]
         trial = dict(pos)
         trial[i] = xy
-        return any(len({a, b, x, y}) == 4 and crosses(trial[a], trial[b], trial[x], trial[y])
-                   for (a, b) in mine for (x, y) in edges)
+        return mine_crossing(trial, i) > mine_crossing(pos, i)
     for _ in range(steps):
         for i in ids:
             fx = fy = 0.0
@@ -183,8 +234,9 @@ def relax_planar(pos, edges, steps=400):
                     j = b if a == i else a
                     dx, dy = pos[i][0] - pos[j][0], pos[i][1] - pos[j][1]
                     d = max(math.hypot(dx, dy), 0.01)
-                    fx -= dx / d * d * d / k
-                    fy -= dy / d * d * d / k
+                    w = pull((weights or {}).get((a, b), (weights or {}).get((b, a), 1)))
+                    fx -= dx / d * d * d / k * w
+                    fy -= dy / d * d * d / k * w
             d = max(math.hypot(fx, fy), 0.01)
             step = min(d, temp)
             for scale in (1.0, 0.5, 0.25):
@@ -198,10 +250,35 @@ def relax_planar(pos, edges, steps=400):
     return {i: [40 + (p[0] - min(xs)) * s, 40 + (p[1] - min(ys)) * s] for i, p in pos.items()}
 
 
-def untangle(pos, edges, labels, rounds=40, gap=40):
+def rule_breaks(pos, edges, labels, gap=40):
+    """Lines passing within `gap` of a circle they do not end at, overlapping labels, circles too close to read."""
+    box = {i: (18 + 8.4 * len(labels[i]), 24) for i in pos}
+    n = 0
+    for (a, b) in [e for e in edges if e[0] in pos and e[1] in pos]:
+        (ax, ay), (bx, by) = pos[a], pos[b]
+        dx, dy = bx - ax, by - ay
+        l2 = dx * dx + dy * dy or 1
+        for c, (cx, cy) in pos.items():
+            if c not in (a, b):
+                t = ((cx - ax) * dx + (cy - ay) * dy) / l2
+                n += 0 < t < 1 and math.hypot(cx - ax - t * dx, cy - ay - t * dy) < gap
+    for a, b in itertools.combinations(pos, 2):
+        (ax, ay), (bx, by) = pos[a], pos[b]
+        left, right = (a, b) if ax <= bx else (b, a)
+        n += pos[left][0] + box[left][0] > pos[right][0] and abs(ay - by) < 24
+        n += math.hypot(ax - bx, ay - by) < 40
+    return n
+
+
+REST = 190   # resting length in px of a line with one shared paper; shorter with more, as pull(w) ** (-1/3)
+
+
+def untangle(pos, edges, labels, rounds=40, gap=40, cross_cost=100000):
     """Drawing rules, enforced by a local search that moves one node at a time to the nearby spot that breaks the
     fewest of them, in this order of weight: no two lines cross; no line passes through a circle it does not end
-    at; no two labels overlap. Small moves are preferred."""
+    at; no two labels overlap. Below those, each line is pulled toward a length that shrinks with its shared papers
+    (REST), so close collaborators sit close. Small moves are preferred."""
+    weight = {e: w for e, w in edges.items()} if hasattr(edges, "items") else {}
     edges = [e for e in edges if e[0] in pos and e[1] in pos]
     box = {i: (18 + 8.4 * len(labels[i]), 24) for i in pos}
 
@@ -209,11 +286,12 @@ def untangle(pos, edges, labels, rounds=40, gap=40):
         c = 0.0
         for (a, b), (x, y) in itertools.combinations(edges, 2):
             if len({a, b, x, y}) == 4 and crosses(p[a], p[b], p[x], p[y]):
-                c += 100000
+                c += cross_cost
         for (a, b) in edges:
             (ax, ay), (bx, by) = p[a], p[b]
             dx, dy = bx - ax, by - ay
             l2 = dx * dx + dy * dy or 1
+            c += 0.015 * (math.sqrt(l2) - rest_length(weight.get((a, b), 1))) ** 2
             for n, (cx, cy) in p.items():
                 if n in (a, b):
                     continue
@@ -274,46 +352,61 @@ def untangle(pos, edges, labels, rounds=40, gap=40):
     return pos
 
 
-def layout(nodes, edges, labels):
+def layout(nodes, edges, labels, prefer="weights"):
     """{id: (x, y)} and the drawing's height. The largest group is drawn with a force layout across the full
-    width; smaller groups go underneath in a grid, each a short column, so their labels never collide."""
+    width; smaller groups go underneath in a grid, each a short column, so their labels never collide.
+    prefer="weights" (the default) puts line lengths that follow the shared papers ahead of crossings, which are
+    then kept few but allowed; "rules" puts the fewest crossings first."""
     groups = components(sorted(nodes), edges)
     if not groups:
         return {}, 200
     main, rest = groups[0], groups[1:]
-    def attempt(seed):
-        pos = force(main, edges, size=95, seed=seed)
-        # scale the main group to the width, keeping its proportions, then remove label overlaps
+    def fit(pos):
+        # scale the main group to the width, keeping its proportions
         xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
         span_x, span_y = max(max(xs) - min(xs), 1), max(max(ys) - min(ys), 1)
         s = min((W - 260) / span_x, 640 / span_y)
-        pos = {i: [40 + (p[0] - min(xs)) * s, 40 + (p[1] - min(ys)) * s] for i, p in pos.items()}
+        return {i: [40 + (p[0] - min(xs)) * s, 40 + (p[1] - min(ys)) * s] for i, p in pos.items()}
+
+    def attempt(seed):
+        pos = fit(force(main, edges, size=95, seed=seed))
+        # then remove label overlaps
         for _ in range(4):   # alternate: lines clear of circles, labels clear of each other
             pos = clear_edges(pos, edges)
             pos = declutter(pos, labels)
         pos = clear_edges(pos, edges)
-        return untangle(pos, edges, labels)
+        return untangle(pos, edges, labels, cross_cost=100000 if prefer == "rules" else 300)
 
-    # a few starting layouts; the first with no crossing lines wins, else the one with the fewest
+    # several starting layouts, each put through the drawing rules; the winner has the fewest crossing lines, then
+    # the fewest other rule breaks, then line lengths closest to rest_length (close collaborators close)
+    starts = [lambda seed=seed: attempt(seed) for seed in (7, 11, 23, 42, 101, 211)]
+    kk = kk_start(main, edges)
+    if kk:
+        starts.append(lambda: untangle(fit(kk), edges, labels))
     best = None
-    for seed in (7, 11, 23, 42, 101, 211):
-        pos = attempt(seed)
-        n = crossings(pos, edges)
-        if best is None or n < best[0]:
-            best = (n, pos)
-        if n == 0:
-            break
-    if best[0]:
-        planar = planar_start(main, edges)
-        if planar:
-            pos = untangle(relax_planar(planar, edges), edges, labels)
-            n = crossings(pos, edges)
-            if n < best[0]:
-                best = (n, pos)
+    for make in starts:
+        pos = make()
+        score = (crossings(pos, edges), rule_breaks(pos, edges, labels), stress(pos, edges))
+        if prefer != "rules":   # weights first: lengths that follow the shared papers, crossings allowed
+            score = (rule_breaks(pos, edges, labels), stress(pos, edges), score[0])
+        if best is None or score < best[0]:
+            best = (score, pos)
+    if prefer == "rules" and best[0][0]:
+        for start, kept in planar_starts(main, edges):
+            pos = untangle(fit(relax_planar(start, edges)), edges, labels)
+            score = (crossings(pos, edges), rule_breaks(pos, edges, labels), stress(pos, edges))
+            if score < best[0]:
+                best = (score, pos)
     pos = best[1]
     xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
+    # the local search can push nodes outward; shrink evenly to the width, which keeps every crossing as it is
+    room = W - 60 - max(7.4 * len(labels[i]) for i in pos)
+    if max(xs) - min(xs) > room:
+        s = room / (max(xs) - min(xs))
+        pos = {i: [min(xs) + (p[0] - min(xs)) * s, min(ys) + (p[1] - min(ys)) * s] for i, p in pos.items()}
+        xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
     shift_x = (W - (max(xs) - min(xs)) - max(7.4 * len(labels[i]) for i in pos)) / 2 - min(xs)
-    shift_y = 40 - min(ys)
+    shift_y = 70 - min(ys)   # room for a label above the top circle
     out = {i: [p[0] + shift_x, p[1] + shift_y] for i, p in pos.items()}
     top = max(p[1] for p in out.values()) + 70
     # small groups: columns of nodes 46 px apart, laid out in cells across the width
