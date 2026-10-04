@@ -417,7 +417,7 @@ nav .links { order: 2 ; }
 /* Pictures: a portrait or logo at the top right of a page, small logos in the lists */
 figure.picture { float: right ; margin: 0 0 1em 1.5em ; }
 figure.picture img { display: block ; max-width: 100% ; height: auto ; }
-figure.portrait img { width: 160px ; height: 160px ; object-fit: cover ; border-radius: 50% ; border: 1px solid var(--axis) ; }
+figure.portrait img { width: 160px ; height: 160px ; object-fit: cover ; object-position: 50% 20% ; border-radius: 50% ; border: 1px solid var(--axis) ; }   /* tall photos keep the head, which sits high */
 figure.logo img { max-width: 180px ; max-height: 120px ; width: auto ; }
 /* conference logos differ in shape and in their own size: each is fitted into the same box */
 figure.logo.venue img { width: 260px ; height: 110px ; max-width: none ; max-height: none ; object-fit: contain ; object-position: right center ; }
