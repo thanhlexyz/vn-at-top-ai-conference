@@ -186,7 +186,11 @@ through a circle; labels never overlap lines or other labels and never leave the
 change, check crossings and label clearance for both graphs and look at screenshots. They use every counted
 submission (rejected and withdrawn included) plus workshop papers from the Vietnam years, and feed the co-author
 lists. Researcher colours: HUST red, VinUni blue, HCMUS cyan, the next two largest institutions green and amber, the
-rest grey. `networkx` is used for planar starts and Kamada-Kawai; without it the layout differs.
+rest grey. `networkx` is used for planar starts and Kamada-Kawai; without it the layout differs. Small groups go
+under the main drawing: a chain as a short column, a group with one person linked to all others (`fan_hub`) as a fan
+(hub on the left, its label to its left, the others in a column to its right). The number on a line sits where no
+other line, circle, number or name label touches it (`weight_spots`, run again after the name labels); a name label
+takes a side or a corner of its circle, whichever touches the fewest lines.
 
 **Photos and Scholar:** a photo shows only with an `images.csv` row (`approved=yes`, right `kind` and `key`) and a file
 `static/img/<people|institutions|venues>/<key>.*`. `fetch_images.py --apply` re-resizes from raw downloads and can

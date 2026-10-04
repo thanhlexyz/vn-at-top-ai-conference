@@ -352,6 +352,19 @@ def untangle(pos, edges, labels, rounds=40, gap=40, cross_cost=100000):
     return pos
 
 
+def fan_hub(group, edges):
+    """The node of a small group linked to every other one, when the group is more than a chain (a node with three
+    links, or a cycle): such a group is drawn as a fan, the hub on the left and the others in a column to its right,
+    so that no line passes another circle. None for a chain, which a column draws well."""
+    if len(group) < 3:
+        return None
+    links = [(a, b) for a, b in edges if a in group and b in group]
+    degree = {i: sum(i in e for e in links) for i in group}
+    if max(degree.values()) < 3 and len(links) < len(group):
+        return None
+    return next((i for i in sorted(group, key=lambda i: -degree[i]) if degree[i] == len(group) - 1), None)
+
+
 def layout(nodes, edges, labels, prefer="weights"):
     """{id: (x, y)} and the drawing's height. The largest group is drawn with a force layout across the full
     width; smaller groups go underneath in a grid, each a short column, so their labels never collide.
@@ -416,18 +429,37 @@ def layout(nodes, edges, labels, prefer="weights"):
     cell_w, step = max(250, round(longest + 18 + 40 + 30)), 46
     cols = max(1, W // cell_w)
     row_y, col, row_h = top, 0, 0
-    for g in rest:
-        order = [g[0]]
-        while len(order) < len(g):   # walk along the links so neighbours sit next to each other
-            nxt = next((b for a in reversed(order) for b in g if b not in order and
-                        ((a, b) in edges or (b, a) in edges)), next(b for b in g if b not in order))
+
+    def walk(members):   # along the links, so neighbours sit next to each other
+        order = [members[0]]
+        while len(order) < len(members):
+            nxt = next((b for a in reversed(order) for b in members if b not in order and
+                        ((a, b) in edges or (b, a) in edges)), next(b for b in members if b not in order))
             order.append(nxt)
+        return order
+
+    for g in rest:
+        hub = fan_hub(g, edges)
+        if hub:   # fan: the hub's label on its left, then the hub, then the others in a column to the right
+            leaves = walk([i for i in g if i != hub])
+            hub_w, reach = CHAR * len(labels[hub]) + 30, 110
+            span = -(-round(hub_w + reach + max(7.4 * len(labels[i]) for i in leaves) + 50) // cell_w)
+        else:
+            span = 1
+        if col and col + span > cols:
+            col, row_y, row_h = 0, row_y + row_h, 0
         x0 = 30 + col * cell_w
-        for k, i in enumerate(order):
-            out[i] = [x0 + (18 if k % 2 else 0), row_y + k * step]
-        row_h = max(row_h, (len(g) - 1) * step + 50)
-        col += 1
-        if col == cols:
+        if hub:
+            for k, i in enumerate(leaves):
+                out[i] = [x0 + hub_w + reach, row_y + k * step]
+            out[hub] = [x0 + hub_w, row_y + (len(leaves) - 1) * step / 2]
+            row_h = max(row_h, (len(leaves) - 1) * step + 50)
+        else:
+            for k, i in enumerate(walk(g)):
+                out[i] = [x0 + (18 if k % 2 else 0), row_y + k * step]
+            row_h = max(row_h, (len(g) - 1) * step + 50)
+        col += span
+        if col >= cols:
             col, row_y, row_h = 0, row_y + row_h, 0
     height = (row_y + row_h if col else row_y) + 10
     return {i: (round(p[0], 1), round(p[1], 1)) for i, p in out.items()}, round(max(height, top))
@@ -455,10 +487,10 @@ def seg_hits_box(x1, y1, x2, y2, bx0, by0, bx1, by1):
     return True
 
 
-def weight_spots(pos, radius, edges, weights):
+def weight_spots(pos, radius, edges, weights, avoid=()):
     """{(a, b): (x, y)}: where the number of shared papers is printed on each line with 2 or more, the point along it
     (the middle if it is clear) whose label box no other line, circle or number touches."""
-    out, boxes = {}, []
+    out, boxes = {}, list(avoid)
     for (a, b) in sorted(edges, key=lambda e: -weights.get(e, 1)):
         if weights.get((a, b), 1) < 2:
             continue
@@ -479,7 +511,7 @@ def weight_spots(pos, radius, edges, weights):
     return out
 
 
-def place_labels(nodes, pos, radius, edges, labels, weights=None, right_only=(), spots=None):
+def place_labels(nodes, pos, radius, edges, labels, weights=None, right_only=(), spots=None, left_only=()):
     """{id: (x, y, anchor)}: for each node the label position, out of right, left, above and below, that crosses
     the fewest edges, circles and labels already placed. Bigger nodes choose first."""
     segs = [(pos[a][0], pos[a][1], pos[b][0], pos[b][1], a, b) for a, b in edges]
@@ -493,8 +525,15 @@ def place_labels(nodes, pos, radius, edges, labels, weights=None, right_only=(),
         options = [("start", x + r + 4, y + 5, (x + r + 2, y - LINE / 2, x + r + 6 + w, y + LINE / 2)),
                    ("end", x - r - 4, y + 5, (x - r - 6 - w, y - LINE / 2, x - r - 2, y + LINE / 2)),
                    ("middle", x, y - r - 7, (x - w / 2 - 2, y - r - 6 - LINE, x + w / 2 + 2, y - r - 4)),
-                   ("middle", x, y + r + 17, (x - w / 2 - 2, y + r + 4, x + w / 2 + 2, y + r + 6 + LINE))]
-        if i in right_only:   # a node of the small groups under the graph: the cell to its left belongs to another group
+                   ("middle", x, y + r + 17, (x - w / 2 - 2, y + r + 4, x + w / 2 + 2, y + r + 6 + LINE)),
+                   # corners, for a crowded circle whose four sides all have lines
+                   ("start", x + 0.7 * r + 2, y + 0.7 * r + 16, (x + 0.7 * r, y + 0.7 * r + 2, x + 0.7 * r + 4 + w, y + 0.7 * r + 2 + LINE)),
+                   ("start", x + 0.7 * r + 2, y - 0.7 * r - 6, (x + 0.7 * r, y - 0.7 * r - 2 - LINE, x + 0.7 * r + 4 + w, y - 0.7 * r - 2)),
+                   ("end", x - 0.7 * r - 2, y + 0.7 * r + 16, (x - 0.7 * r - 4 - w, y + 0.7 * r + 2, x - 0.7 * r, y + 0.7 * r + 2 + LINE)),
+                   ("end", x - 0.7 * r - 2, y - 0.7 * r - 6, (x - 0.7 * r - 4 - w, y - 0.7 * r - 2 - LINE, x - 0.7 * r, y - 0.7 * r - 2))]
+        if i in left_only:    # the hub of a fan under the graph: its lines leave to the right
+            options = options[1:2]
+        elif i in right_only:   # a node of the small groups under the graph: the cell to its left belongs to another group
             options = options[:1]
         best = None
         for k, (anchor, lx, ly, box) in enumerate(options):
@@ -535,9 +574,17 @@ def build(nodes, papers_of, color_of, legend):
     radius = {n["id"]: n["r"] for n in out_nodes if n["linked"]}
     groups = components(sorted(linked), edges)
     small = {i for g in groups[1:] for i in g}
+    hubs = {h for g in groups[1:] if (h := fan_hub(g, edges))}
     numbers = weight_spots(pos, radius, list(edges), edges)
-    spots = place_labels(list(radius), pos, radius, list(edges), {i: text[i] for i in radius}, edges, right_only=small,
-                         spots=numbers)
+    spots = place_labels(list(radius), pos, radius, list(edges), {i: text[i] for i in radius}, edges,
+                         right_only=small - hubs, spots=numbers, left_only=hubs)
+    # second pass: a number that a name label covers moves along its line, away from the labels
+    label_boxes = []
+    for i, (lx, ly, anchor) in spots.items():
+        w = CHAR * len(text[i])
+        x0 = {"start": lx, "end": lx - w, "middle": lx - w / 2}[anchor]
+        label_boxes.append((x0 - 2, ly - 14, x0 + w + 2, ly + 4))
+    numbers = weight_spots(pos, radius, list(edges), edges, avoid=label_boxes)
     for n in out_nodes:
         if n["id"] in spots:
             n["lx"], n["ly"], n["anchor"] = spots[n["id"]]
