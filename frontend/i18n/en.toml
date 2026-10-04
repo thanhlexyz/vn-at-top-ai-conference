@@ -568,3 +568,6 @@ other = "No accepted paper yet, so this figure is not comparable; it sorts last"
 
 [tip_reported_detail]
 other = "reported by the venue, accepted / submitted = {{ . }}"
+
+[venue_rate_finding]
+other = "At ICLR, where every submission is public, the listed professors have {{ .Ours }}% of their submissions accepted, about half of the {{ .Theirs }}% that ICLR reports. At the other seven venues, the estimate here ({{ .OursLo }}–{{ .OursHi }}%) is as high as or higher than the rates the conferences report ({{ .TheirsLo }}–{{ .TheirsHi }}%). This means one of two things: either the listed professors do very well at all the other conferences and badly only at ICLR, or the rejected papers counted on this site are massively under-reported."

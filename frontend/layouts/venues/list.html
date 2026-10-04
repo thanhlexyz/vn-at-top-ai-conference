@@ -57,4 +57,11 @@
 </table>
 </div>
 <p class="note">{{ T "venue_list_note" }}</p>
+{{- /* the ICLR count against the estimates elsewhere, each beside the rate the conference reports */}}
+{{- $iclr := index (where hugo.Data.venues "key" "iclr") 0 }}
+{{- $ours := slice }}{{ $theirs := slice }}
+{{- range where hugo.Data.venues "key" "ne" "iclr" }}{{ with .acceptance_rate }}{{ $ours = $ours | append . }}{{ end }}{{ with .reported_rate }}{{ $theirs = $theirs | append . }}{{ end }}{{ end }}
+{{- if and $iclr.acceptance_rate $iclr.reported_rate $ours $theirs }}
+<p>{{ T "venue_rate_finding" (dict "Ours" $iclr.acceptance_rate "Theirs" $iclr.reported_rate "OursLo" (math.Min $ours) "OursHi" (math.Max $ours) "TheirsLo" (math.Min $theirs) "TheirsHi" (math.Max $theirs)) }}</p>
+{{- end }}
 {{- end }}

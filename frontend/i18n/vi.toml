@@ -562,3 +562,6 @@ other = "Chưa có bài được nhận nên chỉ số này không so sánh đ�
 
 [tip_reported_detail]
 other = "hội nghị công bố, số bài được nhận / số bài nộp = {{ . }}"
+
+[venue_rate_finding]
+other = "Tại ICLR, nơi mọi bài nộp đều công khai, tỉ lệ được nhận của các giảng viên trong danh sách là {{ .Ours }}%, chỉ khoảng một nửa so với {{ .Theirs }}% mà ICLR công bố. Ngược lại, ở bảy hội nghị còn lại, tỉ lệ ước tính trên trang này ({{ .OursLo }}–{{ .OursHi }}%) bằng hoặc cao hơn tỉ lệ do các hội nghị công bố ({{ .TheirsLo }}–{{ .TheirsHi }}%). Điều này có thể có một trong hai nghĩa: hoặc các giảng viên làm rất tốt ở tất cả các hội nghị khác và chỉ kém ở ICLR, hoặc số bài bị từ chối trên trang này đang bị thống kê thiếu rất nhiều."
