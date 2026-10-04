@@ -509,3 +509,10 @@ other = "No shared paper with anyone else here:"
 other = "Pairs by papers together"
 [graph_together]
 other = "Papers together"
+
+[inst_list_charts]
+other = "Accepted papers by where the authors are"
+[inst_list_charts_note]
+other = "One bar per institution, as long as its accepted papers; the number at the end is blue / all. Blue: the first author (top chart) or more than half of the authors (bottom chart) list the institution. Orange: they list another institution. Grey: the source of the paper prints no affiliations (ACL, EMNLP, most CVPR lists, unofficial papers), so it cannot be judged."
+[inst_list_charts_none]
+other = "No accepted paper yet: {{ . }}."

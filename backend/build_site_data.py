@@ -652,6 +652,55 @@ def authorship_charts(entry, inst, counts_from=None):
                    "svg_vi": authorship_svg(a["by_year"], kind, inst, counts_from, "vi")} for kind in ("first", "majority")}
 
 
+INSTITUTION_CHART_TEXT = {"en": {"inst": "the institution", "aria": "Accepted papers per institution: {what}",
+                                  "tip": "{name}: {n} {what}"},
+                          "vi": {"inst": "trường", "aria": "Bài được nhận theo trường: {what}", "tip": "{name}: {n} bài {what}"}}
+
+
+def institution_svg(institutions, kind, peak, lang="en"):
+    """One horizontal stacked bar per institution, longest first: accepted papers with the first author (or most
+    authors, by `kind`) from the institution, from elsewhere, and papers that cannot be judged. Every bar is as long as
+    the institution's accepted papers on one scale shared by both charts, so only the blue part moves between them."""
+    w, t = AUTHOR_CHART_TEXT[lang], INSTITUTION_CHART_TEXT[lang]
+    width, name_w, right, top, row_h, bar_h = 640, 80, 64, 34, 26, 14
+    labels = [("own-inst", w[kind].format(inst=t["inst"])), ("other-inst", w[kind + "_other"]), ("unjudged", w["unknown"])]
+    height = top + row_h * len(institutions) + 4
+    scale = (width - name_w - right) / (peak or 1)
+    out = [f'<svg class="chart" viewBox="0 0 {width} {height}" role="img" '
+           f'aria-label="{html.escape(t["aria"].format(what=labels[0][1]))}">']
+    x = 0
+    for cls, text in labels:
+        out.append(f'<rect class="{cls}" x="{x}" y="8" width="12" height="12"/>'
+                   f'<text class="label" x="{x + 18}" y="18">{html.escape(text)}</text>')
+        x += 30 + 6.4 * len(text)
+    for k, i in enumerate(institutions):
+        y = top + k * row_h
+        name = i["name_vi"] if lang == "vi" else i["name"]
+        a = i.get("authorship", i)
+        home = a["majority" if kind == "majority" else "first_author"]["total"]
+        out.append(f'<text class="value" x="{name_w - 8}" y="{y + bar_h - 2}" text-anchor="end">'
+                   f'<title>{html.escape(name)}</title>{html.escape(i["short"])}</text>')
+        parts = [(cls, v, text) for (cls, text), v in zip(labels, (home, a["judged"] - home, i["accepted"] - a["judged"])) if v > 0]
+        xx = name_w
+        for n, (cls, v, text) in enumerate(parts):
+            seg = max(v * scale - (2 if n < len(parts) - 1 else 0), 1)
+            tip = t["tip"].format(name=name, n=v, what=text[:1].lower() + text[1:])
+            out.append(charts._bar(cls, xx, y, seg, bar_h, tip, round_end=n == len(parts) - 1))
+            xx += seg + 2
+        out.append(f'<text class="value" x="{xx + 4:.1f}" y="{y + bar_h - 2}">{home} / {i["accepted"]}</text>')
+    out.append(f'<line class="axis" x1="{name_w}" y1="{top - 4}" x2="{name_w}" y2="{height - 4}"/></svg>')
+    return "".join(out)
+
+
+def institution_charts(institutions):
+    shown = [i for i in institutions if i["accepted"]]
+    peak = max((i["accepted"] for i in shown), default=0)
+    out = {kind: {"svg": institution_svg(shown, kind, peak, "en"), "svg_vi": institution_svg(shown, kind, peak, "vi")}
+           for kind in ("first", "majority")}
+    out["none"] = [i["slug"] for i in institutions if not i["accepted"]]
+    return out
+
+
 def unique(records):
     seen = {}
     for r in records:
@@ -1152,6 +1201,7 @@ def main():
     for i in institutions:
         i["name_vi"] = names_vi.get(i["name"], i["name"])
     write_json(DATA / "institution_names.json", names_vi)
+    write_json(DATA / "institution_charts.json", institution_charts(institutions))
 
     def with_owners(r):
         who = owners[(r["venue"], r["year"], norm_title(r["title"]))]

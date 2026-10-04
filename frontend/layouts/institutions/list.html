@@ -44,11 +44,18 @@
 </div>
 <p class="note">{{ T "inst_list_note" }}</p>
 
-<h2>{{ T "inst_list_majority" }}</h2>
-<p class="note">{{ T "inst_list_majority_note" }}</p>
-{{ partial "institution-venue-table.html" (dict "rows" hugo.Data.institutions "section" "institutions" "key" "majority") }}
-
-<h2>{{ T "inst_list_first" }}</h2>
-<p class="note">{{ T "inst_list_first_note" }}</p>
-{{ partial "institution-venue-table.html" (dict "rows" hugo.Data.institutions "section" "institutions" "key" "first_author") }}
+{{- $c := hugo.Data.institution_charts }}
+{{- $lang := cond (eq site.Language.Lang "vi") "svg_vi" "svg" }}
+<h2>{{ T "inst_list_charts" }}</h2>
+<figure>
+{{ index $c.first $lang | safeHTML }}
+</figure>
+<figure>
+{{ index $c.majority $lang | safeHTML }}
+</figure>
+<p class="note">{{ T "inst_list_charts_note" }}
+{{- with $c.none }}
+{{- $names := slice }}{{ range . }}{{ $s := . }}{{ range where hugo.Data.institutions "slug" $s }}{{ $names = $names | append .short }}{{ end }}{{ end }}
+{{ T "inst_list_charts_none" (delimit $names ", ") }}
+{{- end }}</p>
 {{- end }}
