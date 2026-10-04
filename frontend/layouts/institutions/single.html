@@ -26,6 +26,9 @@
 <p class="note">{{ T "coauthor_institutions_note" }}</p>
 {{- end }}
 
+<h2>{{ T "inst_professors" }}</h2>
+{{ partial "professor-table.html" (dict "rows" (where hugo.Data.professors "institution_slug" $i.slug) "compact" true) }}
+
 <h2>{{ T "by_year" }}</h2>
 {{ partial "year-table.html" (dict "years" $i.years "venues" $i.venues "official" $i.official "own_page" $i.own_page "complete" true) }}
 
@@ -40,6 +43,4 @@
 <p class="note">{{ T "first_note" $i.short }}</p>
 {{ partial "venue-year-table.html" $i.first_author }}
 
-<h2>{{ T "inst_professors" }}</h2>
-{{ partial "professor-table.html" (dict "rows" (where hugo.Data.professors "institution_slug" $i.slug) "compact" true) }}
 {{- end }}
