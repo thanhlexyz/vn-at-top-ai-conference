@@ -62,15 +62,6 @@
 </figure>
 {{- end }}
 
-<h2>{{ T "author_charts_title" $p.institution_short }}</h2>
-<figure>
-{{ index $p.author_charts.first (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
-</figure>
-<figure>
-{{ index $p.author_charts.majority (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
-</figure>
-<p class="note">{{ T "author_charts_note" $p.institution_short }}</p>
-
 {{- with $p.projection }}
 <h2>{{ T "chart_title" }}</h2>
 <figure>
@@ -123,6 +114,15 @@
 </table>
 </div>
 {{- end }}
+
+<h2>{{ T "author_charts_title" $p.institution_short }}</h2>
+<figure>
+{{ index $p.author_charts.first (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
+</figure>
+<figure>
+{{ index $p.author_charts.majority (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
+</figure>
+<p class="note">{{ T "author_charts_note" $p.institution_short }}</p>
 
 <h2>{{ T "coauthors_title" }}</h2>
 {{- $c := $p.collab }}
