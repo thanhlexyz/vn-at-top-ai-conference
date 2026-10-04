@@ -25,16 +25,33 @@
    "url": "professors/phi-le-nguyen/",
    "group": "HUST",
    "id": "phi-le-nguyen",
-   "papers": 29,
+   "papers": 30,
    "x": 358.0,
    "y": 123.1,
    "linked": true,
-   "r": 18.7,
+   "r": 18.9,
    "color": "c1",
    "degree": 3,
-   "lx": 335.3,
+   "lx": 335.1,
    "ly": 128.1,
    "anchor": "end"
+  },
+  {
+   "name": "Ngo Van Linh",
+   "name_vi": "Ngô Văn Linh",
+   "url": "professors/ngo-van-linh/",
+   "group": "HUST",
+   "id": "ngo-van-linh",
+   "papers": 23,
+   "x": 329.6,
+   "y": 492.6,
+   "linked": true,
+   "r": 17.6,
+   "color": "c1",
+   "degree": 3,
+   "lx": 351.2,
+   "ly": 497.6,
+   "anchor": "start"
   },
   {
    "name": "Dung D. Le",
@@ -68,23 +85,6 @@
    "degree": 1,
    "lx": 551.0,
    "ly": 755.0,
-   "anchor": "start"
-  },
-  {
-   "name": "Ngo Van Linh",
-   "name_vi": "Ngô Văn Linh",
-   "url": "professors/ngo-van-linh/",
-   "group": "HUST",
-   "id": "ngo-van-linh",
-   "papers": 20,
-   "x": 329.6,
-   "y": 492.6,
-   "linked": true,
-   "r": 17.0,
-   "color": "c1",
-   "degree": 3,
-   "lx": 350.6,
-   "ly": 497.6,
    "anchor": "start"
   },
   {
@@ -238,6 +238,23 @@
    "anchor": "start"
   },
   {
+   "name": "Duc-Trong Le",
+   "name_vi": "Lê Đức Trọng",
+   "url": "professors/duc-trong-le/",
+   "group": "VNU-UET",
+   "id": "duc-trong-le",
+   "papers": 5,
+   "x": 30,
+   "y": 938.0,
+   "linked": true,
+   "r": 13.0,
+   "color": "c0",
+   "degree": 1,
+   "lx": 47.0,
+   "ly": 943.0,
+   "anchor": "start"
+  },
+  {
    "name": "Man Ngo",
    "name_vi": "Ngô Minh Mẫn",
    "url": "professors/man-ngo/",
@@ -283,23 +300,6 @@
    "degree": 1,
    "lx": 565.0,
    "ly": 989.0,
-   "anchor": "start"
-  },
-  {
-   "name": "Duc-Trong Le",
-   "name_vi": "Lê Đức Trọng",
-   "url": "professors/duc-trong-le/",
-   "group": "VNU-UET",
-   "id": "duc-trong-le",
-   "papers": 4,
-   "x": 30,
-   "y": 938.0,
-   "linked": true,
-   "r": 12.6,
-   "color": "c0",
-   "degree": 1,
-   "lx": 46.6,
-   "ly": 943.0,
    "anchor": "start"
   },
   {
@@ -478,6 +478,23 @@
    "degree": 1,
    "lx": 813.5,
    "ly": 801.0,
+   "anchor": "start"
+  },
+  {
+   "name": "Nguyen Thi Hanh",
+   "name_vi": "Nguyễn Thị Hạnh",
+   "url": "professors/nguyen-thi-hanh/",
+   "group": "Phenikaa",
+   "id": "nguyen-thi-hanh",
+   "papers": 2,
+   "x": 30,
+   "y": 842.0,
+   "linked": true,
+   "r": 11.5,
+   "color": "c3",
+   "degree": 2,
+   "lx": 45.5,
+   "ly": 847.0,
    "anchor": "start"
   },
   {
@@ -741,23 +758,6 @@
    "r": 10.8,
    "color": "c1",
    "degree": 0
-  },
-  {
-   "name": "Nguyen Thi Hanh",
-   "name_vi": "Nguyễn Thị Hạnh",
-   "url": "professors/nguyen-thi-hanh/",
-   "group": "Phenikaa",
-   "id": "nguyen-thi-hanh",
-   "papers": 1,
-   "x": 30,
-   "y": 842.0,
-   "linked": true,
-   "r": 10.8,
-   "color": "c3",
-   "degree": 2,
-   "lx": 44.8,
-   "ly": 847.0,
-   "anchor": "start"
   },
   {
    "name": "Nguyen Tu Uyen",
@@ -1088,6 +1088,20 @@
    "b_name_vi": "Huỳnh Thành Trung"
   },
   {
+   "a": "huynh-thi-thanh-binh",
+   "b": "nguyen-thi-hanh",
+   "weight": 2,
+   "x1": 48,
+   "y1": 796.0,
+   "x2": 30,
+   "y2": 842.0,
+   "width": 2.6,
+   "a_name": "Huynh Thi Thanh Binh",
+   "b_name": "Nguyen Thi Hanh",
+   "a_name_vi": "Huỳnh Thị Thanh Bình",
+   "b_name_vi": "Nguyễn Thị Hạnh"
+  },
+  {
    "a": "minh-do",
    "b": "phi-le-nguyen",
    "weight": 2,
@@ -1285,20 +1299,6 @@
   },
   {
    "a": "huynh-thi-thanh-binh",
-   "b": "nguyen-thi-hanh",
-   "weight": 1,
-   "x1": 48,
-   "y1": 796.0,
-   "x2": 30,
-   "y2": 842.0,
-   "width": 1.0,
-   "a_name": "Huynh Thi Thanh Binh",
-   "b_name": "Nguyen Thi Hanh",
-   "a_name_vi": "Huỳnh Thị Thanh Bình",
-   "b_name_vi": "Nguyễn Thị Hạnh"
-  },
-  {
-   "a": "huynh-thi-thanh-binh",
    "b": "son-van-nguyen",
    "weight": 1,
    "x1": 48,
@@ -1446,6 +1446,6 @@
    "color": "c0"
   }
  ],
- "papers": 252,
- "shared": 44
+ "papers": 257,
+ "shared": 45
 }

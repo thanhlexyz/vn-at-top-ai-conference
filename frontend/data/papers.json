@@ -2608,6 +2608,11 @@
     "slug": "huynh-thi-thanh-binh",
     "name": "Huynh Thi Thanh Binh",
     "name_vi": "Huỳnh Thị Thanh Bình"
+   },
+   {
+    "slug": "nguyen-thi-hanh",
+    "name": "Nguyen Thi Hanh",
+    "name_vi": "Nguyễn Thị Hạnh"
    }
   ]
  },
@@ -4093,6 +4098,30 @@
   ]
  },
  {
+  "year": 2025,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "EMO: Embedding Model Distillation via Intra-Model Relation and Optimal Transport Alignments",
+  "url": "https://aclanthology.org/2025.emnlp-main.385/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Minh-Phuc Truong, Hai An Vu, Tu Vu, Nguyen Thi Ngoc Diep, Linh Ngo Van, Thien Huu Nguyen, Trung Le",
+  "match": "name, confirmed by hand",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "ngo-van-linh",
+    "name": "Ngo Van Linh",
+    "name_vi": "Ngô Văn Linh"
+   }
+  ]
+ },
+ {
   "year": 2024,
   "venue": "iclr",
   "venue_name": "ICLR",
@@ -4675,6 +4704,78 @@
     "slug": "khoa-d-doan",
     "name": "Khoa D. Doan",
     "name_vi": "Đoàn Đăng Khoa"
+   }
+  ]
+ },
+ {
+  "year": 2024,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "CARER - ClinicAl Reasoning-Enhanced Representation for Temporal Health Risk Prediction",
+  "url": "https://aclanthology.org/2024.emnlp-main.580/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Tuan Dung Nguyen, Thanh Trung Huynh, Minh Hieu Phan, Quoc Viet Hung Nguyen, Phi Le Nguyen",
+  "match": "name, confirmed by hand",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "phi-le-nguyen",
+    "name": "Phi Le Nguyen",
+    "name_vi": "Nguyễn Phi Lê"
+   }
+  ]
+ },
+ {
+  "year": 2024,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "Lifelong Event Detection via Optimal Transport",
+  "url": "https://aclanthology.org/2024.emnlp-main.701/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Viet Dao, Van-Cuong Pham, Quyen Tran, Thanh-Thien Le, Linh Van Ngo, Thien Huu Nguyen",
+  "match": "name, confirmed by hand",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "ngo-van-linh",
+    "name": "Ngo Van Linh",
+    "name_vi": "Ngô Văn Linh"
+   }
+  ]
+ },
+ {
+  "year": 2024,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "Preserving Generalization of Language models in Few-shot Continual Relation Extraction",
+  "url": "https://aclanthology.org/2024.emnlp-main.763/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Quyen Tran, Nguyen Xuan Thanh, Nguyen Hoang Anh, Nam Le Hai, Trung Le, Linh Van Ngo, Thien Huu Nguyen",
+  "match": "name, confirmed by hand",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "ngo-van-linh",
+    "name": "Ngo Van Linh",
+    "name_vi": "Ngô Văn Linh"
    }
   ]
  },
@@ -5323,6 +5424,30 @@
     "slug": "than-quang-khoat",
     "name": "Than Quang Khoat",
     "name_vi": "Thân Quang Khoát"
+   }
+  ]
+ },
+ {
+  "year": 2020,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "Introducing a New Dataset for Event Detection in Cybersecurity Texts",
+  "url": "https://aclanthology.org/2020.emnlp-main.433/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Hieu Man Duc Trong, Duc Trong Le, Amir Pouran Ben Veyseh, Thuat Nguyen, Thien Huu Nguyen",
+  "match": "name, confirmed by hand",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "duc-trong-le",
+    "name": "Duc-Trong Le",
+    "name_vi": "Lê Đức Trọng"
    }
   ]
  }

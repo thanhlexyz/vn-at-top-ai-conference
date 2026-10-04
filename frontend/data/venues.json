@@ -11466,9 +11466,9 @@
   "name": "EMNLP",
   "full_name": "Conference on Empirical Methods in Natural Language Processing",
   "rejections": "none",
-  "accepted": 4,
+  "accepted": 9,
   "own_page": 1,
-  "official": 3,
+  "official": 8,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -11541,14 +11541,14 @@
     "official": 0
    },
    "emnlp": {
-    "accepted": 4,
+    "accepted": 9,
     "rejected": 2,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 2,
-    "submitted": 6,
+    "submitted": 11,
     "own_page": 1,
-    "official": 3
+    "official": 8
    }
   },
   "years": [
@@ -11648,23 +11648,23 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
+      "accepted": 1,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 0,
+      "submitted": 1,
       "own_page": 0,
-      "official": 0,
+      "official": 1,
       "available": true,
       "held": true,
       "provisional": false
      }
     },
-    "accepted": 0,
+    "accepted": 1,
     "own_page": 0,
-    "official": 0,
-    "rejected_estimated": 0
+    "official": 1,
+    "rejected_estimated": 5
    },
    {
     "year": 2021,
@@ -12104,23 +12104,23 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
+      "accepted": 3,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 0,
+      "submitted": 3,
       "own_page": 0,
-      "official": 0,
+      "official": 3,
       "available": true,
       "held": true,
       "provisional": false
      }
     },
-    "accepted": 0,
+    "accepted": 3,
     "own_page": 0,
-    "official": 0,
-    "rejected_estimated": 0
+    "official": 3,
+    "rejected_estimated": 15
    },
    {
     "year": 2025,
@@ -12218,23 +12218,23 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
+      "accepted": 1,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 0,
+      "submitted": 1,
       "own_page": 0,
-      "official": 0,
+      "official": 1,
       "available": true,
       "held": true,
       "provisional": false
      }
     },
-    "accepted": 0,
+    "accepted": 1,
     "own_page": 0,
-    "official": 0,
-    "rejected_estimated": 0
+    "official": 1,
+    "rejected_estimated": 5
    },
    {
     "year": 2026,
@@ -12397,6 +12397,107 @@
       "slug": "huynh-thi-thanh-binh",
       "name": "Huynh Thi Thanh Binh",
       "name_vi": "Huỳnh Thị Thanh Bình"
+     },
+     {
+      "slug": "nguyen-thi-hanh",
+      "name": "Nguyen Thi Hanh",
+      "name_vi": "Nguyễn Thị Hạnh"
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "EMO: Embedding Model Distillation via Intra-Model Relation and Optimal Transport Alignments",
+    "url": "https://aclanthology.org/2025.emnlp-main.385/",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Minh-Phuc Truong, Hai An Vu, Tu Vu, Nguyen Thi Ngoc Diep, Linh Ngo Van, Thien Huu Nguyen, Trung Le",
+    "match": "name, confirmed by hand",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     }
+    ]
+   },
+   {
+    "year": 2024,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "CARER - ClinicAl Reasoning-Enhanced Representation for Temporal Health Risk Prediction",
+    "url": "https://aclanthology.org/2024.emnlp-main.580/",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Tuan Dung Nguyen, Thanh Trung Huynh, Minh Hieu Phan, Quoc Viet Hung Nguyen, Phi Le Nguyen",
+    "match": "name, confirmed by hand",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "phi-le-nguyen",
+      "name": "Phi Le Nguyen",
+      "name_vi": "Nguyễn Phi Lê"
+     }
+    ]
+   },
+   {
+    "year": 2024,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "Lifelong Event Detection via Optimal Transport",
+    "url": "https://aclanthology.org/2024.emnlp-main.701/",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Viet Dao, Van-Cuong Pham, Quyen Tran, Thanh-Thien Le, Linh Van Ngo, Thien Huu Nguyen",
+    "match": "name, confirmed by hand",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     }
+    ]
+   },
+   {
+    "year": 2024,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "Preserving Generalization of Language models in Few-shot Continual Relation Extraction",
+    "url": "https://aclanthology.org/2024.emnlp-main.763/",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Quyen Tran, Nguyen Xuan Thanh, Nguyen Hoang Anh, Nam Le Hai, Trung Le, Linh Van Ngo, Thien Huu Nguyen",
+    "match": "name, confirmed by hand",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
      }
     ]
    },
@@ -12495,11 +12596,35 @@
       "name_vi": "Lê Duy Dũng"
      }
     ]
+   },
+   {
+    "year": 2020,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "Introducing a New Dataset for Event Detection in Cybersecurity Texts",
+    "url": "https://aclanthology.org/2020.emnlp-main.433/",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Hieu Man Duc Trong, Duc Trong Le, Amir Pouran Ben Veyseh, Thuat Nguyen, Thien Huu Nguyen",
+    "match": "name, confirmed by hand",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "duc-trong-le",
+      "name": "Duc-Trong Le",
+      "name_vi": "Lê Đức Trọng"
+     }
+    ]
    }
   ],
   "image": "",
   "image_source": "",
   "ratio": "5.9",
-  "rejected_estimated": 20
+  "rejected_estimated": 44
  }
 ]
