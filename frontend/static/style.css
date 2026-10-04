@@ -24,10 +24,11 @@
         --grid: #3a3a37 ; --axis: #5a5955 ; --chart-text: #c9c7c2 ; --chart-value: #f2f0ed ;
     }
 }
-/* logos keep a light card behind them in dark mode, since most are drawn for a white page */
-:root[data-theme="dark"] figure.logo img, :root[data-theme="dark"] img.mini { background: #ffffff ; padding: 4px ; border-radius: 4px ; }
+/* logos keep a light card behind them in dark mode, since most are drawn for a white page; the card is a soft
+   grey and the logo is dimmed to match, so the white of a logo file does not glare on the dark page */
+:root[data-theme="dark"] figure.logo img, :root[data-theme="dark"] img.mini { background: #ffffff ; padding: 4px ; border-radius: 4px ; filter: brightness(0.8) ; }
 @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) figure.logo img, :root:not([data-theme="light"]) img.mini { background: #ffffff ; padding: 4px ; border-radius: 4px ; }
+    :root:not([data-theme="light"]) figure.logo img, :root:not([data-theme="light"]) img.mini { background: #ffffff ; padding: 4px ; border-radius: 4px ; filter: brightness(0.8) ; }
 }
 nav .theme { background: none ; border: 1px solid var(--line) ; color: var(--fg) ; font: inherit ; cursor: pointer ; border-radius: 4px ; padding: 0 0.4em ; margin-left: 0.8em ; }
 
