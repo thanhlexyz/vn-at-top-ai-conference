@@ -1,13 +1,13 @@
 {{- /* One row per professor. Context: a list of entries from data/professors.json, or a dict with "rows" (that
        list) and "compact" (true on the front page: no per-venue columns, accepted in the latest year added). */ -}}
-{{- $rows := . }}{{ $compact := false }}{{ $podium := false }}
-{{- if reflect.IsMap . }}{{ $rows = .rows }}{{ $compact = .compact }}{{ $podium = .podium }}{{ end }}
+{{- $rows := . }}{{ $compact := false }}{{ $podium := false }}{{ $rank := false }}
+{{- if reflect.IsMap . }}{{ $rows = .rows }}{{ $compact = .compact }}{{ $podium = .podium }}{{ $rank = or .rank .podium }}{{ end }}
 {{- $last := hugo.Data.meta.last_year }}
 <div class="scroll pinned top">
 <table{{ if $podium }} class="podium"{{ end }}>
 	<thead>
 	<tr>
-		{{- if $podium }}<th rowspan="2" class="pin0 rank" data-nosort>#</th>{{ end }}
+		{{- if $rank }}<th rowspan="2" class="pin0 rank" data-nosort>#</th>{{ end }}
 		<th rowspan="2" class="l pin1">{{ T "th_professor" }}</th>
 		<th rowspan="2" class="l pin2">{{ T "th_institution" }}</th>
 		{{- if not $compact }}
@@ -59,7 +59,7 @@
 	{{- $p := . }}
 	{{- $iclr := .venues.iclr }}
 	<tr>
-		{{- if $podium }}<td class="pin0 rank"><span class="cup"></span><span class="n">{{ add $n 1 }}</span></td>{{ end }}
+		{{- if $rank }}<td class="pin0 rank">{{ if $podium }}<span class="cup"></span>{{ end }}<span class="n">{{ add $n 1 }}</span></td>{{ end }}
 		<td class="l pin1"><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ partial "pname.html" . }}</a></td>
 		<td class="l pin2"><a href="{{ printf "institutions/%s/" .institution_slug | relLangURL }}">{{ .institution_short }}</a></td>
 		{{- if not $compact }}

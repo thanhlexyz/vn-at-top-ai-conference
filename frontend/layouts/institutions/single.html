@@ -27,7 +27,9 @@
 {{- end }}
 
 <h2>{{ T "inst_professors" }}</h2>
-{{ partial "professor-table.html" (dict "rows" (where hugo.Data.professors "institution_slug" $i.slug) "compact" true) }}
+{{- $profs := where hugo.Data.professors "institution_slug" $i.slug }}
+{{- /* row numbers always; cups only when there are enough professors for a podium to mean something */}}
+{{ partial "professor-table.html" (dict "rows" $profs "compact" true "rank" true "podium" (ge (len $profs) 4)) }}
 
 <h2>{{ T "author_charts_title" $i.short }}</h2>
 <div class="fig-row">

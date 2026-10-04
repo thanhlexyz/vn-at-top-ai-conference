@@ -1110,30 +1110,6 @@
   "year": 2026,
   "venue": "neurips",
   "venue_name": "NeurIPS",
-  "title": "FlashControl: One-Step Controllable Generator via Distillation-Friendly Single-Stream Teachers.",
-  "url": "https://openreview.net/forum?id=F8EdTnY4HY",
-  "status": "accepted",
-  "status_label": "accepted",
-  "pres": "",
-  "authors": "Ngan Nguyen, Dung Nguyen, Quan Dao, Dimitris Metaxas, Minh Hoai, Cuong Pham, Anh Tran",
-  "match": "name, and listed on their own page",
-  "note": "",
-  "reason": "",
-  "later": "",
-  "unofficial": false,
-  "workshop": "",
-  "professors": [
-   {
-    "slug": "cuong-pham",
-    "name": "Cuong Pham",
-    "name_vi": "Phạm Văn Cường"
-   }
-  ]
- },
- {
-  "year": 2026,
-  "venue": "neurips",
-  "venue_name": "NeurIPS",
   "title": "Graph Topology Augmentation for Prioritized Sweeping in Non-stationary Reinforcement Learning",
   "url": "https://openreview.net/forum?id=midyPx9DqU",
   "status": "accepted",
@@ -1382,11 +1358,6 @@
     "slug": "phi-le-nguyen",
     "name": "Phi Le Nguyen",
     "name_vi": "Nguyễn Phi Lê"
-   },
-   {
-    "slug": "minh-do",
-    "name": "Minh Do",
-    "name_vi": "Đỗ Ngọc Minh"
    },
    {
     "slug": "thanh-trung-huynh",
@@ -1844,11 +1815,6 @@
     "slug": "uyen-n-b-vo",
     "name": "Uyen N.B. Vo",
     "name_vi": "Võ Ngọc Bích Uyên"
-   },
-   {
-    "slug": "thai-khanh-nguyen",
-    "name": "Thai Khanh Nguyen",
-    "name_vi": "Nguyễn Thái Khánh"
    }
   ]
  },
@@ -2349,30 +2315,6 @@
     "slug": "phi-le-nguyen",
     "name": "Phi Le Nguyen",
     "name_vi": "Nguyễn Phi Lê"
-   }
-  ]
- },
- {
-  "year": 2026,
-  "venue": "eccv",
-  "venue_name": "ECCV",
-  "title": "Cross-Space Distillation: Teaching One-Step Students with Modern Diffusion Teachers",
-  "url": "https://eccv.ecva.net/virtual/2026/poster/4819",
-  "status": "accepted",
-  "status_label": "accepted",
-  "pres": "",
-  "authors": "Anh Nguyen, Ngan Nguyen, Hong Duc Vu, Trung Dao, Viet Nguyen, Minh Quan Dao, Kien Nguyen, Tran Bao Chi Tran, Phong Nguyen, Khoi Nguyen, Cuong Pham, Dimitris N. Metaxas, Vishal Patel, Anh Tran",
-  "match": "name, confirmed by hand",
-  "note": "",
-  "reason": "",
-  "later": "",
-  "unofficial": false,
-  "workshop": "",
-  "professors": [
-   {
-    "slug": "cuong-pham",
-    "name": "Cuong Pham",
-    "name_vi": "Phạm Văn Cường"
    }
   ]
  },
@@ -3085,30 +3027,6 @@
     "slug": "tien-vu-van",
     "name": "Tien Vu-Van",
     "name_vi": "Vũ Văn Tiến"
-   }
-  ]
- },
- {
-  "year": 2025,
-  "venue": "iclr",
-  "venue_name": "ICLR",
-  "title": "Rapid Selection and Ordering of In-Context Demonstrations via Prompt Embedding Clustering",
-  "url": "https://openreview.net/forum?id=1Iu2Yte5N6",
-  "status": "accepted",
-  "status_label": "accepted",
-  "pres": "",
-  "authors": "Kha Pham, Hung Le, Man Ngo, Truyen Tran",
-  "match": "OpenReview profile",
-  "note": "",
-  "reason": "",
-  "later": "",
-  "unofficial": false,
-  "workshop": "",
-  "professors": [
-   {
-    "slug": "man-ngo",
-    "name": "Man Ngo",
-    "name_vi": "Ngô Minh Mẫn"
    }
   ]
  },
@@ -3883,54 +3801,6 @@
  },
  {
   "year": 2025,
-  "venue": "cvpr",
-  "venue_name": "CVPR",
-  "title": "Any3DIS: Class-Agnostic 3D Instance Segmentation by 2D Mask Tracking",
-  "url": "https://cvpr.thecvf.com/virtual/2025/poster/34232",
-  "status": "accepted",
-  "status_label": "accepted",
-  "pres": "",
-  "authors": "Phuc Nguyen, Minh Luu, Anh Tran, Cuong Pham, Khoi Nguyen",
-  "match": "name, confirmed by hand",
-  "note": "",
-  "reason": "",
-  "later": "",
-  "unofficial": false,
-  "workshop": "",
-  "professors": [
-   {
-    "slug": "cuong-pham",
-    "name": "Cuong Pham",
-    "name_vi": "Phạm Văn Cường"
-   }
-  ]
- },
- {
-  "year": 2025,
-  "venue": "cvpr",
-  "venue_name": "CVPR",
-  "title": "SwiftEdit: Lightning Fast Text-Guided Image Editing via One-Step Diffusion",
-  "url": "https://cvpr.thecvf.com/virtual/2025/poster/32520",
-  "status": "accepted",
-  "status_label": "accepted",
-  "pres": "",
-  "authors": "Trong-Tung Nguyen, Quang Nguyen, Khoi Nguyen, Anh Tran, Cuong Pham",
-  "match": "name, confirmed by hand",
-  "note": "",
-  "reason": "",
-  "later": "",
-  "unofficial": false,
-  "workshop": "",
-  "professors": [
-   {
-    "slug": "cuong-pham",
-    "name": "Cuong Pham",
-    "name_vi": "Phạm Văn Cường"
-   }
-  ]
- },
- {
-  "year": 2025,
   "venue": "iccv",
   "venue_name": "ICCV",
   "title": "ConstStyle:  Robust Domain Generalization with Unified Style Transformation",
@@ -4679,7 +4549,7 @@
   "status_label": "accepted",
   "pres": "",
   "authors": "Trung Dao, Thuan Nguyen, Thanh Van Le, Duc H Vu, Khoi Nguyen, Cuong Pham, Anh Tran",
-  "match": "name, confirmed by hand",
+  "match": "name and affiliation",
   "note": "",
   "reason": "",
   "later": "",
@@ -5351,30 +5221,6 @@
   "status_label": "withdrawn",
   "pres": "",
   "authors": "Khoat Than, Nghia Vu",
-  "match": "OpenReview profile",
-  "note": "",
-  "reason": "",
-  "later": "",
-  "unofficial": false,
-  "workshop": "",
-  "professors": [
-   {
-    "slug": "than-quang-khoat",
-    "name": "Than Quang Khoat",
-    "name_vi": "Thân Quang Khoát"
-   }
-  ]
- },
- {
-  "year": 2021,
-  "venue": "neurips",
-  "venue_name": "NeurIPS",
-  "title": "Structured Dropout Variational Inference for Bayesian Neural Networks",
-  "url": "https://openreview.net/forum?id=QgNAUqQLh4",
-  "status": "accepted",
-  "status_label": "accepted",
-  "pres": "",
-  "authors": "Son Nguyen, Duong Nguyen, Khai Nguyen, Khoat Than, Hung Bui, Nhat Ho",
   "match": "OpenReview profile",
   "note": "",
   "reason": "",
