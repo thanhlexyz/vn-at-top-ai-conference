@@ -39,7 +39,11 @@
 		<td class="na">&ndash;</td>
 		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
 		{{ partial "split-cells.html" . }}
+		{{- if $t.not_accepted }}
+		<td class="bad" title="{{ T "tip_rejected_findings" }}">{{ T "venue_n_public" $t.not_accepted }}</td>
+		{{- else }}
 		<td class="na bad">&ndash;</td>
+		{{- end }}
 		{{- end }}
 		{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}
 	</tr>

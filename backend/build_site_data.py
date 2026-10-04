@@ -1362,7 +1362,7 @@ def main():
             if not (c.get("held", True) and c.get("available", True)):
                 rows.append({"year": y["year"], "counts": False})
                 continue
-            recorded = c["not_accepted"] if v["rejections"] != "none" else 0
+            recorded = c["not_accepted"]   # also at venues that hide rejections: Findings papers are on record
             guess = max(y.get("rejected_estimated", 0) - recorded, 0)
             rows.append({"year": y["year"], "counts": True, "accepted": c["accepted"], "iclr_not_accepted": recorded,
                          "estimated": guess, "total": c["accepted"] + recorded + guess})

@@ -385,7 +385,7 @@ other = "{{ . }} publishes every submission and its outcome on OpenReview, so su
 [venue_partial]
 other = "{{ . }} publishes accepted papers. A rejected paper is public only when its authors chose to make it so, which means the rejected numbers below are a lower bound and submitted numbers cannot be given."
 [venue_none]
-other = "{{ . }} publishes accepted papers only. Submitted and rejected papers cannot be counted."
+other = "{{ . }} publishes accepted papers only, so submitted and rejected papers cannot be counted; the only rejections on record are papers placed in Findings and rejections their authors made public."
 [venue_once]
 other = "The numbers cover the listed professors; a paper with several of them is counted once."
 [venue_own_page]
@@ -544,3 +544,6 @@ other = "Professors with accepted papers"
 
 [venue_chart_note]
 other = "Each column is one year: accepted papers, rejections that are public, and the estimated rest. Years in grey: the conference was not held, or its list is not published yet."
+
+[tip_rejected_findings]
+other = "rejections on record even here: papers placed in Findings, and rejections their authors made public"

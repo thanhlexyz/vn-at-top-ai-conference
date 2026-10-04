@@ -380,7 +380,7 @@ other = "{{ . }} công khai toàn bộ bài nộp cùng kết quả trên OpenRe
 [venue_partial]
 other = "{{ . }} công khai các bài được chấp nhận. Bài bị từ chối chỉ được công khai khi tác giả lựa chọn, vì vậy số bài bị từ chối dưới đây là con số tối thiểu và không có số liệu về số bài nộp."
 [venue_none]
-other = "{{ . }} chỉ công khai các bài được chấp nhận, do đó không thể thống kê số bài nộp và số bài bị từ chối."
+other = "{{ . }} chỉ công khai các bài được chấp nhận, do đó không thể thống kê số bài nộp và số bài bị từ chối; bài bị từ chối duy nhất có ghi nhận là bài được xếp vào Findings và bài bị từ chối do tác giả tự công khai."
 [venue_once]
 other = "Số liệu được tính cho các giảng viên trong danh sách; một bài có nhiều giảng viên trong danh sách chỉ được tính một lần."
 [venue_own_page]
@@ -538,3 +538,6 @@ other = "Giảng viên có bài được nhận"
 
 [venue_chart_note]
 other = "Mỗi cột là một năm: bài được nhận, bài bị từ chối được công khai và phần ước tính còn lại. Năm màu xám: hội nghị không tổ chức hoặc danh sách chưa được công bố."
+
+[tip_rejected_findings]
+other = "bài bị từ chối vẫn có ghi nhận: bài được xếp vào Findings và bài bị từ chối do tác giả tự công khai"
