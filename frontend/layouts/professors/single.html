@@ -27,6 +27,22 @@
 </ol>
 {{- end }}
 
+{{- /* co-authors who are also on this site, from the collaboration graph: most shared papers first */}}
+{{- $vi := eq site.Language.Lang "vi" }}
+{{- $mine := slice }}
+{{- range hugo.Data.graph_people.edges }}{{ if or (eq .a $p.slug) (eq .b $p.slug) }}{{ $mine = $mine | append . }}{{ end }}{{ end }}
+{{- with $mine }}
+<h2>{{ T "coauthors_on_site" }}</h2>
+<ol class="links">
+	{{- range . }}
+	{{- $other := cond (eq .a $p.slug) .b .a }}
+	{{- $name := cond (eq .a $p.slug) (cond $vi .b_name_vi .b_name) (cond $vi .a_name_vi .a_name) }}
+	<li><a href="{{ printf "professors/%s/" $other | relLangURL }}">{{ $name }}</a>: {{ T "graph_papers" .weight }}</li>
+	{{- end }}
+</ol>
+<p class="note">{{ T "coauthors_on_site_note" }}</p>
+{{- end }}
+
 {{- with $p.scholar }}
 <h2>Google Scholar</h2>
 <p class="note">{{ T "scholar_note" (dict "Date" .fetched "URL" .url) | safeHTML }}</p>
