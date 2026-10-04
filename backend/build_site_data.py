@@ -1405,8 +1405,19 @@ def main():
         total = known_acc + known_rej + extra
         return round(len(rej_recs) + extra), (round(100 * known_acc / total) if known_acc else None)
 
+    # the acceptance rate each conference reports for its main track, all years on record together
+    # (venue_rates.csv: submitted and accepted per year, with the source of each)
+    reported = collections.defaultdict(lambda: [0, 0, []])
+    for r in read_csv(BACKEND / "venue_rates.csv"):
+        if r["submitted"].isdigit() and r["accepted"].isdigit():
+            t = reported[r["venue"].lower()]
+            t[0] += int(r["submitted"]); t[1] += int(r["accepted"]); t[2].append(int(r["year"]))
+
     for v in venues:
         v["rejected_estimated"], v["acceptance_rate"] = venue_estimate(v["key"])
+        sub, acc_n, yrs = reported.get(v["key"], (0, 0, []))
+        v["reported_rate"] = round(100 * acc_n / sub) if sub else None
+        v["reported_detail"] = f"{acc_n} / {sub} ({min(yrs)}–{max(yrs)})" if sub else ""
         a = v["venues"][v["key"]]["accepted"]
         v["ratio"] = f"{(a + v['rejected_estimated']) / a:.1f}" if a else "1.0"
         rows = []

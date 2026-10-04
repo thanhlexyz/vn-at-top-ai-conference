@@ -62,6 +62,7 @@ Even ICLR is not complete: a withdrawn paper can be removed or left anonymous, a
 
 - **Accepted papers:** the conference virtual sites (iclr.cc, neurips.cc, icml.cc, cvpr.thecvf.com), the CVF Open Access lists for CVPR, and the ACL Anthology volumes of long and short papers.
 - **ICLR submissions and outcomes, NeurIPS public rejections:** OpenReview, queried with each professor's own profile ID.
+- **Acceptance rates reported by the venues** (Venues page): submitted and accepted main-track papers per year from each conference's fact sheets, opening slides or proceedings front matter, and a few secondary sources where no official figure was found; each year and its source are in [venue_rates.csv](https://github.com/thanhlexyz/vn-at-top-ai-conference/blob/main/backend/venue_rates.csv). Conferences count submissions differently (all, valid, or after desk rejections), so the rates are only roughly comparable.
 
 Main-track accepted papers read per venue and year:
 

@@ -553,9 +553,12 @@ other = "số bài được nhận chia cho số bài đã nộp ước tính; l
 other = "Chưa có bài nộp ICLR nên không ước tính được số bài bị từ chối; tỉ lệ này không so sánh được và được xếp cuối"
 
 [th_rate_venue]
-other = "Tỉ lệ được nhận"
+other = "Tỉ lệ được nhận: giảng viên trong danh sách / hội nghị công bố"
 [tip_rate_venue]
-other = "Số bài được nhận chia cho số bài đã nộp. Tại ICLR là số đếm; ở các hội nghị không công khai bài bị từ chối là số ước tính (~), theo kết quả ICLR của các tác giả trong danh sách của từng bài; bài mà tác giả trong danh sách chưa từng nộp ICLR không được tính"
+other = "Số thứ nhất: bài của các giảng viên trong danh sách, số bài được nhận chia số bài đã nộp; tại ICLR là số đếm, ở nơi khác là số ước tính (~) theo kết quả ICLR của các tác giả trong danh sách của từng bài, không tính bài mà tác giả chưa từng nộp ICLR. Số thứ hai: tỉ lệ nhánh chính do hội nghị công bố, gộp các năm."
 
 [tip_coauthors_trivial]
 other = "Chưa có bài được nhận nên chỉ số này không so sánh được; được xếp cuối"
+
+[tip_reported_detail]
+other = "hội nghị công bố, số bài được nhận / số bài nộp = {{ . }}"

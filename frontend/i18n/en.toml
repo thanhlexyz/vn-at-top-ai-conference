@@ -559,9 +559,12 @@ other = "accepted divided by submitted, estimated: an estimate, since most venue
 other = "No ICLR submissions, so the hidden rejections cannot be estimated and this rate is not comparable; it sorts last"
 
 [th_rate_venue]
-other = "Acceptance rate"
+other = "Acceptance rate: listed professors / reported by the venue"
 [tip_rate_venue]
-other = "Accepted divided by submitted. Counted at ICLR; estimated (~) at the venues that hide their rejections, from the ICLR record of each paper's listed authors; papers whose listed authors never submitted to ICLR are left out"
+other = "First: the listed professors' papers, accepted divided by submitted; counted at ICLR, estimated (~) elsewhere from the ICLR record of each paper's listed authors, leaving out papers whose listed authors never submitted to ICLR. Second: the main-track rate the conference itself reports, all years together."
 
 [tip_coauthors_trivial]
 other = "No accepted paper yet, so this figure is not comparable; it sorts last"
+
+[tip_reported_detail]
+other = "reported by the venue, accepted / submitted = {{ . }}"

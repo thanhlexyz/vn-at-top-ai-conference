@@ -48,7 +48,9 @@
 		{{- end }}
 		{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}
 		{{- /* accepted over submitted: counted at ICLR, estimated (~) where rejections are hidden */}}
-		{{- with .acceptance_rate }}<td class="rate">{{ if ne $v.rejections "full" }}~{{ end }}{{ . }}%</td>{{ else }}<td class="na rate">&ndash;</td>{{ end }}
+		{{- /* ours (estimated where rejections are hidden) / the rate the conference reports, all years together */}}
+		<td class="rate" title="{{ with .reported_detail }}{{ T "tip_reported_detail" . }}{{ end }}">
+			{{- with .acceptance_rate }}{{ if ne $v.rejections "full" }}~{{ end }}{{ . }}%{{ else }}&ndash;{{ end }} / {{ with .reported_rate }}{{ . }}%{{ else }}&ndash;{{ end }}</td>
 	</tr>
 	{{- end }}
 	</tbody>
