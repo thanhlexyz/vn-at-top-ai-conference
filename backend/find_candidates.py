@@ -9,8 +9,10 @@ columns are the roster columns, so approving someone is one command:
 which appends them to roster.csv with `approved` left empty. Then open roster.csv, fill in `rank`,
 `vn_since` and `openreview_ids`, and set `approved` to yes.
 
-Only sources that give an affiliation per author can be searched: ICLR, NeurIPS and ICML (all years)
-and CVPR from 2023. People who publish only at ACL, or at CVPR before 2023, have to be added by hand.
+Sources that give an affiliation per author are searched: ICLR, NeurIPS and ICML (all years), CVPR from
+2023, ICCV 2025 and ECCV from 2024. For lists without affiliations, only papers whose affiliations were read
+from the PDF and checked (affiliations.csv; `fetch_affiliations.py --scan` finds AAAI, IJCAI and NAACL papers
+with authors in Vietnam) are searched; other people who publish only there have to be added by hand.
 
 If `python fetch_openreview.py --candidates` has been run, their OpenReview position is shown too, and
 `openreview_url` links the one profile at an institution named on their papers. With no such profile, or
@@ -25,7 +27,7 @@ import re
 import sys
 import urllib.parse
 
-from common import (ACCEPTED, BACKEND, CANDIDATES, FIRST_YEAR, OPENREVIEW_RAW, PARENT, ROSTER, ROSTER_FIELDS, VENUE_KEYS,
+from common import (with_pdf_affiliations, ACCEPTED, BACKEND, CANDIDATES, FIRST_YEAR, OPENREVIEW_RAW, PARENT, ROSTER, ROSTER_FIELDS, VENUE_KEYS,
                     VENUE_NAME, load_roster, name_key, norm_name, read_csv, read_jsonl_gz, slugify, vn_institution,
                     vn_institutions,
                     write_csv)
@@ -162,7 +164,9 @@ def main():
     ap.add_argument("--add", nargs="+", metavar="NAME", help="append these candidates to roster.csv")
     args = ap.parse_args()
 
-    rows = find(read_jsonl_gz(ACCEPTED), load_roster())
+    # lists without affiliations (ACL, EMNLP, NAACL, AAAI, IJCAI, CVPR before 2023) are searched where the
+    # affiliations of a paper were read from its PDF and checked (affiliations.csv; fetch_affiliations.py --scan)
+    rows = find(with_pdf_affiliations(read_jsonl_gz(ACCEPTED), []), load_roster())
     if args.add:
         return add_to_roster(rows, args.add)
     write_csv(CANDIDATES, ROSTER_FIELDS + EVIDENCE_FIELDS, rows)

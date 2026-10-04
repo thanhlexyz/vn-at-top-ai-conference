@@ -170,7 +170,9 @@ affiliations). Wrong person: `review.csv` `no` with the evidence (see its limits
 matched only by affiliation can drop out; confirm it in `review.csv` if it is theirs).
 
 **New conference data:** `make refresh`, then `fetch_affiliations.py` for papers whose list prints no affiliations
-(fill and check each row), then `verify_affiliations.py` to check every counted official paper against its PDF;
+(fill and check each row; `--scan aaai ijcai naacl` also reads papers with two or more Vietnamese family names and
+keeps those whose title page names a university in Vietnam, so that `find_candidates.py`, which applies the checked
+rows, lists their authors on the Candidates page), then `verify_affiliations.py` to check every counted official paper against its PDF;
 fix what it flags. NeurIPS PDFs become public only after the conference.
 
 **Text on the site:** every string in both `en.toml` and `vi.toml`, in a professional register; Vietnamese that reads

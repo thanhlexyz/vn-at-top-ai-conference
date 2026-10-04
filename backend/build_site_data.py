@@ -28,7 +28,7 @@ import html
 import json
 import re
 
-from common import (ACCEPTED, BACKEND, CANDIDATES, FRONTEND, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
+from common import (with_pdf_affiliations, ACCEPTED, BACKEND, CANDIDATES, FRONTEND, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
                     STATUS_LABEL, VENUE_GROUPS, VENUE_KEYS, VENUE_NAME, VENUES, WORK, YEARS, classify_status, held, in_vietnam,
                     load_roster, name_key, norm_name, norm_title, openreview_venue, presentation, read_csv,
                     read_jsonl_gz, same_institution, slugify, vn_institutions, write_json)
@@ -46,42 +46,11 @@ FINDINGS_NOTE = "placed in Findings, which counts as rejected from the main trac
 TRACK_REASON = {"datasets_benchmarks": "Datasets & Benchmarks track", "position": "position-paper track",
                 "findings": "Findings track", "journal": "journal track", "blog": "blog-post track",
                 "tiny_papers": "Tiny Papers track"}
-MAX_CANDIDATES_ON_SITE = 150
+MAX_CANDIDATES_ON_SITE = 250
 AREA_ALIAS = {"Miscellaneous Aspects of Machine Learning": "General Machine Learning"}  # renamed in 2025
 
 
 # ---------------------------------------------------------------- inputs
-
-def with_pdf_affiliations(papers, warnings):
-    """Fill the empty affiliations of a list from affiliations.csv (read from the PDF, checked by hand). A paper whose
-    authors there do not match the list, name by name, is left as it is and reported."""
-    fixes = collections.defaultdict(list)
-    for r in read_csv(BACKEND / "affiliation_fixes.csv"):
-        if r["checked"] == "yes":
-            fixes[(r["venue"], int(r["year"]), norm_title(r["title"]))].append(r)
-    rows = collections.defaultdict(list)
-    for r in read_csv(BACKEND / "affiliations.csv"):
-        if r["checked"] == "yes":
-            rows[(r["venue"], int(r["year"]), norm_title(r["title"]))].append(r)
-    for p in papers:
-        found = rows.get((p["venue"], p["year"], norm_title(p["title"])))
-        if found and not any(a["aff"] for a in p["authors"]):
-            found = sorted(found, key=lambda r: int(r["position"]))
-            if [norm_name(r["author"]) for r in found] != [norm_name(a["name"]) for a in p["authors"]]:
-                warnings.append(f"affiliations.csv: the authors of '{p['title'][:60]}' ({VENUE_NAME[p['venue']]} "
-                                f"{p['year']}) do not match the list; not used")
-            else:
-                p["authors"] = [{**a, "aff": r["affiliation"]} for a, r in zip(p["authors"], found)]
-        # one author's affiliation corrected where the list gives a different one than the paper prints
-        # (virtual sites take it from the author's profile, which can list every position they hold)
-        for r in fixes.get((p["venue"], p["year"], norm_title(p["title"])), ()):
-            hit = [a for a in p["authors"] if norm_name(a["name"]) == norm_name(r["author"])]
-            if not hit:
-                warnings.append(f"affiliation_fixes.csv: no author {r['author']} on '{p['title'][:60]}'; not used")
-            for a in hit:
-                a["aff"] = r["affiliation"]
-        yield p
-
 
 class Accepted:
     """The accepted-paper lists, indexed the ways the matching needs."""

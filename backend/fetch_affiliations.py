@@ -8,7 +8,12 @@ read from numbered markers ("Name1,2 ... 1University"). Title pages differ too m
 each row is checked against the title page by hand and marked checked=yes; build_site_data.py uses checked rows only.
 
     python3 fetch_affiliations.py    # then fill and check the new rows of affiliations.csv
+
+With --scan VENUE..., it also reads papers of those venues whose lists print no affiliations (AAAI, IJCAI, NAACL)
+that have two or more authors with a Vietnamese family name, and adds those whose title page names an institution
+in Vietnam: once checked, find_candidates.py lists their authors in Vietnam who are not on the roster.
 """
+import argparse
 import csv
 import gzip
 import json
@@ -17,7 +22,7 @@ import subprocess
 import time
 import urllib.request
 
-from common import BACKEND, FRONTEND, norm_title, read_csv
+from common import BACKEND, FRONTEND, norm_title, read_csv, strip_accents, vn_institutions
 
 PDF_DIR = BACKEND / "raw" / "pdf"
 HEADERS = BACKEND / "work" / "pdf_headers"
@@ -57,7 +62,22 @@ def guess(text, names):
     return ["; ".join(places[n] for n in m if n in places) for m in marks]
 
 
+# Vietnamese family names; a few are also Chinese or Korean, which is why a paper needs two such authors to be read
+VN_FAMILY = {"nguyen", "tran", "le", "pham", "hoang", "huynh", "phan", "vu", "vo", "dang", "bui", "do", "ho", "ngo",
+             "duong", "ly", "dinh", "trinh", "doan", "luong", "truong", "lam", "mai", "ta", "cao", "chu", "quach", "ha",
+             "thai", "kieu", "luu", "vuong", "trieu", "giang", "lai", "tong", "khuat", "nghiem", "bach", "phung", "dao"}
+
+
+def vietnamese_name(name):
+    t = [x for x in re.split(r"[\s\-.]+", strip_accents(name).lower()) if x]
+    return len(t) >= 2 and (t[0] in VN_FAMILY or t[-1] in VN_FAMILY)
+
+
 def main():
+    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap.add_argument("--scan", nargs="+", metavar="VENUE", default=[],
+                    help="also read papers of these venues with authors who may be in Vietnam (aaai ijcai naacl)")
+    args = ap.parse_args()
     papers = {}
     for line in gzip.open(BACKEND / "work" / "accepted.jsonl.gz", "rt"):
         p = json.loads(line)
@@ -72,12 +92,15 @@ def main():
         p = papers.get((r["venue"], int(r["year"]), norm_title(r["title"])))
         if not r["decision"].strip() and p and not any(a["aff"] for a in p["authors"]) and pdf_url(p["url"], p.get("pdf")):
             wanted[(p["venue"], p["year"], norm_title(p["title"]))] = p
+    scan = {k: p for k, p in papers.items() if p["venue"] in args.scan and p["track"] == "main" and k not in wanted
+            and not any(a["aff"] for a in p["authors"]) and pdf_url(p["url"], p.get("pdf"))
+            and sum(vietnamese_name(a["name"]) for a in p["authors"]) >= 2}
     rows = read_csv(CSV) if CSV.exists() else []
     done = {(r["venue"], int(r["year"]), norm_title(r["title"])) for r in rows}
     PDF_DIR.mkdir(parents=True, exist_ok=True)
     HEADERS.mkdir(parents=True, exist_ok=True)
-    added = 0
-    for key, p in sorted(wanted.items()):
+    added, skipped = 0, 0
+    for key, p in sorted(wanted.items()) + sorted(scan.items()):
         url = pdf_url(p["url"], p.get("pdf"))
         name = url.split("/")[-1] if p["venue"] not in ("aaai", "ijcai") else f"{p['venue']}-{p['year']}-" + "-".join(url.split("/")[-2:])
         path = PDF_DIR / re.sub(r"\W+", "_", name)
@@ -86,6 +109,9 @@ def main():
             path.write_bytes(urllib.request.urlopen(req, timeout=120).read())
             time.sleep(1)
         text = title_page(path)
+        if key in scan and not any(uni for _, _, uni in vn_institutions(text)):
+            skipped += 1   # no university in Vietnam on the title page
+            continue
         (HEADERS / (path.stem + ".txt")).write_text(f"{url}\n\n{text}\n")
         if key in done:
             continue
@@ -100,6 +126,8 @@ def main():
         w.writeheader()
         w.writerows(rows)
     unchecked = len({(r["venue"], r["year"], r["title"]) for r in rows if r["checked"] != "yes"})
+    if scan:
+        print(f"scanned {len(scan)} papers with two or more Vietnamese family names; {skipped} name no university in Vietnam")
     print(f"{len(wanted)} papers without affiliations in their list, {added} new; {unchecked} papers in "
           f"{CSV.name} still to check by hand")
 
