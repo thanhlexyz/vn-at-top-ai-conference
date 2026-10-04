@@ -97,7 +97,11 @@
 		});
 		table.querySelectorAll("th[aria-sort]").forEach(function (th) { th.removeAttribute("aria-sort"); });
 		cell.setAttribute("aria-sort", order);
-		values.forEach(function (v) { body.appendChild(v.tr); });
+		values.forEach(function (v, k) {
+			body.appendChild(v.tr);
+			var n = v.tr.querySelector("td.rank .n");   // the # column numbers the rows in the order shown
+			if (n) n.textContent = k + 1;
+		});
 		totals.forEach(function (tr) { body.appendChild(tr); });
 		podium(table, numeric ? column : null, order === "ascending");
 	}
@@ -141,6 +145,7 @@
 		if (!table.tHead || !table.tBodies[0] || table.tBodies[0].rows.length < 3) return;
 		leafHeadings(table.tHead).forEach(function (pair) {
 			var cell = pair[0], column = pair[1];
+			if (cell.hasAttribute("data-nosort")) return;
 			cell.classList.add("sortable");
 			cell.tabIndex = 0;
 			cell.title = (cell.title ? cell.title + ". " : "") + "Click to sort";
@@ -204,6 +209,8 @@
 	function measure() {
 		document.querySelectorAll(".scroll.pinned").forEach(function (box) {
 			box.classList.add("measured");
+			var first = box.querySelector("td.pin0, th.pin0");   // the # column, where there is one
+			box.style.setProperty("--pin0w", (first ? first.getBoundingClientRect().width : 0) + "px");
 			var cell = box.querySelector("td.pin1, th.pin1");
 			if (cell) box.style.setProperty("--pin1w", cell.getBoundingClientRect().width + "px");
 		});

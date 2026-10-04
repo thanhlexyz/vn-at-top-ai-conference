@@ -393,13 +393,18 @@ td.bad, th.bad { background: var(--bad) ; }
 .scroll.top > table { transform: rotateX(180deg) ; }
 .scroll.pinned > table { border-collapse: separate ; border-spacing: 0 ; border-width: 1px 0 0 1px ; }
 .scroll.pinned td, .scroll.pinned th { border-width: 0 1px 1px 0 ; }
-.scroll.pinned .pin1, .scroll.pinned .pin2 { position: sticky ; z-index: 1 ; background: var(--bg) ; }
-.scroll.pinned th.pin1, .scroll.pinned th.pin2 { background: var(--th) ; }
+.scroll.pinned .pin0, .scroll.pinned .pin1, .scroll.pinned .pin2 { position: sticky ; z-index: 1 ; background: var(--bg) ; }
+.scroll.pinned th.pin0, .scroll.pinned th.pin1, .scroll.pinned th.pin2 { background: var(--th) ; }
+/* the # column: row number in the order shown, with the cup of the top three */
+.scroll.pinned .pin0 { left: 0 ; white-space: nowrap ; box-shadow: inset 1px 0 0 var(--line) ; }
+td.rank { text-align: right ; }
+td.rank .cup { margin-right: 0.25em ; }
+.scroll.pinned .pin0 + .pin1 { box-shadow: none ; }   /* the # column already draws the left edge */
 /* the name column is as wide as its longest name; site.js measures it and sets --pin1w so the institution
    column sticks right after it (without the script, a fixed width is used) */
-.scroll.pinned .pin1 { left: 0 ; white-space: nowrap ; }
+.scroll.pinned .pin1 { left: var(--pin0w, 0px) ; white-space: nowrap ; }
 .scroll.pinned:not(.measured) .pin1 { min-width: 13.5em ; max-width: 13.5em ; }
-.scroll.pinned .pin2 { left: var(--pin1w, calc(13.5em + 1.2em + 1px)) ; white-space: nowrap ; box-shadow: 2px 0 0 var(--line) ; }
+.scroll.pinned .pin2 { left: calc(var(--pin0w, 0px) + var(--pin1w, calc(13.5em + 1.2em + 1px))) ; white-space: nowrap ; box-shadow: 2px 0 0 var(--line) ; }
 /* a pinned column keeps its left edge when the table scrolls under it */
 .scroll.pinned .pin1 { box-shadow: inset 1px 0 0 var(--line) ; }
 /* long names wrap to about two lines, so the pinned columns leave room for the numbers */

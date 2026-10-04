@@ -7,6 +7,7 @@
 <table{{ if $podium }} class="podium"{{ end }}>
 	<thead>
 	<tr>
+		{{- if $podium }}<th rowspan="2" class="pin0 rank" data-nosort>#</th>{{ end }}
 		<th rowspan="2" class="l pin1">{{ T "th_professor" }}</th>
 		<th rowspan="2" class="l pin2">{{ T "th_institution" }}</th>
 		{{- if not $compact }}
@@ -54,11 +55,12 @@
 	</tr>
 	</thead>
 	<tbody>
-	{{- range $rows }}
+	{{- range $n, $_ := $rows }}
 	{{- $p := . }}
 	{{- $iclr := .venues.iclr }}
 	<tr>
-		<td class="l pin1">{{ if $podium }}<span class="cup"></span>{{ end }}<a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ partial "pname.html" . }}</a></td>
+		{{- if $podium }}<td class="pin0 rank"><span class="cup"></span><span class="n">{{ add $n 1 }}</span></td>{{ end }}
+		<td class="l pin1"><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ partial "pname.html" . }}</a></td>
 		<td class="l pin2"><a href="{{ printf "institutions/%s/" .institution_slug | relLangURL }}">{{ .institution_short }}</a></td>
 		{{- if not $compact }}
 		{{- if .iclr_complete }}
