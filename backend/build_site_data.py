@@ -7,6 +7,7 @@ Inputs
     work/accepted.jsonl.gz        accepted papers of the eight venues        (fetch_accepted.py)
     affiliations.csv              affiliations read from the PDF where a list prints none (fetch_affiliations.py,
                                   each row checked by hand)
+    affiliation_fixes.csv         one author's affiliation as the paper prints it, where the list differs
     raw/openreview/<slug>.json    every OpenReview submission of a person   (fetch_openreview.py)
     candidates.csv                people not on the roster yet              (find_candidates.py)
 
@@ -54,6 +55,10 @@ AREA_ALIAS = {"Miscellaneous Aspects of Machine Learning": "General Machine Lear
 def with_pdf_affiliations(papers, warnings):
     """Fill the empty affiliations of a list from affiliations.csv (read from the PDF, checked by hand). A paper whose
     authors there do not match the list, name by name, is left as it is and reported."""
+    fixes = collections.defaultdict(list)
+    for r in read_csv(BACKEND / "affiliation_fixes.csv"):
+        if r["checked"] == "yes":
+            fixes[(r["venue"], int(r["year"]), norm_title(r["title"]))].append(r)
     rows = collections.defaultdict(list)
     for r in read_csv(BACKEND / "affiliations.csv"):
         if r["checked"] == "yes":
@@ -67,6 +72,14 @@ def with_pdf_affiliations(papers, warnings):
                                 f"{p['year']}) do not match the list; not used")
             else:
                 p["authors"] = [{**a, "aff": r["affiliation"]} for a, r in zip(p["authors"], found)]
+        # one author's affiliation corrected where the list gives a different one than the paper prints
+        # (virtual sites take it from the author's profile, which can list every position they hold)
+        for r in fixes.get((p["venue"], p["year"], norm_title(p["title"])), ()):
+            hit = [a for a in p["authors"] if norm_name(a["name"]) == norm_name(r["author"])]
+            if not hit:
+                warnings.append(f"affiliation_fixes.csv: no author {r['author']} on '{p['title'][:60]}'; not used")
+            for a in hit:
+                a["aff"] = r["affiliation"]
         yield p
 
 
