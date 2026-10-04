@@ -27,6 +27,7 @@ import difflib
 import html
 import json
 import re
+import urllib.parse
 
 from common import (with_pdf_affiliations, ACCEPTED, BACKEND, CANDIDATES, FRONTEND, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
                     STATUS_LABEL, VENUE_GROUPS, VENUE_KEYS, VENUE_NAME, VENUES, WORK, YEARS, classify_status, held, in_vietnam,
@@ -934,7 +935,7 @@ def person_links(person):
     def kind_of(url):
         u = url.lower()
         for pattern, kind in (("aclanthology.org", "acl"), ("dblp.org", "dblp"), ("scholar.google", "scholar"),
-                              ("researchgate.net", "researchgate"), ("linkedin.com", "linkedin"),
+                              ("researchgate.net", "researchgate"), ("linkedin.com", "linkedin"), ("wikipedia.org", "wikipedia"),
                               ("openreview.net", "openreview"), ("publication", "publications")):
             if pattern in u:
                 return kind
@@ -947,7 +948,9 @@ def person_links(person):
         if not key or key in seen:
             return
         seen.add(key)
-        links.append({"kind": kind or kind_of(url), "url": url.strip(), "label": label})
+        # the address as shown: without the scheme, and readable where it is percent-encoded (Vietnamese titles)
+        text = re.sub(r"^https?://(www\.)?|/$", "", urllib.parse.unquote(url.strip()))
+        links.append({"kind": kind or kind_of(url), "url": url.strip(), "label": label, "text": text})
 
     add(person["homepage"], {"website": "homepage"}.get(kind_of(person["homepage"] or ""), None))
     f = OPENREVIEW_RAW / f"{person['slug']}.json"

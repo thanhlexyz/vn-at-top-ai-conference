@@ -178,10 +178,12 @@ def search(v2, names):
 
 
 def lookup_candidates(v2, limit):
-    """Find the OpenReview profiles of the first `limit` people in candidates.csv that show a post in Vietnam."""
+    """Find the OpenReview profiles of the first `limit` people at a university in candidates.csv that show a post in
+    Vietnam."""
     path = OPENREVIEW_RAW / "_candidates.json"
     found = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
-    for row in read_csv(CANDIDATES)[:limit]:
+    # company staff are not tracked, so only people at a university are looked up
+    for row in [r for r in read_csv(CANDIDATES) if r.get("at_university") == "yes"][:limit]:
         names = [row["display_name"], *[v.strip() for v in row["name_variants"].split(";") if v.strip()]]
         key = name_key(names[0])
         if key in found:

@@ -29,7 +29,7 @@
 <h2>{{ T "links" }}</h2>
 <ol class="links">
 	{{- range . }}
-	<li>{{ T (printf "link_%s" .kind) }}{{ with .label }} ({{ . }}){{ end }}: <a href="{{ .url }}">{{ replaceRE "^https?://(www\\.)?" "" .url | strings.TrimSuffix "/" }}</a></li>
+	<li>{{ T (printf "link_%s" .kind) }}{{ with .label }} ({{ . }}){{ end }}: <a href="{{ .url }}">{{ with .text }}{{ . }}{{ else }}{{ replaceRE "^https?://(www\\.)?" "" .url | strings.TrimSuffix "/" }}{{ end }}</a></li>
 	{{- end }}
 </ol>
 {{- end }}
