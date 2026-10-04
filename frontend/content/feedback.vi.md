@@ -7,4 +7,5 @@ description: "Kính mời quý thầy cô và anh chị góp ý khi thấy số 
 Nếu quý thầy cô và anh chị thấy số liệu chưa chính xác, bài báo còn thiếu hoặc bị gán nhầm người, hay có người nên được đưa vào danh sách, kính mong quý thầy cô và anh chị góp ý ở mẫu bên dưới.
 Khi bấm nút, một issue mới sẽ được mở trên GitHub với nội dung đã nhập; nội dung chỉ được gửi đi sau khi bấm "Create" trên GitHub, và cần có tài khoản GitHub để gửi.
 Đường dẫn tới bài báo (OpenReview, trang của hội nghị) hoặc trang giới thiệu cán bộ của trường sẽ giúp chúng tôi kiểm tra và sửa nhanh nhất.
+Quý thầy cô và anh chị cũng có thể gửi góp ý qua email [hi@thanhle.xyz](mailto:hi@thanhle.xyz), không cần tài khoản.
 Xin chân thành cảm ơn quý thầy cô và anh chị.

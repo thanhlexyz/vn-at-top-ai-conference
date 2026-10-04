@@ -111,3 +111,5 @@ This site was built by an AI, [Claude](https://www.anthropic.com/claude), under 
 ## Acknowledgements
 
 Thanks to Dr [Nam Vo](https://vingen.vinbigdata.org/teams/vo-sy-nam/) for his comments, and for suggesting that the front page separate papers from before 2026 and from 2026 on, to show the numbers before and after AI became really strong.
+
+Thanks to Prof. [Huynh Thi Thanh Binh](https://soict.hust.edu.vn/en/prof-huynh-thi-thanh-binh.html) for her comments, and for suggesting that the site also track EMNLP, ICCV and ECCV.
