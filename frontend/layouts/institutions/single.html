@@ -10,6 +10,22 @@
 	{{ T "inst_once" }}
 </p>
 
+{{- /* institutions in Vietnam that share papers with this one, from the institution graph: most papers first */}}
+{{- $g := hugo.Data.graph_institutions }}
+{{- $mine := slice }}
+{{- range $g.edges }}{{ if or (eq .a $i.slug) (eq .b $i.slug) }}{{ $mine = $mine | append . }}{{ end }}{{ end }}
+{{- with $mine }}
+<h2>{{ T "coauthor_institutions" }}</h2>
+<ol class="links">
+	{{- range . }}
+	{{- $other := cond (eq .a $i.slug) .b .a }}
+	{{- $n := index (where $g.nodes "id" $other) 0 }}
+	<li>{{ if $n.url }}<a href="{{ $n.url | relLangURL }}">{{ partial "iname.html" $n.full }}</a>{{ else }}{{ partial "iname.html" $n.full }}{{ end }} ({{ $n.name }}): {{ T "graph_papers" (int .weight) }}</li>
+	{{- end }}
+</ol>
+<p class="note">{{ T "coauthor_institutions_note" }}</p>
+{{- end }}
+
 <h2>{{ T "by_year" }}</h2>
 {{ partial "year-table.html" (dict "years" $i.years "venues" $i.venues "official" $i.official "own_page" $i.own_page "complete" true) }}
 
