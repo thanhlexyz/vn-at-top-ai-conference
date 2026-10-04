@@ -548,3 +548,6 @@ other = "Nguồn của chức vụ này"
 other = "tỉ lệ được nhận, ước tính"
 [tip_rate_est]
 other = "số bài được nhận chia cho số bài đã nộp ước tính; là số ước tính vì phần lớn hội nghị không công khai bài bị từ chối (xem trang Giới thiệu)"
+
+[tip_rate_trivial]
+other = "Chưa có bài nộp ICLR nên không ước tính được số bài bị từ chối; tỉ lệ này không so sánh được và được xếp cuối"

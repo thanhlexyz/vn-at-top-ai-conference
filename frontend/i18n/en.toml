@@ -554,3 +554,6 @@ other = "Source of this role"
 other = "acceptance rate, estimated"
 [tip_rate_est]
 other = "accepted divided by submitted, estimated: an estimate, since most venues hide their rejections (see About)"
+
+[tip_rate_trivial]
+other = "No ICLR submissions, so the hidden rejections cannot be estimated and this rate is not comparable; it sorts last"

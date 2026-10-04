@@ -81,6 +81,8 @@
 		var totals = Array.prototype.filter.call(body.rows, function (tr) { return tr.classList.contains("total"); });
 		var values = rows.map(function (tr) {
 			var td = tr.cells[column], text = td ? td.textContent.trim() : "";
+			// a cell marked data-last (an estimate with nothing to estimate from) goes last, like an empty one
+			if (td && td.hasAttribute("data-last")) text = "";
 			return { tr: tr, text: text, num: number(text) };
 		});
 		var numeric = values.filter(function (v) { return v.text && v.text !== "–"; }).every(function (v) { return v.num !== null; });
@@ -112,7 +114,8 @@
 		rows.forEach(function (tr, k) {
 			var slot = tr.querySelector(".cup");
 			if (!slot) return;
-			var key = column === undefined ? k : column === null ? null : number(tr.cells[column].textContent);
+			var cell = column === undefined || column === null ? null : tr.cells[column];
+			var key = column === undefined ? k : !cell || cell.hasAttribute("data-last") ? null : number(cell.textContent);
 			if (key === null && column !== undefined) { place = 99; }
 			else if (k === 0 || key !== last) { place += 1; }   // ties share a cup; the next value takes the next one
 			last = key;

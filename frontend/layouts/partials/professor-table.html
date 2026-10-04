@@ -87,7 +87,9 @@
 		{{- else }}
 		{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}
 		{{ partial "numc.html" (dict "v" (add (int .accepted) (int .rejected_estimated)) "cls" "total sub") }}
-		{{- if eq .acceptance_rate nil }}<td class="na rate">&ndash;</td>{{ else }}<td class="rate">{{ .acceptance_rate }}%</td>{{ end }}
+		{{- if eq .acceptance_rate nil }}<td class="na rate">&ndash;</td>
+		{{- else if ne .projection.basis "own" }}<td class="rate trivial" data-last title="{{ T "tip_rate_trivial" }}">{{ .acceptance_rate }}%</td>
+		{{- else }}<td class="rate">{{ .acceptance_rate }}%</td>{{ end }}
 		{{- end }}
 		{{ partial "num.html" (len (.workshop_papers | default slice)) }}
 		{{ partial "num.html" .authorship.majority.total }}

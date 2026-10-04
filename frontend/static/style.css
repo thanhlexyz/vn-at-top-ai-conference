@@ -403,6 +403,7 @@ td.bad, th.bad { background: var(--bad) ; }
 td.est, th.est { background: var(--est) ; }  /* orange: estimated */
 td.sub, th.sub { background: var(--sub) ; }  /* light grey: submitted, estimated */
 td.rate, th.rate { background: var(--rate) ; }  /* light blue: acceptance rate, estimated */
+td.rate.trivial { color: var(--faint) ; }  /* no ICLR record to estimate from: shown, but sorted last */
 
 /* Sortable headings (site.js) */
 th.sortable { cursor: pointer ; }
