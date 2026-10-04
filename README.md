@@ -54,7 +54,8 @@ Check the result on the local site (`make run`, then <http://localhost:1313>) or
   cannot find them automatically, as it already cannot for ACL, EMNLP, and CVPR before 2023. Ways to find them:
   - the Candidates page (`make run`): since 2026-10-05 it includes authors printed at a university in Vietnam on
     AAAI, IJCAI and NAACL papers with two or more Vietnamese family names (`fetch_affiliations.py --scan`), 166
-    people in all; most are students, but some are likely lecturers (e.g. at VNU-UET, UIT);
+    people in all, most of them students. The page shows each one's OpenReview post; 22 have a profile at the
+    university on their papers as lecturer or professor (looked up on 2026-10-05), the first ones to check;
   - co-authors of professors already on the list, on their AAAI, IJCAI and NAACL papers;
   - staff pages of faculties of computer science and AI in Vietnam (`backend/faculty.csv`).
 
