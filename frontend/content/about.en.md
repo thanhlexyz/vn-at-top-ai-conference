@@ -119,7 +119,7 @@ Thanks to Prof. [Huynh Thi Thanh Binh](https://soict.hust.edu.vn/en/prof-huynh-t
 ## Useful links
 
 - [CS Picks](https://cspicks.roars.dev/): helps students choose a university and a PhD advisor in the US. It compares computer science professors and universities by research strengths, publication trends and NSF funding, from open academic data.
-- [CS conference schedule, 2026–2027](https://cspicks.roars.dev/csconfs.html?start=2026&end=2027): dates and submission deadlines of computer science conferences.
+- [CS conferences](https://cspicks.roars.dev/csconfs.html?start=2026&end=2027): dates and submission deadlines of computer science conferences.
 - [VietProfs](https://vietprofs.roars.dev/): a directory of Vietnamese professors worldwide, across universities, disciplines, countries and ranks.
 
 These links, made by [ThanhVu Nguyen](https://tvn.roars.dev/), inspired me to build this site.

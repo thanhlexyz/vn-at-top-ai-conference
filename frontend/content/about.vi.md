@@ -119,7 +119,7 @@ Xin cảm ơn GS. [Huỳnh Thị Thanh Bình](https://soict.hust.edu.vn/en/prof-
 ## Liên kết hữu ích
 
 - [CS Picks](https://cspicks.roars.dev/): giúp sinh viên chọn trường và giáo sư hướng dẫn nghiên cứu sinh (PhD) tại Mỹ. Trang so sánh giảng viên và trường đại học ngành khoa học máy tính theo thế mạnh nghiên cứu, xu hướng công bố và tài trợ NSF, từ dữ liệu học thuật mở.
-- [Lịch hội nghị khoa học máy tính 2026–2027](https://cspicks.roars.dev/csconfs.html?start=2026&end=2027): thời gian diễn ra và hạn nộp bài của các hội nghị khoa học máy tính.
+- [Hội nghị khoa học máy tính](https://cspicks.roars.dev/csconfs.html?start=2026&end=2027): thời gian diễn ra và hạn nộp bài của các hội nghị khoa học máy tính.
 - [VietProfs](https://vietprofs.roars.dev/): danh bạ giáo sư, giảng viên người Việt trên toàn thế giới, theo trường, ngành, quốc gia và chức danh.
 
 Các liên kết trên do [ThanhVu Nguyen](https://tvn.roars.dev/) thực hiện, và chính chúng đã truyền cảm hứng để tôi xây dựng trang này.
