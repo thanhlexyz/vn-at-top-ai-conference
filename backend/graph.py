@@ -410,8 +410,10 @@ def layout(nodes, edges, labels, prefer="weights"):
     shift_y = 70 - min(ys)   # room for a label above the top circle
     out = {i: [p[0] + shift_x, p[1] + shift_y] for i, p in pos.items()}
     top = max(p[1] for p in out.values()) + 70
-    # small groups: columns of nodes 46 px apart, laid out in cells across the width
-    cell_w, step = 250, 46
+    # small groups: columns of nodes 46 px apart, laid out in cells across the width; a cell is wide enough for
+    # the longest label among them (labels sit to the right of the circles), so neighbouring columns never touch
+    longest = max((7.4 * len(labels[i]) for g in rest for i in g), default=0)
+    cell_w, step = max(250, round(longest + 18 + 40 + 30)), 46
     cols = max(1, W // cell_w)
     row_y, col, row_h = top, 0, 0
     for g in rest:
@@ -453,7 +455,7 @@ def seg_hits_box(x1, y1, x2, y2, bx0, by0, bx1, by1):
     return True
 
 
-def place_labels(nodes, pos, radius, edges, labels, weights=None):
+def place_labels(nodes, pos, radius, edges, labels, weights=None, right_only=()):
     """{id: (x, y, anchor)}: for each node the label position, out of right, left, above and below, that crosses
     the fewest edges, circles and labels already placed. Bigger nodes choose first."""
     segs = [(pos[a][0], pos[a][1], pos[b][0], pos[b][1], a, b) for a, b in edges]
@@ -468,6 +470,8 @@ def place_labels(nodes, pos, radius, edges, labels, weights=None):
                    ("end", x - r - 4, y + 5, (x - r - 6 - w, y - LINE / 2, x - r - 2, y + LINE / 2)),
                    ("middle", x, y - r - 7, (x - w / 2 - 2, y - r - 6 - LINE, x + w / 2 + 2, y - r - 4)),
                    ("middle", x, y + r + 17, (x - w / 2 - 2, y + r + 4, x + w / 2 + 2, y + r + 6 + LINE))]
+        if i in right_only:   # a node of the small groups under the graph: the cell to its left belongs to another group
+            options = options[:1]
         best = None
         for k, (anchor, lx, ly, box) in enumerate(options):
             bx0, by0, bx1, by1 = box
@@ -505,7 +509,9 @@ def build(nodes, papers_of, color_of, legend):
                           "r": round(9 + 1.8 * math.sqrt(count[i]), 1), "color": color_of(n),
                           "degree": sum(1 for e in edges if i in e)})
     radius = {n["id"]: n["r"] for n in out_nodes if n["linked"]}
-    spots = place_labels(list(radius), pos, radius, list(edges), {i: text[i] for i in radius}, edges)
+    groups = components(sorted(linked), edges)
+    small = {i for g in groups[1:] for i in g}
+    spots = place_labels(list(radius), pos, radius, list(edges), {i: text[i] for i in radius}, edges, right_only=small)
     for n in out_nodes:
         if n["id"] in spots:
             n["lx"], n["ly"], n["anchor"] = spots[n["id"]]
