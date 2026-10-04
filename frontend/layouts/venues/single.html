@@ -66,6 +66,21 @@
 
 {{- $accepted := where $v.papers "status" "accepted" }}
 {{- $other := where $v.papers "status" "ne" "accepted" }}
+
+{{- /* professors with accepted papers here, most first; a paper of two of them counts for each */}}
+{{- $count := dict }}
+{{- range $accepted }}{{ range .professors }}{{ $count = merge $count (dict .slug (add (index $count .slug | default 0) 1)) }}{{ end }}{{ end }}
+{{- with $count }}
+{{- $rows := slice }}
+{{- range $slug, $n := . }}{{ $rows = $rows | append (dict "slug" $slug "n" $n) }}{{ end }}
+<h2>{{ T "venue_professors" }}</h2>
+<ol class="links">
+	{{- range sort $rows "n" "desc" }}
+	{{- $p := index (where hugo.Data.professors "slug" .slug) 0 }}
+	<li><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ partial "pname.html" $p }}</a> (<a href="{{ printf "institutions/%s/" $p.institution_slug | relLangURL }}" title="{{ partial "iname.html" $p.institution }}">{{ $p.institution_short }}</a>): {{ T "graph_papers" (int .n) }}</li>
+	{{- end }}
+</ol>
+{{- end }}
 <h2>{{ T "accepted_papers" (len $accepted) }}</h2>
 {{- if $accepted }}
 {{ partial "paper-list.html" (dict "papers" $accepted "owners" true) }}
