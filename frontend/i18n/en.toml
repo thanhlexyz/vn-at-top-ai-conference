@@ -406,8 +406,10 @@ other = "Details"
 other = "What is incorrect or missing, on which page, and a link that shows it, if available."
 [fb_submit]
 other = "Continue on GitHub"
+[fb_submit_mail]
+other = "Send by e-mail"
 [fb_note]
-other = "Feedback on GitHub is public, so we kindly ask you not to include private contact details. You are also welcome to <a href=\"{{ . }}\">read the feedback already received</a>."
+other = "Feedback on GitHub is public, so we kindly ask you not to include private contact details there; you are also welcome to <a href=\"{{ . }}\">read the feedback already received</a>. Feedback by e-mail goes only to the site maintainer."
 
 # ---------------------------------------------------------------- about page table
 [cov_no_aff]

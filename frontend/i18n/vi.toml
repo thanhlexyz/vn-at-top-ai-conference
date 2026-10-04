@@ -401,8 +401,10 @@ other = "Chi tiết"
 other = "Thông tin nào chưa chính xác hoặc còn thiếu, ở trang nào, kèm đường dẫn minh chứng (nếu có)."
 [fb_submit]
 other = "Tiếp tục trên GitHub"
+[fb_submit_mail]
+other = "Gửi qua email"
 [fb_note]
-other = "Góp ý trên GitHub được công khai, kính mong quý thầy cô và anh chị không ghi thông tin liên lạc riêng. Quý thầy cô và anh chị cũng có thể <a href=\"{{ . }}\">xem các góp ý đã có</a>."
+other = "Góp ý trên GitHub được công khai, kính mong quý thầy cô và anh chị không ghi thông tin liên lạc riêng ở đó; quý thầy cô và anh chị cũng có thể <a href=\"{{ . }}\">xem các góp ý đã có</a>. Góp ý qua email chỉ được gửi riêng tới người quản lý trang."
 
 # ---------------------------------------------------------------- about page table
 [cov_no_aff]

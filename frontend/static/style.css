@@ -366,6 +366,8 @@ form.feedback button:hover {
     background: var(--th) ;
 }
 
+form.feedback .fb-actions { display: flex ; flex-wrap: wrap ; gap: 0.6em ; }
+
 /* Stacked areas (front page) */
 .chart .band.acc { fill: var(--accepted) ; }
 .chart .band.not { fill: var(--not-accepted) ; }

@@ -202,3 +202,16 @@
 	window.addEventListener("resize", measure);
 	if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
 })();
+
+// Feedback by e-mail: the same form, opened in the visitor's own mail app with the title as subject and the
+// details as body. Nothing is sent until they press send there.
+(function () {
+	var button = document.querySelector("form.feedback .fb-mail");
+	if (!button) return;
+	button.addEventListener("click", function () {
+		var form = button.form;
+		if (!form.reportValidity()) return;
+		location.href = "mailto:" + button.dataset.to + "?subject=" + encodeURIComponent(form.elements.title.value) +
+			"&body=" + encodeURIComponent(form.elements.body.value + "\n\n" + location.href);
+	});
+})();
