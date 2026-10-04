@@ -1,7 +1,6 @@
 ---
 title: "Giảng viên hợp tác"
 layout: "graph"
-node_label: "Người"
 data: "graph_people"
 description: "Ai trong danh sách viết bài cùng ai: bài được nhận, bị từ chối và bài workshop."
 ---

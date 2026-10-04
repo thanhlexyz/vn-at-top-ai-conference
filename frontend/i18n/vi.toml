@@ -499,14 +499,10 @@ other = "{{ . }} liên kết"
 other = "Di chuột lên vòng tròn để làm nổi các liên kết; di chuột lên đường nối để xem cặp và số bài chung."
 [graph_isolated]
 other = "Không có bài chung với ai khác ở đây:"
-[graph_pairs]
-other = "Các cặp theo số bài chung"
-[graph_together]
-other = "Số bài chung"
 
 [inst_list_charts]
 other = "Bài được nhận theo nơi công tác của tác giả"
 [inst_list_charts_note]
-other = "Mỗi trường một thanh, dài bằng số bài được nhận; số ở cuối là xanh / tổng. Xanh: tác giả đầu (biểu đồ trên) hoặc hơn một nửa số tác giả (biểu đồ dưới) ghi đơn vị là trường. Cam: họ ghi đơn vị khác. Xám: nguồn của bài không ghi đơn vị (ACL, EMNLP, đa số danh sách CVPR, bài chưa chính thức) nên không xét được."
+other = "Mỗi trường một thanh, dài bằng số bài được nhận, xếp theo phần xanh; số ở cuối là xanh / tổng. Xanh: tác giả đầu (biểu đồ trên) hoặc hơn một nửa số tác giả (biểu đồ dưới) ghi đơn vị là trường. Cam: họ ghi đơn vị khác. Xám: nguồn của bài không ghi đơn vị (ACL, EMNLP, đa số danh sách CVPR, bài chưa chính thức) nên không xét được."
 [inst_list_charts_none]
 other = "Chưa có bài được nhận: {{ . }}."

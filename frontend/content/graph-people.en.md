@@ -1,7 +1,6 @@
 ---
 title: "Researcher collaboration"
 layout: "graph"
-node_label: "Researcher"
 data: "graph_people"
 description: "Who on the list writes papers with whom: accepted, rejected and workshop papers."
 ---

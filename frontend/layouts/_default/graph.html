@@ -36,15 +36,4 @@
 {{- range $k, $n := . }}{{ if $k }},{{ end }} {{ if $n.url }}<a href="{{ $n.url | relLangURL }}">{{ cond (and $vi $n.name_vi) $n.name_vi $n.name }}</a>{{ else }}{{ $n.name }}{{ end }}{{ end }}.</p>
 {{- end }}
 
-<h2>{{ T "graph_pairs" }}</h2>
-<div class="scroll">
-<table>
-	<thead><tr><th class="l">{{ .Params.node_label }}</th><th class="l">{{ .Params.node_label }}</th><th>{{ T "graph_together" }}</th></tr></thead>
-	<tbody>
-	{{- range $g.edges }}
-	<tr><td class="l">{{ if $vi }}{{ .a_name_vi }}{{ else }}{{ .a_name }}{{ end }}</td><td class="l">{{ if $vi }}{{ .b_name_vi }}{{ else }}{{ .b_name }}{{ end }}</td><td>{{ .weight }}</td></tr>
-	{{- end }}
-	</tbody>
-</table>
-</div>
 {{- end }}

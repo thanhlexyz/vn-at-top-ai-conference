@@ -658,12 +658,16 @@ INSTITUTION_CHART_TEXT = {"en": {"inst": "the institution", "aria": "Accepted pa
 
 
 def institution_svg(institutions, kind, peak, lang="en"):
-    """One horizontal stacked bar per institution, longest first: accepted papers with the first author (or most
+    """One horizontal stacked bar per institution, the most blue first: accepted papers with the first author (or most
     authors, by `kind`) from the institution, from elsewhere, and papers that cannot be judged. Every bar is as long as
     the institution's accepted papers on one scale shared by both charts, so only the blue part moves between them."""
     w, t = AUTHOR_CHART_TEXT[lang], INSTITUTION_CHART_TEXT[lang]
     width, name_w, right, top, row_h, bar_h = 640, 80, 64, 34, 26, 14
     labels = [("own-inst", w[kind].format(inst=t["inst"])), ("other-inst", w[kind + "_other"]), ("unjudged", w["unknown"])]
+    def home_of(i):
+        return i.get("authorship", i)["majority" if kind == "majority" else "first_author"]["total"]
+
+    institutions = sorted(institutions, key=lambda i: (-home_of(i), -i["accepted"], i["short"]))   # most blue first
     height = top + row_h * len(institutions) + 4
     scale = (width - name_w - right) / (peak or 1)
     out = [f'<svg class="chart" viewBox="0 0 {width} {height}" role="img" '
@@ -676,8 +680,7 @@ def institution_svg(institutions, kind, peak, lang="en"):
     for k, i in enumerate(institutions):
         y = top + k * row_h
         name = i["name_vi"] if lang == "vi" else i["name"]
-        a = i.get("authorship", i)
-        home = a["majority" if kind == "majority" else "first_author"]["total"]
+        a, home = i.get("authorship", i), home_of(i)
         out.append(f'<text class="value" x="{name_w - 8}" y="{y + bar_h - 2}" text-anchor="end">'
                    f'<title>{html.escape(name)}</title>{html.escape(i["short"])}</text>')
         parts = [(cls, v, text) for (cls, text), v in zip(labels, (home, a["judged"] - home, i["accepted"] - a["judged"])) if v > 0]
