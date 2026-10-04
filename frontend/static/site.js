@@ -42,12 +42,17 @@
 })();
 
 // Sorting: click a column heading to sort the table by it; click again to reverse. Numbers sort largest first
-// (a cell such as "11 +1" counts as 11), text sorts A to Z, and empty cells ("–") always go last. Total rows stay
+// (a cell such as "11 +1" comes after 11 and before 12), text sorts A to Z, and empty cells ("–") always go last. Total rows stay
 // at the bottom. Group headings that span several columns do not sort.
 (function () {
+	// "11 +1" is 11 official and 1 unofficial: it sorts after 11 and before 12, so the official number comes first
+	// and the unofficial one breaks ties
 	function number(text) {
-		var m = text.replace(/,/g, "").match(/-?\d+(\.\d+)?/);
-		return m ? parseFloat(m[0]) : null;
+		var t = text.replace(/,/g, "");
+		var m = t.match(/-?\d+(\.\d+)?/);
+		if (!m) return null;
+		var extra = t.slice(m.index + m[0].length).match(/\+\s*(\d+)/);
+		return parseFloat(m[0]) + (extra ? parseInt(extra[1], 10) / 1000 : 0);
 	}
 
 	// which column each heading cell stands for, taking rowspan and colspan into account
