@@ -120,7 +120,7 @@ other = "Bị từ chối, ước tính"
 [th_rejected_iclr]
 other = "Bị từ chối ở ICLR"
 [th_rejected_iclr_recorded]
-other = "Bị từ chối ở ICLR, đếm được"
+other = "Bị từ chối, đếm được"
 [th_rejected_elsewhere_est]
 other = "Bị từ chối ở nơi khác, ước tính"
 [th_submitted_est]
@@ -159,7 +159,7 @@ other = "bị từ chối, rút bài hoặc bị loại sơ bộ"
 [tip_rejected_total]
 other = "bị từ chối, rút bài hoặc bị loại sơ bộ, nếu công khai: toàn bộ ICLR, và các bài tác giả tự công khai ở hội nghị khác"
 [tip_rejected_est]
-other = "bị từ chối ở ICLR cộng số bài ước tính bị từ chối ở các hội nghị khác, theo kết quả ICLR của chính giảng viên (xem trang Giới thiệu)"
+other = "bài bị từ chối có ghi nhận (ICLR, bài bị từ chối công khai tại NeurIPS, bài Findings) cộng số bài ước tính bị từ chối ở các hội nghị không công khai, theo kết quả ICLR của chính giảng viên (xem trang Giới thiệu)"
 [tip_rejected_est_inst]
 other = "bị từ chối ở ICLR cộng số bài ước tính bị từ chối ở các hội nghị khác, theo kết quả ICLR của chính trường"
 [tip_rejected_est_venue]
@@ -220,11 +220,11 @@ other = """<ul>
 other = "Được nhận và bị từ chối, tất cả giảng viên trong danh sách"
 [home_overview_text]
 other = """{{ .Accepted }} bài được chấp nhận tương ứng với khoảng {{ .Submissions }} lần nộp bài:
-{{ .Recorded }} bài bị từ chối hoặc rút tại ICLR, nơi mọi bài nộp đều được công khai, và khoảng {{ .Estimated }} bài được ước tính cho các hội nghị còn lại."""
+{{ .Recorded }} bài bị từ chối hoặc rút có ghi nhận (mọi bài nộp ICLR đều công khai; ở nơi khác là bài bị từ chối công khai tại NeurIPS và bài Findings), và khoảng {{ .Estimated }} bài được ước tính cho các hội nghị không công khai bài bị từ chối."""
 [home_fig1]
-other = "Hình 1a. Số bài được chấp nhận so với số bài bị từ chối (thống kê tại ICLR và ước tính tại các hội nghị khác), tính chung cho mọi năm và mọi hội nghị."
+other = "Hình 1a. Số bài được chấp nhận so với số bài bị từ chối (đếm được và ước tính), tính chung cho mọi năm và mọi hội nghị."
 [home_fig2]
-other = "Hình 1b. Số liệu tương tự theo từng năm, dạng xếp chồng: phần dưới là bài được chấp nhận, phần giữa là bài bị từ chối tại ICLR (thống kê), phần trên là bài bị từ chối tại các hội nghị khác (ước tính)."
+other = "Hình 1b. Số liệu tương tự theo từng năm, dạng xếp chồng: phần dưới là bài được chấp nhận, phần giữa là bài bị từ chối có ghi nhận (đếm được), phần trên là bài bị từ chối ở nơi khác (ước tính)."
 [home_fig2_provisional]
 other = " * Danh sách chính thức của {{ . }} hiện chưa đầy đủ."
 [home_numbers]
@@ -266,8 +266,8 @@ other = "Các bài được chấp nhận có tác giả đứng đầu ghi đơ
 [chart_title]
 other = "Số bài nộp và được nhận theo năm"
 [chart_note]
-other = """Số bài được chấp nhận và số bài bị từ chối tại ICLR là số liệu thống kê trực tiếp.
-Do NeurIPS, ICML, CVPR, ICCV, ECCV, ACL và EMNLP không công khai các bài không được chấp nhận, phần tương ứng trên mỗi cột là số liệu ước tính."""
+other = """Số bài được chấp nhận và số bài bị từ chối có ghi nhận là số liệu thống kê trực tiếp: mọi bài bị từ chối tại ICLR, bài bị từ chối công khai tại NeurIPS và bài được xếp vào Findings.
+Các bài khác không được NeurIPS, ICML, CVPR, ICCV, ECCV, ACL và EMNLP chấp nhận không được công khai, nên phần tương ứng trên mỗi cột là số liệu ước tính."""
 [chart_note_own]
 other = """Phần ước tính được tính từ kết quả ICLR của chính giảng viên: {{ .Submitted }} bài nộp, {{ .Accepted }} bài được chấp nhận,
 tức ({{ .Submitted }} + 1) / ({{ .Accepted }} + 1) = {{ .Ratio }} lần nộp cho mỗi bài được chấp nhận tại các hội nghị khác.
@@ -551,4 +551,7 @@ other = "Số chủ đề"
 other = "số nhãn chủ đề khác nhau mà hội nghị gán cho bài, như bảng chủ đề trên trang của từng giảng viên"
 
 [prof_pie_caption]
-other = "Mọi năm: {{ .Accepted }} bài được nhận, {{ .Recorded }} bài bị từ chối ở ICLR và khoảng {{ .Estimated }} bài bị từ chối ở nơi khác (ước tính), tức khoảng {{ .Total }} lần nộp."
+other = "Mọi năm: {{ .Accepted }} bài được nhận, {{ .Recorded }} bài bị từ chối có ghi nhận và khoảng {{ .Estimated }} bài bị từ chối ở nơi khác (ước tính), tức khoảng {{ .Total }} lần nộp."
+
+[prof_other_rejected]
+other = "Bài bị từ chối có ghi nhận ở các hội nghị khác (bài bị từ chối công khai và bài được xếp vào Findings): {{ . }}."

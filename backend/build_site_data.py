@@ -932,9 +932,12 @@ def projection(p):
             rows.append({"year": y["year"], "counts": False})
             continue
         iclr = y["venues"]["iclr"]
-        known = iclr["not_accepted"] if p["iclr_complete"] else 0
+        # rejections on record: every ICLR one, plus those known at other venues (public NeurIPS rejections,
+        # papers placed in Findings); the estimate for the hidden rest does not count those twice
+        other = sum(c["not_accepted"] for v, c in y["venues"].items() if v != "iclr")
+        known = (iclr["not_accepted"] if p["iclr_complete"] else 0) + other
         elsewhere = y["accepted"] - (iclr["accepted"] if p["iclr_complete"] else 0)
-        estimated = elsewhere * (ratio - 1)
+        estimated = max(elsewhere * (ratio - 1) - other, 0)
         rows.append({"year": y["year"], "counts": True, "accepted": y["accepted"], "iclr_not_accepted": known,
                      "estimated": estimated, "total": y["accepted"] + known + estimated})
     counted = [r for r in rows if r["counts"]]
@@ -991,18 +994,18 @@ def overview(professors, acc):
 # the words drawn inside the charts, per site language
 CHART_TEXT = {
     "en": {"aria": "Papers submitted and accepted per year by {name}; the numbers are in the table below",
-           "acc": "Accepted", "not": "Rejected at ICLR", "est": "Rejected elsewhere, estimated",
-           "tip_acc": "{n} accepted", "tip_not": "{n} rejected at ICLR", "tip_est": "about {n} rejected elsewhere (estimate)",
+           "acc": "Accepted", "not": "Rejected, recorded", "est": "Rejected elsewhere, estimated",
+           "tip_acc": "{n} accepted", "tip_not": "{n} rejected, recorded", "tip_est": "about {n} rejected elsewhere (estimate)",
            "about": "about ", "pie_label": "Accepted, recorded rejected and estimated rejected papers, all listed professors",
            "pie_title": "All years and venues", "stack_label": "Accepted, recorded rejected and estimated rejected papers per year",
-           "s_acc": "accepted", "s_not": "rejected at ICLR, recorded", "s_est": "rejected elsewhere, estimated",
+           "s_acc": "accepted", "s_not": "rejected, recorded", "s_est": "rejected elsewhere, estimated",
            "short_not": "recorded", "short_est": "estimated", "total": "total", "incomplete": "list still being completed"},
     "vi": {"aria": "Số bài nộp và được nhận theo năm của {name}; số liệu ở bảng bên dưới",
-           "acc": "Được nhận", "not": "Bị từ chối ở ICLR", "est": "Bị từ chối ở nơi khác, ước tính",
-           "tip_acc": "{n} bài được nhận", "tip_not": "{n} bài bị từ chối ở ICLR", "tip_est": "khoảng {n} bài bị từ chối ở nơi khác (ước tính)",
+           "acc": "Được nhận", "not": "Bị từ chối, đếm được", "est": "Bị từ chối ở nơi khác, ước tính",
+           "tip_acc": "{n} bài được nhận", "tip_not": "{n} bài bị từ chối, đếm được", "tip_est": "khoảng {n} bài bị từ chối ở nơi khác (ước tính)",
            "about": "~", "pie_label": "Bài được nhận, bị từ chối đếm được và bị từ chối ước tính, tất cả giảng viên trong danh sách",
            "pie_title": "Mọi năm và hội nghị", "stack_label": "Bài được nhận, bị từ chối đếm được và ước tính theo năm",
-           "s_acc": "được nhận", "s_not": "bị từ chối ở ICLR, đếm được", "s_est": "bị từ chối ở nơi khác, ước tính",
+           "s_acc": "được nhận", "s_not": "bị từ chối, đếm được", "s_est": "bị từ chối ở nơi khác, ước tính",
            "short_not": "đếm được", "short_est": "ước tính", "total": "tổng", "incomplete": "danh sách còn đang bổ sung"},
 }
 

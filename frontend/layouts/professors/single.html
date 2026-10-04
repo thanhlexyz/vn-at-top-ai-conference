@@ -16,6 +16,12 @@
 	{{- if $p.iclr_complete }}
 	{{ T "prof_iclr_summary" (dict "Submitted" $iclr.submitted "Accepted" $iclr.accepted "Rejected" $iclr.not_accepted "Reviewers" $iclr.rejected "Withdrawn" $iclr.withdrawn "Desk" $iclr.desk_rejected) }}
 	{{- end }}
+	{{- /* rejections on record at the venues that hide them: public NeurIPS rejections, papers placed in Findings */}}
+	{{- $other := slice }}
+	{{- range $meta.venues }}{{ if ne .key "iclr" }}{{ $c := index $p.venues .key }}{{ if gt (int $c.not_accepted) 0 }}{{ $other = $other | append (printf "%s %d" .name (int $c.not_accepted)) }}{{ end }}{{ end }}{{ end }}
+	{{- with $other }}
+	{{ T "prof_other_rejected" (delimit . ", ") }}
+	{{- end }}
 </p>
 
 {{- with $p.links }}

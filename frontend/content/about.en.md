@@ -28,7 +28,7 @@ Each professor's page says how many papers a figure is based on.
 
 ## The chart of submitted and accepted papers
 
-Each professor's page has a chart of papers per year. Two parts of it are counted: the accepted papers at all eight venues, and the rejected ICLR papers. The third part is an estimate of the papers that NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP did not accept, which nobody outside can see.
+Each professor's page has a chart of papers per year. Two parts of it are counted: the accepted papers at all eight venues, and the rejections on record (every ICLR rejection, public NeurIPS rejections and papers placed in Findings). The third part is an estimate of the papers that NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP did not accept, which nobody outside can see.
 
 The estimate is made professor by professor, from their own ICLR record:
 

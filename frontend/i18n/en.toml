@@ -121,7 +121,7 @@ other = "Rejected, estimated"
 [th_rejected_iclr]
 other = "Rejected at ICLR"
 [th_rejected_iclr_recorded]
-other = "Rejected at ICLR, recorded"
+other = "Rejected, recorded"
 [th_rejected_elsewhere_est]
 other = "Rejected elsewhere, estimated"
 [th_submitted_est]
@@ -161,7 +161,7 @@ other = "rejected, withdrawn or desk-rejected"
 [tip_rejected_total]
 other = "rejected, withdrawn or desk-rejected, where public: all of ICLR, and the papers authors made public elsewhere"
 [tip_rejected_est]
-other = "rejected at ICLR plus the papers estimated to have been rejected at the other venues, from each professor's own ICLR record (see About)"
+other = "rejections on record (ICLR, public NeurIPS rejections, Findings) plus the papers estimated to have been rejected at the venues that hide them, from each professor's own ICLR record (see About)"
 [tip_rejected_est_inst]
 other = "rejected at ICLR plus the papers estimated to have been rejected at the other venues, from the institution's own ICLR record"
 [tip_rejected_est_venue]
@@ -222,11 +222,11 @@ other = """<ul>
 other = "Accepted and rejected, all listed professors"
 [home_overview_text]
 other = """{{ .Accepted }} accepted papers stand for about {{ .Submissions }} submissions:
-{{ .Recorded }} rejected or withdrawn at ICLR, where every submission is public, and about {{ .Estimated }} more estimated for the other venues."""
+{{ .Recorded }} rejected or withdrawn on record (every ICLR submission is public; elsewhere, public NeurIPS rejections and Findings papers), and about {{ .Estimated }} more estimated for the venues that hide their rejections."""
 [home_fig1]
-other = "Fig. 1a. Accepted papers against rejected papers, recorded at ICLR and estimated elsewhere, over all years and venues."
+other = "Fig. 1a. Accepted papers against rejected papers, recorded and estimated, over all years and venues."
 [home_fig2]
-other = "Fig. 1b. The same per year, stacked: accepted at the bottom, rejected at ICLR (recorded) above it, rejected elsewhere (estimated) on top."
+other = "Fig. 1b. The same per year, stacked: accepted at the bottom, rejected and on record above it, rejected elsewhere (estimated) on top."
 [home_fig2_provisional]
 other = " * The official {{ . }} list is not complete yet."
 [home_numbers]
@@ -271,8 +271,8 @@ other = "Accepted papers whose first author lists {{ . }}."
 [chart_title]
 other = "Submitted and accepted per year"
 [chart_note]
-other = """Accepted papers and rejected ICLR papers are counted.
-Papers that NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP did not accept are not public, so that part of each column is an estimate."""
+other = """Accepted papers and rejections on record are counted: every ICLR rejection, public NeurIPS rejections and papers placed in Findings.
+The other papers that NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP did not accept are not public, so that part of each column is an estimate."""
 [chart_note_own]
 other = """It comes from this professor's own ICLR record of {{ .Submitted }} submitted and {{ .Accepted }} accepted:
 ({{ .Submitted }} + 1) / ({{ .Accepted }} + 1) = {{ .Ratio }} submissions for each paper accepted elsewhere.
@@ -557,4 +557,7 @@ other = "Topics"
 other = "different topic labels the conference gave the papers, as in the topic table on each professor's page"
 
 [prof_pie_caption]
-other = "All years: {{ .Accepted }} accepted, {{ .Recorded }} rejected at ICLR and about {{ .Estimated }} rejected elsewhere (estimate), so about {{ .Total }} submissions."
+other = "All years: {{ .Accepted }} accepted, {{ .Recorded }} rejected and on record, and about {{ .Estimated }} rejected elsewhere (estimate), so about {{ .Total }} submissions."
+
+[prof_other_rejected]
+other = "Rejected and on record at other venues (public rejections and papers placed in Findings): {{ . }}."

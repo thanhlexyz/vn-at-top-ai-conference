@@ -28,7 +28,7 @@ Trang của từng giảng viên có ghi rõ mỗi chỉ số được tính tr�
 
 ## Biểu đồ số bài nộp và số bài được chấp nhận
 
-Trang của mỗi giảng viên có biểu đồ số bài theo năm, gồm hai phần là số liệu thống kê trực tiếp: số bài được chấp nhận tại cả tám hội nghị, và số bài bị từ chối tại ICLR. Phần thứ ba là số liệu ước tính về các bài không được NeurIPS, ICML, CVPR, ICCV, ECCV, ACL và EMNLP chấp nhận, vốn không được công khai.
+Trang của mỗi giảng viên có biểu đồ số bài theo năm, gồm hai phần là số liệu thống kê trực tiếp: số bài được chấp nhận tại cả tám hội nghị, và số bài bị từ chối có ghi nhận (mọi bài bị từ chối tại ICLR, bài bị từ chối công khai tại NeurIPS và bài được xếp vào Findings). Phần thứ ba là số liệu ước tính về các bài không được NeurIPS, ICML, CVPR, ICCV, ECCV, ACL và EMNLP chấp nhận, vốn không được công khai.
 
 Phần ước tính được thực hiện riêng cho từng giảng viên, dựa trên kết quả ICLR của chính giảng viên đó:
 
