@@ -115,3 +115,9 @@ This site was built by an AI, [Claude](https://www.anthropic.com/claude), under 
 Thanks to Dr. [Nam Vo](https://vingen.vinbigdata.org/teams/vo-sy-nam/) for his comments, and for suggesting that the front page separate papers from before 2026 and from 2026 on, to show the numbers before and after AI became really strong.
 
 Thanks to Prof. [Huynh Thi Thanh Binh](https://soict.hust.edu.vn/en/prof-huynh-thi-thanh-binh.html) for her comments, and for suggesting that the site also track EMNLP, ICCV and ECCV.
+
+## Useful links
+
+- [CS Picks](https://cspicks.roars.dev/): professors, universities, research strengths and publication trends in computer science, from open academic data.
+- [CS conference schedule, 2026–2027](https://cspicks.roars.dev/csconfs.html?start=2026&end=2027): dates and submission deadlines of computer science conferences.
+- [VietProfs](https://vietprofs.roars.dev/): a directory of Vietnamese professors worldwide, across universities, disciplines, countries and ranks.

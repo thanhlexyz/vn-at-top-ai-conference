@@ -115,3 +115,9 @@ Trang thông tin này do **Lê Thành** ([thanhle.xyz](http://thanhle.xyz)) hư�
 Xin cảm ơn TS. [Võ Sỹ Nam](https://vingen.vinbigdata.org/teams/vo-sy-nam/) đã góp ý, đặc biệt là gợi ý tách số liệu trên trang chính thành trước năm 2026 và từ năm 2026, để thấy số bài trước và sau khi AI thực sự trở nên mạnh.
 
 Xin cảm ơn GS. [Huỳnh Thị Thanh Bình](https://soict.hust.edu.vn/en/prof-huynh-thi-thanh-binh.html) đã góp ý, đặc biệt là gợi ý theo dõi thêm các hội nghị EMNLP, ICCV và ECCV.
+
+## Liên kết hữu ích
+
+- [CS Picks](https://cspicks.roars.dev/): giảng viên, trường đại học, thế mạnh nghiên cứu và xu hướng công bố trong ngành khoa học máy tính, từ dữ liệu học thuật mở.
+- [Lịch hội nghị khoa học máy tính 2026–2027](https://cspicks.roars.dev/csconfs.html?start=2026&end=2027): thời gian diễn ra và hạn nộp bài của các hội nghị khoa học máy tính.
+- [VietProfs](https://vietprofs.roars.dev/): danh bạ giáo sư, giảng viên người Việt trên toàn thế giới, theo trường, ngành, quốc gia và chức danh.
