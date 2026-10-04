@@ -13,7 +13,7 @@
 		<th colspan="3">ICLR</th>
 		<th colspan="4">{{ T "th_accepted_at" }}</th>
 		{{- end }}
-		<th colspan="{{ cond $compact 4 3 }}">{{ T "th_total" }}</th>
+		<th colspan="{{ cond $compact 5 3 }}">{{ T "th_total" }}</th>
 		<th rowspan="2" class="ws" title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
 		<th colspan="2" title="{{ T "tip_own_institution" }}">{{ T "th_own_institution" }}</th>
 		<th colspan="5">{{ T "th_coauthors" }}</th>
@@ -32,6 +32,7 @@
 		{{- end }}
 		<th class="good">{{ T "th_accepted" }}</th>
 		{{- if $compact }}
+		<th class="good" title="{{ T "tip_accepted_before" $last }}">{{ T "th_accepted_before" $last }}</th>
 		<th class="good" title="{{ T "tip_accepted_year" $last }}">{{ T "th_accepted_year" $last }}</th>
 		{{- end }}
 		<th class="bad" title="{{ T "tip_rejected_total" }}">{{ T "th_rejected" }}</th>
@@ -72,6 +73,8 @@
 		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" .own_page) }}">+{{ .own_page }}</span>{{ end }}</td>
 		{{- if $compact }}
 		{{- $y := index (where .years "year" $last) 0 }}
+		{{- $before := sub (int .official) (int $y.official) }}{{ $before_own := sub (int .own_page) (int $y.own_page) }}
+		<td class="good">{{ $before }}{{ if gt $before_own 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" $before_own) }}">+{{ $before_own }}</span>{{ end }}</td>
 		<td class="good">{{ $y.official }}{{ if gt (int $y.own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" $y.own_page) }}">+{{ $y.own_page }}</span>{{ end }}</td>
 		{{- end }}
 		{{ partial "rejected-total.html" .venues }}

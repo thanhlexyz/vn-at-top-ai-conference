@@ -69,6 +69,10 @@ other = "Tên bài"
 other = "Kết quả"
 [th_accepted_at]
 other = "Được nhận tại"
+[th_accepted_before]
+other = "trước {{ . }}"
+[tip_accepted_before]
+other = "số bài được nhận trước năm {{ . }}"
 [th_accepted_year]
 other = "được nhận {{ . }}"
 [tip_accepted_year]
