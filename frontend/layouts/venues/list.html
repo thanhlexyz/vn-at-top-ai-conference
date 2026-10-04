@@ -15,7 +15,8 @@
 	</tr>
 	</thead>
 	<tbody>
-	{{- range hugo.Data.venues }}
+	{{- /* most accepted papers first */}}
+	{{- range sort hugo.Data.venues "accepted" "desc" }}
 	{{- $t := index .venues .key }}
 	<tr>
 		<td class="logo-col">{{ with .image }}<img class="mini" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}</td>
