@@ -17,7 +17,6 @@ RAW = BACKEND / "raw"  # downloaded source files, re-creatable
 WORK = BACKEND / "work"  # intermediate files, re-creatable
 ACCEPTED = WORK / "accepted.jsonl.gz"  # every accepted paper of the tracked venues, normalized
 OPENREVIEW_RAW = RAW / "openreview"  # one <slug>.json per person, written by fetch_openreview.py
-LEGACY_PAPERS = BACKEND / "iclr_cache" / "papers.csv"  # cache of the old iclr_author_stats.py
 
 ROSTER = BACKEND / "roster.csv"  # hand-edited: who is on the site
 REVIEW = BACKEND / "review.csv"  # uncertain matches; the build appends rows, you fill in `decision`

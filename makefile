@@ -18,7 +18,7 @@ openreview:
 affiliations:
 	cd backend && $(PYTHON) fetch_affiliations.py && $(PYTHON) build_site_data.py
 
-# save the professors' own pages and list their lines about the five venues in backend/work/homepage_hits.txt;
+# save the professors' own pages and list their lines about the eight venues in backend/work/homepage_hits.txt;
 # copying papers from there into backend/self_reported.csv is done by hand
 homepages:
 	cd backend && $(PYTHON) fetch_homepages.py
@@ -27,7 +27,7 @@ homepages:
 refresh:
 	cd backend && $(PYTHON) fetch_accepted.py --refresh && $(PYTHON) find_candidates.py && $(PYTHON) build_site_data.py
 
-# --buildDrafts shows the blog draft; `make build` leaves drafts out
+# --buildDrafts shows the local-only pages (Candidates, Not tracked); `make build` leaves drafts out
 run:
 	cd frontend && hugo serve --buildDrafts --noHTTPCache --disableFastRender
 
@@ -37,7 +37,7 @@ build:
 
 # Build the public site and push it to the gh-pages branch of the origin repository, which GitHub Pages
 # serves (Settings > Pages > Deploy from a branch > gh-pages). The address and the public settings are in
-# frontend/publish.toml. Drafts (Candidates, the blog draft) are left out. The gh-pages branch holds
+# frontend/publish.toml. Drafts (Candidates, Not tracked) are left out. The gh-pages branch holds
 # generated files only and is replaced on every publish.
 # The commit is made in a throwaway repository inside frontend/public, which would otherwise fall back
 # to the global git identity; it gets this repository's author and a UTC date instead.

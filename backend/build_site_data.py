@@ -28,7 +28,7 @@ import html
 import json
 import re
 
-from common import (ACCEPTED, BACKEND, CANDIDATES, FRONTEND, LEGACY_PAPERS, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
+from common import (ACCEPTED, BACKEND, CANDIDATES, FRONTEND, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
                     STATUS_LABEL, VENUE_GROUPS, VENUE_KEYS, VENUE_NAME, VENUES, WORK, YEARS, classify_status, held, in_vietnam,
                     load_roster, name_key, norm_name, norm_title, openreview_venue, presentation, read_csv,
                     read_jsonl_gz, same_institution, slugify, vn_institutions, write_json)
@@ -123,50 +123,24 @@ class Accepted:
         return p
 
 
-def load_legacy(roster):
-    """Rows of the old iclr_author_stats.py cache, per roster slug.
-
-    They are used only while a person has no raw/openreview/<slug>.json, and only if every profile ID the
-    old script queried is on the roster now: the old name search sometimes mixed several people.
-    """
-    people = {re.sub(r"\(.*?\)", "", r["label"]).strip(): r for r in read_csv(LEGACY_PAPERS.parent / "people.csv")}
-    by_variant = {v: p for p in roster for v in p["variants"]}
-    out = {}
-    for label, row in people.items():
-        person = by_variant.get(norm_name(label))
-        ids = {i for i in row["profile_ids"].split(";") if i}
-        if person and ids and ids <= set(person["openreview_ids"]):
-            out[person["slug"]] = {"fetched_at": row["fetched_at"], "notes": []}
-    for r in read_csv(LEGACY_PAPERS):
-        person = by_variant.get(norm_name(re.sub(r"\(.*?\)", "", r["label"])))
-        if person and person["slug"] in out:
-            out[person["slug"]]["notes"].append({
-                "forum": r["forum"], "title": r["title"], "venue": r["venue"], "venueid": r["venueid"],
-                "invitations": [], "authors": [a for a in r["authors"].split("; ") if a], "decision": "",
-                "legacy_year": int(r["year"]) if r["year"].isdigit() else None})
-    return out
-
-
-def load_openreview(person, legacy):
-    """(notes, source, fetched date, stale, own usernames) where source is 'openreview', 'legacy' or 'none'."""
+def load_openreview(person):
+    """(notes, source, fetched date, stale, own usernames) where source is 'openreview' or 'none'."""
     path = OPENREVIEW_RAW / f"{person['slug']}.json"
     if path.exists():
         data = json.loads(path.read_text(encoding="utf-8"))
         stale = set(data.get("queried_ids", [])) != set(person["openreview_ids"])
         own_ids = set(data.get("profile_ids", [])) | set(person["openreview_ids"])
         return data.get("notes", []), "openreview", data.get("fetched_at", "")[:10], stale, own_ids
-    if person["slug"] in legacy:
-        return legacy[person["slug"]]["notes"], "legacy", legacy[person["slug"]]["fetched_at"][:10], False, set()
     return [], "none", "", False, set()
 
 
-def shared_notes(approved, legacy):
+def shared_notes(approved):
     """Submissions in one professor's OpenReview record that list another approved professor.
 
     {slug: [{note, owner, exact, name}]}. exact means the other professor's profile ID is on the submission.
-    Without IDs on either side (the old cache has names only) the match is by name and has to be confirmed.
+    Without IDs on either side the match is by name and has to be confirmed.
     """
-    loaded = {p["slug"]: load_openreview(p, legacy) for p in approved}
+    loaded = {p["slug"]: load_openreview(p) for p in approved}
     out = collections.defaultdict(list)
     for owner in approved:
         for n in loaded[owner["slug"]][0]:
@@ -185,10 +159,7 @@ def shared_notes(approved, legacy):
 
 
 def note_venue(note):
-    v = openreview_venue(note.get("invitations"), note.get("venueid"))
-    if v is None and note.get("legacy_year") and not note.get("venue") and not note.get("venueid"):
-        return "iclr", note["legacy_year"], "main"  # the old cache stored ICLR 2020-21 rows without any venue
-    return v
+    return openreview_venue(note.get("invitations"), note.get("venueid"))
 
 
 def load_self_reported(roster):
@@ -248,9 +219,9 @@ def same_paper(a, b):
     return same_title(a, b) or (":" in a and ":" in b and len(short_a) >= 4 and short_a == short_b)
 
 
-def person_records(person, acc, legacy, decisions, queue, warnings, skipped, own=(), borrowed=()):
+def person_records(person, acc, decisions, queue, warnings, skipped, own=(), borrowed=()):
     """Every paper of one person at the eight venues, before the counting rules are applied."""
-    notes, source, fetched, stale, own_ids = load_openreview(person, legacy)
+    notes, source, fetched, stale, own_ids = load_openreview(person)
     recs = []
 
     def existing(venue, year, title, workshop=False):
@@ -810,155 +781,6 @@ def paper_order(r):
     return -r["year"], VENUE_KEYS.index(r["venue"]), r["title"].lower()
 
 
-def ratio(a, b, pattern="{:.1f}"):
-    return pattern.format(a / b) if b else ""
-
-
-def blog_charts(pooled, rows, by_venue):
-    """The figures of the blog post, as SVG. Professors without ICLR records are left out of the ICLR
-    figures, where an empty bar would read as 'never rejected', and a professor needs three papers with
-    known affiliations to appear in the co-author figure, so one large paper does not set the scale."""
-    i = pooled["iclr"]
-    outcome = [("s1", "accepted"), ("not", "rejected or withdrawn")]
-
-    def top(candidates, key, n=10):
-        """The ten largest by `key`, shown smallest first."""
-        return sorted(sorted(candidates, key=key, reverse=True)[:n], key=key)
-
-    known = top([r for r in rows if r["iclr_complete"] and r["iclr"]["submitted"]], lambda r: r["iclr"]["submitted"])
-    teams = top([r for r in rows if r["collab"]["papers_with_affiliations"] >= 3],
-                lambda r: sum(float(r["collab"][k]) for k in ("avg_same_institution", "avg_other_vietnam", "avg_foreign")))
-    busy = top([r for r in rows if r["projection"]], lambda r: int(r["projection"]["total"]))
-    hidden = pooled["projected_submissions"] - pooled["projected_accepted"]
-    return {
-        "outcomes": charts.pies(
-            "Accepted and rejected: ICLR as counted, all eight venues as estimated",
-            [("ICLR, counted", [("s1", "accepted", i["accepted"]), ("not", "rejected or withdrawn", i["not_accepted"])]),
-             ("All eight venues, estimated", [("s1", "accepted", pooled["projected_accepted"]),
-                                             ("not", "rejected or withdrawn", hidden)])]),
-        "iclr_each": charts.stacked_rows(
-            "ICLR submissions per professor by outcome",
-            [(r["name"], [r["iclr"]["accepted"], r["iclr"]["not_accepted"]]) for r in known], outcome),
-        "trend": charts.lines(
-            "Accepted papers of the listed professors per conference and year", YEARS,
-            [(f"v{n + 1}", VENUE_NAME[v], by_venue[v]) for n, v in enumerate(VENUE_KEYS)]),
-        "teams": charts.stacked_rows(
-            "Co-authors per accepted paper, by where they work",
-            [(r["name"], [float(r["collab"]["avg_same_institution"]), float(r["collab"]["avg_other_vietnam"]),
-                          float(r["collab"]["avg_foreign"])]) for r in teams],
-            [("s1", "own institution"), ("s2", "elsewhere in Vietnam"), ("s3", "abroad")]),
-        "attempts": charts.stacked_rows(
-            "Accepted papers and the submissions behind them, per professor",
-            [(r["name"], [r["projection"]["accepted"], r["iclr"]["not_accepted"] if r["iclr_complete"] else 0,
-                          int(r["projection"]["estimated"])]) for r in busy],
-            [("s1", "accepted"), ("not", "rejected at ICLR"), ("hollow", "rejected elsewhere, estimated")]),
-    }
-
-
-def blog_data(professors, papers, acc, pages, announced):
-    """Everything the blog post quotes, so that its numbers follow the data instead of being typed in."""
-    complete = {p["slug"] for p in professors if p["iclr_complete"]}
-    iclr = dict.fromkeys(["submitted", "accepted", *NOT_ACCEPTED, "not_accepted", "later"], 0)
-    by_year = collections.Counter()
-    for r in papers:
-        if r["venue"] == "iclr" and any(o["slug"] in complete for o in r["_owners"]):
-            iclr["submitted"] += 1
-            iclr[r["status"]] += 1
-            by_year[r["year"]] += 1
-            if r["status"] in NOT_ACCEPTED:
-                iclr["not_accepted"] += 1
-                iclr["later"] += bool(r.get("later"))
-    accepted = [r for r in papers if r["status"] == "accepted"]
-    teams = [r["people"] for r in accepted if any(a["aff"] for a in r["people"])]
-    in_vn = [sum(1 for a in t if vn_institutions(a["aff"])) for t in teams]
-    abroad = [sum(1 for a in t if a["aff"] and not vn_institutions(a["aff"])) for t in teams]
-    busiest = max(by_year, key=by_year.get) if by_year else 0
-    pooled = {
-        "professors": len(professors), "professors_with_iclr": len(complete),
-        "iclr": {**iclr, "rate": ratio(100 * iclr["accepted"], iclr["submitted"], "{:.0f}%"),
-                 "per_accept": ratio(iclr["submitted"], iclr["accepted"]),
-                 "not_per_accept": ratio(iclr["not_accepted"], iclr["accepted"]),
-                 "busiest_year": busiest, "busiest_year_submitted": by_year.get(busiest, 0)},
-        "accepted": len(accepted), "own_page": sum(bool(r.get("unofficial")) for r in accepted),
-        # per professor, so the post can quote one person's figures by slug
-        "people": {p["slug"]: {"accepted": p["accepted"], "judged": p["authorship"]["judged"],
-                               "majority": p["authorship"]["majority"]["total"],
-                               "first_author": p["authorship"]["first_author"]["total"]} for p in professors},
-        "accepted_by_year": {str(y): sum(r["year"] == y for r in accepted) for y in YEARS},
-        "iclr_largest": max((p["venues"]["iclr"] for p in professors if p["iclr_complete"]),
-                            key=lambda t: t["submitted"], default={}),
-        "accepted_by_venue": {v: sum(r["venue"] == v for r in accepted) for v in VENUE_KEYS},
-        # the estimates on the professors' pages added up; a paper of two professors is in both
-        "projected_accepted": sum(p["projection"]["accepted"] for p in professors if p["projection"]),
-        "projected_submissions": sum(int(p["projection"]["total"]) for p in professors if p["projection"]),
-        "projected_rate": ratio(100 * sum(p["projection"]["accepted"] for p in professors if p["projection"]),
-                                sum(int(p["projection"]["total"]) for p in professors if p["projection"]), "{:.0f}%"),
-        "team_papers": len(teams), "avg_authors": ratio(sum(len(t) for t in teams), len(teams)),
-        "avg_authors_vietnam": ratio(sum(in_vn), len(teams)), "avg_authors_abroad": ratio(sum(abroad), len(teams)),
-        "papers_with_foreign_author": sum(1 for n in abroad if n),
-    }
-
-    rows = []
-    for p in professors:
-        i, c = p["venues"]["iclr"], p["collab"]
-        rows.append({
-            "slug": p["slug"], "name": p["name"], "institution_short": p["institution_short"],
-            "accepted": p["accepted"], "iclr_complete": p["iclr_complete"], "iclr": i,
-            "iclr_rate": ratio(100 * i["accepted"], i["submitted"], "{:.0f}%") if p["iclr_complete"] else "",
-            "iclr_per_accept": ratio(i["submitted"], i["accepted"]) if p["iclr_complete"] else "",
-            "later": sum(1 for e in p["not_accepted_papers"] if e["venue"] == "iclr" and e["later"]),
-            "collab": c, "unconfirmed": bool(p["flags"]),
-            "projection": {k: p["projection"][k] for k in ("ratio", "accepted", "estimated", "total")}
-            if p["projection"] else None,
-        })
-
-    trend = []
-    for v in ("iclr", "neurips", "icml"):  # the lists that print an affiliation for every author, every year
-        years = []
-        for y in YEARS:
-            main = [p for p in acc.papers if (p["venue"], p["year"], p["track"]) == (v, y, "main")]
-            vn = sum(1 for p in main if any(vn_institutions(a["aff"]) for a in p["authors"]))
-            years.append({"year": y, "papers": len(main), "vietnam": vn, "provisional": (v, y) in acc.provisional,
-                          "share": ratio(100 * vn, len(main), "{:.2f}%")})
-        trend.append({"venue": v, "name": VENUE_NAME[v], "years": years})
-
-    neurips = next(t for t in trend if t["venue"] == "neurips")["years"]
-    pooled["neurips_first"], pooled["neurips_last"] = neurips[0], neurips[-1]
-
-    # what the professors' own pages say about NeurIPS, next to the official main-track list
-    own_pages, own_years = [], set()
-    for p in professors:
-        mine = [o for o in pages.get(p["slug"], []) if o["role"] == "own"]
-        claims = {y: c for (v, y), c in announced.get(p["slug"], {}).items() if v == "neurips"}
-        if not mine and not announced.get(p["slug"]):
-            continue
-        cells = []
-        for y in YEARS:
-            listed = sum(1 for o in mine if (o["venue"], o["year"]) == ("neurips", y))
-            claim = int(claims[y]["announced"]) if y in claims else 0
-            neurips = p["years"][y - YEARS[0]]["venues"]["neurips"]
-            other = sum(1 for e in p["excluded_papers"] if (e["venue"], e["year"], e["status"]) == ("neurips", y, "accepted"))
-            cells.append({"year": y, "announced": max(listed, claim) or "", "counted": neurips["official"],
-                          "own_page": neurips["own_page"], "other_track": other,
-                          "detail": claims[y]["note"] if y in claims else ""})
-            if max(listed, claim):
-                own_years.add(y)
-        first = (mine or list(announced[p["slug"]].values()))[0]
-        own_pages.append({"slug": p["slug"], "name": p["name"], "source_url": first["source_url"],
-                          "fetched": first["fetched"], "neurips": cells,
-                          "announced_total": sum(int(c["announced"] or 0) for c in cells)})
-    own_pages.sort(key=lambda r: -r["announced_total"])
-    for o in own_pages:
-        o["neurips"] = [c for c in o["neurips"] if c["year"] in own_years]
-    listed_somewhere = {o["slug"] for o in own_pages}
-    return {"pooled": pooled, "rows": rows, "trend": trend, "own_pages": own_pages, "own_years": sorted(own_years),
-            "charts": blog_charts(pooled, rows, {v: [sum(1 for r in accepted if (r["venue"], r["year"]) == (v, y))
-                                                             for y in YEARS] for v in VENUE_KEYS}),
-            "without_page": [p["name"] for p in professors if p["slug"] not in listed_somewhere]}
-
-
-# ---------------------------------------------------------------- submissions per year, estimated
-
 def projection(p):
     """Papers submitted and accepted per year for one professor, with the unknown part estimated.
 
@@ -1190,14 +1012,13 @@ def main():
     coverage = json.loads((WORK / "coverage.json").read_text(encoding="utf-8"))
     queue, warnings, skipped = [], [], []
     acc = Accepted(with_pdf_affiliations(read_jsonl_gz(ACCEPTED), warnings), coverage)
-    legacy = load_legacy(roster)
     review_rows, decisions = load_review()
     own_pages, announced = load_self_reported(roster)
-    shared = shared_notes(approved, legacy)
+    shared = shared_notes(approved)
 
     professors, all_counted, hidden, graph_recs = [], [], [], []
     for person in approved:
-        recs, source, fetched, stale = person_records(person, acc, legacy, decisions, queue, warnings, skipped,
+        recs, source, fetched, stale = person_records(person, acc, decisions, queue, warnings, skipped,
                                                       own_pages.get(person["slug"], ()),
                                                       shared.get(person["slug"], ()))
         mark_later_acceptance(recs, acc)
@@ -1215,9 +1036,6 @@ def main():
         elif source == "none":
             flags.append("No OpenReview records fetched yet, so only accepted papers are known: "
                          "ICLR submissions and rejections are missing.")
-        elif source == "legacy":
-            flags.append(f"ICLR records come from a first fetch on {fetched}, which covered ICLR only and did "
-                         "not read the decisions of 2020 and 2021. A full fetch will replace them.")
         if stale:
             flags.append("The OpenReview IDs of this professor changed after the last fetch, which has to be repeated.")
         inferred = sum(1 for r in counted if r["note"])
@@ -1419,7 +1237,7 @@ def main():
             item["image_source"] = found[item[key]]["source_page"] if files else ""
     write_json(DATA / "overview.json", overview(professors, acc))
     # people in Vietnam with ICLR submissions but no accepted paper (find_iclr_only.py), for the local
-    # Candidates page; kept in a separate, git-ignored file because these lists name people who are not on the site
+    # Candidates page; tracked in git like the rest of the data, at the site maintainer's request
     on_roster = {i for p in roster for i in p["openreview_ids"]}
     attempted = [{**r, "not_accepted": int(r["not_accepted"])} for r in read_csv(BACKEND / "iclr_only.csv")
                  if r["openreview_id"] not in on_roster and not set(r["openreview_id"].split(";")) & on_roster]
@@ -1489,9 +1307,6 @@ def main():
     write_json(DATA / "graph_people.json", graph.researcher_graph(professors, recs_for_graph))
     write_json(DATA / "graph_institutions.json", graph.institution_graph(professors, recs_for_graph))
     write_json(DATA / "papers.json", [with_owners(r) for r in sorted(papers, key=paper_order)])
-    for r in papers:
-        r["_owners"] = [{"slug": p["slug"]} for p in owners[(r["venue"], r["year"], norm_title(r["title"]))]]
-    write_json(DATA / "blog.json", blog_data(professors, papers, acc, own_pages, announced))
     # approved = no: checked and left off for good; `notes` says why
     excluded = [{"name": p["name"], "institution": p["institution_short"], "reason": p["notes"],
                  "homepage": p["homepage"], "openreview_ids": p["openreview_ids"]}

@@ -1,0 +1,3 @@
+{{- /* The lists still provisional, e.g. "NeurIPS 2026", from data/meta.json */ -}}
+{{- $names := slice }}{{ range hugo.Data.meta.provisional }}{{ $names = $names | append (printf "%s %d" .name (int .year)) }}{{ end -}}
+{{- delimit $names ", " -}}

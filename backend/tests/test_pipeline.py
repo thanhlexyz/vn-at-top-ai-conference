@@ -249,7 +249,7 @@ class Counting(unittest.TestCase):
         (self.raw / "a-b.json").write_text(json.dumps({"notes": notes, "queried_ids": ["~A_B1"],
                                                        "fetched_at": "2026-10-01T00:00:00"}))
         queue, self.warnings, skipped = [], [], []
-        recs, source, _, stale = build.person_records(self.person, self.acc, {}, decisions or {}, queue,
+        recs, source, _, stale = build.person_records(self.person, self.acc, decisions or {}, queue,
                                                       self.warnings, skipped)
         self.assertEqual((source, stale), ("openreview", False))
         counted, excluded, _ = build.apply_rules(self.person, recs)
@@ -264,7 +264,7 @@ class Counting(unittest.TestCase):
                   "authors": ["A B", "C D"], "decision": ""}]
         (self.raw / "a-b.json").write_text(json.dumps({"notes": notes, "queried_ids": ["~A_B1"],
                                                        "fetched_at": "2026-10-01T00:00:00"}))
-        recs, *_ = build.person_records(self.person, self.acc, {}, {}, [], [], [])
+        recs, *_ = build.person_records(self.person, self.acc, {}, [], [], [])
         counted, excluded, workshop = build.apply_rules(self.person, recs)
         # the workshop version is listed on its own; the conference version with the same title still counts
         iclr = [r for r in counted if r["venue"] == "iclr"]
@@ -346,7 +346,7 @@ class Counting(unittest.TestCase):
             self.own("neurips", 2026, "A dataset", track="datasets_benchmarks"),
         ]
         queue, warnings, skipped = [], [], []
-        recs, _, _, _ = build.person_records(self.person, self.acc, {}, {}, queue, warnings, skipped, rows)
+        recs, _, _, _ = build.person_records(self.person, self.acc, {}, queue, warnings, skipped, rows)
         counted, excluded, _ = build.apply_rules(self.person, recs)
         got = {r["title"]: bool(r.get("unofficial")) for r in counted}
         self.assertEqual(got["Announced last week"], True)
@@ -371,13 +371,13 @@ class Counting(unittest.TestCase):
         (self.raw / "a-b.json").write_text(json.dumps({"notes": [], "queried_ids": ["~A_B1"]}))
         row = self.own("cvpr", 2026, "Signed with another name", role="coauthor", owner="X Y")
         queue, warnings = [], []
-        recs, _, _, _ = build.person_records(self.person, self.acc, {}, {}, queue, warnings, [], [row])
+        recs, _, _, _ = build.person_records(self.person, self.acc, {}, queue, warnings, [], [row])
         self.assertNotIn("Signed with another name", {r["title"] for r in recs})
         asked = [q for q in queue if q["title"] == "Signed with another name"]
         self.assertEqual(len(asked), 1)
         self.assertIn("named as co-author on the page of X Y", asked[0]["reason"])
         key = ("a-b", "cvpr", "2026", common.norm_title("Signed with another name"))
-        recs, _, _, _ = build.person_records(self.person, self.acc, {}, {key: "yes"}, [], [], [], [row])
+        recs, _, _, _ = build.person_records(self.person, self.acc, {key: "yes"}, [], [], [], [row])
         self.assertIn("Signed with another name", {r["title"] for r in recs})
 
     def test_unknown_start_year_does_not_pull_in_papers_from_abroad(self):
@@ -385,10 +385,10 @@ class Counting(unittest.TestCase):
         (self.raw / "a-b.json").write_text(json.dumps({"notes": [], "queried_ids": ["~A_B1"]}))
         rows = [self.own("icml", 2025, "Namesake abroad")]               # the official list shows A B at Google
         warnings, skipped = [], []
-        recs, _, _, _ = build.person_records(newcomer, self.acc, {}, {}, [], warnings, skipped, rows)
+        recs, _, _, _ = build.person_records(newcomer, self.acc, {}, [], warnings, skipped, rows)
         self.assertNotIn("Namesake abroad", {r["title"] for r in recs})
         settled = dict(self.person, vn_since=2024)                        # with a start year the year rule decides
-        recs, _, _, _ = build.person_records(settled, self.acc, {}, {}, [], [], [], rows)
+        recs, _, _, _ = build.person_records(settled, self.acc, {}, [], [], [], rows)
         self.assertIn("Namesake abroad", {r["title"] for r in recs})
 
     def test_paper_in_the_record_of_a_colleague(self):
@@ -400,27 +400,27 @@ class Counting(unittest.TestCase):
         (self.raw / "c-d.json").write_text(json.dumps({"notes": [note], "queried_ids": ["~C_D1"],
                                                        "profile_ids": ["~C_D1"]}))
         # the submission carries this person's profile ID: counted without asking
-        shared = build.shared_notes([self.person, colleague], {})
+        shared = build.shared_notes([self.person, colleague])
         self.assertEqual([(b["owner"], b["exact"]) for b in shared["a-b"]], [("C D", True)])
-        recs, source, _, _ = build.person_records(self.person, self.acc, {}, {}, [], [], [], (), shared["a-b"])
+        recs, source, _, _ = build.person_records(self.person, self.acc, {}, [], [], [], (), shared["a-b"])
         self.assertEqual([(r["title"], r["status"], r["borrowed"]) for r in recs if r["venue"] == "iclr"
                           and r["year"] == 2026], [("Withdrawn together", "withdrawn", True)])
         self.assertEqual(source, "none")
 
         # a different profile ID under the same name is somebody else
         other = dict(self.person, openreview_ids=["~A_B9"])
-        self.assertEqual(build.shared_notes([other, colleague], {})["a-b"], [])
+        self.assertEqual(build.shared_notes([other, colleague])["a-b"], [])
 
         # no profile ID known for this person: the name alone waits for a yes
         unknown = dict(self.person, openreview_ids=[])
-        shared = build.shared_notes([unknown, colleague], {})
+        shared = build.shared_notes([unknown, colleague])
         self.assertEqual([b["exact"] for b in shared["a-b"]], [False])
         queue = []
-        recs, _, _, _ = build.person_records(unknown, self.acc, {}, {}, queue, [], [], (), shared["a-b"])
+        recs, _, _, _ = build.person_records(unknown, self.acc, {}, queue, [], [], (), shared["a-b"])
         self.assertNotIn("Withdrawn together", {r["title"] for r in recs})
         self.assertIn("Withdrawn together", {q["title"] for q in queue})
         yes = {("a-b", "iclr", "2026", common.norm_title("Withdrawn together")): "yes"}
-        recs, _, _, _ = build.person_records(unknown, self.acc, {}, yes, [], [], [], (), shared["a-b"])
+        recs, _, _, _ = build.person_records(unknown, self.acc, yes, [], [], [], (), shared["a-b"])
         self.assertIn("Withdrawn together", {r["title"] for r in recs})
 
     def test_stricter_institution_counts(self):
@@ -434,16 +434,6 @@ class Counting(unittest.TestCase):
                               rec("rejected", [h, h], "rejected")], hust)
         self.assertEqual((a["majority"]["total"], a["first_author"]["total"], a["judged"], a["unknown"]), (1, 3, 4, 1))
         self.assertEqual(a["majority"]["venues"]["icml"], 1)
-
-    def test_blog_figures(self):
-        import charts
-        svg = charts.pies("x", [("ICLR", [("s1", "accepted", 6), ("not", "rejected", 29)])])
-        self.assertEqual((svg.count("<path"), "6 (17%)" in svg, "29 (83%)" in svg), (2, True, True))
-        svg = charts.stacked_rows("x", [("A B", [1, 0, 2.5]), ("C D", [0, 0, 0])], [("s1", "a"), ("s2", "b"), ("s3", "c")])
-        self.assertEqual(svg.count("<path"), 2)
-        self.assertIn(">3.5<", svg)
-        svg = charts.lines("x", [2025, 2026], [("v1", "ICLR", [1, 3]), ("v2", "ACL", [0, 2])])
-        self.assertEqual((svg.count("<polyline"), svg.count("<circle"), "ACL 2026: 2" in svg), (2, 4, True))
 
     def test_one_coauthor_under_two_spellings(self):
         keys = build.distinct_people(["Bui T Duc", "Bui Trong Duc", "Duc Bui Trong", "Bui Van Duc", "Khoa D. Doan",
