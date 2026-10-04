@@ -82,7 +82,7 @@
    "linked": true,
    "r": 16.8,
    "color": "c0",
-   "degree": 1,
+   "degree": 2,
    "lx": 550.8,
    "ly": 665.3,
    "anchor": "start"
@@ -402,6 +402,23 @@
    "anchor": "start"
   },
   {
+   "name": "Thai Khanh Nguyen",
+   "name_vi": "Nguyễn Thái Khánh",
+   "url": "professors/thai-khanh-nguyen/",
+   "group": "PTIT",
+   "id": "thai-khanh-nguyen",
+   "papers": 3,
+   "x": 548,
+   "y": 706.3,
+   "linked": true,
+   "r": 12.1,
+   "color": "c0",
+   "degree": 2,
+   "lx": 564.1,
+   "ly": 711.3,
+   "anchor": "start"
+  },
+  {
    "name": "Thuy T. Nguyen",
    "name_vi": "Nguyễn Thị Thủy",
    "url": "professors/thuy-t-nguyen/",
@@ -583,14 +600,14 @@
    "group": "PTIT",
    "id": "uyen-n-b-vo",
    "papers": 2,
-   "x": 548,
-   "y": 706.3,
+   "x": 530,
+   "y": 752.3,
    "linked": true,
    "r": 11.5,
    "color": "c0",
-   "degree": 1,
-   "lx": 563.5,
-   "ly": 711.3,
+   "degree": 2,
+   "lx": 545.5,
+   "ly": 757.3,
    "anchor": "start"
   },
   {
@@ -1033,12 +1050,26 @@
   },
   {
    "a": "cuong-pham",
-   "b": "uyen-n-b-vo",
+   "b": "thai-khanh-nguyen",
    "weight": 2,
    "x1": 530,
    "y1": 660.3,
    "x2": 548,
    "y2": 706.3,
+   "width": 2.6,
+   "a_name": "Cuong Pham",
+   "b_name": "Thai Khanh Nguyen",
+   "a_name_vi": "Phạm Văn Cường",
+   "b_name_vi": "Nguyễn Thái Khánh"
+  },
+  {
+   "a": "cuong-pham",
+   "b": "uyen-n-b-vo",
+   "weight": 2,
+   "x1": 530,
+   "y1": 660.3,
+   "x2": 530,
+   "y2": 752.3,
    "width": 2.6,
    "a_name": "Cuong Pham",
    "b_name": "Uyen N.B. Vo",
@@ -1156,6 +1187,20 @@
    "b_name": "Quan Minh Phan",
    "a_name_vi": "Lương Ngọc Hoàng",
    "b_name_vi": "Phan Minh Quân"
+  },
+  {
+   "a": "thai-khanh-nguyen",
+   "b": "uyen-n-b-vo",
+   "weight": 2,
+   "x1": 548,
+   "y1": 706.3,
+   "x2": 530,
+   "y2": 752.3,
+   "width": 2.6,
+   "a_name": "Thai Khanh Nguyen",
+   "b_name": "Uyen N.B. Vo",
+   "a_name_vi": "Nguyễn Thái Khánh",
+   "b_name_vi": "Võ Ngọc Bích Uyên"
   },
   {
    "a": "an-mai",
@@ -1464,6 +1509,6 @@
    "color": "c0"
   }
  ],
- "papers": 257,
+ "papers": 258,
  "shared": 45
 }
