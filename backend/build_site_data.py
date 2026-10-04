@@ -577,8 +577,79 @@ def authorship(records, institution):
 
     majority = [r for r in judged if 2 * sum(at_home(a) for a in r["people"]) > len(r["people"])]
     first = [r for r in judged if at_home(r["people"][0])]
+    by_year = [{"year": y, "accepted": sum(r["year"] == y for r in accepted), "judged": sum(r["year"] == y for r in judged),
+                "majority": sum(r["year"] == y for r in majority), "first": sum(r["year"] == y for r in first)}
+               for y in YEARS]
     return {"majority": table(majority), "first_author": table(first), "judged": len(judged),
-            "unknown": len(accepted) - len(judged)}
+            "unknown": len(accepted) - len(judged), "by_year": by_year}
+
+
+AUTHOR_CHART_TEXT = {
+    "en": {"first": "First author from {inst}", "majority": "Most authors from {inst}",
+           "first_other": "First author elsewhere", "majority_other": "Most authors elsewhere",
+           "unknown": "No affiliations in the source", "aria": "Accepted papers per year: {what}",
+           "tip": "{year}: {n} {what}"},
+    "vi": {"first": "Tác giả đầu cùng {inst}", "majority": "Đa số tác giả cùng {inst}",
+           "first_other": "Tác giả đầu ở đơn vị khác", "majority_other": "Đa số tác giả ở đơn vị khác",
+           "unknown": "Nguồn không ghi đơn vị", "aria": "Bài được nhận theo năm: {what}",
+           "tip": "{year}: {n} bài {what}"},
+}
+
+
+def authorship_svg(by_year, kind, inst, counts_from=None, lang="en"):
+    """One stacked column per year of accepted papers: from the institution (first author or most authors,
+    by `kind`), from elsewhere, and papers whose source prints no affiliations (cannot be judged)."""
+    w = AUTHOR_CHART_TEXT[lang]
+    width, height, left, right, top, bottom = 640, 260, 40, 12, 46, 30
+    plot_w, plot_h = width - left - right, height - top - bottom
+    peak = max((r["accepted"] for r in by_year), default=0)
+    step = next(s for s in (1, 2, 5, 10, 20, 25, 50, 100) if peak / s <= 5)
+    top_value = max(step, step * -(-peak // step))
+    base = top + plot_h
+    labels = [("own-inst", w[kind].format(inst=inst)), ("other-inst", w[kind + "_other"]), ("unjudged", w["unknown"])]
+    out = [f'<svg class="chart" viewBox="0 0 {width} {height}" role="img" '
+           f'aria-label="{html.escape(w["aria"].format(what=labels[0][1]))}">']
+    x = left
+    for cls, text in labels:
+        out.append(f'<rect class="{cls}" x="{x}" y="8" width="12" height="12"/>'
+                   f'<text class="label" x="{x + 18}" y="18">{html.escape(text)}</text>')
+        x += 30 + 6.4 * len(text)
+    value = 0
+    while value <= top_value:
+        y = base - value / top_value * plot_h
+        out.append(f'<line class="{"axis" if value == 0 else "grid"}" x1="{left}" y1="{y:.1f}" x2="{width - right}" '
+                   f'y2="{y:.1f}"/><text class="tick" x="{left - 6}" y="{y + 4:.1f}" text-anchor="end">{value}</text>')
+        value += step
+    band = plot_w / len(by_year)
+    bar = min(24, band * 0.5)
+    for k, r in enumerate(by_year):
+        cx = left + band * (k + 0.5)
+        counts = counts_from is None or r["year"] >= counts_from
+        out.append(f'<text class="{"tick" if counts else "tick off"}" x="{cx:.1f}" y="{base + 18}" '
+                   f'text-anchor="middle">{r["year"]}</text>')
+        if not counts or not r["accepted"]:
+            continue
+        home = r[kind]
+        parts = [(cls, v, text) for (cls, text), v in zip(labels, (home, r["judged"] - home, r["accepted"] - r["judged"])) if v > 0]
+        low = base
+        for n, (cls, v, text) in enumerate(parts):
+            high = low - v / top_value * plot_h
+            h = max(low - high - (2 if n else 0), 0.5)
+            y, xx = low - (2 if n else 0) - h, cx - bar / 2
+            rnd = min(4, h) if n == len(parts) - 1 else 0
+            shape = (f'M{xx:.1f},{y + h:.1f} V{y + rnd:.1f} Q{xx:.1f},{y:.1f} {xx + rnd:.1f},{y:.1f} H{xx + bar - rnd:.1f} '
+                     f'Q{xx + bar:.1f},{y:.1f} {xx + bar:.1f},{y + rnd:.1f} V{y + h:.1f} Z')
+            out.append(f'<path class="{cls}" d="{shape}"><title>{html.escape(w["tip"].format(year=r["year"], n=v, what=text[:1].lower() + text[1:]))}</title></path>')
+            low = high
+        out.append(f'<text class="value" x="{cx:.1f}" y="{low - 6:.1f}" text-anchor="middle">{r["accepted"]}</text>')
+    out.append("</svg>")
+    return "".join(out)
+
+
+def authorship_charts(entry, inst, counts_from=None):
+    a = entry["authorship"] if "authorship" in entry else entry
+    return {kind: {"svg": authorship_svg(a["by_year"], kind, inst, counts_from, "en"),
+                   "svg_vi": authorship_svg(a["by_year"], kind, inst, counts_from, "vi")} for kind in ("first", "majority")}
 
 
 def unique(records):
@@ -1046,6 +1117,7 @@ def main():
 
     for p in professors:
         p["projection"] = projection(p)
+        p["author_charts"] = authorship_charts(p, p["institution_short"], p["vn_since"] or None)
         # every rejection behind the accepted papers: the ones recorded at ICLR plus the estimate for the other venues
         p["rejected_estimated"] = (round(sum(r["iclr_not_accepted"] + float(r["estimated"])
                                              for r in p["projection"]["rows"] if r["counts"]))
@@ -1072,6 +1144,8 @@ def main():
         ratio = (iclr["submitted"] + 1) / (iclr["accepted"] + 1)
         elsewhere = i["accepted"] - iclr["accepted"]
         i["rejected_estimated"] = round(iclr["not_accepted"] + elsewhere * (ratio - 1)) if i["accepted"] or iclr["submitted"] else None
+    for i in institutions:
+        i["author_charts"] = authorship_charts(i, i["short"])
     institutions.sort(key=lambda i: (-i["accepted"], i["name"]))
     # Vietnamese names, confirmed by hand (institution_names.csv); the Vietnamese site shows them
     names_vi = {r["name"]: r["name_vi"] for r in read_csv(BACKEND / "institution_names.csv")}

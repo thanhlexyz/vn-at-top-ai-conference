@@ -407,6 +407,10 @@ other = "Source of the picture"
 [theme_toggle]
 other = "Switch between day and night mode"
 
+[author_charts_title]
+other = "Accepted papers per year by where the authors are"
+[author_charts_note]
+other = "Each column is one year's accepted papers. Blue: the first author (top chart) or most authors (bottom chart) list {{ . }}. Orange: they list another institution. Grey: the source of the paper prints no affiliations (ACL, EMNLP, most CVPR lists, unofficial papers), so it cannot be judged."
 [coauthor_institutions]
 other = "Co-author institutions"
 [coauthor_institutions_note]

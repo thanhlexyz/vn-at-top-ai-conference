@@ -62,28 +62,16 @@
 </figure>
 {{- end }}
 
-<h2>{{ T "by_year" }}</h2>
-{{ partial "year-table.html" (dict "years" $p.years "venues" $p.venues "official" $p.official "own_page" $p.own_page "complete" $p.iclr_complete) }}
-<p class="note">
-	{{ T "prof_note_year" }}
-	{{- with $p.venues.neurips.not_accepted }}
-	{{ T "prof_note_neurips_public" (dict "Count" (int .)) }}
-	{{- end }}
-</p>
+<h2>{{ T "author_charts_title" $p.institution_short }}</h2>
+<figure>
+{{ index $p.author_charts.first (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
+</figure>
+<figure>
+{{ index $p.author_charts.majority (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
+</figure>
+<p class="note">{{ T "author_charts_note" $p.institution_short }}</p>
 
 {{- with $p.projection }}
-{{- $a := $p.authorship }}
-<h2>{{ T "majority_title" $p.institution_short }}</h2>
-<p class="note">
-	{{ T "majority_note" (dict "Inst" $p.institution_short "Judged" $a.judged) }}
-	{{- if $a.unknown }}{{ T "majority_left_out" (dict "Count" (int $a.unknown)) }}{{ end }}
-</p>
-{{ partial "venue-year-table.html" $a.majority }}
-
-<h2>{{ T "first_title" $p.institution_short }}</h2>
-<p class="note">{{ T "first_note" $p.institution_short }}</p>
-{{ partial "venue-year-table.html" $a.first_author }}
-
 <h2>{{ T "chart_title" }}</h2>
 <figure>
 	{{ index . (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}

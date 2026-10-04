@@ -29,18 +29,14 @@
 <h2>{{ T "inst_professors" }}</h2>
 {{ partial "professor-table.html" (dict "rows" (where hugo.Data.professors "institution_slug" $i.slug) "compact" true) }}
 
-<h2>{{ T "by_year" }}</h2>
-{{ partial "year-table.html" (dict "years" $i.years "venues" $i.venues "official" $i.official "own_page" $i.own_page "complete" true) }}
+<h2>{{ T "author_charts_title" $i.short }}</h2>
+<figure>
+{{ index $i.author_charts.first (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
+</figure>
+<figure>
+{{ index $i.author_charts.majority (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
+</figure>
+<p class="note">{{ T "author_charts_note" $i.short }}</p>
 
-<h2>{{ T "majority_title" $i.short }}</h2>
-<p class="note">
-	{{ T "majority_note" (dict "Inst" $i.short "Judged" $i.judged) }}
-	{{- if $i.unknown }}{{ T "majority_left_out" (dict "Count" (int $i.unknown)) }}{{ end }}
-</p>
-{{ partial "venue-year-table.html" $i.majority }}
-
-<h2>{{ T "first_title" $i.short }}</h2>
-<p class="note">{{ T "first_note" $i.short }}</p>
-{{ partial "venue-year-table.html" $i.first_author }}
 
 {{- end }}

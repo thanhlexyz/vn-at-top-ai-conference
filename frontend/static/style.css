@@ -425,3 +425,8 @@ svg.net.focus .edge.hl { stroke: var(--chart-value) ; }
 .graph-legend .line-key { display: inline-block ; width: 22px ; height: 4px ; border-radius: 2px ; background: var(--axis) ; }
 .chart .v6 { fill: #8a63d2 ; stroke: #8a63d2 ; }
 .chart .v7 { fill: #6b6a66 ; stroke: #6b6a66 ; }
+
+/* authorship charts: from the institution, from elsewhere, not judged */
+.chart .own-inst { fill: #2a78d6 ; }
+.chart .other-inst { fill: #eb6834 ; }
+.chart .unjudged { fill: var(--grid) ; stroke: var(--axis) ; stroke-width: 1 ; }
