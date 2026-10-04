@@ -6,15 +6,16 @@ EMNLP since 2020.
 
 **Website: <https://thanhlexyz.github.io/vn-at-top-ai-conference/>**
 
-![Accepted, recorded rejected and estimated rejected papers of all listed professors, over all years and per year](docs/submissions.png)
+![Accepted, recorded rejected and estimated rejected papers of all listed professors per year](docs/submissions.png)
 
-*Accepted papers against rejected ones, all listed professors: ICLR rejections are counted, the rest are estimated
-from each professor's own ICLR record.*
+*Submissions per year, all listed professors: accepted papers, rejections on record (every ICLR rejection, public
+NeurIPS rejections and Findings papers), and the rejections the other venues do not publish, estimated from each
+professor's own ICLR record.*
 
 ![Researcher collaboration graph: professors on the list joined by the papers they share](docs/researcher-graph.png)
 
-*Who works with whom: each circle is a professor on the list, coloured by institution; lines join people who share
-papers, shorter for more shared papers.*
+*Who works with whom: each circle is a professor on the list (Vietnamese names), coloured by institution; lines join
+people who share papers, shorter for more shared papers.*
 
 The figures are snapshots of the site; the live pages are updated with the data.
 
