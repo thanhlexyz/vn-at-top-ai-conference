@@ -46,6 +46,20 @@ Check the result on the local site (`make run`, then <http://localhost:1313>) or
   `backend/roster.csv` and its notes, is visible to everyone. Screenshots and downloads go to the git-ignored
   `backend/raw/`.
 
+## TODO
+
+- [ ] **Track more professors now that AAAI, IJCAI and NAACL are counted** (added 2026-10-05; the staff list was
+  not expanded then). The papers of people already on the list are counted, but lecturers in Vietnam who publish
+  mainly at these three venues are not on the list yet. Their lists print no affiliations, so `find_candidates.py`
+  cannot find them automatically, as it already cannot for ACL, EMNLP, and CVPR before 2023. Ways to find them:
+  - ask the agent to scan the AAAI, IJCAI and NAACL author lists for Vietnamese names, read the PDFs of those
+    papers, and list authors printed at a university in Vietnam who are not on the roster;
+  - co-authors of professors already on the list, on their AAAI, IJCAI and NAACL papers;
+  - staff pages of faculties of computer science and AI in Vietnam (`backend/faculty.csv`).
+
+  For each person found, decide whether they qualify (a lecturer or higher whose main post is at a university in
+  Vietnam), then ask the agent to "track" them with their OpenReview profile or staff page.
+
 ## Commands, if you want them
 
 ```
