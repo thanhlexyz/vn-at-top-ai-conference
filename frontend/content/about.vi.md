@@ -110,7 +110,7 @@ Trang công khai thống kê lượt truy cập bằng [GoatCounter](https://www
 
 ## Tác giả
 
-Trang thông tin này do **Lê Thành** ([thanhle.xyz](http://thanhle.xyz)) hướng dẫn AI ([Claude](https://www.anthropic.com/claude)) thực hiện. Mã nguồn và dữ liệu được công khai tại [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Nếu thấy trang này hữu ích, xin hãy tặng dự án một ⭐ trên [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Kính mong quý thầy cô và anh chị góp ý qua trang [Góp ý](../feedback/).
+Trang thông tin này do **Lê Thành** ([thanhle.xyz](http://thanhle.xyz)) hướng dẫn AI ([Claude](https://www.anthropic.com/claude)) thực hiện. Mã nguồn và dữ liệu được công khai tại [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Trang thông tin này được xây dựng xuất phát từ sự tò mò của cá nhân tôi, với mong muốn đóng góp vào lợi ích chung: phục vụ cộng đồng học thuật Việt Nam, cũng như những ai quan tâm đến sự phát triển hiện nay của nghiên cứu trí tuệ nhân tạo tại Việt Nam. Nếu thấy trang này hữu ích, xin hãy tặng dự án một ⭐ trên [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Kính mong quý thầy cô và anh chị góp ý qua trang [Góp ý](../feedback/).
 
 ## Lời cảm ơn
 

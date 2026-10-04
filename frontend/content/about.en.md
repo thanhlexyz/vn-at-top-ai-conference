@@ -110,7 +110,7 @@ The public site counts visits with [GoatCounter](https://www.goatcounter.com/), 
 
 ## Author
 
-This site was built by an AI, [Claude](https://www.anthropic.com/claude), under the direction of **Thanh Le** ([thanhle.xyz](http://thanhle.xyz)). The code and data are public on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). If you find this site useful, please give it a ⭐ on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Corrections are warmly welcome on the [Feedback](../feedback/) page.
+This site was built by an AI, [Claude](https://www.anthropic.com/claude), under the direction of **Thanh Le** ([thanhle.xyz](http://thanhle.xyz)). The code and data are public on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). I built this site out of personal curiosity, in the hope that it also serves the public interest: the Vietnamese academic community, and anyone who wishes to follow the current state of AI research in Vietnam. If you find this site useful, please give it a ⭐ on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Corrections are warmly welcome on the [Feedback](../feedback/) page.
 
 ## Acknowledgements
 
