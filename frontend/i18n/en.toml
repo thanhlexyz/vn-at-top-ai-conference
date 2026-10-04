@@ -75,7 +75,7 @@ other = "before {{ . }}"
 [tip_accepted_before]
 other = "accepted papers before {{ . }}"
 [th_accepted_year]
-other = "accepted {{ . }}"
+other = "from {{ . }}"
 [tip_accepted_year]
 other = "accepted papers in {{ . }}"
 [th_total]
