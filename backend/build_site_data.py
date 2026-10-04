@@ -1127,7 +1127,7 @@ def person_links(person):
     def kind_of(url):
         u = url.lower()
         for pattern, kind in (("aclanthology.org", "acl"), ("dblp.org", "dblp"), ("scholar.google", "scholar"),
-                              ("researchgate.net", "researchgate"),
+                              ("researchgate.net", "researchgate"), ("linkedin.com", "linkedin"),
                               ("openreview.net", "openreview"), ("publication", "publications")):
             if pattern in u:
                 return kind
