@@ -2,7 +2,7 @@
 title: "Professors"
 ---
 
-How many papers each professor submitted to ICLR, and how many were accepted at ICLR, NeurIPS, ICML, CVPR, ICCV, ACL and EMNLP.
+How many papers each professor submitted to ICLR, and how many were accepted at ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP.
 Papers count from the year the professor joined a Vietnamese institution.
 Only ICLR publishes every submission, so only ICLR has submitted and rejected numbers.
 

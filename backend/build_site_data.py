@@ -4,7 +4,7 @@
 Inputs
     roster.csv                    who is on the site (hand-edited; only rows with approved = yes count)
     review.csv                    uncertain matches; this script appends rows, you fill in `decision`
-    work/accepted.jsonl.gz        accepted papers of the seven venues        (fetch_accepted.py)
+    work/accepted.jsonl.gz        accepted papers of the eight venues        (fetch_accepted.py)
     raw/openreview/<slug>.json    every OpenReview submission of a person   (fetch_openreview.py)
     candidates.csv                people not on the roster yet              (find_candidates.py)
 
@@ -35,8 +35,9 @@ CONTENT = FRONTEND / "content"
 REVIEW_FIELDS = ["decision", "professor", "venue", "year", "title", "matched_name", "affiliation", "reason", "url",
                  "note"]
 SELF_REPORTED = BACKEND / "self_reported.csv"  # hand-kept: what professors list on their own pages
-# A paper placed in Findings was not accepted to the main track, at any conference, so it counts as a rejection
-FINDINGS_NOTE = "placed in Findings, which counts as rejected from the main track"
+# A paper placed in Findings was not accepted to the main track, at any conference: it counts as a rejection there,
+# and it is also listed and counted with the workshop papers
+FINDINGS_NOTE = "placed in Findings, which counts as rejected from the main track and as a workshop paper"
 # Tracks that are left out on purpose and listed under "Not counted". Workshop papers have a list of their own
 # on the professor's page (workshop_papers), also never counted.
 TRACK_REASON = {"datasets_benchmarks": "Datasets & Benchmarks track", "position": "position-paper track",
@@ -214,7 +215,7 @@ def same_paper(a, b):
 
 
 def person_records(person, acc, legacy, decisions, queue, warnings, skipped, own=(), borrowed=()):
-    """Every paper of one person at the seven venues, before the counting rules are applied."""
+    """Every paper of one person at the eight venues, before the counting rules are applied."""
     notes, source, fetched, stale, own_ids = load_openreview(person, legacy)
     recs = []
 
@@ -229,12 +230,13 @@ def person_records(person, acc, legacy, decisions, queue, warnings, skipped, own
             return
         venue, year, track = v
         status = classify_status(n.get("venue"), n.get("venueid"), n.get("invitations"), n.get("decision"))
-        findings = bool(re.search(r"\bFindings\b", n.get("venue") or ""))
-        if track == "workshop":   # listed for reference only: no official list to check, no outcome inferred
-            if existing(venue, year, n["title"], workshop=True):
+        if re.search(r"\bFindings\b", n.get("venue") or ""):   # "CVPR 2026 Findings", "EMNLP 2023 Findings"
+            track, status = "findings", "accepted"
+        if track in ("workshop", "findings"):   # listed for reference only: no official list to check, no outcome inferred
+            if existing(venue, year, n["title"], workshop=True) or (track == "findings" and existing(venue, year, n["title"])):
                 return
             recs.append({"venue": venue, "year": year, "track": track, "title": n["title"].strip(), "status": status,
-                         "note": "", "pres": "", "workshop": workshop_name(n),
+                         "note": "", "pres": "", "workshop": "Findings" if track == "findings" else workshop_name(n),
                          "url": f"https://openreview.net/forum?id={n['forum']}" if n.get("forum") else "",
                          "authors": n.get("authors") or [], "match": match, "borrowed": borrowed,
                          "people": [{"name": a, "aff": ""} for a in n.get("authors") or []], "self": None, "topic": ""})
@@ -246,8 +248,6 @@ def person_records(person, acc, legacy, decisions, queue, warnings, skipped, own
                 warnings.append(f"{person['name']}: '{n['title'][:60]}' ({VENUE_NAME[venue]} {year}) is labelled "
                                 f"{status} on OpenReview but is in the accepted list; counted as accepted")
             status = "accepted"
-        elif findings:   # "CVPR 2026 Findings", "EMNLP 2023 Findings": not accepted to the main track
-            status, note = "rejected", FINDINGS_NOTE
         elif status == "accepted" and track == "main" and (venue, year) in acc.available:
             warnings.append(f"{person['name']}: '{n['title'][:60]}' ({VENUE_NAME[venue]} {year}) reads as accepted "
                             f"on OpenReview but was not found in the accepted list; check it by hand")
@@ -375,7 +375,7 @@ def person_records(person, acc, legacy, decisions, queue, warnings, skipped, own
                               "reason": f"named as co-author on the page of {row['owner']}, but no author in the "
                                         f"official list has a name form of the roster"})
             continue
-        if row["track"] == "main" and (venue, year) not in acc.provisional:
+        if row["track"] == "main" and (venue, year) in acc.available and (venue, year) not in acc.provisional:
             warnings.append(f"{person['name']}: {where} lists '{title[:60]}' at {VENUE_NAME[venue]} {year}, but the "
                             f"official list of that year does not have it; not counted")
             continue
@@ -392,7 +392,8 @@ def apply_rules(person, recs):
     """(counted, excluded, workshop): counted papers, papers listed as not counted, and workshop papers."""
     counted, excluded, workshop = [], [], []
     for r in recs:
-        if r["track"] == "findings":
+        if r["track"] == "findings":   # a rejection from the main track, and a paper like a workshop paper
+            workshop.append({**r, "track": "workshop", "status": "accepted", "workshop": "Findings"})
             r = {**r, "track": "main", "status": "rejected", "note": FINDINGS_NOTE}
         if r["track"] == "workshop":
             workshop.append(r)
@@ -409,7 +410,7 @@ def apply_rules(person, recs):
 
 
 def mark_later_acceptance(recs, acc):
-    """Note on each not-accepted paper whether the same title was accepted later at one of the seven venues.
+    """Note on each not-accepted paper whether the same title was accepted later at one of the eight venues.
 
     Titles often change between submissions, so this finds only some of the resubmissions.
     """
@@ -620,9 +621,9 @@ def blog_charts(pooled, rows, by_venue):
     hidden = pooled["projected_submissions"] - pooled["projected_accepted"]
     return {
         "outcomes": charts.pies(
-            "Accepted and rejected: ICLR as counted, all seven venues as estimated",
+            "Accepted and rejected: ICLR as counted, all eight venues as estimated",
             [("ICLR, counted", [("s1", "accepted", i["accepted"]), ("not", "rejected or withdrawn", i["not_accepted"])]),
-             ("All seven venues, estimated", [("s1", "accepted", pooled["projected_accepted"]),
+             ("All eight venues, estimated", [("s1", "accepted", pooled["projected_accepted"]),
                                              ("not", "rejected or withdrawn", hidden)])]),
         "iclr_each": charts.stacked_rows(
             "ICLR submissions per professor by outcome",

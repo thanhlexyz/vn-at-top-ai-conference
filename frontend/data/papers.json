@@ -2108,11 +2108,11 @@
   "pres": "",
   "authors": "Nam Nguyen Phuong, Duc Nguyen The Minh, Phi Le Nguyen, Ehsan Abbasnejad, Minh Hoai",
   "match": "OpenReview profile",
-  "note": "placed in Findings, which counts as rejected from the main track",
+  "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
   "reason": "",
   "later": "",
   "unofficial": false,
-  "workshop": "",
+  "workshop": "Findings",
   "professors": [
    {
     "slug": "phi-le-nguyen",
@@ -2185,11 +2185,11 @@
   "pres": "",
   "authors": "M.-Duong Nguyen, Thien-Thanh Dao, Le-Tuan Nguyen, Dung D. Le, Kok-Seng Wong",
   "match": "OpenReview profile",
-  "note": "placed in Findings, which counts as rejected from the main track",
+  "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
   "reason": "",
   "later": "",
   "unofficial": false,
-  "workshop": "",
+  "workshop": "Findings",
   "professors": [
    {
     "slug": "dung-d-le",
@@ -2209,11 +2209,11 @@
   "pres": "",
   "authors": "Thinh Nguyen, Le Huy Khiem, Van-Tuan Tran, Khoa D Doan, Nitesh V. Chawla, Kok-Seng Wong",
   "match": "OpenReview profile",
-  "note": "placed in Findings, which counts as rejected from the main track",
+  "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
   "reason": "",
   "later": "",
   "unofficial": false,
-  "workshop": "",
+  "workshop": "Findings",
   "professors": [
    {
     "slug": "khoa-d-doan",
@@ -2233,11 +2233,11 @@
   "pres": "",
   "authors": "Abin Shoby, Ta Duc Huy, Tuan Dung Nguyen, Minh Khoi Ho, Qi Chen, Anton van den Hengel, Phi Le Nguyen, Johan W. Verjans, Vu Minh Hieu Phan",
   "match": "OpenReview profile",
-  "note": "placed in Findings, which counts as rejected from the main track",
+  "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
   "reason": "",
   "later": "",
   "unofficial": false,
-  "workshop": "",
+  "workshop": "Findings",
   "professors": [
    {
     "slug": "phi-le-nguyen",
@@ -2257,11 +2257,11 @@
   "pres": "",
   "authors": "Nam Duong Tran, Phi Le Nguyen",
   "match": "OpenReview profile",
-  "note": "placed in Findings, which counts as rejected from the main track",
+  "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
   "reason": "",
   "later": "",
   "unofficial": false,
-  "workshop": "",
+  "workshop": "Findings",
   "professors": [
    {
     "slug": "phi-le-nguyen",
@@ -2281,7 +2281,79 @@
   "pres": "",
   "authors": "Huy Duong, Trong-Tung Nguyen, Cuong Pham, Anh Tran, Khoi Nguyen, Minh Hoai",
   "match": "OpenReview profile",
-  "note": "placed in Findings, which counts as rejected from the main track",
+  "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "Findings",
+  "professors": [
+   {
+    "slug": "cuong-pham",
+    "name": "Cuong Pham",
+    "name_vi": "Phạm Văn Cường"
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "eccv",
+  "venue_name": "ECCV",
+  "title": "AC3S: Adaptive Conditioning for 3D-Aware Synthetic Data Generation",
+  "url": "https://eccv.ecva.net/virtual/2026/poster/5183",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Eric Ji, Qiran Hu, Wufei Ma, Sarthak Jain, Yingying Li, Minh Do, Yaoyao Liu",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "minh-do",
+    "name": "Minh Do",
+    "name_vi": "Đỗ Ngọc Minh"
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "eccv",
+  "venue_name": "ECCV",
+  "title": "Back-Tracking from Clarity: Self-Learning to See Text from Afar",
+  "url": "https://eccv.ecva.net/virtual/2026/poster/3551",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Duc Tri Tran, Phi Le Nguyen, Minh Hoai Nguyen",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "phi-le-nguyen",
+    "name": "Phi Le Nguyen",
+    "name_vi": "Nguyễn Phi Lê"
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "eccv",
+  "venue_name": "ECCV",
+  "title": "Cross-Space Distillation: Teaching One-Step Students with Modern Diffusion Teachers",
+  "url": "https://eccv.ecva.net/virtual/2026/poster/4819",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Anh Nguyen, Ngan Nguyen, Hong Duc Vu, Trung Dao, Viet Nguyen, Minh Quan Dao, Kien Nguyen, Tran Bao Chi Tran, Phong Nguyen, Khoi Nguyen, Cuong Pham, Dimitris N. Metaxas, Vishal Patel, Anh Tran",
+  "match": "name and affiliation",
+  "note": "",
   "reason": "",
   "later": "",
   "unofficial": false,
@@ -2464,6 +2536,54 @@
     "slug": "ngo-van-linh",
     "name": "Ngo Van Linh",
     "name_vi": "Ngô Văn Linh"
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "Assembling the CREW: A Collaborative Multi-agent Reinforcement Learning Framework for Automated Related Work Generation",
+  "url": "",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Huynh Thi Thanh Binh, Trần Hương, Bảo Nguyễn, Đặng Hải Đăng, Phạm Bảo Yến",
+  "match": "listed on her own announcement (13 September 2026) and the EMNLP 2026 decision notification: Main Conference paper; not in the official list yet",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": true,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "huynh-thi-thanh-binh",
+    "name": "Huynh Thi Thanh Binh",
+    "name_vi": "Huỳnh Thị Thanh Bình"
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "ReVEL: Multi-Turn Reflective LLM-Guided Heuristic Evolution via Structured Performance Feedback",
+  "url": "",
+  "status": "rejected",
+  "status_label": "rejected",
+  "pres": "",
+  "authors": "Huynh Thi Thanh Binh, Hanh Nguyen, Đức Cường",
+  "match": "listed on her own announcement (13 September 2026) and the EMNLP 2026 decision notification: Findings paper; not in the official list yet",
+  "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+  "reason": "",
+  "later": "",
+  "unofficial": true,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "huynh-thi-thanh-binh",
+    "name": "Huynh Thi Thanh Binh",
+    "name_vi": "Huỳnh Thị Thanh Bình"
    }
   ]
  },
@@ -4416,6 +4536,54 @@
  },
  {
   "year": 2024,
+  "venue": "eccv",
+  "venue_name": "ECCV",
+  "title": "Data Poisoning Quantization Backdoor Attack",
+  "url": "https://eccv.ecva.net/virtual/2024/poster/2699",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Tran Huynh, Anh Tran, Khoa Doan, Tung Pham",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "khoa-d-doan",
+    "name": "Khoa D. Doan",
+    "name_vi": "Đoàn Đăng Khoa"
+   }
+  ]
+ },
+ {
+  "year": 2024,
+  "venue": "eccv",
+  "venue_name": "ECCV",
+  "title": "Flatness-aware Sequential Learning Generates Resilient Backdoors",
+  "url": "https://eccv.ecva.net/virtual/2024/poster/2333",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "oral",
+  "authors": "Hoang Pham, The-Anh Ta, Anh Tran, Khoa Doan",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "khoa-d-doan",
+    "name": "Khoa D. Doan",
+    "name_vi": "Đoàn Đăng Khoa"
+   }
+  ]
+ },
+ {
+  "year": 2024,
   "venue": "acl",
   "venue_name": "ACL",
   "title": "A Curious Case of Searching for the Correlation between Training Data and Adversarial Robustness of Transformer Textual Models",
@@ -4425,7 +4593,7 @@
   "pres": "",
   "authors": "Dung D. Le, Dang Cao Cuong, Thai Le",
   "match": "listed on their own page; not in the official list yet",
-  "note": "placed in Findings, which counts as rejected from the main track",
+  "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
   "reason": "",
   "later": "",
   "unofficial": true,
@@ -4449,7 +4617,7 @@
   "pres": "",
   "authors": "Khoa D. Doan",
   "match": "listed on their own page; not in the official list yet",
-  "note": "placed in Findings, which counts as rejected from the main track",
+  "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
   "reason": "",
   "later": "",
   "unofficial": true,
@@ -4641,7 +4809,7 @@
   "pres": "",
   "authors": "Ngo Van Linh, Nguyen Chien, Thien Nguyen",
   "match": "listed on their own page; not in the official list yet",
-  "note": "placed in Findings, which counts as rejected from the main track",
+  "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
   "reason": "",
   "later": "",
   "unofficial": true,
@@ -4665,11 +4833,11 @@
   "pres": "",
   "authors": "Huy Huu Nguyen, Chien Van Nguyen, Linh Ngo Van, Anh Tuan Luu, Thien Huu Nguyen",
   "match": "OpenReview profile",
-  "note": "placed in Findings, which counts as rejected from the main track",
+  "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
   "reason": "",
   "later": "",
   "unofficial": false,
-  "workshop": "",
+  "workshop": "Findings",
   "professors": [
    {
     "slug": "ngo-van-linh",

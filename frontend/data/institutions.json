@@ -10,6 +10,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -23,6 +24,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -36,6 +38,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -49,6 +52,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -62,6 +66,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -75,6 +80,7 @@
       "icml": 1,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -88,6 +94,7 @@
       "icml": 4,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -100,6 +107,7 @@
     "icml": 5,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -115,6 +123,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -128,6 +137,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -141,6 +151,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -154,6 +165,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -167,6 +179,7 @@
       "icml": 1,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -180,6 +193,7 @@
       "icml": 3,
       "cvpr": 0,
       "iccv": 2,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -193,6 +207,7 @@
       "icml": 6,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -205,13 +220,14 @@
     "icml": 10,
     "cvpr": 0,
     "iccv": 2,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
    "total": 22
   },
-  "judged": 42,
-  "unknown": 9,
+  "judged": 43,
+  "unknown": 10,
   "slug": "hust",
   "name": "Hanoi University of Science and Technology",
   "short": "HUST",
@@ -220,9 +236,9 @@
    "ngo-van-linh",
    "tuan-dam",
    "than-quang-khoat",
+   "huynh-thi-thanh-binh",
    "dinh-viet-sang",
    "hoang-ta",
-   "huynh-thi-thanh-binh",
    "bui-trong-duc",
    "hoa-tien-nguyen",
    "nghia-duong-tan",
@@ -230,9 +246,9 @@
    "van-duc-nguyen"
   ],
   "iclr_complete": true,
-  "accepted": 51,
-  "own_page": 0,
-  "official": 51,
+  "accepted": 53,
+  "own_page": 1,
+  "official": 52,
   "venues": {
    "iclr": {
     "accepted": 5,
@@ -284,6 +300,16 @@
     "own_page": 0,
     "official": 5
    },
+   "eccv": {
+    "accepted": 1,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 1,
+    "own_page": 0,
+    "official": 1
+   },
    "acl": {
     "accepted": 7,
     "rejected": 1,
@@ -295,13 +321,13 @@
     "official": 7
    },
    "emnlp": {
-    "accepted": 0,
-    "rejected": 1,
+    "accepted": 1,
+    "rejected": 2,
     "withdrawn": 0,
     "desk_rejected": 0,
-    "not_accepted": 1,
-    "submitted": 1,
-    "own_page": 0,
+    "not_accepted": 2,
+    "submitted": 3,
+    "own_page": 1,
     "official": 0
    }
   },
@@ -373,6 +399,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -475,6 +514,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -575,6 +627,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -673,6 +738,19 @@
       "official": 0,
       "available": true,
       "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
       "provisional": false
      },
      "acl": {
@@ -775,6 +853,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -873,6 +964,19 @@
       "official": 5,
       "available": true,
       "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
       "provisional": false
      },
      "acl": {
@@ -975,6 +1079,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 1,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 1,
+      "own_page": 0,
+      "official": 1,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 6,
       "rejected": 0,
@@ -989,26 +1106,26 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
+      "accepted": 1,
+      "rejected": 1,
       "withdrawn": 0,
       "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
+      "not_accepted": 1,
+      "submitted": 2,
+      "own_page": 1,
       "official": 0,
       "available": false,
       "held": true,
       "provisional": false
      }
     },
-    "accepted": 29,
-    "own_page": 0,
-    "official": 29
+    "accepted": 31,
+    "own_page": 1,
+    "official": 30
    }
   ],
-  "workshop": 8,
-  "rejected_estimated": 208,
+  "workshop": 14,
+  "rejected_estimated": 216,
   "name_vi": "Đại học Bách khoa Hà Nội",
   "image": "img/institutions/hust.svg",
   "image_source": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_B%C3%A1ch_Khoa_H%C3%A0_N%E1%BB%99i.svg"
@@ -1024,6 +1141,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -1037,6 +1155,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -1050,6 +1169,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -1063,6 +1183,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -1076,6 +1197,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -1089,6 +1211,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -1102,6 +1225,7 @@
       "icml": 1,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -1114,6 +1238,7 @@
     "icml": 1,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -1129,6 +1254,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -1142,6 +1268,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -1155,6 +1282,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -1168,6 +1296,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -1181,10 +1310,11 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 1,
       "acl": 0,
       "emnlp": 0
      },
-     "total": 1
+     "total": 2
     },
     {
      "year": 2025,
@@ -1194,6 +1324,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -1207,6 +1338,7 @@
       "icml": 2,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -1219,12 +1351,13 @@
     "icml": 2,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 1,
     "acl": 0,
     "emnlp": 0
    },
-   "total": 12
+   "total": 13
   },
-  "judged": 28,
+  "judged": 31,
   "unknown": 6,
   "slug": "vinuni",
   "name": "VinUniversity",
@@ -1241,9 +1374,9 @@
    "hong-t-m-chu"
   ],
   "iclr_complete": true,
-  "accepted": 34,
+  "accepted": 37,
   "own_page": 3,
-  "official": 31,
+  "official": 34,
   "venues": {
    "iclr": {
     "accepted": 6,
@@ -1294,6 +1427,16 @@
     "submitted": 1,
     "own_page": 0,
     "official": 1
+   },
+   "eccv": {
+    "accepted": 3,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 3,
+    "own_page": 0,
+    "official": 3
    },
    "acl": {
     "accepted": 0,
@@ -1384,6 +1527,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -1486,6 +1642,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -1586,6 +1755,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -1684,6 +1866,19 @@
       "official": 0,
       "available": true,
       "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
       "provisional": false
      },
      "acl": {
@@ -1786,6 +1981,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 2,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 2,
+      "own_page": 0,
+      "official": 2,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 2,
@@ -1813,9 +2021,9 @@
       "provisional": false
      }
     },
-    "accepted": 1,
+    "accepted": 3,
     "own_page": 0,
-    "official": 1
+    "official": 3
    },
    {
     "year": 2025,
@@ -1884,6 +2092,19 @@
       "official": 1,
       "available": true,
       "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
       "provisional": false
      },
      "acl": {
@@ -1986,6 +2207,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 1,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 1,
+      "own_page": 0,
+      "official": 1,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -2013,13 +2247,13 @@
       "provisional": false
      }
     },
-    "accepted": 19,
+    "accepted": 20,
     "own_page": 3,
-    "official": 16
+    "official": 17
    }
   ],
-  "workshop": 24,
-  "rejected_estimated": 120,
+  "workshop": 31,
+  "rejected_estimated": 130,
   "name_vi": "Trường Đại học VinUni",
   "image": "img/institutions/vinuni.png",
   "image_source": "https://en.wikipedia.org/wiki/File:VinUniversity_Logo.png"
@@ -2035,6 +2269,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -2048,6 +2283,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -2061,6 +2297,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -2074,6 +2311,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -2087,6 +2325,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -2100,6 +2339,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -2113,6 +2353,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -2125,6 +2366,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -2140,6 +2382,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -2153,6 +2396,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -2166,6 +2410,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -2179,6 +2424,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -2192,6 +2438,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -2205,6 +2452,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -2218,6 +2466,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -2230,12 +2479,13 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
    "total": 0
   },
-  "judged": 11,
+  "judged": 12,
   "unknown": 3,
   "slug": "ptit",
   "name": "Posts and Telecommunications Institute of Technology",
@@ -2245,9 +2495,9 @@
    "uyen-n-b-vo"
   ],
   "iclr_complete": true,
-  "accepted": 14,
+  "accepted": 15,
   "own_page": 1,
-  "official": 13,
+  "official": 14,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -2298,6 +2548,16 @@
     "submitted": 2,
     "own_page": 0,
     "official": 2
+   },
+   "eccv": {
+    "accepted": 1,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 1,
+    "own_page": 0,
+    "official": 1
    },
    "acl": {
     "accepted": 0,
@@ -2388,6 +2648,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -2490,6 +2763,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -2588,6 +2874,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -2690,6 +2989,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -2790,6 +3102,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -2888,6 +3213,19 @@
       "official": 2,
       "available": true,
       "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
       "provisional": false
      },
      "acl": {
@@ -2990,6 +3328,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 1,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 1,
+      "own_page": 0,
+      "official": 1,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -3017,13 +3368,13 @@
       "provisional": false
      }
     },
-    "accepted": 5,
+    "accepted": 6,
     "own_page": 1,
-    "official": 4
+    "official": 5
    }
   ],
-  "workshop": 0,
-  "rejected_estimated": 30,
+  "workshop": 1,
+  "rejected_estimated": 32,
   "name_vi": "Học viện Công nghệ Bưu chính Viễn thông",
   "image": "img/institutions/ptit.png",
   "image_source": "https://commons.wikimedia.org/wiki/File:Logo_PTIT_University.png"
@@ -3039,6 +3390,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -3052,6 +3404,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -3065,6 +3418,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -3078,6 +3432,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -3091,6 +3446,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -3104,6 +3460,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -3117,6 +3474,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -3129,6 +3487,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -3144,6 +3503,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -3157,6 +3517,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -3170,6 +3531,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -3183,6 +3545,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -3196,6 +3559,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -3209,6 +3573,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -3222,6 +3587,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -3234,6 +3600,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -3296,6 +3663,16 @@
     "official": 3
    },
    "iccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "eccv": {
     "accepted": 0,
     "rejected": 0,
     "withdrawn": 0,
@@ -3394,6 +3771,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -3496,6 +3886,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -3594,6 +3997,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -3696,6 +4112,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -3794,6 +4223,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -3896,6 +4338,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -3996,6 +4451,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -4028,7 +4496,7 @@
     "official": 1
    }
   ],
-  "workshop": 5,
+  "workshop": 6,
   "rejected_estimated": 21,
   "name_vi": "Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM",
   "image": "img/institutions/hcmus.png",
@@ -4045,6 +4513,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -4058,6 +4527,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -4071,6 +4541,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -4084,6 +4555,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -4097,6 +4569,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -4110,6 +4583,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -4123,6 +4597,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -4135,6 +4610,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -4150,6 +4626,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -4163,6 +4640,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -4176,6 +4654,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -4189,6 +4668,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -4202,6 +4682,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -4215,6 +4696,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -4228,6 +4710,7 @@
       "icml": 1,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -4240,6 +4723,7 @@
     "icml": 1,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -4303,6 +4787,16 @@
     "official": 0
    },
    "iccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "eccv": {
     "accepted": 0,
     "rejected": 0,
     "withdrawn": 0,
@@ -4401,6 +4895,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -4503,6 +5010,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -4601,6 +5121,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -4703,6 +5236,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -4803,6 +5349,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -4901,6 +5460,19 @@
       "official": 0,
       "available": true,
       "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
       "provisional": false
      },
      "acl": {
@@ -5003,6 +5575,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 1,
       "rejected": 0,
@@ -5035,7 +5620,7 @@
     "official": 5
    }
   ],
-  "workshop": 0,
+  "workshop": 1,
   "rejected_estimated": 21,
   "name_vi": "Trường Đại học Phenikaa",
   "image": "img/institutions/phenikaa.png",
@@ -5052,6 +5637,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -5065,6 +5651,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -5078,6 +5665,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -5091,6 +5679,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -5104,6 +5693,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -5117,6 +5707,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -5130,6 +5721,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -5142,6 +5734,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -5157,6 +5750,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -5170,6 +5764,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -5183,6 +5778,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -5196,6 +5792,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -5209,6 +5806,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -5222,6 +5820,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -5235,6 +5834,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -5247,6 +5847,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -5318,6 +5919,16 @@
     "own_page": 0,
     "official": 0
    },
+   "eccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
    "acl": {
     "accepted": 0,
     "rejected": 0,
@@ -5407,6 +6018,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -5509,6 +6133,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -5607,6 +6244,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -5709,6 +6359,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -5807,6 +6470,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -5909,6 +6585,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -6009,6 +6698,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -6058,6 +6760,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -6071,6 +6774,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -6084,6 +6788,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -6097,6 +6802,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -6110,6 +6816,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -6123,6 +6830,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -6136,6 +6844,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -6148,6 +6857,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -6163,6 +6873,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -6176,6 +6887,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -6189,6 +6901,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -6202,6 +6915,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -6215,6 +6929,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -6228,6 +6943,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -6241,6 +6957,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -6253,6 +6970,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -6323,6 +7041,16 @@
     "own_page": 0,
     "official": 0
    },
+   "eccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
    "acl": {
     "accepted": 0,
     "rejected": 0,
@@ -6412,6 +7140,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -6514,6 +7255,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -6612,6 +7366,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -6714,6 +7481,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -6814,6 +7594,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -6912,6 +7705,19 @@
       "official": 0,
       "available": true,
       "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
       "provisional": false
      },
      "acl": {
@@ -7014,6 +7820,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -7063,6 +7882,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -7076,6 +7896,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -7089,6 +7910,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -7102,6 +7924,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -7115,6 +7938,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -7128,6 +7952,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -7141,6 +7966,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -7153,6 +7979,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -7168,6 +7995,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -7181,6 +8009,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -7194,6 +8023,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -7207,6 +8037,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -7220,6 +8051,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -7233,6 +8065,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -7246,6 +8079,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -7258,6 +8092,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -7326,6 +8161,16 @@
     "own_page": 0,
     "official": 0
    },
+   "eccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
    "acl": {
     "accepted": 0,
     "rejected": 0,
@@ -7415,6 +8260,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -7517,6 +8375,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -7615,6 +8486,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -7717,6 +8601,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -7815,6 +8712,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -7917,6 +8827,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -8017,6 +8940,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -8066,6 +9002,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -8079,6 +9016,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -8092,6 +9030,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -8105,6 +9044,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -8118,6 +9058,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -8131,6 +9072,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -8144,6 +9086,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -8156,6 +9099,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -8171,6 +9115,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -8184,6 +9129,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -8197,6 +9143,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -8210,6 +9157,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -8223,6 +9171,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -8236,6 +9185,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -8249,6 +9199,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -8261,6 +9212,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -8329,6 +9281,16 @@
     "own_page": 0,
     "official": 0
    },
+   "eccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
    "acl": {
     "accepted": 0,
     "rejected": 0,
@@ -8418,6 +9380,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -8520,6 +9495,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -8618,6 +9606,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -8720,6 +9721,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -8820,6 +9834,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -8918,6 +9945,19 @@
       "official": 0,
       "available": true,
       "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
       "provisional": false
      },
      "acl": {
@@ -9020,6 +10060,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -9069,6 +10122,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -9082,6 +10136,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -9095,6 +10150,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -9108,6 +10164,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -9121,6 +10178,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -9134,6 +10192,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -9147,6 +10206,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -9159,6 +10219,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -9174,6 +10235,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -9187,6 +10249,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -9200,6 +10263,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -9213,6 +10277,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -9226,6 +10291,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -9239,6 +10305,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -9252,6 +10319,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -9264,6 +10332,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -9332,6 +10401,16 @@
     "own_page": 0,
     "official": 0
    },
+   "eccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
    "acl": {
     "accepted": 0,
     "rejected": 0,
@@ -9421,6 +10500,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -9523,6 +10615,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -9621,6 +10726,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -9723,6 +10841,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -9821,6 +10952,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -9923,6 +11067,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -10023,6 +11180,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -10072,6 +11242,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -10085,6 +11256,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -10098,6 +11270,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -10111,6 +11284,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -10124,6 +11298,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -10137,6 +11312,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -10150,6 +11326,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -10162,6 +11339,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -10177,6 +11355,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -10190,6 +11369,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -10203,6 +11383,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -10216,6 +11397,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -10229,6 +11411,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -10242,6 +11425,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -10255,6 +11439,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -10267,6 +11452,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -10335,6 +11521,16 @@
     "own_page": 0,
     "official": 0
    },
+   "eccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
    "acl": {
     "accepted": 0,
     "rejected": 0,
@@ -10424,6 +11620,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -10526,6 +11735,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -10624,6 +11846,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -10726,6 +11961,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -10826,6 +12074,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -10924,6 +12185,19 @@
       "official": 0,
       "available": true,
       "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
       "provisional": false
      },
      "acl": {
@@ -11026,6 +12300,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -11075,6 +12362,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -11088,6 +12376,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -11101,6 +12390,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -11114,6 +12404,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -11127,6 +12418,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -11140,6 +12432,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -11153,6 +12446,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -11165,6 +12459,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -11180,6 +12475,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -11193,6 +12489,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -11206,6 +12503,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -11219,6 +12517,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -11232,6 +12531,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -11245,6 +12545,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -11258,6 +12559,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -11270,6 +12572,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -11329,6 +12632,16 @@
     "official": 0
    },
    "iccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "eccv": {
     "accepted": 0,
     "rejected": 0,
     "withdrawn": 0,
@@ -11427,6 +12740,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -11529,6 +12855,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -11627,6 +12966,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -11729,6 +13081,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -11829,6 +13194,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -11927,6 +13305,19 @@
       "official": 0,
       "available": true,
       "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
       "provisional": false
      },
      "acl": {
@@ -12029,6 +13420,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -12078,6 +13482,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -12091,6 +13496,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -12104,6 +13510,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -12117,6 +13524,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -12130,6 +13538,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -12143,6 +13552,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -12156,6 +13566,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -12168,6 +13579,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -12183,6 +13595,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -12196,6 +13609,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -12209,6 +13623,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -12222,6 +13637,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -12235,6 +13651,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -12248,6 +13665,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -12261,6 +13679,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -12273,6 +13692,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -12343,6 +13763,16 @@
     "own_page": 0,
     "official": 0
    },
+   "eccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
    "acl": {
     "accepted": 0,
     "rejected": 0,
@@ -12432,6 +13862,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -12534,6 +13977,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -12632,6 +14088,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -12734,6 +14203,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -12832,6 +14314,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -12934,6 +14429,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -13034,6 +14542,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -13083,6 +14604,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -13096,6 +14618,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -13109,6 +14632,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -13122,6 +14646,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -13135,6 +14660,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -13148,6 +14674,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -13161,6 +14688,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -13173,6 +14701,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -13188,6 +14717,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -13201,6 +14731,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -13214,6 +14745,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -13227,6 +14759,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -13240,6 +14773,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -13253,6 +14787,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -13266,6 +14801,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -13278,6 +14814,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -13346,6 +14883,16 @@
     "own_page": 0,
     "official": 0
    },
+   "eccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
    "acl": {
     "accepted": 0,
     "rejected": 0,
@@ -13435,6 +14982,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -13537,6 +15097,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -13635,6 +15208,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -13737,6 +15323,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -13835,6 +15434,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -13937,6 +15549,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -14037,6 +15662,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -14069,7 +15707,7 @@
     "official": 0
    }
   ],
-  "workshop": 0,
+  "workshop": 1,
   "rejected_estimated": 1,
   "name_vi": "Trường Đại học FPT",
   "image": "img/institutions/fptu.svg",
@@ -14086,6 +15724,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -14099,6 +15738,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -14112,6 +15752,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -14125,6 +15766,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -14138,6 +15780,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -14151,6 +15794,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -14164,6 +15808,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -14176,6 +15821,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -14191,6 +15837,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -14204,6 +15851,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -14217,6 +15865,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -14230,6 +15879,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -14243,6 +15893,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -14256,6 +15907,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -14269,6 +15921,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -14281,6 +15934,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -14349,6 +16003,16 @@
     "own_page": 0,
     "official": 0
    },
+   "eccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
    "acl": {
     "accepted": 0,
     "rejected": 0,
@@ -14438,6 +16102,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -14540,6 +16217,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -14638,6 +16328,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -14740,6 +16443,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -14840,6 +16556,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -14938,6 +16667,19 @@
       "official": 0,
       "available": true,
       "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
       "provisional": false
      },
      "acl": {
@@ -15040,6 +16782,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -15089,6 +16844,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -15102,6 +16858,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -15115,6 +16872,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -15128,6 +16886,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -15141,6 +16900,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -15154,6 +16914,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -15167,6 +16928,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -15179,6 +16941,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -15194,6 +16957,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -15207,6 +16971,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -15220,6 +16985,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -15233,6 +16999,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -15246,6 +17013,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -15259,6 +17027,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -15272,6 +17041,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -15284,6 +17054,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -15343,6 +17114,16 @@
     "official": 0
    },
    "iccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "eccv": {
     "accepted": 0,
     "rejected": 0,
     "withdrawn": 0,
@@ -15441,6 +17222,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -15543,6 +17337,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -15641,6 +17448,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -15743,6 +17563,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -15843,6 +17676,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -15941,6 +17787,19 @@
       "official": 0,
       "available": true,
       "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
       "provisional": false
      },
      "acl": {
@@ -16043,6 +17902,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -16092,6 +17964,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -16105,6 +17978,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -16118,6 +17992,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -16131,6 +18006,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -16144,6 +18020,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -16157,6 +18034,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -16170,6 +18048,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -16182,6 +18061,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -16197,6 +18077,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -16210,6 +18091,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -16223,6 +18105,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -16236,6 +18119,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -16249,6 +18133,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -16262,6 +18147,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -16275,6 +18161,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -16287,6 +18174,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -16355,6 +18243,16 @@
     "own_page": 0,
     "official": 0
    },
+   "eccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
    "acl": {
     "accepted": 0,
     "rejected": 0,
@@ -16444,6 +18342,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -16546,6 +18457,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -16644,6 +18568,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -16746,6 +18683,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -16844,6 +18794,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -16946,6 +18909,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -17046,6 +19022,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -17095,6 +19084,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -17108,6 +19098,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -17121,6 +19112,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -17134,6 +19126,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -17147,6 +19140,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -17160,6 +19154,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -17173,6 +19168,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -17185,6 +19181,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -17200,6 +19197,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -17213,6 +19211,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -17226,6 +19225,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -17239,6 +19239,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -17252,6 +19253,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -17265,6 +19267,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -17278,6 +19281,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -17290,6 +19294,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -17358,6 +19363,16 @@
     "own_page": 0,
     "official": 0
    },
+   "eccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
    "acl": {
     "accepted": 0,
     "rejected": 0,
@@ -17447,6 +19462,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -17549,6 +19577,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -17647,6 +19688,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -17749,6 +19803,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -17847,6 +19914,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -17949,6 +20029,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -18049,6 +20142,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -18098,6 +20204,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -18111,6 +20218,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -18124,6 +20232,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -18137,6 +20246,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -18150,6 +20260,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -18163,6 +20274,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -18176,6 +20288,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -18188,6 +20301,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -18203,6 +20317,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -18216,6 +20331,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -18229,6 +20345,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -18242,6 +20359,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -18255,6 +20373,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -18268,6 +20387,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -18281,6 +20401,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -18293,6 +20414,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -18361,6 +20483,16 @@
     "own_page": 0,
     "official": 0
    },
+   "eccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
    "acl": {
     "accepted": 0,
     "rejected": 0,
@@ -18450,6 +20582,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -18552,6 +20697,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -18650,6 +20808,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -18752,6 +20923,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -18850,6 +21034,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -18952,6 +21149,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -19052,6 +21262,19 @@
       "held": false,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -19101,6 +21324,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -19114,6 +21338,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -19127,6 +21352,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -19140,6 +21366,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -19153,6 +21380,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -19166,6 +21394,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -19179,6 +21408,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -19191,6 +21421,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -19206,6 +21437,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -19219,6 +21451,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -19232,6 +21465,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -19245,6 +21479,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -19258,6 +21493,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -19271,6 +21507,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -19284,6 +21521,7 @@
       "icml": 0,
       "cvpr": 0,
       "iccv": 0,
+      "eccv": 0,
       "acl": 0,
       "emnlp": 0
      },
@@ -19296,6 +21534,7 @@
     "icml": 0,
     "cvpr": 0,
     "iccv": 0,
+    "eccv": 0,
     "acl": 0,
     "emnlp": 0
    },
@@ -19367,6 +21606,16 @@
     "own_page": 0,
     "official": 0
    },
+   "eccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
    "acl": {
     "accepted": 0,
     "rejected": 0,
@@ -19456,6 +21705,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -19558,6 +21820,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -19656,6 +21931,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -19758,6 +22046,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -19856,6 +22157,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {
@@ -19958,6 +22272,19 @@
       "held": true,
       "provisional": false
      },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
      "acl": {
       "accepted": 0,
       "rejected": 0,
@@ -20056,6 +22383,19 @@
       "official": 0,
       "available": false,
       "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
       "provisional": false
      },
      "acl": {

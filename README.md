@@ -1,7 +1,7 @@
 # Vietnam at top AI conferences
 
 A static site that shows, for a hand-approved list of professors and lecturers in Vietnam, how many papers they
-submitted, had accepted and had rejected at ICLR, NeurIPS, ICML, CVPR, ICCV, ACL and EMNLP since 2020.
+submitted, had accepted and had rejected at ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP since 2020.
 
 **Website: <https://thanhlexyz.github.io/vn-at-top-ai-conference/>**
 
@@ -15,7 +15,7 @@ Needs Python 3.10+, Hugo 0.156+ and, for the OpenReview step only, `pip install 
 ```
 make data         # public accepted-paper lists -> candidates.csv -> frontend/data/   (no login)
 make openreview   # OpenReview submissions of the approved people, then rebuild        (login)
-make homepages    # save the professors' own pages, list what they say about the seven venues
+make homepages    # save the professors' own pages, list what they say about the eight venues
 make run          # hugo serve, http://localhost:1313
 make build        # static site in frontend/public/, local settings
 make publish      # public site to GitHub Pages
@@ -99,7 +99,7 @@ universities in the same format.
 
 **`backend/self_reported.csv`** holds the papers that professors list on their own pages, one row per
 paper, with the address and the date it was read. `make homepages` saves the pages named in the `pages`
-column of `roster.csv` and writes every line that mentions one of the seven venues to
+column of `roster.csv` and writes every line that mentions one of the eight venues to
 `backend/work/homepage_hits.txt`; copying papers from there into the file is done by hand, because the
 pages are too different to parse safely. A page that only announces a number gets a row with an empty
 title and the number in `announced`.
@@ -119,7 +119,7 @@ What the build does with a row:
 
 The About page of the site states them in full. In short: main conference track only; a paper counts
 from `vn_since`; rejected, withdrawn and desk-rejected papers are added up as "not accepted"; rejections
-are complete for ICLR only, partial for NeurIPS, and not public for ICML, CVPR, ICCV, ACL and EMNLP. The co-author and
+are complete for ICLR only, partial for NeurIPS, and not public for ICML, CVPR, ICCV, ECCV, ACL and EMNLP. The co-author and
 topic columns are taken over all counted papers, accepted or not. The chart on a professor's page estimates the unseen
 rejections at the other venues from that professor's own ICLR record; it is a projection and the page says so.
 
@@ -136,7 +136,7 @@ paper list before publishing anything.
 | path | content |
 |---|---|
 | `backend/raw/` | downloads, gzip-compressed; `raw/openreview/<slug>.json` holds a person's submissions |
-| `backend/work/accepted.jsonl.gz` | every accepted paper of the seven venues, one per line |
+| `backend/work/accepted.jsonl.gz` | every accepted paper of the eight venues, one per line |
 | `backend/work/build_report.txt` | warnings, and same-name papers from foreign institutions that were skipped |
 | `backend/candidates.csv` | people found but not on the roster |
 | `frontend/data/*.json` | what the templates render; `blog.json` has every figure the blog draft quotes |

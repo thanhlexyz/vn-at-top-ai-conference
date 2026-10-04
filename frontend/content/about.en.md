@@ -3,11 +3,11 @@ title: "About"
 ---
 ## What is counted
 
-- **Venues:** ICLR, NeurIPS, ICML, CVPR, ICCV, ACL and EMNLP, from 2020 on. Years are conference years, so an ICLR 2026 paper was submitted in autumn 2025. ICCV is held in odd years only. EMNLP 2026 counts once its papers are in the ACL Anthology.
-- **People:** Vietnamese lecturers, assistant professors, associate professors and professors whose main post is now at a university in Vietnam. Students, researchers at companies or institutes, and faculty from other countries are not tracked. Lecturers are included because the titles of associate professor and professor in Vietnam are conferred by a national council and are harder to obtain than in most other countries, so many lecturers do the work an assistant or associate professor does elsewhere. The list is kept by hand, and nobody appears before their entry has been approved and they have at least one counted submission at the seven venues, accepted or not.
+- **Venues:** ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP, from 2020 on. Years are conference years, so an ICLR 2026 paper was submitted in autumn 2025. ICCV is held in odd years and ECCV in even years. EMNLP 2026 counts once its papers are in the ACL Anthology.
+- **People:** Vietnamese lecturers, assistant professors, associate professors and professors whose main post is now at a university in Vietnam. Students, researchers at companies or institutes, and faculty from other countries are not tracked. Lecturers are included because the titles of associate professor and professor in Vietnam are conferred by a national council and are harder to obtain than in most other countries, so many lecturers do the work an assistant or associate professor does elsewhere. The list is kept by hand, and nobody appears before their entry has been approved and they have at least one counted submission at the eight venues, accepted or not.
 - **Only while in Vietnam:** a paper counts from the year the professor joined a Vietnamese institution. Earlier years are greyed out on the professor's page.
 - **Main track only:** workshops, position-paper tracks (ICML, NeurIPS), the NeurIPS Datasets & Benchmarks track, journal tracks, ICLR blog posts and Tiny Papers are left out. A professor's page lists such papers under "Not main track".
-- **Findings counts as rejected:** a paper placed in Findings (ACL, EMNLP, CVPR or any other conference) was not accepted to the main track, so it counts as rejected there.
+- **Findings counts as rejected:** a paper placed in Findings (ACL, EMNLP, CVPR or any other conference) was not accepted to the main track, so it counts as rejected there, and it is also listed and counted with the workshop papers.
 - **Rejected** adds up papers rejected by reviewers, withdrawn, desk-rejected and placed in Findings. **Submitted** is accepted plus rejected.
 
 ## Co-authors and topics
@@ -26,7 +26,7 @@ Each professor's page says how many papers a figure is based on.
 
 ## The chart of submitted and accepted papers
 
-Each professor's page has a chart of papers per year. Two parts of it are counted: the accepted papers at all seven venues, and the rejected ICLR papers. The third part is an estimate of the papers that NeurIPS, ICML, CVPR, ICCV, ACL and EMNLP did not accept, which nobody outside can see.
+Each professor's page has a chart of papers per year. Two parts of it are counted: the accepted papers at all eight venues, and the rejected ICLR papers. The third part is an estimate of the papers that NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP did not accept, which nobody outside can see.
 
 The estimate is made professor by professor, from their own ICLR record:
 

@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Download the public accepted-paper lists of ICLR, NeurIPS, ICML, CVPR, ICCV, ACL and EMNLP and normalize them.
+"""Download the public accepted-paper lists of ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP and normalize them.
 
 No login needed. Sources:
     iclr.cc / neurips.cc / icml.cc / cvpr.thecvf.com / iccv.thecvf.com   virtual-site JSON (authors with affiliations)
+    eccv.ecva.net                                     ECCV virtual-site JSON (2024 on, authors with affiliations)
     openaccess.thecvf.com                             CVPR and ICCV paper lists (author names only)
+    ecva.net/papers.php                               ECCV paper lists (author names only)
     aclanthology.org                                  ACL and EMNLP main-conference volumes (author names only);
                                                       industry and demo volumes are left out; Findings
                                                       papers count as rejected when a professor's OpenReview record shows them
@@ -33,7 +35,7 @@ from common import (ACCEPTED, LAST_YEAR, RAW, WORK, YEARS, held, norm_title, pre
 
 USER_AGENT = "vn-conference-stats/1.0 (personal research script)"
 VIRTUAL_SITE = {"iclr": "https://iclr.cc", "neurips": "https://neurips.cc", "icml": "https://icml.cc",
-                "cvpr": "https://cvpr.thecvf.com", "iccv": "https://iccv.thecvf.com"}
+                "cvpr": "https://cvpr.thecvf.com", "iccv": "https://iccv.thecvf.com", "eccv": "https://eccv.ecva.net"}
 CVPR2020_DAYS = ["2020-06-16", "2020-06-17", "2020-06-18"]  # the 2020 list has no "all days" page
 PRES_ORDER = {"": 0, "highlight": 1, "spotlight": 1, "oral": 2}
 
@@ -175,6 +177,29 @@ def merge_cvpr(virtual, cvf):
     return cvf + other
 
 
+def parse_ecva(year, page):
+    """ECCV papers of one year from ecva.net/papers.php, which lists every year on one page under
+    'ECCV <year> Papers' headings; titles in <dt class="ptitle">, authors (with * for corresponding) in the next <dd>."""
+    start = page.find(f"ECCV {year} Papers")
+    if start < 0:
+        return []
+    nxt = re.search(r"ECCV \d{4} Papers", page[start + 20:])
+    section = page[start: start + 20 + nxt.start()] if nxt else page[start:]
+    out = []
+    for block in section.split('<dt class="ptitle">')[1:]:
+        m = re.search(r"<a href=([^>]+)>\s*(.*?)</a>", block, re.S)
+        names = re.search(r"</dt>\s*<dd>\s*(.*?)</dd>", block, re.S)
+        if not m or not names:
+            continue
+        authors = [n.strip().rstrip("*").strip() for n in html.unescape(re.sub(r"<[^>]+>", "", names.group(1))).split(",")]
+        out.append({"venue": "eccv", "year": year, "track": "main",
+                    "title": html.unescape(re.sub(r"\s+", " ", m.group(2))).strip(),
+                    "authors": [{"name": a, "aff": ""} for a in authors if a],
+                    "url": "https://www.ecva.net/" + m.group(1).strip("'\""), "forum": "", "pres": "",
+                    "topic": "", "source": "ecva.net"})
+    return out
+
+
 # ---------------------------------------------------------------- ACL Anthology BibTeX
 
 _ACCENT = {"`": "\u0300", "'": "\u0301", "^": "\u0302", "~": "\u0303", "=": "\u0304", "u": "\u0306",
@@ -302,6 +327,18 @@ def collect(years, refresh=False):
         else:
             rows = []
         add("iccv", year, rows, sorted({p["source"] for p in rows}))
+
+        # ECCV is held in even years: ecva.net for the proceedings, the virtual site (2024 on) for affiliations
+        if year % 2 == 0:
+            data = fetch(f"{VIRTUAL_SITE['eccv']}/static/virtual/data/eccv-{year}-orals-posters.json",
+                         f"virtual/eccv-{year}.json", refresh)
+            virtual = parse_virtual("eccv", year, data) if data else []
+            page = fetch("https://www.ecva.net/papers.php", "ecva/papers.html", refresh and year == YEARS[0])
+            listed = parse_ecva(year, page.decode("utf-8", "replace")) if page else []
+            rows = merge_cvpr(virtual, listed)
+        else:
+            rows = []
+        add("eccv", year, rows, sorted({p["source"] for p in rows}))
 
         bib = fetch(f"https://aclanthology.org/volumes/{year}.emnlp-main.bib", f"acl/{year}.emnlp-main.bib", refresh)
         rows = parse_acl_bib(year, bib.decode("utf-8", "replace"), "emnlp") if bib else []

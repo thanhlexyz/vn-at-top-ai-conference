@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04 06:40 UTC",
+ "generated": "2026-10-04 07:01 UTC",
  "generated_date": "2026-10-04",
  "first_year": 2020,
  "last_year": 2026,
@@ -44,6 +44,12 @@
    "rejections": "none"
   },
   {
+   "key": "eccv",
+   "name": "ECCV",
+   "full_name": "European Conference on Computer Vision",
+   "rejections": "none"
+  },
+  {
    "key": "acl",
    "name": "ACL",
    "full_name": "Annual Meeting of the Association for Computational Linguistics",
@@ -62,6 +68,7 @@
   "icml",
   "cvpr",
   "iccv",
+  "eccv",
   "acl",
   "emnlp"
  ],
@@ -126,6 +133,17 @@
    "year": 2020,
    "papers": 0,
    "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "eccv",
+   "year": 2020,
+   "papers": 1358,
+   "sources": [
+    "ecva.net"
+   ],
    "with_affiliation": 0,
    "other_tracks": {},
    "provisional": false
@@ -208,6 +226,15 @@
    "provisional": false
   },
   {
+   "venue": "eccv",
+   "year": 2021,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
    "venue": "emnlp",
    "year": 2021,
    "papers": 847,
@@ -282,6 +309,17 @@
    "year": 2022,
    "papers": 0,
    "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "eccv",
+   "year": 2022,
+   "papers": 1645,
+   "sources": [
+    "ecva.net"
+   ],
    "with_affiliation": 0,
    "other_tracks": {},
    "provisional": false
@@ -371,6 +409,15 @@
    "provisional": false
   },
   {
+   "venue": "eccv",
+   "year": 2023,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
    "venue": "emnlp",
    "year": 2023,
    "papers": 1047,
@@ -450,6 +497,17 @@
    "papers": 0,
    "sources": [],
    "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "eccv",
+   "year": 2024,
+   "papers": 2387,
+   "sources": [
+    "eccv.ecva.net"
+   ],
+   "with_affiliation": 100,
    "other_tracks": {},
    "provisional": false
   },
@@ -541,6 +599,15 @@
    "provisional": false
   },
   {
+   "venue": "eccv",
+   "year": 2025,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
    "venue": "emnlp",
    "year": 2025,
    "papers": 1809,
@@ -627,6 +694,17 @@
    "provisional": false
   },
   {
+   "venue": "eccv",
+   "year": 2026,
+   "papers": 2834,
+   "sources": [
+    "eccv.ecva.net"
+   ],
+   "with_affiliation": 100,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
    "venue": "emnlp",
    "year": 2026,
    "papers": 0,
@@ -637,10 +715,10 @@
   }
  ],
  "professors": 57,
- "papers": 204,
- "accepted": 121,
+ "papers": 211,
+ "accepted": 127,
  "preliminary": true,
- "pending_review": 7,
+ "pending_review": 8,
  "provisional": [
   {
    "venue": "neurips",

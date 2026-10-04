@@ -20,7 +20,7 @@ them; build_site_data.py turns those into accepted / rejected / withdrawn, so a 
 never needs a new download.
 
 What OpenReview does not show cannot be fetched: NeurIPS rejections unless the authors opted in, all
-ICML, CVPR, ICCV, ACL and EMNLP rejections, and withdrawn papers that were removed or left anonymous.
+ICML, CVPR, ICCV, ECCV, ACL and EMNLP rejections, and withdrawn papers that were removed or left anonymous.
 """
 import argparse
 import datetime
@@ -149,7 +149,7 @@ def fetch_person(v2, v1, person):
                     continue  # replies and duplicates
                 rec = note_record(n)
                 if openreview_venue(rec["invitations"], rec["venueid"]) is None:
-                    continue  # not one of the seven venues
+                    continue  # not one of the eight venues
                 seen.add(n.id)
                 notes.append(rec)
 
@@ -227,7 +227,7 @@ def main():
             continue
         data = fetch_person(v2, v1, person)
         write_json(OPENREVIEW_RAW / f"{person['slug']}.json", data)
-        print(f"{person['name']}: {len(data['notes'])} submissions at the seven venues "
+        print(f"{person['name']}: {len(data['notes'])} submissions at the eight venues "
               f"(profile IDs queried: {', '.join(data['profile_ids'])})")
     print("\nnow run: python build_site_data.py")
 

@@ -42,6 +42,8 @@ VENUES = [
      "rejections": "none"},
     {"key": "iccv", "name": "ICCV", "full_name": "IEEE/CVF International Conference on Computer Vision",
      "rejections": "none"},
+    {"key": "eccv", "name": "ECCV", "full_name": "European Conference on Computer Vision",
+     "rejections": "none"},
     {"key": "acl", "name": "ACL", "full_name": "Annual Meeting of the Association for Computational Linguistics",
      "rejections": "none"},
     {"key": "emnlp", "name": "EMNLP", "full_name": "Conference on Empirical Methods in Natural Language Processing",
@@ -51,8 +53,8 @@ VENUE_KEYS = [v["key"] for v in VENUES]
 
 
 def held(venue, year):
-    """False for a year in which the conference does not take place (ICCV is held in odd years only)."""
-    return not (venue == "iccv" and year % 2 == 0)
+    """False for a year in which the conference does not take place: ICCV is held in odd years, ECCV in even ones."""
+    return not ((venue == "iccv" and year % 2 == 0) or (venue == "eccv" and year % 2 == 1))
 VENUE_NAME = {v["key"]: v["name"] for v in VENUES}
 
 NOT_ACCEPTED = ("rejected", "withdrawn", "desk_rejected")  # shown together as "not accepted"
@@ -207,17 +209,17 @@ def virtual_track(title, sourceurl, event_type, file_has_source):
         return "position"
     if re.search(r"jmlr|tmlr|j2c|journal|ann-stats|projecteuclid|imstat|rescience|reproducibility", f"{src} {ev}", re.I):
         return "journal"
-    if re.search(r"/\d{4}/Conference", src) or "cmt3.research.microsoft.com" in src:
+    if re.search(r"/\d{4}/Conference", src) or "cmt3.research.microsoft.com" in src or re.fullmatch(r"[A-Z]+\d{4}", src):
         return "main"
     if not src and not file_has_source:
         return "main"
     return "other"
 
 
-_OR_GROUP = re.compile(r"(ICLR\.cc|NeurIPS\.cc|ICML\.cc|thecvf\.com/CVPR|thecvf\.com/ICCV|aclweb\.org/ACL|(?<![\w/])EMNLP)"
+_OR_GROUP = re.compile(r"(ICLR\.cc|NeurIPS\.cc|ICML\.cc|thecvf\.com/CVPR|thecvf\.com/ICCV|thecvf\.com/ECCV|aclweb\.org/ACL|(?<![\w/])EMNLP)"
                        r"/(\d{4})/([A-Za-z_]+)(/[A-Za-z_]+)?")
 _OR_VENUE = {"ICLR.cc": "iclr", "NeurIPS.cc": "neurips", "ICML.cc": "icml",
-             "thecvf.com/CVPR": "cvpr", "thecvf.com/ICCV": "iccv", "aclweb.org/ACL": "acl", "EMNLP": "emnlp"}
+             "thecvf.com/CVPR": "cvpr", "thecvf.com/ICCV": "iccv", "thecvf.com/ECCV": "eccv", "aclweb.org/ACL": "acl", "EMNLP": "emnlp"}
 
 
 def openreview_venue(invitations, venueid=""):

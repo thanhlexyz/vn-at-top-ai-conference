@@ -17,7 +17,7 @@ other = "Language"
 
 # ---------------------------------------------------------------- shared words
 [venues_five]
-other = "the seven venues"
+other = "the eight venues"
 [none]
 other = "None."
 [titles_hidden]
@@ -89,7 +89,7 @@ other = "Co-authors"
 [th_workshop]
 other = "Workshop"
 [tip_workshop]
-other = "Workshop papers at ICLR, NeurIPS and ICML found on OpenReview. Listed on the professor's page for reference; not counted anywhere."
+other = "Workshop papers at ICLR, NeurIPS and ICML found on OpenReview, and papers placed in Findings. Listed on the professor's page for reference; not counted anywhere."
 [th_topic_areas]
 other = "Topic areas"
 [th_topic_area]
@@ -191,7 +191,7 @@ other = """Rejected counts rejected, withdrawn and desk-rejected submissions. Th
 Total rejected adds every ICLR rejection to the rejections authors made public at other venues (some NeurIPS papers), so it is a lower bound.
 Total rejected, estimated (orange) adds an estimate for the venues that hide their rejections, from each professor's own ICLR record: submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1). It is an estimate, not a count.
 &ndash; means the OpenReview records of that professor have not been fetched.
-Main conference track only; workshops, position papers and the NeurIPS Datasets &amp; Benchmarks track are left out. A paper placed in Findings counts as rejected.
+Main conference track only; workshops, position papers and the NeurIPS Datasets &amp; Benchmarks track are left out. A paper placed in Findings counts as rejected and as a workshop paper.
 Professors are ordered by total accepted papers."""
 [home_note_provisional]
 other = """The official {{ .Name }} {{ .Year }} list was published before the conference and is not complete yet.
@@ -215,7 +215,7 @@ other = " * The official {{ . }} list is not complete yet."
 [home_numbers]
 other = "The numbers behind the figures"
 [home_note_estimate]
-other = """Only ICLR publishes every submission with its outcome. For NeurIPS, ICML, CVPR, ICCV, ACL and EMNLP the rejected papers are estimated from each professor's own ICLR record:
+other = """Only ICLR publishes every submission with its outcome. For NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP the rejected papers are estimated from each professor's own ICLR record:
 submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1). A professor without ICLR submissions adds no estimate.
 A paper of two listed professors is counted for each, as on their own pages, and a paper sent to several conferences counts once per submission."""
 
@@ -225,8 +225,8 @@ other = "At a Vietnamese institution since {{ . }}"
 [prof_homepage]
 other = "Homepage"
 [prof_accepted_summary]
-one = "{{ .Count }} accepted paper at the seven venues since {{ .Year }}"
-other = "{{ .Count }} accepted papers at the seven venues since {{ .Year }}"
+one = "{{ .Count }} accepted paper at the eight venues since {{ .Year }}"
+other = "{{ .Count }} accepted papers at the eight venues since {{ .Year }}"
 [prof_own_page_part]
 other = ": {{ .Official }} in the official lists and {{ .Own }} known only from personal pages, shown as +{{ .Own }} and tagged \"unofficial\" below"
 [prof_iclr_summary]
@@ -254,7 +254,7 @@ other = "Accepted papers whose first author lists {{ . }}."
 other = "Submitted and accepted per year"
 [chart_note]
 other = """Accepted papers and rejected ICLR papers are counted.
-Papers that NeurIPS, ICML, CVPR, ICCV, ACL and EMNLP did not accept are not public, so that part of each column is an estimate."""
+Papers that NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP did not accept are not public, so that part of each column is an estimate."""
 [chart_note_own]
 other = """It comes from this professor's own ICLR record of {{ .Submitted }} submitted and {{ .Accepted }} accepted:
 ({{ .Submitted }} + 1) / ({{ .Accepted }} + 1) = {{ .Ratio }} submissions for each paper accepted elsewhere.
@@ -297,7 +297,7 @@ other = "Datasets & Benchmarks, journal and other tracks, which the site does no
 [workshop_papers]
 other = "Workshop papers ({{ . }})"
 [workshop_note]
-other = "Papers at the workshops of ICLR, NeurIPS and ICML found in this person's OpenReview record, listed for reference only. Workshop papers are not counted anywhere on this site."
+other = "Papers at the workshops of ICLR, NeurIPS and ICML found in this person's OpenReview record, and papers placed in Findings, listed for reference only. Workshop papers are not counted in the totals; a Findings paper also counts as a rejection from the main track."
 [before_vietnam]
 other = "Before joining a Vietnamese institution"
 [before_vietnam_note]
@@ -319,7 +319,7 @@ other = "Accepted papers whose first author lists the professor's current instit
 other = "Papers of the listed professors"
 [inst_list_note]
 other = """A paper with several professors of the same institution is counted once.
-Rejected, estimated (orange) adds the rejections hidden at NeurIPS, ICML, CVPR, ICCV, ACL and EMNLP, estimated from the institution's own ICLR record: submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1). It is an estimate, not a count.
+Rejected, estimated (orange) adds the rejections hidden at NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP, estimated from the institution's own ICLR record: submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1). It is an estimate, not a count.
 +N after a number means N more papers known only from personal pages, which are unofficial."""
 [inst_list_majority]
 other = "Papers with a majority of authors from the institution"
@@ -331,7 +331,7 @@ other = "Papers with a first author from the institution"
 [inst_list_first_note]
 other = "Accepted papers whose first author lists the institution."
 [inst_summary]
-other = "{{ .Profs }} professors listed, {{ .Accepted }} accepted papers at the seven venues"
+other = "{{ .Profs }} professors listed, {{ .Accepted }} accepted papers at the eight venues"
 [inst_summary_own]
 other = ", {{ . }} of them known only from personal pages (unofficial)"
 [inst_iclr]
@@ -428,7 +428,7 @@ other = "Google Scholar"
 other = "ResearchGate"
 
 [scholar_note]
-other = "A snapshot of the <a href=\"{{ .URL }}\">Google Scholar profile</a> taken on {{ .Date }}; it is not updated. Google Scholar counts every publication, not only the seven conferences."
+other = "A snapshot of the <a href=\"{{ .URL }}\">Google Scholar profile</a> taken on {{ .Date }}; it is not updated. Google Scholar counts every publication, not only the eight conferences."
 
 [scholar_all]
 other = "All"
@@ -452,10 +452,10 @@ other = "Citations per year, as shown on Google Scholar on the day of the snapsh
 other = "From each Google Scholar profile, as on 2026-10-02; Scholar counts every publication"
 
 [seo_professor]
-other = "{{ .Name }} ({{ .Inst }}): {{ .Accepted }} papers accepted at ICLR, NeurIPS, ICML, CVPR, ICCV, ACL and EMNLP; {{ .Submitted }} ICLR submissions, {{ .Rejected }} rejected."
+other = "{{ .Name }} ({{ .Inst }}): {{ .Accepted }} papers accepted at ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP; {{ .Submitted }} ICLR submissions, {{ .Rejected }} rejected."
 
 [seo_institution]
-other = "{{ .Name }}: {{ .Profs }} professors, {{ .Accepted }} papers accepted at ICLR, NeurIPS, ICML, CVPR, ICCV, ACL and EMNLP; {{ .Submitted }} ICLR submissions, {{ .Rejected }} rejected."
+other = "{{ .Name }}: {{ .Profs }} professors, {{ .Accepted }} papers accepted at ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP; {{ .Submitted }} ICLR submissions, {{ .Rejected }} rejected."
 
 [seo_venue]
 other = "{{ .Name }}: papers submitted, accepted and rejected by professors and lecturers in Vietnam since 2020; {{ .Accepted }} accepted."

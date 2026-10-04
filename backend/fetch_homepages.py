@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Save the professors' own pages and pull out the lines that mention one of the seven venues.
+"""Save the professors' own pages and pull out the lines that mention one of the eight venues.
 
 The pages are the ones in the `pages` column of roster.csv (several addresses separated by `;`).
 Each is kept in raw/homepages/ and its venue lines go to work/homepage_hits.txt, grouped by professor.
