@@ -22,7 +22,7 @@ These figures are taken over all of a professor's counted papers, accepted or no
 - **Other institutions per paper:** the average number of other authors whose affiliation on the paper is another institution, in Vietnam or abroad.
 - **Topic areas:** the number of different top-level areas among the topic labels the conference gave the papers, for example "Deep Learning" or "Reinforcement Learning".
 
-The two affiliation figures use only papers from lists that print an affiliation for each author, so ACL papers, and CVPR papers before 2023 and in 2026, are left out of them.
+The two affiliation figures use only papers with an affiliation for each author: from the official list, or, where the list prints none (ACL, EMNLP, CVPR before 2023 and in 2026), read from the title page of the paper's PDF and checked by hand. Papers known only from personal pages are left out of them.
 Topic labels exist only for ICLR and ICML from 2024 and for NeurIPS from 2023 to 2025. The label sets differ between conferences and years, and the authors choose the label, so two papers on the same subject can carry different labels.
 Each professor's page says how many papers a figure is based on.
 
@@ -40,7 +40,7 @@ This is a projection, not a measurement. It assumes the other venues treated the
 
 ## Stricter counts on institution pages
 
-An institution page has two more tables. One counts an accepted paper only when more than half of its authors list the institution. The other counts it only when the first author does. Both use papers from lists that print an affiliation for each author, so ACL papers, CVPR papers before 2023 and in 2026, and papers known only from personal pages are left out; the page says how many.
+Institution and professor pages have two more charts. One marks an accepted paper when more than half of its authors list the institution. The other marks it when the first author does. Affiliations come from the official list or, where it prints none, from the PDF of the paper; papers known only from personal pages have none yet and are shown in grey.
 
 ## What each venue makes public
 
@@ -67,7 +67,7 @@ Main-track accepted papers read per venue and year:
 
 {{< coverage >}}
 
-† The list gives author names without affiliations.
+† The list gives author names without affiliations; for accepted papers of the professors here, the affiliations are read from the PDF and checked by hand.
 ‡ The list was published before the conference and is still being filled. In September 2026 the NeurIPS 2026 list lacked papers that their authors had already announced, which is why papers from personal pages are added for it.
 
 ## Papers from personal pages
@@ -92,7 +92,7 @@ A page that only announces a number ("five papers accepted") adds nothing to the
 ## Limits
 
 - A paper published under a name form that is not on the roster is missed.
-- For ACL, and for CVPR before 2023 and in 2026, there are no affiliations, so every match needs a decision by hand.
+- For ACL, EMNLP, and CVPR before 2023 and in 2026, the lists have no affiliations, so a match by name needs a decision by hand; the affiliations are then read from the PDF of the paper.
 - The Vietnam rule works by year. A paper that appeared in the year of the move counts, even if it was submitted before the move.
 - For ICLR 2020 and 2021, OpenReview keeps the decision in a separate record. Where that record has not been read, the outcome is inferred from the accepted list, and the paper is marked.
 - A paper with two listed professors counts once for each of them, and once in the totals of an institution or a venue.

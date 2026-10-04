@@ -405,7 +405,7 @@ other = "Chuyển giữa giao diện sáng và tối"
 [author_charts_title]
 other = "Bài được nhận theo năm, theo đơn vị của tác giả"
 [author_charts_note]
-other = "Mỗi cột là số bài được nhận trong một năm. Màu xanh: tác giả đầu (biểu đồ trên) hoặc đa số tác giả (biểu đồ dưới) ghi đơn vị {{ . }}. Màu cam: ghi đơn vị khác. Màu xám: nguồn của bài không ghi đơn vị (ACL, EMNLP, phần lớn CVPR, bài chưa chính thức) nên không xét được."
+other = "Mỗi cột là số bài được nhận trong một năm. Màu xanh: tác giả đầu (biểu đồ trên) hoặc đa số tác giả (biểu đồ dưới) ghi đơn vị {{ . }}. Màu cam: ghi đơn vị khác. Màu xám: không rõ đơn vị: bài mới biết qua thông báo hoặc trang cá nhân, chưa có trong danh sách chính thức."
 [coauthor_institutions]
 other = "Đơn vị đồng tác giả"
 [coauthor_institutions_note]
@@ -503,6 +503,6 @@ other = "Không có bài chung với ai khác ở đây:"
 [inst_list_charts]
 other = "Bài được nhận theo nơi công tác của tác giả"
 [inst_list_charts_note]
-other = "Mỗi trường một thanh, dài bằng số bài được nhận, xếp theo phần xanh; số ở cuối là xanh / tổng. Xanh: tác giả đầu (biểu đồ trên) hoặc hơn một nửa số tác giả (biểu đồ dưới) ghi đơn vị là trường. Cam: họ ghi đơn vị khác. Xám: nguồn của bài không ghi đơn vị (ACL, EMNLP, đa số danh sách CVPR, bài chưa chính thức) nên không xét được."
+other = "Mỗi trường một thanh, dài bằng số bài được nhận, xếp theo phần xanh; số ở cuối là xanh / tổng. Xanh: tác giả đầu (biểu đồ trên) hoặc hơn một nửa số tác giả (biểu đồ dưới) ghi đơn vị là trường. Cam: họ ghi đơn vị khác. Xám: không rõ đơn vị: bài mới biết qua thông báo hoặc trang cá nhân, chưa có trong danh sách chính thức."
 [inst_list_charts_none]
 other = "Chưa có bài được nhận: {{ . }}."

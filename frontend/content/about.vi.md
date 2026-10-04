@@ -22,7 +22,7 @@ Các chỉ số này được tính trên toàn bộ các bài được thống 
 - **Đơn vị khác mỗi bài:** số đồng tác giả trung bình mỗi bài có đơn vị ghi trên bài là trường hoặc đơn vị khác, dù ở Việt Nam hay nước ngoài.
 - **Số lĩnh vực:** số lĩnh vực lớn khác nhau trong các nhãn chủ đề mà hội nghị gán cho bài, ví dụ "Deep Learning" hay "Reinforcement Learning".
 
-Hai chỉ số liên quan đến đơn vị công tác chỉ sử dụng bài từ các danh sách có ghi đơn vị của từng tác giả; do đó không bao gồm bài tại ACL, cũng như bài tại CVPR trước năm 2023 và năm 2026.
+Hai chỉ số liên quan đến đơn vị công tác chỉ sử dụng bài có đơn vị của từng tác giả: lấy từ danh sách chính thức, hoặc, khi danh sách không ghi (ACL, EMNLP, CVPR trước năm 2023 và năm 2026), đọc từ trang đầu bản PDF của bài và kiểm tra thủ công. Bài chỉ có trên trang cá nhân không được tính.
 Nhãn chủ đề chỉ có tại ICLR và ICML từ năm 2024, và tại NeurIPS từ năm 2023 đến 2025. Bộ nhãn khác nhau giữa các hội nghị và các năm, và do tác giả tự lựa chọn, nên hai bài cùng đề tài có thể mang nhãn khác nhau.
 Trang của từng giảng viên có ghi rõ mỗi chỉ số được tính trên bao nhiêu bài.
 
@@ -40,7 +40,7 @@ Chẳng hạn, với 9 bài nộp ICLR và 1 bài được chấp nhận, tỉ l
 
 ## Cách thống kê chặt chẽ hơn trên trang của trường
 
-Trang của mỗi trường có thêm hai bảng. Bảng thứ nhất chỉ tính bài được chấp nhận khi hơn một nửa số tác giả ghi đơn vị công tác là trường đó; bảng thứ hai chỉ tính khi tác giả đứng đầu ghi đơn vị là trường đó. Cả hai bảng chỉ sử dụng bài từ các danh sách có ghi đơn vị của từng tác giả, do đó không bao gồm bài tại ACL, bài tại CVPR trước năm 2023 và năm 2026, cùng các bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm; trang có ghi rõ số bài thuộc các trường hợp này.
+Trang của mỗi trường và mỗi giảng viên có thêm hai biểu đồ. Biểu đồ thứ nhất đánh dấu bài được chấp nhận khi hơn một nửa số tác giả ghi đơn vị công tác là trường đó; biểu đồ thứ hai đánh dấu khi tác giả đứng đầu ghi đơn vị là trường đó. Đơn vị lấy từ danh sách chính thức hoặc, khi danh sách không ghi, từ bản PDF của bài; các bài chỉ được công bố trên trang cá nhân chưa có đơn vị và được tô màu xám.
 
 ## Phạm vi công khai của từng hội nghị
 
@@ -67,7 +67,7 @@ Số bài được chấp nhận ở nhánh chính đã được thu thập theo
 
 {{< coverage >}}
 
-† Danh sách có tên tác giả nhưng không ghi đơn vị công tác.
+† Danh sách có tên tác giả nhưng không ghi đơn vị công tác; với các bài được nhận của giảng viên trên trang này, đơn vị được đọc từ bản PDF và kiểm tra thủ công.
 ‡ Danh sách được công bố trước khi hội nghị diễn ra và đang tiếp tục được bổ sung. Vào tháng 9 năm 2026, danh sách NeurIPS 2026 còn thiếu một số bài mà tác giả đã thông báo, vì vậy các bài được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm được bổ sung cho danh sách này.
 
 ## Bài được công bố trên trang của giảng viên và phòng thí nghiệm
@@ -92,7 +92,7 @@ Thông báo chỉ nêu số lượng (chẳng hạn "năm bài được chấp n
 ## Giới hạn
 
 - Bài được công bố dưới một cách viết tên chưa có trong danh sách có thể bị bỏ sót.
-- Đối với ACL, và CVPR trước năm 2023 và năm 2026, danh sách không có thông tin đơn vị, nên mọi trường hợp trùng tên đều cần xác nhận thủ công.
+- Đối với ACL, EMNLP, và CVPR trước năm 2023 và năm 2026, danh sách không có thông tin đơn vị, nên trường hợp trùng tên cần xác nhận thủ công; sau đó đơn vị được đọc từ bản PDF của bài.
 - Điều kiện "công tác tại Việt Nam" được xét theo năm: bài xuất hiện trong năm giảng viên chuyển về vẫn được tính, kể cả khi bài được nộp trước thời điểm đó.
 - Đối với ICLR 2020 và 2021, OpenReview lưu quyết định trong một bản ghi riêng. Khi bản ghi này chưa được thu thập, kết quả được suy ra từ danh sách bài được chấp nhận, và bài được đánh dấu.
 - Một bài có hai giảng viên trong danh sách được tính một lần cho mỗi người, và một lần trong tổng số của trường hoặc hội nghị.

@@ -13,6 +13,11 @@ data:
 openreview:
 	cd backend && $(PYTHON) fetch_openreview.py && $(PYTHON) build_site_data.py
 
+# PDFs of accepted papers whose list prints no affiliations; new rows in backend/affiliations.csv are filled and
+# marked checked=yes by hand from backend/work/pdf_headers/, then the site data is rebuilt
+affiliations:
+	cd backend && $(PYTHON) fetch_affiliations.py && $(PYTHON) build_site_data.py
+
 # save the professors' own pages and list their lines about the five venues in backend/work/homepage_hits.txt;
 # copying papers from there into backend/self_reported.csv is done by hand
 homepages:

@@ -5,6 +5,8 @@ Inputs
     roster.csv                    who is on the site (hand-edited; only rows with approved = yes count)
     review.csv                    uncertain matches; this script appends rows, you fill in `decision`
     work/accepted.jsonl.gz        accepted papers of the eight venues        (fetch_accepted.py)
+    affiliations.csv              affiliations read from the PDF where a list prints none (fetch_affiliations.py,
+                                  each row checked by hand)
     raw/openreview/<slug>.json    every OpenReview submission of a person   (fetch_openreview.py)
     candidates.csv                people not on the roster yet              (find_candidates.py)
 
@@ -48,6 +50,25 @@ AREA_ALIAS = {"Miscellaneous Aspects of Machine Learning": "General Machine Lear
 
 
 # ---------------------------------------------------------------- inputs
+
+def with_pdf_affiliations(papers, warnings):
+    """Fill the empty affiliations of a list from affiliations.csv (read from the PDF, checked by hand). A paper whose
+    authors there do not match the list, name by name, is left as it is and reported."""
+    rows = collections.defaultdict(list)
+    for r in read_csv(BACKEND / "affiliations.csv"):
+        if r["checked"] == "yes":
+            rows[(r["venue"], int(r["year"]), norm_title(r["title"]))].append(r)
+    for p in papers:
+        found = rows.get((p["venue"], p["year"], norm_title(p["title"])))
+        if found and not any(a["aff"] for a in p["authors"]):
+            found = sorted(found, key=lambda r: int(r["position"]))
+            if [norm_name(r["author"]) for r in found] != [norm_name(a["name"]) for a in p["authors"]]:
+                warnings.append(f"affiliations.csv: the authors of '{p['title'][:60]}' ({VENUE_NAME[p['venue']]} "
+                                f"{p['year']}) do not match the list; not used")
+            else:
+                p["authors"] = [{**a, "aff": r["affiliation"]} for a, r in zip(p["authors"], found)]
+        yield p
+
 
 class Accepted:
     """The accepted-paper lists, indexed the ways the matching needs."""
@@ -587,11 +608,11 @@ def authorship(records, institution):
 AUTHOR_CHART_TEXT = {
     "en": {"first": "First author from {inst}", "majority": "Most authors from {inst}",
            "first_other": "First author elsewhere", "majority_other": "Most authors elsewhere",
-           "unknown": "No affiliations in the source", "aria": "Accepted papers per year: {what}",
+           "unknown": "Affiliations not known yet", "aria": "Accepted papers per year: {what}",
            "tip": "{year}: {n} {what}"},
     "vi": {"first": "Tác giả đầu cùng {inst}", "majority": "Đa số tác giả cùng {inst}",
            "first_other": "Tác giả đầu ở đơn vị khác", "majority_other": "Đa số tác giả ở đơn vị khác",
-           "unknown": "Nguồn không ghi đơn vị", "aria": "Bài được nhận theo năm: {what}",
+           "unknown": "Chưa rõ đơn vị", "aria": "Bài được nhận theo năm: {what}",
            "tip": "{year}: {n} bài {what}"},
 }
 
@@ -1087,12 +1108,12 @@ def main():
     roster = load_roster()
     approved = [p for p in roster if p["approved"] == "yes"]
     coverage = json.loads((WORK / "coverage.json").read_text(encoding="utf-8"))
-    acc = Accepted(read_jsonl_gz(ACCEPTED), coverage)
+    queue, warnings, skipped = [], [], []
+    acc = Accepted(with_pdf_affiliations(read_jsonl_gz(ACCEPTED), warnings), coverage)
     legacy = load_legacy(roster)
     review_rows, decisions = load_review()
     own_pages, announced = load_self_reported(roster)
     shared = shared_notes(approved, legacy)
-    queue, warnings, skipped = [], [], []
 
     professors, all_counted, hidden, graph_recs = [], [], [], []
     for person in approved:

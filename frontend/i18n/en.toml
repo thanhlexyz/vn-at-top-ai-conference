@@ -410,7 +410,7 @@ other = "Switch between day and night mode"
 [author_charts_title]
 other = "Accepted papers per year by where the authors are"
 [author_charts_note]
-other = "Each column is one year's accepted papers. Blue: the first author (top chart) or most authors (bottom chart) list {{ . }}. Orange: they list another institution. Grey: the source of the paper prints no affiliations (ACL, EMNLP, most CVPR lists, unofficial papers), so it cannot be judged."
+other = "Each column is one year's accepted papers. Blue: the first author (top chart) or most authors (bottom chart) list {{ . }}. Orange: they list another institution. Grey: no affiliations known yet, for papers known only from announcements or personal pages before the official list."
 [coauthor_institutions]
 other = "Co-author institutions"
 [coauthor_institutions_note]
@@ -509,6 +509,6 @@ other = "No shared paper with anyone else here:"
 [inst_list_charts]
 other = "Accepted papers by where the authors are"
 [inst_list_charts_note]
-other = "One bar per institution, as long as its accepted papers, the most blue first; the number at the end is blue / all. Blue: the first author (top chart) or more than half of the authors (bottom chart) list the institution. Orange: they list another institution. Grey: the source of the paper prints no affiliations (ACL, EMNLP, most CVPR lists, unofficial papers), so it cannot be judged."
+other = "One bar per institution, as long as its accepted papers, the most blue first; the number at the end is blue / all. Blue: the first author (top chart) or more than half of the authors (bottom chart) list the institution. Orange: they list another institution. Grey: no affiliations known yet, for papers known only from announcements or personal pages before the official list."
 [inst_list_charts_none]
 other = "No accepted paper yet: {{ . }}."
