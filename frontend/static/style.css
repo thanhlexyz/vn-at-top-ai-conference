@@ -5,14 +5,14 @@
     color-scheme: light ;
     --bg: #ffffff ; --fg: #000000 ; --link: #0645ad ; --line: #000000 ; --muted: #555555 ; --faint: #999999 ;
     --th: #f0f0f0 ; --before: #fafafa ; --flag: #fff8dc ; --tag: #eeeeee ;
-    --good: #e2f0d9 ; --bad: #f8e0e0 ; --est: #fde3cf ; --sub: #ececec ; --rate: #dcebfb ; --same: #d5f3f3 ; --other: #f6dcf1 ;
+    --good: #e2f0d9 ; --bad: #f8e0e0 ; --est: #fde3cf ; --sub: #ececec ; --rate: #dcebfb ; --callout: #eef4fc ; --callout-bar: #2a78d6 ; --same: #d5f3f3 ; --other: #f6dcf1 ;
     --grid: #e1e0d9 ; --axis: #c3c2b7 ; --chart-text: #52514e ; --chart-value: #0b0b0b ;
 }
 :root[data-theme="dark"] {
     color-scheme: dark ;
     --bg: #1a1a19 ; --fg: #e8e6e3 ; --link: #8ab4f8 ; --line: #6b6a66 ; --muted: #b3b1ac ; --faint: #8a8885 ;
     --th: #2a2a28 ; --before: #222220 ; --flag: #3a3420 ; --tag: #333331 ;
-    --good: #1e3a29 ; --bad: #4a2325 ; --est: #4a3220 ; --sub: #30302e ; --rate: #1d3149 ; --same: #163d3e ; --other: #42213d ;
+    --good: #1e3a29 ; --bad: #4a2325 ; --est: #4a3220 ; --sub: #30302e ; --rate: #1d3149 ; --callout: #1b2533 ; --callout-bar: #6aa5ea ; --same: #163d3e ; --other: #42213d ;
     --grid: #3a3a37 ; --axis: #5a5955 ; --chart-text: #c9c7c2 ; --chart-value: #f2f0ed ;
 }
 @media (prefers-color-scheme: dark) {
@@ -20,7 +20,7 @@
         color-scheme: dark ;
         --bg: #1a1a19 ; --fg: #e8e6e3 ; --link: #8ab4f8 ; --line: #6b6a66 ; --muted: #b3b1ac ; --faint: #8a8885 ;
         --th: #2a2a28 ; --before: #222220 ; --flag: #3a3420 ; --tag: #333331 ;
-        --good: #1e3a29 ; --bad: #4a2325 ; --est: #4a3220 ; --sub: #30302e ; --rate: #1d3149 ; --same: #163d3e ; --other: #42213d ;
+        --good: #1e3a29 ; --bad: #4a2325 ; --est: #4a3220 ; --sub: #30302e ; --rate: #1d3149 ; --callout: #1b2533 ; --callout-bar: #6aa5ea ; --same: #163d3e ; --other: #42213d ;
         --grid: #3a3a37 ; --axis: #5a5955 ; --chart-text: #c9c7c2 ; --chart-value: #f2f0ed ;
     }
 }
@@ -496,3 +496,7 @@ svg.net.focus .edge.hl { stroke: var(--chart-value) ; }
 .frac > span:first-child { border-bottom: 1px solid currentColor ; }
 div.note ul { margin: 0.5em 0 ; padding-left: 1.3em ; }
 div.note li { margin: 0.25em 0 ; }
+
+/* a finding worth noticing, set apart from the notes around it */
+aside.callout { margin: 1.5em 0 ; padding: 0.8em 1.1em ; background: var(--callout) ; border-left: 4px solid var(--callout-bar) ; border-radius: 0 6px 6px 0 ; max-width: 48rem ; }
+aside.callout p { margin: 0 ; line-height: 1.55 ; }
