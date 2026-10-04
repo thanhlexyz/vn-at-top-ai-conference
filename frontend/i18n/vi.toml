@@ -197,7 +197,7 @@ other = "Hiện có {{ .Count }} trường hợp trùng tên chưa được xác
 [home_note_table]
 other = """Số bài bị từ chối bao gồm các bài bị từ chối sau phản biện, bài rút và bài bị loại sơ bộ. Số liệu theo từng hội nghị có ở trang của từng giảng viên và trang Giảng viên.
 Tổng số bài bị từ chối được tính bằng toàn bộ số bài bị từ chối tại ICLR cộng với các bài bị từ chối mà tác giả tự công khai tại hội nghị khác (một số bài tại NeurIPS); do đó, đây là con số tối thiểu.
-Tổng số bài bị từ chối ước tính (màu cam) bổ sung phần ước tính cho các hội nghị không công khai bài bị từ chối, dựa trên kết quả ICLR của chính giảng viên, theo công thức: số lần nộp cho mỗi bài được chấp nhận = (số bài nộp ICLR + 1) / (số bài được nhận tại ICLR + 1). Đây là số liệu ước tính, không phải số liệu thống kê trực tiếp.
+Tổng số bài bị từ chối ước tính (màu cam) bổ sung phần ước tính cho các hội nghị không công khai bài bị từ chối, dựa trên kết quả ICLR của chính giảng viên, theo công thức: số lần nộp cho mỗi bài được chấp nhận = (số bài nộp ICLR + 1) / (số bài được nhận tại ICLR + 1). Cột đã nộp ước tính bằng số bài được nhận cộng số bài bị từ chối ước tính. Đây là các số liệu ước tính, không phải số liệu thống kê trực tiếp.
 Dấu &ndash; cho biết hồ sơ OpenReview của giảng viên chưa được thu thập.
 Số liệu chỉ bao gồm nhánh chính (main track); không tính workshop, bài position và nhánh Datasets &amp; Benchmarks của NeurIPS. Bài được xếp vào Findings được tính là bị từ chối và là bài workshop.
 Danh sách giảng viên được sắp xếp theo tổng số bài được chấp nhận."""
@@ -506,3 +506,8 @@ other = "Bài được nhận theo nơi công tác của tác giả"
 other = "Mỗi trường một thanh, dài bằng số bài được nhận, xếp theo phần xanh; số ở cuối là xanh / tổng. Xanh: tác giả đầu (biểu đồ thứ nhất) hoặc hơn một nửa số tác giả (biểu đồ thứ hai) ghi đơn vị là trường. Cam: họ ghi đơn vị khác. Xám: không rõ đơn vị: bài mới biết qua thông báo hoặc trang cá nhân, chưa có trong danh sách chính thức."
 [inst_list_charts_none]
 other = "Chưa có bài được nhận: {{ . }}."
+
+[th_submitted_est_col]
+other = "đã nộp, ước tính"
+[tip_submitted_est]
+other = "bài được nhận cộng bài bị từ chối ước tính: tổng số lần nộp"

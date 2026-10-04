@@ -199,7 +199,7 @@ other = "{{ .Count }} uncertain matches wait for a decision, see <a href=\"{{ .U
 [home_note_table]
 other = """Rejected counts rejected, withdrawn and desk-rejected submissions. The count per conference is on each professor's page and on the Professors page.
 Total rejected adds every ICLR rejection to the rejections authors made public at other venues (some NeurIPS papers), so it is a lower bound.
-Total rejected, estimated (orange) adds an estimate for the venues that hide their rejections, from each professor's own ICLR record: submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1). It is an estimate, not a count.
+Total rejected, estimated (orange) adds an estimate for the venues that hide their rejections, from each professor's own ICLR record: submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1). Submitted, estimated is accepted plus rejected, estimated. Both are estimates, not counts.
 &ndash; means the OpenReview records of that professor have not been fetched.
 Main conference track only; workshops, position papers and the NeurIPS Datasets &amp; Benchmarks track are left out. A paper placed in Findings counts as rejected and as a workshop paper.
 Professors are ordered by total accepted papers."""
@@ -512,3 +512,8 @@ other = "Accepted papers by where the authors are"
 other = "One bar per institution, as long as its accepted papers, the most blue first; the number at the end is blue / all. Blue: the first author (first chart) or more than half of the authors (second chart) list the institution. Orange: they list another institution. Grey: no affiliations known yet, for papers known only from announcements or personal pages before the official list."
 [inst_list_charts_none]
 other = "No accepted paper yet: {{ . }}."
+
+[th_submitted_est_col]
+other = "submitted, estimated"
+[tip_submitted_est]
+other = "accepted plus rejected, estimated: every submission behind the accepted papers"
