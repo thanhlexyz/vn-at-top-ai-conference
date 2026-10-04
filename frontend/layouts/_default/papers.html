@@ -18,7 +18,8 @@
 	<tr>
 		<td>{{ .year }}</td>
 		<td class="l"><a href="{{ printf "venues/%s/" .venue | relLangURL }}">{{ .venue_name }}</a></td>
-		<td class="l"><span class="tag {{ .status }}">{{ T (printf "status_%s" .status) }}</span>{{ with .pres }} {{ . }}{{ end }}{{ if .unofficial }} <span class="tag own" title="{{ .match }}">{{ T "unofficial" }}</span>{{ end }}</td>
+		<td class="l">{{ $tag := printf "<span class=\"tag %s\">%s</span>" .status (T (printf "status_%s" .status)) }}
+			{{- if strings.Contains .url "openreview.net" }}<a class="tag-link" href="{{ .url }}" title="{{ T "tip_openreview_decision" }}">{{ $tag | safeHTML }}</a>{{ else }}{{ $tag | safeHTML }}{{ end }}{{ with .pres }} {{ . }}{{ end }}{{ if .unofficial }} <span class="tag own" title="{{ .match }}">{{ T "unofficial" }}</span>{{ end }}</td>
 		<td class="l">{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</td>
 		<td class="l">
 			{{- range $n, $o := .professors }}{{ if $n }}, {{ end }}<a href="{{ printf "professors/%s/" $o.slug | relLangURL }}">{{ partial "pname.html" $o }}</a>{{ end -}}
