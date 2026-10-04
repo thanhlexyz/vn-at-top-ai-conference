@@ -32,7 +32,7 @@ Trang của mỗi giảng viên có biểu đồ số bài theo năm, gồm hai 
 
 Phần ước tính được thực hiện riêng cho từng giảng viên, dựa trên kết quả ICLR của chính giảng viên đó:
 
-số lần nộp cho mỗi bài được chấp nhận = (số bài nộp ICLR + 1) / (số bài được nhận tại ICLR + 1)
+{{< ratio-eq >}}
 
 Chẳng hạn, với 9 bài nộp ICLR và 1 bài được chấp nhận, tỉ lệ là 10 / 2 = 5, tức mỗi bài được chấp nhận tại hội nghị khác được xem là tương ứng với 5 lần nộp. Việc cộng 1 vào cả tử số và mẫu số là cách thông dụng để ước tính số lần thử cho mỗi lần thành công khi số liệu còn ít: kết quả không trở nên vô hạn khi chưa có bài nào được chấp nhận, và không dao động mạnh khi thêm hoặc bớt một bài. Giảng viên chưa có bài nộp ICLR có tỉ lệ bằng 1, nên biểu đồ không bổ sung phần ước tính.
 

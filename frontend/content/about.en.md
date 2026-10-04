@@ -32,7 +32,7 @@ Each professor's page has a chart of papers per year. Two parts of it are counte
 
 The estimate is made professor by professor, from their own ICLR record:
 
-submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1)
+{{< ratio-eq >}}
 
 With 9 ICLR submissions and 1 accepted, that is 10 / 2 = 5, so each paper accepted elsewhere is taken to stand for 5 submissions. Adding 1 on both sides is the usual way to estimate attempts per success from a short record: the result stays finite when nothing was accepted, and one paper more or less does not swing it. A professor with no ICLR submissions gets 1, so the chart adds nothing for them.
 
