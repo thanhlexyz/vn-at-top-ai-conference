@@ -2,7 +2,7 @@
 {{ .Content }}
 <h2>{{ T "inst_list_table" }}</h2>
 <div class="scroll pinned top">
-<table>
+<table class="podium">
 	<thead>
 	<tr>
 		<th rowspan="2" class="logo-col pin1"></th>
@@ -14,7 +14,7 @@
 	</tr>
 	<tr>
 		{{ partial "group-heads.html" . }}
-		<th class="good">{{ T "th_accepted" }}</th>
+		<th class="good" data-podium>{{ T "th_accepted" }}</th>
 		{{ partial "split-heads.html" . }}
 		<th class="bad" title="{{ T "tip_rejected_total" }}">{{ T "th_rejected" }}</th>
 		<th class="est" title="{{ T "tip_rejected_est_inst" }}">{{ T "th_rejected_est" }}</th>
@@ -25,7 +25,7 @@
 	{{- $i := . }}
 	<tr>
 		<td class="logo-col pin1">{{ with .image }}<img class="mini" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}</td>
-		<td class="l pin2"><a href="{{ printf "institutions/%s/" .slug | relLangURL }}">{{ partial "iname.html" .name }}</a></td>
+		<td class="l pin2"><span class="cup"></span><a href="{{ printf "institutions/%s/" .slug | relLangURL }}">{{ partial "iname.html" .name }}</a></td>
 		<td>{{ len .professors }}</td>
 		{{ partial "group-cells.html" .venues }}
 		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" .own_page) }}">+{{ .own_page }}</span>{{ end }}</td>
