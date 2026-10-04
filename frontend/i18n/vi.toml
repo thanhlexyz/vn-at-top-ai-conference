@@ -556,3 +556,6 @@ other = "Chưa có bài nộp ICLR nên không ước tính được số bài b
 other = "Tỉ lệ được nhận"
 [tip_rate_venue]
 other = "Số bài được nhận chia cho số bài đã nộp. Tại ICLR là số đếm; ở các hội nghị không công khai bài bị từ chối là số ước tính (~), theo kết quả ICLR của các tác giả trong danh sách của từng bài; bài mà tác giả trong danh sách chưa từng nộp ICLR không được tính"
+
+[tip_coauthors_trivial]
+other = "Chưa có bài được nhận nên chỉ số này không so sánh được; được xếp cuối"

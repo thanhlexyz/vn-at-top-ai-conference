@@ -407,7 +407,7 @@ td.bad, th.bad { background: var(--bad) ; }
 td.est, th.est { background: var(--est) ; }  /* orange: estimated */
 td.sub, th.sub { background: var(--sub) ; }  /* light grey: submitted, estimated */
 td.rate, th.rate { background: var(--rate) ; }  /* light blue: acceptance rate, estimated */
-td.rate.trivial { color: var(--faint) ; }
+td.rate.trivial, td.trivial { color: var(--faint) ; }  /* not comparable (no ICLR record, no accepted paper): shown, but sorted last */
 /* co-author columns in pairs, green then red: min / max, domestic / foreign, same institution / other institutions */
 td.ca-min, th.ca-min, td.ca-dom, th.ca-dom, td.ca-same, th.ca-same { background: var(--good) ; }
 td.ca-max, th.ca-max, td.ca-for, th.ca-for, td.ca-other, th.ca-other { background: var(--bad) ; }  /* no ICLR record to estimate from: shown, but sorted last */

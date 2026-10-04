@@ -562,3 +562,6 @@ other = "No ICLR submissions, so the hidden rejections cannot be estimated and t
 other = "Acceptance rate"
 [tip_rate_venue]
 other = "Accepted divided by submitted. Counted at ICLR; estimated (~) at the venues that hide their rejections, from the ICLR record of each paper's listed authors; papers whose listed authors never submitted to ICLR are left out"
+
+[tip_coauthors_trivial]
+other = "No accepted paper yet, so this figure is not comparable; it sorts last"

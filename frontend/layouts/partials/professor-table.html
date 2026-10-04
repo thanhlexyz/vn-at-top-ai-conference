@@ -92,13 +92,23 @@
 		{{- else }}<td class="rate">{{ .acceptance_rate }}%</td>{{ end }}
 		{{- end }}
 		{{ partial "num.html" (len (.workshop_papers | default slice)) }}
+		{{- if eq (int .accepted) 0 }}
+		{{- /* no accepted paper: nothing to compare, shown greyed and always sorted last */}}
+		<td class="trivial" data-last title="{{ T "tip_coauthors_trivial" }}">{{ .authorship.majority.total }}</td>
+		<td class="trivial" data-last title="{{ T "tip_coauthors_trivial" }}">{{ .authorship.first_author.total }}</td>
+		{{- else }}
 		{{ partial "num.html" .authorship.majority.total }}
 		{{ partial "num.html" .authorship.first_author.total }}
+		{{- end }}
 		{{- $cls := slice "" "ca-min" "ca-max" "ca-dom" "ca-for" "ca-same" "ca-other" "" }}
+		{{- /* with no accepted paper the co-author figures say little: shown greyed, and they always sort last */}}
+		{{- $none := eq (int .accepted) 0 }}
 		{{- range $k, $v := slice .collab.avg_coauthors .collab.min_coauthors .collab.max_coauthors .collab.avg_domestic .collab.avg_foreign .collab.avg_same_institution .collab.avg_other_institution .collab.topic_count }}
 		{{- $c := index $cls $k }}
 		{{- if eq (string $v) "" }}
 		<td class="na {{ $c }}">&ndash;</td>
+		{{- else if and $none (lt $k 7) }}
+		<td class="{{ $c }} trivial" data-last title="{{ T "tip_coauthors_trivial" }}">{{ $v }}</td>
 		{{- else }}
 		<td{{ with $c }} class="{{ . }}"{{ end }}>{{ $v }}</td>
 		{{- end }}
