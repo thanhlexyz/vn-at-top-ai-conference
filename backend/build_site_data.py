@@ -1225,11 +1225,21 @@ def main():
     for p in professors:
         for e in (e for k in lists for e in p[k]):
             holders[(e["venue"], e["year"], norm_title(e["title"]))].add(p["slug"])
+    words = {p["slug"]: [set(v.split()) for v in variants[p["slug"]]] for p in professors}
+
+    def holder_of(name, mine):
+        exact = [s for s in sorted(mine) if norm_name(name) in variants[s]]
+        if exact:
+            return exact[0]
+        # a shorter form such as "Hanh Nguyen" for Nguyen Thi Hanh: its words all in one holder's name, and only one
+        part = set(norm_name(name).split())
+        loose = [s for s in sorted(mine) if len(part) >= 2 and any(part <= w for w in words[s])]
+        return loose[0] if len(loose) == 1 else ""
+
     for p in professors:
         for e in (e for k in lists for e in p[k]):
             mine = holders[(e["venue"], e["year"], norm_title(e["title"]))]
-            e["author_links"] = [{"name": a, "slug": next((s for s in sorted(mine) if norm_name(a) in variants[s]), "")}
-                                 for a in e.pop("_authors")]
+            e["author_links"] = [{"name": a, "slug": holder_of(a, mine)} for a in e.pop("_authors")]
 
     # a paper shared by two professors is one paper for an institution, a venue and the paper list
     owners = collections.defaultdict(list)
