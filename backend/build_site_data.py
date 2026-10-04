@@ -678,12 +678,23 @@ INSTITUTION_CHART_TEXT = {"en": {"inst": "the institution", "aria": "Accepted pa
                           "vi": {"inst": "trường", "aria": "Bài được nhận theo trường: {what}", "tip": "{name}: {n} bài {what}"}}
 
 
+CUP_PATH = ("M7 3h10v2h3v3a4 4 0 0 1-4 4h-.3A5 5 0 0 1 13 14.9V18h3v2H8v-2h3v-3.1A5 5 0 0 1 8.3 12H8a4 4 0 0 1-4-4V5h3V3z"
+            "m0 4H6v1a2 2 0 0 0 1 1.7V7zm10 0v2.7A2 2 0 0 0 18 8V7h-1z")   # the cup of the sortable tables (site.js)
+
+
+def podium(values):
+    """Cup for each value, as in the sortable tables: the three highest distinct values take gold, silver and
+    bronze, tied values share one, and zero takes none."""
+    top = sorted({v for v in values if v}, reverse=True)[:3]
+    return [("gold", "silver", "bronze")[top.index(v)] if v in top else None for v in values]
+
+
 def institution_svg(institutions, kind, peak, lang="en"):
     """One horizontal stacked bar per institution, the most blue first: accepted papers with the first author (or most
     authors, by `kind`) from the institution, from elsewhere, and papers that cannot be judged. Every bar is as long as
     the institution's accepted papers on one scale shared by both charts, so only the blue part moves between them."""
     w, t = AUTHOR_CHART_TEXT[lang], INSTITUTION_CHART_TEXT[lang]
-    width, name_w, right, top, row_h, bar_h = 640, 80, 64, 34, 26, 14
+    width, name_w, right, top, row_h, bar_h = 640, 96, 64, 34, 26, 14
     labels = [("own-inst", w[kind].format(inst=t["inst"])), ("other-inst", w[kind + "_other"]), ("unjudged", w["unknown"])]
     def home_of(i):
         return i.get("authorship", i)["majority" if kind == "majority" else "first_author"]["total"]
@@ -698,10 +709,13 @@ def institution_svg(institutions, kind, peak, lang="en"):
         out.append(f'<rect class="{cls}" x="{x}" y="8" width="12" height="12"/>'
                    f'<text class="label" x="{x + 18}" y="18">{html.escape(text)}</text>')
         x += 30 + 6.4 * len(text)
+    cups = podium([home_of(i) for i in institutions])
     for k, i in enumerate(institutions):
         y = top + k * row_h
         name = i["name_vi"] if lang == "vi" else i["name"]
         a, home = i.get("authorship", i), home_of(i)
+        if cups[k]:
+            out.append(f'<path class="cup-{cups[k]}" transform="translate(2 {y - 1}) scale(0.68)" d="{CUP_PATH}"/>')
         out.append(f'<text class="value" x="{name_w - 8}" y="{y + bar_h - 2}" text-anchor="end">'
                    f'<title>{html.escape(name)}</title>{html.escape(i["short"])}</text>')
         parts = [(cls, v, text) for (cls, text), v in zip(labels, (home, a["judged"] - home, i["accepted"] - a["judged"])) if v > 0]

@@ -462,3 +462,6 @@ svg.net.focus .edge.hl { stroke: var(--chart-value) ; }
 .cup.gold svg { fill: #e0a800 ; }
 .cup.silver svg { fill: #9aa4ae ; }
 .cup.bronze svg { fill: #c06b2c ; }
+.chart .cup-gold { fill: #e0a800 ; }
+.chart .cup-silver { fill: #9aa4ae ; }
+.chart .cup-bronze { fill: #c06b2c ; }

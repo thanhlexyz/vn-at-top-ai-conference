@@ -509,6 +509,6 @@ other = "No shared paper with anyone else here:"
 [inst_list_charts]
 other = "Accepted papers by where the authors are"
 [inst_list_charts_note]
-other = "One bar per institution, as long as its accepted papers, the most blue first; the number at the end is blue / all. Blue: the first author (top chart) or more than half of the authors (bottom chart) list the institution. Orange: they list another institution. Grey: no affiliations known yet, for papers known only from announcements or personal pages before the official list."
+other = "One bar per institution, as long as its accepted papers, the most blue first; the number at the end is blue / all. Blue: the first author (first chart) or more than half of the authors (second chart) list the institution. Orange: they list another institution. Grey: no affiliations known yet, for papers known only from announcements or personal pages before the official list."
 [inst_list_charts_none]
 other = "No accepted paper yet: {{ . }}."

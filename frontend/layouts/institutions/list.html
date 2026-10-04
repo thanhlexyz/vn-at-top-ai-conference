@@ -47,12 +47,14 @@
 {{- $c := hugo.Data.institution_charts }}
 {{- $lang := cond (eq site.Language.Lang "vi") "svg_vi" "svg" }}
 <h2>{{ T "inst_list_charts" }}</h2>
+<div class="fig-row">
 <figure>
 {{ index $c.first $lang | safeHTML }}
 </figure>
 <figure>
 {{ index $c.majority $lang | safeHTML }}
 </figure>
+</div>
 <p class="note">{{ T "inst_list_charts_note" }}
 {{- with $c.none }}
 {{- $names := slice }}{{ range . }}{{ $s := . }}{{ range where hugo.Data.institutions "slug" $s }}{{ $names = $names | append .short }}{{ end }}{{ end }}
