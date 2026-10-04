@@ -163,7 +163,7 @@ other = "bài bị từ chối có ghi nhận (ICLR, bài bị từ chối công
 [tip_rejected_est_inst]
 other = "bị từ chối ở ICLR cộng số bài ước tính bị từ chối ở các hội nghị khác, theo kết quả ICLR của chính trường"
 [tip_rejected_est_venue]
-other = "đếm được ở ICLR; ở các hội nghị khác ước tính theo kết quả ICLR của tất cả những người trong danh sách"
+other = "đếm được ở ICLR; ở các hội nghị khác ước tính theo kết quả ICLR của các tác giả trong danh sách của từng bài"
 [tip_own_institution]
 other = "bài được nhận, so với trường hiện tại của giảng viên; bài không ghi đơn vị của từng tác giả thì không tính"
 [tip_majority]
@@ -371,9 +371,9 @@ other = "Số liệu được tính cho các giảng viên trong danh sách; m�
 [venue_own_page]
 other = "Có {{ .Count }} bài được chấp nhận chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm. Các bài này được thể hiện dưới dạng +{{ .Count }} và gắn nhãn \"chưa chính thức\" trong danh sách cho đến khi hội nghị công bố."
 [venue_estimate_note]
-other = "{{ .Name }} không công khai bài bị từ chối, nên số này được ước tính từ kết quả ICLR chung của cả danh sách: {{ .Ratio }} lần nộp cho mỗi bài được nhận (xem trang Giới thiệu)."
+other = "{{ .Name }} không công khai bài bị từ chối, nên số này được ước tính theo kết quả ICLR của các tác giả trong danh sách của từng bài, như trên trang của họ: khoảng {{ .Ratio }} lần nộp cho mỗi bài được nhận (xem trang Giới thiệu)."
 [tip_estimated_venue_year]
-other = "ước tính theo kết quả ICLR của tất cả những người trong danh sách"
+other = "ước tính theo kết quả ICLR của các tác giả trong danh sách của từng bài"
 
 # ---------------------------------------------------------------- feedback form
 [fb_title]
@@ -551,3 +551,8 @@ other = "số bài được nhận chia cho số bài đã nộp ước tính; l
 
 [tip_rate_trivial]
 other = "Chưa có bài nộp ICLR nên không ước tính được số bài bị từ chối; tỉ lệ này không so sánh được và được xếp cuối"
+
+[th_rate_venue]
+other = "Tỉ lệ được nhận"
+[tip_rate_venue]
+other = "Số bài được nhận chia cho số bài đã nộp. Tại ICLR là số đếm; ở các hội nghị không công khai bài bị từ chối là số ước tính (~), theo kết quả ICLR của các tác giả trong danh sách của từng bài; bài mà tác giả trong danh sách chưa từng nộp ICLR không được tính"

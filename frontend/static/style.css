@@ -5,14 +5,14 @@
     color-scheme: light ;
     --bg: #ffffff ; --fg: #000000 ; --link: #0645ad ; --line: #000000 ; --muted: #555555 ; --faint: #999999 ;
     --th: #f0f0f0 ; --before: #fafafa ; --flag: #fff8dc ; --tag: #eeeeee ;
-    --good: #e2f0d9 ; --bad: #f8e0e0 ; --est: #fde3cf ; --sub: #ececec ; --rate: #dcebfb ;
+    --good: #e2f0d9 ; --bad: #f8e0e0 ; --est: #fde3cf ; --sub: #ececec ; --rate: #dcebfb ; --same: #d5f3f3 ; --other: #f6dcf1 ;
     --grid: #e1e0d9 ; --axis: #c3c2b7 ; --chart-text: #52514e ; --chart-value: #0b0b0b ;
 }
 :root[data-theme="dark"] {
     color-scheme: dark ;
     --bg: #1a1a19 ; --fg: #e8e6e3 ; --link: #8ab4f8 ; --line: #6b6a66 ; --muted: #b3b1ac ; --faint: #8a8885 ;
     --th: #2a2a28 ; --before: #222220 ; --flag: #3a3420 ; --tag: #333331 ;
-    --good: #1e3a29 ; --bad: #4a2325 ; --est: #4a3220 ; --sub: #30302e ; --rate: #1d3149 ;
+    --good: #1e3a29 ; --bad: #4a2325 ; --est: #4a3220 ; --sub: #30302e ; --rate: #1d3149 ; --same: #163d3e ; --other: #42213d ;
     --grid: #3a3a37 ; --axis: #5a5955 ; --chart-text: #c9c7c2 ; --chart-value: #f2f0ed ;
 }
 @media (prefers-color-scheme: dark) {
@@ -20,7 +20,7 @@
         color-scheme: dark ;
         --bg: #1a1a19 ; --fg: #e8e6e3 ; --link: #8ab4f8 ; --line: #6b6a66 ; --muted: #b3b1ac ; --faint: #8a8885 ;
         --th: #2a2a28 ; --before: #222220 ; --flag: #3a3420 ; --tag: #333331 ;
-        --good: #1e3a29 ; --bad: #4a2325 ; --est: #4a3220 ; --sub: #30302e ; --rate: #1d3149 ;
+        --good: #1e3a29 ; --bad: #4a2325 ; --est: #4a3220 ; --sub: #30302e ; --rate: #1d3149 ; --same: #163d3e ; --other: #42213d ;
         --grid: #3a3a37 ; --axis: #5a5955 ; --chart-text: #c9c7c2 ; --chart-value: #f2f0ed ;
     }
 }
@@ -408,11 +408,13 @@ td.est, th.est { background: var(--est) ; }  /* orange: estimated */
 td.sub, th.sub { background: var(--sub) ; }  /* light grey: submitted, estimated */
 td.rate, th.rate { background: var(--rate) ; }  /* light blue: acceptance rate, estimated */
 td.rate.trivial { color: var(--faint) ; }
-/* co-author columns: fewest green, most red, domestic blue, foreign orange */
+/* co-author columns: fewest green, most red, domestic blue, foreign orange, same institution cyan, other magenta */
 td.ca-min, th.ca-min { background: var(--good) ; }
 td.ca-max, th.ca-max { background: var(--bad) ; }
 td.ca-dom, th.ca-dom { background: var(--rate) ; }
-td.ca-for, th.ca-for { background: var(--est) ; }  /* no ICLR record to estimate from: shown, but sorted last */
+td.ca-for, th.ca-for { background: var(--est) ; }
+td.ca-same, th.ca-same { background: var(--same) ; }  /* cyan: same institution */
+td.ca-other, th.ca-other { background: var(--other) ; }  /* magenta: other institutions */  /* no ICLR record to estimate from: shown, but sorted last */
 
 /* Sortable headings (site.js) */
 th.sortable { cursor: pointer ; }

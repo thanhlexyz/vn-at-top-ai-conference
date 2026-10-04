@@ -12,6 +12,7 @@
 		{{ partial "split-heads.html" . }}
 		<th class="bad">{{ T "th_Rejected" }}</th>
 		<th class="est" title="{{ T "tip_rejected_est_venue" }}">{{ T "th_Rejected_est" }}</th>
+		<th class="rate" title="{{ T "tip_rate_venue" }}">{{ T "th_rate_venue" }}</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -46,6 +47,8 @@
 		{{- end }}
 		{{- end }}
 		{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}
+		{{- /* accepted over submitted: counted at ICLR, estimated (~) where rejections are hidden */}}
+		{{- with .acceptance_rate }}<td class="rate">{{ if ne $v.rejections "full" }}~{{ end }}{{ . }}%</td>{{ else }}<td class="na rate">&ndash;</td>{{ end }}
 	</tr>
 	{{- end }}
 	</tbody>

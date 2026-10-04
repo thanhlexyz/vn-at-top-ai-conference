@@ -44,10 +44,10 @@
 		<th title="{{ T "tip_per_paper" }}">{{ T "th_per_paper" }}</th>
 		<th class="ca-min" title="{{ T "tip_min" }}">{{ T "th_min" }}</th>
 		<th class="ca-max" title="{{ T "tip_max" }}">{{ T "th_max" }}</th>
-		<th class="ca-for" title="{{ T "tip_foreign" }}">{{ T "th_foreign" }}</th>
 		<th class="ca-dom" title="{{ T "tip_domestic" }}">{{ T "th_domestic" }}</th>
-		<th title="{{ T "tip_same_institution" }}">{{ T "th_same_institution" }}</th>
-		<th title="{{ T "tip_other_institutions" }}">{{ T "th_other_institutions" }}</th>
+		<th class="ca-for" title="{{ T "tip_foreign" }}">{{ T "th_foreign" }}</th>
+		<th class="ca-same" title="{{ T "tip_same_institution" }}">{{ T "th_same_institution" }}</th>
+		<th class="ca-other" title="{{ T "tip_other_institutions" }}">{{ T "th_other_institutions" }}</th>
 		<th>{{ T "scholar_citations" }}</th>
 		<th>{{ T "scholar_h" }}</th>
 		<th>{{ T "scholar_i10" }}</th>
@@ -94,8 +94,8 @@
 		{{ partial "num.html" (len (.workshop_papers | default slice)) }}
 		{{ partial "num.html" .authorship.majority.total }}
 		{{ partial "num.html" .authorship.first_author.total }}
-		{{- $cls := slice "" "ca-min" "ca-max" "ca-for" "ca-dom" "" "" "" }}
-		{{- range $k, $v := slice .collab.avg_coauthors .collab.min_coauthors .collab.max_coauthors .collab.avg_foreign .collab.avg_domestic .collab.avg_same_institution .collab.avg_other_institution .collab.topic_count }}
+		{{- $cls := slice "" "ca-min" "ca-max" "ca-dom" "ca-for" "ca-same" "ca-other" "" }}
+		{{- range $k, $v := slice .collab.avg_coauthors .collab.min_coauthors .collab.max_coauthors .collab.avg_domestic .collab.avg_foreign .collab.avg_same_institution .collab.avg_other_institution .collab.topic_count }}
 		{{- $c := index $cls $k }}
 		{{- if eq (string $v) "" }}
 		<td class="na {{ $c }}">&ndash;</td>

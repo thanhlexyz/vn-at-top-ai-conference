@@ -1377,24 +1377,43 @@ def main():
     now = datetime.datetime.now(datetime.timezone.utc)  # UTC, so the data does not show where it was built
     write_json(DATA / "professors.json", professors)
     write_json(DATA / "institutions.json", institutions)
-    # rejections behind each venue's accepted papers: counted at ICLR; elsewhere estimated from the ICLR record
-    # of everyone listed, (ICLR submitted + 1) / (ICLR accepted + 1) submissions per accepted paper
-    pooled = next(v for v in venues if v["key"] == "iclr")["venues"]["iclr"]
-    ratio = (pooled["submitted"] + 1) / (pooled["accepted"] + 1)
+    # rejections behind each venue's accepted papers: counted at ICLR. Elsewhere each paper is estimated from the
+    # ICLR record of its own authors on the list, as on their pages: (ICLR submitted + 1) / (ICLR accepted + 1)
+    # submissions per accepted paper, averaged over its listed authors who have submitted to ICLR. A paper whose
+    # listed authors never submitted to ICLR adds no estimate and is left out of the acceptance rate.
+    ratio_of = {}
+    for p in professors:
+        i = p["venues"]["iclr"]
+        if p["iclr_complete"] and i["submitted"]:
+            ratio_of[p["slug"]] = (i["submitted"] + 1) / (i["accepted"] + 1)
 
-    def estimated(key, counts):
+    def ratios(r):
+        return [ratio_of[o["slug"]] for o in owners[(r["venue"], r["year"], norm_title(r["title"]))] if o["slug"] in ratio_of]
+
+    def venue_estimate(key, year=None):
+        """(rejected, estimated; acceptance rate in % or None) for a venue, all years or one year."""
+        recs = [r for r in papers if r["venue"] == key and (year is None or r["year"] == year)]
+        acc_recs = [r for r in recs if r["status"] == "accepted"]
+        rej_recs = [r for r in recs if r["status"] != "accepted"]
         if key == "iclr":
-            return counts["not_accepted"]
-        return round(max(counts["not_accepted"], counts["accepted"] * (ratio - 1)))
+            total = len(acc_recs) + len(rej_recs)
+            return len(rej_recs), (round(100 * len(acc_recs) / total) if total else None)
+        hidden = sum(sum(rs) / len(rs) - 1 for rs in map(ratios, acc_recs) if rs)
+        known_acc = sum(1 for r in acc_recs if ratios(r))
+        known_rej = sum(1 for r in rej_recs if ratios(r))
+        extra = max(hidden - known_rej, 0)   # rejections on record are not estimated a second time
+        total = known_acc + known_rej + extra
+        return round(len(rej_recs) + extra), (round(100 * known_acc / total) if known_acc else None)
 
     for v in venues:
-        v["ratio"] = f"{ratio:.1f}"
-        v["rejected_estimated"] = estimated(v["key"], v["venues"][v["key"]])
+        v["rejected_estimated"], v["acceptance_rate"] = venue_estimate(v["key"])
+        a = v["venues"][v["key"]]["accepted"]
+        v["ratio"] = f"{(a + v['rejected_estimated']) / a:.1f}" if a else "1.0"
         rows = []
         for y in v["years"]:
             c = y["venues"][v["key"]]
             if y["counts"]:
-                y["rejected_estimated"] = estimated(v["key"], y["venues"][v["key"]])
+                y["rejected_estimated"] = venue_estimate(v["key"], y["year"])[0]
             if not (c.get("held", True) and c.get("available", True)):
                 rows.append({"year": y["year"], "counts": False})
                 continue

@@ -165,7 +165,7 @@ other = "rejections on record (ICLR, public NeurIPS rejections, Findings) plus t
 [tip_rejected_est_inst]
 other = "rejected at ICLR plus the papers estimated to have been rejected at the other venues, from the institution's own ICLR record"
 [tip_rejected_est_venue]
-other = "counted at ICLR; estimated elsewhere from the ICLR record of everyone listed"
+other = "counted at ICLR; estimated elsewhere from the ICLR record of each paper's listed authors"
 [tip_own_institution]
 other = "accepted papers judged against the professor's current institution; papers whose source prints no affiliation per author are left out"
 [tip_majority]
@@ -376,9 +376,9 @@ other = "The numbers cover the listed professors; a paper with several of them i
 [venue_own_page]
 other = "{{ .Count }} accepted papers are known only from personal pages. They are shown as +{{ .Count }}, tagged \"unofficial\" in the list, and stay so until the conference publishes them."
 [venue_estimate_note]
-other = "{{ .Name }} does not publish its rejections, so they are estimated from the ICLR record of everyone listed: {{ .Ratio }} submissions per accepted paper (see About)."
+other = "{{ .Name }} does not publish its rejections, so they are estimated from the ICLR record of each paper's listed authors, as on their pages: about {{ .Ratio }} submissions per accepted paper (see About)."
 [tip_estimated_venue_year]
-other = "estimated from the ICLR record of everyone listed"
+other = "estimated from the ICLR record of each paper's listed authors"
 
 # ---------------------------------------------------------------- feedback form
 [fb_title]
@@ -557,3 +557,8 @@ other = "accepted divided by submitted, estimated: an estimate, since most venue
 
 [tip_rate_trivial]
 other = "No ICLR submissions, so the hidden rejections cannot be estimated and this rate is not comparable; it sorts last"
+
+[th_rate_venue]
+other = "Acceptance rate"
+[tip_rate_venue]
+other = "Accepted divided by submitted. Counted at ICLR; estimated (~) at the venues that hide their rejections, from the ICLR record of each paper's listed authors; papers whose listed authors never submitted to ICLR are left out"
