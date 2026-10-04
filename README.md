@@ -9,7 +9,7 @@ EMNLP since 2020.
 ## How to maintain it
 
 The site is maintained by asking an AI coding agent (for example Claude Code) to do the work, in plain words. The agent
-follows [AGENT.md](AGENT.md), which describes every step. Typical requests:
+follows [CLAUDE.md](CLAUDE.md), which Claude Code reads automatically and other agents can be pointed to, which describes every step. Typical requests:
 
 - "Track `<OpenReview profile URL>`, he is a lecturer at `<university>`."
 - "Add these unofficial acceptances: `<announcement text, screenshot or link>`."

@@ -1,4 +1,4 @@
-# AGENT.md: how to operate and maintain this site
+# CLAUDE.md: how to operate and maintain this site
 
 You are maintaining a public, bilingual (Vietnamese at `/`, English at `/en/`) Hugo site that counts papers of
 lecturers and professors in Vietnam at eight AI conferences. The maintainer gives short requests in plain words; this
