@@ -109,7 +109,7 @@ The public site counts visits with [GoatCounter](https://www.goatcounter.com/), 
 
 ## Author
 
-This site was built by an AI, [Claude](https://www.anthropic.com/claude), under the direction of **Thanh Le** ([thanhle.xyz](http://thanhle.xyz)). The code and data are public on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Corrections are warmly welcome on the [Feedback](../feedback/) page.
+This site was built by an AI, [Claude](https://www.anthropic.com/claude), under the direction of **Thanh Le** ([thanhle.xyz](http://thanhle.xyz)). The code and data are public on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). If you find this site useful, please give it a ⭐ on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Corrections are warmly welcome on the [Feedback](../feedback/) page.
 
 ## Acknowledgements
 
