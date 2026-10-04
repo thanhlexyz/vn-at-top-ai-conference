@@ -215,9 +215,9 @@ other = "Được nhận và bị từ chối, tất cả giảng viên trong da
 other = """{{ .Accepted }} bài được chấp nhận tương ứng với khoảng {{ .Submissions }} lần nộp bài:
 {{ .Recorded }} bài bị từ chối hoặc rút tại ICLR, nơi mọi bài nộp đều được công khai, và khoảng {{ .Estimated }} bài được ước tính cho các hội nghị còn lại."""
 [home_fig1]
-other = "Hình 1. Số bài được chấp nhận so với số bài bị từ chối (thống kê tại ICLR và ước tính tại các hội nghị khác), tính chung cho mọi năm và mọi hội nghị."
+other = "Hình 1a. Số bài được chấp nhận so với số bài bị từ chối (thống kê tại ICLR và ước tính tại các hội nghị khác), tính chung cho mọi năm và mọi hội nghị."
 [home_fig2]
-other = "Hình 2. Số liệu tương tự theo từng năm, dạng xếp chồng: phần dưới là bài được chấp nhận, phần giữa là bài bị từ chối tại ICLR (thống kê), phần trên là bài bị từ chối tại các hội nghị khác (ước tính)."
+other = "Hình 1b. Số liệu tương tự theo từng năm, dạng xếp chồng: phần dưới là bài được chấp nhận, phần giữa là bài bị từ chối tại ICLR (thống kê), phần trên là bài bị từ chối tại các hội nghị khác (ước tính)."
 [home_fig2_provisional]
 other = " * Danh sách chính thức của {{ . }} hiện chưa đầy đủ."
 [home_numbers]

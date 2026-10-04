@@ -15,14 +15,16 @@
 {{- with hugo.Data.overview }}
 <h2>{{ T "home_overview" }}</h2>
 <p>{{ T "home_overview_text" (dict "Accepted" .total.accepted "Submissions" .submissions "Recorded" .total.recorded "Estimated" .total.estimated) | safeHTML }}</p>
+<div class="fig-row">
 <figure>
-{{ index . (cond (eq site.Language.Lang "vi") "pie_vi" "pie") | safeHTML }}
+<div class="fill">{{ index . (cond (eq site.Language.Lang "vi") "pie_vi" "pie") | safeHTML }}</div>
 <figcaption>{{ T "home_fig1" }}</figcaption>
 </figure>
 <figure>
 {{ index . (cond (eq site.Language.Lang "vi") "stack_vi" "stack") | safeHTML }}
 <figcaption>{{ T "home_fig2" }}{{ with .provisional_lists }}{{ T "home_fig2_provisional" (delimit . ", ") }}{{ end }}</figcaption>
 </figure>
+</div>
 <details>
 <summary>{{ T "home_numbers" }}</summary>
 <div class="scroll">

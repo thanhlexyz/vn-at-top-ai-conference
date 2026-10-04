@@ -217,9 +217,9 @@ other = "Accepted and rejected, all listed professors"
 other = """{{ .Accepted }} accepted papers stand for about {{ .Submissions }} submissions:
 {{ .Recorded }} rejected or withdrawn at ICLR, where every submission is public, and about {{ .Estimated }} more estimated for the other venues."""
 [home_fig1]
-other = "Fig. 1. Accepted papers against rejected papers, recorded at ICLR and estimated elsewhere, over all years and venues."
+other = "Fig. 1a. Accepted papers against rejected papers, recorded at ICLR and estimated elsewhere, over all years and venues."
 [home_fig2]
-other = "Fig. 2. The same per year, stacked: accepted at the bottom, rejected at ICLR (recorded) above it, rejected elsewhere (estimated) on top."
+other = "Fig. 1b. The same per year, stacked: accepted at the bottom, rejected at ICLR (recorded) above it, rejected elsewhere (estimated) on top."
 [home_fig2_provisional]
 other = " * The official {{ . }} list is not complete yet."
 [home_numbers]

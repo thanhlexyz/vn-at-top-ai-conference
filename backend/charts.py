@@ -114,13 +114,19 @@ def year_panels(label, panels):
     return "".join(out)
 
 
-def pies(label, charts):
+def pies(label, charts, fit=False):
     """Pie charts side by side, each with two or three slices named and numbered beside it.
 
-    charts: [(title, [(css class, name, value)])]
+    charts: [(title, [(css class, name, value)])]. fit=True makes the drawing only as wide as its content, for a
+    figure that shares the row with another.
     """
-    cell, r, top = WIDTH / len(charts), 70, 34
-    out = [f'<svg class="chart" viewBox="0 0 {WIDTH} {top + 2 * r + 16}" role="img" aria-label="{_esc(label)}">']
+    r, top = 70, 34
+    width = WIDTH
+    if fit:
+        widest = max(len(name) for _, slices in charts for _, name, _ in slices)
+        width = len(charts) * (2 * r + 4 + 36 + 6.4 * widest + 12)
+    cell = width / len(charts)
+    out = [f'<svg class="chart" viewBox="0 0 {width:.0f} {top + 2 * r + 16}" role="img" aria-label="{_esc(label)}">']
     for k, (title, slices) in enumerate(charts):
         cx, cy = k * cell + r + 4, top + r
         total = sum(v for _, _, v in slices) or 1

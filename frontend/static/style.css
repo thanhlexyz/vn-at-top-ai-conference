@@ -137,6 +137,26 @@ figure {
     overflow-x: auto ;
 }
 
+/* two figures side by side on a wide screen, one above the other on a narrow one */
+.fig-row {
+    display: grid ;
+    grid-template-columns: 1fr 1fr ;
+    gap: 2rem ;
+    align-items: stretch ;
+}
+.fig-row figure { margin: 1em 0 0 ; min-width: 0 ; display: flex ; flex-direction: column ; }
+.fig-row figcaption { margin-top: auto ; padding-top: 0.5em ; }   /* both captions end on the same line */
+.fig-row .chart { min-width: 0 ; max-width: 100% ; }
+/* the figure in .fill grows to the space its neighbour leaves, centred */
+.fig-row .fill { position: relative ; flex: 1 ; min-height: 12rem ; }
+.fig-row .fill .chart { position: absolute ; inset: 0 ; width: 100% ; height: 100% ; max-width: none ; }
+@media (max-width: 900px) {
+    .fig-row { grid-template-columns: 1fr ; gap: 0 ; }
+    .fig-row .chart { min-width: 520px ; }
+    .fig-row .fill { position: static ; }
+    .fig-row .fill .chart { position: static ; height: auto ; min-width: 0 ; max-width: 480px ; margin: 0 auto ; }
+}
+
 .chart {
     display: block ;
     width: 100% ;

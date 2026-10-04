@@ -959,7 +959,7 @@ def overview(professors, acc):
     for lang, suffix in (("en", ""), ("vi", "_vi")):
         w = CHART_TEXT[lang]
         named = [("acc", w["s_acc"]), ("not", w["s_not"]), ("est", w["s_est"])]
-        out["pie" + suffix] = charts.pies(w["pie_label"], [(w["pie_title"], [(c, n, total[k]) for (c, n), k in zip(named, keys)])])
+        out["pie" + suffix] = charts.pies(w["pie_label"], [(w["pie_title"], [(c, n, total[k]) for (c, n), k in zip(named, keys)])], fit=True)
         out["stack" + suffix] = charts.stacked_area(
             w["stack_label"], YEARS, [(c, n, [r[k] for r in rows]) for (c, n), k in zip(named, keys)],
             provisional=provisional, short={w["s_not"]: w["short_not"], w["s_est"]: w["short_est"]},
