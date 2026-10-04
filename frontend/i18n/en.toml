@@ -131,15 +131,23 @@ other = "majority"
 [th_first_author]
 other = "1st author"
 [th_per_paper]
-other = "per paper"
+other = "all*"
 [th_min]
 other = "min"
 [th_max]
 other = "max"
 [th_foreign]
-other = "foreign per paper"
+other = "foreign*"
+[th_domestic]
+other = "domestic*"
+[tip_domestic]
+other = "average number of co-authors per paper who are at an institution in Vietnam, the professor's own included"
+[th_same_institution]
+other = "same institution*"
+[tip_same_institution]
+other = "average number of co-authors per paper who are at the professor's own institution"
 [th_other_institutions]
-other = "other institutions"
+other = "other institutions*"
 [th_not_judged]
 other = "Not judged"
 [th_public]
@@ -173,7 +181,7 @@ other = "most co-authors on one paper, accepted or not, workshop papers included
 [tip_foreign]
 other = "average number of co-authors per paper who are at an institution outside Vietnam"
 [tip_other_institutions]
-other = "number of different co-authors who are at another university or institution"
+other = "average number of co-authors per paper who are at another university or institution, in Vietnam or abroad"
 [tip_not_judged]
 other = "accepted papers without an affiliation for each author, left out"
 [tip_iclr_missing]
@@ -200,7 +208,7 @@ other = """The official {{ .Name }} {{ .Year }} list was published before the co
 For that list only, papers that a professor's own page lists are counted as well. They are shown as <span class="own">+N</span> after the official number and are unofficial until the conference publishes them."""
 [home_note_coauthors]
 other = """The co-author and topic columns are taken over all counted papers, accepted or not.
-Foreign means the affiliation printed on the paper is outside Vietnam; other institutions counts the different co-authors whose affiliation is not the professor's own institution.
+* Averages per paper. Foreign and domestic mean the affiliation printed on the paper is outside or inside Vietnam; same institution is the professor's own institution, and other institutions is any other one, in Vietnam or abroad.
 Both need a paper list with affiliations, and topic areas need the conference's own topic labels, which exist for ICLR, NeurIPS and ICML from 2023 or 2024 on.
 Each professor's page says how many papers a figure is based on."""
 [home_overview]

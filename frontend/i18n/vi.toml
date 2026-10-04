@@ -130,15 +130,23 @@ other = "đa số tác giả"
 [th_first_author]
 other = "tác giả đầu"
 [th_per_paper]
-other = "mỗi bài"
+other = "tất cả*"
 [th_min]
 other = "ít nhất"
 [th_max]
 other = "nhiều nhất"
 [th_foreign]
-other = "nước ngoài mỗi bài"
+other = "nước ngoài*"
+[th_domestic]
+other = "trong nước*"
+[tip_domestic]
+other = "số đồng tác giả trung bình mỗi bài ở đơn vị trong nước, kể cả trường của giảng viên"
+[th_same_institution]
+other = "cùng trường*"
+[tip_same_institution]
+other = "số đồng tác giả trung bình mỗi bài cùng trường với giảng viên"
 [th_other_institutions]
-other = "đơn vị khác"
+other = "đơn vị khác*"
 [th_not_judged]
 other = "Không xác định"
 [th_public]
@@ -171,7 +179,7 @@ other = "số đồng tác giả nhiều nhất trên một bài, kể cả bài
 [tip_foreign]
 other = "số đồng tác giả trung bình mỗi bài ở đơn vị ngoài Việt Nam"
 [tip_other_institutions]
-other = "số đồng tác giả khác nhau ở trường hoặc đơn vị khác"
+other = "số đồng tác giả trung bình mỗi bài ở trường hoặc đơn vị khác, trong nước hay nước ngoài"
 [tip_not_judged]
 other = "bài được nhận không ghi đơn vị của từng tác giả, không tính"
 [tip_iclr_missing]
@@ -198,7 +206,7 @@ other = """Danh sách chính thức của {{ .Name }} {{ .Year }} được công
 Riêng đối với danh sách này, các bài được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm cũng được tính. Các bài này được thể hiện dưới dạng <span class="own">+N</span> sau số liệu chính thức và được xem là chưa chính thức cho đến khi hội nghị công bố."""
 [home_note_coauthors]
 other = """Các cột về đồng tác giả và lĩnh vực được tính trên toàn bộ các bài được thống kê, bao gồm cả bài bị từ chối.
-"Nước ngoài" chỉ các đồng tác giả có đơn vị công tác ghi trên bài ở ngoài Việt Nam; "đơn vị khác" là số đồng tác giả khác nhau không cùng trường với giảng viên.
+* Số trung bình mỗi bài. "Nước ngoài" và "trong nước" chỉ đơn vị công tác ghi trên bài ở ngoài hay trong Việt Nam; "cùng trường" là trường của giảng viên, "đơn vị khác" là mọi đơn vị khác, trong nước hay nước ngoài.
 Hai chỉ số này chỉ tính được với danh sách bài có ghi đơn vị công tác của tác giả; chỉ số lĩnh vực dựa trên nhãn chủ đề do hội nghị gán, chỉ có tại ICLR, NeurIPS và ICML từ năm 2023 hoặc 2024.
 Trang của từng giảng viên có ghi rõ mỗi chỉ số được tính trên bao nhiêu bài."""
 [home_overview]

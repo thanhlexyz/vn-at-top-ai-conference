@@ -17,7 +17,9 @@ Các chỉ số này được tính trên toàn bộ các bài được thống 
 - **Số đồng tác giả mỗi bài:** số tác giả khác trung bình trên một bài.
 - **Ít nhất và nhiều nhất:** số đồng tác giả ít nhất trên một bài được chấp nhận, và nhiều nhất trên một bài bất kỳ, kể cả bài bị từ chối. Giá trị ít nhất bằng 0 tương ứng với bài có một tác giả.
 - **Số đồng tác giả nước ngoài mỗi bài:** số tác giả khác trung bình có đơn vị công tác ghi trên bài không thuộc Việt Nam. Tác giả ghi đồng thời đơn vị ở Việt Nam và ở nước ngoài không được tính là nước ngoài.
-- **Đồng tác giả ở đơn vị khác:** số đồng tác giả khác nhau có đơn vị công tác ghi trên bài không phải trường của giảng viên, dù ở Việt Nam hay nước ngoài.
+- **Trong nước mỗi bài:** số đồng tác giả trung bình mỗi bài có đơn vị ghi trên bài ở Việt Nam, kể cả trường của giảng viên.
+- **Cùng trường mỗi bài:** số đồng tác giả trung bình mỗi bài có đơn vị ghi trên bài là trường của giảng viên.
+- **Đơn vị khác mỗi bài:** số đồng tác giả trung bình mỗi bài có đơn vị ghi trên bài là trường hoặc đơn vị khác, dù ở Việt Nam hay nước ngoài.
 - **Số lĩnh vực:** số lĩnh vực lớn khác nhau trong các nhãn chủ đề mà hội nghị gán cho bài, ví dụ "Deep Learning" hay "Reinforcement Learning".
 
 Hai chỉ số liên quan đến đơn vị công tác chỉ sử dụng bài từ các danh sách có ghi đơn vị của từng tác giả; do đó không bao gồm bài tại ACL, cũng như bài tại CVPR trước năm 2023 và năm 2026.

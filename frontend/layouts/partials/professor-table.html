@@ -16,7 +16,7 @@
 		<th colspan="5">{{ T "th_total" }}</th>
 		<th rowspan="2" class="ws" title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
 		<th colspan="2" title="{{ T "tip_own_institution" }}">{{ T "th_own_institution" }}</th>
-		<th colspan="5">{{ T "th_coauthors" }}</th>
+		<th colspan="7">{{ T "th_coauthors" }}</th>
 		<th rowspan="2">{{ T "th_topic_areas" }}</th>
 		<th colspan="3" title="{{ T "tip_scholar" }}">Google Scholar</th>
 	</tr>
@@ -37,6 +37,8 @@
 		<th title="{{ T "tip_min" }}">{{ T "th_min" }}</th>
 		<th title="{{ T "tip_max" }}">{{ T "th_max" }}</th>
 		<th title="{{ T "tip_foreign" }}">{{ T "th_foreign" }}</th>
+		<th title="{{ T "tip_domestic" }}">{{ T "th_domestic" }}</th>
+		<th title="{{ T "tip_same_institution" }}">{{ T "th_same_institution" }}</th>
 		<th title="{{ T "tip_other_institutions" }}">{{ T "th_other_institutions" }}</th>
 		<th>{{ T "scholar_citations" }}</th>
 		<th>{{ T "scholar_h" }}</th>
@@ -75,7 +77,7 @@
 		{{ partial "num.html" (len (.workshop_papers | default slice)) }}
 		{{ partial "num.html" .authorship.majority.total }}
 		{{ partial "num.html" .authorship.first_author.total }}
-		{{- range slice .collab.avg_coauthors .collab.min_coauthors .collab.max_coauthors .collab.avg_foreign .collab.elsewhere .collab.topic_areas }}
+		{{- range slice .collab.avg_coauthors .collab.min_coauthors .collab.max_coauthors .collab.avg_foreign .collab.avg_domestic .collab.avg_same_institution .collab.avg_other_institution .collab.topic_areas }}
 		{{- if eq (string .) "" }}
 		<td class="na">&ndash;</td>
 		{{- else }}

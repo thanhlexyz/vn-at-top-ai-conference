@@ -1,12 +1,12 @@
 {{ define "main" -}}
 {{ .Content }}
 <h2>{{ T "inst_list_table" }}</h2>
-<div class="scroll">
+<div class="scroll pinned top">
 <table>
 	<thead>
 	<tr>
-		<th rowspan="2" class="logo-col"></th>
-		<th rowspan="2" class="l">{{ T "th_institution" }}</th>
+		<th rowspan="2" class="logo-col pin1"></th>
+		<th rowspan="2" class="l pin2">{{ T "th_institution" }}</th>
 		<th rowspan="2">{{ T "th_professors" }}</th>
 		<th colspan="3">ICLR</th>
 		<th colspan="{{ sub (len hugo.Data.meta.venues) 1 }}">{{ T "th_accepted_at" }}</th>
@@ -28,8 +28,8 @@
 	{{- range hugo.Data.institutions }}
 	{{- $i := . }}
 	<tr>
-		<td class="logo-col">{{ with .image }}<img class="mini" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}</td>
-		<td class="l"><a href="{{ printf "institutions/%s/" .slug | relLangURL }}">{{ partial "iname.html" .name }}</a></td>
+		<td class="logo-col pin1">{{ with .image }}<img class="mini" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}</td>
+		<td class="l pin2"><a href="{{ printf "institutions/%s/" .slug | relLangURL }}">{{ partial "iname.html" .name }}</a></td>
 		<td>{{ len .professors }}</td>
 		{{ partial "num.html" .venues.iclr.submitted }}
 		{{ partial "acc.html" (merge .venues.iclr (dict "cls" "good")) }}

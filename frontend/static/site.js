@@ -155,3 +155,17 @@
 		});
 	});
 })();
+
+// Pinned tables: the first column is as wide as its longest name; the second sticks right after it.
+(function () {
+	function measure() {
+		document.querySelectorAll(".scroll.pinned").forEach(function (box) {
+			box.classList.add("measured");
+			var cell = box.querySelector("td.pin1, th.pin1");
+			if (cell) box.style.setProperty("--pin1w", cell.getBoundingClientRect().width + "px");
+		});
+	}
+	measure();
+	window.addEventListener("resize", measure);
+	if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+})();

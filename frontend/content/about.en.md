@@ -17,7 +17,9 @@ These figures are taken over all of a professor's counted papers, accepted or no
 - **Co-authors per paper:** the average number of other authors on a paper.
 - **Min and max:** the fewest co-authors on a single accepted paper, and the most co-authors on a single paper, accepted or not. A minimum of 0 means a paper written alone.
 - **Foreign co-authors per paper:** the average number of other authors whose affiliation on the paper names no Vietnamese institution. An author who lists both a Vietnamese and a foreign institution is not foreign.
-- **Co-authors at other institutions:** the number of different co-authors whose affiliation on the paper is not the professor's own institution, in Vietnam or abroad.
+- **Domestic per paper:** the average number of other authors whose affiliation on the paper is an institution in Vietnam, the professor's own included.
+- **Same institution per paper:** the average number of other authors whose affiliation on the paper is the professor's own institution.
+- **Other institutions per paper:** the average number of other authors whose affiliation on the paper is another institution, in Vietnam or abroad.
 - **Topic areas:** the number of different top-level areas among the topic labels the conference gave the papers, for example "Deep Learning" or "Reinforcement Learning".
 
 The two affiliation figures use only papers from lists that print an affiliation for each author, so ACL papers, and CVPR papers before 2023 and in 2026, are left out of them.

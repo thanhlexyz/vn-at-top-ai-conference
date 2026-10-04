@@ -509,6 +509,8 @@ def collaboration(person, counted, workshop=()):
     papers = list(counted)
     accepted_sizes = []  # the minimum is taken over accepted papers only, the maximum over every submission
     sizes, foreign, own, other_vn, everyone, elsewhere, abroad = [], [], [], [], set(), set(), set()
+    other_inst = []   # per paper: co-authors at another institution, in Vietnam or abroad
+    domestic = []     # per paper: co-authors at an institution in Vietnam, the professor's own included
     areas, topics = collections.Counter(), collections.Counter()
     who = distinct_people([a["name"] for r in papers for a in r["people"]])
     for r in papers:
@@ -525,6 +527,8 @@ def collaboration(person, counted, workshop=()):
             outside = [a for a in others if a["aff"] and not vn_institutions(a["aff"])]
             foreign.append(len(outside))
             own.append(sum(1 for a in others if same_institution(a["aff"], person)))
+            other_inst.append(sum(1 for a in others if a["aff"] and not same_institution(a["aff"], person)))
+            domestic.append(sum(1 for a in others if vn_institutions(a["aff"])))
             other_vn.append(sum(1 for a in others if vn_institutions(a["aff"]) and not same_institution(a["aff"], person)))
             abroad.update(who[a["name"]] for a in outside)
             elsewhere.update(who[a["name"]] for a in others if a["aff"] and not same_institution(a["aff"], person))
@@ -546,7 +550,7 @@ def collaboration(person, counted, workshop=()):
         "papers": len(papers), "avg_coauthors": mean(sizes), "distinct_coauthors": len(everyone),
         "min_coauthors": min(accepted_sizes) if accepted_sizes else "", "max_coauthors": max(widest) if widest else "",
         "papers_with_affiliations": len(foreign), "avg_foreign": mean(foreign),
-        "avg_same_institution": mean(own), "avg_other_vietnam": mean(other_vn),
+        "avg_same_institution": mean(own), "avg_other_vietnam": mean(other_vn), "avg_other_institution": mean(other_inst), "avg_domestic": mean(domestic),
         "elsewhere": len(elsewhere) if foreign else "", "elsewhere_abroad": len(elsewhere & abroad),
         "elsewhere_vietnam": len(elsewhere - abroad),
         "papers_with_topic": sum(areas.values()), "topic_areas": len(areas) if areas else "",
