@@ -210,7 +210,7 @@ def stacked_area(label, years, series, provisional=(), short=None, words=None):
                    f'y2="{y:.1f}"/><text x="{left - 6}" y="{y + 4:.1f}" text-anchor="end">{value}</text>')
         value += step
     for x, year in zip(xs, years):
-        out.append(f'<text x="{x:.1f}" y="{base + 17}" text-anchor="middle">{year}{"*" if year in provisional else ""}</text>')
+        out.append(f'<text x="{x:.1f}" y="{base + 17}" text-anchor="middle">{year}</text>')
 
     lower = [0.0] * len(years)
     edges, ends = [], []

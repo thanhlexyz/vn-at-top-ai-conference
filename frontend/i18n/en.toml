@@ -224,8 +224,6 @@ other = """{{ .Accepted }} accepted papers stand for about {{ .Submissions }} su
 other = "Fig. 1a. Accepted papers against rejected papers, recorded and estimated, over all years and venues."
 [home_fig2]
 other = "Fig. 1b. The same per year."
-[home_fig2_provisional]
-other = " * The official {{ . }} list is not complete yet."
 [home_numbers]
 other = "The numbers behind the figures"
 [home_note_estimate]
