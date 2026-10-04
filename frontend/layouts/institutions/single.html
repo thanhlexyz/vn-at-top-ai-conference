@@ -23,7 +23,7 @@
 	<li>{{ if $n.url }}<a href="{{ $n.url | relLangURL }}">{{ partial "iname.html" $n.full }}</a>{{ else }}{{ partial "iname.html" $n.full }}{{ end }} ({{ $n.name }}): {{ T "graph_papers" (int .weight) }}</li>
 	{{- end }}
 </ol>
-<p class="note">{{ T "coauthor_institutions_note" }}</p>
+<p class="note">{{ T "coauthor_institutions_note" (relLangURL "graph-institutions/") | safeHTML }}</p>
 {{- end }}
 
 <h2>{{ T "inst_professors" }}</h2>

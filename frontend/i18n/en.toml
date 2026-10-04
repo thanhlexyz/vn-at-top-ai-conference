@@ -413,11 +413,11 @@ other = "Each column is one year's accepted papers; grey papers are known only f
 [coauthor_institutions]
 other = "Co-author institutions"
 [coauthor_institutions_note]
-other = "Institutions in Vietnam that share papers with this one (accepted, rejected or workshop) and the number of shared papers; institutions abroad are left out. See Institution collaboration for the whole graph."
+other = "Institutions in Vietnam that share papers with this one (accepted, rejected or workshop) and the number of shared papers; institutions abroad are left out. See <a href=\"{{ . }}\">Institution collaboration</a> for the whole graph."
 [coauthors_on_site]
 other = "Co-authors"
 [coauthors_on_site_note]
-other = "People on this site who share papers with this professor, accepted, rejected or workshop, with their institution today and the number of shared papers; see Researcher collaboration for the whole graph."
+other = "People on this site who share papers with this professor, accepted, rejected or workshop, with their institution today and the number of shared papers; see <a href=\"{{ . }}\">Researcher collaboration</a> for the whole graph."
 [links]
 other = "Links"
 
