@@ -347,18 +347,16 @@ def parse_ijcai(year, page):
         h = re.match(r"\s*<h3>(.*?)</h3>", part, re.S)
         section = text_of(h.group(1)) if h else ""
         track = "main" if section.lower().startswith("main track") else section or "other"
-        sub = ""
         for m in re.finditer(r'<div class="subsection_title">(.*?)</div>|<div id="paper\d+" class="paper_wrapper">'
                              r'<div class="title">(.*?)</div><div class="authors">(.*?)</div>'
                              r'<div class="details">.*?href="([^"]+\.pdf)".*?href="(/proceedings/[^"]+)"', part, re.S):
-            if m.group(1) is not None:
-                sub = text_of(m.group(1))
+            if m.group(1) is not None:   # a subject heading of the proceedings, not a topic the authors chose
                 continue
             out.append({"venue": "ijcai", "year": year, "track": track, "title": text_of(m.group(2)),
                         "authors": [{"name": n.strip(), "aff": ""} for n in text_of(m.group(3)).split(",") if n.strip()],
                         "url": "https://www.ijcai.org" + m.group(5),
                         "pdf": f"https://www.ijcai.org/proceedings/{year}/{m.group(4)}",
-                        "forum": "", "pres": "", "topic": sub, "source": "ijcai.org"})
+                        "forum": "", "pres": "", "topic": "", "source": "ijcai.org"})
     return out
 
 

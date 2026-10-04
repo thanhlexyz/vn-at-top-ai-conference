@@ -455,15 +455,39 @@ def seg_hits_box(x1, y1, x2, y2, bx0, by0, bx1, by1):
     return True
 
 
-def place_labels(nodes, pos, radius, edges, labels, weights=None, right_only=()):
+def weight_spots(pos, radius, edges, weights):
+    """{(a, b): (x, y)}: where the number of shared papers is printed on each line with 2 or more, the point along it
+    (the middle if it is clear) whose label box no other line, circle or number touches."""
+    out, boxes = {}, []
+    for (a, b) in sorted(edges, key=lambda e: -weights.get(e, 1)):
+        if weights.get((a, b), 1) < 2:
+            continue
+        (x1, y1), (x2, y2) = pos[a], pos[b]
+        best = None
+        for t in (0.5, 0.42, 0.58, 0.35, 0.65, 0.28, 0.72):
+            x, y = x1 + t * (x2 - x1), y1 + t * (y2 - y1)
+            box = (x - 13, y - 12, x + 13, y + 10)
+            cost = 100 * sum(seg_hits_box(*pos[c], *pos[d], *box) for c, d in edges if {c, d} != {a, b})
+            cost += 100 * sum(box[0] - r < cx < box[2] + r and box[1] - r < cy < box[3] + r
+                              for i, (cx, cy) in pos.items() if (r := radius.get(i)) is not None)
+            cost += 100 * sum(not (box[2] < o[0] or o[2] < box[0] or box[3] < o[1] or o[3] < box[1]) for o in boxes)
+            cost += abs(t - 0.5)
+            if best is None or cost < best[0]:
+                best = (cost, x, y, box)
+        out[(a, b)] = (round(best[1], 1), round(best[2], 1))
+        boxes.append(best[3])
+    return out
+
+
+def place_labels(nodes, pos, radius, edges, labels, weights=None, right_only=(), spots=None):
     """{id: (x, y, anchor)}: for each node the label position, out of right, left, above and below, that crosses
     the fewest edges, circles and labels already placed. Bigger nodes choose first."""
     segs = [(pos[a][0], pos[a][1], pos[b][0], pos[b][1], a, b) for a, b in edges]
     out = {}
-    # the weight printed in the middle of a line counts as a label already there
-    placed = [((pos[a][0] + pos[b][0]) / 2 - 13, (pos[a][1] + pos[b][1]) / 2 - 12,
-               (pos[a][0] + pos[b][0]) / 2 + 13, (pos[a][1] + pos[b][1]) / 2 + 10)
-              for (a, b) in edges if (weights or {}).get((a, b), 1) >= 2]
+    # the number printed on a line counts as a label already there (at its spot, or else the middle)
+    mid = {(a, b): ((pos[a][0] + pos[b][0]) / 2, (pos[a][1] + pos[b][1]) / 2) for a, b in edges}
+    placed = [(x - 13, y - 12, x + 13, y + 10) for e in edges if (weights or {}).get(e, 1) >= 2
+              for x, y in [(spots or mid).get(e, mid[e])]]
     for i in sorted(nodes, key=lambda i: -radius[i]):
         x, y, r, w = pos[i][0], pos[i][1], radius[i], CHAR * len(labels[i])
         options = [("start", x + r + 4, y + 5, (x + r + 2, y - LINE / 2, x + r + 6 + w, y + LINE / 2)),
@@ -511,7 +535,9 @@ def build(nodes, papers_of, color_of, legend):
     radius = {n["id"]: n["r"] for n in out_nodes if n["linked"]}
     groups = components(sorted(linked), edges)
     small = {i for g in groups[1:] for i in g}
-    spots = place_labels(list(radius), pos, radius, list(edges), {i: text[i] for i in radius}, edges, right_only=small)
+    numbers = weight_spots(pos, radius, list(edges), edges)
+    spots = place_labels(list(radius), pos, radius, list(edges), {i: text[i] for i in radius}, edges, right_only=small,
+                         spots=numbers)
     for n in out_nodes:
         if n["id"] in spots:
             n["lx"], n["ly"], n["anchor"] = spots[n["id"]]
@@ -519,6 +545,7 @@ def build(nodes, papers_of, color_of, legend):
     by_id = {n["id"]: n for n in out_nodes}
     out_edges = [{"a": a, "b": b, "weight": w, "x1": pos[a][0], "y1": pos[a][1], "x2": pos[b][0], "y2": pos[b][1],
                   "width": round(1 + 1.6 * math.sqrt(w - 1), 1),
+                  "wx": numbers.get((a, b), (0, 0))[0], "wy": numbers.get((a, b), (0, 0))[1],
                   "a_name": by_id[a]["name"], "b_name": by_id[b]["name"],
                   "a_name_vi": by_id[a].get("name_vi") or by_id[a]["name"],
                   "b_name_vi": by_id[b].get("name_vi") or by_id[b]["name"]}
