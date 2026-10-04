@@ -438,9 +438,35 @@ def apply_rules(person, recs):
             excluded.append({**r, "reason": f"before {person['vn_since']}, when they joined a Vietnamese institution"})
         elif r["status"] == "unknown":
             excluded.append({**r, "reason": "outcome not known yet"})
+        elif r["status"] == "accepted" and not at_institution(person, r):
+            excluded.append({**r, "reason": f"the paper lists this author at {own_affiliation(person, r)}, "
+                                            f"not at {person['institution_short']}"})
         else:
             counted.append(r)
     return counted, excluded, workshop
+
+
+def own_affiliation(person, r):
+    """The affiliation the paper prints for this person ('' when it prints none or they cannot be found)."""
+    people = r.get("people") or []
+    i = r.get("self")
+    if i is None or i >= len(people):
+        i = next((k for k, a in enumerate(people) if norm_name(a["name"]) in person["variants"]), None)
+    return people[i]["aff"].strip() if i is not None else ""
+
+
+def at_institution(person, r):
+    """An accepted paper counts for a person only if it lists them at their institution. A paper that prints no
+    affiliation for them (unofficial papers, lists without affiliations) cannot be checked and counts. Their own
+    entry may name the institution by its short name ("VinAI & HUST"), or for HCMUS and the Hanoi University of
+    Science just "University of Science"; neither is safe to read as Vietnamese for anyone else."""
+    aff = own_affiliation(person, r)
+    if not aff or same_institution(aff, person):
+        return True
+    short = person["institution_short"]
+    if len(short) >= 3 and re.search(rf"(?<![\w-]){re.escape(short)}(?![\w-])", aff):
+        return True
+    return short in ("HCMUS", "VNU-HUS") and bool(re.search(r"\buniversity of science\b", aff, re.I))
 
 
 def mark_later_acceptance(recs, acc):

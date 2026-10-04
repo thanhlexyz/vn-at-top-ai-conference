@@ -129,7 +129,7 @@ VN_INSTITUTIONS = [
      "VNU University of Engineering and Technology", "VNU-UET", True),
     (r"fpt university", "FPT University", "FPT University", True),
     (r"\bfpt\b", "FPT Software AI Center", "FPT", False),
-    (r"posts (and|&) telecommunications? institute of technology|\bptit\b",
+    (r"posts (and|&) telecom(munications?|\.)? inst(itute|\.)? (of )?tech|\bptit\b",
      "Posts and Telecommunications Institute of Technology", "PTIT", True),
     (r"phenikaa", "Phenikaa University", "Phenikaa", True),
     (r"ton duc thang", "Ton Duc Thang University", "TDTU", True),
