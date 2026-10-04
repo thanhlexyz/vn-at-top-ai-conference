@@ -13,7 +13,7 @@
 <figure class="graph">
 <svg class="net" viewBox="0 0 {{ $g.width }} {{ $g.height }}" role="img" aria-label="{{ .Title }}">
 	{{- range $g.edges }}
-	<line class="edge" data-a="{{ .a }}" data-b="{{ .b }}" x1="{{ .x1 }}" y1="{{ .y1 }}" x2="{{ .x2 }}" y2="{{ .y2 }}" stroke-width="{{ .width }}"><title>{{ if $vi }}{{ .a_name_vi }} – {{ .b_name_vi }}{{ else }}{{ .a_name }} – {{ .b_name }}{{ end }}: {{ T "graph_papers" .weight }}</title></line>
+	<line class="edge" data-a="{{ .a }}" data-b="{{ .b }}" x1="{{ .x1 }}" y1="{{ .y1 }}" x2="{{ .x2 }}" y2="{{ .y2 }}" stroke-width="{{ .width }}"><title>{{ if $vi }}{{ .a_name_vi }} – {{ .b_name_vi }}{{ else }}{{ .a_name }} – {{ .b_name }}{{ end }}: {{ T "graph_papers" (int .weight) }}</title></line>
 	{{- end }}
 	{{- range $g.edges }}{{ if ge (int .weight) 2 }}
 	<text class="ew" data-a="{{ .a }}" data-b="{{ .b }}" x="{{ div (add .x1 .x2) 2 }}" y="{{ add (div (add .y1 .y2) 2) 4 }}" text-anchor="middle">{{ .weight }}</text>
@@ -24,7 +24,7 @@
 		<circle cx="{{ .x }}" cy="{{ .y }}" r="{{ .r }}"/>
 		<text class="deg" x="{{ .x }}" y="{{ add .y 4 }}" text-anchor="middle">{{ .degree }}</text>
 		<text x="{{ .lx }}" y="{{ .ly }}" text-anchor="{{ .anchor }}">{{ $label }}</text>
-		<title>{{ $label }}{{ with .full }} ({{ . }}){{ end }}: {{ T "graph_papers" .papers }}, {{ T "graph_degree" .degree }}</title>
+		<title>{{ $label }}{{ with .full }} ({{ . }}){{ end }}: {{ T "graph_papers" (int .papers) }}, {{ T "graph_degree" .degree }}</title>
 	</a>
 	{{- end }}
 </svg>
