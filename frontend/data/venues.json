@@ -6482,11 +6482,11 @@
    },
    "cvpr": {
     "accepted": 15,
-    "rejected": 0,
+    "rejected": 6,
     "withdrawn": 0,
     "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 15,
+    "not_accepted": 6,
+    "submitted": 21,
     "own_page": 0,
     "official": 15
    },
@@ -7173,11 +7173,11 @@
      },
      "cvpr": {
       "accepted": 7,
-      "rejected": 0,
+      "rejected": 6,
       "withdrawn": 0,
       "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 7,
+      "not_accepted": 6,
+      "submitted": 13,
       "own_page": 0,
       "official": 7,
       "available": true,
@@ -7360,6 +7360,30 @@
     "year": 2026,
     "venue": "cvpr",
     "venue_name": "CVPR",
+    "title": "Dual Strategies for Test-Time Adaptation",
+    "url": "https://openreview.net/forum?id=bqKizVrTSh",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Nam Nguyen Phuong, Duc Nguyen The Minh, Phi Le Nguyen, Ehsan Abbasnejad, Minh Hoai",
+    "match": "OpenReview profile",
+    "note": "placed in Findings, which counts as rejected from the main track",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "phi-le-nguyen",
+      "name": "Phi Le Nguyen",
+      "name_vi": "Nguyễn Phi Lê"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "cvpr",
+    "venue_name": "CVPR",
     "title": "HFedATM: Hierarchical Federated Domain Generalization via Optimal Transport and Regularized Mean Aggregation",
     "url": "https://openreview.net/forum?id=CETiEAIDHT",
     "status": "accepted",
@@ -7397,6 +7421,126 @@
     "authors": "Duc Vu, Kien Nguyen, Trong-Tung Nguyen, Ngan Nguyen, Phong Nguyen, Khoi Nguyen, Cuong Pham, Anh Tran",
     "match": "OpenReview profile",
     "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "cuong-pham",
+      "name": "Cuong Pham",
+      "name_vi": "Phạm Văn Cường"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "cvpr",
+    "venue_name": "CVPR",
+    "title": "Memory-Efficient Continual Learning with Prototypical Exemplar Condensation",
+    "url": "https://openreview.net/forum?id=00cNzNHUwY",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "M.-Duong Nguyen, Thien-Thanh Dao, Le-Tuan Nguyen, Dung D. Le, Kok-Seng Wong",
+    "match": "OpenReview profile",
+    "note": "placed in Findings, which counts as rejected from the main track",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "dung-d-le",
+      "name": "Dung D. Le",
+      "name_vi": "Lê Duy Dũng"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "cvpr",
+    "venue_name": "CVPR",
+    "title": "Onboarding Without Forgetting: Hypernetwork Personalization with Data-Free Replay for Personalized Federated Learning",
+    "url": "https://openreview.net/forum?id=xwPtEZfjYv",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Thinh Nguyen, Le Huy Khiem, Van-Tuan Tran, Khoa D Doan, Nitesh V. Chawla, Kok-Seng Wong",
+    "match": "OpenReview profile",
+    "note": "placed in Findings, which counts as rejected from the main track",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "khoa-d-doan",
+      "name": "Khoa D. Doan",
+      "name_vi": "Đoàn Đăng Khoa"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "cvpr",
+    "venue_name": "CVPR",
+    "title": "Overthinking Causes Hallucination: Tracing Confounder Propagation in Vision Language Models",
+    "url": "https://openreview.net/forum?id=LXQnjy8j41",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Abin Shoby, Ta Duc Huy, Tuan Dung Nguyen, Minh Khoi Ho, Qi Chen, Anton van den Hengel, Phi Le Nguyen, Johan W. Verjans, Vu Minh Hieu Phan",
+    "match": "OpenReview profile",
+    "note": "placed in Findings, which counts as rejected from the main track",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "phi-le-nguyen",
+      "name": "Phi Le Nguyen",
+      "name_vi": "Nguyễn Phi Lê"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "cvpr",
+    "venue_name": "CVPR",
+    "title": "Phantasia: Context-Adaptive Backdoors in Vision Language Models",
+    "url": "https://openreview.net/forum?id=IX3uqHaq7P",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Nam Duong Tran, Phi Le Nguyen",
+    "match": "OpenReview profile",
+    "note": "placed in Findings, which counts as rejected from the main track",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "phi-le-nguyen",
+      "name": "Phi Le Nguyen",
+      "name_vi": "Nguyễn Phi Lê"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "cvpr",
+    "venue_name": "CVPR",
+    "title": "SwiftPie: Lightning-Fast Subject-Driven Image Personalization via One Step Diffusion",
+    "url": "https://openreview.net/forum?id=n5qLv2LLO5",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Huy Duong, Trong-Tung Nguyen, Cuong Pham, Anh Tran, Khoi Nguyen, Minh Hoai",
+    "match": "OpenReview profile",
+    "note": "placed in Findings, which counts as rejected from the main track",
     "reason": "",
     "later": "",
     "unofficial": false,
@@ -8637,11 +8781,11 @@
    },
    "acl": {
     "accepted": 8,
-    "rejected": 0,
+    "rejected": 3,
     "withdrawn": 0,
     "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 8,
+    "not_accepted": 3,
+    "submitted": 11,
     "own_page": 0,
     "official": 8
    },
@@ -9031,11 +9175,11 @@
      },
      "acl": {
       "accepted": 0,
-      "rejected": 0,
+      "rejected": 1,
       "withdrawn": 0,
       "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
+      "not_accepted": 1,
+      "submitted": 1,
       "own_page": 0,
       "official": 0,
       "available": true,
@@ -9059,7 +9203,7 @@
     "accepted": 0,
     "own_page": 0,
     "official": 0,
-    "rejected_estimated": 0
+    "rejected_estimated": 1
    },
    {
     "year": 2024,
@@ -9132,11 +9276,11 @@
      },
      "acl": {
       "accepted": 0,
-      "rejected": 0,
+      "rejected": 2,
       "withdrawn": 0,
       "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
+      "not_accepted": 2,
+      "submitted": 2,
       "own_page": 0,
       "official": 0,
       "available": true,
@@ -9160,7 +9304,7 @@
     "accepted": 0,
     "own_page": 0,
     "official": 0,
-    "rejected_estimated": 0
+    "rejected_estimated": 2
    },
    {
     "year": 2025,
@@ -9567,6 +9711,78 @@
       "name_vi": "Đinh Viết Sang"
      }
     ]
+   },
+   {
+    "year": 2024,
+    "venue": "acl",
+    "venue_name": "ACL",
+    "title": "A Curious Case of Searching for the Correlation between Training Data and Adversarial Robustness of Transformer Textual Models",
+    "url": "https://andrew-dungle.github.io/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Dung D. Le, Dang Cao Cuong, Thai Le",
+    "match": "listed on their own page; not in the official list yet",
+    "note": "placed in Findings, which counts as rejected from the main track",
+    "reason": "",
+    "later": "",
+    "unofficial": true,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "dung-d-le",
+      "name": "Dung D. Le",
+      "name_vi": "Lê Duy Dũng"
+     }
+    ]
+   },
+   {
+    "year": 2024,
+    "venue": "acl",
+    "venue_name": "ACL",
+    "title": "Fooling the Textual Fooler via Randomizing Latent Representations",
+    "url": "https://mail-research.com/publications/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Khoa D. Doan",
+    "match": "listed on their own page; not in the official list yet",
+    "note": "placed in Findings, which counts as rejected from the main track",
+    "reason": "",
+    "later": "",
+    "unofficial": true,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "khoa-d-doan",
+      "name": "Khoa D. Doan",
+      "name_vi": "Đoàn Đăng Khoa"
+     }
+    ]
+   },
+   {
+    "year": 2023,
+    "venue": "acl",
+    "venue_name": "ACL",
+    "title": "Retrieving relevant context to align representations for cross-lingual event detection",
+    "url": "https://soict.hust.edu.vn/en/phd-ngo-van-linh.html",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Ngo Van Linh, Nguyen Chien, Thien Nguyen",
+    "match": "listed on their own page; not in the official list yet",
+    "note": "placed in Findings, which counts as rejected from the main track",
+    "reason": "",
+    "later": "",
+    "unofficial": true,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     }
+    ]
    }
   ],
   "image": "img/venues/acl.svg",
@@ -9645,11 +9861,11 @@
    },
    "emnlp": {
     "accepted": 3,
-    "rejected": 0,
+    "rejected": 1,
     "withdrawn": 0,
     "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 3,
+    "not_accepted": 1,
+    "submitted": 4,
     "own_page": 0,
     "official": 3
    }
@@ -10042,11 +10258,11 @@
      },
      "emnlp": {
       "accepted": 3,
-      "rejected": 0,
+      "rejected": 1,
       "withdrawn": 0,
       "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 3,
+      "not_accepted": 1,
+      "submitted": 4,
       "own_page": 0,
       "official": 3,
       "available": true,
@@ -10364,6 +10580,30 @@
    }
   ],
   "papers": [
+   {
+    "year": 2023,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "A Spectral Viewpoint on Continual Relation Extraction",
+    "url": "https://openreview.net/forum?id=PNpRxOhVut",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Huy Huu Nguyen, Chien Van Nguyen, Linh Ngo Van, Anh Tuan Luu, Thien Huu Nguyen",
+    "match": "OpenReview profile",
+    "note": "placed in Findings, which counts as rejected from the main track",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     }
+    ]
+   },
    {
     "year": 2023,
     "venue": "emnlp",

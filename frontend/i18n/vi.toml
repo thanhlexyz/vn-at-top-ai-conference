@@ -189,7 +189,7 @@ other = """Số bài bị từ chối bao gồm các bài bị từ chối sau p
 Tổng số bài bị từ chối được tính bằng toàn bộ số bài bị từ chối tại ICLR cộng với các bài bị từ chối mà tác giả tự công khai tại hội nghị khác (một số bài tại NeurIPS); do đó, đây là con số tối thiểu.
 Tổng số bài bị từ chối ước tính (màu cam) bổ sung phần ước tính cho các hội nghị không công khai bài bị từ chối, dựa trên kết quả ICLR của chính giảng viên, theo công thức: số lần nộp cho mỗi bài được chấp nhận = (số bài nộp ICLR + 1) / (số bài được nhận tại ICLR + 1). Đây là số liệu ước tính, không phải số liệu thống kê trực tiếp.
 Dấu &ndash; cho biết hồ sơ OpenReview của giảng viên chưa được thu thập.
-Số liệu chỉ bao gồm nhánh chính (main track); không tính workshop, Findings, bài position và nhánh Datasets &amp; Benchmarks của NeurIPS.
+Số liệu chỉ bao gồm nhánh chính (main track); không tính workshop, bài position và nhánh Datasets &amp; Benchmarks của NeurIPS. Bài được xếp vào Findings được tính là bị từ chối.
 Danh sách giảng viên được sắp xếp theo tổng số bài được chấp nhận."""
 [home_note_provisional]
 other = """Danh sách chính thức của {{ .Name }} {{ .Year }} được công bố trước khi hội nghị diễn ra và hiện chưa đầy đủ.
@@ -288,7 +288,7 @@ other = "Các bài nộp không được chấp nhận."
 [not_main_track]
 other = "Không thuộc nhánh chính"
 [not_main_track_note]
-other = "Các bài thuộc Findings, Datasets & Benchmarks, nhánh tạp chí và các nhánh khác; những bài này không được tính trong thống kê."
+other = "Các bài thuộc Datasets & Benchmarks, nhánh tạp chí và các nhánh khác; những bài này không được tính trong thống kê."
 [workshop_papers]
 other = "Bài workshop ({{ . }})"
 [workshop_note]

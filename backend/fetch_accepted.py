@@ -5,7 +5,8 @@ No login needed. Sources:
     iclr.cc / neurips.cc / icml.cc / cvpr.thecvf.com / iccv.thecvf.com   virtual-site JSON (authors with affiliations)
     openaccess.thecvf.com                             CVPR and ICCV paper lists (author names only)
     aclanthology.org                                  ACL and EMNLP main-conference volumes (author names only);
-                                                      Findings, industry and demo volumes are left out
+                                                      industry and demo volumes are left out; Findings
+                                                      papers count as rejected when a professor's OpenReview record shows them
 
 Downloads are kept in raw/ and reused; pass --refresh to download again (for example after a
 conference publishes its list). The result is work/accepted.jsonl.gz, one paper per line:

@@ -6,8 +6,9 @@ title: "Giới thiệu"
 - **Hội nghị:** ICLR, NeurIPS, ICML, CVPR, ICCV, ACL và EMNLP, từ năm 2020. Năm được ghi là năm diễn ra hội nghị; chẳng hạn, một bài tại ICLR 2026 được nộp vào mùa thu năm 2025. ICCV chỉ tổ chức vào các năm lẻ. EMNLP 2026 sẽ được tính khi các bài được đưa lên ACL Anthology.
 - **Đối tượng:** giảng viên, phó giáo sư, giáo sư và các chức danh tương đương (assistant, associate và full professor) là người Việt Nam, hiện công tác chính tại một trường đại học ở Việt Nam. Sinh viên, nghiên cứu viên tại doanh nghiệp hoặc viện nghiên cứu, và giảng viên người nước ngoài không thuộc phạm vi thống kê. Danh sách bao gồm cả giảng viên, bởi chức danh phó giáo sư và giáo sư tại Việt Nam do Hội đồng Giáo sư nhà nước xét công nhận với yêu cầu cao hơn so với nhiều quốc gia khác; vì vậy, nhiều giảng viên đang đảm nhận công việc tương đương với vị trí assistant hoặc associate professor ở nước ngoài. Danh sách được lựa chọn thủ công; một giảng viên chỉ xuất hiện trên trang sau khi đã được xác nhận và có ít nhất một bài nộp được thống kê tại bảy hội nghị, dù được chấp nhận hay không.
 - **Thời gian công tác tại Việt Nam:** bài báo được tính từ năm giảng viên về công tác tại một đơn vị ở Việt Nam. Các năm trước đó được thể hiện bằng màu xám trên trang của giảng viên.
-- **Chỉ nhánh chính:** không tính workshop, Findings (ACL, EMNLP, CVPR), nhánh position paper (ICML, NeurIPS), nhánh Datasets & Benchmarks của NeurIPS, nhánh tạp chí, bài blog của ICLR và Tiny Papers. Các bài này được liệt kê tại mục "Không thuộc nhánh chính" trên trang của giảng viên.
-- **Bị từ chối** bao gồm bài bị từ chối sau phản biện, bài rút và bài bị loại sơ bộ. **Đã nộp** là tổng số bài được chấp nhận và bài bị từ chối.
+- **Chỉ nhánh chính:** không tính workshop, nhánh position paper (ICML, NeurIPS), nhánh Datasets & Benchmarks của NeurIPS, nhánh tạp chí, bài blog của ICLR và Tiny Papers. Các bài này được liệt kê tại mục "Không thuộc nhánh chính" trên trang của giảng viên.
+- **Findings được tính là bị từ chối:** bài được xếp vào Findings (ACL, EMNLP, CVPR hay bất kỳ hội nghị nào) là bài không được nhận vào nhánh chính, nên được tính là bị từ chối ở hội nghị đó.
+- **Bị từ chối** bao gồm bài bị từ chối sau phản biện, bài rút, bài bị loại sơ bộ và bài được xếp vào Findings. **Đã nộp** là tổng số bài được chấp nhận và bài bị từ chối.
 
 ## Đồng tác giả và lĩnh vực
 

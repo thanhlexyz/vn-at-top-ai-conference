@@ -35,6 +35,8 @@ CONTENT = FRONTEND / "content"
 REVIEW_FIELDS = ["decision", "professor", "venue", "year", "title", "matched_name", "affiliation", "reason", "url",
                  "note"]
 SELF_REPORTED = BACKEND / "self_reported.csv"  # hand-kept: what professors list on their own pages
+# A paper placed in Findings was not accepted to the main track, at any conference, so it counts as a rejection
+FINDINGS_NOTE = "placed in Findings, which counts as rejected from the main track"
 # Tracks that are left out on purpose and listed under "Not counted". Workshop papers have a list of their own
 # on the professor's page (workshop_papers), also never counted.
 TRACK_REASON = {"datasets_benchmarks": "Datasets & Benchmarks track", "position": "position-paper track",
@@ -227,8 +229,7 @@ def person_records(person, acc, legacy, decisions, queue, warnings, skipped, own
             return
         venue, year, track = v
         status = classify_status(n.get("venue"), n.get("venueid"), n.get("invitations"), n.get("decision"))
-        if re.search(r"\bFindings\b", n.get("venue") or ""):   # "EMNLP 2023 Findings": accepted, but not main track
-            track, status = "findings", "accepted"
+        findings = bool(re.search(r"\bFindings\b", n.get("venue") or ""))
         if track == "workshop":   # listed for reference only: no official list to check, no outcome inferred
             if existing(venue, year, n["title"], workshop=True):
                 return
@@ -245,6 +246,8 @@ def person_records(person, acc, legacy, decisions, queue, warnings, skipped, own
                 warnings.append(f"{person['name']}: '{n['title'][:60]}' ({VENUE_NAME[venue]} {year}) is labelled "
                                 f"{status} on OpenReview but is in the accepted list; counted as accepted")
             status = "accepted"
+        elif findings:   # "CVPR 2026 Findings", "EMNLP 2023 Findings": not accepted to the main track
+            status, note = "rejected", FINDINGS_NOTE
         elif status == "accepted" and track == "main" and (venue, year) in acc.available:
             warnings.append(f"{person['name']}: '{n['title'][:60]}' ({VENUE_NAME[venue]} {year}) reads as accepted "
                             f"on OpenReview but was not found in the accepted list; check it by hand")
@@ -389,6 +392,8 @@ def apply_rules(person, recs):
     """(counted, excluded, workshop): counted papers, papers listed as not counted, and workshop papers."""
     counted, excluded, workshop = [], [], []
     for r in recs:
+        if r["track"] == "findings":
+            r = {**r, "track": "main", "status": "rejected", "note": FINDINGS_NOTE}
         if r["track"] == "workshop":
             workshop.append(r)
         elif r["track"] != "main":

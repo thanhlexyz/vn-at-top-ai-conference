@@ -191,7 +191,7 @@ other = """Rejected counts rejected, withdrawn and desk-rejected submissions. Th
 Total rejected adds every ICLR rejection to the rejections authors made public at other venues (some NeurIPS papers), so it is a lower bound.
 Total rejected, estimated (orange) adds an estimate for the venues that hide their rejections, from each professor's own ICLR record: submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1). It is an estimate, not a count.
 &ndash; means the OpenReview records of that professor have not been fetched.
-Main conference track only; workshops, Findings, position papers and the NeurIPS Datasets &amp; Benchmarks track are left out.
+Main conference track only; workshops, position papers and the NeurIPS Datasets &amp; Benchmarks track are left out. A paper placed in Findings counts as rejected.
 Professors are ordered by total accepted papers."""
 [home_note_provisional]
 other = """The official {{ .Name }} {{ .Year }} list was published before the conference and is not complete yet.
@@ -293,7 +293,7 @@ other = "Submissions that were not accepted."
 [not_main_track]
 other = "Not main track"
 [not_main_track_note]
-other = "Findings, Datasets & Benchmarks, journal and other tracks, which the site does not count."
+other = "Datasets & Benchmarks, journal and other tracks, which the site does not count."
 [workshop_papers]
 other = "Workshop papers ({{ . }})"
 [workshop_note]
