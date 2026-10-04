@@ -1,4 +1,4 @@
 ---
-title: "Cong Tran"
+title: "Trần Tiến Công"
 key: "cong-tran"
 ---
