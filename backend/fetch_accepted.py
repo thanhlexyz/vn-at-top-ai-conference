@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
-"""Download the public accepted-paper lists of ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP and normalize them.
+"""Download the public accepted-paper lists of the eleven venues and normalize them.
 
 No login needed. Sources:
     iclr.cc / neurips.cc / icml.cc / cvpr.thecvf.com / iccv.thecvf.com   virtual-site JSON (authors with affiliations)
     eccv.ecva.net                                     ECCV virtual-site JSON (2024 on, authors with affiliations)
     openaccess.thecvf.com                             CVPR and ICCV paper lists (author names only)
     ecva.net/papers.php                               ECCV paper lists (author names only)
-    aclanthology.org                                  ACL and EMNLP main-conference volumes (author names only);
+    aclanthology.org                                  ACL, EMNLP and NAACL main-conference volumes (author names only);
                                                       industry and demo volumes are left out; Findings
                                                       papers count as rejected when a professor's OpenReview record shows them
+    ojs.aaai.org                                      AAAI proceedings issues (author names only); the "AAAI Technical
+                                                      Track on ..." sections are the main track
+    ijcai.org/proceedings                             IJCAI proceedings (author names only); the "Main Track" section
+                                                      is the main track. IJCAI-PRICAI 2020 met in January 2021 and is 2020
 
 Downloads are kept in raw/ and reused; pass --refresh to download again (for example after a
 conference publishes its list). The result is work/accepted.jsonl.gz, one paper per line:
@@ -58,6 +62,8 @@ def fetch(url, name, refresh=False):
         try:
             with urllib.request.urlopen(req, timeout=180) as r:
                 data = r.read()
+            if data[:2] == b"\x1f\x8b":   # ojs.aaai.org sends gzip even when it is not asked for
+                data = gzip.decompress(data)
             break
         except urllib.error.HTTPError as e:
             if e.code in (403, 404, 410):
@@ -274,8 +280,86 @@ def parse_acl_bib(year, text, venue="acl"):
     return out
 
 
-def acl_volumes(year):
+def acl_volumes(year, venue="acl"):
+    if venue == "naacl":
+        return [] if not held("naacl", year) else [f"{year}.naacl-main"] if year < 2024 else [f"{year}.naacl-long", f"{year}.naacl-short"]
     return [f"{year}.acl-main"] if year == 2020 else [f"{year}.acl-long", f"{year}.acl-short"]
+
+
+# ---------------------------------------------------------------- AAAI and IJCAI proceedings
+
+AAAI = "https://ojs.aaai.org/index.php/AAAI"
+
+
+def text_of(fragment):
+    return unicodedata.normalize("NFC", re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", fragment)))).strip()
+
+
+def aaai_issues(refresh=False):
+    """{year: [(issue id, title)]} from the AAAI archive, newest first, down to AAAI-20 (Vol. 34)."""
+    out, page = collections.defaultdict(list), 1
+    while True:
+        data = fetch(f"{AAAI}/issue/archive/{page}", f"aaai/archive-{page}.html", refresh)
+        found = re.findall(r'<a class="title" href="[^"]*issue/view/(\d+)">(.*?)</a>', data.decode("utf-8", "replace"), re.S) if data else []
+        years = []
+        for issue, title in found:
+            title = text_of(title)
+            m = re.search(r"\bAAAI-(\d\d)\b", title)
+            if m:
+                years.append(2000 + int(m.group(1)))
+                if years[-1] >= YEARS[0]:
+                    out[years[-1]].append((issue, title))
+        if not found or (years and min(years) < YEARS[0]):
+            return out
+        page += 1
+
+
+def aaai_track(section):
+    """'main' for an "AAAI Technical Track on ..." section; otherwise the section's own name, e.g. a special track.
+    AAAI-24 and AAAI-25 print three special tracks under technical-track names; they stay special tracks."""
+    if re.search(r"Safe, Robust and Responsible|AI for Social Impact|AI Alignment", section):
+        return section
+    return "main" if re.match(r"AAAI Technical Track\b", section) else section
+
+
+def parse_aaai(year, page):
+    out = []
+    for part in re.split(r'<div class="section">', page)[1:]:
+        h = re.search(r"<h2>(.*?)</h2>", part, re.S)
+        track = aaai_track(text_of(h.group(1))) if h else "other"
+        for art in re.findall(r'<div class="obj_article_summary">(.*?)</ul>\s*</div>', part, re.S):
+            t = re.search(r'<h3 class="title">\s*<a[^>]*href="([^"]+)"[^>]*>(.*?)</a>', art, re.S)
+            a = re.search(r'<div class="authors">(.*?)</div>', art, re.S)
+            if not t:
+                continue
+            pdf = re.search(r'class="obj_galley_link pdf" href="([^"]+)"', art)
+            names = [n.strip() for n in text_of(a.group(1)).split(",") if n.strip()] if a else []
+            out.append({"venue": "aaai", "year": year, "track": track, "title": text_of(t.group(2)),
+                        "authors": [{"name": n, "aff": ""} for n in names], "url": t.group(1),
+                        "pdf": pdf.group(1).replace("/article/view/", "/article/download/") if pdf else "",
+                        "forum": "", "pres": "", "topic": "", "source": "ojs.aaai.org"})
+    return out
+
+
+def parse_ijcai(year, page):
+    out = []
+    for part in re.split(r'<div class="section_title">', page)[1:]:
+        h = re.match(r"\s*<h3>(.*?)</h3>", part, re.S)
+        section = text_of(h.group(1)) if h else ""
+        track = "main" if section.lower().startswith("main track") else section or "other"
+        sub = ""
+        for m in re.finditer(r'<div class="subsection_title">(.*?)</div>|<div id="paper\d+" class="paper_wrapper">'
+                             r'<div class="title">(.*?)</div><div class="authors">(.*?)</div>'
+                             r'<div class="details">.*?href="([^"]+\.pdf)".*?href="(/proceedings/[^"]+)"', part, re.S):
+            if m.group(1) is not None:
+                sub = text_of(m.group(1))
+                continue
+            out.append({"venue": "ijcai", "year": year, "track": track, "title": text_of(m.group(2)),
+                        "authors": [{"name": n.strip(), "aff": ""} for n in text_of(m.group(3)).split(",") if n.strip()],
+                        "url": "https://www.ijcai.org" + m.group(5),
+                        "pdf": f"https://www.ijcai.org/proceedings/{year}/{m.group(4)}",
+                        "forum": "", "pres": "", "topic": sub, "source": "ijcai.org"})
+    return out
 
 
 # ---------------------------------------------------------------- main
@@ -292,6 +376,7 @@ def collect(years, refresh=False):
                          "other_tracks": dict(other), "provisional": provisional})
         papers.extend(rows)
 
+    issues = aaai_issues(refresh)
     for year in years:
         for venue in ("iclr", "neurips", "icml"):
             data = fetch(f"{VIRTUAL_SITE[venue]}/static/virtual/data/{venue}-{year}-orals-posters.json",
@@ -343,6 +428,22 @@ def collect(years, refresh=False):
         bib = fetch(f"https://aclanthology.org/volumes/{year}.emnlp-main.bib", f"acl/{year}.emnlp-main.bib", refresh)
         rows = parse_acl_bib(year, bib.decode("utf-8", "replace"), "emnlp") if bib else []
         add("emnlp", year, rows, ["aclanthology.org"] if rows else [])
+
+        rows = []
+        for vol in acl_volumes(year, "naacl"):
+            bib = fetch(f"https://aclanthology.org/volumes/{vol}.bib", f"acl/{vol}.bib", refresh)
+            rows += parse_acl_bib(year, bib.decode("utf-8", "replace"), "naacl") if bib else []
+        add("naacl", year, rows, ["aclanthology.org"] if rows else [])
+
+        rows = []
+        for issue, _ in issues.get(year, []):
+            page = fetch(f"{AAAI}/issue/view/{issue}", f"aaai/issue-{issue}.html", refresh and year >= LAST_YEAR)
+            rows += parse_aaai(year, page.decode("utf-8", "replace")) if page else []
+        add("aaai", year, rows, ["ojs.aaai.org"] if rows else [])
+
+        page = fetch(f"https://www.ijcai.org/proceedings/{year}/", f"ijcai/{year}.html", refresh)
+        rows = parse_ijcai(year, page.decode("utf-8", "replace")) if page else []
+        add("ijcai", year, rows, ["ijcai.org"] if rows else [])
     return papers, coverage
 
 

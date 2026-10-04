@@ -1,7 +1,8 @@
-"""Affiliations read from the PDF of a paper, for accepted papers whose official list prints none (ACL, EMNLP, most
-CVPR years).
+"""Affiliations read from the PDF of a paper, for accepted papers whose official list prints none (ACL, EMNLP, NAACL,
+AAAI, IJCAI, most CVPR years).
 
-For every accepted paper of a tracked person that has no affiliation in its list, this downloads the PDF (cached in
+For every accepted paper of a tracked person that has no affiliation in its list, and every name match waiting for a
+decision in review.csv (the affiliation on the paper usually settles it), this downloads the PDF (cached in
 raw/pdf/), writes the title page to work/pdf_headers/, and adds one row per author to affiliations.csv with a guess
 read from numbered markers ("Name1,2 ... 1University"). Title pages differ too much for the guess to be trusted, so
 each row is checked against the title page by hand and marked checked=yes; build_site_data.py uses checked rows only.
@@ -24,7 +25,9 @@ CSV = BACKEND / "affiliations.csv"
 FIELDS = ["venue", "year", "title", "position", "author", "affiliation", "checked"]
 
 
-def pdf_url(url):
+def pdf_url(url, pdf=""):
+    if pdf:                      # AAAI and IJCAI lists carry the PDF link
+        return pdf
     if "thecvf.com" in url:      # .../html/X_paper.html -> .../papers/X_paper.pdf
         return url.replace("/html/", "/papers/").replace(".html", ".pdf")
     if "aclanthology.org" in url:
@@ -63,16 +66,21 @@ def main():
     for person in json.load(open(FRONTEND / "data" / "professors.json")):
         for e in person["accepted_papers"]:
             p = papers.get((e["venue"], e["year"], norm_title(e["title"])))
-            if p and not e.get("unofficial") and not any(a["aff"] for a in p["authors"]) and pdf_url(p["url"]):
+            if p and not e.get("unofficial") and not any(a["aff"] for a in p["authors"]) and pdf_url(p["url"], p.get("pdf")):
                 wanted[(p["venue"], p["year"], norm_title(p["title"]))] = p
+    for r in read_csv(BACKEND / "review.csv"):
+        p = papers.get((r["venue"], int(r["year"]), norm_title(r["title"])))
+        if not r["decision"].strip() and p and not any(a["aff"] for a in p["authors"]) and pdf_url(p["url"], p.get("pdf")):
+            wanted[(p["venue"], p["year"], norm_title(p["title"]))] = p
     rows = read_csv(CSV) if CSV.exists() else []
     done = {(r["venue"], int(r["year"]), norm_title(r["title"])) for r in rows}
     PDF_DIR.mkdir(parents=True, exist_ok=True)
     HEADERS.mkdir(parents=True, exist_ok=True)
     added = 0
     for key, p in sorted(wanted.items()):
-        url = pdf_url(p["url"])
-        path = PDF_DIR / re.sub(r"\W+", "_", url.split("/")[-1])
+        url = pdf_url(p["url"], p.get("pdf"))
+        name = url.split("/")[-1] if p["venue"] not in ("aaai", "ijcai") else f"{p['venue']}-{p['year']}-" + "-".join(url.split("/")[-2:])
+        path = PDF_DIR / re.sub(r"\W+", "_", name)
         if not path.exists():
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
             path.write_bytes(urllib.request.urlopen(req, timeout=120).read())

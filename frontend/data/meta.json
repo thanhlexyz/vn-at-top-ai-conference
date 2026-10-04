@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04 17:14 UTC",
+ "generated": "2026-10-04 17:46 UTC",
  "generated_date": "2026-10-04",
  "first_year": 2020,
  "last_year": 2026,
@@ -60,6 +60,24 @@
    "name": "EMNLP",
    "full_name": "Conference on Empirical Methods in Natural Language Processing",
    "rejections": "none"
+  },
+  {
+   "key": "naacl",
+   "name": "NAACL",
+   "full_name": "Annual Conference of the Nations of the Americas Chapter of the ACL",
+   "rejections": "none"
+  },
+  {
+   "key": "aaai",
+   "name": "AAAI",
+   "full_name": "AAAI Conference on Artificial Intelligence",
+   "rejections": "none"
+  },
+  {
+   "key": "ijcai",
+   "name": "IJCAI",
+   "full_name": "International Joint Conference on Artificial Intelligence",
+   "rejections": "none"
   }
  ],
  "venue_keys": [
@@ -70,12 +88,27 @@
   "iccv",
   "eccv",
   "acl",
-  "emnlp"
+  "emnlp",
+  "naacl",
+  "aaai",
+  "ijcai"
  ],
  "venue_groups": [
   {
+   "key": "ai",
+   "name": "AI",
+   "venues": [
+    "aaai",
+    "ijcai"
+   ],
+   "names": [
+    "AAAI",
+    "IJCAI"
+   ]
+  },
+  {
    "key": "ml",
-   "name": "AI/ML",
+   "name": "ML",
    "venues": [
     "iclr",
     "neurips",
@@ -106,11 +139,13 @@
    "name": "NLP",
    "venues": [
     "acl",
-    "emnlp"
+    "emnlp",
+    "naacl"
    ],
    "names": [
     "ACL",
-    "EMNLP"
+    "EMNLP",
+    "NAACL"
    ]
   }
  ],
@@ -202,6 +237,53 @@
    "provisional": false
   },
   {
+   "venue": "naacl",
+   "year": 2020,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "aaai",
+   "year": 2020,
+   "papers": 1585,
+   "sources": [
+    "ojs.aaai.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {
+    "AAAI Special Technical Track: AI for Social Impact": 25,
+    "IAAI Technical Track: Deployed Papers": 11,
+    "IAAI Technical Track: Emerging Papers": 27,
+    "IAAI Technical: Challenge Papers": 1,
+    "Doctoral Consortium Track": 17,
+    "Student Abstract Track": 129
+   },
+   "provisional": false
+  },
+  {
+   "venue": "ijcai",
+   "year": 2020,
+   "papers": 592,
+   "sources": [
+    "ijcai.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {
+    "Special track on AI for CompSust and Human well-being": 19,
+    "Special Track on AI in FinTech": 35,
+    "Sister Conferences Best Papers": 21,
+    "Survey track": 28,
+    "Journal track": 29,
+    "Early Career": 7,
+    "Doctoral Consortium": 17,
+    "Demos": 31
+   },
+   "provisional": false
+  },
+  {
    "venue": "iclr",
    "year": 2021,
    "papers": 860,
@@ -285,6 +367,59 @@
    ],
    "with_affiliation": 0,
    "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "naacl",
+   "year": 2021,
+   "papers": 477,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "aaai",
+   "year": 2021,
+   "papers": 1654,
+   "sources": [
+    "ojs.aaai.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {
+    "AAAI Special Track on AI for Social Impact": 40,
+    "Senior Member Presentation: Blue Sky Papers": 5,
+    "Senior Member Presentation: Summary Papers": 2,
+    "IAAI Technical Track on Highly Innovative Applications of AI": 14,
+    "IAAI Technical Track on Emerging Applications of AI": 27,
+    "IAAI Technical Track on Innovative Tools for Enabling AI Application": 2,
+    "IAAI Technical Track on AI Best Practices, Challenge Problems, Training AI Users": 3,
+    "EAAI Symposium: Full Papers": 30,
+    "EAAI Symposium: Model AI Assignment Abstracts": 1,
+    "The Twenty-Sixth AAAI/SIGAI Doctoral Consortium": 18,
+    "AAAI Student Abstract and Poster Program": 105,
+    "AAAI Undergraduate Consortium": 14,
+    "AAAI Demonstration Track": 46
+   },
+   "provisional": false
+  },
+  {
+   "venue": "ijcai",
+   "year": 2021,
+   "papers": 586,
+   "sources": [
+    "ijcai.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {
+    "Survey Track": 53,
+    "Sister Conferences Best Papers": 29,
+    "Doctoral Consortium": 29,
+    "Early Career": 9,
+    "Demo Track": 17
+   },
    "provisional": false
   },
   {
@@ -375,6 +510,63 @@
    ],
    "with_affiliation": 0,
    "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "naacl",
+   "year": 2022,
+   "papers": 442,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "aaai",
+   "year": 2022,
+   "papers": 1319,
+   "sources": [
+    "ojs.aaai.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {
+    "AAAI Special Track on AI for Social Impact": 50,
+    "Senior Member Presentation: Blue Sky Papers": 10,
+    "Senior Member Presentation: Summary Papers": 6,
+    "IAAI Technical Track on Highly Innovative Applications of AI": 8,
+    "IAAI Technical Track on Emerging Applications of AI": 31,
+    "IAAI Technical Track on Innovative Tools for Enabling AI Application": 3,
+    "IAAI Technical Track on AI Integration": 1,
+    "EAAI Symposium: Full Papers": 22,
+    "EAAI Symposium: Lightning Talk": 3,
+    "EAAI Symposium: Model AI Assignment Abstracts": 1,
+    "The Twenty - Seventh AAAI / SIGAI Doctoral Consortium": 16,
+    "AAAI Student Abstract and Poster Program": 111,
+    "AAAI Undergraduate Consortium": 13,
+    "AAAI Demonstration Track": 30
+   },
+   "provisional": false
+  },
+  {
+   "venue": "ijcai",
+   "year": 2022,
+   "papers": 678,
+   "sources": [
+    "ijcai.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {
+    "Special Track on AI, the Arts and Creativity": 17,
+    "Special Track on AI for Good": 33,
+    "Sister Conferences Best Papers": 26,
+    "Survey Track": 38,
+    "Journal Track": 19,
+    "Early Career": 8,
+    "Doctoral Consortium": 25,
+    "Demo Track": 18
+   },
    "provisional": false
   },
   {
@@ -471,6 +663,68 @@
    "provisional": false
   },
   {
+   "venue": "naacl",
+   "year": 2023,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "aaai",
+   "year": 2023,
+   "papers": 1578,
+   "sources": [
+    "ojs.aaai.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {
+    "AAAI Special Track on AI for Social Impact": 66,
+    "AAAI Special Track on Safe and Robust AI": 76,
+    "Senior Member Presentation: Blue Sky Papers": 4,
+    "Senior Member Presentation: Bridge Papers": 3,
+    "Senior Member Presentation: Summary Papers": 2,
+    "New Faculty Highlights": 35,
+    "IAAI Technical Track on deployed Highly Innovative Applications of AI": 18,
+    "IAAI Technical Track on emerging Applications of AI": 19,
+    "IAAI Technical Track on Innovative Tools for Enabling AI Application": 2,
+    "IAAI Technical Track on nnovative Inter-disciplinary AI Integration": 2,
+    "EAAI Symposium: Main Track": 12,
+    "EAAI Symposium: AI for Education": 10,
+    "EAAI Symposium: Resources for Teaching AI in K-12": 10,
+    "EAAI Symposium: Human-Aware AI in Sound and Music": 6,
+    "EAAI Symposium: Model AI Assignment Abstracts": 1,
+    "AAAI Doctoral Consortium Track": 20,
+    "AAAI Student Abstract and Poster Program": 123,
+    "Demonstrations": 34,
+    "Errata": 2
+   },
+   "provisional": false
+  },
+  {
+   "venue": "ijcai",
+   "year": 2023,
+   "papers": 639,
+   "sources": [
+    "ijcai.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {
+    "AI and Arts": 13,
+    "AI for Good": 51,
+    "AI for Good - Projects": 8,
+    "Sister Conferences Best Papers": 20,
+    "Survey Track": 33,
+    "Journal Track": 34,
+    "Early Career": 10,
+    "Doctoral Consortium": 18,
+    "Demo Track": 20,
+    "Late Papers": 5
+   },
+   "provisional": false
+  },
+  {
    "venue": "iclr",
    "year": 2024,
    "papers": 2260,
@@ -562,6 +816,72 @@
    ],
    "with_affiliation": 0,
    "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "naacl",
+   "year": 2024,
+   "papers": 562,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "aaai",
+   "year": 2024,
+   "papers": 2315,
+   "sources": [
+    "ojs.aaai.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {
+    "Intelligent Robots (ROB)": 16,
+    "AAAI Technical Track on Safe, Robust and Responsible AI Track": 109,
+    "AAAI Technical Track on AI for Social Impact Track": 77,
+    "Senior Member Presentation: Blue Sky Papers": 6,
+    "Senior Member Presentation: Bridge Sky Papers": 1,
+    "Senior Member Presentation: Summary Sky Papers": 3,
+    "New Faculty Highlights": 29,
+    "AAAI Journal Track": 25,
+    "IAAI Technical Track on Deployed Highly Innovative Applications of AI": 13,
+    "IAAI Technical Track on Emerging Applications of AI": 22,
+    "IAAI Technical Track on Deployed Innovative Tools for Enabling AI Applications": 3,
+    "IAAI Technical Track on Innovative Inter-disciplinary AI Integration": 2,
+    "IAAI Technical Track on AI Incidents and Best Practices": 4,
+    "EAAI Symposium: Main track": 12,
+    "EAAI Symposium: AI for Education": 11,
+    "EAAI Symposium: Resources for Teaching AI in K-12": 8,
+    "EAAI: Mentored Undergraduate Research Challenge: AI for Accessibility in Comm": 5,
+    "EAAI Symposium: Model AI Assignment Abstracts": 1,
+    "AAAI Doctoral Consortium Track": 30,
+    "AAAI Student Abstract and Poster Program": 123,
+    "AAAI Undergraduate Consortium": 20,
+    "AAAI Demonstration Track": 30
+   },
+   "provisional": false
+  },
+  {
+   "venue": "ijcai",
+   "year": 2024,
+   "papers": 790,
+   "sources": [
+    "ijcai.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {
+    "AI for Good": 49,
+    "AI, Arts & Creativity": 26,
+    "Human-Centred AI": 11,
+    "Survey Track": 48,
+    "Sister Conferences Best Papers": 19,
+    "Journal Track": 15,
+    "Doctoral Consortium": 17,
+    "Early Career": 12,
+    "Demo Track": 61
+   },
    "provisional": false
   },
   {
@@ -661,6 +981,69 @@
    "provisional": false
   },
   {
+   "venue": "naacl",
+   "year": 2025,
+   "papers": 718,
+   "sources": [
+    "aclanthology.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "aaai",
+   "year": 2025,
+   "papers": 3028,
+   "sources": [
+    "ojs.aaai.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {
+    "AAAI Technical Track on AI Alignment": 66,
+    "AAAI Technical Track on AI for Social Impact Track": 88,
+    "Senior Member Presentation: Blue Sky Papers": 7,
+    "Senior Member Presentation: Bridge Sky Papers": 3,
+    "Senior Member Presentation: Summary Sky Papers": 5,
+    "New Faculty Highlights": 35,
+    "AAAI Journal Track": 7,
+    "IAAI Technical Track on Deployed Highly Innovative Applications of AI": 9,
+    "IAAI Technical Track on Emerging Applications of AI": 9,
+    "IAAI Technical Track on Deployed Innovative Tools for Enabling AI Applications": 3,
+    "IAAI Technical Track on Innovative Inter-disciplinary AI Integration": 2,
+    "IAAI Technical Track on AI Incidents and Best Practices": 3,
+    "EAAI Symposium: Main Track": 17,
+    "EAAI Symposium: Resources for Teaching AI in K-12": 17,
+    "EAAI Symposium: Model AI Assignments": 1,
+    "AAAI Doctoral Consortium Track": 39,
+    "AAAI Student Abstract and Poster Program": 87,
+    "AAAI Undergraduate Consortium": 19,
+    "AAAI Demonstration Track": 41
+   },
+   "provisional": false
+  },
+  {
+   "venue": "ijcai",
+   "year": 2025,
+   "papers": 1014,
+   "sources": [
+    "ijcai.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {
+    "AI4Tech: AI Enabling Technologies": 42,
+    "AI and Social Good": 58,
+    "AI, Arts & Creativity": 25,
+    "Human-Centred AI": 11,
+    "Survey Track": 52,
+    "Sister Conferences Best Papers": 19,
+    "Journal Track": 14,
+    "Doctoral Consortium": 10,
+    "Demo Track": 35
+   },
+   "provisional": false
+  },
+  {
    "venue": "iclr",
    "year": 2026,
    "papers": 5353,
@@ -754,13 +1137,75 @@
    "with_affiliation": 0,
    "other_tracks": {},
    "provisional": false
+  },
+  {
+   "venue": "naacl",
+   "year": 2026,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "aaai",
+   "year": 2026,
+   "papers": 4149,
+   "sources": [
+    "ojs.aaai.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {
+    "AAAI Special Track on AI Alignment": 106,
+    "AAAI Special Track on AI for Social Impact I": 88,
+    "AAAI Special Track on AI for Social Impact II": 74,
+    "Senior Member Presentation": 19,
+    "New Faculty Highlights": 29,
+    "AAAI Journal Track": 58,
+    "IAAI Technical Track on Deployed Highly Innovative Applications of AI": 29,
+    "IAAI Technical Track on Emerging Applications of AI": 41,
+    "IAAI Technical Track on Tools and Methodologies for Moving Faster and Safer": 4,
+    "EAAI Symposium: Main track": 23,
+    "EAAI Symposium: Resources for Teaching AI in K-12": 9,
+    "EAAI Symposium: AI for Education": 15,
+    "EAAI Symposium: Model AI Assignments": 1,
+    "AAAI Emerging Trends in AI": 10,
+    "AAAI Doctoral Consortium Track": 40,
+    "AAAI Student Abstract and Poster Program": 132,
+    "AAAI Undergraduate Consortium": 22,
+    "AAAI Demonstration Track": 71
+   },
+   "provisional": false
+  },
+  {
+   "venue": "ijcai",
+   "year": 2026,
+   "papers": 693,
+   "sources": [
+    "ijcai.org"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {
+    "AI4Tech: AI Enabling Technologies": 24,
+    "AI and Health": 45,
+    "AI and Social Good": 51,
+    "AI and Robotics": 10,
+    "Human-Centred AI": 9,
+    "Survey Track": 42,
+    "Early Career Spotlight": 11,
+    "Sister Conferences Best Papers": 17,
+    "Journal Track": 6,
+    "Doctoral Consortium": 17,
+    "Demo Track": 47
+   },
+   "provisional": false
   }
  ],
  "professors": 61,
- "papers": 212,
- "accepted": 127,
+ "papers": 246,
+ "accepted": 161,
  "preliminary": true,
- "pending_review": 0,
+ "pending_review": 2,
  "provisional": [
   {
    "venue": "neurips",

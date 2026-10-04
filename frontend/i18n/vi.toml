@@ -16,7 +16,7 @@ other = "Ngôn ngữ"
 
 # ---------------------------------------------------------------- shared words
 [venues_five]
-other = "tám hội nghị"
+other = "mười một hội nghị"
 [none]
 other = "Chưa có."
 [titles_hidden]
@@ -233,7 +233,7 @@ other = "Công tác tại Việt Nam từ năm {{ . }}"
 [prof_homepage]
 other = "Trang cá nhân"
 [prof_accepted_summary]
-other = "Từ năm {{ .Year }}, giảng viên có {{ .Count }} bài được chấp nhận tại tám hội nghị"
+other = "Từ năm {{ .Year }}, giảng viên có {{ .Count }} bài được chấp nhận tại mười một hội nghị"
 [prof_own_page_part]
 other = ", trong đó {{ .Official }} bài có trong danh sách chính thức và {{ .Own }} bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm (thể hiện dưới dạng +{{ .Own }} và được gắn nhãn \"chưa chính thức\" bên dưới)"
 [prof_iclr_summary]
@@ -333,7 +333,7 @@ other = "Bài có tác giả đầu thuộc trường"
 [inst_list_first_note]
 other = "Các bài được chấp nhận có tác giả đứng đầu ghi đơn vị công tác là trường."
 [inst_summary]
-other = "Trường có {{ .Profs }} giảng viên trong danh sách, với {{ .Accepted }} bài được chấp nhận tại tám hội nghị"
+other = "Trường có {{ .Profs }} giảng viên trong danh sách, với {{ .Accepted }} bài được chấp nhận tại mười một hội nghị"
 [inst_summary_own]
 other = ", trong đó {{ . }} bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm (chưa chính thức)"
 [inst_iclr]
@@ -444,7 +444,7 @@ other = "LinkedIn"
 other = "ResearchGate"
 
 [scholar_note]
-other = "Số liệu được ghi lại từ <a href=\"{{ .URL }}\">hồ sơ Google Scholar</a> vào ngày {{ .Date }} và không được cập nhật tự động. Google Scholar thống kê toàn bộ công bố, không chỉ riêng tám hội nghị."
+other = "Số liệu được ghi lại từ <a href=\"{{ .URL }}\">hồ sơ Google Scholar</a> vào ngày {{ .Date }} và không được cập nhật tự động. Google Scholar thống kê toàn bộ công bố, không chỉ riêng mười một hội nghị."
 
 [scholar_all]
 other = "Tất cả"
@@ -468,10 +468,10 @@ other = "Số trích dẫn theo năm, theo Google Scholar tại ngày ghi nhận
 other = "Theo hồ sơ Google Scholar của từng giảng viên, ghi nhận ngày 2026-10-02; Google Scholar thống kê toàn bộ công bố"
 
 [seo_professor]
-other = "{{ .Name }} ({{ .Inst }}): {{ .Accepted }} bài được chấp nhận tại ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL và EMNLP; {{ .Submitted }} bài nộp ICLR, {{ .Rejected }} bài bị từ chối."
+other = "{{ .Name }} ({{ .Inst }}): {{ .Accepted }} bài được chấp nhận tại AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP và NAACL; {{ .Submitted }} bài nộp ICLR, {{ .Rejected }} bài bị từ chối."
 
 [seo_institution]
-other = "{{ .Name }}: {{ .Profs }} giảng viên, {{ .Accepted }} bài được chấp nhận tại ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL và EMNLP; {{ .Submitted }} bài nộp ICLR, {{ .Rejected }} bài bị từ chối."
+other = "{{ .Name }}: {{ .Profs }} giảng viên, {{ .Accepted }} bài được chấp nhận tại AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP và NAACL; {{ .Submitted }} bài nộp ICLR, {{ .Rejected }} bài bị từ chối."
 
 [seo_venue]
 other = "{{ .Name }}: số bài nộp, được chấp nhận và bị từ chối của giảng viên tại Việt Nam từ năm 2020; {{ .Accepted }} bài được chấp nhận."
@@ -564,4 +564,4 @@ other = "Chưa có bài được nhận nên chỉ số này không so sánh đ�
 other = "hội nghị công bố, số bài được nhận / số bài nộp = {{ . }}"
 
 [venue_rate_finding]
-other = "ICLR là hội nghị duy nhất công khai toàn bộ bài nộp. Tại đây, tỉ lệ được nhận của các giảng viên trong danh sách là {{ .Ours }}%, chỉ bằng khoảng một nửa tỉ lệ chung {{ .Theirs }}% do ICLR công bố. Ngược lại, ở bảy hội nghị còn lại, tỉ lệ ước tính trên trang này ({{ .OursLo }}–{{ .OursHi }}%) tương đương hoặc cao hơn tỉ lệ do các hội nghị công bố ({{ .TheirsLo }}–{{ .TheirsHi }}%). Có hai khả năng: một là các giảng viên nộp bài ở các hội nghị khác giỏi hơn ở ICLR; hai là trang này đang thống kê thiếu rất nhiều, không chỉ số bài bị từ chối mà cả tổng số bài đã nộp."
+other = "ICLR là hội nghị duy nhất công khai toàn bộ bài nộp. Tại đây, tỉ lệ được nhận của các giảng viên trong danh sách là {{ .Ours }}%, chỉ bằng khoảng một nửa tỉ lệ chung {{ .Theirs }}% do ICLR công bố. Ngược lại, ở mười hội nghị còn lại, tỉ lệ ước tính trên trang này ({{ .OursLo }}–{{ .OursHi }}%) tương đương hoặc cao hơn tỉ lệ do các hội nghị công bố ({{ .TheirsLo }}–{{ .TheirsHi }}%). Có hai khả năng: một là các giảng viên nộp bài ở các hội nghị khác giỏi hơn ở ICLR; hai là trang này đang thống kê thiếu rất nhiều, không chỉ số bài bị từ chối mà cả tổng số bài đã nộp."

@@ -6,7 +6,7 @@ title = 'Việt Nam tại các hội nghị AI hàng đầu'
 disableKinds = ['taxonomy', 'term', 'rss']
 
 [params]
-  description = 'Papers submitted, accepted and rejected at ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP by professors and lecturers in Vietnam since 2020.'
+  description = 'Papers submitted, accepted and rejected at AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP and NAACL by professors and lecturers in Vietnam since 2020.'
   # Titles of rejected and withdrawn papers. Set to false to show the counts only.
   showNonAcceptedTitles = true
   # A local build asks search engines not to index it. publish.toml turns this off for the public site.
@@ -22,14 +22,14 @@ disableKinds = ['taxonomy', 'term', 'rss']
     weight = 2
     title = 'Vietnam at top AI conferences'
     [languages.en.params]
-      description = 'Papers submitted, accepted and rejected at ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP by professors and lecturers in Vietnam since 2020.'
+      description = 'Papers submitted, accepted and rejected at AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP and NAACL by professors and lecturers in Vietnam since 2020.'
   [languages.vi]
     label = 'Tiếng Việt'
     locale = 'vi-vn'
     weight = 1
     title = 'Việt Nam tại các hội nghị AI hàng đầu'
     [languages.vi.params]
-      description = 'Số bài nộp, được nhận và bị từ chối ở ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL và EMNLP của giảng viên tại Việt Nam từ năm 2020.'
+      description = 'Số bài nộp, được nhận và bị từ chối ở AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP và NAACL của giảng viên tại Việt Nam từ năm 2020.'
 
 [[languages.en.menus.main]]
   name = 'Professors'

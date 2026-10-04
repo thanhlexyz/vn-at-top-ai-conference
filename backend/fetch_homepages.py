@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Save the professors' own pages and pull out the lines that mention one of the eight venues.
+"""Save the professors' own pages and pull out the lines that mention one of the eleven venues.
 
 The pages are the ones in the `pages` column of roster.csv (several addresses separated by `;`).
 Each is kept in raw/homepages/ and its venue lines go to work/homepage_hits.txt, grouped by professor.
@@ -28,7 +28,8 @@ from common import RAW, WORK, load_roster, slugify
 USER_AGENT = "vn-conference-stats/1.0 (personal research script)"
 VENUE = re.compile(r"NeurIPS|NIPS\b|Neural Information Processing|ICLR|Learning Representations|ICML|"
                    r"International Conference on Machine Learning|CVPR|Computer Vision and Pattern Recognition|"
-                   r"\bACL\b|Association for Computational Linguistics")
+                   r"\bACL\b|Association for Computational Linguistics|EMNLP|Empirical Methods in Natural Language|"
+                   r"NAACL|ICCV|ECCV|Computer Vision|AAAI|IJCAI|Joint Conference on Artificial Intelligence")
 YEAR = re.compile(r"20(2[0-9])|[’'](2[0-9])\b")
 
 

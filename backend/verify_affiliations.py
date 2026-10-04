@@ -159,6 +159,8 @@ def main():
                 elif p["venue"] == "eccv":
                     url = ecva_pdf(p["title"])
                     fetch(url, path) if url else None
+                elif p.get("pdf"):   # AAAI and IJCAI lists carry the PDF link
+                    fetch(p["pdf"], path)
             except Exception as exc:
                 status = f"no PDF ({str(exc)[:60]})"
         if not path.exists():

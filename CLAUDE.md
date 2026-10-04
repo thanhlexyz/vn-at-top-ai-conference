@@ -1,7 +1,7 @@
 # CLAUDE.md: how to operate and maintain this site
 
 You are maintaining a public, bilingual (Vietnamese at `/`, English at `/en/`) Hugo site that counts papers of
-lecturers and professors in Vietnam at eight AI conferences. The maintainer gives short requests in plain words; this
+lecturers and professors in Vietnam at eleven AI conferences, grouped as CSRankings does. The maintainer gives short requests in plain words; this
 file tells you how to carry them out. Read it before changing anything.
 
 Live site: <https://thanhlexyz.github.io/vn-at-top-ai-conference/>
@@ -56,7 +56,15 @@ The local-only pages (Candidates, Not tracked) are drafts, but their data (`cand
 
 ## Counting rules (the About page states them; keep both in sync)
 
-- Venues: ICLR, NeurIPS, ICML, CVPR, ICCV (odd years), ECCV (even years), ACL, EMNLP; years 2020 on, conference years.
+- Venues, grouped as CSRankings does (`VENUE_GROUPS` in `common.py`): AI (AAAI, IJCAI), ML (ICLR, NeurIPS, ICML),
+  CV (CVPR, ICCV in odd years, ECCV in even years), NLP (ACL, EMNLP, NAACL; NAACL not held in 2020, 2023, 2026:
+  `NAACL_NOT_HELD`); years 2020 on, conference years (IJCAI-PRICAI 2020 met in January 2021 and is 2020). AAAI main
+  track = the "AAAI Technical Track on ..." sections of ojs.aaai.org issues; IJCAI = the "Main Track" section of
+  ijcai.org/proceedings; NAACL = the long/short (or main) volumes, not Findings. These three lists, like ACL and EMNLP,
+  print no affiliations: their name matches go through `fetch_affiliations.py` (which also reads the matches waiting
+  in `review.csv`) before the institution rule can apply. AAAI and IJCAI publish no rejections; NAACL Findings come
+  from OpenReview records (`_OR_GROUP` in `common.py` knows NAACL since 2026-10-05; records fetched before then were
+  filtered without it, so a full `make openreview` is needed to pick them up).
 - People: Vietnamese lecturers, assistant/associate professors, professors whose main post is at a university in
   Vietnam. Not students, researchers or industry staff. To join, a person needs at least one counted submission:
   an accepted paper, an ICLR record (rejected/withdrawn/desk-rejected counts) or a Findings paper. Workshop papers

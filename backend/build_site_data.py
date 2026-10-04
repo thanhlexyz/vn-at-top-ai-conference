@@ -4,7 +4,7 @@
 Inputs
     roster.csv                    who is on the site (hand-edited; only rows with approved = yes count)
     review.csv                    uncertain matches; this script appends rows, you fill in `decision`
-    work/accepted.jsonl.gz        accepted papers of the eight venues        (fetch_accepted.py)
+    work/accepted.jsonl.gz        accepted papers of the eleven venues        (fetch_accepted.py)
     affiliations.csv              affiliations read from the PDF where a list prints none (fetch_affiliations.py,
                                   each row checked by hand)
     affiliation_fixes.csv         one author's affiliation as the paper prints it, where the list differs
@@ -220,7 +220,7 @@ def same_paper(a, b):
 
 
 def person_records(person, acc, decisions, queue, warnings, skipped, own=(), borrowed=()):
-    """Every paper of one person at the eight venues, before the counting rules are applied."""
+    """Every paper of one person at the eleven venues, before the counting rules are applied."""
     notes, source, fetched, stale, own_ids = load_openreview(person)
     recs = []
 
@@ -450,7 +450,7 @@ def at_institution(person, r):
 
 
 def mark_later_acceptance(recs, acc):
-    """Note on each not-accepted paper whether the same title was accepted later at one of the eight venues.
+    """Note on each not-accepted paper whether the same title was accepted later at one of the eleven venues.
 
     Titles often change between submissions, so this finds only some of the resubmissions.
     """

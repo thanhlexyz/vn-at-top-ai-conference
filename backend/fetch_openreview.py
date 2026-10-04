@@ -149,7 +149,7 @@ def fetch_person(v2, v1, person):
                     continue  # replies and duplicates
                 rec = note_record(n)
                 if openreview_venue(rec["invitations"], rec["venueid"]) is None:
-                    continue  # not one of the eight venues
+                    continue  # not one of the eleven venues
                 seen.add(n.id)
                 notes.append(rec)
 
@@ -227,7 +227,7 @@ def main():
             continue
         data = fetch_person(v2, v1, person)
         write_json(OPENREVIEW_RAW / f"{person['slug']}.json", data)
-        print(f"{person['name']}: {len(data['notes'])} submissions at the eight venues "
+        print(f"{person['name']}: {len(data['notes'])} submissions at the eleven venues "
               f"(profile IDs queried: {', '.join(data['profile_ids'])})")
     print("\nnow run: python build_site_data.py")
 

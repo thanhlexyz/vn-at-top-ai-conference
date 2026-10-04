@@ -1,8 +1,8 @@
 # Vietnam at top AI conferences
 
 A bilingual (Vietnamese / English) static site that counts, for a hand-approved list of lecturers and professors in
-Vietnam, the papers they submitted to and had accepted or rejected at ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and
-EMNLP since 2020.
+Vietnam, the papers they submitted to and had accepted or rejected at AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL,
+EMNLP and NAACL since 2020, grouped as CSRankings does (AI, ML, CV, NLP).
 
 **Website: <https://thanhlexyz.github.io/vn-at-top-ai-conference/>**
 
