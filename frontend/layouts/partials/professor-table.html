@@ -13,6 +13,9 @@
 		<th colspan="3">ICLR</th>
 		<th colspan="{{ sub (len hugo.Data.meta.venues) 1 }}">{{ T "th_accepted_at" }}</th>
 		{{- end }}
+		{{- if $compact }}
+		<th colspan="{{ len hugo.Data.meta.venue_groups }}">{{ T "th_accepted_at" }}</th>
+		{{- end }}
 		<th colspan="5">{{ T "th_total" }}</th>
 		<th rowspan="2" class="ws" title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
 		<th colspan="2" title="{{ T "tip_own_institution" }}">{{ T "th_own_institution" }}</th>
@@ -26,6 +29,11 @@
 		<th class="good">{{ T "th_accepted" }}</th>
 		<th class="bad" title="{{ T "tip_rejected" }}">{{ T "th_rejected" }}</th>
 		{{- range after 1 hugo.Data.meta.venues }}<th>{{ .name }}</th>{{ end }}
+		{{- end }}
+		{{- if $compact }}
+		{{- range hugo.Data.meta.venue_groups }}
+		<th title="{{ delimit .names ", " }}">{{ .name }}</th>
+		{{- end }}
 		{{- end }}
 		<th class="good">{{ T "th_accepted" }}</th>
 		{{ partial "split-heads.html" . }}
@@ -64,6 +72,13 @@
 		{{- end }}
 		{{- range after 1 hugo.Data.meta.venue_keys }}
 		{{ partial "acc.html" (index $p.venues .) }}
+		{{- end }}
+		{{- end }}
+		{{- if $compact }}
+		{{- range hugo.Data.meta.venue_groups }}
+		{{- $off := 0 }}{{ $own := 0 }}
+		{{- range .venues }}{{ $v := index $p.venues . }}{{ $off = add $off (int $v.official) }}{{ $own = add $own (int $v.own_page) }}{{ end }}
+		<td>{{ if or $off $own }}{{ $off }}{{ else }}<span class="na">0</span>{{ end }}{{ if gt $own 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" $own) }}">+{{ $own }}</span>{{ end }}</td>
 		{{- end }}
 		{{- end }}
 		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" .own_page) }}">+{{ .own_page }}</span>{{ end }}</td>

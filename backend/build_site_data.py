@@ -26,7 +26,7 @@ import json
 import re
 
 from common import (ACCEPTED, BACKEND, CANDIDATES, FRONTEND, LEGACY_PAPERS, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
-                    STATUS_LABEL, VENUE_KEYS, VENUE_NAME, VENUES, WORK, YEARS, classify_status, held, in_vietnam,
+                    STATUS_LABEL, VENUE_GROUPS, VENUE_KEYS, VENUE_NAME, VENUES, WORK, YEARS, classify_status, held, in_vietnam,
                     load_roster, name_key, norm_name, norm_title, openreview_venue, presentation, read_csv,
                     read_jsonl_gz, same_institution, slugify, vn_institutions, write_json)
 
@@ -1192,7 +1192,7 @@ def main():
     write_json(DATA / "meta.json", {
         "generated": now.strftime("%Y-%m-%d %H:%M %Z"), "generated_date": now.strftime("%Y-%m-%d"),
         "first_year": YEARS[0], "last_year": YEARS[-1], "years": YEARS,
-        "venues": VENUES, "venue_keys": VENUE_KEYS, "coverage": coverage,
+        "venues": VENUES, "venue_keys": VENUE_KEYS, "venue_groups": VENUE_GROUPS, "coverage": coverage,
         "professors": len(professors), "papers": len(papers),
         "accepted": sum(r["status"] == "accepted" for r in papers),
         "preliminary": any(p["flags"] for p in professors), "pending_review": len(pending),

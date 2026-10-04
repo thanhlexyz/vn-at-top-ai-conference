@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04 07:19 UTC",
+ "generated": "2026-10-04 07:31 UTC",
  "generated_date": "2026-10-04",
  "first_year": 2020,
  "last_year": 2026,
@@ -71,6 +71,48 @@
   "eccv",
   "acl",
   "emnlp"
+ ],
+ "venue_groups": [
+  {
+   "key": "ml",
+   "name": "AI/ML",
+   "venues": [
+    "iclr",
+    "neurips",
+    "icml"
+   ],
+   "names": [
+    "ICLR",
+    "NeurIPS",
+    "ICML"
+   ]
+  },
+  {
+   "key": "cv",
+   "name": "CV",
+   "venues": [
+    "cvpr",
+    "iccv",
+    "eccv"
+   ],
+   "names": [
+    "CVPR",
+    "ICCV",
+    "ECCV"
+   ]
+  },
+  {
+   "key": "nlp",
+   "name": "NLP",
+   "venues": [
+    "acl",
+    "emnlp"
+   ],
+   "names": [
+    "ACL",
+    "EMNLP"
+   ]
+  }
  ],
  "coverage": [
   {

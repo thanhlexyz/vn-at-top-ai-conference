@@ -56,6 +56,12 @@ def held(venue, year):
     """False for a year in which the conference does not take place: ICCV is held in odd years, ECCV in even ones."""
     return not ((venue == "iccv" and year % 2 == 0) or (venue == "eccv" and year % 2 == 1))
 VENUE_NAME = {v["key"]: v["name"] for v in VENUES}
+# fields, for the front page: machine learning, computer vision, natural language processing
+VENUE_GROUPS = [{"key": "ml", "name": "AI/ML", "venues": ["iclr", "neurips", "icml"]},
+                {"key": "cv", "name": "CV", "venues": ["cvpr", "iccv", "eccv"]},
+                {"key": "nlp", "name": "NLP", "venues": ["acl", "emnlp"]}]
+for _g in VENUE_GROUPS:
+    _g["names"] = [VENUE_NAME[k] for k in _g["venues"]]
 
 NOT_ACCEPTED = ("rejected", "withdrawn", "desk_rejected")  # shown together as "not accepted"
 STATUS_LABEL = {"accepted": "accepted", "rejected": "rejected", "withdrawn": "withdrawn",
