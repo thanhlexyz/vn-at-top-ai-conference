@@ -74,9 +74,9 @@ other = "trước {{ . }}"
 [tip_accepted_before]
 other = "số bài được nhận trước năm {{ . }}"
 [th_accepted_year]
-other = "được nhận {{ . }}"
+other = "từ {{ . }}"
 [tip_accepted_year]
-other = "số bài được nhận trong năm {{ . }}"
+other = "số bài được nhận từ năm {{ . }}"
 [th_total]
 other = "Tổng"
 [th_own_institution]
