@@ -99,15 +99,15 @@
 		cell.setAttribute("aria-sort", order);
 		values.forEach(function (v) { body.appendChild(v.tr); });
 		totals.forEach(function (tr) { body.appendChild(tr); });
-		podium(table, numeric ? column : null);
+		podium(table, numeric ? column : null, order === "ascending");
 	}
 
 	// Cups for the top three values of a .podium table, in the order shown: gold, silver, bronze. Sorted by a
 	// number column, tied rows share a cup and the next value takes the next cup (one gold and two silvers are
-	// followed by a bronze); zero never gets a cup, and sorted by text there are none.
+	// followed by a bronze); sorted largest first a zero gets no cup, and sorted by text there are none.
 	var CUP = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v2h3v3a4 4 0 0 1-4 4h-.3A5 5 0 0 1 13 14.9V18h3v2H8v-2h3v-3.1A5 5 0 0 1 8.3 12H8a4 4 0 0 1-4-4V5h3V3zm0 4H6v1a2 2 0 0 0 1 1.7V7zm10 0v2.7A2 2 0 0 0 18 8V7h-1z"/></svg>';
 	var PLACES = ["gold", "silver", "bronze"];
-	function podium(table, column) {
+	function podium(table, column, ascending) {
 		if (!table.classList.contains("podium")) return;
 		var rows = Array.prototype.filter.call(table.tBodies[0].rows, function (tr) { return !tr.classList.contains("total"); });
 		var place = -1, last = null;
@@ -116,13 +116,15 @@
 			if (!slot) return;
 			var cell = column === undefined || column === null ? null : tr.cells[column];
 			var key = column === undefined ? k : !cell || cell.hasAttribute("data-last") ? null : number(cell.textContent);
+			// largest first, a zero wins nothing and takes no place; smallest first, a zero is the best value
+			var nothing = column !== undefined && key === 0 && !ascending;
 			if (key === null && column !== undefined) { place = 99; }
-			else if (k === 0 || key !== last) { place += 1; }   // ties share a cup; the next value takes the next one
-			last = key;
+			else if (!nothing && (place < 0 || key !== last)) { place += 1; }   // ties share a cup; the next value takes the next one
+			if (!nothing) last = key;
 			slot.className = "cup";
 			slot.innerHTML = "";
 			slot.removeAttribute("title");
-			if (place < 3 && !(column !== undefined && key === 0)) {   // a zero wins nothing
+			if (place >= 0 && place < 3 && !nothing) {
 				slot.classList.add(PLACES[place]);
 				slot.innerHTML = CUP;
 				slot.title = "#" + (place + 1);
