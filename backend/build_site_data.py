@@ -1258,8 +1258,8 @@ def main():
         graph_recs += [(r, person["slug"]) for r in counted]
         graph_recs += [(r, person["slug"]) for r in workshop if in_vietnam(person, r["year"])]
     # most accepted first; people with none accepted yet come last, most submissions first
-    # official accepted papers first, then unofficial ones, as the tables sort them
-    professors.sort(key=lambda p: (-p["official"], -p["own_page"], -p["venues"]["iclr"]["submitted"] if p["accepted"]
+    # accepted papers, official and unofficial together, more official ones first among equals, as the tables sort them
+    professors.sort(key=lambda p: (-p["accepted"], -p["official"], -p["venues"]["iclr"]["submitted"] if p["accepted"]
                                    else -sum(v.get("submitted", 0) for v in p["venues"].values()), p["name"]))
 
     # authors on a professor's page link to the person when that person is on the site and has the same paper in
@@ -1346,7 +1346,7 @@ def main():
         i["rate_trivial"] = not iclr["submitted"]   # nothing to estimate the hidden rejections from
     for i in institutions:
         i["author_charts"] = authorship_charts(i, i["short"])
-    institutions.sort(key=lambda i: (-i["official"], -i["own_page"], i["name"]))
+    institutions.sort(key=lambda i: (-i["accepted"], -i["official"], i["name"]))
     # Vietnamese names, confirmed by hand (institution_names.csv); the Vietnamese site shows them
     names_vi = {r["name"]: r["name_vi"] for r in read_csv(BACKEND / "institution_names.csv")}
     for i in institutions:

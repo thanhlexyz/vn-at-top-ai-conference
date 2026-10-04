@@ -19,17 +19,17 @@
   "accepted": 127,
   "own_page": 33,
   "people": {
-   "ngo-van-linh": {
-    "accepted": 17,
-    "judged": 17,
-    "majority": 7,
-    "first_author": 9
-   },
    "khoa-d-doan": {
     "accepted": 18,
     "judged": 18,
     "majority": 8,
     "first_author": 12
+   },
+   "ngo-van-linh": {
+    "accepted": 17,
+    "judged": 17,
+    "majority": 7,
+    "first_author": 9
    },
    "phi-le-nguyen": {
     "accepted": 17,
@@ -67,6 +67,18 @@
     "majority": 0,
     "first_author": 2
    },
+   "tuan-do": {
+    "accepted": 5,
+    "judged": 5,
+    "majority": 0,
+    "first_author": 1
+   },
+   "binh-t-nguyen": {
+    "accepted": 4,
+    "judged": 4,
+    "majority": 4,
+    "first_author": 3
+   },
    "man-ngo": {
     "accepted": 3,
     "judged": 3,
@@ -79,16 +91,22 @@
     "majority": 2,
     "first_author": 2
    },
-   "tuan-do": {
-    "accepted": 5,
-    "judged": 5,
-    "majority": 0,
-    "first_author": 1
-   },
    "duc-trong-le": {
     "accepted": 3,
     "judged": 3,
     "majority": 3,
+    "first_author": 2
+   },
+   "hoang-ta": {
+    "accepted": 3,
+    "judged": 3,
+    "majority": 3,
+    "first_author": 3
+   },
+   "huynh-thi-thanh-binh": {
+    "accepted": 3,
+    "judged": 2,
+    "majority": 2,
     "first_author": 2
    },
    "minh-do": {
@@ -115,18 +133,6 @@
     "majority": 0,
     "first_author": 1
    },
-   "binh-t-nguyen": {
-    "accepted": 4,
-    "judged": 4,
-    "majority": 4,
-    "first_author": 3
-   },
-   "hoang-ta": {
-    "accepted": 3,
-    "judged": 3,
-    "majority": 3,
-    "first_author": 3
-   },
    "thanh-trung-huynh": {
     "accepted": 2,
     "judged": 2,
@@ -138,6 +144,24 @@
     "judged": 1,
     "majority": 0,
     "first_author": 0
+   },
+   "hoang-son-do": {
+    "accepted": 2,
+    "judged": 2,
+    "majority": 0,
+    "first_author": 0
+   },
+   "bui-trong-duc": {
+    "accepted": 2,
+    "judged": 2,
+    "majority": 2,
+    "first_author": 2
+   },
+   "thuy-t-nguyen": {
+    "accepted": 2,
+    "judged": 2,
+    "majority": 1,
+    "first_author": 1
    },
    "canh-v-pham": {
     "accepted": 1,
@@ -174,30 +198,6 @@
     "judged": 1,
     "majority": 0,
     "first_author": 0
-   },
-   "huynh-thi-thanh-binh": {
-    "accepted": 3,
-    "judged": 2,
-    "majority": 2,
-    "first_author": 2
-   },
-   "hoang-son-do": {
-    "accepted": 2,
-    "judged": 2,
-    "majority": 0,
-    "first_author": 0
-   },
-   "bui-trong-duc": {
-    "accepted": 2,
-    "judged": 2,
-    "majority": 2,
-    "first_author": 2
-   },
-   "thuy-t-nguyen": {
-    "accepted": 2,
-    "judged": 2,
-    "majority": 1,
-    "first_author": 1
    },
    "danh-le-phuoc": {
     "accepted": 1,
@@ -440,97 +440,6 @@
  },
  "rows": [
   {
-   "slug": "ngo-van-linh",
-   "name": "Ngo Van Linh",
-   "institution_short": "HUST",
-   "accepted": 17,
-   "iclr_complete": true,
-   "iclr": {
-    "accepted": 1,
-    "rejected": 1,
-    "withdrawn": 3,
-    "desk_rejected": 0,
-    "not_accepted": 4,
-    "submitted": 5,
-    "own_page": 0,
-    "official": 1
-   },
-   "iclr_rate": "20%",
-   "iclr_per_accept": "5.0",
-   "later": 0,
-   "collab": {
-    "papers": 23,
-    "avg_coauthors": "5.3",
-    "distinct_coauthors": 59,
-    "min_coauthors": 4,
-    "max_coauthors": 9,
-    "papers_with_affiliations": 17,
-    "avg_foreign": "2.6",
-    "avg_same_institution": "1.8",
-    "avg_other_vietnam": "0.9",
-    "avg_other_institution": "3.6",
-    "avg_domestic": "2.7",
-    "elsewhere": 32,
-    "elsewhere_abroad": 23,
-    "elsewhere_vietnam": 9,
-    "papers_with_topic": 6,
-    "topic_areas": 4,
-    "topic_count": 5,
-    "areas": [
-     {
-      "area": "Deep Learning",
-      "papers": 3
-     },
-     {
-      "area": "Online Learning",
-      "papers": 1
-     },
-     {
-      "area": "General Machine Learning",
-      "papers": 1
-     },
-     {
-      "area": "Optimization",
-      "papers": 1
-     }
-    ],
-    "topics": [
-     {
-      "area": "Deep Learning",
-      "topic": "Large Language Models",
-      "papers": 2
-     },
-     {
-      "area": "Deep Learning",
-      "topic": "Algorithms",
-      "papers": 1
-     },
-     {
-      "area": "General Machine Learning",
-      "topic": "Representation Learning",
-      "papers": 1
-     },
-     {
-      "area": "Online Learning",
-      "topic": "",
-      "papers": 1
-     },
-     {
-      "area": "Optimization",
-      "topic": "Learning for Optimization",
-      "papers": 1
-     }
-    ]
-   },
-   "unconfirmed": true,
-   "projection": {
-    "ratio": "3.0",
-    "accepted": 17,
-    "estimated": "32",
-    "total": "55"
-   }
-  },
-  {
    "slug": "khoa-d-doan",
    "name": "Khoa D. Doan",
    "institution_short": "VinUni",
@@ -625,6 +534,97 @@
     "accepted": 18,
     "estimated": "37",
     "total": "70"
+   }
+  },
+  {
+   "slug": "ngo-van-linh",
+   "name": "Ngo Van Linh",
+   "institution_short": "HUST",
+   "accepted": 17,
+   "iclr_complete": true,
+   "iclr": {
+    "accepted": 1,
+    "rejected": 1,
+    "withdrawn": 3,
+    "desk_rejected": 0,
+    "not_accepted": 4,
+    "submitted": 5,
+    "own_page": 0,
+    "official": 1
+   },
+   "iclr_rate": "20%",
+   "iclr_per_accept": "5.0",
+   "later": 0,
+   "collab": {
+    "papers": 23,
+    "avg_coauthors": "5.3",
+    "distinct_coauthors": 59,
+    "min_coauthors": 4,
+    "max_coauthors": 9,
+    "papers_with_affiliations": 17,
+    "avg_foreign": "2.6",
+    "avg_same_institution": "1.8",
+    "avg_other_vietnam": "0.9",
+    "avg_other_institution": "3.6",
+    "avg_domestic": "2.7",
+    "elsewhere": 32,
+    "elsewhere_abroad": 23,
+    "elsewhere_vietnam": 9,
+    "papers_with_topic": 6,
+    "topic_areas": 4,
+    "topic_count": 5,
+    "areas": [
+     {
+      "area": "Deep Learning",
+      "papers": 3
+     },
+     {
+      "area": "Online Learning",
+      "papers": 1
+     },
+     {
+      "area": "General Machine Learning",
+      "papers": 1
+     },
+     {
+      "area": "Optimization",
+      "papers": 1
+     }
+    ],
+    "topics": [
+     {
+      "area": "Deep Learning",
+      "topic": "Large Language Models",
+      "papers": 2
+     },
+     {
+      "area": "Deep Learning",
+      "topic": "Algorithms",
+      "papers": 1
+     },
+     {
+      "area": "General Machine Learning",
+      "topic": "Representation Learning",
+      "papers": 1
+     },
+     {
+      "area": "Online Learning",
+      "topic": "",
+      "papers": 1
+     },
+     {
+      "area": "Optimization",
+      "topic": "Learning for Optimization",
+      "papers": 1
+     }
+    ]
+   },
+   "unconfirmed": true,
+   "projection": {
+    "ratio": "3.0",
+    "accepted": 17,
+    "estimated": "32",
+    "total": "55"
    }
   },
   {
@@ -1078,6 +1078,124 @@
    }
   },
   {
+   "slug": "tuan-do",
+   "name": "Tuan Do",
+   "institution_short": "Phenikaa",
+   "accepted": 5,
+   "iclr_complete": true,
+   "iclr": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "iclr_rate": "",
+   "iclr_per_accept": "",
+   "later": 0,
+   "collab": {
+    "papers": 5,
+    "avg_coauthors": "7.2",
+    "distinct_coauthors": 17,
+    "min_coauthors": 5,
+    "max_coauthors": 9,
+    "papers_with_affiliations": 5,
+    "avg_foreign": "4.0",
+    "avg_same_institution": "0.8",
+    "avg_other_vietnam": "2.4",
+    "avg_other_institution": "6.4",
+    "avg_domestic": "3.2",
+    "elsewhere": 16,
+    "elsewhere_abroad": 8,
+    "elsewhere_vietnam": 8,
+    "papers_with_topic": 1,
+    "topic_areas": 1,
+    "topic_count": 1,
+    "areas": [
+     {
+      "area": "General Machine Learning",
+      "papers": 1
+     }
+    ],
+    "topics": [
+     {
+      "area": "General Machine Learning",
+      "topic": "Causality",
+      "papers": 1
+     }
+    ]
+   },
+   "unconfirmed": true,
+   "projection": {
+    "ratio": "1.0",
+    "accepted": 5,
+    "estimated": "0",
+    "total": "5"
+   }
+  },
+  {
+   "slug": "binh-t-nguyen",
+   "name": "Binh T. Nguyen",
+   "institution_short": "VinUni",
+   "accepted": 4,
+   "iclr_complete": true,
+   "iclr": {
+    "accepted": 0,
+    "rejected": 3,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 3,
+    "submitted": 3,
+    "own_page": 0,
+    "official": 0
+   },
+   "iclr_rate": "0%",
+   "iclr_per_accept": "",
+   "later": 1,
+   "collab": {
+    "papers": 7,
+    "avg_coauthors": "3.3",
+    "distinct_coauthors": 17,
+    "min_coauthors": 2,
+    "max_coauthors": 5,
+    "papers_with_affiliations": 4,
+    "avg_foreign": "0.5",
+    "avg_same_institution": "1.8",
+    "avg_other_vietnam": "0.8",
+    "avg_other_institution": "1.2",
+    "avg_domestic": "2.5",
+    "elsewhere": 4,
+    "elsewhere_abroad": 2,
+    "elsewhere_vietnam": 2,
+    "papers_with_topic": 1,
+    "topic_areas": 1,
+    "topic_count": 1,
+    "areas": [
+     {
+      "area": "Deep Learning",
+      "papers": 1
+     }
+    ],
+    "topics": [
+     {
+      "area": "Deep Learning",
+      "topic": "Theory",
+      "papers": 1
+     }
+    ]
+   },
+   "unconfirmed": true,
+   "projection": {
+    "ratio": "4.0",
+    "accepted": 4,
+    "estimated": "12",
+    "total": "19"
+   }
+  },
+  {
    "slug": "man-ngo",
    "name": "Man Ngo",
    "institution_short": "HCMUS",
@@ -1174,65 +1292,6 @@
    }
   },
   {
-   "slug": "tuan-do",
-   "name": "Tuan Do",
-   "institution_short": "Phenikaa",
-   "accepted": 5,
-   "iclr_complete": true,
-   "iclr": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "iclr_rate": "",
-   "iclr_per_accept": "",
-   "later": 0,
-   "collab": {
-    "papers": 5,
-    "avg_coauthors": "7.2",
-    "distinct_coauthors": 17,
-    "min_coauthors": 5,
-    "max_coauthors": 9,
-    "papers_with_affiliations": 5,
-    "avg_foreign": "4.0",
-    "avg_same_institution": "0.8",
-    "avg_other_vietnam": "2.4",
-    "avg_other_institution": "6.4",
-    "avg_domestic": "3.2",
-    "elsewhere": 16,
-    "elsewhere_abroad": 8,
-    "elsewhere_vietnam": 8,
-    "papers_with_topic": 1,
-    "topic_areas": 1,
-    "topic_count": 1,
-    "areas": [
-     {
-      "area": "General Machine Learning",
-      "papers": 1
-     }
-    ],
-    "topics": [
-     {
-      "area": "General Machine Learning",
-      "topic": "Causality",
-      "papers": 1
-     }
-    ]
-   },
-   "unconfirmed": true,
-   "projection": {
-    "ratio": "1.0",
-    "accepted": 5,
-    "estimated": "0",
-    "total": "5"
-   }
-  },
-  {
    "slug": "duc-trong-le",
    "name": "Duc-Trong Le",
    "institution_short": "VNU-UET",
@@ -1278,6 +1337,113 @@
     "accepted": 3,
     "estimated": "0",
     "total": "3"
+   }
+  },
+  {
+   "slug": "hoang-ta",
+   "name": "Hoang Ta",
+   "institution_short": "HUST",
+   "accepted": 3,
+   "iclr_complete": true,
+   "iclr": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "iclr_rate": "",
+   "iclr_per_accept": "",
+   "later": 0,
+   "collab": {
+    "papers": 3,
+    "avg_coauthors": "3.7",
+    "distinct_coauthors": 8,
+    "min_coauthors": 3,
+    "max_coauthors": 4,
+    "papers_with_affiliations": 3,
+    "avg_foreign": "0.3",
+    "avg_same_institution": "3.0",
+    "avg_other_vietnam": "0.3",
+    "avg_other_institution": "0.7",
+    "avg_domestic": "3.3",
+    "elsewhere": 2,
+    "elsewhere_abroad": 1,
+    "elsewhere_vietnam": 1,
+    "papers_with_topic": 1,
+    "topic_areas": 1,
+    "topic_count": 1,
+    "areas": [
+     {
+      "area": "Theory",
+      "papers": 1
+     }
+    ],
+    "topics": [
+     {
+      "area": "Theory",
+      "topic": "Reinforcement Learning and Planning",
+      "papers": 1
+     }
+    ]
+   },
+   "unconfirmed": true,
+   "projection": {
+    "ratio": "1.0",
+    "accepted": 3,
+    "estimated": "0",
+    "total": "3"
+   }
+  },
+  {
+   "slug": "huynh-thi-thanh-binh",
+   "name": "Huynh Thi Thanh Binh",
+   "institution_short": "HUST",
+   "accepted": 3,
+   "iclr_complete": true,
+   "iclr": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 1,
+    "desk_rejected": 0,
+    "not_accepted": 1,
+    "submitted": 1,
+    "own_page": 0,
+    "official": 0
+   },
+   "iclr_rate": "0%",
+   "iclr_per_accept": "",
+   "later": 0,
+   "collab": {
+    "papers": 5,
+    "avg_coauthors": "3.2",
+    "distinct_coauthors": 14,
+    "min_coauthors": 1,
+    "max_coauthors": 6,
+    "papers_with_affiliations": 2,
+    "avg_foreign": "0.0",
+    "avg_same_institution": "1.5",
+    "avg_other_vietnam": "0.5",
+    "avg_other_institution": "0.5",
+    "avg_domestic": "2.0",
+    "elsewhere": 1,
+    "elsewhere_abroad": 0,
+    "elsewhere_vietnam": 1,
+    "papers_with_topic": 0,
+    "topic_areas": "",
+    "topic_count": "",
+    "areas": [],
+    "topics": []
+   },
+   "unconfirmed": true,
+   "projection": {
+    "ratio": "2.0",
+    "accepted": 3,
+    "estimated": "2",
+    "total": "7"
    }
   },
   {
@@ -1506,124 +1672,6 @@
    }
   },
   {
-   "slug": "binh-t-nguyen",
-   "name": "Binh T. Nguyen",
-   "institution_short": "VinUni",
-   "accepted": 4,
-   "iclr_complete": true,
-   "iclr": {
-    "accepted": 0,
-    "rejected": 3,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 3,
-    "submitted": 3,
-    "own_page": 0,
-    "official": 0
-   },
-   "iclr_rate": "0%",
-   "iclr_per_accept": "",
-   "later": 1,
-   "collab": {
-    "papers": 7,
-    "avg_coauthors": "3.3",
-    "distinct_coauthors": 17,
-    "min_coauthors": 2,
-    "max_coauthors": 5,
-    "papers_with_affiliations": 4,
-    "avg_foreign": "0.5",
-    "avg_same_institution": "1.8",
-    "avg_other_vietnam": "0.8",
-    "avg_other_institution": "1.2",
-    "avg_domestic": "2.5",
-    "elsewhere": 4,
-    "elsewhere_abroad": 2,
-    "elsewhere_vietnam": 2,
-    "papers_with_topic": 1,
-    "topic_areas": 1,
-    "topic_count": 1,
-    "areas": [
-     {
-      "area": "Deep Learning",
-      "papers": 1
-     }
-    ],
-    "topics": [
-     {
-      "area": "Deep Learning",
-      "topic": "Theory",
-      "papers": 1
-     }
-    ]
-   },
-   "unconfirmed": true,
-   "projection": {
-    "ratio": "4.0",
-    "accepted": 4,
-    "estimated": "12",
-    "total": "19"
-   }
-  },
-  {
-   "slug": "hoang-ta",
-   "name": "Hoang Ta",
-   "institution_short": "HUST",
-   "accepted": 3,
-   "iclr_complete": true,
-   "iclr": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "iclr_rate": "",
-   "iclr_per_accept": "",
-   "later": 0,
-   "collab": {
-    "papers": 3,
-    "avg_coauthors": "3.7",
-    "distinct_coauthors": 8,
-    "min_coauthors": 3,
-    "max_coauthors": 4,
-    "papers_with_affiliations": 3,
-    "avg_foreign": "0.3",
-    "avg_same_institution": "3.0",
-    "avg_other_vietnam": "0.3",
-    "avg_other_institution": "0.7",
-    "avg_domestic": "3.3",
-    "elsewhere": 2,
-    "elsewhere_abroad": 1,
-    "elsewhere_vietnam": 1,
-    "papers_with_topic": 1,
-    "topic_areas": 1,
-    "topic_count": 1,
-    "areas": [
-     {
-      "area": "Theory",
-      "papers": 1
-     }
-    ],
-    "topics": [
-     {
-      "area": "Theory",
-      "topic": "Reinforcement Learning and Planning",
-      "papers": 1
-     }
-    ]
-   },
-   "unconfirmed": true,
-   "projection": {
-    "ratio": "1.0",
-    "accepted": 3,
-    "estimated": "0",
-    "total": "3"
-   }
-  },
-  {
    "slug": "thanh-trung-huynh",
    "name": "Thanh Trung Huynh",
    "institution_short": "VinUni",
@@ -1732,6 +1780,150 @@
       "papers": 1
      }
     ]
+   },
+   "unconfirmed": true,
+   "projection": {
+    "ratio": "1.0",
+    "accepted": 2,
+    "estimated": "0",
+    "total": "2"
+   }
+  },
+  {
+   "slug": "hoang-son-do",
+   "name": "Hoang-Son Do",
+   "institution_short": "VAST",
+   "accepted": 2,
+   "iclr_complete": true,
+   "iclr": {
+    "accepted": 0,
+    "rejected": 1,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 1,
+    "submitted": 1,
+    "own_page": 0,
+    "official": 0
+   },
+   "iclr_rate": "0%",
+   "iclr_per_accept": "",
+   "later": 0,
+   "collab": {
+    "papers": 3,
+    "avg_coauthors": "4.7",
+    "distinct_coauthors": 7,
+    "min_coauthors": 4,
+    "max_coauthors": 5,
+    "papers_with_affiliations": 2,
+    "avg_foreign": "4.5",
+    "avg_same_institution": "0.0",
+    "avg_other_vietnam": "0.0",
+    "avg_other_institution": "4.5",
+    "avg_domestic": "0.0",
+    "elsewhere": 5,
+    "elsewhere_abroad": 5,
+    "elsewhere_vietnam": 0,
+    "papers_with_topic": 0,
+    "topic_areas": "",
+    "topic_count": "",
+    "areas": [],
+    "topics": []
+   },
+   "unconfirmed": true,
+   "projection": {
+    "ratio": "2.0",
+    "accepted": 2,
+    "estimated": "2",
+    "total": "5"
+   }
+  },
+  {
+   "slug": "bui-trong-duc",
+   "name": "Bui Trong Duc",
+   "institution_short": "HUST",
+   "accepted": 2,
+   "iclr_complete": true,
+   "iclr": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "iclr_rate": "",
+   "iclr_per_accept": "",
+   "later": 0,
+   "collab": {
+    "papers": 2,
+    "avg_coauthors": "2.0",
+    "distinct_coauthors": 3,
+    "min_coauthors": 1,
+    "max_coauthors": 4,
+    "papers_with_affiliations": 2,
+    "avg_foreign": "0.0",
+    "avg_same_institution": "1.5",
+    "avg_other_vietnam": "0.5",
+    "avg_other_institution": "0.5",
+    "avg_domestic": "2.0",
+    "elsewhere": 1,
+    "elsewhere_abroad": 0,
+    "elsewhere_vietnam": 1,
+    "papers_with_topic": 0,
+    "topic_areas": "",
+    "topic_count": "",
+    "areas": [],
+    "topics": []
+   },
+   "unconfirmed": true,
+   "projection": {
+    "ratio": "1.0",
+    "accepted": 2,
+    "estimated": "0",
+    "total": "2"
+   }
+  },
+  {
+   "slug": "thuy-t-nguyen",
+   "name": "Thuy T. Nguyen",
+   "institution_short": "RMIT",
+   "accepted": 2,
+   "iclr_complete": true,
+   "iclr": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "iclr_rate": "",
+   "iclr_per_accept": "",
+   "later": 0,
+   "collab": {
+    "papers": 2,
+    "avg_coauthors": "2.5",
+    "distinct_coauthors": 5,
+    "min_coauthors": 2,
+    "max_coauthors": 3,
+    "papers_with_affiliations": 2,
+    "avg_foreign": "1.5",
+    "avg_same_institution": "1.0",
+    "avg_other_vietnam": "0.0",
+    "avg_other_institution": "1.5",
+    "avg_domestic": "1.0",
+    "elsewhere": 3,
+    "elsewhere_abroad": 3,
+    "elsewhere_vietnam": 0,
+    "papers_with_topic": 0,
+    "topic_areas": "",
+    "topic_count": "",
+    "areas": [],
+    "topics": []
    },
    "unconfirmed": true,
    "projection": {
@@ -2082,198 +2274,6 @@
     "accepted": 1,
     "estimated": "0",
     "total": "1"
-   }
-  },
-  {
-   "slug": "huynh-thi-thanh-binh",
-   "name": "Huynh Thi Thanh Binh",
-   "institution_short": "HUST",
-   "accepted": 3,
-   "iclr_complete": true,
-   "iclr": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 1,
-    "desk_rejected": 0,
-    "not_accepted": 1,
-    "submitted": 1,
-    "own_page": 0,
-    "official": 0
-   },
-   "iclr_rate": "0%",
-   "iclr_per_accept": "",
-   "later": 0,
-   "collab": {
-    "papers": 5,
-    "avg_coauthors": "3.2",
-    "distinct_coauthors": 14,
-    "min_coauthors": 1,
-    "max_coauthors": 6,
-    "papers_with_affiliations": 2,
-    "avg_foreign": "0.0",
-    "avg_same_institution": "1.5",
-    "avg_other_vietnam": "0.5",
-    "avg_other_institution": "0.5",
-    "avg_domestic": "2.0",
-    "elsewhere": 1,
-    "elsewhere_abroad": 0,
-    "elsewhere_vietnam": 1,
-    "papers_with_topic": 0,
-    "topic_areas": "",
-    "topic_count": "",
-    "areas": [],
-    "topics": []
-   },
-   "unconfirmed": true,
-   "projection": {
-    "ratio": "2.0",
-    "accepted": 3,
-    "estimated": "2",
-    "total": "7"
-   }
-  },
-  {
-   "slug": "hoang-son-do",
-   "name": "Hoang-Son Do",
-   "institution_short": "VAST",
-   "accepted": 2,
-   "iclr_complete": true,
-   "iclr": {
-    "accepted": 0,
-    "rejected": 1,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 1,
-    "submitted": 1,
-    "own_page": 0,
-    "official": 0
-   },
-   "iclr_rate": "0%",
-   "iclr_per_accept": "",
-   "later": 0,
-   "collab": {
-    "papers": 3,
-    "avg_coauthors": "4.7",
-    "distinct_coauthors": 7,
-    "min_coauthors": 4,
-    "max_coauthors": 5,
-    "papers_with_affiliations": 2,
-    "avg_foreign": "4.5",
-    "avg_same_institution": "0.0",
-    "avg_other_vietnam": "0.0",
-    "avg_other_institution": "4.5",
-    "avg_domestic": "0.0",
-    "elsewhere": 5,
-    "elsewhere_abroad": 5,
-    "elsewhere_vietnam": 0,
-    "papers_with_topic": 0,
-    "topic_areas": "",
-    "topic_count": "",
-    "areas": [],
-    "topics": []
-   },
-   "unconfirmed": true,
-   "projection": {
-    "ratio": "2.0",
-    "accepted": 2,
-    "estimated": "2",
-    "total": "5"
-   }
-  },
-  {
-   "slug": "bui-trong-duc",
-   "name": "Bui Trong Duc",
-   "institution_short": "HUST",
-   "accepted": 2,
-   "iclr_complete": true,
-   "iclr": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "iclr_rate": "",
-   "iclr_per_accept": "",
-   "later": 0,
-   "collab": {
-    "papers": 2,
-    "avg_coauthors": "2.0",
-    "distinct_coauthors": 3,
-    "min_coauthors": 1,
-    "max_coauthors": 4,
-    "papers_with_affiliations": 2,
-    "avg_foreign": "0.0",
-    "avg_same_institution": "1.5",
-    "avg_other_vietnam": "0.5",
-    "avg_other_institution": "0.5",
-    "avg_domestic": "2.0",
-    "elsewhere": 1,
-    "elsewhere_abroad": 0,
-    "elsewhere_vietnam": 1,
-    "papers_with_topic": 0,
-    "topic_areas": "",
-    "topic_count": "",
-    "areas": [],
-    "topics": []
-   },
-   "unconfirmed": true,
-   "projection": {
-    "ratio": "1.0",
-    "accepted": 2,
-    "estimated": "0",
-    "total": "2"
-   }
-  },
-  {
-   "slug": "thuy-t-nguyen",
-   "name": "Thuy T. Nguyen",
-   "institution_short": "RMIT",
-   "accepted": 2,
-   "iclr_complete": true,
-   "iclr": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "iclr_rate": "",
-   "iclr_per_accept": "",
-   "later": 0,
-   "collab": {
-    "papers": 2,
-    "avg_coauthors": "2.5",
-    "distinct_coauthors": 5,
-    "min_coauthors": 2,
-    "max_coauthors": 3,
-    "papers_with_affiliations": 2,
-    "avg_foreign": "1.5",
-    "avg_same_institution": "1.0",
-    "avg_other_vietnam": "0.0",
-    "avg_other_institution": "1.5",
-    "avg_domestic": "1.0",
-    "elsewhere": 3,
-    "elsewhere_abroad": 3,
-    "elsewhere_vietnam": 0,
-    "papers_with_topic": 0,
-    "topic_areas": "",
-    "topic_count": "",
-    "areas": [],
-    "topics": []
-   },
-   "unconfirmed": true,
-   "projection": {
-    "ratio": "1.0",
-    "accepted": 2,
-    "estimated": "0",
-    "total": "2"
    }
   },
   {
@@ -4447,6 +4447,63 @@
    "announced_total": 2
   },
   {
+   "slug": "huynh-thi-thanh-binh",
+   "name": "Huynh Thi Thanh Binh",
+   "source_url": "https://duccuong12.github.io/",
+   "fetched": "2026-09-30",
+   "neurips": [
+    {
+     "year": 2021,
+     "announced": "",
+     "counted": 0,
+     "own_page": 0,
+     "other_track": 0,
+     "detail": ""
+    },
+    {
+     "year": 2022,
+     "announced": "",
+     "counted": 0,
+     "own_page": 0,
+     "other_track": 0,
+     "detail": ""
+    },
+    {
+     "year": 2023,
+     "announced": "",
+     "counted": 0,
+     "own_page": 0,
+     "other_track": 0,
+     "detail": ""
+    },
+    {
+     "year": 2024,
+     "announced": "",
+     "counted": 0,
+     "own_page": 0,
+     "other_track": 0,
+     "detail": ""
+    },
+    {
+     "year": 2025,
+     "announced": "",
+     "counted": 0,
+     "own_page": 0,
+     "other_track": 0,
+     "detail": ""
+    },
+    {
+     "year": 2026,
+     "announced": 1,
+     "counted": 0,
+     "own_page": 2,
+     "other_track": 0,
+     "detail": ""
+    }
+   ],
+   "announced_total": 1
+  },
+  {
    "slug": "minh-do",
    "name": "Minh Do",
    "source_url": "https://vinuni.edu.vn/people/minh-do/",
@@ -4611,63 +4668,6 @@
      "announced": "",
      "counted": 0,
      "own_page": 0,
-     "other_track": 0,
-     "detail": ""
-    }
-   ],
-   "announced_total": 1
-  },
-  {
-   "slug": "huynh-thi-thanh-binh",
-   "name": "Huynh Thi Thanh Binh",
-   "source_url": "https://duccuong12.github.io/",
-   "fetched": "2026-09-30",
-   "neurips": [
-    {
-     "year": 2021,
-     "announced": "",
-     "counted": 0,
-     "own_page": 0,
-     "other_track": 0,
-     "detail": ""
-    },
-    {
-     "year": 2022,
-     "announced": "",
-     "counted": 0,
-     "own_page": 0,
-     "other_track": 0,
-     "detail": ""
-    },
-    {
-     "year": 2023,
-     "announced": "",
-     "counted": 0,
-     "own_page": 0,
-     "other_track": 0,
-     "detail": ""
-    },
-    {
-     "year": 2024,
-     "announced": "",
-     "counted": 0,
-     "own_page": 0,
-     "other_track": 0,
-     "detail": ""
-    },
-    {
-     "year": 2025,
-     "announced": "",
-     "counted": 0,
-     "own_page": 0,
-     "other_track": 0,
-     "detail": ""
-    },
-    {
-     "year": 2026,
-     "announced": 1,
-     "counted": 0,
-     "own_page": 2,
      "other_track": 0,
      "detail": ""
     }
@@ -4856,7 +4856,7 @@
  ],
  "charts": {
   "outcomes": "<svg class=\"chart\" viewBox=\"0 0 640 190\" role=\"img\" aria-label=\"Accepted and rejected: ICLR as counted, all eight venues as estimated\"><text class=\"value\" x=\"4.0\" y=\"16\">ICLR, counted</text><path class=\"s1 slice\" d=\"M74.0,104.0 L74.0,34.0 A70,70 0 0 1 130.1,62.2 Z\"><title>ICLR, counted: 12 accepted, 15%</title></path><rect class=\"s1\" x=\"162.0\" y=\"72.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"82.0\">12 (15%)</text><text x=\"180.0\" y=\"97.0\">accepted</text><path class=\"not slice\" d=\"M74.0,104.0 L130.1,62.2 A70,70 0 1 1 74.0,34.0 Z\"><title>ICLR, counted: 69 rejected or withdrawn, 85%</title></path><rect class=\"not\" x=\"162.0\" y=\"112.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"122.0\">69 (85%)</text><text x=\"180.0\" y=\"137.0\">rejected or withdrawn</text><text class=\"value\" x=\"324.0\" y=\"16\">All eight venues, estimated</text><path class=\"s1 slice\" d=\"M394.0,104.0 L394.0,34.0 A70,70 0 0 1 461.3,123.2 Z\"><title>All eight venues, estimated: 153 accepted, 29%</title></path><rect class=\"s1\" x=\"482.0\" y=\"72.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"500.0\" y=\"82.0\">153 (29%)</text><text x=\"500.0\" y=\"97.0\">accepted</text><path class=\"not slice\" d=\"M394.0,104.0 L461.3,123.2 A70,70 0 1 1 394.0,34.0 Z\"><title>All eight venues, estimated: 367 rejected or withdrawn, 71%</title></path><rect class=\"not\" x=\"482.0\" y=\"112.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"500.0\" y=\"122.0\">367 (71%)</text><text x=\"500.0\" y=\"137.0\">rejected or withdrawn</text></svg>",
-  "iclr_each": "<svg class=\"chart\" viewBox=\"0 0 640 296\" role=\"img\" aria-label=\"ICLR submissions per professor by outcome\"><rect class=\"s1\" x=\"0\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"18\" y=\"16\">accepted</text><rect class=\"not\" x=\"81.2\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"99.2\" y=\"16\">rejected or withdrawn</text><text class=\"value\" x=\"162\" y=\"42\" text-anchor=\"end\">Thanh-Binh Nguyen</text><path class=\"not\" d=\"M170.0,30.0 H256.9 Q260.9,30.0 260.9,34.0 V40.0 Q260.9,44.0 256.9,44.0 H170.0 Z\"><title>Thanh-Binh Nguyen: 3 rejected or withdrawn</title></path><text x=\"266.9\" y=\"42\">3</text><text class=\"value\" x=\"162\" y=\"68\" text-anchor=\"end\">Minh Do</text><path class=\"s1\" d=\"M170.0,56.0 H198.3 Q198.3,56.0 198.3,56.0 V70.0 Q198.3,70.0 198.3,70.0 H170.0 Z\"><title>Minh Do: 1 accepted</title></path><path class=\"not\" d=\"M200.3,56.0 H256.9 Q260.9,56.0 260.9,60.0 V66.0 Q260.9,70.0 256.9,70.0 H200.3 Z\"><title>Minh Do: 2 rejected or withdrawn</title></path><text x=\"266.9\" y=\"68\">3</text><text class=\"value\" x=\"162\" y=\"94\" text-anchor=\"end\">Minh-Triet Tran</text><path class=\"not\" d=\"M170.0,82.0 H256.9 Q260.9,82.0 260.9,86.0 V92.0 Q260.9,96.0 256.9,96.0 H170.0 Z\"><title>Minh-Triet Tran: 3 rejected or withdrawn</title></path><text x=\"266.9\" y=\"94\">3</text><text class=\"value\" x=\"162\" y=\"120\" text-anchor=\"end\">Binh T. Nguyen</text><path class=\"not\" d=\"M170.0,108.0 H256.9 Q260.9,108.0 260.9,112.0 V118.0 Q260.9,122.0 256.9,122.0 H170.0 Z\"><title>Binh T. Nguyen: 3 rejected or withdrawn</title></path><text x=\"266.9\" y=\"120\">3</text><text class=\"value\" x=\"162\" y=\"146\" text-anchor=\"end\">Ngoc Hoang Luong</text><path class=\"not\" d=\"M170.0,134.0 H256.9 Q260.9,134.0 260.9,138.0 V144.0 Q260.9,148.0 256.9,148.0 H170.0 Z\"><title>Ngoc Hoang Luong: 3 rejected or withdrawn</title></path><text x=\"266.9\" y=\"146\">3</text><text class=\"value\" x=\"162\" y=\"172\" text-anchor=\"end\">Ngo Van Linh</text><path class=\"s1\" d=\"M170.0,160.0 H198.3 Q198.3,160.0 198.3,160.0 V174.0 Q198.3,174.0 198.3,174.0 H170.0 Z\"><title>Ngo Van Linh: 1 accepted</title></path><path class=\"not\" d=\"M200.3,160.0 H317.4 Q321.4,160.0 321.4,164.0 V170.0 Q321.4,174.0 317.4,174.0 H200.3 Z\"><title>Ngo Van Linh: 4 rejected or withdrawn</title></path><text x=\"327.4\" y=\"172\">5</text><text class=\"value\" x=\"162\" y=\"198\" text-anchor=\"end\">Phi Le Nguyen</text><path class=\"s1\" d=\"M170.0,186.0 H198.3 Q198.3,186.0 198.3,186.0 V200.0 Q198.3,200.0 198.3,200.0 H170.0 Z\"><title>Phi Le Nguyen: 1 accepted</title></path><path class=\"not\" d=\"M200.3,186.0 H438.6 Q442.6,186.0 442.6,190.0 V196.0 Q442.6,200.0 438.6,200.0 H200.3 Z\"><title>Phi Le Nguyen: 8 rejected or withdrawn</title></path><text x=\"448.6\" y=\"198\">9</text><text class=\"value\" x=\"162\" y=\"224\" text-anchor=\"end\">Dung D. Le</text><path class=\"s1\" d=\"M170.0,212.0 H198.3 Q198.3,212.0 198.3,212.0 V226.0 Q198.3,226.0 198.3,226.0 H170.0 Z\"><title>Dung D. Le: 1 accepted</title></path><path class=\"not\" d=\"M200.3,212.0 H438.6 Q442.6,212.0 442.6,216.0 V222.0 Q442.6,226.0 438.6,226.0 H200.3 Z\"><title>Dung D. Le: 8 rejected or withdrawn</title></path><text x=\"448.6\" y=\"224\">9</text><text class=\"value\" x=\"162\" y=\"250\" text-anchor=\"end\">Than Quang Khoat</text><path class=\"s1\" d=\"M170.0,238.0 H258.9 Q258.9,238.0 258.9,238.0 V252.0 Q258.9,252.0 258.9,252.0 H170.0 Z\"><title>Than Quang Khoat: 3 accepted</title></path><path class=\"not\" d=\"M260.9,238.0 H438.6 Q442.6,238.0 442.6,242.0 V248.0 Q442.6,252.0 438.6,252.0 H260.9 Z\"><title>Than Quang Khoat: 6 rejected or withdrawn</title></path><text x=\"448.6\" y=\"250\">9</text><text class=\"value\" x=\"162\" y=\"276\" text-anchor=\"end\">Khoa D. Doan</text><path class=\"s1\" d=\"M170.0,264.0 H258.9 Q258.9,264.0 258.9,264.0 V278.0 Q258.9,278.0 258.9,278.0 H170.0 Z\"><title>Khoa D. Doan: 3 accepted</title></path><path class=\"not\" d=\"M260.9,264.0 H590.0 Q594.0,264.0 594.0,268.0 V274.0 Q594.0,278.0 590.0,278.0 H260.9 Z\"><title>Khoa D. Doan: 11 rejected or withdrawn</title></path><text x=\"600.0\" y=\"276\">14</text><line class=\"axis\" x1=\"170\" y1=\"26\" x2=\"170\" y2=\"292\"/></svg>",
+  "iclr_each": "<svg class=\"chart\" viewBox=\"0 0 640 296\" role=\"img\" aria-label=\"ICLR submissions per professor by outcome\"><rect class=\"s1\" x=\"0\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"18\" y=\"16\">accepted</text><rect class=\"not\" x=\"81.2\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"99.2\" y=\"16\">rejected or withdrawn</text><text class=\"value\" x=\"162\" y=\"42\" text-anchor=\"end\">Thanh-Binh Nguyen</text><path class=\"not\" d=\"M170.0,30.0 H256.9 Q260.9,30.0 260.9,34.0 V40.0 Q260.9,44.0 256.9,44.0 H170.0 Z\"><title>Thanh-Binh Nguyen: 3 rejected or withdrawn</title></path><text x=\"266.9\" y=\"42\">3</text><text class=\"value\" x=\"162\" y=\"68\" text-anchor=\"end\">Binh T. Nguyen</text><path class=\"not\" d=\"M170.0,56.0 H256.9 Q260.9,56.0 260.9,60.0 V66.0 Q260.9,70.0 256.9,70.0 H170.0 Z\"><title>Binh T. Nguyen: 3 rejected or withdrawn</title></path><text x=\"266.9\" y=\"68\">3</text><text class=\"value\" x=\"162\" y=\"94\" text-anchor=\"end\">Minh Do</text><path class=\"s1\" d=\"M170.0,82.0 H198.3 Q198.3,82.0 198.3,82.0 V96.0 Q198.3,96.0 198.3,96.0 H170.0 Z\"><title>Minh Do: 1 accepted</title></path><path class=\"not\" d=\"M200.3,82.0 H256.9 Q260.9,82.0 260.9,86.0 V92.0 Q260.9,96.0 256.9,96.0 H200.3 Z\"><title>Minh Do: 2 rejected or withdrawn</title></path><text x=\"266.9\" y=\"94\">3</text><text class=\"value\" x=\"162\" y=\"120\" text-anchor=\"end\">Minh-Triet Tran</text><path class=\"not\" d=\"M170.0,108.0 H256.9 Q260.9,108.0 260.9,112.0 V118.0 Q260.9,122.0 256.9,122.0 H170.0 Z\"><title>Minh-Triet Tran: 3 rejected or withdrawn</title></path><text x=\"266.9\" y=\"120\">3</text><text class=\"value\" x=\"162\" y=\"146\" text-anchor=\"end\">Ngoc Hoang Luong</text><path class=\"not\" d=\"M170.0,134.0 H256.9 Q260.9,134.0 260.9,138.0 V144.0 Q260.9,148.0 256.9,148.0 H170.0 Z\"><title>Ngoc Hoang Luong: 3 rejected or withdrawn</title></path><text x=\"266.9\" y=\"146\">3</text><text class=\"value\" x=\"162\" y=\"172\" text-anchor=\"end\">Ngo Van Linh</text><path class=\"s1\" d=\"M170.0,160.0 H198.3 Q198.3,160.0 198.3,160.0 V174.0 Q198.3,174.0 198.3,174.0 H170.0 Z\"><title>Ngo Van Linh: 1 accepted</title></path><path class=\"not\" d=\"M200.3,160.0 H317.4 Q321.4,160.0 321.4,164.0 V170.0 Q321.4,174.0 317.4,174.0 H200.3 Z\"><title>Ngo Van Linh: 4 rejected or withdrawn</title></path><text x=\"327.4\" y=\"172\">5</text><text class=\"value\" x=\"162\" y=\"198\" text-anchor=\"end\">Phi Le Nguyen</text><path class=\"s1\" d=\"M170.0,186.0 H198.3 Q198.3,186.0 198.3,186.0 V200.0 Q198.3,200.0 198.3,200.0 H170.0 Z\"><title>Phi Le Nguyen: 1 accepted</title></path><path class=\"not\" d=\"M200.3,186.0 H438.6 Q442.6,186.0 442.6,190.0 V196.0 Q442.6,200.0 438.6,200.0 H200.3 Z\"><title>Phi Le Nguyen: 8 rejected or withdrawn</title></path><text x=\"448.6\" y=\"198\">9</text><text class=\"value\" x=\"162\" y=\"224\" text-anchor=\"end\">Dung D. Le</text><path class=\"s1\" d=\"M170.0,212.0 H198.3 Q198.3,212.0 198.3,212.0 V226.0 Q198.3,226.0 198.3,226.0 H170.0 Z\"><title>Dung D. Le: 1 accepted</title></path><path class=\"not\" d=\"M200.3,212.0 H438.6 Q442.6,212.0 442.6,216.0 V222.0 Q442.6,226.0 438.6,226.0 H200.3 Z\"><title>Dung D. Le: 8 rejected or withdrawn</title></path><text x=\"448.6\" y=\"224\">9</text><text class=\"value\" x=\"162\" y=\"250\" text-anchor=\"end\">Than Quang Khoat</text><path class=\"s1\" d=\"M170.0,238.0 H258.9 Q258.9,238.0 258.9,238.0 V252.0 Q258.9,252.0 258.9,252.0 H170.0 Z\"><title>Than Quang Khoat: 3 accepted</title></path><path class=\"not\" d=\"M260.9,238.0 H438.6 Q442.6,238.0 442.6,242.0 V248.0 Q442.6,252.0 438.6,252.0 H260.9 Z\"><title>Than Quang Khoat: 6 rejected or withdrawn</title></path><text x=\"448.6\" y=\"250\">9</text><text class=\"value\" x=\"162\" y=\"276\" text-anchor=\"end\">Khoa D. Doan</text><path class=\"s1\" d=\"M170.0,264.0 H258.9 Q258.9,264.0 258.9,264.0 V278.0 Q258.9,278.0 258.9,278.0 H170.0 Z\"><title>Khoa D. Doan: 3 accepted</title></path><path class=\"not\" d=\"M260.9,264.0 H590.0 Q594.0,264.0 594.0,268.0 V274.0 Q594.0,278.0 590.0,278.0 H260.9 Z\"><title>Khoa D. Doan: 11 rejected or withdrawn</title></path><text x=\"600.0\" y=\"276\">14</text><line class=\"axis\" x1=\"170\" y1=\"26\" x2=\"170\" y2=\"292\"/></svg>",
   "trend": "<svg class=\"chart\" viewBox=\"0 0 640 248\" role=\"img\" aria-label=\"Accepted papers of the listed professors per conference and year\"><rect class=\"v1\" x=\"34\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"52\" y=\"16\">ICLR</text><rect class=\"v2\" x=\"89.6\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"107.6\" y=\"16\">NeurIPS</text><rect class=\"v3\" x=\"164.4\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"182.4\" y=\"16\">ICML</text><rect class=\"v4\" x=\"220.0\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"238.0\" y=\"16\">CVPR</text><rect class=\"v5\" x=\"275.6\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"293.6\" y=\"16\">ICCV</text><rect class=\"v6\" x=\"331.20000000000005\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"349.20000000000005\" y=\"16\">ECCV</text><rect class=\"v7\" x=\"386.80000000000007\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"404.80000000000007\" y=\"16\">ACL</text><rect class=\"v8\" x=\"436.00000000000006\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"454.00000000000006\" y=\"16\">EMNLP</text><line class=\"axis\" x1=\"34\" y1=\"224.0\" x2=\"626\" y2=\"224.0\"/><text x=\"28\" y=\"228.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"34\" y1=\"176.5\" x2=\"626\" y2=\"176.5\"/><text x=\"28\" y=\"180.5\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"34\" y1=\"129.0\" x2=\"626\" y2=\"129.0\"/><text x=\"28\" y=\"133.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"34\" y1=\"81.5\" x2=\"626\" y2=\"81.5\"/><text x=\"28\" y=\"85.5\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"34\" y1=\"34.0\" x2=\"626\" y2=\"34.0\"/><text x=\"28\" y=\"38.0\" text-anchor=\"end\">40</text><text x=\"76.3\" y=\"241\" text-anchor=\"middle\">2020</text><text x=\"160.9\" y=\"241\" text-anchor=\"middle\">2021</text><text x=\"245.4\" y=\"241\" text-anchor=\"middle\">2022</text><text x=\"330.0\" y=\"241\" text-anchor=\"middle\">2023</text><text x=\"414.6\" y=\"241\" text-anchor=\"middle\">2024</text><text x=\"499.1\" y=\"241\" text-anchor=\"middle\">2025</text><text x=\"583.7\" y=\"241\" text-anchor=\"middle\">2026</text><polyline class=\"line v1\" points=\"76.3,224.0 160.9,224.0 245.4,219.2 330.0,219.2 414.6,219.2 499.1,205.0 583.7,200.2\"/><circle class=\"dot v1\" cx=\"76.3\" cy=\"224.0\" r=\"4\"><title>ICLR 2020: 0</title></circle><circle class=\"dot v1\" cx=\"160.9\" cy=\"224.0\" r=\"4\"><title>ICLR 2021: 0</title></circle><circle class=\"dot v1\" cx=\"245.4\" cy=\"219.2\" r=\"4\"><title>ICLR 2022: 1</title></circle><circle class=\"dot v1\" cx=\"330.0\" cy=\"219.2\" r=\"4\"><title>ICLR 2023: 1</title></circle><circle class=\"dot v1\" cx=\"414.6\" cy=\"219.2\" r=\"4\"><title>ICLR 2024: 1</title></circle><circle class=\"dot v1\" cx=\"499.1\" cy=\"205.0\" r=\"4\"><title>ICLR 2025: 4</title></circle><circle class=\"dot v1\" cx=\"583.7\" cy=\"200.2\" r=\"4\"><title>ICLR 2026: 5</title></circle><polyline class=\"line v2\" points=\"76.3,224.0 160.9,224.0 245.4,209.8 330.0,209.8 414.6,209.8 499.1,162.2 583.7,76.8\"/><circle class=\"dot v2\" cx=\"76.3\" cy=\"224.0\" r=\"4\"><title>NeurIPS 2020: 0</title></circle><circle class=\"dot v2\" cx=\"160.9\" cy=\"224.0\" r=\"4\"><title>NeurIPS 2021: 0</title></circle><circle class=\"dot v2\" cx=\"245.4\" cy=\"209.8\" r=\"4\"><title>NeurIPS 2022: 3</title></circle><circle class=\"dot v2\" cx=\"330.0\" cy=\"209.8\" r=\"4\"><title>NeurIPS 2023: 3</title></circle><circle class=\"dot v2\" cx=\"414.6\" cy=\"209.8\" r=\"4\"><title>NeurIPS 2024: 3</title></circle><circle class=\"dot v2\" cx=\"499.1\" cy=\"162.2\" r=\"4\"><title>NeurIPS 2025: 13</title></circle><circle class=\"dot v2\" cx=\"583.7\" cy=\"76.8\" r=\"4\"><title>NeurIPS 2026: 31</title></circle><polyline class=\"line v3\" points=\"76.3,219.2 160.9,224.0 245.4,219.2 330.0,224.0 414.6,219.2 499.1,200.2 583.7,167.0\"/><circle class=\"dot v3\" cx=\"76.3\" cy=\"219.2\" r=\"4\"><title>ICML 2020: 1</title></circle><circle class=\"dot v3\" cx=\"160.9\" cy=\"224.0\" r=\"4\"><title>ICML 2021: 0</title></circle><circle class=\"dot v3\" cx=\"245.4\" cy=\"219.2\" r=\"4\"><title>ICML 2022: 1</title></circle><circle class=\"dot v3\" cx=\"330.0\" cy=\"224.0\" r=\"4\"><title>ICML 2023: 0</title></circle><circle class=\"dot v3\" cx=\"414.6\" cy=\"219.2\" r=\"4\"><title>ICML 2024: 1</title></circle><circle class=\"dot v3\" cx=\"499.1\" cy=\"200.2\" r=\"4\"><title>ICML 2025: 5</title></circle><circle class=\"dot v3\" cx=\"583.7\" cy=\"167.0\" r=\"4\"><title>ICML 2026: 12</title></circle><polyline class=\"line v4\" points=\"76.3,224.0 160.9,214.5 245.4,224.0 330.0,219.2 414.6,209.8 499.1,224.0 583.7,190.8\"/><circle class=\"dot v4\" cx=\"76.3\" cy=\"224.0\" r=\"4\"><title>CVPR 2020: 0</title></circle><circle class=\"dot v4\" cx=\"160.9\" cy=\"214.5\" r=\"4\"><title>CVPR 2021: 2</title></circle><circle class=\"dot v4\" cx=\"245.4\" cy=\"224.0\" r=\"4\"><title>CVPR 2022: 0</title></circle><circle class=\"dot v4\" cx=\"330.0\" cy=\"219.2\" r=\"4\"><title>CVPR 2023: 1</title></circle><circle class=\"dot v4\" cx=\"414.6\" cy=\"209.8\" r=\"4\"><title>CVPR 2024: 3</title></circle><circle class=\"dot v4\" cx=\"499.1\" cy=\"224.0\" r=\"4\"><title>CVPR 2025: 0</title></circle><circle class=\"dot v4\" cx=\"583.7\" cy=\"190.8\" r=\"4\"><title>CVPR 2026: 7</title></circle><polyline class=\"line v5\" points=\"76.3,224.0 160.9,224.0 245.4,224.0 330.0,224.0 414.6,224.0 499.1,190.8 583.7,224.0\"/><circle class=\"dot v5\" cx=\"76.3\" cy=\"224.0\" r=\"4\"><title>ICCV 2020: 0</title></circle><circle class=\"dot v5\" cx=\"160.9\" cy=\"224.0\" r=\"4\"><title>ICCV 2021: 0</title></circle><circle class=\"dot v5\" cx=\"245.4\" cy=\"224.0\" r=\"4\"><title>ICCV 2022: 0</title></circle><circle class=\"dot v5\" cx=\"330.0\" cy=\"224.0\" r=\"4\"><title>ICCV 2023: 0</title></circle><circle class=\"dot v5\" cx=\"414.6\" cy=\"224.0\" r=\"4\"><title>ICCV 2024: 0</title></circle><circle class=\"dot v5\" cx=\"499.1\" cy=\"190.8\" r=\"4\"><title>ICCV 2025: 7</title></circle><circle class=\"dot v5\" cx=\"583.7\" cy=\"224.0\" r=\"4\"><title>ICCV 2026: 0</title></circle><polyline class=\"line v6\" points=\"76.3,224.0 160.9,224.0 245.4,224.0 330.0,224.0 414.6,209.8 499.1,224.0 583.7,214.5\"/><circle class=\"dot v6\" cx=\"76.3\" cy=\"224.0\" r=\"4\"><title>ECCV 2020: 0</title></circle><circle class=\"dot v6\" cx=\"160.9\" cy=\"224.0\" r=\"4\"><title>ECCV 2021: 0</title></circle><circle class=\"dot v6\" cx=\"245.4\" cy=\"224.0\" r=\"4\"><title>ECCV 2022: 0</title></circle><circle class=\"dot v6\" cx=\"330.0\" cy=\"224.0\" r=\"4\"><title>ECCV 2023: 0</title></circle><circle class=\"dot v6\" cx=\"414.6\" cy=\"209.8\" r=\"4\"><title>ECCV 2024: 3</title></circle><circle class=\"dot v6\" cx=\"499.1\" cy=\"224.0\" r=\"4\"><title>ECCV 2025: 0</title></circle><circle class=\"dot v6\" cx=\"583.7\" cy=\"214.5\" r=\"4\"><title>ECCV 2026: 2</title></circle><polyline class=\"line v7\" points=\"76.3,224.0 160.9,224.0 245.4,224.0 330.0,224.0 414.6,224.0 499.1,219.2 583.7,190.8\"/><circle class=\"dot v7\" cx=\"76.3\" cy=\"224.0\" r=\"4\"><title>ACL 2020: 0</title></circle><circle class=\"dot v7\" cx=\"160.9\" cy=\"224.0\" r=\"4\"><title>ACL 2021: 0</title></circle><circle class=\"dot v7\" cx=\"245.4\" cy=\"224.0\" r=\"4\"><title>ACL 2022: 0</title></circle><circle class=\"dot v7\" cx=\"330.0\" cy=\"224.0\" r=\"4\"><title>ACL 2023: 0</title></circle><circle class=\"dot v7\" cx=\"414.6\" cy=\"224.0\" r=\"4\"><title>ACL 2024: 0</title></circle><circle class=\"dot v7\" cx=\"499.1\" cy=\"219.2\" r=\"4\"><title>ACL 2025: 1</title></circle><circle class=\"dot v7\" cx=\"583.7\" cy=\"190.8\" r=\"4\"><title>ACL 2026: 7</title></circle><polyline class=\"line v8\" points=\"76.3,224.0 160.9,224.0 245.4,224.0 330.0,209.8 414.6,209.8 499.1,219.2 583.7,214.5\"/><circle class=\"dot v8\" cx=\"76.3\" cy=\"224.0\" r=\"4\"><title>EMNLP 2020: 0</title></circle><circle class=\"dot v8\" cx=\"160.9\" cy=\"224.0\" r=\"4\"><title>EMNLP 2021: 0</title></circle><circle class=\"dot v8\" cx=\"245.4\" cy=\"224.0\" r=\"4\"><title>EMNLP 2022: 0</title></circle><circle class=\"dot v8\" cx=\"330.0\" cy=\"209.8\" r=\"4\"><title>EMNLP 2023: 3</title></circle><circle class=\"dot v8\" cx=\"414.6\" cy=\"209.8\" r=\"4\"><title>EMNLP 2024: 3</title></circle><circle class=\"dot v8\" cx=\"499.1\" cy=\"219.2\" r=\"4\"><title>EMNLP 2025: 1</title></circle><circle class=\"dot v8\" cx=\"583.7\" cy=\"214.5\" r=\"4\"><title>EMNLP 2026: 2</title></circle></svg>",
   "teams": "<svg class=\"chart\" viewBox=\"0 0 640 296\" role=\"img\" aria-label=\"Co-authors per accepted paper, by where they work\"><rect class=\"s1\" x=\"0\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"18\" y=\"16\">own institution</text><rect class=\"s2\" x=\"126.0\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"144.0\" y=\"16\">elsewhere in Vietnam</text><rect class=\"s3\" x=\"284.0\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"302.0\" y=\"16\">abroad</text><text class=\"value\" x=\"162\" y=\"42\" text-anchor=\"end\">Hoang Ta</text><path class=\"s1\" d=\"M170.0,30.0 H337.6 Q337.6,30.0 337.6,30.0 V44.0 Q337.6,44.0 337.6,44.0 H170.0 Z\"><title>Hoang Ta: 3 own institution</title></path><path class=\"s2\" d=\"M339.6,30.0 H354.6 Q354.6,30.0 354.6,30.0 V44.0 Q354.6,44.0 354.6,44.0 H339.6 Z\"><title>Hoang Ta: 0.3 elsewhere in Vietnam</title></path><path class=\"s3\" d=\"M356.6,30.0 H369.5 Q373.5,30.0 373.5,34.0 V40.0 Q373.5,44.0 369.5,44.0 H356.6 Z\"><title>Hoang Ta: 0.3 abroad</title></path><text x=\"379.5\" y=\"42\">3.6</text><text class=\"value\" x=\"162\" y=\"68\" text-anchor=\"end\">Cuong Pham</text><path class=\"s1\" d=\"M170.0,56.0 H173.7 Q173.7,56.0 173.7,56.0 V70.0 Q173.7,70.0 173.7,70.0 H170.0 Z\"><title>Cuong Pham: 0.1 own institution</title></path><path class=\"s2\" d=\"M175.7,56.0 H275.4 Q275.4,56.0 275.4,56.0 V70.0 Q275.4,70.0 275.4,70.0 H175.7 Z\"><title>Cuong Pham: 1.8 elsewhere in Vietnam</title></path><path class=\"s3\" d=\"M277.4,56.0 H414.7 Q418.7,56.0 418.7,60.0 V66.0 Q418.7,70.0 414.7,70.0 H277.4 Z\"><title>Cuong Pham: 2.5 abroad</title></path><text x=\"424.7\" y=\"68\">4.4</text><text class=\"value\" x=\"162\" y=\"94\" text-anchor=\"end\">Dinh Viet Sang</text><path class=\"s1\" d=\"M170.0,82.0 H281.1 Q281.1,82.0 281.1,82.0 V96.0 Q281.1,96.0 281.1,96.0 H170.0 Z\"><title>Dinh Viet Sang: 2 own institution</title></path><path class=\"s2\" d=\"M283.1,82.0 H354.6 Q354.6,82.0 354.6,82.0 V96.0 Q354.6,96.0 354.6,96.0 H283.1 Z\"><title>Dinh Viet Sang: 1.3 elsewhere in Vietnam</title></path><path class=\"s3\" d=\"M356.6,82.0 H426.1 Q430.1,82.0 430.1,86.0 V92.0 Q430.1,96.0 426.1,96.0 H356.6 Z\"><title>Dinh Viet Sang: 1.3 abroad</title></path><text x=\"436.1\" y=\"94\">4.6</text><text class=\"value\" x=\"162\" y=\"120\" text-anchor=\"end\">Phi Le Nguyen</text><path class=\"s1\" d=\"M170.0,108.0 H224.5 Q224.5,108.0 224.5,108.0 V122.0 Q224.5,122.0 224.5,122.0 H170.0 Z\"><title>Phi Le Nguyen: 1 own institution</title></path><path class=\"s2\" d=\"M226.5,108.0 H252.8 Q252.8,108.0 252.8,108.0 V122.0 Q252.8,122.0 252.8,122.0 H226.5 Z\"><title>Phi Le Nguyen: 0.5 elsewhere in Vietnam</title></path><path class=\"s3\" d=\"M254.8,108.0 H465.6 Q469.6,108.0 469.6,112.0 V118.0 Q469.6,122.0 465.6,122.0 H254.8 Z\"><title>Phi Le Nguyen: 3.8 abroad</title></path><text x=\"475.6\" y=\"120\">5.3</text><text class=\"value\" x=\"162\" y=\"146\" text-anchor=\"end\">Dung D. Le</text><path class=\"s1\" d=\"M170.0,134.0 H196.3 Q196.3,134.0 196.3,134.0 V148.0 Q196.3,148.0 196.3,148.0 H170.0 Z\"><title>Dung D. Le: 0.5 own institution</title></path><path class=\"s2\" d=\"M198.3,134.0 H309.3 Q309.3,134.0 309.3,134.0 V148.0 Q309.3,148.0 309.3,148.0 H198.3 Z\"><title>Dung D. Le: 2 elsewhere in Vietnam</title></path><path class=\"s3\" d=\"M311.3,134.0 H465.6 Q469.6,134.0 469.6,138.0 V144.0 Q469.6,148.0 465.6,148.0 H311.3 Z\"><title>Dung D. Le: 2.8 abroad</title></path><text x=\"475.6\" y=\"146\">5.3</text><text class=\"value\" x=\"162\" y=\"172\" text-anchor=\"end\">Ngo Van Linh</text><path class=\"s1\" d=\"M170.0,160.0 H269.8 Q269.8,160.0 269.8,160.0 V174.0 Q269.8,174.0 269.8,174.0 H170.0 Z\"><title>Ngo Van Linh: 1.8 own institution</title></path><path class=\"s2\" d=\"M271.8,160.0 H320.6 Q320.6,160.0 320.6,160.0 V174.0 Q320.6,174.0 320.6,174.0 H271.8 Z\"><title>Ngo Van Linh: 0.9 elsewhere in Vietnam</title></path><path class=\"s3\" d=\"M322.6,160.0 H465.6 Q469.6,160.0 469.6,164.0 V170.0 Q469.6,174.0 465.6,174.0 H322.6 Z\"><title>Ngo Van Linh: 2.6 abroad</title></path><text x=\"475.6\" y=\"172\">5.3</text><text class=\"value\" x=\"162\" y=\"198\" text-anchor=\"end\">Than Quang Khoat</text><path class=\"s1\" d=\"M170.0,186.0 H185.0 Q185.0,186.0 185.0,186.0 V200.0 Q185.0,200.0 185.0,200.0 H170.0 Z\"><title>Than Quang Khoat: 0.3 own institution</title></path><path class=\"s2\" d=\"M187.0,186.0 H264.1 Q264.1,186.0 264.1,186.0 V200.0 Q264.1,200.0 264.1,200.0 H187.0 Z\"><title>Than Quang Khoat: 1.4 elsewhere in Vietnam</title></path><path class=\"s3\" d=\"M266.1,186.0 H471.3 Q475.3,186.0 475.3,190.0 V196.0 Q475.3,200.0 471.3,200.0 H266.1 Z\"><title>Than Quang Khoat: 3.7 abroad</title></path><text x=\"481.3\" y=\"198\">5.4</text><text class=\"value\" x=\"162\" y=\"224\" text-anchor=\"end\">Khoa D. Doan</text><path class=\"s1\" d=\"M170.0,212.0 H258.5 Q258.5,212.0 258.5,212.0 V226.0 Q258.5,226.0 258.5,226.0 H170.0 Z\"><title>Khoa D. Doan: 1.6 own institution</title></path><path class=\"s2\" d=\"M260.5,212.0 H320.6 Q320.6,212.0 320.6,212.0 V226.0 Q320.6,226.0 320.6,226.0 H260.5 Z\"><title>Khoa D. Doan: 1.1 elsewhere in Vietnam</title></path><path class=\"s3\" d=\"M322.6,212.0 H510.9 Q514.9,212.0 514.9,216.0 V222.0 Q514.9,226.0 510.9,226.0 H322.6 Z\"><title>Khoa D. Doan: 3.4 abroad</title></path><text x=\"520.9\" y=\"224\">6.1</text><text class=\"value\" x=\"162\" y=\"250\" text-anchor=\"end\">Tuan Do</text><path class=\"s1\" d=\"M170.0,238.0 H213.2 Q213.2,238.0 213.2,238.0 V252.0 Q213.2,252.0 213.2,252.0 H170.0 Z\"><title>Tuan Do: 0.8 own institution</title></path><path class=\"s2\" d=\"M215.2,238.0 H348.9 Q348.9,238.0 348.9,238.0 V252.0 Q348.9,252.0 348.9,252.0 H215.2 Z\"><title>Tuan Do: 2.4 elsewhere in Vietnam</title></path><path class=\"s3\" d=\"M350.9,238.0 H573.0 Q577.0,238.0 577.0,242.0 V248.0 Q577.0,252.0 573.0,252.0 H350.9 Z\"><title>Tuan Do: 4 abroad</title></path><text x=\"583.0\" y=\"250\">7.2</text><text class=\"value\" x=\"162\" y=\"276\" text-anchor=\"end\">Thanh-Binh Nguyen</text><path class=\"s1\" d=\"M170.0,264.0 H196.3 Q196.3,264.0 196.3,264.0 V278.0 Q196.3,278.0 196.3,278.0 H170.0 Z\"><title>Thanh-Binh Nguyen: 0.5 own institution</title></path><path class=\"s2\" d=\"M198.3,264.0 H292.4 Q292.4,264.0 292.4,264.0 V278.0 Q292.4,278.0 292.4,278.0 H198.3 Z\"><title>Thanh-Binh Nguyen: 1.7 elsewhere in Vietnam</title></path><path class=\"s3\" d=\"M294.4,264.0 H590.0 Q594.0,264.0 594.0,268.0 V274.0 Q594.0,278.0 590.0,278.0 H294.4 Z\"><title>Thanh-Binh Nguyen: 5.3 abroad</title></path><text x=\"600.0\" y=\"276\">7.5</text><line class=\"axis\" x1=\"170\" y1=\"26\" x2=\"170\" y2=\"292\"/></svg>",
   "attempts": "<svg class=\"chart\" viewBox=\"0 0 640 296\" role=\"img\" aria-label=\"Accepted papers and the submissions behind them, per professor\"><rect class=\"s1\" x=\"0\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"18\" y=\"16\">accepted</text><rect class=\"not\" x=\"81.2\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"99.2\" y=\"16\">rejected at ICLR</text><rect class=\"hollow\" x=\"213.60000000000002\" y=\"6\" width=\"12\" height=\"12\"/><text x=\"231.60000000000002\" y=\"16\">rejected elsewhere, estimated</text><text class=\"value\" x=\"162\" y=\"42\" text-anchor=\"end\">Minh-Triet Tran</text><path class=\"s1\" d=\"M170.0,30.0 H177.9 Q177.9,30.0 177.9,30.0 V44.0 Q177.9,44.0 177.9,44.0 H170.0 Z\"><title>Minh-Triet Tran: 2 accepted</title></path><path class=\"not\" d=\"M179.9,30.0 H192.7 Q192.7,30.0 192.7,30.0 V44.0 Q192.7,44.0 192.7,44.0 H179.9 Z\"><title>Minh-Triet Tran: 3 rejected at ICLR</title></path><path class=\"hollow\" d=\"M194.7,30.0 H220.2 Q224.2,30.0 224.2,34.0 V40.0 Q224.2,44.0 220.2,44.0 H194.7 Z\"><title>Minh-Triet Tran: 6 rejected elsewhere, estimated</title></path><text x=\"230.2\" y=\"42\">11</text><text class=\"value\" x=\"162\" y=\"68\" text-anchor=\"end\">Than Quang Khoat</text><path class=\"s1\" d=\"M170.0,56.0 H202.5 Q202.5,56.0 202.5,56.0 V70.0 Q202.5,70.0 202.5,70.0 H170.0 Z\"><title>Than Quang Khoat: 7 accepted</title></path><path class=\"not\" d=\"M204.5,56.0 H232.1 Q232.1,56.0 232.1,56.0 V70.0 Q232.1,70.0 232.1,70.0 H204.5 Z\"><title>Than Quang Khoat: 6 rejected at ICLR</title></path><path class=\"hollow\" d=\"M234.1,56.0 H254.7 Q258.7,56.0 258.7,60.0 V66.0 Q258.7,70.0 254.7,70.0 H234.1 Z\"><title>Than Quang Khoat: 5 rejected elsewhere, estimated</title></path><text x=\"264.7\" y=\"68\">18</text><text class=\"value\" x=\"162\" y=\"94\" text-anchor=\"end\">Binh T. Nguyen</text><path class=\"s1\" d=\"M170.0,82.0 H187.7 Q187.7,82.0 187.7,82.0 V96.0 Q187.7,96.0 187.7,96.0 H170.0 Z\"><title>Binh T. Nguyen: 4 accepted</title></path><path class=\"not\" d=\"M189.7,82.0 H202.5 Q202.5,82.0 202.5,82.0 V96.0 Q202.5,96.0 202.5,96.0 H189.7 Z\"><title>Binh T. Nguyen: 3 rejected at ICLR</title></path><path class=\"hollow\" d=\"M204.5,82.0 H259.7 Q263.7,82.0 263.7,86.0 V92.0 Q263.7,96.0 259.7,96.0 H204.5 Z\"><title>Binh T. Nguyen: 12 rejected elsewhere, estimated</title></path><text x=\"269.7\" y=\"94\">19</text><text class=\"value\" x=\"162\" y=\"120\" text-anchor=\"end\">Thanh-Binh Nguyen</text><path class=\"s1\" d=\"M170.0,108.0 H197.6 Q197.6,108.0 197.6,108.0 V122.0 Q197.6,122.0 197.6,122.0 H170.0 Z\"><title>Thanh-Binh Nguyen: 6 accepted</title></path><path class=\"not\" d=\"M199.6,108.0 H212.4 Q212.4,108.0 212.4,108.0 V122.0 Q212.4,122.0 212.4,122.0 H199.6 Z\"><title>Thanh-Binh Nguyen: 3 rejected at ICLR</title></path><path class=\"hollow\" d=\"M214.4,108.0 H299.1 Q303.1,108.0 303.1,112.0 V118.0 Q303.1,122.0 299.1,122.0 H214.4 Z\"><title>Thanh-Binh Nguyen: 18 rejected elsewhere, estimated</title></path><text x=\"309.1\" y=\"120\">27</text><text class=\"value\" x=\"162\" y=\"146\" text-anchor=\"end\">Cuong Pham</text><path class=\"s1\" d=\"M170.0,134.0 H227.2 Q227.2,134.0 227.2,134.0 V148.0 Q227.2,148.0 227.2,148.0 H170.0 Z\"><title>Cuong Pham: 12 accepted</title></path><path class=\"not\" d=\"M229.2,134.0 H237.0 Q237.0,134.0 237.0,134.0 V148.0 Q237.0,148.0 237.0,148.0 H229.2 Z\"><title>Cuong Pham: 2 rejected at ICLR</title></path><path class=\"hollow\" d=\"M239.0,134.0 H348.4 Q352.4,134.0 352.4,138.0 V144.0 Q352.4,148.0 348.4,148.0 H239.0 Z\"><title>Cuong Pham: 23 rejected elsewhere, estimated</title></path><text x=\"358.4\" y=\"146\">37</text><text class=\"value\" x=\"162\" y=\"172\" text-anchor=\"end\">Tuan Dam</text><path class=\"s1\" d=\"M170.0,160.0 H227.2 Q227.2,160.0 227.2,160.0 V174.0 Q227.2,174.0 227.2,174.0 H170.0 Z\"><title>Tuan Dam: 12 accepted</title></path><path class=\"not\" d=\"M229.2,160.0 H237.0 Q237.0,160.0 237.0,160.0 V174.0 Q237.0,174.0 237.0,174.0 H229.2 Z\"><title>Tuan Dam: 2 rejected at ICLR</title></path><path class=\"hollow\" d=\"M239.0,160.0 H353.3 Q357.3,160.0 357.3,164.0 V170.0 Q357.3,174.0 353.3,174.0 H239.0 Z\"><title>Tuan Dam: 24 rejected elsewhere, estimated</title></path><text x=\"363.3\" y=\"172\">38</text><text class=\"value\" x=\"162\" y=\"198\" text-anchor=\"end\">Dung D. Le</text><path class=\"s1\" d=\"M170.0,186.0 H212.4 Q212.4,186.0 212.4,186.0 V200.0 Q212.4,200.0 212.4,200.0 H170.0 Z\"><title>Dung D. Le: 9 accepted</title></path><path class=\"not\" d=\"M214.4,186.0 H251.8 Q251.8,186.0 251.8,186.0 V200.0 Q251.8,200.0 251.8,200.0 H214.4 Z\"><title>Dung D. Le: 8 rejected at ICLR</title></path><path class=\"hollow\" d=\"M253.8,186.0 H402.7 Q406.7,186.0 406.7,190.0 V196.0 Q406.7,200.0 402.7,200.0 H253.8 Z\"><title>Dung D. Le: 31 rejected elsewhere, estimated</title></path><text x=\"412.7\" y=\"198\">48</text><text class=\"value\" x=\"162\" y=\"224\" text-anchor=\"end\">Ngo Van Linh</text><path class=\"s1\" d=\"M170.0,212.0 H251.8 Q251.8,212.0 251.8,212.0 V226.0 Q251.8,226.0 251.8,226.0 H170.0 Z\"><title>Ngo Van Linh: 17 accepted</title></path><path class=\"not\" d=\"M253.8,212.0 H271.5 Q271.5,212.0 271.5,212.0 V226.0 Q271.5,226.0 271.5,226.0 H253.8 Z\"><title>Ngo Van Linh: 4 rejected at ICLR</title></path><path class=\"hollow\" d=\"M273.5,212.0 H427.3 Q431.3,212.0 431.3,216.0 V222.0 Q431.3,226.0 427.3,226.0 H273.5 Z\"><title>Ngo Van Linh: 32 rejected elsewhere, estimated</title></path><text x=\"437.3\" y=\"224\">53</text><text class=\"value\" x=\"162\" y=\"250\" text-anchor=\"end\">Khoa D. Doan</text><path class=\"s1\" d=\"M170.0,238.0 H256.7 Q256.7,238.0 256.7,238.0 V252.0 Q256.7,252.0 256.7,252.0 H170.0 Z\"><title>Khoa D. Doan: 18 accepted</title></path><path class=\"not\" d=\"M258.7,238.0 H311.0 Q311.0,238.0 311.0,238.0 V252.0 Q311.0,252.0 311.0,252.0 H258.7 Z\"><title>Khoa D. Doan: 11 rejected at ICLR</title></path><path class=\"hollow\" d=\"M313.0,238.0 H491.4 Q495.4,238.0 495.4,242.0 V248.0 Q495.4,252.0 491.4,252.0 H313.0 Z\"><title>Khoa D. Doan: 37 rejected elsewhere, estimated</title></path><text x=\"501.4\" y=\"250\">66</text><text class=\"value\" x=\"162\" y=\"276\" text-anchor=\"end\">Phi Le Nguyen</text><path class=\"s1\" d=\"M170.0,264.0 H251.8 Q251.8,264.0 251.8,264.0 V278.0 Q251.8,278.0 251.8,278.0 H170.0 Z\"><title>Phi Le Nguyen: 17 accepted</title></path><path class=\"not\" d=\"M253.8,264.0 H291.3 Q291.3,264.0 291.3,264.0 V278.0 Q291.3,278.0 291.3,278.0 H253.8 Z\"><title>Phi Le Nguyen: 8 rejected at ICLR</title></path><path class=\"hollow\" d=\"M293.3,264.0 H590.0 Q594.0,264.0 594.0,268.0 V274.0 Q594.0,278.0 590.0,278.0 H293.3 Z\"><title>Phi Le Nguyen: 61 rejected elsewhere, estimated</title></path><text x=\"600.0\" y=\"276\">86</text><line class=\"axis\" x1=\"170\" y1=\"26\" x2=\"170\" y2=\"292\"/></svg>"
@@ -4870,14 +4870,14 @@
   "Nhan-Phu Chung",
   "Thanh Trung Huynh",
   "Uyen N.B. Vo",
+  "Hoang-Son Do",
+  "Bui Trong Duc",
+  "Thuy T. Nguyen",
   "Canh V. Pham",
   "Cuong Viet Ta",
   "Son Ha Xuan",
   "An Mai",
   "Tran Thai Son",
-  "Hoang-Son Do",
-  "Bui Trong Duc",
-  "Thuy T. Nguyen",
   "Danh Le-Phuoc",
   "Long Hoang Dang",
   "Nguyen Tu Uyen",

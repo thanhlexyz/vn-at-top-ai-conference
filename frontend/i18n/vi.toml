@@ -202,7 +202,7 @@ other = """<ul>
 <li>Dấu &ndash; cho biết hồ sơ OpenReview của giảng viên chưa được thu thập.</li>
 <li>Mọi số liệu chỉ tính nhánh chính (main track); không tính workshop, bài position và nhánh Datasets &amp; Benchmarks của NeurIPS.</li>
 <li>Bài được xếp vào Findings là bài không được nhận vào nhánh chính, nên được tính là bị từ chối ở nhánh chính; bài này cũng được liệt kê cùng các bài workshop.</li>
-<li>Giảng viên được sắp xếp theo số bài được chấp nhận chính thức, sau đó đến số bài chưa chính thức.</li>
+<li>Giảng viên được sắp xếp theo tổng số bài được chấp nhận, gồm cả bài chính thức và chưa chính thức; nếu bằng nhau, người có nhiều bài chính thức hơn đứng trước.</li>
 </ul>"""
 [home_note_provisional]
 other = "Danh sách chính thức của {{ .Name }} {{ .Year }} chưa đầy đủ và chưa thể xác nhận tác giả trên OpenReview cho đến khi hội nghị diễn ra; các bài trong danh sách này, cùng các bài có trên trang của giảng viên, được tính là chưa chính thức và hiện dưới dạng <span class=\"own\">+N</span>."
