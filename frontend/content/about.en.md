@@ -106,3 +106,7 @@ The public site counts visits with [GoatCounter](https://www.goatcounter.com/), 
 ## Author
 
 This site was built by an AI, [Claude](https://www.anthropic.com/claude), under the direction of **Thanh Le** ([thanhle.xyz](http://thanhle.xyz)). The code and data are public on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Corrections are warmly welcome on the [Feedback](../feedback/) page.
+
+## Acknowledgements
+
+Thanks to Dr [Nam Vo](https://vingen.vinbigdata.org/teams/vo-sy-nam/) for his comments, and for suggesting that the front page separate papers from before 2026 and from 2026 on, to show the numbers before and after AI became really strong.

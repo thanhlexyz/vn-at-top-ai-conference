@@ -106,3 +106,7 @@ Trang công khai thống kê lượt truy cập bằng [GoatCounter](https://www
 ## Tác giả
 
 Trang thông tin này do **Lê Thành** ([thanhle.xyz](http://thanhle.xyz)) hướng dẫn AI ([Claude](https://www.anthropic.com/claude)) thực hiện. Mã nguồn và dữ liệu được công khai tại [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Kính mong quý thầy cô và anh chị góp ý qua trang [Góp ý](../feedback/).
+
+## Lời cảm ơn
+
+Xin cảm ơn TS. [Võ Sỹ Nam](https://vingen.vinbigdata.org/teams/vo-sy-nam/) đã góp ý, đặc biệt là gợi ý tách số liệu trên trang chính thành trước năm 2026 và từ năm 2026, để thấy số bài trước và sau khi AI thực sự trở nên mạnh.
