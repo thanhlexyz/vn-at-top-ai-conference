@@ -33,6 +33,9 @@
 	{{- end }}
 </ol>
 {{- end }}
+{{- with cond (eq site.Language.Lang "vi") $p.page_note_vi $p.page_note }}
+<aside class="callout">{{ . | markdownify }}</aside>
+{{- end }}
 
 {{- /* co-authors who are also on this site, from the collaboration graph: most shared papers first */}}
 {{- $vi := eq site.Language.Lang "vi" }}
