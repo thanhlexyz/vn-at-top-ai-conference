@@ -408,13 +408,9 @@ td.est, th.est { background: var(--est) ; }  /* orange: estimated */
 td.sub, th.sub { background: var(--sub) ; }  /* light grey: submitted, estimated */
 td.rate, th.rate { background: var(--rate) ; }  /* light blue: acceptance rate, estimated */
 td.rate.trivial { color: var(--faint) ; }
-/* co-author columns: fewest green, most red, domestic blue, foreign orange, same institution cyan, other magenta */
-td.ca-min, th.ca-min { background: var(--good) ; }
-td.ca-max, th.ca-max { background: var(--bad) ; }
-td.ca-dom, th.ca-dom { background: var(--rate) ; }
-td.ca-for, th.ca-for { background: var(--est) ; }
-td.ca-same, th.ca-same { background: var(--same) ; }  /* cyan: same institution */
-td.ca-other, th.ca-other { background: var(--other) ; }  /* magenta: other institutions */  /* no ICLR record to estimate from: shown, but sorted last */
+/* co-author columns in pairs, green then red: min / max, domestic / foreign, same institution / other institutions */
+td.ca-min, th.ca-min, td.ca-dom, th.ca-dom, td.ca-same, th.ca-same { background: var(--good) ; }
+td.ca-max, th.ca-max, td.ca-for, th.ca-for, td.ca-other, th.ca-other { background: var(--bad) ; }  /* no ICLR record to estimate from: shown, but sorted last */
 
 /* Sortable headings (site.js) */
 th.sortable { cursor: pointer ; }
