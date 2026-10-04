@@ -20,7 +20,7 @@ Các chỉ số này được tính trên toàn bộ các bài được thống 
 - **Trong nước mỗi bài:** số đồng tác giả trung bình mỗi bài có đơn vị ghi trên bài ở Việt Nam, kể cả trường của giảng viên.
 - **Cùng trường mỗi bài:** số đồng tác giả trung bình mỗi bài có đơn vị ghi trên bài là trường của giảng viên.
 - **Đơn vị khác mỗi bài:** số đồng tác giả trung bình mỗi bài có đơn vị ghi trên bài là trường hoặc đơn vị khác, dù ở Việt Nam hay nước ngoài.
-- **Số lĩnh vực:** số lĩnh vực lớn khác nhau trong các nhãn chủ đề mà hội nghị gán cho bài, ví dụ "Deep Learning" hay "Reinforcement Learning".
+- **Số chủ đề:** số nhãn chủ đề khác nhau mà hội nghị gán cho bài, mỗi nhãn gồm lĩnh vực và chủ đề trong lĩnh vực đó, ví dụ "Deep Learning / Large Language Models" hay "Reinforcement Learning / Planning". Đây là các dòng của bảng chủ đề trên trang của giảng viên.
 
 Hai chỉ số liên quan đến đơn vị công tác chỉ sử dụng bài có đơn vị của từng tác giả: lấy từ danh sách chính thức, hoặc, khi danh sách không ghi (ACL, EMNLP, CVPR trước năm 2023 và năm 2026), đọc từ trang đầu bản PDF của bài và kiểm tra thủ công. Bài chỉ có trên trang cá nhân không được tính.
 Nhãn chủ đề chỉ có tại ICLR và ICML từ năm 2024, và tại NeurIPS từ năm 2023 đến 2025. Bộ nhãn khác nhau giữa các hội nghị và các năm, và do tác giả tự lựa chọn, nên hai bài cùng đề tài có thể mang nhãn khác nhau.

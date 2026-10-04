@@ -20,7 +20,7 @@
 		<th rowspan="2" class="ws" title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
 		<th colspan="2" title="{{ T "tip_own_institution" }}">{{ T "th_own_institution" }}</th>
 		<th colspan="7">{{ T "th_coauthors" }}</th>
-		<th rowspan="2">{{ T "th_topic_areas" }}</th>
+		<th rowspan="2" title="{{ T "tip_topics" }}">{{ T "th_topics" }}</th>
 		<th colspan="3" title="{{ T "tip_scholar" }}">Google Scholar</th>
 	</tr>
 	<tr>
@@ -89,7 +89,7 @@
 		{{ partial "num.html" (len (.workshop_papers | default slice)) }}
 		{{ partial "num.html" .authorship.majority.total }}
 		{{ partial "num.html" .authorship.first_author.total }}
-		{{- range slice .collab.avg_coauthors .collab.min_coauthors .collab.max_coauthors .collab.avg_foreign .collab.avg_domestic .collab.avg_same_institution .collab.avg_other_institution .collab.topic_areas }}
+		{{- range slice .collab.avg_coauthors .collab.min_coauthors .collab.max_coauthors .collab.avg_foreign .collab.avg_domestic .collab.avg_same_institution .collab.avg_other_institution .collab.topic_count }}
 		{{- if eq (string .) "" }}
 		<td class="na">&ndash;</td>
 		{{- else }}

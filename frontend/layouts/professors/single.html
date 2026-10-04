@@ -143,7 +143,7 @@
 	{{- end }}
 	{{- if $c.papers_with_topic }}
 	<li>
-		{{ T "topics_line" (dict "Count" $c.topic_areas "With" $c.papers_with_topic "Papers" $c.papers) }}
+		{{ T "topics_line" (dict "Topics" $c.topic_count "Count" $c.topic_areas "With" $c.papers_with_topic "Papers" $c.papers) }}
 		{{ range $n, $a := $c.areas }}{{ if $n }}, {{ end }}{{ $a.area }} ({{ $a.papers }}){{ end }}.
 	</li>
 	{{- else }}

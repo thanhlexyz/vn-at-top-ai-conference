@@ -20,7 +20,7 @@ These figures are taken over all of a professor's counted papers, accepted or no
 - **Domestic per paper:** the average number of other authors whose affiliation on the paper is an institution in Vietnam, the professor's own included.
 - **Same institution per paper:** the average number of other authors whose affiliation on the paper is the professor's own institution.
 - **Other institutions per paper:** the average number of other authors whose affiliation on the paper is another institution, in Vietnam or abroad.
-- **Topic areas:** the number of different top-level areas among the topic labels the conference gave the papers, for example "Deep Learning" or "Reinforcement Learning".
+- **Topics:** the number of different topic labels the conference gave the papers, each an area and a topic within it, for example "Deep Learning / Large Language Models" or "Reinforcement Learning / Planning". They are the rows of the topic table on the professor's page.
 
 The two affiliation figures use only papers with an affiliation for each author: from the official list, or, where the list prints none (ACL, EMNLP, CVPR before 2023 and in 2026), read from the title page of the paper's PDF and checked by hand. Papers known only from personal pages are left out of them.
 Topic labels exist only for ICLR and ICML from 2024 and for NeurIPS from 2023 to 2025. The label sets differ between conferences and years, and the authors choose the label, so two papers on the same subject can carry different labels.

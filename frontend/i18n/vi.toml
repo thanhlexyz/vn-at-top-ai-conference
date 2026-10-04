@@ -213,7 +213,7 @@ Riêng đối với danh sách này, các bài được công bố trên trang c
 other = """<ul>
 <li>Các cột về đồng tác giả và lĩnh vực được tính trên toàn bộ các bài được thống kê, kể cả bài bị từ chối.</li>
 <li>* Số trung bình mỗi bài. "Nước ngoài" và "trong nước" chỉ đơn vị công tác ghi trên bài ở ngoài hay trong Việt Nam; "cùng trường" là trường của giảng viên, "đơn vị khác" là mọi đơn vị khác, trong nước hay nước ngoài.</li>
-<li>Hai chỉ số này cần danh sách bài có ghi đơn vị công tác; chỉ số lĩnh vực dựa trên nhãn chủ đề do hội nghị gán, chỉ có tại ICLR, NeurIPS và ICML từ năm 2023 hoặc 2024.</li>
+<li>Hai chỉ số này cần danh sách bài có ghi đơn vị công tác; số chủ đề dựa trên nhãn chủ đề do hội nghị gán, chỉ có tại ICLR, NeurIPS và ICML từ năm 2023 hoặc 2024.</li>
 <li>Trang của từng giảng viên ghi rõ mỗi chỉ số được tính trên bao nhiêu bài.</li>
 </ul>"""
 [home_overview]
@@ -294,7 +294,7 @@ other = "Hai chỉ số trên được tính trên {{ .With }}/{{ .Papers }} bà
 [coauthors_no_aff]
 other = "Các danh sách bài báo không ghi đơn vị công tác, nên không thể thống kê đồng tác giả nước ngoài hoặc ở đơn vị khác."
 [topics_line]
-other = "{{ .Count }} lĩnh vực, theo nhãn chủ đề do hội nghị gán cho {{ .With }}/{{ .Papers }} bài:"
+other = "{{ .Topics }} chủ đề thuộc {{ .Count }} lĩnh vực, theo nhãn chủ đề do hội nghị gán cho {{ .With }}/{{ .Papers }} bài:"
 [topics_none]
 other = "Chưa có bài nào được hội nghị gán nhãn chủ đề."
 [accepted_papers]
@@ -544,3 +544,8 @@ other = "bài bị từ chối vẫn có ghi nhận: bài được xếp vào Fi
 
 [tip_openreview_decision]
 other = "Quyết định trên OpenReview"
+
+[th_topics]
+other = "Số chủ đề"
+[tip_topics]
+other = "số nhãn chủ đề khác nhau mà hội nghị gán cho bài, như bảng chủ đề trên trang của từng giảng viên"

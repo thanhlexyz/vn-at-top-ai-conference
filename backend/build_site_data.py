@@ -575,6 +575,7 @@ def collaboration(person, counted, workshop=()):
         "elsewhere": len(elsewhere) if foreign else "", "elsewhere_abroad": len(elsewhere & abroad),
         "elsewhere_vietnam": len(elsewhere - abroad),
         "papers_with_topic": sum(areas.values()), "topic_areas": len(areas) if areas else "",
+        "topic_count": len(topics) if topics else "",   # distinct (area, topic) labels: the rows of the topic table
         "areas": [{"area": a, "papers": n} for a, n in areas.most_common()],
         "topics": [{"area": a, "topic": t, "papers": n} for (a, t), n in sorted(topics.items(), key=lambda x: (-x[1], x[0]))],
     }

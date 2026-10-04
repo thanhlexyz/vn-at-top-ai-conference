@@ -215,7 +215,7 @@ For that list only, papers that a professor's own page lists are counted as well
 other = """<ul>
 <li>The co-author and topic columns are taken over all counted papers, accepted or not.</li>
 <li>* Averages per paper. Foreign and domestic mean the affiliation printed on the paper is outside or inside Vietnam; same institution is the professor's own institution, and other institutions is any other one, in Vietnam or abroad.</li>
-<li>Both need a paper list with affiliations; topic areas need the conference's own topic labels, which exist for ICLR, NeurIPS and ICML from 2023 or 2024 on.</li>
+<li>Both need a paper list with affiliations; topics need the conference's own topic labels, which exist for ICLR, NeurIPS and ICML from 2023 or 2024 on.</li>
 <li>Each professor's page says how many papers a figure is based on.</li>
 </ul>"""
 [home_overview]
@@ -299,7 +299,7 @@ other = "The last two figures use the {{ .With }} of {{ .Papers }} papers whose 
 [coauthors_no_aff]
 other = "None of the paper lists prints affiliations, so foreign and other-institution co-authors cannot be counted."
 [topics_line]
-other = "{{ .Count }} topic areas, from the conference's own label on {{ .With }} of {{ .Papers }} papers:"
+other = "{{ .Topics }} topics in {{ .Count }} areas, from the conference's own label on {{ .With }} of {{ .Papers }} papers:"
 [topics_none]
 other = "None of the papers carries a topic label from its conference."
 [accepted_papers]
@@ -550,3 +550,8 @@ other = "rejections on record even here: papers placed in Findings, and rejectio
 
 [tip_openreview_decision]
 other = "The decision on OpenReview"
+
+[th_topics]
+other = "Topics"
+[tip_topics]
+other = "different topic labels the conference gave the papers, as in the topic table on each professor's page"
