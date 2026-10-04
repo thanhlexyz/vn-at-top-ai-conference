@@ -116,7 +116,7 @@ Trang thông tin này do **Lê Thành** ([thanhle.xyz](http://thanhle.xyz)) hư�
 
 Xin cảm ơn TS. [Võ Sỹ Nam](https://vingen.vinbigdata.org/teams/vo-sy-nam/) đã góp ý, đặc biệt là gợi ý tách số liệu trên trang chính thành trước năm 2026 và từ năm 2026, để thấy số bài trước và sau khi AI thực sự trở nên mạnh.
 
-Xin cảm ơn GS. [Huỳnh Thị Thanh Bình](https://soict.hust.edu.vn/en/prof-huynh-thi-thanh-binh.html) đã góp ý, đặc biệt là gợi ý theo dõi thêm các hội nghị EMNLP, ICCV và ECCV.
+Xin cảm ơn GS. [Huỳnh Thị Thanh Bình](../professors/huynh-thi-thanh-binh/) đã góp ý, đặc biệt là gợi ý theo dõi thêm các hội nghị EMNLP, ICCV và ECCV.
 
 ## Liên kết hữu ích
 
