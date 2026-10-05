@@ -282,7 +282,7 @@ def parse_acl_bib(year, text, venue="acl"):
 
 def acl_volumes(year, venue="acl"):
     if venue == "naacl":
-        return [] if not held("naacl", year) else [f"{year}.naacl-main"] if year < 2024 else [f"{year}.naacl-long", f"{year}.naacl-short"]
+        return [] if not held("naacl", year) else [f"{year}.naacl-main"] if year < 2024 else [f"{year}.naacl-long"]
     return [f"{year}.acl-main"] if year == 2020 else [f"{year}.acl-long", f"{year}.acl-short"]
 
 

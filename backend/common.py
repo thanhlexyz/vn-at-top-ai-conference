@@ -117,6 +117,8 @@ VN_INSTITUTIONS = [
     (r"vin ?uni", "VinUniversity", "VinUni", True),
     (r"vin ?ai\b", "VinAI Research", "VinAI", False),
     (r"vin ?big ?data|vingroup big data", "VinBigData", "VinBigData", False),
+    (r"cinnamon ?(ai|lab)", "Cinnamon AI", "Cinnamon AI", False),
+    (r"nvidia.*(viet ?nam|ho chi minh|ha ?noi)", "NVIDIA Vietnam", "NVIDIA", False),
     (r"vinbrain|vinfast|vingroup|vin ?robotics|vinmotion|vintech", "Vingroup", "Vingroup", False),
     (r"ha ?noi university of science (and |& )?tech|\bsoict\b|bach khoa ha ?noi",
      "Hanoi University of Science and Technology", "HUST", True),

@@ -48,6 +48,7 @@ TRACK_REASON = {"datasets_benchmarks": "Datasets & Benchmarks track", "position"
                 "findings": "Findings track", "journal": "journal track", "blog": "blog-post track",
                 "tiny_papers": "Tiny Papers track"}
 MAX_CANDIDATES_ON_SITE = 250
+FOREIGN_MIN_PAPERS = 4   # authors outside Vietnam on more than this many counted papers (5 or more) are suggested
 AREA_ALIAS = {"Miscellaneous Aspects of Machine Learning": "General Machine Learning"}  # renamed in 2025
 
 
@@ -1290,8 +1291,30 @@ def main():
     excluded = [{"name": p["name"], "institution": p["institution_short"], "reason": p["notes"],
                  "homepage": p["homepage"], "openreview_ids": p["openreview_ids"]}
                 for p in roster if p["approved"] == "no"]
+    # authors outside Vietnam with many counted papers together with the professors on the list
+    roster_names = {v for p in roster for v in p["variants"]}
+    foreign = {}
+    for r in papers:
+        key = (r["venue"], r["year"], norm_title(r["title"]))
+        mine = sorted({w["name"] for w in owners[key]})
+        for a in r.get("people") or []:
+            aff = (a.get("aff") or "").strip()
+            if not aff or vn_institutions(aff) or norm_name(a["name"]) in roster_names:
+                continue
+            f = foreign.setdefault(name_key(a["name"]), {"name": a["name"], "affs": collections.Counter(),
+                                                         "papers": [], "with": collections.Counter()})
+            f["affs"][aff] += 1
+            f["papers"].append(f"{VENUE_NAME[r['venue']]} {r['year']}")
+            f["with"].update(mine)
+    foreign_coauthors = sorted(
+        ({"name": f["name"], "affiliation": f["affs"].most_common(1)[0][0], "papers": len(f["papers"]),
+          "professors": len(f["with"]),
+          "with": ", ".join(n for n, _ in f["with"].most_common(5)) + (", ..." if len(f["with"]) > 5 else ""),
+          "venues": ", ".join(f"{v} {n}" for v, n in collections.Counter(x.split()[0] for x in f["papers"]).most_common())}
+         for f in foreign.values() if len(f["papers"]) > FOREIGN_MIN_PAPERS),
+        key=lambda f: (-f["papers"], f["name"]))
     write_json(DATA / "candidates.json", {"people": shown, "total": len(candidates), "review": pending,
-                                         "waiting": waiting, "excluded": excluded,
+                                         "waiting": waiting, "excluded": excluded, "foreign": foreign_coauthors,
                                          "companies": companies, "unconfirmed": unconfirmed,
                                          # hand-kept: faculty in Vietnam known in the press as AI/ML pioneers
                                          "pioneers": read_csv(BACKEND / "pioneers.csv"),

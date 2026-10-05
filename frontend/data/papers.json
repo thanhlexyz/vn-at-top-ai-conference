@@ -222,6 +222,11 @@
     "slug": "ngo-van-linh",
     "name": "Ngo Van Linh",
     "name_vi": "Ngô Văn Linh"
+   },
+   {
+    "slug": "nguyen-thi-ngoc-diep",
+    "name": "Nguyen Thi Ngoc Diep",
+    "name_vi": ""
    }
   ]
  },
@@ -845,35 +850,6 @@
   "year": 2026,
   "venue": "neurips",
   "venue_name": "NeurIPS",
-  "title": "BECON: Belief-Conditioned Constrained Multi-Objective Reinforcement Learning under Drifting Preferences and Budgets",
-  "url": "https://openreview.net/forum?id=NKKhc57p17",
-  "status": "accepted",
-  "status_label": "accepted",
-  "pres": "",
-  "authors": "Bui Trong Duc, Huynh Thi Thanh Binh",
-  "match": "name and affiliation; in the NeurIPS 2026 list, not yet confirmable on OpenReview",
-  "note": "",
-  "reason": "",
-  "later": "",
-  "unofficial": true,
-  "workshop": "",
-  "professors": [
-   {
-    "slug": "huynh-thi-thanh-binh",
-    "name": "Huynh Thi Thanh Binh",
-    "name_vi": "Huỳnh Thị Thanh Bình"
-   },
-   {
-    "slug": "bui-trong-duc",
-    "name": "Bui Trong Duc",
-    "name_vi": "Bùi Trọng Đức"
-   }
-  ]
- },
- {
-  "year": 2026,
-  "venue": "neurips",
-  "venue_name": "NeurIPS",
   "title": "Beyond Expected Values: Risk-Sensitive Planning with Distributional Monte-Carlo Tree Search",
   "url": "https://openreview.net/forum?id=qKB3gDxeBz",
   "status": "accepted",
@@ -898,37 +874,13 @@
   "year": 2026,
   "venue": "neurips",
   "venue_name": "NeurIPS",
-  "title": "Birth-Death Structural Learning for 3D Gaussian Splatting",
-  "url": "https://openreview.net/forum?id=8kpY9DyWuJ",
-  "status": "accepted",
-  "status_label": "accepted",
-  "pres": "",
-  "authors": "Quan T Hong, Long Nguyen-Chi, Binh T. Nguyen",
-  "match": "name and affiliation; in the NeurIPS 2026 list, not yet confirmable on OpenReview",
-  "note": "",
-  "reason": "",
-  "later": "",
-  "unofficial": true,
-  "workshop": "",
-  "professors": [
-   {
-    "slug": "binh-t-nguyen",
-    "name": "Binh T. Nguyen",
-    "name_vi": "Nguyễn Tuấn Bình"
-   }
-  ]
- },
- {
-  "year": 2026,
-  "venue": "neurips",
-  "venue_name": "NeurIPS",
   "title": "COMPASS: Composable Policy-Amortized Structured Search for LLM-Based Optimization Modeling",
-  "url": "https://openreview.net/forum?id=jF68qSbugj",
+  "url": "https://duccuong12.github.io/",
   "status": "accepted",
   "status_label": "accepted",
   "pres": "",
-  "authors": "Nguyen Le Minh Hoang, Van D Cuong, Bui Trong Duc, Huynh Thi Thanh Binh",
-  "match": "name, and listed on their own page; in the NeurIPS 2026 list, not yet confirmable on OpenReview",
+  "authors": "Huynh Thi Thanh Binh, Nguyen Le Minh Hoang, Van Duc Cuong, Bui Trong Duc",
+  "match": "listed on the page of her co-author Van Duc Cuong; not in the official list yet",
   "note": "",
   "reason": "",
   "later": "",
@@ -944,6 +896,30 @@
     "slug": "bui-trong-duc",
     "name": "Bui Trong Duc",
     "name_vi": "Bùi Trọng Đức"
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "neurips",
+  "venue_name": "NeurIPS",
+  "title": "Conflict-Aware Logit Adapters for Utility-Preserving Anti-Distillation",
+  "url": "https://openreview.net/forum?id=Sc1RFFLbFC",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Quoc P Dao, Binh Anh Nguyen, Linh Ngo, Thanh-Toan Do, Mehrtash Harandi, Trung Le",
+  "match": "name and affiliation; in the NeurIPS 2026 list, not yet confirmable on OpenReview",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": true,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "ngo-van-linh",
+    "name": "Ngo Van Linh",
+    "name_vi": "Ngô Văn Linh"
    }
   ]
  },
@@ -976,23 +952,18 @@
   "venue": "neurips",
   "venue_name": "NeurIPS",
   "title": "ControlJEPA: Principled Trajectory Regularization via Lyapunov Tube Loss",
-  "url": "",
+  "url": "https://openreview.net/forum?id=pw4nMbt6SR",
   "status": "accepted",
   "status_label": "accepted",
   "pres": "",
-  "authors": "Cuong Pham, Thai Khanh Nguyen, Yen Nhi Pham, Vo Ngoc Bich Uyen, Thieu Vo, Tan Minh Nguyen",
-  "match": "listed on an announcement of the Faculty of Information Technology 1, PTIT (backend/unofficial_news.txt); not in the official list yet",
+  "authors": "Khanh T Nguyen, Yen N Pham, Uyen N.B. Vo, Thieu Vo, Cuong Pham, Tan Nguyen",
+  "match": "name and affiliation; in the NeurIPS 2026 list, not yet confirmable on OpenReview",
   "note": "",
   "reason": "",
   "later": "",
   "unofficial": true,
   "workshop": "",
   "professors": [
-   {
-    "slug": "cuong-pham",
-    "name": "Cuong Pham",
-    "name_vi": "Phạm Văn Cường"
-   },
    {
     "slug": "uyen-n-b-vo",
     "name": "Uyen N.B. Vo",
@@ -1034,12 +1005,12 @@
   "venue": "neurips",
   "venue_name": "NeurIPS",
   "title": "Decoding the Critique Mechanism in Large Reasoning Models",
-  "url": "https://openreview.net/forum?id=Dpd5naao28",
+  "url": "https://mail-research.com/publications/",
   "status": "accepted",
   "status_label": "accepted",
   "pres": "",
-  "authors": "Hoang Phan, Nguyen Hung-Quang, Thanh Quoc Hung Le, Xiusi Chen, Heng Ji, Khoa D Doan",
-  "match": "name, and listed on their own page; in the NeurIPS 2026 list, not yet confirmable on OpenReview",
+  "authors": "Khoa D. Doan, Phan Hoang, Quang H Nguyen, Hung T. Q. Le, Xiusi Chen, Heng Ji",
+  "match": "listed on their own page; not in the official list yet",
   "note": "",
   "reason": "",
   "later": "",
@@ -1062,7 +1033,7 @@
   "status": "accepted",
   "status_label": "accepted",
   "pres": "",
-  "authors": "Dat Q Mac, Thanh H Dang, Duc-Trong Le, Quynh-Trang Pham Thi",
+  "authors": "Dat Q Mac, Thanh Hai Dang, Duc-Trong Le, Quynh-Trang Pham Thi",
   "match": "name and affiliation; in the NeurIPS 2026 list, not yet confirmable on OpenReview",
   "note": "",
   "reason": "",
@@ -1110,13 +1081,13 @@
   "year": 2026,
   "venue": "neurips",
   "venue_name": "NeurIPS",
-  "title": "Graph Topology Augmentation for Prioritized Sweeping in Non-stationary Reinforcement Learning",
-  "url": "https://openreview.net/forum?id=midyPx9DqU",
+  "title": "FlashControl: One-Step Controllable Generator via Distillation-Friendly Single-Stream Teachers",
+  "url": "",
   "status": "accepted",
   "status_label": "accepted",
   "pres": "",
-  "authors": "Gia-Hung Pham, Tuan Dam",
-  "match": "name and affiliation; in the NeurIPS 2026 list, not yet confirmable on OpenReview",
+  "authors": "Cuong Pham, Ngan Nguyen, Dung Nguyen, Quan Dao, Dimitris N. Metaxas, Minh Hoai, Anh Tuan Tran",
+  "match": "listed on an announcement of the Faculty of Information Technology 1, PTIT (backend/unofficial_news.txt); not in the official list yet",
   "note": "",
   "reason": "",
   "later": "",
@@ -1124,9 +1095,9 @@
   "workshop": "",
   "professors": [
    {
-    "slug": "tuan-dam",
-    "name": "Tuan Dam",
-    "name_vi": "Đàm Quang Tuấn"
+    "slug": "cuong-pham",
+    "name": "Cuong Pham",
+    "name_vi": "Phạm Văn Cường"
    }
   ]
  },
@@ -1134,13 +1105,13 @@
   "year": 2026,
   "venue": "neurips",
   "venue_name": "NeurIPS",
-  "title": "Graph-Based Stochastic-Power-UCT: Monte-Carlo Graph Search with Power Mean Estimation",
-  "url": "https://openreview.net/forum?id=C61SqbC0JZ",
+  "title": "Graph-Based Stochastic Power-UCT: Monte-Carlo Graph Search with Power Mean Estimation",
+  "url": "https://sites.google.com/view/taduyhoang/publications",
   "status": "accepted",
   "status_label": "accepted",
   "pres": "",
-  "authors": "Tung Tran, Viet Bao, Hoang Ta, Tuan Dam",
-  "match": "name and affiliation; in the NeurIPS 2026 list, not yet confirmable on OpenReview",
+  "authors": "Hoang Ta, Tung Tran, Mai Viet Bao, Tuan Quang Dam",
+  "match": "listed on the page of Hoang Ta, as co-author; not in the official list yet",
   "note": "",
   "reason": "",
   "later": "",
@@ -1188,12 +1159,12 @@
   "venue": "neurips",
   "venue_name": "NeurIPS",
   "title": "Kernelized Activation Steering",
-  "url": "https://openreview.net/forum?id=F4iCxDrUbU",
+  "url": "https://users.soict.hust.edu.vn/khoattq/publication.htm",
   "status": "accepted",
   "status_label": "accepted",
   "pres": "",
-  "authors": "Laziz Abdullaev, Minh-Hieu Pham, Bach Do, Khoat Than, Tan Nguyen",
-  "match": "name, and listed on their own page; in the NeurIPS 2026 list, not yet confirmable on OpenReview",
+  "authors": "Than Quang Khoat, Laziz Abdullaev, Minh-Hieu Pham, Bach Do, Tan Minh Nguyen",
+  "match": "listed on their own page; not in the official list yet",
   "note": "",
   "reason": "",
   "later": "",
@@ -1289,12 +1260,12 @@
   "venue": "neurips",
   "venue_name": "NeurIPS",
   "title": "MulCLIP: A Multi-level Alignment Framework for Enhancing Fine-grained Long-context CLIP",
-  "url": "https://andrew-dungle.github.io/",
+  "url": "https://openreview.net/forum?id=qD0McGAhI2",
   "status": "accepted",
   "status_label": "accepted",
   "pres": "",
-  "authors": "Dung D. Le, Chau Truong Vinh Hoang, Hieu Ta Quang, Zhenzhen Liu",
-  "match": "listed on their own page; not in the official list yet",
+  "authors": "Chau T Hoang, Hieu Ta, Zhenzhen Liu, Dung Le",
+  "match": "name, and listed on their own page; in the NeurIPS 2026 list, not yet confirmable on OpenReview",
   "note": "",
   "reason": "",
   "later": "",
@@ -1313,12 +1284,12 @@
   "venue": "neurips",
   "venue_name": "NeurIPS",
   "title": "Nearly Optimal Fixed-Confidence Best-Arm Identification with 1-Bit Feedback",
-  "url": "https://openreview.net/forum?id=6ZgRA8gi3F",
+  "url": "https://sites.google.com/view/taduyhoang/publications",
   "status": "accepted",
   "status_label": "accepted",
-  "pres": "spotlight",
-  "authors": "Khang Luong, Thai Son Dinh, Hoang Ta, Hung TRAN, Tuan Dam",
-  "match": "name and affiliation; in the NeurIPS 2026 list, not yet confirmable on OpenReview",
+  "pres": "",
+  "authors": "Hoang Ta, Khang Luong, Dinh Thai Son, Hung The Tran, Tuan Quang Dam",
+  "match": "listed on the page of Hoang Ta, as co-author; not in the official list yet",
   "note": "",
   "reason": "",
   "later": "",
@@ -1495,30 +1466,6 @@
   "year": 2026,
   "venue": "neurips",
   "venue_name": "NeurIPS",
-  "title": "Sharp Non-Asymptotic Analysis of the Penalized Challenger in $\\beta$-EB-TCI for Bernoulli Bandits",
-  "url": "https://openreview.net/forum?id=fhaJs5TH5J",
-  "status": "accepted",
-  "status_label": "accepted",
-  "pres": "",
-  "authors": "Nam Nguyen, Tuan Dam",
-  "match": "name and affiliation; in the NeurIPS 2026 list, not yet confirmable on OpenReview",
-  "note": "",
-  "reason": "",
-  "later": "",
-  "unofficial": true,
-  "workshop": "",
-  "professors": [
-   {
-    "slug": "tuan-dam",
-    "name": "Tuan Dam",
-    "name_vi": "Đàm Quang Tuấn"
-   }
-  ]
- },
- {
-  "year": 2026,
-  "venue": "neurips",
-  "venue_name": "NeurIPS",
   "title": "Spectral Identifiability for World Models: Polynomial Projectors, Resolvent Stability, and a Krylov Bottleneck",
   "url": "https://openreview.net/forum?id=pByZKc2Y2m",
   "status": "accepted",
@@ -1618,30 +1565,6 @@
     "slug": "dung-d-le",
     "name": "Dung D. Le",
     "name_vi": "Lê Duy Dũng"
-   }
-  ]
- },
- {
-  "year": 2026,
-  "venue": "neurips",
-  "venue_name": "NeurIPS",
-  "title": "Two-Clustering Regime of Token Dynamics in Causal Attention",
-  "url": "https://openreview.net/forum?id=APlaj5UkCk",
-  "status": "accepted",
-  "status_label": "accepted",
-  "pres": "",
-  "authors": "Trinh Nguyen, Duy-Tung Pham, Hoang-Son Do, Tan Nguyen, Thieu Vo",
-  "match": "name and affiliation; in the NeurIPS 2026 list, not yet confirmable on OpenReview",
-  "note": "",
-  "reason": "",
-  "later": "",
-  "unofficial": true,
-  "workshop": "",
-  "professors": [
-   {
-    "slug": "hoang-son-do",
-    "name": "Hoang-Son Do",
-    "name_vi": "Đỗ Hoàng Sơn"
    }
   ]
  },
@@ -2373,6 +2296,11 @@
     "slug": "dinh-viet-sang",
     "name": "Dinh Viet Sang",
     "name_vi": "Đinh Viết Sang"
+   },
+   {
+    "slug": "nguyen-thi-ngoc-diep",
+    "name": "Nguyen Thi Ngoc Diep",
+    "name_vi": ""
    }
   ]
  },
@@ -2469,6 +2397,11 @@
     "slug": "ngo-van-linh",
     "name": "Ngo Van Linh",
     "name_vi": "Ngô Văn Linh"
+   },
+   {
+    "slug": "nguyen-thi-ngoc-diep",
+    "name": "Nguyen Thi Ngoc Diep",
+    "name_vi": ""
    }
   ]
  },
@@ -2493,6 +2426,11 @@
     "slug": "ngo-van-linh",
     "name": "Ngo Van Linh",
     "name_vi": "Ngô Văn Linh"
+   },
+   {
+    "slug": "nguyen-thi-ngoc-diep",
+    "name": "Nguyen Thi Ngoc Diep",
+    "name_vi": ""
    }
   ]
  },
@@ -2647,6 +2585,11 @@
     "slug": "ngo-van-linh",
     "name": "Ngo Van Linh",
     "name_vi": "Ngô Văn Linh"
+   },
+   {
+    "slug": "nguyen-thi-ngoc-diep",
+    "name": "Nguyen Thi Ngoc Diep",
+    "name_vi": ""
    }
   ]
  },
@@ -2940,6 +2883,30 @@
     "slug": "phi-le-nguyen",
     "name": "Phi Le Nguyen",
     "name_vi": "Nguyễn Phi Lê"
+   }
+  ]
+ },
+ {
+  "year": 2025,
+  "venue": "iclr",
+  "venue_name": "ICLR",
+  "title": "CodeMMLU: A Multi-Task Benchmark for Assessing Code Understanding & Reasoning Capabilities of CodeLLMs",
+  "url": "https://openreview.net/forum?id=CahIEKCu5Q",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Dung Manh Nguyen, Thang Chau Phan, Nam Le Hai, Tien-Thong Doan, Nam V. Nguyen, Quang Pham, Nghi D. Q. Bui",
+  "match": "OpenReview profile",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "nam-le-hai",
+    "name": "Nam Le Hai",
+    "name_vi": ""
    }
   ]
  },
@@ -4224,6 +4191,16 @@
     "slug": "dinh-viet-sang",
     "name": "Dinh Viet Sang",
     "name_vi": "Đinh Viết Sang"
+   },
+   {
+    "slug": "nguyen-thi-ngoc-diep",
+    "name": "Nguyen Thi Ngoc Diep",
+    "name_vi": ""
+   },
+   {
+    "slug": "nam-le-hai",
+    "name": "Nam Le Hai",
+    "name_vi": ""
    }
   ]
  },
@@ -4248,6 +4225,11 @@
     "slug": "ngo-van-linh",
     "name": "Ngo Van Linh",
     "name_vi": "Ngô Văn Linh"
+   },
+   {
+    "slug": "nguyen-thi-ngoc-diep",
+    "name": "Nguyen Thi Ngoc Diep",
+    "name_vi": ""
    }
   ]
  },
@@ -4277,6 +4259,16 @@
     "slug": "dinh-viet-sang",
     "name": "Dinh Viet Sang",
     "name_vi": "Đinh Viết Sang"
+   },
+   {
+    "slug": "nguyen-thi-ngoc-diep",
+    "name": "Nguyen Thi Ngoc Diep",
+    "name_vi": ""
+   },
+   {
+    "slug": "nam-le-hai",
+    "name": "Nam Le Hai",
+    "name_vi": ""
    }
   ]
  },
@@ -4290,35 +4282,6 @@
   "status_label": "accepted",
   "pres": "",
   "authors": "Quang Duc Nguyen, Tung Nguyen, Duc Anh Nguyen, Linh Ngo Van, Sang Dinh, Thien Huu Nguyen",
-  "match": "name and affiliation",
-  "note": "",
-  "reason": "",
-  "later": "",
-  "unofficial": false,
-  "workshop": "",
-  "professors": [
-   {
-    "slug": "ngo-van-linh",
-    "name": "Ngo Van Linh",
-    "name_vi": "Ngô Văn Linh"
-   },
-   {
-    "slug": "dinh-viet-sang",
-    "name": "Dinh Viet Sang",
-    "name_vi": "Đinh Viết Sang"
-   }
-  ]
- },
- {
-  "year": 2025,
-  "venue": "naacl",
-  "venue_name": "NAACL",
-  "title": "Improving Vietnamese-English Cross-Lingual Retrieval for Legal and General Domains",
-  "url": "https://aclanthology.org/2025.naacl-short.12/",
-  "status": "accepted",
-  "status_label": "accepted",
-  "pres": "",
-  "authors": "Toan Ngoc Nguyen, Nam Le Hai, Nguyen Doan Hieu, Dai An Nguyen, Linh Ngo Van, Thien Huu Nguyen, Sang Dinh",
   "match": "name and affiliation",
   "note": "",
   "reason": "",
@@ -4359,6 +4322,11 @@
     "slug": "ngo-van-linh",
     "name": "Ngo Van Linh",
     "name_vi": "Ngô Văn Linh"
+   },
+   {
+    "slug": "nguyen-thi-ngoc-diep",
+    "name": "Nguyen Thi Ngoc Diep",
+    "name_vi": ""
    }
   ]
  },
@@ -5253,6 +5221,11 @@
     "slug": "ngo-van-linh",
     "name": "Ngo Van Linh",
     "name_vi": "Ngô Văn Linh"
+   },
+   {
+    "slug": "nam-le-hai",
+    "name": "Nam Le Hai",
+    "name_vi": ""
    }
   ]
  },
@@ -5709,6 +5682,30 @@
     "slug": "dung-d-le",
     "name": "Dung D. Le",
     "name_vi": "Lê Duy Dũng"
+   }
+  ]
+ },
+ {
+  "year": 2023,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "The Vault: A Comprehensive Multilingual Dataset for Advancing Code Understanding and Generation",
+  "url": "https://openreview.net/forum?id=j2bP0STpw7",
+  "status": "rejected",
+  "status_label": "rejected",
+  "pres": "",
+  "authors": "Dung Manh Nguyen, Le Hai Nam, Anh T. V. Dau, Anh Minh Nguyen, Khanh Nghiem, Jin L.C. Guo, Nghi D. Q. Bui",
+  "match": "OpenReview profile",
+  "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "Findings",
+  "professors": [
+   {
+    "slug": "nam-le-hai",
+    "name": "Nam Le Hai",
+    "name_vi": ""
    }
   ]
  },

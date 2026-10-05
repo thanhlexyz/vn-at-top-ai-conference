@@ -60,7 +60,7 @@ The local-only pages (Candidates, Not tracked) are drafts, but their data (`cand
   CV (CVPR, ICCV in odd years, ECCV in even years), NLP (ACL, EMNLP, NAACL; NAACL not held in 2020, 2023, 2026:
   `NAACL_NOT_HELD`); years 2020 on, conference years (IJCAI-PRICAI 2020 met in January 2021 and is 2020). AAAI main
   track = the "AAAI Technical Track on ..." sections of ojs.aaai.org issues; IJCAI = the "Main Track" section of
-  ijcai.org/proceedings; NAACL = the long/short (or main) volumes, not Findings. These three lists, like ACL and EMNLP,
+  ijcai.org/proceedings; NAACL = the long-paper volume (the main volume before 2024, which mixes long and short), not the short-paper volume, not Findings. These three lists, like ACL and EMNLP,
   print no affiliations: their name matches go through `fetch_affiliations.py` (which also reads the matches waiting
   in `review.csv`) before the institution rule can apply. AAAI and IJCAI publish no rejections; NAACL Findings come
   from OpenReview records (`_OR_GROUP` in `common.py` knows NAACL since 2026-10-05; records fetched before then were

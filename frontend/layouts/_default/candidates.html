@@ -44,6 +44,25 @@
 <p>None.</p>
 {{- end }}
 
+{{- with $c.foreign }}
+<h2>Co-authors outside Vietnam ({{ len . }})</h2>
+<p>
+	Authors with no Vietnamese affiliation on the paper who appear on 5 or more counted papers together with the professors on the list.
+	They show who contributes most to the Vietnamese network from abroad; they are suggestions to look at, not people to track.
+	Names are grouped by spelling, so two people with a common name may be merged.
+</p>
+<div class="scroll">
+<table>
+	<thead><tr><th class="l">Name</th><th class="l">Affiliation on the papers</th><th>Papers</th><th>Professors</th><th class="l">Venues</th><th class="l">With</th></tr></thead>
+	<tbody>
+	{{- range . }}
+	<tr><td class="l">{{ .name }}</td><td class="l">{{ .affiliation }}</td><td>{{ .papers }}</td><td>{{ .professors }}</td><td class="l">{{ .venues }}</td><td class="l">{{ .with }}</td></tr>
+	{{- end }}
+	</tbody>
+</table>
+</div>
+{{- end }}
+
 {{- with $c.flags }}
 <h2>Notes on the records ({{ len . }})</h2>
 <p>Notes the build writes about a professor's record, such as outcomes inferred without an OpenReview decision or records that were not fetched. They are not shown on the public pages.</p>
