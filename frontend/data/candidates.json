@@ -4985,7 +4985,34 @@
   }
  ],
  "total": 151,
- "review": [],
+ "review": [
+  {
+   "decision": "",
+   "professor": "tan-d-tran",
+   "venue": "iclr",
+   "year": "2025",
+   "title": "Boosting Parallel Algorithms in Linear Queries for Non-Monotone Submodular Maximization",
+   "matched_name": "Tan D. Tran",
+   "affiliation": "",
+   "url": "https://openreview.net/forum?id=pshLnZzIbW",
+   "reason": "named as co-author in the OpenReview record of Canh V. Pham; the professor's own record has not been fetched, so the match is by name only",
+   "professor_name": "Tan D. Tran",
+   "venue_name": "ICLR"
+  },
+  {
+   "decision": "",
+   "professor": "tan-d-tran",
+   "venue": "ijcai",
+   "year": "2023",
+   "title": "Linear Query Approximation Algorithms for Non-monotone Submodular Maximization under Knapsack Constraint",
+   "matched_name": "Tan D. Tran",
+   "affiliation": "Faculty of Information Technology, VNU University of Engineering and Technology, Hanoi, Vietnam",
+   "url": "https://www.ijcai.org/proceedings/2023/459",
+   "reason": "affiliation on the paper is not Phenikaa",
+   "professor_name": "Tan D. Tran",
+   "venue_name": "IJCAI"
+  }
+ ],
  "waiting": [],
  "excluded": [
   {
@@ -5369,8 +5396,8 @@
    "name": "My Thai",
    "affiliation": "University of Florida",
    "papers": 5,
-   "professors": 3,
-   "with": "Canh V. Pham, Hieu Pham, Phi Le Nguyen",
+   "professors": 4,
+   "with": "Canh V. Pham, Hieu Pham, Phi Le Nguyen, Tan D. Tran",
    "venues": "IJCAI 2, ICLR 1, ICCV 1, NeurIPS 1"
   },
   {
@@ -10569,6 +10596,11 @@
    "slug": "minh-do",
    "name": "Minh Do",
    "text": "Their own OpenReview records have not been fetched. The rejected ICLR papers come from the records of co-authors on this site, so there may be more."
+  },
+  {
+   "slug": "tan-d-tran",
+   "name": "Tan D. Tran",
+   "text": "No OpenReview records fetched yet, so only accepted papers are known: ICLR submissions and rejections are missing."
   },
   {
    "slug": "binh-t-nguyen",
