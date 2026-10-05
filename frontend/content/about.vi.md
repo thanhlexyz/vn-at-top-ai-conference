@@ -62,7 +62,7 @@ Ngay cả số liệu ICLR cũng chưa hoàn toàn đầy đủ: bài rút có t
 
 ## Nguồn dữ liệu
 
-- **Bài được chấp nhận:** trang virtual của các hội nghị (iclr.cc, neurips.cc, icml.cc, cvpr.thecvf.com, iccv.thecvf.com, eccv.ecva.net), danh sách CVF Open Access đối với CVPR và ICCV, ecva.net đối với ECCV, các tập bài dài và bài ngắn trên ACL Anthology đối với ACL và EMNLP, tập bài dài đối với NAACL (không tính bài ngắn), các số kỷ yếu nhánh kỹ thuật (Technical Track) của AAAI (ojs.aaai.org) và nhánh chính (Main Track) trong kỷ yếu IJCAI (ijcai.org).
+- **Bài được chấp nhận:** trang virtual của các hội nghị (iclr.cc, neurips.cc, icml.cc, cvpr.thecvf.com, iccv.thecvf.com, eccv.ecva.net), danh sách CVF Open Access đối với CVPR và ICCV, ecva.net đối với ECCV, các tập bài dài trên ACL Anthology đối với ACL và NAACL, tập chính đối với EMNLP (không tính bài ngắn; tập EMNLP và NAACL các năm đầu gộp cả bài dài lẫn bài ngắn, nên mỗi bài được tính ở đó đều được kiểm tra theo số trang), các số kỷ yếu nhánh kỹ thuật (Technical Track) của AAAI (ojs.aaai.org) và nhánh chính (Main Track) trong kỷ yếu IJCAI (ijcai.org).
 - **Bài nộp ICLR cùng kết quả, bài bị từ chối được công khai tại NeurIPS:** OpenReview, tra cứu theo mã hồ sơ của từng giảng viên.
 - **Tỉ lệ được nhận do hội nghị công bố** (trang Hội nghị): số bài nộp và số bài được nhận ở nhánh chính theo từng năm, lấy từ tài liệu tổng kết, slide khai mạc hoặc lời nói đầu kỷ yếu của từng hội nghị, và một số nguồn thứ cấp khi không có số liệu chính thức; từng năm và nguồn được ghi trong [venue_rates.csv](https://github.com/thanhlexyz/vn-at-top-ai-conference/blob/main/backend/venue_rates.csv). Các hội nghị đếm số bài nộp theo cách khác nhau (tất cả, bài hợp lệ, hoặc sau khi loại sơ bộ), nên các tỉ lệ chỉ so sánh được tương đối.
 

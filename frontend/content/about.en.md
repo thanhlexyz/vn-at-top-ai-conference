@@ -62,7 +62,7 @@ Even ICLR is not complete: a withdrawn paper can be removed or left anonymous, a
 
 ## Sources
 
-- **Accepted papers:** the conference virtual sites (iclr.cc, neurips.cc, icml.cc, cvpr.thecvf.com, iccv.thecvf.com, eccv.ecva.net), the CVF Open Access lists for CVPR and ICCV, ecva.net for ECCV, the ACL Anthology volumes of long and short papers for ACL and EMNLP, and of long papers for NAACL (short papers are not counted), the technical-track issues of the AAAI proceedings (ojs.aaai.org) and the Main Track of the IJCAI proceedings (ijcai.org).
+- **Accepted papers:** the conference virtual sites (iclr.cc, neurips.cc, icml.cc, cvpr.thecvf.com, iccv.thecvf.com, eccv.ecva.net), the CVF Open Access lists for CVPR and ICCV, ecva.net for ECCV, the ACL Anthology volumes of long papers for ACL and NAACL and the main volume for EMNLP (short papers are not counted; the EMNLP and early NAACL volumes mix long and short papers, so each counted paper there is checked by its page count), the technical-track issues of the AAAI proceedings (ojs.aaai.org) and the Main Track of the IJCAI proceedings (ijcai.org).
 - **ICLR submissions and outcomes, NeurIPS public rejections:** OpenReview, queried with each professor's own profile ID.
 - **Acceptance rates reported by the venues** (Venues page): submitted and accepted main-track papers per year from each conference's fact sheets, opening slides or proceedings front matter, and a few secondary sources where no official figure was found; each year and its source are in [venue_rates.csv](https://github.com/thanhlexyz/vn-at-top-ai-conference/blob/main/backend/venue_rates.csv). Conferences count submissions differently (all, valid, or after desk rejections), so the rates are only roughly comparable.
 
