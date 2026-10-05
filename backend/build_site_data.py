@@ -986,7 +986,7 @@ def write_stubs(section, items):
             (folder / f"{key}{suffix}").write_text(stub, encoding="utf-8")
 
 
-# flags of the countries VietProfs lists (regional-indicator letters make the emoji)
+# flags of the countries VietProfs lists
 COUNTRY_CODE = {"United States": "US", "Australia": "AU", "United Kingdom": "GB", "France": "FR", "Canada": "CA",
                 "Japan": "JP", "Singapore": "SG", "Taiwan": "TW", "Germany": "DE", "South Korea": "KR", "Switzerland": "CH",
                 "Netherlands": "NL", "Hong Kong": "HK", "China": "CN", "Finland": "FI", "Sweden": "SE", "Norway": "NO",
@@ -997,8 +997,8 @@ COUNTRY_CODE = {"United States": "US", "Australia": "AU", "United Kingdom": "GB"
 
 
 def flag(country):
-    code = COUNTRY_CODE.get(country, "")
-    return "".join(chr(0x1F1E6 + ord(c) - 65) for c in code)
+    """Two-letter code, for the SVG flag static/img/flags/<code>.svg (flag-icons, MIT); emoji flags do not show on Windows."""
+    return COUNTRY_CODE.get(country, "").lower()
 
 
 VIETPROFS_URL = "https://vietprofs.roars.dev/people/{}.html"

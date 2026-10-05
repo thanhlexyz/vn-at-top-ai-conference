@@ -71,37 +71,37 @@
    "anchor": "start"
   },
   {
-   "name": "Cuong Pham",
-   "name_vi": "Phạm Văn Cường",
-   "url": "professors/cuong-pham/",
-   "group": "PTIT",
-   "id": "cuong-pham",
-   "papers": 17,
-   "x": 548,
-   "y": 963.8,
-   "linked": true,
-   "r": 16.4,
-   "color": "c4",
-   "degree": 2,
-   "lx": 568.4,
-   "ly": 968.8,
-   "anchor": "start"
-  },
-  {
    "name": "Tuan Dam",
    "name_vi": "Đàm Quang Tuấn",
    "url": "professors/tuan-dam/",
    "group": "HUST",
    "id": "tuan-dam",
-   "papers": 16,
+   "papers": 18,
    "x": 721.3,
    "y": 440.9,
    "linked": true,
-   "r": 16.2,
+   "r": 16.6,
    "color": "c-red",
    "degree": 3,
-   "lx": 734.6,
-   "ly": 423.6,
+   "lx": 734.9,
+   "ly": 423.3,
+   "anchor": "start"
+  },
+  {
+   "name": "Cuong Pham",
+   "name_vi": "Phạm Văn Cường",
+   "url": "professors/cuong-pham/",
+   "group": "PTIT",
+   "id": "cuong-pham",
+   "papers": 16,
+   "x": 548,
+   "y": 963.8,
+   "linked": true,
+   "r": 16.2,
+   "color": "c4",
+   "degree": 2,
+   "lx": 568.2,
+   "ly": 968.8,
    "anchor": "start"
   },
   {
@@ -144,16 +144,33 @@
    "url": "professors/huynh-thi-thanh-binh/",
    "group": "HUST",
    "id": "huynh-thi-thanh-binh",
-   "papers": 11,
+   "papers": 12,
    "x": 224.0,
    "y": 986.8,
    "linked": true,
-   "r": 15.0,
+   "r": 15.2,
    "color": "c-red",
    "degree": 4,
-   "lx": 205.0,
+   "lx": 204.8,
    "ly": 991.8,
    "anchor": "end"
+  },
+  {
+   "name": "Binh T. Nguyen",
+   "name_vi": "Nguyễn Tuấn Bình",
+   "url": "professors/binh-t-nguyen/",
+   "group": "VinUni",
+   "id": "binh-t-nguyen",
+   "papers": 9,
+   "x": 519.4,
+   "y": 622.1,
+   "linked": true,
+   "r": 14.4,
+   "color": "c-blue",
+   "degree": 2,
+   "lx": 537.8,
+   "ly": 627.1,
+   "anchor": "start"
   },
   {
    "name": "Minh-Triet Tran",
@@ -185,23 +202,6 @@
    "lx": 293.2,
    "ly": 559.1,
    "anchor": "end"
-  },
-  {
-   "name": "Binh T. Nguyen",
-   "name_vi": "Nguyễn Tuấn Bình",
-   "url": "professors/binh-t-nguyen/",
-   "group": "VinUni",
-   "id": "binh-t-nguyen",
-   "papers": 8,
-   "x": 519.4,
-   "y": 622.1,
-   "linked": true,
-   "r": 14.1,
-   "color": "c-blue",
-   "degree": 2,
-   "lx": 537.5,
-   "ly": 627.1,
-   "anchor": "start"
   },
   {
    "name": "Hieu Pham",
@@ -371,6 +371,23 @@
    "degree": 0
   },
   {
+   "name": "Bui Trong Duc",
+   "name_vi": "Bùi Trọng Đức",
+   "url": "professors/bui-trong-duc/",
+   "group": "HUST",
+   "id": "bui-trong-duc",
+   "papers": 3,
+   "x": 334.0,
+   "y": 917.8,
+   "linked": true,
+   "r": 12.1,
+   "color": "c-red",
+   "degree": 1,
+   "lx": 350.1,
+   "ly": 922.8,
+   "anchor": "start"
+  },
+  {
    "name": "Cong Tran",
    "name_vi": "Trần Tiến Công",
    "url": "professors/cong-tran/",
@@ -436,6 +453,20 @@
    "anchor": "start"
   },
   {
+   "name": "Hoang-Son Do",
+   "name_vi": "Đỗ Hoàng Sơn",
+   "url": "professors/hoang-son-do/",
+   "group": "VAST",
+   "id": "hoang-son-do",
+   "papers": 3,
+   "x": null,
+   "y": null,
+   "linked": false,
+   "r": 12.1,
+   "color": "c0",
+   "degree": 0
+  },
+  {
    "name": "Ngoc Hoang Luong",
    "name_vi": "Lương Ngọc Hoàng",
    "url": "professors/ngoc-hoang-luong/",
@@ -487,23 +518,6 @@
    "anchor": "start"
   },
   {
-   "name": "Bui Trong Duc",
-   "name_vi": "Bùi Trọng Đức",
-   "url": "professors/bui-trong-duc/",
-   "group": "HUST",
-   "id": "bui-trong-duc",
-   "papers": 2,
-   "x": 334.0,
-   "y": 917.8,
-   "linked": true,
-   "r": 11.5,
-   "color": "c-red",
-   "degree": 1,
-   "lx": 349.5,
-   "ly": 922.8,
-   "anchor": "start"
-  },
-  {
    "name": "Dinh-Cuong Hoang",
    "name_vi": "Hoàng Đình Cường",
    "url": "professors/dinh-cuong-hoang/",
@@ -519,20 +533,6 @@
    "lx": 45.5,
    "ly": 1252.8,
    "anchor": "start"
-  },
-  {
-   "name": "Hoang-Son Do",
-   "name_vi": "Đỗ Hoàng Sơn",
-   "url": "professors/hoang-son-do/",
-   "group": "VAST",
-   "id": "hoang-son-do",
-   "papers": 2,
-   "x": null,
-   "y": null,
-   "linked": false,
-   "r": 11.5,
-   "color": "c0",
-   "degree": 0
   },
   {
    "name": "Huynh Quyet Thang",
@@ -1120,6 +1120,22 @@
    "b_name_vi": "Huỳnh Thành Trung"
   },
   {
+   "a": "bui-trong-duc",
+   "b": "huynh-thi-thanh-binh",
+   "weight": 3,
+   "x1": 334.0,
+   "y1": 917.8,
+   "x2": 224.0,
+   "y2": 986.8,
+   "width": 3.3,
+   "wx": 279.0,
+   "wy": 952.3,
+   "a_name": "Bui Trong Duc",
+   "b_name": "Huynh Thi Thanh Binh",
+   "a_name_vi": "Bùi Trọng Đức",
+   "b_name_vi": "Huỳnh Thị Thanh Bình"
+  },
+  {
    "a": "canh-v-pham",
    "b": "tan-d-tran",
    "weight": 3,
@@ -1246,22 +1262,6 @@
    "b_name": "Khoa D. Doan",
    "a_name_vi": "Nguyễn Tuấn Bình",
    "b_name_vi": "Đoàn Đăng Khoa"
-  },
-  {
-   "a": "bui-trong-duc",
-   "b": "huynh-thi-thanh-binh",
-   "weight": 2,
-   "x1": 334.0,
-   "y1": 917.8,
-   "x2": 224.0,
-   "y2": 986.8,
-   "width": 2.6,
-   "wx": 279.0,
-   "wy": 952.3,
-   "a_name": "Bui Trong Duc",
-   "b_name": "Huynh Thi Thanh Binh",
-   "a_name_vi": "Bùi Trọng Đức",
-   "b_name_vi": "Huỳnh Thị Thanh Bình"
   },
   {
    "a": "dinh-cuong-hoang",
@@ -1818,6 +1818,6 @@
    "color": "c0"
   }
  ],
- "papers": 285,
- "shared": 62
+ "papers": 289,
+ "shared": 63
 }

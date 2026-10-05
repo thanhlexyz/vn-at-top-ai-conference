@@ -108,7 +108,7 @@
      "year": 2026,
      "venues": {
       "iclr": 0,
-      "neurips": 1,
+      "neurips": 7,
       "icml": 4,
       "cvpr": 0,
       "iccv": 0,
@@ -119,12 +119,12 @@
       "aaai": 4,
       "ijcai": 0
      },
-     "total": 13
+     "total": 19
     }
    ],
    "venues": {
     "iclr": 0,
-    "neurips": 2,
+    "neurips": 8,
     "icml": 5,
     "cvpr": 0,
     "iccv": 0,
@@ -135,7 +135,7 @@
     "aaai": 6,
     "ijcai": 0
    },
-   "total": 22
+   "total": 28
   },
   "first_author": {
    "years": [
@@ -245,7 +245,7 @@
      "year": 2026,
      "venues": {
       "iclr": 0,
-      "neurips": 2,
+      "neurips": 8,
       "icml": 6,
       "cvpr": 1,
       "iccv": 0,
@@ -256,12 +256,12 @@
       "aaai": 4,
       "ijcai": 0
      },
-     "total": 18
+     "total": 24
     }
    ],
    "venues": {
     "iclr": 1,
-    "neurips": 4,
+    "neurips": 10,
     "icml": 10,
     "cvpr": 1,
     "iccv": 2,
@@ -272,10 +272,10 @@
     "aaai": 5,
     "ijcai": 1
    },
-   "total": 35
+   "total": 41
   },
-  "judged": 66,
-  "unknown": 6,
+  "judged": 73,
+  "unknown": 2,
   "by_year": [
    {
     "year": 2020,
@@ -321,10 +321,10 @@
    },
    {
     "year": 2026,
-    "accepted": 34,
-    "judged": 28,
-    "majority": 13,
-    "first": 18
+    "accepted": 37,
+    "judged": 35,
+    "majority": 19,
+    "first": 24
    }
   ],
   "slug": "hust",
@@ -347,8 +347,8 @@
    "van-duc-nguyen"
   ],
   "iclr_complete": true,
-  "accepted": 72,
-  "own_page": 12,
+  "accepted": 75,
+  "own_page": 15,
   "official": 60,
   "venues": {
    "iclr": {
@@ -362,13 +362,13 @@
     "official": 6
    },
    "neurips": {
-    "accepted": 16,
+    "accepted": 19,
     "rejected": 2,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 2,
-    "submitted": 18,
-    "own_page": 10,
+    "submitted": 21,
+    "own_page": 13,
     "official": 6
    },
    "icml": {
@@ -1393,13 +1393,13 @@
       "provisional": false
      },
      "neurips": {
-      "accepted": 10,
+      "accepted": 13,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 10,
-      "own_page": 10,
+      "submitted": 13,
+      "own_page": 13,
       "official": 0,
       "available": true,
       "held": true,
@@ -1523,23 +1523,23 @@
       "provisional": false
      }
     },
-    "accepted": 34,
-    "own_page": 12,
+    "accepted": 37,
+    "own_page": 15,
     "official": 22
    }
   ],
   "workshop": 17,
-  "rejected_estimated": 250,
+  "rejected_estimated": 261,
   "acceptance_rate": 22,
   "rate_trivial": false,
   "author_charts": {
    "first": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from HUST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from HUST</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"381.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"399.6\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><path class=\"other-inst\" d=\"M70.0,230.0 V229.4 Q70.0,225.4 74.0,225.4 H90.0 Q94.0,225.4 94.0,229.4 V230.0 Z\"><title>2020: 1 first author elsewhere</title></path><text class=\"value\" x=\"82.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V229.4 Q238.0,225.4 242.0,225.4 H258.0 Q262.0,225.4 262.0,229.4 V230.0 Z\"><title>2022: 1 first author elsewhere</title></path><text class=\"value\" x=\"250.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V216.2 Q406.0,216.2 406.0,216.2 H430.0 Q430.0,216.2 430.0,216.2 V230.0 Z\"><title>2024: 3 first author from HUST</title></path><path class=\"other-inst\" d=\"M406.0,214.2 V192.6 Q406.0,188.6 410.0,188.6 H426.0 Q430.0,188.6 430.0,192.6 V214.2 Z\"><title>2024: 6 first author elsewhere</title></path><text class=\"value\" x=\"418.0\" y=\"182.6\" text-anchor=\"middle\">9</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V165.6 Q490.0,165.6 490.0,165.6 H514.0 Q514.0,165.6 514.0,165.6 V230.0 Z\"><title>2025: 14 first author from HUST</title></path><path class=\"other-inst\" d=\"M490.0,163.6 V109.8 Q490.0,105.8 494.0,105.8 H510.0 Q514.0,105.8 514.0,109.8 V163.6 Z\"><title>2025: 13 first author elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"99.8\" text-anchor=\"middle\">27</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V147.2 Q574.0,147.2 574.0,147.2 H598.0 Q598.0,147.2 598.0,147.2 V230.0 Z\"><title>2026: 18 first author from HUST</title></path><path class=\"other-inst\" d=\"M574.0,145.2 V101.2 Q574.0,101.2 574.0,101.2 H598.0 Q598.0,101.2 598.0,101.2 V145.2 Z\"><title>2026: 10 first author elsewhere</title></path><path class=\"unjudged\" d=\"M574.0,99.2 V77.6 Q574.0,73.6 578.0,73.6 H594.0 Q598.0,73.6 598.0,77.6 V99.2 Z\"><title>2026: 6 affiliations not known yet</title></path><text class=\"value\" x=\"586.0\" y=\"67.6\" text-anchor=\"middle\">34</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng HUST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng HUST</text><rect class=\"other-inst\" x=\"204.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"222.4\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"394.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"412.4\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><path class=\"other-inst\" d=\"M70.0,230.0 V229.4 Q70.0,225.4 74.0,225.4 H90.0 Q94.0,225.4 94.0,229.4 V230.0 Z\"><title>2020: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"82.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V229.4 Q238.0,225.4 242.0,225.4 H258.0 Q262.0,225.4 262.0,229.4 V230.0 Z\"><title>2022: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"250.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V216.2 Q406.0,216.2 406.0,216.2 H430.0 Q430.0,216.2 430.0,216.2 V230.0 Z\"><title>2024: 3 bài tác giả đầu cùng HUST</title></path><path class=\"other-inst\" d=\"M406.0,214.2 V192.6 Q406.0,188.6 410.0,188.6 H426.0 Q430.0,188.6 430.0,192.6 V214.2 Z\"><title>2024: 6 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"418.0\" y=\"182.6\" text-anchor=\"middle\">9</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V165.6 Q490.0,165.6 490.0,165.6 H514.0 Q514.0,165.6 514.0,165.6 V230.0 Z\"><title>2025: 14 bài tác giả đầu cùng HUST</title></path><path class=\"other-inst\" d=\"M490.0,163.6 V109.8 Q490.0,105.8 494.0,105.8 H510.0 Q514.0,105.8 514.0,109.8 V163.6 Z\"><title>2025: 13 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"99.8\" text-anchor=\"middle\">27</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V147.2 Q574.0,147.2 574.0,147.2 H598.0 Q598.0,147.2 598.0,147.2 V230.0 Z\"><title>2026: 18 bài tác giả đầu cùng HUST</title></path><path class=\"other-inst\" d=\"M574.0,145.2 V101.2 Q574.0,101.2 574.0,101.2 H598.0 Q598.0,101.2 598.0,101.2 V145.2 Z\"><title>2026: 10 bài tác giả đầu ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M574.0,99.2 V77.6 Q574.0,73.6 578.0,73.6 H594.0 Q598.0,73.6 598.0,77.6 V99.2 Z\"><title>2026: 6 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"586.0\" y=\"67.6\" text-anchor=\"middle\">34</text></svg>"
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from HUST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from HUST</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"381.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"399.6\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><path class=\"other-inst\" d=\"M70.0,230.0 V229.4 Q70.0,225.4 74.0,225.4 H90.0 Q94.0,225.4 94.0,229.4 V230.0 Z\"><title>2020: 1 first author elsewhere</title></path><text class=\"value\" x=\"82.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V229.4 Q238.0,225.4 242.0,225.4 H258.0 Q262.0,225.4 262.0,229.4 V230.0 Z\"><title>2022: 1 first author elsewhere</title></path><text class=\"value\" x=\"250.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V216.2 Q406.0,216.2 406.0,216.2 H430.0 Q430.0,216.2 430.0,216.2 V230.0 Z\"><title>2024: 3 first author from HUST</title></path><path class=\"other-inst\" d=\"M406.0,214.2 V192.6 Q406.0,188.6 410.0,188.6 H426.0 Q430.0,188.6 430.0,192.6 V214.2 Z\"><title>2024: 6 first author elsewhere</title></path><text class=\"value\" x=\"418.0\" y=\"182.6\" text-anchor=\"middle\">9</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V165.6 Q490.0,165.6 490.0,165.6 H514.0 Q514.0,165.6 514.0,165.6 V230.0 Z\"><title>2025: 14 first author from HUST</title></path><path class=\"other-inst\" d=\"M490.0,163.6 V109.8 Q490.0,105.8 494.0,105.8 H510.0 Q514.0,105.8 514.0,109.8 V163.6 Z\"><title>2025: 13 first author elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"99.8\" text-anchor=\"middle\">27</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V119.6 Q574.0,119.6 574.0,119.6 H598.0 Q598.0,119.6 598.0,119.6 V230.0 Z\"><title>2026: 24 first author from HUST</title></path><path class=\"other-inst\" d=\"M574.0,117.6 V69.0 Q574.0,69.0 574.0,69.0 H598.0 Q598.0,69.0 598.0,69.0 V117.6 Z\"><title>2026: 11 first author elsewhere</title></path><path class=\"unjudged\" d=\"M574.0,67.0 V63.8 Q574.0,59.8 578.0,59.8 H594.0 Q598.0,59.8 598.0,63.8 V67.0 Z\"><title>2026: 2 affiliations not known yet</title></path><text class=\"value\" x=\"586.0\" y=\"53.8\" text-anchor=\"middle\">37</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng HUST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng HUST</text><rect class=\"other-inst\" x=\"204.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"222.4\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"394.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"412.4\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><path class=\"other-inst\" d=\"M70.0,230.0 V229.4 Q70.0,225.4 74.0,225.4 H90.0 Q94.0,225.4 94.0,229.4 V230.0 Z\"><title>2020: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"82.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V229.4 Q238.0,225.4 242.0,225.4 H258.0 Q262.0,225.4 262.0,229.4 V230.0 Z\"><title>2022: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"250.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V216.2 Q406.0,216.2 406.0,216.2 H430.0 Q430.0,216.2 430.0,216.2 V230.0 Z\"><title>2024: 3 bài tác giả đầu cùng HUST</title></path><path class=\"other-inst\" d=\"M406.0,214.2 V192.6 Q406.0,188.6 410.0,188.6 H426.0 Q430.0,188.6 430.0,192.6 V214.2 Z\"><title>2024: 6 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"418.0\" y=\"182.6\" text-anchor=\"middle\">9</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V165.6 Q490.0,165.6 490.0,165.6 H514.0 Q514.0,165.6 514.0,165.6 V230.0 Z\"><title>2025: 14 bài tác giả đầu cùng HUST</title></path><path class=\"other-inst\" d=\"M490.0,163.6 V109.8 Q490.0,105.8 494.0,105.8 H510.0 Q514.0,105.8 514.0,109.8 V163.6 Z\"><title>2025: 13 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"99.8\" text-anchor=\"middle\">27</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V119.6 Q574.0,119.6 574.0,119.6 H598.0 Q598.0,119.6 598.0,119.6 V230.0 Z\"><title>2026: 24 bài tác giả đầu cùng HUST</title></path><path class=\"other-inst\" d=\"M574.0,117.6 V69.0 Q574.0,69.0 574.0,69.0 H598.0 Q598.0,69.0 598.0,69.0 V117.6 Z\"><title>2026: 11 bài tác giả đầu ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M574.0,67.0 V63.8 Q574.0,59.8 578.0,59.8 H594.0 Q598.0,59.8 598.0,63.8 V67.0 Z\"><title>2026: 2 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"586.0\" y=\"53.8\" text-anchor=\"middle\">37</text></svg>"
    },
    "majority": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from HUST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from HUST</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"381.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"399.6\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><path class=\"other-inst\" d=\"M70.0,230.0 V229.4 Q70.0,225.4 74.0,225.4 H90.0 Q94.0,225.4 94.0,229.4 V230.0 Z\"><title>2020: 1 most authors elsewhere</title></path><text class=\"value\" x=\"82.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V229.4 Q238.0,225.4 242.0,225.4 H258.0 Q262.0,225.4 262.0,229.4 V230.0 Z\"><title>2022: 1 most authors elsewhere</title></path><text class=\"value\" x=\"250.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V220.8 Q406.0,220.8 406.0,220.8 H430.0 Q430.0,220.8 430.0,220.8 V230.0 Z\"><title>2024: 2 most authors from HUST</title></path><path class=\"other-inst\" d=\"M406.0,218.8 V192.6 Q406.0,188.6 410.0,188.6 H426.0 Q430.0,188.6 430.0,192.6 V218.8 Z\"><title>2024: 7 most authors elsewhere</title></path><text class=\"value\" x=\"418.0\" y=\"182.6\" text-anchor=\"middle\">9</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V197.8 Q490.0,197.8 490.0,197.8 H514.0 Q514.0,197.8 514.0,197.8 V230.0 Z\"><title>2025: 7 most authors from HUST</title></path><path class=\"other-inst\" d=\"M490.0,195.8 V109.8 Q490.0,105.8 494.0,105.8 H510.0 Q514.0,105.8 514.0,109.8 V195.8 Z\"><title>2025: 20 most authors elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"99.8\" text-anchor=\"middle\">27</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V170.2 Q574.0,170.2 574.0,170.2 H598.0 Q598.0,170.2 598.0,170.2 V230.0 Z\"><title>2026: 13 most authors from HUST</title></path><path class=\"other-inst\" d=\"M574.0,168.2 V101.2 Q574.0,101.2 574.0,101.2 H598.0 Q598.0,101.2 598.0,101.2 V168.2 Z\"><title>2026: 15 most authors elsewhere</title></path><path class=\"unjudged\" d=\"M574.0,99.2 V77.6 Q574.0,73.6 578.0,73.6 H594.0 Q598.0,73.6 598.0,77.6 V99.2 Z\"><title>2026: 6 affiliations not known yet</title></path><text class=\"value\" x=\"586.0\" y=\"67.6\" text-anchor=\"middle\">34</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng HUST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng HUST</text><rect class=\"other-inst\" x=\"217.20000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"235.20000000000002\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"420.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"438.0\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><path class=\"other-inst\" d=\"M70.0,230.0 V229.4 Q70.0,225.4 74.0,225.4 H90.0 Q94.0,225.4 94.0,229.4 V230.0 Z\"><title>2020: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"82.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V229.4 Q238.0,225.4 242.0,225.4 H258.0 Q262.0,225.4 262.0,229.4 V230.0 Z\"><title>2022: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"250.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V220.8 Q406.0,220.8 406.0,220.8 H430.0 Q430.0,220.8 430.0,220.8 V230.0 Z\"><title>2024: 2 bài đa số tác giả cùng HUST</title></path><path class=\"other-inst\" d=\"M406.0,218.8 V192.6 Q406.0,188.6 410.0,188.6 H426.0 Q430.0,188.6 430.0,192.6 V218.8 Z\"><title>2024: 7 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"418.0\" y=\"182.6\" text-anchor=\"middle\">9</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V197.8 Q490.0,197.8 490.0,197.8 H514.0 Q514.0,197.8 514.0,197.8 V230.0 Z\"><title>2025: 7 bài đa số tác giả cùng HUST</title></path><path class=\"other-inst\" d=\"M490.0,195.8 V109.8 Q490.0,105.8 494.0,105.8 H510.0 Q514.0,105.8 514.0,109.8 V195.8 Z\"><title>2025: 20 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"99.8\" text-anchor=\"middle\">27</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V170.2 Q574.0,170.2 574.0,170.2 H598.0 Q598.0,170.2 598.0,170.2 V230.0 Z\"><title>2026: 13 bài đa số tác giả cùng HUST</title></path><path class=\"other-inst\" d=\"M574.0,168.2 V101.2 Q574.0,101.2 574.0,101.2 H598.0 Q598.0,101.2 598.0,101.2 V168.2 Z\"><title>2026: 15 bài đa số tác giả ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M574.0,99.2 V77.6 Q574.0,73.6 578.0,73.6 H594.0 Q598.0,73.6 598.0,77.6 V99.2 Z\"><title>2026: 6 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"586.0\" y=\"67.6\" text-anchor=\"middle\">34</text></svg>"
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from HUST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from HUST</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"381.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"399.6\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><path class=\"other-inst\" d=\"M70.0,230.0 V229.4 Q70.0,225.4 74.0,225.4 H90.0 Q94.0,225.4 94.0,229.4 V230.0 Z\"><title>2020: 1 most authors elsewhere</title></path><text class=\"value\" x=\"82.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V229.4 Q238.0,225.4 242.0,225.4 H258.0 Q262.0,225.4 262.0,229.4 V230.0 Z\"><title>2022: 1 most authors elsewhere</title></path><text class=\"value\" x=\"250.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V220.8 Q406.0,220.8 406.0,220.8 H430.0 Q430.0,220.8 430.0,220.8 V230.0 Z\"><title>2024: 2 most authors from HUST</title></path><path class=\"other-inst\" d=\"M406.0,218.8 V192.6 Q406.0,188.6 410.0,188.6 H426.0 Q430.0,188.6 430.0,192.6 V218.8 Z\"><title>2024: 7 most authors elsewhere</title></path><text class=\"value\" x=\"418.0\" y=\"182.6\" text-anchor=\"middle\">9</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V197.8 Q490.0,197.8 490.0,197.8 H514.0 Q514.0,197.8 514.0,197.8 V230.0 Z\"><title>2025: 7 most authors from HUST</title></path><path class=\"other-inst\" d=\"M490.0,195.8 V109.8 Q490.0,105.8 494.0,105.8 H510.0 Q514.0,105.8 514.0,109.8 V195.8 Z\"><title>2025: 20 most authors elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"99.8\" text-anchor=\"middle\">27</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V142.6 Q574.0,142.6 574.0,142.6 H598.0 Q598.0,142.6 598.0,142.6 V230.0 Z\"><title>2026: 19 most authors from HUST</title></path><path class=\"other-inst\" d=\"M574.0,140.6 V69.0 Q574.0,69.0 574.0,69.0 H598.0 Q598.0,69.0 598.0,69.0 V140.6 Z\"><title>2026: 16 most authors elsewhere</title></path><path class=\"unjudged\" d=\"M574.0,67.0 V63.8 Q574.0,59.8 578.0,59.8 H594.0 Q598.0,59.8 598.0,63.8 V67.0 Z\"><title>2026: 2 affiliations not known yet</title></path><text class=\"value\" x=\"586.0\" y=\"53.8\" text-anchor=\"middle\">37</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng HUST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng HUST</text><rect class=\"other-inst\" x=\"217.20000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"235.20000000000002\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"420.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"438.0\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><path class=\"other-inst\" d=\"M70.0,230.0 V229.4 Q70.0,225.4 74.0,225.4 H90.0 Q94.0,225.4 94.0,229.4 V230.0 Z\"><title>2020: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"82.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V229.4 Q238.0,225.4 242.0,225.4 H258.0 Q262.0,225.4 262.0,229.4 V230.0 Z\"><title>2022: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"250.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V220.8 Q406.0,220.8 406.0,220.8 H430.0 Q430.0,220.8 430.0,220.8 V230.0 Z\"><title>2024: 2 bài đa số tác giả cùng HUST</title></path><path class=\"other-inst\" d=\"M406.0,218.8 V192.6 Q406.0,188.6 410.0,188.6 H426.0 Q430.0,188.6 430.0,192.6 V218.8 Z\"><title>2024: 7 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"418.0\" y=\"182.6\" text-anchor=\"middle\">9</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V197.8 Q490.0,197.8 490.0,197.8 H514.0 Q514.0,197.8 514.0,197.8 V230.0 Z\"><title>2025: 7 bài đa số tác giả cùng HUST</title></path><path class=\"other-inst\" d=\"M490.0,195.8 V109.8 Q490.0,105.8 494.0,105.8 H510.0 Q514.0,105.8 514.0,109.8 V195.8 Z\"><title>2025: 20 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"99.8\" text-anchor=\"middle\">27</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V142.6 Q574.0,142.6 574.0,142.6 H598.0 Q598.0,142.6 598.0,142.6 V230.0 Z\"><title>2026: 19 bài đa số tác giả cùng HUST</title></path><path class=\"other-inst\" d=\"M574.0,140.6 V69.0 Q574.0,69.0 574.0,69.0 H598.0 Q598.0,69.0 598.0,69.0 V140.6 Z\"><title>2026: 16 bài đa số tác giả ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M574.0,67.0 V63.8 Q574.0,59.8 578.0,59.8 H594.0 Q598.0,59.8 598.0,63.8 V67.0 Z\"><title>2026: 2 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"586.0\" y=\"53.8\" text-anchor=\"middle\">37</text></svg>"
    }
   },
   "name_vi": "Đại học Bách khoa Hà Nội",
@@ -1655,7 +1655,7 @@
      "year": 2026,
      "venues": {
       "iclr": 0,
-      "neurips": 3,
+      "neurips": 5,
       "icml": 1,
       "cvpr": 1,
       "iccv": 0,
@@ -1666,12 +1666,12 @@
       "aaai": 1,
       "ijcai": 0
      },
-     "total": 6
+     "total": 8
     }
    ],
    "venues": {
     "iclr": 2,
-    "neurips": 5,
+    "neurips": 7,
     "icml": 1,
     "cvpr": 1,
     "iccv": 0,
@@ -1682,7 +1682,7 @@
     "aaai": 2,
     "ijcai": 1
    },
-   "total": 12
+   "total": 14
   },
   "first_author": {
    "years": [
@@ -1792,7 +1792,7 @@
      "year": 2026,
      "venues": {
       "iclr": 0,
-      "neurips": 3,
+      "neurips": 5,
       "icml": 2,
       "cvpr": 2,
       "iccv": 0,
@@ -1803,12 +1803,12 @@
       "aaai": 1,
       "ijcai": 0
      },
-     "total": 8
+     "total": 10
     }
    ],
    "venues": {
     "iclr": 2,
-    "neurips": 6,
+    "neurips": 8,
     "icml": 2,
     "cvpr": 2,
     "iccv": 0,
@@ -1819,10 +1819,10 @@
     "aaai": 4,
     "ijcai": 1
    },
-   "total": 18
+   "total": 20
   },
-  "judged": 38,
-  "unknown": 3,
+  "judged": 40,
+  "unknown": 2,
   "by_year": [
    {
     "year": 2020,
@@ -1868,10 +1868,10 @@
    },
    {
     "year": 2026,
-    "accepted": 20,
-    "judged": 17,
-    "majority": 6,
-    "first": 8
+    "accepted": 21,
+    "judged": 19,
+    "majority": 8,
+    "first": 10
    }
   ],
   "slug": "vinuni",
@@ -1880,8 +1880,8 @@
   "professors": [
    "khoa-d-doan",
    "dung-d-le",
-   "minh-do",
    "binh-t-nguyen",
+   "minh-do",
    "hieu-pham",
    "thanh-trung-huynh",
    "an-thai-le",
@@ -1889,8 +1889,8 @@
    "hong-t-m-chu"
   ],
   "iclr_complete": true,
-  "accepted": 41,
-  "own_page": 10,
+  "accepted": 42,
+  "own_page": 11,
   "official": 31,
   "venues": {
    "iclr": {
@@ -1904,13 +1904,13 @@
     "official": 6
    },
    "neurips": {
-    "accepted": 17,
+    "accepted": 18,
     "rejected": 2,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 2,
-    "submitted": 19,
-    "own_page": 10,
+    "submitted": 20,
+    "own_page": 11,
     "official": 7
    },
    "icml": {
@@ -2935,13 +2935,13 @@
       "provisional": false
      },
      "neurips": {
-      "accepted": 10,
+      "accepted": 11,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 10,
-      "own_page": 10,
+      "submitted": 11,
+      "own_page": 11,
       "official": 0,
       "available": true,
       "held": true,
@@ -3065,23 +3065,23 @@
       "provisional": false
      }
     },
-    "accepted": 20,
-    "own_page": 10,
+    "accepted": 21,
+    "own_page": 11,
     "official": 10
    }
   ],
   "workshop": 31,
-  "rejected_estimated": 144,
+  "rejected_estimated": 147,
   "acceptance_rate": 22,
   "rate_trivial": false,
   "author_charts": {
    "first": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from VinUni\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from VinUni</text><rect class=\"other-inst\" x=\"223.60000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"241.60000000000002\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"394.40000000000003\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"412.40000000000003\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">20</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"own-inst\" d=\"M238.0,230.0 V220.8 Q238.0,220.8 238.0,220.8 H262.0 Q262.0,220.8 262.0,220.8 V230.0 Z\"><title>2022: 1 first author from VinUni</title></path><path class=\"other-inst\" d=\"M238.0,218.8 V215.6 Q238.0,211.6 242.0,211.6 H258.0 Q262.0,211.6 262.0,215.6 V218.8 Z\"><title>2022: 1 first author elsewhere</title></path><text class=\"value\" x=\"250.0\" y=\"205.6\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M322.0,230.0 V211.6 Q322.0,211.6 322.0,211.6 H346.0 Q346.0,211.6 346.0,211.6 V230.0 Z\"><title>2023: 2 first author from VinUni</title></path><path class=\"other-inst\" d=\"M322.0,209.6 V188.0 Q322.0,184.0 326.0,184.0 H342.0 Q346.0,184.0 346.0,188.0 V209.6 Z\"><title>2023: 3 first author elsewhere</title></path><text class=\"value\" x=\"334.0\" y=\"178.0\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V211.6 Q406.0,211.6 406.0,211.6 H430.0 Q430.0,211.6 430.0,211.6 V230.0 Z\"><title>2024: 2 first author from VinUni</title></path><path class=\"other-inst\" d=\"M406.0,209.6 V206.4 Q406.0,202.4 410.0,202.4 H426.0 Q430.0,202.4 430.0,206.4 V209.6 Z\"><title>2024: 1 first author elsewhere</title></path><text class=\"value\" x=\"418.0\" y=\"196.4\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V184.0 Q490.0,184.0 490.0,184.0 H514.0 Q514.0,184.0 514.0,184.0 V230.0 Z\"><title>2025: 5 first author from VinUni</title></path><path class=\"other-inst\" d=\"M490.0,182.0 V132.8 Q490.0,128.8 494.0,128.8 H510.0 Q514.0,128.8 514.0,132.8 V182.0 Z\"><title>2025: 6 first author elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"122.8\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V156.4 Q574.0,156.4 574.0,156.4 H598.0 Q598.0,156.4 598.0,156.4 V230.0 Z\"><title>2026: 8 first author from VinUni</title></path><path class=\"other-inst\" d=\"M574.0,154.4 V73.6 Q574.0,73.6 574.0,73.6 H598.0 Q598.0,73.6 598.0,73.6 V154.4 Z\"><title>2026: 9 first author elsewhere</title></path><path class=\"unjudged\" d=\"M574.0,71.6 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V71.6 Z\"><title>2026: 3 affiliations not known yet</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">20</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng VinUni\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng VinUni</text><rect class=\"other-inst\" x=\"217.20000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"235.20000000000002\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"407.20000000000005\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"425.20000000000005\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">20</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"own-inst\" d=\"M238.0,230.0 V220.8 Q238.0,220.8 238.0,220.8 H262.0 Q262.0,220.8 262.0,220.8 V230.0 Z\"><title>2022: 1 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M238.0,218.8 V215.6 Q238.0,211.6 242.0,211.6 H258.0 Q262.0,211.6 262.0,215.6 V218.8 Z\"><title>2022: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"250.0\" y=\"205.6\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M322.0,230.0 V211.6 Q322.0,211.6 322.0,211.6 H346.0 Q346.0,211.6 346.0,211.6 V230.0 Z\"><title>2023: 2 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M322.0,209.6 V188.0 Q322.0,184.0 326.0,184.0 H342.0 Q346.0,184.0 346.0,188.0 V209.6 Z\"><title>2023: 3 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"334.0\" y=\"178.0\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V211.6 Q406.0,211.6 406.0,211.6 H430.0 Q430.0,211.6 430.0,211.6 V230.0 Z\"><title>2024: 2 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M406.0,209.6 V206.4 Q406.0,202.4 410.0,202.4 H426.0 Q430.0,202.4 430.0,206.4 V209.6 Z\"><title>2024: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"418.0\" y=\"196.4\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V184.0 Q490.0,184.0 490.0,184.0 H514.0 Q514.0,184.0 514.0,184.0 V230.0 Z\"><title>2025: 5 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M490.0,182.0 V132.8 Q490.0,128.8 494.0,128.8 H510.0 Q514.0,128.8 514.0,132.8 V182.0 Z\"><title>2025: 6 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"122.8\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V156.4 Q574.0,156.4 574.0,156.4 H598.0 Q598.0,156.4 598.0,156.4 V230.0 Z\"><title>2026: 8 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M574.0,154.4 V73.6 Q574.0,73.6 574.0,73.6 H598.0 Q598.0,73.6 598.0,73.6 V154.4 Z\"><title>2026: 9 bài tác giả đầu ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M574.0,71.6 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V71.6 Z\"><title>2026: 3 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">20</text></svg>"
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from VinUni\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from VinUni</text><rect class=\"other-inst\" x=\"223.60000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"241.60000000000002\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"394.40000000000003\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"412.40000000000003\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"193.2\" x2=\"628\" y2=\"193.2\"/><text class=\"tick\" x=\"34\" y=\"197.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"156.4\" x2=\"628\" y2=\"156.4\"/><text class=\"tick\" x=\"34\" y=\"160.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"119.6\" x2=\"628\" y2=\"119.6\"/><text class=\"tick\" x=\"34\" y=\"123.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"82.8\" x2=\"628\" y2=\"82.8\"/><text class=\"tick\" x=\"34\" y=\"86.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"own-inst\" d=\"M238.0,230.0 V222.6 Q238.0,222.6 238.0,222.6 H262.0 Q262.0,222.6 262.0,222.6 V230.0 Z\"><title>2022: 1 first author from VinUni</title></path><path class=\"other-inst\" d=\"M238.0,220.6 V219.3 Q238.0,215.3 242.0,215.3 H258.0 Q262.0,215.3 262.0,219.3 V220.6 Z\"><title>2022: 1 first author elsewhere</title></path><text class=\"value\" x=\"250.0\" y=\"209.3\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M322.0,230.0 V215.3 Q322.0,215.3 322.0,215.3 H346.0 Q346.0,215.3 346.0,215.3 V230.0 Z\"><title>2023: 2 first author from VinUni</title></path><path class=\"other-inst\" d=\"M322.0,213.3 V197.2 Q322.0,193.2 326.0,193.2 H342.0 Q346.0,193.2 346.0,197.2 V213.3 Z\"><title>2023: 3 first author elsewhere</title></path><text class=\"value\" x=\"334.0\" y=\"187.2\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V215.3 Q406.0,215.3 406.0,215.3 H430.0 Q430.0,215.3 430.0,215.3 V230.0 Z\"><title>2024: 2 first author from VinUni</title></path><path class=\"other-inst\" d=\"M406.0,213.3 V211.9 Q406.0,207.9 410.0,207.9 H426.0 Q430.0,207.9 430.0,211.9 V213.3 Z\"><title>2024: 1 first author elsewhere</title></path><text class=\"value\" x=\"418.0\" y=\"201.9\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V193.2 Q490.0,193.2 490.0,193.2 H514.0 Q514.0,193.2 514.0,193.2 V230.0 Z\"><title>2025: 5 first author from VinUni</title></path><path class=\"other-inst\" d=\"M490.0,191.2 V153.0 Q490.0,149.0 494.0,149.0 H510.0 Q514.0,149.0 514.0,153.0 V191.2 Z\"><title>2025: 6 first author elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"143.0\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V156.4 Q574.0,156.4 574.0,156.4 H598.0 Q598.0,156.4 598.0,156.4 V230.0 Z\"><title>2026: 10 first author from VinUni</title></path><path class=\"other-inst\" d=\"M574.0,154.4 V90.2 Q574.0,90.2 574.0,90.2 H598.0 Q598.0,90.2 598.0,90.2 V154.4 Z\"><title>2026: 9 first author elsewhere</title></path><path class=\"unjudged\" d=\"M574.0,88.2 V79.4 Q574.0,75.4 578.0,75.4 H594.0 Q598.0,75.4 598.0,79.4 V88.2 Z\"><title>2026: 2 affiliations not known yet</title></path><text class=\"value\" x=\"586.0\" y=\"69.4\" text-anchor=\"middle\">21</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng VinUni\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng VinUni</text><rect class=\"other-inst\" x=\"217.20000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"235.20000000000002\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"407.20000000000005\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"425.20000000000005\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"193.2\" x2=\"628\" y2=\"193.2\"/><text class=\"tick\" x=\"34\" y=\"197.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"156.4\" x2=\"628\" y2=\"156.4\"/><text class=\"tick\" x=\"34\" y=\"160.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"119.6\" x2=\"628\" y2=\"119.6\"/><text class=\"tick\" x=\"34\" y=\"123.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"82.8\" x2=\"628\" y2=\"82.8\"/><text class=\"tick\" x=\"34\" y=\"86.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"own-inst\" d=\"M238.0,230.0 V222.6 Q238.0,222.6 238.0,222.6 H262.0 Q262.0,222.6 262.0,222.6 V230.0 Z\"><title>2022: 1 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M238.0,220.6 V219.3 Q238.0,215.3 242.0,215.3 H258.0 Q262.0,215.3 262.0,219.3 V220.6 Z\"><title>2022: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"250.0\" y=\"209.3\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M322.0,230.0 V215.3 Q322.0,215.3 322.0,215.3 H346.0 Q346.0,215.3 346.0,215.3 V230.0 Z\"><title>2023: 2 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M322.0,213.3 V197.2 Q322.0,193.2 326.0,193.2 H342.0 Q346.0,193.2 346.0,197.2 V213.3 Z\"><title>2023: 3 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"334.0\" y=\"187.2\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V215.3 Q406.0,215.3 406.0,215.3 H430.0 Q430.0,215.3 430.0,215.3 V230.0 Z\"><title>2024: 2 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M406.0,213.3 V211.9 Q406.0,207.9 410.0,207.9 H426.0 Q430.0,207.9 430.0,211.9 V213.3 Z\"><title>2024: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"418.0\" y=\"201.9\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V193.2 Q490.0,193.2 490.0,193.2 H514.0 Q514.0,193.2 514.0,193.2 V230.0 Z\"><title>2025: 5 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M490.0,191.2 V153.0 Q490.0,149.0 494.0,149.0 H510.0 Q514.0,149.0 514.0,153.0 V191.2 Z\"><title>2025: 6 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"143.0\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V156.4 Q574.0,156.4 574.0,156.4 H598.0 Q598.0,156.4 598.0,156.4 V230.0 Z\"><title>2026: 10 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M574.0,154.4 V90.2 Q574.0,90.2 574.0,90.2 H598.0 Q598.0,90.2 598.0,90.2 V154.4 Z\"><title>2026: 9 bài tác giả đầu ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M574.0,88.2 V79.4 Q574.0,75.4 578.0,75.4 H594.0 Q598.0,75.4 598.0,79.4 V88.2 Z\"><title>2026: 2 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"586.0\" y=\"69.4\" text-anchor=\"middle\">21</text></svg>"
    },
    "majority": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from VinUni\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from VinUni</text><rect class=\"other-inst\" x=\"223.60000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"241.60000000000002\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"394.40000000000003\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"412.40000000000003\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">20</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V215.6 Q238.0,211.6 242.0,211.6 H258.0 Q262.0,211.6 262.0,215.6 V230.0 Z\"><title>2022: 2 most authors elsewhere</title></path><text class=\"value\" x=\"250.0\" y=\"205.6\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M322.0,230.0 V220.8 Q322.0,220.8 322.0,220.8 H346.0 Q346.0,220.8 346.0,220.8 V230.0 Z\"><title>2023: 1 most authors from VinUni</title></path><path class=\"other-inst\" d=\"M322.0,218.8 V188.0 Q322.0,184.0 326.0,184.0 H342.0 Q346.0,184.0 346.0,188.0 V218.8 Z\"><title>2023: 4 most authors elsewhere</title></path><text class=\"value\" x=\"334.0\" y=\"178.0\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V220.8 Q406.0,220.8 406.0,220.8 H430.0 Q430.0,220.8 430.0,220.8 V230.0 Z\"><title>2024: 1 most authors from VinUni</title></path><path class=\"other-inst\" d=\"M406.0,218.8 V206.4 Q406.0,202.4 410.0,202.4 H426.0 Q430.0,202.4 430.0,206.4 V218.8 Z\"><title>2024: 2 most authors elsewhere</title></path><text class=\"value\" x=\"418.0\" y=\"196.4\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V193.2 Q490.0,193.2 490.0,193.2 H514.0 Q514.0,193.2 514.0,193.2 V230.0 Z\"><title>2025: 4 most authors from VinUni</title></path><path class=\"other-inst\" d=\"M490.0,191.2 V132.8 Q490.0,128.8 494.0,128.8 H510.0 Q514.0,128.8 514.0,132.8 V191.2 Z\"><title>2025: 7 most authors elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"122.8\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V174.8 Q574.0,174.8 574.0,174.8 H598.0 Q598.0,174.8 598.0,174.8 V230.0 Z\"><title>2026: 6 most authors from VinUni</title></path><path class=\"other-inst\" d=\"M574.0,172.8 V73.6 Q574.0,73.6 574.0,73.6 H598.0 Q598.0,73.6 598.0,73.6 V172.8 Z\"><title>2026: 11 most authors elsewhere</title></path><path class=\"unjudged\" d=\"M574.0,71.6 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V71.6 Z\"><title>2026: 3 affiliations not known yet</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">20</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng VinUni\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng VinUni</text><rect class=\"other-inst\" x=\"230.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"248.0\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"432.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"450.8\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">20</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V215.6 Q238.0,211.6 242.0,211.6 H258.0 Q262.0,211.6 262.0,215.6 V230.0 Z\"><title>2022: 2 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"250.0\" y=\"205.6\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M322.0,230.0 V220.8 Q322.0,220.8 322.0,220.8 H346.0 Q346.0,220.8 346.0,220.8 V230.0 Z\"><title>2023: 1 bài đa số tác giả cùng VinUni</title></path><path class=\"other-inst\" d=\"M322.0,218.8 V188.0 Q322.0,184.0 326.0,184.0 H342.0 Q346.0,184.0 346.0,188.0 V218.8 Z\"><title>2023: 4 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"334.0\" y=\"178.0\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V220.8 Q406.0,220.8 406.0,220.8 H430.0 Q430.0,220.8 430.0,220.8 V230.0 Z\"><title>2024: 1 bài đa số tác giả cùng VinUni</title></path><path class=\"other-inst\" d=\"M406.0,218.8 V206.4 Q406.0,202.4 410.0,202.4 H426.0 Q430.0,202.4 430.0,206.4 V218.8 Z\"><title>2024: 2 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"418.0\" y=\"196.4\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V193.2 Q490.0,193.2 490.0,193.2 H514.0 Q514.0,193.2 514.0,193.2 V230.0 Z\"><title>2025: 4 bài đa số tác giả cùng VinUni</title></path><path class=\"other-inst\" d=\"M490.0,191.2 V132.8 Q490.0,128.8 494.0,128.8 H510.0 Q514.0,128.8 514.0,132.8 V191.2 Z\"><title>2025: 7 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"122.8\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V174.8 Q574.0,174.8 574.0,174.8 H598.0 Q598.0,174.8 598.0,174.8 V230.0 Z\"><title>2026: 6 bài đa số tác giả cùng VinUni</title></path><path class=\"other-inst\" d=\"M574.0,172.8 V73.6 Q574.0,73.6 574.0,73.6 H598.0 Q598.0,73.6 598.0,73.6 V172.8 Z\"><title>2026: 11 bài đa số tác giả ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M574.0,71.6 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V71.6 Z\"><title>2026: 3 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">20</text></svg>"
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from VinUni\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from VinUni</text><rect class=\"other-inst\" x=\"223.60000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"241.60000000000002\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"394.40000000000003\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"412.40000000000003\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"193.2\" x2=\"628\" y2=\"193.2\"/><text class=\"tick\" x=\"34\" y=\"197.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"156.4\" x2=\"628\" y2=\"156.4\"/><text class=\"tick\" x=\"34\" y=\"160.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"119.6\" x2=\"628\" y2=\"119.6\"/><text class=\"tick\" x=\"34\" y=\"123.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"82.8\" x2=\"628\" y2=\"82.8\"/><text class=\"tick\" x=\"34\" y=\"86.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V219.3 Q238.0,215.3 242.0,215.3 H258.0 Q262.0,215.3 262.0,219.3 V230.0 Z\"><title>2022: 2 most authors elsewhere</title></path><text class=\"value\" x=\"250.0\" y=\"209.3\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M322.0,230.0 V222.6 Q322.0,222.6 322.0,222.6 H346.0 Q346.0,222.6 346.0,222.6 V230.0 Z\"><title>2023: 1 most authors from VinUni</title></path><path class=\"other-inst\" d=\"M322.0,220.6 V197.2 Q322.0,193.2 326.0,193.2 H342.0 Q346.0,193.2 346.0,197.2 V220.6 Z\"><title>2023: 4 most authors elsewhere</title></path><text class=\"value\" x=\"334.0\" y=\"187.2\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V222.6 Q406.0,222.6 406.0,222.6 H430.0 Q430.0,222.6 430.0,222.6 V230.0 Z\"><title>2024: 1 most authors from VinUni</title></path><path class=\"other-inst\" d=\"M406.0,220.6 V211.9 Q406.0,207.9 410.0,207.9 H426.0 Q430.0,207.9 430.0,211.9 V220.6 Z\"><title>2024: 2 most authors elsewhere</title></path><text class=\"value\" x=\"418.0\" y=\"201.9\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V200.6 Q490.0,200.6 490.0,200.6 H514.0 Q514.0,200.6 514.0,200.6 V230.0 Z\"><title>2025: 4 most authors from VinUni</title></path><path class=\"other-inst\" d=\"M490.0,198.6 V153.0 Q490.0,149.0 494.0,149.0 H510.0 Q514.0,149.0 514.0,153.0 V198.6 Z\"><title>2025: 7 most authors elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"143.0\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V171.1 Q574.0,171.1 574.0,171.1 H598.0 Q598.0,171.1 598.0,171.1 V230.0 Z\"><title>2026: 8 most authors from VinUni</title></path><path class=\"other-inst\" d=\"M574.0,169.1 V90.2 Q574.0,90.2 574.0,90.2 H598.0 Q598.0,90.2 598.0,90.2 V169.1 Z\"><title>2026: 11 most authors elsewhere</title></path><path class=\"unjudged\" d=\"M574.0,88.2 V79.4 Q574.0,75.4 578.0,75.4 H594.0 Q598.0,75.4 598.0,79.4 V88.2 Z\"><title>2026: 2 affiliations not known yet</title></path><text class=\"value\" x=\"586.0\" y=\"69.4\" text-anchor=\"middle\">21</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng VinUni\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng VinUni</text><rect class=\"other-inst\" x=\"230.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"248.0\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"432.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"450.8\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"193.2\" x2=\"628\" y2=\"193.2\"/><text class=\"tick\" x=\"34\" y=\"197.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"156.4\" x2=\"628\" y2=\"156.4\"/><text class=\"tick\" x=\"34\" y=\"160.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"119.6\" x2=\"628\" y2=\"119.6\"/><text class=\"tick\" x=\"34\" y=\"123.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"82.8\" x2=\"628\" y2=\"82.8\"/><text class=\"tick\" x=\"34\" y=\"86.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V219.3 Q238.0,215.3 242.0,215.3 H258.0 Q262.0,215.3 262.0,219.3 V230.0 Z\"><title>2022: 2 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"250.0\" y=\"209.3\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M322.0,230.0 V222.6 Q322.0,222.6 322.0,222.6 H346.0 Q346.0,222.6 346.0,222.6 V230.0 Z\"><title>2023: 1 bài đa số tác giả cùng VinUni</title></path><path class=\"other-inst\" d=\"M322.0,220.6 V197.2 Q322.0,193.2 326.0,193.2 H342.0 Q346.0,193.2 346.0,197.2 V220.6 Z\"><title>2023: 4 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"334.0\" y=\"187.2\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V222.6 Q406.0,222.6 406.0,222.6 H430.0 Q430.0,222.6 430.0,222.6 V230.0 Z\"><title>2024: 1 bài đa số tác giả cùng VinUni</title></path><path class=\"other-inst\" d=\"M406.0,220.6 V211.9 Q406.0,207.9 410.0,207.9 H426.0 Q430.0,207.9 430.0,211.9 V220.6 Z\"><title>2024: 2 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"418.0\" y=\"201.9\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V200.6 Q490.0,200.6 490.0,200.6 H514.0 Q514.0,200.6 514.0,200.6 V230.0 Z\"><title>2025: 4 bài đa số tác giả cùng VinUni</title></path><path class=\"other-inst\" d=\"M490.0,198.6 V153.0 Q490.0,149.0 494.0,149.0 H510.0 Q514.0,149.0 514.0,153.0 V198.6 Z\"><title>2025: 7 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"143.0\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V171.1 Q574.0,171.1 574.0,171.1 H598.0 Q598.0,171.1 598.0,171.1 V230.0 Z\"><title>2026: 8 bài đa số tác giả cùng VinUni</title></path><path class=\"other-inst\" d=\"M574.0,169.1 V90.2 Q574.0,90.2 574.0,90.2 H598.0 Q598.0,90.2 598.0,90.2 V169.1 Z\"><title>2026: 11 bài đa số tác giả ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M574.0,88.2 V79.4 Q574.0,75.4 578.0,75.4 H594.0 Q598.0,75.4 598.0,79.4 V88.2 Z\"><title>2026: 2 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"586.0\" y=\"69.4\" text-anchor=\"middle\">21</text></svg>"
    }
   },
   "name_vi": "Trường Đại học VinUni",
@@ -3364,7 +3364,7 @@
    "total": 2
   },
   "judged": 16,
-  "unknown": 1,
+  "unknown": 0,
   "by_year": [
    {
     "year": 2020,
@@ -3410,7 +3410,7 @@
    },
    {
     "year": 2026,
-    "accepted": 6,
+    "accepted": 5,
     "judged": 5,
     "majority": 0,
     "first": 1
@@ -3427,8 +3427,8 @@
    "thai-khanh-nguyen"
   ],
   "iclr_complete": true,
-  "accepted": 17,
-  "own_page": 3,
+  "accepted": 16,
+  "own_page": 2,
   "official": 14,
   "venues": {
    "iclr": {
@@ -3442,13 +3442,13 @@
     "official": 0
    },
    "neurips": {
-    "accepted": 4,
+    "accepted": 3,
     "rejected": 0,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 0,
-    "submitted": 4,
-    "own_page": 3,
+    "submitted": 3,
+    "own_page": 2,
     "official": 1
    },
    "icml": {
@@ -4473,13 +4473,13 @@
       "provisional": false
      },
      "neurips": {
-      "accepted": 3,
+      "accepted": 2,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 3,
-      "own_page": 3,
+      "submitted": 2,
+      "own_page": 2,
       "official": 0,
       "available": true,
       "held": true,
@@ -4603,23 +4603,23 @@
       "provisional": false
      }
     },
-    "accepted": 6,
-    "own_page": 3,
+    "accepted": 5,
+    "own_page": 2,
     "official": 3
    }
   ],
   "workshop": 3,
-  "rejected_estimated": 36,
+  "rejected_estimated": 34,
   "acceptance_rate": 32,
   "rate_trivial": false,
   "author_charts": {
    "first": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from PTIT\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from PTIT</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"381.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"399.6\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"168.7\" x2=\"628\" y2=\"168.7\"/><text class=\"tick\" x=\"34\" y=\"172.7\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"107.3\" x2=\"628\" y2=\"107.3\"/><text class=\"tick\" x=\"34\" y=\"111.3\" text-anchor=\"end\">4</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">6</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V203.3 Q238.0,199.3 242.0,199.3 H258.0 Q262.0,199.3 262.0,203.3 V230.0 Z\"><title>2022: 1 first author elsewhere</title></path><text class=\"value\" x=\"250.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"other-inst\" d=\"M322.0,230.0 V203.3 Q322.0,199.3 326.0,199.3 H342.0 Q346.0,199.3 346.0,203.3 V230.0 Z\"><title>2023: 1 first author elsewhere</title></path><text class=\"value\" x=\"334.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"other-inst\" d=\"M406.0,230.0 V80.7 Q406.0,76.7 410.0,76.7 H426.0 Q430.0,76.7 430.0,80.7 V230.0 Z\"><title>2024: 5 first author elsewhere</title></path><text class=\"value\" x=\"418.0\" y=\"70.7\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V199.3 Q490.0,199.3 490.0,199.3 H514.0 Q514.0,199.3 514.0,199.3 V230.0 Z\"><title>2025: 1 first author from PTIT</title></path><path class=\"other-inst\" d=\"M490.0,197.3 V111.3 Q490.0,107.3 494.0,107.3 H510.0 Q514.0,107.3 514.0,111.3 V197.3 Z\"><title>2025: 3 first author elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"101.3\" text-anchor=\"middle\">4</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V199.3 Q574.0,199.3 574.0,199.3 H598.0 Q598.0,199.3 598.0,199.3 V230.0 Z\"><title>2026: 1 first author from PTIT</title></path><path class=\"other-inst\" d=\"M574.0,197.3 V76.7 Q574.0,76.7 574.0,76.7 H598.0 Q598.0,76.7 598.0,76.7 V197.3 Z\"><title>2026: 4 first author elsewhere</title></path><path class=\"unjudged\" d=\"M574.0,74.7 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V74.7 Z\"><title>2026: 1 affiliations not known yet</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">6</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng PTIT\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng PTIT</text><rect class=\"other-inst\" x=\"204.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"222.4\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"394.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"412.4\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"168.7\" x2=\"628\" y2=\"168.7\"/><text class=\"tick\" x=\"34\" y=\"172.7\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"107.3\" x2=\"628\" y2=\"107.3\"/><text class=\"tick\" x=\"34\" y=\"111.3\" text-anchor=\"end\">4</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">6</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V203.3 Q238.0,199.3 242.0,199.3 H258.0 Q262.0,199.3 262.0,203.3 V230.0 Z\"><title>2022: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"250.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"other-inst\" d=\"M322.0,230.0 V203.3 Q322.0,199.3 326.0,199.3 H342.0 Q346.0,199.3 346.0,203.3 V230.0 Z\"><title>2023: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"334.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"other-inst\" d=\"M406.0,230.0 V80.7 Q406.0,76.7 410.0,76.7 H426.0 Q430.0,76.7 430.0,80.7 V230.0 Z\"><title>2024: 5 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"418.0\" y=\"70.7\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V199.3 Q490.0,199.3 490.0,199.3 H514.0 Q514.0,199.3 514.0,199.3 V230.0 Z\"><title>2025: 1 bài tác giả đầu cùng PTIT</title></path><path class=\"other-inst\" d=\"M490.0,197.3 V111.3 Q490.0,107.3 494.0,107.3 H510.0 Q514.0,107.3 514.0,111.3 V197.3 Z\"><title>2025: 3 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"101.3\" text-anchor=\"middle\">4</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V199.3 Q574.0,199.3 574.0,199.3 H598.0 Q598.0,199.3 598.0,199.3 V230.0 Z\"><title>2026: 1 bài tác giả đầu cùng PTIT</title></path><path class=\"other-inst\" d=\"M574.0,197.3 V76.7 Q574.0,76.7 574.0,76.7 H598.0 Q598.0,76.7 598.0,76.7 V197.3 Z\"><title>2026: 4 bài tác giả đầu ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M574.0,74.7 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V74.7 Z\"><title>2026: 1 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">6</text></svg>"
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from PTIT\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from PTIT</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"381.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"399.6\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"193.2\" x2=\"628\" y2=\"193.2\"/><text class=\"tick\" x=\"34\" y=\"197.2\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"156.4\" x2=\"628\" y2=\"156.4\"/><text class=\"tick\" x=\"34\" y=\"160.4\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"119.6\" x2=\"628\" y2=\"119.6\"/><text class=\"tick\" x=\"34\" y=\"123.6\" text-anchor=\"end\">3</text><line class=\"grid\" x1=\"40\" y1=\"82.8\" x2=\"628\" y2=\"82.8\"/><text class=\"tick\" x=\"34\" y=\"86.8\" text-anchor=\"end\">4</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">5</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V197.2 Q238.0,193.2 242.0,193.2 H258.0 Q262.0,193.2 262.0,197.2 V230.0 Z\"><title>2022: 1 first author elsewhere</title></path><text class=\"value\" x=\"250.0\" y=\"187.2\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"other-inst\" d=\"M322.0,230.0 V197.2 Q322.0,193.2 326.0,193.2 H342.0 Q346.0,193.2 346.0,197.2 V230.0 Z\"><title>2023: 1 first author elsewhere</title></path><text class=\"value\" x=\"334.0\" y=\"187.2\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"other-inst\" d=\"M406.0,230.0 V50.0 Q406.0,46.0 410.0,46.0 H426.0 Q430.0,46.0 430.0,50.0 V230.0 Z\"><title>2024: 5 first author elsewhere</title></path><text class=\"value\" x=\"418.0\" y=\"40.0\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V193.2 Q490.0,193.2 490.0,193.2 H514.0 Q514.0,193.2 514.0,193.2 V230.0 Z\"><title>2025: 1 first author from PTIT</title></path><path class=\"other-inst\" d=\"M490.0,191.2 V86.8 Q490.0,82.8 494.0,82.8 H510.0 Q514.0,82.8 514.0,86.8 V191.2 Z\"><title>2025: 3 first author elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"76.8\" text-anchor=\"middle\">4</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V193.2 Q574.0,193.2 574.0,193.2 H598.0 Q598.0,193.2 598.0,193.2 V230.0 Z\"><title>2026: 1 first author from PTIT</title></path><path class=\"other-inst\" d=\"M574.0,191.2 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V191.2 Z\"><title>2026: 4 first author elsewhere</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">5</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng PTIT\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng PTIT</text><rect class=\"other-inst\" x=\"204.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"222.4\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"394.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"412.4\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"193.2\" x2=\"628\" y2=\"193.2\"/><text class=\"tick\" x=\"34\" y=\"197.2\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"156.4\" x2=\"628\" y2=\"156.4\"/><text class=\"tick\" x=\"34\" y=\"160.4\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"119.6\" x2=\"628\" y2=\"119.6\"/><text class=\"tick\" x=\"34\" y=\"123.6\" text-anchor=\"end\">3</text><line class=\"grid\" x1=\"40\" y1=\"82.8\" x2=\"628\" y2=\"82.8\"/><text class=\"tick\" x=\"34\" y=\"86.8\" text-anchor=\"end\">4</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">5</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V197.2 Q238.0,193.2 242.0,193.2 H258.0 Q262.0,193.2 262.0,197.2 V230.0 Z\"><title>2022: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"250.0\" y=\"187.2\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"other-inst\" d=\"M322.0,230.0 V197.2 Q322.0,193.2 326.0,193.2 H342.0 Q346.0,193.2 346.0,197.2 V230.0 Z\"><title>2023: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"334.0\" y=\"187.2\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"other-inst\" d=\"M406.0,230.0 V50.0 Q406.0,46.0 410.0,46.0 H426.0 Q430.0,46.0 430.0,50.0 V230.0 Z\"><title>2024: 5 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"418.0\" y=\"40.0\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V193.2 Q490.0,193.2 490.0,193.2 H514.0 Q514.0,193.2 514.0,193.2 V230.0 Z\"><title>2025: 1 bài tác giả đầu cùng PTIT</title></path><path class=\"other-inst\" d=\"M490.0,191.2 V86.8 Q490.0,82.8 494.0,82.8 H510.0 Q514.0,82.8 514.0,86.8 V191.2 Z\"><title>2025: 3 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"76.8\" text-anchor=\"middle\">4</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V193.2 Q574.0,193.2 574.0,193.2 H598.0 Q598.0,193.2 598.0,193.2 V230.0 Z\"><title>2026: 1 bài tác giả đầu cùng PTIT</title></path><path class=\"other-inst\" d=\"M574.0,191.2 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V191.2 Z\"><title>2026: 4 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">5</text></svg>"
    },
    "majority": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from PTIT\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from PTIT</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"381.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"399.6\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"168.7\" x2=\"628\" y2=\"168.7\"/><text class=\"tick\" x=\"34\" y=\"172.7\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"107.3\" x2=\"628\" y2=\"107.3\"/><text class=\"tick\" x=\"34\" y=\"111.3\" text-anchor=\"end\">4</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">6</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V203.3 Q238.0,199.3 242.0,199.3 H258.0 Q262.0,199.3 262.0,203.3 V230.0 Z\"><title>2022: 1 most authors elsewhere</title></path><text class=\"value\" x=\"250.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"other-inst\" d=\"M322.0,230.0 V203.3 Q322.0,199.3 326.0,199.3 H342.0 Q346.0,199.3 346.0,203.3 V230.0 Z\"><title>2023: 1 most authors elsewhere</title></path><text class=\"value\" x=\"334.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"other-inst\" d=\"M406.0,230.0 V80.7 Q406.0,76.7 410.0,76.7 H426.0 Q430.0,76.7 430.0,80.7 V230.0 Z\"><title>2024: 5 most authors elsewhere</title></path><text class=\"value\" x=\"418.0\" y=\"70.7\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V199.3 Q490.0,199.3 490.0,199.3 H514.0 Q514.0,199.3 514.0,199.3 V230.0 Z\"><title>2025: 1 most authors from PTIT</title></path><path class=\"other-inst\" d=\"M490.0,197.3 V111.3 Q490.0,107.3 494.0,107.3 H510.0 Q514.0,107.3 514.0,111.3 V197.3 Z\"><title>2025: 3 most authors elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"101.3\" text-anchor=\"middle\">4</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"other-inst\" d=\"M574.0,230.0 V76.7 Q574.0,76.7 574.0,76.7 H598.0 Q598.0,76.7 598.0,76.7 V230.0 Z\"><title>2026: 5 most authors elsewhere</title></path><path class=\"unjudged\" d=\"M574.0,74.7 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V74.7 Z\"><title>2026: 1 affiliations not known yet</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">6</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng PTIT\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng PTIT</text><rect class=\"other-inst\" x=\"217.20000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"235.20000000000002\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"420.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"438.0\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"168.7\" x2=\"628\" y2=\"168.7\"/><text class=\"tick\" x=\"34\" y=\"172.7\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"107.3\" x2=\"628\" y2=\"107.3\"/><text class=\"tick\" x=\"34\" y=\"111.3\" text-anchor=\"end\">4</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">6</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V203.3 Q238.0,199.3 242.0,199.3 H258.0 Q262.0,199.3 262.0,203.3 V230.0 Z\"><title>2022: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"250.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"other-inst\" d=\"M322.0,230.0 V203.3 Q322.0,199.3 326.0,199.3 H342.0 Q346.0,199.3 346.0,203.3 V230.0 Z\"><title>2023: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"334.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"other-inst\" d=\"M406.0,230.0 V80.7 Q406.0,76.7 410.0,76.7 H426.0 Q430.0,76.7 430.0,80.7 V230.0 Z\"><title>2024: 5 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"418.0\" y=\"70.7\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V199.3 Q490.0,199.3 490.0,199.3 H514.0 Q514.0,199.3 514.0,199.3 V230.0 Z\"><title>2025: 1 bài đa số tác giả cùng PTIT</title></path><path class=\"other-inst\" d=\"M490.0,197.3 V111.3 Q490.0,107.3 494.0,107.3 H510.0 Q514.0,107.3 514.0,111.3 V197.3 Z\"><title>2025: 3 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"101.3\" text-anchor=\"middle\">4</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"other-inst\" d=\"M574.0,230.0 V76.7 Q574.0,76.7 574.0,76.7 H598.0 Q598.0,76.7 598.0,76.7 V230.0 Z\"><title>2026: 5 bài đa số tác giả ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M574.0,74.7 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V74.7 Z\"><title>2026: 1 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">6</text></svg>"
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from PTIT\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from PTIT</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"381.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"399.6\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"193.2\" x2=\"628\" y2=\"193.2\"/><text class=\"tick\" x=\"34\" y=\"197.2\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"156.4\" x2=\"628\" y2=\"156.4\"/><text class=\"tick\" x=\"34\" y=\"160.4\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"119.6\" x2=\"628\" y2=\"119.6\"/><text class=\"tick\" x=\"34\" y=\"123.6\" text-anchor=\"end\">3</text><line class=\"grid\" x1=\"40\" y1=\"82.8\" x2=\"628\" y2=\"82.8\"/><text class=\"tick\" x=\"34\" y=\"86.8\" text-anchor=\"end\">4</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">5</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V197.2 Q238.0,193.2 242.0,193.2 H258.0 Q262.0,193.2 262.0,197.2 V230.0 Z\"><title>2022: 1 most authors elsewhere</title></path><text class=\"value\" x=\"250.0\" y=\"187.2\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"other-inst\" d=\"M322.0,230.0 V197.2 Q322.0,193.2 326.0,193.2 H342.0 Q346.0,193.2 346.0,197.2 V230.0 Z\"><title>2023: 1 most authors elsewhere</title></path><text class=\"value\" x=\"334.0\" y=\"187.2\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"other-inst\" d=\"M406.0,230.0 V50.0 Q406.0,46.0 410.0,46.0 H426.0 Q430.0,46.0 430.0,50.0 V230.0 Z\"><title>2024: 5 most authors elsewhere</title></path><text class=\"value\" x=\"418.0\" y=\"40.0\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V193.2 Q490.0,193.2 490.0,193.2 H514.0 Q514.0,193.2 514.0,193.2 V230.0 Z\"><title>2025: 1 most authors from PTIT</title></path><path class=\"other-inst\" d=\"M490.0,191.2 V86.8 Q490.0,82.8 494.0,82.8 H510.0 Q514.0,82.8 514.0,86.8 V191.2 Z\"><title>2025: 3 most authors elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"76.8\" text-anchor=\"middle\">4</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"other-inst\" d=\"M574.0,230.0 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V230.0 Z\"><title>2026: 5 most authors elsewhere</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">5</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng PTIT\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng PTIT</text><rect class=\"other-inst\" x=\"217.20000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"235.20000000000002\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"420.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"438.0\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"193.2\" x2=\"628\" y2=\"193.2\"/><text class=\"tick\" x=\"34\" y=\"197.2\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"156.4\" x2=\"628\" y2=\"156.4\"/><text class=\"tick\" x=\"34\" y=\"160.4\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"119.6\" x2=\"628\" y2=\"119.6\"/><text class=\"tick\" x=\"34\" y=\"123.6\" text-anchor=\"end\">3</text><line class=\"grid\" x1=\"40\" y1=\"82.8\" x2=\"628\" y2=\"82.8\"/><text class=\"tick\" x=\"34\" y=\"86.8\" text-anchor=\"end\">4</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">5</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V197.2 Q238.0,193.2 242.0,193.2 H258.0 Q262.0,193.2 262.0,197.2 V230.0 Z\"><title>2022: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"250.0\" y=\"187.2\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"other-inst\" d=\"M322.0,230.0 V197.2 Q322.0,193.2 326.0,193.2 H342.0 Q346.0,193.2 346.0,197.2 V230.0 Z\"><title>2023: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"334.0\" y=\"187.2\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"other-inst\" d=\"M406.0,230.0 V50.0 Q406.0,46.0 410.0,46.0 H426.0 Q430.0,46.0 430.0,50.0 V230.0 Z\"><title>2024: 5 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"418.0\" y=\"40.0\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V193.2 Q490.0,193.2 490.0,193.2 H514.0 Q514.0,193.2 514.0,193.2 V230.0 Z\"><title>2025: 1 bài đa số tác giả cùng PTIT</title></path><path class=\"other-inst\" d=\"M490.0,191.2 V86.8 Q490.0,82.8 494.0,82.8 H510.0 Q514.0,82.8 514.0,86.8 V191.2 Z\"><title>2025: 3 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"76.8\" text-anchor=\"middle\">4</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"other-inst\" d=\"M574.0,230.0 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V230.0 Z\"><title>2026: 5 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">5</text></svg>"
    }
   },
   "name_vi": "Học viện Công nghệ Bưu chính Viễn thông",
@@ -12585,6 +12585,1540 @@
    },
    "total": 0
   },
+  "judged": 2,
+  "unknown": 0,
+  "by_year": [
+   {
+    "year": 2020,
+    "accepted": 0,
+    "judged": 0,
+    "majority": 0,
+    "first": 0
+   },
+   {
+    "year": 2021,
+    "accepted": 0,
+    "judged": 0,
+    "majority": 0,
+    "first": 0
+   },
+   {
+    "year": 2022,
+    "accepted": 0,
+    "judged": 0,
+    "majority": 0,
+    "first": 0
+   },
+   {
+    "year": 2023,
+    "accepted": 0,
+    "judged": 0,
+    "majority": 0,
+    "first": 0
+   },
+   {
+    "year": 2024,
+    "accepted": 0,
+    "judged": 0,
+    "majority": 0,
+    "first": 0
+   },
+   {
+    "year": 2025,
+    "accepted": 0,
+    "judged": 0,
+    "majority": 0,
+    "first": 0
+   },
+   {
+    "year": 2026,
+    "accepted": 2,
+    "judged": 2,
+    "majority": 0,
+    "first": 0
+   }
+  ],
+  "slug": "vast",
+  "name": "Vietnam Academy of Science and Technology",
+  "short": "VAST",
+  "professors": [
+   "hoang-son-do"
+  ],
+  "iclr_complete": true,
+  "accepted": 2,
+  "own_page": 2,
+  "official": 0,
+  "venues": {
+   "iclr": {
+    "accepted": 0,
+    "rejected": 1,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 1,
+    "submitted": 1,
+    "own_page": 0,
+    "official": 0
+   },
+   "neurips": {
+    "accepted": 2,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 2,
+    "own_page": 2,
+    "official": 0
+   },
+   "icml": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "cvpr": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "iccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "eccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "acl": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "emnlp": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "naacl": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "aaai": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "ijcai": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   }
+  },
+  "years": [
+   {
+    "year": 2020,
+    "counts": true,
+    "venues": {
+     "iclr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "neurips": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icml": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "cvpr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "acl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "emnlp": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "naacl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "aaai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "ijcai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     }
+    },
+    "accepted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   {
+    "year": 2021,
+    "counts": true,
+    "venues": {
+     "iclr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "neurips": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icml": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "cvpr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "acl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "emnlp": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "naacl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "aaai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "ijcai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     }
+    },
+    "accepted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   {
+    "year": 2022,
+    "counts": true,
+    "venues": {
+     "iclr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "neurips": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icml": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "cvpr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "acl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "emnlp": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "naacl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "aaai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "ijcai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     }
+    },
+    "accepted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   {
+    "year": 2023,
+    "counts": true,
+    "venues": {
+     "iclr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "neurips": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icml": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "cvpr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "acl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "emnlp": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "naacl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "aaai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "ijcai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     }
+    },
+    "accepted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   {
+    "year": 2024,
+    "counts": true,
+    "venues": {
+     "iclr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "neurips": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icml": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "cvpr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "acl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "emnlp": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "naacl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "aaai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "ijcai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     }
+    },
+    "accepted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   {
+    "year": 2025,
+    "counts": true,
+    "venues": {
+     "iclr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "neurips": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icml": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "cvpr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "acl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "emnlp": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "naacl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "aaai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "ijcai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     }
+    },
+    "accepted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   {
+    "year": 2026,
+    "counts": true,
+    "venues": {
+     "iclr": {
+      "accepted": 0,
+      "rejected": 1,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 1,
+      "submitted": 1,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "neurips": {
+      "accepted": 2,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 2,
+      "own_page": 2,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": true
+     },
+     "icml": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "cvpr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "acl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "emnlp": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": true,
+      "provisional": false
+     },
+     "naacl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "aaai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "ijcai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     }
+    },
+    "accepted": 2,
+    "own_page": 2,
+    "official": 0
+   }
+  ],
+  "workshop": 0,
+  "rejected_estimated": 3,
+  "acceptance_rate": 40,
+  "rate_trivial": false,
+  "author_charts": {
+   "first": {
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from VAST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from VAST</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"381.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"399.6\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">2</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"other-inst\" d=\"M574.0,230.0 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V230.0 Z\"><title>2026: 2 first author elsewhere</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">2</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng VAST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng VAST</text><rect class=\"other-inst\" x=\"204.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"222.4\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"394.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"412.4\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">2</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"other-inst\" d=\"M574.0,230.0 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V230.0 Z\"><title>2026: 2 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">2</text></svg>"
+   },
+   "majority": {
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from VAST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from VAST</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"381.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"399.6\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">2</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"other-inst\" d=\"M574.0,230.0 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V230.0 Z\"><title>2026: 2 most authors elsewhere</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">2</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng VAST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng VAST</text><rect class=\"other-inst\" x=\"217.20000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"235.20000000000002\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"420.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"438.0\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">2</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"other-inst\" d=\"M574.0,230.0 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V230.0 Z\"><title>2026: 2 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">2</text></svg>"
+   }
+  },
+  "name_vi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
+  "image": "img/institutions/vast.png",
+  "image_source": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Vi%E1%BB%87n_KH%26CN_Vi%E1%BB%87t_Nam.JPG"
+ },
+ {
+  "majority": {
+   "years": [
+    {
+     "year": 2020,
+     "venues": {
+      "iclr": 0,
+      "neurips": 0,
+      "icml": 0,
+      "cvpr": 0,
+      "iccv": 0,
+      "eccv": 0,
+      "acl": 0,
+      "emnlp": 0,
+      "naacl": 0,
+      "aaai": 0,
+      "ijcai": 0
+     },
+     "total": 0
+    },
+    {
+     "year": 2021,
+     "venues": {
+      "iclr": 0,
+      "neurips": 0,
+      "icml": 0,
+      "cvpr": 0,
+      "iccv": 0,
+      "eccv": 0,
+      "acl": 0,
+      "emnlp": 0,
+      "naacl": 0,
+      "aaai": 0,
+      "ijcai": 0
+     },
+     "total": 0
+    },
+    {
+     "year": 2022,
+     "venues": {
+      "iclr": 0,
+      "neurips": 0,
+      "icml": 0,
+      "cvpr": 0,
+      "iccv": 0,
+      "eccv": 0,
+      "acl": 0,
+      "emnlp": 0,
+      "naacl": 0,
+      "aaai": 0,
+      "ijcai": 0
+     },
+     "total": 0
+    },
+    {
+     "year": 2023,
+     "venues": {
+      "iclr": 0,
+      "neurips": 0,
+      "icml": 0,
+      "cvpr": 0,
+      "iccv": 0,
+      "eccv": 0,
+      "acl": 0,
+      "emnlp": 0,
+      "naacl": 0,
+      "aaai": 0,
+      "ijcai": 0
+     },
+     "total": 0
+    },
+    {
+     "year": 2024,
+     "venues": {
+      "iclr": 0,
+      "neurips": 0,
+      "icml": 0,
+      "cvpr": 0,
+      "iccv": 0,
+      "eccv": 0,
+      "acl": 0,
+      "emnlp": 0,
+      "naacl": 0,
+      "aaai": 0,
+      "ijcai": 0
+     },
+     "total": 0
+    },
+    {
+     "year": 2025,
+     "venues": {
+      "iclr": 0,
+      "neurips": 0,
+      "icml": 0,
+      "cvpr": 0,
+      "iccv": 0,
+      "eccv": 0,
+      "acl": 0,
+      "emnlp": 0,
+      "naacl": 0,
+      "aaai": 0,
+      "ijcai": 0
+     },
+     "total": 0
+    },
+    {
+     "year": 2026,
+     "venues": {
+      "iclr": 0,
+      "neurips": 0,
+      "icml": 0,
+      "cvpr": 0,
+      "iccv": 0,
+      "eccv": 0,
+      "acl": 0,
+      "emnlp": 0,
+      "naacl": 0,
+      "aaai": 0,
+      "ijcai": 0
+     },
+     "total": 0
+    }
+   ],
+   "venues": {
+    "iclr": 0,
+    "neurips": 0,
+    "icml": 0,
+    "cvpr": 0,
+    "iccv": 0,
+    "eccv": 0,
+    "acl": 0,
+    "emnlp": 0,
+    "naacl": 0,
+    "aaai": 0,
+    "ijcai": 0
+   },
+   "total": 0
+  },
+  "first_author": {
+   "years": [
+    {
+     "year": 2020,
+     "venues": {
+      "iclr": 0,
+      "neurips": 0,
+      "icml": 0,
+      "cvpr": 0,
+      "iccv": 0,
+      "eccv": 0,
+      "acl": 0,
+      "emnlp": 0,
+      "naacl": 0,
+      "aaai": 0,
+      "ijcai": 0
+     },
+     "total": 0
+    },
+    {
+     "year": 2021,
+     "venues": {
+      "iclr": 0,
+      "neurips": 0,
+      "icml": 0,
+      "cvpr": 0,
+      "iccv": 0,
+      "eccv": 0,
+      "acl": 0,
+      "emnlp": 0,
+      "naacl": 0,
+      "aaai": 0,
+      "ijcai": 0
+     },
+     "total": 0
+    },
+    {
+     "year": 2022,
+     "venues": {
+      "iclr": 0,
+      "neurips": 0,
+      "icml": 0,
+      "cvpr": 0,
+      "iccv": 0,
+      "eccv": 0,
+      "acl": 0,
+      "emnlp": 0,
+      "naacl": 0,
+      "aaai": 0,
+      "ijcai": 0
+     },
+     "total": 0
+    },
+    {
+     "year": 2023,
+     "venues": {
+      "iclr": 0,
+      "neurips": 0,
+      "icml": 0,
+      "cvpr": 0,
+      "iccv": 0,
+      "eccv": 0,
+      "acl": 0,
+      "emnlp": 0,
+      "naacl": 0,
+      "aaai": 0,
+      "ijcai": 0
+     },
+     "total": 0
+    },
+    {
+     "year": 2024,
+     "venues": {
+      "iclr": 0,
+      "neurips": 0,
+      "icml": 0,
+      "cvpr": 0,
+      "iccv": 0,
+      "eccv": 0,
+      "acl": 0,
+      "emnlp": 0,
+      "naacl": 0,
+      "aaai": 0,
+      "ijcai": 0
+     },
+     "total": 0
+    },
+    {
+     "year": 2025,
+     "venues": {
+      "iclr": 0,
+      "neurips": 0,
+      "icml": 0,
+      "cvpr": 0,
+      "iccv": 0,
+      "eccv": 0,
+      "acl": 0,
+      "emnlp": 0,
+      "naacl": 0,
+      "aaai": 0,
+      "ijcai": 0
+     },
+     "total": 0
+    },
+    {
+     "year": 2026,
+     "venues": {
+      "iclr": 0,
+      "neurips": 0,
+      "icml": 0,
+      "cvpr": 0,
+      "iccv": 0,
+      "eccv": 0,
+      "acl": 0,
+      "emnlp": 0,
+      "naacl": 0,
+      "aaai": 0,
+      "ijcai": 0
+     },
+     "total": 0
+    }
+   ],
+   "venues": {
+    "iclr": 0,
+    "neurips": 0,
+    "icml": 0,
+    "cvpr": 0,
+    "iccv": 0,
+    "eccv": 0,
+    "acl": 0,
+    "emnlp": 0,
+    "naacl": 0,
+    "aaai": 0,
+    "ijcai": 0
+   },
+   "total": 0
+  },
   "judged": 1,
   "unknown": 0,
   "by_year": [
@@ -16911,1540 +18445,6 @@
   "name_vi": "Đại học Kinh tế Quốc dân",
   "image": "img/institutions/neu.png",
   "image_source": "https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Kinh_t%E1%BA%BF_Qu%E1%BB%91c_d%C3%A2n"
- },
- {
-  "majority": {
-   "years": [
-    {
-     "year": 2020,
-     "venues": {
-      "iclr": 0,
-      "neurips": 0,
-      "icml": 0,
-      "cvpr": 0,
-      "iccv": 0,
-      "eccv": 0,
-      "acl": 0,
-      "emnlp": 0,
-      "naacl": 0,
-      "aaai": 0,
-      "ijcai": 0
-     },
-     "total": 0
-    },
-    {
-     "year": 2021,
-     "venues": {
-      "iclr": 0,
-      "neurips": 0,
-      "icml": 0,
-      "cvpr": 0,
-      "iccv": 0,
-      "eccv": 0,
-      "acl": 0,
-      "emnlp": 0,
-      "naacl": 0,
-      "aaai": 0,
-      "ijcai": 0
-     },
-     "total": 0
-    },
-    {
-     "year": 2022,
-     "venues": {
-      "iclr": 0,
-      "neurips": 0,
-      "icml": 0,
-      "cvpr": 0,
-      "iccv": 0,
-      "eccv": 0,
-      "acl": 0,
-      "emnlp": 0,
-      "naacl": 0,
-      "aaai": 0,
-      "ijcai": 0
-     },
-     "total": 0
-    },
-    {
-     "year": 2023,
-     "venues": {
-      "iclr": 0,
-      "neurips": 0,
-      "icml": 0,
-      "cvpr": 0,
-      "iccv": 0,
-      "eccv": 0,
-      "acl": 0,
-      "emnlp": 0,
-      "naacl": 0,
-      "aaai": 0,
-      "ijcai": 0
-     },
-     "total": 0
-    },
-    {
-     "year": 2024,
-     "venues": {
-      "iclr": 0,
-      "neurips": 0,
-      "icml": 0,
-      "cvpr": 0,
-      "iccv": 0,
-      "eccv": 0,
-      "acl": 0,
-      "emnlp": 0,
-      "naacl": 0,
-      "aaai": 0,
-      "ijcai": 0
-     },
-     "total": 0
-    },
-    {
-     "year": 2025,
-     "venues": {
-      "iclr": 0,
-      "neurips": 0,
-      "icml": 0,
-      "cvpr": 0,
-      "iccv": 0,
-      "eccv": 0,
-      "acl": 0,
-      "emnlp": 0,
-      "naacl": 0,
-      "aaai": 0,
-      "ijcai": 0
-     },
-     "total": 0
-    },
-    {
-     "year": 2026,
-     "venues": {
-      "iclr": 0,
-      "neurips": 0,
-      "icml": 0,
-      "cvpr": 0,
-      "iccv": 0,
-      "eccv": 0,
-      "acl": 0,
-      "emnlp": 0,
-      "naacl": 0,
-      "aaai": 0,
-      "ijcai": 0
-     },
-     "total": 0
-    }
-   ],
-   "venues": {
-    "iclr": 0,
-    "neurips": 0,
-    "icml": 0,
-    "cvpr": 0,
-    "iccv": 0,
-    "eccv": 0,
-    "acl": 0,
-    "emnlp": 0,
-    "naacl": 0,
-    "aaai": 0,
-    "ijcai": 0
-   },
-   "total": 0
-  },
-  "first_author": {
-   "years": [
-    {
-     "year": 2020,
-     "venues": {
-      "iclr": 0,
-      "neurips": 0,
-      "icml": 0,
-      "cvpr": 0,
-      "iccv": 0,
-      "eccv": 0,
-      "acl": 0,
-      "emnlp": 0,
-      "naacl": 0,
-      "aaai": 0,
-      "ijcai": 0
-     },
-     "total": 0
-    },
-    {
-     "year": 2021,
-     "venues": {
-      "iclr": 0,
-      "neurips": 0,
-      "icml": 0,
-      "cvpr": 0,
-      "iccv": 0,
-      "eccv": 0,
-      "acl": 0,
-      "emnlp": 0,
-      "naacl": 0,
-      "aaai": 0,
-      "ijcai": 0
-     },
-     "total": 0
-    },
-    {
-     "year": 2022,
-     "venues": {
-      "iclr": 0,
-      "neurips": 0,
-      "icml": 0,
-      "cvpr": 0,
-      "iccv": 0,
-      "eccv": 0,
-      "acl": 0,
-      "emnlp": 0,
-      "naacl": 0,
-      "aaai": 0,
-      "ijcai": 0
-     },
-     "total": 0
-    },
-    {
-     "year": 2023,
-     "venues": {
-      "iclr": 0,
-      "neurips": 0,
-      "icml": 0,
-      "cvpr": 0,
-      "iccv": 0,
-      "eccv": 0,
-      "acl": 0,
-      "emnlp": 0,
-      "naacl": 0,
-      "aaai": 0,
-      "ijcai": 0
-     },
-     "total": 0
-    },
-    {
-     "year": 2024,
-     "venues": {
-      "iclr": 0,
-      "neurips": 0,
-      "icml": 0,
-      "cvpr": 0,
-      "iccv": 0,
-      "eccv": 0,
-      "acl": 0,
-      "emnlp": 0,
-      "naacl": 0,
-      "aaai": 0,
-      "ijcai": 0
-     },
-     "total": 0
-    },
-    {
-     "year": 2025,
-     "venues": {
-      "iclr": 0,
-      "neurips": 0,
-      "icml": 0,
-      "cvpr": 0,
-      "iccv": 0,
-      "eccv": 0,
-      "acl": 0,
-      "emnlp": 0,
-      "naacl": 0,
-      "aaai": 0,
-      "ijcai": 0
-     },
-     "total": 0
-    },
-    {
-     "year": 2026,
-     "venues": {
-      "iclr": 0,
-      "neurips": 0,
-      "icml": 0,
-      "cvpr": 0,
-      "iccv": 0,
-      "eccv": 0,
-      "acl": 0,
-      "emnlp": 0,
-      "naacl": 0,
-      "aaai": 0,
-      "ijcai": 0
-     },
-     "total": 0
-    }
-   ],
-   "venues": {
-    "iclr": 0,
-    "neurips": 0,
-    "icml": 0,
-    "cvpr": 0,
-    "iccv": 0,
-    "eccv": 0,
-    "acl": 0,
-    "emnlp": 0,
-    "naacl": 0,
-    "aaai": 0,
-    "ijcai": 0
-   },
-   "total": 0
-  },
-  "judged": 1,
-  "unknown": 0,
-  "by_year": [
-   {
-    "year": 2020,
-    "accepted": 0,
-    "judged": 0,
-    "majority": 0,
-    "first": 0
-   },
-   {
-    "year": 2021,
-    "accepted": 0,
-    "judged": 0,
-    "majority": 0,
-    "first": 0
-   },
-   {
-    "year": 2022,
-    "accepted": 0,
-    "judged": 0,
-    "majority": 0,
-    "first": 0
-   },
-   {
-    "year": 2023,
-    "accepted": 0,
-    "judged": 0,
-    "majority": 0,
-    "first": 0
-   },
-   {
-    "year": 2024,
-    "accepted": 0,
-    "judged": 0,
-    "majority": 0,
-    "first": 0
-   },
-   {
-    "year": 2025,
-    "accepted": 0,
-    "judged": 0,
-    "majority": 0,
-    "first": 0
-   },
-   {
-    "year": 2026,
-    "accepted": 1,
-    "judged": 1,
-    "majority": 0,
-    "first": 0
-   }
-  ],
-  "slug": "vast",
-  "name": "Vietnam Academy of Science and Technology",
-  "short": "VAST",
-  "professors": [
-   "hoang-son-do"
-  ],
-  "iclr_complete": true,
-  "accepted": 1,
-  "own_page": 1,
-  "official": 0,
-  "venues": {
-   "iclr": {
-    "accepted": 0,
-    "rejected": 1,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 1,
-    "submitted": 1,
-    "own_page": 0,
-    "official": 0
-   },
-   "neurips": {
-    "accepted": 1,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 1,
-    "own_page": 1,
-    "official": 0
-   },
-   "icml": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "cvpr": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "iccv": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "eccv": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "acl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "emnlp": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "aaai": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "ijcai": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   }
-  },
-  "years": [
-   {
-    "year": 2020,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "eccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "aaai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "ijcai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2021,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "eccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "aaai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "ijcai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2022,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "eccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "aaai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "ijcai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2023,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "eccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "aaai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "ijcai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2024,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "eccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "aaai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "ijcai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2025,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "eccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "aaai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "ijcai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2026,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 1,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 1,
-      "submitted": 1,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 1,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 1,
-      "own_page": 1,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": true
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "eccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "aaai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "ijcai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     }
-    },
-    "accepted": 1,
-    "own_page": 1,
-    "official": 0
-   }
-  ],
-  "workshop": 0,
-  "rejected_estimated": 2,
-  "acceptance_rate": 33,
-  "rate_trivial": false,
-  "author_charts": {
-   "first": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from VAST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from VAST</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"381.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"399.6\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"other-inst\" d=\"M574.0,230.0 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V230.0 Z\"><title>2026: 1 first author elsewhere</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">1</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng VAST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng VAST</text><rect class=\"other-inst\" x=\"204.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"222.4\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"394.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"412.4\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"other-inst\" d=\"M574.0,230.0 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V230.0 Z\"><title>2026: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">1</text></svg>"
-   },
-   "majority": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from VAST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from VAST</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"381.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"399.6\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"other-inst\" d=\"M574.0,230.0 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V230.0 Z\"><title>2026: 1 most authors elsewhere</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">1</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng VAST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng VAST</text><rect class=\"other-inst\" x=\"217.20000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"235.20000000000002\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"420.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"438.0\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"other-inst\" d=\"M574.0,230.0 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V230.0 Z\"><title>2026: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">1</text></svg>"
-   }
-  },
-  "name_vi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
-  "image": "img/institutions/vast.png",
-  "image_source": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_Vi%E1%BB%87n_KH%26CN_Vi%E1%BB%87t_Nam.JPG"
  },
  {
   "majority": {
