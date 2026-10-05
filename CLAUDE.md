@@ -44,6 +44,7 @@ Do not stop at a passing build: say what changed in numbers, and anything uncert
 | `backend/images.csv` | photos and logos, with source page and a dated note. |
 | `backend/institution_names.csv` | Vietnamese names of institutions, confirmed by the maintainer. |
 | `backend/scholar.json` | Google Scholar snapshots (`fetch_scholar.py`). |
+| `backend/vietprofs.csv` | co-authors abroad with a profile on VietProfs (<https://vietprofs.roars.dev>, Vietnamese professors worldwide): `match_vietprofs.py` proposes rows from the Candidates table, `checked=yes` once name and university agree; the International cooperation page draws only these. VietProfs' data is CC BY-NC-ND: read it into `raw/` only, commit just the profile ids. |
 | `backend/venue_rates.csv` | acceptance rates the conferences report, per year, with source and `source_kind` (`official`/`secondary`); the build pools all years. |
 | `backend/faculty.csv`, `pioneers.csv` | staff lists (also used by `find_candidates.py` to mark candidates) and press-known pioneers, for the local Candidates page. |
 
@@ -120,6 +121,13 @@ The local-only pages (Candidates, Not tracked) are drafts, but their data (`cand
   (companies, institutes such as VinAI or FPT). An institution with professors on the list joins a paper only through
   one of them, never through a student or untracked co-author, so its shared papers are always among its own
   professors' papers.
+
+## International cooperation
+
+The page (`layouts/_default/international.html`, data `international.json` from `international_graph` in `build_site_data.py`)
+joins the co-authors outside Vietnam with 5 or more counted papers together with the professors on the list (the
+Candidates table "Co-authors outside Vietnam", `FOREIGN_MIN_PAPERS`) and a checked row in `vietprofs.csv`. Authors link
+to VietProfs, professors to their page here; each author carries the flag of the country VietProfs lists.
 
 ## Tables, sorting and cups (`frontend/static/site.js`, `partials/professor-table.html`)
 

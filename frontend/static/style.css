@@ -503,3 +503,4 @@ aside.callout p { margin: 0 ; line-height: 1.55 ; }
 
 /* a number and its unofficial "+N" stay on one line */
 td:not(.l) { white-space: nowrap ; }
+svg.net .node text.sub { font-size: 12px ; fill: var(--muted) ; }

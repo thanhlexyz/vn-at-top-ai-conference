@@ -986,6 +986,59 @@ def write_stubs(section, items):
             (folder / f"{key}{suffix}").write_text(stub, encoding="utf-8")
 
 
+# flags of the countries VietProfs lists (regional-indicator letters make the emoji)
+COUNTRY_CODE = {"United States": "US", "Australia": "AU", "United Kingdom": "GB", "France": "FR", "Canada": "CA",
+                "Japan": "JP", "Singapore": "SG", "Taiwan": "TW", "Germany": "DE", "South Korea": "KR", "Switzerland": "CH",
+                "Netherlands": "NL", "Hong Kong": "HK", "China": "CN", "Finland": "FI", "Sweden": "SE", "Norway": "NO",
+                "Denmark": "DK", "Belgium": "BE", "Italy": "IT", "Spain": "ES", "Austria": "AT", "Ireland": "IE",
+                "New Zealand": "NZ", "Israel": "IL", "Thailand": "TH", "Malaysia": "MY", "Czechia": "CZ",
+                "Czech Republic": "CZ", "Poland": "PL", "Russia": "RU", "United Arab Emirates": "AE", "Qatar": "QA",
+                "Saudi Arabia": "SA", "Luxembourg": "LU", "Portugal": "PT", "India": "IN", "Macau": "MO"}
+
+
+def flag(country):
+    code = COUNTRY_CODE.get(country, "")
+    return "".join(chr(0x1F1E6 + ord(c) - 65) for c in code)
+
+
+VIETPROFS_URL = "https://vietprofs.roars.dev/people/{}.html"
+
+
+def international_graph(authors, by_slug):
+    """Bipartite drawing for the International cooperation page: professors on the list on the left, co-authors
+    abroad who have a VietProfs profile (vietprofs.csv) on the right; a line is the number of papers they share."""
+    authors = sorted(authors, key=lambda f: (-len(f["papers"]), f["name"]))
+    row, left_w, top, step = 0, 300, 40, 46
+    right = []
+    for i, f in enumerate(authors):
+        right.append({"name": f["name"], "affiliation": f["affs"].most_common(1)[0][0], "papers": len(f["papers"]),
+                      "url": VIETPROFS_URL.format(f["vp_id"]), "country": f["country"], "flag": flag(f["country"]), "slugs": f["slugs"], "id": f"f{i}"})
+    slugs = sorted({s for f in right for s in f["slugs"] if s in by_slug})
+    # order the professors by the average position of their co-authors, which keeps most lines from crossing
+    def centre(s):
+        pos = [(i, f["slugs"][s]) for i, f in enumerate(right) if s in f["slugs"]]
+        return sum(i * w for i, w in pos) / sum(w for _, w in pos)
+    slugs.sort(key=lambda s: (centre(s), s))
+    height = top * 2 + step * (max(len(slugs), 1) - 1)
+    right_step = (height - 2 * top) / max(len(right) - 1, 1) if len(right) > 1 else 0
+    xl, xr = 380, 620
+    left = [{"slug": s, "name": by_slug[s]["name"], "name_vi": by_slug[s]["name_vi"], "url": f"professors/{s}/",
+             "x": xl, "y": top + step * i, "papers": sum(f["slugs"][s] for f in right), "id": s}
+            for i, s in enumerate(slugs)]
+    ly = {n["slug"]: n["y"] for n in left}
+    for i, f in enumerate(right):
+        f["x"], f["y"] = xr, round(top + right_step * i if len(right) > 1 else height / 2, 1)
+        f["professors"] = len([s for s in f["slugs"] if s in ly])
+    edges = [{"a": s, "b": f["id"], "weight": w, "x1": xl, "y1": ly[s], "x2": xr, "y2": f["y"],
+              "width": round(1 + 1.2 * w, 1), "a_name": by_slug[s]["name"], "a_name_vi": by_slug[s]["name_vi"],
+              "b_name": f["name"]}
+             for f in right for s, w in sorted(f["slugs"].items()) if s in ly]
+    for f in right:
+        del f["slugs"]
+    return {"width": 1000, "height": height, "left": left, "right": right, "edges": edges,
+            "authors": len(right), "professors": len(left), "papers": sum(e["weight"] for e in edges)}
+
+
 def main():
     roster = load_roster()
     approved = [p for p in roster if p["approved"] == "yes"]
@@ -1302,17 +1355,25 @@ def main():
             if not aff or vn_institutions(aff) or norm_name(a["name"]) in roster_names:
                 continue
             f = foreign.setdefault(name_key(a["name"]), {"name": a["name"], "affs": collections.Counter(),
-                                                         "papers": [], "with": collections.Counter()})
+                                                         "papers": [], "with": collections.Counter(),
+                                                         "slugs": collections.Counter()})
             f["affs"][aff] += 1
             f["papers"].append(f"{VENUE_NAME[r['venue']]} {r['year']}")
             f["with"].update(mine)
+            f["slugs"].update({w["slug"] for w in owners[key]})
+    vietprofs = {name_key(r["name"]): r for r in read_csv(BACKEND / "vietprofs.csv") if r["checked"] == "yes"}
+    international = international_graph(
+        [{**f, "vp_id": vietprofs[k]["vp_id"], "country": vietprofs[k]["country"]} for k, f in foreign.items()
+         if k in vietprofs and len(f["papers"]) > FOREIGN_MIN_PAPERS],
+        {p["slug"]: p for p in professors})
     foreign_coauthors = sorted(
         ({"name": f["name"], "affiliation": f["affs"].most_common(1)[0][0], "papers": len(f["papers"]),
-          "professors": len(f["with"]),
+          "professors": len(f["with"]), "vietprofs": vietprofs[k]["vp_id"] if k in vietprofs else "",
           "with": ", ".join(n for n, _ in f["with"].most_common(5)) + (", ..." if len(f["with"]) > 5 else ""),
           "venues": ", ".join(f"{v} {n}" for v, n in collections.Counter(x.split()[0] for x in f["papers"]).most_common())}
-         for f in foreign.values() if len(f["papers"]) > FOREIGN_MIN_PAPERS),
+         for k, f in foreign.items() if len(f["papers"]) > FOREIGN_MIN_PAPERS),
         key=lambda f: (-f["papers"], f["name"]))
+    write_json(DATA / "international.json", international)
     write_json(DATA / "candidates.json", {"people": shown, "total": len(candidates), "review": pending,
                                          "waiting": waiting, "excluded": excluded, "foreign": foreign_coauthors,
                                          "companies": companies, "unconfirmed": unconfirmed,

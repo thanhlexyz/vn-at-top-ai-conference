@@ -501,6 +501,19 @@ other = "Di chuột lên vòng tròn để làm nổi các liên kết; di chu�
 [graph_isolated]
 other = "Không có bài chung với ai khác ở đây:"
 
+[intl_summary]
+other = "{{ .Authors }} tác giả ở nước ngoài, {{ .Professors }} giảng viên; {{ .Papers }} cặp bài viết chung giữa tác giả và giảng viên."
+[intl_vn]
+other = "giảng viên trong danh sách"
+[intl_abroad]
+other = "đồng tác giả ở nước ngoài, có hồ sơ trên VietProfs"
+[intl_edge_key]
+other = "độ dày và con số trên đường: số bài viết chung"
+[intl_professors]
+other = "{{ . }} giảng viên"
+[intl_caption]
+other = "Rê chuột lên một vòng tròn để làm nổi các liên kết của nó; bấm vào tác giả để mở hồ sơ trên VietProfs."
+
 [inst_list_charts]
 other = "Bài được nhận theo nơi công tác của tác giả"
 [inst_list_charts_note]
