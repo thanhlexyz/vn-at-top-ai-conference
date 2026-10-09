@@ -1,0 +1,506 @@
+/* Colours. Light by default; dark when the reader's system asks for it, or when they choose it with the
+   switch at the top right (site.js sets data-theme on <html> and remembers the choice). The chart hues,
+   accepted green and rejected red, stay the same in both modes: they were checked on both surfaces. */
+:root {
+    color-scheme: light ;
+    --bg: #ffffff ; --fg: #000000 ; --link: #0645ad ; --line: #000000 ; --muted: #555555 ; --faint: #999999 ;
+    --th: #f0f0f0 ; --before: #fafafa ; --flag: #fff8dc ; --tag: #eeeeee ;
+    --good: #e2f0d9 ; --bad: #f8e0e0 ; --est: #fde3cf ; --sub: #ececec ; --rate: #dcebfb ; --callout: #eef4fc ; --callout-bar: #2a78d6 ; --same: #d5f3f3 ; --other: #f6dcf1 ;
+    --grid: #e1e0d9 ; --axis: #c3c2b7 ; --chart-text: #52514e ; --chart-value: #0b0b0b ;
+}
+:root[data-theme="dark"] {
+    color-scheme: dark ;
+    --bg: #1a1a19 ; --fg: #e8e6e3 ; --link: #8ab4f8 ; --line: #6b6a66 ; --muted: #b3b1ac ; --faint: #8a8885 ;
+    --th: #2a2a28 ; --before: #222220 ; --flag: #3a3420 ; --tag: #333331 ;
+    --good: #1e3a29 ; --bad: #4a2325 ; --est: #4a3220 ; --sub: #30302e ; --rate: #1d3149 ; --callout: #1b2533 ; --callout-bar: #6aa5ea ; --same: #163d3e ; --other: #42213d ;
+    --grid: #3a3a37 ; --axis: #5a5955 ; --chart-text: #c9c7c2 ; --chart-value: #f2f0ed ;
+}
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        color-scheme: dark ;
+        --bg: #1a1a19 ; --fg: #e8e6e3 ; --link: #8ab4f8 ; --line: #6b6a66 ; --muted: #b3b1ac ; --faint: #8a8885 ;
+        --th: #2a2a28 ; --before: #222220 ; --flag: #3a3420 ; --tag: #333331 ;
+        --good: #1e3a29 ; --bad: #4a2325 ; --est: #4a3220 ; --sub: #30302e ; --rate: #1d3149 ; --callout: #1b2533 ; --callout-bar: #6aa5ea ; --same: #163d3e ; --other: #42213d ;
+        --grid: #3a3a37 ; --axis: #5a5955 ; --chart-text: #c9c7c2 ; --chart-value: #f2f0ed ;
+    }
+}
+/* logos keep a light card behind them in dark mode, since most are drawn for a white page; the card is a soft
+   grey and the logo is dimmed to match, so the white of a logo file does not glare on the dark page */
+:root[data-theme="dark"] figure.logo img, :root[data-theme="dark"] img.mini { background: #ffffff ; padding: 4px ; border-radius: 4px ; filter: brightness(0.62) ; }
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) figure.logo img, :root:not([data-theme="light"]) img.mini { background: #ffffff ; padding: 4px ; border-radius: 4px ; filter: brightness(0.62) ; }
+}
+nav .theme { background: none ; border: 1px solid var(--line) ; color: var(--fg) ; font: inherit ; cursor: pointer ; border-radius: 4px ; padding: 0 0.4em ; margin-left: 0.8em ; }
+
+body {
+    font-family: sans-serif ;
+    background: var(--bg) ;
+    color: var(--fg) ;
+    margin: 0 ;
+    line-height: 1.45 ;
+}
+
+a {
+    color: var(--link) ;
+}
+
+nav {
+    border-bottom: 1px solid var(--line) ;
+    padding: 0.7em 1em ;
+}
+
+nav a {
+    margin-right: 1em ;
+    text-decoration: none ;
+    white-space: nowrap ;
+}
+
+nav a.site {
+    font-weight: bold ;
+    color: var(--fg) ;
+}
+
+nav a.current {
+    text-decoration: underline ;
+}
+
+main {
+    max-width: 72rem ;
+    margin: auto ;
+    padding: 0 1em ;
+}
+
+header h1 {
+    font-size: 1.6em ;
+    margin: 1em 0 0.4em 0 ;
+}
+
+h2 {
+    font-size: 1.2em ;
+    margin-top: 1.8em ;
+}
+
+footer {
+    max-width: 72rem ;
+    margin: 3em auto 2em auto ;
+    padding: 0 1em ;
+    font-size: 0.85em ;
+    color: var(--muted) ;
+}
+
+/* Tables */
+.scroll {
+    overflow-x: auto ;
+}
+
+table {
+    border-collapse: collapse ;
+    border: 1px solid var(--line) ;
+}
+
+td, th {
+    border: 1px solid var(--line) ;
+    padding: 0.25em 0.6em ;
+    text-align: right ;
+    font-variant-numeric: tabular-nums ;
+    vertical-align: top ;
+}
+
+th {
+    background: var(--th) ;
+    text-align: center ;
+}
+
+td.l, th.l {
+    text-align: left ;
+}
+
+td.total, tr.total td {
+    font-weight: bold ;
+}
+
+td.zero, td.na {
+    color: var(--faint) ;
+}
+
+tr.before td {
+    color: var(--faint) ;
+    background: var(--before) ;
+}
+
+code {
+    white-space: nowrap ;
+}
+
+/* Chart on a professor's page. The two hues were checked with a colour-blindness validator on white. */
+figure {
+    margin: 1em 0 ;
+    overflow-x: auto ;
+}
+
+/* two figures side by side on a wide screen, one above the other on a narrow one */
+.fig-row {
+    display: grid ;
+    grid-template-columns: 1fr 1fr ;
+    gap: 2rem ;
+    align-items: stretch ;
+}
+.fig-row figure { margin: 1em 0 0 ; min-width: 0 ; display: flex ; flex-direction: column ; }
+.fig-row figcaption { margin-top: auto ; padding-top: 0.5em ; }   /* both captions end on the same line */
+.fig-row .chart { min-width: 0 ; max-width: 100% ; }
+/* the figure in .fill grows to the space its neighbour leaves, centred */
+.fig-row .fill { position: relative ; flex: 1 ; min-height: 12rem ; }
+.fig-row .fill .chart { position: absolute ; inset: 0 ; width: 100% ; height: 100% ; max-width: none ; }
+@media (max-width: 900px) {
+    .fig-row { grid-template-columns: 1fr ; gap: 0 ; }
+    .fig-row .chart { min-width: 520px ; }
+    .fig-row .fill { position: static ; }
+    .fig-row .fill .chart { position: static ; height: auto ; min-width: 0 ; max-width: 480px ; margin: 0 auto ; }
+}
+
+.chart {
+    display: block ;
+    width: 100% ;
+    max-width: 640px ;
+    min-width: 520px ;
+    height: auto ;
+    --accepted: #2e8b57 ;  /* green, checked against the red with the palette validator */
+    --not-accepted: #e34948 ;
+}
+
+.chart .acc {
+    fill: var(--accepted) ;
+}
+
+.chart .not {
+    fill: var(--not-accepted) ;
+}
+
+.chart .est {
+    fill: var(--not-accepted) ;
+    fill-opacity: 0.18 ;
+    stroke: var(--not-accepted) ;
+    stroke-width: 1.5 ;
+}
+
+.chart .s1 {
+    fill: var(--accepted) ;
+}
+
+.chart .s2 {
+    fill: #eb6834 ;
+}
+
+.chart .s3 {
+    fill: #1baf7a ;
+}
+
+.chart .hollow {
+    fill: var(--not-accepted) ;
+    fill-opacity: 0.18 ;
+    stroke: var(--not-accepted) ;
+    stroke-width: 1.5 ;
+}
+
+/* the five conferences, in the fixed order of the palette */
+.chart .v1 { fill: #2a78d6 ; stroke: #2a78d6 ; }
+.chart .v2 { fill: #eb6834 ; stroke: #eb6834 ; }
+.chart .v3 { fill: #1baf7a ; stroke: #1baf7a ; }
+.chart .v4 { fill: #eda100 ; stroke: #eda100 ; }
+.chart .v5 { fill: #e87ba4 ; stroke: #e87ba4 ; }
+
+.chart .line {
+    fill: none ;
+    stroke-width: 2 ;
+    stroke-linejoin: round ;
+    stroke-linecap: round ;
+}
+
+.chart .dot {
+    stroke: var(--bg) ;
+    stroke-width: 2 ;
+}
+
+.chart rect.v1, .chart rect.v2, .chart rect.v3, .chart rect.v4, .chart rect.v5 {
+    stroke: none ;
+}
+
+.chart .slice {
+    stroke: var(--bg) ;
+    stroke-width: 2 ;
+}
+
+.chart .grid {
+    stroke: var(--grid) ;
+}
+
+.chart .axis {
+    stroke: var(--axis) ;
+}
+
+.chart text {
+    font-size: 12px ;
+    fill: var(--chart-text) ;
+}
+
+.chart text.value {
+    fill: var(--chart-value) ;
+}
+
+.chart text.off {
+    fill: var(--faint) ;
+}
+
+.chart path:hover {
+    opacity: 0.75 ;
+}
+
+/* Notes and small labels */
+.note {
+    font-size: 0.9em ;
+    color: var(--muted) ;
+}
+
+.flags {
+    border: 1px solid var(--line) ;
+    background: var(--flag) ;
+    padding: 0.5em 1em 0.5em 2em ;
+}
+
+.tag {
+    display: inline-block ;
+    border: 1px solid var(--line) ;
+    font-size: 0.8em ;
+    padding: 0 0.4em ;
+    margin-right: 0.3em ;
+    white-space: nowrap ;
+}
+
+a.tag-link { color: inherit ; text-decoration: none ; }
+a.tag-link:hover .tag { text-decoration: underline ; border-color: var(--fg) ; }
+
+.tag.accepted {
+    background: var(--good) ;
+}
+
+.tag.rejected, .tag.withdrawn, .tag.desk_rejected {
+    background: var(--bad) ;
+}
+
+.tag.other {
+    background: var(--tag) ;
+}
+
+/* papers known only from a personal page: unofficial, so set apart from the official numbers */
+.tag.own {
+    background: var(--bg) ;
+    border-style: dashed ;
+}
+
+.own {
+    color: var(--muted) ;
+    font-weight: normal ;
+    white-space: nowrap ;
+}
+
+ul.papers {
+    list-style: none ;
+    padding-left: 0 ;
+}
+
+ul.papers li {
+    margin-bottom: 0.6em ;
+}
+
+ul.papers .authors {
+    font-size: 0.85em ;
+    color: var(--muted) ;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav a.site {
+        display: block ;
+        margin-bottom: 0.4em ;
+    }
+
+    td, th {
+        padding: 0.2em 0.35em ;
+        font-size: 0.9em ;
+    }
+
+    header h1 {
+        font-size: 1.3em ;
+    }
+}
+
+/* Feedback form */
+form.feedback {
+    display: grid ;
+    gap: 0.4em ;
+    max-width: 40rem ;
+    margin: 1.2em 0 ;
+}
+
+form.feedback label {
+    font-weight: bold ;
+    margin-top: 0.6em ;
+}
+
+form.feedback input,
+form.feedback textarea {
+    font: inherit ;
+    padding: 0.4em ;
+    border: 1px solid var(--line) ;
+    width: 100% ;
+    box-sizing: border-box ;
+}
+
+form.feedback button {
+    justify-self: start ;
+    font: inherit ;
+    margin-top: 0.8em ;
+    padding: 0.4em 1em ;
+    border: 1px solid var(--line) ;
+    background: var(--bg) ;
+    cursor: pointer ;
+}
+
+form.feedback button:hover {
+    background: var(--th) ;
+}
+
+form.feedback .fb-actions { display: flex ; flex-wrap: wrap ; gap: 0.6em ; }
+
+/* Stacked areas (front page) */
+.chart .band.acc { fill: var(--accepted) ; }
+.chart .band.not { fill: var(--not-accepted) ; }
+.chart .band.est { fill: var(--not-accepted) ; fill-opacity: 0.18 ; stroke: none ; }
+.chart .edge { fill: none ; stroke: none ; }
+.chart .edge.est { stroke: var(--not-accepted) ; stroke-width: 1.5 ; stroke-linejoin: round ; }
+.chart .gap { fill: none ; stroke: var(--bg) ; stroke-width: 2 ; stroke-linejoin: round ; }
+.chart .hit { fill: transparent ; }
+.chart .hit:hover { fill: var(--fg) ; fill-opacity: 0.04 ; }
+
+/* ICLR columns: accepted green, rejected red, as on the paper tags */
+td.good, th.good { background: var(--good) ; }
+td.bad, th.bad { background: var(--bad) ; }
+
+/* Wide tables: the scrollbar sits on top (the box is flipped, and the table flipped back), and the first two
+   columns stay in place while the rest scrolls. Borders are drawn with shadows, since collapsed borders
+   would scroll away from sticky cells. */
+.scroll.top { transform: rotateX(180deg) ; }
+.scroll.top > table { transform: rotateX(180deg) ; }
+.scroll.pinned > table { border-collapse: separate ; border-spacing: 0 ; border-width: 1px 0 0 1px ; }
+.scroll.pinned td, .scroll.pinned th { border-width: 0 1px 1px 0 ; }
+.scroll.pinned .pin0, .scroll.pinned .pin1, .scroll.pinned .pin2 { position: sticky ; z-index: 1 ; background: var(--bg) ; }
+.scroll.pinned th.pin0, .scroll.pinned th.pin1, .scroll.pinned th.pin2 { background: var(--th) ; }
+/* the # column: row number in the order shown, with the cup of the top three */
+.scroll.pinned .pin0 { left: 0 ; white-space: nowrap ; box-shadow: inset 1px 0 0 var(--line) ; }
+td.rank { text-align: right ; }
+td.rank .cup { margin-right: 0.25em ; }
+.scroll.pinned .pin0 + .pin1 { box-shadow: none ; }   /* the # column already draws the left edge */
+/* the name column is as wide as its longest name; site.js measures it and sets --pin1w so the institution
+   column sticks right after it (without the script, a fixed width is used) */
+.scroll.pinned .pin1 { left: var(--pin0w, 0px) ; white-space: nowrap ; }
+.scroll.pinned:not(.measured) .pin1 { min-width: 13.5em ; max-width: 13.5em ; }
+.scroll.pinned .pin2 { left: calc(var(--pin0w, 0px) + var(--pin1w, calc(13.5em + 1.2em + 1px))) ; white-space: nowrap ; box-shadow: 2px 0 0 var(--line) ; }
+/* a pinned column keeps its left edge when the table scrolls under it */
+.scroll.pinned .pin1 { box-shadow: inset 1px 0 0 var(--line) ; }
+/* long names wrap to about two lines, so the pinned columns leave room for the numbers */
+.scroll.pinned .pin2.wrap { white-space: normal ; min-width: 8em ; max-width: 12em ; }
+td.est, th.est { background: var(--est) ; }  /* orange: estimated */
+td.sub, th.sub { background: var(--sub) ; }  /* light grey: submitted, estimated */
+td.rate, th.rate { background: var(--rate) ; }  /* light blue: acceptance rate, estimated */
+td.rate.trivial, td.trivial { color: var(--faint) ; }  /* not comparable (no ICLR record, no accepted paper): shown, but sorted last */
+/* co-author columns in pairs, green then red: min / max, domestic / foreign, same institution / other institutions */
+td.ca-min, th.ca-min, td.ca-dom, th.ca-dom, td.ca-same, th.ca-same { background: var(--good) ; }
+td.ca-max, th.ca-max, td.ca-for, th.ca-for, td.ca-other, th.ca-other { background: var(--bad) ; }  /* no ICLR record to estimate from: shown, but sorted last */
+
+/* Sortable headings (site.js) */
+th.sortable { cursor: pointer ; }
+th.sortable:hover { text-decoration: underline ; }
+th[aria-sort="descending"]::after { content: " \25BC" ; font-size: 0.7em ; }
+th[aria-sort="ascending"]::after { content: " \25B2" ; font-size: 0.7em ; }
+
+/* Language switch, top right of the navigation bar */
+nav { display: flex ; flex-wrap: wrap ; align-items: baseline ; gap: 0 1em ; }
+nav .lang { order: 3 ; margin-left: auto ; white-space: nowrap ; }
+nav .lang a { margin-right: 0 ; margin-left: 0.6em ; }
+nav .site { order: 1 ; }
+nav .links { order: 2 ; }
+
+/* Pictures: a portrait or logo at the top right of a page, small logos in the lists */
+figure.picture { float: right ; margin: 0 0 1em 1.5em ; }
+figure.picture img { display: block ; max-width: 100% ; height: auto ; }
+figure.portrait img { width: 160px ; height: 160px ; object-fit: cover ; object-position: 50% 20% ; border-radius: 50% ; border: 1px solid var(--axis) ; }   /* tall photos keep the head, which sits high */
+figure.logo img { max-width: 180px ; max-height: 120px ; width: auto ; }
+/* conference logos differ in shape and in their own size: each is fitted into the same box */
+figure.logo.venue img { width: 260px ; height: 110px ; max-width: none ; max-height: none ; object-fit: contain ; object-position: right center ; }
+img.mini { height: 1.4em ; width: auto ; max-width: 3.5em ; vertical-align: middle ; margin-right: 0.5em ; object-fit: contain ; }
+@media (max-width: 600px) { figure.portrait img { width: 110px ; height: 110px ; } figure.logo img { max-width: 120px ; } figure.logo.venue img { width: 150px ; height: 70px ; } }
+
+/* the logo column of the Institutions and Venues lists */
+td.logo-col, th.logo-col { text-align: center ; vertical-align: middle ; width: 2.8em ; padding: 0.15em 0.25em ; }
+td.logo-col img.mini { height: 1.8em ; max-width: 2.6em ; margin: 0 ; }
+
+/* ---------------------------------------------------------------- collaboration graphs (backend/graph.py) */
+.graph { margin: 1em 0 ; }
+svg.net { width: 100% ; height: auto ; display: block ; max-width: 1000px ; }
+svg.net .edge { stroke: var(--axis) ; stroke-linecap: round ; transition: opacity .15s ; }
+svg.net .ew { font-size: 13px ; font-weight: 700 ; fill: var(--chart-value) ; paint-order: stroke ; stroke: var(--bg) ; stroke-width: 4px ; pointer-events: none ; }
+svg.net .node circle { stroke: var(--bg) ; stroke-width: 2px ; }
+svg.net .node text { font-size: 14px ; fill: var(--fg) ; paint-order: stroke ; stroke: var(--bg) ; stroke-width: 4px ; stroke-linejoin: round ; }
+svg.net .node text.deg { font-size: 12px ; font-weight: 700 ; fill: #ffffff ; stroke: none ; pointer-events: none ; }
+svg.net .node.c4 text.deg, svg.net .node.c0 text.deg, svg.net .node.c-cyan text.deg { fill: #1d1d1f ; }
+svg.net .node { cursor: pointer ; transition: opacity .15s ; }
+svg.net a.node:not([href]) { cursor: default ; }
+svg.net.focus .edge:not(.hl), svg.net.focus .ew:not(.hl), svg.net.focus .node:not(.hl) { opacity: 0.12 ; }
+svg.net.focus .edge.hl { stroke: var(--chart-value) ; }
+.c1 circle, .dot.c1 { fill: #2a78d6 ; background: #2a78d6 ; }
+.c2 circle, .dot.c2 { fill: #eb6834 ; background: #eb6834 ; }
+.c3 circle, .dot.c3 { fill: #1baf7a ; background: #1baf7a ; }
+.c4 circle, .dot.c4 { fill: #eda100 ; background: #eda100 ; }
+.c0 circle, .dot.c0 { fill: #9a9890 ; background: #9a9890 ; }
+/* logo colours of HUST, VinUni and HCMUS on the researcher graph */
+.c-red circle, .dot.c-red { fill: #d7263d ; background: #d7263d ; }
+.c-blue circle, .dot.c-blue { fill: #1f5fbf ; background: #1f5fbf ; }
+.c-cyan circle, .dot.c-cyan { fill: #1fb5d6 ; background: #1fb5d6 ; }
+.graph-legend { list-style: none ; padding: 0 ; display: flex ; flex-wrap: wrap ; gap: 6px 18px ; font-size: 0.9em ; }
+.graph-legend li { display: inline-flex ; align-items: center ; gap: 6px ; }
+.graph-legend .dot { display: inline-block ; width: 12px ; height: 12px ; border-radius: 50% ; }
+.graph-legend .line-key { display: inline-block ; width: 22px ; height: 4px ; border-radius: 2px ; background: var(--axis) ; }
+.chart .v6 { fill: #8a63d2 ; stroke: #8a63d2 ; }
+.chart .v7 { fill: #6b6a66 ; stroke: #6b6a66 ; }
+
+/* authorship charts: from the institution, from elsewhere, not judged */
+.chart .own-inst { fill: #2a78d6 ; }
+.chart .other-inst { fill: #eb6834 ; }
+.chart .unjudged { fill: var(--grid) ; stroke: var(--axis) ; stroke-width: 1 ; }
+
+/* cups for the top three rows of the front-page and institutions tables (site.js); the slot is there on every row so sorting
+   never changes the column width */
+.cup { display: inline-block ; width: 1.1em ; height: 1em ; margin-right: 0.3em ; vertical-align: -0.12em ; }
+.cup svg { width: 1em ; height: 1em ; display: block ; }
+.cup.gold svg { fill: #e0a800 ; }
+.cup.silver svg { fill: #9aa4ae ; }
+.cup.bronze svg { fill: #c06b2c ; }
+.chart .cup-gold { fill: #e0a800 ; }
+.chart .cup-silver { fill: #9aa4ae ; }
+.chart .cup-bronze { fill: #c06b2c ; }
+
+/* a formula on its own centred line, like a LaTeX display equation */
+.eq { display: flex ; justify-content: center ; align-items: center ; gap: 0.5em ; margin: 0.7em 0 ; text-align: center ; }
+.frac { display: inline-flex ; flex-direction: column ; align-items: center ; }
+.frac > span { padding: 0 0.4em ; line-height: 1.5 ; }
+.frac > span:first-child { border-bottom: 1px solid currentColor ; }
+div.note ul { margin: 0.5em 0 ; padding-left: 1.3em ; }
+div.note li { margin: 0.25em 0 ; }
+
+/* a finding worth noticing, set apart from the notes around it */
+aside.callout { margin: 1.5em 0 ; padding: 0.8em 1.1em ; background: var(--callout) ; border-left: 4px solid var(--callout-bar) ; border-radius: 0 6px 6px 0 ; max-width: 48rem ; }
+aside.callout p { margin: 0 ; line-height: 1.55 ; }
+
+/* a number and its unofficial "+N" stay on one line */
+td:not(.l) { white-space: nowrap ; }
+svg.net .node text.sub { font-size: 12px ; fill: var(--muted) ; }
