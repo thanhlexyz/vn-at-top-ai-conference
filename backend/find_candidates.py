@@ -11,7 +11,7 @@ which appends them to roster.csv with `approved` left empty. Then open roster.cs
 
 Sources that give an affiliation per author are searched: ICLR, NeurIPS and ICML (all years), CVPR from
 2023, ICCV 2025 and ECCV from 2024. For lists without affiliations, only papers whose affiliations were read
-from the PDF and checked (affiliations.csv; `fetch_affiliations.py --scan` finds AAAI, IJCAI and NAACL papers
+from the PDF and checked (affiliations.csv; `fetch_affiliations.py --scan` finds AAAI and IJCAI papers
 with authors in Vietnam) are searched; other people who publish only there have to be added by hand.
 
 If `python fetch_openreview.py --candidates` has been run, their OpenReview position is shown too, and
@@ -164,7 +164,7 @@ def main():
     ap.add_argument("--add", nargs="+", metavar="NAME", help="append these candidates to roster.csv")
     args = ap.parse_args()
 
-    # lists without affiliations (ACL, EMNLP, NAACL, AAAI, IJCAI, CVPR before 2023) are searched where the
+    # lists without affiliations (ACL, EMNLP, AAAI, IJCAI, CVPR before 2023) are searched where the
     # affiliations of a paper were read from its PDF and checked (affiliations.csv; fetch_affiliations.py --scan)
     rows = find(with_pdf_affiliations(read_jsonl_gz(ACCEPTED), []), load_roster())
     if args.add:

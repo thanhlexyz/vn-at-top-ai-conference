@@ -13,7 +13,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -30,7 +29,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -47,7 +45,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -64,7 +61,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -81,7 +77,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 1,
-      "naacl": 0,
       "aaai": 1,
       "ijcai": 0
      },
@@ -98,11 +93,10 @@
       "eccv": 0,
       "acl": 1,
       "emnlp": 0,
-      "naacl": 3,
       "aaai": 1,
       "ijcai": 0
      },
-     "total": 7
+     "total": 4
     },
     {
      "year": 2026,
@@ -115,7 +109,6 @@
       "eccv": 0,
       "acl": 4,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 4,
       "ijcai": 0
      },
@@ -131,11 +124,10 @@
     "eccv": 0,
     "acl": 5,
     "emnlp": 1,
-    "naacl": 3,
     "aaai": 6,
     "ijcai": 0
    },
-   "total": 28
+   "total": 25
   },
   "first_author": {
    "years": [
@@ -150,7 +142,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -167,7 +158,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -184,7 +174,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -201,7 +190,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -218,7 +206,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 1,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -235,11 +222,10 @@
       "eccv": 0,
       "acl": 1,
       "emnlp": 1,
-      "naacl": 3,
       "aaai": 1,
       "ijcai": 1
      },
-     "total": 14
+     "total": 11
     },
     {
      "year": 2026,
@@ -252,7 +238,6 @@
       "eccv": 0,
       "acl": 5,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 4,
       "ijcai": 0
      },
@@ -268,13 +253,12 @@
     "eccv": 0,
     "acl": 6,
     "emnlp": 2,
-    "naacl": 3,
     "aaai": 5,
     "ijcai": 1
    },
-   "total": 41
+   "total": 38
   },
-  "judged": 73,
+  "judged": 68,
   "unknown": 2,
   "by_year": [
    {
@@ -307,17 +291,17 @@
    },
    {
     "year": 2024,
-    "accepted": 9,
-    "judged": 9,
+    "accepted": 8,
+    "judged": 8,
     "majority": 2,
     "first": 3
    },
    {
     "year": 2025,
-    "accepted": 27,
-    "judged": 27,
-    "majority": 7,
-    "first": 14
+    "accepted": 23,
+    "judged": 23,
+    "majority": 4,
+    "first": 11
    },
    {
     "year": 2026,
@@ -335,9 +319,9 @@
    "phi-le-nguyen",
    "tuan-dam",
    "than-quang-khoat",
-   "dinh-viet-sang",
    "huynh-thi-thanh-binh",
    "nam-le-hai",
+   "dinh-viet-sang",
    "hoang-ta",
    "bui-trong-duc",
    "huynh-quyet-thang",
@@ -347,9 +331,9 @@
    "van-duc-nguyen"
   ],
   "iclr_complete": true,
-  "accepted": 75,
+  "accepted": 70,
   "own_page": 15,
-  "official": 60,
+  "official": 55,
   "venues": {
    "iclr": {
     "accepted": 6,
@@ -430,16 +414,6 @@
     "submitted": 10,
     "own_page": 2,
     "official": 4
-   },
-   "naacl": {
-    "accepted": 5,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 5,
-    "own_page": 0,
-    "official": 5
    },
    "aaai": {
     "accepted": 10,
@@ -571,19 +545,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -711,19 +672,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -875,19 +823,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 1,
       "rejected": 0,
@@ -1025,19 +960,6 @@
       "official": 0,
       "available": true,
       "held": true,
-      "provisional": false
-     },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
       "provisional": false
      },
      "aaai": {
@@ -1179,19 +1101,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 1,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 1,
-      "own_page": 0,
-      "official": 1,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 2,
       "rejected": 0,
@@ -1219,9 +1128,9 @@
       "provisional": false
      }
     },
-    "accepted": 9,
+    "accepted": 8,
     "own_page": 0,
-    "official": 9
+    "official": 8
    },
    {
     "year": 2025,
@@ -1331,19 +1240,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 4,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 4,
-      "own_page": 0,
-      "official": 4,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 3,
       "rejected": 0,
@@ -1371,9 +1267,9 @@
       "provisional": false
      }
     },
-    "accepted": 27,
+    "accepted": 23,
     "own_page": 0,
-    "official": 27
+    "official": 23
    },
    {
     "year": 2026,
@@ -1483,19 +1379,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 4,
       "rejected": 0,
@@ -1529,17 +1412,17 @@
    }
   ],
   "workshop": 17,
-  "rejected_estimated": 261,
+  "rejected_estimated": 243,
   "acceptance_rate": 22,
   "rate_trivial": false,
   "author_charts": {
    "first": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from HUST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from HUST</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"381.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"399.6\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><path class=\"other-inst\" d=\"M70.0,230.0 V229.4 Q70.0,225.4 74.0,225.4 H90.0 Q94.0,225.4 94.0,229.4 V230.0 Z\"><title>2020: 1 first author elsewhere</title></path><text class=\"value\" x=\"82.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V229.4 Q238.0,225.4 242.0,225.4 H258.0 Q262.0,225.4 262.0,229.4 V230.0 Z\"><title>2022: 1 first author elsewhere</title></path><text class=\"value\" x=\"250.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V216.2 Q406.0,216.2 406.0,216.2 H430.0 Q430.0,216.2 430.0,216.2 V230.0 Z\"><title>2024: 3 first author from HUST</title></path><path class=\"other-inst\" d=\"M406.0,214.2 V192.6 Q406.0,188.6 410.0,188.6 H426.0 Q430.0,188.6 430.0,192.6 V214.2 Z\"><title>2024: 6 first author elsewhere</title></path><text class=\"value\" x=\"418.0\" y=\"182.6\" text-anchor=\"middle\">9</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V165.6 Q490.0,165.6 490.0,165.6 H514.0 Q514.0,165.6 514.0,165.6 V230.0 Z\"><title>2025: 14 first author from HUST</title></path><path class=\"other-inst\" d=\"M490.0,163.6 V109.8 Q490.0,105.8 494.0,105.8 H510.0 Q514.0,105.8 514.0,109.8 V163.6 Z\"><title>2025: 13 first author elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"99.8\" text-anchor=\"middle\">27</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V119.6 Q574.0,119.6 574.0,119.6 H598.0 Q598.0,119.6 598.0,119.6 V230.0 Z\"><title>2026: 24 first author from HUST</title></path><path class=\"other-inst\" d=\"M574.0,117.6 V69.0 Q574.0,69.0 574.0,69.0 H598.0 Q598.0,69.0 598.0,69.0 V117.6 Z\"><title>2026: 11 first author elsewhere</title></path><path class=\"unjudged\" d=\"M574.0,67.0 V63.8 Q574.0,59.8 578.0,59.8 H594.0 Q598.0,59.8 598.0,63.8 V67.0 Z\"><title>2026: 2 affiliations not known yet</title></path><text class=\"value\" x=\"586.0\" y=\"53.8\" text-anchor=\"middle\">37</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng HUST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng HUST</text><rect class=\"other-inst\" x=\"204.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"222.4\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"394.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"412.4\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><path class=\"other-inst\" d=\"M70.0,230.0 V229.4 Q70.0,225.4 74.0,225.4 H90.0 Q94.0,225.4 94.0,229.4 V230.0 Z\"><title>2020: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"82.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V229.4 Q238.0,225.4 242.0,225.4 H258.0 Q262.0,225.4 262.0,229.4 V230.0 Z\"><title>2022: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"250.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V216.2 Q406.0,216.2 406.0,216.2 H430.0 Q430.0,216.2 430.0,216.2 V230.0 Z\"><title>2024: 3 bài tác giả đầu cùng HUST</title></path><path class=\"other-inst\" d=\"M406.0,214.2 V192.6 Q406.0,188.6 410.0,188.6 H426.0 Q430.0,188.6 430.0,192.6 V214.2 Z\"><title>2024: 6 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"418.0\" y=\"182.6\" text-anchor=\"middle\">9</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V165.6 Q490.0,165.6 490.0,165.6 H514.0 Q514.0,165.6 514.0,165.6 V230.0 Z\"><title>2025: 14 bài tác giả đầu cùng HUST</title></path><path class=\"other-inst\" d=\"M490.0,163.6 V109.8 Q490.0,105.8 494.0,105.8 H510.0 Q514.0,105.8 514.0,109.8 V163.6 Z\"><title>2025: 13 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"99.8\" text-anchor=\"middle\">27</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V119.6 Q574.0,119.6 574.0,119.6 H598.0 Q598.0,119.6 598.0,119.6 V230.0 Z\"><title>2026: 24 bài tác giả đầu cùng HUST</title></path><path class=\"other-inst\" d=\"M574.0,117.6 V69.0 Q574.0,69.0 574.0,69.0 H598.0 Q598.0,69.0 598.0,69.0 V117.6 Z\"><title>2026: 11 bài tác giả đầu ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M574.0,67.0 V63.8 Q574.0,59.8 578.0,59.8 H594.0 Q598.0,59.8 598.0,63.8 V67.0 Z\"><title>2026: 2 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"586.0\" y=\"53.8\" text-anchor=\"middle\">37</text></svg>"
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from HUST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from HUST</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"381.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"399.6\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><path class=\"other-inst\" d=\"M70.0,230.0 V229.4 Q70.0,225.4 74.0,225.4 H90.0 Q94.0,225.4 94.0,229.4 V230.0 Z\"><title>2020: 1 first author elsewhere</title></path><text class=\"value\" x=\"82.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V229.4 Q238.0,225.4 242.0,225.4 H258.0 Q262.0,225.4 262.0,229.4 V230.0 Z\"><title>2022: 1 first author elsewhere</title></path><text class=\"value\" x=\"250.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V216.2 Q406.0,216.2 406.0,216.2 H430.0 Q430.0,216.2 430.0,216.2 V230.0 Z\"><title>2024: 3 first author from HUST</title></path><path class=\"other-inst\" d=\"M406.0,214.2 V197.2 Q406.0,193.2 410.0,193.2 H426.0 Q430.0,193.2 430.0,197.2 V214.2 Z\"><title>2024: 5 first author elsewhere</title></path><text class=\"value\" x=\"418.0\" y=\"187.2\" text-anchor=\"middle\">8</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V179.4 Q490.0,179.4 490.0,179.4 H514.0 Q514.0,179.4 514.0,179.4 V230.0 Z\"><title>2025: 11 first author from HUST</title></path><path class=\"other-inst\" d=\"M490.0,177.4 V128.2 Q490.0,124.2 494.0,124.2 H510.0 Q514.0,124.2 514.0,128.2 V177.4 Z\"><title>2025: 12 first author elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"118.2\" text-anchor=\"middle\">23</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V119.6 Q574.0,119.6 574.0,119.6 H598.0 Q598.0,119.6 598.0,119.6 V230.0 Z\"><title>2026: 24 first author from HUST</title></path><path class=\"other-inst\" d=\"M574.0,117.6 V69.0 Q574.0,69.0 574.0,69.0 H598.0 Q598.0,69.0 598.0,69.0 V117.6 Z\"><title>2026: 11 first author elsewhere</title></path><path class=\"unjudged\" d=\"M574.0,67.0 V63.8 Q574.0,59.8 578.0,59.8 H594.0 Q598.0,59.8 598.0,63.8 V67.0 Z\"><title>2026: 2 affiliations not known yet</title></path><text class=\"value\" x=\"586.0\" y=\"53.8\" text-anchor=\"middle\">37</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng HUST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng HUST</text><rect class=\"other-inst\" x=\"204.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"222.4\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"394.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"412.4\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><path class=\"other-inst\" d=\"M70.0,230.0 V229.4 Q70.0,225.4 74.0,225.4 H90.0 Q94.0,225.4 94.0,229.4 V230.0 Z\"><title>2020: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"82.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V229.4 Q238.0,225.4 242.0,225.4 H258.0 Q262.0,225.4 262.0,229.4 V230.0 Z\"><title>2022: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"250.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V216.2 Q406.0,216.2 406.0,216.2 H430.0 Q430.0,216.2 430.0,216.2 V230.0 Z\"><title>2024: 3 bài tác giả đầu cùng HUST</title></path><path class=\"other-inst\" d=\"M406.0,214.2 V197.2 Q406.0,193.2 410.0,193.2 H426.0 Q430.0,193.2 430.0,197.2 V214.2 Z\"><title>2024: 5 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"418.0\" y=\"187.2\" text-anchor=\"middle\">8</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V179.4 Q490.0,179.4 490.0,179.4 H514.0 Q514.0,179.4 514.0,179.4 V230.0 Z\"><title>2025: 11 bài tác giả đầu cùng HUST</title></path><path class=\"other-inst\" d=\"M490.0,177.4 V128.2 Q490.0,124.2 494.0,124.2 H510.0 Q514.0,124.2 514.0,128.2 V177.4 Z\"><title>2025: 12 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"118.2\" text-anchor=\"middle\">23</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V119.6 Q574.0,119.6 574.0,119.6 H598.0 Q598.0,119.6 598.0,119.6 V230.0 Z\"><title>2026: 24 bài tác giả đầu cùng HUST</title></path><path class=\"other-inst\" d=\"M574.0,117.6 V69.0 Q574.0,69.0 574.0,69.0 H598.0 Q598.0,69.0 598.0,69.0 V117.6 Z\"><title>2026: 11 bài tác giả đầu ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M574.0,67.0 V63.8 Q574.0,59.8 578.0,59.8 H594.0 Q598.0,59.8 598.0,63.8 V67.0 Z\"><title>2026: 2 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"586.0\" y=\"53.8\" text-anchor=\"middle\">37</text></svg>"
    },
    "majority": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from HUST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from HUST</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"381.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"399.6\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><path class=\"other-inst\" d=\"M70.0,230.0 V229.4 Q70.0,225.4 74.0,225.4 H90.0 Q94.0,225.4 94.0,229.4 V230.0 Z\"><title>2020: 1 most authors elsewhere</title></path><text class=\"value\" x=\"82.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V229.4 Q238.0,225.4 242.0,225.4 H258.0 Q262.0,225.4 262.0,229.4 V230.0 Z\"><title>2022: 1 most authors elsewhere</title></path><text class=\"value\" x=\"250.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V220.8 Q406.0,220.8 406.0,220.8 H430.0 Q430.0,220.8 430.0,220.8 V230.0 Z\"><title>2024: 2 most authors from HUST</title></path><path class=\"other-inst\" d=\"M406.0,218.8 V192.6 Q406.0,188.6 410.0,188.6 H426.0 Q430.0,188.6 430.0,192.6 V218.8 Z\"><title>2024: 7 most authors elsewhere</title></path><text class=\"value\" x=\"418.0\" y=\"182.6\" text-anchor=\"middle\">9</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V197.8 Q490.0,197.8 490.0,197.8 H514.0 Q514.0,197.8 514.0,197.8 V230.0 Z\"><title>2025: 7 most authors from HUST</title></path><path class=\"other-inst\" d=\"M490.0,195.8 V109.8 Q490.0,105.8 494.0,105.8 H510.0 Q514.0,105.8 514.0,109.8 V195.8 Z\"><title>2025: 20 most authors elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"99.8\" text-anchor=\"middle\">27</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V142.6 Q574.0,142.6 574.0,142.6 H598.0 Q598.0,142.6 598.0,142.6 V230.0 Z\"><title>2026: 19 most authors from HUST</title></path><path class=\"other-inst\" d=\"M574.0,140.6 V69.0 Q574.0,69.0 574.0,69.0 H598.0 Q598.0,69.0 598.0,69.0 V140.6 Z\"><title>2026: 16 most authors elsewhere</title></path><path class=\"unjudged\" d=\"M574.0,67.0 V63.8 Q574.0,59.8 578.0,59.8 H594.0 Q598.0,59.8 598.0,63.8 V67.0 Z\"><title>2026: 2 affiliations not known yet</title></path><text class=\"value\" x=\"586.0\" y=\"53.8\" text-anchor=\"middle\">37</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng HUST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng HUST</text><rect class=\"other-inst\" x=\"217.20000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"235.20000000000002\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"420.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"438.0\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><path class=\"other-inst\" d=\"M70.0,230.0 V229.4 Q70.0,225.4 74.0,225.4 H90.0 Q94.0,225.4 94.0,229.4 V230.0 Z\"><title>2020: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"82.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V229.4 Q238.0,225.4 242.0,225.4 H258.0 Q262.0,225.4 262.0,229.4 V230.0 Z\"><title>2022: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"250.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V220.8 Q406.0,220.8 406.0,220.8 H430.0 Q430.0,220.8 430.0,220.8 V230.0 Z\"><title>2024: 2 bài đa số tác giả cùng HUST</title></path><path class=\"other-inst\" d=\"M406.0,218.8 V192.6 Q406.0,188.6 410.0,188.6 H426.0 Q430.0,188.6 430.0,192.6 V218.8 Z\"><title>2024: 7 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"418.0\" y=\"182.6\" text-anchor=\"middle\">9</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V197.8 Q490.0,197.8 490.0,197.8 H514.0 Q514.0,197.8 514.0,197.8 V230.0 Z\"><title>2025: 7 bài đa số tác giả cùng HUST</title></path><path class=\"other-inst\" d=\"M490.0,195.8 V109.8 Q490.0,105.8 494.0,105.8 H510.0 Q514.0,105.8 514.0,109.8 V195.8 Z\"><title>2025: 20 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"99.8\" text-anchor=\"middle\">27</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V142.6 Q574.0,142.6 574.0,142.6 H598.0 Q598.0,142.6 598.0,142.6 V230.0 Z\"><title>2026: 19 bài đa số tác giả cùng HUST</title></path><path class=\"other-inst\" d=\"M574.0,140.6 V69.0 Q574.0,69.0 574.0,69.0 H598.0 Q598.0,69.0 598.0,69.0 V140.6 Z\"><title>2026: 16 bài đa số tác giả ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M574.0,67.0 V63.8 Q574.0,59.8 578.0,59.8 H594.0 Q598.0,59.8 598.0,63.8 V67.0 Z\"><title>2026: 2 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"586.0\" y=\"53.8\" text-anchor=\"middle\">37</text></svg>"
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from HUST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from HUST</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"381.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"399.6\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><path class=\"other-inst\" d=\"M70.0,230.0 V229.4 Q70.0,225.4 74.0,225.4 H90.0 Q94.0,225.4 94.0,229.4 V230.0 Z\"><title>2020: 1 most authors elsewhere</title></path><text class=\"value\" x=\"82.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V229.4 Q238.0,225.4 242.0,225.4 H258.0 Q262.0,225.4 262.0,229.4 V230.0 Z\"><title>2022: 1 most authors elsewhere</title></path><text class=\"value\" x=\"250.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V220.8 Q406.0,220.8 406.0,220.8 H430.0 Q430.0,220.8 430.0,220.8 V230.0 Z\"><title>2024: 2 most authors from HUST</title></path><path class=\"other-inst\" d=\"M406.0,218.8 V197.2 Q406.0,193.2 410.0,193.2 H426.0 Q430.0,193.2 430.0,197.2 V218.8 Z\"><title>2024: 6 most authors elsewhere</title></path><text class=\"value\" x=\"418.0\" y=\"187.2\" text-anchor=\"middle\">8</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V211.6 Q490.0,211.6 490.0,211.6 H514.0 Q514.0,211.6 514.0,211.6 V230.0 Z\"><title>2025: 4 most authors from HUST</title></path><path class=\"other-inst\" d=\"M490.0,209.6 V128.2 Q490.0,124.2 494.0,124.2 H510.0 Q514.0,124.2 514.0,128.2 V209.6 Z\"><title>2025: 19 most authors elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"118.2\" text-anchor=\"middle\">23</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V142.6 Q574.0,142.6 574.0,142.6 H598.0 Q598.0,142.6 598.0,142.6 V230.0 Z\"><title>2026: 19 most authors from HUST</title></path><path class=\"other-inst\" d=\"M574.0,140.6 V69.0 Q574.0,69.0 574.0,69.0 H598.0 Q598.0,69.0 598.0,69.0 V140.6 Z\"><title>2026: 16 most authors elsewhere</title></path><path class=\"unjudged\" d=\"M574.0,67.0 V63.8 Q574.0,59.8 578.0,59.8 H594.0 Q598.0,59.8 598.0,63.8 V67.0 Z\"><title>2026: 2 affiliations not known yet</title></path><text class=\"value\" x=\"586.0\" y=\"53.8\" text-anchor=\"middle\">37</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng HUST\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng HUST</text><rect class=\"other-inst\" x=\"217.20000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"235.20000000000002\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"420.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"438.0\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"184.0\" x2=\"628\" y2=\"184.0\"/><text class=\"tick\" x=\"34\" y=\"188.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"92.0\" x2=\"628\" y2=\"92.0\"/><text class=\"tick\" x=\"34\" y=\"96.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><path class=\"other-inst\" d=\"M70.0,230.0 V229.4 Q70.0,225.4 74.0,225.4 H90.0 Q94.0,225.4 94.0,229.4 V230.0 Z\"><title>2020: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"82.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M238.0,230.0 V229.4 Q238.0,225.4 242.0,225.4 H258.0 Q262.0,225.4 262.0,229.4 V230.0 Z\"><title>2022: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"250.0\" y=\"219.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V220.8 Q406.0,220.8 406.0,220.8 H430.0 Q430.0,220.8 430.0,220.8 V230.0 Z\"><title>2024: 2 bài đa số tác giả cùng HUST</title></path><path class=\"other-inst\" d=\"M406.0,218.8 V197.2 Q406.0,193.2 410.0,193.2 H426.0 Q430.0,193.2 430.0,197.2 V218.8 Z\"><title>2024: 6 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"418.0\" y=\"187.2\" text-anchor=\"middle\">8</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V211.6 Q490.0,211.6 490.0,211.6 H514.0 Q514.0,211.6 514.0,211.6 V230.0 Z\"><title>2025: 4 bài đa số tác giả cùng HUST</title></path><path class=\"other-inst\" d=\"M490.0,209.6 V128.2 Q490.0,124.2 494.0,124.2 H510.0 Q514.0,124.2 514.0,128.2 V209.6 Z\"><title>2025: 19 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"118.2\" text-anchor=\"middle\">23</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V142.6 Q574.0,142.6 574.0,142.6 H598.0 Q598.0,142.6 598.0,142.6 V230.0 Z\"><title>2026: 19 bài đa số tác giả cùng HUST</title></path><path class=\"other-inst\" d=\"M574.0,140.6 V69.0 Q574.0,69.0 574.0,69.0 H598.0 Q598.0,69.0 598.0,69.0 V140.6 Z\"><title>2026: 16 bài đa số tác giả ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M574.0,67.0 V63.8 Q574.0,59.8 578.0,59.8 H594.0 Q598.0,59.8 598.0,63.8 V67.0 Z\"><title>2026: 2 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"586.0\" y=\"53.8\" text-anchor=\"middle\">37</text></svg>"
    }
   },
   "name_vi": "Đại học Bách khoa Hà Nội",
@@ -1560,7 +1443,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -1577,7 +1459,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -1594,7 +1475,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -1611,7 +1491,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -1628,7 +1507,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -1645,7 +1523,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 1,
       "ijcai": 1
      },
@@ -1662,7 +1539,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 1,
       "ijcai": 0
      },
@@ -1678,7 +1554,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 2,
     "ijcai": 1
    },
@@ -1697,7 +1572,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -1714,7 +1588,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -1731,7 +1604,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -1748,7 +1620,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 2,
       "ijcai": 0
      },
@@ -1765,7 +1636,6 @@
       "eccv": 1,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -1782,7 +1652,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 1,
       "ijcai": 1
      },
@@ -1799,7 +1668,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 1,
       "ijcai": 0
      },
@@ -1815,7 +1683,6 @@
     "eccv": 1,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 4,
     "ijcai": 1
    },
@@ -1973,16 +1840,6 @@
     "own_page": 0,
     "official": 1
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 4,
     "rejected": 0,
@@ -2113,19 +1970,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -2253,19 +2097,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -2417,19 +2248,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -2569,19 +2387,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 2,
       "rejected": 0,
@@ -2709,19 +2514,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -2873,19 +2665,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 1,
       "rejected": 0,
@@ -3025,19 +2804,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 1,
       "rejected": 0,
@@ -3102,7 +2868,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -3119,7 +2884,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -3136,7 +2900,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -3153,7 +2916,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -3170,7 +2932,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -3187,7 +2948,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 1,
       "ijcai": 0
      },
@@ -3204,7 +2964,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -3220,7 +2979,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 1,
     "ijcai": 0
    },
@@ -3239,7 +2997,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -3256,7 +3013,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -3273,7 +3029,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -3290,7 +3045,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -3307,7 +3061,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -3324,7 +3077,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 1,
       "ijcai": 0
      },
@@ -3341,7 +3093,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -3357,7 +3108,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 1,
     "ijcai": 0
    },
@@ -3511,16 +3261,6 @@
     "own_page": 0,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 3,
     "rejected": 0,
@@ -3651,19 +3391,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -3791,19 +3518,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -3955,19 +3669,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -4107,19 +3808,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -4247,19 +3935,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -4411,19 +4086,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 2,
       "rejected": 0,
@@ -4563,19 +4225,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -4640,7 +4289,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -4657,7 +4305,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -4674,7 +4321,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -4691,7 +4337,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -4708,7 +4353,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -4725,7 +4369,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -4742,7 +4385,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 2,
       "ijcai": 0
      },
@@ -4758,7 +4400,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 2,
     "ijcai": 0
    },
@@ -4777,7 +4418,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -4794,7 +4434,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -4811,7 +4450,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -4828,7 +4466,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -4845,7 +4482,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 1,
       "ijcai": 0
      },
@@ -4862,7 +4498,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -4879,7 +4514,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 2,
       "ijcai": 0
      },
@@ -4895,7 +4529,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 3,
     "ijcai": 0
    },
@@ -5048,16 +4681,6 @@
     "own_page": 0,
     "official": 1
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 3,
     "rejected": 0,
@@ -5188,19 +4811,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -5328,19 +4938,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -5492,19 +5089,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -5644,19 +5228,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -5784,19 +5355,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -5948,19 +5506,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -6100,19 +5645,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 2,
       "rejected": 0,
@@ -6177,7 +5709,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -6194,7 +5725,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -6211,7 +5741,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -6228,7 +5757,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 1,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -6245,7 +5773,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 1
      },
@@ -6262,7 +5789,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -6279,7 +5805,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -6295,7 +5820,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 1,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 1
    },
@@ -6314,7 +5838,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -6331,7 +5854,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -6348,7 +5870,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -6365,7 +5886,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 1,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -6382,7 +5902,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 1
      },
@@ -6399,7 +5918,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -6416,7 +5934,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -6432,13 +5949,12 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 1,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 1
    },
    "total": 4
   },
-  "judged": 14,
+  "judged": 12,
   "unknown": 0,
   "by_year": [
    {
@@ -6478,8 +5994,8 @@
    },
    {
     "year": 2025,
-    "accepted": 5,
-    "judged": 5,
+    "accepted": 3,
+    "judged": 3,
     "majority": 1,
     "first": 1
    },
@@ -6502,9 +6018,9 @@
    "nguyen-viet-ha"
   ],
   "iclr_complete": true,
-  "accepted": 14,
+  "accepted": 12,
   "own_page": 1,
-  "official": 13,
+  "official": 11,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -6577,16 +6093,6 @@
     "official": 4
    },
    "emnlp": {
-    "accepted": 2,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 2,
-    "own_page": 0,
-    "official": 2
-   },
-   "naacl": {
     "accepted": 2,
     "rejected": 0,
     "withdrawn": 0,
@@ -6726,19 +6232,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -6866,19 +6359,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -7030,19 +6510,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -7182,19 +6649,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -7322,19 +6776,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -7486,19 +6927,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 2,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 2,
-      "own_page": 0,
-      "official": 2,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -7526,9 +6954,9 @@
       "provisional": false
      }
     },
-    "accepted": 5,
+    "accepted": 3,
     "own_page": 0,
-    "official": 5
+    "official": 3
    },
    {
     "year": 2026,
@@ -7638,19 +7066,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 1,
       "rejected": 0,
@@ -7684,17 +7099,17 @@
    }
   ],
   "workshop": 1,
-  "rejected_estimated": 45,
+  "rejected_estimated": 39,
   "acceptance_rate": 24,
   "rate_trivial": false,
   "author_charts": {
    "first": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from VNU-UET\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from VNU-UET</text><rect class=\"other-inst\" x=\"230.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"248.0\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"400.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"418.8\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"168.7\" x2=\"628\" y2=\"168.7\"/><text class=\"tick\" x=\"34\" y=\"172.7\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"107.3\" x2=\"628\" y2=\"107.3\"/><text class=\"tick\" x=\"34\" y=\"111.3\" text-anchor=\"end\">4</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">6</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><path class=\"other-inst\" d=\"M154.0,230.0 V203.3 Q154.0,199.3 158.0,199.3 H174.0 Q178.0,199.3 178.0,203.3 V230.0 Z\"><title>2021: 1 first author elsewhere</title></path><text class=\"value\" x=\"166.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M322.0,230.0 V203.3 Q322.0,199.3 326.0,199.3 H342.0 Q346.0,199.3 346.0,203.3 V230.0 Z\"><title>2023: 1 first author from VNU-UET</title></path><text class=\"value\" x=\"334.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V203.3 Q406.0,199.3 410.0,199.3 H426.0 Q430.0,199.3 430.0,203.3 V230.0 Z\"><title>2024: 1 first author from VNU-UET</title></path><text class=\"value\" x=\"418.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V199.3 Q490.0,199.3 490.0,199.3 H514.0 Q514.0,199.3 514.0,199.3 V230.0 Z\"><title>2025: 1 first author from VNU-UET</title></path><path class=\"other-inst\" d=\"M490.0,197.3 V80.7 Q490.0,76.7 494.0,76.7 H510.0 Q514.0,76.7 514.0,80.7 V197.3 Z\"><title>2025: 4 first author elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"70.7\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V199.3 Q574.0,199.3 574.0,199.3 H598.0 Q598.0,199.3 598.0,199.3 V230.0 Z\"><title>2026: 1 first author from VNU-UET</title></path><path class=\"other-inst\" d=\"M574.0,197.3 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V197.3 Z\"><title>2026: 5 first author elsewhere</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">6</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng VNU-UET\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng VNU-UET</text><rect class=\"other-inst\" x=\"223.60000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"241.60000000000002\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"413.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"431.6\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"168.7\" x2=\"628\" y2=\"168.7\"/><text class=\"tick\" x=\"34\" y=\"172.7\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"107.3\" x2=\"628\" y2=\"107.3\"/><text class=\"tick\" x=\"34\" y=\"111.3\" text-anchor=\"end\">4</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">6</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><path class=\"other-inst\" d=\"M154.0,230.0 V203.3 Q154.0,199.3 158.0,199.3 H174.0 Q178.0,199.3 178.0,203.3 V230.0 Z\"><title>2021: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"166.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M322.0,230.0 V203.3 Q322.0,199.3 326.0,199.3 H342.0 Q346.0,199.3 346.0,203.3 V230.0 Z\"><title>2023: 1 bài tác giả đầu cùng VNU-UET</title></path><text class=\"value\" x=\"334.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V203.3 Q406.0,199.3 410.0,199.3 H426.0 Q430.0,199.3 430.0,203.3 V230.0 Z\"><title>2024: 1 bài tác giả đầu cùng VNU-UET</title></path><text class=\"value\" x=\"418.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V199.3 Q490.0,199.3 490.0,199.3 H514.0 Q514.0,199.3 514.0,199.3 V230.0 Z\"><title>2025: 1 bài tác giả đầu cùng VNU-UET</title></path><path class=\"other-inst\" d=\"M490.0,197.3 V80.7 Q490.0,76.7 494.0,76.7 H510.0 Q514.0,76.7 514.0,80.7 V197.3 Z\"><title>2025: 4 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"70.7\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V199.3 Q574.0,199.3 574.0,199.3 H598.0 Q598.0,199.3 598.0,199.3 V230.0 Z\"><title>2026: 1 bài tác giả đầu cùng VNU-UET</title></path><path class=\"other-inst\" d=\"M574.0,197.3 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V197.3 Z\"><title>2026: 5 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">6</text></svg>"
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from VNU-UET\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from VNU-UET</text><rect class=\"other-inst\" x=\"230.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"248.0\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"400.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"418.8\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"168.7\" x2=\"628\" y2=\"168.7\"/><text class=\"tick\" x=\"34\" y=\"172.7\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"107.3\" x2=\"628\" y2=\"107.3\"/><text class=\"tick\" x=\"34\" y=\"111.3\" text-anchor=\"end\">4</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">6</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><path class=\"other-inst\" d=\"M154.0,230.0 V203.3 Q154.0,199.3 158.0,199.3 H174.0 Q178.0,199.3 178.0,203.3 V230.0 Z\"><title>2021: 1 first author elsewhere</title></path><text class=\"value\" x=\"166.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M322.0,230.0 V203.3 Q322.0,199.3 326.0,199.3 H342.0 Q346.0,199.3 346.0,203.3 V230.0 Z\"><title>2023: 1 first author from VNU-UET</title></path><text class=\"value\" x=\"334.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V203.3 Q406.0,199.3 410.0,199.3 H426.0 Q430.0,199.3 430.0,203.3 V230.0 Z\"><title>2024: 1 first author from VNU-UET</title></path><text class=\"value\" x=\"418.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V199.3 Q490.0,199.3 490.0,199.3 H514.0 Q514.0,199.3 514.0,199.3 V230.0 Z\"><title>2025: 1 first author from VNU-UET</title></path><path class=\"other-inst\" d=\"M490.0,197.3 V142.0 Q490.0,138.0 494.0,138.0 H510.0 Q514.0,138.0 514.0,142.0 V197.3 Z\"><title>2025: 2 first author elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"132.0\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V199.3 Q574.0,199.3 574.0,199.3 H598.0 Q598.0,199.3 598.0,199.3 V230.0 Z\"><title>2026: 1 first author from VNU-UET</title></path><path class=\"other-inst\" d=\"M574.0,197.3 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V197.3 Z\"><title>2026: 5 first author elsewhere</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">6</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng VNU-UET\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng VNU-UET</text><rect class=\"other-inst\" x=\"223.60000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"241.60000000000002\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"413.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"431.6\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"168.7\" x2=\"628\" y2=\"168.7\"/><text class=\"tick\" x=\"34\" y=\"172.7\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"107.3\" x2=\"628\" y2=\"107.3\"/><text class=\"tick\" x=\"34\" y=\"111.3\" text-anchor=\"end\">4</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">6</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><path class=\"other-inst\" d=\"M154.0,230.0 V203.3 Q154.0,199.3 158.0,199.3 H174.0 Q178.0,199.3 178.0,203.3 V230.0 Z\"><title>2021: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"166.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M322.0,230.0 V203.3 Q322.0,199.3 326.0,199.3 H342.0 Q346.0,199.3 346.0,203.3 V230.0 Z\"><title>2023: 1 bài tác giả đầu cùng VNU-UET</title></path><text class=\"value\" x=\"334.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V203.3 Q406.0,199.3 410.0,199.3 H426.0 Q430.0,199.3 430.0,203.3 V230.0 Z\"><title>2024: 1 bài tác giả đầu cùng VNU-UET</title></path><text class=\"value\" x=\"418.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V199.3 Q490.0,199.3 490.0,199.3 H514.0 Q514.0,199.3 514.0,199.3 V230.0 Z\"><title>2025: 1 bài tác giả đầu cùng VNU-UET</title></path><path class=\"other-inst\" d=\"M490.0,197.3 V142.0 Q490.0,138.0 494.0,138.0 H510.0 Q514.0,138.0 514.0,142.0 V197.3 Z\"><title>2025: 2 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"132.0\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V199.3 Q574.0,199.3 574.0,199.3 H598.0 Q598.0,199.3 598.0,199.3 V230.0 Z\"><title>2026: 1 bài tác giả đầu cùng VNU-UET</title></path><path class=\"other-inst\" d=\"M574.0,197.3 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V197.3 Z\"><title>2026: 5 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">6</text></svg>"
    },
    "majority": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from VNU-UET\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from VNU-UET</text><rect class=\"other-inst\" x=\"230.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"248.0\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"400.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"418.8\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"168.7\" x2=\"628\" y2=\"168.7\"/><text class=\"tick\" x=\"34\" y=\"172.7\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"107.3\" x2=\"628\" y2=\"107.3\"/><text class=\"tick\" x=\"34\" y=\"111.3\" text-anchor=\"end\">4</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">6</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><path class=\"other-inst\" d=\"M154.0,230.0 V203.3 Q154.0,199.3 158.0,199.3 H174.0 Q178.0,199.3 178.0,203.3 V230.0 Z\"><title>2021: 1 most authors elsewhere</title></path><text class=\"value\" x=\"166.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M322.0,230.0 V203.3 Q322.0,199.3 326.0,199.3 H342.0 Q346.0,199.3 346.0,203.3 V230.0 Z\"><title>2023: 1 most authors from VNU-UET</title></path><text class=\"value\" x=\"334.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V203.3 Q406.0,199.3 410.0,199.3 H426.0 Q430.0,199.3 430.0,203.3 V230.0 Z\"><title>2024: 1 most authors from VNU-UET</title></path><text class=\"value\" x=\"418.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V199.3 Q490.0,199.3 490.0,199.3 H514.0 Q514.0,199.3 514.0,199.3 V230.0 Z\"><title>2025: 1 most authors from VNU-UET</title></path><path class=\"other-inst\" d=\"M490.0,197.3 V80.7 Q490.0,76.7 494.0,76.7 H510.0 Q514.0,76.7 514.0,80.7 V197.3 Z\"><title>2025: 4 most authors elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"70.7\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V168.7 Q574.0,168.7 574.0,168.7 H598.0 Q598.0,168.7 598.0,168.7 V230.0 Z\"><title>2026: 2 most authors from VNU-UET</title></path><path class=\"other-inst\" d=\"M574.0,166.7 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V166.7 Z\"><title>2026: 4 most authors elsewhere</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">6</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng VNU-UET\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng VNU-UET</text><rect class=\"other-inst\" x=\"236.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"254.4\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"439.20000000000005\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"457.20000000000005\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"168.7\" x2=\"628\" y2=\"168.7\"/><text class=\"tick\" x=\"34\" y=\"172.7\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"107.3\" x2=\"628\" y2=\"107.3\"/><text class=\"tick\" x=\"34\" y=\"111.3\" text-anchor=\"end\">4</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">6</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><path class=\"other-inst\" d=\"M154.0,230.0 V203.3 Q154.0,199.3 158.0,199.3 H174.0 Q178.0,199.3 178.0,203.3 V230.0 Z\"><title>2021: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"166.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M322.0,230.0 V203.3 Q322.0,199.3 326.0,199.3 H342.0 Q346.0,199.3 346.0,203.3 V230.0 Z\"><title>2023: 1 bài đa số tác giả cùng VNU-UET</title></path><text class=\"value\" x=\"334.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V203.3 Q406.0,199.3 410.0,199.3 H426.0 Q430.0,199.3 430.0,203.3 V230.0 Z\"><title>2024: 1 bài đa số tác giả cùng VNU-UET</title></path><text class=\"value\" x=\"418.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V199.3 Q490.0,199.3 490.0,199.3 H514.0 Q514.0,199.3 514.0,199.3 V230.0 Z\"><title>2025: 1 bài đa số tác giả cùng VNU-UET</title></path><path class=\"other-inst\" d=\"M490.0,197.3 V80.7 Q490.0,76.7 494.0,76.7 H510.0 Q514.0,76.7 514.0,80.7 V197.3 Z\"><title>2025: 4 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"70.7\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V168.7 Q574.0,168.7 574.0,168.7 H598.0 Q598.0,168.7 598.0,168.7 V230.0 Z\"><title>2026: 2 bài đa số tác giả cùng VNU-UET</title></path><path class=\"other-inst\" d=\"M574.0,166.7 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V166.7 Z\"><title>2026: 4 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">6</text></svg>"
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from VNU-UET\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from VNU-UET</text><rect class=\"other-inst\" x=\"230.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"248.0\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"400.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"418.8\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"168.7\" x2=\"628\" y2=\"168.7\"/><text class=\"tick\" x=\"34\" y=\"172.7\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"107.3\" x2=\"628\" y2=\"107.3\"/><text class=\"tick\" x=\"34\" y=\"111.3\" text-anchor=\"end\">4</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">6</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><path class=\"other-inst\" d=\"M154.0,230.0 V203.3 Q154.0,199.3 158.0,199.3 H174.0 Q178.0,199.3 178.0,203.3 V230.0 Z\"><title>2021: 1 most authors elsewhere</title></path><text class=\"value\" x=\"166.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M322.0,230.0 V203.3 Q322.0,199.3 326.0,199.3 H342.0 Q346.0,199.3 346.0,203.3 V230.0 Z\"><title>2023: 1 most authors from VNU-UET</title></path><text class=\"value\" x=\"334.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V203.3 Q406.0,199.3 410.0,199.3 H426.0 Q430.0,199.3 430.0,203.3 V230.0 Z\"><title>2024: 1 most authors from VNU-UET</title></path><text class=\"value\" x=\"418.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V199.3 Q490.0,199.3 490.0,199.3 H514.0 Q514.0,199.3 514.0,199.3 V230.0 Z\"><title>2025: 1 most authors from VNU-UET</title></path><path class=\"other-inst\" d=\"M490.0,197.3 V142.0 Q490.0,138.0 494.0,138.0 H510.0 Q514.0,138.0 514.0,142.0 V197.3 Z\"><title>2025: 2 most authors elsewhere</title></path><text class=\"value\" x=\"502.0\" y=\"132.0\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V168.7 Q574.0,168.7 574.0,168.7 H598.0 Q598.0,168.7 598.0,168.7 V230.0 Z\"><title>2026: 2 most authors from VNU-UET</title></path><path class=\"other-inst\" d=\"M574.0,166.7 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V166.7 Z\"><title>2026: 4 most authors elsewhere</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">6</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng VNU-UET\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng VNU-UET</text><rect class=\"other-inst\" x=\"236.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"254.4\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"439.20000000000005\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"457.20000000000005\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"168.7\" x2=\"628\" y2=\"168.7\"/><text class=\"tick\" x=\"34\" y=\"172.7\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"107.3\" x2=\"628\" y2=\"107.3\"/><text class=\"tick\" x=\"34\" y=\"111.3\" text-anchor=\"end\">4</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">6</text><text class=\"tick\" x=\"82.0\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"166.0\" y=\"248\" text-anchor=\"middle\">2021</text><path class=\"other-inst\" d=\"M154.0,230.0 V203.3 Q154.0,199.3 158.0,199.3 H174.0 Q178.0,199.3 178.0,203.3 V230.0 Z\"><title>2021: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"166.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"250.0\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"334.0\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M322.0,230.0 V203.3 Q322.0,199.3 326.0,199.3 H342.0 Q346.0,199.3 346.0,203.3 V230.0 Z\"><title>2023: 1 bài đa số tác giả cùng VNU-UET</title></path><text class=\"value\" x=\"334.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"418.0\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M406.0,230.0 V203.3 Q406.0,199.3 410.0,199.3 H426.0 Q430.0,199.3 430.0,203.3 V230.0 Z\"><title>2024: 1 bài đa số tác giả cùng VNU-UET</title></path><text class=\"value\" x=\"418.0\" y=\"193.3\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"502.0\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M490.0,230.0 V199.3 Q490.0,199.3 490.0,199.3 H514.0 Q514.0,199.3 514.0,199.3 V230.0 Z\"><title>2025: 1 bài đa số tác giả cùng VNU-UET</title></path><path class=\"other-inst\" d=\"M490.0,197.3 V142.0 Q490.0,138.0 494.0,138.0 H510.0 Q514.0,138.0 514.0,142.0 V197.3 Z\"><title>2025: 2 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"502.0\" y=\"132.0\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"586.0\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M574.0,230.0 V168.7 Q574.0,168.7 574.0,168.7 H598.0 Q598.0,168.7 598.0,168.7 V230.0 Z\"><title>2026: 2 bài đa số tác giả cùng VNU-UET</title></path><path class=\"other-inst\" d=\"M574.0,166.7 V50.0 Q574.0,46.0 578.0,46.0 H594.0 Q598.0,46.0 598.0,50.0 V166.7 Z\"><title>2026: 4 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"586.0\" y=\"40.0\" text-anchor=\"middle\">6</text></svg>"
    }
   },
   "name_vi": "Trường Đại học Công nghệ, ĐHQGHN",
@@ -7715,7 +7130,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -7732,7 +7146,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -7749,7 +7162,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -7766,7 +7178,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -7783,7 +7194,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -7800,7 +7210,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -7817,7 +7226,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 2
      },
@@ -7833,7 +7241,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 2
    },
@@ -7852,7 +7259,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -7869,7 +7275,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -7886,7 +7291,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -7903,7 +7307,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 1
      },
@@ -7920,7 +7323,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 1
      },
@@ -7937,7 +7339,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -7954,7 +7355,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 2
      },
@@ -7970,7 +7370,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 4
    },
@@ -8125,16 +7524,6 @@
     "own_page": 0,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 0,
     "rejected": 0,
@@ -8265,19 +7654,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -8405,19 +7781,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -8569,19 +7932,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -8719,19 +8069,6 @@
       "official": 0,
       "available": true,
       "held": true,
-      "provisional": false
-     },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
       "provisional": false
      },
      "aaai": {
@@ -8873,19 +8210,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -9013,19 +8337,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -9177,19 +8488,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -9254,7 +8552,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -9271,7 +8568,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -9288,7 +8584,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -9305,7 +8600,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -9322,7 +8616,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -9339,7 +8632,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -9356,7 +8648,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -9372,7 +8663,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -9391,7 +8681,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -9408,7 +8697,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -9425,7 +8713,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -9442,7 +8729,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -9459,7 +8745,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -9476,7 +8761,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -9493,7 +8777,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -9509,7 +8792,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -9661,16 +8943,6 @@
     "own_page": 0,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 0,
     "rejected": 0,
@@ -9801,19 +9073,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -9941,19 +9200,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -10105,19 +9351,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -10255,19 +9488,6 @@
       "official": 0,
       "available": true,
       "held": true,
-      "provisional": false
-     },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
       "provisional": false
      },
      "aaai": {
@@ -10409,19 +9629,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -10549,19 +9756,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -10713,19 +9907,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -10790,7 +9971,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -10807,7 +9987,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -10824,7 +10003,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -10841,7 +10019,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -10858,7 +10035,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -10875,7 +10051,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -10892,7 +10067,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -10908,7 +10082,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -10927,7 +10100,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -10944,7 +10116,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -10961,7 +10132,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -10978,7 +10148,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -10995,7 +10164,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -11012,7 +10180,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -11029,7 +10196,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -11045,7 +10211,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -11195,16 +10360,6 @@
     "own_page": 0,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 0,
     "rejected": 0,
@@ -11335,19 +10490,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -11475,19 +10617,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -11639,19 +10768,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -11791,19 +10907,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -11931,19 +11034,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -12095,19 +11185,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -12247,19 +11324,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -12324,7 +11388,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -12341,7 +11404,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -12358,7 +11420,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -12375,7 +11436,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -12392,7 +11452,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -12409,7 +11468,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -12426,7 +11484,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -12442,7 +11499,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -12461,7 +11517,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -12478,7 +11533,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -12495,7 +11549,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -12512,7 +11565,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -12529,7 +11581,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -12546,7 +11597,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -12563,7 +11613,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -12579,7 +11628,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -12729,16 +11777,6 @@
     "own_page": 0,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 0,
     "rejected": 0,
@@ -12869,19 +11907,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -13009,19 +12034,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -13173,19 +12185,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -13323,19 +12322,6 @@
       "official": 0,
       "available": true,
       "held": true,
-      "provisional": false
-     },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
       "provisional": false
      },
      "aaai": {
@@ -13477,19 +12463,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -13617,19 +12590,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -13781,19 +12741,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -13858,7 +12805,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -13875,7 +12821,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -13892,7 +12837,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -13909,7 +12853,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -13926,7 +12869,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -13943,7 +12885,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -13960,7 +12901,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -13976,7 +12916,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -13995,7 +12934,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -14012,7 +12950,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -14029,7 +12966,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -14046,7 +12982,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -14063,7 +12998,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -14080,7 +13014,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -14097,7 +13030,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -14113,7 +13045,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -14263,16 +13194,6 @@
     "own_page": 0,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 0,
     "rejected": 0,
@@ -14403,19 +13324,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -14543,19 +13451,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -14707,19 +13602,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -14859,19 +13741,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -14999,19 +13868,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -15163,19 +14019,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -15315,19 +14158,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -15392,7 +14222,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -15409,7 +14238,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -15426,7 +14254,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -15443,7 +14270,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -15460,7 +14286,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -15477,7 +14302,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -15494,7 +14318,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -15510,7 +14333,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -15529,7 +14351,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -15546,7 +14367,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -15563,7 +14383,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -15580,7 +14399,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -15597,7 +14415,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -15614,7 +14431,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -15631,7 +14447,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -15647,7 +14462,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -15797,16 +14611,6 @@
     "own_page": 1,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 0,
     "rejected": 0,
@@ -15937,19 +14741,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -16077,19 +14868,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -16241,19 +15019,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -16393,19 +15158,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -16533,19 +15285,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -16697,19 +15436,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -16849,19 +15575,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -16926,7 +15639,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -16943,7 +15655,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -16960,7 +15671,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -16977,7 +15687,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -16994,7 +15703,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -17011,7 +15719,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -17028,7 +15735,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -17044,7 +15750,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -17063,7 +15768,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -17080,7 +15784,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -17097,7 +15800,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -17114,7 +15816,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -17131,7 +15832,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -17148,7 +15848,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -17165,7 +15864,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -17181,7 +15879,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -17331,16 +16028,6 @@
     "own_page": 0,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 0,
     "rejected": 0,
@@ -17471,19 +16158,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -17611,19 +16285,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -17775,19 +16436,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -17925,19 +16573,6 @@
       "official": 0,
       "available": true,
       "held": true,
-      "provisional": false
-     },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
       "provisional": false
      },
      "aaai": {
@@ -18079,19 +16714,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -18219,19 +16841,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -18383,19 +16992,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -18460,7 +17056,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -18477,7 +17072,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -18494,7 +17088,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -18511,7 +17104,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -18528,7 +17120,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -18545,7 +17136,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -18562,7 +17152,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -18578,7 +17167,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -18597,7 +17185,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -18614,7 +17201,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -18631,7 +17217,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -18648,7 +17233,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -18665,7 +17249,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -18682,7 +17265,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -18699,7 +17281,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -18715,7 +17296,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -18865,16 +17445,6 @@
     "own_page": 0,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 0,
     "rejected": 0,
@@ -19005,19 +17575,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -19145,19 +17702,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -19309,19 +17853,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -19459,19 +17990,6 @@
       "official": 0,
       "available": true,
       "held": true,
-      "provisional": false
-     },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
       "provisional": false
      },
      "aaai": {
@@ -19613,19 +18131,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -19753,19 +18258,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -19917,19 +18409,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -19994,7 +18473,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -20011,7 +18489,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -20028,7 +18505,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -20045,7 +18521,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -20062,7 +18537,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -20079,7 +18553,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -20096,7 +18569,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -20112,7 +18584,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -20131,7 +18602,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -20148,7 +18618,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -20165,7 +18634,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -20182,7 +18650,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -20199,7 +18666,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -20216,7 +18682,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -20233,7 +18698,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -20249,7 +18713,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -20401,16 +18864,6 @@
     "own_page": 0,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 0,
     "rejected": 0,
@@ -20541,19 +18994,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -20681,19 +19121,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -20845,19 +19272,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -20997,19 +19411,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -21137,19 +19538,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -21301,19 +19689,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -21453,19 +19828,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -21530,7 +19892,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -21547,7 +19908,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -21564,7 +19924,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -21581,7 +19940,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -21598,7 +19956,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -21615,7 +19972,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -21632,7 +19988,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -21648,7 +20003,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -21667,7 +20021,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -21684,7 +20037,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -21701,7 +20053,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -21718,7 +20069,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -21735,7 +20085,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -21752,7 +20101,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -21769,7 +20117,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -21785,7 +20132,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -21935,16 +20281,6 @@
     "own_page": 0,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 0,
     "rejected": 0,
@@ -22075,19 +20411,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -22215,19 +20538,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -22379,19 +20689,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -22531,19 +20828,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -22671,19 +20955,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -22835,19 +21106,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -22987,19 +21245,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -23064,7 +21309,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -23081,7 +21325,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -23098,7 +21341,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -23115,7 +21357,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -23132,7 +21373,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -23149,7 +21389,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -23166,7 +21405,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -23182,7 +21420,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -23201,7 +21438,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -23218,7 +21454,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -23235,7 +21470,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -23252,7 +21486,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -23269,7 +21502,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -23286,7 +21518,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -23303,7 +21534,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -23319,7 +21549,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -23469,16 +21698,6 @@
     "own_page": 0,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 0,
     "rejected": 0,
@@ -23609,19 +21828,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -23749,19 +21955,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -23913,19 +22106,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -24063,19 +22243,6 @@
       "official": 0,
       "available": true,
       "held": true,
-      "provisional": false
-     },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
       "provisional": false
      },
      "aaai": {
@@ -24217,19 +22384,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -24357,19 +22511,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -24521,19 +22662,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -24598,7 +22726,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -24615,7 +22742,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -24632,7 +22758,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -24649,7 +22774,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -24666,7 +22790,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -24683,7 +22806,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -24700,7 +22822,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -24716,7 +22837,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -24735,7 +22855,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -24752,7 +22871,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -24769,7 +22887,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -24786,7 +22903,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -24803,7 +22919,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -24820,7 +22935,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -24837,7 +22951,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -24853,7 +22966,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -25003,16 +23115,6 @@
     "own_page": 0,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 0,
     "rejected": 0,
@@ -25143,19 +23245,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -25283,19 +23372,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -25447,19 +23523,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -25597,19 +23660,6 @@
       "official": 0,
       "available": true,
       "held": true,
-      "provisional": false
-     },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
       "provisional": false
      },
      "aaai": {
@@ -25751,19 +23801,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -25891,19 +23928,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -26055,19 +24079,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -26132,7 +24143,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -26149,7 +24159,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -26166,7 +24175,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -26183,7 +24191,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -26200,7 +24207,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -26217,7 +24223,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -26234,7 +24239,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -26250,7 +24254,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -26269,7 +24272,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -26286,7 +24288,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -26303,7 +24304,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -26320,7 +24320,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -26337,7 +24336,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -26354,7 +24352,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -26371,7 +24368,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -26387,7 +24383,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -26537,16 +24532,6 @@
     "own_page": 0,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 0,
     "rejected": 0,
@@ -26677,19 +24662,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -26817,19 +24789,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -26981,19 +24940,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -27133,19 +25079,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -27273,19 +25206,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -27437,19 +25357,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -27589,19 +25496,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -27666,7 +25560,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -27683,7 +25576,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -27700,7 +25592,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -27717,7 +25608,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -27734,7 +25624,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -27751,7 +25640,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -27768,7 +25656,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -27784,7 +25671,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -27803,7 +25689,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -27820,7 +25705,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -27837,7 +25721,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -27854,7 +25737,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -27871,7 +25753,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -27888,7 +25769,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -27905,7 +25785,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -27921,7 +25800,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -28071,16 +25949,6 @@
     "own_page": 0,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 0,
     "rejected": 0,
@@ -28211,19 +26079,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -28351,19 +26206,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -28515,19 +26357,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -28667,19 +26496,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -28807,19 +26623,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -28971,19 +26774,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -29123,19 +26913,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -29200,7 +26977,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -29217,7 +26993,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -29234,7 +27009,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -29251,7 +27025,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -29268,7 +27041,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -29285,7 +27057,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -29302,7 +27073,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -29318,7 +27088,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -29337,7 +27106,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -29354,7 +27122,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -29371,7 +27138,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -29388,7 +27154,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -29405,7 +27170,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -29422,7 +27186,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -29439,7 +27202,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -29455,7 +27217,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -29605,16 +27366,6 @@
     "own_page": 0,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 0,
     "rejected": 0,
@@ -29745,19 +27496,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -29885,19 +27623,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -30049,19 +27774,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -30201,19 +27913,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -30341,19 +28040,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -30505,19 +28191,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -30657,19 +28330,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -30734,7 +28394,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -30751,7 +28410,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -30768,7 +28426,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -30785,7 +28442,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -30802,7 +28458,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -30819,7 +28474,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -30836,7 +28490,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -30852,7 +28505,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -30871,7 +28523,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -30888,7 +28539,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -30905,7 +28555,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -30922,7 +28571,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -30939,7 +28587,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -30956,7 +28603,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -30973,7 +28619,6 @@
       "eccv": 0,
       "acl": 0,
       "emnlp": 0,
-      "naacl": 0,
       "aaai": 0,
       "ijcai": 0
      },
@@ -30989,7 +28634,6 @@
     "eccv": 0,
     "acl": 0,
     "emnlp": 0,
-    "naacl": 0,
     "aaai": 0,
     "ijcai": 0
    },
@@ -31142,16 +28786,6 @@
     "own_page": 0,
     "official": 0
    },
-   "naacl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
    "aaai": {
     "accepted": 0,
     "rejected": 0,
@@ -31282,19 +28916,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -31422,19 +29043,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -31586,19 +29194,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -31738,19 +29333,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -31878,19 +29460,6 @@
       "provisional": false
      },
      "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "naacl": {
       "accepted": 0,
       "rejected": 0,
       "withdrawn": 0,
@@ -32042,19 +29611,6 @@
       "held": true,
       "provisional": false
      },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
      "aaai": {
       "accepted": 0,
       "rejected": 0,
@@ -32192,19 +29748,6 @@
       "official": 0,
       "available": false,
       "held": true,
-      "provisional": false
-     },
-     "naacl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
       "provisional": false
      },
      "aaai": {

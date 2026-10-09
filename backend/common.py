@@ -48,29 +48,24 @@ VENUES = [
      "rejections": "none"},
     {"key": "emnlp", "name": "EMNLP", "full_name": "Conference on Empirical Methods in Natural Language Processing",
      "rejections": "none"},
-    {"key": "naacl", "name": "NAACL", "full_name": "Annual Conference of the Nations of the Americas Chapter of the ACL",
-     "rejections": "none"},
     {"key": "aaai", "name": "AAAI", "full_name": "AAAI Conference on Artificial Intelligence",
      "rejections": "none"},
     {"key": "ijcai", "name": "IJCAI", "full_name": "International Joint Conference on Artificial Intelligence",
      "rejections": "none"},
 ]
-NAACL_NOT_HELD = {2020, 2023, 2026}  # aclanthology.org/venues/naacl
 VENUE_KEYS = [v["key"] for v in VENUES]
 
 
 def held(venue, year):
-    """False for a year in which the conference does not take place: ICCV is held in odd years, ECCV in even ones,
-    NAACL in some years only."""
-    return not ((venue == "iccv" and year % 2 == 0) or (venue == "eccv" and year % 2 == 1)
-                or (venue == "naacl" and year in NAACL_NOT_HELD))
+    """False for a year in which the conference does not take place: ICCV is held in odd years, ECCV in even ones."""
+    return not ((venue == "iccv" and year % 2 == 0) or (venue == "eccv" and year % 2 == 1))
 VENUE_NAME = {v["key"]: v["name"] for v in VENUES}
 # fields, for the front page, as CSRankings groups the conferences: artificial intelligence, machine learning,
 # computer vision, natural language processing
 VENUE_GROUPS = [{"key": "ai", "name": "AI", "venues": ["aaai", "ijcai"]},
                 {"key": "ml", "name": "ML", "venues": ["iclr", "neurips", "icml"]},
                 {"key": "cv", "name": "CV", "venues": ["cvpr", "iccv", "eccv"]},
-                {"key": "nlp", "name": "NLP", "venues": ["acl", "emnlp", "naacl"]}]
+                {"key": "nlp", "name": "NLP", "venues": ["acl", "emnlp"]}]
 for _g in VENUE_GROUPS:
     _g["names"] = [VENUE_NAME[k] for k in _g["venues"]]
 
@@ -237,11 +232,10 @@ def virtual_track(title, sourceurl, event_type, file_has_source):
     return "other"
 
 
-_OR_GROUP = re.compile(r"(ICLR\.cc|NeurIPS\.cc|ICML\.cc|thecvf\.com/CVPR|thecvf\.com/ICCV|thecvf\.com/ECCV|aclweb\.org/ACL|aclweb\.org/NAACL|(?<![\w/])EMNLP|(?<![\w/])NAACL)"
+_OR_GROUP = re.compile(r"(ICLR\.cc|NeurIPS\.cc|ICML\.cc|thecvf\.com/CVPR|thecvf\.com/ICCV|thecvf\.com/ECCV|aclweb\.org/ACL|(?<![\w/])EMNLP)"
                        r"/(\d{4})/([A-Za-z_]+)(/[A-Za-z_]+)?")
 _OR_VENUE = {"ICLR.cc": "iclr", "NeurIPS.cc": "neurips", "ICML.cc": "icml",
-             "thecvf.com/CVPR": "cvpr", "thecvf.com/ICCV": "iccv", "thecvf.com/ECCV": "eccv", "aclweb.org/ACL": "acl", "EMNLP": "emnlp",
-             "aclweb.org/NAACL": "naacl", "NAACL": "naacl"}
+             "thecvf.com/CVPR": "cvpr", "thecvf.com/ICCV": "iccv", "thecvf.com/ECCV": "eccv", "aclweb.org/ACL": "acl", "EMNLP": "emnlp"}
 
 
 def openreview_venue(invitations, venueid=""):

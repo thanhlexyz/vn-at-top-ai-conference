@@ -3,8 +3,8 @@ title: "About"
 ---
 ## What is counted
 
-- **Venues:** AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP and NAACL, from 2020 on, grouped as [CSRankings](https://csrankings.org/) groups them: AI (AAAI, IJCAI), ML (ICLR, NeurIPS, ICML), CV (CVPR, ICCV, ECCV) and NLP (ACL, EMNLP, NAACL). Years are conference years, so an ICLR 2026 paper was submitted in autumn 2025. ICCV is held in odd years and ECCV in even years; NAACL was not held in 2020, 2023 or 2026. IJCAI-PRICAI 2020, held in January 2021, counts as 2020. EMNLP 2026 counts once its papers are in the ACL Anthology.
-- **People:** Vietnamese lecturers, assistant professors, associate professors and professors whose main post is now at a university in Vietnam. Students, researchers at companies or institutes, and faculty from other countries are not tracked. Lecturers are included because the titles of associate professor and professor in Vietnam are conferred by a national council and are harder to obtain than in most other countries, so many lecturers do the work an assistant or associate professor does elsewhere. The list is kept by hand, and nobody appears before their entry has been approved and they have at least one counted submission at the eleven venues, accepted or not.
+- **Venues:** AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP, from 2020 on, grouped as [CSRankings](https://csrankings.org/) groups them: AI (AAAI, IJCAI), ML (ICLR, NeurIPS, ICML), CV (CVPR, ICCV, ECCV) and NLP (ACL, EMNLP). Years are conference years, so an ICLR 2026 paper was submitted in autumn 2025. ICCV is held in odd years and ECCV in even years. IJCAI-PRICAI 2020, held in January 2021, counts as 2020. EMNLP 2026 counts once its papers are in the ACL Anthology.
+- **People:** Vietnamese lecturers, assistant professors, associate professors and professors whose main post is now at a university in Vietnam. Students, researchers at companies or institutes, and faculty from other countries are not tracked. Lecturers are included because the titles of associate professor and professor in Vietnam are conferred by a national council and are harder to obtain than in most other countries, so many lecturers do the work an assistant or associate professor does elsewhere. The list is kept by hand, and nobody appears before their entry has been approved and they have at least one counted submission at the ten venues, accepted or not.
 - **Only while in Vietnam:** a paper counts from the year the professor joined a Vietnamese institution. Earlier years are greyed out on the professor's page.
 - **At their institution:** an accepted paper counts for a professor only if the paper lists them at their institution, as printed on the paper itself (checked against the PDF where the official list takes affiliations from author profiles). A paper written only at a company or research institute, such as Qualcomm AI Research (formerly VinAI), does not count. Unofficial papers, which print no affiliation yet, count.
 - **Main track only:** workshops, position-paper tracks (ICML, NeurIPS), the NeurIPS Datasets & Benchmarks track, journal tracks, ICLR blog posts and Tiny Papers are left out. A professor's page lists such papers under "Not main track".
@@ -23,13 +23,13 @@ These figures are taken over all of a professor's counted papers, accepted or no
 - **Other institutions per paper:** the average number of other authors whose affiliation on the paper is another institution, in Vietnam or abroad.
 - **Topics:** the number of different topic labels the conference gave the papers, each an area and a topic within it, for example "Deep Learning / Large Language Models" or "Reinforcement Learning / Planning". They are the rows of the topic table on the professor's page.
 
-The two affiliation figures use only papers with an affiliation for each author: from the official list, or, where the list prints none (ACL, EMNLP, NAACL, AAAI, IJCAI, CVPR before 2023 and in 2026), read from the title page of the paper's PDF and checked by hand. Papers known only from personal pages are left out of them.
+The two affiliation figures use only papers with an affiliation for each author: from the official list, or, where the list prints none (ACL, EMNLP, AAAI, IJCAI, CVPR before 2023 and in 2026), read from the title page of the paper's PDF and checked by hand. Papers known only from personal pages are left out of them.
 Topic labels exist only for ICLR and ICML from 2024 and for NeurIPS from 2023 to 2025. The label sets differ between conferences and years, and the authors choose the label, so two papers on the same subject can carry different labels.
 Each professor's page says how many papers a figure is based on.
 
 ## The chart of submitted and accepted papers
 
-Each professor's page has a chart of papers per year. Two parts of it are counted: the accepted papers at all eleven venues, and the rejections on record (every ICLR rejection, public NeurIPS rejections and papers placed in Findings). The third part is an estimate of the papers that the other ten venues did not accept, which nobody outside can see.
+Each professor's page has a chart of papers per year. Two parts of it are counted: the accepted papers at all ten venues, and the rejections on record (every ICLR rejection, public NeurIPS rejections and papers placed in Findings). The third part is an estimate of the papers that the other ten venues did not accept, which nobody outside can see.
 
 The estimate is made professor by professor, from their own ICLR record:
 
@@ -51,7 +51,7 @@ Institution and professor pages have two more charts. One marks an accepted pape
 | NeurIPS | public | public only when the authors opted in |
 | ICML | public | not public |
 | CVPR, ICCV, ECCV | public | not public |
-| ACL, EMNLP, NAACL | public | not public |
+| ACL, EMNLP | public | not public |
 | AAAI, IJCAI | public | not public |
 
 Submitted and rejected numbers therefore exist for ICLR only.
@@ -62,7 +62,7 @@ Even ICLR is not complete: a withdrawn paper can be removed or left anonymous, a
 
 ## Sources
 
-- **Accepted papers:** the conference virtual sites (iclr.cc, neurips.cc, icml.cc, cvpr.thecvf.com, iccv.thecvf.com, eccv.ecva.net), the CVF Open Access lists for CVPR and ICCV, ecva.net for ECCV, the ACL Anthology volumes of long papers for ACL and NAACL and the main volume for EMNLP (short papers are not counted; the EMNLP and early NAACL volumes mix long and short papers, so each counted paper there is checked by its page count), the technical-track issues of the AAAI proceedings (ojs.aaai.org) and the Main Track of the IJCAI proceedings (ijcai.org).
+- **Accepted papers:** the conference virtual sites (iclr.cc, neurips.cc, icml.cc, cvpr.thecvf.com, iccv.thecvf.com, eccv.ecva.net), the CVF Open Access lists for CVPR and ICCV, ecva.net for ECCV, the ACL Anthology volumes of long papers for ACL and the main volume for EMNLP (short papers are not counted; the EMNLP volumes mix long and short papers, so each counted paper there is checked by its page count), the technical-track issues of the AAAI proceedings (ojs.aaai.org) and the Main Track of the IJCAI proceedings (ijcai.org).
 - **ICLR submissions and outcomes, NeurIPS public rejections:** OpenReview, queried with each professor's own profile ID.
 - **Acceptance rates reported by the venues** (Venues page): submitted and accepted main-track papers per year from each conference's fact sheets, opening slides or proceedings front matter, and a few secondary sources where no official figure was found; each year and its source are in [venue_rates.csv](https://github.com/thanhlexyz/vn-at-top-ai-conference/blob/main/backend/venue_rates.csv). Conferences count submissions differently (all, valid, or after desk rejections), so the rates are only roughly comparable.
 
@@ -95,7 +95,7 @@ A page that only announces a number ("five papers accepted") adds nothing to the
 ## Limits
 
 - A paper published under a name form that is not on the roster is missed.
-- For ACL, EMNLP, NAACL, AAAI, IJCAI, and CVPR before 2023 and in 2026, the lists have no affiliations, so a match by name needs a decision by hand; the affiliations are then read from the PDF of the paper.
+- For ACL, EMNLP, AAAI, IJCAI, and CVPR before 2023 and in 2026, the lists have no affiliations, so a match by name needs a decision by hand; the affiliations are then read from the PDF of the paper.
 - The Vietnam rule works by year. A paper that appeared in the year of the move counts, even if it was submitted before the move.
 - For ICLR 2020 and 2021, OpenReview keeps the decision in a separate record. Where that record has not been read, the outcome is inferred from the accepted list, and the paper is marked.
 - A paper with two listed professors counts once for each of them, and once in the totals of an institution or a venue.

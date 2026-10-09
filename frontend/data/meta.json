@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-05 02:07 UTC",
- "generated_date": "2026-10-05",
+ "generated": "2026-10-09 00:33 UTC",
+ "generated_date": "2026-10-09",
  "first_year": 2020,
  "last_year": 2026,
  "years": [
@@ -62,12 +62,6 @@
    "rejections": "none"
   },
   {
-   "key": "naacl",
-   "name": "NAACL",
-   "full_name": "Annual Conference of the Nations of the Americas Chapter of the ACL",
-   "rejections": "none"
-  },
-  {
    "key": "aaai",
    "name": "AAAI",
    "full_name": "AAAI Conference on Artificial Intelligence",
@@ -89,7 +83,6 @@
   "eccv",
   "acl",
   "emnlp",
-  "naacl",
   "aaai",
   "ijcai"
  ],
@@ -139,13 +132,11 @@
    "name": "NLP",
    "venues": [
     "acl",
-    "emnlp",
-    "naacl"
+    "emnlp"
    ],
    "names": [
     "ACL",
-    "EMNLP",
-    "NAACL"
+    "EMNLP"
    ]
   }
  ],
@@ -1202,8 +1193,8 @@
   }
  ],
  "professors": 65,
- "papers": 248,
- "accepted": 162,
+ "papers": 243,
+ "accepted": 157,
  "preliminary": true,
  "pending_review": 2,
  "provisional": [

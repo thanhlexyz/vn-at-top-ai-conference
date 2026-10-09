@@ -1,4 +1,0 @@
----
-title: "NAACL"
-key: "naacl"
----

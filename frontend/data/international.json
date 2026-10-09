@@ -19,8 +19,18 @@
    "url": "professors/ngo-van-linh/",
    "x": 380,
    "y": 86,
-   "papers": 30,
+   "papers": 25,
    "id": "ngo-van-linh"
+  },
+  {
+   "slug": "dinh-viet-sang",
+   "name": "Dinh Viet Sang",
+   "name_vi": "Đinh Viết Sang",
+   "url": "professors/dinh-viet-sang/",
+   "x": 380,
+   "y": 132,
+   "papers": 2,
+   "id": "dinh-viet-sang"
   },
   {
    "slug": "nguyen-thi-ngoc-diep",
@@ -28,19 +38,9 @@
    "name_vi": "Nguyen Thi Ngoc Diep",
    "url": "professors/nguyen-thi-ngoc-diep/",
    "x": 380,
-   "y": 132,
-   "papers": 11,
-   "id": "nguyen-thi-ngoc-diep"
-  },
-  {
-   "slug": "than-quang-khoat",
-   "name": "Than Quang Khoat",
-   "name_vi": "Thân Quang Khoát",
-   "url": "professors/than-quang-khoat/",
-   "x": 380,
    "y": 178,
-   "papers": 3,
-   "id": "than-quang-khoat"
+   "papers": 8,
+   "id": "nguyen-thi-ngoc-diep"
   },
   {
    "slug": "nam-le-hai",
@@ -49,18 +49,18 @@
    "url": "professors/nam-le-hai/",
    "x": 380,
    "y": 224,
-   "papers": 4,
+   "papers": 3,
    "id": "nam-le-hai"
   },
   {
-   "slug": "dinh-viet-sang",
-   "name": "Dinh Viet Sang",
-   "name_vi": "Đinh Viết Sang",
-   "url": "professors/dinh-viet-sang/",
+   "slug": "than-quang-khoat",
+   "name": "Than Quang Khoat",
+   "name_vi": "Thân Quang Khoát",
+   "url": "professors/than-quang-khoat/",
    "x": 380,
    "y": 270,
-   "papers": 5,
-   "id": "dinh-viet-sang"
+   "papers": 3,
+   "id": "than-quang-khoat"
   },
   {
    "slug": "cuong-pham",
@@ -187,7 +187,7 @@
   {
    "name": "Trung Le",
    "affiliation": "Monash University",
-   "papers": 17,
+   "papers": 16,
    "url": "https://vietprofs.roars.dev/people/vp-0560.html",
    "country": "Australia",
    "flag": "au",
@@ -199,7 +199,7 @@
   {
    "name": "Thien Huu Nguyen",
    "affiliation": "University of Oregon",
-   "papers": 14,
+   "papers": 10,
    "url": "https://vietprofs.roars.dev/people/vp-0033.html",
    "country": "United States",
    "flag": "us",
@@ -251,7 +251,7 @@
    "b": "f0",
    "weight": 1,
    "x1": 380,
-   "y1": 270,
+   "y1": 132,
    "x2": 620,
    "y2": 40.0,
    "width": 2.2,
@@ -288,12 +288,12 @@
   {
    "a": "ngo-van-linh",
    "b": "f0",
-   "weight": 16,
+   "weight": 15,
    "x1": 380,
    "y1": 86,
    "x2": 620,
    "y2": 40.0,
-   "width": 20.2,
+   "width": 19.0,
    "a_name": "Ngo Van Linh",
    "a_name_vi": "Ngô Văn Linh",
    "b_name": "Trung Le"
@@ -301,12 +301,12 @@
   {
    "a": "nguyen-thi-ngoc-diep",
    "b": "f0",
-   "weight": 5,
+   "weight": 4,
    "x1": 380,
-   "y1": 132,
+   "y1": 178,
    "x2": 620,
    "y2": 40.0,
-   "width": 7.0,
+   "width": 5.8,
    "a_name": "Nguyen Thi Ngoc Diep",
    "a_name_vi": "Nguyen Thi Ngoc Diep",
    "b_name": "Trung Le"
@@ -316,7 +316,7 @@
    "b": "f0",
    "weight": 2,
    "x1": 380,
-   "y1": 178,
+   "y1": 270,
    "x2": 620,
    "y2": 40.0,
    "width": 3.4,
@@ -327,12 +327,12 @@
   {
    "a": "dinh-viet-sang",
    "b": "f1",
-   "weight": 4,
+   "weight": 1,
    "x1": 380,
-   "y1": 270,
+   "y1": 132,
    "x2": 620,
    "y2": 235.5,
-   "width": 5.8,
+   "width": 2.2,
    "a_name": "Dinh Viet Sang",
    "a_name_vi": "Đinh Viết Sang",
    "b_name": "Thien Huu Nguyen"
@@ -340,12 +340,12 @@
   {
    "a": "nam-le-hai",
    "b": "f1",
-   "weight": 3,
+   "weight": 2,
    "x1": 380,
    "y1": 224,
    "x2": 620,
    "y2": 235.5,
-   "width": 4.6,
+   "width": 3.4,
    "a_name": "Nam Le Hai",
    "a_name_vi": "Nam Le Hai",
    "b_name": "Thien Huu Nguyen"
@@ -353,12 +353,12 @@
   {
    "a": "ngo-van-linh",
    "b": "f1",
-   "weight": 14,
+   "weight": 10,
    "x1": 380,
    "y1": 86,
    "x2": 620,
    "y2": 235.5,
-   "width": 17.8,
+   "width": 13.0,
    "a_name": "Ngo Van Linh",
    "a_name_vi": "Ngô Văn Linh",
    "b_name": "Thien Huu Nguyen"
@@ -366,12 +366,12 @@
   {
    "a": "nguyen-thi-ngoc-diep",
    "b": "f1",
-   "weight": 6,
+   "weight": 4,
    "x1": 380,
-   "y1": 132,
+   "y1": 178,
    "x2": 620,
    "y2": 235.5,
-   "width": 8.2,
+   "width": 5.8,
    "a_name": "Nguyen Thi Ngoc Diep",
    "a_name_vi": "Nguyen Thi Ngoc Diep",
    "b_name": "Thien Huu Nguyen"
@@ -446,7 +446,7 @@
    "b": "f2",
    "weight": 1,
    "x1": 380,
-   "y1": 178,
+   "y1": 270,
    "x2": 620,
    "y2": 431.0,
    "width": 2.2,
@@ -561,5 +561,5 @@
  ],
  "authors": 5,
  "professors": 18,
- "papers": 80
+ "papers": 68
 }

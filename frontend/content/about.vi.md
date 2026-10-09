@@ -3,8 +3,8 @@ title: "Giới thiệu"
 ---
 ## Phạm vi thống kê
 
-- **Hội nghị:** AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP và NAACL, từ năm 2020, được chia nhóm theo cách của [CSRankings](https://csrankings.org/): AI (AAAI, IJCAI), ML (ICLR, NeurIPS, ICML), CV (CVPR, ICCV, ECCV) và NLP (ACL, EMNLP, NAACL). Năm được ghi là năm diễn ra hội nghị; chẳng hạn, một bài tại ICLR 2026 được nộp vào mùa thu năm 2025. ICCV tổ chức vào các năm lẻ, ECCV vào các năm chẵn; NAACL không tổ chức vào các năm 2020, 2023 và 2026. IJCAI-PRICAI 2020, diễn ra vào tháng 1 năm 2021, được tính là năm 2020. EMNLP 2026 sẽ được tính khi các bài được đưa lên ACL Anthology.
-- **Đối tượng:** giảng viên, phó giáo sư, giáo sư và các chức danh tương đương (assistant, associate và full professor) là người Việt Nam, hiện công tác chính tại một trường đại học ở Việt Nam. Sinh viên, nghiên cứu viên tại doanh nghiệp hoặc viện nghiên cứu, và giảng viên người nước ngoài không thuộc phạm vi thống kê. Danh sách bao gồm cả giảng viên, bởi chức danh phó giáo sư và giáo sư tại Việt Nam do Hội đồng Giáo sư nhà nước xét công nhận với yêu cầu cao hơn so với nhiều quốc gia khác; vì vậy, nhiều giảng viên đang đảm nhận công việc tương đương với vị trí assistant hoặc associate professor ở nước ngoài. Danh sách được lựa chọn thủ công; một giảng viên chỉ xuất hiện trên trang sau khi đã được xác nhận và có ít nhất một bài nộp được thống kê tại mười một hội nghị, dù được chấp nhận hay không.
+- **Hội nghị:** AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL và EMNLP, từ năm 2020, được chia nhóm theo cách của [CSRankings](https://csrankings.org/): AI (AAAI, IJCAI), ML (ICLR, NeurIPS, ICML), CV (CVPR, ICCV, ECCV) và NLP (ACL, EMNLP). Năm được ghi là năm diễn ra hội nghị; chẳng hạn, một bài tại ICLR 2026 được nộp vào mùa thu năm 2025. ICCV tổ chức vào các năm lẻ, ECCV vào các năm chẵn. IJCAI-PRICAI 2020, diễn ra vào tháng 1 năm 2021, được tính là năm 2020. EMNLP 2026 sẽ được tính khi các bài được đưa lên ACL Anthology.
+- **Đối tượng:** giảng viên, phó giáo sư, giáo sư và các chức danh tương đương (assistant, associate và full professor) là người Việt Nam, hiện công tác chính tại một trường đại học ở Việt Nam. Sinh viên, nghiên cứu viên tại doanh nghiệp hoặc viện nghiên cứu, và giảng viên người nước ngoài không thuộc phạm vi thống kê. Danh sách bao gồm cả giảng viên, bởi chức danh phó giáo sư và giáo sư tại Việt Nam do Hội đồng Giáo sư nhà nước xét công nhận với yêu cầu cao hơn so với nhiều quốc gia khác; vì vậy, nhiều giảng viên đang đảm nhận công việc tương đương với vị trí assistant hoặc associate professor ở nước ngoài. Danh sách được lựa chọn thủ công; một giảng viên chỉ xuất hiện trên trang sau khi đã được xác nhận và có ít nhất một bài nộp được thống kê tại mười hội nghị, dù được chấp nhận hay không.
 - **Thời gian công tác tại Việt Nam:** bài báo được tính từ năm giảng viên về công tác tại một đơn vị ở Việt Nam. Các năm trước đó được thể hiện bằng màu xám trên trang của giảng viên.
 - **Đúng đơn vị công tác:** bài được nhận chỉ được tính cho giảng viên nếu bài ghi giảng viên thuộc trường của mình, theo đơn vị in trên chính bài báo (đối chiếu với bản PDF khi danh sách chính thức lấy đơn vị từ hồ sơ tác giả). Bài chỉ ghi đơn vị là doanh nghiệp hay viện nghiên cứu, chẳng hạn Qualcomm AI Research (trước đây là VinAI), không được tính. Bài chưa chính thức, chưa ghi đơn vị, vẫn được tính.
 - **Chỉ nhánh chính:** không tính workshop, nhánh position paper (ICML, NeurIPS), nhánh Datasets & Benchmarks của NeurIPS, nhánh tạp chí, bài blog của ICLR và Tiny Papers. Các bài này được liệt kê tại mục "Không thuộc nhánh chính" trên trang của giảng viên.
@@ -23,13 +23,13 @@ Các chỉ số này được tính trên toàn bộ các bài được thống 
 - **Đơn vị khác mỗi bài:** số đồng tác giả trung bình mỗi bài có đơn vị ghi trên bài là trường hoặc đơn vị khác, dù ở Việt Nam hay nước ngoài.
 - **Số chủ đề:** số nhãn chủ đề khác nhau mà hội nghị gán cho bài, mỗi nhãn gồm lĩnh vực và chủ đề trong lĩnh vực đó, ví dụ "Deep Learning / Large Language Models" hay "Reinforcement Learning / Planning". Đây là các dòng của bảng chủ đề trên trang của giảng viên.
 
-Hai chỉ số liên quan đến đơn vị công tác chỉ sử dụng bài có đơn vị của từng tác giả: lấy từ danh sách chính thức, hoặc, khi danh sách không ghi (ACL, EMNLP, NAACL, AAAI, IJCAI, CVPR trước năm 2023 và năm 2026), đọc từ trang đầu bản PDF của bài và kiểm tra thủ công. Bài chỉ có trên trang cá nhân không được tính.
+Hai chỉ số liên quan đến đơn vị công tác chỉ sử dụng bài có đơn vị của từng tác giả: lấy từ danh sách chính thức, hoặc, khi danh sách không ghi (ACL, EMNLP, AAAI, IJCAI, CVPR trước năm 2023 và năm 2026), đọc từ trang đầu bản PDF của bài và kiểm tra thủ công. Bài chỉ có trên trang cá nhân không được tính.
 Nhãn chủ đề chỉ có tại ICLR và ICML từ năm 2024, và tại NeurIPS từ năm 2023 đến 2025. Bộ nhãn khác nhau giữa các hội nghị và các năm, và do tác giả tự lựa chọn, nên hai bài cùng đề tài có thể mang nhãn khác nhau.
 Trang của từng giảng viên có ghi rõ mỗi chỉ số được tính trên bao nhiêu bài.
 
 ## Biểu đồ số bài nộp và số bài được chấp nhận
 
-Trang của mỗi giảng viên có biểu đồ số bài theo năm, gồm hai phần là số liệu thống kê trực tiếp: số bài được chấp nhận tại cả mười một hội nghị, và số bài bị từ chối có ghi nhận (mọi bài bị từ chối tại ICLR, bài bị từ chối công khai tại NeurIPS và bài được xếp vào Findings). Phần thứ ba là số liệu ước tính về các bài không được mười hội nghị còn lại chấp nhận, vốn không được công khai.
+Trang của mỗi giảng viên có biểu đồ số bài theo năm, gồm hai phần là số liệu thống kê trực tiếp: số bài được chấp nhận tại cả mười hội nghị, và số bài bị từ chối có ghi nhận (mọi bài bị từ chối tại ICLR, bài bị từ chối công khai tại NeurIPS và bài được xếp vào Findings). Phần thứ ba là số liệu ước tính về các bài không được mười hội nghị còn lại chấp nhận, vốn không được công khai.
 
 Phần ước tính được thực hiện riêng cho từng giảng viên, dựa trên kết quả ICLR của chính giảng viên đó:
 
@@ -51,7 +51,7 @@ Trang của mỗi trường và mỗi giảng viên có thêm hai biểu đồ. 
 | NeurIPS | công khai | chỉ công khai khi tác giả đồng ý |
 | ICML | công khai | không công khai |
 | CVPR, ICCV, ECCV | công khai | không công khai |
-| ACL, EMNLP, NAACL | công khai | không công khai |
+| ACL, EMNLP | công khai | không công khai |
 | AAAI, IJCAI | công khai | không công khai |
 
 Vì vậy, số bài nộp và số bài bị từ chối chỉ có đối với ICLR.
@@ -62,7 +62,7 @@ Ngay cả số liệu ICLR cũng chưa hoàn toàn đầy đủ: bài rút có t
 
 ## Nguồn dữ liệu
 
-- **Bài được chấp nhận:** trang virtual của các hội nghị (iclr.cc, neurips.cc, icml.cc, cvpr.thecvf.com, iccv.thecvf.com, eccv.ecva.net), danh sách CVF Open Access đối với CVPR và ICCV, ecva.net đối với ECCV, các tập bài dài trên ACL Anthology đối với ACL và NAACL, tập chính đối với EMNLP (không tính bài ngắn; tập EMNLP và NAACL các năm đầu gộp cả bài dài lẫn bài ngắn, nên mỗi bài được tính ở đó đều được kiểm tra theo số trang), các số kỷ yếu nhánh kỹ thuật (Technical Track) của AAAI (ojs.aaai.org) và nhánh chính (Main Track) trong kỷ yếu IJCAI (ijcai.org).
+- **Bài được chấp nhận:** trang virtual của các hội nghị (iclr.cc, neurips.cc, icml.cc, cvpr.thecvf.com, iccv.thecvf.com, eccv.ecva.net), danh sách CVF Open Access đối với CVPR và ICCV, ecva.net đối với ECCV, các tập bài dài trên ACL Anthology đối với ACL, tập chính đối với EMNLP (không tính bài ngắn; tập EMNLP gộp cả bài dài lẫn bài ngắn, nên mỗi bài được tính ở đó đều được kiểm tra theo số trang), các số kỷ yếu nhánh kỹ thuật (Technical Track) của AAAI (ojs.aaai.org) và nhánh chính (Main Track) trong kỷ yếu IJCAI (ijcai.org).
 - **Bài nộp ICLR cùng kết quả, bài bị từ chối được công khai tại NeurIPS:** OpenReview, tra cứu theo mã hồ sơ của từng giảng viên.
 - **Tỉ lệ được nhận do hội nghị công bố** (trang Hội nghị): số bài nộp và số bài được nhận ở nhánh chính theo từng năm, lấy từ tài liệu tổng kết, slide khai mạc hoặc lời nói đầu kỷ yếu của từng hội nghị, và một số nguồn thứ cấp khi không có số liệu chính thức; từng năm và nguồn được ghi trong [venue_rates.csv](https://github.com/thanhlexyz/vn-at-top-ai-conference/blob/main/backend/venue_rates.csv). Các hội nghị đếm số bài nộp theo cách khác nhau (tất cả, bài hợp lệ, hoặc sau khi loại sơ bộ), nên các tỉ lệ chỉ so sánh được tương đối.
 
@@ -95,7 +95,7 @@ Thông báo chỉ nêu số lượng (chẳng hạn "năm bài được chấp n
 ## Giới hạn
 
 - Bài được công bố dưới một cách viết tên chưa có trong danh sách có thể bị bỏ sót.
-- Đối với ACL, EMNLP, NAACL, AAAI, IJCAI, và CVPR trước năm 2023 và năm 2026, danh sách không có thông tin đơn vị, nên trường hợp trùng tên cần xác nhận thủ công; sau đó đơn vị được đọc từ bản PDF của bài.
+- Đối với ACL, EMNLP, AAAI, IJCAI, và CVPR trước năm 2023 và năm 2026, danh sách không có thông tin đơn vị, nên trường hợp trùng tên cần xác nhận thủ công; sau đó đơn vị được đọc từ bản PDF của bài.
 - Điều kiện "công tác tại Việt Nam" được xét theo năm: bài xuất hiện trong năm giảng viên chuyển về vẫn được tính, kể cả khi bài được nộp trước thời điểm đó.
 - Đối với ICLR 2020 và 2021, OpenReview lưu quyết định trong một bản ghi riêng. Khi bản ghi này chưa được thu thập, kết quả được suy ra từ danh sách bài được chấp nhận, và bài được đánh dấu.
 - Một bài có hai giảng viên trong danh sách được tính một lần cho mỗi người, và một lần trong tổng số của trường hoặc hội nghị.

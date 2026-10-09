@@ -17,7 +17,7 @@ other = "Language"
 
 # ---------------------------------------------------------------- shared words
 [venues_five]
-other = "the eleven venues"
+other = "the ten venues"
 [none]
 other = "None."
 [titles_hidden]
@@ -235,8 +235,8 @@ other = "At a Vietnamese institution since {{ . }}"
 [prof_homepage]
 other = "Homepage"
 [prof_accepted_summary]
-one = "{{ .Count }} accepted paper at the eleven venues since {{ .Year }}"
-other = "{{ .Count }} accepted papers at the eleven venues since {{ .Year }}"
+one = "{{ .Count }} accepted paper at the ten venues since {{ .Year }}"
+other = "{{ .Count }} accepted papers at the ten venues since {{ .Year }}"
 [prof_own_page_part]
 other = ": {{ .Official }} in the official lists and {{ .Own }} known only from personal pages, shown as +{{ .Own }} and tagged \"unofficial\" below"
 [prof_iclr_summary]
@@ -338,7 +338,7 @@ other = "Papers with a first author from the institution"
 [inst_list_first_note]
 other = "Accepted papers whose first author lists the institution."
 [inst_summary]
-other = "{{ .Profs }} professors listed, {{ .Accepted }} accepted papers at the eleven venues"
+other = "{{ .Profs }} professors listed, {{ .Accepted }} accepted papers at the ten venues"
 [inst_summary_own]
 other = ", {{ . }} of them known only from personal pages (unofficial)"
 [inst_iclr]
@@ -451,7 +451,7 @@ other = "Wikipedia"
 other = "ResearchGate"
 
 [scholar_note]
-other = "A snapshot of the <a href=\"{{ .URL }}\">Google Scholar profile</a> taken on {{ .Date }}; it is not updated. Google Scholar counts every publication, not only the eleven conferences."
+other = "A snapshot of the <a href=\"{{ .URL }}\">Google Scholar profile</a> taken on {{ .Date }}; it is not updated. Google Scholar counts every publication, not only the ten conferences."
 
 [scholar_all]
 other = "All"
@@ -475,10 +475,10 @@ other = "Citations per year, as shown on Google Scholar on the day of the snapsh
 other = "From each Google Scholar profile, as on 2026-10-02; Scholar counts every publication"
 
 [seo_professor]
-other = "{{ .Name }} ({{ .Inst }}): {{ .Accepted }} papers accepted at AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP and NAACL; {{ .Submitted }} ICLR submissions, {{ .Rejected }} rejected."
+other = "{{ .Name }} ({{ .Inst }}): {{ .Accepted }} papers accepted at AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP; {{ .Submitted }} ICLR submissions, {{ .Rejected }} rejected."
 
 [seo_institution]
-other = "{{ .Name }}: {{ .Profs }} professors, {{ .Accepted }} papers accepted at AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP and NAACL; {{ .Submitted }} ICLR submissions, {{ .Rejected }} rejected."
+other = "{{ .Name }}: {{ .Profs }} professors, {{ .Accepted }} papers accepted at AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP; {{ .Submitted }} ICLR submissions, {{ .Rejected }} rejected."
 
 [seo_venue]
 other = "{{ .Name }}: papers submitted, accepted and rejected by professors and lecturers in Vietnam since 2020; {{ .Accepted }} accepted."

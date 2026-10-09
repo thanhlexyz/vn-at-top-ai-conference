@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Download the public accepted-paper lists of the eleven venues and normalize them.
+"""Download the public accepted-paper lists of the ten venues and normalize them.
 
 No login needed. Sources:
     iclr.cc / neurips.cc / icml.cc / cvpr.thecvf.com / iccv.thecvf.com   virtual-site JSON (authors with affiliations)
     eccv.ecva.net                                     ECCV virtual-site JSON (2024 on, authors with affiliations)
     openaccess.thecvf.com                             CVPR and ICCV paper lists (author names only)
     ecva.net/papers.php                               ECCV paper lists (author names only)
-    aclanthology.org                                  ACL, EMNLP and NAACL main-conference volumes (author names only);
+    aclanthology.org                                  ACL and EMNLP main-conference volumes (author names only);
                                                       industry and demo volumes are left out; Findings
                                                       papers count as rejected when a professor's OpenReview record shows them
     ojs.aaai.org                                      AAAI proceedings issues (author names only); the "AAAI Technical
@@ -280,9 +280,7 @@ def parse_acl_bib(year, text, venue="acl"):
     return out
 
 
-def acl_volumes(year, venue="acl"):
-    if venue == "naacl":
-        return [] if not held("naacl", year) else [f"{year}.naacl-main"] if year < 2024 else [f"{year}.naacl-long"]
+def acl_volumes(year):
     return [f"{year}.acl-main"] if year == 2020 else [f"{year}.acl-long"]
 
 
@@ -426,12 +424,6 @@ def collect(years, refresh=False):
         bib = fetch(f"https://aclanthology.org/volumes/{year}.emnlp-main.bib", f"acl/{year}.emnlp-main.bib", refresh)
         rows = parse_acl_bib(year, bib.decode("utf-8", "replace"), "emnlp") if bib else []
         add("emnlp", year, rows, ["aclanthology.org"] if rows else [])
-
-        rows = []
-        for vol in acl_volumes(year, "naacl"):
-            bib = fetch(f"https://aclanthology.org/volumes/{vol}.bib", f"acl/{vol}.bib", refresh)
-            rows += parse_acl_bib(year, bib.decode("utf-8", "replace"), "naacl") if bib else []
-        add("naacl", year, rows, ["aclanthology.org"] if rows else [])
 
         rows = []
         for issue, _ in issues.get(year, []):

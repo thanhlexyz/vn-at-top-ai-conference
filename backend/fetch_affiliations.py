@@ -1,4 +1,4 @@
-"""Affiliations read from the PDF of a paper, for accepted papers whose official list prints none (ACL, EMNLP, NAACL,
+"""Affiliations read from the PDF of a paper, for accepted papers whose official list prints none (ACL, EMNLP,
 AAAI, IJCAI, most CVPR years).
 
 For every accepted paper of a tracked person that has no affiliation in its list, and every name match waiting for a
@@ -9,7 +9,7 @@ each row is checked against the title page by hand and marked checked=yes; build
 
     python3 fetch_affiliations.py    # then fill and check the new rows of affiliations.csv
 
-With --scan VENUE..., it also reads papers of those venues whose lists print no affiliations (AAAI, IJCAI, NAACL)
+With --scan VENUE..., it also reads papers of those venues whose lists print no affiliations (AAAI, IJCAI)
 that have two or more authors with a Vietnamese family name, and adds those whose title page names an institution
 in Vietnam: once checked, find_candidates.py lists their authors in Vietnam who are not on the roster.
 """
@@ -76,7 +76,7 @@ def vietnamese_name(name):
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--scan", nargs="+", metavar="VENUE", default=[],
-                    help="also read papers of these venues with authors who may be in Vietnam (aaai ijcai naacl)")
+                    help="also read papers of these venues with authors who may be in Vietnam (aaai ijcai)")
     args = ap.parse_args()
     papers = {}
     for line in gzip.open(BACKEND / "work" / "accepted.jsonl.gz", "rt"):
