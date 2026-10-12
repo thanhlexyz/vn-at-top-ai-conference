@@ -204,13 +204,17 @@ other = "Hiện có {{ .Count }} trường hợp trùng tên chưa được xác
 other = "<strong>Cách tính điểm.</strong> Đây là điểm hiệu chỉnh (adjusted count) mà <a href=\"https://csrankings.org/\">CSRankings</a> sử dụng: mỗi bài được chấp nhận có giá trị <strong>1 chia cho số tác giả của bài</strong> đối với mỗi giảng viên trong danh sách là tác giả của bài, và điểm của một giảng viên là tổng điểm các bài của họ. Bài có 4 tác giả cộng 0,25; bài có 10 tác giả cộng 0,1. Điểm của một trường là tổng điểm của các giảng viên. Bài chính thức và chưa chính thức đều được tính, bài bị từ chối thì không. Xem thêm ở mục <a href=\"{{ .About }}\">Giới thiệu</a>."
 [cols_show]
 other = "Hiện thêm cột: bài workshop, trường của giảng viên, đồng tác giả, chủ đề, Google Scholar"
+[cols_show_inst]
+other = "Hiện cột bài workshop"
+[cols_hide_inst]
+other = "Ẩn cột bài workshop"
 [cols_hide]
 other = "Ẩn các cột đó"
 [home_note_table]
 other = """<ul>
 <li>Số bài bị từ chối gồm bài bị từ chối sau phản biện, bài rút và bài bị loại sơ bộ; số liệu theo từng hội nghị có ở trang của từng giảng viên và trang Giảng viên.</li>
 <li>Tổng số bài bị từ chối gồm toàn bộ bài bị từ chối tại ICLR cộng với bài bị từ chối mà tác giả tự công khai ở hội nghị khác (một số bài tại NeurIPS), nên là con số tối thiểu.</li>
-<li>Cột bị từ chối ước tính (màu cam), đã nộp ước tính (màu xám) và tỉ lệ được nhận ước tính (màu xanh, bằng số bài được nhận chia số bài đã nộp) là số liệu ước tính; xem trang <a href="{{ .About }}">Giới thiệu</a>.</li>
+<li>Cột đã nộp ước tính (màu xám) và tỉ lệ được nhận ước tính (màu xanh, bằng số bài được nhận chia số bài đã nộp) là số liệu ước tính; xem trang <a href="{{ .About }}">Giới thiệu</a>.</li>
 <li>Dấu &ndash; cho biết hồ sơ OpenReview của giảng viên chưa được thu thập.</li>
 <li>Mọi số liệu chỉ tính nhánh chính (main track); không tính workshop, bài position và nhánh Datasets &amp; Benchmarks của NeurIPS.</li>
 <li>Bài được xếp vào Findings là bài không được nhận vào nhánh chính, nên được tính là bị từ chối ở nhánh chính; bài này cũng được liệt kê cùng các bài workshop.</li>
@@ -332,7 +336,7 @@ other = "Bài của các giảng viên trong danh sách"
 [inst_list_note]
 other = """<ul>
 <li>Một bài có nhiều giảng viên cùng trường chỉ được tính một lần.</li>
-<li>Cột bị từ chối ước tính (màu cam), đã nộp ước tính (màu xám) và tỉ lệ được nhận ước tính (màu xanh, bằng số bài được nhận chia số bài đã nộp) là số liệu ước tính theo kết quả ICLR của chính trường; xem trang <a href="{{ .About }}">Giới thiệu</a>.</li>
+<li>Cột đã nộp ước tính (màu xám) và tỉ lệ được nhận ước tính (màu xanh, bằng số bài được nhận chia số bài đã nộp) là số liệu ước tính theo kết quả ICLR của chính trường; xem trang <a href="{{ .About }}">Giới thiệu</a>.</li>
 <li>Ký hiệu +N sau một số liệu cho biết có thêm N bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm, chưa chính thức.</li>
 </ul>"""
 [inst_list_majority]

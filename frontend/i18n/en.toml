@@ -206,13 +206,17 @@ other = "{{ .Count }} uncertain matches wait for a decision, see <a href=\"{{ .U
 other = "<strong>How the score is calculated.</strong> It is the adjusted count that <a href=\"https://csrankings.org/\">CSRankings</a> uses: each accepted paper is worth <strong>1 divided by its number of authors</strong> to every listed professor who is an author of it, and a professor's score is the sum over their papers. A paper with 4 authors adds 0.25; a paper with 10 adds 0.1. The score of an institution is the sum of its professors' scores. Official and unofficial papers both count, rejected papers do not. See <a href=\"{{ .About }}\">About</a>."
 [cols_show]
 other = "Show more columns: workshop papers, own institution, co-authors, topics, Google Scholar"
+[cols_show_inst]
+other = "Show workshop papers"
+[cols_hide_inst]
+other = "Hide workshop papers"
 [cols_hide]
 other = "Hide those columns"
 [home_note_table]
 other = """<ul>
 <li>Rejected counts rejected, withdrawn and desk-rejected submissions; the count per conference is on each professor's page and on the Professors page.</li>
 <li>Total rejected adds every ICLR rejection to the rejections authors made public at other venues (some NeurIPS papers), so it is a lower bound.</li>
-<li>Rejected, estimated (orange), submitted, estimated (grey) and acceptance rate, estimated (blue, accepted divided by submitted) are estimates; see <a href="{{ .About }}">About</a>.</li>
+<li>Submitted, estimated (grey) and acceptance rate, estimated (blue, accepted divided by submitted) are estimates; see <a href="{{ .About }}">About</a>.</li>
 <li>&ndash; means the OpenReview records of that professor have not been fetched.</li>
 <li>All counts are for the main conference track only; workshops, position papers and the NeurIPS Datasets &amp; Benchmarks track are left out.</li>
 <li>A paper placed in Findings was not accepted to the main track, so it counts as rejected from the main track; it is also listed with the workshop papers.</li>
@@ -337,7 +341,7 @@ other = "Papers of the listed professors"
 [inst_list_note]
 other = """<ul>
 <li>A paper with several professors of the same institution is counted once.</li>
-<li>Rejected, estimated (orange), submitted, estimated (grey) and acceptance rate, estimated (blue, accepted divided by submitted) are estimates from the institution's own ICLR record; see <a href="{{ .About }}">About</a>.</li>
+<li>Submitted, estimated (grey) and acceptance rate, estimated (blue, accepted divided by submitted) are estimates from the institution's own ICLR record; see <a href="{{ .About }}">About</a>.</li>
 <li>+N after a number means N more papers known only from personal pages, which are unofficial.</li>
 </ul>"""
 [inst_list_majority]
