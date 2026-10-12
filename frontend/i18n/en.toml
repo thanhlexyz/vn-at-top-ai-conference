@@ -211,8 +211,8 @@ other = "The official {{ .Name }} {{ .Year }} list is not complete yet, and its 
 [home_note_coauthors]
 other = """<ul>
 <li>The co-author and topic columns are taken over all counted papers, accepted or not.</li>
-<li>* Averages per paper. Foreign and domestic mean the affiliation printed on the paper is outside or inside Vietnam; same institution is the professor's own institution, and other institutions is any other one, in Vietnam or abroad.</li>
-<li>Both need a paper list with affiliations; topics need the conference's own topic labels, which exist for ICLR, NeurIPS and ICML from 2023 or 2024 on.</li>
+<li>* Co-authors per paper: the average, and the fewest and most on a single paper. The split by institution is on each professor's page.</li>
+<li>Topics need the conference's own topic labels, which exist for ICLR, NeurIPS and ICML from 2023 or 2024 on.</li>
 <li>Each professor's page says how many papers a figure is based on.</li>
 </ul>"""
 [home_overview]

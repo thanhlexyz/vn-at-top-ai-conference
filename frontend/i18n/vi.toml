@@ -209,8 +209,8 @@ other = "Danh sách chính thức của {{ .Name }} {{ .Year }} chưa đầy đ�
 [home_note_coauthors]
 other = """<ul>
 <li>Các cột về đồng tác giả và lĩnh vực được tính trên toàn bộ các bài được thống kê, kể cả bài bị từ chối.</li>
-<li>* Số trung bình mỗi bài. "Nước ngoài" và "trong nước" chỉ đơn vị công tác ghi trên bài ở ngoài hay trong Việt Nam; "cùng trường" là trường của giảng viên, "đơn vị khác" là mọi đơn vị khác, trong nước hay nước ngoài.</li>
-<li>Hai chỉ số này cần danh sách bài có ghi đơn vị công tác; số chủ đề dựa trên nhãn chủ đề do hội nghị gán, chỉ có tại ICLR, NeurIPS và ICML từ năm 2023 hoặc 2024.</li>
+<li>* Số đồng tác giả mỗi bài: trung bình, ít nhất và nhiều nhất trên một bài. Phần chia theo đơn vị công tác có ở trang của từng giảng viên.</li>
+<li>Số chủ đề dựa trên nhãn chủ đề do hội nghị gán, chỉ có tại ICLR, NeurIPS và ICML từ năm 2023 hoặc 2024.</li>
 <li>Trang của từng giảng viên ghi rõ mỗi chỉ số được tính trên bao nhiêu bài.</li>
 </ul>"""
 [home_overview]
