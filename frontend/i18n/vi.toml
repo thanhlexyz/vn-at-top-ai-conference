@@ -205,13 +205,13 @@ other = "Hiện có {{ .Count }} trường hợp trùng tên chưa được xác
 [home_score_callout]
 other = "<strong>Cách tính điểm.</strong> Đây là điểm hiệu chỉnh (adjusted count) mà <a href=\"https://csrankings.org/\">CSRankings</a> sử dụng: mỗi bài được chấp nhận có giá trị <strong>1 chia cho số tác giả của bài</strong> đối với mỗi giảng viên trong danh sách là tác giả của bài, và điểm của một giảng viên là tổng điểm các bài của họ. Bài có 4 tác giả cộng 0,25; bài có 10 tác giả cộng 0,1. Điểm của một trường là tổng điểm của các giảng viên. Bài chính thức và chưa chính thức đều được tính, bài bị từ chối thì không. Xem thêm ở mục <a href=\"{{ .About }}\">Giới thiệu</a>."
 [cols_show]
-other = "Hiện thêm cột: bài workshop, trường của giảng viên, đồng tác giả, chủ đề, Google Scholar"
+other = "Thêm cột"
 [cols_show_inst]
-other = "Hiện cột bài workshop"
+other = "Thêm cột"
 [cols_hide_inst]
-other = "Ẩn cột bài workshop"
+other = "Bớt cột"
 [cols_hide]
-other = "Ẩn các cột đó"
+other = "Bớt cột"
 [home_note_table]
 other = """<ul>
 <li>Số bài bị từ chối gồm bài bị từ chối sau phản biện, bài rút và bài bị loại sơ bộ; số liệu theo từng hội nghị có ở trang của từng giảng viên và trang Giảng viên.</li>
