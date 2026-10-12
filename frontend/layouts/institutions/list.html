@@ -30,7 +30,7 @@
 		<td class="l pin2 wrap"><span class="cup"></span><a href="{{ printf "institutions/%s/" .slug | relLangURL }}">{{ partial "iname.html" .name }}</a></td>
 		<td>{{ len .professors }}</td>
 		{{ partial "group-cells.html" .venues }}
-		<td class="score">{{ printf "%.1f" .score }}</td>
+		<td class="score">{{ printf "%.2f" .score }}</td>
 		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" .own_page) }}">+{{ .own_page }}</span>{{ end }}</td>
 		{{ partial "rejected-total.html" .venues }}
 		{{- if eq .rejected_estimated nil }}

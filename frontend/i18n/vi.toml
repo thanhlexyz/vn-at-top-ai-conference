@@ -104,7 +104,7 @@ other = "đã nộp"
 [th_score]
 other = "điểm CSRankings"
 [tip_score_inst]
-other = "Tổng điểm của các giảng viên, như CSRankings; bảng được xếp theo điểm này"
+other = "Theo cách CSRankings xếp hạng các trường: điểm hiệu chỉnh của các giảng viên được cộng lại theo từng lĩnh vực (AI, ML, CV, NLP), và điểm là trung bình nhân của (điểm lĩnh vực + 1) trên các lĩnh vực; bảng được xếp theo điểm này"
 [tip_score]
 other = "Mỗi bài được nhận tính 1 / (số tác giả của bài), như CSRankings; bảng được xếp theo điểm này"
 [th_accepted]
@@ -203,7 +203,7 @@ other = "Một số hồ sơ hiện chưa đầy đủ hoặc đang chờ xác n
 [home_flag_pending]
 other = "Hiện có {{ .Count }} trường hợp trùng tên chưa được xác nhận, xin xem tại trang <a href=\"{{ .URL }}\">Ứng viên</a>."
 [home_score_callout]
-other = "<strong>Cách tính điểm.</strong> Đây là điểm hiệu chỉnh (adjusted count) mà <a href=\"https://csrankings.org/\">CSRankings</a> sử dụng: mỗi bài được chấp nhận có giá trị <strong>1 chia cho số tác giả của bài</strong> đối với mỗi giảng viên trong danh sách là tác giả của bài, và điểm của một giảng viên là tổng điểm các bài của họ. Bài có 4 tác giả cộng 0,25; bài có 10 tác giả cộng 0,1. Điểm của một trường là tổng điểm của các giảng viên. Bài chính thức và chưa chính thức đều được tính, bài bị từ chối thì không. Xem thêm ở mục <a href=\"{{ .About }}\">Giới thiệu</a>."
+other = "<strong>Cách tính điểm.</strong> Đây là điểm hiệu chỉnh (adjusted count) mà <a href=\"https://csrankings.org/\">CSRankings</a> sử dụng: mỗi bài được chấp nhận có giá trị <strong>1 chia cho số tác giả của bài</strong> đối với mỗi giảng viên trong danh sách là tác giả của bài, và điểm của một giảng viên là tổng điểm các bài của họ. Bài có 4 tác giả cộng 0,25; bài có 10 tác giả cộng 0,1. Điểm của một trường cộng điểm của các giảng viên theo từng trong bốn lĩnh vực (AI, ML, CV, NLP) rồi lấy trung bình nhân của bốn số đó, mỗi số cộng 1, như CSRankings. Bài chính thức và chưa chính thức đều được tính, bài bị từ chối thì không. Xem thêm ở mục <a href=\"{{ .About }}\">Giới thiệu</a>."
 [cols_show]
 other = "Thêm cột"
 [cols_show_inst]

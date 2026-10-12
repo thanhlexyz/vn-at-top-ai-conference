@@ -26,6 +26,7 @@ import graph
 import difflib
 import html
 import json
+import math
 import re
 import urllib.parse
 
@@ -1099,6 +1100,10 @@ def main():
             "links": person_links(person),
             # CSRankings' adjusted count: each accepted paper is worth 1 / (number of authors on it), summed
             "score": round(sum(1 / max(len(r["authors"]), 1) for r in counted if r["status"] == "accepted"), 2),
+            # the same credit by CSRankings area (AI, ML, CV, NLP), which the score of an institution is built from
+            "score_areas": {g["name"]: round(sum(1 / max(len(r["authors"]), 1) for r in counted
+                                                 if r["status"] == "accepted" and r["venue"] in g["venues"]), 4)
+                            for g in VENUE_GROUPS},
             "iclr_complete": complete, "flags": flags, **s, "collab": collaboration(person, counted, workshop), "authorship": authorship(counted, person),
             "accepted_papers": [page_entry(r) for r in sorted(counted, key=paper_order) if r["status"] == "accepted"],
             "not_accepted_papers": [page_entry(r) for r in sorted(counted, key=paper_order)
@@ -1201,10 +1206,13 @@ def main():
         i["rate_trivial"] = not iclr["submitted"]   # nothing to estimate the hidden rejections from
     for i in institutions:
         i["author_charts"] = authorship_charts(i, i["short"])
-    # CSRankings' adjusted count of an institution: the scores of its professors added up (a paper shared by two of
-    # them counts for each, as it does there)
+    # CSRankings' score of an institution: the adjusted counts of its professors are added up in each area (a paper
+    # shared by two of them counts for each, as it does there), and the score is the geometric mean over the areas
+    # of (count + 1), "the nth root of the product of all adjusted counts (+ 1)"
     for i in institutions:
-        i["score"] = round(sum(p["score"] for p in professors if p["institution_slug"] == i["slug"]), 2)
+        mine = [p for p in professors if p["institution_slug"] == i["slug"]]
+        i["score_areas"] = {g["name"]: round(sum(p["score_areas"][g["name"]] for p in mine), 2) for g in VENUE_GROUPS}
+        i["score"] = round(math.prod(v + 1 for v in i["score_areas"].values()) ** (1 / len(VENUE_GROUPS)), 2)
     institutions.sort(key=lambda i: (-i["score"], -i["accepted"], -i["official"], i["name"]))
     # Vietnamese names, confirmed by hand (institution_names.csv); the Vietnamese site shows them
     names_vi = {r["name"]: r["name_vi"] for r in read_csv(BACKEND / "institution_names.csv")}

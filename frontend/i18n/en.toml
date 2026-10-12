@@ -107,7 +107,7 @@ other = "accepted"
 [th_score]
 other = "CSRankings score"
 [tip_score_inst]
-other = "The scores of its professors added up, as in CSRankings; the table is ordered by it"
+other = "As CSRankings ranks institutions: the adjusted counts of its professors are added up in each area (AI, ML, CV, NLP), and the score is the geometric mean over the areas of (count + 1); the table is ordered by it"
 [tip_score]
 other = "Each accepted paper counts 1 / (number of its authors), as in CSRankings; the table is ordered by it"
 [th_rejected]
@@ -205,7 +205,7 @@ other = "Some records are incomplete or still to be confirmed. Those professors 
 [home_flag_pending]
 other = "{{ .Count }} uncertain matches wait for a decision, see <a href=\"{{ .URL }}\">Candidates</a>."
 [home_score_callout]
-other = "<strong>How the score is calculated.</strong> It is the adjusted count that <a href=\"https://csrankings.org/\">CSRankings</a> uses: each accepted paper is worth <strong>1 divided by its number of authors</strong> to every listed professor who is an author of it, and a professor's score is the sum over their papers. A paper with 4 authors adds 0.25; a paper with 10 adds 0.1. The score of an institution is the sum of its professors' scores. Official and unofficial papers both count, rejected papers do not. See <a href=\"{{ .About }}\">About</a>."
+other = "<strong>How the score is calculated.</strong> It is the adjusted count that <a href=\"https://csrankings.org/\">CSRankings</a> uses: each accepted paper is worth <strong>1 divided by its number of authors</strong> to every listed professor who is an author of it, and a professor's score is the sum over their papers. A paper with 4 authors adds 0.25; a paper with 10 adds 0.1. An institution's score adds up its professors' scores in each of the four areas (AI, ML, CV, NLP) and takes the geometric mean of those four numbers, each plus 1, as CSRankings does. Official and unofficial papers both count, rejected papers do not. See <a href=\"{{ .About }}\">About</a>."
 [cols_show]
 other = "More columns"
 [cols_show_inst]

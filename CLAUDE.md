@@ -129,8 +129,9 @@ to VietProfs, professors to their page here; each author carries the flag of the
 ## Score
 
 The front-page and institution tables are ordered by CSRankings' adjusted count: each accepted paper (official and
-unofficial) is worth 1 / (number of authors) to each listed professor; an institution's score is the sum of its
-professors' scores (`score` in `build_site_data.py`, not the geometric mean over areas that CSRankings itself uses).
+unofficial) is worth 1 / (number of authors) to each listed professor; an institution's score adds up its
+professors' scores in each of the four areas, combined as CSRankings does: the geometric mean over AI, ML, CV, NLP of
+(area count + 1) (`score_areas` and `score` in `build_site_data.py`).
 It is explained in a callout on the front page and in About; keep the three in step.
 
 ## Tables, sorting and cups (`frontend/static/site.js`, `partials/professor-table.html`)
