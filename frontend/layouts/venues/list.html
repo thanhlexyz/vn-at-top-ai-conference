@@ -12,6 +12,7 @@
 		{{ partial "split-heads.html" . }}
 		<th class="bad">{{ T "th_Rejected" }}</th>
 		<th class="est" title="{{ T "tip_rejected_est_venue" }}">{{ T "th_Rejected_est" }}</th>
+		<th class="sub" title="{{ T "tip_submitted_est" }}">{{ T "th_Submitted_est" }}</th>
 		<th class="rate" title="{{ T "tip_rate_venue" }}">{{ T "th_rate_venue" }}</th>
 	</tr>
 	</thead>
@@ -47,6 +48,7 @@
 		{{- end }}
 		{{- end }}
 		{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}
+		{{ partial "numc.html" (dict "v" (add (int .accepted) (int .rejected_estimated)) "cls" "total sub") }}
 		{{- /* accepted over submitted: counted at ICLR, estimated (~) where rejections are hidden */}}
 		{{- /* ours (estimated where rejections are hidden) / the rate the conference reports, all years together */}}
 		<td class="rate" title="{{ with .reported_detail }}{{ T "tip_reported_detail" . }}{{ end }}">
