@@ -39,6 +39,10 @@ Chẳng hạn, với 9 bài nộp ICLR và 1 bài được chấp nhận, tỉ l
 
 Đây là phép ngoại suy, không phải số liệu đo lường. Phép tính giả định rằng các hội nghị khác đánh giá bài của giảng viên tương tự như ICLR, và tính theo số lần nộp: một bài bị từ chối tại hội nghị này rồi được chấp nhận tại hội nghị sau sẽ được tính hai lần.
 
+## Điểm số
+
+Điểm số ở trang chủ là điểm hiệu chỉnh (adjusted count) của [CSRankings](https://csrankings.org/): mỗi bài được chấp nhận có giá trị bằng 1 chia cho số tác giả của bài đối với mỗi giảng viên trong danh sách là tác giả của bài, và điểm của một giảng viên là tổng điểm các bài của họ. Điểm của một trường là tổng điểm của các giảng viên, nên một bài có hai giảng viên cùng trường được tính cho từng người. Bài chính thức và bài chưa chính thức đều được tính; danh sách tác giả của bài chưa chính thức lấy từ trang cá nhân nơi bài được đăng và có thể chưa đầy đủ, khiến phần điểm của bài đó cao hơn một chút. CSRankings tự xếp hạng các trường theo trung bình nhân của số liệu này trên bốn lĩnh vực; ở đây dùng tổng thông thường, vì phần lớn các trường chỉ có bài ở một hoặc hai lĩnh vực. Các bảng được xếp theo điểm, rồi theo số bài được chấp nhận.
+
 ## Cách thống kê chặt chẽ hơn trên trang của trường
 
 Trang của mỗi trường và mỗi giảng viên có thêm hai biểu đồ. Biểu đồ thứ nhất đánh dấu bài được chấp nhận khi hơn một nửa số tác giả ghi đơn vị công tác là trường đó; biểu đồ thứ hai đánh dấu khi tác giả đứng đầu ghi đơn vị là trường đó. Đơn vị lấy từ danh sách chính thức hoặc, khi danh sách không ghi, từ bản PDF của bài; các bài chỉ được công bố trên trang cá nhân chưa có đơn vị và được tô màu xám.

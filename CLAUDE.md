@@ -126,6 +126,13 @@ joins the co-authors outside Vietnam with 5 or more counted papers together with
 Candidates table "Co-authors outside Vietnam", `FOREIGN_MIN_PAPERS`) and a checked row in `vietprofs.csv`. Authors link
 to VietProfs, professors to their page here; each author carries the flag of the country VietProfs lists.
 
+## Score
+
+The front-page and institution tables are ordered by CSRankings' adjusted count: each accepted paper (official and
+unofficial) is worth 1 / (number of authors) to each listed professor; an institution's score is the sum of its
+professors' scores (`score` in `build_site_data.py`, not the geometric mean over areas that CSRankings itself uses).
+It is explained in a callout on the front page and in About; keep the three in step.
+
 ## Tables, sorting and cups (`frontend/static/site.js`, `partials/professor-table.html`)
 
 - "x +y" (official, unofficial) sorts as x + y; among equal totals, more official papers first. The default order of

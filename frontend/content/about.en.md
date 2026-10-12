@@ -39,6 +39,10 @@ With 9 ICLR submissions and 1 accepted, that is 10 / 2 = 5, so each paper accept
 
 This is a projection, not a measurement. It assumes the other venues treated the professor's papers as ICLR did, and it counts attempts: a paper rejected at one conference and accepted at the next appears twice.
 
+## The score
+
+The score on the front page is the adjusted count of [CSRankings](https://csrankings.org/): each accepted paper is worth 1 divided by its number of authors to every listed professor who is an author of it, and a professor's score is the sum over their papers. The score of an institution is the sum of the scores of its professors, so a paper shared by two professors of the same institution counts for each of them. Official and unofficial papers both count; the author list of an unofficial paper comes from the personal page it was found on and may be incomplete, which makes its share a little high. CSRankings itself ranks institutions by the geometric mean of this count over the four areas; here the plain sum is used, because most institutions have papers in only one or two areas. The tables are ordered by the score, then by accepted papers.
+
 ## Stricter counts on institution pages
 
 Institution and professor pages have two more charts. One marks an accepted paper when more than half of its authors list the institution. The other marks it when the first author does. Affiliations come from the official list or, where it prints none, from the PDF of the paper; papers known only from personal pages have none yet and are shown in grey.

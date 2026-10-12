@@ -7,6 +7,7 @@
 {{- /* notes on the records and uncertain matches are kept on the local Candidates page */}}
 <p class="table-tools"><button type="button" class="more-columns" aria-expanded="false" data-show="{{ T "cols_show" }}" data-hide="{{ T "cols_hide" }}">{{ T "cols_show" }}</button></p>
 {{ partial "professor-table.html" (dict "rows" hugo.Data.professors "compact" true "podium" true "brief" true) }}
+<aside class="callout"><p>{{ T "home_score_callout" (dict "About" (relLangURL "about/")) | safeHTML }}</p></aside>
 <div class="note">{{ T "home_note_table" (dict "About" (relLangURL "about/")) | safeHTML }}</div>
 {{- range $meta.provisional }}
 <p class="note">{{ T "home_note_provisional" (dict "Name" .name "Year" .year) | safeHTML }}</p>

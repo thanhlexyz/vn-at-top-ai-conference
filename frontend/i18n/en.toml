@@ -202,6 +202,8 @@ other = "Conference papers by professors and lecturers in Vietnam, {{ .First }}&
 other = "Some records are incomplete or still to be confirmed. Those professors are marked with * and their pages say what is missing."
 [home_flag_pending]
 other = "{{ .Count }} uncertain matches wait for a decision, see <a href=\"{{ .URL }}\">Candidates</a>."
+[home_score_callout]
+other = "<strong>How the score is calculated.</strong> It is the adjusted count that <a href=\"https://csrankings.org/\">CSRankings</a> uses: each accepted paper is worth <strong>1 divided by its number of authors</strong> to every listed professor who is an author of it, and a professor's score is the sum over their papers. A paper with 4 authors adds 0.25; a paper with 10 adds 0.1. The score of an institution is the sum of its professors' scores. Official and unofficial papers both count, rejected papers do not. See <a href=\"{{ .About }}\">About</a>."
 [cols_show]
 other = "Show more columns: workshop papers, own institution, co-authors, topics, Google Scholar"
 [cols_hide]
