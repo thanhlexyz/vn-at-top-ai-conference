@@ -9,12 +9,13 @@
 		<th rowspan="2" class="l pin2 wrap">{{ T "th_institution" }}</th>
 		<th rowspan="2">{{ T "th_professors" }}</th>
 		<th colspan="{{ len hugo.Data.meta.venue_groups }}">{{ T "th_accepted_at" }}</th>
-		<th colspan="7">{{ T "th_total" }}</th>
+		<th colspan="8">{{ T "th_total" }}</th>
 		<th rowspan="2" title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
 	</tr>
 	<tr>
 		{{ partial "group-heads.html" . }}
-		<th class="good" data-podium>{{ T "th_accepted" }}</th>
+		<th data-podium title="{{ T "tip_score_inst" }}">{{ T "th_score" }}</th>
+		<th class="good">{{ T "th_accepted" }}</th>
 		{{ partial "split-heads.html" . }}
 		<th class="bad" title="{{ T "tip_rejected_total" }}">{{ T "th_rejected" }}</th>
 		<th class="est" title="{{ T "tip_rejected_est_inst" }}">{{ T "th_rejected_est" }}</th>
@@ -30,6 +31,7 @@
 		<td class="l pin2 wrap"><span class="cup"></span><a href="{{ printf "institutions/%s/" .slug | relLangURL }}">{{ partial "iname.html" .name }}</a></td>
 		<td>{{ len .professors }}</td>
 		{{ partial "group-cells.html" .venues }}
+		<td>{{ printf "%.1f" .score }}</td>
 		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" .own_page) }}">+{{ .own_page }}</span>{{ end }}</td>
 		{{ partial "split-cells.html" . }}
 		{{ partial "rejected-total.html" .venues }}

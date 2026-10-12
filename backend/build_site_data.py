@@ -1201,7 +1201,11 @@ def main():
         i["rate_trivial"] = not iclr["submitted"]   # nothing to estimate the hidden rejections from
     for i in institutions:
         i["author_charts"] = authorship_charts(i, i["short"])
-    institutions.sort(key=lambda i: (-i["accepted"], -i["official"], i["name"]))
+    # CSRankings' adjusted count of an institution: the scores of its professors added up (a paper shared by two of
+    # them counts for each, as it does there)
+    for i in institutions:
+        i["score"] = round(sum(p["score"] for p in professors if p["institution_slug"] == i["slug"]), 2)
+    institutions.sort(key=lambda i: (-i["score"], -i["accepted"], -i["official"], i["name"]))
     # Vietnamese names, confirmed by hand (institution_names.csv); the Vietnamese site shows them
     names_vi = {r["name"]: r["name_vi"] for r in read_csv(BACKEND / "institution_names.csv")}
     for i in institutions:
