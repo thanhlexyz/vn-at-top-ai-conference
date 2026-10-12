@@ -390,7 +390,8 @@ form.feedback .fb-actions { display: flex ; flex-wrap: wrap ; gap: 0.6em ; }
 td.good, th.good { background: var(--good) ; }
 td.score, th.score { background: var(--score) ; }
 /* the estimate headings are three short lines, so those columns stay as narrow as their numbers allow */
-th.est, th.sub, th.rate { width: 6.5em ; }
+/* the number columns take no more than their heading's longest word or their numbers need: the table keeps tight */
+th.score, th.good, th.bad, th.est, th.sub, th.rate { width: 1px ; }
 td.bad, th.bad { background: var(--bad) ; }
 
 /* Wide tables: the scrollbar sits on top (the box is flipped, and the table flipped back), and the first two
