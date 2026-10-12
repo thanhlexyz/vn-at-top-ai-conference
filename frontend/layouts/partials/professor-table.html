@@ -4,7 +4,7 @@
 {{- if reflect.IsMap . }}{{ $rows = .rows }}{{ $compact = .compact }}{{ $podium = .podium }}{{ $rank = or .rank .podium }}{{ $brief = .brief }}{{ end }}
 {{- $last := hugo.Data.meta.last_year }}
 <div class="scroll pinned top">
-<table{{ if $podium }} class="podium"{{ end }}>
+<table{{ if $podium }} class="podium{{ if $brief }} collapsed{{ end }}"{{ else if $brief }} class="collapsed"{{ end }}{{ if $brief }} data-collapsible{{ end }}>
 	<thead>
 	<tr>
 		{{- if $rank }}<th rowspan="2" class="pin0 rank" data-nosort>#</th>{{ end }}
@@ -18,11 +18,11 @@
 		<th colspan="{{ len hugo.Data.meta.venue_groups }}">{{ T "th_accepted_at" }}</th>
 		{{- end }}
 		<th colspan="{{ cond $brief 5 8 }}">{{ T "th_total" }}</th>
-		<th rowspan="2" class="ws" title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
-		<th colspan="2" title="{{ T "tip_own_institution" }}">{{ T "th_own_institution" }}</th>
-		<th colspan="{{ cond $brief 3 7 }}">{{ T "th_coauthors" }}</th>
-		<th rowspan="2" title="{{ T "tip_topics" }}">{{ T "th_topics" }}</th>
-		<th colspan="3" title="{{ T "tip_scholar" }}">Google Scholar</th>
+		<th rowspan="2" class="ws"{{ if $brief }} data-extra{{ end }} title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
+		<th colspan="2"{{ if $brief }} data-extra{{ end }} title="{{ T "tip_own_institution" }}">{{ T "th_own_institution" }}</th>
+		<th colspan="{{ cond $brief 3 7 }}"{{ if $brief }} data-extra{{ end }}>{{ T "th_coauthors" }}</th>
+		<th rowspan="2"{{ if $brief }} data-extra{{ end }} title="{{ T "tip_topics" }}">{{ T "th_topics" }}</th>
+		<th colspan="3"{{ if $brief }} data-extra{{ end }} title="{{ T "tip_scholar" }}">Google Scholar</th>
 	</tr>
 	<tr>
 		{{- if not $compact }}
@@ -41,20 +41,20 @@
 		{{- if not $brief }}<th class="est" title="{{ T "tip_rejected_est" }}">{{ T "th_rejected_est" }}</th>{{ end }}
 		<th class="sub" title="{{ T "tip_submitted_est" }}">{{ T "th_submitted_est_col" }}</th>
 		<th class="rate" title="{{ T "tip_rate_est" }}">{{ T "th_rate_est" }}</th>
-		<th title="{{ T "tip_majority" }}">{{ T "th_majority" }}</th>
-		<th title="{{ T "tip_first_author" }}">{{ T "th_first_author" }}</th>
-		<th title="{{ T "tip_per_paper" }}">{{ T "th_per_paper" }}</th>
-		<th class="ca-min" title="{{ T "tip_min" }}">{{ T "th_min" }}</th>
-		<th class="ca-max" title="{{ T "tip_max" }}">{{ T "th_max" }}</th>
+		<th{{ if $brief }} data-extra{{ end }} title="{{ T "tip_majority" }}">{{ T "th_majority" }}</th>
+		<th{{ if $brief }} data-extra{{ end }} title="{{ T "tip_first_author" }}">{{ T "th_first_author" }}</th>
+		<th{{ if $brief }} data-extra{{ end }} title="{{ T "tip_per_paper" }}">{{ T "th_per_paper" }}</th>
+		<th class="ca-min"{{ if $brief }} data-extra{{ end }} title="{{ T "tip_min" }}">{{ T "th_min" }}</th>
+		<th class="ca-max"{{ if $brief }} data-extra{{ end }} title="{{ T "tip_max" }}">{{ T "th_max" }}</th>
 		{{- if not $brief }}
 		<th class="ca-dom" title="{{ T "tip_domestic" }}">{{ T "th_domestic" }}</th>
 		<th class="ca-for" title="{{ T "tip_foreign" }}">{{ T "th_foreign" }}</th>
 		<th class="ca-same" title="{{ T "tip_same_institution" }}">{{ T "th_same_institution" }}</th>
 		<th class="ca-other" title="{{ T "tip_other_institutions" }}">{{ T "th_other_institutions" }}</th>
 		{{- end }}
-		<th>{{ T "scholar_citations" }}</th>
-		<th>{{ T "scholar_h" }}</th>
-		<th>{{ T "scholar_i10" }}</th>
+		<th{{ if $brief }} data-extra{{ end }}>{{ T "scholar_citations" }}</th>
+		<th{{ if $brief }} data-extra{{ end }}>{{ T "scholar_h" }}</th>
+		<th{{ if $brief }} data-extra{{ end }}>{{ T "scholar_i10" }}</th>
 	</tr>
 	</thead>
 	<tbody>

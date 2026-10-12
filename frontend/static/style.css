@@ -30,6 +30,10 @@
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) figure.logo img, :root:not([data-theme="light"]) img.mini { background: #ffffff ; padding: 4px ; border-radius: 4px ; filter: brightness(0.62) ; }
 }
+table.collapsed .xcol, table.collapsed [data-extra] { display: none ; }
+.table-tools { margin: 0.6em 0 0.4em ; }
+.more-columns { background: none ; border: 1px solid var(--line) ; color: var(--fg) ; font: inherit ; cursor: pointer ; border-radius: 4px ; padding: 0.2em 0.7em ; }
+.more-columns:hover, .more-columns:focus-visible { border-color: var(--fg) ; }
 nav .theme { background: none ; border: 1px solid var(--line) ; color: var(--fg) ; font: inherit ; cursor: pointer ; border-radius: 4px ; padding: 0 0.4em ; margin-left: 0.8em ; }
 
 body {

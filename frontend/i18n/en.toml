@@ -202,6 +202,10 @@ other = "Conference papers by professors and lecturers in Vietnam, {{ .First }}&
 other = "Some records are incomplete or still to be confirmed. Those professors are marked with * and their pages say what is missing."
 [home_flag_pending]
 other = "{{ .Count }} uncertain matches wait for a decision, see <a href=\"{{ .URL }}\">Candidates</a>."
+[cols_show]
+other = "Show more columns: workshop papers, own institution, co-authors, topics, Google Scholar"
+[cols_hide]
+other = "Hide those columns"
 [home_note_table]
 other = """<ul>
 <li>Rejected counts rejected, withdrawn and desk-rejected submissions; the count per conference is on each professor's page and on the Professors page.</li>

@@ -142,6 +142,24 @@
 		podium(table, start ? start[1] : undefined);
 	});
 
+	// The front page table starts without its detail columns (headings marked data-extra); the button above it
+	// shows them again. Cells are marked by the column of their heading, so sorting and cups are unaffected.
+	document.querySelectorAll("table[data-collapsible]").forEach(function (table) {
+		var columns = leafHeadings(table.tHead).filter(function (pair) { return pair[0].hasAttribute("data-extra"); })
+			.map(function (pair) { return pair[1]; });
+		Array.prototype.forEach.call(table.tBodies[0].rows, function (tr) {
+			columns.forEach(function (c) { if (tr.cells[c]) tr.cells[c].classList.add("xcol"); });
+		});
+		var button = document.querySelector("button.more-columns");
+		if (!button) return;
+		button.addEventListener("click", function () {
+			var hidden = table.classList.toggle("collapsed");
+			button.textContent = hidden ? button.dataset.show : button.dataset.hide;
+			button.setAttribute("aria-expanded", hidden ? "false" : "true");
+			window.dispatchEvent(new Event("resize"));   // the pinned columns are measured again
+		});
+	});
+
 	document.querySelectorAll("table").forEach(function (table) {
 		if (!table.tHead || !table.tBodies[0] || table.tBodies[0].rows.length < 3) return;
 		leafHeadings(table.tHead).forEach(function (pair) {

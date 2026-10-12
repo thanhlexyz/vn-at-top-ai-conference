@@ -200,6 +200,10 @@ other = "Bài báo tại các hội nghị AI hàng đầu của giảng viên �
 other = "Một số hồ sơ hiện chưa đầy đủ hoặc đang chờ xác nhận. Các giảng viên này được đánh dấu * và trang của từng giảng viên có ghi rõ những thông tin còn thiếu."
 [home_flag_pending]
 other = "Hiện có {{ .Count }} trường hợp trùng tên chưa được xác nhận, xin xem tại trang <a href=\"{{ .URL }}\">Ứng viên</a>."
+[cols_show]
+other = "Hiện thêm cột: bài workshop, trường của giảng viên, đồng tác giả, chủ đề, Google Scholar"
+[cols_hide]
+other = "Ẩn các cột đó"
 [home_note_table]
 other = """<ul>
 <li>Số bài bị từ chối gồm bài bị từ chối sau phản biện, bài rút và bài bị loại sơ bộ; số liệu theo từng hội nghị có ở trang của từng giảng viên và trang Giảng viên.</li>
