@@ -514,3 +514,12 @@ aside.callout p { margin: 0 ; line-height: 1.55 ; }
 /* a number and its unofficial "+N" stay on one line */
 td:not(.l) { white-space: nowrap ; }
 svg.net .node text.sub { font-size: 12px ; fill: var(--muted) ; }
+
+/* Phones: only the name stays pinned (the professor, or the institution on the Institutions list); the # and
+   institution columns, and the logos, are left out so the numbers have room */
+@media (max-width: 640px) {
+	.scroll.pinned .pin0, .scroll.pinned .logo-col.pin1 { display: none ; }
+	.scroll.pinned .pin1:not(.logo-col) + .pin2 { display: none ; }   /* professor tables: the institution column */
+	.scroll.pinned .pin1:not(.logo-col) { left: 0 ; box-shadow: 2px 0 0 var(--line) ; min-width: 7.5em ; max-width: 9.5em ; white-space: normal ; }
+	.scroll.pinned .logo-col.pin1 + .pin2 { left: 0 ; }                /* the Institutions list: the name stays */
+}
