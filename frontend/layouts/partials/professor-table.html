@@ -17,7 +17,7 @@
 		{{- if $compact }}
 		<th colspan="{{ len hugo.Data.meta.venue_groups }}">{{ T "th_accepted_at" }}</th>
 		{{- end }}
-		<th colspan="{{ cond $brief 5 7 }}">{{ T "th_total" }}</th>
+		<th colspan="{{ cond $brief 4 7 }}">{{ T "th_total" }}</th>
 		<th rowspan="2" class="ws" title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
 		<th colspan="2" title="{{ T "tip_own_institution" }}">{{ T "th_own_institution" }}</th>
 		<th colspan="{{ cond $brief 3 7 }}">{{ T "th_coauthors" }}</th>
@@ -37,7 +37,7 @@
 		<th class="good"{{ if $podium }} data-podium{{ end }}>{{ T "th_accepted" }}</th>
 		{{- if not $brief }}{{ partial "split-heads.html" . }}{{ end }}
 		<th class="bad" title="{{ T "tip_rejected_total" }}">{{ T "th_rejected" }}</th>
-		<th class="est" title="{{ T "tip_rejected_est" }}">{{ T "th_rejected_est" }}</th>
+		{{- if not $brief }}<th class="est" title="{{ T "tip_rejected_est" }}">{{ T "th_rejected_est" }}</th>{{ end }}
 		<th class="sub" title="{{ T "tip_submitted_est" }}">{{ T "th_submitted_est_col" }}</th>
 		<th class="rate" title="{{ T "tip_rate_est" }}">{{ T "th_rate_est" }}</th>
 		<th title="{{ T "tip_majority" }}">{{ T "th_majority" }}</th>
@@ -85,11 +85,11 @@
 		{{- if not $brief }}{{ partial "split-cells.html" . }}{{ end }}
 		{{ partial "rejected-total.html" .venues }}
 		{{- if eq .rejected_estimated nil }}
-		<td class="na est">&ndash;</td>
+		{{- if not $brief }}<td class="na est">&ndash;</td>{{ end }}
 		<td class="na sub">&ndash;</td>
 		<td class="na rate">&ndash;</td>
 		{{- else }}
-		{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}
+		{{- if not $brief }}{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}{{ end }}
 		{{ partial "numc.html" (dict "v" (add (int .accepted) (int .rejected_estimated)) "cls" "total sub") }}
 		{{- if eq .acceptance_rate nil }}<td class="na rate">&ndash;</td>
 		{{- else if ne .projection.basis "own" }}<td class="rate trivial" data-last title="{{ T "tip_rate_trivial" }}">{{ .acceptance_rate }}%</td>
