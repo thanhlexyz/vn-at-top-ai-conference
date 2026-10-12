@@ -2,7 +2,8 @@
 title: "Giảng viên"
 ---
 
-Trang thông tin này thống kê số bài mỗi giảng viên đã nộp tại ICLR, cùng số bài được chấp nhận tại mười hội nghị, chia nhóm theo cách của [CSRankings](https://csrankings.org/): AI (AAAI, IJCAI), ML (ICLR, NeurIPS, ICML), CV (CVPR, ICCV, ECCV) và NLP (ACL, EMNLP).
+Trang thông tin này thống kê số bài của giảng viên ở Việt Nam được chấp nhận tại **mười hội nghị AI hàng đầu**, chia nhóm theo cách của [CSRankings](https://csrankings.org/): AI (AAAI, IJCAI), ML (ICLR, NeurIPS, ICML), CV (CVPR, ICCV, ECCV) và NLP (ACL, EMNLP).
+Với mỗi giảng viên và mỗi trường, chúng tôi tính **điểm CSRankings**, trong đó mỗi bài có giá trị bằng 1 chia cho số tác giả của bài, và **xếp hạng theo điểm này**.
 Bài báo được tính từ năm giảng viên về công tác tại một đơn vị ở Việt Nam.
 Do chỉ ICLR công khai toàn bộ bài nộp, số bài nộp và số bài bị từ chối chỉ có đối với ICLR.
 
