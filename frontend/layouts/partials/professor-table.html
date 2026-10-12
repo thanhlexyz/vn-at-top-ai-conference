@@ -34,7 +34,7 @@
 		{{- if $compact }}
 		{{ partial "group-heads.html" . }}
 		{{- end }}
-		<th{{ if $podium }} data-podium{{ end }} title="{{ T "tip_score" }}">{{ T "th_score" }}</th>
+		<th class="score"{{ if $podium }} data-podium{{ end }} title="{{ T "tip_score" }}">{{ T "th_score" }}</th>
 		<th class="good">{{ T "th_accepted" }}</th>
 		{{- if not $brief }}{{ partial "split-heads.html" . }}{{ end }}
 		<th class="bad" title="{{ T "tip_rejected_total" }}">{{ T "th_rejected" }}</th>
@@ -82,7 +82,7 @@
 		{{- if $compact }}
 		{{ partial "group-cells.html" .venues }}
 		{{- end }}
-		<td>{{ printf "%.1f" .score }}</td>
+		<td class="score">{{ printf "%.1f" .score }}</td>
 		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" .own_page) }}">+{{ .own_page }}</span>{{ end }}</td>
 		{{- if not $brief }}{{ partial "split-cells.html" . }}{{ end }}
 		{{ partial "rejected-total.html" .venues }}
