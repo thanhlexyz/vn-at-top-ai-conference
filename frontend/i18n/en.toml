@@ -104,6 +104,10 @@ other = "Papers"
 other = "submitted"
 [th_accepted]
 other = "accepted"
+[th_score]
+other = "score"
+[tip_score]
+other = "Each accepted paper counts 1 / (number of its authors), as in CSRankings; the table is ordered by it"
 [th_rejected]
 other = "rejected"
 [th_rejected_est]
@@ -204,7 +208,7 @@ other = """<ul>
 <li>&ndash; means the OpenReview records of that professor have not been fetched.</li>
 <li>All counts are for the main conference track only; workshops, position papers and the NeurIPS Datasets &amp; Benchmarks track are left out.</li>
 <li>A paper placed in Findings was not accepted to the main track, so it counts as rejected from the main track; it is also listed with the workshop papers.</li>
-<li>Professors are ordered by accepted papers, official and unofficial together; among equals, more official papers come first.</li>
+<li>The score is the one CSRankings uses: each accepted paper counts 1 divided by its number of authors, so a paper shared by many authors weighs less. Professors are ordered by it; among equals, by accepted papers, official and unofficial together, and then more official papers first.</li>
 </ul>"""
 [home_note_provisional]
 other = "The official {{ .Name }} {{ .Year }} list is not complete yet, and its authors cannot be confirmed on OpenReview until the conference; its papers, and those listed on professors' own pages, count as unofficial and are shown as <span class=\"own\">+N</span>."

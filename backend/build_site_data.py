@@ -1097,6 +1097,8 @@ def main():
             "page_note_vi": person["page_note_vi"] or person["page_note"], "homepage": person["homepage"], "vn_since": person["vn_since"] or 0,
             "openreview_ids": person["openreview_ids"], "openreview_source": source, "openreview_fetched": fetched,
             "links": person_links(person),
+            # CSRankings' adjusted count: each accepted paper is worth 1 / (number of authors on it), summed
+            "score": round(sum(1 / max(len(r["authors"]), 1) for r in counted if r["status"] == "accepted"), 2),
             "iclr_complete": complete, "flags": flags, **s, "collab": collaboration(person, counted, workshop), "authorship": authorship(counted, person),
             "accepted_papers": [page_entry(r) for r in sorted(counted, key=paper_order) if r["status"] == "accepted"],
             "not_accepted_papers": [page_entry(r) for r in sorted(counted, key=paper_order)
@@ -1110,7 +1112,9 @@ def main():
         graph_recs += [(r, person["slug"]) for r in workshop if in_vietnam(person, r["year"])]
     # most accepted first; people with none accepted yet come last, most submissions first
     # accepted papers, official and unofficial together, more official ones first among equals, as the tables sort them
-    professors.sort(key=lambda p: (-p["accepted"], -p["official"], -p["venues"]["iclr"]["submitted"] if p["accepted"]
+    # (CSRankings' score, the sum of 1 / authors over the accepted papers, comes first)
+    professors.sort(key=lambda p: (-p["score"], -p["accepted"], -p["official"],
+                                   -p["venues"]["iclr"]["submitted"] if p["accepted"]
                                    else -sum(v.get("submitted", 0) for v in p["venues"].values()), p["name"]))
 
     # authors on a professor's page link to the person when that person is on the site and has the same paper in
