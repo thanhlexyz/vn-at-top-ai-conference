@@ -24,7 +24,8 @@ REVIEW = BACKEND / "review.csv"  # uncertain matches; the build appends rows, yo
 CANDIDATES = BACKEND / "candidates.csv"  # generated: people found but not on the roster
 
 FIRST_YEAR = 2020
-LAST_YEAR = datetime.date.today().year
+# ICLR 2027 submissions have been public on OpenReview since October 2026, so the year starts early.
+LAST_YEAR = max(datetime.date.today().year, 2027)
 YEARS = list(range(FIRST_YEAR, LAST_YEAR + 1))
 
 # `rejections` says what the venue makes public:

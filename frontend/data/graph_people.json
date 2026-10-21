@@ -484,6 +484,23 @@
    "anchor": "start"
   },
   {
+   "name": "Son Ha Xuan",
+   "name_vi": "Hà Xuân Sơn",
+   "url": "professors/son-ha-xuan/",
+   "group": "RMIT",
+   "id": "son-ha-xuan",
+   "papers": 3,
+   "x": 906.0,
+   "y": 472.2,
+   "linked": true,
+   "r": 12.1,
+   "color": "c0",
+   "degree": 1,
+   "lx": 906.0,
+   "ly": 453.1,
+   "anchor": "middle"
+  },
+  {
    "name": "Tan D. Tran",
    "name_vi": "Tan D. Tran",
    "url": "professors/tan-d-tran/",
@@ -646,23 +663,6 @@
    "lx": 313.5,
    "ly": 1081.3,
    "anchor": "start"
-  },
-  {
-   "name": "Son Ha Xuan",
-   "name_vi": "Hà Xuân Sơn",
-   "url": "professors/son-ha-xuan/",
-   "group": "RMIT",
-   "id": "son-ha-xuan",
-   "papers": 2,
-   "x": 906.0,
-   "y": 472.2,
-   "linked": true,
-   "r": 11.5,
-   "color": "c0",
-   "degree": 1,
-   "lx": 906.0,
-   "ly": 453.7,
-   "anchor": "middle"
   },
   {
    "name": "Thai Khanh Nguyen",
@@ -1818,6 +1818,6 @@
    "color": "c0"
   }
  ],
- "papers": 284,
+ "papers": 285,
  "shared": 59
 }
