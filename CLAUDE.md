@@ -146,7 +146,7 @@ The About section is `{{% ai-only %}}` in `about.{en,vi}.md`; keep it in step wi
   threshold, over sentences judged; **p_AI** = sigmoid of the mean of the top quarter of token scores. p_AI is near 100%
   for nearly every 2025-2026 paper, so the share of sentences is the figure to read; older papers are the control.
 - `build_site_data.py` writes `frontend/data/ai_scores.json` (papers and professors; **git-ignored**) from the CSV; entries
-  carry only an `ai_key`. Templates show the figures only with `showAiScores` (true in `hugo.toml`, false in
+  carry only an `ai_key`. Templates show the figures only with `showAiScores` (false in `hugo.toml` while the work is paused, false in
   `publish.toml`) and the data file present. To publish: remove the ignore line, set the switch in `publish.toml`, and
   agree the wording with the maintainer first (these are model estimates about papers, not facts about people).
 - The column has `data-nocup`: it gets no cups (first place would mean most AI text).
