@@ -126,6 +126,31 @@ joins the co-authors outside Vietnam with 5 or more counted papers together with
 Candidates table "Co-authors outside Vietnam", `FOREIGN_MIN_PAPERS`) and a checked row in `vietprofs.csv`. Authors link
 to VietProfs, professors to their page here; each author carries the flag of the country VietProfs lists.
 
+## AI-text detection (local until the maintainer says otherwise)
+
+Each paper entry shows "x% AI sentences" and "y% p_AI", and the front-page table has a hidden column "AI sentences, mean"
+next to Total (mean of the first figure over the professor's scanned papers). Never aggregate per institution or venue.
+The About section is `{{% ai-only %}}` in `about.{en,vi}.md`; keep it in step with the code below.
+
+- `fetch_detector_model.py` installs MELD v8 (pinned revision in `common.py`, MIT) to `$VN_AI_MODEL_DIR`, default
+  `~/.cache/vn-ai-ranking/models/meld-v8`: weights (4 GB) stay **outside the repository**; the script refuses a target
+  inside it, and `.gitignore` also blocks `*.safetensors`, `*.pt` and the like. Never commit weights.
+- `meld_scorer.py` is upstream's `meld.py`, vendored; its one local change (tokenizer fallback for transformers 4.x) is marked.
+- `score_ai_text.py` finds each paper's PDF (OpenReview API with back-off on rate limits, ACL Anthology, CVF, ECVA, PMLR,
+  AAAI/IJCAI links), caches it in `raw/pdf/`, extracts the **main body only** (`common.paper_body`: abstract up to the
+  first heading of acknowledgments, ethics/reproducibility statement, references or appendix; blocks under 15 words
+  dropped), scores it and writes `work/ai_scores.csv` (resumable; failed downloads are retried; `--only`, `--limit`,
+  `--refresh`). Body texts stay in `work/ai_text/` (git-ignored: several are rejected or withdrawn submissions, and the
+  repository is public), so `--from-text --refresh` scores them again with a new detector, without PDFs.
+- Figures: **% AI sentences** = sentences (at least 8 tokens) whose mean token score is above the 1% false-positive
+  threshold, over sentences judged; **p_AI** = sigmoid of the mean of the top quarter of token scores. p_AI is near 100%
+  for nearly every 2025-2026 paper, so the share of sentences is the figure to read; older papers are the control.
+- `build_site_data.py` writes `frontend/data/ai_scores.json` (papers and professors; **git-ignored**) from the CSV; entries
+  carry only an `ai_key`. Templates show the figures only with `showAiScores` (true in `hugo.toml`, false in
+  `publish.toml`) and the data file present. To publish: remove the ignore line, set the switch in `publish.toml`, and
+  agree the wording with the maintainer first (these are model estimates about papers, not facts about people).
+- The column has `data-nocup`: it gets no cups (first place would mean most AI text).
+
 ## Score
 
 The front-page and institution tables are ordered by CSRankings' adjusted count: each accepted paper (official and

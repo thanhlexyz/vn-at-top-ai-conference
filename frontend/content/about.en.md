@@ -96,6 +96,25 @@ A page that only announces a number ("five papers accepted") adds nothing to the
 3. If the paper names another Vietnamese institution, or the list has no affiliations, the match waits for a yes or no by hand.
 4. If the paper names only a foreign institution, the author is treated as a different person with the same name.
 
+{{% ai-only %}}
+## AI-text detection
+
+Each paper in the lists carries two figures from an open AI-text detector, and the front page has a hidden column with the mean over a professor's scanned papers. They are estimates made by a model about the text of a paper. They do not show who wrote it, whether a tool was used, or whether the research is sound, and nothing is added up for an institution or a venue.
+
+How a paper is scanned:
+
+1. **The PDF.** It is taken from OpenReview (through its API), the ACL Anthology, the CVF and PMLR sites, or the link of the AAAI or IJCAI list. A paper whose PDF is not public, such as a withdrawn submission that OpenReview no longer serves or a NeurIPS paper before its conference, is not scanned and has no figures.
+2. **The main body only.** The text is read with `pdftotext` from the abstract up to the first heading of acknowledgments, an ethics or reproducibility statement, references or an appendix. The title block, headings, equations, tables and figure labels are dropped (every block under 15 words), and a paper with under 300 words of running text is not scored. The extracted texts are kept in the project folder, so a better detector can score the same texts again.
+3. **The detector.** [MELD](https://huggingface.co/anon-review-meld-2026/meld) (v8, MIT licence), an open model built on an encoder of about a billion parameters, run on a local GPU at a pinned revision. The text is cleaned of look-alike and invisible characters, cut into windows of 2,046 tokens, and the model gives every token a score. It is not the model of [Open Text Detector](https://opentextdetector.com/), which scores ICLR 2027 submissions only; the figures of the two sites cannot be compared.
+4. **The figures.** **% AI sentences** is the share of the paper's sentences (at least 8 tokens) whose mean token score is above the detector's threshold for a 1% false-positive rate on human texts. **p_AI** is the detector's score for the whole body, from 0 to 100%: the mean of the highest quarter of the token scores, converted to a probability. A professor's figure is the plain mean of the first one over the papers that were scanned; the number of papers is in its tooltip.
+
+How to read them:
+
+- The threshold was set on whole documents of general human text, not on machine-learning papers and not on single sentences, so the share of sentences is an indicator and not an error rate.
+- p_AI is close to 100% for almost every paper of 2025 and 2026, whatever its share of flagged sentences, so look at the share first. Papers from before 2023, such as the ICLR 2021 paper with 0%, show what a text that cannot come from a language model looks like.
+- Equations, tables, code, text in other languages and heavy copy-editing can move the figures, and a short paper has few sentences, so one sentence weighs more.
+{{% /ai-only %}}
+
 ## Limits
 
 - A paper published under a name form that is not on the roster is missed.

@@ -1,0 +1,2 @@
+{{- /* Text shown only while the AI-text figures are shown (params.showAiScores): the About page must not describe what the public site does not display. Use as {{% ai-only %}} ... {{% /ai-only %}}. */ -}}
+{{- if site.Params.showAiScores }}{{ .Inner }}{{ end -}}

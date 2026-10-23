@@ -49,6 +49,20 @@ other = "công bố trước năm {{ .Year }}, thời điểm giảng viên về
 other = "nhánh {{ .Track }}"
 [not_counted]
 other = "Không tính: {{ .Reason }}."
+[ai_share]
+other = "{{ . }}% câu AI"
+[th_ai_avg]
+other = "Câu AI, trung bình"
+[tip_ai_avg]
+other = "Trung bình, trên các bài đã quét của giảng viên, tỷ lệ câu trong phần nội dung chính bị bộ phát hiện MELD đánh dấu. Đây chỉ là ước lượng của mô hình cho các bài báo, không phải kết luận về người; bài không có PDF công khai chưa được quét."
+[ai_avg_cell]
+other = "{{ . }} bài đã quét"
+[ai_p]
+other = "{{ . }}% p_AI"
+[ai_p_hint]
+other = "Điểm của bộ phát hiện cho toàn bộ phần nội dung chính, tính theo phần trăm. Điểm này cao ở hầu hết bài báo gần đây, nên tỷ lệ câu bị đánh dấu cho biết nhiều hơn."
+[ai_share_hint]
+other = "{{ .Flagged }} trên {{ .Sentences }} câu của phần nội dung chính bị bộ phát hiện MELD đánh dấu. Đây chỉ là ước lượng của mô hình cho riêng bài báo này, không phải kết luận về tác giả; ngưỡng được hiệu chỉnh trên cả văn bản."
 [later_accepted]
 other = "Bài có cùng tiêu đề sau đó đã được chấp nhận tại {{ . }}."
 [unofficial_because]

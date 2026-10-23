@@ -745,8 +745,35 @@ def unique(records):
     return list(seen.values())
 
 
+AI_SCORES = WORK / "ai_scores.csv"   # written by score_ai_text.py
+
+
+def ai_key(venue, year, title):
+    return f"{venue}-{year}-{norm_title(title)[:40]}"
+
+
+def write_ai_scores(professors):
+    """AI-text figures for the front end (frontend/data/ai_scores.json, git-ignored until the maintainer decides to
+    publish it): per paper, the share of flagged sentences and the document score; per professor, the mean share
+    over their scanned papers (counted and workshop papers, each once)."""
+    papers = {ai_key(r["venue"], int(r["year"]), r["title"]):
+              {"pct": float(r["flagged_pct"]), "flagged": int(r["flagged_sentences"]), "sentences": int(r["sentences"]),
+               "p_ai": float(r["p_ai"])}
+              for r in read_csv(AI_SCORES) if r["flagged_pct"] != ""}
+    if not papers:
+        return
+    people = {}
+    for p in professors:
+        keys = {e["ai_key"] for k in ("accepted_papers", "not_accepted_papers", "workshop_papers") for e in p[k]}
+        shares = [papers[k]["pct"] for k in sorted(keys) if k in papers]
+        if shares:
+            people[p["slug"]] = {"avg": round(sum(shares) / len(shares), 1), "scanned": len(shares)}
+    write_json(DATA / "ai_scores.json", {"papers": papers, "professors": people})
+
+
 def page_entry(r, people=None):
     e = {"year": r["year"], "venue": r["venue"], "venue_name": VENUE_NAME[r["venue"]], "title": r["title"],
+         "ai_key": ai_key(r["venue"], r["year"], r["title"]),
          "url": r["url"], "status": r["status"], "status_label": STATUS_LABEL[r["status"]], "pres": r["pres"],
          "authors": ", ".join(r["authors"]), "match": r["match"], "note": r.get("note", ""),
          "reason": r.get("reason", ""), "later": r.get("later", ""), "unofficial": bool(r.get("unofficial")),
@@ -1356,6 +1383,7 @@ def main():
     write_json(DATA / "graph_people.json", graph.researcher_graph(professors, recs_for_graph))
     write_json(DATA / "graph_institutions.json", graph.institution_graph(professors, recs_for_graph))
     write_json(DATA / "papers.json", [with_owners(r) for r in sorted(papers, key=paper_order)])
+    write_ai_scores(professors)
     # approved = no: checked and left off for good; `notes` says why
     excluded = [{"name": p["name"], "institution": p["institution_short"], "reason": p["notes"],
                  "homepage": p["homepage"], "openreview_ids": p["openreview_ids"]}

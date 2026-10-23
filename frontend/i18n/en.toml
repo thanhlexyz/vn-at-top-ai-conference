@@ -50,6 +50,20 @@ other = "before {{ .Year }}, when they joined a Vietnamese institution"
 other = "{{ .Track }} track"
 [not_counted]
 other = "Not counted: {{ .Reason }}."
+[ai_share]
+other = "{{ . }}% AI sentences"
+[th_ai_avg]
+other = "AI sentences, mean"
+[tip_ai_avg]
+other = "Mean over this professor\u2019s scanned papers of the share of main-body sentences the MELD detector flags. A model estimate for the papers, not a finding about the person; papers without a public PDF are not scanned."
+[ai_avg_cell]
+other = "{{ . }} papers scanned"
+[ai_p]
+other = "{{ . }}% p_AI"
+[ai_p_hint]
+other = "The detector\u2019s score for the whole main body, as a percentage. It is high for almost every recent paper, so the share of flagged sentences is the more telling number."
+[ai_share_hint]
+other = "{{ .Flagged }} of {{ .Sentences }} sentences of the main body are flagged by the MELD detector. A model estimate for this paper alone, not a finding about its authors; the threshold is calibrated on whole documents."
 [later_accepted]
 other = "The same title was accepted at {{ . }}."
 [unofficial_because]

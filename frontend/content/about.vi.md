@@ -96,6 +96,25 @@ Thông báo chỉ nêu số lượng (chẳng hạn "năm bài được chấp n
 3. Nếu bài ghi một đơn vị khác ở Việt Nam, hoặc danh sách không có thông tin đơn vị, việc gán bài sẽ chờ xác nhận thủ công.
 4. Nếu bài chỉ ghi đơn vị ở nước ngoài, tác giả được xem là một người khác trùng tên.
 
+{{% ai-only %}}
+## Phát hiện văn bản do AI viết
+
+Mỗi bài trong danh sách có hai chỉ số từ một bộ phát hiện văn bản AI mã nguồn mở, và trang chủ có một cột ẩn với giá trị trung bình trên các bài đã quét của giảng viên. Đó là ước lượng của một mô hình về văn bản của bài báo. Chúng không cho biết ai là người viết, có dùng công cụ hay không, hay nghiên cứu có đáng tin hay không, và không có số liệu nào được cộng gộp cho một trường hay một hội nghị.
+
+Một bài được quét như sau:
+
+1. **Tệp PDF.** Lấy từ OpenReview (qua API), ACL Anthology, trang CVF và PMLR, hoặc đường dẫn trong danh sách của AAAI và IJCAI. Bài không có PDF công khai, chẳng hạn bài đã rút mà OpenReview không còn cung cấp, hoặc bài NeurIPS trước khi hội nghị diễn ra, sẽ không được quét và không có chỉ số.
+2. **Chỉ phần nội dung chính.** Văn bản được đọc bằng `pdftotext` từ phần tóm tắt đến tiêu đề đầu tiên của lời cảm ơn, tuyên bố về đạo đức hay khả năng tái lập, tài liệu tham khảo hoặc phụ lục. Khối tiêu đề và tác giả, các đề mục, công thức, bảng và nhãn hình bị bỏ (mọi khối dưới 15 từ), và bài có dưới 300 từ văn xuôi không được chấm. Văn bản đã trích được giữ trong thư mục dự án, để có thể chấm lại bằng bộ phát hiện tốt hơn.
+3. **Bộ phát hiện.** [MELD](https://huggingface.co/anon-review-meld-2026/meld) (v8, giấy phép MIT), một mô hình mở xây trên bộ mã hóa khoảng một tỷ tham số, chạy trên GPU cục bộ ở một phiên bản cố định. Văn bản được làm sạch các ký tự giống nhau và ký tự ẩn, cắt thành các cửa sổ 2.046 token, và mô hình cho điểm từng token. Đây không phải mô hình của [Open Text Detector](https://opentextdetector.com/), trang chỉ chấm các bài nộp ICLR 2027; chỉ số của hai trang không so sánh được với nhau.
+4. **Các chỉ số.** **% câu AI** là tỷ lệ số câu của bài (từ 8 token trở lên) có điểm token trung bình vượt ngưỡng của bộ phát hiện ứng với 1% dương tính giả trên văn bản do người viết. **p_AI** là điểm của bộ phát hiện cho cả phần nội dung, từ 0 đến 100%: trung bình của một phần tư điểm token cao nhất, đổi thành xác suất. Chỉ số của một giảng viên là trung bình cộng của chỉ số thứ nhất trên các bài đã quét; số bài nằm trong chú giải của ô.
+
+Cách đọc:
+
+- Ngưỡng được đặt trên văn bản đầy đủ của các bài viết thông thường do người viết, không phải bài học máy và không phải từng câu, nên tỷ lệ câu chỉ là một chỉ báo, không phải tỷ lệ lỗi.
+- p_AI gần 100% ở hầu hết bài năm 2025 và 2026, bất kể tỷ lệ câu bị đánh dấu, nên hãy xem tỷ lệ câu trước. Các bài trước năm 2023, như bài ICLR 2021 với 0%, cho thấy văn bản không thể do mô hình ngôn ngữ viết trông như thế nào.
+- Công thức, bảng, mã nguồn, văn bản bằng ngôn ngữ khác và việc biên tập kỹ đều có thể làm lệch chỉ số, và bài ngắn có ít câu nên mỗi câu có trọng số lớn hơn.
+{{% /ai-only %}}
+
 ## Giới hạn
 
 - Bài được công bố dưới một cách viết tên chưa có trong danh sách có thể bị bỏ sót.

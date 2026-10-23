@@ -510,5 +510,29 @@ class Counting(unittest.TestCase):
         self.assertEqual([r["status"] for r in counted if r["title"] == "Accepted at ICLR"], ["accepted"])
 
 
+class PaperBody(unittest.TestCase):
+    PARA = " ".join(["word"] * 20) + "."
+
+    def text(self, end):
+        return (f"TITLE OF THE PAPER\nAnonymous authors\n\nA BSTRACT\n{self.PARA}\n\n1\n\nI NTRODUCTION\n\n{self.PARA} " +
+                f"long-\nrunning text.\n\nTable 1: 0.5 0.6\n\n{self.PARA}\n\n{end}\n\n{self.PARA} appendix text\f")
+
+    def test_body_runs_from_abstract_to_references(self):
+        body = common.paper_body(self.text("R EFERENCES"))
+        self.assertEqual(body.count(self.PARA), 3)
+        self.assertIn("longrunning", body)            # hyphenated line break joined
+        self.assertNotIn("Anonymous", body)           # title block
+        self.assertNotIn("Table 1", body)             # short block
+        self.assertNotIn("appendix text", body)
+
+    def test_each_closing_heading_ends_the_body(self):
+        for end in ("References", "Acknowledgments", "7 ACKNOWLEDGEMENTS", "Appendix A", "Reproducibility Statement"):
+            self.assertNotIn("appendix text", common.paper_body(self.text(end)), end)
+
+    def test_a_sentence_starting_with_appendix_is_not_a_heading(self):
+        body = common.paper_body(self.text("Appendix B shows more results.") + "\n\n" + self.PARA + "\nReferences\n")
+        self.assertIn("appendix text", body)
+
+
 if __name__ == "__main__":
     unittest.main()

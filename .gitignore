@@ -224,3 +224,13 @@ frontend/public/
 frontend/resources/
 frontend/.hugo_build.lock
 __pycache__/
+
+# detector weights live outside the repository (see backend/fetch_detector_model.py); never commit them
+models/
+*.safetensors
+*.gguf
+*.ckpt
+*.pt
+*.pth
+*.onnx
+frontend/data/ai_scores.json

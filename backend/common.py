@@ -8,6 +8,7 @@ import datetime
 import gzip
 import html
 import json
+import os
 import re
 import unicodedata
 from pathlib import Path
@@ -104,6 +105,49 @@ def norm_title(s):
 
 def slugify(s):
     return re.sub(r"[^a-z0-9]+", "-", strip_accents(s).lower()).strip("-")
+
+
+# AI-text detector (MELD, MIT licence). The weights are about 4 GB: they live outside the repository,
+# in $VN_AI_MODEL_DIR (default ~/.cache/vn-ai-ranking/models), and are fetched by fetch_detector_model.py.
+DETECTOR_ID = "anon-review-meld-2026/meld"
+DETECTOR_REVISION = "8990324abd92e1fa17072f6887ea1e5c1cef5abc"
+
+
+def detector_dir():
+    root = os.environ.get("VN_AI_MODEL_DIR") or "~/.cache/vn-ai-ranking/models"
+    return Path(root).expanduser() / "meld-v8"
+
+
+# Headings as pdftotext prints them, small caps included ("R EFERENCES", "A BSTRACT").
+_REFERENCES = re.compile(r"^\s*(?:\d+\.?\s+)?(?:r\s?eferences|b\s?ibliography|a\s?cknowledge?ments?|"
+                         r"a\s?ppendix(?:\s+[A-Z0-9])?|s\s?upplementary\s+m\s?aterial|"
+                         r"(?:e\s?thics|r\s?eproducibility)\s+s\s?tatement)\s*$", re.I | re.M)
+_ABSTRACT = re.compile(r"^\s*a\s?bstract\b[\s.:—-]*", re.I | re.M)
+_INTRO = re.compile(r"^\s*(?:1\.?\s+|I\.\s+)?i\s?ntroduction\s*$", re.I | re.M)
+
+
+def paper_body(pdf_text, min_words=15):
+    """Main body of a paper as `pdftotext` prints it: from the abstract to the first heading of acknowledgments,
+    references or appendix.
+
+    The title block, headings, equations, table cells and figure labels are dropped (blocks under `min_words` words)
+    and hyphenated line breaks are joined. Returns "" when no running text is left."""
+    text = pdf_text.replace("\f", "\n\n")
+    start = 0
+    m = _ABSTRACT.search(text[:20000]) or _INTRO.search(text[:30000])
+    if m:
+        start = m.end()
+    tail = text[start:]
+    refs = [r for r in _REFERENCES.finditer(tail) if r.start() > len(tail) * 0.2]
+    if refs:
+        tail = tail[:refs[0].start()]
+    blocks = []
+    for block in re.split(r"\n\s*\n", tail):
+        block = re.sub(r"(\w)-\n(\w)", r"\1\2", block)
+        block = " ".join(block.split())
+        if len(block.split()) >= min_words and sum(c.isalpha() for c in block) > 0.6 * len(block):
+            blocks.append(block)
+    return "\n\n".join(blocks)
 
 
 # ---------------------------------------------------------------- Vietnamese institutions

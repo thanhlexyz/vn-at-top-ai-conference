@@ -3,6 +3,7 @@
 {{- $rows := . }}{{ $compact := false }}{{ $podium := false }}{{ $rank := false }}{{ $brief := false }}
 {{- if reflect.IsMap . }}{{ $rows = .rows }}{{ $compact = .compact }}{{ $podium = .podium }}{{ $rank = or .rank .podium }}{{ $brief = .brief }}{{ end }}
 {{- $last := hugo.Data.meta.last_year }}
+{{- $ai := cond (and $brief site.Params.showAiScores) hugo.Data.ai_scores nil }}
 <div class="scroll pinned top">
 <table{{ if $podium }} class="podium{{ if $brief }} collapsed{{ end }}"{{ else if $brief }} class="collapsed"{{ end }}{{ if $brief }} data-collapsible{{ end }}>
 	<thead>
@@ -18,6 +19,7 @@
 		<th colspan="{{ len hugo.Data.meta.venue_groups }}">{{ T "th_accepted_at" }}</th>
 		{{- end }}
 		<th colspan="{{ cond $brief 5 8 }}">{{ T "th_total" }}</th>
+		{{- if $ai }}<th rowspan="2" data-extra data-nocup title="{{ T "tip_ai_avg" }}">{{ T "th_ai_avg" }}</th>{{ end }}
 		<th rowspan="2" class="ws"{{ if $brief }} data-extra{{ end }} title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
 		<th colspan="2"{{ if $brief }} data-extra{{ end }} title="{{ T "tip_own_institution" }}">{{ T "th_own_institution" }}</th>
 		<th colspan="{{ cond $brief 3 7 }}"{{ if $brief }} data-extra{{ end }}>{{ T "th_coauthors" }}</th>
@@ -97,6 +99,9 @@
 		{{- else if ne .projection.basis "own" }}<td class="rate trivial" data-last title="{{ T "tip_rate_trivial" }}">{{ .acceptance_rate }}%</td>
 		{{- else }}<td class="rate">{{ .acceptance_rate }}%</td>{{ end }}
 		{{- end }}
+		{{- if $ai }}{{ with index $ai.professors $p.slug }}
+		<td title="{{ T "ai_avg_cell" .scanned }}">{{ printf "%.1f" .avg }}%</td>
+		{{- else }}<td class="na" data-last>&ndash;</td>{{ end }}{{ end }}
 		{{ partial "num.html" (len (.workshop_papers | default slice)) }}
 		{{- if eq (int .accepted) 0 }}
 		{{- /* no accepted paper: nothing to compare, shown greyed and always sorted last */}}
