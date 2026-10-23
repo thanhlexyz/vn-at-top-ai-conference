@@ -57,6 +57,12 @@ other = "Câu AI, trung bình"
 other = "Trung bình, trên các bài đã quét của giảng viên, tỷ lệ câu trong phần nội dung chính bị bộ phát hiện MELD đánh dấu. Đây chỉ là ước lượng của mô hình cho các bài báo, không phải kết luận về người; bài không có PDF công khai chưa được quét."
 [ai_avg_cell]
 other = "{{ . }} bài đã quét"
+[th_ai_share]
+other = "Câu AI"
+[th_p_ai]
+other = "p_AI"
+[tip_ai_share]
+other = "Tỷ lệ câu trong phần nội dung chính bị bộ phát hiện MELD đánh dấu. Đây chỉ là ước lượng của mô hình cho bài báo, không phải kết luận về tác giả; xem trang Giới thiệu."
 [ai_p]
 other = "{{ . }}% p_AI"
 [ai_p_hint]

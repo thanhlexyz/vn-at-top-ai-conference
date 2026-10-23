@@ -1,6 +1,7 @@
 {{ define "main" -}}
 {{ .Content }}
 {{- $papers := hugo.Data.papers }}
+{{- $ai := cond site.Params.showAiScores hugo.Data.ai_scores nil }}
 {{- if not site.Params.showNonAcceptedTitles }}{{ $papers = where $papers "status" "accepted" }}{{ end }}
 <div class="scroll">
 <table>
@@ -11,6 +12,10 @@
 		<th class="l">{{ T "th_outcome" }}</th>
 		<th class="l">{{ T "th_title" }}</th>
 		<th class="l">{{ T "th_professors" }}</th>
+		{{- if $ai }}
+		<th title="{{ T "tip_ai_share" }}">{{ T "th_ai_share" }}</th>
+		<th title="{{ T "ai_p_hint" }}">{{ T "th_p_ai" }}</th>
+		{{- end }}
 	</tr>
 	</thead>
 	<tbody>
@@ -24,6 +29,14 @@
 		<td class="l">
 			{{- range $n, $o := .professors }}{{ if $n }}, {{ end }}<a href="{{ printf "professors/%s/" $o.slug | relLangURL }}">{{ partial "pname.html" $o }}</a>{{ end -}}
 		</td>
+		{{- if $ai }}
+		{{- with index $ai.papers .ai_key }}
+		<td title="{{ T "ai_share_hint" (dict "Flagged" .flagged "Sentences" .sentences) }}">{{ printf "%.1f" .pct }}%</td>
+		<td>{{ printf "%.1f" (mul .p_ai 100) }}%</td>
+		{{- else }}
+		<td class="na">&ndash;</td><td class="na">&ndash;</td>
+		{{- end }}
+		{{- end }}
 	</tr>
 	{{- end }}
 	</tbody>

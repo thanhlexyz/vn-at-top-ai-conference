@@ -58,6 +58,12 @@ other = "AI sentences, mean"
 other = "Mean over this professor\u2019s scanned papers of the share of main-body sentences the MELD detector flags. A model estimate for the papers, not a finding about the person; papers without a public PDF are not scanned."
 [ai_avg_cell]
 other = "{{ . }} papers scanned"
+[th_ai_share]
+other = "AI sentences"
+[th_p_ai]
+other = "p_AI"
+[tip_ai_share]
+other = "Share of main-body sentences the MELD detector flags. A model estimate for the paper, not a finding about its authors; see About."
 [ai_p]
 other = "{{ . }}% p_AI"
 [ai_p_hint]
