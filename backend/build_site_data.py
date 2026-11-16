@@ -771,6 +771,16 @@ def write_ai_scores(professors):
     write_json(DATA / "ai_scores.json", {"papers": papers, "professors": people})
 
 
+def review_scores(url):
+    """Reviewers' "score(confidence), ..." for an OpenReview paper, from reviews.json (fetch_reviews.py)."""
+    path = BACKEND / "reviews.json"
+    if not hasattr(review_scores, "table"):
+        review_scores.table = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    m = re.search(r"openreview\.net/forum\?id=([\w-]+)", url or "")
+    pairs = review_scores.table.get(m.group(1), []) if m else []
+    return ", ".join(f"{s}({c})" if c is not None else str(s) for s, c in pairs)
+
+
 def page_entry(r, people=None):
     e = {"year": r["year"], "venue": r["venue"], "venue_name": VENUE_NAME[r["venue"]], "title": r["title"],
          "ai_key": ai_key(r["venue"], r["year"], r["title"]),
@@ -780,6 +790,7 @@ def page_entry(r, people=None):
          "workshop": r.get("workshop", ""), "_authors": list(r["authors"])}
     if people is not None:
         e["professors"] = people
+        e["reviews"] = review_scores(r["url"])
     return e
 
 
