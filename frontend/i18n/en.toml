@@ -587,6 +587,18 @@ other = "Each column is one year: accepted papers, rejections that are public, a
 [tip_rejected_findings]
 other = "rejections on record even here: papers placed in Findings, and rejections their authors made public"
 
+[th_review_scores]
+other = "Review scores"
+
+[th_otd]
+other = "AI score"
+
+[tip_otd]
+other = "Open Text Detector (ICLR 2027 only): share of the main-text sentences its detector flags as AI-assisted, at a 0.1% false-positive rate on human-written papers. A model estimate about the text, not a finding about the authors."
+
+[otd_hint]
+other = "{{ .Flagged }} of {{ .Sentences }} sentences flagged; open on Open Text Detector"
+
 [tip_review_scores]
 other = "Reviewers' scores, each with the reviewer's confidence in brackets; the scales differ by venue and year"
 

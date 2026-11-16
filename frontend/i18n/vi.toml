@@ -580,6 +580,18 @@ other = "Mỗi cột là một năm: bài được nhận, bài bị từ chối
 [tip_rejected_findings]
 other = "bài bị từ chối vẫn có ghi nhận: bài được xếp vào Findings và bài bị từ chối do tác giả tự công khai"
 
+[th_review_scores]
+other = "Điểm phản biện"
+
+[th_otd]
+other = "Điểm AI"
+
+[tip_otd]
+other = "Open Text Detector (chỉ ICLR 2027): tỷ lệ câu trong phần nội dung chính mà bộ phát hiện đánh dấu là có hỗ trợ của AI, ở ngưỡng dương tính giả 0,1% trên các bài do người viết. Đây là ước tính của mô hình về văn bản, không phải kết luận về tác giả."
+
+[otd_hint]
+other = "{{ .Flagged }} trên {{ .Sentences }} câu bị đánh dấu; xem trên Open Text Detector"
+
 [tip_review_scores]
 other = "Điểm của các phản biện, kèm độ tin cậy của phản biện trong ngoặc; thang điểm khác nhau tùy hội nghị và năm"
 

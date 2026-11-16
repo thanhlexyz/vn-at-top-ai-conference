@@ -2,9 +2,11 @@
 {{ .Content }}
 {{- $papers := hugo.Data.papers }}
 {{- $ai := cond site.Params.showAiScores hugo.Data.ai_scores nil }}
+{{- $otd := cond site.Params.showOtdScores hugo.Data.otd_scores nil }}
 {{- if not site.Params.showNonAcceptedTitles }}{{ $papers = where $papers "status" "accepted" }}{{ end }}
+<p class="table-tools"><button type="button" class="more-columns" aria-expanded="false" data-show="{{ T "cols_show" }}" data-hide="{{ T "cols_hide" }}">{{ T "cols_show" }}</button></p>
 <div class="scroll">
-<table>
+<table class="collapsed" data-collapsible>
 	<thead>
 	<tr>
 		<th>{{ T "th_year" }}</th>
@@ -12,6 +14,10 @@
 		<th class="l">{{ T "th_outcome" }}</th>
 		<th class="l">{{ T "th_title" }}</th>
 		<th class="l">{{ T "th_professors" }}</th>
+		<th class="l" data-extra data-nosort title="{{ T "tip_review_scores" }}">{{ T "th_review_scores" }}</th>
+		{{- if $otd }}
+		<th data-extra title="{{ T "tip_otd" }}">{{ T "th_otd" }}</th>
+		{{- end }}
 		{{- if $ai }}
 		<th title="{{ T "tip_ai_share" }}">{{ T "th_ai_share" }}</th>
 		<th title="{{ T "ai_p_hint" }}">{{ T "th_p_ai" }}</th>
@@ -24,11 +30,19 @@
 		<td>{{ .year }}</td>
 		<td class="l"><a href="{{ printf "venues/%s/" .venue | relLangURL }}">{{ .venue_name }}</a></td>
 		<td class="l">{{ $tag := printf "<span class=\"tag %s\">%s</span>" .status (T (printf "status_%s" .status)) }}
-			{{- if strings.Contains .url "openreview.net" }}<a class="tag-link" href="{{ .url }}" title="{{ T "tip_openreview_decision" }}">{{ $tag | safeHTML }}</a>{{ else }}{{ $tag | safeHTML }}{{ end }}{{ with .pres }} {{ . }}{{ end }}{{ with .reviews }} <span class="scores" title="{{ T "tip_review_scores" }}">{{ . }}</span>{{ end }}{{ if .unofficial }} <span class="tag own" title="{{ .match }}">{{ T "unofficial" }}</span>{{ end }}</td>
+			{{- if strings.Contains .url "openreview.net" }}<a class="tag-link" href="{{ .url }}" title="{{ T "tip_openreview_decision" }}">{{ $tag | safeHTML }}</a>{{ else }}{{ $tag | safeHTML }}{{ end }}{{ with .pres }} {{ . }}{{ end }}{{ if .unofficial }} <span class="tag own" title="{{ .match }}">{{ T "unofficial" }}</span>{{ end }}</td>
 		<td class="l">{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</td>
 		<td class="l">
 			{{- range $n, $o := .professors }}{{ if $n }}, {{ end }}<a href="{{ printf "professors/%s/" $o.slug | relLangURL }}">{{ partial "pname.html" $o }}</a>{{ end -}}
 		</td>
+		{{- with .reviews }}<td class="l xcol scores">{{ . }}</td>{{ else }}<td class="l xcol na">&ndash;</td>{{ end }}
+		{{- if $otd }}
+		{{- with index $otd .ai_key }}
+		<td class="xcol" title="{{ T "otd_hint" (dict "Flagged" .flagged "Sentences" .sentences) }}"><a href="{{ .source }}">{{ printf "%.0f" .pct }}%</a></td>
+		{{- else }}
+		<td class="xcol na" data-last>&ndash;</td>
+		{{- end }}
+		{{- end }}
 		{{- if $ai }}
 		{{- with index $ai.papers .ai_key }}
 		<td title="{{ T "ai_share_hint" (dict "Flagged" .flagged "Sentences" .sentences) }}">{{ printf "%.1f" .pct }}%</td>

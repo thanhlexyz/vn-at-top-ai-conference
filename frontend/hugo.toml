@@ -12,6 +12,7 @@ disableKinds = ['taxonomy', 'term', 'rss']
   # Share of sentences the AI-text detector flags, per paper (data/ai_scores.json, not committed), with its About
   # section. Off while the work is paused; set true to see it locally (publish.toml keeps it off).
   showAiScores = false
+  showOtdScores = true
   # A local build asks search engines not to index it. publish.toml turns this off for the public site.
   local = true
   # GitHub repository (account/name) that the Feedback form opens an issue in

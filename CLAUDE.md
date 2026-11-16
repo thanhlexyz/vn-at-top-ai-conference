@@ -150,6 +150,13 @@ The About section is `{{% ai-only %}}` in `about.{en,vi}.md`; keep it in step wi
   `publish.toml`) and the data file present. To publish: remove the ignore line, set the switch in `publish.toml`, and
   agree the wording with the maintainer first (these are model estimates about papers, not facts about people).
 - The column has `data-nocup`: it gets no cups (first place would mean most AI text).
+- **Open Text Detector** (ICLR 2027 only): `fetch_opentextdetector.py` reads <https://opentextdetector.com>'s public
+  browse API by OpenReview forum id (exact `forum_id` match only) and keeps the site's default view, `flags["body0.1"]`
+  (main text, 0.1% human false-positive rate; no figure under 50 sentences), in `work/opentextdetector.json`. The build
+  writes `frontend/data/otd_scores.json` (**git-ignored**); the Papers page shows it as the "AI score" column with
+  `showOtdScores` (true in `hugo.toml`, false in `publish.toml` until the maintainer agrees the wording). Per paper only.
+- The Papers page's "Review scores" (score(confidence), from `fetch_reviews.py` into `reviews.json`) and "AI score"
+  columns are `data-extra`: hidden until the reader presses "More columns".
 
 ## Score
 

@@ -781,6 +781,24 @@ def review_scores(url):
     return ", ".join(f"{s}({c})" if c is not None else str(s) for s, c in pairs)
 
 
+OTD_SCORES = WORK / "opentextdetector.json"   # written by fetch_opentextdetector.py
+
+
+def write_otd_scores(entries):
+    """Open Text Detector's share of flagged sentences per paper (frontend/data/otd_scores.json, git-ignored like
+    ai_scores.json), keyed by ai_key. Per paper only: never added up per professor, institution or venue."""
+    scores = json.loads(OTD_SCORES.read_text(encoding="utf-8")) if OTD_SCORES.exists() else {}
+    out = {}
+    for e in entries:
+        m = re.search(r"openreview\.net/forum\?id=([\w-]+)", e["url"] or "")
+        if m and m.group(1) in scores:
+            s = scores[m.group(1)]
+            out[e["ai_key"]] = {"pct": round(100 * s["flagged"] / s["sentences"], 1), "flagged": s["flagged"],
+                                "sentences": s["sentences"], "source": s["source"]}
+    if out:
+        write_json(DATA / "otd_scores.json", out)
+
+
 def page_entry(r, people=None):
     e = {"year": r["year"], "venue": r["venue"], "venue_name": VENUE_NAME[r["venue"]], "title": r["title"],
          "ai_key": ai_key(r["venue"], r["year"], r["title"]),
@@ -1393,7 +1411,9 @@ def main():
     recs_for_graph = [(r, shown_by_slug[s]) for r, s in graph_recs if s in shown_by_slug]
     write_json(DATA / "graph_people.json", graph.researcher_graph(professors, recs_for_graph))
     write_json(DATA / "graph_institutions.json", graph.institution_graph(professors, recs_for_graph))
-    write_json(DATA / "papers.json", [with_owners(r) for r in sorted(papers, key=paper_order)])
+    page_papers = [with_owners(r) for r in sorted(papers, key=paper_order)]
+    write_json(DATA / "papers.json", page_papers)
+    write_otd_scores(page_papers)
     write_ai_scores(professors)
     # approved = no: checked and left off for good; `notes` says why
     excluded = [{"name": p["name"], "institution": p["institution_short"], "reason": p["notes"],
