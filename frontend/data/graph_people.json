@@ -76,14 +76,14 @@
    "url": "professors/tuan-dam/",
    "group": "HUST",
    "id": "tuan-dam",
-   "papers": 19,
+   "papers": 22,
    "x": 567.6,
    "y": 514.3,
    "linked": true,
-   "r": 16.8,
+   "r": 17.4,
    "color": "c-red",
    "degree": 3,
-   "lx": 588.4,
+   "lx": 589.0,
    "ly": 519.3,
    "anchor": "start"
   },
@@ -122,6 +122,23 @@
    "anchor": "middle"
   },
   {
+   "name": "Huynh Thi Thanh Binh",
+   "name_vi": "Huỳnh Thị Thanh Bình",
+   "url": "professors/huynh-thi-thanh-binh/",
+   "group": "HUST",
+   "id": "huynh-thi-thanh-binh",
+   "papers": 13,
+   "x": 224.0,
+   "y": 769.3,
+   "linked": true,
+   "r": 15.5,
+   "color": "c-red",
+   "degree": 4,
+   "lx": 204.5,
+   "ly": 774.3,
+   "anchor": "end"
+  },
+  {
    "name": "Thanh-Binh Nguyen",
    "name_vi": "Nguyễn Thanh Bình",
    "url": "professors/thanh-binh-nguyen/",
@@ -137,23 +154,6 @@
    "lx": 698.2,
    "ly": 289.4,
    "anchor": "start"
-  },
-  {
-   "name": "Huynh Thi Thanh Binh",
-   "name_vi": "Huỳnh Thị Thanh Bình",
-   "url": "professors/huynh-thi-thanh-binh/",
-   "group": "HUST",
-   "id": "huynh-thi-thanh-binh",
-   "papers": 12,
-   "x": 224.0,
-   "y": 769.3,
-   "linked": true,
-   "r": 15.2,
-   "color": "c-red",
-   "degree": 4,
-   "lx": 204.8,
-   "ly": 774.3,
-   "anchor": "end"
   },
   {
    "name": "Minh-Triet Tran",
@@ -192,15 +192,15 @@
    "url": "professors/hieu-pham/",
    "group": "VinUni",
    "id": "hieu-pham",
-   "papers": 8,
+   "papers": 9,
    "x": 892.3,
    "y": 70.0,
    "linked": true,
-   "r": 14.1,
+   "r": 14.4,
    "color": "c-blue",
    "degree": 2,
    "lx": 892.3,
-   "ly": 48.9,
+   "ly": 48.6,
    "anchor": "middle"
   },
   {
@@ -219,6 +219,23 @@
    "lx": 321.3,
    "ly": 218.0,
    "anchor": "end"
+  },
+  {
+   "name": "Son Ha Xuan",
+   "name_vi": "Hà Xuân Sơn",
+   "url": "professors/son-ha-xuan/",
+   "group": "RMIT",
+   "id": "son-ha-xuan",
+   "papers": 7,
+   "x": 906.0,
+   "y": 472.2,
+   "linked": true,
+   "r": 13.8,
+   "color": "c0",
+   "degree": 1,
+   "lx": 906.0,
+   "ly": 451.4,
+   "anchor": "middle"
   },
   {
    "name": "Canh V. Pham",
@@ -467,6 +484,23 @@
    "degree": 0
   },
   {
+   "name": "Long Hoang Dang",
+   "name_vi": "Đặng Hoàng Long",
+   "url": "professors/long-hoang-dang/",
+   "group": "PTIT",
+   "id": "long-hoang-dang",
+   "papers": 3,
+   "x": 530,
+   "y": 888.3,
+   "linked": true,
+   "r": 12.1,
+   "color": "c4",
+   "degree": 1,
+   "lx": 546.1,
+   "ly": 893.3,
+   "anchor": "start"
+  },
+  {
    "name": "Ngoc Hoang Luong",
    "name_vi": "Lương Ngọc Hoàng",
    "url": "professors/ngoc-hoang-luong/",
@@ -482,23 +516,6 @@
    "lx": 546.1,
    "ly": 1035.3,
    "anchor": "start"
-  },
-  {
-   "name": "Son Ha Xuan",
-   "name_vi": "Hà Xuân Sơn",
-   "url": "professors/son-ha-xuan/",
-   "group": "RMIT",
-   "id": "son-ha-xuan",
-   "papers": 3,
-   "x": 906.0,
-   "y": 472.2,
-   "linked": true,
-   "r": 12.1,
-   "color": "c0",
-   "degree": 1,
-   "lx": 906.0,
-   "ly": 453.1,
-   "anchor": "middle"
   },
   {
    "name": "Tan D. Tran",
@@ -564,23 +581,6 @@
    "r": 11.5,
    "color": "c-red",
    "degree": 0
-  },
-  {
-   "name": "Long Hoang Dang",
-   "name_vi": "Đặng Hoàng Long",
-   "url": "professors/long-hoang-dang/",
-   "group": "PTIT",
-   "id": "long-hoang-dang",
-   "papers": 2,
-   "x": 530,
-   "y": 888.3,
-   "linked": true,
-   "r": 11.5,
-   "color": "c4",
-   "degree": 1,
-   "lx": 545.5,
-   "ly": 893.3,
-   "anchor": "start"
   },
   {
    "name": "Minhhuy Le",
@@ -876,6 +876,20 @@
    "linked": false,
    "r": 10.8,
    "color": "c-red",
+   "degree": 0
+  },
+  {
+   "name": "Ngoc Nam Pham",
+   "name_vi": "Phạm Ngọc Nam",
+   "url": "professors/ngoc-nam-pham/",
+   "group": "VinUni",
+   "id": "ngoc-nam-pham",
+   "papers": 1,
+   "x": null,
+   "y": null,
+   "linked": false,
+   "r": 10.8,
+   "color": "c-blue",
    "degree": 0
   },
   {
@@ -1818,6 +1832,6 @@
    "color": "c0"
   }
  ],
- "papers": 295,
+ "papers": 306,
  "shared": 59
 }

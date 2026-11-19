@@ -371,28 +371,28 @@
   ],
   "iclr_complete": true,
   "accepted": 70,
-  "own_page": 15,
-  "official": 55,
+  "own_page": 2,
+  "official": 68,
   "venues": {
    "iclr": {
     "accepted": 6,
     "rejected": 10,
-    "withdrawn": 17,
+    "withdrawn": 20,
     "desk_rejected": 1,
-    "not_accepted": 28,
-    "submitted": 34,
+    "not_accepted": 31,
+    "submitted": 37,
     "own_page": 0,
     "official": 6
    },
    "neurips": {
     "accepted": 19,
-    "rejected": 2,
+    "rejected": 3,
     "withdrawn": 0,
     "desk_rejected": 0,
-    "not_accepted": 2,
-    "submitted": 21,
-    "own_page": 13,
-    "official": 6
+    "not_accepted": 3,
+    "submitted": 22,
+    "own_page": 0,
+    "official": 19
    },
    "icml": {
     "accepted": 13,
@@ -1329,13 +1329,13 @@
      },
      "neurips": {
       "accepted": 13,
-      "rejected": 0,
+      "rejected": 1,
       "withdrawn": 0,
       "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 13,
-      "own_page": 13,
-      "official": 0,
+      "not_accepted": 1,
+      "submitted": 14,
+      "own_page": 0,
+      "official": 13,
       "available": true,
       "held": true,
       "provisional": true
@@ -1446,8 +1446,8 @@
      }
     },
     "accepted": 37,
-    "own_page": 15,
-    "official": 22
+    "own_page": 2,
+    "official": 35
    },
    {
     "year": 2027,
@@ -1456,10 +1456,10 @@
      "iclr": {
       "accepted": 0,
       "rejected": 0,
-      "withdrawn": 4,
+      "withdrawn": 7,
       "desk_rejected": 0,
-      "not_accepted": 4,
-      "submitted": 4,
+      "not_accepted": 7,
+      "submitted": 7,
       "own_page": 0,
       "official": 0,
       "available": false,
@@ -1590,8 +1590,8 @@
    }
   ],
   "workshop": 17,
-  "rejected_estimated": 284,
-  "acceptance_rate": 20,
+  "rejected_estimated": 314,
+  "acceptance_rate": 18,
   "rate_trivial": false,
   "author_charts": {
    "first": {
@@ -1906,7 +1906,7 @@
    "total": 20
   },
   "judged": 40,
-  "unknown": 2,
+  "unknown": 3,
   "by_year": [
    {
     "year": 2020,
@@ -1952,7 +1952,7 @@
    },
    {
     "year": 2026,
-    "accepted": 21,
+    "accepted": 22,
     "judged": 19,
     "majority": 8,
     "first": 10
@@ -1975,34 +1975,35 @@
    "minh-do",
    "hieu-pham",
    "thanh-trung-huynh",
+   "ngoc-nam-pham",
    "danh-le-phuoc",
    "an-thai-le",
    "hong-t-m-chu"
   ],
   "iclr_complete": true,
-  "accepted": 42,
-  "own_page": 11,
-  "official": 31,
+  "accepted": 43,
+  "own_page": 0,
+  "official": 43,
   "venues": {
    "iclr": {
     "accepted": 6,
     "rejected": 16,
-    "withdrawn": 12,
+    "withdrawn": 13,
     "desk_rejected": 0,
-    "not_accepted": 28,
-    "submitted": 34,
+    "not_accepted": 29,
+    "submitted": 35,
     "own_page": 0,
     "official": 6
    },
    "neurips": {
-    "accepted": 18,
+    "accepted": 19,
     "rejected": 2,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 2,
-    "submitted": 20,
-    "own_page": 11,
-    "official": 7
+    "submitted": 21,
+    "own_page": 0,
+    "official": 19
    },
    "icml": {
     "accepted": 6,
@@ -2938,14 +2939,14 @@
       "provisional": false
      },
      "neurips": {
-      "accepted": 11,
+      "accepted": 12,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 11,
-      "own_page": 11,
-      "official": 0,
+      "submitted": 12,
+      "own_page": 0,
+      "official": 12,
       "available": true,
       "held": true,
       "provisional": true
@@ -3055,9 +3056,9 @@
       "provisional": false
      }
     },
-    "accepted": 21,
-    "own_page": 11,
-    "official": 10
+    "accepted": 22,
+    "own_page": 0,
+    "official": 22
    },
    {
     "year": 2027,
@@ -3066,10 +3067,10 @@
      "iclr": {
       "accepted": 0,
       "rejected": 0,
-      "withdrawn": 4,
+      "withdrawn": 5,
       "desk_rejected": 0,
-      "not_accepted": 4,
-      "submitted": 4,
+      "not_accepted": 5,
+      "submitted": 5,
       "own_page": 0,
       "official": 0,
       "available": false,
@@ -3200,26 +3201,26 @@
    }
   ],
   "workshop": 31,
-  "rejected_estimated": 172,
-  "acceptance_rate": 20,
+  "rejected_estimated": 182,
+  "acceptance_rate": 19,
   "rate_trivial": false,
   "author_charts": {
    "first": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from VinUni\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from VinUni</text><rect class=\"other-inst\" x=\"223.60000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"241.60000000000002\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"394.40000000000003\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"412.40000000000003\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"193.2\" x2=\"628\" y2=\"193.2\"/><text class=\"tick\" x=\"34\" y=\"197.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"156.4\" x2=\"628\" y2=\"156.4\"/><text class=\"tick\" x=\"34\" y=\"160.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"119.6\" x2=\"628\" y2=\"119.6\"/><text class=\"tick\" x=\"34\" y=\"123.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"82.8\" x2=\"628\" y2=\"82.8\"/><text class=\"tick\" x=\"34\" y=\"86.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"own-inst\" d=\"M211.8,230.0 V222.6 Q211.8,222.6 211.8,222.6 H235.8 Q235.8,222.6 235.8,222.6 V230.0 Z\"><title>2022: 1 first author from VinUni</title></path><path class=\"other-inst\" d=\"M211.8,220.6 V219.3 Q211.8,215.3 215.8,215.3 H231.8 Q235.8,215.3 235.8,219.3 V220.6 Z\"><title>2022: 1 first author elsewhere</title></path><text class=\"value\" x=\"223.8\" y=\"209.3\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M285.2,230.0 V215.3 Q285.2,215.3 285.2,215.3 H309.2 Q309.2,215.3 309.2,215.3 V230.0 Z\"><title>2023: 2 first author from VinUni</title></path><path class=\"other-inst\" d=\"M285.2,213.3 V197.2 Q285.2,193.2 289.2,193.2 H305.2 Q309.2,193.2 309.2,197.2 V213.3 Z\"><title>2023: 3 first author elsewhere</title></path><text class=\"value\" x=\"297.2\" y=\"187.2\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M358.8,230.0 V215.3 Q358.8,215.3 358.8,215.3 H382.8 Q382.8,215.3 382.8,215.3 V230.0 Z\"><title>2024: 2 first author from VinUni</title></path><path class=\"other-inst\" d=\"M358.8,213.3 V211.9 Q358.8,207.9 362.8,207.9 H378.8 Q382.8,207.9 382.8,211.9 V213.3 Z\"><title>2024: 1 first author elsewhere</title></path><text class=\"value\" x=\"370.8\" y=\"201.9\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M432.2,230.0 V193.2 Q432.2,193.2 432.2,193.2 H456.2 Q456.2,193.2 456.2,193.2 V230.0 Z\"><title>2025: 5 first author from VinUni</title></path><path class=\"other-inst\" d=\"M432.2,191.2 V153.0 Q432.2,149.0 436.2,149.0 H452.2 Q456.2,149.0 456.2,153.0 V191.2 Z\"><title>2025: 6 first author elsewhere</title></path><text class=\"value\" x=\"444.2\" y=\"143.0\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V156.4 Q505.8,156.4 505.8,156.4 H529.8 Q529.8,156.4 529.8,156.4 V230.0 Z\"><title>2026: 10 first author from VinUni</title></path><path class=\"other-inst\" d=\"M505.8,154.4 V90.2 Q505.8,90.2 505.8,90.2 H529.8 Q529.8,90.2 529.8,90.2 V154.4 Z\"><title>2026: 9 first author elsewhere</title></path><path class=\"unjudged\" d=\"M505.8,88.2 V79.4 Q505.8,75.4 509.8,75.4 H525.8 Q529.8,75.4 529.8,79.4 V88.2 Z\"><title>2026: 2 affiliations not known yet</title></path><text class=\"value\" x=\"517.8\" y=\"69.4\" text-anchor=\"middle\">21</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng VinUni\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng VinUni</text><rect class=\"other-inst\" x=\"217.20000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"235.20000000000002\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"407.20000000000005\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"425.20000000000005\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"193.2\" x2=\"628\" y2=\"193.2\"/><text class=\"tick\" x=\"34\" y=\"197.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"156.4\" x2=\"628\" y2=\"156.4\"/><text class=\"tick\" x=\"34\" y=\"160.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"119.6\" x2=\"628\" y2=\"119.6\"/><text class=\"tick\" x=\"34\" y=\"123.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"82.8\" x2=\"628\" y2=\"82.8\"/><text class=\"tick\" x=\"34\" y=\"86.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"own-inst\" d=\"M211.8,230.0 V222.6 Q211.8,222.6 211.8,222.6 H235.8 Q235.8,222.6 235.8,222.6 V230.0 Z\"><title>2022: 1 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M211.8,220.6 V219.3 Q211.8,215.3 215.8,215.3 H231.8 Q235.8,215.3 235.8,219.3 V220.6 Z\"><title>2022: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"223.8\" y=\"209.3\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M285.2,230.0 V215.3 Q285.2,215.3 285.2,215.3 H309.2 Q309.2,215.3 309.2,215.3 V230.0 Z\"><title>2023: 2 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M285.2,213.3 V197.2 Q285.2,193.2 289.2,193.2 H305.2 Q309.2,193.2 309.2,197.2 V213.3 Z\"><title>2023: 3 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"297.2\" y=\"187.2\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M358.8,230.0 V215.3 Q358.8,215.3 358.8,215.3 H382.8 Q382.8,215.3 382.8,215.3 V230.0 Z\"><title>2024: 2 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M358.8,213.3 V211.9 Q358.8,207.9 362.8,207.9 H378.8 Q382.8,207.9 382.8,211.9 V213.3 Z\"><title>2024: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"370.8\" y=\"201.9\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M432.2,230.0 V193.2 Q432.2,193.2 432.2,193.2 H456.2 Q456.2,193.2 456.2,193.2 V230.0 Z\"><title>2025: 5 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M432.2,191.2 V153.0 Q432.2,149.0 436.2,149.0 H452.2 Q456.2,149.0 456.2,153.0 V191.2 Z\"><title>2025: 6 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"444.2\" y=\"143.0\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V156.4 Q505.8,156.4 505.8,156.4 H529.8 Q529.8,156.4 529.8,156.4 V230.0 Z\"><title>2026: 10 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M505.8,154.4 V90.2 Q505.8,90.2 505.8,90.2 H529.8 Q529.8,90.2 529.8,90.2 V154.4 Z\"><title>2026: 9 bài tác giả đầu ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M505.8,88.2 V79.4 Q505.8,75.4 509.8,75.4 H525.8 Q529.8,75.4 529.8,79.4 V88.2 Z\"><title>2026: 2 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"517.8\" y=\"69.4\" text-anchor=\"middle\">21</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>"
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from VinUni\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from VinUni</text><rect class=\"other-inst\" x=\"223.60000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"241.60000000000002\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"394.40000000000003\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"412.40000000000003\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"193.2\" x2=\"628\" y2=\"193.2\"/><text class=\"tick\" x=\"34\" y=\"197.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"156.4\" x2=\"628\" y2=\"156.4\"/><text class=\"tick\" x=\"34\" y=\"160.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"119.6\" x2=\"628\" y2=\"119.6\"/><text class=\"tick\" x=\"34\" y=\"123.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"82.8\" x2=\"628\" y2=\"82.8\"/><text class=\"tick\" x=\"34\" y=\"86.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"own-inst\" d=\"M211.8,230.0 V222.6 Q211.8,222.6 211.8,222.6 H235.8 Q235.8,222.6 235.8,222.6 V230.0 Z\"><title>2022: 1 first author from VinUni</title></path><path class=\"other-inst\" d=\"M211.8,220.6 V219.3 Q211.8,215.3 215.8,215.3 H231.8 Q235.8,215.3 235.8,219.3 V220.6 Z\"><title>2022: 1 first author elsewhere</title></path><text class=\"value\" x=\"223.8\" y=\"209.3\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M285.2,230.0 V215.3 Q285.2,215.3 285.2,215.3 H309.2 Q309.2,215.3 309.2,215.3 V230.0 Z\"><title>2023: 2 first author from VinUni</title></path><path class=\"other-inst\" d=\"M285.2,213.3 V197.2 Q285.2,193.2 289.2,193.2 H305.2 Q309.2,193.2 309.2,197.2 V213.3 Z\"><title>2023: 3 first author elsewhere</title></path><text class=\"value\" x=\"297.2\" y=\"187.2\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M358.8,230.0 V215.3 Q358.8,215.3 358.8,215.3 H382.8 Q382.8,215.3 382.8,215.3 V230.0 Z\"><title>2024: 2 first author from VinUni</title></path><path class=\"other-inst\" d=\"M358.8,213.3 V211.9 Q358.8,207.9 362.8,207.9 H378.8 Q382.8,207.9 382.8,211.9 V213.3 Z\"><title>2024: 1 first author elsewhere</title></path><text class=\"value\" x=\"370.8\" y=\"201.9\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M432.2,230.0 V193.2 Q432.2,193.2 432.2,193.2 H456.2 Q456.2,193.2 456.2,193.2 V230.0 Z\"><title>2025: 5 first author from VinUni</title></path><path class=\"other-inst\" d=\"M432.2,191.2 V153.0 Q432.2,149.0 436.2,149.0 H452.2 Q456.2,149.0 456.2,153.0 V191.2 Z\"><title>2025: 6 first author elsewhere</title></path><text class=\"value\" x=\"444.2\" y=\"143.0\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V156.4 Q505.8,156.4 505.8,156.4 H529.8 Q529.8,156.4 529.8,156.4 V230.0 Z\"><title>2026: 10 first author from VinUni</title></path><path class=\"other-inst\" d=\"M505.8,154.4 V90.2 Q505.8,90.2 505.8,90.2 H529.8 Q529.8,90.2 529.8,90.2 V154.4 Z\"><title>2026: 9 first author elsewhere</title></path><path class=\"unjudged\" d=\"M505.8,88.2 V72.1 Q505.8,68.1 509.8,68.1 H525.8 Q529.8,68.1 529.8,72.1 V88.2 Z\"><title>2026: 3 affiliations not known yet</title></path><text class=\"value\" x=\"517.8\" y=\"62.1\" text-anchor=\"middle\">22</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng VinUni\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng VinUni</text><rect class=\"other-inst\" x=\"217.20000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"235.20000000000002\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"407.20000000000005\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"425.20000000000005\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"193.2\" x2=\"628\" y2=\"193.2\"/><text class=\"tick\" x=\"34\" y=\"197.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"156.4\" x2=\"628\" y2=\"156.4\"/><text class=\"tick\" x=\"34\" y=\"160.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"119.6\" x2=\"628\" y2=\"119.6\"/><text class=\"tick\" x=\"34\" y=\"123.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"82.8\" x2=\"628\" y2=\"82.8\"/><text class=\"tick\" x=\"34\" y=\"86.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"own-inst\" d=\"M211.8,230.0 V222.6 Q211.8,222.6 211.8,222.6 H235.8 Q235.8,222.6 235.8,222.6 V230.0 Z\"><title>2022: 1 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M211.8,220.6 V219.3 Q211.8,215.3 215.8,215.3 H231.8 Q235.8,215.3 235.8,219.3 V220.6 Z\"><title>2022: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"223.8\" y=\"209.3\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M285.2,230.0 V215.3 Q285.2,215.3 285.2,215.3 H309.2 Q309.2,215.3 309.2,215.3 V230.0 Z\"><title>2023: 2 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M285.2,213.3 V197.2 Q285.2,193.2 289.2,193.2 H305.2 Q309.2,193.2 309.2,197.2 V213.3 Z\"><title>2023: 3 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"297.2\" y=\"187.2\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M358.8,230.0 V215.3 Q358.8,215.3 358.8,215.3 H382.8 Q382.8,215.3 382.8,215.3 V230.0 Z\"><title>2024: 2 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M358.8,213.3 V211.9 Q358.8,207.9 362.8,207.9 H378.8 Q382.8,207.9 382.8,211.9 V213.3 Z\"><title>2024: 1 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"370.8\" y=\"201.9\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M432.2,230.0 V193.2 Q432.2,193.2 432.2,193.2 H456.2 Q456.2,193.2 456.2,193.2 V230.0 Z\"><title>2025: 5 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M432.2,191.2 V153.0 Q432.2,149.0 436.2,149.0 H452.2 Q456.2,149.0 456.2,153.0 V191.2 Z\"><title>2025: 6 bài tác giả đầu ở đơn vị khác</title></path><text class=\"value\" x=\"444.2\" y=\"143.0\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V156.4 Q505.8,156.4 505.8,156.4 H529.8 Q529.8,156.4 529.8,156.4 V230.0 Z\"><title>2026: 10 bài tác giả đầu cùng VinUni</title></path><path class=\"other-inst\" d=\"M505.8,154.4 V90.2 Q505.8,90.2 505.8,90.2 H529.8 Q529.8,90.2 529.8,90.2 V154.4 Z\"><title>2026: 9 bài tác giả đầu ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M505.8,88.2 V72.1 Q505.8,68.1 509.8,68.1 H525.8 Q529.8,68.1 529.8,72.1 V88.2 Z\"><title>2026: 3 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"517.8\" y=\"62.1\" text-anchor=\"middle\">22</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>"
    },
    "majority": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from VinUni\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from VinUni</text><rect class=\"other-inst\" x=\"223.60000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"241.60000000000002\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"394.40000000000003\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"412.40000000000003\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"193.2\" x2=\"628\" y2=\"193.2\"/><text class=\"tick\" x=\"34\" y=\"197.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"156.4\" x2=\"628\" y2=\"156.4\"/><text class=\"tick\" x=\"34\" y=\"160.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"119.6\" x2=\"628\" y2=\"119.6\"/><text class=\"tick\" x=\"34\" y=\"123.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"82.8\" x2=\"628\" y2=\"82.8\"/><text class=\"tick\" x=\"34\" y=\"86.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M211.8,230.0 V219.3 Q211.8,215.3 215.8,215.3 H231.8 Q235.8,215.3 235.8,219.3 V230.0 Z\"><title>2022: 2 most authors elsewhere</title></path><text class=\"value\" x=\"223.8\" y=\"209.3\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M285.2,230.0 V222.6 Q285.2,222.6 285.2,222.6 H309.2 Q309.2,222.6 309.2,222.6 V230.0 Z\"><title>2023: 1 most authors from VinUni</title></path><path class=\"other-inst\" d=\"M285.2,220.6 V197.2 Q285.2,193.2 289.2,193.2 H305.2 Q309.2,193.2 309.2,197.2 V220.6 Z\"><title>2023: 4 most authors elsewhere</title></path><text class=\"value\" x=\"297.2\" y=\"187.2\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M358.8,230.0 V222.6 Q358.8,222.6 358.8,222.6 H382.8 Q382.8,222.6 382.8,222.6 V230.0 Z\"><title>2024: 1 most authors from VinUni</title></path><path class=\"other-inst\" d=\"M358.8,220.6 V211.9 Q358.8,207.9 362.8,207.9 H378.8 Q382.8,207.9 382.8,211.9 V220.6 Z\"><title>2024: 2 most authors elsewhere</title></path><text class=\"value\" x=\"370.8\" y=\"201.9\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M432.2,230.0 V200.6 Q432.2,200.6 432.2,200.6 H456.2 Q456.2,200.6 456.2,200.6 V230.0 Z\"><title>2025: 4 most authors from VinUni</title></path><path class=\"other-inst\" d=\"M432.2,198.6 V153.0 Q432.2,149.0 436.2,149.0 H452.2 Q456.2,149.0 456.2,153.0 V198.6 Z\"><title>2025: 7 most authors elsewhere</title></path><text class=\"value\" x=\"444.2\" y=\"143.0\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V171.1 Q505.8,171.1 505.8,171.1 H529.8 Q529.8,171.1 529.8,171.1 V230.0 Z\"><title>2026: 8 most authors from VinUni</title></path><path class=\"other-inst\" d=\"M505.8,169.1 V90.2 Q505.8,90.2 505.8,90.2 H529.8 Q529.8,90.2 529.8,90.2 V169.1 Z\"><title>2026: 11 most authors elsewhere</title></path><path class=\"unjudged\" d=\"M505.8,88.2 V79.4 Q505.8,75.4 509.8,75.4 H525.8 Q529.8,75.4 529.8,79.4 V88.2 Z\"><title>2026: 2 affiliations not known yet</title></path><text class=\"value\" x=\"517.8\" y=\"69.4\" text-anchor=\"middle\">21</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng VinUni\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng VinUni</text><rect class=\"other-inst\" x=\"230.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"248.0\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"432.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"450.8\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"193.2\" x2=\"628\" y2=\"193.2\"/><text class=\"tick\" x=\"34\" y=\"197.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"156.4\" x2=\"628\" y2=\"156.4\"/><text class=\"tick\" x=\"34\" y=\"160.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"119.6\" x2=\"628\" y2=\"119.6\"/><text class=\"tick\" x=\"34\" y=\"123.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"82.8\" x2=\"628\" y2=\"82.8\"/><text class=\"tick\" x=\"34\" y=\"86.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M211.8,230.0 V219.3 Q211.8,215.3 215.8,215.3 H231.8 Q235.8,215.3 235.8,219.3 V230.0 Z\"><title>2022: 2 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"223.8\" y=\"209.3\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M285.2,230.0 V222.6 Q285.2,222.6 285.2,222.6 H309.2 Q309.2,222.6 309.2,222.6 V230.0 Z\"><title>2023: 1 bài đa số tác giả cùng VinUni</title></path><path class=\"other-inst\" d=\"M285.2,220.6 V197.2 Q285.2,193.2 289.2,193.2 H305.2 Q309.2,193.2 309.2,197.2 V220.6 Z\"><title>2023: 4 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"297.2\" y=\"187.2\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M358.8,230.0 V222.6 Q358.8,222.6 358.8,222.6 H382.8 Q382.8,222.6 382.8,222.6 V230.0 Z\"><title>2024: 1 bài đa số tác giả cùng VinUni</title></path><path class=\"other-inst\" d=\"M358.8,220.6 V211.9 Q358.8,207.9 362.8,207.9 H378.8 Q382.8,207.9 382.8,211.9 V220.6 Z\"><title>2024: 2 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"370.8\" y=\"201.9\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M432.2,230.0 V200.6 Q432.2,200.6 432.2,200.6 H456.2 Q456.2,200.6 456.2,200.6 V230.0 Z\"><title>2025: 4 bài đa số tác giả cùng VinUni</title></path><path class=\"other-inst\" d=\"M432.2,198.6 V153.0 Q432.2,149.0 436.2,149.0 H452.2 Q456.2,149.0 456.2,153.0 V198.6 Z\"><title>2025: 7 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"444.2\" y=\"143.0\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V171.1 Q505.8,171.1 505.8,171.1 H529.8 Q529.8,171.1 529.8,171.1 V230.0 Z\"><title>2026: 8 bài đa số tác giả cùng VinUni</title></path><path class=\"other-inst\" d=\"M505.8,169.1 V90.2 Q505.8,90.2 505.8,90.2 H529.8 Q529.8,90.2 529.8,90.2 V169.1 Z\"><title>2026: 11 bài đa số tác giả ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M505.8,88.2 V79.4 Q505.8,75.4 509.8,75.4 H525.8 Q529.8,75.4 529.8,79.4 V88.2 Z\"><title>2026: 2 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"517.8\" y=\"69.4\" text-anchor=\"middle\">21</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>"
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from VinUni\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from VinUni</text><rect class=\"other-inst\" x=\"223.60000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"241.60000000000002\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"394.40000000000003\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"412.40000000000003\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"193.2\" x2=\"628\" y2=\"193.2\"/><text class=\"tick\" x=\"34\" y=\"197.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"156.4\" x2=\"628\" y2=\"156.4\"/><text class=\"tick\" x=\"34\" y=\"160.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"119.6\" x2=\"628\" y2=\"119.6\"/><text class=\"tick\" x=\"34\" y=\"123.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"82.8\" x2=\"628\" y2=\"82.8\"/><text class=\"tick\" x=\"34\" y=\"86.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M211.8,230.0 V219.3 Q211.8,215.3 215.8,215.3 H231.8 Q235.8,215.3 235.8,219.3 V230.0 Z\"><title>2022: 2 most authors elsewhere</title></path><text class=\"value\" x=\"223.8\" y=\"209.3\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M285.2,230.0 V222.6 Q285.2,222.6 285.2,222.6 H309.2 Q309.2,222.6 309.2,222.6 V230.0 Z\"><title>2023: 1 most authors from VinUni</title></path><path class=\"other-inst\" d=\"M285.2,220.6 V197.2 Q285.2,193.2 289.2,193.2 H305.2 Q309.2,193.2 309.2,197.2 V220.6 Z\"><title>2023: 4 most authors elsewhere</title></path><text class=\"value\" x=\"297.2\" y=\"187.2\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M358.8,230.0 V222.6 Q358.8,222.6 358.8,222.6 H382.8 Q382.8,222.6 382.8,222.6 V230.0 Z\"><title>2024: 1 most authors from VinUni</title></path><path class=\"other-inst\" d=\"M358.8,220.6 V211.9 Q358.8,207.9 362.8,207.9 H378.8 Q382.8,207.9 382.8,211.9 V220.6 Z\"><title>2024: 2 most authors elsewhere</title></path><text class=\"value\" x=\"370.8\" y=\"201.9\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M432.2,230.0 V200.6 Q432.2,200.6 432.2,200.6 H456.2 Q456.2,200.6 456.2,200.6 V230.0 Z\"><title>2025: 4 most authors from VinUni</title></path><path class=\"other-inst\" d=\"M432.2,198.6 V153.0 Q432.2,149.0 436.2,149.0 H452.2 Q456.2,149.0 456.2,153.0 V198.6 Z\"><title>2025: 7 most authors elsewhere</title></path><text class=\"value\" x=\"444.2\" y=\"143.0\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V171.1 Q505.8,171.1 505.8,171.1 H529.8 Q529.8,171.1 529.8,171.1 V230.0 Z\"><title>2026: 8 most authors from VinUni</title></path><path class=\"other-inst\" d=\"M505.8,169.1 V90.2 Q505.8,90.2 505.8,90.2 H529.8 Q529.8,90.2 529.8,90.2 V169.1 Z\"><title>2026: 11 most authors elsewhere</title></path><path class=\"unjudged\" d=\"M505.8,88.2 V72.1 Q505.8,68.1 509.8,68.1 H525.8 Q529.8,68.1 529.8,72.1 V88.2 Z\"><title>2026: 3 affiliations not known yet</title></path><text class=\"value\" x=\"517.8\" y=\"62.1\" text-anchor=\"middle\">22</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng VinUni\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng VinUni</text><rect class=\"other-inst\" x=\"230.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"248.0\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"432.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"450.8\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"193.2\" x2=\"628\" y2=\"193.2\"/><text class=\"tick\" x=\"34\" y=\"197.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"156.4\" x2=\"628\" y2=\"156.4\"/><text class=\"tick\" x=\"34\" y=\"160.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"119.6\" x2=\"628\" y2=\"119.6\"/><text class=\"tick\" x=\"34\" y=\"123.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"82.8\" x2=\"628\" y2=\"82.8\"/><text class=\"tick\" x=\"34\" y=\"86.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><path class=\"other-inst\" d=\"M211.8,230.0 V219.3 Q211.8,215.3 215.8,215.3 H231.8 Q235.8,215.3 235.8,219.3 V230.0 Z\"><title>2022: 2 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"223.8\" y=\"209.3\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><path class=\"own-inst\" d=\"M285.2,230.0 V222.6 Q285.2,222.6 285.2,222.6 H309.2 Q309.2,222.6 309.2,222.6 V230.0 Z\"><title>2023: 1 bài đa số tác giả cùng VinUni</title></path><path class=\"other-inst\" d=\"M285.2,220.6 V197.2 Q285.2,193.2 289.2,193.2 H305.2 Q309.2,193.2 309.2,197.2 V220.6 Z\"><title>2023: 4 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"297.2\" y=\"187.2\" text-anchor=\"middle\">5</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M358.8,230.0 V222.6 Q358.8,222.6 358.8,222.6 H382.8 Q382.8,222.6 382.8,222.6 V230.0 Z\"><title>2024: 1 bài đa số tác giả cùng VinUni</title></path><path class=\"other-inst\" d=\"M358.8,220.6 V211.9 Q358.8,207.9 362.8,207.9 H378.8 Q382.8,207.9 382.8,211.9 V220.6 Z\"><title>2024: 2 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"370.8\" y=\"201.9\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><path class=\"own-inst\" d=\"M432.2,230.0 V200.6 Q432.2,200.6 432.2,200.6 H456.2 Q456.2,200.6 456.2,200.6 V230.0 Z\"><title>2025: 4 bài đa số tác giả cùng VinUni</title></path><path class=\"other-inst\" d=\"M432.2,198.6 V153.0 Q432.2,149.0 436.2,149.0 H452.2 Q456.2,149.0 456.2,153.0 V198.6 Z\"><title>2025: 7 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"444.2\" y=\"143.0\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V171.1 Q505.8,171.1 505.8,171.1 H529.8 Q529.8,171.1 529.8,171.1 V230.0 Z\"><title>2026: 8 bài đa số tác giả cùng VinUni</title></path><path class=\"other-inst\" d=\"M505.8,169.1 V90.2 Q505.8,90.2 505.8,90.2 H529.8 Q529.8,90.2 529.8,90.2 V169.1 Z\"><title>2026: 11 bài đa số tác giả ở đơn vị khác</title></path><path class=\"unjudged\" d=\"M505.8,88.2 V72.1 Q505.8,68.1 509.8,68.1 H525.8 Q529.8,68.1 529.8,72.1 V88.2 Z\"><title>2026: 3 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"517.8\" y=\"62.1\" text-anchor=\"middle\">22</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>"
    }
   },
   "score_areas": {
    "AI": 1.37,
-   "ML": 6.27,
+   "ML": 6.52,
    "CV": 1.19,
    "NLP": 0.25
   },
-  "score": 2.62,
+  "score": 2.64,
   "name_vi": "Trường Đại học VinUni",
   "image": "img/institutions/vinuni.png",
   "image_source": "https://en.wikipedia.org/wiki/File:VinUniversity_Logo.png"
@@ -3587,16 +3588,16 @@
   ],
   "iclr_complete": true,
   "accepted": 16,
-  "own_page": 2,
-  "official": 14,
+  "own_page": 0,
+  "official": 16,
   "venues": {
    "iclr": {
     "accepted": 0,
     "rejected": 1,
-    "withdrawn": 0,
+    "withdrawn": 1,
     "desk_rejected": 1,
-    "not_accepted": 2,
-    "submitted": 2,
+    "not_accepted": 3,
+    "submitted": 3,
     "own_page": 0,
     "official": 0
    },
@@ -3607,8 +3608,8 @@
     "desk_rejected": 0,
     "not_accepted": 0,
     "submitted": 3,
-    "own_page": 2,
-    "official": 1
+    "own_page": 0,
+    "official": 3
    },
    "icml": {
     "accepted": 1,
@@ -4550,8 +4551,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 2,
-      "own_page": 2,
-      "official": 0,
+      "own_page": 0,
+      "official": 2,
       "available": true,
       "held": true,
       "provisional": true
@@ -4662,8 +4663,8 @@
      }
     },
     "accepted": 5,
-    "own_page": 2,
-    "official": 3
+    "own_page": 0,
+    "official": 5
    },
    {
     "year": 2027,
@@ -4672,10 +4673,10 @@
      "iclr": {
       "accepted": 0,
       "rejected": 0,
-      "withdrawn": 0,
+      "withdrawn": 1,
       "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
+      "not_accepted": 1,
+      "submitted": 1,
       "own_page": 0,
       "official": 0,
       "available": false,
@@ -4806,8 +4807,8 @@
    }
   ],
   "workshop": 3,
-  "rejected_estimated": 34,
-  "acceptance_rate": 32,
+  "rejected_estimated": 51,
+  "acceptance_rate": 24,
   "rate_trivial": false,
   "author_charts": {
    "first": {
@@ -5193,8 +5194,8 @@
   ],
   "iclr_complete": true,
   "accepted": 12,
-  "own_page": 1,
-  "official": 11,
+  "own_page": 0,
+  "official": 12,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -5213,8 +5214,8 @@
     "desk_rejected": 0,
     "not_accepted": 0,
     "submitted": 2,
-    "own_page": 1,
-    "official": 1
+    "own_page": 0,
+    "official": 2
    },
    "icml": {
     "accepted": 0,
@@ -6156,8 +6157,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 1,
-      "own_page": 1,
-      "official": 0,
+      "own_page": 0,
+      "official": 1,
       "available": true,
       "held": true,
       "provisional": true
@@ -6268,8 +6269,8 @@
      }
     },
     "accepted": 6,
-    "own_page": 1,
-    "official": 5
+    "own_page": 0,
+    "official": 6
    },
    {
     "year": 2027,
@@ -6800,8 +6801,8 @@
   ],
   "iclr_complete": false,
   "accepted": 10,
-  "own_page": 3,
-  "official": 7,
+  "own_page": 0,
+  "official": 10,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -6820,8 +6821,8 @@
     "desk_rejected": 0,
     "not_accepted": 0,
     "submitted": 4,
-    "own_page": 3,
-    "official": 1
+    "own_page": 0,
+    "official": 4
    },
    "icml": {
     "accepted": 1,
@@ -7763,8 +7764,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 3,
-      "own_page": 3,
-      "official": 0,
+      "own_page": 0,
+      "official": 3,
       "available": true,
       "held": true,
       "provisional": true
@@ -7875,8 +7876,8 @@
      }
     },
     "accepted": 7,
-    "own_page": 3,
-    "official": 4
+    "own_page": 0,
+    "official": 7
    },
    {
     "year": 2027,
@@ -10009,16 +10010,16 @@
   ],
   "iclr_complete": true,
   "accepted": 3,
-  "own_page": 2,
-  "official": 1,
+  "own_page": 0,
+  "official": 3,
   "venues": {
    "iclr": {
     "accepted": 0,
     "rejected": 0,
-    "withdrawn": 2,
+    "withdrawn": 6,
     "desk_rejected": 0,
-    "not_accepted": 2,
-    "submitted": 2,
+    "not_accepted": 6,
+    "submitted": 6,
     "own_page": 0,
     "official": 0
    },
@@ -10029,8 +10030,8 @@
     "desk_rejected": 0,
     "not_accepted": 0,
     "submitted": 2,
-    "own_page": 2,
-    "official": 0
+    "own_page": 0,
+    "official": 2
    },
    "icml": {
     "accepted": 1,
@@ -10972,8 +10973,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 2,
-      "own_page": 2,
-      "official": 0,
+      "own_page": 0,
+      "official": 2,
       "available": true,
       "held": true,
       "provisional": true
@@ -11084,8 +11085,8 @@
      }
     },
     "accepted": 3,
-    "own_page": 2,
-    "official": 1
+    "own_page": 0,
+    "official": 3
    },
    {
     "year": 2027,
@@ -11094,10 +11095,10 @@
      "iclr": {
       "accepted": 0,
       "rejected": 0,
-      "withdrawn": 1,
+      "withdrawn": 5,
       "desk_rejected": 0,
-      "not_accepted": 1,
-      "submitted": 1,
+      "not_accepted": 5,
+      "submitted": 5,
       "own_page": 0,
       "official": 0,
       "available": false,
@@ -11228,8 +11229,8 @@
    }
   ],
   "workshop": 1,
-  "rejected_estimated": 8,
-  "acceptance_rate": 27,
+  "rejected_estimated": 24,
+  "acceptance_rate": 11,
   "rate_trivial": false,
   "author_charts": {
    "first": {
@@ -13213,8 +13214,8 @@
   ],
   "iclr_complete": true,
   "accepted": 2,
-  "own_page": 2,
-  "official": 0,
+  "own_page": 0,
+  "official": 2,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -13233,8 +13234,8 @@
     "desk_rejected": 0,
     "not_accepted": 0,
     "submitted": 2,
-    "own_page": 2,
-    "official": 0
+    "own_page": 0,
+    "official": 2
    },
    "icml": {
     "accepted": 0,
@@ -14176,8 +14177,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 2,
-      "own_page": 2,
-      "official": 0,
+      "own_page": 0,
+      "official": 2,
       "available": true,
       "held": true,
       "provisional": true
@@ -14288,8 +14289,8 @@
      }
     },
     "accepted": 2,
-    "own_page": 2,
-    "official": 0
+    "own_page": 0,
+    "official": 2
    },
    {
     "year": 2027,
@@ -18019,8 +18020,8 @@
   ],
   "iclr_complete": true,
   "accepted": 1,
-  "own_page": 1,
-  "official": 0,
+  "own_page": 0,
+  "official": 1,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -18039,8 +18040,8 @@
     "desk_rejected": 0,
     "not_accepted": 0,
     "submitted": 1,
-    "own_page": 1,
-    "official": 0
+    "own_page": 0,
+    "official": 1
    },
    "icml": {
     "accepted": 0,
@@ -18982,8 +18983,8 @@
       "desk_rejected": 0,
       "not_accepted": 0,
       "submitted": 1,
-      "own_page": 1,
-      "official": 0,
+      "own_page": 0,
+      "official": 1,
       "available": true,
       "held": true,
       "provisional": true
@@ -19094,8 +19095,8 @@
      }
     },
     "accepted": 1,
-    "own_page": 1,
-    "official": 0
+    "own_page": 0,
+    "official": 1
    },
    {
     "year": 2027,
