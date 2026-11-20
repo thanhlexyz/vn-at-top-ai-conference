@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-19 23:30 UTC",
- "generated_date": "2026-11-19",
+ "generated": "2026-11-20 00:16 UTC",
+ "generated_date": "2026-11-20",
  "first_year": 2020,
  "last_year": 2027,
  "years": [
@@ -229,15 +229,6 @@
    "provisional": false
   },
   {
-   "venue": "naacl",
-   "year": 2020,
-   "papers": 0,
-   "sources": [],
-   "with_affiliation": 0,
-   "other_tracks": {},
-   "provisional": false
-  },
-  {
    "venue": "aaai",
    "year": 2020,
    "papers": 1585,
@@ -322,7 +313,7 @@
   {
    "venue": "acl",
    "year": 2021,
-   "papers": 710,
+   "papers": 571,
    "sources": [
     "aclanthology.org"
    ],
@@ -354,17 +345,6 @@
    "venue": "emnlp",
    "year": 2021,
    "papers": 847,
-   "sources": [
-    "aclanthology.org"
-   ],
-   "with_affiliation": 0,
-   "other_tracks": {},
-   "provisional": false
-  },
-  {
-   "venue": "naacl",
-   "year": 2021,
-   "papers": 477,
    "sources": [
     "aclanthology.org"
    ],
@@ -465,7 +445,7 @@
   {
    "venue": "acl",
    "year": 2022,
-   "papers": 700,
+   "papers": 603,
    "sources": [
     "aclanthology.org"
    ],
@@ -497,17 +477,6 @@
    "venue": "emnlp",
    "year": 2022,
    "papers": 828,
-   "sources": [
-    "aclanthology.org"
-   ],
-   "with_affiliation": 0,
-   "other_tracks": {},
-   "provisional": false
-  },
-  {
-   "venue": "naacl",
-   "year": 2022,
-   "papers": 442,
    "sources": [
     "aclanthology.org"
    ],
@@ -615,7 +584,7 @@
   {
    "venue": "acl",
    "year": 2023,
-   "papers": 1075,
+   "papers": 911,
    "sources": [
     "aclanthology.org"
    ],
@@ -650,15 +619,6 @@
    "sources": [
     "aclanthology.org"
    ],
-   "with_affiliation": 0,
-   "other_tracks": {},
-   "provisional": false
-  },
-  {
-   "venue": "naacl",
-   "year": 2023,
-   "papers": 0,
-   "sources": [],
    "with_affiliation": 0,
    "other_tracks": {},
    "provisional": false
@@ -771,7 +731,7 @@
   {
    "venue": "acl",
    "year": 2024,
-   "papers": 940,
+   "papers": 864,
    "sources": [
     "aclanthology.org"
    ],
@@ -803,17 +763,6 @@
    "venue": "emnlp",
    "year": 2024,
    "papers": 1268,
-   "sources": [
-    "aclanthology.org"
-   ],
-   "with_affiliation": 0,
-   "other_tracks": {},
-   "provisional": false
-  },
-  {
-   "venue": "naacl",
-   "year": 2024,
-   "papers": 487,
    "sources": [
     "aclanthology.org"
    ],
@@ -933,7 +882,7 @@
   {
    "venue": "acl",
    "year": 2025,
-   "papers": 1699,
+   "papers": 1602,
    "sources": [
     "aclanthology.org"
    ],
@@ -965,17 +914,6 @@
    "venue": "emnlp",
    "year": 2025,
    "papers": 1809,
-   "sources": [
-    "aclanthology.org"
-   ],
-   "with_affiliation": 0,
-   "other_tracks": {},
-   "provisional": false
-  },
-  {
-   "venue": "naacl",
-   "year": 2025,
-   "papers": 637,
    "sources": [
     "aclanthology.org"
    ],
@@ -1052,18 +990,18 @@
   {
    "venue": "neurips",
    "year": 2026,
-   "papers": 5284,
+   "papers": 7896,
    "sources": [
     "neurips.cc"
    ],
-   "with_affiliation": 98,
+   "with_affiliation": 99,
    "other_tracks": {
-    "journal": 62,
-    "position": 107,
-    "datasets_benchmarks": 623,
-    "other": 1
+    "datasets_benchmarks": 969,
+    "position": 137,
+    "journal": 87,
+    "other": 22
    },
-   "provisional": true
+   "provisional": false
   },
   {
    "venue": "icml",
@@ -1093,7 +1031,7 @@
   {
    "venue": "acl",
    "year": 2026,
-   "papers": 2296,
+   "papers": 2222,
    "sources": [
     "aclanthology.org"
    ],
@@ -1124,17 +1062,10 @@
   {
    "venue": "emnlp",
    "year": 2026,
-   "papers": 0,
-   "sources": [],
-   "with_affiliation": 0,
-   "other_tracks": {},
-   "provisional": false
-  },
-  {
-   "venue": "naacl",
-   "year": 2026,
-   "papers": 0,
-   "sources": [],
+   "papers": 2704,
+   "sources": [
+    "aclanthology.org"
+   ],
    "with_affiliation": 0,
    "other_tracks": {},
    "provisional": false
@@ -1191,18 +1122,106 @@
     "Demo Track": 47
    },
    "provisional": false
-  }
- ],
- "professors": 66,
- "papers": 265,
- "accepted": 158,
- "preliminary": true,
- "pending_review": 2,
- "provisional": [
+  },
+  {
+   "venue": "iclr",
+   "year": 2027,
+   "papers": 0,
+   "sources": [
+    "iclr.cc"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
   {
    "venue": "neurips",
-   "name": "NeurIPS",
-   "year": 2026
+   "year": 2027,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "icml",
+   "year": 2027,
+   "papers": 0,
+   "sources": [
+    "icml.cc"
+   ],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "cvpr",
+   "year": 2027,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "acl",
+   "year": 2027,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "iccv",
+   "year": 2027,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "eccv",
+   "year": 2027,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "emnlp",
+   "year": 2027,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "aaai",
+   "year": 2027,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
+  },
+  {
+   "venue": "ijcai",
+   "year": 2027,
+   "papers": 0,
+   "sources": [],
+   "with_affiliation": 0,
+   "other_tracks": {},
+   "provisional": false
   }
- ]
+ ],
+ "professors": 67,
+ "papers": 273,
+ "accepted": 166,
+ "preliminary": true,
+ "pending_review": 2,
+ "provisional": []
 }

@@ -373,8 +373,9 @@ def person_records(person, acc, decisions, queue, warnings, skipped, own=(), bor
 
 
 # venue-years whose accepted papers are taken as unofficial unless the person's own OpenReview record confirms them:
-# the list is out, but the submissions and their author IDs are not public on OpenReview yet
-UNVERIFIED = {("neurips", 2026)}
+# the list is out, but the submissions and their author IDs are not public on OpenReview yet (NeurIPS 2026 left on
+# 2026-11-20, when its submissions became public)
+UNVERIFIED = set()
 
 
 def apply_rules(person, recs):

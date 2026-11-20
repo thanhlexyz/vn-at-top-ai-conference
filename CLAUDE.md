@@ -80,7 +80,7 @@ The local-only pages (Candidates, Not tracked) are drafts, but their data (`cand
   affiliation at all and the authors match name by name.
 - **Unofficial:** a paper known only from a personal page or announcement counts while the official list is
   provisional or not published; shown as `+N` and tagged unofficial. A paper in an official list is unofficial too while
-  the venue-year is in `UNVERIFIED` in `build_site_data.py` (today NeurIPS 2026): its authors cannot be confirmed on
+  the venue-year is in `UNVERIFIED` in `build_site_data.py` (empty since 2026-11-20, when NeurIPS 2026 became public): its authors cannot be confirmed on
   OpenReview until the submissions are public, so only a paper from the person's own OpenReview record is official.
   Remove the venue-year from `UNVERIFIED` once OpenReview publishes it (then refresh and run `verify_affiliations.py`).
   The exemption keeps official any match that starts with "OpenReview profile", which includes exact-ID papers found
@@ -88,7 +88,7 @@ The local-only pages (Candidates, Not tracked) are drafts, but their data (`cand
 - **Provisional lists:** only ICLR, NeurIPS and ICML lists of the current year (`LAST_YEAR`, today's year in `common.py`)
   can be provisional (fewer than half the entries have a start time, `fetch_accepted.is_provisional`). On 1 January the
   year rolls over: `YEARS` gains the new year and the before/from split moves. Hard-coded 2026 to update together:
-  `UNVERIFIED`, `neurips_2026_only` in `build_site_data.py`, and the heading of `not-tracked.html`.
+  `neurips_2026_only` in `build_site_data.py`, and the heading of `not-tracked.html`.
 - **Matching** (`person_records`): OpenReview records by profile ID first (an OpenReview "rejected" paper that is in an
   accepted list counts as accepted; an unknown outcome becomes rejected when that list exists). Then accepted lists by
   name, exactly against `norm_name` of every roster name form (no fuzziness: add every printed form to

@@ -55,7 +55,7 @@ def ecva_pdf(title):
     return "https://www.ecva.net/" + m.group(1) if m else None
 
 
-PMLR_VOLUME = {2020: "v119", 2021: "v139", 2022: "v162", 2023: "v202", 2024: "v235", 2025: "v267"}
+PMLR_VOLUME = {2020: "v119", 2021: "v139", 2022: "v162", 2023: "v202", 2024: "v235", 2025: "v267", 2026: "v306"}
 
 
 def pmlr_pdf(year, title, url=""):

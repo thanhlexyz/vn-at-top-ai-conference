@@ -1576,32 +1576,6 @@
   "year": 2026,
   "venue": "neurips",
   "venue_name": "NeurIPS",
-  "title": "Contrastive Hypergraph Source-free Domain Adaptive Object Detection in Adverse Weathers",
-  "ai_key": "neurips-2026-contrastivehypergraphsourcefreedomainada",
-  "url": "https://openreview.net/forum?id=TAXQQlBzoz",
-  "status": "accepted",
-  "status_label": "accepted",
-  "pres": "",
-  "authors": "Jicheng Yuan, Tung Kieu, Duc Manh Nguyen, Manfred Hauswirth, Danh Le-Phuoc",
-  "match": "OpenReview profile",
-  "note": "",
-  "reason": "",
-  "later": "",
-  "unofficial": false,
-  "workshop": "",
-  "professors": [
-   {
-    "slug": "danh-le-phuoc",
-    "name": "Danh Le-Phuoc",
-    "name_vi": "Lê Phước Danh"
-   }
-  ],
-  "reviews": "5(3), 4(4), 4(3)"
- },
- {
-  "year": 2026,
-  "venue": "neurips",
-  "venue_name": "NeurIPS",
   "title": "ControlJEPA: Principled Trajectory Regularization via Lyapunov Tube Loss",
   "ai_key": "neurips-2026-controljepaprincipledtrajectoryregulariz",
   "url": "https://openreview.net/forum?id=pw4nMbt6SR",
@@ -3311,16 +3285,16 @@
   "venue_name": "EMNLP",
   "title": "Assembling the CREW: A Collaborative Multi-agent Reinforcement Learning Framework for Automated Related Work Generation",
   "ai_key": "emnlp-2026-assemblingthecrewacollaborativemultiagen",
-  "url": "",
+  "url": "https://aclanthology.org/2026.emnlp-main.2052/",
   "status": "accepted",
   "status_label": "accepted",
   "pres": "",
-  "authors": "Tran Thi Huong, Bảo Nguyễn, Đặng Hải Đăng, Phạm Bảo Yến, Huynh Thi Thanh Binh",
-  "match": "listed on her own announcement (13 September 2026) and the EMNLP 2026 decision notification: Main Conference paper; not in the official list yet",
+  "authors": "Hai-Dang Dang, Bao-Yen Pham, Bao Nguyen, Tran Thi Huong, Huynh Thi Thanh Binh",
+  "match": "name, and listed on their own page",
   "note": "",
   "reason": "",
   "later": "",
-  "unofficial": true,
+  "unofficial": false,
   "workshop": "",
   "professors": [
    {
@@ -3342,22 +3316,126 @@
   "venue_name": "EMNLP",
   "title": "Athena: Vulnerability-Affected Library Identification via Knowledge Graph Completion",
   "ai_key": "emnlp-2026-athenavulnerabilityaffectedlibraryidenti",
-  "url": "https://thanhlc.net/publications/",
+  "url": "https://aclanthology.org/2026.emnlp-main.2233/",
   "status": "accepted",
   "status_label": "accepted",
   "pres": "",
-  "authors": "Huynh Quyet Thang, Phong Trinh Duy, Trang Dang Yen, Huu Hung Nguyen, Bach Le, Dieu Hoang Vu, David Lo, Thanh Le-Cong",
-  "match": "listed on the publication page of his co-author Thanh Le-Cong; not in the official list yet",
+  "authors": "Phong Trinh Duy, Trang Dang Yen, Hung Nguyen-Huu, Huynh Quyet Thang, Bach Le, Dieu Hoang Vu, David Lo, Thanh Le-Cong",
+  "match": "name, and listed on their own page",
   "note": "",
   "reason": "",
   "later": "",
-  "unofficial": true,
+  "unofficial": false,
   "workshop": "",
   "professors": [
    {
     "slug": "huynh-quyet-thang",
     "name": "Huynh Quyet Thang",
     "name_vi": "Huỳnh Quyết Thắng"
+   }
+  ],
+  "reviews": ""
+ },
+ {
+  "year": 2026,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "Beyond Semantic Accuracy: Consequence-Aware Evaluation for Safety-Critical Language Understanding",
+  "ai_key": "emnlp-2026-beyondsemanticaccuracyconsequenceawareev",
+  "url": "https://aclanthology.org/2026.emnlp-main.2141/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Yujing Chang, Duc-thinh Pham, Van-Phat Thai, Chunyao Ma, Yash Guleria, Pham Nhut Huy, Sameer Alam",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "thinh-pham",
+    "name": "Thinh Pham",
+    "name_vi": "Phạm Đức Thịnh"
+   }
+  ],
+  "reviews": ""
+ },
+ {
+  "year": 2026,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "CRISP: Cliff-awaRe Input-adaptive Sparse Prefilling with Structural-Mass-Motivated Routing",
+  "ai_key": "emnlp-2026-crispcliffawareinputadaptivesparseprefil",
+  "url": "https://aclanthology.org/2026.emnlp-main.184/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Huy Huu Nguyen, Chien Van Nguyen, Franck Dernoncourt, Ryan A. Rossi, Linh Ngo Van, Jieyang Chen, Thien Huu Nguyen",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "ngo-van-linh",
+    "name": "Ngo Van Linh",
+    "name_vi": "Ngô Văn Linh"
+   }
+  ],
+  "reviews": ""
+ },
+ {
+  "year": 2026,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "HyperProve: Answer-Guided Hypergraph Expansion for Multi-Hop Question Answering",
+  "ai_key": "emnlp-2026-hyperproveanswerguidedhypergraphexpansio",
+  "url": "https://aclanthology.org/2026.emnlp-main.212/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Nguyen Phu An, Dung Nguyen Quang, Luu Hieu An, Linh Ngo Van, Trung Le, Thien Huu Nguyen",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "ngo-van-linh",
+    "name": "Ngo Van Linh",
+    "name_vi": "Ngô Văn Linh"
+   }
+  ],
+  "reviews": ""
+ },
+ {
+  "year": 2026,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "LLM Feedback for Topic Model with Preference Optimization and Contrastive Learning",
+  "ai_key": "emnlp-2026-llmfeedbackfortopicmodelwithpreferenceop",
+  "url": "https://aclanthology.org/2026.emnlp-main.265/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Tung Nguyen, Dat Phan Trong, Linh Ngo Van, Duc Anh Nguyen, Dinh Thai Hoang, Diep Nguyen",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "ngo-van-linh",
+    "name": "Ngo Van Linh",
+    "name_vi": "Ngô Văn Linh"
    }
   ],
   "reviews": ""
@@ -3392,6 +3470,63 @@
   "year": 2026,
   "venue": "emnlp",
   "venue_name": "EMNLP",
+  "title": "PGA-KD: Principal Geometry Alignment and Semantic Consistency for VLM2Vec Distillation",
+  "ai_key": "emnlp-2026-pgakdprincipalgeometryalignmentandsemant",
+  "url": "https://aclanthology.org/2026.emnlp-main.257/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "The-Anh Tran, Thanh Xuan Nguyen, Duc Anh Nguyen, Dinh Viet Sang, Linh Ngo Van, Thien Huu Nguyen",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "ngo-van-linh",
+    "name": "Ngo Van Linh",
+    "name_vi": "Ngô Văn Linh"
+   },
+   {
+    "slug": "dinh-viet-sang",
+    "name": "Dinh Viet Sang",
+    "name_vi": "Đinh Viết Sang"
+   }
+  ],
+  "reviews": ""
+ },
+ {
+  "year": 2026,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "Reservoir of Importance: Learning Semi-Structured Sparsity with Differentiable Subset Sampling",
+  "ai_key": "emnlp-2026-reservoirofimportancelearningsemistructu",
+  "url": "https://aclanthology.org/2026.emnlp-main.1212/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Ha Dinh, Xuan Duy Ta, Khoat Than, Khac-Hoai Nam Bui",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "than-quang-khoat",
+    "name": "Than Quang Khoat",
+    "name_vi": "Thân Quang Khoát"
+   }
+  ],
+  "reviews": ""
+ },
+ {
+  "year": 2026,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
   "title": "ReVEL: Multi-Turn Reflective LLM-Guided Heuristic Evolution via Structured Performance Feedback",
   "ai_key": "emnlp-2026-revelmultiturnreflectivellmguidedheurist",
   "url": "",
@@ -3415,6 +3550,89 @@
     "slug": "nguyen-thi-hanh",
     "name": "Nguyen Thi Hanh",
     "name_vi": "Nguyễn Thị Hạnh"
+   }
+  ],
+  "reviews": ""
+ },
+ {
+  "year": 2026,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "Steering from Random Quotients: A Sample-Complexity Theory of Polysemantic Contrast Pairs",
+  "ai_key": "emnlp-2026-steeringfromrandomquotientsasamplecomple",
+  "url": "https://aclanthology.org/2026.emnlp-main.2190/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Khanh Nguyen Quoc, Luong Doan, Duc Hai Nguyen, Mai Phan Quoc Hung, Ngoc Mai Vu, Phong Ho, Nhung Duong, Tuan Do",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "tuan-do",
+    "name": "Tuan Do",
+    "name_vi": "Đỗ Ngọc Tuấn"
+   }
+  ],
+  "reviews": ""
+ },
+ {
+  "year": 2026,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "SUGAR: Spectral and Geometry-Aware Alignment for Matryoshka Representation Distillation",
+  "ai_key": "emnlp-2026-sugarspectralandgeometryawarealignmentfo",
+  "url": "https://aclanthology.org/2026.emnlp-main.228/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Hai An Vu, Phung Gia Huy, Minh-Phuc Truong, Linh Ngo Van, Thanh Hong Nguyen, Thanh-Toan Do, Trung Le",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "ngo-van-linh",
+    "name": "Ngo Van Linh",
+    "name_vi": "Ngô Văn Linh"
+   }
+  ],
+  "reviews": ""
+ },
+ {
+  "year": 2026,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "XRepoTest: Benchmarking Multilingual Repository-Level Unit Test Generation for Large Language Models",
+  "ai_key": "emnlp-2026-xrepotestbenchmarkingmultilingualreposit",
+  "url": "https://aclanthology.org/2026.emnlp-main.274/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Dung Le Quang, Dong Cao Van, Nam Le Hai, Linh Ngo Van, Thi-Mai-Anh Bui, Phuong T. Nguyen",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "ngo-van-linh",
+    "name": "Ngo Van Linh",
+    "name_vi": "Ngô Văn Linh"
+   },
+   {
+    "slug": "nam-le-hai",
+    "name": "Nam Le Hai",
+    "name_vi": ""
    }
   ],
   "reviews": ""
