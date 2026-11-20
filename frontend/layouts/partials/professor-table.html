@@ -84,7 +84,7 @@
 		{{- if $compact }}
 		{{ partial "group-cells.html" .venues }}
 		{{- end }}
-		<td class="score">{{ printf "%.1f" .score }}</td>
+		<td class="score">{{ printf "%.2f" .score }}</td>
 		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" .own_page) }}">+{{ .own_page }}</span>{{ end }}</td>
 		{{- if not $brief }}{{ partial "split-cells.html" . }}{{ end }}
 		{{ partial "rejected-total.html" .venues }}
