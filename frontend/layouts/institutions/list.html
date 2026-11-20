@@ -66,5 +66,5 @@
 {{- $names := slice }}{{ range . }}{{ $s := . }}{{ range where hugo.Data.institutions "slug" $s }}{{ $names = $names | append .short }}{{ end }}{{ end }}
 {{ T "inst_list_charts_none" (delimit $names ", ") }}
 {{- end }}</p>
-<aside class="callout"><p>{{ T "inst_fun_fact" (dict "HMU" (relLangURL "institutions/hmu/") "FTU" (relLangURL "institutions/ftu/") "NEU" (relLangURL "institutions/neu/")) | safeHTML }}</p></aside>
+<aside class="callout"><p>{{ T "inst_fun_fact" (dict "HMU" (relLangURL "institutions/hmu/") "FTU" (relLangURL "institutions/ftu/") "NEU" (relLangURL "institutions/neu/") "UEH" (relLangURL "institutions/ueh/")) | safeHTML }}</p></aside>
 {{- end }}
