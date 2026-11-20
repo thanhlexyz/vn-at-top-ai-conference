@@ -197,6 +197,7 @@ VN_INSTITUTIONS = [
     (r"ha ?noi medical university", "Hanoi Medical University", "HMU", True),
     (r"le quy don", "Le Quy Don Technical University", "LQDTU", True),
     (r"thuy ?loi univ", "Thuyloi University", "TLU", True),
+    (r"thang ?long univ", "Thang Long University", "DHTL", True),
     (r"can tho university(?! of)", "Can Tho University", "CTU", True),
     (r"hue university", "Hue University", "Hue University", True),
     (r"university of da ?nang|da ?nang university", "University of Danang", "UDN", True),
