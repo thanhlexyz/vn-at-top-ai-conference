@@ -800,6 +800,12 @@ def write_otd_scores(entries):
         write_json(DATA / "otd_scores.json", out)
 
 
+def submission_id(url):
+    """The paper's id at its source: the OpenReview forum id, or the ACL Anthology id (ACL, EMNLP); else empty."""
+    m = re.search(r"openreview\.net/forum\?id=([\w-]+)", url or "") or re.search(r"aclanthology\.org/([\w.-]+?)/?$", url or "")
+    return m.group(1) if m else ""
+
+
 def page_entry(r, people=None):
     e = {"year": r["year"], "venue": r["venue"], "venue_name": VENUE_NAME[r["venue"]], "title": r["title"],
          "ai_key": ai_key(r["venue"], r["year"], r["title"]),
@@ -810,6 +816,7 @@ def page_entry(r, people=None):
     if people is not None:
         e["professors"] = people
         e["reviews"] = review_scores(r["url"])
+        e["sub_id"] = submission_id(r["url"])
     return e
 
 

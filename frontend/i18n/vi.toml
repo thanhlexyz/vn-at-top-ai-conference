@@ -592,6 +592,12 @@ other = "Open Text Detector (chỉ ICLR 2027): tỷ lệ câu trong phần nội
 [otd_hint]
 other = "{{ .Flagged }} trên {{ .Sentences }} câu bị đánh dấu; xem trên Open Text Detector"
 
+[th_sub_id]
+other = "Mã bài nộp"
+
+[tip_sub_id]
+other = "Mã của bài trên OpenReview (mã diễn đàn) hoặc trong ACL Anthology"
+
 [tip_review_scores]
 other = "Điểm của các phản biện, kèm độ tin cậy của phản biện trong ngoặc; thang điểm khác nhau tùy hội nghị và năm"
 

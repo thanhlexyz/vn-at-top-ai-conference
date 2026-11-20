@@ -599,6 +599,12 @@ other = "Open Text Detector (ICLR 2027 only): share of the main-text sentences i
 [otd_hint]
 other = "{{ .Flagged }} of {{ .Sentences }} sentences flagged; open on Open Text Detector"
 
+[th_sub_id]
+other = "Submission ID"
+
+[tip_sub_id]
+other = "The paper's id on OpenReview (forum id) or in the ACL Anthology"
+
 [tip_review_scores]
 other = "Reviewers' scores, each with the reviewer's confidence in brackets; the scales differ by venue and year"
 
