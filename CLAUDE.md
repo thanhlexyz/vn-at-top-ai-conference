@@ -109,6 +109,12 @@ The local-only pages (Candidates, Not tracked) are drafts, but their data (`cand
 - **Estimates:** per professor, the ICLR ratio applies only when the ICLR record is complete; each year adds
   `max(elsewhere * (ratio - 1) - rejections on record elsewhere, 0)`. Institutions use their pooled ICLR record.
   Venues: ICLR is counted; elsewhere the rate uses only papers with an author who has an ICLR record.
+- **ICLR projection** (`iclr_projection`, ICLR venue chart only): while the current year is under review (its accepted
+  list not out), the column shows the rejections on record plus a projection, captioned only as a projection (the
+  maintainer does not want the method on the site). Each withdrawn paper stands for 1 / (withdrawal share) submissions,
+  accepted at its professors' rate: withdrawal share from each professor's own previous three ICLR years, acceptance
+  from the previous year, both pulled toward the group's by 2 papers. Papers whose professors did not submit to ICLR the
+  year before count as one rejection only.
 - **Authorship charts:** "majority" = strictly more than half of all authors at the institution; "first" = the first
   author. Only papers with at least one printed affiliation are judged.
 - **Co-author figures:** averages over all counted papers; the minimum over accepted papers; the maximum also over

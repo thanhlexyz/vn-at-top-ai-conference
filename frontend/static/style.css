@@ -187,6 +187,21 @@ figure {
     stroke-width: 1.5 ;
 }
 
+.chart .pa {
+    fill: var(--accepted) ;
+    fill-opacity: 0.18 ;
+    stroke: var(--accepted) ;
+    stroke-width: 1.5 ;
+}
+
+.chart .pr {
+    fill: var(--not-accepted) ;
+    fill-opacity: 0.18 ;
+    stroke: var(--not-accepted) ;
+    stroke-width: 1.5 ;
+    stroke-dasharray: 3 2 ;
+}
+
 .chart .s1 {
     fill: var(--accepted) ;
 }

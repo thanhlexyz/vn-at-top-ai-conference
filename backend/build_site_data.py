@@ -30,7 +30,7 @@ import math
 import re
 import urllib.parse
 
-from common import (with_pdf_affiliations, ACCEPTED, BACKEND, CANDIDATES, FRONTEND, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
+from common import (with_pdf_affiliations, ACCEPTED, BACKEND, CANDIDATES, FRONTEND, LAST_YEAR, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
                     STATUS_LABEL, VENUE_GROUPS, VENUE_KEYS, VENUE_NAME, VENUES, WORK, YEARS, classify_status, held, in_vietnam,
                     load_roster, name_key, norm_name, norm_title, openreview_venue, presentation, read_csv,
                     read_jsonl_gz, same_institution, slugify, vn_institutions, write_json)
@@ -924,11 +924,48 @@ CHART_TEXT = {
 # the same chart on a venue page, where the recorded rejections are that venue's own
 VENUE_CHART_TEXT = {
     "en": {"aria": "Papers accepted and rejected per year at {name}", "not": "Rejected, recorded",
-           "est": "Rejected, estimated", "tip_not": "{n} rejected, recorded", "tip_est": "about {n} rejected (estimate)"},
+           "est": "Rejected, estimated", "tip_not": "{n} rejected, recorded", "tip_est": "about {n} rejected (estimate)",
+           "pa": "Accepted, projected", "pr": "Rejected, projected", "tip_pa": "about {n} accepted (projected)",
+           "tip_pr": "about {n} more rejected (projected)"},
     "vi": {"aria": "Số bài được nhận và bị từ chối theo năm tại {name}", "not": "Bị từ chối, đếm được",
            "est": "Bị từ chối, ước tính", "tip_not": "{n} bài bị từ chối, đếm được",
-           "tip_est": "khoảng {n} bài bị từ chối (ước tính)"},
+           "tip_est": "khoảng {n} bài bị từ chối (ước tính)", "pa": "Được nhận, dự báo", "pr": "Bị từ chối, dự báo",
+           "tip_pa": "khoảng {n} bài được nhận (dự báo)", "tip_pr": "khoảng {n} bài bị từ chối nữa (dự báo)"},
 }
+
+
+def iclr_projection(entries, year, k=2):
+    """(accepted, rejected) projected for an ICLR year under review, from its withdrawals so far: each withdrawn paper
+    stands for 1 / (withdrawal share) submissions and accepts at the acceptance rate of its professors, both their own
+    (withdrawal share over the three years before, acceptance rate the year before), pulled toward the group's by k
+    papers. A paper with no professor who submitted the year before counts as one rejection and nothing more."""
+    iclr = [e for e in entries if e["venue"] == "iclr"]
+    def record(years):
+        per, pool = collections.defaultdict(collections.Counter), collections.Counter()
+        for e in iclr:
+            if e["year"] in years:
+                pool["sub"] += 1; pool[e["status"]] += 1
+                for o in e["professors"]:
+                    per[o["slug"]]["sub"] += 1; per[o["slug"]][e["status"]] += 1
+        return per, pool
+    wd, wd_pool = record(set(range(year - 3, year)))
+    ac, ac_pool = record({year - 1})
+    if not wd_pool["withdrawn"] or not ac_pool["sub"]:
+        return 0.0, 0.0
+    f0, a0 = wd_pool["withdrawn"] / wd_pool["sub"], ac_pool["accepted"] / ac_pool["sub"]
+    accepted = rejected = 0.0
+    for e in iclr:
+        if e["year"] != year or e["status"] not in NOT_ACCEPTED:
+            continue
+        known = [o["slug"] for o in e["professors"] if ac[o["slug"]]["sub"]]
+        if e["status"] != "withdrawn" or not known:
+            rejected += 1
+            continue
+        share = sum((wd[s]["withdrawn"] + k * f0) / (wd[s]["sub"] + k) for s in known) / len(known)
+        rate = sum((ac[s]["accepted"] + k * a0) / (ac[s]["sub"] + k) for s in known) / len(known)
+        accepted += rate / share
+        rejected += (1 - rate) / share
+    return accepted, rejected
 
 
 def projection_svg(name, rows, lang="en", words=None):
@@ -950,9 +987,10 @@ def projection_svg(name, rows, lang="en", words=None):
     w = {**CHART_TEXT[lang], **(words or {})}
     out = [f'<svg class="chart" viewBox="0 0 {width} {height}" role="img" aria-label="{html.escape(w["aria"].format(name=name))}">']
     x = left
-    field = {"acc": "accepted", "not": "iclr_not_accepted", "est": "estimated"}
-    for cls in ("acc", "not", "est"):
-        if cls != "acc" and not any(r["counts"] and r[field[cls]] for r in rows):
+    field = {"acc": "accepted", "not": "iclr_not_accepted", "est": "estimated", "pa": "projected_accepted",
+             "pr": "projected_rejected"}
+    for cls in ("acc", "not", "est", "pa", "pr"):
+        if cls != "acc" and not any(r["counts"] and r.get(field[cls]) for r in rows):
             continue   # a series that is zero every year is left out of the legend
         out.append(f'<rect class="{cls}" x="{x}" y="8" width="12" height="12"/>'
                    f'<text class="label" x="{x + 18}" y="18">{w[cls]}</text>')
@@ -974,7 +1012,11 @@ def projection_svg(name, rows, lang="en", words=None):
         parts = [(cls, v, text) for cls, v, text in [
             ("acc", r["accepted"], w["tip_acc"].format(n=r["accepted"])),
             ("not", r["iclr_not_accepted"], w["tip_not"].format(n=r["iclr_not_accepted"])),
-            ("est", r["estimated"], w["tip_est"].format(n=f"{r['estimated']:.0f}"))] if v > 0]
+            ("est", r["estimated"], w["tip_est"].format(n=f"{r['estimated']:.0f}")),
+            ("pa", r.get("projected_accepted", 0), w.get("tip_pa", "").format(n=f"{r.get('projected_accepted', 0):.0f}")),
+            ("pr", r.get("projected_rejected", 0), w.get("tip_pr", "").format(n=f"{r.get('projected_rejected', 0):.0f}"))]
+            if v > 0]
+        parts.sort(key=lambda p: ("pa", "acc", "not", "est", "pr").index(p[0]))   # projected accepted at the base
         low = base
         for n, (cls, v, text) in enumerate(parts):
             high = low - v / top_value * plot_h
@@ -986,7 +1028,7 @@ def projection_svg(name, rows, lang="en", words=None):
             out.append(f'<path class="{cls}" d="{shape}"><title>{r["year"]}: {text}</title></path>')
             low = high
         if r["total"]:
-            mark = "" if not r["estimated"] else w["about"]
+            mark = "" if not (r["estimated"] or r.get("projected_rejected") or r.get("projected_accepted")) else w["about"]
             out.append(f'<text class="value" x="{cx:.1f}" y="{low - 6:.1f}" text-anchor="middle">'
                        f'{mark}{r["total"]:.0f}</text>')
     out.append("</svg>")
@@ -1397,6 +1439,7 @@ def main():
             t = reported[r["venue"].lower()]
             t[0] += int(r["submitted"]); t[1] += int(r["accepted"]); t[2].append(int(r["year"]))
 
+    projection_entries = [with_owners(r) for r in papers]
     for v in venues:
         v["rejected_estimated"], v["acceptance_rate"] = venue_estimate(v["key"])
         sub, acc_n, yrs = reported.get(v["key"], (0, 0, []))
@@ -1409,6 +1452,15 @@ def main():
             c = y["venues"][v["key"]]
             if y["counts"]:
                 y["rejected_estimated"] = venue_estimate(v["key"], y["year"])[0]
+            if (v["key"] == "iclr" and y["year"] == LAST_YEAR and c.get("held", True) and not c.get("available", True)
+                    and c["not_accepted"]):
+                # under review: the rejections on record so far, and a projection of the rest
+                pa, pr = iclr_projection(projection_entries, y["year"])
+                extra = max(pr - c["not_accepted"], 0)
+                rows.append({"year": y["year"], "counts": True, "accepted": 0, "iclr_not_accepted": c["not_accepted"],
+                             "estimated": 0, "projected_accepted": pa, "projected_rejected": extra,
+                             "total": c["not_accepted"] + extra + pa})
+                continue
             if not (c.get("held", True) and c.get("available", True)):
                 rows.append({"year": y["year"], "counts": False})
                 continue
