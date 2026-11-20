@@ -1,4 +1,4 @@
 ---
-title: "Thanh Duc Ngo"
+title: "Ngô Đức Thành"
 key: "thanh-duc-ngo"
 ---
