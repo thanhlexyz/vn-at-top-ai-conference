@@ -200,6 +200,7 @@ VN_INSTITUTIONS = [
     (r"thang ?long univ", "Thang Long University", "DHTL", True),
     (r"can tho university(?! of)", "Can Tho University", "CTU", True),
     (r"hue university", "Hue University", "Hue University", True),
+    (r"eastern international univ", "Eastern International University", "EIU", True),
     (r"university of da ?nang|da ?nang university", "University of Danang", "UDN", True),
     (r"rmit\b.*viet ?nam", "RMIT University Vietnam", "RMIT Vietnam", True),
     (r"fulbright university viet ?nam", "Fulbright University Vietnam", "Fulbright VN", True),

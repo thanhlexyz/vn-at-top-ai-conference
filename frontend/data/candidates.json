@@ -3005,39 +3005,6 @@
   },
   {
    "approved": "",
-   "display_name": "Minh-Duc Nguyen",
-   "name_variants": "",
-   "institution": "VinUniversity",
-   "institution_short": "VinUni",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "minh-duc-nguyen",
-   "name_vi": "",
-   "papers": 1,
-   "senior_author": 0,
-   "first_year": "2025",
-   "last_year": "2025",
-   "venues": "AAAI 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "College of Engineering and Computer Science, VinUniversity, Vietnam",
-   "openreview_position": "",
-   "sample_paper": "Improving Pareto Set Learning for Expensive Multi-objective Optimization via Stein Variational Hypernetworks (AAAI 2025)",
-   "sample_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34167",
-   "first_paper": "Improving Pareto Set Learning for Expensive Multi-objective Optimization via Stein Variational Hypernetworks (AAAI 2025)",
-   "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34167",
-   "openreview_url": "https://openreview.net/search?term=Minh-Duc+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
    "display_name": "Minh-Quan Le",
    "name_variants": "",
    "institution": "University of Science, VNU-HCM",
@@ -4024,39 +3991,6 @@
    "first_paper": "Cross-Modal Knowledge Distillation without Paired Data: Theoretical Foundation and Algorithm (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=z9aetU7Wfl",
    "openreview_url": "https://openreview.net/search?term=T.+K+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Thanh Duc Ngo",
-   "name_variants": "",
-   "institution": "University of Information Technology, VNU-HCM",
-   "institution_short": "UIT",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "thanh-duc-ngo",
-   "name_vi": "",
-   "papers": 1,
-   "senior_author": 0,
-   "first_year": "2021",
-   "last_year": "2021",
-   "venues": "CVPR 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "University of Information Technology, VNU-HCM; Vietnam National University, Ho Chi Minh City",
-   "openreview_position": "",
-   "sample_paper": "Dictionary-Guided Scene Text Recognition (CVPR 2021)",
-   "sample_url": "https://openaccess.thecvf.com/content/CVPR2021/html/Nguyen_Dictionary-Guided_Scene_Text_Recognition_CVPR_2021_paper.html",
-   "first_paper": "Dictionary-Guided Scene Text Recognition (CVPR 2021)",
-   "first_url": "https://openaccess.thecvf.com/content/CVPR2021/html/Nguyen_Dictionary-Guided_Scene_Text_Recognition_CVPR_2021_paper.html",
-   "openreview_url": "https://openreview.net/search?term=Thanh+Duc+Ngo&group=all&content=all&source=all",
    "openreview_match": "search"
   },
   {
@@ -5380,7 +5314,7 @@
    "openreview_match": "search"
   }
  ],
- "total": 163,
+ "total": 161,
  "review": [
   {
    "decision": "",
@@ -5735,11 +5669,11 @@
   {
    "name": "Trung Le",
    "affiliation": "Monash University",
-   "papers": 18,
-   "professors": 6,
+   "papers": 19,
+   "professors": 7,
    "vietprofs": "vp-0560",
    "with": "Ngo Van Linh, Nguyen Thi Ngoc Diep, Than Quang Khoat, Khoa D. Doan, Dinh Viet Sang, ...",
-   "venues": "EMNLP 4, ACL 4, NeurIPS 3, ICML 3, ICLR 2, CVPR 1, AAAI 1"
+   "venues": "NeurIPS 4, EMNLP 4, ACL 4, ICML 3, ICLR 2, CVPR 1, AAAI 1"
   },
   {
    "name": "Thien Huu Nguyen",
@@ -5752,12 +5686,12 @@
   },
   {
    "name": "Duy Nguyen",
-   "affiliation": "University of Stuttgart and Max Planck Research School for Intelligent Systems, Germany",
-   "papers": 9,
-   "professors": 6,
+   "affiliation": "German Research Center for Artificial Intelligence (DFKI)",
+   "papers": 10,
+   "professors": 8,
    "vietprofs": "",
    "with": "Khoa D. Doan, Thanh-Binh Nguyen, Ngo Van Linh, An Mai, Binh T. Nguyen, ...",
-   "venues": "NeurIPS 6, ICML 2, ICLR 1"
+   "venues": "NeurIPS 7, ICML 2, ICLR 1"
   },
   {
    "name": "Tan Nguyen",
@@ -5772,9 +5706,9 @@
    "name": "Daniel Sonntag",
    "affiliation": "German Research Center for AI",
    "papers": 7,
-   "professors": 4,
+   "professors": 5,
    "vietprofs": "",
-   "with": "Khoa D. Doan, Thanh-Binh Nguyen, An Mai, An Thai Le",
+   "with": "Khoa D. Doan, Thanh-Binh Nguyen, An Mai, An Thai Le, Minh Nhat Vu",
    "venues": "NeurIPS 4, ICLR 1, ICML 1, AAAI 1"
   },
   {
@@ -5799,9 +5733,9 @@
    "name": "Mathias Niepert",
    "affiliation": "Universität Stuttgart / NEC Labs Europe",
    "papers": 5,
-   "professors": 3,
+   "professors": 4,
    "vietprofs": "",
-   "with": "Khoa D. Doan, Thanh-Binh Nguyen, An Thai Le",
+   "with": "Khoa D. Doan, Thanh-Binh Nguyen, An Thai Le, Minh Nhat Vu",
    "venues": "NeurIPS 3, ICLR 1, ICML 1"
   },
   {
@@ -5812,6 +5746,24 @@
    "vietprofs": "vp-0044",
    "with": "Canh V. Pham, Hieu Pham, Phi Le Nguyen, Tan D. Tran",
    "venues": "IJCAI 2, ICLR 1, ICCV 1, NeurIPS 1"
+  },
+  {
+   "name": "Nhat Ho",
+   "affiliation": "University of Texas at Austin",
+   "papers": 5,
+   "professors": 5,
+   "vietprofs": "",
+   "with": "Than Quang Khoat, Ngo Van Linh, Dung D. Le, Khoa D. Doan, Thanh-Binh Nguyen",
+   "venues": "NeurIPS 3, ICML 1, ICLR 1"
+  },
+  {
+   "name": "Thanh-Toan Do",
+   "affiliation": "Monash University",
+   "papers": 5,
+   "professors": 3,
+   "vietprofs": "",
+   "with": "Ngo Van Linh, Minh-Triet Tran, Thanh Duc Ngo",
+   "venues": "ICLR 2, NeurIPS 1, EMNLP 1, AAAI 1"
   }
  ],
  "companies": [
@@ -10963,39 +10915,6 @@
    "first_paper": "Learning to Generate Multiple Objects from Dense and Occluded Layouts (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=KXKtTAY4Fb",
    "openreview_url": "https://openreview.net/search?term=Ngo+Tri&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Ngoc-Thanh Dinh",
-   "name_variants": "",
-   "institution": "VinUniversity",
-   "institution_short": "VinUni",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "ngoc-thanh-dinh",
-   "name_vi": "",
-   "papers": 1,
-   "senior_author": 0,
-   "first_year": "2026",
-   "last_year": "2026",
-   "venues": "NeurIPS 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "VinUniversity",
-   "openreview_position": "",
-   "sample_paper": "BSO: Safety Alignment Is Density Ratio Matching (NeurIPS 2026)",
-   "sample_url": "https://openreview.net/forum?id=0akpzKEMx0",
-   "first_paper": "BSO: Safety Alignment Is Density Ratio Matching (NeurIPS 2026)",
-   "first_url": "https://openreview.net/forum?id=0akpzKEMx0",
-   "openreview_url": "https://openreview.net/search?term=Ngoc-Thanh+Dinh&group=all&content=all&source=all",
    "openreview_match": "search"
   },
   {
