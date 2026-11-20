@@ -155,7 +155,7 @@ The About section is `{{% ai-only %}}` in `about.{en,vi}.md`; keep it in step wi
   (main text, 0.1% human false-positive rate; no figure under 50 sentences), in `work/opentextdetector.json`. The build
   writes `frontend/data/otd_scores.json` (tracked: public since 2026-11-16, at the maintainer's request); the Papers page
   shows it as the "AI score" column with `showOtdScores` (true in both `hugo.toml` and `publish.toml`). Per paper only.
-- The Papers page's "Submission ID" (OpenReview forum id or ACL Anthology id, `submission_id` in `build_site_data.py`),
+- The Papers page's "Submission ID" (the OpenReview submission number, read by `fetch_reviews.py` into `submission_numbers.json`),
   "Review scores" (score(confidence), from `fetch_reviews.py` into `reviews.json`) and "AI score" columns are
   `data-extra`: hidden until the reader presses "More columns".
 

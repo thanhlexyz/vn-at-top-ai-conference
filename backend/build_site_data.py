@@ -801,9 +801,12 @@ def write_otd_scores(entries):
 
 
 def submission_id(url):
-    """The paper's id at its source: the OpenReview forum id, or the ACL Anthology id (ACL, EMNLP); else empty."""
-    m = re.search(r"openreview\.net/forum\?id=([\w-]+)", url or "") or re.search(r"aclanthology\.org/([\w.-]+?)/?$", url or "")
-    return m.group(1) if m else ""
+    """The paper's submission number on OpenReview (submission_numbers.json, from fetch_reviews.py); else empty."""
+    path = BACKEND / "submission_numbers.json"
+    if not hasattr(submission_id, "table"):
+        submission_id.table = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    m = re.search(r"openreview\.net/forum\?id=([\w-]+)", url or "")
+    return submission_id.table.get(m.group(1), "") if m else ""
 
 
 def page_entry(r, people=None):

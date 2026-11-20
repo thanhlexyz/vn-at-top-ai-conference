@@ -603,7 +603,7 @@ other = "{{ .Flagged }} of {{ .Sentences }} sentences flagged; open on Open Text
 other = "Submission ID"
 
 [tip_sub_id]
-other = "The paper's id on OpenReview (forum id) or in the ACL Anthology"
+other = "The paper's submission number on OpenReview"
 
 [tip_review_scores]
 other = "Reviewers' scores, each with the reviewer's confidence in brackets; the scales differ by venue and year"

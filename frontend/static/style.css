@@ -281,7 +281,6 @@ figure {
 }
 
 a.tag-link { color: inherit ; text-decoration: none ; }
-.sub-id { white-space: nowrap ; font-family: ui-monospace, monospace ; font-size: 0.9em ; }
 .scores { white-space: nowrap ; font-variant-numeric: tabular-nums ; }
 a.tag-link:hover .tag { text-decoration: underline ; border-color: var(--fg) ; }
 

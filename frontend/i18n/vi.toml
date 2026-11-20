@@ -596,7 +596,7 @@ other = "{{ .Flagged }} trên {{ .Sentences }} câu bị đánh dấu; xem trên
 other = "Mã bài nộp"
 
 [tip_sub_id]
-other = "Mã của bài trên OpenReview (mã diễn đàn) hoặc trong ACL Anthology"
+other = "Số thứ tự bài nộp của bài trên OpenReview"
 
 [tip_review_scores]
 other = "Điểm của các phản biện, kèm độ tin cậy của phản biện trong ngoặc; thang điểm khác nhau tùy hội nghị và năm"
