@@ -1333,7 +1333,9 @@ def main():
     def with_owners(r):
         who = owners[(r["venue"], r["year"], norm_title(r["title"]))]
         e = page_entry(r, [{"slug": p["slug"], "name": p["name"], "name_vi": p["name_vi"]} for p in who])
-        del e["_authors"]
+        # the professors are linked where they stand in the author list, as on their own pages
+        mine = {p["slug"] for p in who}
+        e["author_links"] = [{"name": a, "slug": holder_of(a, mine)} for a in e.pop("_authors")]
         return e
 
     venues = []

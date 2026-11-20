@@ -18,7 +18,9 @@
 		<br><span class="authors">
 		{{- with .author_links }}{{ range $k, $a := . }}{{ if $k }}, {{ end }}{{ if and $self (eq $a.slug $self) }}<strong>{{ $a.name }}</strong>{{ else if $a.slug }}<a href="{{ printf "professors/%s/" $a.slug | relLangURL }}">{{ $a.name }}</a>{{ else }}{{ $a.name }}{{ end }}{{ end }}
 		{{- else }}{{ .authors }}{{ end }}
-		{{- if $owners }}{{ range .professors }} &middot; <a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ partial "pname.html" . }}</a>{{ end }}{{ end }}</span>
+		{{- if $owners }}{{ $linked := slice }}{{ range .author_links }}{{ with .slug }}{{ $linked = $linked | append . }}{{ end }}{{ end }}
+		{{- /* a professor whose printed name was not recognised in the author list is named after it */ -}}
+		{{- range .professors }}{{ if not (in $linked .slug) }} &middot; <a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ partial "pname.html" . }}</a>{{ end }}{{ end }}{{ end }}</span>
 	</li>
 	{{- end }}
 </ul>
