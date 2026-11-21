@@ -1,4 +1,4 @@
 ---
-title: "Xuan-Bach Le"
+title: "Lê Xuân Bách"
 key: "xuan-bach-le"
 ---
