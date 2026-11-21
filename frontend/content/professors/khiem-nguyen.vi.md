@@ -1,4 +1,4 @@
 ---
-title: "Khiem Nguyen"
+title: "Nguyễn Tiến Tuấn Khiêm"
 key: "khiem-nguyen"
 ---
