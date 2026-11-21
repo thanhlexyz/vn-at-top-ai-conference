@@ -1,4 +1,4 @@
 ---
-title: "Quy Van Tran"
+title: "Trần Văn Quý"
 key: "quy-van-tran"
 ---
