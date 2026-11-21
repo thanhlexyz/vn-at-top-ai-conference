@@ -1,4 +1,4 @@
 ---
-title: "Tan D. Tran"
+title: "Trần Đình Tân"
 key: "tan-d-tran"
 ---

@@ -1,4 +1,4 @@
 ---
-title: "Nguyen Duc Minh"
+title: "Nguyễn Đức Minh"
 key: "nguyen-duc-minh"
 ---

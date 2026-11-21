@@ -1,4 +1,4 @@
 ---
-title: "Nguyen Thi Ngoc Diep"
+title: "Nguyễn Thị Ngọc Diệp"
 key: "nguyen-thi-ngoc-diep"
 ---
