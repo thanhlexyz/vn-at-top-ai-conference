@@ -31,9 +31,14 @@
     :root:not([data-theme="light"]) figure.logo img, :root:not([data-theme="light"]) img.mini { background: #ffffff ; padding: 4px ; border-radius: 4px ; filter: brightness(0.62) ; }
 }
 table.collapsed .xcol, table.collapsed [data-extra] { display: none ; }
-.table-tools { margin: 0.6em 0 0.4em ; }
-.more-columns { background: none ; border: 1px solid var(--line) ; color: var(--fg) ; font: inherit ; cursor: pointer ; border-radius: 4px ; padding: 0.2em 0.7em ; }
-.more-columns:hover, .more-columns:focus-visible { border-color: var(--fg) ; }
+/* the control and its table share a box as wide as the table, so the control sits at the table's right edge */
+.table-box { width: fit-content ; max-width: 100% ; }
+.table-tools { display: flex ; justify-content: flex-end ; margin: 0.2em 0 0.3em ; }
+.more-columns { background: none ; border: 0 ; color: var(--link) ; font: inherit ; font-size: 0.9em ; cursor: pointer ; padding: 0.15em 0 ; }
+.more-columns::before { content: "+ " ; }
+.more-columns[aria-expanded="true"]::before { content: "\2212  " ; }
+.more-columns:hover { text-decoration: underline ; }
+.more-columns:focus-visible { outline: 2px solid var(--link) ; outline-offset: 2px ; }
 nav .theme { background: none ; border: 1px solid var(--line) ; color: var(--fg) ; font: inherit ; cursor: pointer ; border-radius: 4px ; padding: 0 0.4em ; margin-left: 0.8em ; }
 
 body {

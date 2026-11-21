@@ -151,11 +151,21 @@
 		Array.prototype.forEach.call(table.tBodies[0].rows, function (tr) {
 			columns.forEach(function (c) { if (tr.cells[c]) tr.cells[c].classList.add("xcol"); });
 		});
-		var button = document.querySelector("button.more-columns");
+		var button = (table.id && document.querySelector('button.more-columns[aria-controls="' + table.id + '"]'))
+			|| document.querySelector("button.more-columns");
 		if (!button) return;
+		// the label says how many columns it shows; the tooltip names them
+		var show = (columns.length === 1 && button.dataset.showOne ? button.dataset.showOne : button.dataset.show)
+			.replace("{n}", columns.length);
+		// the tooltip names the top-level headings only: a group such as Co-authors, not its sub-columns
+		var names = Array.prototype.map.call(table.tHead.rows[0].querySelectorAll("th[data-extra]"), function (th) {
+			return th.textContent.replace(/\s+/g, " ").trim();
+		}).filter(function (n) { return n; });
+		button.textContent = show;
+		if (names.length) button.title = button.dataset.names.replace("{names}", names.join(", "));
 		button.addEventListener("click", function () {
 			var hidden = table.classList.toggle("collapsed");
-			button.textContent = hidden ? button.dataset.show : button.dataset.hide;
+			button.textContent = hidden ? show : button.dataset.hide;
 			button.setAttribute("aria-expanded", hidden ? "false" : "true");
 			window.dispatchEvent(new Event("resize"));   // the pinned columns are measured again
 		});

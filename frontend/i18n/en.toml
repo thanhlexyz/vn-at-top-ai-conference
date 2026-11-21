@@ -226,14 +226,18 @@ other = "Some records are incomplete or still to be confirmed. Those professors 
 other = "{{ .Count }} uncertain matches wait for a decision, see <a href=\"{{ .URL }}\">Candidates</a>."
 [home_score_callout]
 other = "<strong>How the score is calculated.</strong> It is the adjusted count that <a href=\"https://csrankings.org/\">CSRankings</a> uses: each accepted paper is worth <strong>1 divided by its number of authors</strong> to every listed professor who is an author of it, and a professor's score is the sum over their papers. A paper with 4 authors adds 0.25; a paper with 10 adds 0.1. An institution's score adds up its professors' scores in each of the four areas (AI, ML, CV, NLP) and takes the geometric mean of those four numbers, each plus 1, as CSRankings does. Official and unofficial papers both count, rejected papers do not. See <a href=\"{{ .About }}\">About</a>."
+[cols_hidden]
+other = "Hidden: {names}"
+[cols_show_one]
+other = "Show 1 more column"
 [cols_show]
-other = "More columns"
+other = "Show {n} more columns"
 [cols_show_inst]
-other = "More columns"
+other = "Show {n} more columns"
 [cols_hide_inst]
-other = "Fewer columns"
+other = "Hide extra columns"
 [cols_hide]
-other = "Fewer columns"
+other = "Hide extra columns"
 [home_note_provisional]
 other = "The official {{ .Name }} {{ .Year }} list is not complete yet, and its authors cannot be confirmed on OpenReview until the conference; its papers, and those listed on professors' own pages, count as unofficial and are shown as <span class=\"own\">+N</span>."
 [home_fig1]

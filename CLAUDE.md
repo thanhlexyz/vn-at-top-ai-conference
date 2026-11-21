@@ -186,6 +186,9 @@ It is explained in a callout on the front page and in About; keep the three in s
 - Cells marked `data-last` always sort to the bottom and get no cup: the acceptance rate of people with no ICLR
   submissions, and the co-author and own-institution columns of people with no accepted paper (shown greyed).
 - Numbers never wrap (`td:not(.l)`); captions and notes stay short and refer to About for definitions.
+- Hidden columns (`data-extra`) open with a quiet text control at the table's top-right ("+ Show N more columns",
+  tooltip naming the hidden headings), inside a `.table-box` as wide as the table; the control's `aria-controls`
+  names its table's `id`.
 
 ## Professor pages
 
