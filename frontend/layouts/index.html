@@ -8,15 +8,11 @@
 <p class="table-tools"><button type="button" class="more-columns" aria-expanded="false" data-show="{{ T "cols_show" }}" data-hide="{{ T "cols_hide" }}">{{ T "cols_show" }}</button></p>
 {{ partial "professor-table.html" (dict "rows" hugo.Data.professors "compact" true "podium" true "brief" true) }}
 <aside class="callout"><p>{{ T "home_score_callout" (dict "About" (relLangURL "about/")) | safeHTML }}</p></aside>
-<div class="note">{{ T "home_note_table" (dict "About" (relLangURL "about/")) | safeHTML }}</div>
 {{- range $meta.provisional }}
 <p class="note">{{ T "home_note_provisional" (dict "Name" .name "Year" .year) | safeHTML }}</p>
 {{- end }}
-<div class="note">{{ T "home_note_coauthors" | safeHTML }}</div>
 
 {{- with hugo.Data.overview }}
-<h2>{{ T "home_overview" }}</h2>
-<p>{{ T "home_overview_text" (dict "Accepted" .total.accepted "Submissions" .submissions "Recorded" .total.recorded "Estimated" .total.estimated) | safeHTML }}</p>
 <div class="fig-row">
 <figure>
 <div class="fill">{{ index . (cond (eq site.Language.Lang "vi") "pie_vi" "pie") | safeHTML }}</div>
@@ -41,6 +37,5 @@
 </table>
 </div>
 </details>
-<div class="note">{{ T "home_note_estimate" (dict "About" (relLangURL "about/")) | safeHTML }}</div>
 {{- end }}
 {{- end }}

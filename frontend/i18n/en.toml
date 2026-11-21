@@ -234,38 +234,14 @@ other = "More columns"
 other = "Fewer columns"
 [cols_hide]
 other = "Fewer columns"
-[home_note_table]
-other = """<ul>
-<li>Rejected counts rejected, withdrawn and desk-rejected submissions; the count per conference is on each professor's page and on the Professors page.</li>
-<li>Total rejected adds every ICLR rejection to the rejections authors made public at other venues (some NeurIPS papers), so it is a lower bound.</li>
-<li>Submitted, estimated (grey) and acceptance rate, estimated (blue, accepted divided by submitted) are estimates; see <a href="{{ .About }}">About</a>.</li>
-<li>&ndash; means the OpenReview records of that professor have not been fetched.</li>
-<li>All counts are for the main conference track only; workshops, position papers and the NeurIPS Datasets &amp; Benchmarks track are left out.</li>
-<li>A paper placed in Findings was not accepted to the main track, so it counts as rejected from the main track; it is also listed with the workshop papers.</li>
-<li>The score is the one CSRankings uses: each accepted paper counts 1 divided by its number of authors, so a paper shared by many authors weighs less. Professors are ordered by it; among equals, by accepted papers, official and unofficial together, and then more official papers first.</li>
-</ul>"""
 [home_note_provisional]
 other = "The official {{ .Name }} {{ .Year }} list is not complete yet, and its authors cannot be confirmed on OpenReview until the conference; its papers, and those listed on professors' own pages, count as unofficial and are shown as <span class=\"own\">+N</span>."
-[home_note_coauthors]
-other = """<ul>
-<li>The co-author and topic columns are taken over all counted papers, accepted or not.</li>
-<li>* Co-authors per paper: the average, and the fewest and most on a single paper. The split by institution is on each professor's page.</li>
-<li>Topics need the conference's own topic labels, which exist for ICLR, NeurIPS and ICML from 2023 or 2024 on.</li>
-<li>Each professor's page says how many papers a figure is based on.</li>
-</ul>"""
-[home_overview]
-other = "Accepted and rejected, all listed professors"
-[home_overview_text]
-other = """{{ .Accepted }} accepted papers stand for about {{ .Submissions }} submissions:
-{{ .Recorded }} rejected or withdrawn on record (every ICLR submission is public; elsewhere, public NeurIPS rejections and Findings papers), and about {{ .Estimated }} more estimated for the venues that hide their rejections."""
 [home_fig1]
-other = "Fig. 1a. Accepted papers against rejected papers, recorded and estimated, over all years and venues."
+other = "Fig. 1a. Accepted papers against rejected papers, over all years and venues."
 [home_fig2]
-other = "Fig. 1b. The same per year."
+other = "Fig. 1b. Accepted and rejected papers per year, all venues."
 [home_numbers]
 other = "The numbers behind the figures"
-[home_note_estimate]
-other = """How the rejected papers are estimated: see <a href="{{ .About }}">About</a>."""
 
 # ---------------------------------------------------------------- professor page
 [prof_since]

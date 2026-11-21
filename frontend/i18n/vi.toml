@@ -232,38 +232,14 @@ other = "Thêm cột"
 other = "Bớt cột"
 [cols_hide]
 other = "Bớt cột"
-[home_note_table]
-other = """<ul>
-<li>Số bài bị từ chối gồm bài bị từ chối sau phản biện, bài rút và bài bị loại sơ bộ; số liệu theo từng hội nghị có ở trang của từng giảng viên và trang Giảng viên.</li>
-<li>Tổng số bài bị từ chối gồm toàn bộ bài bị từ chối tại ICLR cộng với bài bị từ chối mà tác giả tự công khai ở hội nghị khác (một số bài tại NeurIPS), nên là con số tối thiểu.</li>
-<li>Cột đã nộp ước tính (màu xám) và tỉ lệ được nhận ước tính (màu xanh, bằng số bài được nhận chia số bài đã nộp) là số liệu ước tính; xem trang <a href="{{ .About }}">Giới thiệu</a>.</li>
-<li>Dấu &ndash; cho biết hồ sơ OpenReview của giảng viên chưa được thu thập.</li>
-<li>Mọi số liệu chỉ tính nhánh chính (main track); không tính workshop, bài position và nhánh Datasets &amp; Benchmarks của NeurIPS.</li>
-<li>Bài được xếp vào Findings là bài không được nhận vào nhánh chính, nên được tính là bị từ chối ở nhánh chính; bài này cũng được liệt kê cùng các bài workshop.</li>
-<li>Điểm là điểm CSRankings sử dụng: mỗi bài được nhận tính bằng 1 chia cho số tác giả của bài, nên bài có nhiều tác giả có trọng số thấp hơn. Giảng viên được sắp xếp theo điểm; nếu bằng nhau, theo số bài được chấp nhận, gồm cả bài chính thức và chưa chính thức, rồi người có nhiều bài chính thức hơn đứng trước.</li>
-</ul>"""
 [home_note_provisional]
 other = "Danh sách chính thức của {{ .Name }} {{ .Year }} chưa đầy đủ và chưa thể xác nhận tác giả trên OpenReview cho đến khi hội nghị diễn ra; các bài trong danh sách này, cùng các bài có trên trang của giảng viên, được tính là chưa chính thức và hiện dưới dạng <span class=\"own\">+N</span>."
-[home_note_coauthors]
-other = """<ul>
-<li>Các cột về đồng tác giả và lĩnh vực được tính trên toàn bộ các bài được thống kê, kể cả bài bị từ chối.</li>
-<li>* Số đồng tác giả mỗi bài: trung bình, ít nhất và nhiều nhất trên một bài. Phần chia theo đơn vị công tác có ở trang của từng giảng viên.</li>
-<li>Số chủ đề dựa trên nhãn chủ đề do hội nghị gán, chỉ có tại ICLR, NeurIPS và ICML từ năm 2023 hoặc 2024.</li>
-<li>Trang của từng giảng viên ghi rõ mỗi chỉ số được tính trên bao nhiêu bài.</li>
-</ul>"""
-[home_overview]
-other = "Được nhận và bị từ chối, tất cả giảng viên trong danh sách"
-[home_overview_text]
-other = """{{ .Accepted }} bài được chấp nhận tương ứng với khoảng {{ .Submissions }} lần nộp bài:
-{{ .Recorded }} bài bị từ chối hoặc rút có ghi nhận (mọi bài nộp ICLR đều công khai; ở nơi khác là bài bị từ chối công khai tại NeurIPS và bài Findings), và khoảng {{ .Estimated }} bài được ước tính cho các hội nghị không công khai bài bị từ chối."""
 [home_fig1]
-other = "Hình 1a. Số bài được chấp nhận so với số bài bị từ chối (đếm được và ước tính), tính chung cho mọi năm và mọi hội nghị."
+other = "Hình 1a. Số bài được chấp nhận so với số bài bị từ chối, tính chung cho mọi năm và mọi hội nghị."
 [home_fig2]
-other = "Hình 1b. Số liệu như hình 1a, theo từng năm."
+other = "Hình 1b. Số bài được chấp nhận và bị từ chối theo từng năm, tính chung cho mọi hội nghị."
 [home_numbers]
 other = "Số liệu của hai hình"
-[home_note_estimate]
-other = """Cách ước tính số bài bị từ chối: xem trang <a href="{{ .About }}">Giới thiệu</a>."""
 
 # ---------------------------------------------------------------- professor page
 [prof_since]
