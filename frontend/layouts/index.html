@@ -23,19 +23,5 @@
 <figcaption>{{ T "home_fig2" }}</figcaption>
 </figure>
 </div>
-<details>
-<summary>{{ T "home_numbers" }}</summary>
-<div class="scroll">
-<table>
-	<thead><tr><th>{{ T "th_year" }}</th><th>{{ T "th_Accepted" }}</th><th>{{ T "th_rejected_iclr_recorded" }}</th><th>{{ T "th_rejected_elsewhere_est" }}</th><th>{{ T "th_total" }}</th></tr></thead>
-	<tbody>
-	{{- range .rows }}
-	<tr><td>{{ .year }}</td>{{ partial "num.html" .accepted }}{{ partial "num.html" .recorded }}{{ partial "num.html" .estimated }}<td class="total">{{ add .accepted .recorded .estimated }}</td></tr>
-	{{- end }}
-	<tr class="total"><td>{{ T "th_total" }}</td><td>{{ .total.accepted }}</td><td>{{ .total.recorded }}</td><td>{{ .total.estimated }}</td><td>{{ .submissions }}</td></tr>
-	</tbody>
-</table>
-</div>
-</details>
 {{- end }}
 {{- end }}
