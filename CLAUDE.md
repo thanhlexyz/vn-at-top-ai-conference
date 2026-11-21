@@ -227,6 +227,11 @@ keeps those whose title page names a university in Vietnam, so that `find_candid
 rows, lists their authors on the Candidates page), then `verify_affiliations.py` to check every counted official paper against its PDF;
 fix what it flags. NeurIPS PDFs become public only after the conference.
 
+**Both languages, always:** the Vietnamese site (`/`) mirrors the English one (`/en/`). Any change to a page, whether
+text added, removed or reworded, a section, a caption, a column or a layout change, is made in both languages in the
+same commit: `en.toml` and `vi.toml`, `*.en.md` and `*.vi.md`. Then compare the two built pages
+(`frontend/public/en/...` against `frontend/public/...`) before committing; the maintainer reads the Vietnamese page.
+
 **Text on the site:** every string in both `en.toml` and `vi.toml`, in a professional register; Vietnamese that reads
 naturally, not translated word for word. Keep captions short; do not repeat what a legend or the About page already
 explains (refer to About instead). Surfaces, grid and text are CSS tokens defined for light and dark mode; the chart
