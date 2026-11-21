@@ -26555,7 +26555,7 @@
      },
      {
       "name": "Tan D. Tran",
-      "slug": ""
+      "slug": "tan-d-tran"
      },
      {
       "name": "Dung T.K. Ha",
@@ -37586,10 +37586,18 @@
   "page_note_vi": "",
   "homepage": "",
   "vn_since": 0,
-  "openreview_ids": [],
-  "openreview_source": "none",
-  "openreview_fetched": "",
+  "openreview_ids": [
+   "~Tan_D._Tran1"
+  ],
+  "openreview_source": "openreview",
+  "openreview_fetched": "2026-11-21",
   "links": [
+   {
+    "kind": "openreview",
+    "url": "https://openreview.net/profile?id=~Tan_Dinh_Tran1",
+    "label": "~Tan_Dinh_Tran1",
+    "text": "openreview.net/profile?id=~Tan_Dinh_Tran1"
+   },
    {
     "kind": "staff",
     "url": "https://comp-beta.phenikaa-uni.edu.vn/faculty/tran-dinh-tan/",
@@ -37601,6 +37609,12 @@
     "url": "https://scholar.google.com/citations?user=EHKNGs0AAAAJ",
     "label": "",
     "text": "scholar.google.com/citations?user=EHKNGs0AAAAJ"
+   },
+   {
+    "kind": "homepage",
+    "url": "https://facebook.com/psaleader",
+    "label": "",
+    "text": "facebook.com/psaleader"
    }
   ],
   "score": 0.83,
@@ -37610,10 +37624,8 @@
    "CV": 0,
    "NLP": 0
   },
-  "iclr_complete": false,
-  "flags": [
-   "No OpenReview records fetched yet, so only accepted papers are known: ICLR submissions and rejections are missing."
-  ],
+  "iclr_complete": true,
+  "flags": [],
   "accepted": 3,
   "own_page": 0,
   "official": 3,
@@ -37621,10 +37633,10 @@
    "iclr": {
     "accepted": 0,
     "rejected": 0,
-    "withdrawn": 0,
+    "withdrawn": 1,
     "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
+    "not_accepted": 1,
+    "submitted": 1,
     "own_page": 0,
     "official": 0
    },
@@ -38422,10 +38434,10 @@
      "iclr": {
       "accepted": 0,
       "rejected": 0,
-      "withdrawn": 0,
+      "withdrawn": 1,
       "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
+      "not_accepted": 1,
+      "submitted": 1,
       "own_page": 0,
       "official": 0,
       "available": true,
@@ -38834,8 +38846,8 @@
    }
   ],
   "collab": {
-   "papers": 3,
-   "avg_coauthors": "2.7",
+   "papers": 4,
+   "avg_coauthors": "2.8",
    "distinct_coauthors": 4,
    "min_coauthors": 2,
    "max_coauthors": 3,
@@ -39312,20 +39324,57 @@
     ]
    }
   ],
-  "not_accepted_papers": [],
+  "not_accepted_papers": [
+   {
+    "year": 2025,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "Boosting Parallel Algorithms in Linear Queries for Non-Monotone Submodular Maximization",
+    "ai_key": "iclr-2025-boostingparallelalgorithmsinlinearquerie",
+    "url": "https://openreview.net/forum?id=pshLnZzIbW",
+    "status": "withdrawn",
+    "status_label": "withdrawn",
+    "pres": "",
+    "authors": "Canh V. Pham, Tan D. Tran, Dung T.K. Ha, My T. Thai",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "author_links": [
+     {
+      "name": "Canh V. Pham",
+      "slug": "canh-v-pham"
+     },
+     {
+      "name": "Tan D. Tran",
+      "slug": "tan-d-tran"
+     },
+     {
+      "name": "Dung T.K. Ha",
+      "slug": ""
+     },
+     {
+      "name": "My T. Thai",
+      "slug": ""
+     }
+    ]
+   }
+  ],
   "excluded_papers": [],
   "workshop_papers": [],
   "projection": {
-   "basis": "none",
-   "ratio": "1.0",
-   "ratio_submitted": 0,
+   "basis": "own",
+   "ratio": "2.0",
+   "ratio_submitted": 1,
    "ratio_accepted": 0,
    "accepted": 3,
-   "total": "3",
-   "estimated": "0",
-   "svg": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers submitted and accepted per year by Tan D. Tran; the numbers are in the table below\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">2</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V162.0 Q358.8,158.0 362.8,158.0 H378.8 Q382.8,158.0 382.8,162.0 V270.0 Z\"><title>2024: 1 accepted</title></path><text class=\"value\" x=\"370.8\" y=\"152.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V270.0 Z\"><title>2026: 2 accepted</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
-   "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài nộp và được nhận theo năm của Tan D. Tran; số liệu ở bảng bên dưới\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">2</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V162.0 Q358.8,158.0 362.8,158.0 H378.8 Q382.8,158.0 382.8,162.0 V270.0 Z\"><title>2024: 1 bài được nhận</title></path><text class=\"value\" x=\"370.8\" y=\"152.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V270.0 Z\"><title>2026: 2 bài được nhận</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
-   "recorded": 0,
+   "total": "7",
+   "estimated": "3",
+   "svg": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers submitted and accepted per year by Tan D. Tran; the numbers are in the table below\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"est\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Rejected elsewhere, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">3</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">4</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V214.0 Q358.8,214.0 358.8,214.0 H382.8 Q382.8,214.0 382.8,214.0 V270.0 Z\"><title>2024: 1 accepted</title></path><path class=\"est\" d=\"M358.8,212.0 V162.0 Q358.8,158.0 362.8,158.0 H378.8 Q382.8,158.0 382.8,162.0 V212.0 Z\"><title>2024: about 1 rejected elsewhere (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"152.0\" text-anchor=\"middle\">about 2</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"not\" d=\"M432.2,270.0 V218.0 Q432.2,214.0 436.2,214.0 H452.2 Q456.2,214.0 456.2,218.0 V270.0 Z\"><title>2025: 1 rejected, recorded</title></path><text class=\"value\" x=\"444.2\" y=\"208.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V158.0 Q505.8,158.0 505.8,158.0 H529.8 Q529.8,158.0 529.8,158.0 V270.0 Z\"><title>2026: 2 accepted</title></path><path class=\"est\" d=\"M505.8,156.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V156.0 Z\"><title>2026: about 2 rejected elsewhere (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">about 4</text><text class=\"tick\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
+   "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài nộp và được nhận theo năm của Tan D. Tran; số liệu ở bảng bên dưới\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"est\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Bị từ chối ở nơi khác, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">3</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">4</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V214.0 Q358.8,214.0 358.8,214.0 H382.8 Q382.8,214.0 382.8,214.0 V270.0 Z\"><title>2024: 1 bài được nhận</title></path><path class=\"est\" d=\"M358.8,212.0 V162.0 Q358.8,158.0 362.8,158.0 H378.8 Q382.8,158.0 382.8,162.0 V212.0 Z\"><title>2024: khoảng 1 bài bị từ chối ở nơi khác (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"152.0\" text-anchor=\"middle\">~2</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"not\" d=\"M432.2,270.0 V218.0 Q432.2,214.0 436.2,214.0 H452.2 Q456.2,214.0 456.2,218.0 V270.0 Z\"><title>2025: 1 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"444.2\" y=\"208.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V158.0 Q505.8,158.0 505.8,158.0 H529.8 Q529.8,158.0 529.8,158.0 V270.0 Z\"><title>2026: 2 bài được nhận</title></path><path class=\"est\" d=\"M505.8,156.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V156.0 Z\"><title>2026: khoảng 2 bài bị từ chối ở nơi khác (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">~4</text><text class=\"tick\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
+   "recorded": 1,
    "rows": [
     {
      "year": 2020,
@@ -39364,24 +39413,24 @@
      "counts": true,
      "accepted": 1,
      "iclr_not_accepted": 0,
-     "estimated": "0",
-     "total": "1"
+     "estimated": "1",
+     "total": "2"
     },
     {
      "year": 2025,
      "counts": true,
      "accepted": 0,
-     "iclr_not_accepted": 0,
+     "iclr_not_accepted": 1,
      "estimated": "0",
-     "total": "0"
+     "total": "1"
     },
     {
      "year": 2026,
      "counts": true,
      "accepted": 2,
      "iclr_not_accepted": 0,
-     "estimated": "0",
-     "total": "2"
+     "estimated": "2",
+     "total": "4"
     },
     {
      "year": 2027,
@@ -39392,8 +39441,8 @@
      "total": "0"
     }
    ],
-   "pie": "<svg class=\"chart\" viewBox=\"0 0 378 190\" role=\"img\" aria-label=\"Accepted, recorded rejected and estimated rejected papers, all listed professors\"><text class=\"value\" x=\"4.0\" y=\"16\">All years and venues</text><circle class=\"acc\" cx=\"74.0\" cy=\"104.0\" r=\"70\"><title>All years and venues: 3 accepted, 100%</title></circle><rect class=\"acc\" x=\"162.0\" y=\"72.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"82.0\">3 (100%)</text><text x=\"180.0\" y=\"97.0\">accepted</text><rect class=\"not\" x=\"162.0\" y=\"112.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"122.0\">0 (0%)</text><text x=\"180.0\" y=\"137.0\">rejected, recorded</text><rect class=\"est\" x=\"162.0\" y=\"152.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"162.0\">0 (0%)</text><text x=\"180.0\" y=\"177.0\">rejected elsewhere, estimated</text></svg>",
-   "pie_vi": "<svg class=\"chart\" viewBox=\"0 0 390 190\" role=\"img\" aria-label=\"Bài được nhận, bị từ chối đếm được và bị từ chối ước tính, tất cả giảng viên trong danh sách\"><text class=\"value\" x=\"4.0\" y=\"16\">Mọi năm và hội nghị</text><circle class=\"acc\" cx=\"74.0\" cy=\"104.0\" r=\"70\"><title>Mọi năm và hội nghị: 3 được nhận, 100%</title></circle><rect class=\"acc\" x=\"162.0\" y=\"72.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"82.0\">3 (100%)</text><text x=\"180.0\" y=\"97.0\">được nhận</text><rect class=\"not\" x=\"162.0\" y=\"112.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"122.0\">0 (0%)</text><text x=\"180.0\" y=\"137.0\">bị từ chối, đếm được</text><rect class=\"est\" x=\"162.0\" y=\"152.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"162.0\">0 (0%)</text><text x=\"180.0\" y=\"177.0\">bị từ chối ở nơi khác, ước tính</text></svg>"
+   "pie": "<svg class=\"chart\" viewBox=\"0 0 378 190\" role=\"img\" aria-label=\"Accepted, recorded rejected and estimated rejected papers, all listed professors\"><text class=\"value\" x=\"4.0\" y=\"16\">All years and venues</text><path class=\"acc slice\" d=\"M74.0,104.0 L74.0,34.0 A70,70 0 0 1 104.4,167.1 Z\"><title>All years and venues: 3 accepted, 43%</title></path><rect class=\"acc\" x=\"162.0\" y=\"72.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"82.0\">3 (43%)</text><text x=\"180.0\" y=\"97.0\">accepted</text><path class=\"not slice\" d=\"M74.0,104.0 L104.4,167.1 A70,70 0 0 1 43.6,167.1 Z\"><title>All years and venues: 1 rejected, recorded, 14%</title></path><rect class=\"not\" x=\"162.0\" y=\"112.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"122.0\">1 (14%)</text><text x=\"180.0\" y=\"137.0\">rejected, recorded</text><path class=\"est slice\" d=\"M74.0,104.0 L43.6,167.1 A70,70 0 0 1 74.0,34.0 Z\"><title>All years and venues: 3 rejected elsewhere, estimated, 43%</title></path><rect class=\"est\" x=\"162.0\" y=\"152.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"162.0\">3 (43%)</text><text x=\"180.0\" y=\"177.0\">rejected elsewhere, estimated</text></svg>",
+   "pie_vi": "<svg class=\"chart\" viewBox=\"0 0 390 190\" role=\"img\" aria-label=\"Bài được nhận, bị từ chối đếm được và bị từ chối ước tính, tất cả giảng viên trong danh sách\"><text class=\"value\" x=\"4.0\" y=\"16\">Mọi năm và hội nghị</text><path class=\"acc slice\" d=\"M74.0,104.0 L74.0,34.0 A70,70 0 0 1 104.4,167.1 Z\"><title>Mọi năm và hội nghị: 3 được nhận, 43%</title></path><rect class=\"acc\" x=\"162.0\" y=\"72.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"82.0\">3 (43%)</text><text x=\"180.0\" y=\"97.0\">được nhận</text><path class=\"not slice\" d=\"M74.0,104.0 L104.4,167.1 A70,70 0 0 1 43.6,167.1 Z\"><title>Mọi năm và hội nghị: 1 bị từ chối, đếm được, 14%</title></path><rect class=\"not\" x=\"162.0\" y=\"112.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"122.0\">1 (14%)</text><text x=\"180.0\" y=\"137.0\">bị từ chối, đếm được</text><path class=\"est slice\" d=\"M74.0,104.0 L43.6,167.1 A70,70 0 0 1 74.0,34.0 Z\"><title>Mọi năm và hội nghị: 3 bị từ chối ở nơi khác, ước tính, 43%</title></path><rect class=\"est\" x=\"162.0\" y=\"152.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"162.0\">3 (43%)</text><text x=\"180.0\" y=\"177.0\">bị từ chối ở nơi khác, ước tính</text></svg>"
   },
   "author_charts": {
    "first": {
@@ -39405,8 +39454,8 @@
     "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng Phenikaa\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng Phenikaa</text><rect class=\"other-inst\" x=\"242.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"260.8\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"445.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"463.6\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">2</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"other-inst\" d=\"M358.8,230.0 V142.0 Q358.8,138.0 362.8,138.0 H378.8 Q382.8,138.0 382.8,142.0 V230.0 Z\"><title>2024: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"370.8\" y=\"132.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 2 bài đa số tác giả cùng Phenikaa</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>"
    }
   },
-  "rejected_estimated": 0,
-  "acceptance_rate": 100,
+  "rejected_estimated": 4,
+  "acceptance_rate": 43,
   "scholar": {
    "user": "EHKNGs0AAAAJ",
    "url": "https://scholar.google.com/citations?user=EHKNGs0AAAAJ",

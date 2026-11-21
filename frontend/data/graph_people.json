@@ -459,6 +459,23 @@
    "anchor": "middle"
   },
   {
+   "name": "Tan D. Tran",
+   "name_vi": "Trần Đình Tân",
+   "url": "professors/tan-d-tran/",
+   "group": "Phenikaa",
+   "id": "tan-d-tran",
+   "papers": 4,
+   "x": 48,
+   "y": 1343.2,
+   "linked": true,
+   "r": 12.6,
+   "color": "c3",
+   "degree": 1,
+   "lx": 64.6,
+   "ly": 1348.2,
+   "anchor": "start"
+  },
+  {
    "name": "Bui Trong Duc",
    "name_vi": "Bùi Trọng Đức",
    "url": "professors/bui-trong-duc/",
@@ -569,23 +586,6 @@
    "degree": 1,
    "lx": 796.1,
    "ly": 1302.2,
-   "anchor": "start"
-  },
-  {
-   "name": "Tan D. Tran",
-   "name_vi": "Trần Đình Tân",
-   "url": "professors/tan-d-tran/",
-   "group": "Phenikaa",
-   "id": "tan-d-tran",
-   "papers": 3,
-   "x": 48,
-   "y": 1343.2,
-   "linked": true,
-   "r": 12.1,
-   "color": "c3",
-   "degree": 1,
-   "lx": 64.1,
-   "ly": 1348.2,
    "anchor": "start"
   },
   {
@@ -1329,6 +1329,22 @@
    "b_name_vi": "Lê Xuân Bách"
   },
   {
+   "a": "canh-v-pham",
+   "b": "tan-d-tran",
+   "weight": 4,
+   "x1": 30,
+   "y1": 1297.2,
+   "x2": 48,
+   "y2": 1343.2,
+   "width": 3.8,
+   "wx": 39.0,
+   "wy": 1320.2,
+   "a_name": "Canh V. Pham",
+   "b_name": "Tan D. Tran",
+   "a_name_vi": "Phạm Văn Cảnh",
+   "b_name_vi": "Trần Đình Tân"
+  },
+  {
    "a": "khoa-d-doan",
    "b": "thanh-binh-nguyen",
    "weight": 4,
@@ -1375,22 +1391,6 @@
    "b_name": "Huynh Thi Thanh Binh",
    "a_name_vi": "Bùi Trọng Đức",
    "b_name_vi": "Huỳnh Thị Thanh Bình"
-  },
-  {
-   "a": "canh-v-pham",
-   "b": "tan-d-tran",
-   "weight": 3,
-   "x1": 30,
-   "y1": 1297.2,
-   "x2": 48,
-   "y2": 1343.2,
-   "width": 3.3,
-   "wx": 39.0,
-   "wy": 1320.2,
-   "a_name": "Canh V. Pham",
-   "b_name": "Tan D. Tran",
-   "a_name_vi": "Phạm Văn Cảnh",
-   "b_name_vi": "Trần Đình Tân"
   },
   {
    "a": "cong-tran",
@@ -2236,5 +2236,5 @@
   }
  ],
  "papers": 332,
- "shared": 71
+ "shared": 72
 }
