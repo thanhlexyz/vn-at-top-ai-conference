@@ -10,7 +10,6 @@
 <table id="papers-table" class="collapsed" data-collapsible>
 	<thead>
 	<tr>
-		<th>{{ T "th_year" }}</th>
 		<th class="l">{{ T "th_venue" }}</th>
 		<th class="l">{{ T "th_outcome" }}</th>
 		<th data-extra title="{{ T "tip_sub_id" }}">{{ T "th_sub_id" }}</th>
@@ -29,8 +28,7 @@
 	<tbody>
 	{{- range $papers }}
 	<tr>
-		<td>{{ .year }}</td>
-		<td class="l"><a href="{{ printf "venues/%s/" .venue | relLangURL }}">{{ .venue_name }}</a></td>
+		<td class="l venue-year"><a href="{{ printf "venues/%s/" .venue | relLangURL }}">{{ .venue_name }}</a>&rsquo;{{ printf "%02d" (mod .year 100) }}</td>
 		<td class="l">{{ $tag := printf "<span class=\"tag %s\">%s</span>" .status (T (printf "status_%s" .status)) }}
 			{{- if strings.Contains .url "openreview.net" }}<a class="tag-link" href="{{ .url }}" title="{{ T "tip_openreview_decision" }}">{{ $tag | safeHTML }}</a>{{ else }}{{ $tag | safeHTML }}{{ end }}{{ with .pres }} {{ . }}{{ end }}{{ if .unofficial }} <span class="tag own" title="{{ .match }}">{{ T "unofficial" }}</span>{{ end }}</td>
 		{{- if .sub_id }}<td class="xcol"><a href="{{ .url }}">{{ .sub_id }}</a></td>{{ else }}<td class="xcol na" data-last>&ndash;</td>{{ end }}
