@@ -29,7 +29,7 @@
    "url": "professors/ngo-van-linh/",
    "x": 380,
    "y": 132,
-   "papers": 30,
+   "papers": 47,
    "id": "ngo-van-linh"
   },
   {
@@ -39,18 +39,8 @@
    "url": "professors/nguyen-thi-ngoc-diep/",
    "x": 380,
    "y": 178,
-   "papers": 8,
+   "papers": 10,
    "id": "nguyen-thi-ngoc-diep"
-  },
-  {
-   "slug": "dinh-viet-sang",
-   "name": "Dinh Viet Sang",
-   "name_vi": "Đinh Viết Sang",
-   "url": "professors/dinh-viet-sang/",
-   "x": 380,
-   "y": 224,
-   "papers": 3,
-   "id": "dinh-viet-sang"
   },
   {
    "slug": "nam-le-hai",
@@ -58,9 +48,19 @@
    "name_vi": "Lê Hải Nam",
    "url": "professors/nam-le-hai/",
    "x": 380,
-   "y": 270,
-   "papers": 3,
+   "y": 224,
+   "papers": 7,
    "id": "nam-le-hai"
+  },
+  {
+   "slug": "dinh-viet-sang",
+   "name": "Dinh Viet Sang",
+   "name_vi": "Đinh Viết Sang",
+   "url": "professors/dinh-viet-sang/",
+   "x": 380,
+   "y": 270,
+   "papers": 8,
+   "id": "dinh-viet-sang"
   },
   {
    "slug": "than-quang-khoat",
@@ -197,7 +197,7 @@
   {
    "name": "Trung Le",
    "affiliation": "Monash University",
-   "papers": 19,
+   "papers": 28,
    "url": "https://vietprofs.roars.dev/people/vp-0560.html",
    "country": "Australia",
    "flag": "au",
@@ -209,7 +209,7 @@
   {
    "name": "Thien Huu Nguyen",
    "affiliation": "University of Oregon",
-   "papers": 13,
+   "papers": 21,
    "url": "https://vietprofs.roars.dev/people/vp-0033.html",
    "country": "United States",
    "flag": "us",
@@ -259,12 +259,12 @@
   {
    "a": "dinh-viet-sang",
    "b": "f0",
-   "weight": 1,
+   "weight": 3,
    "x1": 380,
-   "y1": 224,
+   "y1": 270,
    "x2": 620,
    "y2": 40.0,
-   "width": 2.2,
+   "width": 4.6,
    "a_name": "Dinh Viet Sang",
    "a_name_vi": "Đinh Viết Sang",
    "b_name": "Trung Le"
@@ -285,12 +285,12 @@
   {
    "a": "nam-le-hai",
    "b": "f0",
-   "weight": 1,
+   "weight": 3,
    "x1": 380,
-   "y1": 270,
+   "y1": 224,
    "x2": 620,
    "y2": 40.0,
-   "width": 2.2,
+   "width": 4.6,
    "a_name": "Nam Le Hai",
    "a_name_vi": "Lê Hải Nam",
    "b_name": "Trung Le"
@@ -298,12 +298,12 @@
   {
    "a": "ngo-van-linh",
    "b": "f0",
-   "weight": 17,
+   "weight": 26,
    "x1": 380,
    "y1": 132,
    "x2": 620,
    "y2": 40.0,
-   "width": 21.4,
+   "width": 32.2,
    "a_name": "Ngo Van Linh",
    "a_name_vi": "Ngô Văn Linh",
    "b_name": "Trung Le"
@@ -324,12 +324,12 @@
   {
    "a": "nguyen-thi-ngoc-diep",
    "b": "f0",
-   "weight": 4,
+   "weight": 5,
    "x1": 380,
    "y1": 178,
    "x2": 620,
    "y2": 40.0,
-   "width": 5.8,
+   "width": 7.0,
    "a_name": "Nguyen Thi Ngoc Diep",
    "a_name_vi": "Nguyễn Thị Ngọc Diệp",
    "b_name": "Trung Le"
@@ -350,12 +350,12 @@
   {
    "a": "dinh-viet-sang",
    "b": "f1",
-   "weight": 2,
+   "weight": 5,
    "x1": 380,
-   "y1": 224,
+   "y1": 270,
    "x2": 620,
    "y2": 247.0,
-   "width": 3.4,
+   "width": 7.0,
    "a_name": "Dinh Viet Sang",
    "a_name_vi": "Đinh Viết Sang",
    "b_name": "Thien Huu Nguyen"
@@ -363,12 +363,12 @@
   {
    "a": "nam-le-hai",
    "b": "f1",
-   "weight": 2,
+   "weight": 4,
    "x1": 380,
-   "y1": 270,
+   "y1": 224,
    "x2": 620,
    "y2": 247.0,
-   "width": 3.4,
+   "width": 5.8,
    "a_name": "Nam Le Hai",
    "a_name_vi": "Lê Hải Nam",
    "b_name": "Thien Huu Nguyen"
@@ -376,12 +376,12 @@
   {
    "a": "ngo-van-linh",
    "b": "f1",
-   "weight": 13,
+   "weight": 21,
    "x1": 380,
    "y1": 132,
    "x2": 620,
    "y2": 247.0,
-   "width": 16.6,
+   "width": 26.2,
    "a_name": "Ngo Van Linh",
    "a_name_vi": "Ngô Văn Linh",
    "b_name": "Thien Huu Nguyen"
@@ -389,12 +389,12 @@
   {
    "a": "nguyen-thi-ngoc-diep",
    "b": "f1",
-   "weight": 4,
+   "weight": 5,
    "x1": 380,
    "y1": 178,
    "x2": 620,
    "y2": 247.0,
-   "width": 5.8,
+   "width": 7.0,
    "a_name": "Nguyen Thi Ngoc Diep",
    "a_name_vi": "Nguyễn Thị Ngọc Diệp",
    "b_name": "Thien Huu Nguyen"
@@ -584,5 +584,5 @@
  ],
  "authors": 5,
  "professors": 19,
- "papers": 75
+ "papers": 103
 }

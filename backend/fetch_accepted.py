@@ -262,7 +262,9 @@ def bib_fields(entry):
         i = entry.find(",", i) + 1 if entry[i:i + 3].lstrip().startswith(",") else i
 
 
-def parse_acl_bib(year, text, venue="acl"):
+def parse_acl_bib(year, text, venue="acl", track="main", min_pages=0):
+    """Papers of one ACL Anthology volume. min_pages drops the short papers of a volume that mixes long and short
+    ones (Findings: a long paper runs 12 pages or more with references); an entry without page numbers is kept."""
     out = []
     for entry in re.split(r"\n(?=@)", text):
         if not entry.startswith("@inproceedings"):
@@ -270,11 +272,14 @@ def parse_acl_bib(year, text, venue="acl"):
         fields = bib_fields(entry)
         if "title" not in fields or "author" not in fields:
             continue
+        pages = re.match(r"(\d+)\D+(\d+)", fields.get("pages", ""))
+        if min_pages and pages and int(pages.group(2)) - int(pages.group(1)) + 1 < min_pages:
+            continue
         authors = []
         for a in re.split(r"\s+and\s+", fields["author"]):
             last, _, first = debib(a).partition(",")
             authors.append({"name": f"{first.strip()} {last.strip()}".strip(), "aff": ""})
-        out.append({"venue": venue, "year": year, "track": "main", "title": debib(fields["title"]),
+        out.append({"venue": venue, "year": year, "track": track, "title": debib(fields["title"]),
                     "authors": authors, "url": fields.get("url", ""), "forum": "", "pres": "",
                     "topic": "", "source": "aclanthology.org"})
     return out
@@ -395,6 +400,9 @@ def collect(years, refresh=False):
         for vol in acl_volumes(year):
             bib = fetch(f"https://aclanthology.org/volumes/{vol}.bib", f"acl/{vol}.bib", refresh)
             rows += parse_acl_bib(year, bib.decode("utf-8", "replace")) if bib else []
+        if year >= 2021:   # Findings: rejected from the main track; long papers only
+            bib = fetch(f"https://aclanthology.org/volumes/{year}.findings-acl.bib", f"acl/{year}.findings-acl.bib", refresh)
+            rows += parse_acl_bib(year, bib.decode("utf-8", "replace"), "acl", "findings", 12) if bib else []
         add("acl", year, rows, ["aclanthology.org"] if rows else [])
 
         # ICCV is held in odd years; only 2025 has a virtual site with affiliations
@@ -423,6 +431,8 @@ def collect(years, refresh=False):
 
         bib = fetch(f"https://aclanthology.org/volumes/{year}.emnlp-main.bib", f"acl/{year}.emnlp-main.bib", refresh)
         rows = parse_acl_bib(year, bib.decode("utf-8", "replace"), "emnlp") if bib else []
+        bib = fetch(f"https://aclanthology.org/volumes/{year}.findings-emnlp.bib", f"acl/{year}.findings-emnlp.bib", refresh)
+        rows += parse_acl_bib(year, bib.decode("utf-8", "replace"), "emnlp", "findings", 12) if bib else []
         add("emnlp", year, rows, ["aclanthology.org"] if rows else [])
 
         rows = []

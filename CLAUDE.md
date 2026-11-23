@@ -69,6 +69,10 @@ The local-only pages (Candidates, Not tracked) are drafts, but their data (`cand
   alone do not qualify.
 - A paper counts from `vn_since`; main track only (no workshops, position papers, D&B, journal tracks).
 - **Findings** = rejected from the main track at any conference, and also listed as a workshop paper.
+  Sources: the ACL Anthology Findings volumes (`{year}.findings-acl` from 2021, `{year}.findings-emnlp` from 2020;
+  `fetch_accepted.py`, track `findings`, long papers only: 12 pages or more in the bib), the professors' OpenReview
+  records (CVPR 2026 Findings, EMNLP Findings on OpenReview) and `self_reported.csv`. Their name matches go through
+  `review.csv` and `fetch_affiliations.py` like the main track.
 - **Institution rule:** an accepted official paper counts for a person only if the paper lists them at their roster
   institution, as printed on the paper (the PDF wins over a virtual site, which copies profiles). A paper written
   only at a company or institute (e.g. Qualcomm AI Research, which is the former VinAI) does not count. Papers that

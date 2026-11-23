@@ -307,7 +307,7 @@ def person_records(person, acc, decisions, queue, warnings, skipped, own=(), bor
             elif decision == "yes":
                 match = "name, confirmed by hand"
             else:
-                relevant = decision != "no" and paper["track"] == "main" and in_vietnam(person, year)
+                relevant = decision != "no" and paper["track"] in ("main", "findings") and in_vietnam(person, year)
                 if relevant and aff and not vn_institutions(aff):
                     # same name at a foreign institution: almost always somebody else, so it is only logged
                     skipped.append(f"{person['name']}: skipped '{paper['title'][:60]}' ({VENUE_NAME[venue]} {year}), "

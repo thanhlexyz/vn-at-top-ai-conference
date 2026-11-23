@@ -19322,11 +19322,11 @@
    },
    "acl": {
     "accepted": 8,
-    "rejected": 3,
+    "rejected": 7,
     "withdrawn": 0,
     "desk_rejected": 0,
-    "not_accepted": 3,
-    "submitted": 11,
+    "not_accepted": 7,
+    "submitted": 15,
     "own_page": 0,
     "official": 8
    },
@@ -20146,11 +20146,11 @@
      },
      "acl": {
       "accepted": 1,
-      "rejected": 0,
+      "rejected": 2,
       "withdrawn": 0,
       "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 1,
+      "not_accepted": 2,
+      "submitted": 3,
       "own_page": 0,
       "official": 1,
       "available": true,
@@ -20200,7 +20200,7 @@
     "accepted": 1,
     "own_page": 0,
     "official": 1,
-    "rejected_estimated": 1
+    "rejected_estimated": 2
    },
    {
     "year": 2026,
@@ -20286,11 +20286,11 @@
      },
      "acl": {
       "accepted": 7,
-      "rejected": 0,
+      "rejected": 2,
       "withdrawn": 0,
       "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 7,
+      "not_accepted": 2,
+      "submitted": 9,
       "own_page": 0,
       "official": 7,
       "available": true,
@@ -20604,6 +20604,130 @@
     "year": 2026,
     "venue": "acl",
     "venue_name": "ACL",
+    "title": "MemORAI: Memory Organization and Retrieval via Adaptive Graph Intelligence for LLM Conversational Agents",
+    "ai_key": "acl-2026-memoraimemoryorganizationandretrievalvia",
+    "url": "https://aclanthology.org/2026.findings-acl.1408/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Hung Pham Van, Nguyen Manh Hieu, Khang Pham Tran Tuan, Nam Le Hai, Linh Ngo Van, Nguyen Thi Ngoc Diep, Trung Le",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     },
+     {
+      "slug": "nguyen-thi-ngoc-diep",
+      "name": "Nguyen Thi Ngoc Diep",
+      "name_vi": "Nguyễn Thị Ngọc Diệp"
+     },
+     {
+      "slug": "nam-le-hai",
+      "name": "Nam Le Hai",
+      "name_vi": "Lê Hải Nam"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Hung Pham Van",
+      "slug": ""
+     },
+     {
+      "name": "Nguyen Manh Hieu",
+      "slug": ""
+     },
+     {
+      "name": "Khang Pham Tran Tuan",
+      "slug": ""
+     },
+     {
+      "name": "Nam Le Hai",
+      "slug": "nam-le-hai"
+     },
+     {
+      "name": "Linh Ngo Van",
+      "slug": "ngo-van-linh"
+     },
+     {
+      "name": "Nguyen Thi Ngoc Diep",
+      "slug": "nguyen-thi-ngoc-diep"
+     },
+     {
+      "name": "Trung Le",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "acl",
+    "venue_name": "ACL",
+    "title": "MIPIC: Matryoshka Representation Learning via Self-Distilled Intra-Relational and Progressive Information Chaining",
+    "ai_key": "acl-2026-mipicmatryoshkarepresentationlearningvia",
+    "url": "https://aclanthology.org/2026.findings-acl.676/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Phung Gia Huy, Hai An Vu, Minh-Phuc Truong, Thang Duc Tran, Linh Ngo Van, Thanh Hong Nguyen, Trung Le",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Phung Gia Huy",
+      "slug": ""
+     },
+     {
+      "name": "Hai An Vu",
+      "slug": ""
+     },
+     {
+      "name": "Minh-Phuc Truong",
+      "slug": ""
+     },
+     {
+      "name": "Thang Duc Tran",
+      "slug": ""
+     },
+     {
+      "name": "Linh Ngo Van",
+      "slug": "ngo-van-linh"
+     },
+     {
+      "name": "Thanh Hong Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Trung Le",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "acl",
+    "venue_name": "ACL",
     "title": "MTA: Multi-Granular Trajectory Alignment for Large Language Model Distillation",
     "ai_key": "acl-2026-mtamultigranulartrajectoryalignmentforla",
     "url": "https://aclanthology.org/2026.acl-long.1507/",
@@ -20903,6 +21027,68 @@
     "year": 2025,
     "venue": "acl",
     "venue_name": "ACL",
+    "title": "HiCOT: Improving Neural Topic Models via Optimal Transport and Contrastive Learning",
+    "ai_key": "acl-2025-hicotimprovingneuraltopicmodelsviaoptima",
+    "url": "https://aclanthology.org/2025.findings-acl.715/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Hoang Tran Vuong, Tue Le, Tu Vu, Tung Nguyen, Linh Ngo Van, Sang Dinh, Thien Huu Nguyen",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     },
+     {
+      "slug": "dinh-viet-sang",
+      "name": "Dinh Viet Sang",
+      "name_vi": "Đinh Viết Sang"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Hoang Tran Vuong",
+      "slug": ""
+     },
+     {
+      "name": "Tue Le",
+      "slug": ""
+     },
+     {
+      "name": "Tu Vu",
+      "slug": ""
+     },
+     {
+      "name": "Tung Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Linh Ngo Van",
+      "slug": "ngo-van-linh"
+     },
+     {
+      "name": "Sang Dinh",
+      "slug": "dinh-viet-sang"
+     },
+     {
+      "name": "Thien Huu Nguyen",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "acl",
+    "venue_name": "ACL",
     "title": "Mitigating Non-Representative Prototypes and Representation Bias in Few-Shot Continual Relation Extraction",
     "ai_key": "acl-2025-mitigatingnonrepresentativeprototypesand",
     "url": "https://aclanthology.org/2025.acl-long.530/",
@@ -20968,21 +21154,79 @@
     ]
    },
    {
+    "year": 2025,
+    "venue": "acl",
+    "venue_name": "ACL",
+    "title": "Topic Modeling for Short Texts via Optimal Transport-Based Clustering",
+    "ai_key": "acl-2025-topicmodelingforshorttextsviaoptimaltran",
+    "url": "https://aclanthology.org/2025.findings-acl.398/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Tu Vu, Manh Do, Tung Nguyen, Linh Ngo Van, Sang Dinh, Thien Huu Nguyen",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     },
+     {
+      "slug": "dinh-viet-sang",
+      "name": "Dinh Viet Sang",
+      "name_vi": "Đinh Viết Sang"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Tu Vu",
+      "slug": ""
+     },
+     {
+      "name": "Manh Do",
+      "slug": ""
+     },
+     {
+      "name": "Tung Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Linh Ngo Van",
+      "slug": "ngo-van-linh"
+     },
+     {
+      "name": "Sang Dinh",
+      "slug": "dinh-viet-sang"
+     },
+     {
+      "name": "Thien Huu Nguyen",
+      "slug": ""
+     }
+    ]
+   },
+   {
     "year": 2024,
     "venue": "acl",
     "venue_name": "ACL",
     "title": "A Curious Case of Searching for the Correlation between Training Data and Adversarial Robustness of Transformer Textual Models",
     "ai_key": "acl-2024-acuriouscaseofsearchingforthecorrelation",
-    "url": "https://andrew-dungle.github.io/",
+    "url": "https://aclanthology.org/2024.findings-acl.800/",
     "status": "rejected",
     "status_label": "rejected",
     "pres": "",
-    "authors": "Dung D. Le, Dang Cao Cuong, Thai Le",
-    "match": "listed on their own page; not in the official list yet",
+    "authors": "Cuong Dang, Dung D. Le, Thai Le",
+    "match": "name, and listed on their own page",
     "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
     "reason": "",
     "later": "",
-    "unofficial": true,
+    "unofficial": false,
     "workshop": "",
     "professors": [
      {
@@ -20995,12 +21239,12 @@
     "sub_id": "",
     "author_links": [
      {
-      "name": "Dung D. Le",
-      "slug": "dung-d-le"
+      "name": "Cuong Dang",
+      "slug": ""
      },
      {
-      "name": "Dang Cao Cuong",
-      "slug": ""
+      "name": "Dung D. Le",
+      "slug": "dung-d-le"
      },
      {
       "name": "Thai Le",
@@ -21014,16 +21258,16 @@
     "venue_name": "ACL",
     "title": "Fooling the Textual Fooler via Randomizing Latent Representations",
     "ai_key": "acl-2024-foolingthetextualfoolerviarandomizinglat",
-    "url": "https://mail-research.com/publications/",
+    "url": "https://aclanthology.org/2024.findings-acl.856/",
     "status": "rejected",
     "status_label": "rejected",
     "pres": "",
-    "authors": "Khoa D. Doan",
-    "match": "listed on their own page; not in the official list yet",
+    "authors": "Duy Hoang, Nguyen Hung-Quang, Saurav Manchanda, Minlong Peng, Kok-Seng Wong, Khoa Doan",
+    "match": "name, and listed on their own page",
     "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
     "reason": "",
     "later": "",
-    "unofficial": true,
+    "unofficial": false,
     "workshop": "",
     "professors": [
      {
@@ -21036,7 +21280,27 @@
     "sub_id": "",
     "author_links": [
      {
-      "name": "Khoa D. Doan",
+      "name": "Duy Hoang",
+      "slug": ""
+     },
+     {
+      "name": "Nguyen Hung-Quang",
+      "slug": ""
+     },
+     {
+      "name": "Saurav Manchanda",
+      "slug": ""
+     },
+     {
+      "name": "Minlong Peng",
+      "slug": ""
+     },
+     {
+      "name": "Kok-Seng Wong",
+      "slug": ""
+     },
+     {
+      "name": "Khoa Doan",
       "slug": "khoa-d-doan"
      }
     ]
@@ -21045,18 +21309,18 @@
     "year": 2023,
     "venue": "acl",
     "venue_name": "ACL",
-    "title": "Retrieving relevant context to align representations for cross-lingual event detection",
+    "title": "Retrieving Relevant Context to Align Representations for Cross-lingual Event Detection",
     "ai_key": "acl-2023-retrievingrelevantcontexttoalignrepresen",
-    "url": "https://soict.hust.edu.vn/en/phd-ngo-van-linh.html",
+    "url": "https://aclanthology.org/2023.findings-acl.135/",
     "status": "rejected",
     "status_label": "rejected",
     "pres": "",
-    "authors": "Ngo Van Linh, Nguyen Chien, Thien Nguyen",
-    "match": "listed on their own page; not in the official list yet",
+    "authors": "Chien Nguyen, Linh Ngo, Thien Nguyen",
+    "match": "name, and listed on their own page",
     "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
     "reason": "",
     "later": "",
-    "unofficial": true,
+    "unofficial": false,
     "workshop": "",
     "professors": [
      {
@@ -21069,12 +21333,12 @@
     "sub_id": "",
     "author_links": [
      {
-      "name": "Ngo Van Linh",
-      "slug": "ngo-van-linh"
+      "name": "Chien Nguyen",
+      "slug": ""
      },
      {
-      "name": "Nguyen Chien",
-      "slug": ""
+      "name": "Linh Ngo",
+      "slug": "ngo-van-linh"
      },
      {
       "name": "Thien Nguyen",
@@ -21091,8 +21355,8 @@
   "reported_detail": "8199 / 39936 (2020–2026)",
   "ratio": "3.0",
   "chart": {
-   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at ACL\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"est\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"225.2\" x2=\"628\" y2=\"225.2\"/><text class=\"tick\" x=\"34\" y=\"229.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"180.4\" x2=\"628\" y2=\"180.4\"/><text class=\"tick\" x=\"34\" y=\"184.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"135.6\" x2=\"628\" y2=\"135.6\"/><text class=\"tick\" x=\"34\" y=\"139.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"90.8\" x2=\"628\" y2=\"90.8\"/><text class=\"tick\" x=\"34\" y=\"94.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"not\" d=\"M285.2,270.0 V265.0 Q285.2,261.0 289.2,261.0 H305.2 Q309.2,261.0 309.2,265.0 V270.0 Z\"><title>2023: 1 rejected, recorded</title></path><text class=\"value\" x=\"297.2\" y=\"255.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"not\" d=\"M358.8,270.0 V256.1 Q358.8,252.1 362.8,252.1 H378.8 Q382.8,252.1 382.8,256.1 V270.0 Z\"><title>2024: 2 rejected, recorded</title></path><text class=\"value\" x=\"370.8\" y=\"246.1\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V261.0 Q432.2,261.0 432.2,261.0 H456.2 Q456.2,261.0 456.2,261.0 V270.0 Z\"><title>2025: 1 accepted</title></path><path class=\"est\" d=\"M432.2,259.0 V256.1 Q432.2,252.1 436.2,252.1 H452.2 Q456.2,252.1 456.2,256.1 V259.0 Z\"><title>2025: about 1 rejected (estimate)</title></path><text class=\"value\" x=\"444.2\" y=\"246.1\" text-anchor=\"middle\">about 2</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V207.3 Q505.8,207.3 505.8,207.3 H529.8 Q529.8,207.3 529.8,207.3 V270.0 Z\"><title>2026: 7 accepted</title></path><path class=\"est\" d=\"M505.8,205.3 V76.9 Q505.8,72.9 509.8,72.9 H525.8 Q529.8,72.9 529.8,76.9 V205.3 Z\"><title>2026: about 15 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"66.9\" text-anchor=\"middle\">about 22</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
-   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại ACL\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"est\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"225.2\" x2=\"628\" y2=\"225.2\"/><text class=\"tick\" x=\"34\" y=\"229.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"180.4\" x2=\"628\" y2=\"180.4\"/><text class=\"tick\" x=\"34\" y=\"184.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"135.6\" x2=\"628\" y2=\"135.6\"/><text class=\"tick\" x=\"34\" y=\"139.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"90.8\" x2=\"628\" y2=\"90.8\"/><text class=\"tick\" x=\"34\" y=\"94.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"not\" d=\"M285.2,270.0 V265.0 Q285.2,261.0 289.2,261.0 H305.2 Q309.2,261.0 309.2,265.0 V270.0 Z\"><title>2023: 1 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"297.2\" y=\"255.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"not\" d=\"M358.8,270.0 V256.1 Q358.8,252.1 362.8,252.1 H378.8 Q382.8,252.1 382.8,256.1 V270.0 Z\"><title>2024: 2 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"370.8\" y=\"246.1\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V261.0 Q432.2,261.0 432.2,261.0 H456.2 Q456.2,261.0 456.2,261.0 V270.0 Z\"><title>2025: 1 bài được nhận</title></path><path class=\"est\" d=\"M432.2,259.0 V256.1 Q432.2,252.1 436.2,252.1 H452.2 Q456.2,252.1 456.2,256.1 V259.0 Z\"><title>2025: khoảng 1 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"444.2\" y=\"246.1\" text-anchor=\"middle\">~2</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V207.3 Q505.8,207.3 505.8,207.3 H529.8 Q529.8,207.3 529.8,207.3 V270.0 Z\"><title>2026: 7 bài được nhận</title></path><path class=\"est\" d=\"M505.8,205.3 V76.9 Q505.8,72.9 509.8,72.9 H525.8 Q529.8,72.9 529.8,76.9 V205.3 Z\"><title>2026: khoảng 15 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"66.9\" text-anchor=\"middle\">~22</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
+   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at ACL\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"est\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"225.2\" x2=\"628\" y2=\"225.2\"/><text class=\"tick\" x=\"34\" y=\"229.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"180.4\" x2=\"628\" y2=\"180.4\"/><text class=\"tick\" x=\"34\" y=\"184.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"135.6\" x2=\"628\" y2=\"135.6\"/><text class=\"tick\" x=\"34\" y=\"139.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"90.8\" x2=\"628\" y2=\"90.8\"/><text class=\"tick\" x=\"34\" y=\"94.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"not\" d=\"M285.2,270.0 V265.0 Q285.2,261.0 289.2,261.0 H305.2 Q309.2,261.0 309.2,265.0 V270.0 Z\"><title>2023: 1 rejected, recorded</title></path><text class=\"value\" x=\"297.2\" y=\"255.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"not\" d=\"M358.8,270.0 V256.1 Q358.8,252.1 362.8,252.1 H378.8 Q382.8,252.1 382.8,256.1 V270.0 Z\"><title>2024: 2 rejected, recorded</title></path><text class=\"value\" x=\"370.8\" y=\"246.1\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V261.0 Q432.2,261.0 432.2,261.0 H456.2 Q456.2,261.0 456.2,261.0 V270.0 Z\"><title>2025: 1 accepted</title></path><path class=\"not\" d=\"M432.2,259.0 V247.1 Q432.2,243.1 436.2,243.1 H452.2 Q456.2,243.1 456.2,247.1 V259.0 Z\"><title>2025: 2 rejected, recorded</title></path><text class=\"value\" x=\"444.2\" y=\"237.1\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V207.3 Q505.8,207.3 505.8,207.3 H529.8 Q529.8,207.3 529.8,207.3 V270.0 Z\"><title>2026: 7 accepted</title></path><path class=\"not\" d=\"M505.8,205.3 V189.4 Q505.8,189.4 505.8,189.4 H529.8 Q529.8,189.4 529.8,189.4 V205.3 Z\"><title>2026: 2 rejected, recorded</title></path><path class=\"est\" d=\"M505.8,187.4 V76.9 Q505.8,72.9 509.8,72.9 H525.8 Q529.8,72.9 529.8,76.9 V187.4 Z\"><title>2026: about 13 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"66.9\" text-anchor=\"middle\">about 22</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
+   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại ACL\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"est\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"225.2\" x2=\"628\" y2=\"225.2\"/><text class=\"tick\" x=\"34\" y=\"229.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"180.4\" x2=\"628\" y2=\"180.4\"/><text class=\"tick\" x=\"34\" y=\"184.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"135.6\" x2=\"628\" y2=\"135.6\"/><text class=\"tick\" x=\"34\" y=\"139.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"90.8\" x2=\"628\" y2=\"90.8\"/><text class=\"tick\" x=\"34\" y=\"94.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"not\" d=\"M285.2,270.0 V265.0 Q285.2,261.0 289.2,261.0 H305.2 Q309.2,261.0 309.2,265.0 V270.0 Z\"><title>2023: 1 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"297.2\" y=\"255.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"not\" d=\"M358.8,270.0 V256.1 Q358.8,252.1 362.8,252.1 H378.8 Q382.8,252.1 382.8,256.1 V270.0 Z\"><title>2024: 2 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"370.8\" y=\"246.1\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V261.0 Q432.2,261.0 432.2,261.0 H456.2 Q456.2,261.0 456.2,261.0 V270.0 Z\"><title>2025: 1 bài được nhận</title></path><path class=\"not\" d=\"M432.2,259.0 V247.1 Q432.2,243.1 436.2,243.1 H452.2 Q456.2,243.1 456.2,247.1 V259.0 Z\"><title>2025: 2 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"444.2\" y=\"237.1\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V207.3 Q505.8,207.3 505.8,207.3 H529.8 Q529.8,207.3 529.8,207.3 V270.0 Z\"><title>2026: 7 bài được nhận</title></path><path class=\"not\" d=\"M505.8,205.3 V189.4 Q505.8,189.4 505.8,189.4 H529.8 Q529.8,189.4 529.8,189.4 V205.3 Z\"><title>2026: 2 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M505.8,187.4 V76.9 Q505.8,72.9 509.8,72.9 H525.8 Q529.8,72.9 529.8,76.9 V187.4 Z\"><title>2026: khoảng 13 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"66.9\" text-anchor=\"middle\">~22</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
   }
  },
  {
@@ -21176,11 +21440,11 @@
    },
    "emnlp": {
     "accepted": 18,
-    "rejected": 4,
+    "rejected": 21,
     "withdrawn": 0,
     "desk_rejected": 0,
-    "not_accepted": 4,
-    "submitted": 22,
+    "not_accepted": 21,
+    "submitted": 39,
     "own_page": 0,
     "official": 18
    },
@@ -21583,11 +21847,11 @@
      },
      "emnlp": {
       "accepted": 0,
-      "rejected": 0,
+      "rejected": 1,
       "withdrawn": 0,
       "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
+      "not_accepted": 1,
+      "submitted": 1,
       "own_page": 0,
       "official": 0,
       "available": true,
@@ -21624,7 +21888,7 @@
     "accepted": 0,
     "own_page": 0,
     "official": 0,
-    "rejected_estimated": 0
+    "rejected_estimated": 1
    },
    {
     "year": 2023,
@@ -21863,11 +22127,11 @@
      },
      "emnlp": {
       "accepted": 3,
-      "rejected": 0,
+      "rejected": 2,
       "withdrawn": 0,
       "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 3,
+      "not_accepted": 2,
+      "submitted": 5,
       "own_page": 0,
       "official": 3,
       "available": true,
@@ -22003,11 +22267,11 @@
      },
      "emnlp": {
       "accepted": 1,
-      "rejected": 0,
+      "rejected": 5,
       "withdrawn": 0,
       "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 1,
+      "not_accepted": 5,
+      "submitted": 6,
       "own_page": 0,
       "official": 1,
       "available": true,
@@ -22044,7 +22308,7 @@
     "accepted": 1,
     "own_page": 0,
     "official": 1,
-    "rejected_estimated": 2
+    "rejected_estimated": 5
    },
    {
     "year": 2026,
@@ -22143,11 +22407,11 @@
      },
      "emnlp": {
       "accepted": 11,
-      "rejected": 2,
+      "rejected": 11,
       "withdrawn": 0,
       "desk_rejected": 0,
-      "not_accepted": 2,
-      "submitted": 13,
+      "not_accepted": 11,
+      "submitted": 22,
       "own_page": 0,
       "official": 11,
       "available": true,
@@ -22332,6 +22596,71 @@
     "year": 2026,
     "venue": "emnlp",
     "venue_name": "EMNLP",
+    "title": "A Survey on Knowledge Distillation of Vision-Language Models",
+    "ai_key": "emnlp-2026-asurveyonknowledgedistillationofvisionla",
+    "url": "https://aclanthology.org/2026.findings-emnlp.180/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Hoang Tran Vuong, Dat Dao, Pham Khanh Chi, Minh-Phuc Truong, Quyen Tran, Linh Ngo Van, Thien Huu Nguyen, Thanh-Toan Do, Trung Le",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Hoang Tran Vuong",
+      "slug": ""
+     },
+     {
+      "name": "Dat Dao",
+      "slug": ""
+     },
+     {
+      "name": "Pham Khanh Chi",
+      "slug": ""
+     },
+     {
+      "name": "Minh-Phuc Truong",
+      "slug": ""
+     },
+     {
+      "name": "Quyen Tran",
+      "slug": ""
+     },
+     {
+      "name": "Linh Ngo Van",
+      "slug": "ngo-van-linh"
+     },
+     {
+      "name": "Thien Huu Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Thanh-Toan Do",
+      "slug": ""
+     },
+     {
+      "name": "Trung Le",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
     "title": "Assembling the CREW: A Collaborative Multi-agent Reinforcement Learning Framework for Automated Related Work Generation",
     "ai_key": "emnlp-2026-assemblingthecrewacollaborativemultiagen",
     "url": "https://aclanthology.org/2026.emnlp-main.2052/",
@@ -22447,6 +22776,68 @@
     "year": 2026,
     "venue": "emnlp",
     "venue_name": "EMNLP",
+    "title": "Beyond Repository Boundaries: Cross-Repository Graph Retrieval for Code Generation",
+    "ai_key": "emnlp-2026-beyondrepositoryboundariescrossrepositor",
+    "url": "https://aclanthology.org/2026.findings-emnlp.433/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Minh Le-Anh, Nam Le Hai, Quyen Tran, Anh Nguyen Hoang, Linh Ngo Van, Bach Le, Nghi D. Q. Bui",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     },
+     {
+      "slug": "nam-le-hai",
+      "name": "Nam Le Hai",
+      "name_vi": "Lê Hải Nam"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Minh Le-Anh",
+      "slug": ""
+     },
+     {
+      "name": "Nam Le Hai",
+      "slug": "nam-le-hai"
+     },
+     {
+      "name": "Quyen Tran",
+      "slug": ""
+     },
+     {
+      "name": "Anh Nguyen Hoang",
+      "slug": ""
+     },
+     {
+      "name": "Linh Ngo Van",
+      "slug": "ngo-van-linh"
+     },
+     {
+      "name": "Bach Le",
+      "slug": ""
+     },
+     {
+      "name": "Nghi D. Q. Bui",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
     "title": "Beyond Semantic Accuracy: Consequence-Aware Evaluation for Safety-Critical Language Understanding",
     "ai_key": "emnlp-2026-beyondsemanticaccuracyconsequenceawareev",
     "url": "https://aclanthology.org/2026.emnlp-main.2141/",
@@ -22504,6 +22895,112 @@
     "year": 2026,
     "venue": "emnlp",
     "venue_name": "EMNLP",
+    "title": "Complementary Lattice Correction for Post-Training Quantization",
+    "ai_key": "emnlp-2026-complementarylatticecorrectionforposttra",
+    "url": "https://aclanthology.org/2026.findings-emnlp.158/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Tung Nguyen, Quang Hung Tran, Linh Ngo Van, Dinh Thai Hoang, Diep Nguyen, Trung Le, Duc Anh Nguyen",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Tung Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Quang Hung Tran",
+      "slug": ""
+     },
+     {
+      "name": "Linh Ngo Van",
+      "slug": "ngo-van-linh"
+     },
+     {
+      "name": "Dinh Thai Hoang",
+      "slug": ""
+     },
+     {
+      "name": "Diep Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Trung Le",
+      "slug": ""
+     },
+     {
+      "name": "Duc Anh Nguyen",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "Continual Graph Memory for Adaptive Recommendation under Intent Drift",
+    "ai_key": "emnlp-2026-continualgraphmemoryforadaptiverecommend",
+    "url": "https://aclanthology.org/2026.findings-emnlp.402/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Hao Nguyen Ngoc, Tung Nguyen, Nguyen Thi Hanh, Dinh Thai Hoang, Nguyen Xuan Tung",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "nguyen-thi-hanh",
+      "name": "Nguyen Thi Hanh",
+      "name_vi": "Nguyễn Thị Hạnh"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Hao Nguyen Ngoc",
+      "slug": ""
+     },
+     {
+      "name": "Tung Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Nguyen Thi Hanh",
+      "slug": "nguyen-thi-hanh"
+     },
+     {
+      "name": "Dinh Thai Hoang",
+      "slug": ""
+     },
+     {
+      "name": "Nguyen Xuan Tung",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
     "title": "CRISP: Cliff-awaRe Input-adaptive Sparse Prefilling with Structural-Mass-Motivated Routing",
     "ai_key": "emnlp-2026-crispcliffawareinputadaptivesparseprefil",
     "url": "https://aclanthology.org/2026.emnlp-main.184/",
@@ -22549,6 +23046,182 @@
      },
      {
       "name": "Jieyang Chen",
+      "slug": ""
+     },
+     {
+      "name": "Thien Huu Nguyen",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "Don't Generate, Just Score: Enhancing Topic Coherence with Masked Semantic Alignment",
+    "ai_key": "emnlp-2026-dontgeneratejustscoreenhancingtopiccoher",
+    "url": "https://aclanthology.org/2026.findings-emnlp.226/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Tien-Phat Nguyen, Minh Chu Xuan, Phung Gia Huy, Linh Ngo Van, Duc Anh Nguyen, Trung Le, Thien Huu Nguyen",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Tien-Phat Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Minh Chu Xuan",
+      "slug": ""
+     },
+     {
+      "name": "Phung Gia Huy",
+      "slug": ""
+     },
+     {
+      "name": "Linh Ngo Van",
+      "slug": "ngo-van-linh"
+     },
+     {
+      "name": "Duc Anh Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Trung Le",
+      "slug": ""
+     },
+     {
+      "name": "Thien Huu Nguyen",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "En-ViMedNER: An English-Vietnamese Parallel Biomedical Corpus with UMLS Semantic Type Annotations",
+    "ai_key": "emnlp-2026-envimedneranenglishvietnameseparallelbio",
+    "url": "https://aclanthology.org/2026.findings-emnlp.2392/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Nhu Vo, Phuong Nguyen, Nu Uyen Phuong Le, Inigo Jauregi Unanue, Dung D. Le, Massimo Piccardi, Wray Buntine",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "dung-d-le",
+      "name": "Dung D. Le",
+      "name_vi": "Lê Duy Dũng"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Nhu Vo",
+      "slug": ""
+     },
+     {
+      "name": "Phuong Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Nu Uyen Phuong Le",
+      "slug": ""
+     },
+     {
+      "name": "Inigo Jauregi Unanue",
+      "slug": ""
+     },
+     {
+      "name": "Dung D. Le",
+      "slug": "dung-d-le"
+     },
+     {
+      "name": "Massimo Piccardi",
+      "slug": ""
+     },
+     {
+      "name": "Wray Buntine",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "EventKD: Event-Aware Knowledge Distillation for Generative Event Extraction",
+    "ai_key": "emnlp-2026-eventkdeventawareknowledgedistillationfo",
+    "url": "https://aclanthology.org/2026.findings-emnlp.154/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Hoang Thanh Dat, Quoc Phong Dao, Nam Le Hai, Franck Dernoncourt, Linh Ngo Van, Trung Le, Thien Huu Nguyen",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     },
+     {
+      "slug": "nam-le-hai",
+      "name": "Nam Le Hai",
+      "name_vi": "Lê Hải Nam"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Hoang Thanh Dat",
+      "slug": ""
+     },
+     {
+      "name": "Quoc Phong Dao",
+      "slug": ""
+     },
+     {
+      "name": "Nam Le Hai",
+      "slug": "nam-le-hai"
+     },
+     {
+      "name": "Franck Dernoncourt",
+      "slug": ""
+     },
+     {
+      "name": "Linh Ngo Van",
+      "slug": "ngo-van-linh"
+     },
+     {
+      "name": "Trung Le",
       "slug": ""
      },
      {
@@ -22667,18 +23340,75 @@
     "year": 2026,
     "venue": "emnlp",
     "venue_name": "EMNLP",
-    "title": "Perish or Flourish? A Holistic Evaluation of Large Language Models for Code Generation in Functional Programming",
-    "ai_key": "emnlp-2026-perishorflourishaholisticevaluationoflar",
-    "url": "https://thanhlc.net/publications/",
+    "title": "M-VLM2Vec: Structure-Preserving Matryoshka Representation Learning for Vision-Language Embeddings",
+    "ai_key": "emnlp-2026-mvlm2vecstructurepreservingmatryoshkarep",
+    "url": "https://aclanthology.org/2026.findings-emnlp.308/",
     "status": "rejected",
     "status_label": "rejected",
     "pres": "",
-    "authors": "Huynh Quyet Thang, Nguyet-Anh H. Lang, Eric Lang, Bach Le, Thanh Le-Cong",
-    "match": "listed on the publication page of his co-author Thanh Le-Cong; not in the official list yet",
+    "authors": "Minh Khoi Nguyen Do, Nguyen Hong Dang, Danh Vinh Le, Minh Quoc Nhat Nguyen, Linh Ngo Van, Duc Anh Nguyen, Trung Le",
+    "match": "name and affiliation",
     "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
     "reason": "",
     "later": "",
-    "unofficial": true,
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Minh Khoi Nguyen Do",
+      "slug": ""
+     },
+     {
+      "name": "Nguyen Hong Dang",
+      "slug": ""
+     },
+     {
+      "name": "Danh Vinh Le",
+      "slug": ""
+     },
+     {
+      "name": "Minh Quoc Nhat Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Linh Ngo Van",
+      "slug": "ngo-van-linh"
+     },
+     {
+      "name": "Duc Anh Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Trung Le",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "Perish or Flourish? A Holistic Evaluation of Large Language Models for Code Generation in Functional Programming",
+    "ai_key": "emnlp-2026-perishorflourishaholisticevaluationoflar",
+    "url": "https://aclanthology.org/2026.findings-emnlp.710/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Lang Hong Nguyet Anh, Eric Lang, Bach Le, Huynh Quyet Thang, Thanh Le-Cong",
+    "match": "name, and listed on their own page",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
     "workshop": "",
     "professors": [
      {
@@ -22691,11 +23421,7 @@
     "sub_id": "",
     "author_links": [
      {
-      "name": "Huynh Quyet Thang",
-      "slug": "huynh-quyet-thang"
-     },
-     {
-      "name": "Nguyet-Anh H. Lang",
+      "name": "Lang Hong Nguyet Anh",
       "slug": ""
      },
      {
@@ -22705,6 +23431,10 @@
      {
       "name": "Bach Le",
       "slug": ""
+     },
+     {
+      "name": "Huynh Quyet Thang",
+      "slug": "huynh-quyet-thang"
      },
      {
       "name": "Thanh Le-Cong",
@@ -22821,16 +23551,16 @@
     "venue_name": "EMNLP",
     "title": "ReVEL: Multi-Turn Reflective LLM-Guided Heuristic Evolution via Structured Performance Feedback",
     "ai_key": "emnlp-2026-revelmultiturnreflectivellmguidedheurist",
-    "url": "",
+    "url": "https://aclanthology.org/2026.findings-emnlp.1030/",
     "status": "rejected",
     "status_label": "rejected",
     "pres": "",
-    "authors": "Huynh Thi Thanh Binh, Hanh Nguyen, Đức Cường",
-    "match": "listed on her own announcement (13 September 2026) and the EMNLP 2026 decision notification: Findings paper; not in the official list yet",
+    "authors": "Van Duc Cuong, Nguyen Dinh Tuan Minh, Vu Duc Tam, Tung D. Vu, Son Van Nguyen, Nguyen Thi Hanh, Huynh Thi Thanh Binh",
+    "match": "name, and listed on their own page",
     "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
     "reason": "",
     "later": "",
-    "unofficial": true,
+    "unofficial": false,
     "workshop": "",
     "professors": [
      {
@@ -22842,22 +23572,43 @@
       "slug": "nguyen-thi-hanh",
       "name": "Nguyen Thi Hanh",
       "name_vi": "Nguyễn Thị Hạnh"
+     },
+     {
+      "slug": "son-van-nguyen",
+      "name": "Son Van Nguyen",
+      "name_vi": "Nguyễn Văn Sơn"
      }
     ],
     "reviews": "",
     "sub_id": "",
     "author_links": [
      {
-      "name": "Huynh Thi Thanh Binh",
-      "slug": "huynh-thi-thanh-binh"
+      "name": "Van Duc Cuong",
+      "slug": ""
      },
      {
-      "name": "Hanh Nguyen",
+      "name": "Nguyen Dinh Tuan Minh",
+      "slug": ""
+     },
+     {
+      "name": "Vu Duc Tam",
+      "slug": ""
+     },
+     {
+      "name": "Tung D. Vu",
+      "slug": ""
+     },
+     {
+      "name": "Son Van Nguyen",
+      "slug": "son-van-nguyen"
+     },
+     {
+      "name": "Nguyen Thi Hanh",
       "slug": "nguyen-thi-hanh"
      },
      {
-      "name": "Đức Cường",
-      "slug": ""
+      "name": "Huynh Thi Thanh Binh",
+      "slug": "huynh-thi-thanh-binh"
      }
     ]
    },
@@ -22983,6 +23734,57 @@
     "year": 2026,
     "venue": "emnlp",
     "venue_name": "EMNLP",
+    "title": "When Audit Quality Fails to Predict Downstream Utility: Synthetic-Data Selection for Low-Resource Classification",
+    "ai_key": "emnlp-2026-whenauditqualityfailstopredictdownstream",
+    "url": "https://aclanthology.org/2026.findings-emnlp.1184/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Xuan-Bach Le, Phat T. Tran-Truong, Son Ha Xuan",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "son-ha-xuan",
+      "name": "Son Ha Xuan",
+      "name_vi": "Hà Xuân Sơn"
+     },
+     {
+      "slug": "xuan-bach-le",
+      "name": "Xuan-Bach Le",
+      "name_vi": "Lê Xuân Bách"
+     },
+     {
+      "slug": "phat-t-tran-truong",
+      "name": "Phat T. Tran-Truong",
+      "name_vi": "Trần Trương Tuấn Phát"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Xuan-Bach Le",
+      "slug": "xuan-bach-le"
+     },
+     {
+      "name": "Phat T. Tran-Truong",
+      "slug": "phat-t-tran-truong"
+     },
+     {
+      "name": "Son Ha Xuan",
+      "slug": "son-ha-xuan"
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
     "title": "XRepoTest: Benchmarking Multilingual Repository-Level Unit Test Generation for Large Language Models",
     "ai_key": "emnlp-2026-xrepotestbenchmarkingmultilingualreposit",
     "url": "https://aclanthology.org/2026.emnlp-main.274/",
@@ -23100,6 +23902,307 @@
     ]
    },
    {
+    "year": 2025,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "MaGiX: A Multi-Granular Adaptive Graph Intelligence Framework for Enhancing Cross-Lingual RAG",
+    "ai_key": "emnlp-2025-magixamultigranularadaptivegraphintellig",
+    "url": "https://aclanthology.org/2025.findings-emnlp.279/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Nguyen Manh Hieu, Vu Lam Anh, Hung Pham Van, Nam Le Hai, Linh Ngo Van, Nguyen Thi Ngoc Diep, Thien Huu Nguyen",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     },
+     {
+      "slug": "nguyen-thi-ngoc-diep",
+      "name": "Nguyen Thi Ngoc Diep",
+      "name_vi": "Nguyễn Thị Ngọc Diệp"
+     },
+     {
+      "slug": "nam-le-hai",
+      "name": "Nam Le Hai",
+      "name_vi": "Lê Hải Nam"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Nguyen Manh Hieu",
+      "slug": ""
+     },
+     {
+      "name": "Vu Lam Anh",
+      "slug": ""
+     },
+     {
+      "name": "Hung Pham Van",
+      "slug": ""
+     },
+     {
+      "name": "Nam Le Hai",
+      "slug": "nam-le-hai"
+     },
+     {
+      "name": "Linh Ngo Van",
+      "slug": "ngo-van-linh"
+     },
+     {
+      "name": "Nguyen Thi Ngoc Diep",
+      "slug": "nguyen-thi-ngoc-diep"
+     },
+     {
+      "name": "Thien Huu Nguyen",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "MLAlgo-Bench: Can Machines Implement Machine Learning Algorithms?",
+    "ai_key": "emnlp-2025-mlalgobenchcanmachinesimplementmachinele",
+    "url": "https://aclanthology.org/2025.findings-emnlp.772/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Yunfei Wang, Yeqin Zhang, Yuyang Wu, Liang Lu, Phi Le Nguyen, Xiaoliang Wang, Cam-Tu Nguyen",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "phi-le-nguyen",
+      "name": "Phi Le Nguyen",
+      "name_vi": "Nguyễn Phi Lê"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Yunfei Wang",
+      "slug": ""
+     },
+     {
+      "name": "Yeqin Zhang",
+      "slug": ""
+     },
+     {
+      "name": "Yuyang Wu",
+      "slug": ""
+     },
+     {
+      "name": "Liang Lu",
+      "slug": ""
+     },
+     {
+      "name": "Phi Le Nguyen",
+      "slug": "phi-le-nguyen"
+     },
+     {
+      "name": "Xiaoliang Wang",
+      "slug": ""
+     },
+     {
+      "name": "Cam-Tu Nguyen",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "Multi-Surrogate-Objective Optimization for Neural Topic Models",
+    "ai_key": "emnlp-2025-multisurrogateobjectiveoptimizationforne",
+    "url": "https://aclanthology.org/2025.findings-emnlp.9/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Tue Le, Hoang Tran Vuong, Tung Nguyen, Linh Ngo Van, Dinh Viet Sang, Trung Le, Thien Huu Nguyen",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     },
+     {
+      "slug": "dinh-viet-sang",
+      "name": "Dinh Viet Sang",
+      "name_vi": "Đinh Viết Sang"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Tue Le",
+      "slug": ""
+     },
+     {
+      "name": "Hoang Tran Vuong",
+      "slug": ""
+     },
+     {
+      "name": "Tung Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Linh Ngo Van",
+      "slug": "ngo-van-linh"
+     },
+     {
+      "name": "Dinh Viet Sang",
+      "slug": "dinh-viet-sang"
+     },
+     {
+      "name": "Trung Le",
+      "slug": ""
+     },
+     {
+      "name": "Thien Huu Nguyen",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "SLM-Bench: A Comprehensive Benchmark of Small Language Models on Environmental Impacts",
+    "ai_key": "emnlp-2025-slmbenchacomprehensivebenchmarkofsmallla",
+    "url": "https://aclanthology.org/2025.findings-emnlp.1165/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Nghiem Thanh Pham, Tung Kieu, Duc Manh Nguyen, Son Ha Xuan, Nghia Duong-Trung, Danh Le-Phuoc",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "son-ha-xuan",
+      "name": "Son Ha Xuan",
+      "name_vi": "Hà Xuân Sơn"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Nghiem Thanh Pham",
+      "slug": ""
+     },
+     {
+      "name": "Tung Kieu",
+      "slug": ""
+     },
+     {
+      "name": "Duc Manh Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Son Ha Xuan",
+      "slug": "son-ha-xuan"
+     },
+     {
+      "name": "Nghia Duong-Trung",
+      "slug": ""
+     },
+     {
+      "name": "Danh Le-Phuoc",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "XTRA: Cross-Lingual Topic Modeling with Topic and Representation Alignments",
+    "ai_key": "emnlp-2025-xtracrosslingualtopicmodelingwithtopican",
+    "url": "https://aclanthology.org/2025.findings-emnlp.298/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Tien Phat Nguyen, Ngo Vu Minh, Tung Nguyen, Linh Ngo Van, Duc Anh Nguyen, Dinh Viet Sang, Trung Le",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     },
+     {
+      "slug": "dinh-viet-sang",
+      "name": "Dinh Viet Sang",
+      "name_vi": "Đinh Viết Sang"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Tien Phat Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Ngo Vu Minh",
+      "slug": ""
+     },
+     {
+      "name": "Tung Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Linh Ngo Van",
+      "slug": "ngo-van-linh"
+     },
+     {
+      "name": "Duc Anh Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Dinh Viet Sang",
+      "slug": "dinh-viet-sang"
+     },
+     {
+      "name": "Trung Le",
+      "slug": ""
+     }
+    ]
+   },
+   {
     "year": 2024,
     "venue": "emnlp",
     "venue_name": "EMNLP",
@@ -23152,6 +24255,55 @@
     "year": 2024,
     "venue": "emnlp",
     "venue_name": "EMNLP",
+    "title": "Experience as Source for Anticipation and Planning: Experiential Policy Learning for Target-driven Recommendation Dialogues",
+    "ai_key": "emnlp-2024-experienceassourceforanticipationandplan",
+    "url": "https://aclanthology.org/2024.findings-emnlp.829/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Huy Quang Dao, Yang Deng, Khanh-Huyen Bui, Dung D. Le, Lizi Liao",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "dung-d-le",
+      "name": "Dung D. Le",
+      "name_vi": "Lê Duy Dũng"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Huy Quang Dao",
+      "slug": ""
+     },
+     {
+      "name": "Yang Deng",
+      "slug": ""
+     },
+     {
+      "name": "Khanh-Huyen Bui",
+      "slug": ""
+     },
+     {
+      "name": "Dung D. Le",
+      "slug": "dung-d-le"
+     },
+     {
+      "name": "Lizi Liao",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2024,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
     "title": "Lifelong Event Detection via Optimal Transport",
     "ai_key": "emnlp-2024-lifelongeventdetectionviaoptimaltranspor",
     "url": "https://aclanthology.org/2024.emnlp-main.701/",
@@ -23194,6 +24346,59 @@
      {
       "name": "Linh Van Ngo",
       "slug": "ngo-van-linh"
+     },
+     {
+      "name": "Thien Huu Nguyen",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2024,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "NeuroMax: Enhancing Neural Topic Modeling via Maximizing Mutual Information and Group Topic Regularization",
+    "ai_key": "emnlp-2024-neuromaxenhancingneuraltopicmodelingviam",
+    "url": "https://aclanthology.org/2024.findings-emnlp.457/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Duy-Tung Pham, Thien Trang Nguyen Vu, Tung Nguyen, Linh Van Ngo, Duc Anh Nguyen, Thien Huu Nguyen",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Duy-Tung Pham",
+      "slug": ""
+     },
+     {
+      "name": "Thien Trang Nguyen Vu",
+      "slug": ""
+     },
+     {
+      "name": "Tung Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Linh Van Ngo",
+      "slug": "ngo-van-linh"
+     },
+     {
+      "name": "Duc Anh Nguyen",
+      "slug": ""
      },
      {
       "name": "Thien Huu Nguyen",
@@ -23531,6 +24736,55 @@
       "slug": ""
      }
     ]
+   },
+   {
+    "year": 2022,
+    "venue": "emnlp",
+    "venue_name": "EMNLP",
+    "title": "Multilingual SubEvent Relation Extraction: A Novel Dataset and Structure Induction Method",
+    "ai_key": "emnlp-2022-multilingualsubeventrelationextractionan",
+    "url": "https://aclanthology.org/2022.findings-emnlp.407/",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Viet Lai, Hieu Man, Linh Ngo, Franck Dernoncourt, Thien Nguyen",
+    "match": "name and affiliation",
+    "note": "placed in Findings, which counts as rejected from the main track and as a workshop paper",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "ngo-van-linh",
+      "name": "Ngo Van Linh",
+      "name_vi": "Ngô Văn Linh"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Viet Lai",
+      "slug": ""
+     },
+     {
+      "name": "Hieu Man",
+      "slug": ""
+     },
+     {
+      "name": "Linh Ngo",
+      "slug": "ngo-van-linh"
+     },
+     {
+      "name": "Franck Dernoncourt",
+      "slug": ""
+     },
+     {
+      "name": "Thien Nguyen",
+      "slug": ""
+     }
+    ]
    }
   ],
   "image": "img/venues/emnlp.png",
@@ -23541,8 +24795,8 @@
   "reported_detail": "6550 / 30337 (2020–2025)",
   "ratio": "3.1",
   "chart": {
-   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at EMNLP\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"est\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">30</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V247.6 Q285.2,247.6 285.2,247.6 H309.2 Q309.2,247.6 309.2,247.6 V270.0 Z\"><title>2023: 3 accepted</title></path><path class=\"not\" d=\"M285.2,245.6 V232.7 Q285.2,232.7 285.2,232.7 H309.2 Q309.2,232.7 309.2,232.7 V245.6 Z\"><title>2023: 2 rejected, recorded</title></path><path class=\"est\" d=\"M285.2,230.7 V184.4 Q285.2,180.4 289.2,180.4 H305.2 Q309.2,180.4 309.2,184.4 V230.7 Z\"><title>2023: about 7 rejected (estimate)</title></path><text class=\"value\" x=\"297.2\" y=\"174.4\" text-anchor=\"middle\">about 12</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V247.6 Q358.8,247.6 358.8,247.6 H382.8 Q382.8,247.6 382.8,247.6 V270.0 Z\"><title>2024: 3 accepted</title></path><path class=\"est\" d=\"M358.8,245.6 V184.4 Q358.8,180.4 362.8,180.4 H378.8 Q382.8,180.4 382.8,184.4 V245.6 Z\"><title>2024: about 9 rejected (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"174.4\" text-anchor=\"middle\">about 12</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V262.5 Q432.2,262.5 432.2,262.5 H456.2 Q456.2,262.5 456.2,262.5 V270.0 Z\"><title>2025: 1 accepted</title></path><path class=\"est\" d=\"M432.2,260.5 V251.6 Q432.2,247.6 436.2,247.6 H452.2 Q456.2,247.6 456.2,251.6 V260.5 Z\"><title>2025: about 2 rejected (estimate)</title></path><text class=\"value\" x=\"444.2\" y=\"241.6\" text-anchor=\"middle\">about 3</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V187.9 Q505.8,187.9 505.8,187.9 H529.8 Q529.8,187.9 529.8,187.9 V270.0 Z\"><title>2026: 11 accepted</title></path><path class=\"not\" d=\"M505.8,185.9 V172.9 Q505.8,172.9 505.8,172.9 H529.8 Q529.8,172.9 529.8,172.9 V185.9 Z\"><title>2026: 2 rejected, recorded</title></path><path class=\"est\" d=\"M505.8,170.9 V57.5 Q505.8,53.5 509.8,53.5 H525.8 Q529.8,53.5 529.8,57.5 V170.9 Z\"><title>2026: about 16 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"47.5\" text-anchor=\"middle\">about 29</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
-   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại EMNLP\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"est\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">30</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V247.6 Q285.2,247.6 285.2,247.6 H309.2 Q309.2,247.6 309.2,247.6 V270.0 Z\"><title>2023: 3 bài được nhận</title></path><path class=\"not\" d=\"M285.2,245.6 V232.7 Q285.2,232.7 285.2,232.7 H309.2 Q309.2,232.7 309.2,232.7 V245.6 Z\"><title>2023: 2 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M285.2,230.7 V184.4 Q285.2,180.4 289.2,180.4 H305.2 Q309.2,180.4 309.2,184.4 V230.7 Z\"><title>2023: khoảng 7 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"297.2\" y=\"174.4\" text-anchor=\"middle\">~12</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V247.6 Q358.8,247.6 358.8,247.6 H382.8 Q382.8,247.6 382.8,247.6 V270.0 Z\"><title>2024: 3 bài được nhận</title></path><path class=\"est\" d=\"M358.8,245.6 V184.4 Q358.8,180.4 362.8,180.4 H378.8 Q382.8,180.4 382.8,184.4 V245.6 Z\"><title>2024: khoảng 9 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"174.4\" text-anchor=\"middle\">~12</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V262.5 Q432.2,262.5 432.2,262.5 H456.2 Q456.2,262.5 456.2,262.5 V270.0 Z\"><title>2025: 1 bài được nhận</title></path><path class=\"est\" d=\"M432.2,260.5 V251.6 Q432.2,247.6 436.2,247.6 H452.2 Q456.2,247.6 456.2,251.6 V260.5 Z\"><title>2025: khoảng 2 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"444.2\" y=\"241.6\" text-anchor=\"middle\">~3</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V187.9 Q505.8,187.9 505.8,187.9 H529.8 Q529.8,187.9 529.8,187.9 V270.0 Z\"><title>2026: 11 bài được nhận</title></path><path class=\"not\" d=\"M505.8,185.9 V172.9 Q505.8,172.9 505.8,172.9 H529.8 Q529.8,172.9 529.8,172.9 V185.9 Z\"><title>2026: 2 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M505.8,170.9 V57.5 Q505.8,53.5 509.8,53.5 H525.8 Q529.8,53.5 529.8,57.5 V170.9 Z\"><title>2026: khoảng 16 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"47.5\" text-anchor=\"middle\">~29</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
+   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at EMNLP\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"est\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">30</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"not\" d=\"M211.8,270.0 V266.5 Q211.8,262.5 215.8,262.5 H231.8 Q235.8,262.5 235.8,266.5 V270.0 Z\"><title>2022: 1 rejected, recorded</title></path><text class=\"value\" x=\"223.8\" y=\"256.5\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V247.6 Q285.2,247.6 285.2,247.6 H309.2 Q309.2,247.6 309.2,247.6 V270.0 Z\"><title>2023: 3 accepted</title></path><path class=\"not\" d=\"M285.2,245.6 V232.7 Q285.2,232.7 285.2,232.7 H309.2 Q309.2,232.7 309.2,232.7 V245.6 Z\"><title>2023: 2 rejected, recorded</title></path><path class=\"est\" d=\"M285.2,230.7 V184.4 Q285.2,180.4 289.2,180.4 H305.2 Q309.2,180.4 309.2,184.4 V230.7 Z\"><title>2023: about 7 rejected (estimate)</title></path><text class=\"value\" x=\"297.2\" y=\"174.4\" text-anchor=\"middle\">about 12</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V247.6 Q358.8,247.6 358.8,247.6 H382.8 Q382.8,247.6 382.8,247.6 V270.0 Z\"><title>2024: 3 accepted</title></path><path class=\"not\" d=\"M358.8,245.6 V232.7 Q358.8,232.7 358.8,232.7 H382.8 Q382.8,232.7 382.8,232.7 V245.6 Z\"><title>2024: 2 rejected, recorded</title></path><path class=\"est\" d=\"M358.8,230.7 V184.4 Q358.8,180.4 362.8,180.4 H378.8 Q382.8,180.4 382.8,184.4 V230.7 Z\"><title>2024: about 7 rejected (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"174.4\" text-anchor=\"middle\">about 12</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V262.5 Q432.2,262.5 432.2,262.5 H456.2 Q456.2,262.5 456.2,262.5 V270.0 Z\"><title>2025: 1 accepted</title></path><path class=\"not\" d=\"M432.2,260.5 V229.2 Q432.2,225.2 436.2,225.2 H452.2 Q456.2,225.2 456.2,229.2 V260.5 Z\"><title>2025: 5 rejected, recorded</title></path><text class=\"value\" x=\"444.2\" y=\"219.2\" text-anchor=\"middle\">6</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V187.9 Q505.8,187.9 505.8,187.9 H529.8 Q529.8,187.9 529.8,187.9 V270.0 Z\"><title>2026: 11 accepted</title></path><path class=\"not\" d=\"M505.8,185.9 V105.7 Q505.8,105.7 505.8,105.7 H529.8 Q529.8,105.7 529.8,105.7 V185.9 Z\"><title>2026: 11 rejected, recorded</title></path><path class=\"est\" d=\"M505.8,103.7 V57.5 Q505.8,53.5 509.8,53.5 H525.8 Q529.8,53.5 529.8,57.5 V103.7 Z\"><title>2026: about 7 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"47.5\" text-anchor=\"middle\">about 29</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
+   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại EMNLP\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"est\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">30</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"not\" d=\"M211.8,270.0 V266.5 Q211.8,262.5 215.8,262.5 H231.8 Q235.8,262.5 235.8,266.5 V270.0 Z\"><title>2022: 1 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"223.8\" y=\"256.5\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V247.6 Q285.2,247.6 285.2,247.6 H309.2 Q309.2,247.6 309.2,247.6 V270.0 Z\"><title>2023: 3 bài được nhận</title></path><path class=\"not\" d=\"M285.2,245.6 V232.7 Q285.2,232.7 285.2,232.7 H309.2 Q309.2,232.7 309.2,232.7 V245.6 Z\"><title>2023: 2 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M285.2,230.7 V184.4 Q285.2,180.4 289.2,180.4 H305.2 Q309.2,180.4 309.2,184.4 V230.7 Z\"><title>2023: khoảng 7 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"297.2\" y=\"174.4\" text-anchor=\"middle\">~12</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V247.6 Q358.8,247.6 358.8,247.6 H382.8 Q382.8,247.6 382.8,247.6 V270.0 Z\"><title>2024: 3 bài được nhận</title></path><path class=\"not\" d=\"M358.8,245.6 V232.7 Q358.8,232.7 358.8,232.7 H382.8 Q382.8,232.7 382.8,232.7 V245.6 Z\"><title>2024: 2 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M358.8,230.7 V184.4 Q358.8,180.4 362.8,180.4 H378.8 Q382.8,180.4 382.8,184.4 V230.7 Z\"><title>2024: khoảng 7 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"174.4\" text-anchor=\"middle\">~12</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V262.5 Q432.2,262.5 432.2,262.5 H456.2 Q456.2,262.5 456.2,262.5 V270.0 Z\"><title>2025: 1 bài được nhận</title></path><path class=\"not\" d=\"M432.2,260.5 V229.2 Q432.2,225.2 436.2,225.2 H452.2 Q456.2,225.2 456.2,229.2 V260.5 Z\"><title>2025: 5 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"444.2\" y=\"219.2\" text-anchor=\"middle\">6</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V187.9 Q505.8,187.9 505.8,187.9 H529.8 Q529.8,187.9 529.8,187.9 V270.0 Z\"><title>2026: 11 bài được nhận</title></path><path class=\"not\" d=\"M505.8,185.9 V105.7 Q505.8,105.7 505.8,105.7 H529.8 Q529.8,105.7 529.8,105.7 V185.9 Z\"><title>2026: 11 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M505.8,103.7 V57.5 Q505.8,53.5 509.8,53.5 H525.8 Q529.8,53.5 529.8,57.5 V103.7 Z\"><title>2026: khoảng 7 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"47.5\" text-anchor=\"middle\">~29</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
   }
  },
  {
