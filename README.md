@@ -10,14 +10,6 @@ Publications are tracked from 2020 onward across ten flagship conferences in fou
 
 **Live Website:** <https://thanhlexyz.github.io/vn-at-top-ai-conference/>
 
-![Accepted, recorded rejected and estimated rejected papers of all listed professors per year](docs/submissions.png)
-
-*Submissions per year across all listed faculty: accepted papers, recorded rejections (all ICLR submissions, public NeurIPS rejections, and Findings papers), and estimated submissions at non-disclosing venues projected from each researcher's ICLR record using Laplace smoothing.*
-
-![Researcher collaboration graph: professors on the list joined by the papers they share](docs/researcher-graph.png)
-
-*Co-authorship network: each node represents a tracked faculty member, colored by university affiliation. Connecting edges indicate shared publications, with shorter distances representing stronger collaboration.*
-
 ### Sample data: top 10 by CSRankings score (2026-11-23)
 
 Accepted main-track papers per area and the CSRankings score; the full table is on the [live site](https://thanhlexyz.github.io/vn-at-top-ai-conference/).
@@ -34,6 +26,14 @@ Accepted main-track papers per area and the CSRankings score; the full table is 
 | 8 | Huỳnh Thị Thanh Bình | HUST | 3 | 2 | 0 | 1 | 1.70 |
 | 9 | Phạm Văn Cảnh | Phenikaa | 4 | 1 | 0 | 0 | 1.25 |
 | 10 | Nguyễn Tuấn Bình | VinUni | 0 | 4 | 0 | 0 | 1.08 |
+
+![Accepted, recorded rejected and estimated rejected papers of all listed professors per year](docs/submissions.png)
+
+*Submissions per year across all listed faculty: accepted papers, recorded rejections (all ICLR submissions, public NeurIPS rejections, and Findings papers), and estimated submissions at non-disclosing venues projected from each researcher's ICLR record using Laplace smoothing.*
+
+![Researcher collaboration graph: professors on the list joined by the papers they share](docs/researcher-graph.png)
+
+*Co-authorship network: each node represents a tracked faculty member, colored by university affiliation. Connecting edges indicate shared publications, with shorter distances representing stronger collaboration.*
 
 ---
 
