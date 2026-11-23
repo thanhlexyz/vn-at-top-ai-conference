@@ -552,6 +552,7 @@ aside.callout p { margin: 0 ; line-height: 1.55 ; }
 .toc nav li { margin: 0.35em 0 ; line-height: 1.35 ; }
 .toc nav a { color: var(--muted) ; text-decoration: none ; }
 .toc nav a:hover { color: var(--link) ; text-decoration: underline ; }
+.toc nav a.current { color: var(--fg) ; font-weight: 600 ; }
 @media (min-width: 900px) {
 	.with-toc { display: grid ; grid-template-columns: minmax(0, 1fr) 14rem ; gap: 2.5rem ; align-items: start ; }
 	.with-toc .toc { grid-column: 2 ; grid-row: 1 ; position: sticky ; top: 1.5rem ; border-left: 2px solid var(--axis) ; padding-left: 1rem ; font-size: 0.9em ; }

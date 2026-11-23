@@ -221,6 +221,28 @@
 	});
 })();
 
+// "On this page": the link of the section being read is marked (class current, aria-current), from the last
+// heading above a line near the top of the window; at the end of the page, the last section.
+(function () {
+	var links = Array.prototype.slice.call(document.querySelectorAll('.toc nav a[href^="#"]'));
+	var items = links.map(function (a) { return { a: a, h: document.getElementById(decodeURIComponent(a.hash.slice(1))) }; })
+		.filter(function (i) { return i.h; });
+	if (!items.length) return;
+	function mark() {   // a dozen headings: cheap enough to run on every scroll event
+		var line = 100, current = items[0];   // just below the top: the heading a link jumps to wins over the ones after it
+		items.forEach(function (i) { if (i.h.getBoundingClientRect().top <= line) current = i; });
+		if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) current = items[items.length - 1];
+		items.forEach(function (i) {
+			var on = i === current;
+			i.a.classList.toggle("current", on);
+			if (on) i.a.setAttribute("aria-current", "location"); else i.a.removeAttribute("aria-current");
+		});
+	}
+	window.addEventListener("scroll", mark, { passive: true });
+	window.addEventListener("resize", mark);
+	mark();
+})();
+
 // Day / night: the button next to the language switch flips the colours and remembers the choice in this
 // browser. Without a stored choice the page follows the system setting (prefers-color-scheme in style.css).
 (function () {
