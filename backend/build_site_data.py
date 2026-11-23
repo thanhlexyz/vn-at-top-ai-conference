@@ -30,7 +30,7 @@ import math
 import re
 import urllib.parse
 
-from common import (with_pdf_affiliations, ACCEPTED, BACKEND, CANDIDATES, FRONTEND, LAST_YEAR, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
+from common import (with_pdf_affiliations, ACCEPTED, DECISION_DATES, BACKEND, CANDIDATES, FRONTEND, LAST_YEAR, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
                     STATUS_LABEL, VENUE_GROUPS, VENUE_KEYS, VENUE_NAME, VENUES, WORK, YEARS, classify_status, held, in_vietnam,
                     load_roster, name_key, norm_name, norm_title, openreview_venue, presentation, read_csv,
                     read_jsonl_gz, same_institution, slugify, vn_institutions, write_json)
@@ -841,6 +841,12 @@ def paper_order(r):
     return -r["year"], VENUE_KEYS.index(r["venue"]), r["title"].lower()
 
 
+def decision_order(r):
+    """The Papers page: newest decision first (DECISION_DATES); a venue-year still under review comes first."""
+    date = DECISION_DATES.get(r["venue"], {}).get(r["year"], "9999")
+    return [-ord(c) for c in date], VENUE_KEYS.index(r["venue"]), r["title"].lower()
+
+
 def projection(p):
     """Papers submitted and accepted per year for one professor, with the unknown part estimated.
 
@@ -1504,7 +1510,11 @@ def main():
     recs_for_graph = [(r, shown_by_slug[s]) for r, s in graph_recs if s in shown_by_slug]
     write_json(DATA / "graph_people.json", graph.researcher_graph(professors, recs_for_graph))
     write_json(DATA / "graph_institutions.json", graph.institution_graph(professors, recs_for_graph))
-    page_papers = [with_owners(r) for r in sorted(papers, key=paper_order)]
+    for venue, year in sorted({(r["venue"], r["year"]) for r in papers if r["status"] == "accepted"}):
+        if year not in DECISION_DATES.get(venue, {}):
+            print(f"warning: no decision date for {VENUE_NAME[venue]} {year} in common.DECISION_DATES; "
+                  "its papers sort first on the Papers page")
+    page_papers = [with_owners(r) for r in sorted(papers, key=decision_order)]
     write_json(DATA / "papers.json", page_papers)
     write_otd_scores(page_papers)
     write_ai_scores(professors)

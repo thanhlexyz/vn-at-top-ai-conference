@@ -235,7 +235,8 @@ matched only by affiliation can drop out; confirm it in `review.csv` if it is th
 (fill and check each row; `--scan aaai ijcai` also reads papers with two or more Vietnamese family names and
 keeps those whose title page names a university in Vietnam, so that `find_candidates.py`, which applies the checked
 rows, lists their authors on the Candidates page), then `verify_affiliations.py` to check every counted official paper against its PDF;
-fix what it flags. NeurIPS PDFs become public only after the conference.
+fix what it flags. Add the venue-year's notification date to `DECISION_DATES` in `common.py`: the Papers page lists
+the newest decisions first (the build warns about a venue-year with accepted papers and no date). NeurIPS PDFs become public only after the conference.
 
 **Both languages, always:** the Vietnamese site (`/`) mirrors the English one (`/en/`). Any change to a page, whether
 text added, removed or reworded, a section, a caption, a column or a layout change, is made in both languages in the
