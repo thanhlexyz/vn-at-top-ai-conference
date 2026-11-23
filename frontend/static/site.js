@@ -105,6 +105,7 @@
 		});
 		totals.forEach(function (tr) { body.appendChild(tr); });
 		podium(table, numeric && !cell.hasAttribute("data-nocup") ? column : null, order === "ascending");
+		if (table.paginate) table.paginate(0, false);   // a paged table starts again from its first page
 	}
 
 	// Cups for the top three values of a .podium table, in the order shown: gold, silver, bronze. Sorted by a
@@ -169,6 +170,39 @@
 			button.setAttribute("aria-expanded", hidden ? "false" : "true");
 			window.dispatchEvent(new Event("resize"));   // the pinned columns are measured again
 		});
+	});
+
+	// Long tables (data-page-size) show one page of rows at a time, with page links in the nav.pager after them
+	// (aria-controls names the table). Sorting sorts every row, then shows the first page again. The page itself
+	// hides the rows after the first page (class off-page), so the first view draws only that many.
+	document.querySelectorAll("table[data-page-size]").forEach(function (table) {
+		var size = parseInt(table.dataset.pageSize, 10), body = table.tBodies[0];
+		var nav = table.id && document.querySelector('nav.pager[aria-controls="' + table.id + '"]');
+		if (!size || !nav) return;
+		function rows() { return Array.prototype.filter.call(body.rows, function (tr) { return !tr.classList.contains("total"); }); }
+		function link(label, page, current, disabled) {
+			var b = document.createElement("button");
+			b.type = "button";
+			b.textContent = label;
+			if (current) b.setAttribute("aria-current", "page");
+			if (disabled) b.disabled = true;
+			b.addEventListener("click", function () { show(page, true); });
+			return b;
+		}
+		function show(page, scroll) {
+			var all = rows(), pages = Math.max(1, Math.ceil(all.length / size));
+			page = Math.max(0, Math.min(page, pages - 1));
+			all.forEach(function (tr, k) { tr.classList.toggle("off-page", Math.floor(k / size) !== page); });
+			nav.innerHTML = "";
+			nav.hidden = pages < 2;
+			nav.appendChild(link(nav.dataset.prev, page - 1, false, page === 0));
+			for (var p = 0; p < pages; p++) nav.appendChild(link(String(p + 1), p, p === page, false));
+			nav.appendChild(link(nav.dataset.next, page + 1, false, page === pages - 1));
+			if (scroll) table.scrollIntoView({ block: "start" });
+			window.dispatchEvent(new Event("resize"));   // the pinned columns are measured again
+		}
+		table.paginate = show;
+		show(0, false);
 	});
 
 	document.querySelectorAll("table").forEach(function (table) {

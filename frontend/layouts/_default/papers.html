@@ -7,7 +7,7 @@
 <div class="table-box">
 <p class="table-tools"><button type="button" class="more-columns" aria-expanded="false" data-names="{{ T "cols_hidden" }}" aria-controls="papers-table" data-show="{{ T "cols_show" }}" data-show-one="{{ T "cols_show_one" }}" data-hide="{{ T "cols_hide" }}">{{ T "cols_show" }}</button></p>
 <div class="scroll">
-<table id="papers-table" class="collapsed" data-collapsible>
+<table id="papers-table" class="collapsed" data-collapsible data-page-size="50">
 	<thead>
 	<tr>
 		<th class="l">{{ T "th_venue" }}</th>
@@ -26,8 +26,8 @@
 	</tr>
 	</thead>
 	<tbody>
-	{{- range $papers }}
-	<tr>
+	{{- range $k, $_ := $papers }}
+	<tr{{ if ge $k 50 }} class="off-page"{{ end }}>
 		<td class="l venue-year"><a href="{{ printf "venues/%s/" .venue | relLangURL }}">{{ .venue_name }}</a>&rsquo;{{ printf "%02d" (mod .year 100) }}</td>
 		<td class="l">{{ $tag := printf "<span class=\"tag %s\">%s</span>" .status (T (printf "status_%s" .status)) }}
 			{{- if strings.Contains .url "openreview.net" }}<a class="tag-link" href="{{ .url }}" title="{{ T "tip_openreview_decision" }}">{{ $tag | safeHTML }}</a>{{ else }}{{ $tag | safeHTML }}{{ end }}{{ with .pres }} {{ . }}{{ end }}{{ if .unofficial }} <span class="tag own" title="{{ .match }}">{{ T "unofficial" }}</span>{{ end }}</td>
@@ -57,5 +57,7 @@
 	</tbody>
 </table>
 </div>
+<nav class="pager" aria-controls="papers-table" aria-label="{{ T "pager_label" }}" data-prev="{{ T "pager_prev" }}" data-next="{{ T "pager_next" }}" hidden></nav>
+<noscript><style>#papers-table tr.off-page { display: table-row ; }</style></noscript>
 </div>
 {{- end }}
