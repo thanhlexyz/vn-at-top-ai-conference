@@ -37,7 +37,7 @@
 		{{ partial "split-cells.html" (merge . (dict "split" (sub hugo.Data.meta.last_year 1))) }}
 		<td class="bad">{{ T "venue_n_public" $t.not_accepted }}</td>
 		{{- else }}
-		<td class="l">{{ T "venue_public_none" }}</td>
+		<td class="l">{{ if in (slice "acl" "emnlp" "cvpr") .key }}{{ T "venue_public_findings" }}{{ else }}{{ T "venue_public_none" }}{{ end }}</td>
 		<td class="na">&ndash;</td>
 		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
 		{{ partial "split-cells.html" (merge . (dict "split" (sub hugo.Data.meta.last_year 1))) }}
