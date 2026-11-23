@@ -428,6 +428,8 @@ other = "Accepted papers per year by where the authors are"
 other = "Each column is one year's accepted papers; grey papers are known only from announcements or personal pages."
 [coauthor_institutions]
 other = "Co-author institutions"
+[coauthor_institutions_note_short]
+other = "Institutions in Vietnam that share papers with this one (accepted, rejected or workshop) and the number of shared papers; institutions abroad are left out."
 [coauthor_institutions_note]
 other = "Institutions in Vietnam that share papers with this one (accepted, rejected or workshop) and the number of shared papers; institutions abroad are left out. See <a href=\"{{ . }}\">Institution collaboration</a> for the whole graph."
 [coauthors_on_site]

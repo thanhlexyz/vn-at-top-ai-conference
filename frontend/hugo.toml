@@ -61,11 +61,6 @@ disableKinds = ['taxonomy', 'term', 'rss']
   pageRef = '/graph-people'
   weight = 5
 [[languages.en.menus.main]]
-  name = 'Institution collaboration'
-  identifier = 'graph-institutions'
-  pageRef = '/graph-institutions'
-  weight = 5
-[[languages.en.menus.main]]
   name = 'International cooperation'
   identifier = 'international'
   pageRef = '/international'
@@ -100,11 +95,6 @@ disableKinds = ['taxonomy', 'term', 'rss']
   name = 'Giảng viên hợp tác'
   identifier = 'graph-people'
   pageRef = '/graph-people'
-  weight = 5
-[[languages.vi.menus.main]]
-  name = 'Trường hợp tác'
-  identifier = 'graph-institutions'
-  pageRef = '/graph-institutions'
   weight = 5
 [[languages.vi.menus.main]]
   name = 'Hợp tác quốc tế'

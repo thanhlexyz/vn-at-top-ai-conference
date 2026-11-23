@@ -1,6 +1,7 @@
 ---
 title: "Institution collaboration"
 layout: "graph"
+draft: true
 data: "graph_institutions"
 description: "Which institutions in Vietnam share papers: accepted, rejected and workshop papers."
 ---

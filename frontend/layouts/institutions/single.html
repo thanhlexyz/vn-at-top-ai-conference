@@ -23,7 +23,8 @@
 	<li>{{ if $n.url }}<a href="{{ $n.url | relLangURL }}">{{ partial "iname.html" $n.full }}</a>{{ else }}{{ partial "iname.html" $n.full }}{{ end }} ({{ $n.name }}): {{ T "graph_papers" (int .weight) }}</li>
 	{{- end }}
 </ol>
-<p class="note">{{ T "coauthor_institutions_note" (relLangURL "graph-institutions/") | safeHTML }}</p>
+{{- /* the whole graph is a draft page: linked only where it is built (locally) */}}
+<p class="note">{{ with site.GetPage "/graph-institutions" }}{{ T "coauthor_institutions_note" .RelPermalink | safeHTML }}{{ else }}{{ T "coauthor_institutions_note_short" }}{{ end }}</p>
 {{- end }}
 
 <h2>{{ T "inst_professors" }}</h2>

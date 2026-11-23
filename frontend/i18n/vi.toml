@@ -423,6 +423,8 @@ other = "Bài được nhận theo năm, theo đơn vị của tác giả"
 other = "Mỗi cột là số bài được nhận trong một năm; phần xám là bài mới biết qua thông báo hoặc trang cá nhân."
 [coauthor_institutions]
 other = "Đơn vị đồng tác giả"
+[coauthor_institutions_note_short]
+other = "Các trường, viện ở Việt Nam có bài chung với đơn vị này (được nhận, bị từ chối hoặc workshop) và số bài chung; không tính đơn vị ở nước ngoài."
 [coauthor_institutions_note]
 other = "Các trường, viện ở Việt Nam có bài chung với đơn vị này (được nhận, bị từ chối hoặc workshop) và số bài chung; không tính đơn vị ở nước ngoài. Xem toàn bộ ở mục <a href=\"{{ . }}\">Trường hợp tác</a>."
 [coauthors_on_site]

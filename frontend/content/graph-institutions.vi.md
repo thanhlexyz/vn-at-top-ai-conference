@@ -1,6 +1,7 @@
 ---
 title: "Trường hợp tác"
 layout: "graph"
+draft: true
 data: "graph_institutions"
 description: "Các trường, viện ở Việt Nam có bài viết chung: bài được nhận, bị từ chối và bài workshop."
 ---
