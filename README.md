@@ -8,11 +8,11 @@ Publications are tracked from 2020 onward across ten flagship conferences in fou
 - **CV:** CVPR, ICCV (odd years), ECCV (even years)
 - **NLP:** ACL, EMNLP
 
-**Live Website:** <https://thanhlexyz.github.io/vn-at-top-ai-conference/>
+**Live Website:** <https://thanhle.xyz/ranking>
 
 ### Sample data: top 10 by CSRankings score (2026-11-23)
 
-Accepted main-track papers per area and the CSRankings score; the full table is on the [live site](https://thanhlexyz.github.io/vn-at-top-ai-conference/).
+Accepted main-track papers per area and the CSRankings score; the full table is on the [live site](https://thanhle.xyz/ranking).
 
 | # | Professor | Institution | AI | ML | CV | NLP | CSRankings score |
 |---:|---|---|---:|---:|---:|---:|---:|
