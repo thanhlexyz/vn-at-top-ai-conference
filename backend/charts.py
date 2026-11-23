@@ -41,7 +41,8 @@ def pies(label, charts, fit=False):
     charts: [(title, [(css class, name, value)])]. fit=True makes the drawing only as wide as its content, for a
     figure that shares the row with another.
     """
-    r, top = 70, 34
+    r = 70
+    top = 34 if any(title for title, _ in charts) else 8   # room for the titles, when there are any
     width = WIDTH
     if fit:
         widest = max(len(name) for _, slices in charts for _, name, _ in slices)
@@ -51,14 +52,15 @@ def pies(label, charts, fit=False):
     for k, (title, slices) in enumerate(charts):
         cx, cy = k * cell + r + 4, top + r
         total = sum(v for _, _, v in slices) or 1
-        out.append(f'<text class="value" x="{k * cell + 4:.1f}" y="16">{_esc(title)}</text>')
+        if title:
+            out.append(f'<text class="value" x="{k * cell + 4:.1f}" y="16">{_esc(title)}</text>')
         angle = -math.pi / 2
         for n, (cls, name, value) in enumerate(slices):
             share = value / total
             end = angle + 2 * math.pi * share
             x1, y1 = cx + r * math.cos(angle), cy + r * math.sin(angle)
             x2, y2 = cx + r * math.cos(end), cy + r * math.sin(end)
-            tip = f"{title}: {_fmt(value)} {name}, {share:.0%}"
+            tip = f"{title + ': ' if title else ''}{_fmt(value)} {name}, {share:.0%}"
             if share >= 0.999:
                 out.append(f'<circle class="{cls}" cx="{cx:.1f}" cy="{cy:.1f}" r="{r}"><title>{_esc(tip)}</title></circle>')
             elif value:
