@@ -32,7 +32,7 @@ Dự án thu thập danh sách bài được nhận từ cổng thông tin và k
 ### Đối chiếu tác giả và Bài báo chưa chính thức
 Đối với dữ liệu OpenReview, các bài báo được khớp chính xác thông qua Profile ID cá nhân. Đối với kỷ yếu hội nghị, hệ thống đối chiếu theo tên tác giả và tự động ghi nhận nếu đơn vị công tác in trên bài trùng khớp với trường đại học của giảng viên. Trong trường hợp bài báo ghi nhận một cơ quan khác tại Việt Nam hoặc danh sách hội nghị thiếu thông tin đơn vị (`†`), chúng tôi sẽ kiểm tra thủ công từng bản PDF. Nếu bài báo chỉ ghi đơn vị ở nước ngoài, tác giả được xác định là người khác trùng tên.
 
-Khi danh sách chính thức từ hội nghị chưa được phát hành đầy đủ{{< provisional >}}, những công trình được công bố trên trang cá nhân hoặc trang của phòng lab (`self_reported.csv`) sẽ được ghi nhận tạm thời dưới dạng `+N` kèm nhãn "chưa chính thức" cho đến khi kỷ yếu và dữ liệu OpenReview xuất bản hoàn tất.
+Khi danh sách chính thức từ hội nghị chưa được phát hành đầy đủ{{< provisional >}}, những công trình được công bố trên trang cá nhân hoặc trang của phòng lab sẽ được ghi nhận tạm thời dưới dạng `+N` kèm nhãn "chưa chính thức" cho đến khi kỷ yếu và dữ liệu OpenReview xuất bản hoàn tất.
 
 ## Phương pháp Tính điểm
 
