@@ -302,6 +302,11 @@ figure {
 
 a.tag-link { color: inherit ; text-decoration: none ; }
 .venue-year { white-space: nowrap ; }
+/* rank change since the latest results (front page): fixed hues, readable on both themes */
+.rk { font-size: 0.78em ; font-weight: 600 ; white-space: nowrap ; margin-left: 0.25em ; font-variant-numeric: tabular-nums ; }
+.rk.up { color: #2e8b57 ; }
+.rk.down { color: #e34948 ; }
+.rk.new { color: #2a78d6 ; }
 .scores { white-space: nowrap ; font-variant-numeric: tabular-nums ; }
 a.tag-link:hover .tag { text-decoration: underline ; border-color: var(--fg) ; }
 

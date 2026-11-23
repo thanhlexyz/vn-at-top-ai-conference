@@ -175,6 +175,9 @@ The front-page and institution tables are ordered by CSRankings' adjusted count:
 unofficial) is worth 1 / (number of authors) to each listed professor; an institution's score adds up its
 professors' scores in each of the four areas, combined as CSRankings does: the geometric mean over AI, ML, CV, NLP of
 (area count + 1) (`score_areas` and `score` in `build_site_data.py`).
+The front table marks each professor's rank change (▲n / ▼n, ✦ for new to the list) against the same ranking
+without the papers of `RANK_BASELINE` in `build_site_data.py` (today NeurIPS 2026: the latest results announced);
+move it to the next venue-year when its results arrive. Shown only for professors with accepted papers.
 It is explained in About and in two callouts: the professor score on the front page, the institution score on the Institutions page; keep them in step.
 
 ## Tables, sorting and cups (`frontend/static/site.js`, `partials/professor-table.html`)

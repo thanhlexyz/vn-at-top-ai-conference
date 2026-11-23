@@ -49,6 +49,8 @@ TRACK_REASON = {"datasets_benchmarks": "Datasets & Benchmarks track", "position"
                 "findings": "Findings track", "journal": "journal track", "blog": "blog-post track",
                 "tiny_papers": "Tiny Papers track"}
 MAX_CANDIDATES_ON_SITE = 250
+# the front page shows how each professor's rank moved when this venue-year's results came in
+RANK_BASELINE = ("neurips", 2026)
 FOREIGN_MIN_PAPERS = 2   # authors outside Vietnam on more than this many counted papers (3 or more) are suggested
 AREA_ALIAS = {"Miscellaneous Aspects of Machine Learning": "General Machine Learning"}  # renamed in 2025
 
@@ -809,6 +811,18 @@ def submission_id(url):
     return submission_id.table.get(m.group(1), "") if m else ""
 
 
+def rank_keys_without(counted, venue_year):
+    """Score, accepted and official counts over the counted papers outside one venue-year, and whether anything
+    else is counted (a professor with nothing else would not have been on the list)."""
+    rest = [r for r in counted if (r["venue"], r["year"]) != venue_year]
+    acc = [r for r in rest if r["status"] == "accepted"]
+    main = [r for r in rest if r.get("track", "main") == "main"]
+    return {"score": round(sum(1 / max(len(r["authors"]), 1) for r in acc), 2), "accepted": len(acc),
+            "official": sum(1 for r in acc if not r.get("unofficial")), "shown": bool(rest),
+            # the table's last tie-breaks: ICLR submissions when something was accepted, else all submissions
+            "iclr_submitted": sum(1 for r in main if r["venue"] == "iclr"), "submitted": len(main)}
+
+
 def page_entry(r, people=None):
     e = {"year": r["year"], "venue": r["venue"], "venue_name": VENUE_NAME[r["venue"]], "title": r["title"],
          "ai_key": ai_key(r["venue"], r["year"], r["title"]),
@@ -1214,6 +1228,8 @@ def main():
                                                  if r["status"] == "accepted" and r["venue"] in g["venues"]), 4)
                             for g in VENUE_GROUPS},
             "iclr_complete": complete, "flags": flags, **s, "collab": collaboration(person, counted, workshop), "authorship": authorship(counted, person),
+            # the same ordering keys without the papers of RANK_BASELINE, for the rank change on the front page
+            "_base": rank_keys_without(counted, RANK_BASELINE),
             "accepted_papers": [page_entry(r) for r in sorted(counted, key=paper_order) if r["status"] == "accepted"],
             "not_accepted_papers": [page_entry(r) for r in sorted(counted, key=paper_order)
                                     if r["status"] != "accepted"],
@@ -1230,6 +1246,18 @@ def main():
     professors.sort(key=lambda p: (-p["score"], -p["accepted"], -p["official"],
                                    -p["venues"]["iclr"]["submitted"] if p["accepted"]
                                    else -sum(v.get("submitted", 0) for v in p["venues"].values()), p["name"]))
+
+    # rank before the results of RANK_BASELINE: the same order, on the papers counted without that venue-year;
+    # someone with no other counted submission was not on the list then ("new")
+    before = sorted((p for p in professors if p["_base"]["shown"]),
+                    key=lambda p: (-p["_base"]["score"], -p["_base"]["accepted"], -p["_base"]["official"],
+                                   -p["_base"]["iclr_submitted"] if p["_base"]["accepted"] else -p["_base"]["submitted"],
+                                   p["name"]))
+    was = {p["slug"]: k + 1 for k, p in enumerate(before)}
+    for k, p in enumerate(professors):
+        p.pop("_base")
+        p["rank_before"] = was.get(p["slug"])
+        p["rank_change"] = (was[p["slug"]] - (k + 1)) if p["slug"] in was else None
 
     # authors on a professor's page link to the person when that person is on the site and has the same paper in
     # their own record, so a namesake at another institution is never linked
@@ -1527,6 +1555,7 @@ def main():
     write_json(DATA / "meta.json", {
         "generated": now.strftime("%Y-%m-%d %H:%M %Z"), "generated_date": now.strftime("%Y-%m-%d"),
         "first_year": YEARS[0], "last_year": YEARS[-1], "years": YEARS,
+        "rank_baseline": f"{VENUE_NAME[RANK_BASELINE[0]]}'{RANK_BASELINE[1] % 100:02d}",
         "venues": VENUES, "venue_keys": VENUE_KEYS, "venue_groups": VENUE_GROUPS, "coverage": coverage,
         "professors": len(professors), "papers": len(papers),
         "accepted": sum(r["status"] == "accepted" for r in papers),

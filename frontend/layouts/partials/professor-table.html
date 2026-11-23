@@ -65,7 +65,13 @@
 	{{- $iclr := .venues.iclr }}
 	<tr>
 		{{- if $rank }}<td class="pin0 rank">{{ if $podium }}<span class="cup"></span>{{ end }}<span class="n">{{ add $n 1 }}</span></td>{{ end }}
-		<td class="l pin1"><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ partial "pname.html" . }}</a></td>
+		<td class="l pin1"><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ partial "pname.html" . }}</a>
+			{{- /* a rank change only means something among professors with accepted papers */}}
+			{{- if and $brief (gt .score 0.0) }}{{ $base := hugo.Data.meta.rank_baseline }}
+			{{- if not .rank_before }} <span class="rk new" title="{{ T "rank_new" (dict "Base" $base) }}">&#10022;</span>
+			{{- else if gt (int .rank_change) 0 }} <span class="rk up" title="{{ T "rank_was" (dict "Base" $base "Rank" .rank_before) }}">&#9650;{{ .rank_change }}</span>
+			{{- else if lt (int .rank_change) 0 }} <span class="rk down" title="{{ T "rank_was" (dict "Base" $base "Rank" .rank_before) }}">&#9660;{{ sub 0 (int .rank_change) }}</span>
+			{{- end }}{{ end }}</td>
 		<td class="l pin2"><a href="{{ printf "institutions/%s/" .institution_slug | relLangURL }}">{{ .institution_short }}</a></td>
 		{{- if not $compact }}
 		{{- if .iclr_complete }}

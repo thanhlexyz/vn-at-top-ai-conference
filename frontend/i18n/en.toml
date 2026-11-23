@@ -228,6 +228,12 @@ other = "Some records are incomplete or still to be confirmed. Those professors 
 other = "{{ .Count }} uncertain matches wait for a decision, see <a href=\"{{ .URL }}\">Candidates</a>."
 [inst_score_callout]
 other = "<strong>How an institution's score is calculated:</strong> An institution's overall score aggregates its faculty's adjusted counts across the four core areas (AI, ML, CV, NLP) and computes the geometric mean of these four totals (each plus 1), following the CSRankings methodology."
+[rank_was]
+other = "Rank before {{ .Base }}: {{ .Rank }}"
+[rank_new]
+other = "New on the list with {{ .Base }}"
+[rank_note]
+other = "<span class=\"rk up\">&#9650;</span> / <span class=\"rk down\">&#9660;</span> places gained or lost after the {{ .Base }} results; <span class=\"rk new\">&#10022;</span> new to the list."
 [home_score_callout]
 other = "<strong>How the score is calculated:</strong> We use the adjusted count model from <a href=\"https://csrankings.org/\">CSRankings</a>. Each accepted paper awards <strong>1 divided by its total number of authors</strong> (1/N) to each listed faculty co-author, and a professor's score is the sum of these fractional credits across all their papers (e.g., a paper with 4 authors adds 0.25 points; a paper with 10 adds 0.10)."
 [cols_hidden]
