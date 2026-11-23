@@ -1,151 +1,92 @@
 ---
 title: "About"
+toc: true
 ---
-## What is counted
 
-- **Venues:** AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP, from 2020 on, grouped as [CSRankings](https://csrankings.org/) groups them: AI (AAAI, IJCAI), ML (ICLR, NeurIPS, ICML), CV (CVPR, ICCV, ECCV) and NLP (ACL, EMNLP). Years are conference years, so an ICLR 2026 paper was submitted in autumn 2025. ICCV is held in odd years and ECCV in even years. IJCAI-PRICAI 2020, held in January 2021, counts as 2020. EMNLP 2026 counts once its papers are in the ACL Anthology.
-- **People:** Vietnamese lecturers, assistant professors, associate professors and professors whose main post is now at a university in Vietnam. Students, researchers at companies or institutes, and faculty from other countries are not tracked. Lecturers are included because the titles of associate professor and professor in Vietnam are conferred by a national council and are harder to obtain than in most other countries, so many lecturers do the work an assistant or associate professor does elsewhere. The list is kept by hand, and nobody appears before their entry has been approved and they have at least one counted submission at the ten venues, accepted or not.
-- **Only while in Vietnam:** a paper counts from the year the professor joined a Vietnamese institution. Earlier years are greyed out on the professor's page.
-- **At their institution:** an accepted paper counts for a professor only if the paper lists them at their institution, as printed on the paper itself (checked against the PDF where the official list takes affiliations from author profiles). A paper written only at a company or research institute, such as Qualcomm AI Research (formerly VinAI), does not count. Unofficial papers, which print no affiliation yet, count.
-- **Main track only:** workshops, position-paper tracks (ICML, NeurIPS), the NeurIPS Datasets & Benchmarks track, journal tracks, ICLR blog posts and Tiny Papers are left out. A professor's page lists such papers under "Not main track".
-- **Findings counts as rejected:** a paper placed in Findings (ACL, EMNLP, CVPR or any other conference) was not accepted to the main track, so it counts as rejected there, and it is also listed and counted with the workshop papers.
-- **Rejected** adds up papers rejected by reviewers, withdrawn, desk-rejected and placed in Findings. **Submitted** is accepted plus rejected.
+**Vietnam AIRankings** is an open-source, data-driven project that tracks publications by Vietnamese university faculty at premier international artificial intelligence conferences.
 
-## Co-authors and topics
+In computer science, peer-reviewed flagship conferences are the primary venues for publishing cutting-edge research. By tracking publications from 2020 onward across the top 10 conferences in AI, Machine Learning, Computer Vision, and Natural Language Processing, this site aims to provide a transparent, objective overview of academic AI research originating from universities in Vietnam.
 
-These figures are taken over all of a professor's counted papers, accepted or not. Rejected papers come from OpenReview, which gives author names but no affiliations, so they enter the first figure only.
+## Scope & Data Collection
 
-- **Co-authors per paper:** the average number of other authors on a paper.
-- **Min and max:** the fewest co-authors on a single accepted paper, and the most co-authors on a single paper, accepted or not. A minimum of 0 means a paper written alone.
-- **Foreign co-authors per paper:** the average number of other authors whose affiliation on the paper names no Vietnamese institution. An author who lists both a Vietnamese and a foreign institution is not foreign.
-- **Domestic per paper:** the average number of other authors whose affiliation on the paper is an institution in Vietnam, the professor's own included.
-- **Same institution per paper:** the average number of other authors whose affiliation on the paper is the professor's own institution.
-- **Other institutions per paper:** the average number of other authors whose affiliation on the paper is another institution, in Vietnam or abroad.
-- **Topics:** the number of different topic labels the conference gave the papers, each an area and a topic within it, for example "Deep Learning / Large Language Models" or "Reinforcement Learning / Planning". They are the rows of the topic table on the professor's page.
+### Tracked Conferences
+We track ten flagship venues from 2020 onward, grouped into four subfields following [CSRankings](https://csrankings.org/): **AI** (AAAI, IJCAI), **ML** (ICLR, NeurIPS, ICML), **CV** (CVPR, ICCV in odd years, ECCV in even years), and **NLP** (ACL, EMNLP).
 
-The two affiliation figures use only papers with an affiliation for each author: from the official list, or, where the list prints none (ACL, EMNLP, AAAI, IJCAI, CVPR before 2023 and in 2026), read from the title page of the paper's PDF and checked by hand. Papers known only from personal pages are left out of them.
-Topic labels exist only for ICLR and ICML from 2024 and for NeurIPS from 2023 to 2025. The label sets differ between conferences and years, and the authors choose the label, so two papers on the same subject can carry different labels.
-Each professor's page says how many papers a figure is based on.
+Only full-length Main Track papers (Long Papers) are counted. Short papers, workshops, position papers, Datasets & Benchmarks tracks, journal tracks, blog posts, and Tiny Papers are excluded from the main counts and listed separately under "Not main track" on profile pages. Papers accepted to *Findings* are counted alongside main-track rejections and listed with workshop papers.
 
-## The chart of submitted and accepted papers
+### Tracked Researchers
+We track Vietnamese lecturers, assistant professors, associate professors, and full professors whose primary appointment is currently at a university in Vietnam. Lecturers (*Giảng viên*) are included because Associate Professor and Professor titles in Vietnam are conferred by a centralized national council under criteria distinct from international tenure tracks, and many lecturers lead labs and advise PhD students just as Assistant or Associate Professors do abroad.
 
-Each professor's page has a chart of papers per year. Two parts of it are counted: the accepted papers at all ten venues, and the rejections on record (every ICLR rejection, public NeurIPS rejections and papers placed in Findings). The third part is an estimate of the papers that the other ten venues did not accept, which nobody outside can see.
+Students, foreign faculty, and researchers based solely at corporate labs or non-university institutes are excluded. The roster is curated by hand. A researcher appears once verified and having at least one counted submission (accepted or rejected) at the ten venues.
 
-The estimate is made professor by professor, from their own ICLR record:
+Papers count starting from the year a researcher joined a Vietnamese university. An accepted paper counts only if the camera-ready PDF explicitly lists the researcher at their Vietnamese university. Papers written solely under corporate or institute affiliations (e.g., Qualcomm AI Research / former VinAI) without a university affiliation do not count.
 
-{{< ratio-eq >}}
-
-With 9 ICLR submissions and 1 accepted, that is 10 / 2 = 5, so each paper accepted elsewhere is taken to stand for 5 submissions. Adding 1 on both sides is the usual way to estimate attempts per success from a short record: the result stays finite when nothing was accepted, and one paper more or less does not swing it. A professor with no ICLR submissions gets 1, so the chart adds nothing for them.
-
-This is a projection, not a measurement. It assumes the other venues treated the professor's papers as ICLR did, and it counts attempts: a paper rejected at one conference and accepted at the next appears twice.
-
-## The score
-
-The score on the front page is the adjusted count of [CSRankings](https://csrankings.org/): each accepted paper is worth 1 divided by its number of authors to every listed professor who is an author of it, and a professor's score is the sum over their papers. The score of an institution follows CSRankings' ranking of institutions: the adjusted counts of its professors are added up separately in each of the four areas (AI, ML, CV, NLP), so a paper shared by two professors of the same institution counts for each of them, and the score is the geometric mean over the areas of each count plus 1, the nth root of the product. Adding 1 keeps an area with no papers from setting the whole score to zero, and it rewards institutions with papers in several areas. Official and unofficial papers both count; the author list of an unofficial paper comes from the personal page it was found on and may be incomplete, which makes its share a little high. CSRankings also drops publications of fewer than 6 pages, which is not checked here, and counts only the last 10 years, which here is all of 2020 to 2026. The tables are ordered by the score, then by accepted papers.
-
-## Stricter counts on institution pages
-
-Institution and professor pages have two more charts. One marks an accepted paper when more than half of its authors list the institution. The other marks it when the first author does. Affiliations come from the official list or, where it prints none, from the PDF of the paper; papers known only from personal pages have none yet and are shown in grey.
-
-## What each venue makes public
-
-| Venue | Accepted papers | Rejected and withdrawn papers |
-|:---|:---|:---|
-| ICLR | public | public for every submission |
-| NeurIPS | public | public only when the authors opted in |
-| ICML | public | not public |
-| CVPR, ICCV, ECCV | public | not public |
-| ACL, EMNLP | public | not public |
-| AAAI, IJCAI | public | not public |
-
-Submitted and rejected numbers therefore exist for ICLR only.
-A professor who sends most papers to ICLR will show more rejections here than one who sends them to ICML or CVPR, whatever their real acceptance rates are.
-The NeurIPS rejections that are public appear on the professor's page and on the NeurIPS page, marked as partial, and are included in the rejected column on the front page.
-
-Even ICLR is not complete: a withdrawn paper can be removed or left anonymous, and then it cannot be found.
-
-## Sources
-
-- **Accepted papers:** the conference virtual sites (iclr.cc, neurips.cc, icml.cc, cvpr.thecvf.com, iccv.thecvf.com, eccv.ecva.net), the CVF Open Access lists for CVPR and ICCV, ecva.net for ECCV, the ACL Anthology volumes of long papers for ACL and the main volume for EMNLP (short papers are not counted; the EMNLP volumes mix long and short papers, so each counted paper there is checked by its page count), the technical-track issues of the AAAI proceedings (ojs.aaai.org) and the Main Track of the IJCAI proceedings (ijcai.org).
-- **ICLR submissions and outcomes, NeurIPS public rejections:** OpenReview, queried with each professor's own profile ID.
-- **Acceptance rates reported by the venues** (Venues page): submitted and accepted main-track papers per year from each conference's fact sheets, opening slides or proceedings front matter, and a few secondary sources where no official figure was found; each year and its source are in [venue_rates.csv](https://github.com/thanhlexyz/vn-at-top-ai-conference/blob/main/backend/venue_rates.csv). Conferences count submissions differently (all, valid, or after desk rejections), so the rates are only roughly comparable.
-
-Main-track accepted papers read per venue and year:
+### Official Proceedings & OpenReview
+Accepted papers are collected from official conference portals and proceedings (see table below).
 
 {{< coverage >}}
 
-† The list gives author names without affiliations; for accepted papers of the professors here, the affiliations are read from the PDF and checked by hand.
-‡ The list was published before the conference and is still being filled. In September 2026 the NeurIPS 2026 list lacked papers that their authors had already announced, which is why papers from personal pages are added for it.
+† Official lists omit author affiliations. Affiliations for listed professors' papers are verified by hand from the PDF title pages (and excluded from affiliation-based metrics when unavailable).
+‡ Preliminary list published prior to the conference and still being updated.
 
-## Papers from personal pages
+### Author Matching & Provisional Papers
+OpenReview papers are matched directly by confirmed profile ID. Proceedings entries are matched by author name and count automatically if the printed affiliation matches the professor's university. If a paper lists another Vietnamese institution or the venue list omits affiliations (`†`), it is verified by hand. If a paper lists only foreign institutions, the author is treated as a namesake. While an official list is still incomplete (`{{< provisional >}}`), verified announcements from faculty or lab pages (`self_reported.csv`) are counted provisionally as `+N` with an "unofficial" badge until formal proceedings and OpenReview records are published.
 
-The professors' own pages are read as well, and what they list is kept in `self_reported.csv` with the address and the date. They are used in three ways.
+## Scoring Methodology
 
-- A paper on a professor's own page that is also in an official list counts as theirs, even when the name on the paper is not a form the roster knows.
-- When an official list is not complete yet, a paper from a personal page is counted although the list does not have it. This applies to a list published before its conference, which today means {{< provisional >}}. Such a paper is **unofficial**: it appears as +N after the official number and carries the tag "unofficial", with the page it comes from, until the conference publishes it. A paper in that list is unofficial too until the professor's authorship can be confirmed on OpenReview, where the submissions become public after the conference.
-- A paper on a colleague's page that names a listed professor as co-author is treated the same way for that professor when it is not in an official list yet. If it is in an official list, it waits for a yes or no by hand.
+### Faculty Score
+Each accepted paper is worth `1 / N` (where `N` is the total number of authors) to each listed professor on the paper, following the [CSRankings](https://csrankings.org/) fractional model. A professor's score is the sum of their fractional shares across all qualifying papers.
 
-For a year whose official list is complete, a paper that only a personal page mentions is not counted. It is usually a workshop paper, another track or another year, and it is written to the build report.
+### Institution Score
+Faculty scores are summed within each of the four subfields (AI, ML, CV, NLP). The institution's overall score is the geometric mean across the four areas of `(Area Score + 1)`—the 4th root of their product. Adding 1 keeps a subfield with zero papers from zeroing out the entire score, while the geometric mean rewards balanced research strength across subfields.
 
-A page that only announces a number ("five papers accepted") adds nothing to the counts. The professor's page says so when the number is higher than what could be identified.
+### Authorship Roles and Lab Mentoring
+Institution and professor pages also feature two stricter charts tracking accepted papers where the institution accounts for the **first author** or **more than half (>50%) of the authors**. Prospective graduate students and research interns choosing an advisor should pay close attention to this breakdown: it offers an important signal of how a professor works. A high proportion of lead-author and majority-institution papers generally indicates that the professor invests significant time directly mentoring students within their own lab, whereas a record dominated by external affiliations often reflects broader collaborative networks where primary day-to-day mentoring may occur outside.
 
-## How a paper is matched to a professor
+## Submissions & Rejection Estimates
 
-1. OpenReview records are matched by profile ID, which is exact once the ID has been confirmed.
-2. In the accepted lists, a paper is matched by author name. It counts automatically only when the affiliation printed on the paper is the professor's institution.
-3. If the paper names another Vietnamese institution, or the list has no affiliations, the match waits for a yes or no by hand.
-4. If the paper names only a foreign institution, the author is treated as a different person with the same name.
+### Transparency of Review Outcomes
+Conferences differ significantly in what submission data and review outcomes they disclose:
+
+| Venue | Accepted Papers | Rejected and Withdrawn Submissions |
+|:---|:---|:---|
+| **ICLR** | Public | Public for all submissions |
+| **NeurIPS** | Public | Public only when authors opt in |
+| **ACL, EMNLP, CVPR** | Public | Not public (except for papers published in the Findings track) |
+| **ICML, ICCV, ECCV, AAAI, IJCAI** | Public | Not public |
+
+Venues such as ACL, EMNLP, and CVPR do not disclose rejections directly, but publishing in the Findings track reveals that a paper was not accepted to the Main Track (without exposing the rest of the rejected submissions). Consequently, comprehensive submission and rejection records exist only for ICLR. In our tables, recorded **Rejected** counts combine reviewer rejections, withdrawals, desk rejections, and Findings papers, while **Submitted** is accepted plus rejected. A professor who submits frequently to ICLR will thus show more recorded rejections than one who does not submit to ICLR.
+
+### Estimating Submissions at Non-Disclosing Venues
+To provide a more balanced view on each professor's yearly timeline chart, unseen rejections at non-disclosing venues are projected from the professor's own ICLR record using Laplace smoothing:
+
+{{< ratio-eq >}}
+
+For instance, 9 ICLR submissions and 1 acceptance gives `(9 + 1) / (1 + 1) = 5`, meaning each paper accepted at another venue is estimated to represent 5 submissions (defaulting to 1 if a professor has no ICLR submissions). Adding 1 avoids division by zero and stabilizes small sample sizes. This is a statistical projection of submission attempts: a paper rejected at one conference and accepted at the next counts as two attempts.
+
+Importantly, this projection only applies to venues where submissions are certain because the researcher has at least one accepted paper. For example, if a professor has 1 accepted paper at AAAI and a submission record at ICLR, we extrapolate their submissions at AAAI. If they have no accepted papers at AAAI, no submissions are estimated for that venue because there is no evidence that they submitted there.
 
 {{% ai-only %}}
-## AI-text detection
+## AI-Generated Text Scanning
 
-Each paper in the lists carries two figures from an open AI-text detector, and the front page has a hidden column with the mean over a professor's scanned papers. They are estimates made by a model about the text of a paper. They do not show who wrote it, whether a tool was used, or whether the research is sound, and nothing is added up for an institution or a venue.
+Each scanned paper displays two experimental metrics from [MELD](https://huggingface.co/anon-review-meld-2026/meld) (v8, MIT license), an open ~1B-parameter encoder detector run locally on the main body text extracted via `pdftotext` (abstract to references/acknowledgments, dropping blocks under 15 words and papers under 300 words):
 
-How a paper is scanned:
+- **% AI Sentences:** Share of main-body sentences (8+ tokens) scoring above the detector's 1% false-positive threshold on general human text.
+- **p_AI:** Holistic document score (0–100%) from the mean of the top quartile of token scores.
 
-1. **The PDF.** It is taken from OpenReview (through its API), the ACL Anthology, the CVF and PMLR sites, or the link of the AAAI or IJCAI list. A paper whose PDF is not public, such as a withdrawn submission that OpenReview no longer serves or a NeurIPS paper before its conference, is not scanned and has no figures.
-2. **The main body only.** The text is read with `pdftotext` from the abstract up to the first heading of acknowledgments, an ethics or reproducibility statement, references or an appendix. The title block, headings, equations, tables and figure labels are dropped (every block under 15 words), and a paper with under 300 words of running text is not scored. The extracted texts are kept in the project folder, so a better detector can score the same texts again.
-3. **The detector.** [MELD](https://huggingface.co/anon-review-meld-2026/meld) (v8, MIT licence), an open model built on an encoder of about a billion parameters, run on a local GPU at a pinned revision. The text is cleaned of look-alike and invisible characters, cut into windows of 2,046 tokens, and the model gives every token a score. It is not the model of [Open Text Detector](https://opentextdetector.com/), which scores ICLR 2027 submissions only; the figures of the two sites cannot be compared.
-4. **The figures.** **% AI sentences** is the share of the paper's sentences (at least 8 tokens) whose mean token score is above the detector's threshold for a 1% false-positive rate on human texts. **p_AI** is the detector's score for the whole body, from 0 to 100%: the mean of the highest quarter of the token scores, converted to a probability. A professor's figure is the plain mean of the first one over the papers that were scanned; the number of papers is in its tooltip.
-
-How to read them:
-
-- The threshold was set on whole documents of general human text, not on machine-learning papers and not on single sentences, so the share of sentences is an indicator and not an error rate.
-- p_AI is close to 100% for almost every paper of 2025 and 2026, whatever its share of flagged sentences, so look at the share first. Papers from before 2023, such as the ICLR 2021 paper with 0%, show what a text that cannot come from a language model looks like.
-- Equations, tables, code, text in other languages and heavy copy-editing can move the figures, and a short paper has few sentences, so one sentence weighs more.
+**How to interpret:** These are model estimates of text patterns, not proof of authorship or research quality. Because LLM-assisted proofreading and copy-editing are now widespread, `p_AI` approaches 100% on most 2025–2026 papers globally, so `% AI sentences` is the more informative indicator. Equations, tables, code, and heavy editing can also shift scores.
 {{% /ai-only %}}
 
-## Limits
+## Credits & Resources
 
-- A paper published under a name form that is not on the roster is missed.
-- For ACL, EMNLP, AAAI, IJCAI, and CVPR before 2023 and in 2026, the lists have no affiliations, so a match by name needs a decision by hand; the affiliations are then read from the PDF of the paper.
-- The Vietnam rule works by year. A paper that appeared in the year of the move counts, even if it was submitted before the move.
-- For ICLR 2020 and 2021, OpenReview keeps the decision in a separate record. Where that record has not been read, the outcome is inferred from the accepted list, and the paper is marked.
-- A paper with two listed professors counts once for each of them, and once in the totals of an institution or a venue.
-- Counts say nothing about author order, contribution or the quality of a paper.
+This project was conceived, designed, and curated by **Thanh Le** ([thanhle.xyz](http://thanhle.xyz)), built with the assistance of [Claude](https://www.anthropic.com/claude), with writing and editorial revisions assisted by [Gemini](https://gemini.google.com/). I created this site out of personal curiosity to offer a transparent reference for the Vietnamese academic community and anyone following AI research in Vietnam.
 
-## Updating
+The code and data are open source on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). If you find this site useful, please consider giving it a ⭐ on GitHub, and feel free to submit corrections on the [Feedback](../feedback/) page. Visitor statistics use [GoatCounter](https://www.goatcounter.com/), which sets no cookies and stores no personal data.
 
-The data is rebuilt with `make data` in the project folder. `make openreview` fetches the OpenReview records and needs a login. The README lists the main commands.
-
-## Visitors
-
-The public site counts visits with [GoatCounter](https://www.goatcounter.com/), which sets no cookies and keeps no personal data about visitors: only the page, the referring site, the browser, the screen size and the country derived from the address, which is not stored.
-
-## Author
-
-This site was built by an AI, [Claude](https://www.anthropic.com/claude), under the direction of **Thanh Le** ([thanhle.xyz](http://thanhle.xyz)). The code and data are public on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). I built this site out of personal curiosity, in the hope that it also serves the public interest: the Vietnamese academic community, and anyone who wishes to follow the current state of AI research in Vietnam. If you find this site useful, please give it a ⭐ on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Corrections are warmly welcome on the [Feedback](../feedback/) page.
-
-## Acknowledgements
-
-Thanks to Dr. [Nam Vo](https://vingen.vinbigdata.org/teams/vo-sy-nam/) for his comments, and for suggesting that the [Venues](../venues/) page separate papers from before 2026 and from 2026 on, to show the numbers before and after AI became really strong.
-
-Thanks to Prof. [Huynh Thi Thanh Binh](../professors/huynh-thi-thanh-binh/) for her comments, for suggesting that the site also track EMNLP, ICCV and ECCV, and for suggesting that it track AAAI and IJCAI and group the conferences as [CSRankings](https://csrankings.org/) does.
-
-## Useful links
-
-- [CS Picks](https://cspicks.roars.dev/): helps students choose a university and a PhD advisor in the US. It compares computer science professors and universities by research strengths, publication trends and NSF funding, from open academic data.
-- [CS conferences](https://cspicks.roars.dev/csconfs.html): dates and submission deadlines of computer science conferences.
-- [VietProfs](https://vietprofs.roars.dev/): a directory of Vietnamese professors worldwide, across universities, disciplines, countries and ranks.
-
-These links, made by [ThanhVu Nguyen](https://tvn.roars.dev/), inspired me to build this site.
+**Acknowledgements:**
+- **Dr. [Vo Sy Nam](https://vingen.vinbigdata.org/teams/vo-sy-nam/):** For insightful feedback and suggesting the pre-/post-2026 split on the [Venues](../venues/) page.
+- **Prof. [Huynh Thi Thanh Binh](../professors/huynh-thi-thanh-binh/):** For suggesting the addition of EMNLP, ICCV, ECCV, AAAI, and IJCAI, as well as the CSRankings subfield grouping.
+- **Prof. [ThanhVu Nguyen](https://tvn.roars.dev/):** Whose academic tools inspired this site:
+  - [CS Picks](https://cspicks.roars.dev/) — compares US computer science faculty and universities by research strengths and NSF funding.
+  - [CS Conferences](https://cspicks.roars.dev/csconfs.html) — tracks submission deadlines and dates for computer science conferences.
+  - [VietProfs](https://vietprofs.roars.dev/) — directory of Vietnamese professors and academics worldwide.

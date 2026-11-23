@@ -2,7 +2,7 @@ baseURL = '/'
 defaultContentLanguage = 'vi'
 # Vietnamese at /, English at /en/
 defaultContentLanguageInSubdir = false
-title = 'Việt Nam tại các hội nghị AI hàng đầu'
+title = 'Vietnam AIRankings'
 disableKinds = ['taxonomy', 'term', 'rss']
 
 [params]
@@ -24,14 +24,14 @@ disableKinds = ['taxonomy', 'term', 'rss']
     label = 'English'
     locale = 'en-us'
     weight = 2
-    title = 'Vietnam at top AI conferences'
+    title = 'Vietnam AIRankings'
     [languages.en.params]
       description = 'Papers of professors and lecturers in Vietnam at ten top AI conferences (AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP) since 2020, ranked by CSRankings score.'
   [languages.vi]
     label = 'Tiếng Việt'
     locale = 'vi-vn'
     weight = 1
-    title = 'Việt Nam tại các hội nghị AI hàng đầu'
+    title = 'Vietnam AIRankings'
     [languages.vi.params]
       description = 'Số bài của giảng viên tại Việt Nam ở mười hội nghị AI hàng đầu (AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP) từ năm 2020, xếp hạng theo điểm CSRankings.'
 

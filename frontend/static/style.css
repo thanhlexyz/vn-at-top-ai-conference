@@ -533,6 +533,22 @@ div.note li { margin: 0.25em 0 ; }
 aside.callout { margin: 1.5em 0 ; padding: 0.8em 1.1em ; background: var(--callout) ; border-left: 4px solid var(--callout-bar) ; border-radius: 0 6px 6px 0 ; max-width: 48rem ; }
 aside.callout p { margin: 0 ; line-height: 1.55 ; }
 
+/* "On this page" table of contents outline (About page) */
+.toc-title { font-weight: bold ; margin: 0 0 0.5em 0 ; color: var(--fg) ; }
+.toc nav ul { list-style: none ; padding-left: 0 ; margin: 0 ; }
+.toc nav ul ul { padding-left: 0.85em ; margin-top: 0.25em ; }
+.toc nav li { margin: 0.35em 0 ; line-height: 1.35 ; }
+.toc nav a { color: var(--muted) ; text-decoration: none ; }
+.toc nav a:hover { color: var(--link) ; text-decoration: underline ; }
+@media (min-width: 900px) {
+	.with-toc { display: grid ; grid-template-columns: minmax(0, 1fr) 14rem ; gap: 2.5rem ; align-items: start ; }
+	.with-toc .toc { grid-column: 2 ; grid-row: 1 ; position: sticky ; top: 1.5rem ; border-left: 2px solid var(--axis) ; padding-left: 1rem ; font-size: 0.9em ; }
+	.with-toc .toc-body { grid-column: 1 ; grid-row: 1 ; min-width: 0 ; }
+}
+@media (max-width: 899px) {
+	.with-toc .toc { margin: 1em 0 1.5em ; padding: 0.7em 1em ; background: var(--th) ; border-left: 3px solid var(--axis) ; border-radius: 0 4px 4px 0 ; font-size: 0.9em ; }
+}
+
 /* a number and its unofficial "+N" stay on one line */
 td:not(.l) { white-space: nowrap ; }
 svg.net .node text.sub { font-size: 12px ; fill: var(--muted) ; }

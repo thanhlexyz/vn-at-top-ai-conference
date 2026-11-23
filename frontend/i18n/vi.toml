@@ -13,6 +13,8 @@ other = "Số liệu cập nhật đến ngày {{ .Date }}, giai đoạn {{ .Fir
 other = "Nguồn và giới hạn"
 [lang_switch]
 other = "Ngôn ngữ"
+[on_this_page]
+other = "Trên trang này"
 
 # ---------------------------------------------------------------- shared words
 [venues_five]
@@ -223,9 +225,9 @@ other = "Một số hồ sơ hiện chưa đầy đủ hoặc đang chờ xác n
 [home_flag_pending]
 other = "Hiện có {{ .Count }} trường hợp trùng tên chưa được xác nhận, xin xem tại trang <a href=\"{{ .URL }}\">Ứng viên</a>."
 [inst_score_callout]
-other = "<strong>Cách tính điểm của trường.</strong> Điểm của một trường cộng điểm của các giảng viên theo từng trong bốn lĩnh vực (AI, ML, CV, NLP) rồi lấy trung bình nhân của bốn số đó, mỗi số cộng 1, như CSRankings."
+other = "<strong>Cách tính điểm của trường:</strong> Điểm tổng hợp của một trường được tính bằng cách cộng điểm của các giảng viên theo từng lĩnh vực trong 4 lĩnh vực chính (AI, ML, CV, NLP), sau đó lấy trung bình nhân (geometric mean) của 4 giá trị này (mỗi giá trị cộng thêm 1) theo phương pháp của CSRankings."
 [home_score_callout]
-other = "<strong>Cách tính điểm.</strong> Đây là điểm hiệu chỉnh (adjusted count) mà <a href=\"https://csrankings.org/\">CSRankings</a> sử dụng: mỗi bài được chấp nhận có giá trị <strong>1 chia cho số tác giả của bài</strong> đối với mỗi giảng viên trong danh sách là tác giả của bài, và điểm của một giảng viên là tổng điểm các bài của họ. Bài có 4 tác giả cộng 0,25; bài có 10 tác giả cộng 0,1."
+other = "<strong>Cách tính điểm:</strong> Điểm số được tính theo phương pháp hiệu chỉnh (adjusted count) của <a href=\"https://csrankings.org/\">CSRankings</a>: mỗi bài báo được nhận có giá trị <strong>1 chia cho tổng số tác giả</strong> (1/N). Điểm của mỗi giảng viên là tổng điểm đóng góp từ các bài báo của mình (ví dụ: bài có 4 tác giả đóng góp 0,25 điểm; bài có 10 tác giả đóng góp 0,1 điểm)."
 [cols_hidden]
 other = "Đang ẩn: {names}"
 [cols_show_one]
@@ -239,7 +241,7 @@ other = "Ẩn bớt cột"
 [cols_hide]
 other = "Ẩn bớt cột"
 [home_note_provisional]
-other = "Danh sách chính thức của {{ .Name }} {{ .Year }} chưa đầy đủ và chưa thể xác nhận tác giả trên OpenReview cho đến khi hội nghị diễn ra; các bài trong danh sách này, cùng các bài có trên trang của giảng viên, được tính là chưa chính thức và hiện dưới dạng <span class=\"own\">+N</span>."
+other = "Danh sách chính thức của {{ .Name }} {{ .Year }} hiện là danh sách sơ bộ và thông tin tác giả sẽ được đối chiếu đầy đủ trên OpenReview sau khi hội nghị diễn ra. Các bài báo này, cùng các bài được công bố sớm trên trang của giảng viên, được ghi nhận tạm thời dưới dạng chưa chính thức (<span class=\"own\">+N</span>)."
 [home_fig1]
 other = "Hình 1a. Số bài được chấp nhận so với số bài bị từ chối, tính chung cho mọi năm và mọi hội nghị."
 [home_fig2]
@@ -251,9 +253,9 @@ other = "Công tác tại Việt Nam từ năm {{ . }}"
 [prof_homepage]
 other = "Trang cá nhân"
 [prof_accepted_summary]
-other = "Từ năm {{ .Year }}, giảng viên có {{ .Count }} bài được chấp nhận tại mười hội nghị"
+other = "Từ năm {{ .Year }}, giảng viên có {{ .Count }} bài báo được chấp nhận tại mười hội nghị hàng đầu"
 [prof_own_page_part]
-other = ", trong đó {{ .Official }} bài có trong danh sách chính thức và {{ .Own }} bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm (thể hiện dưới dạng +{{ .Own }} và được gắn nhãn \"chưa chính thức\" bên dưới)"
+other = " (gồm {{ .Official }} bài trong kỷ yếu chính thức và {{ .Own }} bài được công bố sớm từ trang cá nhân hoặc lab, hiển thị dưới dạng +{{ .Own }} kèm nhãn \"chưa chính thức\" bên dưới)"
 [prof_iclr_summary]
 other = "Tại ICLR: {{ .Submitted }} bài nộp, {{ .Accepted }} bài được chấp nhận, {{ .Rejected }} bài bị từ chối."
 [by_year]
@@ -290,11 +292,11 @@ other = "Đồng tác giả và lĩnh vực"
 [coauthors_none]
 other = "Chưa có bài để tính các chỉ số này."
 [coauthors_avg]
-other = "Trung bình mỗi bài có {{ .Avg }} đồng tác giả, tính cả bài bị từ chối (ít nhất {{ .Min }} trên một bài được chấp nhận, nhiều nhất {{ .Max }} trên một bài nộp); tổng cộng {{ .Distinct }} đồng tác giả khác nhau trên {{ .Papers }} bài."
+other = "Trung bình {{ .Avg }} đồng tác giả trên mỗi bài báo (ít nhất {{ .Min }} tác giả ở bài được nhận, nhiều nhất {{ .Max }} tác giả ở một bài nộp), với tổng cộng {{ .Distinct }} đồng tác giả khác nhau qua {{ .Papers }} công trình."
 [coauthors_foreign]
-other = "Trung bình mỗi bài có {{ . }} đồng tác giả nước ngoài, tức đồng tác giả ghi đơn vị công tác ngoài Việt Nam."
+other = "Trung bình {{ . }} đồng tác giả quốc tế mỗi bài (các đồng tác giả có đơn vị công tác hoàn toàn ở ngoài Việt Nam)."
 [coauthors_elsewhere]
-other = "Có {{ .Count }} đồng tác giả khác nhau công tác tại trường hoặc đơn vị khác ngoài {{ .Inst }} ({{ .Abroad }} người ở nước ngoài, {{ .Vietnam }} người ở Việt Nam)."
+other = "{{ .Count }} đồng tác giả đến từ các trường hoặc đơn vị khác ngoài {{ .Inst }} ({{ .Abroad }} người ở nước ngoài, {{ .Vietnam }} người ở Việt Nam)."
 [coauthors_partial]
 other = "Hai chỉ số trên được tính trên {{ .With }}/{{ .Papers }} bài có danh sách ghi đơn vị công tác của từng tác giả."
 [coauthors_no_aff]
@@ -310,13 +312,13 @@ other = "Bị từ chối ({{ . }})"
 [rejected_note]
 other = "Các bài nộp không được chấp nhận."
 [not_main_track]
-other = "Không thuộc nhánh chính"
+other = "Ngoài Main Track"
 [not_main_track_note]
-other = "Các bài thuộc Datasets & Benchmarks, nhánh tạp chí và các nhánh khác; những bài này không được tính trong thống kê."
+other = "Các bài thuộc Datasets & Benchmarks, journal track và các track khác; những bài này không được tính trong thống kê."
 [workshop_papers]
 other = "Bài workshop ({{ . }})"
 [workshop_note]
-other = "Bài workshop có trên OpenReview và bài được xếp vào Findings, chỉ để tham khảo; không được tính, riêng bài Findings được tính là bị từ chối ở nhánh chính (xem trang Giới thiệu)."
+other = "Bài workshop có trên OpenReview và bài được xếp vào Findings, chỉ để tham khảo; không được tính, riêng bài Findings được tính là không được nhận vào Main Track (xem trang Giới thiệu)."
 [before_vietnam]
 other = "Trước khi về công tác tại Việt Nam"
 [before_vietnam_note]
@@ -601,7 +603,7 @@ other = "Chưa có bài nộp ICLR nên không ước tính được số bài b
 [th_rate_venue]
 other = "Tỉ lệ được nhận"
 [tip_rate_venue]
-other = "Số thứ nhất: bài của các giảng viên trong danh sách, số bài được nhận chia số bài đã nộp; tại ICLR là số đếm, ở nơi khác là số ước tính (~) theo kết quả ICLR của các tác giả trong danh sách của từng bài, không tính bài mà tác giả chưa từng nộp ICLR. Số thứ hai: tỉ lệ nhánh chính do hội nghị công bố, gộp các năm."
+other = "Số thứ nhất: bài của các giảng viên trong danh sách, số bài được nhận chia số bài đã nộp; tại ICLR là số đếm, ở nơi khác là số ước tính (~) theo kết quả ICLR của các tác giả trong danh sách của từng bài, không tính bài mà tác giả chưa từng nộp ICLR. Số thứ hai: tỉ lệ Main Track do hội nghị công bố, gộp các năm."
 
 [tip_coauthors_trivial]
 other = "Chưa có bài được nhận nên chỉ số này không so sánh được; được xếp cuối"

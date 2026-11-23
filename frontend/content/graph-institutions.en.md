@@ -3,7 +3,9 @@ title: "Institution collaboration"
 layout: "graph"
 draft: true
 data: "graph_institutions"
-description: "Which institutions in Vietnam share papers: accepted, rejected and workshop papers."
+description: "Inter-institutional collaboration network across universities, research institutes, and industry labs in Vietnam."
 ---
 
-Each circle is an institution in Vietnam; a line joins two institutions that share papers, and the number on a line is how many. A paper links the institutions of the people on the list who wrote it, plus the Vietnamese institutions printed on the paper that have nobody on the list, such as companies and research institutes; an institution with professors on the list takes part only through them, so its shared papers are always among its own professors' papers. Rejected and workshop papers have no affiliations, so for them only the institutions of people on the list are known. Institutions abroad are left out.
+This graph visualizes collaborative research between academic institutions, research institutes, and industry laboratories in Vietnam.
+
+Each circle represents an institution. Connecting lines indicate joint publications between affiliated authors, with the number denoting the shared paper count. Because rejected and workshop submissions do not provide institutional affiliation metadata in public sources, those entries reflect only institutions associated with faculty on our roster. International institutions are excluded to focus on domestic research partnerships.

@@ -4,8 +4,6 @@ layout: "not-tracked"
 draft: true
 ---
 
-People confirmed not to be a lecturer or professor at a university in Vietnam, so they are not tracked.
-"Checked by hand" are the rows of `backend/roster.csv` with `approved = no`, with the `notes` column as the
-reason. "Not at a university" are authors whose papers name only a company or institute, and "Only NeurIPS 2026 papers" are authors who cannot be looked up on OpenReview yet. Neither group appears
-on the [Candidates](../candidates/) page.
-This page is a draft, so it is shown by `make run` and left out of `make build` and `make publish`.
+Profiles confirmed not to be faculty at a university in Vietnam, and therefore excluded from tracking.
+"Checked by hand" lists entries in `backend/roster.csv` with `approved = no`, with the justification noted in the `notes` column. "Not at a university" includes authors whose publications exclusively cite corporate or institute affiliations, while "Only NeurIPS 2026 papers" reflects authors whose profiles cannot yet be fully verified on OpenReview. Neither group is shown on the active [Candidates](../candidates/) page.
+*(This draft page is visible during local development with `make run` and omitted from public production builds).*

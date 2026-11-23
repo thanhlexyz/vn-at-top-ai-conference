@@ -2,4 +2,4 @@
 title: "Institutions"
 ---
 
-Totals for each institution, over the professors listed for it.
+Aggregate research metrics and publication rankings for universities in Vietnam, based on the tracked publications of their affiliated faculty.

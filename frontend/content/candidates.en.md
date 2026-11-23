@@ -4,8 +4,8 @@ layout: "candidates"
 draft: true
 ---
 
-Nobody appears on the site until their row in `backend/roster.csv` says `approved = yes`.
-To add people from the list at the bottom, run `python find_candidates.py --add "Name"` in `backend/`,
-then fill in `rank`, `vn_since` and `openreview_ids` and set `approved` to `yes`.
-People confirmed not to be a lecturer or professor in Vietnam are on the [Not tracked](../not-tracked/) page instead.
-This page is a draft, so it is shown by `make run` and left out of `make build` and `make publish`.
+Candidates waiting for validation or manual review before being added to the public roster.
+Faculty members appear on the public site once their entry in `backend/roster.csv` is set to `approved = yes`.
+To evaluate candidates, use `python find_candidates.py --add "Name"` in `backend/`, verify their position, appointment year (`vn_since`), and OpenReview profile ID.
+Individuals confirmed not to be faculty at a university in Vietnam are cataloged on the [Not tracked](../not-tracked/) page.
+*(This draft page is visible during local development with `make run` and omitted from public production builds).*

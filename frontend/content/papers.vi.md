@@ -3,4 +3,4 @@ title: "Bài báo"
 layout: "papers"
 ---
 
-Toàn bộ các bài báo được thống kê trên trang, sắp xếp từ mới đến cũ.
+Danh mục đầy đủ các bài báo khoa học của giảng viên tại Việt Nam được công bố tại mười hội nghị AI hàng đầu, sắp xếp theo thứ tự thời gian mới nhất.

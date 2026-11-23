@@ -1,15 +1,16 @@
 ---
 title: "Góp ý"
 layout: "feedback"
-description: "Kính mời quý thầy cô và anh chị góp ý khi thấy số liệu chưa đúng, bài còn thiếu hoặc người còn thiếu trong danh sách."
+description: "Kính mời quý thầy cô và anh chị góp ý khi thấy số liệu chưa chính xác, bài báo còn thiếu hoặc giảng viên chưa được ghi nhận."
 ---
 
-Nếu quý thầy cô và anh chị thấy số liệu chưa chính xác, bài báo còn thiếu hoặc bị gán nhầm người, hay có người nên được đưa vào danh sách, kính mong quý thầy cô và anh chị góp ý ở mẫu bên dưới.
-Đường dẫn tới bài báo (OpenReview, trang của hội nghị) hoặc trang giới thiệu cán bộ của trường sẽ giúp chúng tôi kiểm tra và sửa nhanh nhất.
+Nếu quý thầy cô và anh chị phát hiện số liệu chưa chính xác, bài báo còn thiếu, công trình bị gán nhầm tác giả, hoặc có giảng viên đủ tiêu chuẩn nhưng chưa có tên trong danh sách, kính mong quý thầy cô và anh chị gửi thông tin phản hồi qua mẫu bên dưới. Mọi ý kiến đóng góp đều được tiếp nhận và xử lý cẩn trọng.
 
-Sau khi điền mẫu, quý thầy cô và anh chị có thể chọn một trong hai cách gửi:
+Đường dẫn trực tiếp tới bài báo (trên OpenReview hoặc trang kỷ yếu của hội nghị) hoặc trang giới thiệu cán bộ của trường sẽ giúp chúng tôi đối chiếu và cập nhật dữ liệu nhanh nhất.
 
-- **Tiếp tục trên GitHub** mở một issue công khai mới với nội dung đã nhập; nội dung chỉ được gửi sau khi bấm "Create" trên GitHub, và cần có tài khoản GitHub.
-- **Gửi qua email** mở ứng dụng email của quý thầy cô và anh chị với thư gửi tới [hi@thanhle.xyz](mailto:hi@thanhle.xyz) đã điền sẵn nội dung; thư chỉ được gửi sau khi bấm gửi, và không cần tài khoản.
+Sau khi điền nội dung, quý thầy cô và anh chị có thể chọn một trong hai phương thức gửi:
 
-Xin chân thành cảm ơn quý thầy cô và anh chị.
+- **Tiếp tục trên GitHub:** Mở một thảo luận (issue) công khai trên GitHub với nội dung đã được soạn sẵn; thông tin chỉ được gửi sau khi bấm nút xác nhận trên GitHub (cần có tài khoản GitHub).
+- **Gửi qua email:** Mở ứng dụng thư điện tử trên thiết bị với nội dung đã điền sẵn để gửi tới [hi@thanhle.xyz](mailto:hi@thanhle.xyz); thư chỉ được gửi sau khi bấm gửi (không cần tài khoản riêng).
+
+Xin chân thành cảm ơn sự quan tâm và đóng góp quý báu của quý thầy cô và anh chị!

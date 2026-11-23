@@ -1,16 +1,16 @@
 ---
 title: "Feedback"
 layout: "feedback"
-description: "We warmly welcome corrections: a wrong number, a missing paper, or someone who should be listed."
+description: "We warmly welcome corrections: inaccurate figures, missing papers, or faculty members who should be listed."
 ---
 
-If you notice a figure that is not correct, a paper that is missing or credited to the wrong person, or someone who should be on the list, we would be very grateful if you could let us know using the form below.
-Every piece of feedback is read with care.
-A link to the paper (OpenReview or the conference page) or to the relevant staff page helps us check and correct the record quickly.
+If you spot an inaccurate figure, a missing paper, an attribution that needs correcting, or a faculty member who meets the inclusion criteria but isn't listed yet, please let us know using the form below. Every suggestion is reviewed with care.
 
-After filling in the form, choose one of two ways to send it:
+Including a direct link to the paper (on OpenReview or the conference site) or to an official faculty directory page helps us verify and update the record quickly.
 
-- **Continue on GitHub** opens a new public issue with your message filled in; nothing is sent until you press "Create" there, and a GitHub account is needed.
-- **Send by e-mail** opens your own e-mail app with a message to [hi@thanhle.xyz](mailto:hi@thanhle.xyz) filled in; nothing is sent until you press send, and no account is needed.
+After filling out the form, you can choose how to submit:
 
-Thank you very much for your time and help.
+- **Continue on GitHub:** Opens a pre-filled public issue on our repository. Nothing is submitted until you click "Submit new issue" on GitHub (requires a GitHub account).
+- **Send by e-mail:** Opens your default e-mail client with a pre-filled message addressed to [hi@thanhle.xyz](mailto:hi@thanhle.xyz). Nothing is sent until you hit send (no account required).
+
+Thank you very much for taking the time to help improve this project!

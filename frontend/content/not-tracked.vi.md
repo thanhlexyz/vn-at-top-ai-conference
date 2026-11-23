@@ -1,11 +1,9 @@
 ---
-title: "Not tracked"
+title: "Không theo dõi"
 layout: "not-tracked"
 draft: true
 ---
 
-People confirmed not to be a lecturer or professor at a university in Vietnam, so they are not tracked.
-"Checked by hand" are the rows of `backend/roster.csv` with `approved = no`, with the `notes` column as the
-reason. "Not at a university" are authors whose papers name only a company or institute, and "Only NeurIPS 2026 papers" are authors who cannot be looked up on OpenReview yet. Neither group appears
-on the [Candidates](../candidates/) page.
-This page is a draft, so it is shown by `make run` and left out of `make build` and `make publish`.
+Những trường hợp đã xác nhận không phải là giảng viên hay nhà nghiên cứu tại các trường đại học ở Việt Nam, do đó không thuộc phạm vi theo dõi của trang.
+Mục "Kiểm tra thủ công" là các mục trong `backend/roster.csv` có `approved = no`, kèm lý do ghi rõ trong cột `notes`. Mục "Không thuộc trường đại học" gồm các tác giả có bài báo chỉ ghi đơn vị doanh nghiệp hoặc viện nghiên cứu, và mục "Chỉ có bài NeurIPS 2026" là các tác giả chưa thể đối chiếu hồ sơ trên OpenReview. Cả hai nhóm này đều không xuất hiện trên trang [Ứng viên](../candidates/).
+*(Trang nháp này chỉ hiển thị trong môi trường phát triển cục bộ qua lệnh `make run` và không đưa vào bản xuất bản chính thức).*

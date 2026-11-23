@@ -3,4 +3,4 @@ title: "Papers"
 layout: "papers"
 ---
 
-Every paper counted on this site, newest first.
+A complete catalog of peer-reviewed papers by faculty in Vietnam across the ten tracked AI conferences, ordered chronologically.

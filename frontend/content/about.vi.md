@@ -1,151 +1,94 @@
 ---
 title: "Giới thiệu"
+toc: true
 ---
-## Phạm vi thống kê
 
-- **Hội nghị:** AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL và EMNLP, từ năm 2020, được chia nhóm theo cách của [CSRankings](https://csrankings.org/): AI (AAAI, IJCAI), ML (ICLR, NeurIPS, ICML), CV (CVPR, ICCV, ECCV) và NLP (ACL, EMNLP). Năm được ghi là năm diễn ra hội nghị; chẳng hạn, một bài tại ICLR 2026 được nộp vào mùa thu năm 2025. ICCV tổ chức vào các năm lẻ, ECCV vào các năm chẵn. IJCAI-PRICAI 2020, diễn ra vào tháng 1 năm 2021, được tính là năm 2020. EMNLP 2026 sẽ được tính khi các bài được đưa lên ACL Anthology.
-- **Đối tượng:** giảng viên, phó giáo sư, giáo sư và các chức danh tương đương (assistant, associate và full professor) là người Việt Nam, hiện công tác chính tại một trường đại học ở Việt Nam. Sinh viên, nghiên cứu viên tại doanh nghiệp hoặc viện nghiên cứu, và giảng viên người nước ngoài không thuộc phạm vi thống kê. Danh sách bao gồm cả giảng viên, bởi chức danh phó giáo sư và giáo sư tại Việt Nam do Hội đồng Giáo sư nhà nước xét công nhận với yêu cầu cao hơn so với nhiều quốc gia khác; vì vậy, nhiều giảng viên đang đảm nhận công việc tương đương với vị trí assistant hoặc associate professor ở nước ngoài. Danh sách được lựa chọn thủ công; một giảng viên chỉ xuất hiện trên trang sau khi đã được xác nhận và có ít nhất một bài nộp được thống kê tại mười hội nghị, dù được chấp nhận hay không.
-- **Thời gian công tác tại Việt Nam:** bài báo được tính từ năm giảng viên về công tác tại một đơn vị ở Việt Nam. Các năm trước đó được thể hiện bằng màu xám trên trang của giảng viên.
-- **Đúng đơn vị công tác:** bài được nhận chỉ được tính cho giảng viên nếu bài ghi giảng viên thuộc trường của mình, theo đơn vị in trên chính bài báo (đối chiếu với bản PDF khi danh sách chính thức lấy đơn vị từ hồ sơ tác giả). Bài chỉ ghi đơn vị là doanh nghiệp hay viện nghiên cứu, chẳng hạn Qualcomm AI Research (trước đây là VinAI), không được tính. Bài chưa chính thức, chưa ghi đơn vị, vẫn được tính.
-- **Chỉ nhánh chính:** không tính workshop, nhánh position paper (ICML, NeurIPS), nhánh Datasets & Benchmarks của NeurIPS, nhánh tạp chí, bài blog của ICLR và Tiny Papers. Các bài này được liệt kê tại mục "Không thuộc nhánh chính" trên trang của giảng viên.
-- **Findings được tính là bị từ chối:** bài được xếp vào Findings (ACL, EMNLP, CVPR hay bất kỳ hội nghị nào) là bài không được nhận vào nhánh chính, nên được tính là bị từ chối ở hội nghị đó, đồng thời được liệt kê và tính như một bài workshop.
-- **Bị từ chối** bao gồm bài bị từ chối sau phản biện, bài rút, bài bị loại sơ bộ và bài được xếp vào Findings. **Đã nộp** là tổng số bài được chấp nhận và bài bị từ chối.
+**Vietnam AIRankings** là dự án mã nguồn mở định hướng dữ liệu (open-source, data-driven), nhằm theo dõi và thống kê các công bố khoa học của đội ngũ giảng viên tại các trường đại học ở Việt Nam tại các hội nghị quốc tế hàng đầu về trí tuệ nhân tạo (AI).
 
-## Đồng tác giả và lĩnh vực
+Trong ngành khoa học máy tính, các hội nghị chuyên ngành hàng đầu (top-tier conferences) là nơi công bố những nghiên cứu mới nhất và có sức ảnh hưởng học thuật lớn nhất. Bằng việc theo dõi dữ liệu từ năm 2020 đến nay tại 10 hội nghị hàng đầu thuộc bốn phân ngành cốt lõi (AI, Machine Learning, Computer Vision và NLP), dự án hướng tới cung cấp một góc nhìn khách quan, minh bạch và toàn diện về năng lực nghiên cứu AI tại các trường đại học ở Việt Nam.
 
-Các chỉ số này được tính trên toàn bộ các bài được thống kê của giảng viên, bao gồm cả bài bị từ chối. Bài bị từ chối được lấy từ OpenReview, nơi chỉ ghi tên tác giả mà không ghi đơn vị công tác, nên chỉ được dùng cho chỉ số thứ nhất.
+## Phạm vi và Thu thập Dữ liệu
 
-- **Số đồng tác giả mỗi bài:** số tác giả khác trung bình trên một bài.
-- **Ít nhất và nhiều nhất:** số đồng tác giả ít nhất trên một bài được chấp nhận, và nhiều nhất trên một bài bất kỳ, kể cả bài bị từ chối. Giá trị ít nhất bằng 0 tương ứng với bài có một tác giả.
-- **Số đồng tác giả nước ngoài mỗi bài:** số tác giả khác trung bình có đơn vị công tác ghi trên bài không thuộc Việt Nam. Tác giả ghi đồng thời đơn vị ở Việt Nam và ở nước ngoài không được tính là nước ngoài.
-- **Trong nước mỗi bài:** số đồng tác giả trung bình mỗi bài có đơn vị ghi trên bài ở Việt Nam, kể cả trường của giảng viên.
-- **Cùng trường mỗi bài:** số đồng tác giả trung bình mỗi bài có đơn vị ghi trên bài là trường của giảng viên.
-- **Đơn vị khác mỗi bài:** số đồng tác giả trung bình mỗi bài có đơn vị ghi trên bài là trường hoặc đơn vị khác, dù ở Việt Nam hay nước ngoài.
-- **Số chủ đề:** số nhãn chủ đề khác nhau mà hội nghị gán cho bài, mỗi nhãn gồm lĩnh vực và chủ đề trong lĩnh vực đó, ví dụ "Deep Learning / Large Language Models" hay "Reinforcement Learning / Planning". Đây là các dòng của bảng chủ đề trên trang của giảng viên.
+### Hội nghị theo dõi
+Dự án theo dõi 10 hội nghị hàng đầu từ năm 2020, được phân chia thành 4 lĩnh vực theo chuẩn của [CSRankings](https://csrankings.org/): **AI** (AAAI, IJCAI), **ML** (ICLR, NeurIPS, ICML), **CV** (CVPR, ICCV năm lẻ, ECCV năm chẵn) và **NLP** (ACL, EMNLP).
 
-Hai chỉ số liên quan đến đơn vị công tác chỉ sử dụng bài có đơn vị của từng tác giả: lấy từ danh sách chính thức, hoặc, khi danh sách không ghi (ACL, EMNLP, AAAI, IJCAI, CVPR trước năm 2023 và năm 2026), đọc từ trang đầu bản PDF của bài và kiểm tra thủ công. Bài chỉ có trên trang cá nhân không được tính.
-Nhãn chủ đề chỉ có tại ICLR và ICML từ năm 2024, và tại NeurIPS từ năm 2023 đến 2025. Bộ nhãn khác nhau giữa các hội nghị và các năm, và do tác giả tự lựa chọn, nên hai bài cùng đề tài có thể mang nhãn khác nhau.
-Trang của từng giảng viên có ghi rõ mỗi chỉ số được tính trên bao nhiêu bài.
+Về loại hình bài báo, hệ thống chỉ thống kê các công trình chính thức dạng Long Papers tại Main Track. Những bài báo ngắn (Short papers), bài workshop, position papers, Datasets & Benchmarks track, journal track, blog posts và Tiny Papers không tính vào số liệu chính mà được thống kê riêng ở mục "Ngoài Main Track". Các bài báo thuộc phân nhánh *Findings* được xếp cùng nhóm với các bài không vào Main Track và hiển thị cùng các bài workshop.
 
-## Biểu đồ số bài nộp và số bài được chấp nhận
+### Đối tượng thống kê
+Đối tượng được theo dõi là các giảng viên, phó giáo sư và giáo sư người Việt Nam hiện có vị trí công tác chính thức tại một trường đại học ở Việt Nam. Danh sách bao gồm cả ngạch Giảng viên, bởi chức danh Phó Giáo sư và Giáo sư tại Việt Nam do Hội đồng Giáo sư Nhà nước công nhận với quy trình đặc thù so với hệ thống tenure-track quốc tế, trong khi nhiều giảng viên trẻ hiện đã chủ trì phòng thí nghiệm và trực tiếp hướng dẫn nghiên cứu sinh tương đương vị trí Assistant hoặc Associate Professor ở nước ngoài.
 
-Trang của mỗi giảng viên có biểu đồ số bài theo năm, gồm hai phần là số liệu thống kê trực tiếp: số bài được chấp nhận tại cả mười hội nghị, và số bài bị từ chối có ghi nhận (mọi bài bị từ chối tại ICLR, bài bị từ chối công khai tại NeurIPS và bài được xếp vào Findings). Phần thứ ba là số liệu ước tính về các bài không được mười hội nghị còn lại chấp nhận, vốn không được công khai.
+Ngược lại, sinh viên, giảng viên nước ngoài cùng các nghiên cứu viên làm việc thuần túy tại doanh nghiệp hoặc viện nghiên cứu độc lập không nằm trong phạm vi thống kê của dự án. Danh sách nhân sự này được rà soát và đối chiếu thủ công, trong đó một giảng viên chỉ xuất hiện trên bảng xếp hạng sau khi đã được xác thực thông tin và có ít nhất một bài nộp được ghi nhận tại 10 hội nghị.
 
-Phần ước tính được thực hiện riêng cho từng giảng viên, dựa trên kết quả ICLR của chính giảng viên đó:
+Về mốc thời gian và đơn vị công tác, công trình nghiên cứu bắt đầu được tính từ năm giảng viên chính thức về làm việc tại một trường đại học ở Việt Nam. Một bài báo được nhận chỉ được ghi nhận nếu bản in PDF chính thức có ghi rõ tên trường đại học tại Việt Nam của giảng viên. Những bài báo chỉ ghi tên doanh nghiệp hoặc viện nghiên cứu bên ngoài mà không có tên trường đại học đi kèm sẽ không được tính vào bảng xếp hạng.
 
-{{< ratio-eq >}}
-
-Chẳng hạn, với 9 bài nộp ICLR và 1 bài được chấp nhận, tỉ lệ là 10 / 2 = 5, tức mỗi bài được chấp nhận tại hội nghị khác được xem là tương ứng với 5 lần nộp. Việc cộng 1 vào cả tử số và mẫu số là cách thông dụng để ước tính số lần thử cho mỗi lần thành công khi số liệu còn ít: kết quả không trở nên vô hạn khi chưa có bài nào được chấp nhận, và không dao động mạnh khi thêm hoặc bớt một bài. Giảng viên chưa có bài nộp ICLR có tỉ lệ bằng 1, nên biểu đồ không bổ sung phần ước tính.
-
-Đây là phép ngoại suy, không phải số liệu đo lường. Phép tính giả định rằng các hội nghị khác đánh giá bài của giảng viên tương tự như ICLR, và tính theo số lần nộp: một bài bị từ chối tại hội nghị này rồi được chấp nhận tại hội nghị sau sẽ được tính hai lần.
-
-## Điểm số
-
-Điểm số ở trang chủ là điểm hiệu chỉnh (adjusted count) của [CSRankings](https://csrankings.org/): mỗi bài được chấp nhận có giá trị bằng 1 chia cho số tác giả của bài đối với mỗi giảng viên trong danh sách là tác giả của bài, và điểm của một giảng viên là tổng điểm các bài của họ. Điểm của một trường theo cách CSRankings xếp hạng các trường: điểm hiệu chỉnh của các giảng viên được cộng riêng theo từng lĩnh vực trong bốn lĩnh vực (AI, ML, CV, NLP), nên một bài có hai giảng viên cùng trường được tính cho từng người, và điểm là trung bình nhân trên các lĩnh vực của mỗi số cộng 1, tức căn bậc n của tích. Việc cộng 1 giúp một lĩnh vực chưa có bài không làm cả điểm bằng 0, và ưu tiên trường có bài ở nhiều lĩnh vực. Bài chính thức và bài chưa chính thức đều được tính; danh sách tác giả của bài chưa chính thức lấy từ trang cá nhân nơi bài được đăng và có thể chưa đầy đủ, khiến phần điểm của bài đó cao hơn một chút. CSRankings còn loại các công bố dưới 6 trang, điều này không được kiểm tra ở đây, và chỉ tính 10 năm gần nhất, ở đây là toàn bộ giai đoạn 2020–2026. Các bảng được xếp theo điểm, rồi theo số bài được chấp nhận.
-
-## Cách thống kê chặt chẽ hơn trên trang của trường
-
-Trang của mỗi trường và mỗi giảng viên có thêm hai biểu đồ. Biểu đồ thứ nhất đánh dấu bài được chấp nhận khi hơn một nửa số tác giả ghi đơn vị công tác là trường đó; biểu đồ thứ hai đánh dấu khi tác giả đứng đầu ghi đơn vị là trường đó. Đơn vị lấy từ danh sách chính thức hoặc, khi danh sách không ghi, từ bản PDF của bài; các bài chỉ được công bố trên trang cá nhân chưa có đơn vị và được tô màu xám.
-
-## Phạm vi công khai của từng hội nghị
-
-| Hội nghị | Bài được nhận | Bài bị từ chối và rút |
-|:---|:---|:---|
-| ICLR | công khai | công khai với mọi bài nộp |
-| NeurIPS | công khai | chỉ công khai khi tác giả đồng ý |
-| ICML | công khai | không công khai |
-| CVPR, ICCV, ECCV | công khai | không công khai |
-| ACL, EMNLP | công khai | không công khai |
-| AAAI, IJCAI | công khai | không công khai |
-
-Vì vậy, số bài nộp và số bài bị từ chối chỉ có đối với ICLR.
-Giảng viên nộp phần lớn bài tại ICLR sẽ có số bài bị từ chối cao hơn so với giảng viên chủ yếu nộp tại ICML hoặc CVPR, bất kể tỉ lệ được chấp nhận thực tế.
-Các bài bị từ chối được công khai tại NeurIPS được thể hiện trên trang của giảng viên và trang NeurIPS, kèm ghi chú là số liệu chưa đầy đủ, và được tính vào cột bài bị từ chối ở trang chủ.
-
-Ngay cả số liệu ICLR cũng chưa hoàn toàn đầy đủ: bài rút có thể bị gỡ hoặc để ẩn danh, và khi đó không thể tra cứu được.
-
-## Nguồn dữ liệu
-
-- **Bài được chấp nhận:** trang virtual của các hội nghị (iclr.cc, neurips.cc, icml.cc, cvpr.thecvf.com, iccv.thecvf.com, eccv.ecva.net), danh sách CVF Open Access đối với CVPR và ICCV, ecva.net đối với ECCV, các tập bài dài trên ACL Anthology đối với ACL, tập chính đối với EMNLP (không tính bài ngắn; tập EMNLP gộp cả bài dài lẫn bài ngắn, nên mỗi bài được tính ở đó đều được kiểm tra theo số trang), các số kỷ yếu nhánh kỹ thuật (Technical Track) của AAAI (ojs.aaai.org) và nhánh chính (Main Track) trong kỷ yếu IJCAI (ijcai.org).
-- **Bài nộp ICLR cùng kết quả, bài bị từ chối được công khai tại NeurIPS:** OpenReview, tra cứu theo mã hồ sơ của từng giảng viên.
-- **Tỉ lệ được nhận do hội nghị công bố** (trang Hội nghị): số bài nộp và số bài được nhận ở nhánh chính theo từng năm, lấy từ tài liệu tổng kết, slide khai mạc hoặc lời nói đầu kỷ yếu của từng hội nghị, và một số nguồn thứ cấp khi không có số liệu chính thức; từng năm và nguồn được ghi trong [venue_rates.csv](https://github.com/thanhlexyz/vn-at-top-ai-conference/blob/main/backend/venue_rates.csv). Các hội nghị đếm số bài nộp theo cách khác nhau (tất cả, bài hợp lệ, hoặc sau khi loại sơ bộ), nên các tỉ lệ chỉ so sánh được tương đối.
-
-Số bài được chấp nhận ở nhánh chính đã được thu thập theo từng hội nghị và từng năm:
+### Kỷ yếu chính thức và OpenReview
+Dự án thu thập danh sách bài được nhận từ cổng thông tin và kỷ yếu chính thức của từng hội nghị (chi tiết xem bảng bên dưới).
 
 {{< coverage >}}
 
-† Danh sách có tên tác giả nhưng không ghi đơn vị công tác; với các bài được nhận của giảng viên trên trang này, đơn vị được đọc từ bản PDF và kiểm tra thủ công.
-‡ Danh sách được công bố trước khi hội nghị diễn ra và đang tiếp tục được bổ sung. Vào tháng 9 năm 2026, danh sách NeurIPS 2026 còn thiếu một số bài mà tác giả đã thông báo, vì vậy các bài được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm được bổ sung cho danh sách này.
+† Danh sách chính thức của hội nghị không in đơn vị công tác, do đó đơn vị của tác giả được đối chiếu thủ công từ trang đầu bản in PDF. Những bài chưa thể xác định đầy đủ đơn vị của từng tác giả sẽ tạm thời chưa đưa vào các chỉ số phân tích hợp tác.
+‡ Danh sách sơ bộ do hội nghị công bố trước ngày diễn ra chính thức và đang tiếp tục được cập nhật.
 
-## Bài được công bố trên trang của giảng viên và phòng thí nghiệm
+### Đối chiếu tác giả và Bài báo chưa chính thức
+Đối với dữ liệu OpenReview, các bài báo được khớp chính xác thông qua Profile ID cá nhân. Đối với kỷ yếu hội nghị, hệ thống đối chiếu theo tên tác giả và tự động ghi nhận nếu đơn vị công tác in trên bài trùng khớp với trường đại học của giảng viên. Trong trường hợp bài báo ghi nhận một cơ quan khác tại Việt Nam hoặc danh sách hội nghị thiếu thông tin đơn vị (`†`), chúng tôi sẽ kiểm tra thủ công từng bản PDF. Nếu bài báo chỉ ghi đơn vị ở nước ngoài, tác giả được xác định là người khác trùng tên.
 
-Các trang công khai của giảng viên và phòng thí nghiệm cũng được tham khảo; thông tin trên đó được lưu trong tệp `self_reported.csv` kèm địa chỉ trang và ngày truy cập. Thông tin này được sử dụng theo ba cách:
+Khi danh sách chính thức từ hội nghị chưa được phát hành đầy đủ (`{{< provisional >}}`), những công trình được công bố trên trang cá nhân hoặc trang của phòng lab (`self_reported.csv`) sẽ được ghi nhận tạm thời dưới dạng `+N` kèm nhãn "chưa chính thức" cho đến khi kỷ yếu và dữ liệu OpenReview xuất bản hoàn tất.
 
-- Một bài được giảng viên công bố, đồng thời có trong danh sách chính thức, được tính cho giảng viên đó, kể cả khi tên trên bài được viết theo cách chưa có trong danh sách.
-- Khi danh sách chính thức chưa đầy đủ, bài được công bố trên các trang này vẫn được tính dù danh sách chưa có. Trường hợp này áp dụng cho danh sách được công bố trước hội nghị, hiện là {{< provisional >}}. Bài như vậy được xem là **chưa chính thức**: bài được thể hiện dưới dạng +N sau số liệu chính thức và gắn nhãn "chưa chính thức", kèm nguồn, cho đến khi hội nghị công bố. Bài có trong danh sách đó cũng được xem là chưa chính thức cho đến khi xác nhận được tác giả trên OpenReview, nơi các bài nộp được công khai sau hội nghị.
-- Một bài trên trang của đồng nghiệp có ghi tên một giảng viên trong danh sách là đồng tác giả cũng được xử lý tương tự đối với giảng viên đó khi bài chưa có trong danh sách chính thức. Nếu bài đã có trong danh sách chính thức, việc gán bài sẽ chờ xác nhận thủ công.
+## Phương pháp Tính điểm
 
-Đối với những năm có danh sách chính thức đầy đủ, bài chỉ xuất hiện trên các trang này sẽ không được tính. Thông thường, đó là bài workshop, bài thuộc nhánh khác hoặc năm khác, và được ghi vào báo cáo của lần cập nhật dữ liệu.
+### Điểm giảng viên
+Mỗi bài báo được nhận có tổng điểm là 1,0, chia đều cho số tác giả của bài (`1 / N`). Điểm của giảng viên là tổng điểm phân đoạn từ các bài báo hợp lệ theo mô hình của [CSRankings](https://csrankings.org/).
 
-Thông báo chỉ nêu số lượng (chẳng hạn "năm bài được chấp nhận") không làm thay đổi số liệu. Trang của giảng viên sẽ ghi chú khi con số được thông báo cao hơn số bài xác định được.
+### Điểm trường
+Điểm của các giảng viên thuộc trường được cộng riêng theo từng lĩnh vực (AI, ML, CV, NLP). Điểm chung cuộc của trường là trung bình nhân (geometric mean) của `(Điểm lĩnh vực + 1)` trên cả 4 lĩnh vực (căn bậc 4 của tích). Việc cộng 1 giúp một lĩnh vực chưa có bài không kéo tổng điểm về 0, đồng thời khuyến khích sự phát triển đồng đều giữa các phân ngành.
 
-## Cách gán bài báo cho giảng viên
+### Vai trò tác giả và Hướng dẫn sinh viên
+Trang thông tin của từng trường và giảng viên cung cấp thêm hai biểu đồ lọc riêng các bài báo mà trường hoặc giảng viên giữ vị trí **tác giả đầu (first author)** hoặc chiếm **đa số (>50%) số tác giả**. Đối với các bạn sinh viên và nghiên cứu sinh đang tìm kiếm giáo sư hướng dẫn (advisor), đây là một chỉ dấu rất đáng quan tâm: tỷ lệ bài báo có tác giả đầu hoặc đa số tác giả cùng trường cao thường phản ánh giảng viên dành nhiều thời gian làm việc và trực tiếp hướng dẫn sinh viên trong phòng lab của mình. Ngược lại, nếu tỷ lệ này thấp, điều đó thường cho thấy giảng viên dành nhiều thời gian hơn cho các dự án hợp tác đối ngoại với các nhóm nghiên cứu bên ngoài.
 
-1. Hồ sơ OpenReview được đối chiếu theo mã hồ sơ, đảm bảo chính xác khi mã đã được xác nhận.
-2. Trong danh sách bài được chấp nhận, bài được đối chiếu theo tên tác giả và chỉ được tính tự động khi đơn vị công tác ghi trên bài là trường của giảng viên.
-3. Nếu bài ghi một đơn vị khác ở Việt Nam, hoặc danh sách không có thông tin đơn vị, việc gán bài sẽ chờ xác nhận thủ công.
-4. Nếu bài chỉ ghi đơn vị ở nước ngoài, tác giả được xem là một người khác trùng tên.
+## Dữ liệu Bài nộp và Ước tính Tỷ lệ
+
+### Mức độ công khai dữ liệu phản biện
+Chính sách công khai dữ liệu phản biện giữa các hội nghị có sự khác biệt lớn:
+
+| Hội nghị | Bài được nhận | Bài bị từ chối và tự rút |
+|:---|:---|:---|
+| **ICLR** | Công khai | Công khai toàn bộ bài nộp |
+| **NeurIPS** | Công khai | Chỉ công khai khi tác giả tự nguyện chia sẻ |
+| **ACL, EMNLP, CVPR** | Công khai | Không công khai (ngoại trừ các bài xuất bản ở Findings track) |
+| **ICML, ICCV, ECCV, AAAI, IJCAI** | Công khai | Hoàn toàn bảo mật |
+
+Các hội nghị như ACL, EMNLP hay CVPR không công khai bài bị từ chối, nhưng các bài được công bố ở Findings track cho biết bài đó không được nhận vào Main Track (dù vẫn không thể biết được toàn bộ các bài bị từ chối khác). Do đó, vì chỉ riêng ICLR công khai đầy đủ số liệu bài nộp và bài bị từ chối, một giảng viên nộp bài thường xuyên tại ICLR sẽ có số lượng bài bị từ chối hiển thị nhiều hơn so với người không nộp ICLR. Trên hệ thống, số bài **Bị từ chối** có ghi nhận bao gồm các bài bị từ chối sau phản biện, bài tác giả tự rút, bài bị loại sơ bộ (desk-rejected) và bài chuyển sang Findings. Số bài **Đã nộp** được tính bằng tổng số bài được nhận và số bài bị từ chối được ghi nhận.
+
+### Ước tính bài nộp tại các hội nghị bảo mật thông tin
+Để biểu đồ theo năm trên trang cá nhân phản ánh cân bằng hơn, hệ thống ước tính số bài không được nhận ở các hội nghị bảo mật thông tin dựa trên chính lịch sử nộp bài ICLR của giảng viên đó thông qua kỹ thuật làm mịn Laplace:
+
+{{< ratio-eq >}}
+
+Chẳng hạn, với 9 bài nộp ICLR và 1 bài được nhận, tỷ lệ là `(9 + 1) / (1 + 1) = 5`, tức mỗi bài được nhận ở hội nghị khác được ước tính tương ứng với 5 lượt nộp (mặc định bằng 1 nếu giảng viên chưa từng nộp ICLR). Việc cộng 1 giúp mẫu số luôn khác 0 và giữ ước lượng ổn định khi số bài còn ít. Đây là phép ước tính thống kê theo lượt nộp: một bài bị từ chối ở hội nghị này rồi được nhận ở hội nghị sau được tính là hai lượt thử.
+
+Đáng chú ý, phép ước tính này chỉ áp dụng cho những hội nghị chắc chắn có bài nộp dựa trên minh chứng là có ít nhất một bài được nhận. Chẳng hạn, nếu một giảng viên có 1 bài được nhận tại AAAI và có lịch sử nộp bài tại ICLR, hệ thống mới ngoại suy số lượt nộp tại AAAI. Nếu giảng viên không có bài nào được nhận tại AAAI, hệ thống hoàn toàn không ước tính lượt nộp nào cho hội nghị đó vì không có căn cứ xác định họ có nộp bài hay không.
 
 {{% ai-only %}}
-## Phát hiện văn bản do AI viết
+## Thử nghiệm: Quét Văn bản AI
 
-Mỗi bài trong danh sách có hai chỉ số từ một bộ phát hiện văn bản AI mã nguồn mở, và trang chủ có một cột ẩn với giá trị trung bình trên các bài đã quét của giảng viên. Đó là ước lượng của một mô hình về văn bản của bài báo. Chúng không cho biết ai là người viết, có dùng công cụ hay không, hay nghiên cứu có đáng tin hay không, và không có số liệu nào được cộng gộp cho một trường hay một hội nghị.
+Mỗi bài báo có PDF công khai hiển thị hai chỉ số thử nghiệm từ mô hình mở [MELD](https://huggingface.co/anon-review-meld-2026/meld) (v8, giấy phép MIT, ~1 tỷ tham số), chạy cục bộ trên phần văn bản chính trích xuất bằng `pdftotext` (từ tóm tắt đến trước tài liệu tham khảo/lời cảm ơn, lược bỏ các khối dưới 15 từ và các bài dưới 300 từ):
 
-Một bài được quét như sau:
+- **% câu AI:** Tỷ lệ câu trong phần nội dung chính (từ 8 token trở lên) có điểm vượt ngưỡng 1% dương tính giả được hiệu chỉnh trên văn bản thông thường.
+- **p_AI:** Điểm xác suất toàn văn bản (0–100%), tính từ trung bình 25% token có điểm cao nhất.
 
-1. **Tệp PDF.** Lấy từ OpenReview (qua API), ACL Anthology, trang CVF và PMLR, hoặc đường dẫn trong danh sách của AAAI và IJCAI. Bài không có PDF công khai, chẳng hạn bài đã rút mà OpenReview không còn cung cấp, hoặc bài NeurIPS trước khi hội nghị diễn ra, sẽ không được quét và không có chỉ số.
-2. **Chỉ phần nội dung chính.** Văn bản được đọc bằng `pdftotext` từ phần tóm tắt đến tiêu đề đầu tiên của lời cảm ơn, tuyên bố về đạo đức hay khả năng tái lập, tài liệu tham khảo hoặc phụ lục. Khối tiêu đề và tác giả, các đề mục, công thức, bảng và nhãn hình bị bỏ (mọi khối dưới 15 từ), và bài có dưới 300 từ văn xuôi không được chấm. Văn bản đã trích được giữ trong thư mục dự án, để có thể chấm lại bằng bộ phát hiện tốt hơn.
-3. **Bộ phát hiện.** [MELD](https://huggingface.co/anon-review-meld-2026/meld) (v8, giấy phép MIT), một mô hình mở xây trên bộ mã hóa khoảng một tỷ tham số, chạy trên GPU cục bộ ở một phiên bản cố định. Văn bản được làm sạch các ký tự giống nhau và ký tự ẩn, cắt thành các cửa sổ 2.046 token, và mô hình cho điểm từng token. Đây không phải mô hình của [Open Text Detector](https://opentextdetector.com/), trang chỉ chấm các bài nộp ICLR 2027; chỉ số của hai trang không so sánh được với nhau.
-4. **Các chỉ số.** **% câu AI** là tỷ lệ số câu của bài (từ 8 token trở lên) có điểm token trung bình vượt ngưỡng của bộ phát hiện ứng với 1% dương tính giả trên văn bản do người viết. **p_AI** là điểm của bộ phát hiện cho cả phần nội dung, từ 0 đến 100%: trung bình của một phần tư điểm token cao nhất, đổi thành xác suất. Chỉ số của một giảng viên là trung bình cộng của chỉ số thứ nhất trên các bài đã quét; số bài nằm trong chú giải của ô.
-
-Cách đọc:
-
-- Ngưỡng được đặt trên văn bản đầy đủ của các bài viết thông thường do người viết, không phải bài học máy và không phải từng câu, nên tỷ lệ câu chỉ là một chỉ báo, không phải tỷ lệ lỗi.
-- p_AI gần 100% ở hầu hết bài năm 2025 và 2026, bất kể tỷ lệ câu bị đánh dấu, nên hãy xem tỷ lệ câu trước. Các bài trước năm 2023, như bài ICLR 2021 với 0%, cho thấy văn bản không thể do mô hình ngôn ngữ viết trông như thế nào.
-- Công thức, bảng, mã nguồn, văn bản bằng ngôn ngữ khác và việc biên tập kỹ đều có thể làm lệch chỉ số, và bài ngắn có ít câu nên mỗi câu có trọng số lớn hơn.
+**Lưu ý khi đọc:** Đây là ước lượng thống kê về mặt văn bản, không phải kết luận về tác giả hay chất lượng khoa học. Do việc dùng LLM để biên tập và trau chuốt tiếng Anh đã trở nên phổ biến, `p_AI` của hầu hết bài báo năm 2025–2026 đều gần 100%, vì vậy chỉ số `% câu AI` mang tính tham khảo tốt hơn. Công thức toán, bảng biểu, mã nguồn và mức độ biên tập cũng có thể làm thay đổi chỉ số.
 {{% /ai-only %}}
 
-## Giới hạn
+## Thông tin Dự án và Lời cảm ơn
 
-- Bài được công bố dưới một cách viết tên chưa có trong danh sách có thể bị bỏ sót.
-- Đối với ACL, EMNLP, AAAI, IJCAI, và CVPR trước năm 2023 và năm 2026, danh sách không có thông tin đơn vị, nên trường hợp trùng tên cần xác nhận thủ công; sau đó đơn vị được đọc từ bản PDF của bài.
-- Điều kiện "công tác tại Việt Nam" được xét theo năm: bài xuất hiện trong năm giảng viên chuyển về vẫn được tính, kể cả khi bài được nộp trước thời điểm đó.
-- Đối với ICLR 2020 và 2021, OpenReview lưu quyết định trong một bản ghi riêng. Khi bản ghi này chưa được thu thập, kết quả được suy ra từ danh sách bài được chấp nhận, và bài được đánh dấu.
-- Một bài có hai giảng viên trong danh sách được tính một lần cho mỗi người, và một lần trong tổng số của trường hoặc hội nghị.
-- Số liệu không phản ánh thứ tự tác giả, mức độ đóng góp hay chất lượng của bài báo.
+Dự án này do **Lê Thành** ([thanhle.xyz](http://thanhle.xyz)) lên ý tưởng, thiết kế và quản lý nội dung, được xây dựng với sự trợ giúp của [Claude](https://www.anthropic.com/claude) và biên tập, hoàn thiện văn phong với sự hỗ trợ của [Gemini](https://gemini.google.com/). Tôi thực hiện trang web này từ sự tò mò cá nhân, với hy vọng đóng góp một nguồn tham khảo minh bạch, hữu ích cho cộng đồng học thuật và những ai quan tâm đến nghiên cứu AI tại Việt Nam.
 
-## Cập nhật dữ liệu
+Toàn bộ mã nguồn và dữ liệu được công khai tại [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Nếu thấy trang hữu ích, bạn có thể tặng dự án một ngôi sao ⭐ trên GitHub, hoặc gửi thông tin bổ sung, đính chính qua trang [Góp ý](../feedback/). Lượt truy cập được thống kê bằng [GoatCounter](https://www.goatcounter.com/) (không dùng cookie và không lưu dữ liệu cá nhân).
 
-Dữ liệu được cập nhật bằng lệnh `make data` trong thư mục dự án. Lệnh `make openreview` thu thập hồ sơ OpenReview và cần đăng nhập. Tệp README liệt kê các lệnh chính.
-
-## Lượt truy cập
-
-Trang công khai thống kê lượt truy cập bằng [GoatCounter](https://www.goatcounter.com/). Công cụ này không sử dụng cookie và không lưu dữ liệu cá nhân của người truy cập; thông tin được ghi nhận chỉ gồm trang được xem, trang dẫn tới, trình duyệt, kích thước màn hình và quốc gia (suy ra từ địa chỉ mạng, địa chỉ này không được lưu lại).
-
-## Tác giả
-
-Trang thông tin này do **Lê Thành** ([thanhle.xyz](http://thanhle.xyz)) hướng dẫn AI ([Claude](https://www.anthropic.com/claude)) thực hiện. Mã nguồn và dữ liệu được công khai tại [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Trang thông tin này được xây dựng xuất phát từ sự tò mò của cá nhân tôi, với mong muốn đóng góp vào lợi ích chung: phục vụ cộng đồng học thuật Việt Nam, cũng như những ai quan tâm đến sự phát triển hiện nay của nghiên cứu trí tuệ nhân tạo tại Việt Nam. Nếu thấy trang này hữu ích, xin hãy tặng dự án một ⭐ trên [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Kính mong quý thầy cô và anh chị góp ý qua trang [Góp ý](../feedback/).
-
-## Lời cảm ơn
-
-Xin cảm ơn TS. [Võ Sỹ Nam](https://vingen.vinbigdata.org/teams/vo-sy-nam/) đã góp ý, đặc biệt là gợi ý tách số liệu ở trang [Hội nghị](../venues/) thành trước năm 2026 và từ năm 2026, để thấy số bài trước và sau khi AI thực sự trở nên mạnh.
-
-Xin cảm ơn GS. [Huỳnh Thị Thanh Bình](../professors/huynh-thi-thanh-binh/) đã góp ý, đặc biệt là gợi ý theo dõi thêm các hội nghị EMNLP, ICCV và ECCV, cùng AAAI và IJCAI, và gộp các hội nghị theo nhóm như [CSRankings](https://csrankings.org/).
-
-## Liên kết hữu ích
-
-- [CS Picks](https://cspicks.roars.dev/): giúp sinh viên chọn trường và giáo sư hướng dẫn nghiên cứu sinh (PhD) tại Mỹ. Trang so sánh giảng viên và trường đại học ngành khoa học máy tính theo thế mạnh nghiên cứu, xu hướng công bố và tài trợ NSF, từ dữ liệu học thuật mở.
-- [Hội nghị khoa học máy tính](https://cspicks.roars.dev/csconfs.html): thời gian diễn ra và hạn nộp bài của các hội nghị khoa học máy tính.
-- [VietProfs](https://vietprofs.roars.dev/): danh bạ giáo sư, giảng viên người Việt trên toàn thế giới, theo trường, ngành, quốc gia và chức danh.
-
-Các liên kết trên do [ThanhVu Nguyen](https://tvn.roars.dev/) thực hiện, và chính chúng đã truyền cảm hứng để tôi xây dựng trang này.
+**Lời cảm ơn:**
+- **TS. [Võ Sỹ Nam](https://vingen.vinbigdata.org/teams/vo-sy-nam/):** Đã góp ý và gợi ý tách số liệu trên trang [Hội nghị](../venues/) thành giai đoạn trước và từ năm 2026 để thấy rõ bước chuyển của nghiên cứu AI.
+- **GS. [Huỳnh Thị Thanh Bình](../professors/huynh-thi-thanh-binh/):** Đã góp ý mở rộng theo dõi thêm EMNLP, ICCV, ECCV, AAAI, IJCAI và phân nhóm theo chuẩn CSRankings.
+- **GS. [ThanhVu Nguyen](https://tvn.roars.dev/):** Tác giả của bộ công cụ đã truyền cảm hứng cho dự án này:
+  - [CS Picks](https://cspicks.roars.dev/) — so sánh giảng viên và trường đại học ngành Khoa học Máy tính tại Mỹ theo hướng nghiên cứu và tài trợ NSF.
+  - [CS Conferences](https://cspicks.roars.dev/csconfs.html) — tra cứu thời gian và hạn nộp bài của các hội nghị khoa học máy tính.
+  - [VietProfs](https://vietprofs.roars.dev/) — danh bạ giáo sư và giảng viên người Việt trên toàn thế giới.

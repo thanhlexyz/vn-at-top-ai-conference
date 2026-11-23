@@ -14,6 +14,8 @@ other = "Data as of {{ .Date }}, covering {{ .First }}&ndash;{{ .Last }}."
 other = "Sources and limits"
 [lang_switch]
 other = "Language"
+[on_this_page]
+other = "On this page"
 
 # ---------------------------------------------------------------- shared words
 [venues_five]
@@ -225,9 +227,9 @@ other = "Some records are incomplete or still to be confirmed. Those professors 
 [home_flag_pending]
 other = "{{ .Count }} uncertain matches wait for a decision, see <a href=\"{{ .URL }}\">Candidates</a>."
 [inst_score_callout]
-other = "<strong>How an institution's score is calculated.</strong> An institution's score adds up its professors' scores in each of the four areas (AI, ML, CV, NLP) and takes the geometric mean of those four numbers, each plus 1, as CSRankings does."
+other = "<strong>How an institution's score is calculated:</strong> An institution's overall score aggregates its faculty's adjusted counts across the four core areas (AI, ML, CV, NLP) and computes the geometric mean of these four totals (each plus 1), following the CSRankings methodology."
 [home_score_callout]
-other = "<strong>How the score is calculated.</strong> It is the adjusted count that <a href=\"https://csrankings.org/\">CSRankings</a> uses: each accepted paper is worth <strong>1 divided by its number of authors</strong> to every listed professor who is an author of it, and a professor's score is the sum over their papers. A paper with 4 authors adds 0.25; a paper with 10 adds 0.1."
+other = "<strong>How the score is calculated:</strong> We use the adjusted count model from <a href=\"https://csrankings.org/\">CSRankings</a>. Each accepted paper awards <strong>1 divided by its total number of authors</strong> (1/N) to each listed faculty co-author, and a professor's score is the sum of these fractional credits across all their papers (e.g., a paper with 4 authors adds 0.25 points; a paper with 10 adds 0.10)."
 [cols_hidden]
 other = "Hidden: {names}"
 [cols_show_one]
@@ -241,7 +243,7 @@ other = "Hide extra columns"
 [cols_hide]
 other = "Hide extra columns"
 [home_note_provisional]
-other = "The official {{ .Name }} {{ .Year }} list is not complete yet, and its authors cannot be confirmed on OpenReview until the conference; its papers, and those listed on professors' own pages, count as unofficial and are shown as <span class=\"own\">+N</span>."
+other = "The official {{ .Name }} {{ .Year }} proceedings list is still preliminary, and author profiles cannot be fully confirmed on OpenReview until the conference concludes. These papers, along with self-reported announcements from faculty homepages, are provisionally counted as unofficial (<span class=\"own\">+N</span>)."
 [home_fig1]
 other = "Fig. 1a. Accepted papers against rejected papers, over all years and venues."
 [home_fig2]
@@ -256,7 +258,7 @@ other = "Homepage"
 one = "{{ .Count }} accepted paper at the ten venues since {{ .Year }}"
 other = "{{ .Count }} accepted papers at the ten venues since {{ .Year }}"
 [prof_own_page_part]
-other = ": {{ .Official }} in the official lists and {{ .Own }} known only from personal pages, shown as +{{ .Own }} and tagged \"unofficial\" below"
+other = " ({{ .Official }} in official conference proceedings and {{ .Own }} from personal or lab pages, shown as +{{ .Own }} with an \"unofficial\" badge below)"
 [prof_iclr_summary]
 other = "ICLR: {{ .Submitted }} submitted, {{ .Accepted }} accepted, {{ .Rejected }} rejected."
 [by_year]
@@ -295,11 +297,11 @@ other = "Co-authors and topics"
 [coauthors_none]
 other = "No papers to compute these from."
 [coauthors_avg]
-other = "{{ .Avg }} co-authors per paper on average, accepted or not (fewest on an accepted paper {{ .Min }}, most on any submission {{ .Max }}), {{ .Distinct }} different co-authors over {{ .Papers }} papers."
+other = "Average of {{ .Avg }} co-authors per paper across all submissions (min {{ .Min }} on an accepted paper, max {{ .Max }} on any submission), with {{ .Distinct }} unique co-authors across {{ .Papers }} papers."
 [coauthors_foreign]
-other = "{{ . }} foreign co-authors per paper on average: co-authors whose affiliation on the paper is outside Vietnam."
+other = "Average of {{ . }} international co-authors per paper (co-authors affiliated exclusively with institutions outside Vietnam)."
 [coauthors_elsewhere]
-other = "{{ .Count }} different co-authors are at another university or institution than {{ .Inst }} ({{ .Abroad }} abroad, {{ .Vietnam }} in Vietnam)."
+other = "{{ .Count }} distinct co-authors are affiliated with institutions other than {{ .Inst }} ({{ .Abroad }} abroad, {{ .Vietnam }} in Vietnam)."
 [coauthors_partial]
 other = "The last two figures use the {{ .With }} of {{ .Papers }} papers whose list prints an affiliation for each author."
 [coauthors_no_aff]
