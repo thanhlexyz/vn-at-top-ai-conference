@@ -90,11 +90,3 @@ make build     # Build production site with Hugo (must have zero warnings)
 make test      # Run all 33 backend verification and scoring unit tests
 make publish   # Build the production site and deploy to GitHub Pages
 ```
-
----
-
-## Roadmap & Ongoing Tasks
-
-- [ ] **Expand faculty roster for AAAI and IJCAI:** Identify and verify additional lecturers and researchers in Vietnam who publish primarily in AAAI and IJCAI proceedings (where author affiliations are often omitted from web proceedings and require manual PDF title verification).
-- [ ] **Cross-reference Candidates page:** Review authors affiliated with Vietnamese institutions identified via `find_candidates.py` and promote qualifying faculty to the active roster (`backend/roster.csv`).
-- [ ] **Community Feedback:** Process submissions and corrections submitted via GitHub issues and the site's [Feedback page](https://thanhlexyz.github.io/vn-at-top-ai-conference/feedback/).
