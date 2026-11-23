@@ -335,12 +335,6 @@ other = "Các bài được chấp nhận có tác giả đứng đầu ghi đơ
 # ---------------------------------------------------------------- institutions
 [inst_list_table]
 other = "Bài của các giảng viên trong danh sách"
-[inst_list_note]
-other = """<ul>
-<li>Một bài có nhiều giảng viên cùng trường chỉ được tính một lần.</li>
-<li>Cột đã nộp ước tính (màu xám) và tỉ lệ được nhận ước tính (màu xanh, bằng số bài được nhận chia số bài đã nộp) là số liệu ước tính theo kết quả ICLR của chính trường; xem trang <a href="{{ .About }}">Giới thiệu</a>.</li>
-<li>Ký hiệu +N sau một số liệu cho biết có thêm N bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm, chưa chính thức.</li>
-</ul>"""
 [inst_list_majority]
 other = "Bài có đa số tác giả thuộc trường"
 [inst_list_majority_note]

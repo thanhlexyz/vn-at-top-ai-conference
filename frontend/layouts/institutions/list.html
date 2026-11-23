@@ -51,7 +51,6 @@
 </div>
 </div>
 <aside class="callout"><p>{{ T "inst_score_callout" | safeHTML }}</p></aside>
-<div class="note">{{ T "inst_list_note" (dict "About" (relLangURL "about/")) | safeHTML }}</div>
 
 {{- $c := hugo.Data.institution_charts }}
 {{- $lang := cond (eq site.Language.Lang "vi") "svg_vi" "svg" }}
