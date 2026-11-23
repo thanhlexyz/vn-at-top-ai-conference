@@ -175,7 +175,7 @@ The front-page and institution tables are ordered by CSRankings' adjusted count:
 unofficial) is worth 1 / (number of authors) to each listed professor; an institution's score adds up its
 professors' scores in each of the four areas, combined as CSRankings does: the geometric mean over AI, ML, CV, NLP of
 (area count + 1) (`score_areas` and `score` in `build_site_data.py`).
-It is explained in a callout on the front page and in About; keep the three in step.
+It is explained in About and in two callouts: the professor score on the front page, the institution score on the Institutions page; keep them in step.
 
 ## Tables, sorting and cups (`frontend/static/site.js`, `partials/professor-table.html`)
 
