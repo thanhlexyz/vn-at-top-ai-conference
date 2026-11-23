@@ -30,7 +30,7 @@ Accepted papers are collected from official conference portals and proceedings (
 ‡ Preliminary list published prior to the conference and still being updated.
 
 ### Author Matching & Provisional Papers
-OpenReview papers are matched directly by confirmed profile ID. Proceedings entries are matched by author name and count automatically if the printed affiliation matches the professor's university. If a paper lists another Vietnamese institution or the venue list omits affiliations (`†`), it is verified by hand. If a paper lists only foreign institutions, the author is treated as a namesake. While an official list is still incomplete (`{{< provisional >}}`), verified announcements from faculty or lab pages (`self_reported.csv`) are counted provisionally as `+N` with an "unofficial" badge until formal proceedings and OpenReview records are published.
+OpenReview papers are matched directly by confirmed profile ID. Proceedings entries are matched by author name and count automatically if the printed affiliation matches the professor's university. If a paper lists another Vietnamese institution or the venue list omits affiliations (`†`), it is verified by hand. If a paper lists only foreign institutions, the author is treated as a namesake. While an official list is still incomplete{{< provisional >}}, verified announcements from faculty or lab pages (`self_reported.csv`) are counted provisionally as `+N` with an "unofficial" badge until formal proceedings and OpenReview records are published.
 
 ## Scoring Methodology
 
