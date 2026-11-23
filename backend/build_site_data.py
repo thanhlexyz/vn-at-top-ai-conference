@@ -49,7 +49,7 @@ TRACK_REASON = {"datasets_benchmarks": "Datasets & Benchmarks track", "position"
                 "findings": "Findings track", "journal": "journal track", "blog": "blog-post track",
                 "tiny_papers": "Tiny Papers track"}
 MAX_CANDIDATES_ON_SITE = 250
-FOREIGN_MIN_PAPERS = 4   # authors outside Vietnam on more than this many counted papers (5 or more) are suggested
+FOREIGN_MIN_PAPERS = 2   # authors outside Vietnam on more than this many counted papers (3 or more) are suggested
 AREA_ALIAS = {"Miscellaneous Aspects of Machine Learning": "General Machine Learning"}  # renamed in 2025
 
 
