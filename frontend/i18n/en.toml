@@ -376,9 +376,9 @@ other = "only when the authors opt in"
 [venue_public_none]
 other = "no"
 [venue_n_public]
-other = "{{ . }} public"
+other = "{{ . }}*"
 [venue_list_note]
-other = "Papers of the listed professors; a paper with several of them counts once. Rejected, estimated is counted at ICLR and estimated elsewhere (see About). +N: papers known only from personal pages, unofficial. * Listed professors / reported by the venue: the first is counted at ICLR and estimated (~) elsewhere; the second is the main-track rate the conference reports, all years together."
+other = "* Rejections on record at a venue that does not publish them: papers placed in Findings, and rejections their authors made public."
 [venue_full]
 other = "{{ . }} publishes every submission and its outcome on OpenReview, so submitted and rejected papers can be counted."
 [venue_partial]
@@ -612,7 +612,7 @@ other = "accepted divided by submitted, estimated: an estimate, since most venue
 other = "No ICLR submissions, so the hidden rejections cannot be estimated and this rate is not comparable; it sorts last"
 
 [th_rate_venue]
-other = "Acceptance rate*"
+other = "Acceptance rate"
 [tip_rate_venue]
 other = "First: the listed professors' papers, accepted divided by submitted; counted at ICLR, estimated (~) elsewhere from the ICLR record of each paper's listed authors, leaving out papers whose listed authors never submitted to ICLR. Second: the main-track rate the conference itself reports, all years together."
 
@@ -623,7 +623,7 @@ other = "No accepted paper yet, so this figure is not comparable; it sorts last"
 other = "reported by the venue, accepted / submitted = {{ . }}"
 
 [venue_rate_finding]
-other = "ICLR is the only venue that makes every submission public. There, the listed professors have an acceptance rate of {{ .Ours }}%, roughly half the {{ .Theirs }}% that ICLR reports across all submissions. At the other ten venues, by contrast, the rates estimated here ({{ .OursLo }}–{{ .OursHi }}%) match or exceed those the conferences report ({{ .TheirsLo }}–{{ .TheirsHi }}%). There are two possibilities: one, the listed professors do better at the other conferences than at ICLR; two, this site heavily undercounts, not only the rejected papers but the total number of submissions as well."
+other = "ICLR is the only venue that makes every submission public. There, the listed professors have an acceptance rate of {{ .Ours }}%, just over a third of the {{ .Theirs }}% that ICLR reports across all submissions. At the other nine venues, by contrast, the rates estimated here ({{ .OursLo }}–{{ .OursHi }}%) match or exceed those the conferences report ({{ .TheirsLo }}–{{ .TheirsHi }}%)."
 
 [inst_fun_fact]
 other = "Fun fact: universities that are not known for computer science, such as <a href=\"{{ .HMU }}\">Hanoi Medical University</a> and <a href=\"{{ .FTU }}\">Foreign Trade University</a>, have also submitted papers to ICLR. Beyond submissions, the <a href=\"{{ .NEU }}\">National Economics University</a> has a paper officially accepted at NeurIPS 2026, and the <a href=\"{{ .UEH }}\">University of Economics Ho Chi Minh City</a> has two at NeurIPS 2025."
