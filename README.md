@@ -1,74 +1,100 @@
-# Vietnam at top AI conferences
+# Vietnam AIRankings
 
-A bilingual (Vietnamese / English) static site that counts, for a hand-approved list of lecturers and professors in
-Vietnam, the papers they submitted to and had accepted or rejected at AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL,
-EMNLP and NAACL since 2020, grouped as CSRankings does (AI, ML, CV, NLP).
+An open-source, data-driven bilingual (Vietnamese / English) static site that tracks and benchmarks scientific publications from faculty at Vietnamese universities at premier international conferences in artificial intelligence.
 
-**Website: <https://thanhlexyz.github.io/vn-at-top-ai-conference/>**
+Publications are tracked from 2020 onward across ten flagship conferences in four core subfields following the [CSRankings](https://csrankings.org/) model:
+- **AI:** AAAI, IJCAI
+- **ML:** ICLR, NeurIPS, ICML
+- **CV:** CVPR, ICCV (odd years), ECCV (even years)
+- **NLP:** ACL, EMNLP
+
+**Live Website:** <https://thanhlexyz.github.io/vn-at-top-ai-conference/>
 
 ![Accepted, recorded rejected and estimated rejected papers of all listed professors per year](docs/submissions.png)
 
-*Submissions per year, all listed professors: accepted papers, rejections on record (every ICLR rejection, public
-NeurIPS rejections and Findings papers), and the rejections the other venues do not publish, estimated from each
-professor's own ICLR record.*
+*Submissions per year across all listed faculty: accepted papers, recorded rejections (all ICLR submissions, public NeurIPS rejections, and Findings papers), and estimated submissions at non-disclosing venues projected from each researcher's ICLR record using Laplace smoothing.*
 
 ![Researcher collaboration graph: professors on the list joined by the papers they share](docs/researcher-graph.png)
 
-*Who works with whom: each circle is a professor on the list (Vietnamese names), coloured by institution; lines join
-people who share papers, shorter for more shared papers.*
+*Co-authorship network: each node represents a tracked faculty member, colored by university affiliation. Connecting edges indicate shared publications, with shorter distances representing stronger collaboration.*
 
-The figures are snapshots of the site; the live pages are updated with the data.
+### Sample data: top 10 by CSRankings score (2026-11-23)
 
-## How to maintain it
+Accepted main-track papers per area and the CSRankings score; the full table is on the [live site](https://thanhlexyz.github.io/vn-at-top-ai-conference/).
 
-The site is maintained by asking an AI coding agent (for example Claude Code) to do the work, in plain words. Every
-step is described in [CLAUDE.md](CLAUDE.md); Claude Code reads it automatically, and any other agent can be told to
-read it first. Typical requests:
+| # | Professor | Institution | AI | ML | CV | NLP | CSRankings score |
+|---:|---|---|---:|---:|---:|---:|---:|
+| 1 | Đàm Quang Tuấn | HUST | 0 | 12 | 0 | 0 | 5.48 |
+| 2 | Ngô Văn Linh | HUST | 6 | 8 | 1 | 15 | 4.96 |
+| 3 | Đoàn Đăng Khoa | VinUni | 2 | 15 | 3 | 0 | 3.81 |
+| 4 | Nguyễn Phi Lê | HUST | 1 | 9 | 6 | 2 | 3.19 |
+| 5 | Phạm Văn Cường | PTIT | 2 | 2 | 9 | 0 | 2.52 |
+| 6 | Lê Duy Dũng | VinUni | 2 | 7 | 1 | 1 | 2.36 |
+| 7 | Thân Quang Khoát | HUST | 1 | 7 | 1 | 1 | 1.84 |
+| 8 | Huỳnh Thị Thanh Bình | HUST | 3 | 2 | 0 | 1 | 1.70 |
+| 9 | Phạm Văn Cảnh | Phenikaa | 4 | 1 | 0 | 0 | 1.25 |
+| 10 | Nguyễn Tuấn Bình | VinUni | 0 | 4 | 0 | 0 | 1.08 |
 
-- "Track `<OpenReview profile URL>`, he is a lecturer at `<university>`."
-- "Add these unofficial acceptances: `<announcement text, screenshot or link>`."
-- "`<name>`'s photo is at `<link>`" or "their staff page is `<link>`".
-- "This paper is wrong: `<link>`" (wrong person, wrong affiliation, missing paper).
-- "Refresh the data" (for example after a conference publishes its accepted papers).
-- "Publish."
+---
 
-Check the result on the local site (`make run`, then <http://localhost:1313>) or on the live site after publishing.
+## Key Features & Methodology
 
-## What you need to do yourself
+- **Scope & Criteria:** Tracks Vietnamese lecturers, assistant professors, associate professors, and full professors whose primary appointment is at a university in Vietnam. Only official full-length Main Track papers (Long Papers) are counted toward primary rankings.
+- **CSRankings Scoring:** Each paper receives 1.0 point divided equally among all authors (`1 / N`). An institution's score is the geometric mean of `(Area Score + 1)` across all four subfields.
+- **Authorship Perspectives:** Provides dedicated filters for **first-author** and **majority-institution (>50%)** publications, highlighting direct lab mentoring and internal student guidance versus broad external collaborations.
+- **Submission Modeling:** Accounts for differing review disclosure policies across venues. Confirmed acceptances at confidential venues are extrapolated based on the researcher's demonstrated ICLR submission and acceptance rates.
+- **Interactive Visualizations:** Includes institution and co-author collaboration graphs, annual publication trends, and venue distributions.
 
-- **Set up once:** Python 3.10+, Hugo 0.156+, `poppler` (`pdftotext`), ImageMagick, and
-  `pip install openreview-py opencv-python-headless`.
-- **Give your OpenReview login** in the environment as `OPENREVIEW_USERNAME` and `OPENREVIEW_PASSWORD` (OpenReview
-  is the only source of rejected papers; the agent never prints them).
-- **Decide** what only you can decide: who belongs on the list, and the answers the agent asks for when a match is
-  uncertain.
-- **Keep private material out of the repository.** The repository is public: everything committed, including
-  `backend/roster.csv` and its notes, is visible to everyone. Screenshots and downloads go to the git-ignored
-  `backend/raw/`.
+---
 
-## TODO
+## How to Maintain
 
-- [ ] **Track more professors now that AAAI, IJCAI and NAACL are counted** (added 2026-10-05; the staff list was
-  not expanded then). The papers of people already on the list are counted, but lecturers in Vietnam who publish
-  mainly at these three venues are not on the list yet. Their lists print no affiliations, so `find_candidates.py`
-  cannot find them automatically, as it already cannot for ACL, EMNLP, and CVPR before 2023. Ways to find them:
-  - the Candidates page (`make run`): since 2026-10-05 it includes authors printed at a university in Vietnam on
-    AAAI, IJCAI and NAACL papers with two or more Vietnamese family names (`fetch_affiliations.py --scan`), 166
-    people in all, most of them students. The page shows each one's OpenReview post; 22 have a profile at the
-    university on their papers as lecturer or professor (looked up on 2026-10-05), the first ones to check;
-  - co-authors of professors already on the list, on their AAAI, IJCAI and NAACL papers;
-  - staff pages of faculties of computer science and AI in Vietnam (`backend/faculty.csv`).
+The site is designed to be maintained with the assistance of an AI coding agent (such as Claude Code or Gemini via Antigravity) through natural language requests. All operational rules and maintenance workflows are documented in [CLAUDE.md](CLAUDE.md).
 
-  For each person found, decide whether they qualify (a lecturer or higher whose main post is at a university in
-  Vietnam), then ask the agent to "track" them with their OpenReview profile or staff page.
+Common maintenance requests:
+- *"Track `<OpenReview profile URL>`, they are a lecturer at `<university>`."*
+- *"Add these unofficial acceptances from `<announcement link or text>`."*
+- *"Update profile photo for `<name>` from `<link>`."*
+- *"Fix attribution for `<link>` (reassign institution or resolve namesake). "*
+- *"Refresh the data after new conference proceedings are released."*
+- *"Publish updates."*
 
-## Commands, if you want them
+You can verify all updates locally before deploying (`make run`, accessible at <http://localhost:1313>).
 
+---
+
+## Requirements & Setup
+
+### Prerequisites
+- **Python:** 3.10+
+- **Hugo:** Extended version (0.156+)
+- **System Tools:** `poppler` (`pdftotext`), `imagemagick`
+- **Python Libraries:**
+  ```bash
+  pip install openreview-py networkx opencv-python-headless
+  ```
+
+### Credentials
+Set your OpenReview credentials in your local environment so that the backend can query submission records:
+```bash
+export OPENREVIEW_USERNAME="your-username"
+export OPENREVIEW_PASSWORD="your-password"
 ```
-make run       # local site at http://localhost:1313
-make data      # rebuild the data from the cached lists
-make test      # checks of the counting rules
-make publish   # build the public site and push it to GitHub Pages
+
+### Common Commands
+
+```bash
+make run       # Start local development server at http://localhost:1313
+make data      # Rebuild JSON data and content stubs from raw caches
+make build     # Build production site with Hugo (must have zero warnings)
+make test      # Run all 33 backend verification and scoring unit tests
+make publish   # Build the production site and deploy to GitHub Pages
 ```
 
-Feedback from readers arrives as GitHub issues or by e-mail (see the site's Feedback page).
+---
+
+## Roadmap & Ongoing Tasks
+
+- [ ] **Expand faculty roster for AAAI and IJCAI:** Identify and verify additional lecturers and researchers in Vietnam who publish primarily in AAAI and IJCAI proceedings (where author affiliations are often omitted from web proceedings and require manual PDF title verification).
+- [ ] **Cross-reference Candidates page:** Review authors affiliated with Vietnamese institutions identified via `find_candidates.py` and promote qualifying faculty to the active roster (`backend/roster.csv`).
+- [ ] **Community Feedback:** Process submissions and corrections submitted via GitHub issues and the site's [Feedback page](https://thanhlexyz.github.io/vn-at-top-ai-conference/feedback/).
