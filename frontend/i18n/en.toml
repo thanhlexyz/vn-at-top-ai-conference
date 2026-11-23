@@ -419,7 +419,7 @@ other = "Source of the picture"
 other = "Switch between day and night mode"
 
 [author_charts_title]
-other = "Accepted papers per year by where the authors are"
+other = "Accepted papers per year by institution"
 [author_charts_note]
 other = "Each column is one year's accepted papers; grey papers are known only from announcements or personal pages."
 [coauthor_institutions]
@@ -538,7 +538,7 @@ other = "{{ . }} professors"
 other = "Hover over a circle to highlight its links; click an author for the VietProfs profile."
 
 [inst_list_charts]
-other = "Accepted papers by where the authors are"
+other = "Accepted papers by institution"
 [inst_list_charts_note]
 other = "One bar per institution, as long as its accepted papers, the most blue first; the number at the end is blue / all. Grey papers are known only from announcements or personal pages."
 [inst_list_charts_none]
