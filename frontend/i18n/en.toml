@@ -378,7 +378,7 @@ other = "no"
 [venue_n_public]
 other = "{{ . }}*"
 [venue_list_note]
-other = "* Rejections on record at a venue that does not publish them: papers placed in Findings, and rejections their authors made public."
+other = "* Self-disclosed and Findings-track papers, counted as rejected."
 [venue_full]
 other = "{{ . }} publishes every submission and its outcome on OpenReview, so submitted and rejected papers can be counted."
 [venue_partial]

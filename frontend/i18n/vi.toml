@@ -373,7 +373,7 @@ other = "không"
 [venue_n_public]
 other = "{{ . }}*"
 [venue_list_note]
-other = "* Bài bị từ chối có ghi nhận ở hội nghị không công khai bài bị từ chối: bài được xếp vào Findings và bài bị từ chối do tác giả tự công khai."
+other = "* Bài tác giả tự công khai và bài thuộc Findings, được tính là bị từ chối."
 [venue_full]
 other = "{{ . }} công khai toàn bộ bài nộp cùng kết quả trên OpenReview, do đó có thể thống kê số bài nộp và số bài bị từ chối."
 [venue_partial]
