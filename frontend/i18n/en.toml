@@ -539,10 +539,6 @@ other = "Hover over a circle to highlight its links; click an author for the Vie
 
 [inst_list_charts]
 other = "Accepted papers by institution"
-[inst_list_charts_note]
-other = "One bar per institution, as long as its accepted papers, the most blue first; the number at the end is blue / all. Grey papers are known only from announcements or personal pages."
-[inst_list_charts_none]
-other = "No accepted paper yet: {{ . }}."
 
 [th_submitted_est_col]
 other = "submitted, estimated"
