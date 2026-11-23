@@ -517,12 +517,10 @@ other = "Di chuột lên vòng tròn để làm nổi các liên kết; di chu�
 [graph_isolated]
 other = "Không có bài chung với ai khác ở đây:"
 
-[intl_summary]
-other = "{{ .Authors }} tác giả ở nước ngoài, {{ .Professors }} giảng viên; {{ .Papers }} cặp bài viết chung giữa tác giả và giảng viên."
 [intl_vn]
 other = "giảng viên trong danh sách"
 [intl_abroad]
-other = "đồng tác giả ở nước ngoài, có hồ sơ trên VietProfs"
+other = "đồng tác giả ở nước ngoài, có hồ sơ trên <a href=\"https://vietprofs.roars.dev/\">VietProfs</a>"
 [intl_edge_key]
 other = "độ dày và con số trên đường: số bài viết chung"
 [intl_professors]

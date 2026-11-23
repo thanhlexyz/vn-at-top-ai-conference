@@ -523,12 +523,10 @@ other = "Hover over a circle to highlight its links; hover over a line for the p
 [graph_isolated]
 other = "No shared paper with anyone else here:"
 
-[intl_summary]
-other = "{{ .Authors }} authors abroad, {{ .Professors }} professors; {{ .Papers }} author-professor paper pairs."
 [intl_vn]
 other = "professor on the list"
 [intl_abroad]
-other = "co-author abroad, with a VietProfs profile"
+other = "co-author abroad, with a <a href=\"https://vietprofs.roars.dev/\">VietProfs</a> profile"
 [intl_edge_key]
 other = "line width and number: papers together"
 [intl_professors]

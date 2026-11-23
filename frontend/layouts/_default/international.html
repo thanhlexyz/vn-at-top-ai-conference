@@ -3,10 +3,9 @@
 {{- $g := hugo.Data.international }}
 {{- $vi := eq site.Language.Lang "vi" }}
 {{ .Content }}
-<p class="note">{{ T "intl_summary" (dict "Authors" $g.authors "Professors" $g.professors "Papers" $g.papers) }}</p>
 <ul class="graph-legend">
 	<li><span class="dot c0"></span>{{ T "intl_vn" }}</li>
-	<li><span class="dot c1"></span>{{ T "intl_abroad" }}</li>
+	<li><span class="dot c1"></span>{{ T "intl_abroad" | safeHTML }}</li>
 	<li><span class="line-key"></span>{{ T "intl_edge_key" }}</li>
 </ul>
 <figure class="graph">
