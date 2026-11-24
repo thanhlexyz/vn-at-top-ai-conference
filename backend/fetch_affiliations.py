@@ -77,6 +77,9 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--scan", nargs="+", metavar="VENUE", default=[],
                     help="also read papers of these venues with authors who may be in Vietnam (aaai ijcai)")
+    ap.add_argument("--min-names", type=int, default=2, metavar="N",
+                    help="a scanned paper needs at least N authors with a Vietnamese family name (default 2; "
+                         "1 finds a lecturer who writes with foreign co-authors, at the cost of many more PDFs)")
     args = ap.parse_args()
     papers = {}
     for line in gzip.open(BACKEND / "work" / "accepted.jsonl.gz", "rt"):
@@ -94,19 +97,28 @@ def main():
             wanted[(p["venue"], p["year"], norm_title(p["title"]))] = p
     scan = {k: p for k, p in papers.items() if p["venue"] in args.scan and p["track"] == "main" and k not in wanted
             and not any(a["aff"] for a in p["authors"]) and pdf_url(p["url"], p.get("pdf"))
-            and sum(vietnamese_name(a["name"]) for a in p["authors"]) >= 2}
+            and sum(vietnamese_name(a["name"]) for a in p["authors"]) >= args.min_names}
     rows = read_csv(CSV) if CSV.exists() else []
     done = {(r["venue"], int(r["year"]), norm_title(r["title"])) for r in rows}
     PDF_DIR.mkdir(parents=True, exist_ok=True)
     HEADERS.mkdir(parents=True, exist_ok=True)
-    added, skipped = 0, 0
+    added, skipped, unreachable = 0, 0, 0
     for key, p in sorted(wanted.items()) + sorted(scan.items()):
         url = pdf_url(p["url"], p.get("pdf"))
         name = url.split("/")[-1] if p["venue"] not in ("aaai", "ijcai") else f"{p['venue']}-{p['year']}-" + "-".join(url.split("/")[-2:])
         path = PDF_DIR / re.sub(r"\W+", "_", name)
         if not path.exists():
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-            path.write_bytes(urllib.request.urlopen(req, timeout=120).read())
+            try:
+                data = urllib.request.urlopen(req, timeout=120).read()
+            except OSError as e:
+                unreachable += 1
+                print(f"could not download {url}: {e}")
+                continue
+            if not data.startswith(b"%PDF"):   # ojs.aaai.org answers scripts with a bot check, not the paper
+                unreachable += 1
+                continue
+            path.write_bytes(data)
             time.sleep(1)
         text = title_page(path)
         if key in scan and not any(uni for _, _, uni in vn_institutions(text)):
@@ -127,7 +139,8 @@ def main():
         w.writerows(rows)
     unchecked = len({(r["venue"], r["year"], r["title"]) for r in rows if r["checked"] != "yes"})
     if scan:
-        print(f"scanned {len(scan)} papers with two or more Vietnamese family names; {skipped} name no university in Vietnam")
+        print(f"scanned {len(scan)} papers with {args.min_names} or more Vietnamese family names; {skipped} name no "
+              f"university in Vietnam; {unreachable} could not be downloaded")
     print(f"{len(wanted)} papers without affiliations in their list, {added} new; {unchecked} papers in "
           f"{CSV.name} still to check by hand")
 

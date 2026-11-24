@@ -239,6 +239,13 @@ rows, lists their authors on the Candidates page), then `verify_affiliations.py`
 fix what it flags. Add the venue-year's notification date to `DECISION_DATES` in `common.py`: the Papers page lists
 the newest decisions first (the build warns about a venue-year with accepted papers and no date). NeurIPS PDFs become public only after the conference.
 
+Since November 2026 `ojs.aaai.org` answers scripts with a bot check, so AAAI PDFs cannot be downloaded by a script (do
+not try to get around it; the maintainer can save PDFs by hand). IJCAI is unaffected: `fetch_affiliations.py --scan ijcai
+--min-names 1` reads every paper with at least one Vietnamese family name (default 2), and a download that is not a PDF
+is skipped, never cached. For AAAI (and as a cross-check for IJCAI) run `scan_openalex.py`: OpenAlex lists the authors in
+Vietnam of every paper, with the affiliation as printed (`work/openalex_vn.csv`). They are leads: look up each one's
+OpenReview profile, and do not suggest anyone whose profile says they are a student.
+
 **Both languages, always:** the Vietnamese site (`/`) mirrors the English one (`/en/`). Any change to a page, whether
 text added, removed or reworded, a section, a caption, a column or a layout change, is made in both languages in the
 same commit: `en.toml` and `vi.toml`, `*.en.md` and `*.vi.md`. Then compare the two built pages

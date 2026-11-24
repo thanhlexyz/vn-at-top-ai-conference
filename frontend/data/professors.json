@@ -88389,13 +88389,13 @@
    "distinct_coauthors": 8,
    "min_coauthors": 5,
    "max_coauthors": 10,
-   "papers_with_affiliations": 0,
-   "avg_foreign": "",
-   "avg_same_institution": "",
-   "avg_other_vietnam": "",
-   "avg_other_institution": "",
-   "avg_domestic": "",
-   "elsewhere": "",
+   "papers_with_affiliations": 1,
+   "avg_foreign": "0.0",
+   "avg_same_institution": "5.0",
+   "avg_other_vietnam": "0.0",
+   "avg_other_institution": "0.0",
+   "avg_domestic": "5.0",
+   "elsewhere": 0,
    "elsewhere_abroad": 0,
    "elsewhere_vietnam": 0,
    "papers_with_topic": 0,
@@ -88512,12 +88512,12 @@
        "cvpr": 0,
        "iccv": 0,
        "eccv": 0,
-       "acl": 0,
+       "acl": 1,
        "emnlp": 0,
        "aaai": 0,
        "ijcai": 0
       },
-      "total": 0
+      "total": 1
      },
      {
       "year": 2027,
@@ -88543,12 +88543,12 @@
      "cvpr": 0,
      "iccv": 0,
      "eccv": 0,
-     "acl": 0,
+     "acl": 1,
      "emnlp": 0,
      "aaai": 0,
      "ijcai": 0
     },
-    "total": 0
+    "total": 1
    },
    "first_author": {
     "years": [
@@ -88657,12 +88657,12 @@
        "cvpr": 0,
        "iccv": 0,
        "eccv": 0,
-       "acl": 0,
+       "acl": 1,
        "emnlp": 0,
        "aaai": 0,
        "ijcai": 0
       },
-      "total": 0
+      "total": 1
      },
      {
       "year": 2027,
@@ -88688,15 +88688,15 @@
      "cvpr": 0,
      "iccv": 0,
      "eccv": 0,
-     "acl": 0,
+     "acl": 1,
      "emnlp": 0,
      "aaai": 0,
      "ijcai": 0
     },
-    "total": 0
+    "total": 1
    },
-   "judged": 0,
-   "unknown": 1,
+   "judged": 1,
+   "unknown": 0,
    "by_year": [
     {
      "year": 2020,
@@ -88743,9 +88743,9 @@
     {
      "year": 2026,
      "accepted": 1,
-     "judged": 0,
-     "majority": 0,
-     "first": 0
+     "judged": 1,
+     "majority": 1,
+     "first": 1
     },
     {
      "year": 2027,
@@ -88768,7 +88768,7 @@
     "status_label": "accepted",
     "pres": "",
     "authors": "Tu-Phuong Mai, Minh-Ha H. Le, Duc-Luong Tran, Phuong-Anh Chu, Duy-Cat Can, Hoang-Quynh Le",
-    "match": "name, confirmed by hand",
+    "match": "name and affiliation",
     "note": "",
     "reason": "",
     "later": "",
@@ -89096,12 +89096,12 @@
   },
   "author_charts": {
    "first": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from VNU-UET\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from VNU-UET</text><rect class=\"other-inst\" x=\"230.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"248.0\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"400.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"418.8\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"unjudged\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 1 affiliations not known yet</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng VNU-UET\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng VNU-UET</text><rect class=\"other-inst\" x=\"223.60000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"241.60000000000002\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"413.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"431.6\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"unjudged\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 1 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>"
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from VNU-UET\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from VNU-UET</text><rect class=\"other-inst\" x=\"230.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"248.0\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"400.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"418.8\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 1 first author from VNU-UET</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng VNU-UET\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng VNU-UET</text><rect class=\"other-inst\" x=\"223.60000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"241.60000000000002\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"413.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"431.6\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 1 bài tác giả đầu cùng VNU-UET</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>"
    },
    "majority": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from VNU-UET\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from VNU-UET</text><rect class=\"other-inst\" x=\"230.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"248.0\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"400.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"418.8\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"unjudged\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 1 affiliations not known yet</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng VNU-UET\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng VNU-UET</text><rect class=\"other-inst\" x=\"236.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"254.4\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"439.20000000000005\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"457.20000000000005\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"unjudged\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 1 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>"
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from VNU-UET\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from VNU-UET</text><rect class=\"other-inst\" x=\"230.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"248.0\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"400.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"418.8\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 1 most authors from VNU-UET</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng VNU-UET\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng VNU-UET</text><rect class=\"other-inst\" x=\"236.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"254.4\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"439.20000000000005\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"457.20000000000005\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 1 bài đa số tác giả cùng VNU-UET</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text></svg>"
    }
   },
   "rejected_estimated": 2,
