@@ -134,7 +134,8 @@ The local-only pages (Candidates, Not tracked) are drafts, but their data (`cand
 The page (`layouts/_default/international.html`, data `international.json` from `international_graph` in `build_site_data.py`)
 joins the co-authors outside Vietnam with 3 or more counted papers together with the professors on the list (the
 Candidates table "Co-authors outside Vietnam", `FOREIGN_MIN_PAPERS`) and a checked row in `vietprofs.csv`. Authors link
-to VietProfs, professors to their page here; each author carries the flag of the country VietProfs lists.
+to VietProfs, professors to their page here; each author carries the flag of the country VietProfs lists. Each column runs
+from the most connected node down (links to the other side, then shared papers, then name).
 
 ## AI-text detection (local until the maintainer says otherwise)
 

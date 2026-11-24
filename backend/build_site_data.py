@@ -1134,21 +1134,45 @@ def flag(country):
 VIETPROFS_URL = "https://vietprofs.roars.dev/people/{}.html"
 
 
+def place_weight_labels(edges):
+    """Where the number of shared papers sits on each line with 2 or more: a point along the line, heaviest lines
+    first, clear of the numbers already placed and touching as few other lines as possible (lx, ly)."""
+    def near_line(x, y, e, pad):
+        dx, dy = e["x2"] - e["x1"], e["y2"] - e["y1"]
+        t = max(0, min(1, ((x - e["x1"]) * dx + (y - e["y1"]) * dy) / (dx * dx + dy * dy)))
+        return math.hypot(x - e["x1"] - t * dx, y - e["y1"] - t * dy) < pad + e["width"] / 2
+    placed = []
+    for e in sorted((e for e in edges if e["weight"] >= 2), key=lambda e: -e["weight"]):
+        half_w = 4 * len(str(e["weight"])) + 3
+        best = None
+        for t in (0.3, 0.22, 0.38, 0.15, 0.46, 0.54, 0.62, 0.7, 0.78, 0.86):
+            x, y = e["x1"] + t * (e["x2"] - e["x1"]), e["y1"] + t * (e["y2"] - e["y1"])
+            clash = sum(1 for px, py, pw in placed if abs(px - x) < half_w + pw and abs(py - y) < 15)
+            touch = sum(1 for o in edges if o is not e and near_line(x, y, o, 6))
+            cost = (clash, touch, abs(t - 0.3))
+            if best is None or cost < best[0]:
+                best = (cost, x, y)
+        _, x, y = best
+        placed.append((x, y, half_w))
+        e["lx"], e["ly"] = round(x, 1), round(y + 4, 1)
+
+
 def international_graph(authors, by_slug):
     """Bipartite drawing for the International cooperation page: professors on the list on the left, co-authors
-    abroad who have a VietProfs profile (vietprofs.csv) on the right; a line is the number of papers they share."""
-    authors = sorted(authors, key=lambda f: (-len(f["papers"]), f["name"]))
+    abroad who have a VietProfs profile (vietprofs.csv) on the right; a line is the number of papers they share.
+    Each column runs from the most connected node (most links to the other side) down; ties by papers, then name."""
+    def degree(f):
+        return sum(1 for s in f["slugs"] if s in by_slug)
+    authors = sorted(authors, key=lambda f: (-degree(f), -len(f["papers"]), f["name"]))
     row, left_w, top, step = 0, 300, 40, 46
     right = []
     for i, f in enumerate(authors):
         right.append({"name": f["name"], "affiliation": f["affs"].most_common(1)[0][0], "papers": len(f["papers"]),
                       "url": VIETPROFS_URL.format(f["vp_id"]), "country": f["country"], "flag": flag(f["country"]), "slugs": f["slugs"], "id": f"f{i}"})
     slugs = sorted({s for f in right for s in f["slugs"] if s in by_slug})
-    # order the professors by the average position of their co-authors, which keeps most lines from crossing
-    def centre(s):
-        pos = [(i, f["slugs"][s]) for i, f in enumerate(right) if s in f["slugs"]]
-        return sum(i * w for i, w in pos) / sum(w for _, w in pos)
-    slugs.sort(key=lambda s: (centre(s), s))
+    links = {s: sum(1 for f in right if s in f["slugs"]) for s in slugs}
+    shared = {s: sum(f["slugs"][s] for f in right if s in f["slugs"]) for s in slugs}
+    slugs.sort(key=lambda s: (-links[s], -shared[s], by_slug[s]["name"]))
     height = top * 2 + step * (max(len(slugs), 1) - 1)
     right_step = (height - 2 * top) / max(len(right) - 1, 1) if len(right) > 1 else 0
     xl, xr = 380, 620
@@ -1163,6 +1187,7 @@ def international_graph(authors, by_slug):
               "width": round(1 + 1.2 * w, 1), "a_name": by_slug[s]["name"], "a_name_vi": by_slug[s]["name_vi"],
               "b_name": f["name"]}
              for f in right for s, w in sorted(f["slugs"].items()) if s in ly]
+    place_weight_labels(edges)
     for f in right:
         del f["slugs"]
     return {"width": 1000, "height": height, "left": left, "right": right, "edges": edges,

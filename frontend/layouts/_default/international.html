@@ -14,7 +14,7 @@
 	<line class="edge" data-a="{{ .a }}" data-b="{{ .b }}" x1="{{ .x1 }}" y1="{{ .y1 }}" x2="{{ .x2 }}" y2="{{ .y2 }}" stroke-width="{{ .width }}"><title>{{ if $vi }}{{ .a_name_vi }}{{ else }}{{ .a_name }}{{ end }} – {{ .b_name }}: {{ T "graph_papers" (int .weight) }}</title></line>
 	{{- end }}
 	{{- range $g.edges }}{{ if ge (int .weight) 2 }}
-	<text class="ew" data-a="{{ .a }}" data-b="{{ .b }}" x="{{ add .x1 (mul 0.3 (sub .x2 .x1)) }}" y="{{ add (add .y1 (mul 0.3 (sub .y2 .y1))) 4 }}" text-anchor="middle">{{ .weight }}</text>
+	<text class="ew" data-a="{{ .a }}" data-b="{{ .b }}" x="{{ .lx }}" y="{{ .ly }}" text-anchor="middle">{{ .weight }}</text>
 	{{- end }}{{ end }}
 	{{- range $g.left }}
 	{{- $label := cond (and $vi .name_vi) .name_vi .name }}
