@@ -261,11 +261,13 @@ other = "Hide extra columns"
 [home_note_provisional]
 other = "The official {{ .Name }} {{ .Year }} proceedings list is still preliminary, and author profiles cannot be fully confirmed on OpenReview until the conference concludes. These papers, along with self-reported announcements from faculty homepages, are provisionally counted as unofficial (<span class=\"own\">+N</span>)."
 [home_fig1]
-other = "Fig. 1a. Total accepted papers against total rejected papers."
+other = "Fig. 1. Total accepted papers against total rejected papers."
+[home_fig4]
+other = "Fig. 4. Accepted papers per year in each area."
 [home_fig3]
-other = "Fig. 2. Cumulative distribution of CSRankings scores, professors with an accepted paper."
+other = "Fig. 3. Cumulative distribution of CSRankings scores, professors with an accepted paper."
 [home_fig2]
-other = "Fig. 1b. Total accepted papers and total rejected papers per year."
+other = "Fig. 2. Total accepted papers and total rejected papers per year."
 
 # ---------------------------------------------------------------- professor page
 [prof_since]

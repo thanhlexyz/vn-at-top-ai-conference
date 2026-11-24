@@ -950,7 +950,17 @@ def overview(professors, acc):
             w["stack_label"], YEARS, [(c, n, [r[k] for r in rows]) for (c, n), k in zip(named, keys)],
             provisional=provisional, short={w["s_not"]: w["short_not"], w["s_est"]: w["short_est"]},
             words={"total": w["total"], "incomplete": w["incomplete"]})
-        # Fig. 2: how the CSRankings scores of the professors with an accepted paper are spread
+        # Fig. 4: accepted papers per year in each area, added up over the professors like Fig. 1 and 2
+        area_of = {v: g["key"] for g in VENUE_GROUPS for v in g["venues"]}
+        per = {g["key"]: [0] * len(YEARS) for g in VENUE_GROUPS}
+        for p in professors:
+            for e in p["accepted_papers"]:
+                if e["year"] in YEARS:
+                    per[area_of[e["venue"]]][YEARS.index(e["year"])] += 1
+        out["areas" + suffix] = charts.stacked_area(
+            w["areas_label"], YEARS, [(f"ar-{g['key']}", g["name"], per[g["key"]]) for g in VENUE_GROUPS],
+            words={"total": w["total"], "incomplete": w["incomplete"]})
+        # Fig. 3: how the CSRankings scores of the professors with an accepted paper are spread
         out["cdf" + suffix] = charts.cdf(w["cdf_label"], [p["score"] for p in professors if p["accepted"]],
                                          {"x": w["cdf_x"], "tip": w["cdf_tip"]})
     return out
@@ -966,7 +976,8 @@ CHART_TEXT = {
            "s_acc": "accepted", "s_not": "rejected, recorded", "s_est": "rejected elsewhere, estimated",
            "short_not": "recorded", "short_est": "estimated", "total": "total", "incomplete": "list still being completed",
            "cdf_label": "Cumulative distribution of the CSRankings scores of professors with an accepted paper",
-           "cdf_x": "CSRankings score", "cdf_tip": "{count} professors ({share}) score {score} or less"},
+           "cdf_x": "CSRankings score", "cdf_tip": "{count} professors ({share}) score {score} or less",
+           "areas_label": "Accepted papers per year in each area (AI, ML, CV, NLP), all listed professors"},
     "vi": {"aria": "Số bài nộp và được nhận theo năm của {name}; số liệu ở bảng bên dưới",
            "acc": "Được nhận", "not": "Bị từ chối, đếm được", "est": "Bị từ chối ở nơi khác, ước tính",
            "tip_acc": "{n} bài được nhận", "tip_not": "{n} bài bị từ chối, đếm được", "tip_est": "khoảng {n} bài bị từ chối ở nơi khác (ước tính)",
@@ -975,7 +986,8 @@ CHART_TEXT = {
            "s_acc": "được nhận", "s_not": "bị từ chối, đếm được", "s_est": "bị từ chối ở nơi khác, ước tính",
            "short_not": "đếm được", "short_est": "ước tính", "total": "tổng", "incomplete": "danh sách còn đang bổ sung",
            "cdf_label": "Phân bố tích luỹ điểm CSRankings của các giảng viên đã có bài được nhận",
-           "cdf_x": "Điểm CSRankings", "cdf_tip": "{count} giảng viên ({share}) có điểm từ {score} trở xuống"},
+           "cdf_x": "Điểm CSRankings", "cdf_tip": "{count} giảng viên ({share}) có điểm từ {score} trở xuống",
+           "areas_label": "Số bài được nhận theo từng năm ở mỗi lĩnh vực (AI, ML, CV, NLP), tính chung các giảng viên"},
 }
 
 

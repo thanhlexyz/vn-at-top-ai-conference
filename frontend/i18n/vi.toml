@@ -259,11 +259,13 @@ other = "Ẩn bớt cột"
 [home_note_provisional]
 other = "Danh sách chính thức của {{ .Name }} {{ .Year }} hiện là danh sách sơ bộ và thông tin tác giả sẽ được đối chiếu đầy đủ trên OpenReview sau khi hội nghị diễn ra. Các bài báo này, cùng các bài được công bố sớm trên trang của giảng viên, được ghi nhận tạm thời dưới dạng chưa chính thức (<span class=\"own\">+N</span>)."
 [home_fig1]
-other = "Hình 1a. Tổng số bài được chấp nhận so với tổng số bài bị từ chối."
+other = "Hình 1. Tổng số bài được chấp nhận so với tổng số bài bị từ chối."
+[home_fig4]
+other = "Hình 4. Số bài được nhận theo từng năm ở mỗi lĩnh vực."
 [home_fig3]
-other = "Hình 2. Phân bố tích luỹ điểm CSRankings của các giảng viên đã có bài được nhận."
+other = "Hình 3. Phân bố tích luỹ điểm CSRankings của các giảng viên đã có bài được nhận."
 [home_fig2]
-other = "Hình 1b. Tổng số bài được chấp nhận và tổng số bài bị từ chối theo từng năm."
+other = "Hình 2. Tổng số bài được chấp nhận và tổng số bài bị từ chối theo từng năm."
 
 # ---------------------------------------------------------------- professor page
 [prof_since]

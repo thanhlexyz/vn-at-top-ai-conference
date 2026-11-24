@@ -142,7 +142,7 @@ def stacked_area(label, years, series, provisional=(), short=None, words=None):
 def cdf(label, values, words):
     """Cumulative distribution as a step line: for each score, the share of the values at or below it. A hover
     target at each step says how many values reach that far. words: {"x": axis name, "tip": "{share} ... {score}"}."""
-    width, left, right, top, plot_h, bottom = 420, 40, 14, 16, 200, 42
+    width, left, right, top, plot_h, bottom = 640, 40, 14, 16, 200, 42   # as wide and tall as stacked_area
     values = sorted(values)
     n = len(values) or 1
     peak = max(values, default=0) or 1
