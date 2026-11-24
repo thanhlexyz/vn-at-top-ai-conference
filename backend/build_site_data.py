@@ -51,7 +51,7 @@ TRACK_REASON = {"datasets_benchmarks": "Datasets & Benchmarks track", "position"
 MAX_CANDIDATES_ON_SITE = 250
 # the front page shows how each professor's rank moved when this venue-year's results came in
 RANK_BASELINE = ("neurips", 2026)
-FOREIGN_MIN_PAPERS = 2   # authors outside Vietnam on more than this many counted papers (3 or more) are suggested
+FOREIGN_MIN_PAPERS = 3   # authors outside Vietnam on more than this many counted papers (4 or more) are suggested
 AREA_ALIAS = {"Miscellaneous Aspects of Machine Learning": "General Machine Learning"}  # renamed in 2025
 
 
@@ -1159,20 +1159,19 @@ def place_weight_labels(edges):
 
 def international_graph(authors, by_slug):
     """Bipartite drawing for the International cooperation page: professors on the list on the left, co-authors
-    abroad who have a VietProfs profile (vietprofs.csv) on the right; a line is the number of papers they share.
-    Each column runs from the most connected node (most links to the other side) down; ties by papers, then name."""
-    def degree(f):
-        return sum(1 for s in f["slugs"] if s in by_slug)
-    authors = sorted(authors, key=lambda f: (-degree(f), -len(f["papers"]), f["name"]))
+    abroad who have a VietProfs profile (vietprofs.csv) on the right; a line is the number of papers they share."""
+    authors = sorted(authors, key=lambda f: (-len(f["papers"]), f["name"]))
     row, left_w, top, step = 0, 300, 40, 46
     right = []
     for i, f in enumerate(authors):
         right.append({"name": f["name"], "affiliation": f["affs"].most_common(1)[0][0], "papers": len(f["papers"]),
                       "url": VIETPROFS_URL.format(f["vp_id"]), "country": f["country"], "flag": flag(f["country"]), "slugs": f["slugs"], "id": f"f{i}"})
     slugs = sorted({s for f in right for s in f["slugs"] if s in by_slug})
-    links = {s: sum(1 for f in right if s in f["slugs"]) for s in slugs}
-    shared = {s: sum(f["slugs"][s] for f in right if s in f["slugs"]) for s in slugs}
-    slugs.sort(key=lambda s: (-links[s], -shared[s], by_slug[s]["name"]))
+    # order the professors by the average position of their co-authors, which keeps most lines from crossing
+    def centre(s):
+        pos = [(i, f["slugs"][s]) for i, f in enumerate(right) if s in f["slugs"]]
+        return sum(i * w for i, w in pos) / sum(w for _, w in pos)
+    slugs.sort(key=lambda s: (centre(s), s))
     height = top * 2 + step * (max(len(slugs), 1) - 1)
     right_step = (height - 2 * top) / max(len(right) - 1, 1) if len(right) > 1 else 0
     xl, xr = 380, 620
