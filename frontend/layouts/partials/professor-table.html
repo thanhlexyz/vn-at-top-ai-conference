@@ -5,7 +5,7 @@
 {{- $last := hugo.Data.meta.last_year }}
 {{- $ai := cond (and $brief site.Params.showAiScores) hugo.Data.ai_scores nil }}
 <div class="scroll pinned top">
-<table{{ if $podium }} class="podium{{ if $brief }} collapsed{{ end }}"{{ else if $brief }} class="collapsed"{{ end }}{{ if $brief }} id="professors-table" data-collapsible{{ end }}>
+<table{{ if $podium }} class="podium{{ if $brief }} collapsed rows-collapsed{{ end }}"{{ else if $brief }} class="collapsed rows-collapsed"{{ end }}{{ if $brief }} id="professors-table" data-collapsible data-rows-collapsible{{ end }}>
 	<thead>
 	<tr>
 		{{- if $rank }}<th rowspan="2" class="pin0 rank" data-nosort>#</th>{{ end }}
@@ -63,7 +63,8 @@
 	{{- range $n, $_ := $rows }}
 	{{- $p := . }}
 	{{- $iclr := .venues.iclr }}
-	<tr>
+	{{- /* the front page starts with the professors who have an accepted paper; the rest open with a button */}}
+	<tr{{ if and $brief (eq (int .accepted) 0) }} class="more-row"{{ end }}>
 		{{- if $rank }}<td class="pin0 rank">{{ if $podium }}<span class="cup"></span>{{ end }}<span class="n">{{ add $n 1 }}</span></td>{{ end }}
 		<td class="l pin1"><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ partial "pname.html" . }}</a>
 			{{- /* a rank change only means something among professors with accepted papers */}}

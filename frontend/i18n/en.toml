@@ -246,6 +246,10 @@ other = "Pages"
 other = "‹ Previous"
 [pager_next]
 other = "Next ›"
+[rows_show]
+other = "Show {{ .N }} professors with no accepted paper yet"
+[rows_hide]
+other = "Hide professors with no accepted paper"
 [cols_show]
 other = "Show {n} more columns"
 [cols_show_inst]

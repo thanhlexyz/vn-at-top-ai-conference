@@ -76,6 +76,19 @@
 		return leaves;
 	}
 
+	// rows hidden by the front page's row button take no number and no cup
+	function hiddenRow(table, tr) {
+		return table.classList.contains("rows-collapsed") && tr.classList.contains("more-row");
+	}
+	function renumber(table) {
+		var k = 0;
+		Array.prototype.forEach.call(table.tBodies[0].rows, function (tr) {
+			var n = tr.querySelector("td.rank .n");   // the # column numbers the rows in the order shown
+			if (!n || tr.classList.contains("total") || hiddenRow(table, tr)) return;
+			n.textContent = ++k;
+		});
+	}
+
 	function sortBy(table, column, cell) {
 		var body = table.tBodies[0];
 		var rows = Array.prototype.filter.call(body.rows, function (tr) { return !tr.classList.contains("total"); });
@@ -98,12 +111,9 @@
 		});
 		table.querySelectorAll("th[aria-sort]").forEach(function (th) { th.removeAttribute("aria-sort"); });
 		cell.setAttribute("aria-sort", order);
-		values.forEach(function (v, k) {
-			body.appendChild(v.tr);
-			var n = v.tr.querySelector("td.rank .n");   // the # column numbers the rows in the order shown
-			if (n) n.textContent = k + 1;
-		});
+		values.forEach(function (v) { body.appendChild(v.tr); });
 		totals.forEach(function (tr) { body.appendChild(tr); });
+		renumber(table);
 		podium(table, numeric && !cell.hasAttribute("data-nocup") ? column : null, order === "ascending");
 		if (table.paginate) table.paginate(0, false);   // a paged table starts again from its first page
 	}
@@ -116,11 +126,14 @@
 	var PLACES = ["gold", "silver", "bronze"];
 	function podium(table, column, ascending) {
 		if (!table.classList.contains("podium")) return;
+		table.lastPodium = [column, ascending];   // the row button draws the cups again with the same column
 		var rows = Array.prototype.filter.call(table.tBodies[0].rows, function (tr) { return !tr.classList.contains("total"); });
-		var place = -1, last = null;
-		rows.forEach(function (tr, k) {
+		var place = -1, last = null, k = -1;
+		rows.forEach(function (tr) {
 			var slot = tr.querySelector(".cup");
 			if (!slot) return;
+			if (hiddenRow(table, tr)) { slot.className = "cup"; slot.innerHTML = ""; slot.removeAttribute("title"); return; }
+			k += 1;
 			var cell = column === undefined || column === null ? null : tr.cells[column];
 			var key = column === undefined ? k : !cell || cell.hasAttribute("data-last") ? null : number(cell.textContent);
 			// largest first, a zero wins nothing and takes no place; smallest first, a zero is the best value
@@ -168,6 +181,22 @@
 			var hidden = table.classList.toggle("collapsed");
 			button.textContent = hidden ? show : button.dataset.hide;
 			button.setAttribute("aria-expanded", hidden ? "false" : "true");
+			window.dispatchEvent(new Event("resize"));   // the pinned columns are measured again
+		});
+	});
+
+	// The front page table starts with the professors who have an accepted paper; the button under it shows the
+	// rest (rows marked more-row). Without JavaScript every row shows (a noscript rule) and the button stays hidden.
+	document.querySelectorAll("table[data-rows-collapsible]").forEach(function (table) {
+		var button = table.id && document.querySelector('button.more-rows[aria-controls="' + table.id + '"]');
+		if (!button) return;
+		button.hidden = false;
+		button.addEventListener("click", function () {
+			var hidden = table.classList.toggle("rows-collapsed");
+			button.textContent = hidden ? button.dataset.show : button.dataset.hide;
+			button.setAttribute("aria-expanded", hidden ? "false" : "true");
+			renumber(table);
+			if (table.lastPodium) podium(table, table.lastPodium[0], table.lastPodium[1]);
 			window.dispatchEvent(new Event("resize"));   // the pinned columns are measured again
 		});
 	});

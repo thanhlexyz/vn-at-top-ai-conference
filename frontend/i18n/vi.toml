@@ -244,6 +244,10 @@ other = "Trang"
 other = "‹ Trước"
 [pager_next]
 other = "Sau ›"
+[rows_show]
+other = "Hiện {{ .N }} giảng viên chưa có bài được nhận"
+[rows_hide]
+other = "Ẩn giảng viên chưa có bài được nhận"
 [cols_show]
 other = "Hiện thêm {n} cột"
 [cols_show_inst]

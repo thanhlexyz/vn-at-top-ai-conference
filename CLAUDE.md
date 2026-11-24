@@ -194,6 +194,9 @@ It is explained in About and in two callouts: the professor score on the front p
 - Cells marked `data-last` always sort to the bottom and get no cup: the acceptance rate of people with no ICLR
   submissions, and the co-author and own-institution columns of people with no accepted paper (shown greyed).
 - Numbers never wrap (`td:not(.l)`); captions and notes stay short and refer to About for definitions.
+- The front table starts with the professors who have an accepted paper (official or unofficial); the rest (`more-row`,
+  accepted = 0) open with "+ Show N professors with no accepted paper yet" under the table. Hidden rows take no `#` number
+  and no cup (`renumber`, `podium` in `site.js`); without JavaScript every row shows.
 - Hidden columns (`data-extra`) open with a quiet text control at the table's top-right ("+ Show N more columns",
   tooltip naming the hidden headings), inside a `.table-box` as wide as the table; the control's `aria-controls`
   names its table's `id`.
