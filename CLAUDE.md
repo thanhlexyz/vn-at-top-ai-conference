@@ -258,6 +258,8 @@ in Vietnam (`fetch_openreview.py --candidates N`, then `find_candidates.py`; Ope
 per half hour) and lecturers with an ICLR record (`iclr_only.csv`), most papers first. Students are never listed. A yes
 is a roster row with `approved = yes`, a no a row with `approved = no` and the reason (decided by OpenReview ID, so the
 name leaves the list). Everything else on the page is a closed checklist line that opens to its table.
+`scan_openalex.py --leads` rewrites `staff_leads.csv`: the hand-added lead Hoang-Quynh Le (ACL 2026, post ended 2026)
+is not from the scan, so add her row back after a rerun until she is decided.
 
 **Both languages, always:** the Vietnamese site (`/`) mirrors the English one (`/en/`). Any change to a page, whether
 text added, removed or reworded, a section, a caption, a column or a layout change, is made in both languages in the
