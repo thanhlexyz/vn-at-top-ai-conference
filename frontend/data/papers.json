@@ -21,6 +21,11 @@
     "slug": "thanh-duc-ngo",
     "name": "Thanh Duc Ngo",
     "name_vi": "Ngô Đức Thành"
+   },
+   {
+    "slug": "duy-dinh-le",
+    "name": "Duy-Dinh Le",
+    "name_vi": "Lê Đình Duy"
    }
   ],
   "reviews": "1(2), 1(3), 1(3), 2(2)",
@@ -40,7 +45,7 @@
    },
    {
     "name": "Duy-Dinh Le",
-    "slug": ""
+    "slug": "duy-dinh-le"
    },
    {
     "name": "Shin'ichi Satoh",
@@ -219,6 +224,11 @@
     "slug": "hien-d-nguyen",
     "name": "Hien D. Nguyen",
     "name_vi": ""
+   },
+   {
+    "slug": "hung-nguyen",
+    "name": "Hung Nguyen",
+    "name_vi": "Nguyễn Viết Hưng"
    }
   ],
   "reviews": "2(2), 2(3), 2(2)",
@@ -238,7 +248,7 @@
    },
    {
     "name": "Hung Nguyen",
-    "slug": ""
+    "slug": "hung-nguyen"
    },
    {
     "name": "Tai Huynh",
@@ -472,6 +482,51 @@
    },
    {
     "name": "Anne-Christin Hauschild",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2027,
+  "venue": "iclr",
+  "venue_name": "ICLR",
+  "title": "GENERATIVE MODEL VIA QUANTILE ASSIGNMENT",
+  "ai_key": "iclr-2027-generativemodelviaquantileassignment",
+  "url": "https://openreview.net/forum?id=KGxyHNEMV4",
+  "status": "withdrawn",
+  "status_label": "withdrawn",
+  "pres": "",
+  "authors": "Georgi Hrusanov, Duy-Cat Can, Oliver Y. Chén, Julien Bodelet",
+  "match": "OpenReview profile",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "duy-cat-can",
+    "name": "Duy-Cat Can",
+    "name_vi": "Cấn Duy Cát"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Georgi Hrusanov",
+    "slug": ""
+   },
+   {
+    "name": "Duy-Cat Can",
+    "slug": "duy-cat-can"
+   },
+   {
+    "name": "Oliver Y. Chén",
+    "slug": ""
+   },
+   {
+    "name": "Julien Bodelet",
     "slug": ""
    }
   ]
@@ -5504,6 +5559,59 @@
    {
     "name": "Tuan Do",
     "slug": "tuan-do"
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "acl",
+  "venue_name": "ACL",
+  "title": "HOPE: Hybrid Optimized Parallel Encoding with Supervised and Unsupervised Semantic Fusion for Depression Symptom Detection",
+  "ai_key": "acl-2026-hopehybridoptimizedparallelencodingwiths",
+  "url": "https://aclanthology.org/2026.acl-long.132/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Tu-Phuong Mai, Minh-Ha H. Le, Duc-Luong Tran, Phuong-Anh Chu, Duy-Cat Can, Hoang-Quynh Le",
+  "match": "name, confirmed by hand",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "duy-cat-can",
+    "name": "Duy-Cat Can",
+    "name_vi": "Cấn Duy Cát"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Tu-Phuong Mai",
+    "slug": ""
+   },
+   {
+    "name": "Minh-Ha H. Le",
+    "slug": ""
+   },
+   {
+    "name": "Duc-Luong Tran",
+    "slug": ""
+   },
+   {
+    "name": "Phuong-Anh Chu",
+    "slug": ""
+   },
+   {
+    "name": "Duy-Cat Can",
+    "slug": "duy-cat-can"
+   },
+   {
+    "name": "Hoang-Quynh Le",
+    "slug": ""
    }
   ]
  },
