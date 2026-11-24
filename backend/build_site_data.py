@@ -32,7 +32,7 @@ import urllib.parse
 
 from common import (with_pdf_affiliations, ACCEPTED, DECISION_DATES, BACKEND, CANDIDATES, FRONTEND, LAST_YEAR, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
                     STATUS_LABEL, VENUE_GROUPS, VENUE_KEYS, VENUE_NAME, VENUES, WORK, YEARS, classify_status, held, in_vietnam,
-                    load_roster, name_key, norm_name, norm_title, openreview_venue, post_class, presentation, read_csv,
+                    load_roster, name_key, norm_name, norm_title, openreview_venue, PARENT, post_class, presentation, read_csv,
                     read_jsonl_gz, same_institution, slugify, token_key, vn_institutions, write_json)
 
 DATA = FRONTEND / "data"
@@ -300,7 +300,7 @@ def person_records(person, acc, decisions, queue, warnings, skipped, own=(), bor
             abroad = person["vn_since"] is None and aff and not vn_institutions(aff)
             if listed and decision != "no" and not abroad:
                 match = "name, and listed on their own page"
-            elif same_institution(aff, person):
+            elif same_institution(aff, person) or at_past_post(aff, person, year):
                 match = "name and affiliation"
                 if not in_vietnam(person, year) and paper["track"] == "main":
                     warnings.append(f"{person['name']}: '{paper['title'][:60]}' ({VENUE_NAME[venue]} {year}) already "
@@ -417,13 +417,44 @@ def own_affiliation(person, r):
     return people[i]["aff"].strip() if i is not None else ""
 
 
+_PAST_POSTS = {}
+
+
+def past_posts(person):
+    """Staff posts (lecturer or higher) at universities in Vietnam other than the roster institution, from the
+    person's OpenReview history: (pseudo person for same_institution, start year, end year). A paper written there
+    while the post lasted counts too, at the maintainer's rule; a student post never does."""
+    if person["slug"] in _PAST_POSTS:
+        return _PAST_POSTS[person["slug"]]
+    path = OPENREVIEW_RAW / f"{person['slug']}.json"
+    posts = []
+    if path.exists():
+        for prof in json.loads(path.read_text(encoding="utf-8")).get("profiles", []):
+            for h in prof.get("history") or []:
+                found = [(full, short) for full, short, uni in vn_institutions(h["institution"]) if uni]
+                if not found or post_class(h["position"]) != "staff":
+                    continue
+                full, short = found[0]
+                if short == person["institution_short"] or PARENT.get(short) == person["institution_short"]:
+                    continue
+                posts.append(({"institution": full, "institution_short": short}, h.get("start"), h.get("end")))
+    _PAST_POSTS[person["slug"]] = posts
+    return posts
+
+
+def at_past_post(aff, person, year):
+    """True if the affiliation names a university where the person held a staff post in that year."""
+    return bool(aff) and any((start is None or start <= year) and (end is None or year <= end)
+                             and same_institution(aff, inst) for inst, start, end in past_posts(person))
+
+
 def at_institution(person, r):
     """An accepted paper counts for a person only if it lists them at their institution. A paper that prints no
     affiliation for them (unofficial papers, lists without affiliations) cannot be checked and counts. Their own
     entry may name the institution by its short name ("VinAI & HUST"), or for HCMUS and the Hanoi University of
     Science just "University of Science"; neither is safe to read as Vietnamese for anyone else."""
     aff = own_affiliation(person, r)
-    if not aff or same_institution(aff, person):
+    if not aff or same_institution(aff, person) or at_past_post(aff, person, r["year"]):
         return True
     short = person["institution_short"]
     if len(short) >= 3 and re.search(rf"(?<![\w-]){re.escape(short)}(?![\w-])", aff):

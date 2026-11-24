@@ -248,7 +248,7 @@
    "y": 422.3,
    "linked": true,
    "r": 14.4,
-   "color": "g-ochre",
+   "color": "g-green",
    "degree": 3,
    "lx": 799.3,
    "ly": 427.3,
@@ -299,7 +299,7 @@
    "y": 937.5,
    "linked": true,
    "r": 14.1,
-   "color": "g-green",
+   "color": "g-ochre",
    "degree": 2,
    "lx": 623.1,
    "ly": 942.5,
@@ -333,7 +333,7 @@
    "y": 361.1,
    "linked": true,
    "r": 13.8,
-   "color": "g-ochre",
+   "color": "g-green",
    "degree": 2,
    "lx": 337.1,
    "ly": 366.1,
@@ -435,7 +435,7 @@
    "y": 1324.1,
    "linked": true,
    "r": 13.0,
-   "color": "g-ochre",
+   "color": "g-green",
    "degree": 1,
    "lx": 547.0,
    "ly": 1329.1,
@@ -486,7 +486,7 @@
    "y": null,
    "linked": false,
    "r": 12.6,
-   "color": "g-ochre",
+   "color": "g-green",
    "degree": 0
   },
   {
@@ -596,7 +596,7 @@
    "y": null,
    "linked": false,
    "r": 12.1,
-   "color": "g-ochre",
+   "color": "g-green",
    "degree": 0
   },
   {
@@ -624,7 +624,7 @@
    "y": 908.0,
    "linked": true,
    "r": 12.1,
-   "color": "g-green",
+   "color": "g-ochre",
    "degree": 1,
    "lx": 759.6,
    "ly": 913.0,
@@ -689,7 +689,7 @@
    "y": 1420.1,
    "linked": true,
    "r": 12.1,
-   "color": "g-green",
+   "color": "g-ochre",
    "degree": 1,
    "lx": 46.1,
    "ly": 1425.1,
@@ -836,7 +836,7 @@
    "y": 1466.1,
    "linked": true,
    "r": 11.5,
-   "color": "g-green",
+   "color": "g-ochre",
    "degree": 1,
    "lx": 63.5,
    "ly": 1471.1,
@@ -870,7 +870,7 @@
    "y": 1370.1,
    "linked": true,
    "r": 11.5,
-   "color": "g-ochre",
+   "color": "g-green",
    "degree": 1,
    "lx": 563.5,
    "ly": 1375.1,
@@ -1017,7 +1017,7 @@
    "y": null,
    "linked": false,
    "r": 10.8,
-   "color": "g-green",
+   "color": "g-ochre",
    "degree": 0
   },
   {
@@ -1048,7 +1048,7 @@
    "y": 1324.1,
    "linked": true,
    "r": 10.8,
-   "color": "g-green",
+   "color": "g-ochre",
    "degree": 1,
    "lx": 794.8,
    "ly": 1329.1,
@@ -1093,7 +1093,7 @@
    "y": null,
    "linked": false,
    "r": 10.8,
-   "color": "g-green",
+   "color": "g-ochre",
    "degree": 0
   },
   {
@@ -1142,6 +1142,20 @@
    "linked": false,
    "r": 10.8,
    "color": "c0",
+   "degree": 0
+  },
+  {
+   "name": "Kim-Hung Le",
+   "name_vi": "Lê Kim Hùng",
+   "url": "professors/kim-hung-le/",
+   "group": "UIT",
+   "id": "kim-hung-le",
+   "papers": 1,
+   "x": null,
+   "y": null,
+   "linked": false,
+   "r": 10.8,
+   "color": "g-ochre",
    "degree": 0
   },
   {
@@ -1259,7 +1273,7 @@
    "y": null,
    "linked": false,
    "r": 10.8,
-   "color": "g-ochre",
+   "color": "g-green",
    "degree": 0
   },
   {
@@ -1416,6 +1430,20 @@
    "lx": 544.8,
    "ly": 1425.1,
    "anchor": "start"
+  },
+  {
+   "name": "Trung Thanh Nguyen",
+   "name_vi": "Nguyễn Trung Thành",
+   "url": "professors/trung-thanh-nguyen/",
+   "group": "NEU",
+   "id": "trung-thanh-nguyen",
+   "papers": 1,
+   "x": null,
+   "y": null,
+   "linked": false,
+   "r": 10.8,
+   "color": "c0",
+   "degree": 0
   },
   {
    "name": "Van Duc Nguyen",
@@ -2503,15 +2531,15 @@
    "color": "c-blue"
   },
   {
+   "label": "UIT",
+   "color": "g-ochre"
+  },
+  {
    "label": "HCMUS",
    "color": "c-cyan"
   },
   {
    "label": "VNU-UET",
-   "color": "g-ochre"
-  },
-  {
-   "label": "UIT",
    "color": "g-green"
   },
   {
@@ -2535,6 +2563,6 @@
    "color": "c0"
   }
  ],
- "papers": 384,
+ "papers": 386,
  "shared": 91
 }

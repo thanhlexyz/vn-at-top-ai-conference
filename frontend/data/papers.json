@@ -5767,6 +5767,55 @@
   "year": 2026,
   "venue": "icml",
   "venue_name": "ICML",
+  "title": "Tuning-Free One-Class Discriminant Learning for Tabular Anomaly Detection",
+  "ai_key": "icml-2026-tuningfreeoneclassdiscriminantlearningfo",
+  "url": "https://openreview.net/forum?id=3vezZKhyoS",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Xuan-Ha Nguyen, Vu Nguyen Thai Duong, Nguyen Van Hoi, Kim-Hung Le, Nhien-An Le-Khac",
+  "match": "OpenReview profile",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "kim-hung-le",
+    "name": "Kim-Hung Le",
+    "name_vi": "Lê Kim Hùng"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Xuan-Ha Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Vu Nguyen Thai Duong",
+    "slug": ""
+   },
+   {
+    "name": "Nguyen Van Hoi",
+    "slug": ""
+   },
+   {
+    "name": "Kim-Hung Le",
+    "slug": "kim-hung-le"
+   },
+   {
+    "name": "Nhien-An Le-Khac",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "icml",
+  "venue_name": "ICML",
   "title": "Variance Driven Exploration: A Provable and Efficient Methodology for Pure Exploration in Highly Stochastic Environments",
   "ai_key": "icml-2026-variancedrivenexplorationaprovableandeff",
   "url": "https://openreview.net/forum?id=34cmbsgpT5",
@@ -17526,6 +17575,43 @@
    },
    {
     "name": "Hung Bui",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2020,
+  "venue": "ijcai",
+  "venue_name": "IJCAI",
+  "title": "Approximate Pareto Set for Fair and Efficient Allocation: Few Agent Types or Few Resource Types",
+  "ai_key": "ijcai-2020-approximateparetosetforfairandefficienta",
+  "url": "https://www.ijcai.org/proceedings/2020/41",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Trung Thanh Nguyen, Jörg Rothe",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "trung-thanh-nguyen",
+    "name": "Trung Thanh Nguyen",
+    "name_vi": "Nguyễn Trung Thành"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Trung Thanh Nguyen",
+    "slug": "trung-thanh-nguyen"
+   },
+   {
+    "name": "Jörg Rothe",
     "slug": ""
    }
   ]

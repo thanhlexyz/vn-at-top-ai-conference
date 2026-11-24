@@ -231,7 +231,7 @@ other = "Hạng trước {{ .Base }}: {{ .Rank }}"
 [rank_new]
 other = "Mới vào danh sách nhờ {{ .Base }}"
 [rank_note]
-other = "<span class=\"rk up\">&#9650;</span> / <span class=\"rk down\">&#9660;</span> số bậc tăng hoặc giảm sau kết quả {{ .Base }}; <span class=\"rk new\">&#10022;</span> mới vào danh sách."
+other = "<span class=\"rk up\">&#9650;</span> / <span class=\"rk down\">&#9660;</span> số bậc tăng hoặc giảm sau kết quả {{ .Base }}; <span class=\"rk new\"></span> mới vào danh sách."
 [home_score_callout]
 other = "<strong>Cách tính điểm:</strong> Điểm số được tính theo phương pháp hiệu chỉnh của <a href=\"https://csrankings.org/\">CSRankings</a>: mỗi bài báo được nhận có giá trị <strong>1 chia cho tổng số tác giả</strong> (1/N). Điểm của mỗi giảng viên là tổng điểm đóng góp từ các bài báo của mình (ví dụ: bài có 4 tác giả đóng góp 0,25 điểm; bài có 10 tác giả đóng góp 0,1 điểm)."
 [cols_hidden]

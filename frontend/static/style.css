@@ -328,7 +328,8 @@ a.tag-link { color: inherit ; text-decoration: none ; }
 .rk { font-size: 0.78em ; font-weight: 600 ; white-space: nowrap ; margin-left: 0.25em ; font-variant-numeric: tabular-nums ; }
 .rk.up { color: #2e8b57 ; }
 .rk.down { color: #e34948 ; }
-.rk.new { color: #2a78d6 ; }
+/* new to the list: the Japanese beginner mark (shoshinsha), yellow and green */
+.rk.new { display: inline-block ; width: 0.75em ; height: 1em ; vertical-align: -0.12em ; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 26'%3E%3Cpath d='M1 1 L10 7 L10 25 L1 19 Z' fill='%23f5c400' stroke='%23ffffff' stroke-width='1.2'/%3E%3Cpath d='M19 1 L10 7 L10 25 L19 19 Z' fill='%2321a052' stroke='%23ffffff' stroke-width='1.2'/%3E%3C/svg%3E") no-repeat center / contain ; }
 /* long tables, one page of rows at a time (site.js) */
 tr.off-page { display: none ; }
 .pager { display: flex ; flex-wrap: wrap ; justify-content: center ; gap: 0.3em ; margin: 0.8em 0 ; }

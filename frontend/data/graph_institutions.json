@@ -171,14 +171,14 @@
    "url": "institutions/uit/",
    "group": "roster",
    "id": "uit",
-   "papers": 14,
+   "papers": 15,
    "x": 670.1,
    "y": 508.9,
    "linked": true,
-   "r": 15.7,
+   "r": 16.0,
    "color": "c1",
    "degree": 3,
-   "lx": 689.8,
+   "lx": 690.1,
    "ly": 513.9,
    "anchor": "start"
   },
@@ -231,6 +231,24 @@
    "degree": 1,
    "lx": 557.3,
    "ly": 170.2,
+   "anchor": "start"
+  },
+  {
+   "name": "NEU",
+   "name_vi": "NEU",
+   "full": "National Economics University",
+   "url": "institutions/neu/",
+   "group": "roster",
+   "id": "neu",
+   "papers": 2,
+   "x": 452.3,
+   "y": 70.0,
+   "linked": true,
+   "r": 11.5,
+   "color": "c1",
+   "degree": 1,
+   "lx": 467.8,
+   "ly": 75.0,
    "anchor": "start"
   },
   {
@@ -412,24 +430,6 @@
    "r": 10.8,
    "color": "c1",
    "degree": 0
-  },
-  {
-   "name": "NEU",
-   "name_vi": "NEU",
-   "full": "National Economics University",
-   "url": "institutions/neu/",
-   "group": "roster",
-   "id": "neu",
-   "papers": 1,
-   "x": 452.3,
-   "y": 70.0,
-   "linked": true,
-   "r": 10.8,
-   "color": "c1",
-   "degree": 1,
-   "lx": 467.1,
-   "ly": 75.0,
-   "anchor": "start"
   },
   {
    "name": "QNU",
@@ -938,6 +938,6 @@
    "color": "c2"
   }
  ],
- "papers": 384,
+ "papers": 386,
  "shared": 94
 }
