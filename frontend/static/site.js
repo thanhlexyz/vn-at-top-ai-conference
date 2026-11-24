@@ -363,3 +363,11 @@
 			"&body=" + encodeURIComponent(form.elements.body.value + "\n\n" + location.href);
 	});
 })();
+
+// Phones: the page menu is one strip that scrolls sideways; start it at the current page.
+(function () {
+	var strip = document.querySelector("nav .links"), current = strip && strip.querySelector("a.current");
+	if (strip && current && strip.scrollWidth > strip.clientWidth) {
+		strip.scrollLeft = Math.max(0, current.offsetLeft - strip.offsetLeft - 16);
+	}
+})();
