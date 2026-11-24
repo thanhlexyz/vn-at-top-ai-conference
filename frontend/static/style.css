@@ -39,6 +39,14 @@ table.collapsed .xcol, table.collapsed [data-extra] { display: none ; }
 .more-columns[aria-expanded="true"]::before { content: "\2212  " ; }
 .more-columns:hover { text-decoration: underline ; }
 .more-columns:focus-visible { outline: 2px solid var(--link) ; outline-offset: 2px ; }
+/* Candidates page (local): the later tasks are a checklist, each line opening to its table */
+ul.todo { list-style: none ; padding-left: 0 ; }
+ul.todo > li { margin: 0.35em 0 ; }
+ul.todo summary { cursor: pointer ; list-style: none ; }
+ul.todo summary::-webkit-details-marker { display: none ; }
+ul.todo summary:hover { text-decoration: underline ; }
+ul.todo summary::before { content: "\2610\00a0" ; }
+ul.todo details[open] > summary { margin-bottom: 0.5em ; }
 /* front page: professors with no accepted paper open with the button under the table (site.js) */
 table.rows-collapsed tr.more-row { display: none ; }
 .rows-tools { justify-content: flex-start ; }

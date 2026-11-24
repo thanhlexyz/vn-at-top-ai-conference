@@ -28,14 +28,14 @@ import sys
 import urllib.parse
 
 from common import (with_pdf_affiliations, ACCEPTED, BACKEND, CANDIDATES, FIRST_YEAR, OPENREVIEW_RAW, PARENT, ROSTER, ROSTER_FIELDS, VENUE_KEYS,
-                    VENUE_NAME, load_roster, name_key, norm_name, read_csv, read_jsonl_gz, slugify, vn_institution,
+                    VENUE_NAME, load_roster, name_key, norm_name, post_class, read_csv, read_jsonl_gz, slugify, vn_institution,
                     vn_institutions,
                     write_csv)
 
 EVIDENCE_FIELDS = ["papers", "senior_author", "first_year", "last_year", "venues", "at_university",
                    "faculty_page", "faculty_rank", "faculty_match",
                    "affiliations", "openreview_position", "sample_paper", "sample_url", "first_paper", "first_url",
-                   "openreview_url", "openreview_match"]
+                   "openreview_url", "openreview_match", "openreview_class"]
 PROFILES = OPENREVIEW_RAW / "_candidates.json"  # written by fetch_openreview.py --candidates
 FACULTY = BACKEND / "faculty.csv"  # hand-kept: names and titles copied from the universities' faculty pages
 MATCH_ORDER = {"exact": 0, "likely": 1, "possible": 2}
@@ -68,6 +68,22 @@ def faculty_match(forms, institutions, faculty):
             if best is None or MATCH_ORDER[quality] < MATCH_ORDER[best[1]]:
                 best = (row, quality)
     return best
+
+
+def profile_class(mine):
+    """What the profiles that are surely theirs say about the person today: 'staff' (a lecturer or higher at a
+    university in Vietnam), 'researcher', 'other', 'student', or 'left' when the post there has ended. A person
+    with no profile found has no class, and is never hidden. Staff wins over everything: a doubtful match must not
+    hide a lecturer."""
+    found = set()
+    for p in mine:
+        # every post in Vietnam counts when the lookup kept them all: a lecturer who is also a PhD student is staff
+        for post in p.get("posts") or [p]:
+            found.add("left" if post.get("end") is not None else post_class(post.get("position")) or "other")
+    for c in ("staff", "researcher", "other", "student", "left"):
+        if c in found:
+            return c
+    return ""
 
 
 def find(accepted, roster):
@@ -127,12 +143,15 @@ def find(accepted, roster):
             # still at VinAI, and goes to the Not tracked page
             "at_university": "yes" if uni else "no",
             "affiliations": " | ".join(a for a, _ in c["raw"].most_common(3)),
+            # only the profiles that are theirs (a post at an institution named on their papers): a name search
+            # also returns namesakes, whose posts have no place in this public file
             "openreview_position": "; ".join(
-                f"{p['id']}: {p.get('position') or '?'} at {p.get('institution') or '?'}" for p in prof),
+                f"{p['id']}: {p.get('position') or '?'} at {p.get('institution') or '?'}" for p in mine),
             "sample_paper": f"{latest[2]} ({VENUE_NAME[latest[0]]} {latest[1]})", "sample_url": c["papers"][latest],
             "openreview_url": f"https://openreview.net/profile?id={mine[0]['id']}" if len(mine) == 1 else
             "https://openreview.net/search?" + urllib.parse.urlencode(
                 {"term": names[0], "group": "all", "content": "all", "source": "all"}),
+            "openreview_class": profile_class(mine),
             "openreview_match": "profile" if len(mine) == 1 else f"{len(mine)} profiles at the institution" if mine
             else "search",
             "first_paper": f"{oldest[2]} ({VENUE_NAME[oldest[0]]} {oldest[1]})", "first_url": c["papers"][oldest],

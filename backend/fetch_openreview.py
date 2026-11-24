@@ -186,7 +186,7 @@ def lookup_candidates(v2, limit):
     for row in [r for r in read_csv(CANDIDATES) if r.get("at_university") == "yes"][:limit]:
         names = [row["display_name"], *[v.strip() for v in row["name_variants"].split(";") if v.strip()]]
         key = name_key(names[0])
-        if key in found:
+        if key in found and all("posts" in h for h in found[key]):   # looked up before posts were kept: again
             continue
         hits = {}
         for name in names:
@@ -194,8 +194,11 @@ def lookup_candidates(v2, limit):
                 s = profile_summary(p)
                 post = vietnam_post(s)
                 if post:
+                    # every post in Vietnam is kept: a lecturer who is also a PhD student must not look like a student
+                    posts = [{k: h[k] for k in ("position", "institution", "start", "end")} for h in s["history"]
+                             if vn_institution(h["institution"]) or h["domain"].endswith(".vn")]
                     hits[p.id] = {"id": p.id, "position": post["position"], "institution": post["institution"],
-                                  "start": post["start"], "end": post["end"]}
+                                  "start": post["start"], "end": post["end"], "posts": posts}
             time.sleep(0.5)
         found[key] = list(hits.values())
         print(f"  {names[0]}: " + ("; ".join(f"{h['id']} {h['position']} at {h['institution']}" for h in hits.values())

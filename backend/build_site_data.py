@@ -32,8 +32,8 @@ import urllib.parse
 
 from common import (with_pdf_affiliations, ACCEPTED, DECISION_DATES, BACKEND, CANDIDATES, FRONTEND, LAST_YEAR, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
                     STATUS_LABEL, VENUE_GROUPS, VENUE_KEYS, VENUE_NAME, VENUES, WORK, YEARS, classify_status, held, in_vietnam,
-                    load_roster, name_key, norm_name, norm_title, openreview_venue, presentation, read_csv,
-                    read_jsonl_gz, same_institution, slugify, vn_institutions, write_json)
+                    load_roster, name_key, norm_name, norm_title, openreview_venue, post_class, presentation, read_csv,
+                    read_jsonl_gz, same_institution, slugify, token_key, vn_institutions, write_json)
 
 DATA = FRONTEND / "data"
 CONTENT = FRONTEND / "content"
@@ -1418,6 +1418,7 @@ def main():
     # people whose papers name no university (VinAI, FPT, Vingroup, Viettel...) are not lecturers or
     # professors, so they go to the Not tracked page instead of waiting as candidates
     found = [{**c, "papers": int(c["papers"]), "senior_author": int(c["senior_author"])} for c in read_csv(CANDIDATES)]
+    candidate_rows = found   # `found` is reused further down
     # people whose only papers are at NeurIPS 2026: that year's papers are not on OpenReview yet, so the
     # profile behind the name cannot be checked; they wait on the Not tracked page until they can be
     def neurips_2026_only(c):
@@ -1426,6 +1427,19 @@ def main():
     candidates = [c for c in found if c["at_university"] == "yes" and not neurips_2026_only(c)]
     companies = [c for c in found if c["at_university"] != "yes"]
     unconfirmed = [c for c in found if c["at_university"] == "yes" and neurips_2026_only(c)]
+    # possible staff (scan_openalex.py --leads) go to the top of the Candidates page. A profile on the roster, approved
+    # or not, has been decided; a name shared with a roster person is only a note. A student (by the OpenReview post)
+    # is not shown, unless a faculty page or a last-author paper says otherwise.
+    roster_ids = {i for p in roster for i in p["openreview_ids"]}
+    leads = [r for r in (read_csv(BACKEND / "staff_leads.csv") if (BACKEND / "staff_leads.csv").exists() else [])
+             if r["openreview_id"] not in roster_ids]
+    def student(c):
+        return c.get("openreview_class") == "student" and not c["faculty_page"] and not int(c["senior_author"])
+    students = [c for c in candidates if student(c)]
+    candidates = [c for c in candidates if not student(c)]
+    looked_up = json.loads((OPENREVIEW_RAW / "_candidates.json").read_text(encoding="utf-8")) \
+        if (OPENREVIEW_RAW / "_candidates.json").exists() else {}
+    lookup_pending = sum(1 for c in candidate_rows if c["at_university"] == "yes" and name_key(c["display_name"]) not in looked_up)
     shown = candidates[:MAX_CANDIDATES_ON_SITE]
     waiting = [{"name": p["name"], "institution": p["institution_short"], "to_confirm": p["to_confirm"]}
                for p in roster if p["approved"] != "yes" and p["approved"] != "no"]
@@ -1459,7 +1473,9 @@ def main():
     on_roster = {i for p in roster for i in p["openreview_ids"]}
     attempted = [{**r, "not_accepted": int(r["not_accepted"])} for r in read_csv(BACKEND / "iclr_only.csv")
                  if r["openreview_id"] not in on_roster and not set(r["openreview_id"].split(";")) & on_roster]
-    write_json(DATA / "attempted.json", {"people": attempted})
+    students_attempted = [r for r in attempted if post_class(r["position"]) == "student"]
+    attempted = [r for r in attempted if post_class(r["position"]) != "student"]
+    write_json(DATA / "attempted.json", {"people": attempted, "students_hidden": len(students_attempted)})
     now = datetime.datetime.now(datetime.timezone.utc)  # UTC, so the data does not show where it was built
     write_json(DATA / "professors.json", professors)
     write_json(DATA / "institutions.json", institutions)
@@ -1576,7 +1592,47 @@ def main():
          for k, f in foreign.items() if len(f["papers"]) > FOREIGN_MIN_PAPERS),
         key=lambda f: (-f["papers"], f["name"]))
     write_json(DATA / "international.json", international)
+    # one list of people to decide about, from the three places a lecturer turns up: the AAAI/IJCAI scan, an
+    # accepted paper that names a university (with a staff post on OpenReview), and an ICLR record (find_iclr_only.py)
+    def ids(text):
+        return {i for i in re.split(r"[;,\s]+", text or "") if i}
+    to_validate, seen_ids, seen_names = [], set(), set()
+    def add(row, profile_ids):
+        key = token_key(row["name"])
+        if profile_ids & seen_ids or (not profile_ids and key in seen_names) or profile_ids & roster_ids:
+            return
+        seen_ids.update(profile_ids)
+        seen_names.add(key)
+        to_validate.append(row)
+    for r in leads:
+        add({"name": r["name"], "profile": f"https://openreview.net/profile?id={r['openreview_id']}", "post": r["post"],
+             "evidence": r["papers"], "paper_url": r["paper_url"], "flag": r["note"], "source": "AAAI/IJCAI scan",
+             "weight": len(r["papers"].split("; "))}, {r["openreview_id"]})
+    for c in candidates:
+        if c.get("openreview_class") == "staff":
+            staff_posts = [x for x in c["openreview_position"].split("; ") if post_class(x.split(": ", 1)[-1]) == "staff"]
+            add({"name": c["display_name"], "profile": c["openreview_url"], "post": "; ".join(staff_posts),
+                 "evidence": f"{c['venues']} ({c['papers']} accepted)", "paper_url": c["sample_url"],
+                 "flag": "" if c["openreview_match"] == "profile" else c["openreview_match"],
+                 "source": "accepted paper", "weight": int(c["papers"])}, ids(c["openreview_ids"]))
+    for r in attempted:
+        if r.get("faculty") == "yes":
+            add({"name": r["name"], "profile": r["profile"], "post": f"{r['position']} at {r['institution']}",
+                 "evidence": f"ICLR {r['years']}: {r['not_accepted']} not accepted", "paper_url": r["sample_url"],
+                 "flag": f"same name on an accepted paper: {r['same_name_accepted']}" if r["same_name_accepted"] else "",
+                 "source": "ICLR record", "weight": int(r["not_accepted"])}, ids(r["openreview_id"]))
+    # papers: accepted main-track papers that name a university in Vietnam (candidates.csv), or the scan's count
+    accepted_by_name = {token_key(c["display_name"]): int(c["papers"]) for c in candidate_rows}
+    for r in to_validate:
+        r["papers"] = max(accepted_by_name.get(token_key(r["name"]), 0), r["weight"] if r["source"] != "ICLR record" else 0)
+    to_validate.sort(key=lambda r: (-r["papers"], r["name"]))
+    shown = [c for c in candidates if token_key(c["display_name"]) not in seen_names
+             and not ids(c["openreview_ids"]) & seen_ids][:MAX_CANDIDATES_ON_SITE]
+    counts = collections.Counter(c.get("openreview_class") or "" for c in candidates)
     write_json(DATA / "candidates.json", {"people": shown, "total": len(candidates), "review": pending,
+                                         "to_validate": to_validate, "students_hidden": len(students),
+                                         "researchers": counts["researcher"], "left": counts["left"],
+                                         "lookup_pending": lookup_pending,
                                          "waiting": waiting, "excluded": excluded, "foreign": foreign_coauthors,
                                          "companies": companies, "unconfirmed": unconfirmed,
                                          # hand-kept: faculty in Vietnam known in the press as AI/ML pioneers

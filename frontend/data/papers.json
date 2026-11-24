@@ -1630,6 +1630,59 @@
   "year": 2026,
   "venue": "neurips",
   "venue_name": "NeurIPS",
+  "title": "AeroChem: Closed-loop Physics-Informed State Space Modeling for Long-term Chemically-Reactive Air Quality Forecasting",
+  "ai_key": "neurips-2026-aerochemclosedloopphysicsinformedstatesp",
+  "url": "https://openreview.net/forum?id=K8qavlGl1B",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Kien Le Trung, Tung Kieu, Dinh Duc Nha Nguyen, Cuong Do, Bin Yang, Phi Long Nguyen",
+  "match": "OpenReview profile",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "cuong-do",
+    "name": "Cuong Do",
+    "name_vi": "Đỗ Danh Cường"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Kien Le Trung",
+    "slug": ""
+   },
+   {
+    "name": "Tung Kieu",
+    "slug": ""
+   },
+   {
+    "name": "Dinh Duc Nha Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Cuong Do",
+    "slug": "cuong-do"
+   },
+   {
+    "name": "Bin Yang",
+    "slug": ""
+   },
+   {
+    "name": "Phi Long Nguyen",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "neurips",
+  "venue_name": "NeurIPS",
   "title": "BECON: Belief-Conditioned Constrained Multi-Objective Reinforcement Learning under Drifting Preferences and Budgets",
   "ai_key": "neurips-2026-beconbeliefconditionedconstrainedmultiob",
   "url": "https://openreview.net/forum?id=NKKhc57p17",
@@ -8629,6 +8682,55 @@
   "year": 2026,
   "venue": "aaai",
   "venue_name": "AAAI",
+  "title": "DEGRE: Dynamic Gating Ensembles for Trust-Aware Rejection in Medical Image Diagnostics",
+  "ai_key": "aaai-2026-degredynamicgatingensemblesfortrustaware",
+  "url": "https://ojs.aaai.org/index.php/AAAI/article/view/42473",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Hai Nguyen Hong, Duong Bach, Nam Phan, Cuong V. Nguyen, Cuong Do",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "cuong-do",
+    "name": "Cuong Do",
+    "name_vi": "Đỗ Danh Cường"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Hai Nguyen Hong",
+    "slug": ""
+   },
+   {
+    "name": "Duong Bach",
+    "slug": ""
+   },
+   {
+    "name": "Nam Phan",
+    "slug": ""
+   },
+   {
+    "name": "Cuong V. Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Cuong Do",
+    "slug": "cuong-do"
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "aaai",
+  "venue_name": "AAAI",
   "title": "GloCTM: Cross-Lingual Topic Modeling via a Global Context Space",
   "ai_key": "aaai-2026-gloctmcrosslingualtopicmodelingviaagloba",
   "url": "https://ojs.aaai.org/index.php/AAAI/article/view/40549",
@@ -13381,6 +13483,47 @@
   "year": 2024,
   "venue": "eccv",
   "venue_name": "ECCV",
+  "title": "Deep Polarization Cues for Single-shot Shape and Subsurface Scattering Estimation",
+  "ai_key": "eccv-2024-deeppolarizationcuesforsingleshotshapean",
+  "url": "https://eccv.ecva.net/virtual/2024/poster/2394",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "chenhao li, Trung Thanh Ngo, Hajime Nagahara",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "trung-thanh-ngo",
+    "name": "Trung Thanh Ngo",
+    "name_vi": "Ngô Thành Trung"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "chenhao li",
+    "slug": ""
+   },
+   {
+    "name": "Trung Thanh Ngo",
+    "slug": "trung-thanh-ngo"
+   },
+   {
+    "name": "Hajime Nagahara",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2024,
+  "venue": "eccv",
+  "venue_name": "ECCV",
   "title": "Flatness-aware Sequential Learning Generates Resilient Backdoors",
   "ai_key": "eccv-2024-flatnessawaresequentiallearninggenerates",
   "url": "https://eccv.ecva.net/virtual/2024/poster/2333",
@@ -13754,6 +13897,55 @@
    },
    {
     "name": "Minh Hoai",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2024,
+  "venue": "cvpr",
+  "venue_name": "CVPR",
+  "title": "Efficiently Assemble Normalization Layers and Regularization for Federated Domain Generalization",
+  "ai_key": "cvpr-2024-efficientlyassemblenormalizationlayersan",
+  "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Le_Efficiently_Assemble_Normalization_Layers_and_Regularization_for_Federated_Domain_Generalization_CVPR_2024_paper.html",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Khiem Le, Tuan Long Ho, Cuong Do, Danh Le-Phuoc, KOK SENG WONG",
+  "match": "name, confirmed by hand",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "cuong-do",
+    "name": "Cuong Do",
+    "name_vi": "Đỗ Danh Cường"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Khiem Le",
+    "slug": ""
+   },
+   {
+    "name": "Tuan Long Ho",
+    "slug": ""
+   },
+   {
+    "name": "Cuong Do",
+    "slug": "cuong-do"
+   },
+   {
+    "name": "Danh Le-Phuoc",
+    "slug": ""
+   },
+   {
+    "name": "KOK SENG WONG",
     "slug": ""
    }
   ]
@@ -15206,6 +15398,47 @@
    },
    {
     "name": "Minh Hoai",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2023,
+  "venue": "cvpr",
+  "venue_name": "CVPR",
+  "title": "Inverse Rendering of Translucent Objects Using Physical and Neural Renderers",
+  "ai_key": "cvpr-2023-inverserenderingoftranslucentobjectsusin",
+  "url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Li_Inverse_Rendering_of_Translucent_Objects_Using_Physical_and_Neural_Renderers_CVPR_2023_paper.pdf",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Chenhao Li, Trung Thanh Ngo, Hajime Nagahara",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "trung-thanh-ngo",
+    "name": "Trung Thanh Ngo",
+    "name_vi": "Ngô Thành Trung"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Chenhao Li",
+    "slug": ""
+   },
+   {
+    "name": "Trung Thanh Ngo",
+    "slug": "trung-thanh-ngo"
+   },
+   {
+    "name": "Hajime Nagahara",
     "slug": ""
    }
   ]

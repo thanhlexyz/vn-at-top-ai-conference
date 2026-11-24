@@ -257,6 +257,28 @@ def vn_institutions(affiliation):
     return found
 
 
+# What an OpenReview position title says about a person. A student is never suggested as someone to track; staff
+# (lecturer or higher) is who the maintainer decides about; a researcher or postdoc is neither.
+_STUDENT_POST = re.compile(r"student|intern\b|undergrad|bachelor|\bms\b|master|phd candidate|research assistant|trainee|"
+                           r"apprentice", re.I)
+_STAFF_POST = re.compile(r"lecturer|professor|instructor|faculty|dean\b|head\b|director|chair\b|teacher|rector|giảng viên", re.I)
+_RESEARCH_POST = re.compile(r"research|scientist|postdoc|engineer|fellow", re.I)
+
+
+def token_key(name):
+    """A name as its sorted words without accents, so that 'Tran Anh Tuan' and 'Tuan-Anh Tran' are the same name."""
+    return tuple(sorted(re.findall(r"[a-z]+", strip_accents(name or "").lower())))
+
+
+def post_class(position):
+    """'student', 'staff', 'researcher' or '' for the position title of an OpenReview history entry."""
+    if _STUDENT_POST.search(position or ""):
+        return "student"
+    if _STAFF_POST.search(position or ""):
+        return "staff"
+    return "researcher" if _RESEARCH_POST.search(position or "") else ""
+
+
 def vn_institution(affiliation):
     """The first Vietnamese institution in an affiliation string, or None if there is none."""
     found = vn_institutions(affiliation)

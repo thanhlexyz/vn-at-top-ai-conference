@@ -2,79 +2,13 @@
  "people": [
   {
    "approved": "",
-   "display_name": "Hoang Thanh-Tung",
-   "name_variants": "Thanh Tung Hoang",
-   "institution": "VNU University of Engineering and Technology",
-   "institution_short": "VNU-UET",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "hoang-thanh-tung",
-   "name_vi": "",
-   "papers": 3,
-   "senior_author": 1,
-   "first_year": "2025",
-   "last_year": "2025",
-   "venues": "ICLR 1, ICCV 1, AAAI 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "Vietnam National University - University of Engineering and Technology | VNU University of Engineering and Technology | VNU University of Engineering and Technology, Vietnam",
-   "openreview_position": "",
-   "sample_paper": "Wicked Oddities: Selectively Poisoning for Effective Clean-Label Backdoor Attacks (ICLR 2025)",
-   "sample_url": "https://openreview.net/forum?id=1Z3C49JQVf",
-   "first_paper": "Guiding Noisy Label Conditional Diffusion Models with Score-based Discriminator Correction (ICCV 2025)",
-   "first_url": "https://iccv.thecvf.com/virtual/2025/poster/1482",
-   "openreview_url": "https://openreview.net/search?term=Hoang+Thanh-Tung&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Van-Dinh Nguyen",
-   "name_variants": "Nguyen Van Dinh",
-   "institution": "VinUniversity",
-   "institution_short": "VinUni",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "van-dinh-nguyen",
-   "name_vi": "",
-   "papers": 3,
-   "senior_author": 1,
-   "first_year": "2024",
-   "last_year": "2026",
-   "venues": "ECCV 2, AAAI 1",
-   "at_university": "yes",
-   "faculty_page": "Nguyen Van Dinh (VinUni)",
-   "faculty_rank": "Affiliate or visiting",
-   "faculty_match": "exact",
-   "affiliations": "Vinuniversity | Faculty of Information Science and Engineering, University of Information Technology, Ho Chi Minh City, Vietnam; Vietnam National University, Ho Chi Minh City, Vietnam",
-   "openreview_position": "",
-   "sample_paper": "ViDia2Std: A Parallel Corpus and Methods for Low-Resource Vietnamese Dialect-to-Standard Translation (AAAI 2026)",
-   "sample_url": "https://ojs.aaai.org/index.php/AAAI/article/view/40247",
-   "first_paper": "HPE-Li: WiFi-enabled Lightweight Dual Selective Kernel Convolution for Human Pose Estimation (ECCV 2024)",
-   "first_url": "https://eccv.ecva.net/virtual/2024/poster/1708",
-   "openreview_url": "https://openreview.net/search?term=Van-Dinh+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
    "display_name": "Minh-Duong Nguyen",
    "name_variants": "",
    "institution": "VinUniversity",
    "institution_short": "VinUni",
-   "rank": "",
+   "rank": "Postdoc",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~Duong_Minh_Nguyen1",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -91,46 +25,14 @@
    "faculty_rank": "",
    "faculty_match": "",
    "affiliations": "VinUniversity | CAIR, VinUniversity",
-   "openreview_position": "",
+   "openreview_position": "~Duong_Minh_Nguyen1: Postdoc at VinUniversity",
    "sample_paper": "Trajectory-Matching Meta Pseudo-Labeling for Semi-Supervised Learning (NeurIPS 2026)",
    "sample_url": "https://openreview.net/forum?id=w4z8ShoMu5",
    "first_paper": "Computation and Communication Efficient Federated Unlearning via On-server Gradient Conflict Mitigation and Expression (CVPR 2026)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Nguyen_Computation_and_Communication_Efficient_Federated_Unlearning_via_On-server_Gradient_Conflict_CVPR_2026_paper.html",
-   "openreview_url": "https://openreview.net/search?term=Minh-Duong+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Minh-Phuc Truong",
-   "name_variants": "",
-   "institution": "Hanoi University of Science and Technology",
-   "institution_short": "HUST",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "minh-phuc-truong",
-   "name_vi": "",
-   "papers": 3,
-   "senior_author": 0,
-   "first_year": "2025",
-   "last_year": "2026",
-   "venues": "NeurIPS 1, EMNLP 2",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "Hanoi University of Science and Technology | Ha Noi University of Science and Technology",
-   "openreview_position": "",
-   "sample_paper": "SUGAR: Spectral and Geometry-Aware Alignment for Matryoshka Representation Distillation (EMNLP 2026)",
-   "sample_url": "https://aclanthology.org/2026.emnlp-main.228/",
-   "first_paper": "EMO: Embedding Model Distillation via Intra-Model Relation and Optimal Transport Alignments (EMNLP 2025)",
-   "first_url": "https://aclanthology.org/2025.emnlp-main.385/",
-   "openreview_url": "https://openreview.net/search?term=Minh-Phuc+Truong&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~Duong_Minh_Nguyen1",
+   "openreview_match": "profile",
+   "openreview_class": "researcher"
   },
   {
    "approved": "",
@@ -138,9 +40,9 @@
    "name_variants": "",
    "institution": "Hanoi University of Science and Technology",
    "institution_short": "HUST",
-   "rank": "",
+   "rank": "Undergrad student",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~Pham_Khanh_Chi1",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -157,46 +59,14 @@
    "faculty_rank": "",
    "faculty_match": "",
    "affiliations": "Hanoi University of Science and Technology",
-   "openreview_position": "",
+   "openreview_position": "~Pham_Khanh_Chi1: Undergrad student at Hanoi University of Science and Technology",
    "sample_paper": "TALAS: Teacher-Anchored Layer Alignment with Adaptive Sharpness-Aware Minimization for Embedding Distillation (ACL 2026)",
    "sample_url": "https://aclanthology.org/2026.acl-long.1509/",
    "first_paper": "MTA: Multi-Granular Trajectory Alignment for Large Language Model Distillation (ACL 2026)",
    "first_url": "https://aclanthology.org/2026.acl-long.1507/",
-   "openreview_url": "https://openreview.net/search?term=Pham+Khanh+Chi&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Quoc Phong Dao",
-   "name_variants": "",
-   "institution": "Hanoi University of Science and Technology",
-   "institution_short": "HUST",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "quoc-phong-dao",
-   "name_vi": "",
-   "papers": 3,
-   "senior_author": 0,
-   "first_year": "2026",
-   "last_year": "2026",
-   "venues": "ACL 3",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "Hanoi University of Science and Technology",
-   "openreview_position": "",
-   "sample_paper": "TALAS: Teacher-Anchored Layer Alignment with Adaptive Sharpness-Aware Minimization for Embedding Distillation (ACL 2026)",
-   "sample_url": "https://aclanthology.org/2026.acl-long.1509/",
-   "first_paper": "MTA: Multi-Granular Trajectory Alignment for Large Language Model Distillation (ACL 2026)",
-   "first_url": "https://aclanthology.org/2026.acl-long.1507/",
-   "openreview_url": "https://openreview.net/search?term=Quoc+Phong+Dao&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~Pham_Khanh_Chi1",
+   "openreview_match": "profile",
+   "openreview_class": "left"
   },
   {
    "approved": "",
@@ -204,9 +74,9 @@
    "name_variants": "",
    "institution": "Hanoi University of Science and Technology",
    "institution_short": "HUST",
-   "rank": "",
+   "rank": "MS student",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~Tuan_Dung_Nguyen2",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -223,13 +93,14 @@
    "faculty_rank": "Lecturer with PhD",
    "faculty_match": "exact",
    "affiliations": "School of Information and Communication Technology, Hanoi University of Science and Technology | Hanoi University of Science and Technology; Australian Institute for Machine Learning, University of Adelaide | Hanoi University of Science and Technology",
-   "openreview_position": "",
+   "openreview_position": "~Tuan_Dung_Nguyen2: MS student at Hanoi University of Science and Technology",
    "sample_paper": "Region-Grounded Report Generation for 3D Medical Imaging: A Fine-Grained Dataset and Graph-Enhanced Framework (ACL 2026)",
    "sample_url": "https://aclanthology.org/2026.acl-long.903/",
    "first_paper": "CARER - ClinicAl Reasoning-Enhanced Representation for Temporal Health Risk Prediction (EMNLP 2024)",
    "first_url": "https://aclanthology.org/2024.emnlp-main.580/",
-   "openreview_url": "https://openreview.net/search?term=Tuan+Dung+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~Tuan_Dung_Nguyen2",
+   "openreview_match": "profile",
+   "openreview_class": "left"
   },
   {
    "approved": "",
@@ -237,9 +108,9 @@
    "name_variants": "",
    "institution": "University of Information Technology, VNU-HCM",
    "institution_short": "UIT",
-   "rank": "",
+   "rank": "Researcher",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~Kiet_Van_Nguyen1",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -256,13 +127,14 @@
    "faculty_rank": "",
    "faculty_match": "",
    "affiliations": "Faculty of Information Science and Engineering, University of Information Technology, Ho Chi Minh City, Vietnam; Vietnam National University, Ho Chi Minh City, Vietnam",
-   "openreview_position": "",
+   "openreview_position": "~Kiet_Van_Nguyen1: Researcher at University of Information Technology, VNU-HCM",
    "sample_paper": "ViDia2Std: A Parallel Corpus and Methods for Low-Resource Vietnamese Dialect-to-Standard Translation (AAAI 2026)",
    "sample_url": "https://ojs.aaai.org/index.php/AAAI/article/view/40247",
    "first_paper": "ViFactCheck: A New Benchmark Dataset and Methods for Multi-Domain News Fact-Checking In Vietnamese (AAAI 2025)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/32008",
-   "openreview_url": "https://openreview.net/search?term=Kiet+Van+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~Kiet_Van_Nguyen1",
+   "openreview_match": "profile",
+   "openreview_class": "researcher"
   },
   {
    "approved": "",
@@ -295,7 +167,8 @@
    "first_paper": "Improved Parallel Algorithm for Non-Monotone Submodular Maximization under Knapsack Constraint (IJCAI 2024)",
    "first_url": "https://www.ijcai.org/proceedings/2024/217",
    "openreview_url": "https://openreview.net/search?term=Phuong+N.+H.+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -303,9 +176,9 @@
    "name_variants": "",
    "institution": "VNU University of Engineering and Technology",
    "institution_short": "VNU-UET",
-   "rank": "",
+   "rank": "PhD student",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~Cam_Van_Thi_Nguyen1",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -322,79 +195,14 @@
    "faculty_rank": "Below PhD",
    "faculty_match": "exact",
    "affiliations": "VNU University of Engineering and Technology",
-   "openreview_position": "",
+   "openreview_position": "~Cam_Van_Thi_Nguyen1: PhD student at Univeristy of Engineering and Technology, Vietnam National University",
    "sample_paper": "BALM: A Model-Agnostic Framework for Balanced Multimodal Learning under Imbalanced Missing Rates (CVPR 2026)",
    "sample_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Nguyen_BALM_A_Model-Agnostic_Framework_for_Balanced_Multimodal_Learning_under_Imbalanced_CVPR_2026_paper.html",
    "first_paper": "Conversation Understanding using Relational Temporal Graph Neural Networks with Auxiliary Cross-Modality Interaction (EMNLP 2023)",
    "first_url": "https://aclanthology.org/2023.emnlp-main.937/",
-   "openreview_url": "https://openreview.net/search?term=Cam-Van+Thi+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Cuong Do",
-   "name_variants": "",
-   "institution": "VinUniversity",
-   "institution_short": "VinUni",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "cuong-do",
-   "name_vi": "",
-   "papers": 2,
-   "senior_author": 1,
-   "first_year": "2026",
-   "last_year": "2026",
-   "venues": "NeurIPS 1, AAAI 1",
-   "at_university": "yes",
-   "faculty_page": "Do Danh Cuong (VinUni)",
-   "faculty_rank": "Assistant Professor",
-   "faculty_match": "possible",
-   "affiliations": "VinUniversity | Smart Green Transformation Center (Green-X), VinUniversity, Ha Noi, Viet Nam; College of Engineering & Computer Science, VinUniversity, Ha Noi, Viet Nam; Smart Health Center (VISHC), VinUniversity, Ha Noi, Viet Nam",
-   "openreview_position": "",
-   "sample_paper": "DEGRE: Dynamic Gating Ensembles for Trust-Aware Rejection in Medical Image Diagnostics (AAAI 2026)",
-   "sample_url": "https://ojs.aaai.org/index.php/AAAI/article/view/42473",
-   "first_paper": "AeroChem: Closed-loop Physics-Informed State Space Modeling for Long-term Chemically-Reactive Air Quality Forecasting (NeurIPS 2026)",
-   "first_url": "https://openreview.net/forum?id=K8qavlGl1B",
-   "openreview_url": "https://openreview.net/search?term=Cuong+Do&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Duc Anh Nguyen",
-   "name_variants": "",
-   "institution": "Hanoi University of Science and Technology",
-   "institution_short": "HUST",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "duc-anh-nguyen",
-   "name_vi": "",
-   "papers": 2,
-   "senior_author": 0,
-   "first_year": "2026",
-   "last_year": "2026",
-   "venues": "EMNLP 2",
-   "at_university": "yes",
-   "faculty_page": "Nguyen Duc Anh (HUST)",
-   "faculty_rank": "Lecturer with PhD",
-   "faculty_match": "exact",
-   "affiliations": "Hanoi University of Science and Technology, Vietnam | Hanoi University of Science and Technology (HUST), Vietnam",
-   "openreview_position": "",
-   "sample_paper": "PGA-KD: Principal Geometry Alignment and Semantic Consistency for VLM2Vec Distillation (EMNLP 2026)",
-   "sample_url": "https://aclanthology.org/2026.emnlp-main.257/",
-   "first_paper": "LLM Feedback for Topic Model with Preference Optimization and Contrastive Learning (EMNLP 2026)",
-   "first_url": "https://aclanthology.org/2026.emnlp-main.265/",
-   "openreview_url": "https://openreview.net/search?term=Duc+Anh+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~Cam_Van_Thi_Nguyen1",
+   "openreview_match": "profile",
+   "openreview_class": "left"
   },
   {
    "approved": "",
@@ -402,9 +210,9 @@
    "name_variants": "",
    "institution": "Hanoi University of Science and Technology",
    "institution_short": "HUST",
-   "rank": "",
+   "rank": "Undergrad student",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~Hai_An_Vu1",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -421,13 +229,14 @@
    "faculty_rank": "",
    "faculty_match": "",
    "affiliations": "Hanoi University of Science and Technology",
-   "openreview_position": "",
+   "openreview_position": "~Hai_An_Vu1: Undergrad student at Hanoi University of Science and Technology",
    "sample_paper": "SUGAR: Spectral and Geometry-Aware Alignment for Matryoshka Representation Distillation (EMNLP 2026)",
    "sample_url": "https://aclanthology.org/2026.emnlp-main.228/",
    "first_paper": "EMO: Embedding Model Distillation via Intra-Model Relation and Optimal Transport Alignments (EMNLP 2025)",
    "first_url": "https://aclanthology.org/2025.emnlp-main.385/",
-   "openreview_url": "https://openreview.net/search?term=Hai+An+Vu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~Hai_An_Vu1",
+   "openreview_match": "profile",
+   "openreview_class": "left"
   },
   {
    "approved": "",
@@ -435,9 +244,9 @@
    "name_variants": "",
    "institution": "Hanoi University of Science and Technology",
    "institution_short": "HUST",
-   "rank": "",
+   "rank": "Undergrad student",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~Hoang_Son_Nguyen1;~Nguyen_Hoang_Son1",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -454,13 +263,14 @@
    "faculty_rank": "",
    "faculty_match": "",
    "affiliations": "Hanoi University of Science and Technology",
-   "openreview_position": "",
+   "openreview_position": "~Hoang_Son_Nguyen1: Undergrad student at Hanoi University of Science and Technology; ~Nguyen_Hoang_Son1: Undergrad student at Hanoi University of Science and Technology",
    "sample_paper": "TALAS: Teacher-Anchored Layer Alignment with Adaptive Sharpness-Aware Minimization for Embedding Distillation (ACL 2026)",
    "sample_url": "https://aclanthology.org/2026.acl-long.1509/",
    "first_paper": "SRA: Span Representation Alignment for Large Language Model Distillation (ACL 2026)",
    "first_url": "https://aclanthology.org/2026.acl-long.1522/",
    "openreview_url": "https://openreview.net/search?term=Hoang+Son+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "2 profiles at the institution",
+   "openreview_class": "left"
   },
   {
    "approved": "",
@@ -468,9 +278,9 @@
    "name_variants": "Hoang Tran Vuong",
    "institution": "Hanoi University of Science and Technology",
    "institution_short": "HUST",
-   "rank": "",
+   "rank": "Undergrad student",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~Hoang_Tran_Vuong1",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -487,46 +297,14 @@
    "faculty_rank": "",
    "faculty_match": "",
    "affiliations": "Hanoi University of Science and Technology | Hanoi University of Science and Technology, Hanoi, Vietnam",
-   "openreview_position": "",
+   "openreview_position": "~Hoang_Tran_Vuong1: Undergrad student at Hanoi University of Science and Technology",
    "sample_paper": "MCW-KD: Multi-Cost Wasserstein Knowledge Distillation for Large Language Models (AAAI 2026)",
    "sample_url": "https://ojs.aaai.org/index.php/AAAI/article/view/40619",
    "first_paper": "$f$-Divergence Self-Play for Tabular Anomaly Detection via Large Language Models (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=YobXoHXLS7",
-   "openreview_url": "https://openreview.net/search?term=Hoang+Vuong+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Hung Phan",
-   "name_variants": "",
-   "institution": "RMIT University Vietnam",
-   "institution_short": "RMIT Vietnam",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "hung-phan",
-   "name_vi": "",
-   "papers": 2,
-   "senior_author": 0,
-   "first_year": "2026",
-   "last_year": "2026",
-   "venues": "NeurIPS 1, AAAI 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "RMIT International University Vietnam | Hanoi University of Science and Technology, Vietnam",
-   "openreview_position": "",
-   "sample_paper": "Raw-Routed Mixture of Adapters: A Causal Intervention for Routing Collapse in Time Series Foundation Models (NeurIPS 2026)",
-   "sample_url": "https://openreview.net/forum?id=YOHVtj0IBk",
-   "first_paper": "Pareto-Grid-Guided Large Language Models for Fast and High-Quality Heuristics Design in Multi-Objective Combinatorial Optimization (AAAI 2026)",
-   "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41024",
-   "openreview_url": "https://openreview.net/search?term=Hung+Phan&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~Hoang_Tran_Vuong1",
+   "openreview_match": "profile",
+   "openreview_class": "left"
   },
   {
    "approved": "",
@@ -534,9 +312,9 @@
    "name_variants": "",
    "institution": "Phenikaa University",
    "institution_short": "Phenikaa",
-   "rank": "",
+   "rank": "Researcher",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~Khanh_Nguyen_Quoc1",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -553,46 +331,14 @@
    "faculty_rank": "",
    "faculty_match": "",
    "affiliations": "B0Labs, N2TP Technology Solutions JSC, Ha Noi, Vietnam; Phenikaa University | Phenikaa University, Ha Noi, Vietnam; B0Labs, N2TP Technology Solutions JSC, Ha Noi, Vietnam",
-   "openreview_position": "",
+   "openreview_position": "~Khanh_Nguyen_Quoc1: Researcher at Phenikaa University",
    "sample_paper": "Steering from Random Quotients: A Sample-Complexity Theory of Polysemantic Contrast Pairs (EMNLP 2026)",
    "sample_url": "https://aclanthology.org/2026.emnlp-main.2190/",
    "first_paper": "An Information-Theoretic Foundation for the Subregular Hierarchy (ACL 2026)",
    "first_url": "https://aclanthology.org/2026.acl-long.2153/",
-   "openreview_url": "https://openreview.net/search?term=Khanh+Nguyen+Quoc&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Khanh Quoc Tran",
-   "name_variants": "",
-   "institution": "University of Information Technology, VNU-HCM",
-   "institution_short": "UIT",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "khanh-quoc-tran",
-   "name_vi": "",
-   "papers": 2,
-   "senior_author": 0,
-   "first_year": "2025",
-   "last_year": "2026",
-   "venues": "AAAI 2",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "Faculty of Information Science and Engineering, University of Information Technology, Ho Chi Minh City, Vietnam; Vietnam National University, Ho Chi Minh City, Vietnam | University of Information Technology, Ho Chi Minh City, Vietnam; Vietnam National University, Ho Chi Minh City, Vietnam; AISIA Research Lab, Vietnam",
-   "openreview_position": "",
-   "sample_paper": "VietCheckMed: Explainable Regulatory Compliance Checking for Medical Advertisements on Vietnamese Social Media (AAAI 2026)",
-   "sample_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37077",
-   "first_paper": "ViFactCheck: A New Benchmark Dataset and Methods for Multi-Domain News Fact-Checking In Vietnamese (AAAI 2025)",
-   "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/32008",
-   "openreview_url": "https://openreview.net/search?term=Khanh+Quoc+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~Khanh_Nguyen_Quoc1",
+   "openreview_match": "profile",
+   "openreview_class": "left"
   },
   {
    "approved": "",
@@ -600,9 +346,9 @@
    "name_variants": "",
    "institution": "National Economics University",
    "institution_short": "NEU",
-   "rank": "",
+   "rank": "Undergrad student",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~Mai_Phan_Quoc_Hung1",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -619,13 +365,14 @@
    "faculty_rank": "",
    "faculty_match": "",
    "affiliations": "National Economics University; B0Labs, N2TP Technology Solutions JSC, Ha Noi, Vietnam | B0Labs, N2TP Technology Solutions JSC, Ha Noi, Vietnam; National Economics University, Ha Noi, Vietnam",
-   "openreview_position": "",
+   "openreview_position": "~Mai_Phan_Quoc_Hung1: Undergrad student at Hanoi National Economics University",
    "sample_paper": "Steering from Random Quotients: A Sample-Complexity Theory of Polysemantic Contrast Pairs (EMNLP 2026)",
    "sample_url": "https://aclanthology.org/2026.emnlp-main.2190/",
    "first_paper": "An Information-Theoretic Foundation for the Subregular Hierarchy (ACL 2026)",
    "first_url": "https://aclanthology.org/2026.acl-long.2153/",
-   "openreview_url": "https://openreview.net/search?term=Mai+Phan+Quoc+Hung&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~Mai_Phan_Quoc_Hung1",
+   "openreview_match": "profile",
+   "openreview_class": "left"
   },
   {
    "approved": "",
@@ -658,7 +405,8 @@
    "first_paper": "Continual Relation Extraction via Sequential Multi-Task Learning (AAAI 2024)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/29805",
    "openreview_url": "https://openreview.net/search?term=Manh+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -691,7 +439,8 @@
    "first_paper": "Localizing Before Answering: A Benchmark for Grounded Medical Visual Question Answering (IJCAI 2025)",
    "first_url": "https://www.ijcai.org/proceedings/2025/853",
    "openreview_url": "https://openreview.net/search?term=Minh+Khoi+Ho&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -699,9 +448,9 @@
    "name_variants": "Thanh Xuan Nguyen",
    "institution": "Hanoi University of Science and Technology",
    "institution_short": "HUST",
-   "rank": "",
+   "rank": "Researcher",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~Nguyen_Xuan_Thanh1",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -718,79 +467,14 @@
    "faculty_rank": "",
    "faculty_match": "",
    "affiliations": "Hanoi University of Science and Technology | Hanoi University of Science and Technology, Vietnam",
-   "openreview_position": "",
+   "openreview_position": "~Nguyen_Xuan_Thanh1: Researcher at Hanoi University of Science and Technology",
    "sample_paper": "PGA-KD: Principal Geometry Alignment and Semantic Consistency for VLM2Vec Distillation (EMNLP 2026)",
    "sample_url": "https://aclanthology.org/2026.emnlp-main.257/",
    "first_paper": "Preserving Generalization of Language models in Few-shot Continual Relation Extraction (EMNLP 2024)",
    "first_url": "https://aclanthology.org/2024.emnlp-main.763/",
-   "openreview_url": "https://openreview.net/search?term=Nguyen+Xuan+Thanh&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Thinh Nguyen",
-   "name_variants": "",
-   "institution": "VinUniversity",
-   "institution_short": "VinUni",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "thinh-nguyen",
-   "name_vi": "",
-   "papers": 2,
-   "senior_author": 0,
-   "first_year": "2026",
-   "last_year": "2026",
-   "venues": "NeurIPS 1, CVPR 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "VinUniversity | VinUni-Illinois Smart Health Center, VinUniversity; College of Engineering & Computer Science, VinUniversity",
-   "openreview_position": "",
-   "sample_paper": "Rethinking Molecular Graph Backdoors under Chemistry-aware Admission (NeurIPS 2026)",
-   "sample_url": "https://openreview.net/forum?id=Oo98xlurzU",
-   "first_paper": "HFedATM: Hierarchical Federated Domain Generalization via Optimal Transport and Regularized Mean Aggregation (CVPR 2026)",
-   "first_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Nguyen_HFedATM_Hierarchical_Federated_Domain_Generalization_via_Optimal_Transport_and_Regularized_CVPR_2026_paper.html",
-   "openreview_url": "https://openreview.net/search?term=Thinh+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Tho Quan",
-   "name_variants": "",
-   "institution": "Ho Chi Minh City University of Technology, VNU-HCM",
-   "institution_short": "HCMUT",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "tho-quan",
-   "name_vi": "",
-   "papers": 2,
-   "senior_author": 0,
-   "first_year": "2024",
-   "last_year": "2026",
-   "venues": "ICML 1, AAAI 1",
-   "at_university": "yes",
-   "faculty_page": "Quan Thanh Tho (HCMUT)",
-   "faculty_rank": "Associate Professor",
-   "faculty_match": "possible",
-   "affiliations": "Ho Chi Minh City University of Technology (HCMUT), VNU-HCM, Ho Chi Minh City, Vietnam | Bach Khoa University (HCMUT)",
-   "openreview_position": "",
-   "sample_paper": "Geometric and Stochastic Analysis of Discontinuities in Sparse Mixture-of-Experts (ICML 2026)",
-   "sample_url": "https://openreview.net/forum?id=AyrNR1ExN5",
-   "first_paper": "LAMPAT: Low-Rank Adaption for Multilingual Paraphrasing Using Adversarial Training (AAAI 2024)",
-   "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/29804",
-   "openreview_url": "https://openreview.net/search?term=Tho+Quan&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~Nguyen_Xuan_Thanh1",
+   "openreview_match": "profile",
+   "openreview_class": "researcher"
   },
   {
    "approved": "",
@@ -798,9 +482,9 @@
    "name_variants": "",
    "institution": "Hanoi University of Science and Technology",
    "institution_short": "HUST",
-   "rank": "",
+   "rank": "Undergrad student",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~Thuat_Nguyen1",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -817,112 +501,14 @@
    "faculty_rank": "",
    "faculty_match": "",
    "affiliations": "Hanoi University of Science and Technology",
-   "openreview_position": "",
+   "openreview_position": "~Thuat_Nguyen1: Undergrad student at Hanoi University of Science and Technology",
    "sample_paper": "MTA: Multi-Granular Trajectory Alignment for Large Language Model Distillation (ACL 2026)",
    "sample_url": "https://aclanthology.org/2026.acl-long.1507/",
    "first_paper": "Introducing a New Dataset for Event Detection in Cybersecurity Texts (EMNLP 2020)",
    "first_url": "https://aclanthology.org/2020.emnlp-main.433/",
-   "openreview_url": "https://openreview.net/search?term=Thuat+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Trung Thanh Ngo",
-   "name_variants": "",
-   "institution": "Hanoi University of Science and Technology",
-   "institution_short": "HUST",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "trung-thanh-ngo",
-   "name_vi": "",
-   "papers": 2,
-   "senior_author": 0,
-   "first_year": "2023",
-   "last_year": "2024",
-   "venues": "CVPR 1, ECCV 1",
-   "at_university": "yes",
-   "faculty_page": "Ngo Thanh Trung (HUST)",
-   "faculty_rank": "Lecturer with PhD",
-   "faculty_match": "exact",
-   "affiliations": "Hanoi University of Science and Technology | Hanoi University of Science and Technolog",
-   "openreview_position": "",
-   "sample_paper": "Deep Polarization Cues for Single-shot Shape and Subsurface Scattering Estimation (ECCV 2024)",
-   "sample_url": "https://eccv.ecva.net/virtual/2024/poster/2394",
-   "first_paper": "Inverse Rendering of Translucent Objects Using Physical and Neural Renderers (CVPR 2023)",
-   "first_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Li_Inverse_Rendering_of_Translucent_Objects_Using_Physical_and_Neural_Renderers_CVPR_2023_paper.pdf",
-   "openreview_url": "https://openreview.net/search?term=Trung+Thanh+Ngo&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Trung Thanh Nguyen",
-   "name_variants": "Thanh Trung Nguyen",
-   "institution": "Phenikaa University",
-   "institution_short": "Phenikaa",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "trung-thanh-nguyen",
-   "name_vi": "",
-   "papers": 2,
-   "senior_author": 0,
-   "first_year": "2020",
-   "last_year": "2026",
-   "venues": "ACL 1, IJCAI 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "ORLab, Faculty of Computer Science, Phenikaa University, Hanoi 12116, Vietnam | 108 Military Central Hospital, Vietnam",
-   "openreview_position": "",
-   "sample_paper": "Region-Grounded Report Generation for 3D Medical Imaging: A Fine-Grained Dataset and Graph-Enhanced Framework (ACL 2026)",
-   "sample_url": "https://aclanthology.org/2026.acl-long.903/",
-   "first_paper": "Approximate Pareto Set for Fair and Efficient Allocation: Few Agent Types or Few Resource Types (IJCAI 2020)",
-   "first_url": "https://www.ijcai.org/proceedings/2020/41",
-   "openreview_url": "https://openreview.net/search?term=Trung+Thanh+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Tuan Nguyen",
-   "name_variants": "Tuan D. Q. Nguyen",
-   "institution": "VinUniversity",
-   "institution_short": "VinUni",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "tuan-nguyen",
-   "name_vi": "",
-   "papers": 2,
-   "senior_author": 0,
-   "first_year": "2023",
-   "last_year": "2026",
-   "venues": "NeurIPS 1, AAAI 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "VinUniversity | University of Information Technology,Vietnam National University, Ho Chi Minh City",
-   "openreview_position": "",
-   "sample_paper": "Reinforce Trustworthiness in Multimodal Emotional Support System (AAAI 2026)",
-   "sample_url": "https://ojs.aaai.org/index.php/AAAI/article/view/40412",
-   "first_paper": "IBA: Towards Irreversible Backdoor Attacks in Federated Learning (NeurIPS 2023)",
-   "first_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/d0c6bc641a56bebee9d985b937307367-Abstract-Conference.html",
-   "openreview_url": "https://openreview.net/search?term=Tuan+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~Thuat_Nguyen1",
+   "openreview_match": "profile",
+   "openreview_class": "left"
   },
   {
    "approved": "",
@@ -955,7 +541,8 @@
    "first_paper": "MOTIF: Multi-strategy Optimization via Turn-based Interactive Framework (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41028",
    "openreview_url": "https://openreview.net/search?term=Tung+Dao&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -963,9 +550,9 @@
    "name_variants": "",
    "institution": "VNU University of Engineering and Technology",
    "institution_short": "VNU-UET",
-   "rank": "",
+   "rank": "MS student",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~Le_Viet_Quan1",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -982,46 +569,14 @@
    "faculty_rank": "Below PhD",
    "faculty_match": "exact",
    "affiliations": "Human Machine Interaction Laboratory, VNU University of Engineering and Technology, Hanoi, Vietnam | VNU University of Engineering and Technology, Hanoi, Vietnam",
-   "openreview_position": "",
+   "openreview_position": "~Le_Viet_Quan1: MS student at Vietnam National University Hanoi",
    "sample_paper": "Pseudo-Riemannian Graph Transformer (NeurIPS 2025)",
    "sample_url": "https://openreview.net/forum?id=bChA28jPpm",
    "first_paper": "Toward a Manifold-Preserving Temporal Graph Network in Hyperbolic Space (IJCAI 2024)",
    "first_url": "https://www.ijcai.org/proceedings/2024/484",
-   "openreview_url": "https://openreview.net/search?term=Viet+Quan+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Hoang-Quynh Le",
-   "name_variants": "",
-   "institution": "VNU University of Engineering and Technology",
-   "institution_short": "VNU-UET",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "hoang-quynh-le",
-   "name_vi": "",
-   "papers": 1,
-   "senior_author": 1,
-   "first_year": "2026",
-   "last_year": "2026",
-   "venues": "ACL 1",
-   "at_university": "yes",
-   "faculty_page": "Lê Hoàng Quỳnh (VNU-UET)",
-   "faculty_rank": "Lecturer with PhD",
-   "faculty_match": "exact",
-   "affiliations": "Faculty of Information Technology, VNU University of Engineering and Technology, Vietnam",
-   "openreview_position": "",
-   "sample_paper": "HOPE: Hybrid Optimized Parallel Encoding with Supervised and Unsupervised Semantic Fusion for Depression Symptom Detection (ACL 2026)",
-   "sample_url": "https://aclanthology.org/2026.acl-long.132/",
-   "first_paper": "HOPE: Hybrid Optimized Parallel Encoding with Supervised and Unsupervised Semantic Fusion for Depression Symptom Detection (ACL 2026)",
-   "first_url": "https://aclanthology.org/2026.acl-long.132/",
-   "openreview_url": "https://openreview.net/search?term=Hoang-Quynh+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~Le_Viet_Quan1",
+   "openreview_match": "profile",
+   "openreview_class": "left"
   },
   {
    "approved": "",
@@ -1029,9 +584,9 @@
    "name_variants": "",
    "institution": "Hanoi University of Science and Technology",
    "institution_short": "HUST",
-   "rank": "",
+   "rank": "Undergrad student",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~The_Hung_Tran1",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -1048,112 +603,14 @@
    "faculty_rank": "",
    "faculty_match": "",
    "affiliations": "Hanoi University of Science and Technology",
-   "openreview_position": "",
+   "openreview_position": "~The_Hung_Tran1: Undergrad student at Hanoi University of Science and Technology",
    "sample_paper": "Bayesian Optimization for Unknown Cost-Varying Variable Subsets with No-Regret Costs (AAAI 2025)",
    "sample_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34906",
    "first_paper": "Bayesian Optimization for Unknown Cost-Varying Variable Subsets with No-Regret Costs (AAAI 2025)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34906",
-   "openreview_url": "https://openreview.net/search?term=Hung+The+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Minh Hoàng Hà",
-   "name_variants": "",
-   "institution": "National Economics University",
-   "institution_short": "NEU",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "minh-hoang-ha",
-   "name_vi": "",
-   "papers": 1,
-   "senior_author": 1,
-   "first_year": "2026",
-   "last_year": "2026",
-   "venues": "IJCAI 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "SLSCM and CADA, Faculty of Data Science and Artificial Intelligence, College of Technology, National Economics University, Hanoi, Vietnam",
-   "openreview_position": "",
-   "sample_paper": "Beyond Homogeneous Adversaries: Stackelberg Security Games with Mixed Quantal Response (IJCAI 2026)",
-   "sample_url": "https://www.ijcai.org/proceedings/2026/392",
-   "first_paper": "Beyond Homogeneous Adversaries: Stackelberg Security Games with Mixed Quantal Response (IJCAI 2026)",
-   "first_url": "https://www.ijcai.org/proceedings/2026/392",
-   "openreview_url": "https://openreview.net/search?term=Minh+Ho%C3%A0ng+H%C3%A0&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Ngan Luu-Thuy Nguyen",
-   "name_variants": "",
-   "institution": "University of Information Technology, VNU-HCM",
-   "institution_short": "UIT",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "ngan-luu-thuy-nguyen",
-   "name_vi": "",
-   "papers": 1,
-   "senior_author": 1,
-   "first_year": "2025",
-   "last_year": "2025",
-   "venues": "AAAI 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "University of Information Technology; Vietnam National University, Ho Chi Minh city, Vietnam",
-   "openreview_position": "",
-   "sample_paper": "Vietnamese Words Are Not Constructed from Syllables: Rethinking the Role of Word Segmentation in Natural Language Processing for Vietnamese Texts (AAAI 2025)",
-   "sample_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34581",
-   "first_paper": "Vietnamese Words Are Not Constructed from Syllables: Rethinking the Role of Word Segmentation in Natural Language Processing for Vietnamese Texts (AAAI 2025)",
-   "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34581",
-   "openreview_url": "https://openreview.net/search?term=Ngan+Luu-Thuy+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Tran Ngoc Thang",
-   "name_variants": "",
-   "institution": "Hanoi University of Science and Technology",
-   "institution_short": "HUST",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "tran-ngoc-thang",
-   "name_vi": "",
-   "papers": 1,
-   "senior_author": 1,
-   "first_year": "2023",
-   "last_year": "2023",
-   "venues": "AAAI 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "School of Applied Mathematics and Informatics, Hanoi University of Science and Technology",
-   "openreview_position": "",
-   "sample_paper": "Improving Pareto Front Learning via Multi-Sample Hypernetworks (AAAI 2023)",
-   "sample_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25953",
-   "first_paper": "Improving Pareto Front Learning via Multi-Sample Hypernetworks (AAAI 2023)",
-   "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25953",
-   "openreview_url": "https://openreview.net/search?term=Tran+Ngoc+Thang&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~The_Hung_Tran1",
+   "openreview_match": "profile",
+   "openreview_class": "left"
   },
   {
    "approved": "",
@@ -1186,7 +643,8 @@
    "first_paper": "Few-Shot, No Problem: Descriptive Continual Relation Extraction (AAAI 2025)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34715",
    "openreview_url": "https://openreview.net/search?term=Anh+Duc+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1219,7 +677,8 @@
    "first_paper": "Semi-supervised 3D Semantic Scene Completion with 2D Vision Foundation Model Guidance (AAAI 2025)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/32698",
    "openreview_url": "https://openreview.net/search?term=Anh+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1252,7 +711,8 @@
    "first_paper": "Expert Merging in Sparse Mixture of Experts with Nash Bargaining (ICLR 2026)",
    "first_url": "https://openreview.net/forum?id=JLe9xfd0ln",
    "openreview_url": "https://openreview.net/search?term=Anh+Thi&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1285,7 +745,8 @@
    "first_paper": "Multi-Perspective Data Augmentation for Few-shot Object Detection (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=qG0WCAhZE0",
    "openreview_url": "https://openreview.net/search?term=Anh-Khoa+Nguyen+Vu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1318,7 +779,8 @@
    "first_paper": "Conversation Understanding using Relational Temporal Graph Neural Networks with Auxiliary Cross-Modality Interaction (EMNLP 2023)",
    "first_url": "https://aclanthology.org/2023.emnlp-main.937/",
    "openreview_url": "https://openreview.net/search?term=Anh-Tuan+Mai&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1351,7 +813,8 @@
    "first_paper": "Provably Improving Generalization of Few-shot models with Synthetic Data (ICML 2025)",
    "first_url": "https://openreview.net/forum?id=L6U7nYc4ah",
    "openreview_url": "https://openreview.net/search?term=Bang+Khanh&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1384,7 +847,8 @@
    "first_paper": "One-Prompt Strikes Back: Sparse Mixture of Experts for Prompt-based Continual Learning (ICLR 2026)",
    "first_url": "https://openreview.net/forum?id=B8eIc9783S",
    "openreview_url": "https://openreview.net/search?term=Bao-Ngoc+Dao&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1417,7 +881,8 @@
    "first_paper": "Assembling the CREW: A Collaborative Multi-agent Reinforcement Learning Framework for Automated Related Work Generation (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.2052/",
    "openreview_url": "https://openreview.net/search?term=Bao-Yen+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1450,7 +915,8 @@
    "first_paper": "FOCA: Future-Oriented Conditioning for Data-Efficient Vision-Language-Action Adaptation (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=0cnDTttyMR",
    "openreview_url": "https://openreview.net/search?term=Binh+Nguyen+Gia&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1483,7 +949,8 @@
    "first_paper": "Accelerating Transformers with Spectrum-Preserving Token Merging (NeurIPS 2024)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/37094fdc81632915a5738293cf9b7ad4-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Chau+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1516,7 +983,8 @@
    "first_paper": "Region-Grounded Report Generation for 3D Medical Imaging: A Fine-Grained Dataset and Graph-Enhanced Framework (ACL 2026)",
    "first_url": "https://aclanthology.org/2026.acl-long.903/",
    "openreview_url": "https://openreview.net/search?term=Cong+Huy+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1549,7 +1017,8 @@
    "first_paper": "DEGRE: Dynamic Gating Ensembles for Trust-Aware Rejection in Medical Image Diagnostics (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/42473",
    "openreview_url": "https://openreview.net/search?term=Cuong+V.+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1582,7 +1051,8 @@
    "first_paper": "Beyond the Global Scores: Fine-Grained Token Grounding as a Robust Detector of LVLM Hallucinations (CVPR 2026)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Nguyen_Beyond_the_Global_Scores_Fine-Grained_Token_Grounding_as_a_Robust_CVPR_2026_paper.html",
    "openreview_url": "https://openreview.net/search?term=Dang+Huy+Pham+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1615,7 +1085,8 @@
    "first_paper": "LLM Feedback for Topic Model with Preference Optimization and Contrastive Learning (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.265/",
    "openreview_url": "https://openreview.net/search?term=Dat+Phan+Trong&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1648,7 +1119,8 @@
    "first_paper": "VietCheckMed: Explainable Regulatory Compliance Checking for Medical Advertisements on Vietnamese Social Media (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37077",
    "openreview_url": "https://openreview.net/search?term=Dat+Thanh+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1681,7 +1153,8 @@
    "first_paper": "Athena: Vulnerability-Affected Library Identification via Knowledge Graph Completion (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.2233/",
    "openreview_url": "https://openreview.net/search?term=Dieu+Hoang+Vu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1714,7 +1187,8 @@
    "first_paper": "Think Twice Before Adaptation: Improving Adaptability of DeepFake Detection via Online Test-Time Adaptation (IJCAI 2025)",
    "first_url": "https://www.ijcai.org/proceedings/2025/854",
    "openreview_url": "https://openreview.net/search?term=Dinh-Thuc+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1747,7 +1221,8 @@
    "first_paper": "VSC: Visual Search Compositional Text-to-Image Diffusion Model (ICCV 2025)",
    "first_url": "https://iccv.thecvf.com/virtual/2025/poster/2425",
    "openreview_url": "https://openreview.net/search?term=Do+Dat&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1780,7 +1255,8 @@
    "first_paper": "XRepoTest: Benchmarking Multilingual Repository-Level Unit Test Generation for Large Language Models (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.274/",
    "openreview_url": "https://openreview.net/search?term=Dong+Cao+Van&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1813,40 +1289,8 @@
    "first_paper": "Steering from Random Quotients: A Sample-Complexity Theory of Polysemantic Contrast Pairs (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.2190/",
    "openreview_url": "https://openreview.net/search?term=Duc+Hai+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Duc-Dung Nguyen",
-   "name_variants": "",
-   "institution": "Ho Chi Minh City University of Technology, VNU-HCM",
-   "institution_short": "HCMUT",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "duc-dung-nguyen",
-   "name_vi": "",
-   "papers": 1,
-   "senior_author": 0,
-   "first_year": "2025",
-   "last_year": "2025",
-   "venues": "AAAI 1",
-   "at_university": "yes",
-   "faculty_page": "Nguyen Duc Dung (HCMUT)",
-   "faculty_rank": "Lecturer with PhD",
-   "faculty_match": "exact",
-   "affiliations": "AITech Lab., Ho Chi Minh City University of Technology, VNU-HCM, Vietnam",
-   "openreview_position": "",
-   "sample_paper": "Semi-supervised 3D Semantic Scene Completion with 2D Vision Foundation Model Guidance (AAAI 2025)",
-   "sample_url": "https://ojs.aaai.org/index.php/AAAI/article/view/32698",
-   "first_paper": "Semi-supervised 3D Semantic Scene Completion with 2D Vision Foundation Model Guidance (AAAI 2025)",
-   "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/32698",
-   "openreview_url": "https://openreview.net/search?term=Duc-Dung+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1879,7 +1323,8 @@
    "first_paper": "HOPE: Hybrid Optimized Parallel Encoding with Supervised and Unsupervised Semantic Fusion for Depression Symptom Detection (ACL 2026)",
    "first_url": "https://aclanthology.org/2026.acl-long.132/",
    "openreview_url": "https://openreview.net/search?term=Duc-Luong+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1912,7 +1357,8 @@
    "first_paper": "XRepoTest: Benchmarking Multilingual Repository-Level Unit Test Generation for Large Language Models (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.274/",
    "openreview_url": "https://openreview.net/search?term=Dung+Le+Quang&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1945,7 +1391,8 @@
    "first_paper": "HyperProve: Answer-Guided Hypergraph Expansion for Multi-Hop Question Answering (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.212/",
    "openreview_url": "https://openreview.net/search?term=Dung+Nguyen+Quang&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -1978,7 +1425,8 @@
    "first_paper": "CAMEx: Curvature-aware Merging of Experts (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=nT2u0M0nf8",
    "openreview_url": "https://openreview.net/search?term=Dung+Viet+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2011,7 +1459,8 @@
    "first_paper": "DEGRE: Dynamic Gating Ensembles for Trust-Aware Rejection in Medical Image Diagnostics (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/42473",
    "openreview_url": "https://openreview.net/search?term=Duong+Bach&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2044,7 +1493,8 @@
    "first_paper": "Structured Dropout Variational Inference for Bayesian Neural Networks (NeurIPS 2021)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Duong+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2077,7 +1527,8 @@
    "first_paper": "An Information-Theoretic Foundation for the Subregular Hierarchy (ACL 2026)",
    "first_url": "https://aclanthology.org/2026.acl-long.2153/",
    "openreview_url": "https://openreview.net/search?term=Duong+Thi+Phuong+Thao&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2110,7 +1561,8 @@
    "first_paper": "An Information-Theoretic Foundation for the Subregular Hierarchy (ACL 2026)",
    "first_url": "https://aclanthology.org/2026.acl-long.2153/",
    "openreview_url": "https://openreview.net/search?term=Duong+Thu+Ngan&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2143,7 +1595,8 @@
    "first_paper": "HPE-Li: WiFi-enabled Lightweight Dual Selective Kernel Convolution for Human Pose Estimation (ECCV 2024)",
    "first_url": "https://eccv.ecva.net/virtual/2024/poster/1708",
    "openreview_url": "https://openreview.net/search?term=Gian+Toan+D.&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2176,7 +1629,8 @@
    "first_paper": "On Inference Stability for Diffusion Models (AAAI 2024)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/29359",
    "openreview_url": "https://openreview.net/search?term=Giang+Vu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2209,7 +1663,8 @@
    "first_paper": "Pareto-Grid-Guided Large Language Models for Fast and High-Quality Heuristics Design in Multi-Objective Combinatorial Optimization (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41024",
    "openreview_url": "https://openreview.net/search?term=Ha+Minh+Hieu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2242,40 +1697,8 @@
    "first_paper": "Improving Transformer with an Admixture of Attention Heads (NeurIPS 2022)",
    "first_url": "https://openreview.net/forum?id=0VFQhPGF1M3",
    "openreview_url": "https://openreview.net/search?term=Hai+Do&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Hai Nguyen Hong",
-   "name_variants": "",
-   "institution": "VinUniversity",
-   "institution_short": "VinUni",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "hai-nguyen-hong",
-   "name_vi": "",
-   "papers": 1,
-   "senior_author": 0,
-   "first_year": "2026",
-   "last_year": "2026",
-   "venues": "AAAI 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "FPT University, Ha Noi, Viet Nam; Smart Green Transformation Center (Green-X), VinUniversity, Ha Noi, Viet Nam",
-   "openreview_position": "",
-   "sample_paper": "DEGRE: Dynamic Gating Ensembles for Trust-Aware Rejection in Medical Image Diagnostics (AAAI 2026)",
-   "sample_url": "https://ojs.aaai.org/index.php/AAAI/article/view/42473",
-   "first_paper": "DEGRE: Dynamic Gating Ensembles for Trust-Aware Rejection in Medical Image Diagnostics (AAAI 2026)",
-   "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/42473",
-   "openreview_url": "https://openreview.net/search?term=Hai+Nguyen+Hong&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2308,7 +1731,8 @@
    "first_paper": "Assembling the CREW: A Collaborative Multi-agent Reinforcement Learning Framework for Automated Related Work Generation (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.2052/",
    "openreview_url": "https://openreview.net/search?term=Hai-Dang+Dang&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2341,7 +1765,8 @@
    "first_paper": "Conversation Understanding using Relational Temporal Graph Neural Networks with Auxiliary Cross-Modality Interaction (EMNLP 2023)",
    "first_url": "https://aclanthology.org/2023.emnlp-main.937/",
    "openreview_url": "https://openreview.net/search?term=Hai-Dang+Kieu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2374,7 +1799,8 @@
    "first_paper": "Federated Prompt-Tuning with Heterogeneous and Incomplete Multimodal Client Data (ICCV 2025)",
    "first_url": "https://iccv.thecvf.com/virtual/2025/poster/1906",
    "openreview_url": "https://openreview.net/search?term=Hang+Phung&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2407,7 +1833,8 @@
    "first_paper": "REM: A Scalable Reinforced Multi-Expert Framework for Multiplex Influence Maximization (AAAI 2025)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34917",
    "openreview_url": "https://openreview.net/search?term=Hieu+Dam&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2440,7 +1867,8 @@
    "first_paper": "Introducing a New Dataset for Event Detection in Cybersecurity Texts (EMNLP 2020)",
    "first_url": "https://aclanthology.org/2020.emnlp-main.433/",
    "openreview_url": "https://openreview.net/search?term=Hieu+Man+Duc+Trong&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2473,7 +1901,8 @@
    "first_paper": "Wicked Oddities: Selectively Poisoning for Effective Clean-Label Backdoor Attacks (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=1Z3C49JQVf",
    "openreview_url": "https://openreview.net/search?term=Hieu+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2506,7 +1935,8 @@
    "first_paper": "LVM-Med: Learning Large-Scale Self-Supervised Vision Models for Medical Imaging via Second-order Graph Matching (NeurIPS 2023)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/58cc11cda2a2679e8af5c6317aed0af8-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Hoang+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2539,40 +1969,8 @@
    "first_paper": "Reinforce Trustworthiness in Multimodal Emotional Support System (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/40412",
    "openreview_url": "https://openreview.net/search?term=Huy+M.+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Huyen Nguyen",
-   "name_variants": "",
-   "institution": "Posts and Telecommunications Institute of Technology",
-   "institution_short": "PTIT",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "huyen-nguyen",
-   "name_vi": "",
-   "papers": 1,
-   "senior_author": 0,
-   "first_year": "2025",
-   "last_year": "2025",
-   "venues": "AAAI 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "Posts and Telecommunications Institute of Technology, Hanoi, Vietnam",
-   "openreview_position": "",
-   "sample_paper": "REM: A Scalable Reinforced Multi-Expert Framework for Multiplex Influence Maximization (AAAI 2025)",
-   "sample_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34917",
-   "first_paper": "REM: A Scalable Reinforced Multi-Expert Framework for Multiplex Influence Maximization (AAAI 2025)",
-   "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34917",
-   "openreview_url": "https://openreview.net/search?term=Huyen+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2605,7 +2003,8 @@
    "first_paper": "ViDia2Std: A Parallel Corpus and Methods for Low-Resource Vietnamese Dialect-to-Standard Translation (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/40247",
    "openreview_url": "https://openreview.net/search?term=Khoa+Anh+Ta&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2638,7 +2037,8 @@
    "first_paper": "Scalable Group Choreography via Variational Phase Manifold Learning (ECCV 2024)",
    "first_url": "https://eccv.ecva.net/virtual/2024/poster/1394",
    "openreview_url": "https://openreview.net/search?term=Khoa+Do&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2671,7 +2071,8 @@
    "first_paper": "Tuning-Free One-Class Discriminant Learning for Tabular Anomaly Detection (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=3vezZKhyoS",
    "openreview_url": "https://openreview.net/search?term=Kim-Hung+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2704,7 +2105,8 @@
    "first_paper": "HyperRouter: Towards Efficient Training and Inference of Sparse Mixture of Experts (EMNLP 2023)",
    "first_url": "https://aclanthology.org/2023.emnlp-main.351/",
    "openreview_url": "https://openreview.net/search?term=Le+Khiem&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2737,7 +2139,8 @@
    "first_paper": "Computation and Communication Efficient Federated Unlearning via On-server Gradient Conflict Mitigation and Expression (CVPR 2026)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Nguyen_Computation_and_Communication_Efficient_Federated_Unlearning_via_On-server_Gradient_Conflict_CVPR_2026_paper.html",
    "openreview_url": "https://openreview.net/search?term=Le-Tuan+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2770,7 +2173,8 @@
    "first_paper": "Improving Pareto Front Learning via Multi-Sample Hypernetworks (AAAI 2023)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25953",
    "openreview_url": "https://openreview.net/search?term=Long+P.+Hoang&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2803,7 +2207,8 @@
    "first_paper": "Precise Video-to-Audio Generation with Cross-Modal Alignment in Latent Space (ECCV 2026)",
    "first_url": "https://eccv.ecva.net/virtual/2026/poster/4130",
    "openreview_url": "https://openreview.net/search?term=Long-Khanh+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2836,7 +2241,8 @@
    "first_paper": "HyperProve: Answer-Guided Hypergraph Expansion for Multi-Hop Question Answering (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.212/",
    "openreview_url": "https://openreview.net/search?term=Luu+Hieu+An&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2869,7 +2275,8 @@
    "first_paper": "Region-Grounded Report Generation for 3D Medical Imaging: A Fine-Grained Dataset and Graph-Enhanced Framework (ACL 2026)",
    "first_url": "https://aclanthology.org/2026.acl-long.903/",
    "openreview_url": "https://openreview.net/search?term=Mai+Hong+Son&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2902,7 +2309,8 @@
    "first_paper": "Region-Grounded Report Generation for 3D Medical Imaging: A Fine-Grained Dataset and Graph-Enhanced Framework (ACL 2026)",
    "first_url": "https://aclanthology.org/2026.acl-long.903/",
    "openreview_url": "https://openreview.net/search?term=Mai+Huy+Thong&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2935,7 +2343,8 @@
    "first_paper": "ZeroBench: An Impossible Visual Benchmark for Contemporary Large Multimodal Models (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=EvmCeoiKYI",
    "openreview_url": "https://openreview.net/search?term=Mikah+%C4%90%E1%BA%B7ng&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -2968,7 +2377,8 @@
    "first_paper": "LLM-XTM: Enhancing Cross-Lingual Topic Models with Large Language Models (ACL 2026)",
    "first_url": "https://aclanthology.org/2026.acl-long.170/",
    "openreview_url": "https://openreview.net/search?term=Minh+Chu+Xuan&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3001,7 +2411,8 @@
    "first_paper": "Expert Merging in Sparse Mixture of Experts with Nash Bargaining (ICLR 2026)",
    "first_url": "https://openreview.net/forum?id=JLe9xfd0ln",
    "openreview_url": "https://openreview.net/search?term=Minh+Hoang+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3034,7 +2445,8 @@
    "first_paper": "Beyond the Global Scores: Fine-Grained Token Grounding as a Robust Detector of LVLM Hallucinations (CVPR 2026)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Nguyen_Beyond_the_Global_Scores_Fine-Grained_Token_Grounding_as_a_Robust_CVPR_2026_paper.html",
    "openreview_url": "https://openreview.net/search?term=Minh+Khoi+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3067,7 +2479,8 @@
    "first_paper": "FOCA: Future-Oriented Conditioning for Data-Efficient Vision-Language-Action Adaptation (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=0cnDTttyMR",
    "openreview_url": "https://openreview.net/search?term=Minh+VU&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3100,7 +2513,8 @@
    "first_paper": "HOPE: Hybrid Optimized Parallel Encoding with Supervised and Unsupervised Semantic Fusion for Depression Symptom Detection (ACL 2026)",
    "first_url": "https://aclanthology.org/2026.acl-long.132/",
    "openreview_url": "https://openreview.net/search?term=Minh-Ha+H.+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3133,7 +2547,8 @@
    "first_paper": "MaskDiff: Modeling Mask Distribution with Diffusion Probabilistic Model for Few-Shot Instance Segmentation (AAAI 2024)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/28068",
    "openreview_url": "https://openreview.net/search?term=Minh-Quan+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3166,7 +2581,8 @@
    "first_paper": "Spectral-Aware Analytic Class-Incremental Learning for Long-Tailed Distributions (ECCV 2026)",
    "first_url": "https://eccv.ecva.net/virtual/2026/poster/4012",
    "openreview_url": "https://openreview.net/search?term=Nam+Hai&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3199,7 +2615,8 @@
    "first_paper": "ConstStyle:  Robust Domain Generalization with Unified Style Transformation (ICCV 2025)",
    "first_url": "https://iccv.thecvf.com/virtual/2025/poster/291",
    "openreview_url": "https://openreview.net/search?term=Nam+Nguyen+Phuong&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3232,7 +2649,8 @@
    "first_paper": "DEGRE: Dynamic Gating Ensembles for Trust-Aware Rejection in Medical Image Diagnostics (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/42473",
    "openreview_url": "https://openreview.net/search?term=Nam+Phan&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3265,40 +2683,8 @@
    "first_paper": "Reinforce Trustworthiness in Multimodal Emotional Support System (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/40412",
    "openreview_url": "https://openreview.net/search?term=Ngan+T.+T.+Vo&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Nghia Hieu Nguyen",
-   "name_variants": "",
-   "institution": "University of Information Technology, VNU-HCM",
-   "institution_short": "UIT",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "nghia-hieu-nguyen",
-   "name_vi": "",
-   "papers": 1,
-   "senior_author": 0,
-   "first_year": "2025",
-   "last_year": "2025",
-   "venues": "AAAI 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "University of Information Technology; Vietnam National University, Ho Chi Minh city, Vietnam",
-   "openreview_position": "",
-   "sample_paper": "Vietnamese Words Are Not Constructed from Syllables: Rethinking the Role of Word Segmentation in Natural Language Processing for Vietnamese Texts (AAAI 2025)",
-   "sample_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34581",
-   "first_paper": "Vietnamese Words Are Not Constructed from Syllables: Rethinking the Role of Word Segmentation in Natural Language Processing for Vietnamese Texts (AAAI 2025)",
-   "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34581",
-   "openreview_url": "https://openreview.net/search?term=Nghia+Hieu+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3331,7 +2717,8 @@
    "first_paper": "GloCTM: Cross-Lingual Topic Modeling via a Global Context Space (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/40549",
    "openreview_url": "https://openreview.net/search?term=Ngo+Vu+Minh&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3364,7 +2751,8 @@
    "first_paper": "Steering from Random Quotients: A Sample-Complexity Theory of Polysemantic Contrast Pairs (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.2190/",
    "openreview_url": "https://openreview.net/search?term=Ngoc+Mai+Vu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3397,7 +2785,8 @@
    "first_paper": "H-SFP: Hierarchical Federated Learning with Decoupled Split-Model Prototyping (ECCV 2026)",
    "first_url": "https://eccv.ecva.net/virtual/2026/poster/5748",
    "openreview_url": "https://openreview.net/search?term=Nguyen+Ha&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3430,7 +2819,8 @@
    "first_paper": "Preserving Generalization of Language models in Few-shot Continual Relation Extraction (EMNLP 2024)",
    "first_url": "https://aclanthology.org/2024.emnlp-main.763/",
    "openreview_url": "https://openreview.net/search?term=Nguyen+Hoang+Anh&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3463,7 +2853,8 @@
    "first_paper": "VietCheckMed: Explainable Regulatory Compliance Checking for Medical Advertisements on Vietnamese Social Media (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37077",
    "openreview_url": "https://openreview.net/search?term=Nguyen+Hoang+Gia+Han&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3496,7 +2887,8 @@
    "first_paper": "Reinforce Trustworthiness in Multimodal Emotional Support System (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/40412",
    "openreview_url": "https://openreview.net/search?term=Nguyen+Le+Binh&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3529,7 +2921,8 @@
    "first_paper": "HyperProve: Answer-Guided Hypergraph Expansion for Multi-Hop Question Answering (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.212/",
    "openreview_url": "https://openreview.net/search?term=Nguyen+Phu+An&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3562,7 +2955,8 @@
    "first_paper": "VietCheckMed: Explainable Regulatory Compliance Checking for Medical Advertisements on Vietnamese Social Media (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37077",
    "openreview_url": "https://openreview.net/search?term=Nguyen+Thanh+Tam&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3595,7 +2989,8 @@
    "first_paper": "MOTIF: Multi-strategy Optimization via Turn-based Interactive Framework (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41028",
    "openreview_url": "https://openreview.net/search?term=Nguyen+Viet+Tuan+Kiet&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3628,7 +3023,8 @@
    "first_paper": "ESC: Emotional Self-Correction for Reliable Vision-Language Models (ECCV 2026)",
    "first_url": "https://eccv.ecva.net/virtual/2026/poster/5933",
    "openreview_url": "https://openreview.net/search?term=Nhat-Huy+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3661,7 +3057,8 @@
    "first_paper": "Geometric and Stochastic Analysis of Discontinuities in Sparse Mixture-of-Experts (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=AyrNR1ExN5",
    "openreview_url": "https://openreview.net/search?term=Nhat-Tri+Ho&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3694,7 +3091,8 @@
    "first_paper": "Fundamental Convergence Analysis of Sharpness-Aware Minimization (NeurIPS 2024)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/17b08a9de93e2accf13429643e7eafdc-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Pham+Khanh&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3727,7 +3125,8 @@
    "first_paper": "HSEvo: Elevating Automatic Heuristic Design with Diversity-Driven Harmony Search and Genetic Algorithm Using LLMs (AAAI 2025)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34898",
    "openreview_url": "https://openreview.net/search?term=Pham+Vu+Tuan+Dat&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3760,7 +3159,8 @@
    "first_paper": "Steering from Random Quotients: A Sample-Complexity Theory of Polysemantic Contrast Pairs (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.2190/",
    "openreview_url": "https://openreview.net/search?term=Phong+Ho&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3793,7 +3193,8 @@
    "first_paper": "Athena: Vulnerability-Affected Library Identification via Knowledge Graph Completion (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.2233/",
    "openreview_url": "https://openreview.net/search?term=Phong+Trinh+Duy&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3826,7 +3227,8 @@
    "first_paper": "SUGAR: Spectral and Geometry-Aware Alignment for Matryoshka Representation Distillation (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.228/",
    "openreview_url": "https://openreview.net/search?term=Phung+Gia+Huy&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3859,7 +3261,8 @@
    "first_paper": "Improving Pareto Set Learning for Expensive Multi-objective Optimization via Stein Variational Hypernetworks (AAAI 2025)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34167",
    "openreview_url": "https://openreview.net/search?term=Phuong+Mai+Dinh&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3892,7 +3295,8 @@
    "first_paper": "HOPE: Hybrid Optimized Parallel Encoding with Supervised and Unsupervised Semantic Fusion for Depression Symptom Detection (ACL 2026)",
    "first_url": "https://aclanthology.org/2026.acl-long.132/",
    "openreview_url": "https://openreview.net/search?term=Phuong-Anh+Chu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3925,7 +3329,8 @@
    "first_paper": "BALM: A Model-Agnostic Framework for Balanced Multimodal Learning under Imbalanced Missing Rates (CVPR 2026)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Nguyen_BALM_A_Model-Agnostic_Framework_for_Balanced_Multimodal_Learning_under_Imbalanced_CVPR_2026_paper.html",
    "openreview_url": "https://openreview.net/search?term=Phuong-Anh+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3958,7 +3363,8 @@
    "first_paper": "Cross-Modal Knowledge Distillation without Paired Data: Theoretical Foundation and Algorithm (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=z9aetU7Wfl",
    "openreview_url": "https://openreview.net/search?term=Quang+Hung+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -3991,7 +3397,8 @@
    "first_paper": "Interleaved Selective State Space Models for Efficient WiFi-Based 3D Multi-Person Pose Estimation (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=RbeAuiypKb",
    "openreview_url": "https://openreview.net/search?term=Quang-Anh+N.D.&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4024,7 +3431,8 @@
    "first_paper": "Improving Pareto Set Learning for Expensive Multi-objective Optimization via Stein Variational Hypernetworks (AAAI 2025)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34167",
    "openreview_url": "https://openreview.net/search?term=Quang-Huy+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4057,7 +3465,8 @@
    "first_paper": "Multi-Perspective Data Augmentation for Few-shot Object Detection (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=qG0WCAhZE0",
    "openreview_url": "https://openreview.net/search?term=Quoc+Truong+Truong&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4090,7 +3499,8 @@
    "first_paper": "Region-Grounded Report Generation for 3D Medical Imaging: A Fine-Grained Dataset and Graph-Enhanced Framework (ACL 2026)",
    "first_url": "https://aclanthology.org/2026.acl-long.903/",
    "openreview_url": "https://openreview.net/search?term=Son+Dinh+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4123,7 +3533,8 @@
    "first_paper": "Cross-Modal Knowledge Distillation without Paired Data: Theoretical Foundation and Algorithm (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=z9aetU7Wfl",
    "openreview_url": "https://openreview.net/search?term=T.+K+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4156,7 +3567,8 @@
    "first_paper": "Mitigating Non-Representative Prototypes and Representation Bias in Few-Shot Continual Relation Extraction (ACL 2025)",
    "first_url": "https://aclanthology.org/2025.acl-long.530/",
    "openreview_url": "https://openreview.net/search?term=Thanh+Duc+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4189,7 +3601,8 @@
    "first_paper": "Multi-Perspective Data Augmentation for Few-shot Object Detection (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=qG0WCAhZE0",
    "openreview_url": "https://openreview.net/search?term=Thanh+Ngo&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4222,7 +3635,8 @@
    "first_paper": "PGA-KD: Principal Geometry Alignment and Semantic Consistency for VLM2Vec Distillation (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.257/",
    "openreview_url": "https://openreview.net/search?term=The-Anh+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4255,7 +3669,8 @@
    "first_paper": "Conversation Understanding using Relational Temporal Graph Neural Networks with Auxiliary Cross-Modality Interaction (EMNLP 2023)",
    "first_url": "https://aclanthology.org/2023.emnlp-main.937/",
    "openreview_url": "https://openreview.net/search?term=The-Son+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4288,7 +3703,8 @@
    "first_paper": "INFORMEDQX: Informed Conflict Detection for Over-Constrained Problems (AAAI 2024)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/28932",
    "openreview_url": "https://openreview.net/search?term=Thi+Ngoc+Trang+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4321,7 +3737,8 @@
    "first_paper": "XRepoTest: Benchmarking Multilingual Repository-Level Unit Test Generation for Large Language Models (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.274/",
    "openreview_url": "https://openreview.net/search?term=Thi-Mai-Anh+Bui&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4354,7 +3771,8 @@
    "first_paper": "HPE-Li: WiFi-enabled Lightweight Dual Selective Kernel Convolution for Human Pose Estimation (ECCV 2024)",
    "first_url": "https://eccv.ecva.net/virtual/2024/poster/1708",
    "openreview_url": "https://openreview.net/search?term=Thien+Van+Luong&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4387,7 +3805,8 @@
    "first_paper": "Geometric and Stochastic Analysis of Discontinuities in Sparse Mixture-of-Experts (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=AyrNR1ExN5",
    "openreview_url": "https://openreview.net/search?term=Thien-Hai+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4420,7 +3839,8 @@
    "first_paper": "FOCA: Future-Oriented Conditioning for Data-Efficient Vision-Language-Action Adaptation (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=0cnDTttyMR",
    "openreview_url": "https://openreview.net/search?term=Thien-Loc+Ha&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4453,7 +3873,8 @@
    "first_paper": "Language-Driven 6-DoF Grasp Detection Using Negative Prompt Guidance (ECCV 2024)",
    "first_url": "https://eccv.ecva.net/virtual/2024/poster/1611",
    "openreview_url": "https://openreview.net/search?term=Thieu+Vo&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4486,7 +3907,8 @@
    "first_paper": "Clean-Label Physical Backdoor Attacks with Data Distillation (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37349",
    "openreview_url": "https://openreview.net/search?term=Thinh+Dao&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4519,7 +3941,8 @@
    "first_paper": "Efficient Scale-Invariant Generator With Column-Row Entangled Pixel Synthesis (CVPR 2023)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Nguyen_Efficient_Scale-Invariant_Generator_With_Column-Row_Entangled_Pixel_Synthesis_CVPR_2023_paper.pdf",
    "openreview_url": "https://openreview.net/search?term=Thuan+Hoang+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4552,40 +3975,8 @@
    "first_paper": "Beyond Binary Classification: A Semi-supervised Approach to Generalized AI-generated Image Detection (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/40886",
    "openreview_url": "https://openreview.net/search?term=Thuc+D.+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Thuy Anh Ta",
-   "name_variants": "",
-   "institution": "Phenikaa University",
-   "institution_short": "Phenikaa",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "thuy-anh-ta",
-   "name_vi": "",
-   "papers": 1,
-   "senior_author": 0,
-   "first_year": "2026",
-   "last_year": "2026",
-   "venues": "IJCAI 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "School of Computing, Phenikaa University, Hanoi, Vietnam",
-   "openreview_position": "",
-   "sample_paper": "Beyond Homogeneous Adversaries: Stackelberg Security Games with Mixed Quantal Response (IJCAI 2026)",
-   "sample_url": "https://www.ijcai.org/proceedings/2026/392",
-   "first_paper": "Beyond Homogeneous Adversaries: Stackelberg Security Games with Mixed Quantal Response (IJCAI 2026)",
-   "first_url": "https://www.ijcai.org/proceedings/2026/392",
-   "openreview_url": "https://openreview.net/search?term=Thuy+Anh+Ta&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4618,7 +4009,8 @@
    "first_paper": "BALM: A Model-Agnostic Framework for Balanced Multimodal Learning under Imbalanced Missing Rates (CVPR 2026)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Nguyen_BALM_A_Model-Agnostic_Framework_for_Balanced_Multimodal_Learning_under_Imbalanced_CVPR_2026_paper.html",
    "openreview_url": "https://openreview.net/search?term=Tien+Anh+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4651,7 +4043,8 @@
    "first_paper": "HPE-Li: WiFi-enabled Lightweight Dual Selective Kernel Convolution for Human Pose Estimation (ECCV 2024)",
    "first_url": "https://eccv.ecva.net/virtual/2024/poster/1708",
    "openreview_url": "https://openreview.net/search?term=Tien+Dac+Lai&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4684,7 +4077,8 @@
    "first_paper": "Adaptive Prompting for Continual Relation Extraction: A Within-Task Variance Perspective (AAAI 2025)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34616",
    "openreview_url": "https://openreview.net/search?term=Tien+Ngoc+Luu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4717,40 +4111,8 @@
    "first_paper": "ESC: Emotional Self-Correction for Reliable Vision-Language Models (ECCV 2026)",
    "first_url": "https://eccv.ecva.net/virtual/2026/poster/5933",
    "openreview_url": "https://openreview.net/search?term=Tien-Huy+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Tran Anh Tuan",
-   "name_variants": "",
-   "institution": "Hanoi University of Science and Technology",
-   "institution_short": "HUST",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "tran-anh-tuan",
-   "name_vi": "",
-   "papers": 1,
-   "senior_author": 0,
-   "first_year": "2023",
-   "last_year": "2023",
-   "venues": "AAAI 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "School of Applied Mathematics and Informatics, Hanoi University of Science and Technology",
-   "openreview_position": "",
-   "sample_paper": "Improving Pareto Front Learning via Multi-Sample Hypernetworks (AAAI 2023)",
-   "sample_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25953",
-   "first_paper": "Improving Pareto Front Learning via Multi-Sample Hypernetworks (AAAI 2023)",
-   "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25953",
-   "openreview_url": "https://openreview.net/search?term=Tran+Anh+Tuan&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4783,7 +4145,8 @@
    "first_paper": "ViFactCheck: A New Benchmark Dataset and Methods for Multi-Domain News Fact-Checking In Vietnamese (AAAI 2025)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/32008",
    "openreview_url": "https://openreview.net/search?term=Tran+Quang+Duy&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4816,7 +4179,8 @@
    "first_paper": "ViFactCheck: A New Benchmark Dataset and Methods for Multi-Domain News Fact-Checking In Vietnamese (AAAI 2025)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/32008",
    "openreview_url": "https://openreview.net/search?term=Tran+Thai+Hoa&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4849,7 +4213,8 @@
    "first_paper": "LAMPAT: Low-Rank Adaption for Multilingual Paraphrasing Using Adversarial Training (AAAI 2024)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/29804",
    "openreview_url": "https://openreview.net/search?term=Trinh+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4882,7 +4247,8 @@
    "first_paper": "Region-Level Data Attribution for Text-to-Image Generative Models (ICCV 2025)",
    "first_url": "https://iccv.thecvf.com/virtual/2025/poster/2033",
    "openreview_url": "https://openreview.net/search?term=Trong+Bang+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4915,7 +4281,8 @@
    "first_paper": "HFedATM: Hierarchical Federated Domain Generalization via Optimal Transport and Regularized Mean Aggregation (CVPR 2026)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Nguyen_HFedATM_Hierarchical_Federated_Domain_Generalization_via_Optimal_Transport_and_Regularized_CVPR_2026_paper.html",
    "openreview_url": "https://openreview.net/search?term=Trung+Phan&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -4948,40 +4315,8 @@
    "first_paper": "H-SFP: Hierarchical Federated Learning with Decoupled Split-Model Prototyping (ECCV 2026)",
    "first_url": "https://eccv.ecva.net/virtual/2026/poster/5748",
    "openreview_url": "https://openreview.net/search?term=Trung-Dung+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
-  },
-  {
-   "approved": "",
-   "display_name": "Trung-Nghia Le",
-   "name_variants": "",
-   "institution": "University of Science, VNU-HCM",
-   "institution_short": "HCMUS",
-   "rank": "",
-   "vn_since": "",
-   "openreview_ids": "",
-   "homepage": "",
-   "pages": "",
-   "to_confirm": "rank, vn_since and OpenReview ID",
-   "notes": "",
-   "slug": "trung-nghia-le",
-   "name_vi": "",
-   "papers": 1,
-   "senior_author": 0,
-   "first_year": "2024",
-   "last_year": "2024",
-   "venues": "AAAI 1",
-   "at_university": "yes",
-   "faculty_page": "",
-   "faculty_rank": "",
-   "faculty_match": "",
-   "affiliations": "University of Science, VNU-HCM, Ho Chi Minh City, Vietnam; Vietnam National University, Ho Chi Minh City, Vietnam",
-   "openreview_position": "",
-   "sample_paper": "MaskDiff: Modeling Mask Distribution with Diffusion Probabilistic Model for Few-Shot Instance Segmentation (AAAI 2024)",
-   "sample_url": "https://ojs.aaai.org/index.php/AAAI/article/view/28068",
-   "first_paper": "MaskDiff: Modeling Mask Distribution with Diffusion Probabilistic Model for Few-Shot Instance Segmentation (AAAI 2024)",
-   "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/28068",
-   "openreview_url": "https://openreview.net/search?term=Trung-Nghia+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -5014,7 +4349,8 @@
    "first_paper": "VietCheckMed: Explainable Regulatory Compliance Checking for Medical Advertisements on Vietnamese Social Media (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37077",
    "openreview_url": "https://openreview.net/search?term=Truong+Phu+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -5047,7 +4383,8 @@
    "first_paper": "HOPE: Hybrid Optimized Parallel Encoding with Supervised and Unsupervised Semantic Fusion for Depression Symptom Detection (ACL 2026)",
    "first_url": "https://aclanthology.org/2026.acl-long.132/",
    "openreview_url": "https://openreview.net/search?term=Tu-Phuong+Mai&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -5080,7 +4417,8 @@
    "first_paper": "Efficiently Assemble Normalization Layers and Regularization for Federated Domain Generalization (CVPR 2024)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Le_Efficiently_Assemble_Normalization_Layers_and_Regularization_for_Federated_Domain_Generalization_CVPR_2024_paper.html",
    "openreview_url": "https://openreview.net/search?term=Tuan+Long+Ho&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -5113,7 +4451,8 @@
    "first_paper": "NeurFlow: Interpreting Neural Networks through Neuron Groups and Functional Interactions (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=GdbQyFOUlJ",
    "openreview_url": "https://openreview.net/search?term=Tue+Cao&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -5146,7 +4485,8 @@
    "first_paper": "Pareto-Grid-Guided Large Language Models for Fast and High-Quality Heuristics Design in Multi-Objective Combinatorial Optimization (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41024",
    "openreview_url": "https://openreview.net/search?term=Tung+Duy+Doan&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -5179,7 +4519,8 @@
    "first_paper": "On Inference Stability for Diffusion Models (AAAI 2024)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/29359",
    "openreview_url": "https://openreview.net/search?term=Tung+Nguyen+Thanh&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -5212,7 +4553,8 @@
    "first_paper": "A Unified Framework for Variable Selection in Model-Based Clustering with Missing Not at Random (NeurIPS 2025)",
    "first_url": "https://openreview.net/forum?id=n7yVbKH7c3",
    "openreview_url": "https://openreview.net/search?term=Van+Hoang&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -5245,7 +4587,8 @@
    "first_paper": "Tuning-Free One-Class Discriminant Learning for Tabular Anomaly Detection (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=3vezZKhyoS",
    "openreview_url": "https://openreview.net/search?term=VanHoi+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -5278,7 +4621,8 @@
    "first_paper": "INFORMEDQX: Informed Conflict Detection for Over-Constrained Problems (AAAI 2024)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/28932",
    "openreview_url": "https://openreview.net/search?term=Viet-Man+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -5311,7 +4655,8 @@
    "first_paper": "HieRD: Hierarchical Relational Distillation for Vision-Language Embedding Models (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=ZyqAd4xpT5",
    "openreview_url": "https://openreview.net/search?term=Vinh+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -5344,7 +4689,8 @@
    "first_paper": "Statistical Test for Attention Maps in Vision Transformers (ICML 2024)",
    "first_url": "https://icml.cc/virtual/2024/poster/32832",
    "openreview_url": "https://openreview.net/search?term=Vo+Nguyen+Le+Duy&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -5377,7 +4723,8 @@
    "first_paper": "FOCA: Future-Oriented Conditioning for Data-Efficient Vision-Language-Action Adaptation (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=0cnDTttyMR",
    "openreview_url": "https://openreview.net/search?term=Vu+Duong&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -5410,7 +4757,8 @@
    "first_paper": "RC-AutoCalib: An End-to-End Radar-Camera Automatic Calibration Network (CVPR 2025)",
    "first_url": "https://cvpr.thecvf.com/virtual/2025/poster/35011",
    "openreview_url": "https://openreview.net/search?term=Vu-Hoang+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -5443,25 +4791,194 @@
    "first_paper": "Scalable Group Choreography via Variational Phase Manifold Learning (ECCV 2024)",
    "first_url": "https://eccv.ecva.net/virtual/2024/poster/1394",
    "openreview_url": "https://openreview.net/search?term=Xuan+Bui&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   }
  ],
- "total": 165,
- "review": [
+ "total": 157,
+ "review": [],
+ "to_validate": [
   {
-   "decision": "",
-   "professor": "tan-d-tran",
-   "venue": "ijcai",
-   "year": "2023",
-   "title": "Linear Query Approximation Algorithms for Non-monotone Submodular Maximization under Knapsack Constraint",
-   "matched_name": "Tan D. Tran",
-   "affiliation": "Faculty of Information Technology, VNU University of Engineering and Technology, Hanoi, Vietnam",
-   "url": "https://www.ijcai.org/proceedings/2023/459",
-   "reason": "affiliation on the paper is not Phenikaa",
-   "professor_name": "Tan D. Tran",
-   "venue_name": "IJCAI"
+   "name": "Hoang Thanh-Tung",
+   "profile": "https://openreview.net/profile?id=~Thanh_Tung_Hoang1",
+   "post": "Lecturer at VNU University of Engineering and Technology",
+   "evidence": "AAAI 2025: On Effects of Steering Latent Representation for Large Language Model Unlearning",
+   "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34544",
+   "flag": "",
+   "source": "AAAI/IJCAI scan",
+   "weight": 1,
+   "papers": 3
+  },
+  {
+   "name": "Nguyen Van Dinh",
+   "profile": "https://openreview.net/profile?id=~Van-Dinh_Nguyen1",
+   "post": "Assistant Professor at VinUniversityy",
+   "evidence": "AAAI 2026: ViDia2Std: A Parallel Corpus and Methods for Low-Resource Vietnamese Dialect-to-Standard Translation",
+   "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/40247",
+   "flag": "the paper and OpenReview name different institutions: check it is the same person",
+   "source": "AAAI/IJCAI scan",
+   "weight": 1,
+   "papers": 3
+  },
+  {
+   "name": "Duc Anh Nguyen",
+   "profile": "https://openreview.net/search?term=Duc+Anh+Nguyen&group=all&content=all&source=all",
+   "post": "~Duc_Anh_Nguyen4: Lecturer at Hanoi University of Science and Technology",
+   "evidence": "EMNLP 2 (2 accepted)",
+   "paper_url": "https://aclanthology.org/2026.emnlp-main.257/",
+   "flag": "3 profiles at the institution",
+   "source": "accepted paper",
+   "weight": 2,
+   "papers": 2
+  },
+  {
+   "name": "Tho Quan",
+   "profile": "https://openreview.net/profile?id=~Tho_Quan1",
+   "post": "Associate Professor at Ho Chi Minh City University of Technology",
+   "evidence": "AAAI 2024: LAMPAT: Low-Rank Adaption for Multilingual Paraphrasing Using Adversarial Training",
+   "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/29804",
+   "flag": "",
+   "source": "AAAI/IJCAI scan",
+   "weight": 1,
+   "papers": 2
+  },
+  {
+   "name": "Trung Thanh Nguyen",
+   "profile": "https://openreview.net/profile?id=~Trung_Thanh_Nguyen2",
+   "post": "Associate Professor at Hanoi National Economics University (Phenikaa University 2020-2024)",
+   "evidence": "IJCAI 2020: Approximate Pareto Set for Fair and Efficient Allocation: Few Agent Types or Few Resource Types",
+   "paper_url": "https://www.ijcai.org/proceedings/2020/41",
+   "flag": "the paper names Phenikaa, his post then; it counts only if his roster institution is Phenikaa",
+   "source": "AAAI/IJCAI scan",
+   "weight": 1,
+   "papers": 2
+  },
+  {
+   "name": "Duc-Dung Nguyen",
+   "profile": "https://openreview.net/profile?id=~Duc_Dung_Nguyen1",
+   "post": "Lecturer at Ho Chi Minh City University of Technology",
+   "evidence": "AAAI 2025: Semi-supervised 3D Semantic Scene Completion with 2D Vision Foundation Model Guidance",
+   "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/32698",
+   "flag": "",
+   "source": "AAAI/IJCAI scan",
+   "weight": 1,
+   "papers": 1
+  },
+  {
+   "name": "Hai Nguyen Hong",
+   "profile": "https://openreview.net/profile?id=~Nguyen_Hong_Hai1",
+   "post": "Lecturer at FPT University",
+   "evidence": "AAAI 2026: DEGRE: Dynamic Gating Ensembles for Trust-Aware Rejection in Medical Image Diagnostics",
+   "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/42473",
+   "flag": "",
+   "source": "AAAI/IJCAI scan",
+   "weight": 1,
+   "papers": 1
+  },
+  {
+   "name": "Hoang-Quynh Le",
+   "profile": "https://openreview.net/profile?id=~Hoang-Quynh_Le2",
+   "post": "Lecturer at VNU University of Engineering and Technology (2009-2026)",
+   "evidence": "ACL 2026: HOPE: Hybrid Optimized Parallel Encoding with Supervised and Unsupervised Semantic Fusion for Depression Symptom Detection",
+   "paper_url": "https://aclanthology.org/2026.acl-long.132/",
+   "flag": "the post ended in 2026 and no current post is given: check she is still at VNU-UET",
+   "source": "AAAI/IJCAI scan",
+   "weight": 1,
+   "papers": 1
+  },
+  {
+   "name": "Huyen Nguyen",
+   "profile": "https://openreview.net/profile?id=~Huyen_Nguyen1",
+   "post": "Lecturer at VNU University of Science",
+   "evidence": "AAAI 2025: REM: A Scalable Reinforced Multi-Expert Framework for Multiplex Influence Maximization",
+   "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34917",
+   "flag": "the paper and OpenReview name different institutions: check it is the same person",
+   "source": "AAAI/IJCAI scan",
+   "weight": 1,
+   "papers": 1
+  },
+  {
+   "name": "Minh Hoàng Hà",
+   "profile": "https://openreview.net/profile?id=~Hà_Minh_Hoàng1",
+   "post": "Associate Professor at National Economics University",
+   "evidence": "IJCAI 2026: Beyond Homogeneous Adversaries: Stackelberg Security Games with Mixed Quantal Response",
+   "paper_url": "https://www.ijcai.org/proceedings/2026/392",
+   "flag": "",
+   "source": "AAAI/IJCAI scan",
+   "weight": 1,
+   "papers": 1
+  },
+  {
+   "name": "Ngan Luu-Thuy Nguyen",
+   "profile": "https://openreview.net/profile?id=~Ngan_Luu-Thuy_Nguyen1",
+   "post": "Lecturer at University of Information Technology, Vietnam National University Ho Chi Minh City",
+   "evidence": "AAAI 2025: Vietnamese Words Are Not Constructed from Syllables: Rethinking the Role of Word Segmentation in Natural Language Processing for Vietnamese Texts",
+   "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34581",
+   "flag": "",
+   "source": "AAAI/IJCAI scan",
+   "weight": 1,
+   "papers": 1
+  },
+  {
+   "name": "Nghia Hieu Nguyen",
+   "profile": "https://openreview.net/profile?id=~Nghia_Hieu_Nguyen1",
+   "post": "Lecturer at University of Information Technology, Vietnam National University",
+   "evidence": "AAAI 2025: Vietnamese Words Are Not Constructed from Syllables: Rethinking the Role of Word Segmentation in Natural Language Processing for Vietnamese Texts",
+   "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34581",
+   "flag": "",
+   "source": "AAAI/IJCAI scan",
+   "weight": 1,
+   "papers": 1
+  },
+  {
+   "name": "Thuy Anh Ta",
+   "profile": "https://openreview.net/profile?id=~THUY_ANH_TA2",
+   "post": "Assistant Professor at Phenikaa University",
+   "evidence": "IJCAI 2026: Beyond Homogeneous Adversaries: Stackelberg Security Games with Mixed Quantal Response",
+   "paper_url": "https://www.ijcai.org/proceedings/2026/392",
+   "flag": "",
+   "source": "AAAI/IJCAI scan",
+   "weight": 1,
+   "papers": 1
+  },
+  {
+   "name": "Tran Anh Tuan",
+   "profile": "https://openreview.net/profile?id=~Tuan-Anh_Tran1",
+   "post": "Lecturer at Ho Chi Minh City University of Technology",
+   "evidence": "AAAI 2023: Improving Pareto Front Learning via Multi-Sample Hypernetworks",
+   "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25953",
+   "flag": "the paper and OpenReview name different institutions: check it is the same person",
+   "source": "AAAI/IJCAI scan",
+   "weight": 1,
+   "papers": 1
+  },
+  {
+   "name": "Tran Ngoc Thang",
+   "profile": "https://openreview.net/profile?id=~Thang_Ngoc_Tran1",
+   "post": "Lecturer at Hanoi University of Science and Technology",
+   "evidence": "AAAI 2023: Improving Pareto Front Learning via Multi-Sample Hypernetworks",
+   "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25953",
+   "flag": "",
+   "source": "AAAI/IJCAI scan",
+   "weight": 1,
+   "papers": 1
+  },
+  {
+   "name": "Trung-Nghia Le",
+   "profile": "https://openreview.net/profile?id=~Trung-Nghia_Le1",
+   "post": "Lecturer at University of Science (also Researcher there)",
+   "evidence": "AAAI 2024: MaskDiff: Modeling Mask Distribution with Diffusion Probabilistic Model for Few-Shot Instance Segmentation",
+   "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/28068",
+   "flag": "OpenReview says only 'University of Science'; the paper names HCMUS",
+   "source": "AAAI/IJCAI scan",
+   "weight": 1,
+   "papers": 1
   }
  ],
+ "students_hidden": 6,
+ "researchers": 3,
+ "left": 12,
+ "lookup_pending": 75,
  "waiting": [],
  "excluded": [
   {
@@ -5791,6 +5308,33 @@
    "openreview_ids": [
     "~Thong_H._Bui1"
    ]
+  },
+  {
+   "name": "Wray Buntine",
+   "institution": "VinUni",
+   "reason": "Not Vietnamese: the site tracks Vietnamese professors and lecturers (decided by the maintainer on 2026-11-24). Full Professor at VinUniversity and Monash University (OpenReview profile); AAAI 2023, 2024, 2026 papers at VinUniversity.",
+   "homepage": "",
+   "openreview_ids": [
+    "~Wray_Buntine1"
+   ]
+  },
+  {
+   "name": "Alex Chichung Kot",
+   "institution": "VinUni",
+   "reason": "Not Vietnamese: the site tracks Vietnamese professors and lecturers (decided by the maintainer on 2026-11-24). Affiliated Professor at VinUniversity, Emeritus Professor at NTU (OpenReview profile); AAAI 2026 paper at VinUniversity.",
+   "homepage": "",
+   "openreview_ids": [
+    "~Alex_Kot1"
+   ]
+  },
+  {
+   "name": "Zengchang Qin",
+   "institution": "VinUni",
+   "reason": "Not Vietnamese: the site tracks Vietnamese professors and lecturers (decided by the maintainer on 2026-11-24). Full Professor at VinUniversity since 2025 (OpenReview profile); ICLR 2022 record.",
+   "homepage": "",
+   "openreview_ids": [
+    "~Zengchang_Qin1"
+   ]
   }
  ],
  "foreign": [
@@ -5998,7 +5542,8 @@
    "first_paper": "Input-Aware Dynamic Backdoor Attack (NeurIPS 2020)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Anh+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6031,7 +5576,8 @@
    "first_paper": "Domain Invariant Representation Learning with Domain Density Transformations (NeurIPS 2021)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Toan+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6064,7 +5610,8 @@
    "first_paper": "Distributionally Robust Local Non-parametric Conditional Estimation (NeurIPS 2020)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Viet+Anh+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6097,7 +5644,8 @@
    "first_paper": "Collapsed Amortized Variational Inference for Switching Nonlinear Dynamical Systems (ICML 2020)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Hung+Bui&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6130,7 +5678,8 @@
    "first_paper": "On Unbalanced Optimal Transport: An Analysis of Sinkhorn Algorithm (ICML 2020)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Tung+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6163,7 +5712,8 @@
    "first_paper": "Enhancing Domain Adaptation through Prompt Gradient Alignment (NeurIPS 2024)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/50ea4cf434c84a50203d7145afc7b853-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Quyen+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6196,7 +5746,8 @@
    "first_paper": "Dataset Diffusion: Diffusion-based Synthetic Data Generation for Pixel-Level Semantic Segmentation (NeurIPS 2023)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/f2957e48240c1d90e62b303574871b47-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Khoi+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6229,7 +5780,8 @@
    "first_paper": "Demystifying the Token Dynamics of Deep Selective State Space Models (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=qtTIP5Gjc5",
    "openreview_url": "https://openreview.net/search?term=Duy-Tung+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6262,7 +5814,8 @@
    "first_paper": "Dataset Diffusion: Diffusion-based Synthetic Data Generation for Pixel-Level Semantic Segmentation (NeurIPS 2023)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/f2957e48240c1d90e62b303574871b47-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Quang+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6295,7 +5848,8 @@
    "first_paper": "POODLE: Improving Few-shot Learning via Penalizing Out-of-Distribution Samples (NeurIPS 2021)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Rang+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6328,7 +5882,8 @@
    "first_paper": "Diverse Text-to-3D Synthesis with Augmented Text Embedding (ECCV 2024)",
    "first_url": "https://eccv.ecva.net/virtual/2024/poster/1675",
    "openreview_url": "https://openreview.net/search?term=Phong+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6361,7 +5916,8 @@
    "first_paper": "Mixture of Experts Meets Prompt-Based Continual Learning (NeurIPS 2024)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/d78d68cae595fabadd187b583ee8708e-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=An+Nguyen+The&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6394,7 +5950,8 @@
    "first_paper": "Improving Mini-batch Optimal Transport via Partial Transportation (ICML 2022)",
    "first_url": "https://proceedings.mlr.press/v162/nguyen22e.html",
    "openreview_url": "https://openreview.net/search?term=Dang+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6427,7 +5984,8 @@
    "first_paper": "Distance-Based Tree-Sliced Wasserstein Distance (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=OiQttMHwce",
    "openreview_url": "https://openreview.net/search?term=Minh-Khoi+Nguyen-Nhat&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6460,7 +6018,8 @@
    "first_paper": "DiMSUM: Diffusion Mamba - A Scalable and Unified Spatial-Frequency Method for Image Generation (NeurIPS 2024)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/39bc6e3cbf5a1991d33dc10ebff9a9cf-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Trung+Dao&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6493,7 +6052,8 @@
    "first_paper": "Predictive Coding for Locally-Linear Control (ICML 2020)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Tung+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6526,7 +6086,8 @@
    "first_paper": "Dictionary-Guided Scene Text Recognition (CVPR 2021)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2021/html/Nguyen_Dictionary-Guided_Scene_Text_Recognition_CVPR_2021_paper.html",
    "openreview_url": "https://openreview.net/search?term=Minh+Hoai&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6559,7 +6120,8 @@
    "first_paper": "EgoMusic-driven Human Dance Motion Estimation with Skeleton Mamba (ICCV 2025)",
    "first_url": "https://iccv.thecvf.com/virtual/2025/poster/67",
    "openreview_url": "https://openreview.net/search?term=Van+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6592,7 +6154,8 @@
    "first_paper": "Neural ODE Transformers: Analyzing Internal Dynamics and Adaptive Fine-tuning (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=XnDyddPcBT",
    "openreview_url": "https://openreview.net/search?term=Duc+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6625,7 +6188,8 @@
    "first_paper": "Neural Collapse in Deep Linear Networks: From Balanced to Imbalanced Data (ICML 2023)",
    "first_url": "https://icml.cc/virtual/2023/poster/24079",
    "openreview_url": "https://openreview.net/search?term=Hien+Dang&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6658,7 +6222,8 @@
    "first_paper": "Open3DIS: Open-Vocabulary 3D Instance Segmentation with 2D Mask Guidance (CVPR 2024)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Nguyen_Open3DIS_Open-Vocabulary_3D_Instance_Segmentation_with_2D_Mask_Guidance_CVPR_2024_paper.html",
    "openreview_url": "https://openreview.net/search?term=Phuc+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6691,7 +6256,8 @@
    "first_paper": "Continual Relation Extraction via Sequential Multi-Task Learning (AAAI 2024)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/29805",
    "openreview_url": "https://openreview.net/search?term=Thanh-Thien+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6724,7 +6290,8 @@
    "first_paper": "Distance-Based Tree-Sliced Wasserstein Distance (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=OiQttMHwce",
    "openreview_url": "https://openreview.net/search?term=Trang+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6757,7 +6324,8 @@
    "first_paper": "CAMEx: Curvature-aware Merging of Experts (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=nT2u0M0nf8",
    "openreview_url": "https://openreview.net/search?term=Duy+Linh+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6790,7 +6358,8 @@
    "first_paper": "Language-driven Scene Synthesis using Multi-conditional Diffusion Model (NeurIPS 2023)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/623e5a86fcedca573d33390dd1173e6b-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=An+Dinh+Vuong&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6823,7 +6392,8 @@
    "first_paper": "EFHQ: Multi-purpose ExtremePose-Face-HQ dataset (CVPR 2024)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Dao_EFHQ_Multi-purpose_ExtremePose-Face-HQ_dataset_CVPR_2024_paper.html",
    "openreview_url": "https://openreview.net/search?term=Duc+H+Vu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6856,7 +6426,8 @@
    "first_paper": "Multi-Task Learning for Metaphor Detection with Graph Convolutional Neural Networks and Word Sense Disambiguation (AAAI 2020)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/6326",
    "openreview_url": "https://openreview.net/search?term=Duong+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6889,7 +6460,8 @@
    "first_paper": "Counterfactual Plans under Distributional Ambiguity (ICLR 2022)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Duy+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6922,7 +6494,8 @@
    "first_paper": "Wavelet Diffusion Models Are Fast and Scalable Image Generators (CVPR 2023)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Phung_Wavelet_Diffusion_Models_Are_Fast_and_Scalable_Image_Generators_CVPR_2023_paper.pdf",
    "openreview_url": "https://openreview.net/search?term=Hao+Phung&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6955,7 +6528,8 @@
    "first_paper": "DPaI: Differentiable Pruning at Initialization with Node-Path Balance Principle (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=hvLBTpiDt3",
    "openreview_url": "https://openreview.net/search?term=Lan-Cuong+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -6988,7 +6562,8 @@
    "first_paper": "More Reliable Pseudo-labels, Better Performance: A Generalized Approach to Single Positive Multi-label Learning (ICCV 2025)",
    "first_url": "https://iccv.thecvf.com/virtual/2025/poster/1755",
    "openreview_url": "https://openreview.net/search?term=Luong+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7021,7 +6596,8 @@
    "first_paper": "DPaI: Differentiable Pruning at Initialization with Node-Path Balance Principle (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=hvLBTpiDt3",
    "openreview_url": "https://openreview.net/search?term=Quan+Nguyen-Tri&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7054,7 +6630,8 @@
    "first_paper": "Improving Transformer with an Admixture of Attention Heads (NeurIPS 2022)",
    "first_url": "https://openreview.net/forum?id=0VFQhPGF1M3",
    "openreview_url": "https://openreview.net/search?term=Tam+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7087,7 +6664,8 @@
    "first_paper": "Neural Collapse in Deep Linear Networks: From Balanced to Imbalanced Data (ICML 2023)",
    "first_url": "https://icml.cc/virtual/2023/poster/24079",
    "openreview_url": "https://openreview.net/search?term=Tho+Tran+Huu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7120,7 +6698,8 @@
    "first_paper": "Input-Aware Dynamic Backdoor Attack (NeurIPS 2020)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Tuan+Anh+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7153,7 +6732,8 @@
    "first_paper": "Revisiting Reverse Distillation for Anomaly Detection (CVPR 2023)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Tien_Revisiting_Reverse_Distillation_for_Anomaly_Detection_CVPR_2023_paper.pdf",
    "openreview_url": "https://openreview.net/search?term=Steven+Q.+H.+Truong&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7186,7 +6766,8 @@
    "first_paper": "Network Pruning That Matters:  A Case Study on Retraining Variants (ICLR 2021)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Binh-Son+Hua&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7219,7 +6800,8 @@
    "first_paper": "Dictionary-Guided Scene Text Recognition (CVPR 2021)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2021/html/Nguyen_Dictionary-Guided_Scene_Text_Recognition_CVPR_2021_paper.html",
    "openreview_url": "https://openreview.net/search?term=Thien+Huu+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7252,7 +6834,8 @@
    "first_paper": "Equivariant Neural Functional Networks for Transformers (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=uBai0ukstY",
    "openreview_url": "https://openreview.net/search?term=An+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7285,7 +6868,8 @@
    "first_paper": "MOTIF: Multi-strategy Optimization via Turn-based Interactive Framework (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41028",
    "openreview_url": "https://openreview.net/search?term=Cong+Dao+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7318,7 +6902,8 @@
    "first_paper": "CT-ScanGaze: A Dataset and Baselines for 3D Volumetric Scanpath Modeling (ICCV 2025)",
    "first_url": "https://iccv.thecvf.com/virtual/2025/poster/149",
    "openreview_url": "https://openreview.net/search?term=Cuong+Van&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7351,7 +6936,8 @@
    "first_paper": "CodeMMLU: A Multi-Task Benchmark for Assessing Code Understanding & Reasoning Capabilities of CodeLLMs (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=CahIEKCu5Q",
    "openreview_url": "https://openreview.net/search?term=Dung+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7384,7 +6970,8 @@
    "first_paper": "Towards Data-Agnostic Pruning At Initialization: What Makes a Good Sparse Mask? (NeurIPS 2023)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/fd5013ea0c3f96931dec77174eaf9d80-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Hoang+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7417,7 +7004,8 @@
    "first_paper": "On Unbalanced Optimal Transport: An Analysis of Sinkhorn Algorithm (ICML 2020)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Khang+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7450,7 +7038,8 @@
    "first_paper": "LAMPAT: Low-Rank Adaption for Multilingual Paraphrasing Using Adversarial Training (AAAI 2024)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/29804",
    "openreview_url": "https://openreview.net/search?term=Khoi+M+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7483,7 +7072,8 @@
    "first_paper": "Fantastic Targets for Concept Erasure in Diffusion Models and Where To Find Them (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=tZdqL5FH7w",
    "openreview_url": "https://openreview.net/search?term=Long+Vuong&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7516,7 +7106,8 @@
    "first_paper": "CAMEx: Curvature-aware Merging of Experts (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=nT2u0M0nf8",
    "openreview_url": "https://openreview.net/search?term=Luc+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7549,7 +7140,8 @@
    "first_paper": "Mixture of Experts Meets Prompt-Based Continual Learning (NeurIPS 2024)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/d78d68cae595fabadd187b583ee8708e-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Minh+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7582,7 +7174,8 @@
    "first_paper": "CT-ScanGaze: A Dataset and Baselines for 3D Volumetric Scanpath Modeling (ICCV 2025)",
    "first_url": "https://iccv.thecvf.com/virtual/2025/poster/149",
    "openreview_url": "https://openreview.net/search?term=Ngoc+Son+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7615,7 +7208,8 @@
    "first_paper": "Revisiting Reverse Distillation for Anomaly Detection (CVPR 2023)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Tien_Revisiting_Reverse_Distillation_for_Anomaly_Detection_CVPR_2023_paper.pdf",
    "openreview_url": "https://openreview.net/search?term=Nguyen+Hoang+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7648,7 +7242,8 @@
    "first_paper": "Improving Relational Regularized Autoencoders with Spherical Sliced Fused Gromov Wasserstein (ICLR 2021)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Son+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7681,7 +7276,8 @@
    "first_paper": "Elliptical Attention (NeurIPS 2024)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/c63908a3e946af0e7978c23737229137-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Stefan+Nielsen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7714,7 +7310,8 @@
    "first_paper": "Efficient Scale-Invariant Generator With Column-Row Entangled Pixel Synthesis (CVPR 2023)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Nguyen_Efficient_Scale-Invariant_Generator_With_Column-Row_Entangled_Pixel_Synthesis_CVPR_2023_paper.pdf",
    "openreview_url": "https://openreview.net/search?term=Thanh+Van+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7747,7 +7344,8 @@
    "first_paper": "Language-driven Scene Synthesis using Multi-conditional Diffusion Model (NeurIPS 2023)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/623e5a86fcedca573d33390dd1173e6b-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Toan+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7780,7 +7378,8 @@
    "first_paper": "Mixture of Experts Meets Prompt-Based Continual Learning (NeurIPS 2024)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/d78d68cae595fabadd187b583ee8708e-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Trang+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7813,7 +7412,8 @@
    "first_paper": "Predictive Coding for Locally-Linear Control (ICML 2020)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Tuan+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7846,7 +7446,8 @@
    "first_paper": "Token-Level Self-Play with Importance-Aware Guidance for Large Language Models (NeurIPS 2025)",
    "first_url": "https://openreview.net/forum?id=3VvdoCcVPU",
    "openreview_url": "https://openreview.net/search?term=Tue+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7879,7 +7480,8 @@
    "first_paper": "On Inference Stability for Diffusion Models (AAAI 2024)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/29359",
    "openreview_url": "https://openreview.net/search?term=Viet+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7912,7 +7514,8 @@
    "first_paper": "Reservoir of Importance: Learning Semi-Structured Sparsity with Differentiable Subset Sampling (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.1212/",
    "openreview_url": "https://openreview.net/search?term=Khac-Hoai+Nam+Bui&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7945,7 +7548,8 @@
    "first_paper": "Multi-Task Learning for Metaphor Detection with Graph Convolutional Neural Networks and Word Sense Disambiguation (AAAI 2020)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/6326",
    "openreview_url": "https://openreview.net/search?term=Thien+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -7978,7 +7582,8 @@
    "first_paper": "Blur2Blur: Blur Conversion for Unsupervised Image Deblurring on Unknown Domains (CVPR 2024)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Pham_Blur2Blur_Blur_Conversion_for_Unsupervised_Image_Deblurring_on_Unknown_Domains_CVPR_2024_paper.html",
    "openreview_url": "https://openreview.net/search?term=Bang-Dang+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8011,7 +7616,8 @@
    "first_paper": "A high-quality robust diffusion framework for corrupted dataset (ECCV 2024)",
    "first_url": "https://eccv.ecva.net/virtual/2024/poster/2326",
    "openreview_url": "https://openreview.net/search?term=Binh+Ta&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8044,7 +7650,8 @@
    "first_paper": "Revisiting Reverse Distillation for Anomaly Detection (CVPR 2023)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Tien_Revisiting_Reverse_Distillation_for_Anomaly_Detection_CVPR_2023_paper.pdf",
    "openreview_url": "https://openreview.net/search?term=Chanh+D.+Tr.+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8077,7 +7684,8 @@
    "first_paper": "MulCLIP: A Multi-level Alignment Framework for Enhancing Fine-grained Long-context CLIP (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=qD0McGAhI2",
    "openreview_url": "https://openreview.net/search?term=Chau+Truong&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8110,7 +7718,8 @@
    "first_paper": "GIIM: Graph-based Learning of Inter- and Intra-view Dependencies for Multi-view Medical Image Diagnosis (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37830",
    "openreview_url": "https://openreview.net/search?term=Dao+Trung+Kien&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8143,7 +7752,8 @@
    "first_paper": "Guiding Noisy Label Conditional Diffusion Models with Score-based Discriminator Correction (ICCV 2025)",
    "first_url": "https://iccv.thecvf.com/virtual/2025/poster/1482",
    "openreview_url": "https://openreview.net/search?term=Dat+Cong&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8176,7 +7786,8 @@
    "first_paper": "QC-StyleGAN - Quality Controllable Image Generation and Manipulation (NeurIPS 2022)",
    "first_url": "https://openreview.net/forum?id=AWeZdGJ89lC",
    "openreview_url": "https://openreview.net/search?term=Dat+Viet+Thanh+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8209,7 +7820,8 @@
    "first_paper": "Count What You Want: Exemplar Identification and Few-Shot Counting of Human Actions in the Wild (AAAI 2024)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/28869",
    "openreview_url": "https://openreview.net/search?term=Duc+Duy+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8242,7 +7854,8 @@
    "first_paper": "Semi-supervised 3D Semantic Scene Completion with 2D Vision Foundation Model Guidance (AAAI 2025)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/32698",
    "openreview_url": "https://openreview.net/search?term=Duc-Hai+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8275,7 +7888,8 @@
    "first_paper": "Improving Transformers with Probabilistic Attention Keys (ICML 2022)",
    "first_url": "https://proceedings.mlr.press/v162/nguyen22c.html",
    "openreview_url": "https://openreview.net/search?term=Duy+Khuong+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8308,7 +7922,8 @@
    "first_paper": "Language-driven Scene Synthesis using Multi-conditional Diffusion Model (NeurIPS 2023)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/623e5a86fcedca573d33390dd1173e6b-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Dzung+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8341,7 +7956,8 @@
    "first_paper": "Reservoir of Importance: Learning Semi-Structured Sparsity with Differentiable Subset Sampling (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.1212/",
    "openreview_url": "https://openreview.net/search?term=Ha+Dinh&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8374,7 +7990,8 @@
    "first_paper": "Language-driven Grasp Detection (CVPR 2024)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Vuong_Language-driven_Grasp_Detection_CVPR_2024_paper.html",
    "openreview_url": "https://openreview.net/search?term=Hieu+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8407,7 +8024,8 @@
    "first_paper": "Selecting Optimal Context Sentences for Event-Event Relation Extraction (AAAI 2022)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/21354",
    "openreview_url": "https://openreview.net/search?term=Hieu+Man&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8440,7 +8058,8 @@
    "first_paper": "Guiding Noisy Label Conditional Diffusion Models with Score-based Discriminator Correction (ICCV 2025)",
    "first_url": "https://iccv.thecvf.com/virtual/2025/poster/1482",
    "openreview_url": "https://openreview.net/search?term=Hieu+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8473,7 +8092,8 @@
    "first_paper": "Distributionally Robust Fair Principal Components via Geodesic Descents (ICLR 2022)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Hieu+Vu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8506,7 +8126,8 @@
    "first_paper": "Improving Neural Ordinary Differential Equations with Nesterov's Accelerated Gradient Method (NeurIPS 2022)",
    "first_url": "https://openreview.net/forum?id=-OfK_B9Q5hI",
    "openreview_url": "https://openreview.net/search?term=Ho+Huu+Nghia+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8539,7 +8160,8 @@
    "first_paper": "Cross-Space Distillation: Teaching One-Step Students with Modern Diffusion Teachers (ECCV 2026)",
    "first_url": "https://eccv.ecva.net/virtual/2026/poster/4819",
    "openreview_url": "https://openreview.net/search?term=Hong+Duc+Vu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8572,7 +8194,8 @@
    "first_paper": "FOCA: Future-Oriented Conditioning for Data-Efficient Vision-Language-Action Adaptation (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=0cnDTttyMR",
    "openreview_url": "https://openreview.net/search?term=Hung+Ngo&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8605,7 +8228,8 @@
    "first_paper": "Nearly Optimal Fixed-Confidence Best-Arm Identification with 1-Bit Feedback (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=6ZgRA8gi3F",
    "openreview_url": "https://openreview.net/search?term=Hung+TRAN&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8638,7 +8262,8 @@
    "first_paper": "GIIM: Graph-based Learning of Inter- and Intra-view Dependencies for Multi-view Medical Image Diagnosis (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37830",
    "openreview_url": "https://openreview.net/search?term=Hung+Vu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8671,7 +8296,8 @@
    "first_paper": "Low-Rank Adaptation in Multilinear Operator Networks for Security-Preserving Incremental Learning (CVPR 2025)",
    "first_url": "https://cvpr.thecvf.com/virtual/2025/poster/33975",
    "openreview_url": "https://openreview.net/search?term=Huu+Binh+Ta&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8704,7 +8330,8 @@
    "first_paper": "Reinforced Target-driven Conversational Promotion (EMNLP 2023)",
    "first_url": "https://aclanthology.org/2023.emnlp-main.775/",
    "openreview_url": "https://openreview.net/search?term=Huy+Dao&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8737,7 +8364,8 @@
    "first_paper": "On Robust Optimal Transport: Computational Complexity and Barycenter Computation (NeurIPS 2021)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Huy+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8770,7 +8398,8 @@
    "first_paper": "CLIP-FMoE: Scalable CLIP via Fused Mixture-of-Experts with Enforced Specialization (ICLR 2026)",
    "first_url": "https://openreview.net/forum?id=RErUA45pI9",
    "openreview_url": "https://openreview.net/search?term=Huynh+Dang+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8803,7 +8432,8 @@
    "first_paper": "Revisiting Over-smoothing and Over-squashing Using Ollivier-Ricci Curvature (ICML 2023)",
    "first_url": "https://icml.cc/virtual/2023/poster/24144",
    "openreview_url": "https://openreview.net/search?term=Khang+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8836,7 +8466,8 @@
    "first_paper": "Erasing Undesirable Concepts in Diffusion Models with Adversarial Preservation (NeurIPS 2024)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/f02d7fb7ddd2e6be33b6f3224e5cc44a-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Khanh+Doan&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8869,7 +8500,8 @@
    "first_paper": "On Unbalanced Optimal Transport: An Analysis of Sinkhorn Algorithm (ICML 2020)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Khiem+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8902,7 +8534,8 @@
    "first_paper": "POODLE: Improving Few-shot Learning via Penalizing Out-of-Distribution Samples (NeurIPS 2021)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Khoi+Duc+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8935,7 +8568,8 @@
    "first_paper": "Count What You Want: Exemplar Identification and Few-Shot Counting of Human Actions in the Wild (AAAI 2024)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/28869",
    "openreview_url": "https://openreview.net/search?term=Lam+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -8968,7 +8602,8 @@
    "first_paper": "Exploiting Domain-Specific Features to Enhance Domain Generalization (NeurIPS 2021)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Manh-Ha+Bui&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9001,7 +8636,8 @@
    "first_paper": "Any3DIS: Class-Agnostic 3D Instance Segmentation by 2D Mask Tracking (CVPR 2025)",
    "first_url": "https://cvpr.thecvf.com/virtual/2025/poster/34232",
    "openreview_url": "https://openreview.net/search?term=Minh+Luu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9034,7 +8670,8 @@
    "first_paper": "Diverse Text-to-3D Synthesis with Augmented Text Embedding (ECCV 2024)",
    "first_url": "https://eccv.ecva.net/virtual/2024/poster/1675",
    "openreview_url": "https://openreview.net/search?term=Minh+N.+Hoang+Luu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9067,7 +8704,8 @@
    "first_paper": "Language-driven Grasp Detection (CVPR 2024)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Vuong_Language-driven_Grasp_Detection_CVPR_2024_paper.html",
    "openreview_url": "https://openreview.net/search?term=Nghia+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9100,7 +8738,8 @@
    "first_paper": "Selecting Optimal Context Sentences for Event-Event Relation Extraction (AAAI 2022)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/21354",
    "openreview_url": "https://openreview.net/search?term=Nghia+Trung+Ngo&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9133,7 +8772,8 @@
    "first_paper": "LLM-SRBench: A New Benchmark for Scientific Equation Discovery with Large Language Models (ICML 2025)",
    "first_url": "https://openreview.net/forum?id=SyQPiZJVWY",
    "openreview_url": "https://openreview.net/search?term=Ngoc+Hieu+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9166,7 +8806,8 @@
    "first_paper": "Stochastic Multiple Target Sampling Gradient Descent (NeurIPS 2022)",
    "first_url": "https://openreview.net/forum?id=Iksst2czYoB",
    "openreview_url": "https://openreview.net/search?term=Ngoc+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9199,7 +8840,8 @@
    "first_paper": "CLIP-FMoE: Scalable CLIP via Fused Mixture-of-Experts with Enforced Specialization (ICLR 2026)",
    "first_url": "https://openreview.net/forum?id=RErUA45pI9",
    "openreview_url": "https://openreview.net/search?term=Nguyen+Cong+Dat&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9232,7 +8874,8 @@
    "first_paper": "Dictionary-Guided Scene Text Recognition (CVPR 2021)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2021/html/Nguyen_Dictionary-Guided_Scene_Text_Recognition_CVPR_2021_paper.html",
    "openreview_url": "https://openreview.net/search?term=Nguyen+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9265,7 +8908,8 @@
    "first_paper": "DepthVanish: Optimizing Adversarial Interval Structures for Stereo-Depth-Invisible Patches (NeurIPS 2025)",
    "first_url": "https://openreview.net/forum?id=eD1VyYURiq",
    "openreview_url": "https://openreview.net/search?term=Nhat+Chung&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9298,7 +8942,8 @@
    "first_paper": "DyGLIP: A Dynamic Graph Model With Link Prediction for Accurate Multi-Camera Multiple Object Tracking (CVPR 2021)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2021/html/Quach_DyGLIP_A_Dynamic_Graph_Model_With_Link_Prediction_for_Accurate_CVPR_2021_paper.html",
    "openreview_url": "https://openreview.net/search?term=Pha+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9331,7 +8976,8 @@
    "first_paper": "A high-quality robust diffusion framework for corrupted dataset (ECCV 2024)",
    "first_url": "https://eccv.ecva.net/virtual/2024/poster/2326",
    "openreview_url": "https://openreview.net/search?term=Quan+Dao&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9364,7 +9010,8 @@
    "first_paper": "Bayesian Optimization for Unknown Cost-Varying Variable Subsets with No-Regret Costs (AAAI 2025)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34906",
    "openreview_url": "https://openreview.net/search?term=Quoc+Anh+Hoang+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9397,7 +9044,8 @@
    "first_paper": "On Transportation of Mini-batches: A Hierarchical Approach (ICML 2022)",
    "first_url": "https://proceedings.mlr.press/v162/nguyen22d.html",
    "openreview_url": "https://openreview.net/search?term=Quoc+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9430,7 +9078,8 @@
    "first_paper": "Interactive Medical Image Analysis with Concept-based Similarity Reasoning (CVPR 2025)",
    "first_url": "https://cvpr.thecvf.com/virtual/2025/poster/33732",
    "openreview_url": "https://openreview.net/search?term=Sen+Kim+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9463,7 +9112,8 @@
    "first_paper": "Seeing the Trees for the Forest: Rethinking Weakly-Supervised Medical Visual Grounding (ICCV 2025)",
    "first_url": "https://iccv.thecvf.com/virtual/2025/poster/1190",
    "openreview_url": "https://openreview.net/search?term=Sen+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9496,7 +9146,8 @@
    "first_paper": "Revisiting Reverse Distillation for Anomaly Detection (CVPR 2023)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Tien_Revisiting_Reverse_Distillation_for_Anomaly_Detection_CVPR_2023_paper.pdf",
    "openreview_url": "https://openreview.net/search?term=Soan+T.M.+Duong&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9529,7 +9180,8 @@
    "first_paper": "Revisiting Reverse Distillation for Anomaly Detection (CVPR 2023)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Tien_Revisiting_Reverse_Distillation_for_Anomaly_Detection_CVPR_2023_paper.pdf",
    "openreview_url": "https://openreview.net/search?term=Ta+Duc+Huy&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9562,7 +9214,8 @@
    "first_paper": "QC-StyleGAN - Quality Controllable Image Generation and Manipulation (NeurIPS 2022)",
    "first_url": "https://openreview.net/forum?id=AWeZdGJ89lC",
    "openreview_url": "https://openreview.net/search?term=Tan+M.+Dinh&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9595,7 +9248,8 @@
    "first_paper": "CodeMMLU: A Multi-Task Benchmark for Assessing Code Understanding & Reasoning Capabilities of CodeLLMs (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=CahIEKCu5Q",
    "openreview_url": "https://openreview.net/search?term=Thang+Phan&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9628,7 +9282,8 @@
    "first_paper": "Improving Mini-batch Optimal Transport via Partial Transportation (ICML 2022)",
    "first_url": "https://proceedings.mlr.press/v162/nguyen22e.html",
    "openreview_url": "https://openreview.net/search?term=The-Anh+Vu-Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9661,7 +9316,8 @@
    "first_paper": "Statistical Advantages of Perturbing Cosine Router in Mixture of Experts (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=faDMOmnsjx",
    "openreview_url": "https://openreview.net/search?term=Thien+Trang+Nguyen+Vu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9694,7 +9350,8 @@
    "first_paper": "Monomial Matrix Group Equivariant Neural Functional Networks (NeurIPS 2024)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/577cd5863ec73be4e6871340be0936ae-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Tho+Huu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9727,7 +9384,8 @@
    "first_paper": "CodeMMLU: A Multi-Task Benchmark for Assessing Code Understanding & Reasoning Capabilities of CodeLLMs (ICLR 2025)",
    "first_url": "https://openreview.net/forum?id=CahIEKCu5Q",
    "openreview_url": "https://openreview.net/search?term=Thong+Doan&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9760,7 +9418,8 @@
    "first_paper": "Contrastive Learning for Neural Topic Model (NeurIPS 2021)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Thong+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9793,7 +9452,8 @@
    "first_paper": "Dictionary-Guided Scene Text Recognition (CVPR 2021)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2021/html/Nguyen_Dictionary-Guided_Scene_Text_Recognition_CVPR_2021_paper.html",
    "openreview_url": "https://openreview.net/search?term=Thu+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9826,7 +9486,8 @@
    "first_paper": "SwiftBrush: One-Step Text-to-Image Diffusion Model with Variational Score Distillation (CVPR 2024)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Nguyen_SwiftBrush_One-Step_Text-to-Image_Diffusion_Model_with_Variational_Score_Distillation_CVPR_2024_paper.html",
    "openreview_url": "https://openreview.net/search?term=Thuan+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9859,7 +9520,8 @@
    "first_paper": "Language-Driven 6-DoF Grasp Detection Using Negative Prompt Guidance (ECCV 2024)",
    "first_url": "https://eccv.ecva.net/virtual/2024/poster/1611",
    "openreview_url": "https://openreview.net/search?term=Tien+Toan+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9892,7 +9554,8 @@
    "first_paper": "GIIM: Graph-based Learning of Inter- and Intra-view Dependencies for Multi-view Medical Image Diagnosis (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37830",
    "openreview_url": "https://openreview.net/search?term=Tran+Bao+Sam&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9925,7 +9588,8 @@
    "first_paper": "GIIM: Graph-based Learning of Inter- and Intra-view Dependencies for Multi-view Medical Image Diagnosis (AAAI 2026)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37830",
    "openreview_url": "https://openreview.net/search?term=Tran+Dat+Dang&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9958,7 +9622,8 @@
    "first_paper": "Revisiting Reverse Distillation for Anomaly Detection (CVPR 2023)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Tien_Revisiting_Reverse_Distillation_for_Anomaly_Detection_CVPR_2023_paper.pdf",
    "openreview_url": "https://openreview.net/search?term=Tran+Dinh+Tien&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -9991,7 +9656,8 @@
    "first_paper": "Data Poisoning Quantization Backdoor Attack (ECCV 2024)",
    "first_url": "https://eccv.ecva.net/virtual/2024/poster/2699",
    "openreview_url": "https://openreview.net/search?term=Tran+Huynh&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10024,7 +9690,8 @@
    "first_paper": "FOCA: Future-Oriented Conditioning for Data-Efficient Vision-Language-Action Adaptation (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=0cnDTttyMR",
    "openreview_url": "https://openreview.net/search?term=Tran+Nhat&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10057,7 +9724,8 @@
    "first_paper": "FOCA: Future-Oriented Conditioning for Data-Efficient Vision-Language-Action Adaptation (ICML 2026)",
    "first_url": "https://openreview.net/forum?id=0cnDTttyMR",
    "openreview_url": "https://openreview.net/search?term=Trong-Bao+Ho&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10090,7 +9758,8 @@
    "first_paper": "Detecting Hands and Recognizing Physical Contact in the Wild (NeurIPS 2020)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Trung+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10123,7 +9792,8 @@
    "first_paper": "On Learning Domain-Invariant Representations for Transfer Learning with Multiple Sources (NeurIPS 2021)",
    "first_url": "",
    "openreview_url": "https://openreview.net/search?term=Trung+Phung&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10156,7 +9826,8 @@
    "first_paper": "Dataset Diffusion: Diffusion-based Synthetic Data Generation for Pixel-Level Semantic Segmentation (NeurIPS 2023)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/f2957e48240c1d90e62b303574871b47-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Truong+Vu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10189,7 +9860,8 @@
    "first_paper": "ISBNet: A 3D Point Cloud Instance Segmentation Network With Instance-Aware Sampling and Box-Aware Dynamic Convolution (CVPR 2023)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Ngo_ISBNet_A_3D_Point_Cloud_Instance_Segmentation_Network_With_Instance-Aware_CVPR_2023_paper.pdf",
    "openreview_url": "https://openreview.net/search?term=Tuan+Duc+Ngo&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10222,7 +9894,8 @@
    "first_paper": "Semi-supervised 3D Semantic Scene Completion with 2D Vision Foundation Model Guidance (AAAI 2025)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/32698",
    "openreview_url": "https://openreview.net/search?term=Tuan+Ho&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10255,7 +9928,8 @@
    "first_paper": "Learning CNN on ViT: A Hybrid Model to Explicitly Class-specific Boundaries for Domain Adaptation (CVPR 2024)",
    "first_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Ngo_Learning_CNN_on_ViT_A_Hybrid_Model_to_Explicitly_Class-specific_CVPR_2024_paper.html",
    "openreview_url": "https://openreview.net/search?term=Tuan-Ngoc+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10288,7 +9962,8 @@
    "first_paper": "Enhancing Domain Adaptation through Prompt Gradient Alignment (NeurIPS 2024)",
    "first_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/50ea4cf434c84a50203d7145afc7b853-Abstract-Conference.html",
    "openreview_url": "https://openreview.net/search?term=Tung+Lam+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10321,7 +9996,8 @@
    "first_paper": "Diverse Text-to-3D Synthesis with Augmented Text Embedding (ECCV 2024)",
    "first_url": "https://eccv.ecva.net/virtual/2024/poster/1675",
    "openreview_url": "https://openreview.net/search?term=Uy+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10354,7 +10030,8 @@
    "first_paper": "Lifelong Event Detection via Optimal Transport (EMNLP 2024)",
    "first_url": "https://aclanthology.org/2024.emnlp-main.701/",
    "openreview_url": "https://openreview.net/search?term=Van-Cuong+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10387,7 +10064,8 @@
    "first_paper": "Lifelong Event Detection via Optimal Transport (EMNLP 2024)",
    "first_url": "https://aclanthology.org/2024.emnlp-main.701/",
    "openreview_url": "https://openreview.net/search?term=Viet+Dao&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10420,7 +10098,8 @@
    "first_paper": "Revisiting Over-smoothing and Over-squashing Using Ollivier-Ricci Curvature (ICML 2023)",
    "first_url": "https://icml.cc/virtual/2023/poster/24144",
    "openreview_url": "https://openreview.net/search?term=Vinh+NGUYEN&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10453,7 +10132,8 @@
    "first_paper": "Bayesian Optimization for Unknown Cost-Varying Variable Subsets with No-Regret Costs (AAAI 2025)",
    "first_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34906",
    "openreview_url": "https://openreview.net/search?term=Vu+Viet+Hoang&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10486,7 +10166,8 @@
    "first_paper": "Reservoir of Importance: Learning Semi-Structured Sparsity with Differentiable Subset Sampling (EMNLP 2026)",
    "first_url": "https://aclanthology.org/2026.emnlp-main.1212/",
    "openreview_url": "https://openreview.net/search?term=Xuan+Duy+Ta&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   }
  ],
  "unconfirmed": [
@@ -10496,9 +10177,9 @@
    "name_variants": "",
    "institution": "University of Science, VNU-HCM",
    "institution_short": "HCMUS",
-   "rank": "",
+   "rank": "Undergrad student",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~Tran_Chi_Nguyen2",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -10515,13 +10196,14 @@
    "faculty_rank": "",
    "faculty_match": "",
    "affiliations": "VNUHCM - University of Science",
-   "openreview_position": "",
+   "openreview_position": "~Tran_Chi_Nguyen2: Undergrad student at Faculty of Information and Technology, Ho Chi Minh city University of Science, Vietnam National University",
    "sample_paper": "Weather-Robust Cross-View Geo-Localization via Prototype-Based Semantic Part Discovery (NeurIPS 2026)",
    "sample_url": "https://openreview.net/forum?id=wxPKGRCVh8",
    "first_paper": "MIST: Reliable Streaming Decision Trees for Online Class-Incremental Learning via McDiarmid Bound (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=YsDOcP6Vpb",
-   "openreview_url": "https://openreview.net/search?term=Chi-Nguyen+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~Tran_Chi_Nguyen2",
+   "openreview_match": "profile",
+   "openreview_class": "left"
   },
   {
    "approved": "",
@@ -10554,7 +10236,8 @@
    "first_paper": "MIST: Reliable Streaming Decision Trees for Online Class-Incremental Learning via McDiarmid Bound (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=YsDOcP6Vpb",
    "openreview_url": "https://openreview.net/search?term=Dao+S+Minh&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10562,9 +10245,9 @@
    "name_variants": "",
    "institution": "University of Science, VNU-HCM",
    "institution_short": "HCMUS",
-   "rank": "",
+   "rank": "Undergrad student",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~Phu-Hoa_Pham1",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -10581,13 +10264,14 @@
    "faculty_rank": "",
    "faculty_match": "",
    "affiliations": "Ho Chi Minh City University of Science, Vietnam National University",
-   "openreview_position": "",
+   "openreview_position": "~Phu-Hoa_Pham1: Undergrad student at Ho Chi Minh city University of Science, Vietnam National University",
    "sample_paper": "Weather-Robust Cross-View Geo-Localization via Prototype-Based Semantic Part Discovery (NeurIPS 2026)",
    "sample_url": "https://openreview.net/forum?id=wxPKGRCVh8",
    "first_paper": "MIST: Reliable Streaming Decision Trees for Online Class-Incremental Learning via McDiarmid Bound (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=YsDOcP6Vpb",
-   "openreview_url": "https://openreview.net/search?term=Phu-Hoa+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~Phu-Hoa_Pham1",
+   "openreview_match": "profile",
+   "openreview_class": "left"
   },
   {
    "approved": "",
@@ -10595,9 +10279,9 @@
    "name_variants": "",
    "institution": "University of Science, VNU-HCM",
    "institution_short": "HCMUS",
-   "rank": "",
+   "rank": "Undergrad student",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~Phu_Quy_Nguyen_Lam1",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -10614,13 +10298,14 @@
    "faculty_rank": "",
    "faculty_match": "",
    "affiliations": "University of Science, Vietnam National University, Ho Chi Minh City",
-   "openreview_position": "",
+   "openreview_position": "~Phu_Quy_Nguyen_Lam1: Undergrad student at Ho Chi Minh city University of Science, Vietnam National University",
    "sample_paper": "Weather-Robust Cross-View Geo-Localization via Prototype-Based Semantic Part Discovery (NeurIPS 2026)",
    "sample_url": "https://openreview.net/forum?id=wxPKGRCVh8",
    "first_paper": "MIST: Reliable Streaming Decision Trees for Online Class-Incremental Learning via McDiarmid Bound (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=YsDOcP6Vpb",
-   "openreview_url": "https://openreview.net/search?term=Phu-Quy+Nguyen-Lam&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~Phu_Quy_Nguyen_Lam1",
+   "openreview_match": "profile",
+   "openreview_class": "left"
   },
   {
    "approved": "",
@@ -10628,9 +10313,9 @@
    "name_variants": "",
    "institution": "University of Science, VNU-HCM",
    "institution_short": "HCMUS",
-   "rank": "",
+   "rank": "Undergrad student",
    "vn_since": "",
-   "openreview_ids": "",
+   "openreview_ids": "~TRUNG_KIET_HUYNH1",
    "homepage": "",
    "pages": "",
    "to_confirm": "rank, vn_since and OpenReview ID",
@@ -10647,13 +10332,14 @@
    "faculty_rank": "",
    "faculty_match": "",
    "affiliations": "Ho Chi Minh city University of Science, Vietnam National University",
-   "openreview_position": "",
+   "openreview_position": "~TRUNG_KIET_HUYNH1: Undergrad student at Ho Chi Minh city University of Science, Vietnam National University",
    "sample_paper": "Weather-Robust Cross-View Geo-Localization via Prototype-Based Semantic Part Discovery (NeurIPS 2026)",
    "sample_url": "https://openreview.net/forum?id=wxPKGRCVh8",
    "first_paper": "MIST: Reliable Streaming Decision Trees for Online Class-Incremental Learning via McDiarmid Bound (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=YsDOcP6Vpb",
-   "openreview_url": "https://openreview.net/search?term=Trung-Kiet+Huynh&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_url": "https://openreview.net/profile?id=~TRUNG_KIET_HUYNH1",
+   "openreview_match": "profile",
+   "openreview_class": "left"
   },
   {
    "approved": "",
@@ -10686,7 +10372,8 @@
    "first_paper": "On the Primacy Bias in RLVR Training (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=iYqWuTaHph",
    "openreview_url": "https://openreview.net/search?term=Chinh+D+La&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10719,7 +10406,8 @@
    "first_paper": "AeroChem: Closed-loop Physics-Informed State Space Modeling for Long-term Chemically-Reactive Air Quality Forecasting (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=K8qavlGl1B",
    "openreview_url": "https://openreview.net/search?term=Phi+Long+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10752,7 +10440,8 @@
    "first_paper": "Learning to Generate Multiple Objects from Dense and Occluded Layouts (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=KXKtTAY4Fb",
    "openreview_url": "https://openreview.net/search?term=Bach+Hoang+Ngo&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10785,7 +10474,8 @@
    "first_paper": "Conflict-Aware Logit Adapters for Utility-Preserving Anti-Distillation (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=Sc1RFFLbFC",
    "openreview_url": "https://openreview.net/search?term=Binh+Anh+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10818,7 +10508,8 @@
    "first_paper": "SympFNO: Structure-Preserving Fourier Neural Operators for Physical Surrogate Modeling (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=TtVLwbWHCn",
    "openreview_url": "https://openreview.net/search?term=Bui+T+Hieu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10851,7 +10542,8 @@
    "first_paper": "Disentangling Optimization Geometry via Hierarchical Polar Adapters for Class-Incremental Learning (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=FBAriogGVS",
    "openreview_url": "https://openreview.net/search?term=Dat+Q+Mac&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10884,7 +10576,8 @@
    "first_paper": "AeroChem: Closed-loop Physics-Informed State Space Modeling for Long-term Chemically-Reactive Air Quality Forecasting (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=K8qavlGl1B",
    "openreview_url": "https://openreview.net/search?term=Dinh+D+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10917,7 +10610,8 @@
    "first_paper": "Graph Topology Augmentation for Prioritized Sweeping in Non-stationary Reinforcement Learning (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=midyPx9DqU",
    "openreview_url": "https://openreview.net/search?term=Gia-Hung+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10950,7 +10644,8 @@
    "first_paper": "Latent Abstraction for Retrieval-Augmented Generation (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=6Gb0gkrUgv",
    "openreview_url": "https://openreview.net/search?term=Ha+Lan+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -10983,7 +10678,8 @@
    "first_paper": "MulCLIP: A Multi-level Alignment Framework for Enhancing Fine-grained Long-context CLIP (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=qD0McGAhI2",
    "openreview_url": "https://openreview.net/search?term=Hieu+Ta&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11016,7 +10712,8 @@
    "first_paper": "AeroChem: Closed-loop Physics-Informed State Space Modeling for Long-term Chemically-Reactive Air Quality Forecasting (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=K8qavlGl1B",
    "openreview_url": "https://openreview.net/search?term=Le+Trung+Kien&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11049,7 +10746,8 @@
    "first_paper": "Trajectory-Matching Meta Pseudo-Labeling for Semi-Supervised Learning (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=w4z8ShoMu5",
    "openreview_url": "https://openreview.net/search?term=Minh-Duc+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11082,7 +10780,8 @@
    "first_paper": "Kernelized Activation Steering (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=F4iCxDrUbU",
    "openreview_url": "https://openreview.net/search?term=Minh-Hieu+Pham&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11115,7 +10814,8 @@
    "first_paper": "Learning to Generate Multiple Objects from Dense and Occluded Layouts (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=KXKtTAY4Fb",
    "openreview_url": "https://openreview.net/search?term=Ngo+Tri&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11148,7 +10848,8 @@
    "first_paper": "COMPASS: Composable Policy-Amortized Structured Search for LLM-Based Optimization Modeling (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=jF68qSbugj",
    "openreview_url": "https://openreview.net/search?term=Nguyen+Le+Minh+Hoang&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11181,7 +10882,8 @@
    "first_paper": "Modeling quantum neural network gradient with reinforcement learning (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=lfrvu8xfsh",
    "openreview_url": "https://openreview.net/search?term=Nhan+Luu&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11214,7 +10916,8 @@
    "first_paper": "Conflict-Aware Logit Adapters for Utility-Preserving Anti-Distillation (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=Sc1RFFLbFC",
    "openreview_url": "https://openreview.net/search?term=Quoc+P+Dao&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11247,7 +10950,8 @@
    "first_paper": "How Finite-Rank Bottleneck Shape the Low-Rank Adaptation Landscape (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=eyfZvKjtnQ",
    "openreview_url": "https://openreview.net/search?term=Quynh+Nguyen&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11280,7 +10984,8 @@
    "first_paper": "Beyond Expected Values: Risk-Sensitive Planning with Distributional Monte-Carlo Tree Search (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=qKB3gDxeBz",
    "openreview_url": "https://openreview.net/search?term=Quynh+Trinh&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11313,7 +11018,8 @@
    "first_paper": "Nearly Optimal Fixed-Confidence Best-Arm Identification with 1-Bit Feedback (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=6ZgRA8gi3F",
    "openreview_url": "https://openreview.net/search?term=Thai+Son+Dinh&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11346,7 +11052,8 @@
    "first_paper": "Disentangling Optimization Geometry via Hierarchical Polar Adapters for Class-Incremental Learning (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=FBAriogGVS",
    "openreview_url": "https://openreview.net/search?term=Thanh+Hai+Dang&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11379,7 +11086,8 @@
    "first_paper": "How Finite-Rank Bottleneck Shape the Low-Rank Adaptation Landscape (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=eyfZvKjtnQ",
    "openreview_url": "https://openreview.net/search?term=Thanh+Nguyen+Cung&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11412,7 +11120,8 @@
    "first_paper": "Decoding the Critique Mechanism in Large Reasoning Models (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=Dpd5naao28",
    "openreview_url": "https://openreview.net/search?term=Thanh+Quoc+Hung+Le&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11445,7 +11154,8 @@
    "first_paper": "A Statistical Theory of Gated Attention through the Lens of Hierarchical Mixture of Experts (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=Oe70EbkiGc",
    "openreview_url": "https://openreview.net/search?term=Thinh+Cao&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11478,7 +11188,8 @@
    "first_paper": "Birth-Death Structural Learning for 3D Gaussian Splatting (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=8kpY9DyWuJ",
    "openreview_url": "https://openreview.net/search?term=Tran+Hong+Quan&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11511,7 +11222,8 @@
    "first_paper": "Learning in Policy Transparency Games: Wedge Structure and Adaptive Certification (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=Qcd3vQCm5h",
    "openreview_url": "https://openreview.net/search?term=Trang+Le+Vu+Quynh&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11544,7 +11256,8 @@
    "first_paper": "Graph-Based Stochastic-Power-UCT: Monte-Carlo Graph Search with Power Mean Estimation (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=C61SqbC0JZ",
    "openreview_url": "https://openreview.net/search?term=Tung+Tran&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   },
   {
    "approved": "",
@@ -11577,7 +11290,8 @@
    "first_paper": "Graph-Based Stochastic-Power-UCT: Monte-Carlo Graph Search with Power Mean Estimation (NeurIPS 2026)",
    "first_url": "https://openreview.net/forum?id=C61SqbC0JZ",
    "openreview_url": "https://openreview.net/search?term=Viet+Bao&group=all&content=all&source=all",
-   "openreview_match": "search"
+   "openreview_match": "search",
+   "openreview_class": ""
   }
  ],
  "pioneers": [

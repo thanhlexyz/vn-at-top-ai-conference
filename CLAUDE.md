@@ -249,6 +249,13 @@ is skipped, never cached. For AAAI (and as a cross-check for IJCAI) run `scan_op
 Vietnam of every paper, with the affiliation as printed (`work/openalex_vn.csv`). They are leads: look up each one's
 OpenReview profile, and do not suggest anyone whose profile says they are a student.
 
+The local Candidates page starts with **To validate**: the people the maintainer decides about, merged from
+`staff_leads.csv` (`scan_openalex.py --leads`), candidates whose OpenReview post is lecturer or higher at a university
+in Vietnam (`fetch_openreview.py --candidates N`, then `find_candidates.py`; OpenReview allows about 126 profile searches
+per half hour) and lecturers with an ICLR record (`iclr_only.csv`), most papers first. Students are never listed. A yes
+is a roster row with `approved = yes`, a no a row with `approved = no` and the reason (decided by OpenReview ID, so the
+name leaves the list). Everything else on the page is a closed checklist line that opens to its table.
+
 **Both languages, always:** the Vietnamese site (`/`) mirrors the English one (`/en/`). Any change to a page, whether
 text added, removed or reworded, a section, a caption, a column or a layout change, is made in both languages in the
 same commit: `en.toml` and `vi.toml`, `*.en.md` and `*.vi.md`. Then compare the two built pages

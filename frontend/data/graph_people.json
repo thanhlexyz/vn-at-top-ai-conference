@@ -524,6 +524,20 @@
    "anchor": "start"
   },
   {
+   "name": "Cuong Do",
+   "name_vi": "Đỗ Danh Cường",
+   "url": "professors/cuong-do/",
+   "group": "VinUni",
+   "id": "cuong-do",
+   "papers": 3,
+   "x": null,
+   "y": null,
+   "linked": false,
+   "r": 12.1,
+   "color": "c-blue",
+   "degree": 0
+  },
+  {
    "name": "Cuong Viet Ta",
    "name_vi": "Tạ Việt Cường",
    "url": "professors/cuong-viet-ta/",
@@ -833,6 +847,20 @@
    "lx": 813.5,
    "ly": 1194.1,
    "anchor": "start"
+  },
+  {
+   "name": "Trung Thanh Ngo",
+   "name_vi": "Ngô Thành Trung",
+   "url": "professors/trung-thanh-ngo/",
+   "group": "HUST",
+   "id": "trung-thanh-ngo",
+   "papers": 2,
+   "x": null,
+   "y": null,
+   "linked": false,
+   "r": 11.5,
+   "color": "c-red",
+   "degree": 0
   },
   {
    "name": "Uyen N.B. Vo",
@@ -2367,6 +2395,6 @@
    "color": "c0"
   }
  ],
- "papers": 358,
+ "papers": 363,
  "shared": 85
 }
