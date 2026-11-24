@@ -2534,6 +2534,51 @@
   "year": 2026,
   "venue": "neurips",
   "venue_name": "NeurIPS",
+  "title": "Learning to Generate Multiple Objects from Dense and Occluded Layouts",
+  "ai_key": "neurips-2026-learningtogeneratemultipleobjectsfromden",
+  "url": "https://openreview.net/forum?id=KXKtTAY4Fb",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Bach Hoang Ngo, Ngo Tri, Hieu Minh Le, Trung Nghia Le",
+  "match": "name, confirmed by hand",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "trung-nghia-le",
+    "name": "Trung-Nghia Le",
+    "name_vi": "Lê Trung Nghĩa"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Bach Hoang Ngo",
+    "slug": ""
+   },
+   {
+    "name": "Ngo Tri",
+    "slug": ""
+   },
+   {
+    "name": "Hieu Minh Le",
+    "slug": ""
+   },
+   {
+    "name": "Trung Nghia Le",
+    "slug": "trung-nghia-le"
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "neurips",
+  "venue_name": "NeurIPS",
   "title": "MAGE: Towards Generalizable Multi-timescale EEG Representations",
   "ai_key": "neurips-2026-magetowardsgeneralizablemultitimescaleee",
   "url": "https://openreview.net/forum?id=cBtjuprKBt",
@@ -2798,6 +2843,51 @@
    {
     "name": "Minh N. Do",
     "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "neurips",
+  "venue_name": "NeurIPS",
+  "title": "Occlusion-Aware Text-To-Image Generation",
+  "ai_key": "neurips-2026-occlusionawaretexttoimagegeneration",
+  "url": "https://openreview.net/forum?id=KXKtTAY4Fb",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Bach Hoang Ngo, Ngo Tri Si, Hieu Le, Trung-Nghia Le",
+  "match": "OpenReview profile",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "trung-nghia-le",
+    "name": "Trung-Nghia Le",
+    "name_vi": "Lê Trung Nghĩa"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Bach Hoang Ngo",
+    "slug": ""
+   },
+   {
+    "name": "Ngo Tri Si",
+    "slug": ""
+   },
+   {
+    "name": "Hieu Le",
+    "slug": ""
+   },
+   {
+    "name": "Trung-Nghia Le",
+    "slug": "trung-nghia-le"
    }
   ]
  },
@@ -4070,6 +4160,67 @@
   "year": 2026,
   "venue": "emnlp",
   "venue_name": "EMNLP",
+  "title": "Fast and Focused: Interactive Repository-Level Fill-in-the-Middle Code Completion with Hybrid Structural Retrieval",
+  "ai_key": "emnlp-2026-fastandfocusedinteractiverepositorylevel",
+  "url": "https://aclanthology.org/2026.emnlp-main.81/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Long S. T. Nguyen, Dat Huynh, Quynh Vo, LE Dang Nguyen Hai, Cong-Duy T Nguyen, Anh Tuan Luu, Anh Nguyen-Duc, Tho Quan",
+  "match": "name, confirmed by hand",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "tho-quan",
+    "name": "Tho Quan",
+    "name_vi": "Quản Thành Thơ"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Long S. T. Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Dat Huynh",
+    "slug": ""
+   },
+   {
+    "name": "Quynh Vo",
+    "slug": ""
+   },
+   {
+    "name": "LE Dang Nguyen Hai",
+    "slug": ""
+   },
+   {
+    "name": "Cong-Duy T Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Anh Tuan Luu",
+    "slug": ""
+   },
+   {
+    "name": "Anh Nguyen-Duc",
+    "slug": ""
+   },
+   {
+    "name": "Tho Quan",
+    "slug": "tho-quan"
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
   "title": "HyperProve: Answer-Guided Hypergraph Expansion for Multi-Hop Question Answering",
   "ai_key": "emnlp-2026-hyperproveanswerguidedhypergraphexpansio",
   "url": "https://aclanthology.org/2026.emnlp-main.212/",
@@ -4452,6 +4603,59 @@
   "year": 2026,
   "venue": "emnlp",
   "venue_name": "EMNLP",
+  "title": "SIMPA: Restricting What Experts See, Not What They Produce, in MoE-PEFT",
+  "ai_key": "emnlp-2026-simparestrictingwhatexpertsseenotwhatthe",
+  "url": "https://aclanthology.org/2026.emnlp-main.726/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Pham Tri Quang, Khoa Tran, Giang Do, Hung Le, Truyen Tran, Tho Quan",
+  "match": "name, confirmed by hand",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "tho-quan",
+    "name": "Tho Quan",
+    "name_vi": "Quản Thành Thơ"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Pham Tri Quang",
+    "slug": ""
+   },
+   {
+    "name": "Khoa Tran",
+    "slug": ""
+   },
+   {
+    "name": "Giang Do",
+    "slug": ""
+   },
+   {
+    "name": "Hung Le",
+    "slug": ""
+   },
+   {
+    "name": "Truyen Tran",
+    "slug": ""
+   },
+   {
+    "name": "Tho Quan",
+    "slug": "tho-quan"
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
   "title": "Steering from Random Quotients: A Sample-Complexity Theory of Polysemantic Contrast Pairs",
   "ai_key": "emnlp-2026-steeringfromrandomquotientsasamplecomple",
   "url": "https://aclanthology.org/2026.emnlp-main.2190/",
@@ -4563,6 +4767,47 @@
    {
     "name": "Trung Le",
     "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "Transporting Concepts Across Languages: Optimal Transport Toward English-Level Performance in Multilingual LLMs",
+  "ai_key": "emnlp-2026-transportingconceptsacrosslanguagesoptim",
+  "url": "https://aclanthology.org/2026.emnlp-main.861/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Anh Trac Duc Dinh, Anh Duc Le, Tho Quan",
+  "match": "name, confirmed by hand",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "tho-quan",
+    "name": "Tho Quan",
+    "name_vi": "Quản Thành Thơ"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Anh Trac Duc Dinh",
+    "slug": ""
+   },
+   {
+    "name": "Anh Duc Le",
+    "slug": ""
+   },
+   {
+    "name": "Tho Quan",
+    "slug": "tho-quan"
    }
   ]
  },
@@ -4769,6 +5014,55 @@
    },
    {
     "name": "Minh Hoai Nguyen",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "eccv",
+  "venue_name": "ECCV",
+  "title": "H-SFP: Hierarchical Federated Learning with Decoupled Split-Model Prototyping",
+  "ai_key": "eccv-2026-hsfphierarchicalfederatedlearningwithdec",
+  "url": "https://eccv.ecva.net/virtual/2026/poster/5748",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Trung-Dung Tran, Nguyen Ha, Minh-Duong Nguyen, Van-Dinh Nguyen, Kok-Seng Wong",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "van-dinh-nguyen",
+    "name": "Van-Dinh Nguyen",
+    "name_vi": "Nguyễn Văn Định"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Trung-Dung Tran",
+    "slug": ""
+   },
+   {
+    "name": "Nguyen Ha",
+    "slug": ""
+   },
+   {
+    "name": "Minh-Duong Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Van-Dinh Nguyen",
+    "slug": "van-dinh-nguyen"
+   },
+   {
+    "name": "Kok-Seng Wong",
     "slug": ""
    }
   ]
@@ -5112,6 +5406,63 @@
    },
    {
     "name": "Vien Anh Ngo",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "icml",
+  "venue_name": "ICML",
+  "title": "Geometric and Stochastic Analysis of Discontinuities in Sparse Mixture-of-Experts",
+  "ai_key": "icml-2026-geometricandstochasticanalysisofdisconti",
+  "url": "https://openreview.net/forum?id=AyrNR1ExN5",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "spotlight",
+  "authors": "Tho Tran Huu, Huu-Tuan Nguyen, Thien-Hai Nguyen, Nhat-Tri Ho, Viet-Hoang Tran, Tho Quan, Tan Minh Nguyen",
+  "match": "OpenReview profile",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "tho-quan",
+    "name": "Tho Quan",
+    "name_vi": "Quản Thành Thơ"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Tho Tran Huu",
+    "slug": ""
+   },
+   {
+    "name": "Huu-Tuan Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Thien-Hai Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Nhat-Tri Ho",
+    "slug": ""
+   },
+   {
+    "name": "Viet-Hoang Tran",
+    "slug": ""
+   },
+   {
+    "name": "Tho Quan",
+    "slug": "tho-quan"
+   },
+   {
+    "name": "Tan Minh Nguyen",
     "slug": ""
    }
   ]
@@ -6156,6 +6507,55 @@
  },
  {
   "year": 2026,
+  "venue": "acl",
+  "venue_name": "ACL",
+  "title": "When Morphology Hides in Plain Sight: Breaking the Isolation in Vietnamese and Beyond",
+  "ai_key": "acl-2026-whenmorphologyhidesinplainsightbreakingt",
+  "url": "https://aclanthology.org/2026.acl-long.472/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Anh Trac Duc Dinh, Khang Hoang Nhat Vo, Tai Tien Ta, Vinh Cong Doan, Tho Quan",
+  "match": "name, confirmed by hand",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "tho-quan",
+    "name": "Tho Quan",
+    "name_vi": "Quản Thành Thơ"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Anh Trac Duc Dinh",
+    "slug": ""
+   },
+   {
+    "name": "Khang Hoang Nhat Vo",
+    "slug": ""
+   },
+   {
+    "name": "Tai Tien Ta",
+    "slug": ""
+   },
+   {
+    "name": "Vinh Cong Doan",
+    "slug": ""
+   },
+   {
+    "name": "Tho Quan",
+    "slug": "tho-quan"
+   }
+  ]
+ },
+ {
+  "year": 2026,
   "venue": "cvpr",
   "venue_name": "CVPR",
   "title": "An Optimal Transport-driven Approach for Cultivating Latent Space in Online Incremental Learning",
@@ -6867,6 +7267,59 @@
  },
  {
   "year": 2026,
+  "venue": "cvpr",
+  "venue_name": "CVPR",
+  "title": "UCAN: Unified Convolutional Attention Network for Expansive Receptive Fields in Lightweight Super-Resolution",
+  "ai_key": "cvpr-2026-ucanunifiedconvolutionalattentionnetwork",
+  "url": "https://openreview.net/forum?id=84YJ78vLzm",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Cao Thien Tan, Phan Thi Thu Trang, Do Nghiem Duc, Ho Ngoc Anh, Hanyang Zhuang, Nguyen Duc Dung",
+  "match": "OpenReview profile",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "duc-dung-nguyen",
+    "name": "Duc-Dung Nguyen",
+    "name_vi": "Nguyễn Đức Dũng"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Cao Thien Tan",
+    "slug": ""
+   },
+   {
+    "name": "Phan Thi Thu Trang",
+    "slug": ""
+   },
+   {
+    "name": "Do Nghiem Duc",
+    "slug": ""
+   },
+   {
+    "name": "Ho Ngoc Anh",
+    "slug": ""
+   },
+   {
+    "name": "Hanyang Zhuang",
+    "slug": ""
+   },
+   {
+    "name": "Nguyen Duc Dung",
+    "slug": "duc-dung-nguyen"
+   }
+  ]
+ },
+ {
+  "year": 2026,
   "venue": "iclr",
   "venue_name": "ICLR",
   "title": "A Multi-Institutional Multimodal EEG Benchmark for Foundation Model Generalization and Early Neurological Diagnosis",
@@ -7209,6 +7662,51 @@
   "year": 2026,
   "venue": "iclr",
   "venue_name": "ICLR",
+  "title": "Deep Thinking on Out-Of-Distribution Data: How can we know when a model is overthinking?",
+  "ai_key": "iclr-2026-deepthinkingonoutofdistributiondatahowca",
+  "url": "https://openreview.net/forum?id=8GSpNEHYIn",
+  "status": "rejected",
+  "status_label": "rejected",
+  "pres": "",
+  "authors": "Hieu Tran Bao, Dat Nguyen Cong, Nguyễn Đức Anh, Hoang Thanh-Tung",
+  "match": "OpenReview profile",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "hoang-thanh-tung",
+    "name": "Hoang Thanh-Tung",
+    "name_vi": "Hoàng Thanh Tùng"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Hieu Tran Bao",
+    "slug": ""
+   },
+   {
+    "name": "Dat Nguyen Cong",
+    "slug": ""
+   },
+   {
+    "name": "Nguyễn Đức Anh",
+    "slug": ""
+   },
+   {
+    "name": "Hoang Thanh-Tung",
+    "slug": "hoang-thanh-tung"
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "iclr",
+  "venue_name": "ICLR",
   "title": "Diffusion-Inspired Reconfiguration of Transformers for Uncertainty Quantification",
   "ai_key": "iclr-2026-diffusioninspiredreconfigurationoftransf",
   "url": "https://openreview.net/forum?id=cjoO4CNC41",
@@ -7288,6 +7786,63 @@
    {
     "name": "Tuan Quang Dam",
     "slug": "tuan-dam"
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "iclr",
+  "venue_name": "ICLR",
+  "title": "Discontinuities in Sparse Mixture-of-Experts: A Measure-Stochastic Analysis",
+  "ai_key": "iclr-2026-discontinuitiesinsparsemixtureofexpertsa",
+  "url": "https://openreview.net/forum?id=hQElhp8NWW",
+  "status": "desk_rejected",
+  "status_label": "desk-rejected",
+  "pres": "",
+  "authors": "Tho Tran Huu, Huu-Tuan Nguyen, Thien-Hai Nguyen, Nhat-Tri Ho, Viet-Hoang Tran, Tho Quan, Tan Minh Nguyen",
+  "match": "OpenReview profile",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "tho-quan",
+    "name": "Tho Quan",
+    "name_vi": "Quản Thành Thơ"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Tho Tran Huu",
+    "slug": ""
+   },
+   {
+    "name": "Huu-Tuan Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Thien-Hai Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Nhat-Tri Ho",
+    "slug": ""
+   },
+   {
+    "name": "Viet-Hoang Tran",
+    "slug": ""
+   },
+   {
+    "name": "Tho Quan",
+    "slug": "tho-quan"
+   },
+   {
+    "name": "Tan Minh Nguyen",
+    "slug": ""
    }
   ]
  },
@@ -7672,6 +8227,59 @@
    },
    {
     "name": "Tae Jong Choi",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "iclr",
+  "venue_name": "ICLR",
+  "title": "Improving LLM Unlearning Robustness via Random Perturbations",
+  "ai_key": "iclr-2026-improvingllmunlearningrobustnessviarando",
+  "url": "https://openreview.net/forum?id=JtX6oaaJ2d",
+  "status": "rejected",
+  "status_label": "rejected",
+  "pres": "",
+  "authors": "Dang Huu-Tien, Hoang Thanh-Tung, Anh Tuan Bui, Phuong Minh Nguyen, Le-Minh Nguyen, Naoya Inoue",
+  "match": "OpenReview profile",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "hoang-thanh-tung",
+    "name": "Hoang Thanh-Tung",
+    "name_vi": "Hoàng Thanh Tùng"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Dang Huu-Tien",
+    "slug": ""
+   },
+   {
+    "name": "Hoang Thanh-Tung",
+    "slug": "hoang-thanh-tung"
+   },
+   {
+    "name": "Anh Tuan Bui",
+    "slug": ""
+   },
+   {
+    "name": "Phuong Minh Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Le-Minh Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Naoya Inoue",
     "slug": ""
    }
   ]
@@ -10323,6 +10931,47 @@
   "year": 2025,
   "venue": "iccv",
   "venue_name": "ICCV",
+  "title": "Guiding Noisy Label Conditional Diffusion Models with Score-based Discriminator Correction",
+  "ai_key": "iccv-2025-guidingnoisylabelconditionaldiffusionmod",
+  "url": "https://iccv.thecvf.com/virtual/2025/poster/1482",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Dat Cong, Hieu Tran, Hoang Thanh-Tung",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "hoang-thanh-tung",
+    "name": "Hoang Thanh-Tung",
+    "name_vi": "Hoàng Thanh Tùng"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Dat Cong",
+    "slug": ""
+   },
+   {
+    "name": "Hieu Tran",
+    "slug": ""
+   },
+   {
+    "name": "Hoang Thanh-Tung",
+    "slug": "hoang-thanh-tung"
+   }
+  ]
+ },
+ {
+  "year": 2025,
+  "venue": "iccv",
+  "venue_name": "ICCV",
   "title": "More Reliable Pseudo-labels, Better Performance: A Generalized Approach to Single Positive Multi-label Learning",
   "ai_key": "iccv-2025-morereliablepseudolabelsbetterperformanc",
   "url": "https://iccv.thecvf.com/virtual/2025/poster/1755",
@@ -11470,6 +12119,11 @@
     "slug": "minh-triet-tran",
     "name": "Minh-Triet Tran",
     "name_vi": "Trần Minh Triết"
+   },
+   {
+    "slug": "trung-nghia-le",
+    "name": "Trung-Nghia Le",
+    "name_vi": "Lê Trung Nghĩa"
    }
   ],
   "reviews": "3(5), 5(4), 3(5), 5(5)",
@@ -11497,7 +12151,7 @@
    },
    {
     "name": "Trung-Nghia Le",
-    "slug": ""
+    "slug": "trung-nghia-le"
    }
   ]
  },
@@ -12128,6 +12782,11 @@
     "slug": "minh-triet-tran",
     "name": "Minh-Triet Tran",
     "name_vi": "Trần Minh Triết"
+   },
+   {
+    "slug": "trung-nghia-le",
+    "name": "Trung-Nghia Le",
+    "name_vi": "Lê Trung Nghĩa"
    }
   ],
   "reviews": "5(4), 5(4), 5(5), 5(3)",
@@ -12151,7 +12810,7 @@
    },
    {
     "name": "Trung-Nghia Le",
-    "slug": ""
+    "slug": "trung-nghia-le"
    }
   ]
  },
@@ -12557,6 +13216,11 @@
     "slug": "khoa-d-doan",
     "name": "Khoa D. Doan",
     "name_vi": "Đoàn Đăng Khoa"
+   },
+   {
+    "slug": "hoang-thanh-tung",
+    "name": "Hoang Thanh-Tung",
+    "name_vi": "Hoàng Thanh Tùng"
    }
   ],
   "reviews": "5(4), 8(5), 6(4), 5(4)",
@@ -12584,7 +13248,7 @@
    },
    {
     "name": "Hoang Thanh-Tung",
-    "slug": ""
+    "slug": "hoang-thanh-tung"
    },
    {
     "name": "Khoa D Doan",
@@ -12857,6 +13521,51 @@
   "year": 2025,
   "venue": "aaai",
   "venue_name": "AAAI",
+  "title": "On Effects of Steering Latent Representation for Large Language Model Unlearning",
+  "ai_key": "aaai-2025-oneffectsofsteeringlatentrepresentationf",
+  "url": "https://ojs.aaai.org/index.php/AAAI/article/view/34544",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Huu-Tien Dang, Tin Pham, Hoang Thanh-Tung, Naoya Inoue",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "hoang-thanh-tung",
+    "name": "Hoang Thanh-Tung",
+    "name_vi": "Hoàng Thanh Tùng"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Huu-Tien Dang",
+    "slug": ""
+   },
+   {
+    "name": "Tin Pham",
+    "slug": ""
+   },
+   {
+    "name": "Hoang Thanh-Tung",
+    "slug": "hoang-thanh-tung"
+   },
+   {
+    "name": "Naoya Inoue",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2025,
+  "venue": "aaai",
+  "venue_name": "AAAI",
   "title": "Progressive Multi-granular Alignments for Grounded Reasoning in Large Vision-Language Models",
   "ai_key": "aaai-2025-progressivemultigranularalignmentsforgro",
   "url": "https://ojs.aaai.org/index.php/AAAI/article/view/32471",
@@ -12953,6 +13662,63 @@
    {
     "name": "Cuong Pham",
     "slug": "cuong-pham"
+   }
+  ]
+ },
+ {
+  "year": 2025,
+  "venue": "aaai",
+  "venue_name": "AAAI",
+  "title": "Semi-supervised 3D Semantic Scene Completion with 2D Vision Foundation Model Guidance",
+  "ai_key": "aaai-2025-semisupervised3dsemanticscenecompletionw",
+  "url": "https://ojs.aaai.org/index.php/AAAI/article/view/32698",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Duc-Hai Pham, Duc-Dung Nguyen, Anh Pham, Tuan Ho, Phong Nguyen, Khoi Nguyen, Rang Nguyen",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "duc-dung-nguyen",
+    "name": "Duc-Dung Nguyen",
+    "name_vi": "Nguyễn Đức Dũng"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Duc-Hai Pham",
+    "slug": ""
+   },
+   {
+    "name": "Duc-Dung Nguyen",
+    "slug": "duc-dung-nguyen"
+   },
+   {
+    "name": "Anh Pham",
+    "slug": ""
+   },
+   {
+    "name": "Tuan Ho",
+    "slug": ""
+   },
+   {
+    "name": "Phong Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Khoi Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Rang Nguyen",
+    "slug": ""
    }
   ]
  },
@@ -13562,6 +14328,55 @@
    {
     "name": "Khoa Doan",
     "slug": "khoa-d-doan"
+   }
+  ]
+ },
+ {
+  "year": 2024,
+  "venue": "eccv",
+  "venue_name": "ECCV",
+  "title": "HPE-Li: WiFi-enabled Lightweight Dual Selective Kernel Convolution for Human Pose Estimation",
+  "ai_key": "eccv-2024-hpeliwifienabledlightweightdualselective",
+  "url": "https://eccv.ecva.net/virtual/2024/poster/1708",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Gian Toan D., Tien Dac Lai, Thien Van Luong, Kok-Seng Wong, Van-Dinh Nguyen",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "van-dinh-nguyen",
+    "name": "Van-Dinh Nguyen",
+    "name_vi": "Nguyễn Văn Định"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Gian Toan D.",
+    "slug": ""
+   },
+   {
+    "name": "Tien Dac Lai",
+    "slug": ""
+   },
+   {
+    "name": "Thien Van Luong",
+    "slug": ""
+   },
+   {
+    "name": "Kok-Seng Wong",
+    "slug": ""
+   },
+   {
+    "name": "Van-Dinh Nguyen",
+    "slug": "van-dinh-nguyen"
    }
   ]
  },
@@ -14713,6 +15528,51 @@
   "year": 2024,
   "venue": "aaai",
   "venue_name": "AAAI",
+  "title": "LAMPAT: Low-Rank Adaption for Multilingual Paraphrasing Using Adversarial Training",
+  "ai_key": "aaai-2024-lampatlowrankadaptionformultilingualpara",
+  "url": "https://ojs.aaai.org/index.php/AAAI/article/view/29804",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Khoi M. Le, Trinh Pham, Tho Quan, Anh Tuan Luu",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "tho-quan",
+    "name": "Tho Quan",
+    "name_vi": "Quản Thành Thơ"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Khoi M. Le",
+    "slug": ""
+   },
+   {
+    "name": "Trinh Pham",
+    "slug": ""
+   },
+   {
+    "name": "Tho Quan",
+    "slug": "tho-quan"
+   },
+   {
+    "name": "Anh Tuan Luu",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2024,
+  "venue": "aaai",
+  "venue_name": "AAAI",
   "title": "MaskDiff: Modeling Mask Distribution with Diffusion Probabilistic Model for Few-Shot Instance Segmentation",
   "ai_key": "aaai-2024-maskdiffmodelingmaskdistributionwithdiff",
   "url": "https://ojs.aaai.org/index.php/AAAI/article/view/28068",
@@ -14731,6 +15591,11 @@
     "slug": "minh-triet-tran",
     "name": "Minh-Triet Tran",
     "name_vi": "Trần Minh Triết"
+   },
+   {
+    "slug": "trung-nghia-le",
+    "name": "Trung-Nghia Le",
+    "name_vi": "Lê Trung Nghĩa"
    }
   ],
   "reviews": "",
@@ -14746,7 +15611,7 @@
    },
    {
     "name": "Trung-Nghia Le",
-    "slug": ""
+    "slug": "trung-nghia-le"
    },
    {
     "name": "Thanh-Toan Do",
@@ -16060,6 +16925,47 @@
   "year": 2022,
   "venue": "iclr",
   "venue_name": "ICLR",
+  "title": "Grounding Language Representation with Visual Object Information via Cross Modal Pretraining",
+  "ai_key": "iclr-2022-groundinglanguagerepresentationwithvisua",
+  "url": "https://openreview.net/forum?id=Mdn3eM7VHFn",
+  "status": "withdrawn",
+  "status_label": "withdrawn",
+  "pres": "",
+  "authors": "Cong-Duy T Nguyen, Anh Tuan Luu, Tho Quan",
+  "match": "OpenReview profile",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "tho-quan",
+    "name": "Tho Quan",
+    "name_vi": "Quản Thành Thơ"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Cong-Duy T Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Anh Tuan Luu",
+    "slug": ""
+   },
+   {
+    "name": "Tho Quan",
+    "slug": "tho-quan"
+   }
+  ]
+ },
+ {
+  "year": 2022,
+  "venue": "iclr",
+  "venue_name": "ICLR",
   "title": "Incorporating User-Item Similarity in Hybrid Neighborhood-based Recommendation System",
   "ai_key": "iclr-2022-incorporatinguseritemsimilarityinhybridn",
   "url": "https://openreview.net/forum?id=0lSoIruExF",
@@ -16318,6 +17224,51 @@
    {
     "name": "Nhat Ho",
     "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2021,
+  "venue": "emnlp",
+  "venue_name": "EMNLP",
+  "title": "Enriching and Controlling Global Semantics for Text Summarization",
+  "ai_key": "emnlp-2021-enrichingandcontrollingglobalsemanticsfo",
+  "url": "https://aclanthology.org/2021.emnlp-main.744/",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Thong Nguyen, Anh Tuan Luu, Truc Lu, Tho Quan",
+  "match": "name, confirmed by hand",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "tho-quan",
+    "name": "Tho Quan",
+    "name_vi": "Quản Thành Thơ"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Thong Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Anh Tuan Luu",
+    "slug": ""
+   },
+   {
+    "name": "Truc Lu",
+    "slug": ""
+   },
+   {
+    "name": "Tho Quan",
+    "slug": "tho-quan"
    }
   ]
  },

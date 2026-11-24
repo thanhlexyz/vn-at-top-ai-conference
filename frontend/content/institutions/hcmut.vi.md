@@ -1,4 +1,4 @@
 ---
-title: "Trường Đại học Bách khoa, ĐHQG-HCM"
+title: "Ho Chi Minh City University of Technology"
 key: "hcmut"
 ---
