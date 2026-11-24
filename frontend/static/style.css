@@ -512,7 +512,7 @@ svg.net .ew { font-size: 13px ; font-weight: 700 ; fill: var(--chart-value) ; pa
 svg.net .node circle { stroke: var(--bg) ; stroke-width: 2px ; }
 svg.net .node text { font-size: 14px ; fill: var(--fg) ; paint-order: stroke ; stroke: var(--bg) ; stroke-width: 4px ; stroke-linejoin: round ; }
 svg.net .node text.deg { font-size: 12px ; font-weight: 700 ; fill: #ffffff ; stroke: none ; pointer-events: none ; }
-svg.net .node.c4 text.deg, svg.net .node.c0 text.deg, svg.net .node.c-cyan text.deg { fill: #1d1d1f ; }
+svg.net .node.c4 text.deg, svg.net .node.c0 text.deg { fill: #1d1d1f ; }
 svg.net .node { cursor: pointer ; transition: opacity .15s ; }
 svg.net a.node:not([href]) { cursor: default ; }
 svg.net.focus .edge:not(.hl), svg.net.focus .ew:not(.hl), svg.net.focus .node:not(.hl) { opacity: 0.12 ; }
@@ -522,11 +522,37 @@ svg.net.focus .edge.hl { stroke: var(--chart-value) ; }
 .c3 circle, .dot.c3 { fill: #1baf7a ; background: #1baf7a ; }
 .c4 circle, .dot.c4 { fill: #eda100 ; background: #eda100 ; }
 .c0 circle, .dot.c0 { fill: #9a9890 ; background: #9a9890 ; }
-/* logo colours of HUST, VinUni and HCMUS on the researcher graph */
-.c-red circle, .dot.c-red { fill: #d7263d ; background: #d7263d ; }
-.c-blue circle, .dot.c-blue { fill: #1f5fbf ; background: #1f5fbf ; }
-.c-cyan circle, .dot.c-cyan { fill: #1fb5d6 ; background: #1fb5d6 ; }
+/* researcher graph: HUST, VinUni and HCMUS in the hue of their logos, then ochre, green and purple; the six fills
+   sit within 0.12 of each other in OKLCH lightness (backend/graph.py says how they were chosen). The number in a
+   circle is white or dark ink, whichever reads better on that fill. */
+.c-red circle, .dot.c-red { fill: #ca5558 ; background: #ca5558 ; }
+.c-blue circle, .dot.c-blue { fill: #2d66bd ; background: #2d66bd ; }
+.c-cyan circle, .dot.c-cyan { fill: #009cba ; background: #009cba ; }
+.g-ochre circle, .dot.g-ochre { fill: #ab8704 ; background: #ab8704 ; }
+.g-green circle, .dot.g-green { fill: #1b7e2a ; background: #1b7e2a ; }
+.g-purple circle, .dot.g-purple { fill: #8e479d ; background: #8e479d ; }
+svg.net .node.c-cyan text.deg, svg.net .node.g-ochre text.deg { fill: #1d1d1f ; }
+/* rings: the same three colours as an outline round a light tint of the colour, as heavy as a disc */
+svg.net .node.ring.g-ochre circle { fill: color-mix(in srgb, #ab8704 20%, var(--bg)) ; stroke: #ab8704 ; }
+svg.net .node.ring.g-green circle { fill: color-mix(in srgb, #1b7e2a 20%, var(--bg)) ; stroke: #1b7e2a ; }
+svg.net .node.ring.g-purple circle { fill: color-mix(in srgb, #8e479d 20%, var(--bg)) ; stroke: #8e479d ; }
+svg.net .node.ring text.deg { fill: var(--fg) ; }
+.dot.ring { box-sizing: border-box ; border: 3px solid ; }
+.dot.ring.g-ochre { background: color-mix(in srgb, #ab8704 20%, var(--bg)) ; border-color: #ab8704 ; }
+.dot.ring.g-green { background: color-mix(in srgb, #1b7e2a 20%, var(--bg)) ; border-color: #1b7e2a ; }
+.dot.ring.g-purple { background: color-mix(in srgb, #8e479d 20%, var(--bg)) ; border-color: #8e479d ; }
 .graph-legend { list-style: none ; padding: 0 ; display: flex ; flex-wrap: wrap ; gap: 6px 18px ; font-size: 0.9em ; }
+/* the graph pages: the legend is a sticky side box like "On this page"; the hover lights the institutions of the
+   people it lights and fades the rest, as it does the circles */
+.legend-box .graph-legend { display: block ; margin: 0 ; }
+.legend-box .graph-legend li { display: flex ; align-items: center ; gap: 6px ; margin: 0.4em 0 ; transition: opacity .15s ; }
+.legend-box .graph-legend a { color: var(--muted) ; text-decoration: none ; }
+.legend-box .graph-legend a:hover { color: var(--link) ; text-decoration: underline ; }
+.legend-box.focus .graph-legend li[data-color]:not(.hl) { opacity: 0.12 ; }
+.legend-box.focus .graph-legend li.hl a { color: var(--fg) ; font-weight: 600 ; }
+.legend-box .edge-key { margin-top: 0.8em !important ; color: var(--muted) ; font-size: 0.95em ; }
+@media (min-width: 900px) { .graph-page { grid-template-columns: minmax(0, 1fr) 11rem ; } }
+.legend-box .legend-logo { height: 1.3em ; width: 1.6em ; object-fit: contain ; margin-right: 2px ; }
 .graph-legend li { display: inline-flex ; align-items: center ; gap: 6px ; }
 .graph-legend .dot { display: inline-block ; width: 12px ; height: 12px ; border-radius: 50% ; }
 .graph-legend .line-key { display: inline-block ; width: 22px ; height: 4px ; border-radius: 2px ; background: var(--axis) ; }

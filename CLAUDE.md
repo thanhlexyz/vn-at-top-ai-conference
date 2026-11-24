@@ -271,8 +271,9 @@ the build are parsed by templates (a reason starting with `before `, a track end
 through a circle; labels never overlap lines or other labels and never leave the drawing; crossings few. After any
 change, check crossings and label clearance for both graphs and look at screenshots. They use every counted
 submission (rejected and withdrawn included) plus workshop papers from the Vietnam years, and feed the co-author
-lists. Researcher colours: HUST red, VinUni blue, HCMUS cyan, the next two largest institutions green and amber, the
-rest grey. `networkx` is used for planar starts and Kamada-Kawai; without it the layout differs. Small groups go
+lists. Researcher colours: HUST red, VinUni blue, HCMUS cyan (logo hues), the next three institutions ochre, green
+and purple, the three after them rings of those colours (never a brand colour as a ring), the rest grey; the six
+fills pass the dataviz palette checks in both modes (`graph.py`). Groups of 5 or more get their own band. `networkx` is used for planar starts and Kamada-Kawai; without it the layout differs. Small groups go
 under the main drawing: a chain as a short column, a group with one person linked to all others (`fan_hub`) as a fan
 (hub on the left, its label to its left, the others in a column to its right). The number on a line sits where no
 other line, circle, number or name label touches it (`weight_spots`, run again after the name labels); a name label

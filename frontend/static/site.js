@@ -294,10 +294,25 @@
 // Collaboration graphs: hovering or focusing a circle highlights its links and the people or institutions it
 // links to; everything else fades. The graph is complete without this.
 (function () {
+	var legend = document.querySelector(".legend-box");
 	document.querySelectorAll("svg.net").forEach(function (svg) {
 		function clear() {
 			svg.classList.remove("focus");
 			svg.querySelectorAll(".hl").forEach(function (el) { el.classList.remove("hl"); });
+			if (legend) {
+				legend.classList.remove("focus");
+				legend.querySelectorAll(".hl").forEach(function (el) { el.classList.remove("hl"); });
+			}
+		}
+		// the institutions (legend colours) of every circle that is lit: the person and the people one link away
+		function lightLegend() {
+			if (!legend) return;
+			legend.classList.add("focus");
+			svg.querySelectorAll(".node.hl").forEach(function (n) {
+				legend.querySelectorAll("li[data-color]").forEach(function (li) {
+					if (li.dataset.color === n.dataset.color) li.classList.add("hl");
+				});
+			});
 		}
 		function focus(id) {
 			clear();
@@ -309,6 +324,7 @@
 				e.classList.add("hl");
 				svg.querySelectorAll('.node[data-id="' + other + '"]').forEach(function (n) { n.classList.add("hl"); });
 			});
+			lightLegend();
 		}
 		svg.querySelectorAll(".node").forEach(function (n) {
 			n.addEventListener("mouseenter", function () { focus(n.dataset.id); });

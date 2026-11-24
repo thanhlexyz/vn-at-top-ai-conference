@@ -521,6 +521,8 @@ other = "Also published as: {{ . }}"
 # ---------------------------------------------------------------- collaboration graphs
 [graph_summary]
 other = "{{ .Nodes }} connected, {{ .Edges }} links; {{ .Shared }} of {{ .Papers }} papers are shared."
+[graph_legend_title]
+other = "Institutions"
 [graph_other]
 other = "other"
 [graph_roster]

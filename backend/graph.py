@@ -12,6 +12,8 @@ import random
 from common import PARENT, norm_title, slugify, vn_institutions
 
 W, H = 1000, 720   # layout box; the page scales the SVG to its width
+BIG_GROUP = 5        # a group this large gets a band of its own, drawn like the main group
+BAND_HEIGHT = 360    # the most a band below the main group may take
 
 
 def paper_key(r):
@@ -365,6 +367,20 @@ def fan_hub(group, edges):
     return next((i for i in sorted(group, key=lambda i: -degree[i]) if degree[i] == len(group) - 1), None)
 
 
+def lie_flat(pos):
+    """Turn a drawing so its longest direction is horizontal (principal axis): a band then uses the page's width
+    instead of its height."""
+    xs = [p[0] for p in pos.values()]
+    ys = [p[1] for p in pos.values()]
+    mx, my = sum(xs) / len(xs), sum(ys) / len(ys)
+    sxx = sum((x - mx) ** 2 for x in xs)
+    syy = sum((y - my) ** 2 for y in ys)
+    sxy = sum((x - mx) * (y - my) for x, y in zip(xs, ys))
+    angle = -0.5 * math.atan2(2 * sxy, sxx - syy)
+    c, s = math.cos(angle), math.sin(angle)
+    return {i: [(p[0] - mx) * c - (p[1] - my) * s, (p[0] - mx) * s + (p[1] - my) * c] for i, p in pos.items()}
+
+
 def layout(nodes, edges, labels, prefer="weights"):
     """{id: (x, y)} and the drawing's height. The largest group is drawn with a force layout across the full
     width; smaller groups go underneath in a grid, each a short column, so their labels never collide.
@@ -373,56 +389,67 @@ def layout(nodes, edges, labels, prefer="weights"):
     groups = components(sorted(nodes), edges)
     if not groups:
         return {}, 200
-    main, rest = groups[0], groups[1:]
-    def fit(pos):
-        # scale the main group to the width, keeping its proportions
-        xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
-        span_x, span_y = max(max(xs) - min(xs), 1), max(max(ys) - min(ys), 1)
-        s = min((W - 260) / span_x, 640 / span_y)
-        return {i: [40 + (p[0] - min(xs)) * s, 40 + (p[1] - min(ys)) * s] for i, p in pos.items()}
+    # the largest group, and any other group of BIG_GROUP or more, is drawn with the full layout in its own band
+    # across the width; smaller groups go underneath as columns and fans
+    bands = [groups[0]] + [g for g in groups[1:] if len(g) >= BIG_GROUP]
+    rest = [g for g in groups[1:] if len(g) < BIG_GROUP]
 
-    def attempt(seed):
-        pos = fit(force(main, edges, size=95, seed=seed))
-        # then remove label overlaps
-        for _ in range(4):   # alternate: lines clear of circles, labels clear of each other
+    def draw(members, cap, top):
+        def fit(pos):
+            # scale the group to the width, keeping its proportions; a band is at most `cap` high
+            xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
+            span_x, span_y = max(max(xs) - min(xs), 1), max(max(ys) - min(ys), 1)
+            s = min((W - 260) / span_x, cap / span_y)
+            return {i: [40 + (p[0] - min(xs)) * s, 40 + (p[1] - min(ys)) * s] for i, p in pos.items()}
+
+        def attempt(seed):
+            raw = force(members, edges, size=95, seed=seed)
+            pos = fit(lie_flat(raw) if top > 70 else raw)   # a band below the main group runs across the page
+            # then remove label overlaps
+            for _ in range(4):   # alternate: lines clear of circles, labels clear of each other
+                pos = clear_edges(pos, edges)
+                pos = declutter(pos, labels)
             pos = clear_edges(pos, edges)
-            pos = declutter(pos, labels)
-        pos = clear_edges(pos, edges)
-        return untangle(pos, edges, labels, cross_cost=100000 if prefer == "rules" else 300)
+            return untangle(pos, edges, labels, cross_cost=100000 if prefer == "rules" else 300)
 
-    # several starting layouts, each put through the drawing rules; the winner has the fewest crossing lines, then
-    # the fewest other rule breaks, then line lengths closest to rest_length (close collaborators close)
-    starts = [lambda seed=seed: attempt(seed) for seed in (7, 11, 23, 42, 101, 211)]
-    kk = kk_start(main, edges)
-    if kk:
-        starts.append(lambda: untangle(fit(kk), edges, labels))
-    best = None
-    for make in starts:
-        pos = make()
-        score = (crossings(pos, edges), rule_breaks(pos, edges, labels), stress(pos, edges))
-        if prefer != "rules":   # weights first: lengths that follow the shared papers, crossings allowed
-            score = (rule_breaks(pos, edges, labels), stress(pos, edges), score[0])
-        if best is None or score < best[0]:
-            best = (score, pos)
-    if prefer == "rules" and best[0][0]:
-        for start, kept in planar_starts(main, edges):
-            pos = untangle(fit(relax_planar(start, edges)), edges, labels)
+        # several starting layouts, each put through the drawing rules; the winner has the fewest crossing lines,
+        # then the fewest other rule breaks, then line lengths closest to rest_length (close collaborators close)
+        starts = [lambda seed=seed: attempt(seed) for seed in (7, 11, 23, 42, 101, 211)]
+        kk = kk_start(members, edges)
+        if kk:
+            starts.append(lambda: untangle(fit(lie_flat(kk) if top > 70 else kk), edges, labels))
+        best = None
+        for make in starts:
+            pos = make()
             score = (crossings(pos, edges), rule_breaks(pos, edges, labels), stress(pos, edges))
-            if score < best[0]:
+            if prefer != "rules":   # weights first: lengths that follow the shared papers, crossings allowed
+                score = (rule_breaks(pos, edges, labels), stress(pos, edges), score[0])
+            if best is None or score < best[0]:
                 best = (score, pos)
-    pos = best[1]
-    xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
-    # the local search can push nodes outward; shrink evenly to the width, which keeps every crossing as it is
-    margin = 20 + max(7.4 * len(labels[i]) for i in pos) / 2   # a label centred over an edge node still fits
-    room = W - 2 * margin
-    if max(xs) - min(xs) > room:
-        s = room / (max(xs) - min(xs))
-        pos = {i: [min(xs) + (p[0] - min(xs)) * s, min(ys) + (p[1] - min(ys)) * s] for i, p in pos.items()}
+        if prefer == "rules" and best[0][0]:
+            for start, kept in planar_starts(members, edges):
+                pos = untangle(fit(relax_planar(start, edges)), edges, labels)
+                score = (crossings(pos, edges), rule_breaks(pos, edges, labels), stress(pos, edges))
+                if score < best[0]:
+                    best = (score, pos)
+        pos = best[1]
         xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
-    shift_x = (W - (max(xs) - min(xs))) / 2 - min(xs)
-    shift_y = 70 - min(ys)   # room for a label above the top circle
-    out = {i: [p[0] + shift_x, p[1] + shift_y] for i, p in pos.items()}
-    top = max(p[1] for p in out.values()) + 70
+        # the local search can push nodes outward; shrink evenly to the width, which keeps every crossing as it is
+        margin = 20 + max(7.4 * len(labels[i]) for i in pos) / 2   # a label centred over an edge node still fits
+        room = W - 2 * margin
+        if max(xs) - min(xs) > room:
+            s = room / (max(xs) - min(xs))
+            pos = {i: [min(xs) + (p[0] - min(xs)) * s, min(ys) + (p[1] - min(ys)) * s] for i, p in pos.items()}
+            xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
+        shift_x = (W - (max(xs) - min(xs))) / 2 - min(xs)
+        shift_y = top - min(ys)   # room for a label above the top circle
+        return {i: [p[0] + shift_x, p[1] + shift_y] for i, p in pos.items()}
+
+    out, top = {}, 70
+    for k, g in enumerate(bands):
+        placed = draw(g, 640 if k == 0 else BAND_HEIGHT, top)
+        out.update(placed)
+        top = max(p[1] for p in placed.values()) + (70 if k == len(bands) - 1 else 110)
     # small groups: columns of nodes 46 px apart, laid out in cells across the width; a cell is wide enough for
     # the longest label among them (labels sit to the right of the circles), so neighbouring columns never touch
     longest = max((7.4 * len(labels[i]) for g in rest for i in g), default=0)
@@ -604,7 +631,17 @@ def build(nodes, papers_of, color_of, legend):
 PALETTE = ["c1", "c2", "c3", "c4"]   # classes styled in style.css; the rest are "c0" (other)
 # institutions drawn in the main colour of their logo; the next largest groups take the colours left after these
 BRAND = {"HUST": "c-red", "VinUni": "c-blue", "HCMUS": "c-cyan"}
-REST_COLORS = ["c3", "c4"]   # green, amber: clear of red, blue and cyan
+# the next largest institutions: three more solid colours, then the same three as rings (a tinted centre and a
+# coloured outline), so nine institutions are named; the rest are grey. A brand colour is never a ring (a red ring
+# would read as HUST). The six fills sit within 0.12 of each other in OKLCH lightness and pass the dataviz palette
+# checks (colour-blind separation, normal-vision floor) in light and dark mode; every circle also has a name label.
+REST_COLORS = ["g-ochre", "g-green", "g-purple", "ring g-ochre", "ring g-green", "ring g-purple"]
+
+
+def color_of_group(g, top):
+    """The colour class of a group among `top` (ordered by size): its brand colour, or the next free one."""
+    rest = [x for x in top if x not in BRAND]
+    return BRAND[g] if g in BRAND else REST_COLORS[rest.index(g)]
 
 
 def researcher_graph(professors, records):
@@ -616,10 +653,13 @@ def researcher_graph(professors, records):
                          "group": p["institution_short"]} for p in professors}
     size = collections.Counter(p["institution_short"] for p in professors if any(p["slug"] in m for m in papers_of.values()))
     ranked = [g for g, _ in size.most_common()]
+    # an institution with a single person on the graph stays grey ("other")
+    ranked = [g for g in ranked if size[g] > 1 or g in BRAND]
     top = [g for g in ranked if g in BRAND] + [g for g in ranked if g not in BRAND][:len(REST_COLORS)]
     top.sort(key=ranked.index)
-    others = iter(REST_COLORS)
-    color = {g: BRAND[g] if g in BRAND else next(others) for g in top}
+    color = {g: color_of_group(g, top) for g in top}
+    # the legend lists the solid colours first, then the rings, then "other"
+    top.sort(key=lambda g: (color[g].startswith("ring"), ranked.index(g)))
     legend = [{"label": g, "color": color[g]} for g in top] + [{"label": "", "color": "c0"}]
     return build(nodes, papers_of, lambda n: color.get(n["group"], "c0"), legend)
 

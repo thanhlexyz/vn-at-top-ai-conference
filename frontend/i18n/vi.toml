@@ -516,6 +516,8 @@ other = "Tên khác trên các bài báo: {{ . }}"
 # ---------------------------------------------------------------- collaboration graphs
 [graph_summary]
 other = "{{ .Nodes }} nút có liên kết, {{ .Edges }} đường nối; {{ .Shared }} trên {{ .Papers }} bài là bài chung."
+[graph_legend_title]
+other = "Trường"
 [graph_other]
 other = "khác"
 [graph_roster]
