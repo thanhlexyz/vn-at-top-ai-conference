@@ -10,11 +10,11 @@
   "venues": {
    "iclr": {
     "accepted": 14,
-    "rejected": 38,
-    "withdrawn": 61,
+    "rejected": 39,
+    "withdrawn": 63,
     "desk_rejected": 6,
-    "not_accepted": 105,
-    "submitted": 119,
+    "not_accepted": 108,
+    "submitted": 122,
     "own_page": 0,
     "official": 14
    },
@@ -817,10 +817,10 @@
      "iclr": {
       "accepted": 6,
       "rejected": 12,
-      "withdrawn": 10,
+      "withdrawn": 12,
       "desk_rejected": 1,
-      "not_accepted": 23,
-      "submitted": 29,
+      "not_accepted": 25,
+      "submitted": 31,
       "own_page": 0,
       "official": 6,
       "available": true,
@@ -948,7 +948,7 @@
     "accepted": 6,
     "own_page": 0,
     "official": 6,
-    "rejected_estimated": 23
+    "rejected_estimated": 25
    },
    {
     "year": 2026,
@@ -956,11 +956,11 @@
     "venues": {
      "iclr": {
       "accepted": 5,
-      "rejected": 18,
+      "rejected": 19,
       "withdrawn": 9,
       "desk_rejected": 4,
-      "not_accepted": 31,
-      "submitted": 36,
+      "not_accepted": 32,
+      "submitted": 37,
       "own_page": 0,
       "official": 5,
       "available": true,
@@ -1088,7 +1088,7 @@
     "accepted": 5,
     "own_page": 0,
     "official": 5,
-    "rejected_estimated": 31
+    "rejected_estimated": 32
    },
    {
     "year": 2027,
@@ -4173,6 +4173,55 @@
     "year": 2026,
     "venue": "iclr",
     "venue_name": "ICLR",
+    "title": "Quantifying Statistical Significance in Diffusion-Based Anomaly Localization via Selective Inference",
+    "ai_key": "iclr-2026-quantifyingstatisticalsignificanceindiff",
+    "url": "https://openreview.net/forum?id=3jwVvq5qxJ",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Teruyuki Katsuoka, Tomohiro Shiraishi, Daiki Miwa, Vo Nguyen Le Duy, Ichiro Takeuchi",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "vo-nguyen-le-duy",
+      "name": "Vo Nguyen Le Duy",
+      "name_vi": "Võ Nguyễn Lê Duy"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Teruyuki Katsuoka",
+      "slug": ""
+     },
+     {
+      "name": "Tomohiro Shiraishi",
+      "slug": ""
+     },
+     {
+      "name": "Daiki Miwa",
+      "slug": ""
+     },
+     {
+      "name": "Vo Nguyen Le Duy",
+      "slug": "vo-nguyen-le-duy"
+     },
+     {
+      "name": "Ichiro Takeuchi",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "iclr",
+    "venue_name": "ICLR",
     "title": "Reflecting and Linking knowledge: Dynamic Label Structures for Prompt-based Continual Learning",
     "ai_key": "iclr-2026-reflectingandlinkingknowledgedynamiclabe",
     "url": "https://openreview.net/forum?id=9NBQ4wPP4w",
@@ -5909,6 +5958,104 @@
     "year": 2025,
     "venue": "iclr",
     "venue_name": "ICLR",
+    "title": "Statistical Test for Anomaly Detections using Variational Auto-Encoders by Selective Inference",
+    "ai_key": "iclr-2025-statisticaltestforanomalydetectionsusing",
+    "url": "https://openreview.net/forum?id=AJp85vrtNe",
+    "status": "withdrawn",
+    "status_label": "withdrawn",
+    "pres": "",
+    "authors": "Daiki Miwa, Tomohiro Shiraishi, Vo Nguyen Le Duy, Teruyuki Katsuoka, Ichiro Takeuchi",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "vo-nguyen-le-duy",
+      "name": "Vo Nguyen Le Duy",
+      "name_vi": "Võ Nguyễn Lê Duy"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Daiki Miwa",
+      "slug": ""
+     },
+     {
+      "name": "Tomohiro Shiraishi",
+      "slug": ""
+     },
+     {
+      "name": "Vo Nguyen Le Duy",
+      "slug": "vo-nguyen-le-duy"
+     },
+     {
+      "name": "Teruyuki Katsuoka",
+      "slug": ""
+     },
+     {
+      "name": "Ichiro Takeuchi",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "Statistical Test on Diffusion Model-based Anomaly Detection by Selective Inference",
+    "ai_key": "iclr-2025-statisticaltestondiffusionmodelbasedanom",
+    "url": "https://openreview.net/forum?id=WrdLgVY5ZH",
+    "status": "withdrawn",
+    "status_label": "withdrawn",
+    "pres": "",
+    "authors": "Teruyuki Katsuoka, Tomohiro Shiraishi, Daiki Miwa, Vo Nguyen Le Duy, Ichiro Takeuchi",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "vo-nguyen-le-duy",
+      "name": "Vo Nguyen Le Duy",
+      "name_vi": "Võ Nguyễn Lê Duy"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Teruyuki Katsuoka",
+      "slug": ""
+     },
+     {
+      "name": "Tomohiro Shiraishi",
+      "slug": ""
+     },
+     {
+      "name": "Daiki Miwa",
+      "slug": ""
+     },
+     {
+      "name": "Vo Nguyen Le Duy",
+      "slug": "vo-nguyen-le-duy"
+     },
+     {
+      "name": "Ichiro Takeuchi",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "iclr",
+    "venue_name": "ICLR",
     "title": "Synthesizing Physical Backdoor Datasets: An Automated Framework Leveraging Deep Generative Models",
     "ai_key": "iclr-2025-synthesizingphysicalbackdoordatasetsanau",
     "url": "https://openreview.net/forum?id=vG123yHVVl",
@@ -7387,14 +7534,14 @@
   ],
   "image": "img/venues/iclr.svg",
   "image_source": "https://iclr.cc/",
-  "rejected_estimated": 105,
-  "acceptance_rate": 12,
+  "rejected_estimated": 108,
+  "acceptance_rate": 11,
   "reported_rate": 30,
   "reported_detail": "15537 / 52327 (2020–2026)",
-  "ratio": "8.5",
+  "ratio": "8.7",
   "chart": {
-   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at ICLR\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"pa\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Accepted, projected</text><rect class=\"pr\" x=\"418.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"436.0\" y=\"18\">Rejected, projected</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">40</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">60</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">80</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"not\" d=\"M138.2,270.0 V270.0 Q138.2,267.2 141.1,267.2 H159.4 Q162.2,267.2 162.2,270.0 V270.0 Z\"><title>2021: 1 rejected, recorded</title></path><text class=\"value\" x=\"150.2\" y=\"261.2\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V267.2 Q211.8,267.2 211.8,267.2 H235.8 Q235.8,267.2 235.8,267.2 V270.0 Z\"><title>2022: 1 accepted</title></path><path class=\"not\" d=\"M211.8,265.2 V254.4 Q211.8,250.4 215.8,250.4 H231.8 Q235.8,250.4 235.8,254.4 V265.2 Z\"><title>2022: 6 rejected, recorded</title></path><text class=\"value\" x=\"223.8\" y=\"244.4\" text-anchor=\"middle\">7</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V267.2 Q285.2,267.2 285.2,267.2 H309.2 Q309.2,267.2 309.2,267.2 V270.0 Z\"><title>2023: 1 accepted</title></path><path class=\"not\" d=\"M285.2,265.2 V265.2 Q285.2,261.6 288.9,261.6 H305.6 Q309.2,261.6 309.2,265.2 V265.2 Z\"><title>2023: 2 rejected, recorded</title></path><text class=\"value\" x=\"297.2\" y=\"255.6\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V267.2 Q358.8,267.2 358.8,267.2 H382.8 Q382.8,267.2 382.8,267.2 V270.0 Z\"><title>2024: 1 accepted</title></path><path class=\"not\" d=\"M358.8,265.2 V243.2 Q358.8,239.2 362.8,239.2 H378.8 Q382.8,239.2 382.8,243.2 V265.2 Z\"><title>2024: 10 rejected, recorded</title></path><text class=\"value\" x=\"370.8\" y=\"233.2\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V253.2 Q432.2,253.2 432.2,253.2 H456.2 Q456.2,253.2 456.2,253.2 V270.0 Z\"><title>2025: 6 accepted</title></path><path class=\"not\" d=\"M432.2,251.2 V192.8 Q432.2,188.8 436.2,188.8 H452.2 Q456.2,188.8 456.2,192.8 V251.2 Z\"><title>2025: 23 rejected, recorded</title></path><text class=\"value\" x=\"444.2\" y=\"182.8\" text-anchor=\"middle\">29</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V256.0 Q505.8,256.0 505.8,256.0 H529.8 Q529.8,256.0 529.8,256.0 V270.0 Z\"><title>2026: 5 accepted</title></path><path class=\"not\" d=\"M505.8,254.0 V173.2 Q505.8,169.2 509.8,169.2 H525.8 Q529.8,169.2 529.8,173.2 V254.0 Z\"><title>2026: 31 rejected, recorded</title></path><text class=\"value\" x=\"517.8\" y=\"163.2\" text-anchor=\"middle\">36</text><text class=\"tick\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text><path class=\"pa\" d=\"M579.2,270.0 V249.1 Q579.2,249.1 579.2,249.1 H603.2 Q603.2,249.1 603.2,249.1 V270.0 Z\"><title>2027: about 7 accepted (projected)</title></path><path class=\"not\" d=\"M579.2,247.1 V159.5 Q579.2,159.5 579.2,159.5 H603.2 Q603.2,159.5 603.2,159.5 V247.1 Z\"><title>2027: 32 rejected, recorded</title></path><path class=\"pr\" d=\"M579.2,157.5 V64.8 Q579.2,60.8 583.2,60.8 H599.2 Q603.2,60.8 603.2,64.8 V157.5 Z\"><title>2027: about 35 more rejected (projected)</title></path><text class=\"value\" x=\"591.2\" y=\"54.8\" text-anchor=\"middle\">about 75</text></svg>",
-   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại ICLR\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"pa\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Được nhận, dự báo</text><rect class=\"pr\" x=\"424.40000000000003\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"442.40000000000003\" y=\"18\">Bị từ chối, dự báo</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">40</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">60</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">80</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"not\" d=\"M138.2,270.0 V270.0 Q138.2,267.2 141.1,267.2 H159.4 Q162.2,267.2 162.2,270.0 V270.0 Z\"><title>2021: 1 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"150.2\" y=\"261.2\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V267.2 Q211.8,267.2 211.8,267.2 H235.8 Q235.8,267.2 235.8,267.2 V270.0 Z\"><title>2022: 1 bài được nhận</title></path><path class=\"not\" d=\"M211.8,265.2 V254.4 Q211.8,250.4 215.8,250.4 H231.8 Q235.8,250.4 235.8,254.4 V265.2 Z\"><title>2022: 6 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"223.8\" y=\"244.4\" text-anchor=\"middle\">7</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V267.2 Q285.2,267.2 285.2,267.2 H309.2 Q309.2,267.2 309.2,267.2 V270.0 Z\"><title>2023: 1 bài được nhận</title></path><path class=\"not\" d=\"M285.2,265.2 V265.2 Q285.2,261.6 288.9,261.6 H305.6 Q309.2,261.6 309.2,265.2 V265.2 Z\"><title>2023: 2 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"297.2\" y=\"255.6\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V267.2 Q358.8,267.2 358.8,267.2 H382.8 Q382.8,267.2 382.8,267.2 V270.0 Z\"><title>2024: 1 bài được nhận</title></path><path class=\"not\" d=\"M358.8,265.2 V243.2 Q358.8,239.2 362.8,239.2 H378.8 Q382.8,239.2 382.8,243.2 V265.2 Z\"><title>2024: 10 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"370.8\" y=\"233.2\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V253.2 Q432.2,253.2 432.2,253.2 H456.2 Q456.2,253.2 456.2,253.2 V270.0 Z\"><title>2025: 6 bài được nhận</title></path><path class=\"not\" d=\"M432.2,251.2 V192.8 Q432.2,188.8 436.2,188.8 H452.2 Q456.2,188.8 456.2,192.8 V251.2 Z\"><title>2025: 23 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"444.2\" y=\"182.8\" text-anchor=\"middle\">29</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V256.0 Q505.8,256.0 505.8,256.0 H529.8 Q529.8,256.0 529.8,256.0 V270.0 Z\"><title>2026: 5 bài được nhận</title></path><path class=\"not\" d=\"M505.8,254.0 V173.2 Q505.8,169.2 509.8,169.2 H525.8 Q529.8,169.2 529.8,173.2 V254.0 Z\"><title>2026: 31 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"517.8\" y=\"163.2\" text-anchor=\"middle\">36</text><text class=\"tick\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text><path class=\"pa\" d=\"M579.2,270.0 V249.1 Q579.2,249.1 579.2,249.1 H603.2 Q603.2,249.1 603.2,249.1 V270.0 Z\"><title>2027: khoảng 7 bài được nhận (dự báo)</title></path><path class=\"not\" d=\"M579.2,247.1 V159.5 Q579.2,159.5 579.2,159.5 H603.2 Q603.2,159.5 603.2,159.5 V247.1 Z\"><title>2027: 32 bài bị từ chối, đếm được</title></path><path class=\"pr\" d=\"M579.2,157.5 V64.8 Q579.2,60.8 583.2,60.8 H599.2 Q603.2,60.8 603.2,64.8 V157.5 Z\"><title>2027: khoảng 35 bài bị từ chối nữa (dự báo)</title></path><text class=\"value\" x=\"591.2\" y=\"54.8\" text-anchor=\"middle\">~75</text></svg>"
+   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at ICLR\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"pa\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Accepted, projected</text><rect class=\"pr\" x=\"418.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"436.0\" y=\"18\">Rejected, projected</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">40</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">60</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">80</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"not\" d=\"M138.2,270.0 V270.0 Q138.2,267.2 141.1,267.2 H159.4 Q162.2,267.2 162.2,270.0 V270.0 Z\"><title>2021: 1 rejected, recorded</title></path><text class=\"value\" x=\"150.2\" y=\"261.2\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V267.2 Q211.8,267.2 211.8,267.2 H235.8 Q235.8,267.2 235.8,267.2 V270.0 Z\"><title>2022: 1 accepted</title></path><path class=\"not\" d=\"M211.8,265.2 V254.4 Q211.8,250.4 215.8,250.4 H231.8 Q235.8,250.4 235.8,254.4 V265.2 Z\"><title>2022: 6 rejected, recorded</title></path><text class=\"value\" x=\"223.8\" y=\"244.4\" text-anchor=\"middle\">7</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V267.2 Q285.2,267.2 285.2,267.2 H309.2 Q309.2,267.2 309.2,267.2 V270.0 Z\"><title>2023: 1 accepted</title></path><path class=\"not\" d=\"M285.2,265.2 V265.2 Q285.2,261.6 288.9,261.6 H305.6 Q309.2,261.6 309.2,265.2 V265.2 Z\"><title>2023: 2 rejected, recorded</title></path><text class=\"value\" x=\"297.2\" y=\"255.6\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V267.2 Q358.8,267.2 358.8,267.2 H382.8 Q382.8,267.2 382.8,267.2 V270.0 Z\"><title>2024: 1 accepted</title></path><path class=\"not\" d=\"M358.8,265.2 V243.2 Q358.8,239.2 362.8,239.2 H378.8 Q382.8,239.2 382.8,243.2 V265.2 Z\"><title>2024: 10 rejected, recorded</title></path><text class=\"value\" x=\"370.8\" y=\"233.2\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V253.2 Q432.2,253.2 432.2,253.2 H456.2 Q456.2,253.2 456.2,253.2 V270.0 Z\"><title>2025: 6 accepted</title></path><path class=\"not\" d=\"M432.2,251.2 V187.2 Q432.2,183.2 436.2,183.2 H452.2 Q456.2,183.2 456.2,187.2 V251.2 Z\"><title>2025: 25 rejected, recorded</title></path><text class=\"value\" x=\"444.2\" y=\"177.2\" text-anchor=\"middle\">31</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V256.0 Q505.8,256.0 505.8,256.0 H529.8 Q529.8,256.0 529.8,256.0 V270.0 Z\"><title>2026: 5 accepted</title></path><path class=\"not\" d=\"M505.8,254.0 V170.4 Q505.8,166.4 509.8,166.4 H525.8 Q529.8,166.4 529.8,170.4 V254.0 Z\"><title>2026: 32 rejected, recorded</title></path><text class=\"value\" x=\"517.8\" y=\"160.4\" text-anchor=\"middle\">37</text><text class=\"tick\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text><path class=\"pa\" d=\"M579.2,270.0 V249.8 Q579.2,249.8 579.2,249.8 H603.2 Q603.2,249.8 603.2,249.8 V270.0 Z\"><title>2027: about 7 accepted (projected)</title></path><path class=\"not\" d=\"M579.2,247.8 V160.2 Q579.2,160.2 579.2,160.2 H603.2 Q603.2,160.2 603.2,160.2 V247.8 Z\"><title>2027: 32 rejected, recorded</title></path><path class=\"pr\" d=\"M579.2,158.2 V68.8 Q579.2,64.8 583.2,64.8 H599.2 Q603.2,64.8 603.2,68.8 V158.2 Z\"><title>2027: about 34 more rejected (projected)</title></path><text class=\"value\" x=\"591.2\" y=\"58.8\" text-anchor=\"middle\">about 73</text></svg>",
+   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại ICLR\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"pa\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Được nhận, dự báo</text><rect class=\"pr\" x=\"424.40000000000003\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"442.40000000000003\" y=\"18\">Bị từ chối, dự báo</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">40</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">60</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">80</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"not\" d=\"M138.2,270.0 V270.0 Q138.2,267.2 141.1,267.2 H159.4 Q162.2,267.2 162.2,270.0 V270.0 Z\"><title>2021: 1 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"150.2\" y=\"261.2\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V267.2 Q211.8,267.2 211.8,267.2 H235.8 Q235.8,267.2 235.8,267.2 V270.0 Z\"><title>2022: 1 bài được nhận</title></path><path class=\"not\" d=\"M211.8,265.2 V254.4 Q211.8,250.4 215.8,250.4 H231.8 Q235.8,250.4 235.8,254.4 V265.2 Z\"><title>2022: 6 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"223.8\" y=\"244.4\" text-anchor=\"middle\">7</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V267.2 Q285.2,267.2 285.2,267.2 H309.2 Q309.2,267.2 309.2,267.2 V270.0 Z\"><title>2023: 1 bài được nhận</title></path><path class=\"not\" d=\"M285.2,265.2 V265.2 Q285.2,261.6 288.9,261.6 H305.6 Q309.2,261.6 309.2,265.2 V265.2 Z\"><title>2023: 2 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"297.2\" y=\"255.6\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V267.2 Q358.8,267.2 358.8,267.2 H382.8 Q382.8,267.2 382.8,267.2 V270.0 Z\"><title>2024: 1 bài được nhận</title></path><path class=\"not\" d=\"M358.8,265.2 V243.2 Q358.8,239.2 362.8,239.2 H378.8 Q382.8,239.2 382.8,243.2 V265.2 Z\"><title>2024: 10 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"370.8\" y=\"233.2\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V253.2 Q432.2,253.2 432.2,253.2 H456.2 Q456.2,253.2 456.2,253.2 V270.0 Z\"><title>2025: 6 bài được nhận</title></path><path class=\"not\" d=\"M432.2,251.2 V187.2 Q432.2,183.2 436.2,183.2 H452.2 Q456.2,183.2 456.2,187.2 V251.2 Z\"><title>2025: 25 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"444.2\" y=\"177.2\" text-anchor=\"middle\">31</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V256.0 Q505.8,256.0 505.8,256.0 H529.8 Q529.8,256.0 529.8,256.0 V270.0 Z\"><title>2026: 5 bài được nhận</title></path><path class=\"not\" d=\"M505.8,254.0 V170.4 Q505.8,166.4 509.8,166.4 H525.8 Q529.8,166.4 529.8,170.4 V254.0 Z\"><title>2026: 32 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"517.8\" y=\"160.4\" text-anchor=\"middle\">37</text><text class=\"tick\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text><path class=\"pa\" d=\"M579.2,270.0 V249.8 Q579.2,249.8 579.2,249.8 H603.2 Q603.2,249.8 603.2,249.8 V270.0 Z\"><title>2027: khoảng 7 bài được nhận (dự báo)</title></path><path class=\"not\" d=\"M579.2,247.8 V160.2 Q579.2,160.2 579.2,160.2 H603.2 Q603.2,160.2 603.2,160.2 V247.8 Z\"><title>2027: 32 bài bị từ chối, đếm được</title></path><path class=\"pr\" d=\"M579.2,158.2 V68.8 Q579.2,64.8 583.2,64.8 H599.2 Q603.2,64.8 603.2,68.8 V158.2 Z\"><title>2027: khoảng 34 bài bị từ chối nữa (dự báo)</title></path><text class=\"value\" x=\"591.2\" y=\"58.8\" text-anchor=\"middle\">~73</text></svg>"
   }
  },
  {
@@ -11926,9 +12073,9 @@
   "name": "ICML",
   "full_name": "International Conference on Machine Learning",
   "rejections": "none",
-  "accepted": 22,
+  "accepted": 23,
   "own_page": 0,
-  "official": 22,
+  "official": 23,
   "venues": {
    "iclr": {
     "accepted": 0,
@@ -11951,14 +12098,14 @@
     "official": 0
    },
    "icml": {
-    "accepted": 22,
+    "accepted": 23,
     "rejected": 0,
     "withdrawn": 0,
     "desk_rejected": 0,
     "not_accepted": 0,
-    "submitted": 22,
+    "submitted": 23,
     "own_page": 0,
-    "official": 22
+    "official": 23
    },
    "cvpr": {
     "accepted": 0,
@@ -12623,14 +12770,14 @@
       "provisional": false
      },
      "icml": {
-      "accepted": 1,
+      "accepted": 2,
       "rejected": 0,
       "withdrawn": 0,
       "desk_rejected": 0,
       "not_accepted": 0,
-      "submitted": 1,
+      "submitted": 2,
       "own_page": 0,
-      "official": 1,
+      "official": 2,
       "available": true,
       "held": true,
       "provisional": false
@@ -12727,10 +12874,10 @@
       "provisional": false
      }
     },
-    "accepted": 1,
+    "accepted": 2,
     "own_page": 0,
-    "official": 1,
-    "rejected_estimated": 5
+    "official": 2,
+    "rejected_estimated": 8
    },
    {
     "year": 2025,
@@ -13398,6 +13545,11 @@
       "slug": "minh-nhat-vu",
       "name": "Minh Nhat Vu",
       "name_vi": "Vũ Nhật Minh"
+     },
+     {
+      "slug": "vu-n-duong",
+      "name": "Vu N. Duong",
+      "name_vi": "Dương Nguyên Vũ"
      }
     ],
     "reviews": "5(3), 4(3), 5(3), 4(5)",
@@ -13473,7 +13625,7 @@
      },
      {
       "name": "Vu N. Duong",
-      "slug": ""
+      "slug": "vu-n-duong"
      },
      {
       "name": "Hung Ngo",
@@ -14241,6 +14393,59 @@
     ]
    },
    {
+    "year": 2024,
+    "venue": "icml",
+    "venue_name": "ICML",
+    "title": "Statistical Test for Attention Maps in Vision Transformers",
+    "ai_key": "icml-2024-statisticaltestforattentionmapsinvisiont",
+    "url": "https://openreview.net/forum?id=uLonuOfrwp",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Tomohiro Shiraishi, Daiki Miwa, Teruyuki Katsuoka, Vo Nguyen Le Duy, Kouichi Taji, Ichiro Takeuchi",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "professors": [
+     {
+      "slug": "vo-nguyen-le-duy",
+      "name": "Vo Nguyen Le Duy",
+      "name_vi": "Võ Nguyễn Lê Duy"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "Tomohiro Shiraishi",
+      "slug": ""
+     },
+     {
+      "name": "Daiki Miwa",
+      "slug": ""
+     },
+     {
+      "name": "Teruyuki Katsuoka",
+      "slug": ""
+     },
+     {
+      "name": "Vo Nguyen Le Duy",
+      "slug": "vo-nguyen-le-duy"
+     },
+     {
+      "name": "Kouichi Taji",
+      "slug": ""
+     },
+     {
+      "name": "Ichiro Takeuchi",
+      "slug": ""
+     }
+    ]
+   },
+   {
     "year": 2022,
     "venue": "icml",
     "venue_name": "ICML",
@@ -14365,14 +14570,14 @@
   ],
   "image": "img/venues/icml.svg",
   "image_source": "https://icml.cc/",
-  "rejected_estimated": 76,
+  "rejected_estimated": 79,
   "acceptance_rate": 21,
   "reported_rate": 26,
   "reported_detail": "17555 / 68169 (2020–2026)",
-  "ratio": "4.5",
+  "ratio": "4.4",
   "chart": {
-   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at ICML\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"est\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">40</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">60</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><path class=\"acc\" d=\"M64.8,270.0 V266.3 Q64.8,266.3 64.8,266.3 H88.8 Q88.8,266.3 88.8,266.3 V270.0 Z\"><title>2020: 1 accepted</title></path><path class=\"est\" d=\"M64.8,264.3 V262.8 Q64.8,258.8 68.8,258.8 H84.8 Q88.8,258.8 88.8,262.8 V264.3 Z\"><title>2020: about 2 rejected (estimate)</title></path><text class=\"value\" x=\"76.8\" y=\"252.8\" text-anchor=\"middle\">about 3</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V266.3 Q211.8,266.3 211.8,266.3 H235.8 Q235.8,266.3 235.8,266.3 V270.0 Z\"><title>2022: 1 accepted</title></path><path class=\"est\" d=\"M211.8,264.3 V251.6 Q211.8,247.6 215.8,247.6 H231.8 Q235.8,247.6 235.8,251.6 V264.3 Z\"><title>2022: about 5 rejected (estimate)</title></path><text class=\"value\" x=\"223.8\" y=\"241.6\" text-anchor=\"middle\">about 6</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V266.3 Q358.8,266.3 358.8,266.3 H382.8 Q382.8,266.3 382.8,266.3 V270.0 Z\"><title>2024: 1 accepted</title></path><path class=\"est\" d=\"M358.8,264.3 V251.6 Q358.8,247.6 362.8,247.6 H378.8 Q382.8,247.6 382.8,251.6 V264.3 Z\"><title>2024: about 5 rejected (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"241.6\" text-anchor=\"middle\">about 6</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V251.3 Q432.2,251.3 432.2,251.3 H456.2 Q456.2,251.3 456.2,251.3 V270.0 Z\"><title>2025: 5 accepted</title></path><path class=\"est\" d=\"M432.2,249.3 V176.9 Q432.2,172.9 436.2,172.9 H452.2 Q456.2,172.9 456.2,176.9 V249.3 Z\"><title>2025: about 21 rejected (estimate)</title></path><text class=\"value\" x=\"444.2\" y=\"166.9\" text-anchor=\"middle\">about 26</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V217.7 Q505.8,217.7 505.8,217.7 H529.8 Q529.8,217.7 529.8,217.7 V270.0 Z\"><title>2026: 14 accepted</title></path><path class=\"est\" d=\"M505.8,215.7 V61.2 Q505.8,57.2 509.8,57.2 H525.8 Q529.8,57.2 529.8,61.2 V215.7 Z\"><title>2026: about 43 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"51.2\" text-anchor=\"middle\">about 57</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
-   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại ICML\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"est\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">40</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">60</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><path class=\"acc\" d=\"M64.8,270.0 V266.3 Q64.8,266.3 64.8,266.3 H88.8 Q88.8,266.3 88.8,266.3 V270.0 Z\"><title>2020: 1 bài được nhận</title></path><path class=\"est\" d=\"M64.8,264.3 V262.8 Q64.8,258.8 68.8,258.8 H84.8 Q88.8,258.8 88.8,262.8 V264.3 Z\"><title>2020: khoảng 2 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"76.8\" y=\"252.8\" text-anchor=\"middle\">~3</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V266.3 Q211.8,266.3 211.8,266.3 H235.8 Q235.8,266.3 235.8,266.3 V270.0 Z\"><title>2022: 1 bài được nhận</title></path><path class=\"est\" d=\"M211.8,264.3 V251.6 Q211.8,247.6 215.8,247.6 H231.8 Q235.8,247.6 235.8,251.6 V264.3 Z\"><title>2022: khoảng 5 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"223.8\" y=\"241.6\" text-anchor=\"middle\">~6</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V266.3 Q358.8,266.3 358.8,266.3 H382.8 Q382.8,266.3 382.8,266.3 V270.0 Z\"><title>2024: 1 bài được nhận</title></path><path class=\"est\" d=\"M358.8,264.3 V251.6 Q358.8,247.6 362.8,247.6 H378.8 Q382.8,247.6 382.8,251.6 V264.3 Z\"><title>2024: khoảng 5 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"241.6\" text-anchor=\"middle\">~6</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V251.3 Q432.2,251.3 432.2,251.3 H456.2 Q456.2,251.3 456.2,251.3 V270.0 Z\"><title>2025: 5 bài được nhận</title></path><path class=\"est\" d=\"M432.2,249.3 V176.9 Q432.2,172.9 436.2,172.9 H452.2 Q456.2,172.9 456.2,176.9 V249.3 Z\"><title>2025: khoảng 21 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"444.2\" y=\"166.9\" text-anchor=\"middle\">~26</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V217.7 Q505.8,217.7 505.8,217.7 H529.8 Q529.8,217.7 529.8,217.7 V270.0 Z\"><title>2026: 14 bài được nhận</title></path><path class=\"est\" d=\"M505.8,215.7 V61.2 Q505.8,57.2 509.8,57.2 H525.8 Q529.8,57.2 529.8,61.2 V215.7 Z\"><title>2026: khoảng 43 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"51.2\" text-anchor=\"middle\">~57</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
+   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at ICML\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"est\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">40</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">60</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><path class=\"acc\" d=\"M64.8,270.0 V266.3 Q64.8,266.3 64.8,266.3 H88.8 Q88.8,266.3 88.8,266.3 V270.0 Z\"><title>2020: 1 accepted</title></path><path class=\"est\" d=\"M64.8,264.3 V262.8 Q64.8,258.8 68.8,258.8 H84.8 Q88.8,258.8 88.8,262.8 V264.3 Z\"><title>2020: about 2 rejected (estimate)</title></path><text class=\"value\" x=\"76.8\" y=\"252.8\" text-anchor=\"middle\">about 3</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V266.3 Q211.8,266.3 211.8,266.3 H235.8 Q235.8,266.3 235.8,266.3 V270.0 Z\"><title>2022: 1 accepted</title></path><path class=\"est\" d=\"M211.8,264.3 V251.6 Q211.8,247.6 215.8,247.6 H231.8 Q235.8,247.6 235.8,251.6 V264.3 Z\"><title>2022: about 5 rejected (estimate)</title></path><text class=\"value\" x=\"223.8\" y=\"241.6\" text-anchor=\"middle\">about 6</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V262.5 Q358.8,262.5 358.8,262.5 H382.8 Q382.8,262.5 382.8,262.5 V270.0 Z\"><title>2024: 2 accepted</title></path><path class=\"est\" d=\"M358.8,260.5 V236.7 Q358.8,232.7 362.8,232.7 H378.8 Q382.8,232.7 382.8,236.7 V260.5 Z\"><title>2024: about 8 rejected (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"226.7\" text-anchor=\"middle\">about 10</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V251.3 Q432.2,251.3 432.2,251.3 H456.2 Q456.2,251.3 456.2,251.3 V270.0 Z\"><title>2025: 5 accepted</title></path><path class=\"est\" d=\"M432.2,249.3 V176.9 Q432.2,172.9 436.2,172.9 H452.2 Q456.2,172.9 456.2,176.9 V249.3 Z\"><title>2025: about 21 rejected (estimate)</title></path><text class=\"value\" x=\"444.2\" y=\"166.9\" text-anchor=\"middle\">about 26</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V217.7 Q505.8,217.7 505.8,217.7 H529.8 Q529.8,217.7 529.8,217.7 V270.0 Z\"><title>2026: 14 accepted</title></path><path class=\"est\" d=\"M505.8,215.7 V61.2 Q505.8,57.2 509.8,57.2 H525.8 Q529.8,57.2 529.8,61.2 V215.7 Z\"><title>2026: about 43 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"51.2\" text-anchor=\"middle\">about 57</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
+   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại ICML\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"est\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">40</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">60</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><path class=\"acc\" d=\"M64.8,270.0 V266.3 Q64.8,266.3 64.8,266.3 H88.8 Q88.8,266.3 88.8,266.3 V270.0 Z\"><title>2020: 1 bài được nhận</title></path><path class=\"est\" d=\"M64.8,264.3 V262.8 Q64.8,258.8 68.8,258.8 H84.8 Q88.8,258.8 88.8,262.8 V264.3 Z\"><title>2020: khoảng 2 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"76.8\" y=\"252.8\" text-anchor=\"middle\">~3</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V266.3 Q211.8,266.3 211.8,266.3 H235.8 Q235.8,266.3 235.8,266.3 V270.0 Z\"><title>2022: 1 bài được nhận</title></path><path class=\"est\" d=\"M211.8,264.3 V251.6 Q211.8,247.6 215.8,247.6 H231.8 Q235.8,247.6 235.8,251.6 V264.3 Z\"><title>2022: khoảng 5 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"223.8\" y=\"241.6\" text-anchor=\"middle\">~6</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V262.5 Q358.8,262.5 358.8,262.5 H382.8 Q382.8,262.5 382.8,262.5 V270.0 Z\"><title>2024: 2 bài được nhận</title></path><path class=\"est\" d=\"M358.8,260.5 V236.7 Q358.8,232.7 362.8,232.7 H378.8 Q382.8,232.7 382.8,236.7 V260.5 Z\"><title>2024: khoảng 8 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"226.7\" text-anchor=\"middle\">~10</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V251.3 Q432.2,251.3 432.2,251.3 H456.2 Q456.2,251.3 456.2,251.3 V270.0 Z\"><title>2025: 5 bài được nhận</title></path><path class=\"est\" d=\"M432.2,249.3 V176.9 Q432.2,172.9 436.2,172.9 H452.2 Q456.2,172.9 456.2,176.9 V249.3 Z\"><title>2025: khoảng 21 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"444.2\" y=\"166.9\" text-anchor=\"middle\">~26</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V217.7 Q505.8,217.7 505.8,217.7 H529.8 Q529.8,217.7 529.8,217.7 V270.0 Z\"><title>2026: 14 bài được nhận</title></path><path class=\"est\" d=\"M505.8,215.7 V61.2 Q505.8,57.2 509.8,57.2 H525.8 Q529.8,57.2 529.8,61.2 V215.7 Z\"><title>2026: khoảng 43 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"51.2\" text-anchor=\"middle\">~57</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
   }
  },
  {

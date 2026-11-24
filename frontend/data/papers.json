@@ -5311,6 +5311,11 @@
     "slug": "minh-nhat-vu",
     "name": "Minh Nhat Vu",
     "name_vi": "Vũ Nhật Minh"
+   },
+   {
+    "slug": "vu-n-duong",
+    "name": "Vu N. Duong",
+    "name_vi": "Dương Nguyên Vũ"
    }
   ],
   "reviews": "5(3), 4(3), 5(3), 4(5)",
@@ -5386,7 +5391,7 @@
    },
    {
     "name": "Vu N. Duong",
-    "slug": ""
+    "slug": "vu-n-duong"
    },
    {
     "name": "Hung Ngo",
@@ -8673,6 +8678,55 @@
    },
    {
     "name": "Ulas Bagci",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "iclr",
+  "venue_name": "ICLR",
+  "title": "Quantifying Statistical Significance in Diffusion-Based Anomaly Localization via Selective Inference",
+  "ai_key": "iclr-2026-quantifyingstatisticalsignificanceindiff",
+  "url": "https://openreview.net/forum?id=3jwVvq5qxJ",
+  "status": "rejected",
+  "status_label": "rejected",
+  "pres": "",
+  "authors": "Teruyuki Katsuoka, Tomohiro Shiraishi, Daiki Miwa, Vo Nguyen Le Duy, Ichiro Takeuchi",
+  "match": "OpenReview profile",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "vo-nguyen-le-duy",
+    "name": "Vo Nguyen Le Duy",
+    "name_vi": "Võ Nguyễn Lê Duy"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Teruyuki Katsuoka",
+    "slug": ""
+   },
+   {
+    "name": "Tomohiro Shiraishi",
+    "slug": ""
+   },
+   {
+    "name": "Daiki Miwa",
+    "slug": ""
+   },
+   {
+    "name": "Vo Nguyen Le Duy",
+    "slug": "vo-nguyen-le-duy"
+   },
+   {
+    "name": "Ichiro Takeuchi",
     "slug": ""
    }
   ]
@@ -12969,6 +13023,104 @@
   "year": 2025,
   "venue": "iclr",
   "venue_name": "ICLR",
+  "title": "Statistical Test for Anomaly Detections using Variational Auto-Encoders by Selective Inference",
+  "ai_key": "iclr-2025-statisticaltestforanomalydetectionsusing",
+  "url": "https://openreview.net/forum?id=AJp85vrtNe",
+  "status": "withdrawn",
+  "status_label": "withdrawn",
+  "pres": "",
+  "authors": "Daiki Miwa, Tomohiro Shiraishi, Vo Nguyen Le Duy, Teruyuki Katsuoka, Ichiro Takeuchi",
+  "match": "OpenReview profile",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "vo-nguyen-le-duy",
+    "name": "Vo Nguyen Le Duy",
+    "name_vi": "Võ Nguyễn Lê Duy"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Daiki Miwa",
+    "slug": ""
+   },
+   {
+    "name": "Tomohiro Shiraishi",
+    "slug": ""
+   },
+   {
+    "name": "Vo Nguyen Le Duy",
+    "slug": "vo-nguyen-le-duy"
+   },
+   {
+    "name": "Teruyuki Katsuoka",
+    "slug": ""
+   },
+   {
+    "name": "Ichiro Takeuchi",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2025,
+  "venue": "iclr",
+  "venue_name": "ICLR",
+  "title": "Statistical Test on Diffusion Model-based Anomaly Detection by Selective Inference",
+  "ai_key": "iclr-2025-statisticaltestondiffusionmodelbasedanom",
+  "url": "https://openreview.net/forum?id=WrdLgVY5ZH",
+  "status": "withdrawn",
+  "status_label": "withdrawn",
+  "pres": "",
+  "authors": "Teruyuki Katsuoka, Tomohiro Shiraishi, Daiki Miwa, Vo Nguyen Le Duy, Ichiro Takeuchi",
+  "match": "OpenReview profile",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "vo-nguyen-le-duy",
+    "name": "Vo Nguyen Le Duy",
+    "name_vi": "Võ Nguyễn Lê Duy"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Teruyuki Katsuoka",
+    "slug": ""
+   },
+   {
+    "name": "Tomohiro Shiraishi",
+    "slug": ""
+   },
+   {
+    "name": "Daiki Miwa",
+    "slug": ""
+   },
+   {
+    "name": "Vo Nguyen Le Duy",
+    "slug": "vo-nguyen-le-duy"
+   },
+   {
+    "name": "Ichiro Takeuchi",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2025,
+  "venue": "iclr",
+  "venue_name": "ICLR",
   "title": "Synthesizing Physical Backdoor Datasets: An Automated Framework Leveraging Deep Generative Models",
   "ai_key": "iclr-2025-synthesizingphysicalbackdoordatasetsanau",
   "url": "https://openreview.net/forum?id=vG123yHVVl",
@@ -14621,6 +14773,59 @@
    },
    {
     "name": "Trong Nghia Hoang",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2024,
+  "venue": "icml",
+  "venue_name": "ICML",
+  "title": "Statistical Test for Attention Maps in Vision Transformers",
+  "ai_key": "icml-2024-statisticaltestforattentionmapsinvisiont",
+  "url": "https://openreview.net/forum?id=uLonuOfrwp",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Tomohiro Shiraishi, Daiki Miwa, Teruyuki Katsuoka, Vo Nguyen Le Duy, Kouichi Taji, Ichiro Takeuchi",
+  "match": "OpenReview profile",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "professors": [
+   {
+    "slug": "vo-nguyen-le-duy",
+    "name": "Vo Nguyen Le Duy",
+    "name_vi": "Võ Nguyễn Lê Duy"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Tomohiro Shiraishi",
+    "slug": ""
+   },
+   {
+    "name": "Daiki Miwa",
+    "slug": ""
+   },
+   {
+    "name": "Teruyuki Katsuoka",
+    "slug": ""
+   },
+   {
+    "name": "Vo Nguyen Le Duy",
+    "slug": "vo-nguyen-le-duy"
+   },
+   {
+    "name": "Kouichi Taji",
+    "slug": ""
+   },
+   {
+    "name": "Ichiro Takeuchi",
     "slug": ""
    }
   ]

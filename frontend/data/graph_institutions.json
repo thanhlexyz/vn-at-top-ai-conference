@@ -147,6 +147,24 @@
    "anchor": "start"
   },
   {
+   "name": "UIT",
+   "name_vi": "UIT",
+   "full": "University of Information Technology, VNU-HCM",
+   "url": "institutions/uit/",
+   "group": "roster",
+   "id": "uit",
+   "papers": 19,
+   "x": 670.1,
+   "y": 508.9,
+   "linked": true,
+   "r": 16.8,
+   "color": "c1",
+   "degree": 3,
+   "lx": 690.9,
+   "ly": 513.9,
+   "anchor": "start"
+  },
+  {
    "name": "Phenikaa",
    "name_vi": "Phenikaa",
    "full": "Phenikaa University",
@@ -162,24 +180,6 @@
    "degree": 4,
    "lx": 442.2,
    "ly": 264.9,
-   "anchor": "start"
-  },
-  {
-   "name": "UIT",
-   "name_vi": "UIT",
-   "full": "University of Information Technology, VNU-HCM",
-   "url": "institutions/uit/",
-   "group": "roster",
-   "id": "uit",
-   "papers": 15,
-   "x": 670.1,
-   "y": 508.9,
-   "linked": true,
-   "r": 16.0,
-   "color": "c1",
-   "degree": 3,
-   "lx": 690.1,
-   "ly": 513.9,
    "anchor": "start"
   },
   {
@@ -938,6 +938,6 @@
    "color": "c2"
   }
  ],
- "papers": 386,
+ "papers": 390,
  "shared": 94
 }
