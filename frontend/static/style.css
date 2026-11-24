@@ -173,6 +173,12 @@ figure {
 .fig-row figure { margin: 1em 0 0 ; min-width: 0 ; display: flex ; flex-direction: column ; }
 .fig-row figcaption { margin-top: auto ; padding-top: 0.5em ; }   /* both captions end on the same line */
 .fig-row .chart { min-width: 0 ; max-width: 100% ; }
+/* Fig. 2: the score distribution as a step line, on a row of its own */
+.fig-single { margin: 2em 0 0 ; max-width: 560px ; }
+.fig-single figcaption { padding-top: 0.5em ; }
+.chart .cdf-line { fill: none ; stroke: #2e8b57 ; stroke-width: 2.5 ; stroke-linejoin: round ; }
+.chart .cdf-dot { fill: transparent ; }
+.chart .cdf-dot:hover { fill: #2e8b57 ; fill-opacity: 0.25 ; }
 /* the figure in .fill grows to the space its neighbour leaves, centred */
 .fig-row .fill { position: relative ; flex: 1 ; min-height: 12rem ; }
 .fig-row .fill .chart { position: absolute ; inset: 0 ; width: 100% ; height: 100% ; max-width: none ; }

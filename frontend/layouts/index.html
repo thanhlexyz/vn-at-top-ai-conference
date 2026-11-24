@@ -31,5 +31,9 @@
 <figcaption>{{ T "home_fig2" }}</figcaption>
 </figure>
 </div>
+<figure class="fig-single">
+{{ index . (cond (eq site.Language.Lang "vi") "cdf_vi" "cdf") | safeHTML }}
+<figcaption>{{ T "home_fig3" }}</figcaption>
+</figure>
 {{- end }}
 {{- end }}

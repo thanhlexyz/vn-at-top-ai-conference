@@ -139,6 +139,45 @@ def stacked_area(label, years, series, provisional=(), short=None, words=None):
     return "".join(out)
 
 
+def cdf(label, values, words):
+    """Cumulative distribution as a step line: for each score, the share of the values at or below it. A hover
+    target at each step says how many values reach that far. words: {"x": axis name, "tip": "{share} ... {score}"}."""
+    width, left, right, top, plot_h, bottom = 420, 40, 14, 16, 200, 42
+    values = sorted(values)
+    n = len(values) or 1
+    peak = max(values, default=0) or 1
+    step = next(s for s in (0.5, 1, 2, 5, 10) if peak / s <= 6)
+    top_x = step * -(-peak // step)
+    plot_w, base = width - left - right, top + plot_h
+    x_of = lambda v: left + v / top_x * plot_w
+    y_of = lambda share: base - share * plot_h
+    out = [f'<svg class="chart" viewBox="0 0 {width} {base + bottom}" role="img" aria-label="{_esc(label)}">']
+    for share in (0, 0.25, 0.5, 0.75, 1):
+        y = y_of(share)
+        out.append(f'<line class="{"axis" if share == 0 else "grid"}" x1="{left}" y1="{y:.1f}" x2="{left + plot_w}" '
+                   f'y2="{y:.1f}"/><text x="{left - 6}" y="{y + 4:.1f}" text-anchor="end">{share:.0%}</text>')
+    v = 0.0
+    while v <= top_x + 1e-9:
+        out.append(f'<text x="{x_of(v):.1f}" y="{base + 17}" text-anchor="middle">{_fmt(round(v, 1))}</text>')
+        v += step
+    out.append(f'<text x="{left + plot_w / 2:.1f}" y="{base + 36}" text-anchor="middle">{_esc(words["x"])}</text>')
+    pts, prev = [f"{x_of(0):.1f},{y_of(0):.1f}"], 0.0
+    for k, v in enumerate(values):
+        pts.append(f"{x_of(v):.1f},{y_of(prev):.1f}")
+        prev = (k + 1) / n
+        pts.append(f"{x_of(v):.1f},{y_of(prev):.1f}")
+    pts.append(f"{x_of(top_x):.1f},{y_of(1):.1f}")
+    out.append(f'<polyline class="cdf-line" points="{" ".join(pts)}"/>')
+    for k, v in enumerate(values):
+        if k + 1 < len(values) and values[k + 1] == v:
+            continue   # one target per distinct score, at the top of its step
+        share = (k + 1) / n
+        tip = words["tip"].format(count=k + 1, share=f"{share:.0%}", score=_fmt(v))
+        out.append(f'<circle class="cdf-dot" cx="{x_of(v):.1f}" cy="{y_of(share):.1f}" r="7"><title>{_esc(tip)}</title></circle>')
+    out.append("</svg>")
+    return "".join(out)
+
+
 def columns(label, years, values, tip):
     """One column per year with its value on top (as on a Google Scholar profile).
 

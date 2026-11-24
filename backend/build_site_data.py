@@ -919,6 +919,9 @@ def overview(professors, acc):
             w["stack_label"], YEARS, [(c, n, [r[k] for r in rows]) for (c, n), k in zip(named, keys)],
             provisional=provisional, short={w["s_not"]: w["short_not"], w["s_est"]: w["short_est"]},
             words={"total": w["total"], "incomplete": w["incomplete"]})
+        # Fig. 2: how the CSRankings scores of the professors with an accepted paper are spread
+        out["cdf" + suffix] = charts.cdf(w["cdf_label"], [p["score"] for p in professors if p["accepted"]],
+                                         {"x": w["cdf_x"], "tip": w["cdf_tip"]})
     return out
 
 
@@ -930,14 +933,18 @@ CHART_TEXT = {
            "about": "about ", "pie_label": "Accepted, recorded rejected and estimated rejected papers, all listed professors",
            "pie_title": "All years and venues", "stack_label": "Accepted, recorded rejected and estimated rejected papers per year",
            "s_acc": "accepted", "s_not": "rejected, recorded", "s_est": "rejected elsewhere, estimated",
-           "short_not": "recorded", "short_est": "estimated", "total": "total", "incomplete": "list still being completed"},
+           "short_not": "recorded", "short_est": "estimated", "total": "total", "incomplete": "list still being completed",
+           "cdf_label": "Cumulative distribution of the CSRankings scores of professors with an accepted paper",
+           "cdf_x": "CSRankings score", "cdf_tip": "{count} professors ({share}) score {score} or less"},
     "vi": {"aria": "Số bài nộp và được nhận theo năm của {name}; số liệu ở bảng bên dưới",
            "acc": "Được nhận", "not": "Bị từ chối, đếm được", "est": "Bị từ chối ở nơi khác, ước tính",
            "tip_acc": "{n} bài được nhận", "tip_not": "{n} bài bị từ chối, đếm được", "tip_est": "khoảng {n} bài bị từ chối ở nơi khác (ước tính)",
            "about": "~", "pie_label": "Bài được nhận, bị từ chối đếm được và bị từ chối ước tính, tất cả giảng viên trong danh sách",
            "pie_title": "Mọi năm và hội nghị", "stack_label": "Bài được nhận, bị từ chối đếm được và ước tính theo năm",
            "s_acc": "được nhận", "s_not": "bị từ chối, đếm được", "s_est": "bị từ chối ở nơi khác, ước tính",
-           "short_not": "đếm được", "short_est": "ước tính", "total": "tổng", "incomplete": "danh sách còn đang bổ sung"},
+           "short_not": "đếm được", "short_est": "ước tính", "total": "tổng", "incomplete": "danh sách còn đang bổ sung",
+           "cdf_label": "Phân bố tích luỹ điểm CSRankings của các giảng viên đã có bài được nhận",
+           "cdf_x": "Điểm CSRankings", "cdf_tip": "{count} giảng viên ({share}) có điểm từ {score} trở xuống"},
 }
 
 
