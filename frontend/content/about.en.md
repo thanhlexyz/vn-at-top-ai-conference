@@ -19,7 +19,7 @@ We track Vietnamese lecturers, assistant professors, associate professors, and f
 
 Students, foreign faculty, and researchers based solely at corporate labs or non-university institutes are excluded. The roster is curated by hand. A researcher appears once verified and having at least one counted submission (accepted or rejected) at the ten venues.
 
-Papers count starting from the year a researcher joined a Vietnamese university. An accepted paper counts only if the camera-ready PDF explicitly lists the researcher at their Vietnamese university. Papers written solely under corporate or institute affiliations (e.g., Qualcomm AI Research / former VinAI) without a university affiliation do not count.
+Papers count starting from the year a researcher joined a Vietnamese university. An accepted paper counts only if the camera-ready PDF explicitly lists the researcher at their Vietnamese university. A paper from an earlier post at another university in Vietnam also counts, if the researcher's OpenReview profile shows a lecturer or higher post there in that year; papers from a student post never count. Papers written solely under corporate or institute affiliations (e.g., Qualcomm AI Research / former VinAI) without a university affiliation do not count.
 
 ### Official Proceedings & OpenReview
 Accepted papers are collected from official conference portals and proceedings (see table below).

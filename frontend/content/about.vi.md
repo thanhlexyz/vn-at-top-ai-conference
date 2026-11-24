@@ -19,7 +19,7 @@ Về loại hình bài báo, hệ thống chỉ thống kê các công trình ch
 
 Ngược lại, sinh viên, giảng viên nước ngoài cùng các nghiên cứu viên làm việc thuần túy tại doanh nghiệp hoặc viện nghiên cứu độc lập không nằm trong phạm vi thống kê của dự án. Danh sách nhân sự này được rà soát và đối chiếu thủ công, trong đó một giảng viên chỉ xuất hiện trên bảng xếp hạng sau khi đã được xác thực thông tin và có ít nhất một bài nộp được ghi nhận tại 10 hội nghị.
 
-Về mốc thời gian và đơn vị công tác, công trình nghiên cứu bắt đầu được tính từ năm giảng viên chính thức về làm việc tại một trường đại học ở Việt Nam. Một bài báo được nhận chỉ được ghi nhận nếu bản in PDF chính thức có ghi rõ tên trường đại học tại Việt Nam của giảng viên. Những bài báo chỉ ghi tên doanh nghiệp hoặc viện nghiên cứu bên ngoài mà không có tên trường đại học đi kèm sẽ không được tính vào bảng xếp hạng.
+Về mốc thời gian và đơn vị công tác, công trình nghiên cứu bắt đầu được tính từ năm giảng viên chính thức về làm việc tại một trường đại học ở Việt Nam. Một bài báo được nhận chỉ được ghi nhận nếu bản in PDF chính thức có ghi rõ tên trường đại học tại Việt Nam của giảng viên. Bài báo viết khi giảng viên còn công tác tại một trường đại học khác ở Việt Nam cũng được tính, nếu hồ sơ OpenReview ghi nhận vị trí giảng viên trở lên tại trường đó trong năm của bài báo; bài báo từ thời còn là học viên, nghiên cứu sinh thì không được tính. Những bài báo chỉ ghi tên doanh nghiệp hoặc viện nghiên cứu bên ngoài mà không có tên trường đại học đi kèm sẽ không được tính vào bảng xếp hạng.
 
 ### Kỷ yếu chính thức và OpenReview
 Dự án thu thập danh sách bài được nhận từ cổng thông tin và kỷ yếu chính thức của từng hội nghị (chi tiết xem bảng bên dưới).

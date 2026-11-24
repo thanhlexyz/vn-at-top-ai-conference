@@ -80,6 +80,9 @@ The local-only pages (Candidates, Not tracked) are drafts, but their data (`cand
   `same_institution`): the institution's known names (`vn_institutions` in `common.py`), its parent national university
   (`PARENT`), its full name as a substring, its short name as a word in the person's own entry ("VinAI & HUST"), and a
   bare "University of Science" for HCMUS or VNU-HUS. If the person cannot be found on the paper, it counts.
+  It also passes at an earlier university in Vietnam (`at_past_post`): the person's OpenReview history has a staff post
+  (`post_class` "staff": lecturer or higher) there covering the paper's year; a student post never counts (rule set by
+  the maintainer on 2026-11-24).
   `affiliation_fixes.csv` rows apply only with `checked=yes`; `affiliations.csv` applies only when the list prints no
   affiliation at all and the authors match name by name.
 - **Unofficial:** a paper known only from a personal page or announcement counts while the official list is
