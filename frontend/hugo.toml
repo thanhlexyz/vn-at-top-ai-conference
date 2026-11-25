@@ -41,14 +41,14 @@ disableKinds = ['taxonomy', 'term', 'rss']
   pageRef = '/'
   weight = 1
 [[languages.en.menus.main]]
-  name = 'Institutions'
+  name = 'Universities'
   identifier = 'institutions'
-  pageRef = '/institutions'
+  pageRef = '/universities'
   weight = 2
 [[languages.en.menus.main]]
-  name = 'Venues'
-  identifier = 'venues'
-  pageRef = '/venues'
+  name = 'Conferences'
+  identifier = 'conferences'
+  pageRef = '/conferences'
   weight = 3
 [[languages.en.menus.main]]
   name = 'Papers'
@@ -56,9 +56,9 @@ disableKinds = ['taxonomy', 'term', 'rss']
   pageRef = '/papers'
   weight = 4
 [[languages.en.menus.main]]
-  name = 'Researcher collaboration'
-  identifier = 'graph-people'
-  pageRef = '/graph-people'
+  name = 'Domestic cooperation'
+  identifier = 'domestic'
+  pageRef = '/domestic'
   weight = 5
 [[languages.en.menus.main]]
   name = 'International cooperation'
@@ -79,12 +79,12 @@ disableKinds = ['taxonomy', 'term', 'rss']
 [[languages.vi.menus.main]]
   name = 'Trường'
   identifier = 'institutions'
-  pageRef = '/institutions'
+  pageRef = '/universities'
   weight = 2
 [[languages.vi.menus.main]]
   name = 'Hội nghị'
-  identifier = 'venues'
-  pageRef = '/venues'
+  identifier = 'conferences'
+  pageRef = '/conferences'
   weight = 3
 [[languages.vi.menus.main]]
   name = 'Bài báo'
@@ -92,9 +92,9 @@ disableKinds = ['taxonomy', 'term', 'rss']
   pageRef = '/papers'
   weight = 4
 [[languages.vi.menus.main]]
-  name = 'Giảng viên hợp tác'
-  identifier = 'graph-people'
-  pageRef = '/graph-people'
+  name = 'Hợp tác trong nước'
+  identifier = 'domestic'
+  pageRef = '/domestic'
   weight = 5
 [[languages.vi.menus.main]]
   name = 'Hợp tác quốc tế'

@@ -1,4 +1,0 @@
----
-title: "IJCAI"
-key: "ijcai"
----

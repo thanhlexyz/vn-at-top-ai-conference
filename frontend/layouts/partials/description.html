@@ -3,10 +3,10 @@
 {{- if and (eq .Section "professors") .Params.key }}
 {{- $p := index (where hugo.Data.professors "slug" .Params.key) 0 }}
 {{- $d = T "seo_professor" (dict "Name" (partial "pname.html" $p) "Inst" $p.institution_short "Accepted" $p.accepted "Submitted" $p.venues.iclr.submitted "Rejected" $p.venues.iclr.not_accepted) }}
-{{- else if and (eq .Section "institutions") .Params.key }}
+{{- else if and (eq .Section "universities") .Params.key }}
 {{- $i := index (where hugo.Data.institutions "slug" .Params.key) 0 }}
 {{- $d = T "seo_institution" (dict "Name" $i.name "Profs" (len $i.professors) "Accepted" $i.accepted "Submitted" $i.venues.iclr.submitted "Rejected" $i.venues.iclr.not_accepted) }}
-{{- else if and (eq .Section "venues") .Params.key }}
+{{- else if and (eq .Section "conferences") .Params.key }}
 {{- $v := index (where hugo.Data.venues "key" .Params.key) 0 }}
 {{- $d = T "seo_venue" (dict "Name" $v.name "Accepted" $v.accepted) }}
 {{- else }}

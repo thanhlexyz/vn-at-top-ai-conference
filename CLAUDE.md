@@ -8,6 +8,14 @@ Live site: <https://thanhlexyz.github.io/vn-at-top-ai-conference/>
 
 ## Layout
 
+Naming (the maintainer's choice, 2026-11-25), in both languages and in the addresses: **universities**
+(`/universities/`, formerly `/institutions/`), **conferences** (`/conferences/`, formerly `/venues/`), **professors**,
+and the professors' graph is **Domestic cooperation** (`/domestic/`, formerly `/graph-people/` and `/graph-professors/`),
+the counterpart of International cooperation. Old addresses redirect (Hugo aliases; `write_stubs(..., former=...)`).
+"Institutions" stays only where companies and institutes are included (co-author institutions, the institution graph).
+Internal names (data files such as `institutions.json`, `venues.json`, `graph_people.json`, `img/people/`) are unchanged.
+
+
 - `backend/`: Python scripts that collect records and write the site data. `build_site_data.py` is the core.
 - `frontend/`: Hugo site, own layouts (no theme), data in `frontend/data/*.json`, strings in `frontend/i18n/{en,vi}.toml`,
   one small `static/site.js` (sorting, cups, pinned columns, graph hover, feedback e-mail).
@@ -50,7 +58,7 @@ Do not stop at a passing build: say what changed in numbers, and anything uncert
 
 `backend/raw/` and `backend/work/` are git-ignored: downloads, PDFs, screenshots the maintainer gives you.
 `work/build_report.txt` lists warnings and skipped namesakes after each build. Page stubs in
-`frontend/content/{professors,institutions,venues}/` are rewritten on every build: never edit them by hand.
+`frontend/content/{professors,universities,venues}/` are rewritten on every build: never edit them by hand.
 `make data` also runs `fetch_accepted.py` (may download) and `find_candidates.py` (rewrites `candidates.csv`).
 The local-only pages (Candidates, Not tracked) are drafts, but their data (`candidates.json`, `candidates.csv`,
 `attempted.json`) is tracked in the public repository.
@@ -290,7 +298,7 @@ explains (refer to About instead). Surfaces, grid and text are CSS tokens define
 and table hues (accepted green, rejected red, graph colours) are fixed and checked on both. Some English strings from
 the build are parsed by templates (a reason starting with `before `, a track ending in ` track`): keep that wording.
 
-**Collaboration graphs** (`backend/graph.py`): line length follows shared papers (more papers, closer); no line passes
+**Collaboration graphs** (`backend/graph.py`; the professors' graph is at `/graph-professors/`, formerly `/graph-people/`): line length follows shared papers (more papers, closer); no line passes
 through a circle; labels never overlap lines or other labels and never leave the drawing; crossings few. After any
 change, check crossings and label clearance for both graphs and look at screenshots. They use every counted
 submission (rejected and withdrawn included) plus workshop papers from the Vietnam years, and feed the co-author
@@ -326,6 +334,122 @@ and needs the OpenReview variables; extend its `PMLR_VOLUME` (ICML) and `DOMAINS
   (`gh`). It does not rebuild the data or push `main`: do both first. CSS and JS links carry a content hash.
 - Never rewrite pushed history without the maintainer's go-ahead.
 - The repository is public: no private screenshots, local paths, e-mails or credentials in commits.
+
+## Entity Page Writing Guidelines & Templates (Professors, Universities, Venues)
+
+The introductory text on entity pages (`/professors/<slug>/`, `/universities/<slug>/`, `/conferences/<slug>/` or `/venues/<slug>/`) must be smooth, natural, and human-friendly.
+Past AI-generated text was overly dense, robotic, and read like a mechanical dump of database fields. When writing or updating these pages (via layout templates and `i18n/{vi,en}.toml`), follow these principles and templates strictly.
+
+### Core Writing Principles
+1. **Human Academic Register:** Write as a professional academic editor presenting a scholar, university, or conference. Sentences must be complete, active, and conversational rather than telegraphic dumps of numbers.
+2. **Avoid Densely Packed Subjects:** Never build sentences around heavy, convoluted noun phrases with nested conditions. Keep subjects light and clear.
+3. **No Semicolons (`;`):** Do not use semicolons in prose; use natural commas or separate sentences.
+4. **Eliminate Disjointed Fragments:** Avoid abruptly inserting robotic time splits (e.g. do not write "80 bài được nhận trước năm 2027, 1 bài từ năm 2027" or "Tại ICLR: 5 bài nộp, 0 bài được chấp nhận, 5 bài bị từ chối"). Weave numbers naturally into sentences.
+5. **Clean Presentation of Caveats & Estimates:** Unofficial papers, name variants, and statistical estimates should be mentioned gracefully rather than through heavy bracketed formulas.
+
+---
+
+### 1. Professor Pages (`/professors/<slug>/`)
+
+#### Template Structure
+- **Line 1 (Academic Affiliation & Role):**
+  - **VI:** `[Chức danh / Vị trí], [Tên trường]. Công tác tại một trường đại học ở Việt Nam từ năm [Năm].`
+  - **EN:** `[Title / Rank], [University]. Affiliated with a Vietnamese university since [Year].`
+  - *If alternate names exist:*
+    - **VI:** `<br><span class="note">Tên khác trên bài báo: [Danh sách tên].</span>`
+    - **EN:** `<br><span class="note">Also published as: [List of names].</span>`
+
+- **Paragraph 2 (Publications & Peer Review Record):**
+  - **Sentence 1 (Accepted publications):**
+    - **VI:** `Trong giai đoạn công tác tại Việt Nam, [tác giả / giảng viên] có [N] bài báo chính thức được nhận tại mười hội nghị hàng đầu [nếu có bài chưa chính thức: (bao gồm [X] bài trong kỷ yếu và [Y] bài công bố sớm)].`
+    - **EN:** `While based in Vietnam, [the researcher / Dr. Name] has published [N] accepted papers across the ten tracked flagship conferences [if unofficial: (including [X] in official proceedings and [Y] provisional announcements)].`
+  - **Sentence 2 (OpenReview / ICLR & Other Rejection Data):**
+    - **VI:** `[Nếu có hồ sơ ICLR]: Về dữ liệu phản biện công khai, tác giả đã nộp [A] bài tại ICLR ([B] bài được nhận và [C] bài không được nhận) [nếu có bài bị từ chối ghi nhận ở hội nghị khác: cùng [D] bài bị từ chối công khai hoặc thuộc Findings tại [Các hội nghị]].`
+    - **EN:** `[If ICLR record]: Based on public review records, they have submitted [A] papers to ICLR ([B] accepted, [C] rejected or withdrawn) [if other rejections: alongside [D] recorded rejections or Findings papers at [Venues]].`
+
+#### Example: Tuan Dam (`tuan-dam`)
+- **Before (Dense & Robotic):**
+  > Lecturer, Đại học Bách khoa Hà Nội. Công tác tại Việt Nam từ năm 2024.
+  > Tên khác trên các bài báo: Tuan Dam, Tuan Quang Dam, Tuan Q. Dam, Quang Tuan Dam
+  > Từ năm 2024, giảng viên có 12 bài báo được chấp nhận tại mười hội nghị hàng đầu. 12 bài được nhận trước năm 2027, 0 bài từ năm 2027. Tại ICLR: 5 bài nộp, 0 bài được chấp nhận, 5 bài bị từ chối. Bài bị từ chối có ghi nhận ở các hội nghị khác (bài bị từ chối công khai và bài được xếp vào Findings): NeurIPS 2.
+- **After (Human-friendly & Smooth):**
+  > Lecturer, Đại học Bách khoa Hà Nội. Công tác tại một trường đại học ở Việt Nam từ năm 2024.
+  > Tên khác trên bài báo: Tuan Dam, Tuan Quang Dam, Tuan Q. Dam, Quang Tuan Dam.
+  >
+  > Trong giai đoạn công tác tại Việt Nam, giảng viên có 12 bài báo được nhận tại mười hội nghị AI hàng đầu. Về dữ liệu phản biện công khai, tác giả đã nộp 5 bài tại ICLR (5 bài không được nhận), cùng 2 bài thuộc Findings hoặc bị từ chối công khai tại NeurIPS.
+
+---
+
+### 2. University / Institution Pages (`/universities/<slug>/`)
+
+#### Template Structure
+- **Paragraph 1 (Roster & Core Output):**
+  - **Sentence 1 (Faculty count & Accepted total):**
+    - **VI:** `Hiện có [N] giảng viên của [Tên trường] nằm trong danh sách theo dõi, với tổng cộng [M] bài báo được nhận tại mười hội nghị hàng đầu [nếu có bài chưa chính thức: (bao gồm [X] bài chính thức và [Y] bài công bố sớm)].`
+    - **EN:** `[University Name] has [N] tracked faculty members with a combined total of [M] accepted papers across the ten tracked AI conferences [if unofficial: (including [X] in official proceedings and [Y] provisional announcements)].`
+  - **Sentence 2 (De-duplication rule):**
+    - **VI:** `Công trình có nhiều giảng viên trong trường cùng tham gia chỉ tính một lần cho trường.`
+    - **EN:** `Papers co-authored by multiple faculty members within the university are counted once toward the institution total.`
+
+- **Paragraph 2 (Review Profile & Projection):**
+  - **Sentence 1 (ICLR public records):**
+    - **VI:** `Về lịch sử nộp bài công khai tại ICLR, các tác giả của trường đã nộp [A] bài ([B] bài được nhận và [C] bài bị từ chối).`
+    - **EN:** `In public OpenReview records at ICLR, faculty from the institution have submitted [A] papers ([B] accepted, [C] rejected).`
+  - **Sentence 2 (Statistical estimate across confidential venues):**
+    - **VI:** `Dựa trên tỷ lệ chấp nhận tại ICLR, ước tính trường có thêm khoảng [D] lượt bài không được nhận tại các hội nghị bảo mật thông tin phản biện.`
+    - **EN:** `Extrapolating from this ICLR record, the institution is projected to have approximately [D] unobserved rejections across confidential venues.`
+
+#### Example: HUST (`hust`)
+- **Before (Dense & Robotic):**
+  > Trường có 15 giảng viên trong danh sách, với 81 bài được chấp nhận tại mười hội nghị, trong đó 1 bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm (chưa chính thức). 80 bài được nhận trước năm 2027, 1 bài từ năm 2027. Tại ICLR: 39 bài nộp, 7 bài được chấp nhận, 32 bài bị từ chối. Nếu tính cả số bài bị từ chối không được công khai tại các hội nghị khác (ước tính dựa trên kết quả ICLR nêu trên), tổng số bài bị từ chối vào khoảng 328 bài. Một bài có nhiều giảng viên của trường chỉ được tính một lần.
+- **After (Human-friendly & Smooth):**
+  > Hiện có 15 giảng viên của Đại học Bách khoa Hà Nội nằm trong danh sách theo dõi, với tổng cộng 81 bài báo được nhận tại mười hội nghị hàng đầu (gồm 80 bài chính thức và 1 bài công bố sớm). Công trình có nhiều giảng viên trong trường cùng tham gia chỉ tính một lần cho trường.
+  >
+  > Về lịch sử nộp bài công khai tại ICLR, các tác giả của trường đã nộp 39 bài (7 bài được nhận và 32 bài bị từ chối). Dựa trên tỷ lệ chấp nhận tại ICLR, ước tính trường có thêm khoảng 328 lượt bài không được nhận tại các hội nghị bảo mật thông tin phản biện.
+
+---
+
+### 3. Conference / Venue Pages (`/conferences/<slug>/` or `/venues/<slug>/`)
+
+#### Template Structure
+- **Paragraph 1 (Venue Overview & Core Output):**
+  - **Sentence 1 (Acceptance total):**
+    - **VI:** `Tại [Tên hội nghị], các giảng viên trong danh sách theo dõi có tổng cộng [N] bài báo được nhận kể từ năm 2020.`
+    - **EN:** `At [Venue Name], tracked faculty from universities in Vietnam have authored a total of [N] accepted papers since 2020.`
+  - **Sentence 2 (De-duplication rule):**
+    - **VI:** `Công trình có nhiều giảng viên trong nước đồng tác giả được tính một lần cho hội nghị.`
+    - **EN:** `Papers co-authored by multiple listed faculty are counted once toward the venue total.`
+
+- **Paragraph 2 (Transparency Policy & Rejections):**
+  - **Case A: Full disclosure (ICLR):**
+    - **VI:** `[Tên hội nghị] công khai toàn bộ bài nộp và kết quả phản biện trên OpenReview, cho phép thống kê chính xác cả số bài được nhận lẫn số bài bị từ chối.`
+    - **EN:** `[Venue Name] discloses all submissions and review outcomes on OpenReview, allowing exact tracking of both accepted and rejected submissions.`
+  - **Case B: Partial disclosure (NeurIPS):**
+    - **VI:** `[Tên hội nghị] công khai các bài được nhận, trong khi bài bị từ chối chỉ xuất hiện khi tác giả chủ động chia sẻ. Do đó, số bài bị từ chối được ghi nhận đại diện cho mức tối thiểu.`
+    - **EN:** `[Venue Name] publishes accepted papers, while rejected submissions are public only if authors opt in. The recorded rejections therefore represent a lower bound.`
+  - **Case C: Confidential rejections (CVPR, ICML, ICCV, ECCV, ACL, EMNLP, AAAI, IJCAI):**
+    - **VI:** `[Tên hội nghị] chỉ công khai danh sách bài được nhận và bảo mật toàn bộ bài bị từ chối (ngoại trừ các bài công bố ở Findings). Vì vậy, số bài nộp và lượt từ chối tại đây được ước tính gián tiếp dựa trên dữ liệu ICLR của các tác giả.`
+    - **EN:** `[Venue Name] publishes accepted papers only and keeps rejections confidential (except for papers published in Findings). Total submissions and unseen rejections are projected using each author's ICLR submission record.`
+
+#### Example: NeurIPS (`neurips`)
+- **Before (Dense & Robotic):**
+  > NeurIPS công khai các bài được chấp nhận. Bài bị từ chối chỉ được công khai khi tác giả lựa chọn, vì vậy số bài bị từ chối dưới đây là con số tối thiểu và không có số liệu về số bài nộp. Số liệu được tính cho các giảng viên trong danh sách; một bài có nhiều giảng viên trong danh sách chỉ được tính một lần. 57 bài được nhận trước năm 2027, 0 bài từ năm 2027.
+- **After (Human-friendly & Smooth):**
+  > Tại NeurIPS, các giảng viên trong danh sách theo dõi có tổng cộng 57 bài báo được nhận kể từ năm 2020. Công trình có nhiều giảng viên trong nước đồng tác giả được tính một lần cho hội nghị.
+  >
+  > NeurIPS công khai các bài được nhận, trong khi bài bị từ chối chỉ xuất hiện khi tác giả chủ động chia sẻ. Do đó, số bài bị từ chối được ghi nhận đại diện cho mức tối thiểu. Số bài nộp bổ sung tại đây được ước tính gián tiếp theo lịch sử nộp bài ICLR của các tác giả (trung bình khoảng 3.1 lượt nộp cho mỗi bài được nhận).
+
+---
+
+### Technical Implementation Guide for Future Agents
+When rewriting entity pages across the site:
+1. Update template strings in `frontend/i18n/vi.toml` and `frontend/i18n/en.toml`.
+2. Update the layout template files:
+   - `frontend/layouts/professors/single.html`
+   - `frontend/layouts/universities/single.html`
+   - `frontend/layouts/conferences/single.html`
+3. Remove or streamline robotic helper templates like `frontend/layouts/partials/split-sentence.html` that inject disjointed year fragments ("X bài trước năm Y, Z bài từ năm Y").
+4. Always verify with `make build` (must show zero warnings) and `make test` (all tests must pass).
 
 ## Things to remember
 

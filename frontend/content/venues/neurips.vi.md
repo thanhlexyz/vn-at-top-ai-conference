@@ -1,4 +1,0 @@
----
-title: "NeurIPS"
-key: "neurips"
----

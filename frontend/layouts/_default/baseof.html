@@ -13,8 +13,8 @@
 	{{- $desc := partial "description.html" . }}
 	{{- $image := "" }}
 	{{- if and (eq .Section "professors") .Params.key }}{{ with index (where hugo.Data.professors "slug" .Params.key) 0 }}{{ $image = .image }}{{ end }}{{ end }}
-	{{- if and (eq .Section "institutions") .Params.key }}{{ with index (where hugo.Data.institutions "slug" .Params.key) 0 }}{{ $image = .image }}{{ end }}{{ end }}
-	{{- if and (eq .Section "venues") .Params.key }}{{ with index (where hugo.Data.venues "key" .Params.key) 0 }}{{ $image = .image }}{{ end }}{{ end }}
+	{{- if and (eq .Section "universities") .Params.key }}{{ with index (where hugo.Data.institutions "slug" .Params.key) 0 }}{{ $image = .image }}{{ end }}{{ end }}
+	{{- if and (eq .Section "conferences") .Params.key }}{{ with index (where hugo.Data.venues "key" .Params.key) 0 }}{{ $image = .image }}{{ end }}{{ end }}
 	<meta name="description" content="{{ $desc }}">
 	<link rel="canonical" href="{{ .Permalink }}">
 	<meta property="og:site_name" content="{{ site.Title }}">

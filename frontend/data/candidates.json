@@ -4325,11 +4325,6 @@
    "institution": "VinUni"
   },
   {
-   "slug": "hoang-son-do",
-   "name": "Hoang-Son Do",
-   "institution": "VAST"
-  },
-  {
    "slug": "nhat-quang-tran",
    "name": "Nhat-Quang Tran",
    "institution": "RMIT"
@@ -4402,11 +4397,6 @@
    "institution": "RMIT"
   },
   {
-   "slug": "hoang-son-do",
-   "name": "Hoang-Son Do",
-   "institution": "VAST"
-  },
-  {
    "slug": "nhat-quang-tran",
    "name": "Nhat-Quang Tran",
    "institution": "RMIT"
@@ -4462,6 +4452,15 @@
  "lookup_pending": 0,
  "waiting": [],
  "excluded": [
+  {
+   "name": "Hoang-Son Do",
+   "institution": "VAST",
+   "reason": "Not tracked (decided by the maintainer on 2026-11-25): VAST is an academy of science, not a university. OpenReview profile, 2026-09-30: Associate Professor at Vietnam Academy of Science and Technology since 2022; role: from the source page, checked on 2026-10-04",
+   "homepage": "",
+   "openreview_ids": [
+    "~Hoang-Son_Do1"
+   ]
+  },
   {
    "name": "Hoang Phan",
    "institution": "NYU",
@@ -4856,15 +4855,6 @@
    "venues": "NeurIPS 7, ICML 2, ICLR 1"
   },
   {
-   "name": "Tan Nguyen",
-   "affiliation": "National University of Singapore",
-   "papers": 9,
-   "professors": 9,
-   "vietprofs": "vp-0802",
-   "with": "Uyen N.B. Vo, Hoang-Son Do, Than Quang Khoat, Tuan Dam, Dung D. Le, ...",
-   "venues": "NeurIPS 5, ICML 4"
-  },
-  {
    "name": "Daniel Sonntag",
    "affiliation": "German Research Center for AI",
    "papers": 7,
@@ -4883,6 +4873,15 @@
    "venues": "NeurIPS 5, ICML 2"
   },
   {
+   "name": "Tan Nguyen",
+   "affiliation": "National University of Singapore",
+   "papers": 7,
+   "professors": 8,
+   "vietprofs": "vp-0802",
+   "with": "Uyen N.B. Vo, Than Quang Khoat, Tuan Dam, Dung D. Le, Cuong Pham, ...",
+   "venues": "ICML 4, NeurIPS 3"
+  },
+  {
    "name": "Thanh-Toan Do",
    "affiliation": "Monash University",
    "papers": 6,
@@ -4890,15 +4889,6 @@
    "vietprofs": "vp-0559",
    "with": "Ngo Van Linh, Minh-Triet Tran, Trung-Nghia Le, Thanh Duc Ngo",
    "venues": "ICLR 2, EMNLP 2, NeurIPS 1, AAAI 1"
-  },
-  {
-   "name": "Thieu Vo",
-   "affiliation": "National University of Singapore",
-   "papers": 6,
-   "professors": 6,
-   "vietprofs": "",
-   "with": "Uyen N.B. Vo, Hoang-Son Do, Cuong Pham, Nhan-Phu Chung, Thai Khanh Nguyen, ...",
-   "venues": "NeurIPS 4, ICML 1, ICCV 1"
   },
   {
    "name": "Mathias Niepert",
@@ -4971,6 +4961,15 @@
    "vietprofs": "",
    "with": "Ngo Van Linh",
    "venues": "NeurIPS 2, ICML 1, ICLR 1"
+  },
+  {
+   "name": "Thieu Vo",
+   "affiliation": "National University of Singapore",
+   "papers": 4,
+   "professors": 5,
+   "vietprofs": "",
+   "with": "Uyen N.B. Vo, Cuong Pham, Nhan-Phu Chung, Thai Khanh Nguyen, Dinh Viet Sang",
+   "venues": "NeurIPS 2, ICML 1, ICCV 1"
   },
   {
    "name": "TrungTin Nguyen",

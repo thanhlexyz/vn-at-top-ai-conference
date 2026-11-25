@@ -677,7 +677,7 @@ def institution_graph(professors, records):
         exact = [s for s, i in roster.items() if i["short"] == short or i["name"] == full]
         return exact[0] if exact else None
 
-    nodes = {s: {"name": i["short"], "name_vi": i["short"], "full": i["name"], "url": f"institutions/{s}/",
+    nodes = {s: {"name": i["short"], "name_vi": i["short"], "full": i["name"], "url": f"universities/{s}/",
                  "group": "roster"} for s, i in roster.items()}
     papers_of = collections.defaultdict(set)
     for r, p in records:

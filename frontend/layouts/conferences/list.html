@@ -1,0 +1,72 @@
+{{ define "main" -}}
+{{ .Content }}
+<div class="scroll">
+<table>
+	<thead>
+	<tr>
+		<th class="logo-col"></th>
+		<th class="l">{{ T "th_venue" }}</th>
+		<th class="l">{{ T "th_public" }}</th>
+		<th>{{ T "th_Submitted" }}</th>
+		<th class="good">{{ T "th_Accepted" }}</th>
+		{{ partial "split-heads.html" (dict "split" (sub hugo.Data.meta.last_year 1)) }}
+		<th class="bad">{{ T "th_Rejected" }}</th>
+		<th class="est" title="{{ T "tip_rejected_est_venue" }}">{{ T "th_Rejected_est" }}</th>
+		<th class="sub" title="{{ T "tip_submitted_est" }}">{{ T "th_Submitted_est" }}</th>
+		<th class="rate" title="{{ T "tip_rate_venue" }}">{{ T "th_rate_venue" }}</th>
+		<th title="{{ T "tip_under_review_col" }}">{{ T "th_under_review" }}</th>
+	</tr>
+	</thead>
+	<tbody>
+	{{- /* most accepted papers, official and unofficial together, first; more official ones first among equals */}}
+	{{- range sort (sort hugo.Data.venues "official" "desc") "accepted" "desc" }}
+	{{- $v := . }}
+	{{- $t := index .venues .key }}
+	<tr>
+		<td class="logo-col">{{ with .image }}<a href="{{ printf "conferences/%s/" $v.key | relLangURL }}" tabindex="-1"><img class="mini" src="{{ . | relURL }}" alt="{{ $v.name }}" loading="lazy"></a>{{ end }}</td>
+		<td class="l"><a href="{{ printf "conferences/%s/" .key | relLangURL }}">{{ .name }}</a></td>
+		{{- if eq .rejections "full" }}
+		<td class="l">{{ T "venue_public_full" }}</td>
+		{{ partial "num.html" $t.submitted }}
+		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
+		{{ partial "split-cells.html" (merge . (dict "split" (sub hugo.Data.meta.last_year 1))) }}
+		{{ partial "numc.html" (dict "v" $t.not_accepted "cls" "bad") }}
+		{{- else if eq .rejections "partial" }}
+		<td class="l">{{ T "venue_public_partial" }}</td>
+		<td class="na">&ndash;</td>
+		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
+		{{ partial "split-cells.html" (merge . (dict "split" (sub hugo.Data.meta.last_year 1))) }}
+		<td class="bad">{{ T "venue_n_public" $t.not_accepted }}</td>
+		{{- else }}
+		<td class="l">{{ if in (slice "acl" "emnlp" "cvpr") .key }}{{ T "venue_public_findings" }}{{ else }}{{ T "venue_public_none" }}{{ end }}</td>
+		<td class="na">&ndash;</td>
+		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
+		{{ partial "split-cells.html" (merge . (dict "split" (sub hugo.Data.meta.last_year 1))) }}
+		{{- if $t.not_accepted }}
+		<td class="bad" title="{{ T "tip_rejected_findings" }}">{{ T "venue_n_public" $t.not_accepted }}</td>
+		{{- else }}
+		<td class="na bad">&ndash;</td>
+		{{- end }}
+		{{- end }}
+		{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}
+		{{ partial "numc.html" (dict "v" (add (int .accepted) (int .rejected_estimated)) "cls" "total sub") }}
+		{{- /* accepted over submitted: counted at ICLR, estimated (~) where rejections are hidden */}}
+		{{- /* ours (estimated where rejections are hidden) / the rate the conference reports, all years together */}}
+		<td class="rate" title="{{ with .reported_detail }}{{ T "tip_reported_detail" . }}{{ end }}">
+			{{- with .acceptance_rate }}{{ if ne $v.rejections "full" }}~{{ end }}{{ . }}%{{ else }}&ndash;{{ end }} / {{ with .reported_rate }}{{ . }}%{{ else }}&ndash;{{ end }}</td>
+		{{- $ur := 0 }}{{ with hugo.Data.under_review }}{{ if eq $v.key "iclr" }}{{ $ur = len .papers }}{{ end }}{{ end }}
+		{{ partial "numc.html" (dict "v" $ur "cls" "under") }}
+	</tr>
+	{{- end }}
+	</tbody>
+</table>
+</div>
+<p class="note">{{ T "venue_list_note" }}</p>
+{{- /* the ICLR count against the estimates elsewhere, each beside the rate the conference reports */}}
+{{- $iclr := index (where hugo.Data.venues "key" "iclr") 0 }}
+{{- $ours := slice }}{{ $theirs := slice }}
+{{- range where hugo.Data.venues "key" "ne" "iclr" }}{{ with .acceptance_rate }}{{ $ours = $ours | append . }}{{ end }}{{ with .reported_rate }}{{ $theirs = $theirs | append . }}{{ end }}{{ end }}
+{{- if and $iclr.acceptance_rate $iclr.reported_rate $ours $theirs }}
+<aside class="callout"><p>{{ T "venue_rate_finding" (dict "Ours" $iclr.acceptance_rate "Theirs" $iclr.reported_rate "OursLo" (math.Min $ours) "OursHi" (math.Max $ours) "TheirsLo" (math.Min $theirs) "TheirsHi" (math.Max $theirs)) }}</p></aside>
+{{- end }}
+{{- end }}

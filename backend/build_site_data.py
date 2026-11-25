@@ -1210,10 +1210,10 @@ def person_links(person):
     return links
 
 
-def write_stubs(section, items):
+def write_stubs(section, items, former=None):
     """One content file per page. Everything shown comes from data/, the stub only creates the URL.
 
-    items: (key, title) or (key, title, Vietnamese title)."""
+    items: (key, title) or (key, title, Vietnamese title). former: a former section name; its addresses redirect here."""
     folder = CONTENT / section
     folder.mkdir(parents=True, exist_ok=True)
     for old in folder.glob("*.md"):
@@ -1221,7 +1221,8 @@ def write_stubs(section, items):
             old.unlink()
     for key, title, *vi in items:
         for suffix, name in ((".vi.md", vi[0] if vi else title), (".en.md", title)):   # Vietnamese at /, English at /en/
-            stub = f"---\ntitle: {json.dumps(name, ensure_ascii=False)}\nkey: {json.dumps(key)}\n---\n"
+            alias = f"aliases: [{json.dumps(f'/{former}/{key}/')}]\n" if former else ""
+            stub = f"---\ntitle: {json.dumps(name, ensure_ascii=False)}\nkey: {json.dumps(key)}\n{alias}---\n"
             (folder / f"{key}{suffix}").write_text(stub, encoding="utf-8")
 
 
@@ -1795,8 +1796,9 @@ def main():
         "provisional": [{"venue": v, "name": VENUE_NAME[v], "year": y} for v, y in sorted(acc.provisional)],
     })
     write_stubs("professors", [(p["slug"], p["name"], p["name_vi"]) for p in professors])
-    write_stubs("institutions", [(i["slug"], i["name"], i["name_vi"]) for i in institutions])
-    write_stubs("venues", [(v["key"], v["name"]) for v in venues])
+    # the universities' pages (formerly /institutions/, which redirects)
+    write_stubs("universities", [(i["slug"], i["name"], i["name_vi"]) for i in institutions], former="institutions")
+    write_stubs("conferences", [(v["key"], v["name"]) for v in venues], former="venues")   # formerly /venues/
 
     (WORK / "build_report.txt").write_text("\n".join(warnings + skipped) + "\n", encoding="utf-8")
     print(f"{'professor':24s}{'ICLR sub/acc/not':>18s}" + "".join(f"{VENUE_NAME[v]:>9s}" for v in VENUE_KEYS[1:])

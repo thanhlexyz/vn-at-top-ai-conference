@@ -13,7 +13,7 @@
 	{{- range $g.legend }}
 	{{- /* an institution named in the legend links to its page; data-color ties it to its circles for the hover */}}
 	{{- $inst := index (where hugo.Data.institutions "slug" (lower (urlize .label))) 0 }}
-	<li data-color="{{ .color }}"><span class="dot {{ .color }}"></span>{{ with and $inst $inst.image }}<img class="legend-logo" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}{{ if eq .label "" }}{{ T "graph_other" }}{{ else if eq .label "roster" }}{{ T "graph_roster" }}{{ else if eq .label "other" }}{{ T "graph_not_roster" }}{{ else if $inst }}<a href="{{ printf "institutions/%s/" $inst.slug | relLangURL }}" title="{{ partial "iname.html" $inst.name }}">{{ .label }}</a>{{ else }}{{ .label }}{{ end }}</li>
+	<li data-color="{{ .color }}"><span class="dot {{ .color }}"></span>{{ with and $inst $inst.image }}<img class="legend-logo" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}{{ if eq .label "" }}{{ T "graph_other" }}{{ else if eq .label "roster" }}{{ T "graph_roster" }}{{ else if eq .label "other" }}{{ T "graph_not_roster" }}{{ else if $inst }}<a href="{{ printf "universities/%s/" $inst.slug | relLangURL }}" title="{{ partial "iname.html" $inst.name }}">{{ .label }}</a>{{ else }}{{ .label }}{{ end }}</li>
 	{{- end }}
 	<li class="edge-key"><span class="line-key"></span>{{ T "graph_edge_key" }}</li>
 </ul>

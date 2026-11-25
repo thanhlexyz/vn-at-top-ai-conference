@@ -464,7 +464,7 @@ other = "Nguồn hình ảnh"
 other = "Chuyển giữa giao diện sáng và tối"
 
 [author_charts_title]
-other = "Bài được nhận theo năm, theo đơn vị"
+other = "Bài được nhận theo năm, theo trường"
 [author_charts_note]
 other = "Mỗi cột là số bài được nhận trong một năm; phần xám là bài mới biết qua thông báo hoặc trang cá nhân."
 [coauthor_institutions]
@@ -476,7 +476,7 @@ other = "Các trường, viện ở Việt Nam có bài chung với đơn vị n
 [coauthors_on_site]
 other = "Đồng tác giả"
 [coauthors_on_site_note]
-other = "Những người trên trang có bài chung với giảng viên này (được nhận, bị từ chối hoặc workshop), kèm đơn vị hiện tại và số bài chung; xem toàn bộ ở mục <a href=\"{{ . }}\">Giảng viên hợp tác</a>."
+other = "Những giảng viên trên trang có bài chung với giảng viên này (được nhận, bị từ chối hoặc workshop), kèm trường hiện tại và số bài chung; xem toàn bộ ở mục <a href=\"{{ . }}\">Hợp tác trong nước</a>."
 [links]
 other = "Liên kết"
 
@@ -555,7 +555,7 @@ other = "Trường"
 [graph_other]
 other = "khác"
 [graph_roster]
-other = "đơn vị của người trong danh sách"
+other = "trường của giảng viên trong danh sách"
 [graph_not_roster]
 other = "đơn vị khác ở Việt Nam"
 [graph_edge_key]
@@ -581,7 +581,7 @@ other = "{{ . }} giảng viên"
 other = "Rê chuột lên một vòng tròn để làm nổi các liên kết của nó; bấm vào tác giả để mở hồ sơ trên VietProfs."
 
 [inst_list_charts]
-other = "Bài được nhận theo đơn vị"
+other = "Bài được nhận theo trường"
 
 [th_submitted_est_col]
 other = "đã nộp, ước tính"
