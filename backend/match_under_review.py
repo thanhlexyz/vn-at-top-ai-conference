@@ -21,7 +21,7 @@ import urllib.request
 
 import gzip
 
-from common import FRONTEND, OPENREVIEW_RAW, WORK, LAST_YEAR, load_roster, norm_title, token_key
+from common import FRONTEND, OPENREVIEW_RAW, WORK, LAST_YEAR, load_roster, norm_title, post_class, token_key, vn_institutions
 
 OUT = WORK / "under_review.json"
 PAGE = FRONTEND / "data" / "under_review.json"
@@ -60,6 +60,37 @@ def preprints():
             return out
         page += 1
         time.sleep(0.3)
+
+
+def judge(v2, name, institution):
+    """The OpenReview profile of an author in Vietnam who is not on the roster, and what it says about them:
+    'candidate' (lecturer or higher at a university in Vietnam today), 'researcher', 'student', 'abroad' (no current
+    post in Vietnam) or 'no profile'. Profiles are found by name, so a namesake is possible: the one whose post in
+    Vietnam names the institution on the preprint is preferred."""
+    from fetch_openreview import profile_summary, vietnam_post
+    try:
+        found = v2.search_profiles(fullname=name)
+    except Exception:
+        found = []
+    best = None
+    for p in found:
+        s = profile_summary(p)
+        if token_key(name) not in {token_key(x) for x in s["names"]}:
+            continue
+        post = vietnam_post(s)
+        current = post if post and post["end"] is None else None
+        kind = post_class(current["position"]) if current else ""
+        uni = bool(current) and any(u for _, _, u in vn_institutions(current["institution"]))
+        verdict = ("candidate" if kind == "staff" and uni else "researcher" if kind in ("researcher", "staff")
+                   else "student" if kind == "student" else "abroad" if not current else "other")
+        same = bool(current) and bool({x for _, x, _ in vn_institutions(current["institution"])} & {x for _, x, _ in vn_institutions(institution)})
+        rank = (same, verdict == "candidate", bool(current))
+        if best is None or rank > best[0]:
+            best = (rank, {"id": s["id"], "post": f"{current['position']} at {current['institution']}" if current else
+                           "; ".join(f"{h['position']} at {h['institution']}" for h in s["history"][:2]),
+                           "verdict": verdict, "same_institution": same})
+    time.sleep(0.5)
+    return best[1] if best else {"id": "", "post": "", "verdict": "no profile", "same_institution": False}
 
 
 def main():
@@ -111,6 +142,13 @@ def main():
         print(f"  #{m['number']} {m['title'][:50]} | {[p['name'] for p in m['professors']]} + {len(m['others'])} others | "
               f"mean {m['mean']} {m['likely']} | AI {m['ai']}")
         time.sleep(0.5)
+    judged = {}
+    for m in matches.values():
+        for o in m["others"]:
+            if o["name"] not in judged:
+                judged[o["name"]] = judge(v2, o["name"], o["institution"])
+                print(f"    {o['name']} ({o['institution'][:40]}): {judged[o['name']]['verdict']} {judged[o['name']]['id']} {judged[o['name']]['post'][:60]}")
+            o["openreview"] = judged[o["name"]]
     rows = sorted((m for m in matches.values() if m["professors"]), key=lambda m: (-(m["mean"] or 0), m["title"]))
     outside = sorted((m for m in matches.values() if not m["professors"]), key=lambda m: m["title"])
     data = {"year": year, "fetched": time.strftime("%Y-%m-%d"), "threshold": ACCEPT_SCORE, "papers": rows, "outside": outside}

@@ -58,11 +58,28 @@
 {{- end }}
 
 {{- with hugo.Data.under_review }}{{ $people := dict }}
-{{- range (.papers | append .outside) }}{{ $r := . }}{{ range .others }}{{ $people = merge $people (dict .name (dict "name" .name "institution" .institution "title" $r.title "forum" $r.forum "mean" $r.mean)) }}{{ end }}{{ end }}
-{{- with $people }}
-<li><details><summary>Look at people in Vietnam on ICLR {{ hugo.Data.under_review.year }} submissions under review who are not on the list ({{ len . }})</summary>
-<p class="note">Authors listed at an institution in Vietnam on a preprint whose title matches a submission under review (backend/match_under_review.py). Check each one's OpenReview profile; students are not candidates.</p>
-<ul>{{ range . }}<li>{{ .name }} ({{ .institution }}): <a href="https://openreview.net/forum?id={{ .forum }}">{{ .title }}</a>{{ with .mean }}, mean score {{ . }}{{ end }}</li>{{ end }}</ul>
+{{- range (.papers | append .outside) }}{{ $r := . }}{{ range .others }}{{ $people = merge $people (dict .name (dict "name" .name "institution" .institution "title" $r.title "forum" $r.forum "mean" $r.mean "or" .openreview)) }}{{ end }}{{ end }}
+{{- with $people }}{{ $order := dict "candidate" 0 "researcher" 1 "other" 2 "student" 3 "abroad" 4 "no profile" 5 }}
+{{- $rows := slice }}{{ range . }}{{ $v := (.or | default dict).verdict | default "no profile" }}{{ $rows = $rows | append (merge . (dict "verdict" $v "rank" (index $order $v))) }}{{ end }}
+<li><details{{ if where $rows "verdict" "candidate" }} open{{ end }}><summary>People in Vietnam on ICLR {{ hugo.Data.under_review.year }} submissions under review who are not on the list ({{ len $rows }}; {{ len (where $rows "verdict" "candidate") }} possible staff)</summary>
+<p class="note">Authors listed at an institution in Vietnam on a preprint whose title matches a submission under review, judged by their OpenReview profile found by name (a namesake is possible): candidate = lecturer or higher at a university in Vietnam today; abroad = no current post in Vietnam. Students are not candidates.</p>
+<div class="scroll">
+<table>
+	<thead><tr><th class="l">Name</th><th class="l">Verdict</th><th class="l">Post on OpenReview</th><th class="l">On the preprint</th><th class="l">Submission</th><th>Mean</th></tr></thead>
+	<tbody>
+	{{- range sort $rows "rank" }}{{ $row := . }}
+	<tr>
+		<td class="l">{{ with .or.id }}<a href="https://openreview.net/profile?id={{ . }}">{{ $row.name }}</a>{{ else }}{{ .name }}{{ end }}</td>
+		<td class="l"><span class="tag {{ if eq .verdict "candidate" }}accepted{{ else }}other{{ end }}">{{ .verdict }}</span></td>
+		<td class="l">{{ .or.post }}</td>
+		<td class="l">{{ .institution }}</td>
+		<td class="l"><a href="https://openreview.net/forum?id={{ .forum }}">{{ .title }}</a></td>
+		<td>{{ .mean }}</td>
+	</tr>
+	{{- end }}
+	</tbody>
+</table>
+</div>
 </details></li>
 {{- end }}{{ end }}
 
