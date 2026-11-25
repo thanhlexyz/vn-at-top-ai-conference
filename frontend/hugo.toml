@@ -69,7 +69,7 @@ disableKinds = ['taxonomy', 'term', 'rss']
   name = 'About'
   identifier = 'about'
   pageRef = '/about'
-  weight = 6
+  weight = 7
 
 [[languages.vi.menus.main]]
   name = 'Giảng viên'
@@ -105,4 +105,4 @@ disableKinds = ['taxonomy', 'term', 'rss']
   name = 'Giới thiệu'
   identifier = 'about'
   pageRef = '/about'
-  weight = 6
+  weight = 7
