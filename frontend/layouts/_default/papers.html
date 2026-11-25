@@ -13,6 +13,7 @@
 		<th class="l">{{ T "th_outcome" }}</th>
 		<th data-extra title="{{ T "tip_sub_id" }}">{{ T "th_sub_id" }}</th>
 		<th class="l" data-extra data-nosort title="{{ T "tip_review_scores" }}">{{ T "th_review_scores" }}</th>
+		<th data-extra data-nocup title="{{ T "tip_chance" }}">{{ T "th_chance" }}</th>
 		{{- if $otd }}
 		<th data-extra title="{{ T "tip_otd" }}">{{ T "th_otd" }}</th>
 		{{- end }}
@@ -30,6 +31,7 @@
 			{{- if and .mean (gt .mean 3.3) }} <span class="tag likely-spotlight" title="{{ T "tip_spotlight" (dict "Mean" $row.mean) }}">{{ T "likely_spotlight" }}</span> 🎉{{ end }}</td>
 		{{- with .number }}<td class="xcol"><a href="https://openreview.net/forum?id={{ $row.forum }}">{{ . }}</a></td>{{ else }}<td class="xcol na" data-last>&ndash;</td>{{ end }}
 		<td class="l xcol scores">{{ range $n, $r := .reviews }}{{ if $n }}, {{ end }}{{ index $r 0 }}({{ index $r 1 }}){{ end }}</td>
+		{{- if ne .chance nil }}<td class="xcol"><a href="https://www.goodpapers.org/iclr?id={{ $row.forum }}" title="{{ T "tip_chance_link" }}">{{ .chance }}%</a></td>{{ else }}<td class="xcol na" data-last><a href="https://www.goodpapers.org/iclr?id={{ $row.forum }}" title="{{ T "tip_chance_link" }}">{{ T "chance_open" }}</a></td>{{ end }}
 		{{- if $otd }}
 		{{- with .ai }}<td class="xcol"><a href="https://opentextdetector.com/?collection=iclr/{{ $year }}&q={{ $row.forum }}">{{ . }}%</a></td>{{ else }}<td class="xcol na" data-last>&ndash;</td>{{ end }}
 		{{- end }}
@@ -49,6 +51,7 @@
 			{{- if strings.Contains .url "openreview.net" }}<a class="tag-link" href="{{ .url }}" title="{{ T "tip_openreview_decision" }}">{{ $tag | safeHTML }}</a>{{ else }}{{ $tag | safeHTML }}{{ end }}{{ with .pres }} {{ . }}{{ if in (slice "spotlight" "highlight") (lower .) }} 🎉{{ end }}{{ end }}{{ if .unofficial }} <span class="tag own" title="{{ .match }}">{{ T "unofficial" }}</span>{{ end }}</td>
 		{{- if .sub_id }}<td class="xcol"><a href="{{ .url }}">{{ .sub_id }}</a></td>{{ else }}<td class="xcol na" data-last>&ndash;</td>{{ end }}
 		{{- with .reviews }}<td class="l xcol scores">{{ . }}</td>{{ else }}<td class="l xcol na">&ndash;</td>{{ end }}
+		<td class="xcol na" data-last>&ndash;</td>
 		{{- if $otd }}
 		{{- with index $otd .ai_key }}
 		<td class="xcol" title="{{ T "otd_hint" (dict "Flagged" .flagged "Sentences" .sentences) }}"><a href="{{ .source }}">{{ printf "%.0f" .pct }}%</a></td>

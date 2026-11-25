@@ -269,7 +269,10 @@ rows, lists their authors on the Candidates page), then `verify_affiliations.py`
 fix what it flags. Add the venue-year's notification date to `DECISION_DATES` in `common.py`: the Papers page lists
 the newest decisions first (the build warns about a venue-year with accepted papers and no date); within one
 conference and date, by mean review score, then mean reviewer confidence (highest first), papers without scores last
-(`decision_order`; the under-review rows sort the same way). NeurIPS PDFs become public only after the conference.
+(`decision_order`). The under-review rows sort by goodpapers.org's acceptance chance where known, then the same way.
+The chances are hand-kept in `work/acceptance_chance.csv` (`forum,chance,checked,note`; git-ignored): goodpapers.org
+sits behind a Vercel bot check, so they are read in a browser, never by a script. `match_under_review.py --chances`
+merges them without fetching anything; the "Acceptance chance" column (hidden until "More columns") links each row there. NeurIPS PDFs become public only after the conference.
 
 Since November 2026 `ojs.aaai.org` answers scripts with a bot check, so AAAI PDFs cannot be downloaded by a script (do
 not try to get around it; the maintainer can save PDFs by hand). IJCAI is unaffected: `fetch_affiliations.py --scan ijcai

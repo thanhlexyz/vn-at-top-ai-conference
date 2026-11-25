@@ -7,8 +7,9 @@ import collections
 import difflib
 import gzip
 import re
+import sys
 
-from common import FRONTEND, OPENREVIEW_RAW, WORK, LAST_YEAR, load_roster, norm_title, post_class, token_key, vn_institutions
+from common import FRONTEND, OPENREVIEW_RAW, WORK, LAST_YEAR, load_roster, norm_title, post_class, read_csv, token_key, vn_institutions
 
 OUT = WORK / "under_review.json"
 PAGE = FRONTEND / "data" / "under_review.json"
@@ -86,6 +87,7 @@ def words(text):
     return {w for w in re.findall(r"[a-z][a-z0-9]{3,}", (text or "").lower()) if w not in STOP}
 
 
+CHANCES = WORK / "acceptance_chance.csv"
 DECISIONS = WORK / "under_review_decisions.json"
 _AFFS = {}
 
@@ -284,16 +286,28 @@ def main():
                 judged[o["name"]] = judge(v2, o["name"], o["institution"])
                 print(f"    {o['name']} ({o['institution'][:40]}): {judged[o['name']]['verdict']} {judged[o['name']]['id']} {judged[o['name']]['post'][:60]}")
             o["openreview"] = judged[o["name"]]
+    rows = [m for m in matches.values() if m["professors"]]
+    outside = sorted((m for m in matches.values() if not m["professors"]), key=lambda m: m["title"])
+    write({"year": year, "fetched": time.strftime("%Y-%m-%d"), "papers": rows, "outside": outside})
+
+
+def write(data):
+    chances = {r["forum"]: float(r["chance"]) for r in read_csv(CHANCES) if r.get("chance")} if CHANCES.exists() else {}
+
     def confidence(m):
         c = [r[1] for r in m["reviews"] if r[1] is not None]
         return sum(c) / len(c) if c else 0
-    rows = sorted((m for m in matches.values() if m["professors"]), key=lambda m: (-(m["mean"] or 0), -confidence(m), m["title"]))
-    outside = sorted((m for m in matches.values() if not m["professors"]), key=lambda m: m["title"])
-    data = {"year": year, "fetched": time.strftime("%Y-%m-%d"), "papers": rows, "outside": outside}
+    for m in data["papers"]:
+        m["chance"] = chances.get(m["forum"])
+    data["papers"] = sorted(data["papers"], key=lambda m: (m["chance"] is None, -(m["chance"] or 0), -(m["mean"] or 0),
+                                                           -confidence(m), m["title"]))
     for path in (OUT, PAGE):
         path.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print(f"-> {OUT} and {PAGE} (both git-ignored)")
+    print(f"-> {OUT} and {PAGE} (both git-ignored); {sum(m['chance'] is not None for m in data['papers'])} with an acceptance chance")
 
 
 if __name__ == "__main__":
-    main()
+    if "--chances" in sys.argv:
+        write(json.loads(OUT.read_text(encoding="utf-8")))
+    else:
+        main()
