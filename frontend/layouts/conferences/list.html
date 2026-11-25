@@ -67,6 +67,9 @@
 {{- $ours := slice }}{{ $theirs := slice }}
 {{- range where hugo.Data.venues "key" "ne" "iclr" }}{{ with .acceptance_rate }}{{ $ours = $ours | append . }}{{ end }}{{ with .reported_rate }}{{ $theirs = $theirs | append . }}{{ end }}{{ end }}
 {{- if and $iclr.acceptance_rate $iclr.reported_rate $ours $theirs }}
-<aside class="callout"><p>{{ T "venue_rate_finding" (dict "Ours" $iclr.acceptance_rate "Theirs" $iclr.reported_rate "OursLo" (math.Min $ours) "OursHi" (math.Max $ours) "TheirsLo" (math.Min $theirs) "TheirsHi" (math.Max $theirs)) }}</p></aside>
+{{- /* how the listed professors' ICLR rate compares with ICLR's own, in words that follow the numbers */}}
+{{- $r := div (float $iclr.acceptance_rate) (float $iclr.reported_rate) }}
+{{- $share := cond (lt $r 0.31) "rate_share_third_under" (cond (lt $r 0.4) "rate_share_third_over" (cond (lt $r 0.5) "rate_share_half_under" (cond (lt $r 0.62) "rate_share_half_over" (cond (lt $r 0.75) "rate_share_two_thirds" (cond (lt $r 0.95) "rate_share_most" (cond (le $r 1.05) "rate_share_equal" "rate_share_above")))))) }}
+<aside class="callout"><p>{{ T "venue_rate_finding" (dict "Share" (T $share) "Ours" $iclr.acceptance_rate "Theirs" $iclr.reported_rate "OursLo" (math.Min $ours) "OursHi" (math.Max $ours) "TheirsLo" (math.Min $theirs) "TheirsHi" (math.Max $theirs)) }}</p></aside>
 {{- end }}
 {{- end }}

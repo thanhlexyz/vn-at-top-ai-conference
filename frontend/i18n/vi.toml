@@ -662,7 +662,7 @@ other = "Chưa có bài được nhận nên chỉ số này không so sánh đ�
 other = "hội nghị công bố, số bài được nhận / số bài nộp = {{ . }}"
 
 [venue_rate_finding]
-other = "ICLR là hội nghị duy nhất công khai toàn bộ bài nộp. Tại đây, tỉ lệ được nhận của các giảng viên trong danh sách là {{ .Ours }}%, chỉ hơn một phần ba tỉ lệ chung {{ .Theirs }}% do ICLR công bố. Ngược lại, ở chín hội nghị còn lại, tỉ lệ ước tính trên trang này ({{ .OursLo }}–{{ .OursHi }}%) tương đương hoặc cao hơn tỉ lệ do các hội nghị công bố ({{ .TheirsLo }}–{{ .TheirsHi }}%)."
+other = "ICLR là hội nghị duy nhất công khai toàn bộ bài nộp. Tại đây, tỉ lệ được nhận của các giảng viên trong danh sách là {{ .Ours }}%, {{ .Share }} tỉ lệ chung {{ .Theirs }}% do ICLR công bố. Ngược lại, ở chín hội nghị còn lại, tỉ lệ ước tính trên trang này ({{ .OursLo }}–{{ .OursHi }}%) tương đương hoặc cao hơn tỉ lệ do các hội nghị công bố ({{ .TheirsLo }}–{{ .TheirsHi }}%)."
 
 [inst_fun_fact]
 other = "Một điều thú vị: một số trường vốn không chuyên về khoa học máy tính, như <a href=\"{{ .HMU }}\">Trường Đại học Y Hà Nội</a> và <a href=\"{{ .FTU }}\">Trường Đại học Ngoại thương</a>, cũng đã có bài nộp tại ICLR. Không chỉ dừng ở bài nộp, <a href=\"{{ .NEU }}\">Đại học Kinh tế Quốc dân</a> đã có một bài được nhận chính thức tại NeurIPS 2026, và <a href=\"{{ .UEH }}\">Đại học Kinh tế TP. Hồ Chí Minh</a> có hai bài tại NeurIPS 2025."
@@ -718,3 +718,19 @@ other = "{{ .Name }} chỉ công khai danh sách bài được nhận và bảo 
 other = " (trung bình khoảng {{ . }} lượt nộp cho mỗi bài được nhận)"
 [ent_conf_ratio]
 other = "Số bài nộp bổ sung tại đây được ước tính gián tiếp theo lịch sử nộp bài ICLR của các tác giả (trung bình khoảng {{ . }} lượt nộp cho mỗi bài được nhận)."
+[rate_share_third_under]
+other = "chưa tới một phần ba"
+[rate_share_third_over]
+other = "chỉ hơn một phần ba"
+[rate_share_half_under]
+other = "gần một nửa"
+[rate_share_half_over]
+other = "hơn một nửa"
+[rate_share_two_thirds]
+other = "khoảng hai phần ba"
+[rate_share_most]
+other = "phần lớn"
+[rate_share_equal]
+other = "tương đương"
+[rate_share_above]
+other = "cao hơn"

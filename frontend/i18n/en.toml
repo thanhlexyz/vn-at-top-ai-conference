@@ -669,7 +669,7 @@ other = "No accepted paper yet, so this figure is not comparable; it sorts last"
 other = "reported by the conference, accepted / submitted = {{ . }}"
 
 [venue_rate_finding]
-other = "ICLR is the only conference that makes every submission public. There, the listed professors have an acceptance rate of {{ .Ours }}%, just over a third of the {{ .Theirs }}% that ICLR reports across all submissions. At the other nine conferences, by contrast, the rates estimated here ({{ .OursLo }}–{{ .OursHi }}%) match or exceed those the conferences report ({{ .TheirsLo }}–{{ .TheirsHi }}%)."
+other = "ICLR is the only conference that makes every submission public. There, the listed professors have an acceptance rate of {{ .Ours }}%, {{ .Share }} the {{ .Theirs }}% that ICLR reports across all submissions. At the other nine conferences, by contrast, the rates estimated here ({{ .OursLo }}–{{ .OursHi }}%) match or exceed those the conferences report ({{ .TheirsLo }}–{{ .TheirsHi }}%)."
 
 [inst_fun_fact]
 other = "Fun fact: universities that are not known for computer science, such as <a href=\"{{ .HMU }}\">Hanoi Medical University</a> and <a href=\"{{ .FTU }}\">Foreign Trade University</a>, have also submitted papers to ICLR. Beyond submissions, the <a href=\"{{ .NEU }}\">National Economics University</a> has a paper officially accepted at NeurIPS 2026, and the <a href=\"{{ .UEH }}\">University of Economics Ho Chi Minh City</a> has two at NeurIPS 2025."
@@ -728,3 +728,19 @@ other = "{{ .Name }} publishes accepted papers only and keeps rejections confide
 other = " (about {{ . }} submissions per accepted paper on average)"
 [ent_conf_ratio]
 other = "Additional submissions here are estimated from the authors' ICLR records (about {{ . }} submissions per accepted paper on average)."
+[rate_share_third_under]
+other = "under a third of"
+[rate_share_third_over]
+other = "just over a third of"
+[rate_share_half_under]
+other = "just under half of"
+[rate_share_half_over]
+other = "just over half of"
+[rate_share_two_thirds]
+other = "about two thirds of"
+[rate_share_most]
+other = "most of"
+[rate_share_equal]
+other = "about the same as"
+[rate_share_above]
+other = "above"
