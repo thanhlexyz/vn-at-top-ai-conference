@@ -293,7 +293,8 @@ the build are parsed by templates (a reason starting with `before `, a track end
 **Collaboration graphs** (`backend/code/graph.py`; the professors' graph is Domestic cooperation at `/domestic/`): line length follows shared
 papers only loosely (more papers, closer; the maintainer allowed relaxing it on 2026-11-25 so that labels and crossings
 come first); it also links professors who share an ICLR submission under review (`under_review_links`, no titles, the
-maintainer's decision of 2026-11-25); no line passes
+maintainer's decision of 2026-11-25); no line passes (`repair` ends each layout: a seeded search moves circles off lines they
+are not on, inside the group's area, at the cost of a crossing if need be)
 through a circle; labels never overlap lines or other labels and never leave the drawing; crossings few. After any
 change, check crossings and label clearance and look at screenshots. They use every counted
 submission (rejected and withdrawn included) plus workshop papers from the Vietnam years, and feed the co-author

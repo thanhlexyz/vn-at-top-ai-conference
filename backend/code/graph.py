@@ -321,6 +321,65 @@ def untangle(pos, edges, labels, rounds=40, gap=40, cross_cost=100000):
     return pos
 
 
+def on_lines(p, edges, gap):
+    n = 0
+    for (a, b) in edges:
+        (ax, ay), (bx, by) = p[a], p[b]
+        dx, dy = bx - ax, by - ay
+        l2 = dx * dx + dy * dy or 1
+        for c, (cx, cy) in p.items():
+            if c not in (a, b):
+                t = ((cx - ax) * dx + (cy - ay) * dy) / l2
+                n += 0 < t < 1 and math.hypot(cx - ax - t * dx, cy - ay - t * dy) < gap
+    return n
+
+
+def repair(pos, edges, gap=30, iters=6000, seed=11):
+    E = [e for e in edges if e[0] in pos and e[1] in pos]
+    if not on_lines(pos, E, gap):
+        return pos
+    bad = set()
+    for (a, b) in E:
+        for c in pos:
+            if c not in (a, b) and on_lines({a: pos[a], b: pos[b], c: pos[c]}, [(a, b)], gap):
+                bad |= {a, b, c}
+    movers = sorted(bad | {n for e in E for n in e if e[0] in bad or e[1] in bad})
+    home = {i: tuple(pos[i]) for i in pos}
+    x0, x1 = min(v[0] for v in pos.values()), max(v[0] for v in pos.values())
+    y0, y1 = min(v[1] for v in pos.values()), max(v[1] for v in pos.values())
+
+    def cost(p):
+        c = 3000 * on_lines(p, E, gap)
+        c += 1000 * sum(1 for (a, b), (x, y) in itertools.combinations(E, 2)
+                        if len({a, b, x, y}) == 4 and crosses(p[a], p[b], p[x], p[y]))
+        c += 300 * sum(1 for a, b in itertools.combinations(p, 2) if math.hypot(p[a][0] - p[b][0], p[a][1] - p[b][1]) < 45)
+        c += 2 * sum(math.hypot(p[i][0] - home[i][0], p[i][1] - home[i][1]) for i in movers)
+        return c
+
+    rng = random.Random(seed)
+    cur = cost(pos)
+    best = (cur, {i: list(v) for i, v in pos.items()})
+    temp = 800.0
+    for _ in range(iters):
+        i = rng.choice(movers)
+        ox, oy = pos[i]
+        r = rng.choice((10, 20, 35, 55, 80))
+        ang = rng.random() * 2 * math.pi
+        nx, ny = ox + r * math.cos(ang), oy + r * math.sin(ang)
+        if not (x0 <= nx <= x1 and y0 <= ny <= y1):
+            continue
+        pos[i] = [nx, ny]
+        c = cost(pos)
+        if c < cur or rng.random() < math.exp((cur - c) / temp):
+            cur = c
+            if c < best[0]:
+                best = (c, {k: list(v) for k, v in pos.items()})
+        else:
+            pos[i] = [ox, oy]
+        temp *= 0.999
+    return best[1]
+
+
 def fan_hub(group, edges):
     if len(group) < 3:
         return None
@@ -394,7 +453,7 @@ def layout(nodes, edges, labels, prefer="weights"):
             xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
         shift_x = (W - (max(xs) - min(xs))) / 2 - min(xs)
         shift_y = top - min(ys)
-        return {i: [p[0] + shift_x, p[1] + shift_y] for i, p in pos.items()}
+        return repair({i: [p[0] + shift_x, p[1] + shift_y] for i, p in pos.items()}, edges)
 
     out, top = {}, 70
     for k, g in enumerate(bands):
