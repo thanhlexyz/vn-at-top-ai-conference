@@ -58,14 +58,17 @@
 {{- end }}
 
 {{- with hugo.Data.under_review }}{{ $people := dict }}
-{{- range (.papers | append .outside) }}{{ $r := . }}{{ range .others }}{{ $people = merge $people (dict .name (dict "name" .name "institution" .institution "title" $r.title "forum" $r.forum "mean" $r.mean "or" .openreview)) }}{{ end }}{{ end }}
+{{- $done := slice }}{{ with hugo.Data.under_review_reviewed }}{{ $done = .reviewed }}{{ end }}
+{{- /* people already reviewed by the maintainer (data/under_review_reviewed.json, git-ignored) are left out */}}
+{{- range (.papers | append .outside) }}{{ $r := . }}{{ range .others }}{{ if not (in $done .name) }}{{ $people = merge $people (dict .name (dict "name" .name "institution" .institution "title" $r.title "forum" $r.forum "mean" $r.mean "likely" $r.likely "or" .openreview)) }}{{ end }}{{ end }}{{ end }}
 {{- with $people }}{{ $order := dict "candidate" 0 "researcher" 1 "other" 2 "student" 3 "abroad" 4 "no profile" 5 }}
-{{- $rows := slice }}{{ range . }}{{ $v := (.or | default dict).verdict | default "no profile" }}{{ $rows = $rows | append (merge . (dict "verdict" $v "rank" (index $order $v))) }}{{ end }}
-<li><details{{ if where $rows "verdict" "candidate" }} open{{ end }}><summary>People in Vietnam on ICLR {{ hugo.Data.under_review.year }} submissions under review who are not on the list ({{ len $rows }}; {{ len (where $rows "verdict" "candidate") }} possible staff)</summary>
+{{- $rows := slice }}{{ range . }}{{ $v := (.or | default dict).verdict | default "no profile" }}{{ $rows = $rows | append (merge . (dict "verdict" $v "rank" (add (mul (index $order $v) 10) (cond (eq .likely "accept") 0 1)))) }}{{ end }}
+{{- $acc := where $rows "likely" "accept" }}
+<li><details open><summary>People in Vietnam on ICLR {{ hugo.Data.under_review.year }} submissions under review who are not on the list ({{ len $rows }}: {{ len $acc }} on a potential accept, {{ len (where $rows "verdict" "candidate") }} possible staff)</summary>
 <p class="note">Authors listed at an institution in Vietnam on a preprint whose title matches a submission under review, judged by their OpenReview profile found by name (a namesake is possible): candidate = lecturer or higher at a university in Vietnam today; abroad = no current post in Vietnam. Students are not candidates.</p>
 <div class="scroll">
 <table>
-	<thead><tr><th class="l">Name</th><th class="l">Verdict</th><th class="l">Post on OpenReview</th><th class="l">On the preprint</th><th class="l">Submission</th><th>Mean</th></tr></thead>
+	<thead><tr><th class="l">Name</th><th class="l">Verdict</th><th class="l">Post on OpenReview</th><th class="l">On the preprint</th><th class="l">Submission</th><th>Mean</th><th class="l">Outlook</th></tr></thead>
 	<tbody>
 	{{- range sort $rows "rank" }}{{ $row := . }}
 	<tr>
@@ -75,6 +78,7 @@
 		<td class="l">{{ .institution }}</td>
 		<td class="l"><a href="https://openreview.net/forum?id={{ .forum }}">{{ .title }}</a></td>
 		<td>{{ .mean }}</td>
+		<td class="l">{{ with .likely }}<span class="tag likely-{{ . }}">{{ T (printf "likely_%s" .) }}</span>{{ end }}{{ if and .mean (gt .mean 3.3) }} <span class="tag likely-spotlight">{{ T "likely_spotlight" }}</span> 🎉{{ end }}</td>
 	</tr>
 	{{- end }}
 	</tbody>

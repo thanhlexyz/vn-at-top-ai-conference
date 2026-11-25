@@ -19,7 +19,10 @@ import time
 import urllib.parse
 import urllib.request
 
+import collections
+import difflib
 import gzip
+import re
 
 from common import FRONTEND, OPENREVIEW_RAW, WORK, LAST_YEAR, load_roster, norm_title, post_class, token_key, vn_institutions
 
@@ -93,6 +96,57 @@ def judge(v2, name, institution):
     return best[1] if best else {"id": "", "post": "", "verdict": "no profile", "same_institution": False}
 
 
+ABSTRACTS = OPENREVIEW_RAW / f"iclr-{LAST_YEAR}-abstracts.json.gz"   # every submission with its abstract (fetched once)
+ARXIV = WORK / "arxiv_professors.json"   # each tracked professor's arXiv preprints since SINCE, by name form
+STOP = set("the and for with from that this which their these those into over under using based towards toward via "
+           "through while where when what both such than then them they have been were also more most only each other "
+           "about across between within without upon show shows shown propose proposed method methods approach "
+           "approaches results paper model models learning data task tasks".split())
+
+
+def words(text):
+    return {w for w in re.findall(r"[a-z][a-z0-9]{3,}", (text or "").lower()) if w not in STOP}
+
+
+def fuzzy_matches(under, roster_names):
+    """Submissions under review that look like a tracked professor's arXiv preprint, by title and abstract, for
+    preprints whose title changed before submission (the exact title match misses those). A preprint counts only if
+    a roster name form is among its authors; a match needs very similar abstracts (word overlap 0.4 or more), or
+    a near-identical title (0.85), or both fairly close (title 0.6 and abstract 0.25)."""
+    if not ARXIV.exists():
+        return []
+    subs = [s for s in under if s["abstract"]]
+    index = collections.defaultdict(set)
+    vocab = []
+    for k, s in enumerate(subs):
+        w = words(s["title"] + " " + s["abstract"])
+        vocab.append((words(s["abstract"]), w))
+        for x in w:
+            index[x].add(k)
+    rare = {x: 1 / len(ks) for x, ks in index.items()}
+    found = {}
+    for key, entries in json.loads(ARXIV.read_text(encoding="utf-8")).items():
+        for e in entries:
+            slugs = {roster_names[token_key(a)]["slug"]: roster_names[token_key(a)]["name"]
+                     for a in e["authors"] if token_key(a) in roster_names}
+            if not slugs:
+                continue   # the name matched only part of an author's name
+            mine = words(e["title"] + " " + e["abstract"])
+            score = collections.Counter()
+            for x in mine:
+                for k in index.get(x, ()):
+                    score[k] += rare[x]
+            for k, _ in score.most_common(15):
+                s = subs[k]
+                ab = vocab[k][0]
+                jac = len(ab & words(e["abstract"])) / max(len(ab | words(e["abstract"])), 1)
+                tsim = difflib.SequenceMatcher(None, norm_title(s["title"]), norm_title(e["title"])).ratio()
+                if jac >= 0.4 or tsim >= 0.85 or (tsim >= 0.6 and jac >= 0.25):
+                    m = found.setdefault(s["forum"], {"submission": s, "arxiv": e, "professors": {}, "title_sim": tsim, "abstract_sim": jac})
+                    m["professors"].update(slugs)
+    return list(found.values())
+
+
 def main():
     year = LAST_YEAR
     subs = json.load(gzip.open(OPENREVIEW_RAW / f"iclr-{year}.json.gz"))
@@ -121,6 +175,20 @@ def main():
                                             "posted": w["date"], "authors": w["authors"], "professors": {}, "others": {}})
         m["professors"].update(people)
         m["others"].update(others)
+    if ABSTRACTS.exists():
+        under_all = [x for x in json.load(gzip.open(ABSTRACTS)) if x["venueid"].endswith("/Submission")]
+        for f in fuzzy_matches(under_all, names):
+            s, e = f["submission"], f["arxiv"]
+            m = matches.get(s["forum"])
+            if m is None:
+                m = matches.setdefault(s["forum"], {"forum": s["forum"], "title": s["title"],
+                                                    "preprint": f"https://arxiv.org/abs/{e['id']}", "posted": e["date"],
+                                                    "authors": e["authors"], "professors": {}, "others": {},
+                                                    "method": f"fuzzy: title {f['title_sim']:.2f}, abstract {f['abstract_sim']:.2f} "
+                                                              f"(arXiv: {e['title']})"})
+                print(f"  fuzzy: {s['title'][:60]} <- {e['title'][:60]} | {sorted(f['professors'].values())} | "
+                      f"title {f['title_sim']:.2f} abstract {f['abstract_sim']:.2f}")
+            m["professors"].update(f["professors"])
     print(f"{len(matches)} submissions under review match a preprint with an author in Vietnam "
           f"({sum(1 for m in matches.values() if m['professors'])} with a tracked professor)")
 
