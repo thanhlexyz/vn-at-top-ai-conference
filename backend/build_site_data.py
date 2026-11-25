@@ -1769,7 +1769,20 @@ def main():
                                          "to_confirm": [{"slug": p["slug"], "name": p["name"], "institution": p["institution_short"],
                                                          "text": p["to_confirm"]} for p in roster
                                                         if p["approved"] == "yes" and p["to_confirm"]]})
+    # About: accepted papers per venue and year as four small line charts, one per area, on one scale
+    peak = max((c["papers"] for c in coverage if c["papers"]), default=1)
+    top_value = next(t for t in (2000, 4000, 6000, 8000, 10000, 12000, 16000, 20000) if t >= peak)
+    cov = {(c["venue"], c["year"]): c for c in coverage}
+    coverage_charts = {}
+    for lang, words in (("en", {"papers": "accepted papers", "no_aff": "the list prints no affiliations"}),
+                        ("vi", {"papers": "bài được nhận", "no_aff": "danh sách không in đơn vị"})):
+        coverage_charts[lang] = [charts.lines(
+            f"{g['name']}: " + ("accepted papers per year" if lang == "en" else "số bài được nhận theo năm"), g["name"], YEARS,
+            [(f"cv{k}", VENUE_NAME[v], {y: (cov[(v, y)]["papers"], cov[(v, y)]["with_affiliation"] < 50)
+                                        for y in YEARS if (v, y) in cov and cov[(v, y)]["papers"]})
+             for k, v in enumerate(g["venues"])], top_value, words) for g in VENUE_GROUPS]
     write_json(DATA / "meta.json", {
+        "coverage_charts": coverage_charts,
         "generated": now.strftime("%Y-%m-%d %H:%M %Z"), "generated_date": now.strftime("%Y-%m-%d"),
         "first_year": YEARS[0], "last_year": YEARS[-1], "years": YEARS,
         "rank_baseline": f"ICLR'{LAST_YEAR % 100:02d}" if RANK_BASELINE == "potential" else

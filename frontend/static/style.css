@@ -658,3 +658,12 @@ tr.under-review td { background: color-mix(in srgb, #ab8704 6%, var(--bg)) ; }
 ul.under-list { list-style: none ; padding-left: 0 ; }
 ul.under-list li { margin: 0.4em 0 ; }
 .tag.likely-spotlight { font-weight: 600 ; }
+
+/* About: accepted papers per venue and year, four small line charts (the dataviz-checked blue, ochre and purple) */
+.chart .line { fill: none ; stroke-width: 2 ; stroke-linejoin: round ; }
+.chart .line.cv0 { stroke: #2d66bd ; } .chart .pt.cv0 { fill: #2d66bd ; stroke: #2d66bd ; }
+.chart .line.cv1 { stroke: #ab8704 ; } .chart .pt.cv1 { fill: #ab8704 ; stroke: #ab8704 ; }
+.chart .line.cv2 { stroke: #8e479d ; } .chart .pt.cv2 { fill: #8e479d ; stroke: #8e479d ; }
+.chart .pt { stroke-width: 2 ; }
+.chart .pt.hollow { fill: var(--bg) ; }
+.fig-row.coverage figure { margin-top: 0.5em ; }

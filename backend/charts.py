@@ -139,6 +139,45 @@ def stacked_area(label, years, series, provisional=(), short=None, words=None):
     return "".join(out)
 
 
+def lines(label, title, years, series, top_value, words):
+    """A small line chart: one line per series over the years, labelled at its right end, with a hover title on
+    every point. series: [(css class, name, {year: (value, hollow)})]; a hollow point marks a year whose official list
+    prints no affiliations. A year with no value is skipped and the line joins the years around it (a conference held
+    every other year). top_value fixes the scale, so that small multiples can be compared."""
+    width, left, right, top, plot_h, bottom = 360, 44, 62, 26, 150, 22
+    plot_w, base = width - left - right, top + plot_h
+    xs = {y: left + plot_w * k / max(len(years) - 1, 1) for k, y in enumerate(years)}
+    y_of = lambda v: base - v / top_value * plot_h
+    step = next(s for s in (500, 1000, 2000, 2500, 5000) if top_value / s <= 4)
+    out = [f'<svg class="chart" viewBox="0 0 {width} {base + bottom}" role="img" aria-label="{_esc(label)}">',
+           f'<text class="value" x="{left}" y="14">{_esc(title)}</text>']
+    v = 0
+    while v <= top_value:
+        out.append(f'<line class="{"axis" if v == 0 else "grid"}" x1="{left}" y1="{y_of(v):.1f}" x2="{left + plot_w}" y2="{y_of(v):.1f}"/>'
+                   f'<text x="{left - 5}" y="{y_of(v) + 4:.1f}" text-anchor="end">{_fmt(v)}</text>')
+        v += step
+    for y in years:
+        if y % 2 == 0 or y == years[-1] or y == years[0]:
+            out.append(f'<text x="{xs[y]:.1f}" y="{base + 16}" text-anchor="middle">{y}</text>')
+    ends = []
+    for cls, name, points in series:
+        pts = [(y, points[y]) for y in years if y in points]
+        if not pts:
+            continue
+        out.append(f'<polyline class="line {cls}" points="{" ".join(f"{xs[y]:.1f},{y_of(v):.1f}" for y, (v, _) in pts)}"/>')
+        for y, (v, hollow) in pts:
+            tip = f"{name} {y}: {_fmt(v)} {words['papers']}" + (f" ({words['no_aff']})" if hollow else "")
+            out.append(f'<circle class="pt {cls}{" hollow" if hollow else ""}" cx="{xs[y]:.1f}" cy="{y_of(v):.1f}" r="3.6"><title>{_esc(tip)}</title></circle>')
+        ends.append([name, y_of(pts[-1][1][0]), xs[pts[-1][0]]])
+    ends.sort(key=lambda e: e[1])
+    for k in range(1, len(ends)):   # names at the right end, pushed apart
+        ends[k][1] = max(ends[k][1], ends[k - 1][1] + 13)
+    for name, y, x in ends:
+        out.append(f'<text x="{x + 7:.1f}" y="{y + 4:.1f}">{_esc(name)}</text>')
+    out.append("</svg>")
+    return "".join(out)
+
+
 def cdf(label, values, words):
     """Cumulative distribution as a step line: for each score, the share of the values at or below it. A hover
     target at each step says how many values reach that far. words: {"x": axis name, "tip": "{share} ... {score}"}."""

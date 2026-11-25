@@ -276,6 +276,8 @@ other = "có thể được nhận"
 other = "có thể được spotlight"
 [tip_spotlight]
 other = "Điểm phản biện trung bình {{ .Mean }}; trên 3,3 được coi là có thể được spotlight"
+[cov_sources]
+other = "Nguồn danh sách:"
 [cols_show]
 other = "Hiện thêm {n} cột"
 [cols_show_inst]

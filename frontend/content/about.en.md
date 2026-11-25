@@ -19,14 +19,14 @@ We track Vietnamese lecturers, assistant professors, associate professors, and f
 
 Students, foreign faculty, and researchers based solely at corporate labs or non-university institutes are excluded. The roster is curated by hand. A researcher appears once verified and having at least one counted submission (accepted or rejected) at the ten venues.
 
-Papers count starting from the year a researcher joined a Vietnamese university. An accepted paper counts only if the camera-ready PDF explicitly lists the researcher at their Vietnamese university. A paper from an earlier post at another university in Vietnam also counts, if the researcher's OpenReview profile shows a lecturer or higher post there in that year; papers from a student post never count. Papers written solely under corporate or institute affiliations (e.g., Qualcomm AI Research / former VinAI) without a university affiliation do not count.
+Papers count starting from the year a researcher joined a Vietnamese university. An accepted paper counts only if the camera-ready PDF explicitly lists the researcher at their Vietnamese university. Papers from an earlier appointment at another university in Vietnam also count, provided the researcher held a faculty position (lecturer or higher) there that year. In contrast, papers published while the author was a student or PhD candidate do not count. Papers written solely under corporate or institute affiliations without an accompanying university affiliation are also excluded.
 
 ### Official Proceedings & OpenReview
-Accepted papers are collected from official conference portals and proceedings (see table below).
+Accepted papers are collected from official conference portals and proceedings (see the charts below).
 
 {{< coverage >}}
 
-† Official lists omit author affiliations. Affiliations for listed professors' papers are verified by hand from the PDF title pages (and excluded from affiliation-based metrics when unavailable).
+A hollow point (†) marks a year whose official list omits author affiliations. Affiliations for listed professors' papers are verified by hand from the PDF title pages (and excluded from affiliation-based metrics when unavailable).
 ‡ Preliminary list published prior to the conference and still being updated.
 
 ### Author Matching & Provisional Papers

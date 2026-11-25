@@ -278,6 +278,8 @@ other = "potential acceptance"
 other = "potential spotlight"
 [tip_spotlight]
 other = "Mean review score {{ .Mean }}; above 3.3 counts as a potential spotlight"
+[cov_sources]
+other = "Sources of the lists:"
 [cols_show]
 other = "Show {n} more columns"
 [cols_show_inst]

@@ -1,36 +1,11 @@
-{{- /* Accepted main-track papers per venue and year that the pipeline has read. */ -}}
+{{- /* Accepted main-track papers per venue and year that the pipeline has read: four small line charts, one per
+       area, on one scale (backend/charts.py lines); a hollow point is a year whose list prints no affiliations. */ -}}
 {{- $meta := hugo.Data.meta }}
-<div class="scroll">
-<table>
-	<thead>
-	<tr>
-		<th class="l">{{ T "th_venue" }}</th>
-		{{- range $meta.years }}
-		<th>{{ . }}</th>
-		{{- end }}
-		<th class="l">{{ T "th_list_source" }}</th>
-	</tr>
-	</thead>
-	<tbody>
-	{{- range $meta.venues }}
-	{{- $key := .key }}
-	{{- $rows := where $meta.coverage "venue" $key }}
-	<tr>
-		<td class="l">{{ .name }}</td>
-		{{- range $rows }}
-		{{- if .papers }}
-		<td{{ if lt .with_affiliation 50 }} title="{{ T "cov_no_aff" }}"{{ end }}>{{ .papers }}{{ if lt .with_affiliation 50 }}&dagger;{{ end }}{{ if .provisional }}&Dagger;{{ end }}</td>
-		{{- else }}
-		<td class="na">&ndash;</td>
-		{{- end }}
-		{{- end }}
-		<td class="l">
-			{{- $sources := slice }}
-			{{- range $rows }}{{ range .sources }}{{ $sources = $sources | append . }}{{ end }}{{ end }}
-			{{- delimit ($sources | uniq) ", " }}
-		</td>
-	</tr>
-	{{- end }}
-	</tbody>
-</table>
+{{- $lang := cond (eq site.Language.Lang "vi") "vi" "en" }}
+<div class="fig-row coverage">
+{{- range index $meta.coverage_charts $lang }}
+<figure>{{ . | safeHTML }}</figure>
+{{- end }}
 </div>
+<p class="note">{{ T "cov_sources" }}
+{{- range $k, $v := $meta.venues }}{{ $key := .key }}{{ $sources := slice }}{{ range where $meta.coverage "venue" $key }}{{ range .sources }}{{ $sources = $sources | append . }}{{ end }}{{ end }}{{ if $k }};{{ end }} {{ .name }}: {{ delimit ($sources | uniq) ", " }}{{ end }}.</p>
