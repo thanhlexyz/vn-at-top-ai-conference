@@ -298,12 +298,35 @@
 			});
 			lightLegend();
 		}
+		function focusGroup(color) {
+			clear();
+			svg.classList.add("focus");
+			var ids = {};
+			svg.querySelectorAll(".node").forEach(function (n) {
+				if (n.dataset.color === color) { ids[n.dataset.id] = true; n.classList.add("hl"); }
+			});
+			svg.querySelectorAll(".edge, .ew").forEach(function (e) {
+				var other = ids[e.dataset.a] ? e.dataset.b : ids[e.dataset.b] ? e.dataset.a : null;
+				if (other === null) return;
+				e.classList.add("hl");
+				svg.querySelectorAll('.node[data-id="' + other + '"]').forEach(function (n) { n.classList.add("hl"); });
+			});
+			lightLegend();
+		}
 		svg.querySelectorAll(".node").forEach(function (n) {
 			n.addEventListener("mouseenter", function () { focus(n.dataset.id); });
 			n.addEventListener("focus", function () { focus(n.dataset.id); });
 			n.addEventListener("mouseleave", clear);
 			n.addEventListener("blur", clear);
 		});
+		if (legend) {
+			legend.querySelectorAll("li[data-color]").forEach(function (li) {
+				li.addEventListener("mouseenter", function () { focusGroup(li.dataset.color); });
+				li.addEventListener("focusin", function () { focusGroup(li.dataset.color); });
+				li.addEventListener("mouseleave", clear);
+				li.addEventListener("focusout", clear);
+			});
+		}
 	});
 })();
 

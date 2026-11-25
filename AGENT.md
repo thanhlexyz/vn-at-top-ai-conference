@@ -296,7 +296,9 @@ come first); it also links professors who share an ICLR submission under review 
 maintainer's decision of 2026-11-25); no line passes
 through a circle (`repair` ends each layout: a seeded search moves circles off lines they are not on, inside the
 group's area, at the cost of a crossing if need be); labels never overlap lines or other labels and never leave the drawing; crossings few. After any
-change, check crossings and label clearance and look at screenshots. They use every counted
+change, check crossings and label clearance and look at screenshots. Hovering a circle lights it, its links and its
+neighbours; hovering a university in the legend (dot, logo or name) lights that university's professors, their one-hop
+neighbours, the links between them and the legend entries of the universities reached (`site.js`). They use every counted
 submission (rejected and withdrawn included) plus workshop papers from the Vietnam years, and feed the co-author
 lists. Researcher colours: HUST red, VinUni blue, HCMUS cyan (logo hues), the next three institutions ochre, green
 and purple, the three after them rings of those colours (never a brand colour as a ring), the rest grey; the six
@@ -328,7 +330,7 @@ and needs the OpenReview variables; extend its `PMLR_VOLUME` (ICML) and `DOMAINS
   `frontend/publish.toml`, commits the built site in a throwaway repository (UTC date, repository identity) and
   force-pushes it to the `gh-pages` branch (GitHub Pages, "Deploy from a branch"), then asks GitHub Pages to build
   (`gh`). It does not rebuild the data or push `main`: do both first. CSS and JS links carry a content hash.
-- Publish (`make publish`) only when the maintainer says so in the current request; a publish request does not carry
+- Publish (`make publish`) only when the maintainer says so in the current request ("ship" means commit, push and publish); a publish request does not carry
   over to later requests.
 - Never rewrite pushed history without the maintainer's go-ahead.
 - The repository is public: no private screenshots, local paths, e-mails or credentials in commits.
