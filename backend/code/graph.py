@@ -263,7 +263,7 @@ def untangle(pos, edges, labels, rounds=40, gap=40, cross_cost=100000):
             (ax, ay), (bx, by) = p[a], p[b]
             dx, dy = bx - ax, by - ay
             l2 = dx * dx + dy * dy or 1
-            c += 0.015 * (math.sqrt(l2) - rest_length(weight.get((a, b), 1))) ** 2
+            c += 0.004 * (math.sqrt(l2) - rest_length(weight.get((a, b), 1))) ** 2
             for n, (cx, cy) in p.items():
                 if n in (a, b):
                     continue
@@ -375,7 +375,7 @@ def layout(nodes, edges, labels, prefer="weights"):
             pos = make()
             score = (crossings(pos, edges), rule_breaks(pos, edges, labels), stress(pos, edges))
             if prefer != "rules":
-                score = (rule_breaks(pos, edges, labels), stress(pos, edges), score[0])
+                score = (rule_breaks(pos, edges, labels) + score[0], score[0], stress(pos, edges))
             if best is None or score < best[0]:
                 best = (score, pos)
         if prefer == "rules" and best[0][0]:
@@ -398,7 +398,7 @@ def layout(nodes, edges, labels, prefer="weights"):
 
     out, top = {}, 70
     for k, g in enumerate(bands):
-        placed = draw(g, 640 if k == 0 else BAND_HEIGHT, top)
+        placed = draw(g, 760 if k == 0 else BAND_HEIGHT, top)
         out.update(placed)
         top = max(p[1] for p in placed.values()) + (70 if k == len(bands) - 1 else 110)
     longest = max((7.4 * len(labels[i]) for g in rest for i in g), default=0)
@@ -540,8 +540,8 @@ def build(nodes, papers_of, color_of, legend):
                           "degree": sum(1 for e in edges if i in e)})
     radius = {n["id"]: n["r"] for n in out_nodes if n["linked"]}
     groups = components(sorted(linked), edges)
-    small = {i for g in groups[1:] for i in g}
-    hubs = {h for g in groups[1:] if (h := fan_hub(g, edges))}
+    small = {i for g in groups[1:] if len(g) < BIG_GROUP for i in g}
+    hubs = {h for g in groups[1:] if len(g) < BIG_GROUP and (h := fan_hub(g, edges))}
     numbers = weight_spots(pos, radius, list(edges), edges)
     spots = place_labels(list(radius), pos, radius, list(edges), {i: text[i] for i in radius}, edges,
                          right_only=small - hubs, spots=numbers, left_only=hubs)

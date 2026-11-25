@@ -905,6 +905,22 @@ def potential_records(person):
     return out
 
 
+def under_review_links(recs, shown_by_slug):
+    path = WORK / "under_review.json"
+    if not path.exists():
+        return []
+    data = json.loads(path.read_text(encoding="utf-8"))
+    titles = {norm_title(r["title"]) for r, _ in recs}
+    out = []
+    for p in data.get("papers", []):
+        people = [shown_by_slug[o["slug"]] for o in p["professors"] if o["slug"] in shown_by_slug]
+        if len(people) < 2 or norm_title(p["title"]) in titles:
+            continue
+        rec = {"venue": "iclr", "year": data["year"], "title": f"under review {p['forum']}"}
+        out += [(rec, person) for person in people]
+    return out
+
+
 def iclr_projection(entries, year, k=2):
     iclr = [e for e in entries if e["venue"] == "iclr"]
     def record(years):
@@ -1434,7 +1450,7 @@ def main():
     write_json(DATA / "venues.json", venues)
     shown_by_slug = {p["slug"]: p for p in professors}
     recs_for_graph = [(r, shown_by_slug[s]) for r, s in graph_recs if s in shown_by_slug]
-    write_json(DATA / "graph_people.json", graph.researcher_graph(professors, recs_for_graph))
+    write_json(DATA / "graph_people.json", graph.researcher_graph(professors, recs_for_graph + under_review_links(recs_for_graph, shown_by_slug)))
     write_json(DATA / "graph_institutions.json", graph.institution_graph(professors, recs_for_graph))
     for venue, year in sorted({(r["venue"], r["year"]) for r in papers if r["status"] == "accepted"}):
         if year not in DECISION_DATES.get(venue, {}):
