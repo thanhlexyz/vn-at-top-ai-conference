@@ -64,7 +64,7 @@ disableKinds = ['taxonomy', 'term', 'rss']
   name = 'International cooperation'
   identifier = 'international'
   pageRef = '/international'
-  weight = 5
+  weight = 6
 [[languages.en.menus.main]]
   name = 'About'
   identifier = 'about'
@@ -100,7 +100,7 @@ disableKinds = ['taxonomy', 'term', 'rss']
   name = 'Hợp tác quốc tế'
   identifier = 'international'
   pageRef = '/international'
-  weight = 5
+  weight = 6
 [[languages.vi.menus.main]]
   name = 'Giới thiệu'
   identifier = 'about'

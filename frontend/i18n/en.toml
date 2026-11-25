@@ -673,3 +673,58 @@ other = "ICLR is the only conference that makes every submission public. There, 
 
 [inst_fun_fact]
 other = "Fun fact: universities that are not known for computer science, such as <a href=\"{{ .HMU }}\">Hanoi Medical University</a> and <a href=\"{{ .FTU }}\">Foreign Trade University</a>, have also submitted papers to ICLR. Beyond submissions, the <a href=\"{{ .NEU }}\">National Economics University</a> has a paper officially accepted at NeurIPS 2026, and the <a href=\"{{ .UEH }}\">University of Economics Ho Chi Minh City</a> has two at NeurIPS 2025."
+
+# ---------------------------------------------------------------- entity page introductions (CLAUDE.md templates)
+[ent_since]
+other = "Affiliated with a Vietnamese university since {{ . }}."
+[ent_unofficial_part]
+other = " (including {{ .Official }} in official proceedings and {{ .Own }} provisional)"
+[ent_n_accepted]
+one = "{{ .Count }} accepted paper"
+other = "{{ .Count }} accepted papers"
+[ent_n_papers]
+one = "{{ .Count }} paper"
+other = "{{ .Count }} papers"
+[ent_n_profs]
+one = "{{ .Count }} tracked professor"
+other = "{{ .Count }} tracked professors"
+[ent_prof_accepted]
+other = "While based in Vietnam, this professor has published {{ .Papers }} across the ten tracked flagship conferences{{ .Part }}."
+[ent_prof_none]
+other = "While based in Vietnam, this professor has no accepted paper yet at the ten tracked flagship conferences."
+[ent_prof_iclr]
+other = "Based on public review records, they have submitted {{ .Papers }} to ICLR ({{ .Detail }}){{ .Other }}."
+[ent_acc_rej]
+other = "{{ .Accepted }} accepted, {{ .Rejected }} rejected or withdrawn"
+[ent_acc_only]
+other = "{{ . }} accepted"
+[ent_rej_only]
+other = "{{ . }} rejected or withdrawn"
+[ent_other_part]
+other = ", alongside {{ .Count }} recorded rejections or Findings papers at {{ .Venues }}"
+[ent_other_only]
+other = "They also have {{ .Count }} recorded rejections or Findings papers at {{ .Venues }}."
+[ent_and]
+other = " and "
+[ent_uni_summary]
+other = "{{ .Name }} has {{ .Profs }} with a combined total of {{ .Papers }} across the ten tracked AI conferences{{ .Part }}."
+[ent_uni_once]
+other = "Papers co-authored by several professors of the university are counted once toward its total."
+[ent_uni_iclr]
+other = "In public OpenReview records at ICLR, professors of the university have submitted {{ .Papers }} ({{ .Accepted }} accepted, {{ .Rejected }} rejected)."
+[ent_uni_est]
+other = "Extrapolating from this ICLR record, the university is projected to have about {{ . }} more rejections at conferences that keep rejections confidential."
+[ent_conf_summary]
+other = "At {{ .Name }}, professors on the list have authored a total of {{ .Papers }} since {{ .Year }}{{ .Part }}."
+[ent_conf_once]
+other = "Papers co-authored by several listed professors are counted once toward the conference total."
+[ent_conf_full]
+other = "{{ . }} discloses all submissions and review outcomes on OpenReview, allowing exact tracking of both accepted and rejected submissions."
+[ent_conf_partial]
+other = "{{ . }} publishes accepted papers, while rejected submissions are public only if authors opt in. The recorded rejections therefore represent a lower bound."
+[ent_conf_none]
+other = "{{ .Name }} publishes accepted papers only and keeps rejections confidential (except for papers published in Findings). Total submissions and unseen rejections are projected using each author's ICLR submission record{{ .Ratio }}."
+[ent_conf_ratio_part]
+other = " (about {{ . }} submissions per accepted paper on average)"
+[ent_conf_ratio]
+other = "Additional submissions here are estimated from the authors' ICLR records (about {{ . }} submissions per accepted paper on average)."

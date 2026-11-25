@@ -6,24 +6,21 @@
 {{- $key := $v.key }}
 {{- $t := index $v.venues $key }}
 {{ partial "picture.html" (dict "src" $v.image "source" $v.image_source "alt" $v.name "cls" "logo venue") }}
+{{- /* the introduction follows the entity-page templates in CLAUDE.md */}}
+{{- $part := "" }}{{ if gt (int $t.own_page) 0 }}{{ $part = T "ent_unofficial_part" (dict "Official" $t.official "Own" $t.own_page) }}{{ end }}
+<p>
+	{{ T "ent_conf_summary" (dict "Name" $v.name "Papers" (T "ent_n_accepted" (dict "Count" (int $v.accepted))) "Year" hugo.Data.meta.first_year "Part" $part) }}
+	{{ T "ent_conf_once" }}
+</p>
 <p>
 	{{- if eq $v.rejections "full" }}
-	{{ T "venue_full" $v.name }}
+	{{ T "ent_conf_full" $v.name }}
 	{{- else if eq $v.rejections "partial" }}
-	{{ T "venue_partial" $v.name }}
+	{{ T "ent_conf_partial" $v.name }}{{ with $v.ratio }} {{ T "ent_conf_ratio" . }}{{ end }}
 	{{- else }}
-	{{ T "venue_none" $v.name }}
-	{{- end }}
-	{{ T "venue_once" }}
-	{{ partial "split-sentence.html" $v }}
-	{{- if gt (int $t.own_page) 0 }}
-	{{ T "venue_own_page" (dict "Count" $t.own_page) }}
+	{{ T "ent_conf_none" (dict "Name" $v.name "Ratio" (cond (ne $v.ratio nil) (T "ent_conf_ratio_part" $v.ratio) "")) }}
 	{{- end }}
 </p>
-
-{{- if ne $v.rejections "full" }}
-<p class="note">{{ T "venue_estimate_note" (dict "Name" $v.name "Ratio" $v.ratio) }}</p>
-{{- end }}
 <h2>{{ T "by_year" }}</h2>
 <figure>
 {{ index $v.chart site.Language.Lang | safeHTML }}

@@ -5,23 +5,32 @@
 {{ partial "picture.html" (dict "src" $p.image "source" $p.image_source "alt" (partial "pname.html" $p) "cls" "portrait") }}
 <p>
 	{{ with $p.rank }}{{ . }}, {{ end }}
-	{{- with $p.role }}{{ $role := cond (eq site.Language.Lang "vi") $p.role_vi . }}{{ with $p.role_source }}<a href="{{ . }}" title="{{ T "role_source" }}">{{ $role }}</a>{{ else }}{{ $role }}{{ end }}, {{ end }}<a href="{{ printf "universities/%s/" $p.institution_slug | relLangURL }}">{{ partial "iname.html" $p.institution }}</a>
-	{{- if $p.vn_since }}. {{ T "prof_since" $p.vn_since }}{{ end }}.
+	{{- with $p.role }}{{ $role := cond (eq site.Language.Lang "vi") $p.role_vi . }}{{ with $p.role_source }}<a href="{{ . }}" title="{{ T "role_source" }}">{{ $role }}</a>{{ else }}{{ $role }}{{ end }}, {{ end }}<a href="{{ printf "universities/%s/" $p.institution_slug | relLangURL }}">{{ partial "iname.html" $p.institution }}</a>.
+	{{- with $p.vn_since }} {{ T "ent_since" . }}{{ end }}
 	{{- $names := slice }}{{ if ne (partial "pname.html" $p) $p.name }}{{ $names = $names | append $p.name }}{{ else if ne $p.name_vi $p.name }}{{ $names = $names | append $p.name_vi }}{{ end }}
-	{{- with ($names | append $p.aliases) }}<br><span class="note">{{ T "also_published_as" (delimit . ", ") }}</span>{{ end }}
+	{{- with ($names | append $p.aliases) }}<br><span class="note">{{ T "also_published_as" (delimit . ", ") }}.</span>{{ end }}
 </p>
 <p>
-	{{ T "prof_accepted_summary" (dict "Count" (int $p.accepted) "Year" (cond (gt $p.vn_since $meta.first_year) $p.vn_since $meta.first_year)) }}
-	{{- if gt (int $p.own_page) 0 }}{{ T "prof_own_page_part" (dict "Official" $p.official "Own" $p.own_page) }}{{ end }}.
-	{{ partial "split-sentence.html" $p }}
-	{{- if $p.iclr_complete }}
-	{{ T "prof_iclr_summary" (dict "Submitted" $iclr.submitted "Accepted" $iclr.accepted "Rejected" $iclr.not_accepted "Reviewers" $iclr.rejected "Withdrawn" $iclr.withdrawn "Desk" $iclr.desk_rejected) }}
+	{{- /* the introduction follows the entity-page templates in CLAUDE.md: whole sentences, no number lists */}}
+	{{- $part := "" }}{{ if gt (int $p.own_page) 0 }}{{ $part = T "ent_unofficial_part" (dict "Official" $p.official "Own" $p.own_page) }}{{ end }}
+	{{- if gt (int $p.accepted) 0 }}
+	{{ T "ent_prof_accepted" (dict "Papers" (T "ent_n_accepted" (dict "Count" (int $p.accepted))) "Part" $part) }}
+	{{- else }}
+	{{ T "ent_prof_none" }}
 	{{- end }}
-	{{- /* rejections on record at the venues that hide them: public NeurIPS rejections, papers placed in Findings */}}
-	{{- $other := slice }}
-	{{- range $meta.venues }}{{ if ne .key "iclr" }}{{ $c := index $p.venues .key }}{{ if gt (int $c.not_accepted) 0 }}{{ $other = $other | append (printf "%s %d" .name (int $c.not_accepted)) }}{{ end }}{{ end }}{{ end }}
-	{{- with $other }}
-	{{ T "prof_other_rejected" (delimit . ", ") }}
+	{{- /* rejections on record at the conferences that hide them: public NeurIPS rejections, papers placed in Findings */}}
+	{{- $otherN := 0 }}{{ $otherV := slice }}
+	{{- range $meta.venues }}{{ if ne .key "iclr" }}{{ $c := index $p.venues .key }}{{ if gt (int $c.not_accepted) 0 }}{{ $otherN = add $otherN (int $c.not_accepted) }}{{ $otherV = $otherV | append .name }}{{ end }}{{ end }}{{ end }}
+	{{- $venues := delimit $otherV ", " (T "ent_and") }}
+	{{- /* public review records only: a potential acceptance under review (unofficial at ICLR) is left out here */}}
+	{{- $pending := sub (int $iclr.accepted) (int $iclr.official) }}{{ $submitted := sub (int $iclr.submitted) $pending }}
+	{{- if and $p.iclr_complete (gt $submitted 0) }}
+	{{- $acc := int $iclr.official }}{{ $rej := int $iclr.not_accepted }}
+	{{- $detail := cond (and (gt $acc 0) (gt $rej 0)) (T "ent_acc_rej" (dict "Accepted" $acc "Rejected" $rej)) (cond (gt $acc 0) (T "ent_acc_only" $acc) (T "ent_rej_only" $rej)) }}
+	{{- $other := "" }}{{ if gt $otherN 0 }}{{ $other = T "ent_other_part" (dict "Count" $otherN "Venues" $venues) }}{{ end }}
+	{{ T "ent_prof_iclr" (dict "Papers" (T "ent_n_papers" (dict "Count" $submitted)) "Detail" $detail "Other" $other) }}
+	{{- else if gt $otherN 0 }}
+	{{ T "ent_other_only" (dict "Count" $otherN "Venues" $venues) }}
 	{{- end }}
 </p>
 

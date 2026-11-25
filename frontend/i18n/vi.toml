@@ -666,3 +666,55 @@ other = "ICLR là hội nghị duy nhất công khai toàn bộ bài nộp. Tạ
 
 [inst_fun_fact]
 other = "Một điều thú vị: một số trường vốn không chuyên về khoa học máy tính, như <a href=\"{{ .HMU }}\">Trường Đại học Y Hà Nội</a> và <a href=\"{{ .FTU }}\">Trường Đại học Ngoại thương</a>, cũng đã có bài nộp tại ICLR. Không chỉ dừng ở bài nộp, <a href=\"{{ .NEU }}\">Đại học Kinh tế Quốc dân</a> đã có một bài được nhận chính thức tại NeurIPS 2026, và <a href=\"{{ .UEH }}\">Đại học Kinh tế TP. Hồ Chí Minh</a> có hai bài tại NeurIPS 2025."
+
+# ---------------------------------------------------------------- entity page introductions (CLAUDE.md templates)
+[ent_since]
+other = "Công tác tại một trường đại học ở Việt Nam từ năm {{ . }}."
+[ent_unofficial_part]
+other = " (bao gồm {{ .Official }} bài trong kỷ yếu và {{ .Own }} bài chưa chính thức)"
+[ent_n_accepted]
+other = "{{ .Count }} bài báo được nhận"
+[ent_n_papers]
+other = "{{ .Count }} bài"
+[ent_n_profs]
+other = "{{ .Count }} giảng viên"
+[ent_prof_accepted]
+other = "Trong giai đoạn công tác tại Việt Nam, giảng viên có {{ .Papers }} tại mười hội nghị AI hàng đầu{{ .Part }}."
+[ent_prof_none]
+other = "Trong giai đoạn công tác tại Việt Nam, giảng viên chưa có bài báo nào được nhận tại mười hội nghị AI hàng đầu."
+[ent_prof_iclr]
+other = "Về dữ liệu phản biện công khai, tác giả đã nộp {{ .Papers }} tại ICLR ({{ .Detail }}){{ .Other }}."
+[ent_acc_rej]
+other = "{{ .Accepted }} bài được nhận và {{ .Rejected }} bài không được nhận"
+[ent_acc_only]
+other = "{{ . }} bài được nhận"
+[ent_rej_only]
+other = "{{ . }} bài không được nhận"
+[ent_other_part]
+other = ", cùng {{ .Count }} bài thuộc Findings hoặc bị từ chối công khai tại {{ .Venues }}"
+[ent_other_only]
+other = "Ngoài ra, tác giả có {{ .Count }} bài thuộc Findings hoặc bị từ chối công khai tại {{ .Venues }}."
+[ent_and]
+other = " và "
+[ent_uni_summary]
+other = "Hiện có {{ .Profs }} của {{ .Name }} nằm trong danh sách theo dõi, với tổng cộng {{ .Papers }} tại mười hội nghị hàng đầu{{ .Part }}."
+[ent_uni_once]
+other = "Công trình có nhiều giảng viên trong trường cùng tham gia chỉ tính một lần cho trường."
+[ent_uni_iclr]
+other = "Về lịch sử nộp bài công khai tại ICLR, các tác giả của trường đã nộp {{ .Papers }} ({{ .Accepted }} bài được nhận và {{ .Rejected }} bài bị từ chối)."
+[ent_uni_est]
+other = "Dựa trên tỷ lệ chấp nhận tại ICLR, ước tính trường có thêm khoảng {{ . }} lượt bài không được nhận tại các hội nghị bảo mật thông tin phản biện."
+[ent_conf_summary]
+other = "Tại {{ .Name }}, các giảng viên trong danh sách theo dõi có tổng cộng {{ .Papers }} kể từ năm {{ .Year }}{{ .Part }}."
+[ent_conf_once]
+other = "Công trình có nhiều giảng viên trong nước đồng tác giả được tính một lần cho hội nghị."
+[ent_conf_full]
+other = "{{ . }} công khai toàn bộ bài nộp và kết quả phản biện trên OpenReview, cho phép thống kê chính xác cả số bài được nhận lẫn số bài bị từ chối."
+[ent_conf_partial]
+other = "{{ . }} công khai các bài được nhận, trong khi bài bị từ chối chỉ xuất hiện khi tác giả chủ động chia sẻ. Do đó, số bài bị từ chối được ghi nhận đại diện cho mức tối thiểu."
+[ent_conf_none]
+other = "{{ .Name }} chỉ công khai danh sách bài được nhận và bảo mật toàn bộ bài bị từ chối (ngoại trừ các bài công bố ở Findings). Vì vậy, số bài nộp và lượt từ chối tại đây được ước tính gián tiếp dựa trên dữ liệu ICLR của các tác giả{{ .Ratio }}."
+[ent_conf_ratio_part]
+other = " (trung bình khoảng {{ . }} lượt nộp cho mỗi bài được nhận)"
+[ent_conf_ratio]
+other = "Số bài nộp bổ sung tại đây được ước tính gián tiếp theo lịch sử nộp bài ICLR của các tác giả (trung bình khoảng {{ . }} lượt nộp cho mỗi bài được nhận)."
