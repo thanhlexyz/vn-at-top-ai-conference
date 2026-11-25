@@ -11,7 +11,7 @@
 	{{- end }}
 	<li>
 		<a class="tag-link" href="{{ printf "venues/%s/" .venue | relLangURL }}"><span class="tag {{ .status }}">{{ .venue_name }} {{ .year }}{{ with .workshop }} · {{ if eq . "Findings" }}Findings{{ else }}workshop {{ . }}{{ end }}{{ end }}{{ if ne .status "accepted" }}, {{ T (printf "status_%s" .status) }}{{ end }}</span></a>
-		{{- with .pres }}<span class="tag other">{{ . }}</span>{{ end }}
+		{{- with .pres }}<span class="tag other">{{ . }}</span>{{ if eq (lower .) "spotlight" }} 🎉{{ end }}{{ end }}
 		{{- if .unofficial }}<span class="tag own">{{ T "unofficial" }}</span>{{ end }}
 		{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
 		{{- with .reason }}<br><span class="note">{{ T "not_counted" (dict "Reason" (partial "reason.html" .)) }}</span>{{ end }}

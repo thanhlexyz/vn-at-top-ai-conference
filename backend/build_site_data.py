@@ -1510,7 +1510,9 @@ def main():
     for v in VENUES:
         recs = [r for r in papers if r["venue"] == v["key"]]
         venues.append({**v, **summary(recs, acc),
-                       "papers": [with_owners(r) for r in sorted(recs, key=paper_order)]})
+                       # the list (and its professors with accepted papers) leaves the potential acceptances out:
+                       # they are only counted, as +N, in the figures above
+                       "papers": [with_owners(r) for r in sorted(recs, key=paper_order) if not r.get("potential")]})
 
     # review.csv is append-only from this side, so answers already typed in are never touched
     known = {(r["professor"], r["venue"], r["year"], norm_title(r["title"])) for r in review_rows}
