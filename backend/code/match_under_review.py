@@ -292,13 +292,18 @@ def main():
 
 
 def write(data):
-    chances = {r["forum"]: float(r["chance"]) for r in read_csv(CHANCES) if r.get("chance")} if CHANCES.exists() else {}
+    chances = {r["forum"]: r["chance"].strip() for r in read_csv(CHANCES) if r.get("chance")} if CHANCES.exists() else {}
+
+    def value(text):
+        return float(text[1:]) / 2 if text.startswith("<") else float(text)
 
     def confidence(m):
         c = [r[1] for r in m["reviews"] if r[1] is not None]
         return sum(c) / len(c) if c else 0
     for m in data["papers"]:
-        m["chance"] = chances.get(m["forum"])
+        text = chances.get(m["forum"])
+        m["chance"] = value(text) if text else None
+        m["chance_text"] = text
     data["papers"] = sorted(data["papers"], key=lambda m: (m["chance"] is None, -(m["chance"] or 0), -(m["mean"] or 0),
                                                            -confidence(m), m["title"]))
     for path in (OUT, PAGE):

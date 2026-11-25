@@ -31,7 +31,7 @@
 			{{- if and .mean (gt .mean 3.3) }} <span class="tag likely-spotlight" title="{{ T "tip_spotlight" (dict "Mean" $row.mean) }}">{{ T "likely_spotlight" }}</span> 🎉{{ end }}</td>
 		{{- with .number }}<td class="xcol"><a href="https://openreview.net/forum?id={{ $row.forum }}">{{ . }}</a></td>{{ else }}<td class="xcol na" data-last>&ndash;</td>{{ end }}
 		<td class="l xcol scores">{{ range $n, $r := .reviews }}{{ if $n }}, {{ end }}{{ index $r 0 }}({{ index $r 1 }}){{ end }}</td>
-		{{- if ne .chance nil }}<td class="xcol"><a href="https://www.goodpapers.org/iclr?id={{ $row.forum }}" title="{{ T "tip_chance_link" }}">{{ .chance }}%</a></td>{{ else }}<td class="xcol na" data-last><a href="https://www.goodpapers.org/iclr?id={{ $row.forum }}" title="{{ T "tip_chance_link" }}">{{ T "chance_open" }}</a></td>{{ end }}
+		{{- if ne .chance nil }}<td class="xcol"><a href="https://www.goodpapers.org/iclr?id={{ $row.forum }}" title="{{ T "tip_chance_link" }}">{{ .chance_text }}%</a></td>{{ else }}<td class="xcol na" data-last><a href="https://www.goodpapers.org/iclr?id={{ $row.forum }}" title="{{ T "tip_chance_link" }}">{{ T "chance_open" }}</a></td>{{ end }}
 		{{- if $otd }}
 		{{- with .ai }}<td class="xcol"><a href="https://opentextdetector.com/?collection=iclr/{{ $year }}&q={{ $row.forum }}">{{ . }}%</a></td>{{ else }}<td class="xcol na" data-last>&ndash;</td>{{ end }}
 		{{- end }}
