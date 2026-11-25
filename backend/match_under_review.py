@@ -131,12 +131,49 @@ def openalex_work(url):
         return json.load(r)
 
 
-def fuzzy_matches(under, roster_names):
+WORKSHOPS = WORK / "workshop_abstracts.json"   # {url: abstract} of the tracked professors' workshop papers
+
+
+def workshop_entries(v2):
+    """The tracked professors' workshop (and Findings) papers on the site, with their abstracts: OpenReview through
+    its API, the ACL Anthology from its paper page. Their professors are known, so no name check is needed."""
+    import html as htmllib
+    professors = json.loads((FRONTEND / "data" / "professors.json").read_text(encoding="utf-8"))
+    papers = {}
+    for p in professors:
+        for e in p.get("workshop_papers") or []:
+            if e.get("url"):
+                papers.setdefault(e["url"], {"title": e["title"], "date": str(e["year"]), "slugs": {}})["slugs"][p["slug"]] = p["name"]
+    cache = json.loads(WORKSHOPS.read_text(encoding="utf-8")) if WORKSHOPS.exists() else {}
+    for url in papers:
+        if url in cache:
+            continue
+        text = ""
+        try:
+            m = re.search(r"openreview\.net/forum\?id=([\w-]+)", url)
+            if m:
+                note = v2.get_note(m.group(1))
+                text = (note.content.get("abstract") or {}).get("value", "") if isinstance(note.content.get("abstract"), dict) else ""
+            elif "aclanthology.org" in url:
+                with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "vn-ai-ranking"}), timeout=60) as r:
+                    page = r.read().decode("utf-8", "ignore")
+                m = re.search(r'acl-abstract">.*?<span>(.*?)</span>', page, re.S)
+                text = htmllib.unescape(re.sub(r"<[^>]+>", "", m.group(1))) if m else ""
+        except Exception as ex:
+            print("  no abstract:", url, str(ex)[:60])
+        cache[url] = text
+        time.sleep(0.6)
+    WORKSHOPS.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+    return [{"id": url, "url": url, "title": w["title"], "abstract": cache.get(url, ""), "authors": [],
+             "date": w["date"], "slugs": w["slugs"], "source": "workshop"} for url, w in papers.items()]
+
+
+def fuzzy_matches(under, roster_names, entries=None):
     """Submissions under review that look like a tracked professor's arXiv preprint, by title and abstract, for
     preprints whose title changed before submission (the exact title match misses those). A preprint counts only if
     a roster name form is among its authors; a match needs very similar abstracts (word overlap 0.4 or more), or
     a near-identical title (0.85), or both fairly close (title 0.6 and abstract 0.25)."""
-    if not ARXIV.exists():
+    if entries is None and not ARXIV.exists():
         return []
     subs = [s for s in under if s["abstract"]]
     index = collections.defaultdict(set)
@@ -148,12 +185,14 @@ def fuzzy_matches(under, roster_names):
             index[x].add(k)
     rare = {x: 1 / len(ks) for x, ks in index.items()}
     found = {}
-    for key, entries in json.loads(ARXIV.read_text(encoding="utf-8")).items():
-        for e in entries:
+    groups = [entries] if entries is not None else json.loads(ARXIV.read_text(encoding="utf-8")).values()
+    for group in groups:
+        for e in group:
+            known = e.get("slugs")   # workshop papers: their professors are already known
             mine_names = [a for a in e["authors"] if token_key(a) in roster_names]
-            if not mine_names:
+            if not mine_names and not known:
                 continue   # the name matched only part of an author's name
-            slugs = {roster_names[token_key(a)]["slug"]: roster_names[token_key(a)]["name"] for a in mine_names}
+            slugs = known or {roster_names[token_key(a)]["slug"]: roster_names[token_key(a)]["name"] for a in mine_names}
             mine = words(e["title"] + " " + e["abstract"])
             score = collections.Counter()
             for x in mine:
@@ -165,6 +204,10 @@ def fuzzy_matches(under, roster_names):
                 jac = len(ab & words(e["abstract"])) / max(len(ab | words(e["abstract"])), 1)
                 tsim = difflib.SequenceMatcher(None, norm_title(s["title"]), norm_title(e["title"])).ratio()
                 if jac >= 0.4 or tsim >= 0.85 or (tsim >= 0.6 and jac >= 0.25):
+                    if known:
+                        m = found.setdefault(s["forum"], {"submission": s, "arxiv": e, "professors": {}, "title_sim": tsim, "abstract_sim": jac})
+                        m["professors"].update(known)
+                        continue
                     # a namesake: OpenAlex lists the matched author only at institutions outside Vietnam
                     affs = openalex_affiliations(e["id"])
                     kept = {roster_names[token_key(a)]["slug"]: roster_names[token_key(a)]["name"] for a in mine_names
@@ -208,12 +251,15 @@ def main():
         m["others"].update(others)
     if ABSTRACTS.exists():
         under_all = [x for x in json.load(gzip.open(ABSTRACTS)) if x["venueid"].endswith("/Submission")]
-        for f in fuzzy_matches(under_all, names):
+        from fetch_openreview import login as _login
+        v2w, _ = _login()
+        # the professors' arXiv preprints, then their workshop and Findings papers (authors already known)
+        for f in fuzzy_matches(under_all, names) + fuzzy_matches(under_all, names, workshop_entries(v2w)):
             s, e = f["submission"], f["arxiv"]
             m = matches.get(s["forum"])
             if m is None:
                 m = matches.setdefault(s["forum"], {"forum": s["forum"], "title": s["title"],
-                                                    "preprint": f"https://arxiv.org/abs/{e['id']}", "posted": e["date"],
+                                                    "preprint": e.get("url") or f"https://arxiv.org/abs/{e['id']}", "posted": e["date"],
                                                     "authors": e["authors"], "professors": {}, "others": {},
                                                     "method": f"fuzzy: title {f['title_sim']:.2f}, abstract {f['abstract_sim']:.2f} "
                                                               f"(arXiv: {e['title']})"})
