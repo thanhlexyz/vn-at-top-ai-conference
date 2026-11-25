@@ -1,24 +1,3 @@
-#!/usr/bin/env python3
-"""List people with a Vietnamese affiliation on accepted papers who are not on the roster yet.
-
-Reads work/accepted.jsonl.gz and writes candidates.csv, people with the most accepted papers first. The first
-columns are the roster columns, so approving someone is one command:
-
-    python find_candidates.py --add "Nguyen Van A" "Tran Thi B"
-
-which appends them to roster.csv with `approved` left empty. Then open roster.csv, fill in `rank`,
-`vn_since` and `openreview_ids`, and set `approved` to yes.
-
-Sources that give an affiliation per author are searched: ICLR, NeurIPS and ICML (all years), CVPR from
-2023, ICCV 2025 and ECCV from 2024. For lists without affiliations, only papers whose affiliations were read
-from the PDF and checked (affiliations.csv; `fetch_affiliations.py --scan` finds AAAI and IJCAI papers
-with authors in Vietnam) are searched; other people who publish only there have to be added by hand.
-
-If `python fetch_openreview.py --candidates` has been run, their OpenReview position is shown too, and
-`openreview_url` links the one profile at an institution named on their papers. With no such profile, or
-several, it links an OpenReview search for the name instead, and `openreview_ids` lists only profiles at
-that institution: a name search alone returns every namesake.
-"""
 import argparse
 import collections
 import csv
@@ -36,25 +15,16 @@ EVIDENCE_FIELDS = ["papers", "senior_author", "first_year", "last_year", "venues
                    "faculty_page", "faculty_rank", "faculty_match",
                    "affiliations", "openreview_position", "sample_paper", "sample_url", "first_paper", "first_url",
                    "openreview_url", "openreview_match", "openreview_class"]
-PROFILES = OPENREVIEW_RAW / "_candidates.json"  # written by fetch_openreview.py --candidates
-FACULTY = CSV_DIR / "faculty.csv"  # hand-kept: names and titles copied from the universities' faculty pages
+PROFILES = OPENREVIEW_RAW / "_candidates.json"
+FACULTY = CSV_DIR / "faculty.csv"
 MATCH_ORDER = {"exact": 0, "likely": 1, "possible": 2}
 
 
 def faculty_match(forms, institutions, faculty):
-    """The faculty-page entry that fits a candidate's name forms best, as (row, quality), or None.
-
-    Faculty pages print Vietnamese names family name first ("Doan Dang Khoa"); papers print them given
-    name first and often shortened ("Khoa D. Doan"). A form fits when all its words are in the listed
-    name, it has both the family and the given name, and its initials stand for the remaining words.
-      exact     every word of the listed name is there
-      likely    three or more words, or initials that fit
-      possible  given and family name only; several people at one university can share those
-    """
     best = None
     for row in faculty:
         if not any(i == row["institution_short"] or row["institution_short"].startswith(i + "-") for i in institutions):
-            continue  # full names repeat across universities, so the paper must name the same institution
+            continue
         listed = norm_name(row["name"]).split()
         for form in forms:
             words = norm_name(form).split()
@@ -71,13 +41,8 @@ def faculty_match(forms, institutions, faculty):
 
 
 def profile_class(mine):
-    """What the profiles that are surely theirs say about the person today: 'staff' (a lecturer or higher at a
-    university in Vietnam), 'researcher', 'other', 'student', or 'left' when the post there has ended. A person
-    with no profile found has no class, and is never hidden. Staff wins over everything: a doubtful match must not
-    hide a lecturer."""
     found = set()
     for p in mine:
-        # every post in Vietnam counts when the lookup kept them all: a lecturer who is also a PhD student is staff
         for post in p.get("posts") or [p]:
             found.add("left" if post.get("end") is not None else post_class(post.get("position")) or "other")
     for c in ("staff", "researcher", "other", "student", "left"):
@@ -121,7 +86,6 @@ def find(accepted, roster):
         latest = max(c["papers"], key=lambda p: (p[1], p[2]))
         oldest = min(c["papers"], key=lambda p: (p[1], p[2]))
         prof = profiles.get(key, [])
-        # a name search returns every namesake; only a profile at an institution named on the papers is theirs
         shorts = {short for (_, short, _) in c["inst"]}
         shorts |= {PARENT[x] for x in shorts if x in PARENT}
         keys = {name_key(n) for n in names}
@@ -139,12 +103,8 @@ def find(accepted, roster):
             "papers": len(c["papers"]), "senior_author": len(c["senior"]),
             "first_year": min(years), "last_year": max(years),
             "venues": ", ".join(f"{VENUE_NAME[v]} {venues[v]}" for v in VENUE_KEYS if venues[v]),
-            # judged by the institution named most often: a VinAI resident who once lists a university is
-            # still at VinAI, and goes to the Not tracked page
             "at_university": "yes" if uni else "no",
             "affiliations": " | ".join(a for a, _ in c["raw"].most_common(3)),
-            # only the profiles that are theirs (a post at an institution named on their papers): a name search
-            # also returns namesakes, whose posts have no place in this public file
             "openreview_position": "; ".join(
                 f"{p['id']}: {p.get('position') or '?'} at {p.get('institution') or '?'}" for p in mine),
             "sample_paper": f"{latest[2]} ({VENUE_NAME[latest[0]]} {latest[1]})", "sample_url": c["papers"][latest],
@@ -179,12 +139,10 @@ def add_to_roster(rows, wanted):
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap = argparse.ArgumentParser(description='List people with a Vietnamese affiliation on accepted papers who are not on the roster yet.')
     ap.add_argument("--add", nargs="+", metavar="NAME", help="append these candidates to roster.csv")
     args = ap.parse_args()
 
-    # lists without affiliations (ACL, EMNLP, AAAI, IJCAI, CVPR before 2023) are searched where the
-    # affiliations of a paper were read from its PDF and checked (affiliations.csv; fetch_affiliations.py --scan)
     rows = find(with_pdf_affiliations(read_jsonl_gz(ACCEPTED), []), load_roster())
     if args.add:
         return add_to_roster(rows, args.add)

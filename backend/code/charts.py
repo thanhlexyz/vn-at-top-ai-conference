@@ -1,9 +1,3 @@
-"""SVG figures for the site, drawn without any library: pies, stacked areas and columns.
-
-Colours are classes (s1, s2, s3, hollow) styled in frontend/static/style.css. The three hues were
-checked with a colour-blindness validator on a white surface. Every mark carries a <title>, which
-browsers show on hover, and the value is printed next to the mark.
-"""
 import html
 import math
 
@@ -28,7 +22,6 @@ def _legend(series, y=16, x=0):
 
 
 def _bar(cls, x, y, w, h, tip, round_end=False):
-    """A horizontal segment; the free end of a bar is rounded, the rest stays square."""
     r = min(4, w) if round_end else 0
     d = (f"M{x:.1f},{y:.1f} H{x + w - r:.1f} Q{x + w:.1f},{y:.1f} {x + w:.1f},{y + r:.1f} V{y + h - r:.1f} "
          f"Q{x + w:.1f},{y + h:.1f} {x + w - r:.1f},{y + h:.1f} H{x:.1f} Z")
@@ -36,13 +29,8 @@ def _bar(cls, x, y, w, h, tip, round_end=False):
 
 
 def pies(label, charts, fit=False):
-    """Pie charts side by side, each with two or three slices named and numbered beside it.
-
-    charts: [(title, [(css class, name, value)])]. fit=True makes the drawing only as wide as its content, for a
-    figure that shares the row with another.
-    """
     r = 70
-    top = 34 if any(title for title, _ in charts) else 8   # room for the titles, when there are any
+    top = 34 if any(title for title, _ in charts) else 8
     width = WIDTH
     if fit:
         widest = max(len(name) for _, slices in charts for _, name, _ in slices)
@@ -76,13 +64,6 @@ def pies(label, charts, fit=False):
 
 
 def stacked_area(label, years, series, provisional=(), short=None, words=None):
-    """Stacked areas over the years, the first series at the bottom, with a legend on top, each band
-    named at its right end, and a hover column per year whose <title> gives that year's numbers.
-
-    series: [(css class, name, [value per year])]. The band classes are styled in style.css; a 2px
-    surface line separates the bands. Years in `provisional` are still being counted and say so.
-    `short` gives shorter band names for the labels at the right end; the legend keeps the full names.
-    """
     left, right, top, plot_h, bottom = 34, 120, 34, 200, 24
     totals = [sum(values[k] for _, _, values in series) for k in range(len(years))]
     peak = max(totals, default=0) or 1
@@ -115,12 +96,11 @@ def stacked_area(label, years, series, provisional=(), short=None, words=None):
         edges.append((cls, " ".join(pts)))
         ends.append([(short or {}).get(name, name), (y_of(lower[-1]) + y_of(upper[-1])) / 2, values[-1]])
         lower = upper
-    for k, (cls, pts) in enumerate(edges):  # surface gap between bands, then the band's own top edge
+    for k, (cls, pts) in enumerate(edges):
         if k < len(edges) - 1:
             out.append(f'<polyline class="gap" points="{pts}"/>')
         out.append(f'<polyline class="edge {cls}" points="{pts}"/>')
 
-    # names at the right end, pushed apart so that thin bands do not overlap their neighbours
     for k in range(1, len(ends)):
         ends[k][1] = min(ends[k][1], ends[k - 1][1] - 15)
     for name, y, last in ends:
@@ -140,10 +120,6 @@ def stacked_area(label, years, series, provisional=(), short=None, words=None):
 
 
 def lines(label, title, years, series, top_value, words):
-    """A small line chart: one line per series over the years, labelled at its right end, with a hover title on
-    every point. series: [(css class, name, {year: (value, hollow)})]; a hollow point marks a year whose official list
-    prints no affiliations. A year with no value is skipped and the line joins the years around it (a conference held
-    every other year). top_value fixes the scale, so that small multiples can be compared."""
     width, left, right, top, plot_h, bottom = 360, 44, 62, 26, 150, 22
     plot_w, base = width - left - right, top + plot_h
     xs = {y: left + plot_w * k / max(len(years) - 1, 1) for k, y in enumerate(years)}
@@ -170,7 +146,7 @@ def lines(label, title, years, series, top_value, words):
             out.append(f'<circle class="pt {cls}{" hollow" if hollow else ""}" cx="{xs[y]:.1f}" cy="{y_of(v):.1f}" r="3.6"><title>{_esc(tip)}</title></circle>')
         ends.append([name, y_of(pts[-1][1][0]), xs[pts[-1][0]]])
     ends.sort(key=lambda e: e[1])
-    for k in range(1, len(ends)):   # names at the right end, pushed apart
+    for k in range(1, len(ends)):
         ends[k][1] = max(ends[k][1], ends[k - 1][1] + 13)
     for name, y, x in ends:
         out.append(f'<text x="{x + 7:.1f}" y="{y + 4:.1f}">{_esc(name)}</text>')
@@ -179,9 +155,7 @@ def lines(label, title, years, series, top_value, words):
 
 
 def cdf(label, values, words):
-    """Cumulative distribution as a step line: for each score, the share of the values at or below it. A hover
-    target at each step says how many values reach that far. words: {"x": axis name, "tip": "{share} ... {score}"}."""
-    width, left, right, top, plot_h, bottom = 640, 40, 14, 16, 200, 42   # as wide and tall as stacked_area
+    width, left, right, top, plot_h, bottom = 640, 40, 14, 16, 200, 42
     values = sorted(values)
     n = len(values) or 1
     peak = max(values, default=0) or 1
@@ -209,7 +183,7 @@ def cdf(label, values, words):
     out.append(f'<polyline class="cdf-line" points="{" ".join(pts)}"/>')
     for k, v in enumerate(values):
         if k + 1 < len(values) and values[k + 1] == v:
-            continue   # one target per distinct score, at the top of its step
+            continue
         share = (k + 1) / n
         tip = words["tip"].format(count=k + 1, share=f"{share:.0%}", score=_fmt(v))
         out.append(f'<circle class="cdf-dot" cx="{x_of(v):.1f}" cy="{y_of(share):.1f}" r="7"><title>{_esc(tip)}</title></circle>')
@@ -218,10 +192,6 @@ def cdf(label, values, words):
 
 
 def columns(label, years, values, tip):
-    """One column per year with its value on top (as on a Google Scholar profile).
-
-    years, values: lists of the same length. tip: a format string with {year} and {n} for the hover text.
-    """
     left, right, top, plot_h, bottom = 34, 10, 24, 160, 24
     peak = max(values, default=0) or 1
     step = next(s for s in (1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 5000, 10000) if peak / s <= 5)

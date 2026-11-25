@@ -1,7 +1,3 @@
-{{- /* One row per institution or professor, accepted papers per venue for one way of counting.
-       Context: a map with "rows" (hugo.Data.institutions or hugo.Data.professors), "section"
-       ("universities" or "professors") and "key" ("majority" or "first_author"). Professors keep
-       these counts under "authorship", institutions at the top level. */ -}}
 {{- $key := .key }}
 {{- $section := .section }}
 {{- $path := cond (eq $section "professors") (printf "authorship.%s.total" $key) (printf "%s.total" $key) }}

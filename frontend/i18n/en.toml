@@ -1,7 +1,3 @@
-# Interface text, English. The Vietnamese version is vi.toml; keep the two in step.
-# Values with HTML are printed with safeHTML in the templates.
-
-# ---------------------------------------------------------------- frame
 [nav_candidates]
 other = "Candidates"
 [nav_not_tracked]
@@ -17,7 +13,6 @@ other = "Language"
 [on_this_page]
 other = "On this page"
 
-# ---------------------------------------------------------------- shared words
 [none]
 other = "None."
 [titles_hidden]
@@ -45,7 +40,6 @@ other = "The same title was accepted at {{ . }}."
 [unofficial_because]
 other = "Unofficial: {{ . }}."
 
-# ---------------------------------------------------------------- table headings
 [th_professor]
 other = "Professor"
 [th_professors]
@@ -163,7 +157,6 @@ other = "accepted papers without an affiliation for each author, left out"
 [tip_rejected_where_public]
 other = "rejected, withdrawn or desk-rejected, where public"
 
-# ---------------------------------------------------------------- front page
 [home_title]
 other = "Conference papers by professors and lecturers in Vietnam, {{ .First }}&ndash;{{ .Last }}"
 [inst_score_callout]
@@ -239,7 +232,6 @@ other = "Fig. 3. Cumulative distribution of CSRankings scores, professors with a
 [home_fig2]
 other = "Fig. 2. Total accepted papers and total rejected papers per year."
 
-# ---------------------------------------------------------------- professor page
 [by_year]
 other = "By year"
 [chart_title]
@@ -291,7 +283,6 @@ other = "Before joining a Vietnamese university"
 [before_vietnam_note]
 other = "Papers from before the year this person's post in Vietnam began, which the site does not count."
 
-# ---------------------------------------------------------------- professors list page
 [prof_list_majority]
 other = "Papers with a majority of authors from the professor's university"
 [prof_list_majority_note]
@@ -301,11 +292,9 @@ other = "Papers with a first author from the professor's university"
 [prof_list_first_note]
 other = "Accepted papers whose first author lists the professor's current university."
 
-# ---------------------------------------------------------------- institutions
 [inst_professors]
 other = "Professors"
 
-# ---------------------------------------------------------------- venues
 [venue_public_full]
 other = "yes, every submission"
 [venue_public_partial]
@@ -420,7 +409,6 @@ other = "{{ .Name }}: papers submitted, accepted and rejected by professors and 
 [also_published_as]
 other = "Also published as: {{ . }}"
 
-# ---------------------------------------------------------------- collaboration graphs
 [graph_summary]
 other = "{{ .Nodes }} connected, {{ .Edges }} links; {{ .Shared }} of {{ .Papers }} papers are shared."
 [graph_legend_title]
@@ -539,7 +527,6 @@ other = "ICLR is the only conference that makes every submission public. There, 
 [inst_fun_fact]
 other = "Fun fact: universities that are not known for computer science, such as <a href=\"{{ .HMU }}\">Hanoi Medical University</a> and <a href=\"{{ .FTU }}\">Foreign Trade University</a>, have also submitted papers to ICLR. Beyond submissions, the <a href=\"{{ .NEU }}\">National Economics University</a> has a paper officially accepted at NeurIPS 2026, and the <a href=\"{{ .UEH }}\">University of Economics Ho Chi Minh City</a> has two at NeurIPS 2025."
 
-# ---------------------------------------------------------------- entity page introductions (CLAUDE.md templates)
 [ent_since]
 other = "Affiliated with a Vietnamese university since {{ . }}."
 [ent_unofficial_part]

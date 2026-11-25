@@ -6,7 +6,6 @@
 {{- $key := $v.key }}
 {{- $t := index $v.venues $key }}
 {{ partial "picture.html" (dict "src" $v.image "source" $v.image_source "alt" $v.name "cls" "logo venue") }}
-{{- /* the introduction follows the entity-page templates in CLAUDE.md */}}
 {{- $part := "" }}{{ if gt (int $t.own_page) 0 }}{{ $part = T "ent_unofficial_part" (dict "Official" $t.official "Own" $t.own_page) }}{{ end }}
 <p>
 	{{ T "ent_conf_summary" (dict "Name" $v.name "Papers" (T "ent_n_accepted" (dict "Count" (int $v.accepted))) "Year" hugo.Data.meta.first_year "Part" $part) }}
@@ -29,8 +28,6 @@
 
 {{- $accepted := where $v.papers "status" "accepted" }}
 {{- $other := where $v.papers "status" "ne" "accepted" }}
-
-{{- /* professors with accepted papers here, most first; a paper of two of them counts for each */}}
 {{- $count := dict }}
 {{- range $accepted }}{{ range .professors }}{{ $count = merge $count (dict .slug (add (index $count .slug | default 0) 1)) }}{{ end }}{{ end }}
 {{- with $count }}

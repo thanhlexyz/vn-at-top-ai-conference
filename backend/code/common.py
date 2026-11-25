@@ -1,7 +1,3 @@
-"""Shared configuration and pure helpers for the conference-statistics pipeline.
-
-Nothing in this file touches the network, so all of it can be unit-tested (see tests/).
-"""
 import collections
 import csv
 import datetime
@@ -12,28 +8,23 @@ import re
 import unicodedata
 from pathlib import Path
 
-BACKEND = Path(__file__).resolve().parent.parent  # backend/: code/ holds the scripts
-CSV_DIR = BACKEND / "data" / "csv"  # hand-kept and generated tables
-JSON_DIR = BACKEND / "data" / "json"  # snapshots kept in the repository (Scholar, reviews, submission numbers)
+BACKEND = Path(__file__).resolve().parent.parent
+CSV_DIR = BACKEND / "data" / "csv"
+JSON_DIR = BACKEND / "data" / "json"
 FRONTEND = BACKEND.parent / "frontend"
-RAW = BACKEND / "raw"  # downloaded source files, re-creatable
-WORK = BACKEND / "work"  # intermediate files, re-creatable
-ACCEPTED = WORK / "accepted.jsonl.gz"  # every accepted paper of the tracked venues, normalized
-OPENREVIEW_RAW = RAW / "openreview"  # one <slug>.json per person, written by fetch_openreview.py
+RAW = BACKEND / "raw"
+WORK = BACKEND / "work"
+ACCEPTED = WORK / "accepted.jsonl.gz"
+OPENREVIEW_RAW = RAW / "openreview"
 
-ROSTER = CSV_DIR / "roster.csv"  # hand-edited: who is on the site
-REVIEW = CSV_DIR / "review.csv"  # uncertain matches; the build appends rows, you fill in `decision`
-CANDIDATES = CSV_DIR / "candidates.csv"  # generated: people found but not on the roster
+ROSTER = CSV_DIR / "roster.csv"
+REVIEW = CSV_DIR / "review.csv"
+CANDIDATES = CSV_DIR / "candidates.csv"
 
 FIRST_YEAR = 2020
-# ICLR 2027 submissions have been public on OpenReview since October 2026, so the year starts early.
 LAST_YEAR = max(datetime.date.today().year, 2027)
 YEARS = list(range(FIRST_YEAR, LAST_YEAR + 1))
 
-# `rejections` says what the venue makes public:
-#   full    - every submission and its outcome (ICLR)
-#   partial - rejected papers only when the authors opted in (NeurIPS)
-#   none    - accepted papers only
 VENUES = [
     {"key": "iclr", "name": "ICLR", "full_name": "International Conference on Learning Representations",
      "rejections": "full"},
@@ -58,9 +49,6 @@ VENUES = [
 ]
 VENUE_KEYS = [v["key"] for v in VENUES]
 
-# When each venue-year announced its decisions (author notification, from the call for papers; to the month at
-# least). The Papers page lists the newest decisions first. A venue-year still under review (no entry) sorts
-# first: its papers so far are withdrawals and desk rejections. Add each new venue-year when its results come out.
 DECISION_DATES = {
     "aaai":    {2020: "2019-11-10", 2021: "2020-12-01", 2022: "2021-12-01", 2023: "2022-11-18", 2024: "2023-12-09",
                 2025: "2024-12-09", 2026: "2025-11-08"},
@@ -84,11 +72,8 @@ DECISION_DATES = {
 
 
 def held(venue, year):
-    """False for a year in which the conference does not take place: ICCV is held in odd years, ECCV in even ones."""
     return not ((venue == "iccv" and year % 2 == 0) or (venue == "eccv" and year % 2 == 1))
 VENUE_NAME = {v["key"]: v["name"] for v in VENUES}
-# fields, for the front page, as CSRankings groups the conferences: artificial intelligence, machine learning,
-# computer vision, natural language processing
 VENUE_GROUPS = [{"key": "ai", "name": "AI", "venues": ["aaai", "ijcai"]},
                 {"key": "ml", "name": "ML", "venues": ["iclr", "neurips", "icml"]},
                 {"key": "cv", "name": "CV", "venues": ["cvpr", "iccv", "eccv"]},
@@ -96,12 +81,10 @@ VENUE_GROUPS = [{"key": "ai", "name": "AI", "venues": ["aaai", "ijcai"]},
 for _g in VENUE_GROUPS:
     _g["names"] = [VENUE_NAME[k] for k in _g["venues"]]
 
-NOT_ACCEPTED = ("rejected", "withdrawn", "desk_rejected")  # shown together as "not accepted"
+NOT_ACCEPTED = ("rejected", "withdrawn", "desk_rejected")
 STATUS_LABEL = {"accepted": "accepted", "rejected": "rejected", "withdrawn": "withdrawn",
                 "desk_rejected": "desk-rejected", "unknown": "unknown"}
 
-
-# ---------------------------------------------------------------- text normalization
 
 def strip_accents(s):
     s = s.replace("đ", "d").replace("Đ", "D")
@@ -109,20 +92,17 @@ def strip_accents(s):
 
 
 def norm_name(s):
-    """'Nguyễn Phi-Lê ' -> 'nguyen phi le'. Used to compare author names."""
     s = strip_accents(html.unescape(s or ""))
     return " ".join(re.sub(r"[^A-Za-z0-9]+", " ", s).lower().split())
 
 
 def name_key(s):
-    """Key that ignores word order and middle initials: 'Khoa D. Doan' and 'Doan Khoa' group together."""
     tokens = norm_name(s).split()
     full = [t for t in tokens if len(t) > 1]
     return " ".join(sorted(full if len(full) >= 2 else tokens))
 
 
 def norm_title(s):
-    """Key for comparing paper titles across sources (case, punctuation and LaTeX insensitive)."""
     s = strip_accents(html.unescape(s or ""))
     s = re.sub(r"\\[a-zA-Z]+|\\.", "", s)
     return re.sub(r"[^a-z0-9]+", "", s.lower())
@@ -132,9 +112,6 @@ def slugify(s):
     return re.sub(r"[^a-z0-9]+", "-", strip_accents(s).lower()).strip("-")
 
 
-# ---------------------------------------------------------------- Vietnamese institutions
-
-# (pattern, full name, short name, is_university). First match wins, so specific entries come first.
 VN_INSTITUTIONS = [
     (r"vin ?uni", "VinUniversity", "VinUni", True),
     (r"vin ?ai\b", "VinAI Research", "VinAI", False),
@@ -203,20 +180,17 @@ _VNU_HCM = {"HCMUS", "HCMUT", "UIT", "HCMIU", "VNU-HCM"}
 
 
 def vn_institutions(affiliation):
-    """Every Vietnamese institution named in an affiliation string, as (full name, short name, is_university)."""
     a = strip_accents(html.unescape(affiliation or "")).strip()
     if not a:
         return []
     found = [(full, short, uni) for rx, full, short, uni in _VN_COMPILED if rx.search(a)]
-    if any(short in _VNU_HCM for _, short, _ in found):  # "VNU" alone means Hanoi only when HCM is not named
+    if any(short in _VNU_HCM for _, short, _ in found):
         found = [f for f in found if f[1] != "VNU"]
     if not found and _VN_GENERIC.search(a):
         found = [(a, a, True)]
     return found
 
 
-# What an OpenReview position title says about a person. A student is never suggested as someone to track; staff
-# (lecturer or higher) is who the maintainer decides about; a researcher or postdoc is neither.
 _STUDENT_POST = re.compile(r"student|intern\b|undergrad|bachelor|\bms\b|master|phd candidate|research assistant|trainee|"
                            r"apprentice", re.I)
 _STAFF_POST = re.compile(r"lecturer|professor|instructor|faculty|dean\b|head\b|director|chair\b|teacher|rector|giảng viên", re.I)
@@ -224,12 +198,10 @@ _RESEARCH_POST = re.compile(r"research|scientist|postdoc|engineer|fellow", re.I)
 
 
 def token_key(name):
-    """A name as its sorted words without accents, so that 'Tran Anh Tuan' and 'Tuan-Anh Tran' are the same name."""
     return tuple(sorted(re.findall(r"[a-z]+", strip_accents(name or "").lower())))
 
 
 def post_class(position):
-    """'student', 'staff', 'researcher' or '' for the position title of an OpenReview history entry."""
     if _STUDENT_POST.search(position or ""):
         return "student"
     if _STAFF_POST.search(position or ""):
@@ -238,18 +210,15 @@ def post_class(position):
 
 
 def vn_institution(affiliation):
-    """The first Vietnamese institution in an affiliation string, or None if there is none."""
     found = vn_institutions(affiliation)
     return found[0] if found else None
 
 
-# A paper often names only the national university; that still counts as the member school.
 PARENT = {"VNU-UET": "VNU", "VNU-HUS": "VNU", "HCMUS": "VNU-HCM", "HCMUT": "VNU-HCM", "UIT": "VNU-HCM",
           "HCMIU": "VNU-HCM"}
 
 
 def same_institution(affiliation, person):
-    """True if the affiliation printed on a paper names the institution the roster gives for this person."""
     mine = {person["institution_short"], PARENT.get(person["institution_short"])}
     if any(short in mine or full == person["institution"] for full, short, _ in vn_institutions(affiliation)):
         return True
@@ -257,14 +226,7 @@ def same_institution(affiliation, person):
     return bool(wanted) and wanted in norm_name(affiliation)
 
 
-# ---------------------------------------------------------------- tracks
-
 def virtual_track(title, sourceurl, event_type, file_has_source):
-    """Track of one row of a neurips.cc / icml.cc / iclr.cc / cvpr.thecvf.com virtual-site listing.
-
-    `file_has_source` is True when the listing carries a sourceurl for its papers (2022 and later).
-    In those files a row without one is a session container, a Findings paper or a duplicate oral.
-    """
     src, ev = sourceurl or "", event_type or ""
     if re.search(r"findings", ev, re.I):
         return "findings"
@@ -290,7 +252,6 @@ _OR_VENUE = {"ICLR.cc": "iclr", "NeurIPS.cc": "neurips", "ICML.cc": "icml",
 
 
 def openreview_venue(invitations, venueid=""):
-    """(venue key, year, track) of an OpenReview note, or None if it is not one of the tracked venues."""
     for s in [*(invitations or []), venueid or ""]:
         m = _OR_GROUP.search(s or "")
         if not m:
@@ -314,19 +275,7 @@ def openreview_venue(invitations, venueid=""):
     return None
 
 
-# ---------------------------------------------------------------- submission outcomes
-
 def classify_status(venue="", venueid="", invitations=(), decision=""):
-    """Outcome of an OpenReview submission: accepted, rejected, withdrawn, desk_rejected or unknown.
-
-    Label conventions seen so far (venue string / venueid):
-      API v2, 2024+    'ICLR 2025 Poster' / ICLR.cc/2025/Conference
-                       'Submitted to ICLR 2025' / .../Conference/Rejected_Submission
-                       'ICLR 2026 Conference Withdrawn Submission' / .../Withdrawn_Submission
-                       'ICLR 2026 Conference Desk Rejected Submission' / .../Desk_Rejected_Submission
-      API v1, 2022-23  'ICLR 2022 Poster' (accepted) but 'ICLR 2022 Submitted' (rejected)
-      API v1, 2020-21  no venue at all: the outcome is in the forum's Decision reply (`decision`).
-    """
     venue, venueid, decision = venue or "", venueid or "", decision or ""
     text = " ".join([venue, venueid, *(invitations or [])])
     if re.search(r"desk[ _-]?reject", text, re.I):
@@ -346,7 +295,6 @@ def classify_status(venue="", venueid="", invitations=(), decision=""):
 
 
 def presentation(text):
-    """'Accept (spotlight)' -> 'spotlight'. Empty for plain posters."""
     t = (text or "").lower()
     if "oral" in t or "talk" in t or "top-5%" in t or "top 5%" in t:
         return "oral"
@@ -357,11 +305,9 @@ def presentation(text):
     return ""
 
 
-# ---------------------------------------------------------------- roster
-
 ROSTER_FIELDS = ["approved", "display_name", "name_variants", "institution", "institution_short", "rank",
                  "vn_since", "openreview_ids", "homepage", "pages", "to_confirm", "notes", "slug",
-                 "name_vi"]  # the name in Vietnamese, with diacritics, shown on the Vietnamese site
+                 "name_vi"]
 
 
 def _split(value):
@@ -369,7 +315,6 @@ def _split(value):
 
 
 def load_roster(path=ROSTER):
-    """Rows of roster.csv as dicts, with list and int fields parsed. Order of the file is kept."""
     people = []
     if not Path(path).exists():
         return people
@@ -383,15 +328,13 @@ def load_roster(path=ROSTER):
                 "slug": (row.get("slug") or "").strip() or slugify(name),
                 "name": name,
                 "variants": sorted({norm_name(v) for v in [name, *_split(row.get("name_variants"))]}),
-                "name_forms": [name, *_split(row.get("name_variants"))],   # as written, for display
+                "name_forms": [name, *_split(row.get("name_variants"))],
                 "institution": (row.get("institution") or "").strip(),
                 "institution_short": (row.get("institution_short") or "").strip()
                 or (row.get("institution") or "").strip(),
-                "rank": (row.get("rank") or "").strip(),   # as given on OpenReview
-                # a leadership role found on university or lab pages, shown as extra information with its source
+                "rank": (row.get("rank") or "").strip(),
                 "role": (row.get("role") or "").strip(), "role_vi": (row.get("role_vi") or "").strip(),
                 "role_source": (row.get("role_source") or "").strip(),
-                # a short note of facts with their sources, shown in a box under the links (Markdown)
                 "page_note": (row.get("page_note") or "").strip(), "page_note_vi": (row.get("page_note_vi") or "").strip(),
                 "vn_since": int(since) if since.isdigit() else None,
                 "openreview_ids": _split(row.get("openreview_ids")),
@@ -406,11 +349,8 @@ def load_roster(path=ROSTER):
 
 
 def in_vietnam(person, year):
-    """'Only while in Vietnam': a paper counts from the year the person joined a Vietnamese institution."""
     return person["vn_since"] is None or int(year) >= person["vn_since"]
 
-
-# ---------------------------------------------------------------- small I/O helpers
 
 def read_jsonl_gz(path):
     with gzip.open(path, "rt", encoding="utf-8") as f:
@@ -448,8 +388,6 @@ def read_csv(path):
 
 
 def with_pdf_affiliations(papers, warnings):
-    """Fill the empty affiliations of a list from affiliations.csv (read from the PDF, checked by hand). A paper whose
-    authors there do not match the list, name by name, is left as it is and reported."""
     fixes = collections.defaultdict(list)
     for r in read_csv(CSV_DIR / "affiliation_fixes.csv"):
         if r["checked"] == "yes":
@@ -467,8 +405,6 @@ def with_pdf_affiliations(papers, warnings):
                                 f"{p['year']}) do not match the list; not used")
             else:
                 p["authors"] = [{**a, "aff": r["affiliation"]} for a, r in zip(p["authors"], found)]
-        # one author's affiliation corrected where the list gives a different one than the paper prints
-        # (virtual sites take it from the author's profile, which can list every position they hold)
         for r in fixes.get((p["venue"], p["year"], norm_title(p["title"])), ()):
             hit = [a for a in p["authors"] if norm_name(a["name"]) == norm_name(r["author"])]
             if not hit:

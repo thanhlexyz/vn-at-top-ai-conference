@@ -1,5 +1,3 @@
-{{- /* Accepted papers before a year and from it on, as two cells. Context: an entry with "years", "official" and
-       "own_page" (a professor, an institution or a venue); "split" sets the year (default: the latest year). */ -}}
 {{- $last := .split | default hugo.Data.meta.last_year }}
 {{- $from := 0 }}{{ $from_own := 0 }}
 {{- range .years }}{{ if ge (int .year) (int $last) }}{{ $from = add $from (int .official) }}{{ $from_own = add $from_own (int .own_page) }}{{ end }}{{ end }}

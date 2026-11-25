@@ -2,26 +2,21 @@
 {{- $i := index (where hugo.Data.institutions "slug" .Params.key) 0 }}
 {{- $iclr := $i.venues.iclr }}
 {{ partial "picture.html" (dict "src" $i.image "source" $i.image_source "alt" $i.name "cls" "logo") }}
-{{- /* the introduction follows the entity-page templates in CLAUDE.md */}}
 {{- $part := "" }}{{ if gt (int $i.own_page) 0 }}{{ $part = T "ent_unofficial_part" (dict "Official" $i.official "Own" $i.own_page) }}{{ end }}
 <p>
 	{{ T "ent_uni_summary" (dict "Name" (partial "iname.html" $i.name) "Profs" (T "ent_n_profs" (dict "Count" (len $i.professors))) "Papers" (T "ent_n_accepted" (dict "Count" (int $i.accepted))) "Part" $part) }}
 	{{ T "ent_uni_once" }}
 </p>
-{{- /* public review records only: potential acceptances under review are left out of this sentence */}}
 {{- $submitted := sub (int $iclr.submitted) (sub (int $iclr.accepted) (int $iclr.official)) }}
 {{- if gt $submitted 0 }}
 <p>
 	{{ T "ent_uni_iclr" (dict "Papers" (T "ent_n_papers" (dict "Count" $submitted)) "Accepted" (int $iclr.official) "Rejected" (int $iclr.not_accepted)) }}
-	{{- /* the estimated rejections include ICLR's own; the sentence speaks of the ones beyond them */}}
 	{{- $more := sub (int ($i.rejected_estimated | default 0)) (int $iclr.not_accepted) }}
 	{{- if gt $more 0 }}
 	{{ T "ent_uni_est" $more }}
 	{{- end }}
 </p>
 {{- end }}
-
-{{- /* institutions in Vietnam that share papers with this one, from the institution graph: most papers first */}}
 {{- $g := hugo.Data.graph_institutions }}
 {{- $mine := slice }}
 {{- range $g.edges }}{{ if or (eq .a $i.slug) (eq .b $i.slug) }}{{ $mine = $mine | append . }}{{ end }}{{ end }}
@@ -34,13 +29,11 @@
 	<li>{{ if $n.url }}<a href="{{ $n.url | relLangURL }}">{{ partial "iname.html" $n.full }}</a>{{ else }}{{ partial "iname.html" $n.full }}{{ end }} ({{ $n.name }}): {{ T "graph_papers" (int .weight) }}</li>
 	{{- end }}
 </ol>
-{{- /* the whole graph is a draft page: linked only where it is built (locally) */}}
 <p class="note">{{ with site.GetPage "/graph-institutions" }}{{ T "coauthor_institutions_note" .RelPermalink | safeHTML }}{{ else }}{{ T "coauthor_institutions_note_short" }}{{ end }}</p>
 {{- end }}
 
 <h2>{{ T "inst_professors" }}</h2>
 {{- $profs := where hugo.Data.professors "institution_slug" $i.slug }}
-{{- /* row numbers always; cups only when there are enough professors for a podium to mean something */}}
 {{ partial "professor-table.html" (dict "rows" $profs "compact" true "rank" true "podium" (ge (len $profs) 4)) }}
 
 <h2>{{ T "author_charts_title" $i.short }}</h2>

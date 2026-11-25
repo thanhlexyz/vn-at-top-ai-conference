@@ -1,7 +1,5 @@
 {{ define "main" -}}
 {{ .Content }}
-{{- /* Two ways to send the same form. GitHub: a plain GET form, since GitHub's /issues/new page reads `title` and
-       `body` from the address. E-mail: site.js opens the visitor's own mail app with the form filled in. */}}
 <form class="feedback" action="https://github.com/{{ site.Params.repository }}/issues/new" method="get">
 	<label for="title">{{ T "fb_title" }}</label>
 	<input id="title" name="title" type="text" required maxlength="200" placeholder="{{ T "fb_title_placeholder" }}">

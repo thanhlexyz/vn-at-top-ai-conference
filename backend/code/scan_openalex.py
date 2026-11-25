@@ -1,25 +1,3 @@
-#!/usr/bin/env python3
-"""Leads for AAAI and IJCAI papers with an author at an institution in Vietnam, from OpenAlex.
-
-ojs.aaai.org answers scripts with a bot check, so the AAAI PDFs that fetch_affiliations.py --scan reads cannot be
-downloaded. OpenAlex keeps the affiliation of each author as printed on the paper (raw_affiliation_strings) and the
-country of the matched institution. This script asks it for every AAAI and IJCAI paper (2020 to now) with an author
-in Vietnam and writes work/openalex_vn.csv: one row per such author, with the track the paper is in (from the lists
-the site uses), the printed affiliation and whether the name is on the roster. These are leads, not facts: a row
-is checked against the person's OpenReview profile (current post, a student is not a candidate) and, where the PDF
-can be had, against its title page. Against the 23 AAAI papers already counted for listed professors it found all 23.
-
-    python3 scan_openalex.py            # leads -> work/openalex_vn.csv
-    python3 scan_openalex.py --leads    # also look each name up on OpenReview -> staff_leads.csv (needs the
-                                        # OpenReview variables), the table at the top of the Candidates page
-
-staff_leads.csv holds the names (not on the roster yet) whose OpenReview profile shows a current post at a university in
-Vietnam of lecturer or higher, or such a post that ended in the last two years. Students are left out: they are never
-suggested. The maintainer answers each lead: a roster row with approved yes, or no, takes the name off the list.
-
-An API key is optional (OPENALEX_API_KEY in the environment; never printed): without one the daily budget is shared
-and paging past the first page uses page= up to 10,000 results, which is enough for a year at a time.
-"""
 import argparse
 import csv
 import datetime
@@ -33,7 +11,7 @@ import urllib.request
 from common import (CSV_DIR, WORK, YEARS, load_roster, name_key, norm_title, post_class,
                     token_key, vn_institutions, PARENT)
 
-SOURCES = {"aaai": "S4210191458", "ijcai": "S4306419999"}   # OpenAlex sources: AAAI and IJCAI proceedings
+SOURCES = {"aaai": "S4210191458", "ijcai": "S4306419999"}
 OUT = WORK / "openalex_vn.csv"
 LEADS = CSV_DIR / "staff_leads.csv"
 LEAD_FIELDS = ["name", "openreview_id", "post", "institution_on_paper", "papers", "paper_url", "note", "found"]
@@ -57,18 +35,14 @@ def get(params):
 
 
 def shorts(text):
-    """The Vietnamese institutions named in a text, with their parent university (UIT is part of VNU-HCM)."""
     found = {short for _, short, _ in vn_institutions(text)}
     return found | {PARENT[x] for x in found if x in PARENT}
 
 
-SEARCHES = WORK / "openreview_name_search.json"   # name -> profile summaries; OpenReview allows ~126 searches per window
+SEARCHES = WORK / "openreview_name_search.json"
 
 
 def write_leads(rows, roster):
-    """Names on main-track papers whose OpenReview profile shows a lecturer or higher at a university in Vietnam today
-    (or until last year). A student is dropped, whatever the paper says. A profile already on the roster (approved or
-    not) has been decided; a lead that only shares a name with a roster person is kept, with a note."""
     from find_iclr_only import login
     from fetch_openreview import profile_summary, vietnam_post
     v2, _ = login()
@@ -83,7 +57,6 @@ def write_leads(rows, roster):
     leads = []
     for name, papers in sorted(by_name.items()):
         if name not in cache:
-            # the client waits out a rate limit by itself (up to ~25 minutes); the cache keeps what was found
             cache[name] = [profile_summary(p) for p in v2.search_profiles(fullname=name)]
             SEARCHES.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
             time.sleep(0.5)
@@ -95,7 +68,7 @@ def write_leads(rows, roster):
             if not post or post_class(post["position"]) != "staff":
                 continue
             if not any(uni for _, _, uni in vn_institutions(post["institution"])) and not post["domain"].endswith(".edu.vn"):
-                continue   # a director or head at a company is not a candidate
+                continue
             if post["end"] is not None and post["end"] < this_year - 1:
                 continue
             if best is None or (post["end"] is None, post["start"] or 0) > (best[1]["end"] is None, best[1]["start"] or 0):
@@ -124,7 +97,7 @@ def write_leads(rows, roster):
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap = argparse.ArgumentParser(description='Leads for AAAI and IJCAI papers with an author at an institution in Vietnam, from OpenAlex.')
     ap.add_argument("--leads", action="store_true", help="look the names up on OpenReview and write staff_leads.csv")
     args = ap.parse_args()
     tracks = {}

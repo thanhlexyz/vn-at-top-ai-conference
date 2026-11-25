@@ -1,6 +1,4 @@
-{{ define "main" -}}
-{{- /* Professors on the list and the co-authors abroad with a VietProfs profile, from data/international.json (backend/build_site_data.py). */ -}}
-{{- $g := hugo.Data.international }}
+{{ define "main" -}}{{- $g := hugo.Data.international }}
 {{- $vi := eq site.Language.Lang "vi" }}
 {{ .Content }}
 <ul class="graph-legend">

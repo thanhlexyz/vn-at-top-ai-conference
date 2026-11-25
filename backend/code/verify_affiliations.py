@@ -1,15 +1,3 @@
-"""Checks the affiliation of every counted official paper against the paper itself.
-
-The accepted-paper lists of the virtual sites (ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV) take each author's affiliation
-from their profile, which can name every position they hold: a professor who also works at a company or a research
-institute can appear at the university on a paper that only prints the company. This downloads the PDF of each
-counted official paper whose affiliation came from such a list (cached in raw/pdf/), reads its first page, footnotes
-included, and checks that the professor's institution is printed there by name, short name or e-mail domain.
-Papers where it is not are written to work/affiliation_check.csv; each is read by hand, and a correction goes into
-affiliation_fixes.csv.
-
-    OPENREVIEW_USERNAME=... OPENREVIEW_PASSWORD=... python3 verify_affiliations.py
-"""
 import csv
 import gzip
 import json
@@ -23,7 +11,6 @@ from common import BACKEND, CSV_DIR, FRONTEND, norm_title, read_csv, strip_accen
 
 PDF_DIR = BACKEND / "raw" / "pdf"
 OUT = BACKEND / "work" / "affiliation_check.csv"
-# e-mail domains, which a title page often prints when the affiliation itself is abbreviated
 DOMAINS = {"HUST": ["hust.edu.vn"], "VinUni": ["vinuni.edu.vn"], "PTIT": ["ptit.edu.vn"], "HCMUS": ["hcmus.edu.vn"],
            "VNU-UET": ["vnu.edu.vn"], "RMIT": ["rmit.edu.vn"], "UEH": ["ueh.edu.vn"], "VAST": ["math.ac.vn", "vast.vn"],
            "HCMIU": ["hcmiu.edu.vn"], "NEU": ["neu.edu.vn"], "Phenikaa": ["phenikaa-uni.edu.vn"], "CTU": ["ctu.edu.vn"],
@@ -36,7 +23,6 @@ def first_page(path):
 
 
 def cvf_pdf(venue, year, title):
-    """The CVF open-access PDF of a CVPR or ICCV paper, found in the cached list of that year."""
     for f in sorted((BACKEND / "raw" / "cvf").glob(f"{venue}-{year}*")):
         page = gzip.open(f, "rt").read()
         key = norm_title(title)[:30]
@@ -59,7 +45,6 @@ PMLR_VOLUME = {2020: "v119", 2021: "v139", 2022: "v162", 2023: "v202", 2024: "v2
 
 
 def pmlr_pdf(year, title, url=""):
-    """The PMLR PDF of an ICML paper: from its PMLR page, or found by title in the volume's index."""
     m = re.search(r"proceedings\.mlr\.press/(v\d+)/([\w-]+)\.html", url or "")
     if m:
         return f"https://proceedings.mlr.press/{m.group(1)}/{m.group(2)}/{m.group(2)}.pdf"
@@ -78,7 +63,6 @@ def pmlr_pdf(year, title, url=""):
 
 
 def neurips_pdf(url):
-    """proceedings.neurips.cc: the paper's PDF next to its abstract page."""
     if "proceedings.neurips.cc" not in (url or ""):
         return None
     return url.replace("/hash/", "/file/").replace("-Abstract-Conference.html", "-Paper-Conference.pdf") \
@@ -92,7 +76,6 @@ def fetch(url, path):
 
 
 def printed(text, person):
-    """True if the page names the person's institution, by name, short name or e-mail domain."""
     flat = " ".join(strip_accents(text).split())
     short = person["institution_short"]
     found = {s for _, s, _ in vn_institutions(flat)}
@@ -135,7 +118,7 @@ def main():
             try:
                 if p["venue"] in ("iclr", "neurips", "icml"):
                     data = None
-                    for cl in (client, client_v1):   # notes before 2023 are on the older API
+                    for cl in (client, client_v1):
                         try:
                             data = cl.get_attachment(id=p["forum"], field_name="pdf") if p.get("forum") else None
                         except Exception:
@@ -147,7 +130,7 @@ def main():
                         time.sleep(1)
                     else:
                         url = neurips_pdf(p["url"]) or (pmlr_pdf(p["year"], p["title"], p["url"]) if p["venue"] == "icml" else None)
-                        if not url and p["venue"] == "iclr":   # an ICLR paper listed without its forum: find it by title
+                        if not url and p["venue"] == "iclr":
                             notes = client_v1.get_notes(content={"title": p["title"]}, limit=5)
                             url = next((f"https://openreview.net/pdf?id={n.forum}" for n in notes), None)
                             if url:
@@ -160,7 +143,7 @@ def main():
                 elif p["venue"] == "eccv":
                     url = ecva_pdf(p["title"])
                     fetch(url, path) if url else None
-                elif p.get("pdf"):   # AAAI and IJCAI lists carry the PDF link
+                elif p.get("pdf"):
                     fetch(p["pdf"], path)
             except Exception as exc:
                 status = f"no PDF ({str(exc)[:60]})"

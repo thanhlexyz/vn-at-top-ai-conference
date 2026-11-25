@@ -4,7 +4,6 @@
 {{ define "main" -}}
 {{ .Content }}
 {{- $meta := hugo.Data.meta }}
-{{- /* notes on the records and uncertain matches are kept on the local Candidates page */}}
 <div class="table-box">
 <p class="table-tools"><button type="button" class="more-columns" aria-expanded="false" data-names="{{ T "cols_hidden" }}" aria-controls="professors-table" data-show="{{ T "cols_show" }}" data-show-one="{{ T "cols_show_one" }}" data-hide="{{ T "cols_hide" }}">{{ T "cols_show" }}</button></p>
 {{ partial "professor-table.html" (dict "rows" hugo.Data.professors "compact" true "podium" true "brief" true) }}

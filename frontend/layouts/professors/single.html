@@ -11,18 +11,15 @@
 	{{- with ($names | append $p.aliases) }}<br><span class="note">{{ T "also_published_as" (delimit . ", ") }}.</span>{{ end }}
 </p>
 <p>
-	{{- /* the introduction follows the entity-page templates in CLAUDE.md: whole sentences, no number lists */}}
 	{{- $part := "" }}{{ if gt (int $p.own_page) 0 }}{{ $part = T "ent_unofficial_part" (dict "Official" $p.official "Own" $p.own_page) }}{{ end }}
 	{{- if gt (int $p.accepted) 0 }}
 	{{ T "ent_prof_accepted" (dict "Papers" (T "ent_n_accepted" (dict "Count" (int $p.accepted))) "Part" $part) }}
 	{{- else }}
 	{{ T "ent_prof_none" }}
 	{{- end }}
-	{{- /* rejections on record at the conferences that hide them: public NeurIPS rejections, papers placed in Findings */}}
 	{{- $otherN := 0 }}{{ $otherV := slice }}
 	{{- range $meta.venues }}{{ if ne .key "iclr" }}{{ $c := index $p.venues .key }}{{ if gt (int $c.not_accepted) 0 }}{{ $otherN = add $otherN (int $c.not_accepted) }}{{ $otherV = $otherV | append .name }}{{ end }}{{ end }}{{ end }}
 	{{- $venues := delimit $otherV ", " (T "ent_and") }}
-	{{- /* public review records only: a potential acceptance under review (unofficial at ICLR) is left out here */}}
 	{{- $pending := sub (int $iclr.accepted) (int $iclr.official) }}{{ $submitted := sub (int $iclr.submitted) $pending }}
 	{{- if and $p.iclr_complete (gt $submitted 0) }}
 	{{- $acc := int $iclr.official }}{{ $rej := int $iclr.not_accepted }}
@@ -45,8 +42,6 @@
 {{- with cond (eq site.Language.Lang "vi") $p.page_note_vi $p.page_note }}
 <aside class="callout">{{ . | markdownify }}</aside>
 {{- end }}
-
-{{- /* co-authors who are also on this site, from the collaboration graph: most shared papers first */}}
 {{- $vi := eq site.Language.Lang "vi" }}
 {{- $mine := slice }}
 {{- range hugo.Data.graph_people.edges }}{{ if or (eq .a $p.slug) (eq .b $p.slug) }}{{ $mine = $mine | append . }}{{ end }}{{ end }}
@@ -191,8 +186,6 @@
 <p class="note">{{ T "titles_hidden" }}</p>
 {{- end }}
 {{- end }}
-
-{{- /* papers left out of the counts: other tracks, and papers from before the person came to Vietnam */}}
 {{- $before := slice }}{{ $track := slice }}
 {{- range $p.excluded_papers }}{{ if hasPrefix .reason "before" }}{{ $before = $before | append . }}{{ else }}{{ $track = $track | append . }}{{ end }}{{ end }}
 {{- range $group := slice (dict "title" (T "not_main_track") "papers" $track "note" (T "not_main_track_note")) (dict "title" (T "before_vietnam") "papers" $before "note" (T "before_vietnam_note")) }}
@@ -206,8 +199,6 @@
 {{- end }}
 {{- end }}
 {{- end }}
-
-{{- /* workshop papers: for reference only, never counted */}}
 {{- with $p.workshop_papers }}
 <h2>{{ T "workshop_papers" (len .) }}</h2>
 <p class="note">{{ T "workshop_note" }}</p>

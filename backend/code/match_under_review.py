@@ -1,19 +1,3 @@
-#!/usr/bin/env python3
-"""ICLR submissions still under review that are probably by tracked professors: LOCAL USE ONLY.
-
-Submissions under review are anonymous. A submission whose title matches a public preprint (OpenAlex, an author in
-Vietnam) that lists a tracked professor is probably theirs; this is how clareLab's ICLR 2027 posters tie scores to
-institutions. Naming people during double-blind review is not for the public site, so everything here stays local:
-the output is work/under_review.json and frontend/data/under_review.json, both git-ignored, and the Papers page
-shows them; the published site redacts the professors' names and the preprint (a title can still be searched, which
-the maintainer accepted on 2026-11-25). Decided by the maintainer on
-2026-11-25.
-
-For each match it keeps the submission's forum id, the preprint, the professors on it, the reviewers' scores
-(fetch_reviews.reviews_of) and Open Text Detector's AI-text share (fetch_opentextdetector.lookup).
-
-    python3 match_under_review.py            # needs the OpenReview variables
-"""
 import json
 import time
 import urllib.parse
@@ -28,8 +12,8 @@ from common import FRONTEND, OPENREVIEW_RAW, WORK, LAST_YEAR, load_roster, norm_
 
 OUT = WORK / "under_review.json"
 PAGE = FRONTEND / "data" / "under_review.json"
-SINCE = f"{LAST_YEAR - 1}-05-01"   # preprints posted in the months before the ICLR deadline and after
-ACCEPT_SCORE = 2.6   # a mean review score above this is a potential accept (the maintainer's threshold)
+SINCE = f"{LAST_YEAR - 1}-05-01"
+ACCEPT_SCORE = 2.6
 
 
 def openalex(params):
@@ -46,7 +30,6 @@ def openalex(params):
 
 
 def preprints():
-    """Preprints since SINCE with an author at an institution in Vietnam: title and author names."""
     out, page = [], 1
     while True:
         d = openalex({"filter": f"authorships.countries:VN,from_publication_date:{SINCE},type:preprint",
@@ -55,7 +38,6 @@ def preprints():
             out.append({"id": w["id"].rsplit("/", 1)[-1], "title": w["title"] or "", "date": w["publication_date"],
                         "url": ((w.get("primary_location") or {}).get("landing_page_url") or ""),
                         "authors": [a["author"]["display_name"] for a in w["authorships"]],
-                        # authors listed at an institution in Vietnam, with that institution
                         "in_vn": {a["author"]["display_name"]: "; ".join(i["display_name"] for i in a.get("institutions") or []
                                                                         if i.get("country_code") == "VN")
                                   for a in w["authorships"] if "VN" in (a.get("countries") or [])}})
@@ -66,10 +48,6 @@ def preprints():
 
 
 def judge(v2, name, institution):
-    """The OpenReview profile of an author in Vietnam who is not on the roster, and what it says about them:
-    'candidate' (lecturer or higher at a university in Vietnam today), 'researcher', 'student', 'abroad' (no current
-    post in Vietnam) or 'no profile'. Profiles are found by name, so a namesake is possible: the one whose post in
-    Vietnam names the institution on the preprint is preferred."""
     from fetch_openreview import profile_summary, vietnam_post
     try:
         found = v2.search_profiles(fullname=name)
@@ -96,8 +74,8 @@ def judge(v2, name, institution):
     return best[1] if best else {"id": "", "post": "", "verdict": "no profile", "same_institution": False}
 
 
-ABSTRACTS = OPENREVIEW_RAW / f"iclr-{LAST_YEAR}-abstracts.json.gz"   # every submission with its abstract (fetched once)
-ARXIV = WORK / "arxiv_professors.json"   # each tracked professor's arXiv preprints since SINCE, by name form
+ABSTRACTS = OPENREVIEW_RAW / f"iclr-{LAST_YEAR}-abstracts.json.gz"
+ARXIV = WORK / "arxiv_professors.json"
 STOP = set("the and for with from that this which their these those into over under using based towards toward via "
            "through while where when what both such than then them they have been were also more most only each other "
            "about across between within without upon show shows shown propose proposed method methods approach "
@@ -108,12 +86,11 @@ def words(text):
     return {w for w in re.findall(r"[a-z][a-z0-9]{3,}", (text or "").lower()) if w not in STOP}
 
 
-DECISIONS = WORK / "under_review_decisions.json"   # hand decisions: {forum: {"drop": reason} or {"professors": [slugs]}}
+DECISIONS = WORK / "under_review_decisions.json"
 _AFFS = {}
 
 
 def openalex_affiliations(arxiv_id):
-    """{author name: [institution country codes]} for an arXiv preprint, from OpenAlex ({} when it is not there)."""
     aid = re.sub(r"v\d+$", "", arxiv_id)
     if aid not in _AFFS:
         try:
@@ -131,12 +108,10 @@ def openalex_work(url):
         return json.load(r)
 
 
-WORKSHOPS = WORK / "workshop_abstracts.json"   # {url: abstract} of the tracked professors' workshop papers
+WORKSHOPS = WORK / "workshop_abstracts.json"
 
 
 def workshop_entries(v2):
-    """The tracked professors' workshop (and Findings) papers on the site, with their abstracts: OpenReview through
-    its API, the ACL Anthology from its paper page. Their professors are known, so no name check is needed."""
     import html as htmllib
     professors = json.loads((FRONTEND / "data" / "professors.json").read_text(encoding="utf-8"))
     papers = {}
@@ -169,10 +144,6 @@ def workshop_entries(v2):
 
 
 def fuzzy_matches(under, roster_names, entries=None):
-    """Submissions under review that look like a tracked professor's arXiv preprint, by title and abstract, for
-    preprints whose title changed before submission (the exact title match misses those). A preprint counts only if
-    a roster name form is among its authors; a match needs very similar abstracts (word overlap 0.4 or more), or
-    a near-identical title (0.85), or both fairly close (title 0.6 and abstract 0.25)."""
     if entries is None and not ARXIV.exists():
         return []
     subs = [s for s in under if s["abstract"]]
@@ -188,10 +159,10 @@ def fuzzy_matches(under, roster_names, entries=None):
     groups = [entries] if entries is not None else json.loads(ARXIV.read_text(encoding="utf-8")).values()
     for group in groups:
         for e in group:
-            known = e.get("slugs")   # workshop papers: their professors are already known
+            known = e.get("slugs")
             mine_names = [a for a in e["authors"] if token_key(a) in roster_names]
             if not mine_names and not known:
-                continue   # the name matched only part of an author's name
+                continue
             slugs = known or {roster_names[token_key(a)]["slug"]: roster_names[token_key(a)]["name"] for a in mine_names}
             mine = words(e["title"] + " " + e["abstract"])
             score = collections.Counter()
@@ -208,7 +179,6 @@ def fuzzy_matches(under, roster_names, entries=None):
                         m = found.setdefault(s["forum"], {"submission": s, "arxiv": e, "professors": {}, "title_sim": tsim, "abstract_sim": jac})
                         m["professors"].update(known)
                         continue
-                    # a namesake: OpenAlex lists the matched author only at institutions outside Vietnam
                     affs = openalex_affiliations(e["id"])
                     kept = {roster_names[token_key(a)]["slug"]: roster_names[token_key(a)]["name"] for a in mine_names
                             if not (affs.get(a) and "VN" not in affs.get(a))}
@@ -226,7 +196,6 @@ def main():
     subs = json.load(gzip.open(OPENREVIEW_RAW / f"iclr-{year}.json.gz"))
     under = {norm_title(s["title"]): s for s in subs if s["status"] == "unknown" and s.get("title")}
     roster = [p for p in load_roster() if p["approved"] == "yes"]
-    # anyone on the roster, approved or not, has been decided: not suggested again
     decided = {token_key(n) for p in load_roster() for n in [p["name"], *p["variants"], p.get("name_vi") or ""] if n}
     names = {}
     for p in roster:
@@ -241,7 +210,6 @@ def main():
         if not s:
             continue
         people = {names[token_key(a)]["slug"]: names[token_key(a)]["name"] for a in w["authors"] if token_key(a) in names}
-        # authors in Vietnam who are not on the roster at all: people the maintainer may want to track
         others = {a: inst for a, inst in w["in_vn"].items() if token_key(a) not in names and token_key(a) not in decided}
         if not people and not others:
             continue
@@ -253,7 +221,6 @@ def main():
         under_all = [x for x in json.load(gzip.open(ABSTRACTS)) if x["venueid"].endswith("/Submission")]
         from fetch_openreview import login as _login
         v2w, _ = _login()
-        # the professors' arXiv preprints, then their workshop and Findings papers (authors already known)
         for f in fuzzy_matches(under_all, names) + fuzzy_matches(under_all, names, workshop_entries(v2w)):
             s, e = f["submission"], f["arxiv"]
             m = matches.get(s["forum"])
@@ -268,7 +235,6 @@ def main():
             m["professors"].update(f["professors"])
     decisions = json.loads(DECISIONS.read_text(encoding="utf-8")) if DECISIONS.exists() else {}
     by_slug = {p["slug"]: p["name"] for p in roster}
-    # a hand match the automatic ones miss (retitled, abstract rewritten): {"add": arXiv id, "professors": [slugs]}
     if ABSTRACTS.exists():
         sub_by_forum = {x["forum"]: x for x in under_all}
         cached = json.loads(ARXIV.read_text(encoding="utf-8")) if ARXIV.exists() else {}
@@ -288,7 +254,7 @@ def main():
     print(f"{len(matches)} submissions under review match a preprint with an author in Vietnam "
           f"({sum(1 for m in matches.values() if m['professors'])} with a tracked professor)")
 
-    from fetch_openreview import login   # needs the OpenReview variables
+    from fetch_openreview import login
     from fetch_reviews import reviews_of, submission_number
     from fetch_opentextdetector import lookup, COLLECTIONS, MODE, MIN_SENTENCES
     v2, _ = login()

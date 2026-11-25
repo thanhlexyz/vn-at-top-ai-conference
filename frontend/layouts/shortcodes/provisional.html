@@ -1,4 +1,2 @@
-{{- /* The lists still provisional, e.g. " (NeurIPS 2026)" with the space and brackets, from data/meta.json;
-       nothing when every list is complete. */ -}}
 {{- $names := slice }}{{ range hugo.Data.meta.provisional }}{{ $names = $names | append (printf "%s %d" .name (int .year)) }}{{ end -}}
 {{- with $names }} ({{ delimit . ", " }}){{ end -}}

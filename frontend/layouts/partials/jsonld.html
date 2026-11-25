@@ -1,4 +1,3 @@
-{{- /* Structured data (schema.org): a Person for each professor page, a Dataset for the front page. */ -}}
 {{- if and (eq .Section "professors") .Params.key }}
 {{- $p := index (where hugo.Data.professors "slug" .Params.key) 0 }}
 {{- $same := slice }}{{ range $p.links }}{{ $same = $same | append .url }}{{ end }}

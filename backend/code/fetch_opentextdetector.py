@@ -1,14 +1,3 @@
-#!/usr/bin/env python3
-"""Fetch Open Text Detector's AI-text share for the ICLR 2027 papers on the site.
-
-Open Text Detector (https://opentextdetector.com) scores the public ICLR 2027 submissions: the share of a paper's
-main-text sentences (bibliography and appendices left out) that its detector flags at a 0.1% human false-positive
-rate, the site's default view ("body0.1"). A paper with fewer than 50 sentences judged has no figure there, and none
-here. Each paper is looked up by its OpenReview forum id; only an item with that exact forum id is taken.
-
-Reads frontend/data/papers.json (build first), writes work/opentextdetector.json (git-ignored):
-{forum id: {flagged, sentences, mode, model, fetched, source}}. Resumable; --refresh reads all again.
-"""
 import argparse
 import datetime
 import json
@@ -24,7 +13,7 @@ OUT = BACKEND / "work" / "opentextdetector.json"
 API = "https://opentextdetector.com/backend/v1/browse?"
 COLLECTIONS = {("iclr", 2027): "iclr/2027"}
 MODE = "body0.1"
-MIN_SENTENCES = 50  # the site shows no figure below this
+MIN_SENTENCES = 50
 
 
 def lookup(collection, forum):
@@ -36,7 +25,7 @@ def lookup(collection, forum):
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap = argparse.ArgumentParser(description="Fetch Open Text Detector's AI-text share for the ICLR 2027 papers on the site.")
     ap.add_argument("--refresh", action="store_true", help="read every paper again")
     args = ap.parse_args()
     papers = json.loads((FRONTEND / "data" / "papers.json").read_text(encoding="utf-8"))

@@ -1,14 +1,3 @@
-#!/usr/bin/env python3
-"""A one-time snapshot of each professor's Google Scholar profile: citations, h-index, i10-index and
-citations per year.
-
-    python3 fetch_scholar.py            # find the profiles and read them -> scholar.json
-
-A profile is used only when it comes from a trustworthy link: the Google Scholar field of the professor's
-own OpenReview profile, or a link to Scholar on their homepage or staff page in the roster. Google Scholar
-refuses name searches from scripts, so a professor without such a link gets no Scholar figures. The
-snapshot is not refreshed by `make data`; run this script again to update it.
-"""
 import datetime
 import html
 import json
@@ -30,7 +19,6 @@ def get(url):
 
 
 def from_openreview():
-    """Scholar IDs written on the professors' OpenReview profiles (needs the OpenReview login)."""
     from fetch_openreview import login
     v2, _ = login()
     found = {}
@@ -53,7 +41,6 @@ def from_openreview():
 
 
 def from_pages():
-    """Scholar IDs linked from the homepages and staff pages on the roster."""
     found = {}
     for p in load_roster():
         if p["approved"] != "yes":
@@ -79,7 +66,6 @@ def read_profile(user):
     since = re.search(r'<th class="gsc_rsb_sth">Since (\d{4})</th>', h)
     years = [int(y) for y in re.findall(r'<span class="gsc_g_t"[^>]*>(\d{4})</span>', h)]
     counts = [int(c) for c in re.findall(r'<span class="gsc_g_al">(\d+)</span>', h)]
-    # a year without citations has no bar; the bars carry their year's position in z-index order
     bars = re.findall(r'<a href="[^"]*"[^>]*class="gsc_g_a"[^>]*style="[^"]*z-index:(\d+)[^"]*"[^>]*><span class="gsc_g_al">(\d+)</span>', h)
     by_year = {}
     if bars and years:
@@ -114,7 +100,7 @@ def main():
             continue
         person = next(p for p in load_roster() if p["slug"] == slug)
         mine = set(norm_name(" ".join([person["name"], *person["variants"], person.get("name_vi", "")])).split())
-        if len(mine & set(norm_name(prof["name"]).split())) < 2:   # a co-author's or advisor's profile linked from the page
+        if len(mine & set(norm_name(prof["name"]).split())) < 2:
             print(f"  {slug}: skipped {user}, the profile is {prof['name']}", file=sys.stderr)
             continue
         data[slug] = {**prof, "found_on": source, "fetched": today}

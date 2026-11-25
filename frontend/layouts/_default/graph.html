@@ -1,6 +1,4 @@
-{{ define "main" -}}
-{{- /* A collaboration graph from data/<page param "data">.json, laid out by backend/graph.py. */ -}}
-{{- $g := index hugo.Data .Params.data }}
+{{ define "main" -}}{{- $g := index hugo.Data .Params.data }}
 {{- $vi := eq site.Language.Lang "vi" }}
 {{ .Content }}
 {{- if ne .Params.data "graph_people" }}
@@ -11,7 +9,6 @@
 <p class="toc-title">{{ T "graph_legend_title" }}</p>
 <ul class="graph-legend">
 	{{- range $g.legend }}
-	{{- /* an institution named in the legend links to its page; data-color ties it to its circles for the hover */}}
 	{{- $inst := index (where hugo.Data.institutions "slug" (lower (urlize .label))) 0 }}
 	<li data-color="{{ .color }}"><span class="dot {{ .color }}"></span>{{ with and $inst $inst.image }}<img class="legend-logo" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}{{ if eq .label "" }}{{ T "graph_other" }}{{ else if eq .label "roster" }}{{ T "graph_roster" }}{{ else if eq .label "other" }}{{ T "graph_not_roster" }}{{ else if $inst }}<a href="{{ printf "universities/%s/" $inst.slug | relLangURL }}" title="{{ partial "iname.html" $inst.name }}">{{ .label }}</a>{{ else }}{{ .label }}{{ end }}</li>
 	{{- end }}

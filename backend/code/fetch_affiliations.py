@@ -1,18 +1,3 @@
-"""Affiliations read from the PDF of a paper, for accepted papers whose official list prints none (ACL, EMNLP,
-AAAI, IJCAI, most CVPR years).
-
-For every accepted paper of a tracked person that has no affiliation in its list, and every name match waiting for a
-decision in review.csv (the affiliation on the paper usually settles it), this downloads the PDF (cached in
-raw/pdf/), writes the title page to work/pdf_headers/, and adds one row per author to affiliations.csv with a guess
-read from numbered markers ("Name1,2 ... 1University"). Title pages differ too much for the guess to be trusted, so
-each row is checked against the title page by hand and marked checked=yes; build_site_data.py uses checked rows only.
-
-    python3 fetch_affiliations.py    # then fill and check the new rows of affiliations.csv
-
-With --scan VENUE..., it also reads papers of those venues whose lists print no affiliations (AAAI, IJCAI)
-that have two or more authors with a Vietnamese family name, and adds those whose title page names an institution
-in Vietnam: once checked, find_candidates.py lists their authors in Vietnam who are not on the roster.
-"""
 import argparse
 import csv
 import gzip
@@ -31,9 +16,9 @@ FIELDS = ["venue", "year", "title", "position", "author", "affiliation", "checke
 
 
 def pdf_url(url, pdf=""):
-    if pdf:                      # AAAI and IJCAI lists carry the PDF link
+    if pdf:
         return pdf
-    if "thecvf.com" in url:      # .../html/X_paper.html -> .../papers/X_paper.pdf
+    if "thecvf.com" in url:
         return url.replace("/html/", "/papers/").replace(".html", ".pdf")
     if "aclanthology.org" in url:
         return url.rstrip("/") + ".pdf"
@@ -48,7 +33,6 @@ def title_page(path):
 
 
 def guess(text, names):
-    """Affiliation per author from numbered markers; '' where the markers cannot be read."""
     flat = re.sub(r"\s+", " ", text)
     marks = []
     for name in names:
@@ -62,7 +46,6 @@ def guess(text, names):
     return ["; ".join(places[n] for n in m if n in places) for m in marks]
 
 
-# Vietnamese family names; a few are also Chinese or Korean, which is why a paper needs two such authors to be read
 VN_FAMILY = {"nguyen", "tran", "le", "pham", "hoang", "huynh", "phan", "vu", "vo", "dang", "bui", "do", "ho", "ngo",
              "duong", "ly", "dinh", "trinh", "doan", "luong", "truong", "lam", "mai", "ta", "cao", "chu", "quach", "ha",
              "thai", "kieu", "luu", "vuong", "trieu", "giang", "lai", "tong", "khuat", "nghiem", "bach", "phung", "dao"}
@@ -74,7 +57,7 @@ def vietnamese_name(name):
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap = argparse.ArgumentParser(description='Affiliations read from the PDF of a paper, for accepted papers whose official list prints none (ACL, EMNLP,')
     ap.add_argument("--scan", nargs="+", metavar="VENUE", default=[],
                     help="also read papers of these venues with authors who may be in Vietnam (aaai ijcai)")
     ap.add_argument("--min-names", type=int, default=2, metavar="N",
@@ -115,14 +98,14 @@ def main():
                 unreachable += 1
                 print(f"could not download {url}: {e}")
                 continue
-            if not data.startswith(b"%PDF"):   # ojs.aaai.org answers scripts with a bot check, not the paper
+            if not data.startswith(b"%PDF"):
                 unreachable += 1
                 continue
             path.write_bytes(data)
             time.sleep(1)
         text = title_page(path)
         if key in scan and not any(uni for _, _, uni in vn_institutions(text)):
-            skipped += 1   # no university in Vietnam on the title page
+            skipped += 1
             continue
         (HEADERS / (path.stem + ".txt")).write_text(f"{url}\n\n{text}\n")
         if key in done:

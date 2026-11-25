@@ -2,9 +2,6 @@
 {{- $c := hugo.Data.candidates }}
 {{- $a := hugo.Data.attempted }}
 {{ .Content }}
-
-{{- /* What needs a decision now: people who may be staff at a university in Vietnam. Everything else is a checklist
-       line underneath, closed, with its table inside. */}}
 <h2>To validate ({{ len $c.to_validate }})</h2>
 {{- if $c.to_validate }}
 <p>
@@ -59,7 +56,6 @@
 
 {{- with hugo.Data.under_review }}{{ $people := dict }}
 {{- $done := slice }}{{ with hugo.Data.under_review_reviewed }}{{ $done = .reviewed }}{{ end }}
-{{- /* people already reviewed by the maintainer (data/under_review_reviewed.json, git-ignored) are left out */}}
 {{- range (.papers | append .outside) }}{{ $r := . }}{{ range .others }}{{ if not (in $done .name) }}{{ $people = merge $people (dict .name (dict "name" .name "institution" .institution "title" $r.title "forum" $r.forum "mean" $r.mean "likely" $r.likely "or" .openreview)) }}{{ end }}{{ end }}{{ end }}
 {{- with $people }}{{ $order := dict "candidate" 0 "researcher" 1 "other" 2 "student" 3 "abroad" 4 "no profile" 5 }}
 {{- $rows := slice }}{{ range . }}{{ $v := (.or | default dict).verdict | default "no profile" }}{{ $rows = $rows | append (merge . (dict "verdict" $v "rank" (add (mul (index $order $v) 10) (cond (eq .likely "accept") 0 1)))) }}{{ end }}

@@ -1,12 +1,3 @@
-"""Finds which co-authors outside Vietnam (the "Co-authors outside Vietnam" table of the Candidates page) have a
-profile on VietProfs (https://vietprofs.roars.dev, a directory of Vietnamese professors worldwide), and writes
-proposals to vietprofs.csv. A row counts on the International cooperation page only when `checked` is `yes`;
-check that the university on the papers is the one VietProfs lists for the same person.
-
-The directory is read from the site's public data.json and kept only in raw/vietprofs/ (not committed): its licence
-(CC BY-NC-ND) does not allow passing the data on, so vietprofs.csv holds only the profile id of each match.
-Run after a build (it reads frontend/data/candidates.json).
-"""
 import json
 import urllib.request
 
@@ -32,7 +23,7 @@ def main():
     foreign = json.loads((FRONTEND / "data" / "candidates.json").read_text(encoding="utf-8"))["foreign"]
     by_id = {r["id"]: r for r in directory}
     rows = list(known.values())
-    for r in rows:   # the country is added to rows made before the column existed
+    for r in rows:
         r["country"] = r.get("country") or by_id.get(r["vp_id"], {}).get("country", "")
     for f in foreign:
         if f["name"] in known:

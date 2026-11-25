@@ -1,5 +1,3 @@
-{{- /* One row per professor. Context: a list of entries from data/professors.json, or a dict with "rows" (that
-       list) and "compact" (true on the front page: no per-venue columns, accepted in the latest year added). */ -}}
 {{- $rows := . }}{{ $compact := false }}{{ $podium := false }}{{ $rank := false }}{{ $brief := false }}
 {{- if reflect.IsMap . }}{{ $rows = .rows }}{{ $compact = .compact }}{{ $podium = .podium }}{{ $rank = or .rank .podium }}{{ $brief = .brief }}{{ end }}
 {{- $last := hugo.Data.meta.last_year }}
@@ -61,11 +59,9 @@
 	{{- range $n, $_ := $rows }}
 	{{- $p := . }}
 	{{- $iclr := .venues.iclr }}
-	{{- /* the front page starts with the professors who have an accepted paper; the rest open with a button */}}
 	<tr{{ if and $brief (eq (int .accepted) 0) }} class="more-row"{{ end }}>
 		{{- if $rank }}<td class="pin0 rank">{{ if $podium }}<span class="cup"></span>{{ end }}<span class="n">{{ add $n 1 }}</span></td>{{ end }}
 		<td class="l pin1"><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ partial "pname.html" . }}</a>
-			{{- /* a rank change only means something among professors with accepted papers */}}
 			{{- if and $brief (gt .score 0.0) }}{{ $base := hugo.Data.meta.rank_baseline }}
 			{{- if not .rank_before }} <span class="rk new" role="img" aria-label="{{ T "rank_new" (dict "Base" $base) }}" title="{{ T "rank_new" (dict "Base" $base) }}"></span>
 			{{- else if gt (int .rank_change) 0 }} <span class="rk up" title="{{ T "rank_was" (dict "Base" $base "Rank" .rank_before) }}">&#9650;{{ .rank_change }}</span>
@@ -106,7 +102,6 @@
 		{{- end }}
 		{{ partial "num.html" (len (.workshop_papers | default slice)) }}
 		{{- if eq (int .accepted) 0 }}
-		{{- /* no accepted paper: nothing to compare, shown greyed and always sorted last */}}
 		<td class="trivial" data-last title="{{ T "tip_coauthors_trivial" }}">{{ .authorship.majority.total }}</td>
 		<td class="trivial" data-last title="{{ T "tip_coauthors_trivial" }}">{{ .authorship.first_author.total }}</td>
 		{{- else }}
@@ -114,12 +109,10 @@
 		{{ partial "num.html" .authorship.first_author.total }}
 		{{- end }}
 		{{- $cls := slice "" "ca-min" "ca-max" "ca-dom" "ca-for" "ca-same" "ca-other" "" }}
-		{{- /* with no accepted paper the co-author figures say little: shown greyed, and they always sort last */}}
 		{{- $none := eq (int .accepted) 0 }}
 		{{- range $k, $v := slice .collab.avg_coauthors .collab.min_coauthors .collab.max_coauthors .collab.avg_domestic .collab.avg_foreign .collab.avg_same_institution .collab.avg_other_institution .collab.topic_count }}
 		{{- $c := index $cls $k }}
 		{{- if and $brief (ge $k 3) (lt $k 7) }}
-		{{- /* front page: only the average, minimum and maximum of the co-author figures */}}
 		{{- else if eq (string $v) "" }}
 		<td class="na {{ $c }}">&ndash;</td>
 		{{- else if and $none (lt $k 7) }}

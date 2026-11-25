@@ -1,6 +1,3 @@
-# Interface text, Vietnamese. Keep in step with en.toml.
-
-# ---------------------------------------------------------------- frame
 [nav_candidates]
 other = "Ứng viên"
 [nav_not_tracked]
@@ -16,7 +13,6 @@ other = "Ngôn ngữ"
 [on_this_page]
 other = "Trên trang này"
 
-# ---------------------------------------------------------------- shared words
 [none]
 other = "Chưa có."
 [titles_hidden]
@@ -44,7 +40,6 @@ other = "Bài có cùng tiêu đề sau đó đã được chấp nhận tại {
 [unofficial_because]
 other = "Chưa chính thức: {{ . }}."
 
-# ---------------------------------------------------------------- table headings
 [th_professor]
 other = "Giảng viên"
 [th_professors]
@@ -162,7 +157,6 @@ other = "bài được nhận không ghi đơn vị của từng tác giả, kh�
 [tip_rejected_where_public]
 other = "bị từ chối, rút bài hoặc bị loại sơ bộ, nếu công khai"
 
-# ---------------------------------------------------------------- front page
 [home_title]
 other = "Bài báo tại các hội nghị AI hàng đầu của giảng viên ở Việt Nam, {{ .First }}&ndash;{{ .Last }}"
 [inst_score_callout]
@@ -238,7 +232,6 @@ other = "Hình 3. Phân bố tích luỹ điểm CSRankings của các giảng v
 [home_fig2]
 other = "Hình 2. Tổng số bài được chấp nhận và tổng số bài bị từ chối theo từng năm."
 
-# ---------------------------------------------------------------- professor page
 [by_year]
 other = "Theo năm"
 [chart_title]
@@ -290,7 +283,6 @@ other = "Trước khi về công tác tại Việt Nam"
 [before_vietnam_note]
 other = "Các bài công bố trước năm giảng viên về công tác tại Việt Nam; những bài này không được tính trong thống kê."
 
-# ---------------------------------------------------------------- professors list page
 [prof_list_majority]
 other = "Bài có đa số tác giả cùng trường với giảng viên"
 [prof_list_majority_note]
@@ -300,11 +292,9 @@ other = "Bài có tác giả đầu cùng trường với giảng viên"
 [prof_list_first_note]
 other = "Các bài được chấp nhận có tác giả đứng đầu ghi đơn vị công tác là trường hiện tại của giảng viên."
 
-# ---------------------------------------------------------------- institutions
 [inst_professors]
 other = "Giảng viên"
 
-# ---------------------------------------------------------------- venues
 [venue_public_full]
 other = "có, mọi bài nộp"
 [venue_public_partial]
@@ -419,7 +409,6 @@ other = "{{ .Name }}: số bài nộp, được chấp nhận và bị từ ch�
 [also_published_as]
 other = "Tên khác trên các bài báo: {{ . }}"
 
-# ---------------------------------------------------------------- collaboration graphs
 [graph_summary]
 other = "{{ .Nodes }} nút có liên kết, {{ .Edges }} đường nối; {{ .Shared }} trên {{ .Papers }} bài là bài chung."
 [graph_legend_title]
@@ -536,7 +525,6 @@ other = "ICLR là hội nghị duy nhất công khai toàn bộ bài nộp. Tạ
 [inst_fun_fact]
 other = "Một điều thú vị: một số trường vốn không chuyên về khoa học máy tính, như <a href=\"{{ .HMU }}\">Trường Đại học Y Hà Nội</a> và <a href=\"{{ .FTU }}\">Trường Đại học Ngoại thương</a>, cũng đã có bài nộp tại ICLR. Không chỉ dừng ở bài nộp, <a href=\"{{ .NEU }}\">Đại học Kinh tế Quốc dân</a> đã có một bài được nhận chính thức tại NeurIPS 2026, và <a href=\"{{ .UEH }}\">Đại học Kinh tế TP. Hồ Chí Minh</a> có hai bài tại NeurIPS 2025."
 
-# ---------------------------------------------------------------- entity page introductions (CLAUDE.md templates)
 [ent_since]
 other = "Công tác tại một trường đại học ở Việt Nam từ năm {{ . }}."
 [ent_unofficial_part]

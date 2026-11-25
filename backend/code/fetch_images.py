@@ -1,19 +1,3 @@
-#!/usr/bin/env python3
-"""Collect candidate pictures for the site: conference logos, university logos and professor photos.
-
-    python3 fetch_images.py            # download candidates into raw/images/ and write raw/images/candidates.csv
-    python3 fetch_images.py --apply    # copy the approved rows of images.csv into frontend/static/img/
-
-Candidates are only proposals. Every picture is looked at by hand before its row in images.csv gets
-`approved = yes`; only approved pictures are copied to the site. A professor photo is proposed only from the
-professor's own page or their staff page on the roster (or the homepage on their OpenReview profile), and only
-when the page marks it as a portrait: the page's preview image, or an image whose file name or alt text
-carries the person's name or words such as "profile", "avatar" or "photo". Professors without such a picture
-simply get none.
-
-Logos come from Wikipedia's page image for the institution (the infobox logo or seal) and from the
-conferences' own sites. Everything is resized to at most 400 px and stored with its source in images.csv.
-"""
 import argparse
 import csv
 import hashlib
@@ -27,13 +11,12 @@ from common import CSV_DIR, FRONTEND, OPENREVIEW_RAW, RAW, load_roster, norm_nam
 
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
 CANDIDATES = RAW / "images"
-TABLE = CSV_DIR / "images.csv"   # hand-checked: kind, key, approved, image_url, source_page, note
+TABLE = CSV_DIR / "images.csv"
 STATIC = FRONTEND / "static" / "img"
 FIELDS = ["kind", "key", "approved", "image_url", "source_page", "note"]
 
 VENUE_SITES = {"iclr": "https://iclr.cc/", "neurips": "https://neurips.cc/", "icml": "https://icml.cc/",
                "cvpr": "https://cvpr.thecvf.com/", "acl": "https://www.aclweb.org/portal/"}
-# English Wikipedia titles of the institutions on the site
 WIKIPEDIA = {
     "hust": "Hanoi University of Science and Technology", "vinuni": "VinUniversity",
     "ptit": "Posts and Telecommunications Institute of Technology", "hcmus": "Ho Chi Minh City University of Science",
@@ -65,7 +48,6 @@ def save(kind, key, url, page, note, rows):
 
 
 def images_on(page_url, html):
-    """(absolute url, alt, how it was found) for the preview image and every <img> of a page."""
     out = []
     for m in re.finditer(r'<meta[^>]+(?:property|name)=["\'](?:og:image|twitter:image)["\'][^>]*>', html, re.I):
         c = re.search(r'content=["\']([^"\']+)', m.group(0))
@@ -144,7 +126,7 @@ def apply():
         if src.suffix == ".svg":
             dest = folder / f"{r['key']}.svg"
             dest.write_bytes(src.read_bytes())
-        else:   # a still image at most 400 px on its longer side; logos keep transparency
+        else:
             dest = folder / f"{r['key']}.{'png' if r['kind'] != 'person' else 'jpg'}"
             subprocess.run(["magick", f"{src}[0]", "-auto-orient", "-resize", "400x400>", "-strip", str(dest)], check=True)
         done += 1
@@ -152,7 +134,7 @@ def apply():
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap = argparse.ArgumentParser(description='Collect candidate pictures for the site: conference logos, university logos and professor photos.')
     ap.add_argument("--apply", action="store_true", help="copy the approved pictures into frontend/static/img")
     ap.add_argument("--only", choices=["person", "institution", "venue"])
     args = ap.parse_args()

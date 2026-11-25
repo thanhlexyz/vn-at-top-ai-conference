@@ -8,7 +8,6 @@
 	<link rel="icon" href="{{ "favicon-32.png" | relURL }}" type="image/png" sizes="32x32">
 	<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
 	<script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
-	{{- /* the file's hash in the address, so a browser never keeps an old copy after a change */}}
 	<link rel="stylesheet" type="text/css" href="{{ "style.css" | relURL }}?v={{ readFile "static/style.css" | md5 | truncate 10 "" }}">
 	{{- $desc := partial "description.html" . }}
 	{{- $image := "" }}
@@ -38,8 +37,6 @@
 </head>
 <body>
 <nav>
-	{{- /* language switch: the same page in the other language, or that language's front page when the page
-	       has no translation (the local-only Candidates and Not tracked pages) */}}
 	{{- $page := . }}
 	<span class="lang" aria-label="{{ T "lang_switch" }}">
 	{{- range site.Home.AllTranslations }}

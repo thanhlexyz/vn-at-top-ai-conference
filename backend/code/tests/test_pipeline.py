@@ -1,4 +1,3 @@
-"""Checks of the rules that decide what is counted. Run with `make test` (no network, no login)."""
 import json
 import sys
 import tempfile
@@ -8,12 +7,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import build_site_data as build  # noqa: E402
-import common  # noqa: E402
-import fetch_accepted  # noqa: E402
-import fetch_openreview  # noqa: E402
-import find_candidates  # noqa: E402
-from common import (classify_status, in_vietnam, name_key, norm_name, norm_title, openreview_venue,  # noqa: E402
+import build_site_data as build
+import common
+import fetch_accepted
+import fetch_openreview
+import find_candidates
+from common import (classify_status, in_vietnam, name_key, norm_name, norm_title, openreview_venue,
                     same_institution, virtual_track, vn_institution)
 
 
@@ -24,7 +23,7 @@ class Labels(unittest.TestCase):
             ("ICLR 2023 notable top 25%", "ICLR.cc/2023/Conference", "accepted"),
             ("NeurIPS 2022 Accept", "NeurIPS.cc/2022/Conference", "accepted"),
             ("Submitted to ICLR 2025", "ICLR.cc/2025/Conference/Rejected_Submission", "rejected"),
-            ("ICLR 2022 Submitted", "ICLR.cc/2022/Conference", "rejected"),  # once misread as accepted
+            ("ICLR 2022 Submitted", "ICLR.cc/2022/Conference", "rejected"),
             ("ICLR 2026 Conference Withdrawn Submission", "ICLR.cc/2026/Conference/Withdrawn_Submission", "withdrawn"),
             ("ICLR 2026 Conference Desk Rejected Submission", "ICLR.cc/2026/Conference/Desk_Rejected_Submission",
              "desk_rejected"),
@@ -66,8 +65,8 @@ class Labels(unittest.TestCase):
         self.assertEqual(virtual_track("Position: stop", g + "ICML.cc/2024/Conference", "", True), "position")
         self.assertEqual(virtual_track("T", None, "Findings Poster", True), "findings")
         self.assertEqual(virtual_track("T", "TMLR-123", "", True), "journal")
-        self.assertEqual(virtual_track("T", None, "", True), "other")  # a session container, not a paper
-        self.assertEqual(virtual_track("T", None, None, False), "main")  # 2020-21 lists carry no source
+        self.assertEqual(virtual_track("T", None, "", True), "other")
+        self.assertEqual(virtual_track("T", None, None, False), "main")
 
 
 class Names(unittest.TestCase):
@@ -79,12 +78,11 @@ class Names(unittest.TestCase):
         self.assertEqual(norm_title("ES³: A {Study} of 360° — Models"), norm_title("es3 a study of 360 models"))
 
     def test_vietnamese_institutions(self):
-        short = lambda a: (vn_institution(a) or (None, None))[1]  # noqa: E731
+        short = lambda a: (vn_institution(a) or (None, None))[1]
         self.assertEqual(short("School of ICT, Hanoi University of Science and Technology"), "HUST")
         self.assertEqual(short("Hanoi University of Science"), "VNU-HUS")
         self.assertEqual(short("VinUniversity; Nanyang Technological University"), "VinUni")
         self.assertEqual(short("Ho Chi Minh city University of Science, Vietnam National University"), "HCMUS")
-        # look-alikes abroad
         for foreign in ["HUST", "Beijing University of Posts and Telecommunications", "Vinci4D",
                         "UiT The Arctic University of Norway", "Carnegie Mellon University", ""]:
             self.assertIsNone(vn_institution(foreign), foreign)
@@ -117,7 +115,6 @@ class Sources(unittest.TestCase):
         paper = {"name": "P", "authors": [{"fullname": "X"}]}
         self.assertTrue(fetch_accepted.is_provisional(json.dumps({"results": [paper]})))
         self.assertFalse(fetch_accepted.is_provisional(json.dumps({"results": [dict(paper, starttime="2025-12-03")]})))
-        # a schedule for a few sessions only: the list is still being filled
         partly = [dict(paper, starttime="2026-12-03")] + [paper] * 9
         self.assertTrue(fetch_accepted.is_provisional(json.dumps({"results": partly})))
 
@@ -149,8 +146,8 @@ class FacultyPages(unittest.TestCase):
         self.assertEqual(self.match(["Khoa D Doan", "Khoa Doan"], {"VinUni"}), ("Doan Dang Khoa", "likely"))
         self.assertEqual(self.match(["Khoa Doan"], {"VinUni"}), ("Doan Dang Khoa", "possible"))
         self.assertEqual(self.match(["Cuong Viet Ta"], {"VNU-UET"}), ("Tạ Việt Cường", "exact"))
-        self.assertEqual(self.match(["Cuong Viet Ta"], {"VNU"}), ("Tạ Việt Cường", "exact"))  # VNU is the parent
-        self.assertIsNone(self.match(["Khoa X Doan"], {"VinUni"}))  # the initial fits no listed word
+        self.assertEqual(self.match(["Cuong Viet Ta"], {"VNU"}), ("Tạ Việt Cường", "exact"))
+        self.assertIsNone(self.match(["Khoa X Doan"], {"VinUni"}))
 
     def test_same_name_at_another_university_is_not_matched(self):
         self.assertIsNone(self.match(["Anh T Tran", "Anh Tran"], {"VinAI"}))
@@ -168,7 +165,6 @@ class FakeNote:
 
 class OpenReviewFetch(unittest.TestCase):
     def test_authors_given_as_objects(self):
-        # since 2026 some notes give one object per author and leave authorids empty
         content = {"authors": {"value": [{"username": "~Thuy_T._Nguyen1", "fullname": "Thuy T. Nguyen",
                                           "institutions": [{"name": "RMIT International University Vietnam"}]}]},
                    "authorids": {"value": []}}
@@ -176,7 +172,6 @@ class OpenReviewFetch(unittest.TestCase):
         plain = {"authors": ["A B", "C D"], "authorids": ["~A_B1", "c@d.org"]}
         self.assertEqual(fetch_openreview.split_authors(plain), (["A B", "C D"], ["~A_B1", "c@d.org"]))
 
-    """fetch_person against stand-ins shaped like the two OpenReview API versions."""
 
     def test_fetch_person(self):
         profile = types.SimpleNamespace(id="~A_B1", content={
@@ -203,12 +198,12 @@ class OpenReviewFetch(unittest.TestCase):
         person = {"slug": "a-b", "name": "A B", "openreview_ids": ["~A_B1"]}
         data = fetch_openreview.fetch_person(v2, v1, person)
 
-        self.assertEqual(data["profile_ids"], ["~A_B1", "~B_A1"])  # both usernames of the profile are queried
-        self.assertEqual(sorted(n["forum"] for n in data["notes"]), ["f0", "f1"])  # review and TMLR paper dropped
+        self.assertEqual(data["profile_ids"], ["~A_B1", "~B_A1"])
+        self.assertEqual(sorted(n["forum"] for n in data["notes"]), ["f0", "f1"])
         old = next(n for n in data["notes"] if n["forum"] == "f0")
-        self.assertEqual(old["decision"], "Reject")  # read from the Decision reply
+        self.assertEqual(old["decision"], "Reject")
         self.assertEqual(fetch_openreview.vietnam_post(data["profiles"][0])["position"], "Lecturer")
-        json.dumps(data)  # must be serializable as it is
+        json.dumps(data)
 
 
 class Counting(unittest.TestCase):
@@ -240,7 +235,7 @@ class Counting(unittest.TestCase):
             paper("neurips", 2025, "A benchmark", hust, track="datasets_benchmarks"),
             paper("icml", 2022, "Before the move", hust),
         ]
-        for a in self.accepted[3]["authors"]:  # the ACL Anthology gives names only
+        for a in self.accepted[3]["authors"]:
             a["aff"] = ""
         coverage = [{"venue": v, "year": y, "papers": 1} for v in common.VENUE_KEYS for y in common.YEARS]
         self.acc = build.Accepted(self.accepted, coverage)
@@ -266,7 +261,6 @@ class Counting(unittest.TestCase):
                                                        "fetched_at": "2026-10-01T00:00:00"}))
         recs, *_ = build.person_records(self.person, self.acc, {}, [], [], [])
         counted, excluded, workshop = build.apply_rules(self.person, recs)
-        # the workshop version is listed on its own; the conference version with the same title still counts
         iclr = [r for r in counted if r["venue"] == "iclr"]
         self.assertEqual([(r["title"], r["track"]) for r in iclr], [("Accepted at ICLR", "main")])
         self.assertFalse(any(r["track"] == "workshop" for r in counted))
@@ -295,14 +289,14 @@ class Counting(unittest.TestCase):
             "Accepted at ICLR": ("iclr", "accepted"),
             "Rejected at ICLR": ("iclr", "rejected"),
             "Withdrawn from ICLR": ("iclr", "withdrawn"),
-            "No decision on record": ("iclr", "rejected"),  # inferred, and marked as such
+            "No decision on record": ("iclr", "rejected"),
             "Own institution": ("icml", "accepted"),
         })
         self.assertTrue(next(r for r in counted if r["title"] == "No decision on record")["note"])
         self.assertEqual({r["title"] for r in excluded}, {"A benchmark", "Rejected before the move", "Before the move"})
-        self.assertTrue(any("check vn_since" in w for w in self.warnings))  # HUST on a 2022 paper, vn_since 2024
+        self.assertTrue(any("check vn_since" in w for w in self.warnings))
         self.assertEqual({q["title"] for q in queue}, {"Other Vietnamese institution", "No affiliation in source"})
-        self.assertEqual(len(skipped), 1)  # the namesake at Google is neither counted nor queued
+        self.assertEqual(len(skipped), 1)
 
         totals = build.tally(counted)["iclr"]
         self.assertEqual((totals["submitted"], totals["accepted"], totals["not_accepted"]), (4, 1, 3))
@@ -318,11 +312,10 @@ class Counting(unittest.TestCase):
     def test_coauthors_and_topics(self):
         counted, _, _, _ = self.records([], {("a-b", "acl", "2025", common.norm_title("No affiliation in source")): "yes"})
         c = build.collaboration(self.person, counted)
-        # three accepted papers with 1, 3 and 1 co-authors; the ACL one has no affiliations
         self.assertEqual((c["papers"], c["avg_coauthors"], c["distinct_coauthors"]), (3, "1.7", 3))
         self.assertEqual((c["min_coauthors"], c["max_coauthors"]), (1, 3))
-        self.assertEqual((c["papers_with_affiliations"], c["avg_foreign"]), (2, "1.0"))  # only C D at MIT is foreign
-        self.assertEqual((c["elsewhere"], c["elsewhere_abroad"], c["elsewhere_vietnam"]), (2, 1, 1))  # C D, G H
+        self.assertEqual((c["papers_with_affiliations"], c["avg_foreign"]), (2, "1.0"))
+        self.assertEqual((c["elsewhere"], c["elsewhere_abroad"], c["elsewhere_vietnam"]), (2, 1, 1))
         self.assertEqual((c["papers_with_topic"], c["topic_areas"]), (2, 2))
 
     def own(self, venue, year, title, role="own", track="main", authors=("A B", "C D"), owner="A B"):
@@ -337,10 +330,10 @@ class Counting(unittest.TestCase):
         self.acc = build.Accepted(self.accepted, coverage)
         (self.raw / "a-b.json").write_text(json.dumps({"notes": [], "queried_ids": ["~A_B1"]}))
         rows = [
-            self.own("neurips", 2026, "Announced last week"),            # list not complete yet: counted, unofficial
-            self.own("neurips", 2025, "Only on the page"),               # complete list without it: not counted
-            self.own("acl", 2025, "No affiliation in source"),           # confirms a name-only match, no review needed
-            self.own("cvpr", 2026, "Signed with another name"),          # official paper under an unknown name form
+            self.own("neurips", 2026, "Announced last week"),
+            self.own("neurips", 2025, "Only on the page"),
+            self.own("acl", 2025, "No affiliation in source"),
+            self.own("cvpr", 2026, "Signed with another name"),
             self.own("neurips", 2026, "With a colleague", role="coauthor", owner="X Y", authors=("X Y", "B A")),
             self.own("cvpr", 2026, "Signed with another name", role="coauthor", owner="X Y"),
             self.own("neurips", 2026, "A dataset", track="datasets_benchmarks"),
@@ -355,13 +348,13 @@ class Counting(unittest.TestCase):
         self.assertEqual(got["Signed with another name"], False)
         self.assertNotIn("Only on the page", got)
         self.assertTrue(any("Only on the page" in w and "not counted" in w for w in warnings))
-        self.assertNotIn("No affiliation in source", {q["title"] for q in queue})  # no longer needs a yes
+        self.assertNotIn("No affiliation in source", {q["title"] for q in queue})
         self.assertEqual([r["title"] for r in excluded if r.get("unofficial")], ["A dataset"])
         t = build.tally(counted)["neurips"]
         self.assertEqual((t["accepted"], t["official"], t["own_page"]), (2, 0, 2))
         colleague = next(r for r in counted if r["title"] == "With a colleague")
         self.assertIn("page of X Y", colleague["match"])
-        self.assertEqual(colleague["self"], 1)                            # 'B A' is a name form of this person
+        self.assertEqual(colleague["self"], 1)
 
     def test_colleague_page_does_not_settle_an_official_paper(self):
         self.accepted.append({"venue": "cvpr", "year": 2026, "track": "main", "title": "Signed with another name",
@@ -383,11 +376,11 @@ class Counting(unittest.TestCase):
     def test_unknown_start_year_does_not_pull_in_papers_from_abroad(self):
         newcomer = dict(self.person, vn_since=None)
         (self.raw / "a-b.json").write_text(json.dumps({"notes": [], "queried_ids": ["~A_B1"]}))
-        rows = [self.own("icml", 2025, "Namesake abroad")]               # the official list shows A B at Google
+        rows = [self.own("icml", 2025, "Namesake abroad")]
         warnings, skipped = [], []
         recs, _, _, _ = build.person_records(newcomer, self.acc, {}, [], warnings, skipped, rows)
         self.assertNotIn("Namesake abroad", {r["title"] for r in recs})
-        settled = dict(self.person, vn_since=2024)                        # with a start year the year rule decides
+        settled = dict(self.person, vn_since=2024)
         recs, _, _, _ = build.person_records(settled, self.acc, {}, [], [], [], rows)
         self.assertIn("Namesake abroad", {r["title"] for r in recs})
 
@@ -399,7 +392,6 @@ class Counting(unittest.TestCase):
                 "authorids": ["~C_D1", "~A_B1"]}
         (self.raw / "c-d.json").write_text(json.dumps({"notes": [note], "queried_ids": ["~C_D1"],
                                                        "profile_ids": ["~C_D1"]}))
-        # the submission carries this person's profile ID: counted without asking
         shared = build.shared_notes([self.person, colleague])
         self.assertEqual([(b["owner"], b["exact"]) for b in shared["a-b"]], [("C D", True)])
         recs, source, _, _ = build.person_records(self.person, self.acc, {}, [], [], [], (), shared["a-b"])
@@ -407,11 +399,9 @@ class Counting(unittest.TestCase):
                           and r["year"] == 2026], [("Withdrawn together", "withdrawn", True)])
         self.assertEqual(source, "none")
 
-        # a different profile ID under the same name is somebody else
         other = dict(self.person, openreview_ids=["~A_B9"])
         self.assertEqual(build.shared_notes([other, colleague])["a-b"], [])
 
-        # no profile ID known for this person: the name alone waits for a yes
         unknown = dict(self.person, openreview_ids=[])
         shared = build.shared_notes([unknown, colleague])
         self.assertEqual([b["exact"] for b in shared["a-b"]], [False])
@@ -438,8 +428,8 @@ class Counting(unittest.TestCase):
     def test_one_coauthor_under_two_spellings(self):
         keys = build.distinct_people(["Bui T Duc", "Bui Trong Duc", "Duc Bui Trong", "Bui Van Duc", "Khoa D. Doan",
                                       "Doan Khoa"])
-        self.assertEqual(keys["Bui T Duc"], keys["Bui Trong Duc"])      # an initial stands for the full word
-        self.assertEqual(keys["Bui Trong Duc"], keys["Duc Bui Trong"])  # word order does not matter
+        self.assertEqual(keys["Bui T Duc"], keys["Bui Trong Duc"])
+        self.assertEqual(keys["Bui Trong Duc"], keys["Duc Bui Trong"])
         self.assertNotEqual(keys["Bui Trong Duc"], keys["Bui Van Duc"])
         self.assertEqual(keys["Khoa D. Doan"], keys["Doan Khoa"])
 
@@ -459,7 +449,7 @@ class Counting(unittest.TestCase):
                   {"slug": "c-d", "name": "C D", "variants": ["c d"], "approved": "yes"}]
         papers, announced = build.load_self_reported(roster)
         self.assertEqual([(r["role"], r["track"], r["year"]) for r in papers["c-d"]], [("own", "main", 2026)])
-        self.assertEqual([(r["role"], r["owner"]) for r in papers["a-b"]], [("coauthor", "C D")])  # named on C D's page
+        self.assertEqual([(r["role"], r["owner"]) for r in papers["a-b"]], [("coauthor", "C D")])
         self.assertEqual(announced["c-d"][("neurips", 2026)]["announced"], "5")
 
     def test_later_acceptance(self):
@@ -487,20 +477,19 @@ class Counting(unittest.TestCase):
         prof = {"name": "A B", "iclr_complete": True, "venues": {"iclr": {"submitted": 9, "accepted": 1}},
                 "years": [year(2023, 5, 0, 0, counts=False), year(2024, 2, 0, 2), year(2025, 3, 1, 2)]}
         p = build.projection(prof)
-        self.assertEqual((p["basis"], p["ratio"]), ("own", "5.0"))  # (9 + 1) / (1 + 1)
-        # 2024: 2 accepted elsewhere stand for 2 x 4 = 8 papers that were not accepted, plus 2 known at ICLR
+        self.assertEqual((p["basis"], p["ratio"]), ("own", "5.0"))
         self.assertEqual([(r["estimated"], r["total"]) for r in p["rows"] if r["counts"]], [("8", "12"), ("8", "13")])
-        self.assertFalse(p["rows"][0]["counts"])  # a year before the move to Vietnam is left out
+        self.assertFalse(p["rows"][0]["counts"])
         self.assertIn("<svg", p["svg"])
         self.assertIn("2024: 2 accepted", p["svg"])
 
         none_accepted = dict(prof, venues={"iclr": {"submitted": 2, "accepted": 0}})
-        self.assertEqual(build.projection(none_accepted)["ratio"], "3.0")  # stays finite without an acceptance
+        self.assertEqual(build.projection(none_accepted)["ratio"], "3.0")
         no_iclr = dict(prof, venues={"iclr": {"submitted": 0, "accepted": 0}},
                        years=[year(2024, 2, 0, 0), year(2025, 3, 0, 0)])
-        p = build.projection(no_iclr)  # no ICLR papers at all: nothing is added
+        p = build.projection(no_iclr)
         self.assertEqual((p["basis"], p["ratio"], p["estimated"], p["total"]), ("none", "1.0", "0", "5"))
-        unknown = dict(prof, iclr_complete=False)  # OpenReview record not fetched: nothing is added either
+        unknown = dict(prof, iclr_complete=False)
         self.assertEqual(build.projection(unknown)["estimated"], "0")
 
     def test_accepted_list_overrides_a_misread_label(self):

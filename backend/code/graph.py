@@ -1,9 +1,3 @@
-"""Collaboration graphs for the site: researchers on the roster, and institutions in Vietnam.
-
-An edge joins two nodes that share papers; its weight is the number of distinct papers they share. Papers are
-every counted submission (accepted, rejected, withdrawn) plus workshop papers, from the years a person worked in
-Vietnam. The layout is computed here, once, with a seeded force simulation, so the page needs no script to draw it.
-"""
 import collections
 import itertools
 import math
@@ -11,9 +5,9 @@ import random
 
 from common import PARENT, norm_title, slugify, vn_institutions
 
-W, H = 1000, 720   # layout box; the page scales the SVG to its width
-BIG_GROUP = 5        # a group this large gets a band of its own, drawn like the main group
-BAND_HEIGHT = 360    # the most a band below the main group may take
+W, H = 1000, 720
+BIG_GROUP = 5
+BAND_HEIGHT = 360
 
 
 def paper_key(r):
@@ -37,14 +31,10 @@ def components(ids, edges):
 
 
 def pull(w):
-    """Spring strength of a line with w shared papers; the resting length goes as w ** (-0.8 / 3)."""
     return w ** 0.8
 
 
 def force(ids, edges, size, seed=7, steps=700):
-    """Fruchterman-Reingold positions for one connected group, in arbitrary units. A line pulls in proportion to
-    PULL(papers together), so two nodes with many shared papers settle close and a single shared paper keeps them
-    far apart, as in Obsidian's graph view."""
     rng = random.Random(seed)
     n = len(ids)
     pos = {i: [math.cos(2 * math.pi * k / n) * 100 + rng.uniform(-3, 3),
@@ -75,7 +65,6 @@ def force(ids, edges, size, seed=7, steps=700):
 
 
 def declutter(pos, labels, rounds=300):
-    """Pushes apart nodes whose labels (drawn to the right of the circle) overlap."""
     box = {i: (18 + 8.4 * len(labels[i]), 24) for i in pos}
     for _ in range(rounds):
         moved = False
@@ -86,7 +75,7 @@ def declutter(pos, labels, rounds=300):
             oy = (box[a][1] + box[b][1]) / 2 - abs(ay - by)
             if ox > 0 and oy > 0:
                 moved = True
-                if oy < ox:   # cheaper to move apart vertically
+                if oy < ox:
                     up, down = (a, b) if ay <= by else (b, a)
                     pos[up][1] -= oy / 2 + 0.5
                     pos[down][1] += oy / 2 + 0.5
@@ -99,8 +88,6 @@ def declutter(pos, labels, rounds=300):
 
 
 def clear_edges(pos, edges, gap=36, rounds=200):
-    """Moves a node sideways when a line between two other nodes passes through or close to it, so every line
-    can be followed from end to end. Nodes in a straight row are the usual case."""
     edges = [e for e in edges if e[0] in pos and e[1] in pos]
     for _ in range(rounds):
         moved = False
@@ -120,7 +107,6 @@ def clear_edges(pos, edges, gap=36, rounds=200):
                 d = math.hypot(cx - px, cy - py)
                 if d >= gap:
                     continue
-                # push the node away from the line, along the perpendicular (either side if it sits on it)
                 nx, ny = (-dy, dx) if d < 0.5 else (cx - px, cy - py)
                 norm = math.hypot(nx, ny)
                 step = (gap - d) * 0.6 + 0.5
@@ -133,7 +119,6 @@ def clear_edges(pos, edges, gap=36, rounds=200):
 
 
 def crosses(p1, p2, p3, p4):
-    """True if segment p1-p2 properly crosses segment p3-p4."""
     def side(a, b, c):
         return (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0])
     d1, d2 = side(p3, p4, p1), side(p3, p4, p2)
@@ -148,10 +133,6 @@ def crossings(pos, edges):
 
 
 def planar_starts(ids, edges):
-    """[(layout, lines it keeps)]: crossing-free starting layouts (needs networkx; without it, none). For a group that
-    can be drawn without crossings, one layout of all of it; else one for each line whose removal makes the rest
-    drawable, which then comes back across it. The force layout cannot always find these, for example when a node
-    has to sit inside a triangle."""
     try:
         import networkx as nx
     except ImportError:
@@ -176,12 +157,10 @@ def planar_starts(ids, edges):
 
 
 def rest_length(w):
-    """Target length in px of a line with w shared papers."""
     return REST * pull(w) ** (-1 / 3)
 
 
 def kk_start(ids, edges):
-    """Kamada-Kawai layout that aims every line at rest_length(papers together) (needs networkx)."""
     try:
         import networkx as nx
     except ImportError:
@@ -195,7 +174,6 @@ def kk_start(ids, edges):
 
 
 def stress(pos, edges):
-    """How far line lengths are from rest_length, after the best overall scale: 0 is a perfect match."""
     pairs = [(math.dist(pos[a], pos[b]), rest_length(w)) for (a, b), w in edges.items() if a in pos and b in pos]
     if not pairs:
         return 0.0
@@ -204,9 +182,6 @@ def stress(pos, edges):
 
 
 def relax_planar(pos, edges, steps=400, weights=None):
-    """Spreads a crossing-free layout with spring forces (stronger for more shared papers), taking only the moves
-    that add no crossing over all lines, so a stiff planar starting point turns into an even drawing. `edges` may
-    be a Counter of every line; a line left out of the planar start already crosses and may keep doing so."""
     weights = weights if weights is not None else (edges if hasattr(edges, "items") else {})
     edges = [e for e in edges if e[0] in pos and e[1] in pos]
     ids = list(pos)
@@ -253,7 +228,6 @@ def relax_planar(pos, edges, steps=400, weights=None):
 
 
 def rule_breaks(pos, edges, labels, gap=40):
-    """Lines passing within `gap` of a circle they do not end at, overlapping labels, circles too close to read."""
     box = {i: (18 + 8.4 * len(labels[i]), 24) for i in pos}
     n = 0
     for (a, b) in [e for e in edges if e[0] in pos and e[1] in pos]:
@@ -272,14 +246,10 @@ def rule_breaks(pos, edges, labels, gap=40):
     return n
 
 
-REST = 190   # resting length in px of a line with one shared paper; shorter with more, as pull(w) ** (-1/3)
+REST = 190
 
 
 def untangle(pos, edges, labels, rounds=40, gap=40, cross_cost=100000):
-    """Drawing rules, enforced by a local search that moves one node at a time to the nearby spot that breaks the
-    fewest of them, in this order of weight: no two lines cross; no line passes through a circle it does not end
-    at; no two labels overlap. Below those, each line is pulled toward a length that shrinks with its shared papers
-    (REST), so close collaborators sit close. Small moves are preferred."""
     weight = {e: w for e, w in edges.items()} if hasattr(edges, "items") else {}
     edges = [e for e in edges if e[0] in pos and e[1] in pos]
     box = {i: (18 + 8.4 * len(labels[i]), 24) for i in pos}
@@ -305,14 +275,13 @@ def untangle(pos, edges, labels, rounds=40, gap=40, cross_cost=100000):
             left, right = (a, b) if ax <= bx else (b, a)
             if p[left][0] + box[left][0] > p[right][0] and abs(ay - by) < 24:
                 c += 100
-            if math.hypot(ax - bx, ay - by) < 40:   # circles too close to read
+            if math.hypot(ax - bx, ay - by) < 40:
                 c += 100
         return c
 
     current = cost(pos)
     home = {i: tuple(v) for i, v in pos.items()}
     degree = collections.Counter(n for e in edges for n in e)
-    # a node moves together with the neighbours that hang on it alone, so it can cross to another side
     leaves = {i: [b if a == i else a for a, b in edges if i in (a, b) and degree[b if a == i else a] == 1]
               for i in pos}
     for _ in range(rounds):
@@ -323,7 +292,6 @@ def untangle(pos, edges, labels, rounds=40, gap=40, cross_cost=100000):
             carried = {j: list(pos[j]) for j in leaves[i]}
             spots = [(ox + r * math.cos(k * math.pi / 8), oy + r * math.sin(k * math.pi / 8))
                      for r in (15, 30, 50, 75, 110, 150, 210, 280, 360) for k in range(16)]
-            # a node at the end of a crossing line can also jump to its mirror image across the other line
             for (a, b) in edges:
                 if i not in (a, b):
                     continue
@@ -354,9 +322,6 @@ def untangle(pos, edges, labels, rounds=40, gap=40, cross_cost=100000):
 
 
 def fan_hub(group, edges):
-    """The node of a small group linked to every other one, when the group is more than a chain (a node with three
-    links, or a cycle): such a group is drawn as a fan, the hub on the left and the others in a column to its right,
-    so that no line passes another circle. None for a chain, which a column draws well."""
     if len(group) < 3:
         return None
     links = [(a, b) for a, b in edges if a in group and b in group]
@@ -367,8 +332,6 @@ def fan_hub(group, edges):
 
 
 def lie_flat(pos):
-    """Turn a drawing so its longest direction is horizontal (principal axis): a band then uses the page's width
-    instead of its height."""
     xs = [p[0] for p in pos.values()]
     ys = [p[1] for p in pos.values()]
     mx, my = sum(xs) / len(xs), sum(ys) / len(ys)
@@ -381,21 +344,14 @@ def lie_flat(pos):
 
 
 def layout(nodes, edges, labels, prefer="weights"):
-    """{id: (x, y)} and the drawing's height. The largest group is drawn with a force layout across the full
-    width; smaller groups go underneath in a grid, each a short column, so their labels never collide.
-    prefer="weights" (the default) puts line lengths that follow the shared papers ahead of crossings, which are
-    then kept few but allowed; "rules" puts the fewest crossings first."""
     groups = components(sorted(nodes), edges)
     if not groups:
         return {}, 200
-    # the largest group, and any other group of BIG_GROUP or more, is drawn with the full layout in its own band
-    # across the width; smaller groups go underneath as columns and fans
     bands = [groups[0]] + [g for g in groups[1:] if len(g) >= BIG_GROUP]
     rest = [g for g in groups[1:] if len(g) < BIG_GROUP]
 
     def draw(members, cap, top):
         def fit(pos):
-            # scale the group to the width, keeping its proportions; a band is at most `cap` high
             xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
             span_x, span_y = max(max(xs) - min(xs), 1), max(max(ys) - min(ys), 1)
             s = min((W - 260) / span_x, cap / span_y)
@@ -403,16 +359,13 @@ def layout(nodes, edges, labels, prefer="weights"):
 
         def attempt(seed):
             raw = force(members, edges, size=95, seed=seed)
-            pos = fit(lie_flat(raw) if top > 70 else raw)   # a band below the main group runs across the page
-            # then remove label overlaps
-            for _ in range(4):   # alternate: lines clear of circles, labels clear of each other
+            pos = fit(lie_flat(raw) if top > 70 else raw)
+            for _ in range(4):
                 pos = clear_edges(pos, edges)
                 pos = declutter(pos, labels)
             pos = clear_edges(pos, edges)
             return untangle(pos, edges, labels, cross_cost=100000 if prefer == "rules" else 300)
 
-        # several starting layouts, each put through the drawing rules; the winner has the fewest crossing lines,
-        # then the fewest other rule breaks, then line lengths closest to rest_length (close collaborators close)
         starts = [lambda seed=seed: attempt(seed) for seed in (7, 11, 23, 42, 101, 211)]
         kk = kk_start(members, edges)
         if kk:
@@ -421,7 +374,7 @@ def layout(nodes, edges, labels, prefer="weights"):
         for make in starts:
             pos = make()
             score = (crossings(pos, edges), rule_breaks(pos, edges, labels), stress(pos, edges))
-            if prefer != "rules":   # weights first: lengths that follow the shared papers, crossings allowed
+            if prefer != "rules":
                 score = (rule_breaks(pos, edges, labels), stress(pos, edges), score[0])
             if best is None or score < best[0]:
                 best = (score, pos)
@@ -433,15 +386,14 @@ def layout(nodes, edges, labels, prefer="weights"):
                     best = (score, pos)
         pos = best[1]
         xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
-        # the local search can push nodes outward; shrink evenly to the width, which keeps every crossing as it is
-        margin = 20 + max(7.4 * len(labels[i]) for i in pos) / 2   # a label centred over an edge node still fits
+        margin = 20 + max(7.4 * len(labels[i]) for i in pos) / 2
         room = W - 2 * margin
         if max(xs) - min(xs) > room:
             s = room / (max(xs) - min(xs))
             pos = {i: [min(xs) + (p[0] - min(xs)) * s, min(ys) + (p[1] - min(ys)) * s] for i, p in pos.items()}
             xs, ys = [p[0] for p in pos.values()], [p[1] for p in pos.values()]
         shift_x = (W - (max(xs) - min(xs))) / 2 - min(xs)
-        shift_y = top - min(ys)   # room for a label above the top circle
+        shift_y = top - min(ys)
         return {i: [p[0] + shift_x, p[1] + shift_y] for i, p in pos.items()}
 
     out, top = {}, 70
@@ -449,14 +401,12 @@ def layout(nodes, edges, labels, prefer="weights"):
         placed = draw(g, 640 if k == 0 else BAND_HEIGHT, top)
         out.update(placed)
         top = max(p[1] for p in placed.values()) + (70 if k == len(bands) - 1 else 110)
-    # small groups: columns of nodes 46 px apart, laid out in cells across the width; a cell is wide enough for
-    # the longest label among them (labels sit to the right of the circles), so neighbouring columns never touch
     longest = max((7.4 * len(labels[i]) for g in rest for i in g), default=0)
     cell_w, step = max(250, round(longest + 18 + 40 + 30)), 46
     cols = max(1, W // cell_w)
     row_y, col, row_h = top, 0, 0
 
-    def walk(members):   # along the links, so neighbours sit next to each other
+    def walk(members):
         order = [members[0]]
         while len(order) < len(members):
             nxt = next((b for a in reversed(order) for b in members if b not in order and
@@ -466,7 +416,7 @@ def layout(nodes, edges, labels, prefer="weights"):
 
     for g in rest:
         hub = fan_hub(g, edges)
-        if hub:   # fan: the hub's label on its left, then the hub, then the others in a column to the right
+        if hub:
             leaves = walk([i for i in g if i != hub])
             hub_w, reach = CHAR * len(labels[hub]) + 30, 110
             span = -(-round(hub_w + reach + max(7.4 * len(labels[i]) for i in leaves) + 50) // cell_w)
@@ -491,11 +441,10 @@ def layout(nodes, edges, labels, prefer="weights"):
     return {i: (round(p[0], 1), round(p[1], 1)) for i, p in out.items()}, round(max(height, top))
 
 
-CHAR, LINE = 8.2, 18   # approximate label size at 14px, in layout units
+CHAR, LINE = 8.2, 18
 
 
 def seg_hits_box(x1, y1, x2, y2, bx0, by0, bx1, by1):
-    """True if the segment (x1, y1)-(x2, y2) passes through the rectangle."""
     t0, t1 = 0.0, 1.0
     dx, dy = x2 - x1, y2 - y1
     for p, q in ((-dx, x1 - bx0), (dx, bx1 - x1), (-dy, y1 - by0), (dy, by1 - y1)):
@@ -514,8 +463,6 @@ def seg_hits_box(x1, y1, x2, y2, bx0, by0, bx1, by1):
 
 
 def weight_spots(pos, radius, edges, weights, avoid=()):
-    """{(a, b): (x, y)}: where the number of shared papers is printed on each line with 2 or more, the point along it
-    (the middle if it is clear) whose label box no other line, circle or number touches."""
     out, boxes = {}, list(avoid)
     for (a, b) in sorted(edges, key=lambda e: -weights.get(e, 1)):
         if weights.get((a, b), 1) < 2:
@@ -538,11 +485,8 @@ def weight_spots(pos, radius, edges, weights, avoid=()):
 
 
 def place_labels(nodes, pos, radius, edges, labels, weights=None, right_only=(), spots=None, left_only=()):
-    """{id: (x, y, anchor)}: for each node the label position, out of right, left, above and below, that crosses
-    the fewest edges, circles and labels already placed. Bigger nodes choose first."""
     segs = [(pos[a][0], pos[a][1], pos[b][0], pos[b][1], a, b) for a, b in edges]
     out = {}
-    # the number printed on a line counts as a label already there (at its spot, or else the middle)
     mid = {(a, b): ((pos[a][0] + pos[b][0]) / 2, (pos[a][1] + pos[b][1]) / 2) for a, b in edges}
     placed = [(x - 13, y - 12, x + 13, y + 10) for e in edges if (weights or {}).get(e, 1) >= 2
               for x, y in [(spots or mid).get(e, mid[e])]]
@@ -552,14 +496,13 @@ def place_labels(nodes, pos, radius, edges, labels, weights=None, right_only=(),
                    ("end", x - r - 4, y + 5, (x - r - 6 - w, y - LINE / 2, x - r - 2, y + LINE / 2)),
                    ("middle", x, y - r - 7, (x - w / 2 - 2, y - r - 6 - LINE, x + w / 2 + 2, y - r - 4)),
                    ("middle", x, y + r + 17, (x - w / 2 - 2, y + r + 4, x + w / 2 + 2, y + r + 6 + LINE)),
-                   # corners, for a crowded circle whose four sides all have lines
                    ("start", x + 0.7 * r + 2, y + 0.7 * r + 16, (x + 0.7 * r, y + 0.7 * r + 2, x + 0.7 * r + 4 + w, y + 0.7 * r + 2 + LINE)),
                    ("start", x + 0.7 * r + 2, y - 0.7 * r - 6, (x + 0.7 * r, y - 0.7 * r - 2 - LINE, x + 0.7 * r + 4 + w, y - 0.7 * r - 2)),
                    ("end", x - 0.7 * r - 2, y + 0.7 * r + 16, (x - 0.7 * r - 4 - w, y + 0.7 * r + 2, x - 0.7 * r, y + 0.7 * r + 2 + LINE)),
                    ("end", x - 0.7 * r - 2, y - 0.7 * r - 6, (x - 0.7 * r - 4 - w, y - 0.7 * r - 2 - LINE, x - 0.7 * r, y - 0.7 * r - 2))]
-        if i in left_only:    # the hub of a fan under the graph: its lines leave to the right
+        if i in left_only:
             options = options[1:2]
-        elif i in right_only:   # a node of the small groups under the graph: the cell to its left belongs to another group
+        elif i in right_only:
             options = options[:1]
         best = None
         for k, (anchor, lx, ly, box) in enumerate(options):
@@ -568,8 +511,8 @@ def place_labels(nodes, pos, radius, edges, labels, weights=None, right_only=(),
             cost += 10 * sum(1 for j in nodes if j != i and bx0 - radius[j] < pos[j][0] < bx1 + radius[j]
                              and by0 - radius[j] < pos[j][1] < by1 + radius[j])
             cost += 10 * sum(1 for p in placed if not (box[2] < p[0] or p[2] < box[0] or box[3] < p[1] or p[3] < box[1]))
-            cost += 1000 * (box[0] < 0 or box[2] > W)   # never off the drawing
-            cost += k * 0.5   # prefer the right, then the left
+            cost += 1000 * (box[0] < 0 or box[2] > W)
+            cost += k * 0.5
             if best is None or cost < best[0]:
                 best = (cost, anchor, lx, ly, box)
         placed.append(best[4])
@@ -578,7 +521,6 @@ def place_labels(nodes, pos, radius, edges, labels, weights=None, right_only=(),
 
 
 def build(nodes, papers_of, color_of, legend):
-    """nodes: {id: dict}; papers_of: {paper key: set of node ids}. Returns the page data."""
     edges, count = collections.Counter(), collections.Counter()
     for members in papers_of.values():
         for m in members:
@@ -586,7 +528,6 @@ def build(nodes, papers_of, color_of, legend):
         for a, b in itertools.combinations(sorted(members), 2):
             edges[(a, b)] += 1
     linked = {m for e in edges for m in e}
-    # a label is as wide as the longer of its English and Vietnamese forms, so neither site clips or overlaps it
     text = {i: max(nodes[i]["name"], nodes[i].get("name_vi") or "", key=len) for i in nodes}
     pos, height = layout(linked, edges, {i: text[i] for i in linked})
     out_nodes = []
@@ -604,7 +545,6 @@ def build(nodes, papers_of, color_of, legend):
     numbers = weight_spots(pos, radius, list(edges), edges)
     spots = place_labels(list(radius), pos, radius, list(edges), {i: text[i] for i in radius}, edges,
                          right_only=small - hubs, spots=numbers, left_only=hubs)
-    # second pass: a number that a name label covers moves along its line, away from the labels
     label_boxes = []
     for i, (lx, ly, anchor) in spots.items():
         w = CHAR * len(text[i])
@@ -627,23 +567,16 @@ def build(nodes, papers_of, color_of, legend):
             "papers": len(papers_of), "shared": sum(1 for m in papers_of.values() if len(m) > 1)}
 
 
-# institutions drawn in the main colour of their logo; the next largest groups take the colours left after these
 BRAND = {"HUST": "c-red", "VinUni": "c-blue", "HCMUS": "c-cyan"}
-# the next largest institutions: three more solid colours, then the same three as rings (a tinted centre and a
-# coloured outline), so nine institutions are named; the rest are grey. A brand colour is never a ring (a red ring
-# would read as HUST). The six fills sit within 0.12 of each other in OKLCH lightness and pass the dataviz palette
-# checks (colour-blind separation, normal-vision floor) in light and dark mode; every circle also has a name label.
 REST_COLORS = ["g-ochre", "g-green", "g-purple", "ring g-ochre", "ring g-green", "ring g-purple"]
 
 
 def color_of_group(g, top):
-    """The colour class of a group among `top` (ordered by size): its brand colour, or the next free one."""
     rest = [x for x in top if x not in BRAND]
     return BRAND[g] if g in BRAND else REST_COLORS[rest.index(g)]
 
 
 def researcher_graph(professors, records):
-    """records: [(paper record, professor entry)] for every counted and workshop paper."""
     papers_of = collections.defaultdict(set)
     for r, p in records:
         papers_of[paper_key(r)].add(p["slug"])
@@ -651,22 +584,16 @@ def researcher_graph(professors, records):
                          "group": p["institution_short"]} for p in professors}
     size = collections.Counter(p["institution_short"] for p in professors if any(p["slug"] in m for m in papers_of.values()))
     ranked = [g for g, _ in size.most_common()]
-    # an institution with a single person on the graph stays grey ("other")
     ranked = [g for g in ranked if size[g] > 1 or g in BRAND]
     top = [g for g in ranked if g in BRAND] + [g for g in ranked if g not in BRAND][:len(REST_COLORS)]
     top.sort(key=ranked.index)
     color = {g: color_of_group(g, top) for g in top}
-    # the legend lists the solid colours first, then the rings, then "other"
     top.sort(key=lambda g: (color[g].startswith("ring"), ranked.index(g)))
     legend = [{"label": g, "color": color[g]} for g in top] + [{"label": "", "color": "c0"}]
     return build(nodes, papers_of, lambda n: color.get(n["group"], "c0"), legend)
 
 
 def institution_graph(professors, records):
-    """Institutions in Vietnam: the roster institution of every listed author on a paper, plus the Vietnamese
-    institutions printed on the paper that have nobody on the list (companies, institutes, other universities).
-    An institution with professors on the list takes part in a paper only through one of them, so its shared
-    papers are always among its own professors' papers. Institutions abroad are left out."""
     roster = {}
     for p in professors:
         roster.setdefault(p["institution_slug"], {"name": p["institution"], "short": p["institution_short"]})
@@ -683,15 +610,14 @@ def institution_graph(professors, records):
         members.add(p["institution_slug"])
         for a in r.get("people") or []:
             for full, short, _ in vn_institutions(a.get("aff") or ""):
-                if full == short:   # a generic match ("University of ... Vietnam"), not a known institution
+                if full == short:
                     continue
-                # on the list, or the national university one of them belongs to: it joins through its own professors only
                 if resolve(full, short) is not None or any(PARENT.get(i["short"]) == short for i in roster.values()):
                     continue
                 s = "x-" + slugify(short)
                 nodes.setdefault(s, {"name": short, "name_vi": short, "full": full, "url": "", "group": "other"})
                 members.add(s)
-    for members in papers_of.values():   # "University of Science, VNU-HCM" is one institution, not two
+    for members in papers_of.values():
         shorts = {nodes[m]["name"] for m in members}
         for m in list(members):
             if any(PARENT.get(x) == nodes[m]["name"] for x in shorts):

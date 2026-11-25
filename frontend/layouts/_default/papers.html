@@ -21,9 +21,6 @@
 	</tr>
 	</thead>
 	<tbody>
-	{{- /* ICLR submissions under review whose title matches a preprint with an author in Vietnam
-	       (backend/match_under_review.py; data/under_review.json is git-ignored). The published build redacts the
-	       professors and the preprint (publish.toml: local = false), at the maintainer's choice. */}}
 	{{- with hugo.Data.under_review }}{{ $year := .year }}
 	{{- range .papers }}{{ $row := . }}
 	<tr class="under-review">

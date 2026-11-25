@@ -1,6 +1,3 @@
-/* Colours. Light by default; dark when the reader's system asks for it, or when they choose it with the
-   switch at the top right (site.js sets data-theme on <html> and remembers the choice). The chart hues,
-   accepted green and rejected red, stay the same in both modes: they were checked on both surfaces. */
 :root {
     color-scheme: light ;
     --bg: #ffffff ; --fg: #000000 ; --link: #0645ad ; --line: #000000 ; --muted: #555555 ; --faint: #999999 ;
@@ -24,14 +21,13 @@
         --grid: #3a3a37 ; --axis: #5a5955 ; --chart-text: #c9c7c2 ; --chart-value: #f2f0ed ;
     }
 }
-/* logos keep a light card behind them in dark mode, since most are drawn for a white page; the card is a soft
-   grey and the logo is dimmed to match, so the white of a logo file does not glare on the dark page */
+
 :root[data-theme="dark"] figure.logo img, :root[data-theme="dark"] img.mini { background: #ffffff ; padding: 4px ; border-radius: 4px ; filter: brightness(0.62) ; }
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) figure.logo img, :root:not([data-theme="light"]) img.mini { background: #ffffff ; padding: 4px ; border-radius: 4px ; filter: brightness(0.62) ; }
 }
 table.collapsed .xcol, table.collapsed [data-extra] { display: none ; }
-/* the control and its table share a box as wide as the table, so the control sits at the table's right edge */
+
 .table-box { width: fit-content ; max-width: 100% ; }
 .table-tools { display: flex ; justify-content: flex-end ; margin: 0.2em 0 0.3em ; }
 .more-columns { background: none ; border: 0 ; color: var(--link) ; font: inherit ; font-size: 0.9em ; cursor: pointer ; padding: 0.15em 0 ; }
@@ -39,7 +35,7 @@ table.collapsed .xcol, table.collapsed [data-extra] { display: none ; }
 .more-columns[aria-expanded="true"]::before { content: "\2212  " ; }
 .more-columns:hover { text-decoration: underline ; }
 .more-columns:focus-visible { outline: 2px solid var(--link) ; outline-offset: 2px ; }
-/* Candidates page (local): the later tasks are a checklist, each line opening to its table */
+
 ul.todo { list-style: none ; padding-left: 0 ; }
 ul.todo > li { margin: 0.35em 0 ; }
 ul.todo summary { cursor: pointer ; list-style: none ; }
@@ -47,7 +43,7 @@ ul.todo summary::-webkit-details-marker { display: none ; }
 ul.todo summary:hover { text-decoration: underline ; }
 ul.todo summary::before { content: "\2610\00a0" ; }
 ul.todo details[open] > summary { margin-bottom: 0.5em ; }
-/* front page: professors with no accepted paper open with the button under the table (site.js) */
+
 table.rows-collapsed tr.more-row { display: none ; }
 .rows-tools { justify-content: flex-start ; }
 .more-rows { background: none ; border: 0 ; color: var(--link) ; font: inherit ; font-size: 0.9em ; cursor: pointer ; padding: 0.15em 0 ; }
@@ -113,7 +109,6 @@ footer {
     color: var(--muted) ;
 }
 
-/* Tables */
 .scroll {
     overflow-x: auto ;
 }
@@ -157,13 +152,11 @@ code {
     white-space: nowrap ;
 }
 
-/* Chart on a professor's page. The two hues were checked with a colour-blindness validator on white. */
 figure {
     margin: 1em 0 ;
     overflow-x: auto ;
 }
 
-/* two figures side by side on a wide screen, one above the other on a narrow one */
 .fig-row {
     display: grid ;
     grid-template-columns: 1fr 1fr ;
@@ -171,13 +164,13 @@ figure {
     align-items: stretch ;
 }
 .fig-row figure { margin: 1em 0 0 ; min-width: 0 ; display: flex ; flex-direction: column ; }
-.fig-row figcaption { margin-top: auto ; padding-top: 0.5em ; }   /* both captions end on the same line */
+.fig-row figcaption { margin-top: auto ; padding-top: 0.5em ; }
 .fig-row .chart { min-width: 0 ; max-width: 100% ; }
-/* Fig. 3: the score distribution as a step line */
+
 .chart .cdf-line { fill: none ; stroke: #2e8b57 ; stroke-width: 2.5 ; stroke-linejoin: round ; }
 .chart .cdf-dot { fill: transparent ; }
 .chart .cdf-dot:hover { fill: #2e8b57 ; fill-opacity: 0.25 ; }
-/* the figure in .fill grows to the space its neighbour leaves, centred */
+
 .fig-row .fill { position: relative ; flex: 1 ; min-height: 12rem ; }
 .fig-row .fill .chart { position: absolute ; inset: 0 ; width: 100% ; height: 100% ; max-width: none ; }
 @media (max-width: 900px) {
@@ -193,7 +186,7 @@ figure {
     max-width: 640px ;
     min-width: 520px ;
     height: auto ;
-    --accepted: #2e8b57 ;  /* green, checked against the red with the palette validator */
+    --accepted: #2e8b57 ;
     --not-accepted: #e34948 ;
 }
 
@@ -227,9 +220,6 @@ figure {
     stroke-dasharray: 3 2 ;
 }
 
-
-
-
 .chart .hollow {
     fill: var(--not-accepted) ;
     fill-opacity: 0.18 ;
@@ -237,7 +227,6 @@ figure {
     stroke-width: 1.5 ;
 }
 
-/* the five conferences, in the fixed order of the palette */
 .chart .v1 { fill: #2a78d6 ; stroke: #2a78d6 ; }
 
 .chart .line {
@@ -251,7 +240,6 @@ figure {
     stroke: var(--bg) ;
     stroke-width: 2 ;
 }
-
 
 .chart .slice {
     stroke: var(--bg) ;
@@ -283,7 +271,6 @@ figure {
     opacity: 0.75 ;
 }
 
-/* Notes and small labels */
 .note {
     font-size: 0.9em ;
     color: var(--muted) ;
@@ -306,13 +293,13 @@ figure {
 
 a.tag-link { color: inherit ; text-decoration: none ; }
 .venue-year { white-space: nowrap ; }
-/* rank change since the latest results (front page): fixed hues, readable on both themes */
+
 .rk { font-size: 0.78em ; font-weight: 600 ; white-space: nowrap ; margin-left: 0.25em ; font-variant-numeric: tabular-nums ; }
 .rk.up { color: #2e8b57 ; }
 .rk.down { color: #e34948 ; }
-/* new to the list: the Japanese beginner mark (shoshinsha), yellow and green */
+
 .rk.new { display: inline-block ; width: 0.75em ; height: 1em ; vertical-align: -0.12em ; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 26'%3E%3Cpath d='M1 1 L10 7 L10 25 L1 19 Z' fill='%23f5c400' stroke='%23ffffff' stroke-width='1.2'/%3E%3Cpath d='M19 1 L10 7 L10 25 L19 19 Z' fill='%2321a052' stroke='%23ffffff' stroke-width='1.2'/%3E%3C/svg%3E") no-repeat center / contain ; }
-/* long tables, one page of rows at a time (site.js) */
+
 tr.off-page { display: none ; }
 .pager { display: flex ; flex-wrap: wrap ; justify-content: center ; gap: 0.3em ; margin: 0.8em 0 ; }
 .pager button { background: none ; border: 1px solid var(--line) ; color: var(--link) ; font: inherit ; cursor: pointer ; border-radius: 4px ; padding: 0.2em 0.65em ; font-variant-numeric: tabular-nums ; }
@@ -334,7 +321,6 @@ a.tag-link:hover .tag { text-decoration: underline ; border-color: var(--fg) ; }
     background: var(--tag) ;
 }
 
-/* papers known only from a personal page: unofficial, so set apart from the official numbers */
 .tag.own {
     background: var(--bg) ;
     border-style: dashed ;
@@ -360,7 +346,6 @@ ul.papers .authors {
     color: var(--muted) ;
 }
 
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     nav a.site {
         display: block ;
@@ -377,7 +362,6 @@ ul.papers .authors {
     }
 }
 
-/* Feedback form */
 form.feedback {
     display: grid ;
     gap: 0.4em ;
@@ -415,11 +399,10 @@ form.feedback button:hover {
 
 form.feedback .fb-actions { display: flex ; flex-wrap: wrap ; gap: 0.6em ; }
 
-/* Stacked areas (front page) */
 .chart .band.acc { fill: var(--accepted) ; }
 .chart .band.not { fill: var(--not-accepted) ; }
 .chart .band.est { fill: var(--not-accepted) ; fill-opacity: 0.18 ; stroke: none ; }
-/* Fig. 4: the four areas, from the validated graph fills (blue and purple, the closest pair, never touch) */
+
 .chart .ar-ai { fill: #ab8704 ; }
 .chart .ar-ml { fill: #2d66bd ; }
 .chart .ar-cv { fill: #009cba ; }
@@ -430,75 +413,64 @@ form.feedback .fb-actions { display: flex ; flex-wrap: wrap ; gap: 0.6em ; }
 .chart .hit { fill: transparent ; }
 .chart .hit:hover { fill: var(--fg) ; fill-opacity: 0.04 ; }
 
-/* ICLR columns: accepted green, rejected red, as on the paper tags */
 td.good, th.good { background: var(--good) ; }
 td.score, th.score { background: var(--score) ; }
-/* the estimate headings are three short lines, so those columns stay as narrow as their numbers allow */
-/* the number columns take no more than their heading's longest word or their numbers need: the table keeps tight */
+
 th.score, th.good, th.bad, th.est, th.sub, th.rate { width: 1px ; }
-/* every heading under a group heading (second heading row) wraps one word per line, so its column is as narrow as it can be */
+
 thead tr + tr th { width: 1px ; font-size: 0.9em ; }
 td.bad, th.bad { background: var(--bad) ; }
 
-/* Wide tables: the scrollbar sits on top (the box is flipped, and the table flipped back), and the first two
-   columns stay in place while the rest scrolls. Borders are drawn with shadows, since collapsed borders
-   would scroll away from sticky cells. */
 .scroll.top { transform: rotateX(180deg) ; }
 .scroll.top > table { transform: rotateX(180deg) ; }
 .scroll.pinned > table { border-collapse: separate ; border-spacing: 0 ; border-width: 1px 0 0 1px ; }
 .scroll.pinned td, .scroll.pinned th { border-width: 0 1px 1px 0 ; }
 .scroll.pinned .pin0, .scroll.pinned .pin1, .scroll.pinned .pin2 { position: sticky ; z-index: 1 ; background: var(--bg) ; }
 .scroll.pinned th.pin0, .scroll.pinned th.pin1, .scroll.pinned th.pin2 { background: var(--th) ; }
-/* the # column: row number in the order shown, with the cup of the top three */
+
 .scroll.pinned .pin0 { left: 0 ; white-space: nowrap ; box-shadow: inset 1px 0 0 var(--line) ; }
 td.rank { text-align: right ; }
 td.rank .cup { margin-right: 0.25em ; }
-.scroll.pinned .pin0 + .pin1 { box-shadow: none ; }   /* the # column already draws the left edge */
-/* the name column is as wide as its longest name; site.js measures it and sets --pin1w so the institution
-   column sticks right after it (without the script, a fixed width is used) */
+.scroll.pinned .pin0 + .pin1 { box-shadow: none ; }
+
 .scroll.pinned .pin1 { left: var(--pin0w, 0px) ; white-space: nowrap ; }
 .scroll.pinned:not(.measured) .pin1 { min-width: 13.5em ; max-width: 13.5em ; }
 .scroll.pinned .pin2 { left: calc(var(--pin0w, 0px) + var(--pin1w, calc(13.5em + 1.2em + 1px))) ; white-space: nowrap ; box-shadow: 2px 0 0 var(--line) ; }
-/* a pinned column keeps its left edge when the table scrolls under it */
-.scroll.pinned .pin1 { box-shadow: inset 1px 0 0 var(--line) ; }
-/* long names wrap to about two lines, so the pinned columns leave room for the numbers */
-.scroll.pinned .pin2.wrap { white-space: normal ; min-width: 8em ; max-width: 12em ; }
-td.est, th.est { background: var(--est) ; }  /* orange: estimated */
-td.sub, th.sub { background: var(--sub) ; }  /* light grey: submitted, estimated */
-td.rate, th.rate { background: var(--rate) ; }  /* light blue: acceptance rate, estimated */
-td.rate.trivial, td.trivial { color: var(--faint) ; }  /* not comparable (no ICLR record, no accepted paper): shown, but sorted last */
-/* co-author columns in pairs, green then red: min / max, domestic / foreign, same institution / other institutions */
-td.ca-min, th.ca-min, td.ca-dom, th.ca-dom, td.ca-same, th.ca-same { background: var(--good) ; }
-td.ca-max, th.ca-max, td.ca-for, th.ca-for, td.ca-other, th.ca-other { background: var(--bad) ; }  /* no ICLR record to estimate from: shown, but sorted last */
 
-/* Sortable headings (site.js) */
+.scroll.pinned .pin1 { box-shadow: inset 1px 0 0 var(--line) ; }
+
+.scroll.pinned .pin2.wrap { white-space: normal ; min-width: 8em ; max-width: 12em ; }
+td.est, th.est { background: var(--est) ; }
+td.sub, th.sub { background: var(--sub) ; }
+td.rate, th.rate { background: var(--rate) ; }
+td.rate.trivial, td.trivial { color: var(--faint) ; }
+
+td.ca-min, th.ca-min, td.ca-dom, th.ca-dom, td.ca-same, th.ca-same { background: var(--good) ; }
+td.ca-max, th.ca-max, td.ca-for, th.ca-for, td.ca-other, th.ca-other { background: var(--bad) ; }
+
 th.sortable { cursor: pointer ; }
 th.sortable:hover { text-decoration: underline ; }
 th[aria-sort="descending"]::after { content: " \25BC" ; font-size: 0.7em ; }
 th[aria-sort="ascending"]::after { content: " \25B2" ; font-size: 0.7em ; }
 
-/* Language switch, top right of the navigation bar */
 nav { display: flex ; flex-wrap: wrap ; align-items: baseline ; gap: 0 1em ; }
 nav .lang { order: 3 ; margin-left: auto ; white-space: nowrap ; }
 nav .lang a { margin-right: 0 ; margin-left: 0.6em ; }
 nav .site { order: 1 ; }
 nav .links { order: 2 ; }
 
-/* Pictures: a portrait or logo at the top right of a page, small logos in the lists */
 figure.picture { float: right ; margin: 0 0 1em 1.5em ; }
 figure.picture img { display: block ; max-width: 100% ; height: auto ; }
-figure.portrait img { width: 160px ; height: 160px ; object-fit: cover ; object-position: 50% 20% ; border-radius: 50% ; border: 1px solid var(--axis) ; }   /* tall photos keep the head, which sits high */
+figure.portrait img { width: 160px ; height: 160px ; object-fit: cover ; object-position: 50% 20% ; border-radius: 50% ; border: 1px solid var(--axis) ; }
 figure.logo img { max-width: 180px ; max-height: 120px ; width: auto ; }
-/* conference logos differ in shape and in their own size: each is fitted into the same box */
+
 figure.logo.venue img { width: 260px ; height: 110px ; max-width: none ; max-height: none ; object-fit: contain ; object-position: right center ; }
 img.mini { height: 1.4em ; width: auto ; max-width: 3.5em ; vertical-align: middle ; margin-right: 0.5em ; object-fit: contain ; }
 @media (max-width: 600px) { figure.portrait img { width: 110px ; height: 110px ; } figure.logo img { max-width: 120px ; } figure.logo.venue img { width: 150px ; height: 70px ; } }
 
-/* the logo column of the Institutions and Venues lists */
 td.logo-col, th.logo-col { text-align: center ; vertical-align: middle ; width: 2.8em ; padding: 0.15em 0.25em ; }
 td.logo-col img.mini { height: 1.8em ; max-width: 2.6em ; margin: 0 ; }
 
-/* ---------------------------------------------------------------- collaboration graphs (backend/graph.py) */
 .graph { margin: 1em 0 ; }
 svg.net { width: 100% ; height: auto ; display: block ; max-width: 1000px ; }
 svg.net .edge { stroke: var(--axis) ; stroke-linecap: round ; transition: opacity .15s ; }
@@ -516,9 +488,7 @@ svg.net.focus .edge.hl { stroke: var(--chart-value) ; }
 .c3 circle, .dot.c3 { fill: #1baf7a ; background: #1baf7a ; }
 .c4 circle, .dot.c4 { fill: #eda100 ; background: #eda100 ; }
 .c0 circle, .dot.c0 { fill: #9a9890 ; background: #9a9890 ; }
-/* researcher graph: HUST, VinUni and HCMUS in the hue of their logos, then ochre, green and purple; the six fills
-   sit within 0.12 of each other in OKLCH lightness (backend/graph.py says how they were chosen). The number in a
-   circle is white or dark ink, whichever reads better on that fill. */
+
 .c-red circle, .dot.c-red { fill: #ca5558 ; background: #ca5558 ; }
 .c-blue circle, .dot.c-blue { fill: #2d66bd ; background: #2d66bd ; }
 .c-cyan circle, .dot.c-cyan { fill: #009cba ; background: #009cba ; }
@@ -526,7 +496,7 @@ svg.net.focus .edge.hl { stroke: var(--chart-value) ; }
 .g-green circle, .dot.g-green { fill: #1b7e2a ; background: #1b7e2a ; }
 .g-purple circle, .dot.g-purple { fill: #8e479d ; background: #8e479d ; }
 svg.net .node.c-cyan text.deg, svg.net .node.g-ochre text.deg { fill: #1d1d1f ; }
-/* rings: the same three colours as an outline round a light tint of the colour, as heavy as a disc */
+
 svg.net .node.ring.g-ochre circle { fill: color-mix(in srgb, #ab8704 20%, var(--bg)) ; stroke: #ab8704 ; }
 svg.net .node.ring.g-green circle { fill: color-mix(in srgb, #1b7e2a 20%, var(--bg)) ; stroke: #1b7e2a ; }
 svg.net .node.ring.g-purple circle { fill: color-mix(in srgb, #8e479d 20%, var(--bg)) ; stroke: #8e479d ; }
@@ -536,8 +506,7 @@ svg.net .node.ring text.deg { fill: var(--fg) ; }
 .dot.ring.g-green { background: color-mix(in srgb, #1b7e2a 20%, var(--bg)) ; border-color: #1b7e2a ; }
 .dot.ring.g-purple { background: color-mix(in srgb, #8e479d 20%, var(--bg)) ; border-color: #8e479d ; }
 .graph-legend { list-style: none ; padding: 0 ; display: flex ; flex-wrap: wrap ; gap: 6px 18px ; font-size: 0.9em ; }
-/* the graph pages: the legend is a sticky side box like "On this page"; the hover lights the institutions of the
-   people it lights and fades the rest, as it does the circles */
+
 .legend-box .graph-legend { display: block ; margin: 0 ; }
 .legend-box .graph-legend li { display: flex ; align-items: center ; gap: 6px ; margin: 0.4em 0 ; transition: opacity .15s ; }
 .legend-box .graph-legend a { color: var(--muted) ; text-decoration: none ; }
@@ -551,13 +520,10 @@ svg.net .node.ring text.deg { fill: var(--fg) ; }
 .graph-legend .dot { display: inline-block ; width: 12px ; height: 12px ; border-radius: 50% ; }
 .graph-legend .line-key { display: inline-block ; width: 22px ; height: 4px ; border-radius: 2px ; background: var(--axis) ; }
 
-/* authorship charts: from the institution, from elsewhere, not judged */
 .chart .own-inst { fill: #2a78d6 ; }
 .chart .other-inst { fill: #eb6834 ; }
 .chart .unjudged { fill: var(--grid) ; stroke: var(--axis) ; stroke-width: 1 ; }
 
-/* cups for the top three rows of the front-page and institutions tables (site.js); the slot is there on every row so sorting
-   never changes the column width */
 .cup { display: inline-block ; width: 1.1em ; height: 1em ; margin-right: 0.3em ; vertical-align: -0.12em ; }
 .cup svg { width: 1em ; height: 1em ; display: block ; }
 .cup.gold svg { fill: #e0a800 ; }
@@ -567,7 +533,6 @@ svg.net .node.ring text.deg { fill: var(--fg) ; }
 .chart .cup-silver { fill: #9aa4ae ; }
 .chart .cup-bronze { fill: #c06b2c ; }
 
-/* a formula on its own centred line, like a LaTeX display equation */
 .eq { display: flex ; justify-content: center ; align-items: center ; gap: 0.5em ; margin: 0.7em 0 ; text-align: center ; }
 .frac { display: inline-flex ; flex-direction: column ; align-items: center ; }
 .frac > span { padding: 0 0.4em ; line-height: 1.5 ; }
@@ -575,11 +540,9 @@ svg.net .node.ring text.deg { fill: var(--fg) ; }
 div.note ul { margin: 0.5em 0 ; padding-left: 1.3em ; }
 div.note li { margin: 0.25em 0 ; }
 
-/* a finding worth noticing, set apart from the notes around it */
 aside.callout { margin: 1.5em 0 ; padding: 0.8em 1.1em ; background: var(--callout) ; border-left: 4px solid var(--callout-bar) ; border-radius: 0 6px 6px 0 ; max-width: 48rem ; }
 aside.callout p { margin: 0 ; line-height: 1.55 ; }
 
-/* "On this page" table of contents outline (About page) */
 .toc-title { font-weight: bold ; margin: 0 0 0.5em 0 ; color: var(--fg) ; }
 .toc nav ul { list-style: none ; padding-left: 0 ; margin: 0 ; }
 .toc nav ul ul { padding-left: 0.85em ; margin-top: 0.25em ; }
@@ -596,24 +559,18 @@ aside.callout p { margin: 0 ; line-height: 1.55 ; }
 	.with-toc .toc { margin: 1em 0 1.5em ; padding: 0.7em 1em ; background: var(--th) ; border-left: 3px solid var(--axis) ; border-radius: 0 4px 4px 0 ; font-size: 0.9em ; }
 }
 
-/* a number and its unofficial "+N" stay on one line */
 td:not(.l) { white-space: nowrap ; }
 svg.net .node text.sub { font-size: 12px ; fill: var(--muted) ; }
 
-/* Phones: only the name stays pinned (the professor, or the institution on the Institutions list); the # and
-   institution columns, and the logos, are left out so the numbers have room */
 @media (max-width: 640px) {
 	.scroll.pinned .pin0, .scroll.pinned .logo-col.pin1 { display: none ; }
-	.scroll.pinned .pin1:not(.logo-col) + .pin2 { display: none ; }   /* professor tables: the institution column */
+	.scroll.pinned .pin1:not(.logo-col) + .pin2 { display: none ; }
 	.scroll.pinned .pin1:not(.logo-col) { left: 0 ; box-shadow: 2px 0 0 var(--line) ; min-width: 7.5em ; max-width: 9.5em ; white-space: normal ; }
-	.scroll.pinned .logo-col.pin1 + .pin2 { left: 0 ; }                /* the Institutions list: the name stays */
+	.scroll.pinned .logo-col.pin1 + .pin2 { left: 0 ; }
 }
 
-
-/* ---------------------------------------------------------------- phones */
 @media (max-width: 640px) {
-	/* header in two short rows: the site name with the language and theme switches, then the pages as one strip
-	   that scrolls sideways (site.js brings the current page into view) */
+
 	nav { padding: 0.5em 0.8em 0.3em ; gap: 0.2em 0.6em ; align-items: center ; }
 	nav a.site { display: inline ; margin-bottom: 0 ; order: 1 ; }
 	nav .lang { order: 2 ; }
@@ -621,19 +578,18 @@ svg.net .node text.sub { font-size: 12px ; fill: var(--muted) ; }
 	nav .links::-webkit-scrollbar { display: none ; }
 	nav .links a { margin-right: 1.1em ; }
 	header h1 { margin-top: 0.7em ; }
-	/* the graphs keep a readable size and scroll sideways instead of shrinking to the screen */
+
 	figure.graph { overflow-x: auto ; margin-left: -0.5em ; margin-right: -0.5em ; }
 	figure.graph svg.net { min-width: 760px ; }
-	/* charts likewise, except the pie, which is sized by its box */
+
 	figure:not(.portrait):not(.logo):not(.graph) { overflow-x: auto ; }
 	figure .chart { min-width: 500px ; }
 	.fig-row .fill .chart { min-width: 0 ; }
 	.fig-row .fill { min-height: 15rem ; }
 }
-/* the contents box of a page: its entries wrap (the site menu's links do not) */
+
 .toc nav a { white-space: normal ; }
 
-/* local build only: ICLR submissions under review matched to tracked professors (Papers page) */
 .tag.under { background: color-mix(in srgb, #ab8704 18%, var(--bg)) ; border-color: #ab8704 ; }
 tr.under-review td { background: color-mix(in srgb, #ab8704 6%, var(--bg)) ; }
 .redacted { color: var(--muted) ; font-style: italic ; }
@@ -641,7 +597,6 @@ ul.under-list { list-style: none ; padding-left: 0 ; }
 ul.under-list li { margin: 0.4em 0 ; }
 .tag.likely-spotlight { font-weight: 600 ; }
 
-/* About: accepted papers per venue and year, four small line charts (the dataviz-checked blue, ochre and purple) */
 .chart .line { fill: none ; stroke-width: 2 ; stroke-linejoin: round ; }
 .chart .line.cv0 { stroke: #2d66bd ; } .chart .pt.cv0 { fill: #2d66bd ; stroke: #2d66bd ; }
 .chart .line.cv1 { stroke: #ab8704 ; } .chart .pt.cv1 { fill: #ab8704 ; stroke: #ab8704 ; }

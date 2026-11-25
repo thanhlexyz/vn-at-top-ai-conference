@@ -1,18 +1,3 @@
-#!/usr/bin/env python3
-"""Save the professors' own pages and pull out the lines that mention one of the ten venues.
-
-The pages are the ones in the `pages` column of roster.csv (several addresses separated by `;`).
-Each is kept in raw/homepages/ and its venue lines go to work/homepage_hits.txt, grouped by professor.
-
-Nothing is turned into data here. Personal pages are too different from each other to parse safely,
-so read homepage_hits.txt and copy the papers into self_reported.csv by hand, one row per paper:
-
-    professor, venue, year, title, track, coauthors, announced, source_url, fetched, note
-
-`track` is main unless the page says otherwise (datasets_benchmarks, findings, workshop, position).
-A page that only announces a number ("five papers accepted") gets one row with an empty title and the
-number in `announced`. build_site_data.py decides what is counted; see the About page for the rule.
-"""
 import argparse
 import datetime
 import gzip
@@ -40,7 +25,6 @@ def download(url):
 
 
 def text_lines(data):
-    """Visible text of a page, one block per line. Some old university pages are UTF-16."""
     text = data.decode("utf-16", "replace") if data[:2] in (b"\xff\xfe", b"\xfe\xff") else data.decode("utf-8", "replace")
     text = re.sub(r"<(script|style)\b.*?</\1>", " ", text, flags=re.S | re.I).replace("\r", " ").replace("\n", " ")
     text = re.sub(r"<(/p|/li|/tr|/h\d|/div|br|/dd|/dt)\b[^>]*>", "\n", text, flags=re.I)
@@ -49,7 +33,7 @@ def text_lines(data):
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap = argparse.ArgumentParser(description="Save the professors' own pages and pull out the lines that mention one of the ten venues.")
     ap.add_argument("--only", nargs="+", metavar="SLUG", help="fetch only these people")
     args = ap.parse_args()
 

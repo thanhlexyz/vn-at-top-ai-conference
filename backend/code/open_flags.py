@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-"""Print what is still unconfirmed in the data that is about to be published. `make publish` runs this first."""
 import json
 
 from common import FRONTEND

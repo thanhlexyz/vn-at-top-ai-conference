@@ -1,27 +1,3 @@
-#!/usr/bin/env python3
-"""Download the public accepted-paper lists of the ten venues and normalize them.
-
-No login needed. Sources:
-    iclr.cc / neurips.cc / icml.cc / cvpr.thecvf.com / iccv.thecvf.com   virtual-site JSON (authors with affiliations)
-    eccv.ecva.net                                     ECCV virtual-site JSON (2024 on, authors with affiliations)
-    openaccess.thecvf.com                             CVPR and ICCV paper lists (author names only)
-    ecva.net/papers.php                               ECCV paper lists (author names only)
-    aclanthology.org                                  ACL and EMNLP main-conference volumes (author names only);
-                                                      industry and demo volumes are left out; Findings
-                                                      papers count as rejected when a professor's OpenReview record shows them
-    ojs.aaai.org                                      AAAI proceedings issues (author names only); the "AAAI Technical
-                                                      Track on ..." sections are the main track
-    ijcai.org/proceedings                             IJCAI proceedings (author names only); the "Main Track" section
-                                                      is the main track. IJCAI-PRICAI 2020 met in January 2021 and is 2020
-
-Downloads are kept in raw/ and reused; pass --refresh to download again (for example after a
-conference publishes its list). The result is work/accepted.jsonl.gz, one paper per line:
-
-    {"venue", "year", "track", "title", "authors": [{"name", "aff"}], "url", "forum", "pres", "topic", "source"}
-
-`track` is "main" for the main conference; other tracks are kept so the site can say why a paper
-is not counted.
-"""
 import argparse
 import collections
 import gzip
@@ -40,14 +16,11 @@ from common import (ACCEPTED, LAST_YEAR, RAW, WORK, YEARS, held, norm_title, pre
 USER_AGENT = "vn-conference-stats/1.0 (personal research script)"
 VIRTUAL_SITE = {"iclr": "https://iclr.cc", "neurips": "https://neurips.cc", "icml": "https://icml.cc",
                 "cvpr": "https://cvpr.thecvf.com", "iccv": "https://iccv.thecvf.com", "eccv": "https://eccv.ecva.net"}
-CVPR2020_DAYS = ["2020-06-16", "2020-06-17", "2020-06-18"]  # the 2020 list has no "all days" page
+CVPR2020_DAYS = ["2020-06-16", "2020-06-17", "2020-06-18"]
 PRES_ORDER = {"": 0, "highlight": 1, "spotlight": 1, "oral": 2}
 
 
-# ---------------------------------------------------------------- download
-
 def fetch(url, name, refresh=False):
-    """Return the bytes of `url`, cached gzip-compressed as raw/<name>.gz. None if the server has no such file."""
     path = RAW / (name + ".gz")
     missing = RAW / (name + ".missing")
     if not refresh:
@@ -62,7 +35,7 @@ def fetch(url, name, refresh=False):
         try:
             with urllib.request.urlopen(req, timeout=180) as r:
                 data = r.read()
-            if data[:2] == b"\x1f\x8b":   # ojs.aaai.org sends gzip even when it is not asked for
+            if data[:2] == b"\x1f\x8b":
                 data = gzip.decompress(data)
             break
         except urllib.error.HTTPError as e:
@@ -78,11 +51,9 @@ def fetch(url, name, refresh=False):
         return None
     path.write_bytes(gzip.compress(data))
     missing.unlink(missing_ok=True)
-    time.sleep(1)  # stay polite between downloads
+    time.sleep(1)
     return data
 
-
-# ---------------------------------------------------------------- virtual-site JSON
 
 def parse_virtual(venue, year, data):
     try:
@@ -113,7 +84,6 @@ def parse_virtual(venue, year, data):
                            "url": url, "forum": forum.group(1) if forum else "", "pres": pres,
                            "topic": topic, "source": site.split("//")[1]}
             continue
-        # the same paper listed again as an oral/spotlight session: keep the richer record
         if PRES_ORDER[pres] > PRES_ORDER[p["pres"]]:
             p["pres"] = pres
         if forum and not p["forum"]:
@@ -121,7 +91,6 @@ def parse_virtual(venue, year, data):
         p["topic"] = p["topic"] or topic
         if sum(bool(a["aff"]) for a in authors) > sum(bool(a["aff"]) for a in p["authors"]):
             p["authors"] = authors
-    # an oral listed a second time without a sourceurl is the same paper as its main-track poster
     for track, title in [k for k in papers if k[0] == "other"]:
         main = papers.get(("main", title))
         if main:
@@ -132,21 +101,12 @@ def parse_virtual(venue, year, data):
 
 
 def is_provisional(data):
-    """True for a virtual-site list that has no schedule yet (only meaningful for the current year).
-
-    Such a list was put up between the decisions and the conference and is still being filled: in
-    September 2026 the NeurIPS 2026 list lacked papers that their authors had already announced. The
-    schedule is added a few sessions at a time (on 2026-10-02, 22 of 9,236 entries had a time while
-    announced papers were still missing), so the list counts as final only once most entries have one.
-    """
     try:
         rows = json.loads(data).get("results", [])
     except (ValueError, AttributeError):
         return False
     return bool(rows) and 2 * sum(1 for r in rows if r.get("starttime")) < len(rows)
 
-
-# ---------------------------------------------------------------- CVF open access
 
 def parse_cvf(year, page, venue="cvpr"):
     out = []
@@ -164,11 +124,6 @@ def parse_cvf(year, page, venue="cvpr"):
 
 
 def merge_cvpr(virtual, cvf):
-    """Use the CVF list as the base (it is the proceedings) and copy affiliations from the virtual site.
-
-    When the virtual-site list is as complete as the CVF one, it is used directly: every author then
-    has an affiliation, which the name matching needs.
-    """
     vmain = [p for p in virtual if p["track"] == "main"]
     other = [p for p in virtual if p["track"] != "main"]
     if not cvf:
@@ -184,8 +139,6 @@ def merge_cvpr(virtual, cvf):
 
 
 def parse_ecva(year, page):
-    """ECCV papers of one year from ecva.net/papers.php, which lists every year on one page under
-    'ECCV <year> Papers' headings; titles in <dt class="ptitle">, authors (with * for corresponding) in the next <dd>."""
     start = page.find(f"ECCV {year} Papers")
     if start < 0:
         return []
@@ -206,8 +159,6 @@ def parse_ecva(year, page):
     return out
 
 
-# ---------------------------------------------------------------- ACL Anthology BibTeX
-
 _ACCENT = {"`": "\u0300", "'": "\u0301", "^": "\u0302", "~": "\u0303", "=": "\u0304", "u": "\u0306",
            ".": "\u0307", '"': "\u0308", "h": "\u0309", "r": "\u030a", "H": "\u030b", "v": "\u030c",
            "d": "\u0323", "c": "\u0327", "k": "\u0328", "b": "\u0331"}
@@ -220,9 +171,8 @@ _ACCENT_RX = [re.compile(r"\\([`'^~=.\"])\s*\{?" + _BASE + r"\}?"),
 
 
 def debib(s):
-    """BibTeX/LaTeX text to plain Unicode: '{\\DJ}o{\\`a}n' -> 'Đoàn', '{E}com{S}cript' -> 'EcomScript'."""
     s = re.sub(r"\\(DJ|dj|ss|ae|AE|aa|AA|oe|OE|[oOlLij])(?![A-Za-z]) ?", lambda m: _LETTER[m.group(1)], s)
-    for _ in range(4):  # accents can be nested, e.g. \~{\^e}
+    for _ in range(4):
         before = s
         for rx in _ACCENT_RX:
             s = rx.sub(lambda m: m.group(2) + _ACCENT[m.group(1)], s)
@@ -234,7 +184,6 @@ def debib(s):
 
 
 def bib_fields(entry):
-    """Fields of one BibTeX entry. Values are delimited by "..." or {...} (the latter may nest)."""
     fields, i = {}, entry.find("\n")
     while True:
         m = re.compile(r"\s*(\w+)\s*=\s*").match(entry, i)
@@ -263,8 +212,6 @@ def bib_fields(entry):
 
 
 def parse_acl_bib(year, text, venue="acl", track="main", min_pages=0):
-    """Papers of one ACL Anthology volume. min_pages drops the short papers of a volume that mixes long and short
-    ones (Findings: a long paper runs 12 pages or more with references); an entry without page numbers is kept."""
     out = []
     for entry in re.split(r"\n(?=@)", text):
         if not entry.startswith("@inproceedings"):
@@ -289,8 +236,6 @@ def acl_volumes(year):
     return [f"{year}.acl-main"] if year == 2020 else [f"{year}.acl-long"]
 
 
-# ---------------------------------------------------------------- AAAI and IJCAI proceedings
-
 AAAI = "https://ojs.aaai.org/index.php/AAAI"
 
 
@@ -299,7 +244,6 @@ def text_of(fragment):
 
 
 def aaai_issues(refresh=False):
-    """{year: [(issue id, title)]} from the AAAI archive, newest first, down to AAAI-20 (Vol. 34)."""
     out, page = collections.defaultdict(list), 1
     while True:
         data = fetch(f"{AAAI}/issue/archive/{page}", f"aaai/archive-{page}.html", refresh)
@@ -318,8 +262,6 @@ def aaai_issues(refresh=False):
 
 
 def aaai_track(section):
-    """'main' for an "AAAI Technical Track on ..." section; otherwise the section's own name, e.g. a special track.
-    AAAI-24 and AAAI-25 print three special tracks under technical-track names; they stay special tracks."""
     if re.search(r"Safe, Robust and Responsible|AI for Social Impact|AI Alignment", section):
         return section
     return "main" if re.match(r"AAAI Technical Track\b", section) else section
@@ -353,7 +295,7 @@ def parse_ijcai(year, page):
         for m in re.finditer(r'<div class="subsection_title">(.*?)</div>|<div id="paper\d+" class="paper_wrapper">'
                              r'<div class="title">(.*?)</div><div class="authors">(.*?)</div>'
                              r'<div class="details">.*?href="([^"]+\.pdf)".*?href="(/proceedings/[^"]+)"', part, re.S):
-            if m.group(1) is not None:   # a subject heading of the proceedings, not a topic the authors chose
+            if m.group(1) is not None:
                 continue
             out.append({"venue": "ijcai", "year": year, "track": track, "title": text_of(m.group(2)),
                         "authors": [{"name": n.strip(), "aff": ""} for n in text_of(m.group(3)).split(",") if n.strip()],
@@ -362,8 +304,6 @@ def parse_ijcai(year, page):
                         "forum": "", "pres": "", "topic": "", "source": "ijcai.org"})
     return out
 
-
-# ---------------------------------------------------------------- main
 
 def collect(years, refresh=False):
     papers, coverage = [], []
@@ -400,12 +340,11 @@ def collect(years, refresh=False):
         for vol in acl_volumes(year):
             bib = fetch(f"https://aclanthology.org/volumes/{vol}.bib", f"acl/{vol}.bib", refresh)
             rows += parse_acl_bib(year, bib.decode("utf-8", "replace")) if bib else []
-        if year >= 2021:   # Findings: rejected from the main track; long papers only
+        if year >= 2021:
             bib = fetch(f"https://aclanthology.org/volumes/{year}.findings-acl.bib", f"acl/{year}.findings-acl.bib", refresh)
             rows += parse_acl_bib(year, bib.decode("utf-8", "replace"), "acl", "findings", 12) if bib else []
         add("acl", year, rows, ["aclanthology.org"] if rows else [])
 
-        # ICCV is held in odd years; only 2025 has a virtual site with affiliations
         if year % 2 == 1:
             data = fetch(f"{VIRTUAL_SITE['iccv']}/static/virtual/data/iccv-{year}-orals-posters.json",
                          f"virtual/iccv-{year}.json", refresh)
@@ -417,7 +356,6 @@ def collect(years, refresh=False):
             rows = []
         add("iccv", year, rows, sorted({p["source"] for p in rows}))
 
-        # ECCV is held in even years: ecva.net for the proceedings, the virtual site (2024 on) for affiliations
         if year % 2 == 0:
             data = fetch(f"{VIRTUAL_SITE['eccv']}/static/virtual/data/eccv-{year}-orals-posters.json",
                          f"virtual/eccv-{year}.json", refresh)
@@ -448,7 +386,7 @@ def collect(years, refresh=False):
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap = argparse.ArgumentParser(description='Download the public accepted-paper lists of the ten venues and normalize them.')
     ap.add_argument("--refresh", action="store_true", help="download everything again instead of using raw/")
     args = ap.parse_args()
 

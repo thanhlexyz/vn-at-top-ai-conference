@@ -1,27 +1,3 @@
-#!/usr/bin/env python3
-"""Fetch every public OpenReview submission of the approved people in roster.csv.
-
-This is the only step that needs a login, and the only source of rejected and withdrawn papers.
-
-Setup (once):
-    pip install openreview-py
-    export OPENREVIEW_USERNAME=you@example.com
-    export OPENREVIEW_PASSWORD=...        # or leave it out and type it when asked
-
-Usage:
-    python fetch_openreview.py                     # everyone with approved = yes and an OpenReview ID
-    python fetch_openreview.py --only tuan-dam     # just these slugs
-    python fetch_openreview.py --search "Khoa D Doan" "Doan Khoa"   # find the ~ID of a person
-    python fetch_openreview.py --candidates 60     # look up the first 60 people of candidates.csv
-
-People are queried by the profile IDs in roster.csv only, never by name, because a name search mixes
-different people. Results go to raw/openreview/<slug>.json with the labels exactly as OpenReview gives
-them; build_site_data.py turns those into accepted / rejected / withdrawn, so a change in the rules
-never needs a new download.
-
-What OpenReview does not show cannot be fetched: NeurIPS rejections unless the authors opted in, all
-ICML, CVPR, ICCV, ECCV, ACL and EMNLP rejections, and withdrawn papers that were removed or left anonymous.
-"""
 import argparse
 import datetime
 import getpass
@@ -36,7 +12,7 @@ from common import (CANDIDATES, OPENREVIEW_RAW, classify_status, load_roster, na
 
 
 def login():
-    import openreview  # imported here so that the rest of the pipeline works without the package
+    import openreview
 
     user, pw = os.environ.get("OPENREVIEW_USERNAME"), os.environ.get("OPENREVIEW_PASSWORD")
     for name, v in (("OPENREVIEW_USERNAME", user), ("OPENREVIEW_PASSWORD", pw)):
@@ -48,14 +24,13 @@ def login():
     v2 = with_retry(openreview.api.OpenReviewClient, baseurl="https://api2.openreview.net", username=user, password=pw)
     try:
         v1 = with_retry(openreview.Client, baseurl="https://api.openreview.net", username=user, password=pw)
-    except Exception as e:  # API v1 holds the conferences up to 2023
+    except Exception as e:
         print(f"warning: API v1 login failed ({e}); submissions before 2024 will be missing", file=sys.stderr)
         v1 = None
     return v2, v1
 
 
 def with_retry(call, *args, **kwargs):
-    """OpenReview allows three logins a minute and answers 429 above that; wait as long as it asks."""
     for _ in range(6):
         try:
             return call(*args, **kwargs)
@@ -70,12 +45,10 @@ def with_retry(call, *args, **kwargs):
 
 
 def val(x):
-    """API v2 wraps fields as {'value': ...}; API v1 uses plain values."""
     return x.get("value") if isinstance(x, dict) else x
 
 
 def profile_summary(p):
-    """The parts of a profile the pipeline uses: its usernames and the employment history."""
     c = p.content
     history = [{"position": h.get("position") or "", "institution": (h.get("institution") or {}).get("name") or "",
                 "domain": (h.get("institution") or {}).get("domain") or "", "start": h.get("start"),
@@ -88,14 +61,11 @@ def profile_summary(p):
 
 
 def vietnam_post(summary):
-    """The most recent entry of a profile's history at a Vietnamese institution, or None."""
     posts = [h for h in summary["history"] if vn_institution(h["institution"]) or h["domain"].endswith(".vn")]
     return max(posts, key=lambda h: (h["end"] is None, h["end"] or 0, h["start"] or 0)) if posts else None
 
 
 def split_authors(content):
-    """Author names and profile IDs of a note. Older notes keep them in two parallel lists; since 2026 some
-    notes give one object per author ({"username", "fullname", "institutions"}) and leave authorids empty."""
     authors = val(content.get("authors")) or []
     if not isinstance(authors, list):
         authors = [str(authors)]
@@ -118,7 +88,6 @@ def note_record(n):
 
 
 def decision_of(v1, forum):
-    """ICLR 2020-2021 keep the outcome in a Decision reply instead of a venue label."""
     for r in v1.get_all_notes(forum=forum):
         if (getattr(r, "invitation", "") or "").endswith("Decision"):
             return str(r.content.get("decision") or r.content.get("recommendation") or "")
@@ -146,10 +115,10 @@ def fetch_person(v2, v1, person):
         for batch in batches:
             for n in batch:
                 if n.id != n.forum or n.id in seen:
-                    continue  # replies and duplicates
+                    continue
                 rec = note_record(n)
                 if openreview_venue(rec["invitations"], rec["venueid"]) is None:
-                    continue  # not one of the ten venues
+                    continue
                 seen.add(n.id)
                 notes.append(rec)
 
@@ -178,15 +147,12 @@ def search(v2, names):
 
 
 def lookup_candidates(v2, limit):
-    """Find the OpenReview profiles of the first `limit` people at a university in candidates.csv that show a post in
-    Vietnam."""
     path = OPENREVIEW_RAW / "_candidates.json"
     found = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
-    # company staff are not tracked, so only people at a university are looked up
     for row in [r for r in read_csv(CANDIDATES) if r.get("at_university") == "yes"][:limit]:
         names = [row["display_name"], *[v.strip() for v in row["name_variants"].split(";") if v.strip()]]
         key = name_key(names[0])
-        if key in found and all("posts" in h for h in found[key]):   # looked up before posts were kept: again
+        if key in found and all("posts" in h for h in found[key]):
             continue
         hits = {}
         for name in names:
@@ -194,7 +160,6 @@ def lookup_candidates(v2, limit):
                 s = profile_summary(p)
                 post = vietnam_post(s)
                 if post:
-                    # every post in Vietnam is kept: a lecturer who is also a PhD student must not look like a student
                     posts = [{k: h[k] for k in ("position", "institution", "start", "end")} for h in s["history"]
                              if vn_institution(h["institution"]) or h["domain"].endswith(".vn")]
                     hits[p.id] = {"id": p.id, "position": post["position"], "institution": post["institution"],
@@ -208,7 +173,7 @@ def lookup_candidates(v2, limit):
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap = argparse.ArgumentParser(description='Fetch every public OpenReview submission of the approved people in roster.csv.')
     ap.add_argument("--only", nargs="+", metavar="SLUG", help="fetch only these people")
     ap.add_argument("--search", nargs="+", metavar="NAME", help="print the profiles with this name and stop")
     ap.add_argument("--candidates", type=int, metavar="N", help="look up the first N people of candidates.csv")

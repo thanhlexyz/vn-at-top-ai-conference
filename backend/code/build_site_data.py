@@ -1,23 +1,3 @@
-#!/usr/bin/env python3
-"""Build the JSON data and the page stubs that the Hugo site in ../frontend renders.
-
-Inputs
-    roster.csv                    who is on the site (hand-edited; only rows with approved = yes count)
-    review.csv                    uncertain matches; this script appends rows, you fill in `decision`
-    work/accepted.jsonl.gz        accepted papers of the ten venues        (fetch_accepted.py)
-    affiliations.csv              affiliations read from the PDF where a list prints none (fetch_affiliations.py,
-                                  each row checked by hand)
-    affiliation_fixes.csv         one author's affiliation as the paper prints it, where the list differs
-    raw/openreview/<slug>.json    every OpenReview submission of a person   (fetch_openreview.py)
-    candidates.csv                people not on the roster yet              (find_candidates.py)
-
-Counting rules (the site's About page states the same)
-    * main conference track only
-    * a paper counts from the year the person joined a Vietnamese institution (roster column vn_since)
-    * rejected, withdrawn and desk-rejected papers are added up as "not accepted"
-    * rejections are complete for ICLR only; NeurIPS has only those its authors chose to make public
-    * co-author and topic figures are taken over all counted papers, accepted or not
-"""
 import collections
 import csv
 import datetime
@@ -40,30 +20,22 @@ DATA = FRONTEND / "data"
 CONTENT = FRONTEND / "content"
 REVIEW_FIELDS = ["decision", "professor", "venue", "year", "title", "matched_name", "affiliation", "reason", "url",
                  "note"]
-SELF_REPORTED = CSV_DIR / "self_reported.csv"  # hand-kept: what professors list on their own pages
-# A paper placed in Findings was not accepted to the main track, at any conference: it counts as a rejection there,
-# and it is also listed and counted with the workshop papers
+SELF_REPORTED = CSV_DIR / "self_reported.csv"
 FINDINGS_NOTE = "placed in Findings, which counts as rejected from the main track and as a workshop paper"
-# Tracks that are left out on purpose and listed under "Not counted". Workshop papers have a list of their own
-# on the professor's page (workshop_papers), also never counted.
 TRACK_REASON = {"datasets_benchmarks": "Datasets & Benchmarks track", "position": "position-paper track",
                 "findings": "Findings track", "journal": "journal track", "blog": "blog-post track",
                 "tiny_papers": "Tiny Papers track"}
 MAX_CANDIDATES_ON_SITE = 250
-# the front page shows how each professor's rank moved when this venue-year's results came in
-RANK_BASELINE = "potential"   # the potential ICLR acceptances (potential_records); or a (venue, year) pair
-FOREIGN_MIN_PAPERS = 3   # authors outside Vietnam on more than this many counted papers (4 or more) are suggested
-AREA_ALIAS = {"Miscellaneous Aspects of Machine Learning": "General Machine Learning"}  # renamed in 2025
+RANK_BASELINE = "potential"
+FOREIGN_MIN_PAPERS = 3
+AREA_ALIAS = {"Miscellaneous Aspects of Machine Learning": "General Machine Learning"}
 
-
-# ---------------------------------------------------------------- inputs
 
 class Accepted:
-    """The accepted-paper lists, indexed the ways the matching needs."""
 
     def __init__(self, papers, coverage):
         papers = list(papers)
-        self.by_name = collections.defaultdict(list)  # normalized author name -> [(paper, author position)]
+        self.by_name = collections.defaultdict(list)
         self.by_forum, self.by_title = {}, {}
         self.in_year = collections.defaultdict(list)
         for p in papers:
@@ -87,7 +59,6 @@ class Accepted:
         return self.by_title.get((venue, year, norm_title(title)))
 
     def find(self, venue, year, title):
-        """Like official(), but also accepts a title that differs a little, as titles on personal pages do."""
         p = self.by_title.get((venue, year, norm_title(title)))
         if p is None:
             key = norm_title(title)
@@ -99,7 +70,6 @@ class Accepted:
 
 
 def load_openreview(person):
-    """(notes, source, fetched date, stale, own usernames) where source is 'openreview' or 'none'."""
     path = OPENREVIEW_RAW / f"{person['slug']}.json"
     if path.exists():
         data = json.loads(path.read_text(encoding="utf-8"))
@@ -110,11 +80,6 @@ def load_openreview(person):
 
 
 def shared_notes(approved):
-    """Submissions in one professor's OpenReview record that list another approved professor.
-
-    {slug: [{note, owner, exact, name}]}. exact means the other professor's profile ID is on the submission.
-    Without IDs on either side the match is by name and has to be confirmed.
-    """
     loaded = {p["slug"]: load_openreview(p) for p in approved}
     out = collections.defaultdict(list)
     for owner in approved:
@@ -128,7 +93,7 @@ def shared_notes(approved):
                 named = next((names[v] for v in p["variants"] if v in names), None)
                 if ids & known:
                     out[p["slug"]].append({"note": n, "owner": owner["name"], "exact": True, "name": named or ""})
-                elif named and not (ids and known):  # both sides have IDs and they differ: a namesake
+                elif named and not (ids and known):
                     out[p["slug"]].append({"note": n, "owner": owner["name"], "exact": False, "name": named})
     return out
 
@@ -138,11 +103,6 @@ def note_venue(note):
 
 
 def load_self_reported(roster):
-    """Papers from personal pages, per roster slug, and the totals that pages announce without titles.
-
-    A paper is filed under the professor whose page lists it and under every other approved professor
-    the page names as co-author, so a paper on Hoang Ta's page also reaches Tuan Dam.
-    """
     approved = [p for p in roster if p["approved"] == "yes"]
     by_variant = {v: p for p in approved for v in p["variants"]}
     names = {p["slug"]: p["name"] for p in roster}
@@ -156,7 +116,6 @@ def load_self_reported(roster):
                 announced[slug][(r["venue"], int(r["year"]))] = r
             continue
         coauthors = [c.strip() for c in r["coauthors"].split(";") if c.strip()]
-        # the professor's own name among the co-authors gives their place in the author order; else they come first
         own = {v for p in roster if p["slug"] == slug for v in p["variants"]} | {norm_name(names[slug])}
         if any(norm_name(c) in own for c in coauthors):
             authors = [names[slug] if norm_name(c) in own else c for c in coauthors]
@@ -179,15 +138,12 @@ def load_review():
                   for r in rows}
 
 
-# ---------------------------------------------------------------- matching
-
 def same_title(a, b):
     a, b = norm_title(a), norm_title(b)
     return a == b or difflib.SequenceMatcher(None, a, b).ratio() >= 0.9
 
 
 def workshop_name(n):
-    """Short name of the workshop of an OpenReview note, from its group ID ('ICLR.cc/2025/Workshop/ICBINB')."""
     for s in [n.get("venueid") or "", *(n.get("invitations") or [])]:
         m = re.search(r"/Workshop/([^/]+)", s)
         if m:
@@ -196,18 +152,15 @@ def workshop_name(n):
 
 
 def same_paper(a, b):
-    """same_title, or the same name before the colon ('UniCon: ...'), which a retitled paper keeps."""
     short_a, short_b = norm_title(a.partition(":")[0]), norm_title(b.partition(":")[0])
     return same_title(a, b) or (":" in a and ":" in b and len(short_a) >= 4 and short_a == short_b)
 
 
 def person_records(person, acc, decisions, queue, warnings, skipped, own=(), borrowed=()):
-    """Every paper of one person at the ten venues, before the counting rules are applied."""
     notes, source, fetched, stale, own_ids = load_openreview(person)
     recs = []
 
     def existing(venue, year, title, workshop=False):
-        # a workshop version and a conference version of the same paper are two different records
         return next((r for r in recs if (r["venue"], r["year"]) == (venue, year) and same_title(r["title"], title)
                      and (r["track"] == "workshop") == workshop), None)
 
@@ -217,9 +170,9 @@ def person_records(person, acc, decisions, queue, warnings, skipped, own=(), bor
             return
         venue, year, track = v
         status = classify_status(n.get("venue"), n.get("venueid"), n.get("invitations"), n.get("decision"))
-        if re.search(r"\bFindings\b", n.get("venue") or ""):   # "CVPR 2026 Findings", "EMNLP 2023 Findings"
+        if re.search(r"\bFindings\b", n.get("venue") or ""):
             track, status = "findings", "accepted"
-        if track in ("workshop", "findings"):   # listed for reference only: no official list to check, no outcome inferred
+        if track in ("workshop", "findings"):
             if existing(venue, year, n["title"], workshop=True) or (track == "findings" and existing(venue, year, n["title"])):
                 return
             recs.append({"venue": venue, "year": year, "track": track, "title": n["title"].strip(), "status": status,
@@ -254,12 +207,9 @@ def person_records(person, acc, decisions, queue, warnings, skipped, own=(), bor
                      "authors": names or [a["name"] for a in people], "match": match, "borrowed": borrowed,
                      "people": people, "self": mine[0] if mine else None, "topic": (official or {}).get("topic", "")})
 
-    # 1. OpenReview submissions, matched by profile ID: the only source of rejected and withdrawn papers
     for n in notes:
         add_note(n, "OpenReview profile", own_ids)
 
-    #    ... and submissions in the OpenReview record of a colleague on the roster that list this person.
-    #    With a profile ID on the submission that is exact; with a name only it needs a yes in review.csv.
     seen = {n.get("forum") for n in notes}
     for b in borrowed:
         n, v = b["note"], note_venue(b["note"])
@@ -281,7 +231,6 @@ def person_records(person, acc, decisions, queue, warnings, skipped, own=(), bor
                           "reason": f"named as co-author in the OpenReview record of {b['owner']}; the professor's "
                                     f"own record has not been fetched, so the match is by name only"})
 
-    # 2. accepted-paper lists, matched by name: needs the affiliation printed on the paper, or your yes
     seen = set()
     for variant in person["variants"]:
         for paper, i in acc.by_name.get(variant, ()):
@@ -290,7 +239,7 @@ def person_records(person, acc, decisions, queue, warnings, skipped, own=(), bor
             seen.add(id(paper))
             venue, year = paper["venue"], paper["year"]
             rec = existing(venue, year, paper["title"])
-            if rec:  # already known from OpenReview; the official list settles track and outcome
+            if rec:
                 rec.update(status="accepted", track=paper["track"], pres=paper["pres"] or rec["pres"],
                            people=paper["authors"], self=i, topic=paper.get("topic", ""))
                 continue
@@ -312,7 +261,6 @@ def person_records(person, acc, decisions, queue, warnings, skipped, own=(), bor
             else:
                 relevant = decision != "no" and paper["track"] in ("main", "findings") and in_vietnam(person, year)
                 if relevant and aff and not vn_institutions(aff):
-                    # same name at a foreign institution: almost always somebody else, so it is only logged
                     skipped.append(f"{person['name']}: skipped '{paper['title'][:60]}' ({VENUE_NAME[venue]} {year}), "
                                    f"author '{paper['authors'][i]['name']}' is listed at {aff}")
                 elif relevant:
@@ -326,8 +274,6 @@ def person_records(person, acc, decisions, queue, warnings, skipped, own=(), bor
                          "status": "accepted", "note": "", "pres": paper["pres"], "url": paper["url"],
                          "authors": [a["name"] for a in paper["authors"]], "match": match,
                          "people": paper["authors"], "self": i, "topic": paper.get("topic", "")})
-    # 3. papers on personal pages: the professor's own, or a colleague's that names them as co-author.
-    #    They confirm a paper of an official list, or stand in for a list that is not complete yet.
     for row in own:
         venue, year, title = row["venue"], row["year"], row["title"].strip()
         if venue not in VENUE_KEYS or year not in YEARS or existing(venue, year, title) or any(
@@ -375,21 +321,17 @@ def person_records(person, acc, decisions, queue, warnings, skipped, own=(), bor
     return recs, source, fetched, stale
 
 
-# venue-years whose accepted papers are taken as unofficial unless the person's own OpenReview record confirms them:
-# the list is out, but the submissions and their author IDs are not public on OpenReview yet (NeurIPS 2026 left on
-# 2026-11-20, when its submissions became public)
 UNVERIFIED = set()
 
 
 def apply_rules(person, recs):
-    """(counted, excluded, workshop): counted papers, papers listed as not counted, and workshop papers."""
     counted, excluded, workshop = [], [], []
     for r in recs:
         if ((r["venue"], r["year"]) in UNVERIFIED and r["status"] == "accepted" and not r.get("unofficial")
                 and not r["match"].startswith("OpenReview profile")):
             r = {**r, "unofficial": True,
                  "match": f"{r['match']}; in the {VENUE_NAME[r['venue']]} {r['year']} list, not yet confirmable on OpenReview"}
-        if r["track"] == "findings":   # a rejection from the main track, and a paper like a workshop paper
+        if r["track"] == "findings":
             workshop.append({**r, "track": "workshop", "status": "accepted", "workshop": "Findings"})
             r = {**r, "track": "main", "status": "rejected", "note": FINDINGS_NOTE}
         if r["track"] == "workshop":
@@ -410,7 +352,6 @@ def apply_rules(person, recs):
 
 
 def own_affiliation(person, r):
-    """The affiliation the paper prints for this person ('' when it prints none or they cannot be found)."""
     people = r.get("people") or []
     i = r.get("self")
     if i is None or i >= len(people):
@@ -422,9 +363,6 @@ _PAST_POSTS = {}
 
 
 def past_posts(person):
-    """Staff posts (lecturer or higher) at universities in Vietnam other than the roster institution, from the
-    person's OpenReview history: (pseudo person for same_institution, start year, end year). A paper written there
-    while the post lasted counts too, at the maintainer's rule; a student post never does."""
     if person["slug"] in _PAST_POSTS:
         return _PAST_POSTS[person["slug"]]
     path = OPENREVIEW_RAW / f"{person['slug']}.json"
@@ -444,16 +382,11 @@ def past_posts(person):
 
 
 def at_past_post(aff, person, year):
-    """True if the affiliation names a university where the person held a staff post in that year."""
     return bool(aff) and any((start is None or start <= year) and (end is None or year <= end)
                              and same_institution(aff, inst) for inst, start, end in past_posts(person))
 
 
 def at_institution(person, r):
-    """An accepted paper counts for a person only if it lists them at their institution. A paper that prints no
-    affiliation for them (unofficial papers, lists without affiliations) cannot be checked and counts. Their own
-    entry may name the institution by its short name ("VinAI & HUST"), or for HCMUS and the Hanoi University of
-    Science just "University of Science"; neither is safe to read as Vietnamese for anyone else."""
     aff = own_affiliation(person, r)
     if not aff or same_institution(aff, person) or at_past_post(aff, person, r["year"]):
         return True
@@ -464,11 +397,6 @@ def at_institution(person, r):
 
 
 def mark_later_acceptance(recs, acc):
-    """Note on each not-accepted paper whether the same title was accepted later at one of the ten venues.
-
-    Titles often change between submissions, so this finds only some of the resubmissions.
-    """
-    # main track only: an acceptance in Findings or a workshop is not one of the counted venues
     accepted = [r for r in recs if r["status"] == "accepted" and r.get("track", "main") == "main"]
     for r in recs:
         r["later"] = ""
@@ -476,7 +404,7 @@ def mark_later_acceptance(recs, acc):
             continue
         found = [a for a in accepted if (a["year"], VENUE_KEYS.index(a["venue"])) > (r["year"], -1)
                  and a is not r and same_title(a["title"], r["title"])]
-        if not found:  # an accepted paper that was not matched to this person, for example at ACL
+        if not found:
             found = [p for v in VENUE_KEYS for y in YEARS if y >= r["year"]
                      for p in [acc.by_title.get((v, y, norm_title(r["title"])))] if p and p["track"] == "main"]
         if found:
@@ -484,10 +412,7 @@ def mark_later_acceptance(recs, acc):
             r["later"] = f"{VENUE_NAME[first['venue']]} {first['year']}"
 
 
-# ---------------------------------------------------------------- aggregation
-
 def tally(records):
-    """{venue: {accepted, official, own_page, rejected, withdrawn, desk_rejected, not_accepted, submitted}}."""
     out = {v: dict.fromkeys(["accepted", *NOT_ACCEPTED, "not_accepted", "submitted", "own_page", "official"], 0)
            for v in VENUE_KEYS}
     for r in records:
@@ -497,12 +422,11 @@ def tally(records):
         if r["status"] in NOT_ACCEPTED:
             t["not_accepted"] += 1
         if r["status"] == "accepted":
-            t["own_page" if r.get("unofficial") else "official"] += 1  # own_page: from a personal page only
+            t["own_page" if r.get("unofficial") else "official"] += 1
     return out
 
 
 def summary(records, acc, counts_from=None):
-    """Totals and the year-by-year table for a person, an institution or a venue."""
     years = []
     for y in YEARS:
         in_year = [r for r in records if r["year"] == y]
@@ -522,22 +446,19 @@ def summary(records, acc, counts_from=None):
 
 
 def split_topic(label):
-    """('Deep Learning', 'Generative Models') from 'Deep Learning->Generative Models' or, in 2023 lists, 'a/b'."""
     area, _, sub = label.partition("->") if "->" in label else label.partition("/")
     area = area.strip()
     return AREA_ALIAS.get(area, area), sub.strip()
 
 
 def same_person(a, b):
-    """Two spellings of one name where one abbreviates a word of the other: 'Bui T Duc' and 'Bui Trong Duc'."""
     a, b = norm_name(a).split(), norm_name(b).split()
     return len(a) == len(b) and all(x == y or (len(x) == 1 and y.startswith(x)) or (len(y) == 1 and x.startswith(y))
                                     for x, y in zip(a, b))
 
 
 def distinct_people(names):
-    """One key per person for a list of author names, so a co-author under two spellings is counted once."""
-    groups, keys = [], {}  # each group: the spellings of one person
+    groups, keys = [], {}
     for name in names:
         group = next((g for g in groups if any(name_key(n) == name_key(name) or same_person(n, name) for n in g)),
                      None)
@@ -552,24 +473,16 @@ def distinct_people(names):
 
 
 def collaboration(person, counted, workshop=()):
-    """Co-author and topic figures over every counted paper of a person, accepted or not.
-
-    Papers that were not accepted come from OpenReview, which gives author names but no affiliations.
-
-    Foreign and other-institution co-authors can only be told apart where the accepted list prints an
-    affiliation for each author, and topics only where the conference labels its papers, so each figure
-    comes with the number of papers it is based on. Workshop papers enter only the maximum.
-    """
     papers = list(counted)
-    accepted_sizes = []  # the minimum is taken over accepted papers only, the maximum over every submission
+    accepted_sizes = []
     sizes, foreign, own, other_vn, everyone, elsewhere, abroad = [], [], [], [], set(), set(), set()
-    other_inst = []   # per paper: co-authors at another institution, in Vietnam or abroad
-    domestic = []     # per paper: co-authors at an institution in Vietnam, the professor's own included
+    other_inst = []
+    domestic = []
     areas, topics = collections.Counter(), collections.Counter()
     who = distinct_people([a["name"] for r in papers for a in r["people"]])
     for r in papers:
         me = r["self"]
-        if me is None:  # from OpenReview only: find the professor by name
+        if me is None:
             me = next((i for i, a in enumerate(r["people"]) if norm_name(a["name"]) in person["variants"]), None)
         others = [a for i, a in enumerate(r["people"]) if i != me]
         sizes.append(len(others) if me is not None else max(len(others) - 1, 0))
@@ -595,7 +508,7 @@ def collaboration(person, counted, workshop=()):
         return f"{sum(xs) / len(xs):.1f}" if xs else ""
 
     widest = list(sizes)
-    for r in workshop:   # OpenReview names only: leave the professor out by name
+    for r in workshop:
         names = [a["name"] for a in r["people"]]
         mine = sum(1 for a in names if norm_name(a) in person["variants"])
         widest.append(len(names) - max(mine, 1) if names else 0)
@@ -608,16 +521,13 @@ def collaboration(person, counted, workshop=()):
         "elsewhere": len(elsewhere) if foreign else "", "elsewhere_abroad": len(elsewhere & abroad),
         "elsewhere_vietnam": len(elsewhere - abroad),
         "papers_with_topic": sum(areas.values()), "topic_areas": len(areas) if areas else "",
-        "topic_count": len(topics) if topics else "",   # distinct (area, topic) labels: the rows of the topic table
+        "topic_count": len(topics) if topics else "",
         "areas": [{"area": a, "papers": n} for a, n in areas.most_common()],
         "topics": [{"area": a, "topic": t, "papers": n} for (a, t), n in sorted(topics.items(), key=lambda x: (-x[1], x[0]))],
     }
 
 
 def authorship(records, institution):
-    """Stricter counts for an institution page: accepted papers whose authors are mostly from the
-    institution, and accepted papers whose first author is. Only papers from a list that prints an
-    affiliation for each author can be judged; the others are counted in `unknown`."""
     accepted = [r for r in records if r["status"] == "accepted"]
     judged = [r for r in accepted if any(a["aff"] for a in r["people"])]
 
@@ -652,8 +562,6 @@ AUTHOR_CHART_TEXT = {
 
 
 def authorship_svg(by_year, kind, inst, counts_from=None, lang="en"):
-    """One stacked column per year of accepted papers: from the institution (first author or most authors,
-    by `kind`), from elsewhere, and papers whose source prints no affiliations (cannot be judged)."""
     w = AUTHOR_CHART_TEXT[lang]
     width, height, left, right, top, bottom = 640, 260, 40, 12, 46, 30
     plot_w, plot_h = width - left - right, height - top - bottom
@@ -713,27 +621,22 @@ INSTITUTION_CHART_TEXT = {"en": {"inst": "the institution", "aria": "Accepted pa
 
 
 CUP_PATH = ("M7 3h10v2h3v3a4 4 0 0 1-4 4h-.3A5 5 0 0 1 13 14.9V18h3v2H8v-2h3v-3.1A5 5 0 0 1 8.3 12H8a4 4 0 0 1-4-4V5h3V3z"
-            "m0 4H6v1a2 2 0 0 0 1 1.7V7zm10 0v2.7A2 2 0 0 0 18 8V7h-1z")   # the cup of the sortable tables (site.js)
+            "m0 4H6v1a2 2 0 0 0 1 1.7V7zm10 0v2.7A2 2 0 0 0 18 8V7h-1z")
 
 
 def podium(values):
-    """Cup for each value, as in the sortable tables: the three highest distinct values take gold, silver and
-    bronze, tied values share one, and zero takes none."""
     top = sorted({v for v in values if v}, reverse=True)[:3]
     return [("gold", "silver", "bronze")[top.index(v)] if v in top else None for v in values]
 
 
 def institution_svg(institutions, kind, peak, lang="en"):
-    """One horizontal stacked bar per institution, the most blue first: accepted papers with the first author (or most
-    authors, by `kind`) from the institution, from elsewhere, and papers that cannot be judged. Every bar is as long as
-    the institution's accepted papers on one scale shared by both charts, so only the blue part moves between them."""
     w, t = AUTHOR_CHART_TEXT[lang], INSTITUTION_CHART_TEXT[lang]
     width, name_w, right, top, row_h, bar_h = 640, 96, 64, 34, 26, 14
     labels = [("own-inst", w[kind].format(inst=t["inst"])), ("other-inst", w[kind + "_other"]), ("unjudged", w["unknown"])]
     def home_of(i):
         return i.get("authorship", i)["majority" if kind == "majority" else "first_author"]["total"]
 
-    institutions = sorted(institutions, key=lambda i: (-home_of(i), -i["accepted"], i["short"]))   # most blue first
+    institutions = sorted(institutions, key=lambda i: (-home_of(i), -i["accepted"], i["short"]))
     height = top + row_h * len(institutions) + 4
     scale = (width - name_w - right) / (peak or 1)
     out = [f'<svg class="chart" viewBox="0 0 {width} {height}" role="img" '
@@ -785,7 +688,6 @@ def ai_key(venue, year, title):
 
 
 def review_scores(url):
-    """Reviewers' "score(confidence), ..." for an OpenReview paper, from reviews.json (fetch_reviews.py)."""
     path = JSON_DIR / "reviews.json"
     if not hasattr(review_scores, "table"):
         review_scores.table = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
@@ -794,12 +696,10 @@ def review_scores(url):
     return ", ".join(f"{s}({c})" if c is not None else str(s) for s, c in pairs)
 
 
-OTD_SCORES = WORK / "opentextdetector.json"   # written by fetch_opentextdetector.py
+OTD_SCORES = WORK / "opentextdetector.json"
 
 
 def write_otd_scores(entries):
-    """Open Text Detector's share of flagged sentences per paper (frontend/data/otd_scores.json, git-ignored like
-    ai_scores.json), keyed by ai_key. Per paper only: never added up per professor, institution or venue."""
     scores = json.loads(OTD_SCORES.read_text(encoding="utf-8")) if OTD_SCORES.exists() else {}
     out = {}
     for e in entries:
@@ -813,7 +713,6 @@ def write_otd_scores(entries):
 
 
 def submission_id(url):
-    """The paper's submission number on OpenReview (submission_numbers.json, from fetch_reviews.py); else empty."""
     path = JSON_DIR / "submission_numbers.json"
     if not hasattr(submission_id, "table"):
         submission_id.table = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
@@ -822,17 +721,13 @@ def submission_id(url):
 
 
 def rank_keys_without(counted, venue_year):
-    """Score, accepted and official counts over the counted papers outside one venue-year, and whether the
-    professor has an accepted paper outside it (without one they are new to the list: the beginner mark)."""
     rest = [r for r in counted if not r.get("potential")] if venue_year == "potential" else \
         [r for r in counted if (r["venue"], r["year"]) != venue_year]
     acc = [r for r in rest if r["status"] == "accepted"]
     main = [r for r in rest if r.get("track", "main") == "main"]
     return {"score": round(sum(1 / max(len(r["authors"]), 1) for r in acc), 2), "accepted": len(acc),
             "official": sum(1 for r in acc if not r.get("unofficial")),
-            # ranked before the baseline only with an accepted paper outside it; otherwise new (the beginner mark)
             "shown": bool(acc),
-            # the table's last tie-breaks: ICLR submissions when something was accepted, else all submissions
             "iclr_submitted": sum(1 for r in main if r["venue"] == "iclr"), "submitted": len(main)}
 
 
@@ -855,23 +750,11 @@ def paper_order(r):
 
 
 def decision_order(r):
-    """The Papers page: newest decision first (DECISION_DATES); a venue-year still under review comes first."""
     date = DECISION_DATES.get(r["venue"], {}).get(r["year"], "9999")
     return [-ord(c) for c in date], VENUE_KEYS.index(r["venue"]), r["title"].lower()
 
 
 def projection(p):
-    """Papers submitted and accepted per year for one professor, with the unknown part estimated.
-
-    Submissions are public for ICLR only. For the other venues the papers that were not accepted are
-    estimated from the accepted ones and the professor's own ICLR record, case by case:
-
-        submissions per accepted paper = (ICLR submitted + 1) / (ICLR accepted + 1)
-
-    The +1 on both sides is the usual way to estimate "attempts per success" from a short record: it
-    stays finite when nothing was accepted, it does not swing on one paper, and with no ICLR
-    submissions at all it gives 1, so nothing is added for a professor whose rejections are unknown.
-    """
     i = p["venues"]["iclr"]
     submitted, accepted = (i["submitted"], i["accepted"]) if p["iclr_complete"] else (0, 0)
     ratio = (submitted + 1) / (accepted + 1)
@@ -881,8 +764,6 @@ def projection(p):
             rows.append({"year": y["year"], "counts": False})
             continue
         iclr = y["venues"]["iclr"]
-        # rejections on record: every ICLR one, plus those known at other venues (public NeurIPS rejections,
-        # papers placed in Findings); the estimate for the hidden rest does not count those twice
         other = sum(c["not_accepted"] for v, c in y["venues"].items() if v != "iclr")
         known = (iclr["not_accepted"] if p["iclr_complete"] else 0) + other
         elsewhere = y["accepted"] - (iclr["accepted"] if p["iclr_complete"] else 0)
@@ -904,10 +785,6 @@ def projection(p):
 
 
 def overview(professors, acc):
-    """The front-page figures: accepted papers and the papers behind them, all listed professors together.
-
-    The per-professor estimates (see `projection`) are added up, so a paper of two listed professors is
-    counted for each, as on their own pages."""
     years = {y: {"accepted": 0, "recorded": 0, "estimated": 0.0} for y in YEARS}
     for p in professors:
         for r in (p["projection"] or {}).get("rows", []):
@@ -930,7 +807,6 @@ def overview(professors, acc):
             w["stack_label"], YEARS, [(c, n, [r[k] for r in rows]) for (c, n), k in zip(named, keys)],
             provisional=provisional, short={w["s_not"]: w["short_not"], w["s_est"]: w["short_est"]},
             words={"total": w["total"], "incomplete": w["incomplete"]})
-        # Fig. 4: accepted papers per year in each area, added up over the professors like Fig. 1 and 2
         area_of = {v: g["key"] for g in VENUE_GROUPS for v in g["venues"]}
         per = {g["key"]: [0] * len(YEARS) for g in VENUE_GROUPS}
         for p in professors:
@@ -940,13 +816,11 @@ def overview(professors, acc):
         out["areas" + suffix] = charts.stacked_area(
             w["areas_label"], YEARS, [(f"ar-{g['key']}", g["name"], per[g["key"]]) for g in VENUE_GROUPS],
             words={"total": w["total"], "incomplete": w["incomplete"]})
-        # Fig. 3: how the CSRankings scores of the professors with an accepted paper are spread
         out["cdf" + suffix] = charts.cdf(w["cdf_label"], [p["score"] for p in professors if p["accepted"]],
                                          {"x": w["cdf_x"], "tip": w["cdf_tip"]})
     return out
 
 
-# the words drawn inside the charts, per site language
 CHART_TEXT = {
     "en": {"aria": "Papers submitted and accepted per year by {name}; the numbers are in the table below",
            "acc": "Accepted", "not": "Rejected, recorded", "est": "Rejected elsewhere, estimated",
@@ -971,7 +845,6 @@ CHART_TEXT = {
 }
 
 
-# the same chart on a venue page, where the recorded rejections are that venue's own
 VENUE_CHART_TEXT = {
     "en": {"aria": "Papers accepted and rejected per year at {name}", "not": "Rejected, recorded",
            "est": "Rejected, estimated", "tip_not": "{n} rejected, recorded", "tip_est": "about {n} rejected (estimate)",
@@ -984,11 +857,10 @@ VENUE_CHART_TEXT = {
 }
 
 
-ACCEPT_SCORE = 2.6   # mean review score above which a submission under review counts as likely accepted (maintainer)
+ACCEPT_SCORE = 2.6
 
 
 def likely_rejected(year):
-    """How many of those submissions have a mean review score at or below ACCEPT_SCORE; None without the list."""
     path = WORK / "under_review.json"
     if not path.exists():
         return None
@@ -1000,8 +872,6 @@ def likely_rejected(year):
 
 
 def likely_accepted(year):
-    """How many ICLR submissions under review, matched to tracked professors (work/under_review.json), have a mean
-    review score above ACCEPT_SCORE; None when that local list is missing or for another year."""
     path = WORK / "under_review.json"
     if not path.exists():
         return None
@@ -1016,10 +886,6 @@ _UNDER_REVIEW = None
 
 
 def potential_records(person):
-    """Potential acceptances: ICLR submissions under review matched to this professor through a public preprint
-    (match_under_review.py, local data) whose mean review score is above ACCEPT_SCORE. They count as unofficial (+N)
-    everywhere a paper is counted. Title, co-authors and links are redacted here, so that the public data files
-    never hold them; the tag in the title only keeps two such papers apart (a hash of the forum id)."""
     global _UNDER_REVIEW
     if _UNDER_REVIEW is None:
         path = WORK / "under_review.json"
@@ -1040,10 +906,6 @@ def potential_records(person):
 
 
 def iclr_projection(entries, year, k=2):
-    """(accepted, rejected) projected for an ICLR year under review, from its withdrawals so far: each withdrawn paper
-    stands for 1 / (withdrawal share) submissions and accepts at the acceptance rate of its professors, both their own
-    (withdrawal share over the three years before, acceptance rate the year before), pulled toward the group's by k
-    papers. A paper with no professor who submitted the year before counts as one rejection and nothing more."""
     iclr = [e for e in entries if e["venue"] == "iclr"]
     def record(years):
         per, pool = collections.defaultdict(collections.Counter), collections.Counter()
@@ -1074,11 +936,6 @@ def iclr_projection(entries, year, k=2):
 
 
 def projection_svg(name, rows, lang="en", words=None):
-    """One stacked column per year: accepted, not accepted at ICLR (counted), not accepted elsewhere (estimated).
-
-    The colours are classes styled in static/style.css; every segment carries a <title>, which browsers
-    show on hover, and the same numbers are in the table under the chart.
-    """
     width, height, left, right, top, bottom = 640, 300, 40, 12, 46, 30
     plot_w, plot_h = width - left - right, height - top - bottom
     peak = max((r["total"] for r in rows if r["counts"]), default=0)
@@ -1096,7 +953,7 @@ def projection_svg(name, rows, lang="en", words=None):
              "pr": "projected_rejected"}
     for cls in ("acc", "not", "est", "pa", "pr"):
         if cls != "acc" and not any(r["counts"] and r.get(field[cls]) for r in rows):
-            continue   # a series that is zero every year is left out of the legend
+            continue
         out.append(f'<rect class="{cls}" x="{x}" y="8" width="12" height="12"/>'
                    f'<text class="label" x="{x + 18}" y="18">{w[cls]}</text>')
         x += 30 + 6.4 * len(w[cls])
@@ -1121,13 +978,13 @@ def projection_svg(name, rows, lang="en", words=None):
             ("pa", r.get("projected_accepted", 0), w.get("tip_pa", "").format(n=f"{r.get('projected_accepted', 0):.0f}")),
             ("pr", r.get("projected_rejected", 0), w.get("tip_pr", "").format(n=f"{r.get('projected_rejected', 0):.0f}"))]
             if v > 0]
-        parts.sort(key=lambda p: ("pa", "acc", "not", "est", "pr").index(p[0]))   # projected accepted at the base
+        parts.sort(key=lambda p: ("pa", "acc", "not", "est", "pr").index(p[0]))
         low = base
         for n, (cls, v, text) in enumerate(parts):
             high = low - v / top_value * plot_h
-            h = max(low - high - (2 if n else 0), 0.5)  # a 2px gap in the surface colour separates the segments
+            h = max(low - high - (2 if n else 0), 0.5)
             y, x = low - (2 if n else 0) - h, cx - bar / 2
-            rnd = min(4, h) if n == len(parts) - 1 else 0  # only the free end of the column is rounded
+            rnd = min(4, h) if n == len(parts) - 1 else 0
             shape = (f'M{x:.1f},{y + h:.1f} V{y + rnd:.1f} Q{x:.1f},{y:.1f} {x + rnd:.1f},{y:.1f} H{x + bar - rnd:.1f} '
                      f'Q{x + bar:.1f},{y:.1f} {x + bar:.1f},{y + rnd:.1f} V{y + h:.1f} Z')
             out.append(f'<path class="{cls}" d="{shape}"><title>{r["year"]}: {text}</title></path>')
@@ -1140,12 +997,7 @@ def projection_svg(name, rows, lang="en", words=None):
     return "".join(out)
 
 
-# ---------------------------------------------------------------- outputs
-
 def person_links(person):
-    """Every public page known for a professor, one entry each: their homepage and other sites, staff and
-    publication pages from the roster, each OpenReview profile (merged usernames count as one profile), and
-    the DBLP and homepage links their OpenReview profiles give."""
     links, seen = [], set()
 
     def kind_of(url):
@@ -1164,7 +1016,6 @@ def person_links(person):
         if not key or key in seen:
             return
         seen.add(key)
-        # the address as shown: without the scheme, and readable where it is percent-encoded (Vietnamese titles)
         text = re.sub(r"^https?://(www\.)?|/$", "", urllib.parse.unquote(url.strip()))
         links.append({"kind": kind or kind_of(url), "url": url.strip(), "label": label, "text": text})
 
@@ -1187,22 +1038,18 @@ def person_links(person):
 
 
 def write_stubs(section, items, former=None):
-    """One content file per page. Everything shown comes from data/, the stub only creates the URL.
-
-    items: (key, title) or (key, title, Vietnamese title). former: a former section name; its addresses redirect here."""
     folder = CONTENT / section
     folder.mkdir(parents=True, exist_ok=True)
     for old in folder.glob("*.md"):
         if not old.name.startswith("_index."):
             old.unlink()
     for key, title, *vi in items:
-        for suffix, name in ((".vi.md", vi[0] if vi else title), (".en.md", title)):   # Vietnamese at /, English at /en/
+        for suffix, name in ((".vi.md", vi[0] if vi else title), (".en.md", title)):
             alias = f"aliases: [{json.dumps(f'/{former}/{key}/')}]\n" if former else ""
             stub = f"---\ntitle: {json.dumps(name, ensure_ascii=False)}\nkey: {json.dumps(key)}\n{alias}---\n"
             (folder / f"{key}{suffix}").write_text(stub, encoding="utf-8")
 
 
-# flags of the countries VietProfs lists
 COUNTRY_CODE = {"United States": "US", "Australia": "AU", "United Kingdom": "GB", "France": "FR", "Canada": "CA",
                 "Japan": "JP", "Singapore": "SG", "Taiwan": "TW", "Germany": "DE", "South Korea": "KR", "Switzerland": "CH",
                 "Netherlands": "NL", "Hong Kong": "HK", "China": "CN", "Finland": "FI", "Sweden": "SE", "Norway": "NO",
@@ -1213,7 +1060,6 @@ COUNTRY_CODE = {"United States": "US", "Australia": "AU", "United Kingdom": "GB"
 
 
 def flag(country):
-    """Two-letter code, for the SVG flag static/img/flags/<code>.svg (flag-icons, MIT); emoji flags do not show on Windows."""
     return COUNTRY_CODE.get(country, "").lower()
 
 
@@ -1221,8 +1067,6 @@ VIETPROFS_URL = "https://vietprofs.roars.dev/people/{}.html"
 
 
 def place_weight_labels(edges):
-    """Where the number of shared papers sits on each line with 2 or more: a point along the line, heaviest lines
-    first, clear of the numbers already placed and touching as few other lines as possible (lx, ly)."""
     def near_line(x, y, e, pad):
         dx, dy = e["x2"] - e["x1"], e["y2"] - e["y1"]
         t = max(0, min(1, ((x - e["x1"]) * dx + (y - e["y1"]) * dy) / (dx * dx + dy * dy)))
@@ -1244,8 +1088,6 @@ def place_weight_labels(edges):
 
 
 def international_graph(authors, by_slug):
-    """Bipartite drawing for the International cooperation page: professors on the list on the left, co-authors
-    abroad who have a VietProfs profile (vietprofs.csv) on the right; a line is the number of papers they share."""
     authors = sorted(authors, key=lambda f: (-len(f["papers"]), f["name"]))
     top, step = 40, 46
     right = []
@@ -1253,7 +1095,6 @@ def international_graph(authors, by_slug):
         right.append({"name": f["name"], "affiliation": f["affs"].most_common(1)[0][0], "papers": len(f["papers"]),
                       "url": VIETPROFS_URL.format(f["vp_id"]), "country": f["country"], "flag": flag(f["country"]), "slugs": f["slugs"], "id": f"f{i}"})
     slugs = sorted({s for f in right for s in f["slugs"] if s in by_slug})
-    # order the professors by the average position of their co-authors, which keeps most lines from crossing
     def centre(s):
         pos = [(i, f["slugs"][s]) for i, f in enumerate(right) if s in f["slugs"]]
         return sum(i * w for i, w in pos) / sum(w for _, w in pos)
@@ -1298,12 +1139,11 @@ def main():
         recs += potential_records(person)
         counted, excluded, workshop = apply_rules(person, recs)
         if not counted:
-            hidden.append(person["name"])  # on the roster, but shown only once they have a counted submission
+            hidden.append(person["name"])
             continue
-        # without a record of their own, only what a colleague's record happens to show is known
         partial = source == "none" and any(r.get("borrowed") and r["venue"] == "iclr" for r in counted)
         complete = source != "none" or partial
-        flags = []   # what is still to confirm is listed on the local Candidates page, not on the public page
+        flags = []
         if partial:
             flags.append("Their own OpenReview records have not been fetched. The rejected ICLR papers "
                          "come from the records of co-authors on this site, so there may be more.")
@@ -1328,7 +1168,6 @@ def main():
         s = summary(counted, acc, person["vn_since"])
         professors.append({
             "slug": person["slug"], "name": person["name"], "name_vi": person["name_vi"] or person["name"],
-            # the name forms used on papers, shown as "also published as" and given to search engines
             "aliases": [a for a in dict.fromkeys(person["name_forms"]) if norm_name(a) not in
                         {norm_name(person["name"]), norm_name(person["name_vi"] or "")}],
             "institution": person["institution"],
@@ -1338,14 +1177,11 @@ def main():
             "page_note_vi": person["page_note_vi"] or person["page_note"], "homepage": person["homepage"], "vn_since": person["vn_since"] or 0,
             "openreview_ids": person["openreview_ids"], "openreview_source": source, "openreview_fetched": fetched,
             "links": person_links(person),
-            # CSRankings' adjusted count: each accepted paper is worth 1 / (number of authors on it), summed
             "score": round(sum(1 / max(len(r["authors"]), 1) for r in counted if r["status"] == "accepted"), 2),
-            # the same credit by CSRankings area (AI, ML, CV, NLP), which the score of an institution is built from
             "score_areas": {g["name"]: round(sum(1 / max(len(r["authors"]), 1) for r in counted
                                                  if r["status"] == "accepted" and r["venue"] in g["venues"]), 4)
                             for g in VENUE_GROUPS},
             "iclr_complete": complete, "flags": flags, **s, "collab": collaboration(person, counted, workshop), "authorship": authorship(counted, person),
-            # the same ordering keys without the papers of RANK_BASELINE, for the rank change on the front page
             "_base": rank_keys_without(counted, RANK_BASELINE),
             "accepted_papers": [page_entry(r) for r in sorted(counted, key=paper_order) if r["status"] == "accepted"],
             "not_accepted_papers": [page_entry(r) for r in sorted(counted, key=paper_order)
@@ -1354,18 +1190,12 @@ def main():
             "workshop_papers": [page_entry(r) for r in sorted(workshop, key=paper_order)],
         })
         all_counted += [{**r, "_who": person} for r in counted]
-        # the collaboration graphs use workshop papers too, from the years in Vietnam
-        graph_recs += [(r, person["slug"]) for r in counted if not r.get("potential")]   # under review: not drawn
+        graph_recs += [(r, person["slug"]) for r in counted if not r.get("potential")]
         graph_recs += [(r, person["slug"]) for r in workshop if in_vietnam(person, r["year"])]
-    # most accepted first; people with none accepted yet come last, most submissions first
-    # accepted papers, official and unofficial together, more official ones first among equals, as the tables sort them
-    # (CSRankings' score, the sum of 1 / authors over the accepted papers, comes first)
     professors.sort(key=lambda p: (-p["score"], -p["accepted"], -p["official"],
                                    -p["venues"]["iclr"]["submitted"] if p["accepted"]
                                    else -sum(v.get("submitted", 0) for v in p["venues"].values()), p["name"]))
 
-    # rank before the results of RANK_BASELINE: the same order, on the papers counted without that venue-year;
-    # someone with no other counted submission was not on the list then ("new")
     before = sorted((p for p in professors if p["_base"]["shown"]),
                     key=lambda p: (-p["_base"]["score"], -p["_base"]["accepted"], -p["_base"]["official"],
                                    -p["_base"]["iclr_submitted"] if p["_base"]["accepted"] else -p["_base"]["submitted"],
@@ -1376,8 +1206,6 @@ def main():
         p["rank_before"] = was.get(p["slug"])
         p["rank_change"] = (was[p["slug"]] - (k + 1)) if p["slug"] in was else None
 
-    # authors on a professor's page link to the person when that person is on the site and has the same paper in
-    # their own record, so a namesake at another institution is never linked
     variants = {p["slug"]: p["variants"] for p in approved}
     lists = ("accepted_papers", "not_accepted_papers", "excluded_papers", "workshop_papers")
     holders = collections.defaultdict(set)
@@ -1390,7 +1218,6 @@ def main():
         exact = [s for s in sorted(mine) if norm_name(name) in variants[s]]
         if exact:
             return exact[0]
-        # a shorter form such as "Hanh Nguyen" for Nguyen Thi Hanh: its words all in one holder's name, and only one
         part = set(norm_name(name).split())
         loose = [s for s in sorted(mine) if len(part) >= 2 and any(part <= w for w in words[s])]
         return loose[0] if len(loose) == 1 else ""
@@ -1400,7 +1227,6 @@ def main():
             mine = holders[(e["venue"], e["year"], norm_title(e["title"]))]
             e["author_links"] = [{"name": a, "slug": holder_of(a, mine)} for a in e.pop("_authors")]
 
-    # a paper shared by two professors is one paper for an institution, a venue and the paper list
     owners = collections.defaultdict(list)
     for r in all_counted:
         owners[(r["venue"], r["year"], norm_title(r["title"]))].append(r["_who"])
@@ -1412,12 +1238,9 @@ def main():
     for p in professors:
         p["projection"] = projection(p)
         p["author_charts"] = authorship_charts(p, p["institution_short"], p["vn_since"] or None)
-        # every rejection behind the accepted papers: the ones recorded at ICLR plus the estimate for the other venues
         p["rejected_estimated"] = (round(sum(r["iclr_not_accepted"] + float(r["estimated"])
                                              for r in p["projection"]["rows"] if r["counts"]))
                                    if p["projection"] else None)
-        # all years together: the pie beside the chart and the estimated acceptance rate use the same rounded
-        # numbers as the front table, so the three always agree
         p["acceptance_rate"] = None
         if p["projection"]:
             pr = p["projection"]
@@ -1441,34 +1264,25 @@ def main():
                              **summary(recs, acc)})
     by_slug = {p["slug"]: p for p in professors}
     for i in institutions:
-        # workshop papers of its professors, for reference only; a paper of two of them is one paper
         i["workshop"] = len({(w["venue"], w["year"], norm_title(w["title"]))
                              for m in i["professors"] for w in by_slug[m]["workshop_papers"]})
     for i in institutions:
-        # the same estimate as for a professor, from the institution's own ICLR record, so a paper shared by two
-        # of its professors counts once: recorded ICLR rejections plus the hidden rejections behind its other papers
         iclr = i["venues"]["iclr"]
         ratio = (iclr["submitted"] + 1) / (iclr["accepted"] + 1)
         elsewhere = i["accepted"] - iclr["accepted"]
-        # rejections on record at the other venues (public NeurIPS rejections, Findings) count, and are not
-        # estimated a second time
         other = sum(c["not_accepted"] for v, c in i["venues"].items() if v != "iclr")
         i["rejected_estimated"] = (round(iclr["not_accepted"] + other + max(elsewhere * (ratio - 1) - other, 0))
                                    if i["accepted"] or iclr["submitted"] or other else None)
         total = i["accepted"] + (i["rejected_estimated"] or 0)
         i["acceptance_rate"] = round(100 * i["accepted"] / total) if i["rejected_estimated"] is not None and total else None
-        i["rate_trivial"] = not iclr["submitted"]   # nothing to estimate the hidden rejections from
+        i["rate_trivial"] = not iclr["submitted"]
     for i in institutions:
         i["author_charts"] = authorship_charts(i, i["short"])
-    # CSRankings' score of an institution: the adjusted counts of its professors are added up in each area (a paper
-    # shared by two of them counts for each, as it does there), and the score is the geometric mean over the areas
-    # of (count + 1), "the nth root of the product of all adjusted counts (+ 1)"
     for i in institutions:
         mine = [p for p in professors if p["institution_slug"] == i["slug"]]
         i["score_areas"] = {g["name"]: round(sum(p["score_areas"][g["name"]] for p in mine), 2) for g in VENUE_GROUPS}
         i["score"] = round(math.prod(v + 1 for v in i["score_areas"].values()) ** (1 / len(VENUE_GROUPS)), 2)
     institutions.sort(key=lambda i: (-i["score"], -i["accepted"], -i["official"], i["name"]))
-    # Vietnamese names, confirmed by hand (institution_names.csv); the Vietnamese site shows them
     names_vi = {r["name"]: r["name_vi"] for r in read_csv(CSV_DIR / "institution_names.csv")}
     for i in institutions:
         i["name_vi"] = names_vi.get(i["name"], i["name"])
@@ -1478,7 +1292,6 @@ def main():
     def with_owners(r):
         who = owners[(r["venue"], r["year"], norm_title(r["title"]))]
         e = page_entry(r, [{"slug": p["slug"], "name": p["name"], "name_vi": p["name_vi"]} for p in who])
-        # the professors are linked where they stand in the author list, as on their own pages
         mine = {p["slug"] for p in who}
         e["author_links"] = [{"name": a, "slug": holder_of(a, mine)} for a in e.pop("_authors")]
         return e
@@ -1487,11 +1300,8 @@ def main():
     for v in VENUES:
         recs = [r for r in papers if r["venue"] == v["key"]]
         venues.append({**v, **summary(recs, acc),
-                       # the list (and its professors with accepted papers) leaves the potential acceptances out:
-                       # they are only counted, as +N, in the figures above
                        "papers": [with_owners(r) for r in sorted(recs, key=paper_order) if not r.get("potential")]})
 
-    # review.csv is append-only from this side, so answers already typed in are never touched
     known = {(r["professor"], r["venue"], r["year"], norm_title(r["title"])) for r in review_rows}
     new = [q for q in queue if (q["professor"], q["venue"], q["year"], norm_title(q["title"])) not in known]
     if new or not REVIEW.exists():
@@ -1504,21 +1314,14 @@ def main():
     names = {p["slug"]: p["name"] for p in roster}
     pending = [{**q, "professor_name": names[q["professor"]], "venue_name": VENUE_NAME[q["venue"]]} for q in queue]
 
-    # people whose papers name no university (VinAI, FPT, Vingroup, Viettel...) are not lecturers or
-    # professors, so they go to the Not tracked page instead of waiting as candidates
     found = [{**c, "papers": int(c["papers"]), "senior_author": int(c["senior_author"])} for c in read_csv(CANDIDATES)]
-    candidate_rows = found   # `found` is reused further down
-    # people whose only papers are at NeurIPS 2026: that year's papers are not on OpenReview yet, so the
-    # profile behind the name cannot be checked; they wait on the Not tracked page until they can be
+    candidate_rows = found
     def neurips_2026_only(c):
         return c["first_year"] == c["last_year"] == "2026" and c["venues"].startswith("NeurIPS ") and "," not in c["venues"]
 
     candidates = [c for c in found if c["at_university"] == "yes" and not neurips_2026_only(c)]
     companies = [c for c in found if c["at_university"] != "yes"]
     unconfirmed = [c for c in found if c["at_university"] == "yes" and neurips_2026_only(c)]
-    # possible staff (scan_openalex.py --leads) go to the top of the Candidates page. A profile on the roster, approved
-    # or not, has been decided; a name shared with a roster person is only a note. A student (by the OpenReview post)
-    # is not shown, unless a faculty page or a last-author paper says otherwise.
     roster_ids = {i for p in roster for i in p["openreview_ids"]}
     leads = [r for r in (read_csv(CSV_DIR / "staff_leads.csv") if (CSV_DIR / "staff_leads.csv").exists() else [])
              if r["openreview_id"] not in roster_ids]
@@ -1533,7 +1336,6 @@ def main():
     waiting = [{"name": p["name"], "institution": p["institution_short"], "to_confirm": p["to_confirm"]}
                for p in roster if p["approved"] != "yes" and p["approved"] != "no"]
 
-    # Google Scholar: a one-time snapshot (fetch_scholar.py), shown as it was on the day it was read
     scholar = json.loads((JSON_DIR / "scholar.json").read_text(encoding="utf-8")) if (JSON_DIR / "scholar.json").exists() else {}
     for p in professors:
         s = scholar.get(p["slug"])
@@ -1548,7 +1350,6 @@ def main():
         if not any(l["kind"] == "scholar" for l in p["links"]):
             p["links"].append({"kind": "scholar", "url": s["url"], "label": ""})
 
-    # pictures checked by hand (images.csv, copied into static/img by fetch_images.py --apply)
     for kind, items, key in (("person", professors, "slug"), ("institution", institutions, "slug"), ("venue", venues, "key")):
         found = {r["key"]: r for r in read_csv(CSV_DIR / "images.csv") if r["kind"] == kind and r["approved"] == "yes"}
         folder = FRONTEND / "static" / "img" / {"person": "people", "institution": "institutions", "venue": "venues"}[kind]
@@ -1557,21 +1358,15 @@ def main():
             item["image"] = f"img/{folder.name}/{files[0].name}" if files else ""
             item["image_source"] = found[item[key]]["source_page"] if files else ""
     write_json(DATA / "overview.json", overview(professors, acc))
-    # people in Vietnam with ICLR submissions but no accepted paper (find_iclr_only.py), for the local
-    # Candidates page; tracked in git like the rest of the data, at the site maintainer's request
     on_roster = {i for p in roster for i in p["openreview_ids"]}
     attempted = [{**r, "not_accepted": int(r["not_accepted"])} for r in read_csv(CSV_DIR / "iclr_only.csv")
                  if r["openreview_id"] not in on_roster and not set(r["openreview_id"].split(";")) & on_roster]
     students_attempted = [r for r in attempted if post_class(r["position"]) == "student"]
     attempted = [r for r in attempted if post_class(r["position"]) != "student"]
     write_json(DATA / "attempted.json", {"people": attempted, "students_hidden": len(students_attempted)})
-    now = datetime.datetime.now(datetime.timezone.utc)  # UTC, so the data does not show where it was built
+    now = datetime.datetime.now(datetime.timezone.utc)
     write_json(DATA / "professors.json", professors)
     write_json(DATA / "institutions.json", institutions)
-    # rejections behind each venue's accepted papers: counted at ICLR. Elsewhere each paper is estimated from the
-    # ICLR record of its own authors on the list, as on their pages: (ICLR submitted + 1) / (ICLR accepted + 1)
-    # submissions per accepted paper, averaged over its listed authors who have submitted to ICLR. A paper whose
-    # listed authors never submitted to ICLR adds no estimate and is left out of the acceptance rate.
     ratio_of = {}
     for p in professors:
         i = p["venues"]["iclr"]
@@ -1582,7 +1377,6 @@ def main():
         return [ratio_of[o["slug"]] for o in owners[(r["venue"], r["year"], norm_title(r["title"]))] if o["slug"] in ratio_of]
 
     def venue_estimate(key, year=None):
-        """(rejected, estimated; acceptance rate in % or None) for a venue, all years or one year."""
         recs = [r for r in papers if r["venue"] == key and (year is None or r["year"] == year)]
         acc_recs = [r for r in recs if r["status"] == "accepted"]
         rej_recs = [r for r in recs if r["status"] != "accepted"]
@@ -1592,12 +1386,10 @@ def main():
         hidden = sum(sum(rs) / len(rs) - 1 for rs in map(ratios, acc_recs) if rs)
         known_acc = sum(1 for r in acc_recs if ratios(r))
         known_rej = sum(1 for r in rej_recs if ratios(r))
-        extra = max(hidden - known_rej, 0)   # rejections on record are not estimated a second time
+        extra = max(hidden - known_rej, 0)
         total = known_acc + known_rej + extra
         return round(len(rej_recs) + extra), (round(100 * known_acc / total) if known_acc else None)
 
-    # the acceptance rate each conference reports for its main track, all years on record together
-    # (venue_rates.csv: submitted and accepted per year, with the source of each)
     reported = collections.defaultdict(lambda: [0, 0, []])
     for r in read_csv(CSV_DIR / "venue_rates.csv"):
         if r["submitted"].isdigit() and r["accepted"].isdigit():
@@ -1619,17 +1411,11 @@ def main():
                 y["rejected_estimated"] = venue_estimate(v["key"], y["year"])[0]
             if (v["key"] == "iclr" and y["year"] == LAST_YEAR and c.get("held", True) and not c.get("available", True)
                     and c["not_accepted"]):
-                # under review: the rejections on record so far, and a projection of the rest
                 pa, pr = iclr_projection(projection_entries, y["year"])
                 extra = max(pr - c["not_accepted"], 0)
-                # counted, not extrapolated, where the matched submissions under review are known: the potential
-                # rejects (mean review score at or below ACCEPT_SCORE) are the rest of the bar
                 counted_rejects = likely_rejected(y["year"])
                 if counted_rejects is not None:
                     extra = counted_rejects
-                # the accepted part, where the submissions under review matched to tracked professors are known
-                # (match_under_review.py, local data): each whose mean review score is above ACCEPT_SCORE.
-                # Only this count reaches the public chart, never a title or a name.
                 crawled = likely_accepted(y["year"])
                 if crawled is not None:
                     pa = crawled
@@ -1640,7 +1426,7 @@ def main():
             if not (c.get("held", True) and c.get("available", True)):
                 rows.append({"year": y["year"], "counts": False})
                 continue
-            recorded = c["not_accepted"]   # also at venues that hide rejections: Findings papers are on record
+            recorded = c["not_accepted"]
             guess = max(y.get("rejected_estimated", 0) - recorded, 0)
             rows.append({"year": y["year"], "counts": True, "accepted": c["accepted"], "iclr_not_accepted": recorded,
                          "estimated": guess, "total": c["accepted"] + recorded + guess})
@@ -1657,11 +1443,9 @@ def main():
     page_papers = [with_owners(r) for r in sorted((r for r in papers if not r.get("potential")), key=decision_order)]
     write_json(DATA / "papers.json", page_papers)
     write_otd_scores(page_papers)
-    # approved = no: checked and left off for good; `notes` says why
     excluded = [{"name": p["name"], "institution": p["institution_short"], "reason": p["notes"],
                  "homepage": p["homepage"], "openreview_ids": p["openreview_ids"]}
                 for p in roster if p["approved"] == "no"]
-    # authors outside Vietnam with many counted papers together with the professors on the list
     roster_names = {v for p in roster for v in p["variants"]}
     foreign = {}
     for r in papers:
@@ -1691,8 +1475,6 @@ def main():
          for k, f in foreign.items() if len(f["papers"]) > FOREIGN_MIN_PAPERS),
         key=lambda f: (-f["papers"], f["name"]))
     write_json(DATA / "international.json", international)
-    # one list of people to decide about, from the three places a lecturer turns up: the AAAI/IJCAI scan, an
-    # accepted paper that names a university (with a staff post on OpenReview), and an ICLR record (find_iclr_only.py)
     def ids(text):
         return {i for i in re.split(r"[;,\s]+", text or "") if i}
     to_validate, seen_ids, seen_names = [], set(), set()
@@ -1720,7 +1502,6 @@ def main():
                  "evidence": f"ICLR {r['years']}: {r['not_accepted']} not accepted", "paper_url": r["sample_url"],
                  "flag": f"same name on an accepted paper: {r['same_name_accepted']}" if r["same_name_accepted"] else "",
                  "source": "ICLR record", "weight": int(r["not_accepted"])}, ids(r["openreview_id"]))
-    # papers: accepted main-track papers that name a university in Vietnam (candidates.csv), or the scan's count
     accepted_by_name = {token_key(c["display_name"]): int(c["papers"]) for c in candidate_rows}
     for r in to_validate:
         r["papers"] = max(accepted_by_name.get(token_key(r["name"]), 0), r["weight"] if r["source"] != "ICLR record" else 0)
@@ -1738,12 +1519,10 @@ def main():
                                          "lookup_pending": lookup_pending,
                                          "waiting": waiting, "excluded": excluded, "foreign": foreign_coauthors,
                                          "companies": companies, "unconfirmed": unconfirmed,
-                                         # notes on a professor's record (inferred outcomes, missing records, ...): local only
                                          "flags": [{"slug": p["slug"], "name": p["name"], "text": f} for p in professors for f in p["flags"]],
                                          "to_confirm": [{"slug": p["slug"], "name": p["name"], "institution": p["institution_short"],
                                                          "text": p["to_confirm"]} for p in roster
                                                         if p["approved"] == "yes" and p["to_confirm"]]})
-    # About: accepted papers per venue and year as four small line charts, one per area, on one scale
     peak = max((c["papers"] for c in coverage if c["papers"]), default=1)
     top_value = next(t for t in (2000, 4000, 6000, 8000, 10000, 12000, 16000, 20000) if t >= peak)
     cov = {(c["venue"], c["year"]): c for c in coverage}
@@ -1768,9 +1547,8 @@ def main():
         "provisional": [{"venue": v, "name": VENUE_NAME[v], "year": y} for v, y in sorted(acc.provisional)],
     })
     write_stubs("professors", [(p["slug"], p["name"], p["name_vi"]) for p in professors])
-    # the universities' pages (formerly /institutions/, which redirects)
     write_stubs("universities", [(i["slug"], i["name"], i["name_vi"]) for i in institutions], former="institutions")
-    write_stubs("conferences", [(v["key"], v["name"]) for v in venues], former="venues")   # formerly /venues/
+    write_stubs("conferences", [(v["key"], v["name"]) for v in venues], former="venues")
 
     (WORK / "build_report.txt").write_text("\n".join(warnings + skipped) + "\n", encoding="utf-8")
     print(f"{'professor':24s}{'ICLR sub/acc/not':>18s}" + "".join(f"{VENUE_NAME[v]:>9s}" for v in VENUE_KEYS[1:])

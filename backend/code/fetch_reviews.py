@@ -1,15 +1,3 @@
-#!/usr/bin/env python3
-"""Fetch the reviewers' scores of the papers on the site from OpenReview, as score(confidence) pairs.
-
-Reads frontend/data/papers.json (run build_site_data.py first), asks OpenReview for the official reviews of every
-ICLR, NeurIPS and ICML paper whose address is an OpenReview forum, and writes reviews.json:
-{forum id: [[score, confidence], ...]}, one pair per review, scores exactly as the reviewers gave them (the scales
-differ by venue and year, so only the number before the colon is kept). Papers with no public review are left out.
-Also writes submission_numbers.json: the submission number of every OpenReview paper on the site, any venue.
-
-Needs OPENREVIEW_USERNAME and OPENREVIEW_PASSWORD (and a TOTP code when asked). Resumable: forums already in
-reviews.json are skipped; --refresh reads all again (reviews appear and change during review periods).
-"""
 import argparse
 import json
 import re
@@ -19,7 +7,7 @@ from common import JSON_DIR, FRONTEND, write_json
 from fetch_openreview import login, val, with_retry
 
 OUT = JSON_DIR / "reviews.json"
-NUMBERS = JSON_DIR / "submission_numbers.json"   # {forum id: the submission's number at its venue}
+NUMBERS = JSON_DIR / "submission_numbers.json"
 VENUES = ("iclr", "neurips", "icml")
 SCORE_KEYS = ("rating", "overall_recommendation", "recommendation")
 
@@ -49,7 +37,7 @@ def submission_number(client, forum):
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap = argparse.ArgumentParser(description="Fetch the reviewers' scores of the papers on the site from OpenReview, as score(confidence) pairs.")
     ap.add_argument("--refresh", action="store_true", help="read every paper again")
     args = ap.parse_args()
     papers = json.loads((FRONTEND / "data" / "papers.json").read_text(encoding="utf-8"))
@@ -70,7 +58,6 @@ def main():
     write_json(OUT, dict(sorted(known.items())))
     print(f"{len(known)} of {len(todo)} papers have public review scores -> {OUT}")
 
-    # the submission number of every OpenReview paper on the site, any venue (shown as its Submission ID)
     numbers = {} if args.refresh or not NUMBERS.exists() else json.loads(NUMBERS.read_text(encoding="utf-8"))
     forums = {m.group(1): p["year"] for p in papers
               if (m := re.search(r"openreview\.net/forum\?id=([\w-]+)", p["url"] or ""))}
