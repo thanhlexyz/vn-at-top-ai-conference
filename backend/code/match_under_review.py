@@ -246,6 +246,11 @@ def main():
                                   "posted": e["date"], "authors": e["authors"], "professors": {}, "others": {},
                                   "method": f"by hand (arXiv: {e['title']})"}
                 print(f"  by hand: {s['title'][:60]} <- {e['title'][:60]}")
+            elif "add" in d and forum not in matches and forum in sub_by_forum and d["add"].startswith("http"):
+                s = sub_by_forum[forum]
+                matches[forum] = {"forum": forum, "title": s["title"], "preprint": d["add"], "posted": "", "authors": [],
+                                  "professors": {}, "others": {}, "method": f"by hand ({d['add']})"}
+                print(f"  by hand: {s['title'][:60]} <- {d['add']}")
     for forum, d in decisions.items():
         if forum in matches and "drop" in d:
             del matches[forum]

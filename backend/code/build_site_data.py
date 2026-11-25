@@ -8,6 +8,7 @@ import html
 import hashlib
 import json
 import math
+import sys
 import re
 import urllib.parse
 
@@ -1450,7 +1451,8 @@ def main():
     write_json(DATA / "venues.json", venues)
     shown_by_slug = {p["slug"]: p for p in professors}
     recs_for_graph = [(r, shown_by_slug[s]) for r, s in graph_recs if s in shown_by_slug]
-    write_json(DATA / "graph_people.json", graph.researcher_graph(professors, recs_for_graph + under_review_links(recs_for_graph, shown_by_slug)))
+    if "--keep-graph" not in sys.argv or not (DATA / "graph_people.json").exists():
+        write_json(DATA / "graph_people.json", graph.researcher_graph(professors, recs_for_graph + under_review_links(recs_for_graph, shown_by_slug)))
     write_json(DATA / "institution_links.json", graph.institution_links(professors, recs_for_graph))
     for venue, year in sorted({(r["venue"], r["year"]) for r in papers if r["status"] == "accepted"}):
         if year not in DECISION_DATES.get(venue, {}):

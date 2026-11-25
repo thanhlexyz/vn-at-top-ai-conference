@@ -42,6 +42,9 @@ same command before running the script. Never print, log or commit the password.
 
 1. Edit the hand-kept files (below), or code.
 2. `cd backend/code && <python> build_site_data.py` (or `make data`): rebuilds `frontend/data/` and the page stubs.
+   A full build takes about 10 minutes, almost all of it the Domestic cooperation layout. When the graph's input has not
+   changed (no new paper with two or more professors, no roster change), run `build_site_data.py --keep-graph` (about
+   15 s): it keeps `graph_people.json`. Run the full build only when the maintainer asks or the graph must change.
 3. `make build` (must show no warnings) and `make test PYTHON=<python>` (must pass).
 4. Look at what changed: diff the numbers you expected to move, and take headless screenshots
    (`chromium --headless --screenshot`, served with `python3 -m http.server` from `frontend/public`) of the pages
@@ -177,6 +180,9 @@ The MELD detector was removed on 2026-11-25 in commit 4118d8b (its parent, 8d267
 
 ## ICLR submissions under review
 
+Hand matches go in `work/under_review_decisions.json`: `{"add": <arXiv id or page address>, "professors": [slugs]}` for a
+submission the automatic match misses (a page address when a professor's own page lists it as under review), `drop`
+for a namesake.
 `match_under_review.py` matches ICLR submissions still under review to public preprints by title (OpenAlex, an author in
 Vietnam), with the submission number, review scores, their mean (above 2.6 = potential accept, `ACCEPT_SCORE`) and the
 Open Text Detector share. The data (`work/under_review.json`, `frontend/data/under_review.json`) is git-ignored: the
