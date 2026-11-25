@@ -57,6 +57,20 @@
 </details></li>
 {{- end }}
 
+{{- with $c.no_photo }}
+<li><details><summary>Find a photo for these professors ({{ len . }})</summary>
+<p class="note">A staff page, a lab page, their own site or Google Scholar; a row in <code>backend/images.csv</code> and the file in <code>static/img/people/</code>.</p>
+<ul>{{ range . }}<li><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ .name }}</a> ({{ .institution }})</li>{{ end }}</ul>
+</details></li>
+{{- end }}
+
+{{- with $c.no_scholar }}
+<li><details><summary>Find the Google Scholar profile of these professors ({{ len . }})</summary>
+<p class="note">Not linked from their OpenReview profile or roster pages, or the link no longer works; a snapshot goes in <code>backend/scholar.json</code>.</p>
+<ul>{{ range . }}<li><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ .name }}</a> ({{ .institution }})</li>{{ end }}</ul>
+</details></li>
+{{- end }}
+
 {{- with $c.waiting }}
 <li><details><summary>Approve the roster rows still waiting ({{ len . }})</summary>
 <div class="scroll">

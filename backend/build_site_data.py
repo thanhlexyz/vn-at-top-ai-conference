@@ -843,13 +843,15 @@ def submission_id(url):
 
 
 def rank_keys_without(counted, venue_year):
-    """Score, accepted and official counts over the counted papers outside one venue-year, and whether anything
-    else is counted (a professor with nothing else would not have been on the list)."""
+    """Score, accepted and official counts over the counted papers outside one venue-year, and whether the
+    professor has an accepted paper outside it (without one they are new to the list: the beginner mark)."""
     rest = [r for r in counted if (r["venue"], r["year"]) != venue_year]
     acc = [r for r in rest if r["status"] == "accepted"]
     main = [r for r in rest if r.get("track", "main") == "main"]
     return {"score": round(sum(1 / max(len(r["authors"]), 1) for r in acc), 2), "accepted": len(acc),
-            "official": sum(1 for r in acc if not r.get("unofficial")), "shown": bool(rest),
+            "official": sum(1 for r in acc if not r.get("unofficial")),
+            # ranked before the baseline only with an accepted paper outside it; otherwise new (the beginner mark)
+            "shown": bool(acc),
             # the table's last tie-breaks: ICLR submissions when something was accepted, else all submissions
             "iclr_submitted": sum(1 for r in main if r["venue"] == "iclr"), "submitted": len(main)}
 
@@ -1681,6 +1683,10 @@ def main():
     counts = collections.Counter(c.get("openreview_class") or "" for c in candidates)
     write_json(DATA / "candidates.json", {"people": shown, "total": len(candidates), "review": pending,
                                          "to_validate": to_validate, "students_hidden": len(students),
+                                         "no_photo": [{"slug": p["slug"], "name": p["name"], "institution": p["institution_short"]}
+                                                      for p in professors if not p.get("image")],
+                                         "no_scholar": [{"slug": p["slug"], "name": p["name"], "institution": p["institution_short"]}
+                                                        for p in professors if not p.get("scholar")],
                                          "researchers": counts["researcher"], "left": counts["left"],
                                          "lookup_pending": lookup_pending,
                                          "waiting": waiting, "excluded": excluded, "foreign": foreign_coauthors,

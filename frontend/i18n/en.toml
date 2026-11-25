@@ -250,6 +250,12 @@ other = "Next ›"
 other = "Show {{ .N }} more rows"
 [rows_hide]
 other = "Show fewer rows"
+[status_under_review]
+other = "under review"
+[tip_under_review]
+other = "Under review; matched to tracked professors through a public preprint with the same title (local build only)"
+[preprint]
+other = "preprint"
 [cols_show]
 other = "Show {n} more columns"
 [cols_show_inst]

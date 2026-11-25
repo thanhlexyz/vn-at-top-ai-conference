@@ -248,7 +248,7 @@
    "y": 553.3,
    "linked": true,
    "r": 14.4,
-   "color": "g-green",
+   "color": "g-purple",
    "degree": 3,
    "lx": 438.6,
    "ly": 558.3,
@@ -333,7 +333,7 @@
    "y": 415.2,
    "linked": true,
    "r": 13.8,
-   "color": "g-green",
+   "color": "g-purple",
    "degree": 2,
    "lx": 415.4,
    "ly": 440.9,
@@ -367,7 +367,7 @@
    "y": 1565.2,
    "linked": true,
    "r": 13.4,
-   "color": "g-purple",
+   "color": "g-green",
    "degree": 1,
    "lx": 47.4,
    "ly": 1570.2,
@@ -401,7 +401,7 @@
    "y": 1423.2,
    "linked": true,
    "r": 13.4,
-   "color": "g-purple",
+   "color": "g-green",
    "degree": 2,
    "lx": 815.4,
    "ly": 1428.2,
@@ -435,7 +435,7 @@
    "y": 1565.2,
    "linked": true,
    "r": 13.0,
-   "color": "g-green",
+   "color": "g-purple",
    "degree": 1,
    "lx": 547.0,
    "ly": 1570.2,
@@ -474,20 +474,6 @@
    "lx": 400.4,
    "ly": 1312.2,
    "anchor": "start"
-  },
-  {
-   "name": "Duy-Cat Can",
-   "name_vi": "Cấn Duy Cát",
-   "url": "professors/duy-cat-can/",
-   "group": "VNU-UET",
-   "id": "duy-cat-can",
-   "papers": 4,
-   "x": null,
-   "y": null,
-   "linked": false,
-   "r": 12.6,
-   "color": "g-green",
-   "degree": 0
   },
   {
    "name": "Man Ngo",
@@ -531,7 +517,7 @@
    "y": 1611.2,
    "linked": true,
    "r": 12.6,
-   "color": "g-purple",
+   "color": "g-green",
    "degree": 1,
    "lx": 64.6,
    "ly": 1616.2,
@@ -610,7 +596,7 @@
    "y": null,
    "linked": false,
    "r": 12.1,
-   "color": "g-green",
+   "color": "g-purple",
    "degree": 0
   },
   {
@@ -720,7 +706,7 @@
    "y": 250.1,
    "linked": true,
    "r": 12.1,
-   "color": "g-purple",
+   "color": "g-green",
    "degree": 2,
    "lx": 392.0,
    "ly": 255.1,
@@ -802,7 +788,7 @@
    "y": 1611.2,
    "linked": true,
    "r": 11.5,
-   "color": "g-purple",
+   "color": "g-green",
    "degree": 1,
    "lx": 313.5,
    "ly": 1616.2,
@@ -884,7 +870,7 @@
    "y": 1611.2,
    "linked": true,
    "r": 11.5,
-   "color": "g-green",
+   "color": "g-purple",
    "degree": 1,
    "lx": 563.5,
    "ly": 1616.2,
@@ -901,7 +887,7 @@
    "y": 234.9,
    "linked": true,
    "r": 11.5,
-   "color": "g-purple",
+   "color": "g-green",
    "degree": 2,
    "lx": 221.8,
    "ly": 239.9,
@@ -1287,7 +1273,7 @@
    "y": null,
    "linked": false,
    "r": 10.8,
-   "color": "g-green",
+   "color": "g-purple",
    "degree": 0
   },
   {
@@ -2618,11 +2604,11 @@
    "color": "c-cyan"
   },
   {
-   "label": "VNU-UET",
+   "label": "Phenikaa",
    "color": "g-green"
   },
   {
-   "label": "Phenikaa",
+   "label": "VNU-UET",
    "color": "g-purple"
   },
   {
@@ -2642,6 +2628,6 @@
    "color": "c0"
   }
  ],
- "papers": 390,
+ "papers": 386,
  "shared": 91
 }

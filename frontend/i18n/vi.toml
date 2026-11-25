@@ -248,6 +248,12 @@ other = "Sau ›"
 other = "Hiện thêm {{ .N }} dòng"
 [rows_hide]
 other = "Thu gọn"
+[status_under_review]
+other = "đang phản biện"
+[tip_under_review]
+other = "Đang phản biện; khớp với giảng viên trong danh sách qua bản preprint công khai cùng tên bài (chỉ ở bản dựng cục bộ)"
+[preprint]
+other = "bản preprint"
 [cols_show]
 other = "Hiện thêm {n} cột"
 [cols_show_inst]

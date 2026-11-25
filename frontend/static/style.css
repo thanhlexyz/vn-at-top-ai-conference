@@ -650,3 +650,7 @@ svg.net .node text.sub { font-size: 12px ; fill: var(--muted) ; }
 }
 /* the contents box of a page: its entries wrap (the site menu's links do not) */
 .toc nav a { white-space: normal ; }
+
+/* local build only: ICLR submissions under review matched to tracked professors (Papers page) */
+.tag.under { background: color-mix(in srgb, #ab8704 18%, var(--bg)) ; border-color: #ab8704 ; }
+tr.under-review td { background: color-mix(in srgb, #ab8704 6%, var(--bg)) ; }

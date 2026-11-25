@@ -4308,6 +4308,155 @@
   }
  ],
  "students_hidden": 18,
+ "no_photo": [
+  {
+   "slug": "man-ngo",
+   "name": "Man Ngo",
+   "institution": "HCMUS"
+  },
+  {
+   "slug": "thuy-t-nguyen",
+   "name": "Thuy T. Nguyen",
+   "institution": "RMIT"
+  },
+  {
+   "slug": "van-dinh-nguyen",
+   "name": "Van-Dinh Nguyen",
+   "institution": "VinUni"
+  },
+  {
+   "slug": "hoang-son-do",
+   "name": "Hoang-Son Do",
+   "institution": "VAST"
+  },
+  {
+   "slug": "nhat-quang-tran",
+   "name": "Nhat-Quang Tran",
+   "institution": "RMIT"
+  },
+  {
+   "slug": "quynh-trang-pham-thi",
+   "name": "Quynh-Trang Pham Thi",
+   "institution": "VNU-UET"
+  },
+  {
+   "slug": "tran-thai-son",
+   "name": "Tran Thai Son",
+   "institution": "HCMUS"
+  },
+  {
+   "slug": "thai-khanh-nguyen",
+   "name": "Thai Khanh Nguyen",
+   "institution": "PTIT"
+  },
+  {
+   "slug": "an-mai",
+   "name": "An Mai",
+   "institution": "HCMIU"
+  },
+  {
+   "slug": "hai-thanh-nguyen",
+   "name": "Hai Thanh Nguyen",
+   "institution": "CTU"
+  },
+  {
+   "slug": "hieu-trung-thai",
+   "name": "Hieu Trung Thai",
+   "institution": "QNU"
+  },
+  {
+   "slug": "hoan-cong-nguyen",
+   "name": "Hoan Cong Nguyen",
+   "institution": "UIT"
+  },
+  {
+   "slug": "nguyen-duc-minh",
+   "name": "Nguyen Duc Minh",
+   "institution": "DHTL"
+  },
+  {
+   "slug": "nguyen-viet-ha",
+   "name": "Nguyen Viet Ha",
+   "institution": "VNU-UET"
+  },
+  {
+   "slug": "tien-vu-van",
+   "name": "Tien Vu-Van",
+   "institution": "HCMUT"
+  }
+ ],
+ "no_scholar": [
+  {
+   "slug": "tho-quan",
+   "name": "Tho Quan",
+   "institution": "HCMUT"
+  },
+  {
+   "slug": "tuan-do",
+   "name": "Tuan Do",
+   "institution": "Phenikaa"
+  },
+  {
+   "slug": "thuy-t-nguyen",
+   "name": "Thuy T. Nguyen",
+   "institution": "RMIT"
+  },
+  {
+   "slug": "hoang-son-do",
+   "name": "Hoang-Son Do",
+   "institution": "VAST"
+  },
+  {
+   "slug": "nhat-quang-tran",
+   "name": "Nhat-Quang Tran",
+   "institution": "RMIT"
+  },
+  {
+   "slug": "tran-thai-son",
+   "name": "Tran Thai Son",
+   "institution": "HCMUS"
+  },
+  {
+   "slug": "nguyen-tu-uyen",
+   "name": "Nguyen Tu Uyen",
+   "institution": "NEU"
+  },
+  {
+   "slug": "vu-nguyen",
+   "name": "Vu Nguyen",
+   "institution": "HCMUS"
+  },
+  {
+   "slug": "hai-thanh-nguyen",
+   "name": "Hai Thanh Nguyen",
+   "institution": "CTU"
+  },
+  {
+   "slug": "hoan-cong-nguyen",
+   "name": "Hoan Cong Nguyen",
+   "institution": "UIT"
+  },
+  {
+   "slug": "long-dao-van",
+   "name": "Long Dao Van",
+   "institution": "HMU"
+  },
+  {
+   "slug": "nguyen-viet-ha",
+   "name": "Nguyen Viet Ha",
+   "institution": "VNU-UET"
+  },
+  {
+   "slug": "thi-thuy-uyen-nguyen",
+   "name": "Thi Thuy Uyen Nguyen",
+   "institution": "Hue University"
+  },
+  {
+   "slug": "tien-vu-van",
+   "name": "Tien Vu-Van",
+   "institution": "HCMUT"
+  }
+ ],
  "researchers": 8,
  "left": 55,
  "lookup_pending": 0,
@@ -4639,6 +4788,15 @@
    "homepage": "",
    "openreview_ids": [
     "~Thong_H._Bui1"
+   ]
+  },
+  {
+   "name": "Duy-Cat Can",
+   "institution": "VNU-UET",
+   "reason": "Not tracked (decided by the maintainer on 2026-11-25): a PhD student at the Université de Lausanne / CHUV since 2024, and his counted paper (ACL 2026) is from that PhD abroad, not from his VNU-UET lecturer post. 2026-11-24: added at the maintainer's request (ICLR 2027 record). VNU Scholar: Cấn Duy Cát, UET Faculty of Information Technology. OpenReview: Lecturer at VNU-UET since 2017 (no end date); also PhD student at the Université de Lausanne / CHUV since 2024.",
+   "homepage": "https://scholar.vnu.edu.vn/entities/person/cdfb03b9-b112-4560-aa0b-69658b03b6a5",
+   "openreview_ids": [
+    "~Duy-Cat_Can1"
    ]
   },
   {

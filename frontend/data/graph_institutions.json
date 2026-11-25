@@ -75,24 +75,6 @@
    "anchor": "start"
   },
   {
-   "name": "VNU-UET",
-   "name_vi": "VNU-UET",
-   "full": "VNU University of Engineering and Technology",
-   "url": "institutions/vnu-uet/",
-   "group": "roster",
-   "id": "vnu-uet",
-   "papers": 29,
-   "x": 332.8,
-   "y": 408.9,
-   "linked": true,
-   "r": 18.7,
-   "color": "c1",
-   "degree": 3,
-   "lx": 310.1,
-   "ly": 413.9,
-   "anchor": "end"
-  },
-  {
    "name": "FPT",
    "name_vi": "FPT",
    "full": "FPT Software AI Center",
@@ -108,6 +90,24 @@
    "degree": 7,
    "lx": 331.9,
    "ly": 494.0,
+   "anchor": "end"
+  },
+  {
+   "name": "VNU-UET",
+   "name_vi": "VNU-UET",
+   "full": "VNU University of Engineering and Technology",
+   "url": "institutions/vnu-uet/",
+   "group": "roster",
+   "id": "vnu-uet",
+   "papers": 25,
+   "x": 332.8,
+   "y": 408.9,
+   "linked": true,
+   "r": 18.0,
+   "color": "c1",
+   "degree": 3,
+   "lx": 310.8,
+   "ly": 413.9,
    "anchor": "end"
   },
   {
@@ -938,6 +938,6 @@
    "color": "c2"
   }
  ],
- "papers": 390,
+ "papers": 386,
  "shared": 94
 }

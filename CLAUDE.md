@@ -173,13 +173,22 @@ The About section is `{{% ai-only %}}` in `about.{en,vi}.md`; keep it in step wi
   "Review scores" (score(confidence), from `fetch_reviews.py` into `reviews.json`) and "AI score" columns are
   `data-extra`: hidden until the reader presses "More columns".
 
+## ICLR submissions under review (local only)
+
+`match_under_review.py` matches ICLR submissions still under review to public preprints by title (OpenAlex, an author in
+Vietnam) and keeps those with a tracked professor on the preprint, with review scores and the Open Text Detector share.
+Naming authors during double-blind review is not for the public site (decided with the maintainer on 2026-11-25): the
+data (`work/under_review.json`, `frontend/data/under_review.json`) is git-ignored and the Papers page shows the rows
+only when `local` is true (hugo.toml); publish.toml turns it off. Check the published build has none before publishing.
+
 ## Score
 
 The front-page and institution tables are ordered by CSRankings' adjusted count: each accepted paper (official and
 unofficial) is worth 1 / (number of authors) to each listed professor; an institution's score adds up its
 professors' scores in each of the four areas, combined as CSRankings does: the geometric mean over AI, ML, CV, NLP of
 (area count + 1) (`score_areas` and `score` in `build_site_data.py`).
-The front table marks each professor's rank change (▲n / ▼n, ✦ for new to the list) against the same ranking
+The front table marks each professor's rank change (▲n / ▼n; the beginner mark for anyone with no accepted paper
+outside it, i.e. new to the list) against the same ranking
 without the papers of `RANK_BASELINE` in `build_site_data.py` (today NeurIPS 2026: the latest results announced);
 move it to the next venue-year when its results arrive. Shown only for professors with accepted papers.
 It is explained in About and in two callouts: the professor score on the front page, the institution score on the Institutions page; keep them in step.
