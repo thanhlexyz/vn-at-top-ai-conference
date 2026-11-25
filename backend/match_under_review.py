@@ -108,6 +108,29 @@ def words(text):
     return {w for w in re.findall(r"[a-z][a-z0-9]{3,}", (text or "").lower()) if w not in STOP}
 
 
+DECISIONS = WORK / "under_review_decisions.json"   # hand decisions: {forum: {"drop": reason} or {"professors": [slugs]}}
+_AFFS = {}
+
+
+def openalex_affiliations(arxiv_id):
+    """{author name: [institution country codes]} for an arXiv preprint, from OpenAlex ({} when it is not there)."""
+    aid = re.sub(r"v\d+$", "", arxiv_id)
+    if aid not in _AFFS:
+        try:
+            w = openalex_work(f"https://api.openalex.org/works/doi:10.48550/arxiv.{aid}?select=authorships")
+            _AFFS[aid] = {a["author"]["display_name"]: [i.get("country_code") or "" for i in a.get("institutions") or []]
+                          for a in w.get("authorships", [])}
+        except Exception:
+            _AFFS[aid] = {}
+        time.sleep(0.3)
+    return _AFFS[aid]
+
+
+def openalex_work(url):
+    with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "vn-ai-ranking"}), timeout=60) as r:
+        return json.load(r)
+
+
 def fuzzy_matches(under, roster_names):
     """Submissions under review that look like a tracked professor's arXiv preprint, by title and abstract, for
     preprints whose title changed before submission (the exact title match misses those). A preprint counts only if
@@ -127,10 +150,10 @@ def fuzzy_matches(under, roster_names):
     found = {}
     for key, entries in json.loads(ARXIV.read_text(encoding="utf-8")).items():
         for e in entries:
-            slugs = {roster_names[token_key(a)]["slug"]: roster_names[token_key(a)]["name"]
-                     for a in e["authors"] if token_key(a) in roster_names}
-            if not slugs:
+            mine_names = [a for a in e["authors"] if token_key(a) in roster_names]
+            if not mine_names:
                 continue   # the name matched only part of an author's name
+            slugs = {roster_names[token_key(a)]["slug"]: roster_names[token_key(a)]["name"] for a in mine_names}
             mine = words(e["title"] + " " + e["abstract"])
             score = collections.Counter()
             for x in mine:
@@ -142,6 +165,14 @@ def fuzzy_matches(under, roster_names):
                 jac = len(ab & words(e["abstract"])) / max(len(ab | words(e["abstract"])), 1)
                 tsim = difflib.SequenceMatcher(None, norm_title(s["title"]), norm_title(e["title"])).ratio()
                 if jac >= 0.4 or tsim >= 0.85 or (tsim >= 0.6 and jac >= 0.25):
+                    # a namesake: OpenAlex lists the matched author only at institutions outside Vietnam
+                    affs = openalex_affiliations(e["id"])
+                    kept = {roster_names[token_key(a)]["slug"]: roster_names[token_key(a)]["name"] for a in mine_names
+                            if not (affs.get(a) and "VN" not in affs.get(a))}
+                    if not kept:
+                        print(f"  namesake (abroad on OpenAlex): {s['title'][:60]}")
+                        continue
+                    slugs = kept
                     m = found.setdefault(s["forum"], {"submission": s, "arxiv": e, "professors": {}, "title_sim": tsim, "abstract_sim": jac})
                     m["professors"].update(slugs)
     return list(found.values())
@@ -189,6 +220,13 @@ def main():
                 print(f"  fuzzy: {s['title'][:60]} <- {e['title'][:60]} | {sorted(f['professors'].values())} | "
                       f"title {f['title_sim']:.2f} abstract {f['abstract_sim']:.2f}")
             m["professors"].update(f["professors"])
+    decisions = json.loads(DECISIONS.read_text(encoding="utf-8")) if DECISIONS.exists() else {}
+    by_slug = {p["slug"]: p["name"] for p in roster}
+    for forum, d in decisions.items():
+        if forum in matches and "drop" in d:
+            del matches[forum]
+        elif forum in matches and "professors" in d:
+            matches[forum]["professors"] = {s: by_slug[s] for s in d["professors"]}
     print(f"{len(matches)} submissions under review match a preprint with an author in Vietnam "
           f"({sum(1 for m in matches.values() if m['professors'])} with a tracked professor)")
 
