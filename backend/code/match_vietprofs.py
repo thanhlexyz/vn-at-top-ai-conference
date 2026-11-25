@@ -10,11 +10,12 @@ Run after a build (it reads frontend/data/candidates.json).
 import json
 import urllib.request
 
+from common import CSV_DIR  # backend/data/
 from common import BACKEND, FRONTEND, name_key, norm_name, read_csv, write_csv
 
 URL = "https://vietprofs.roars.dev/data.json"
 RAW = BACKEND / "raw" / "vietprofs" / "data.json"
-CSV = BACKEND / "vietprofs.csv"
+CSV = CSV_DIR / "vietprofs.csv"
 FIELDS = ["name", "affiliation", "vp_id", "vp_name", "vp_university", "country", "checked", "note"]
 STOP = {"university", "of", "the", "and", "institute", "college", "de", "at"}
 

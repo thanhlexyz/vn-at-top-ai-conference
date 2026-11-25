@@ -31,6 +31,7 @@ import math
 import re
 import urllib.parse
 
+from common import CSV_DIR, JSON_DIR  # backend/data/
 from common import (with_pdf_affiliations, ACCEPTED, DECISION_DATES, BACKEND, CANDIDATES, FRONTEND, LAST_YEAR, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
                     STATUS_LABEL, VENUE_GROUPS, VENUE_KEYS, VENUE_NAME, VENUES, WORK, YEARS, classify_status, held, in_vietnam,
                     load_roster, name_key, norm_name, norm_title, openreview_venue, PARENT, post_class, presentation, read_csv,
@@ -40,7 +41,7 @@ DATA = FRONTEND / "data"
 CONTENT = FRONTEND / "content"
 REVIEW_FIELDS = ["decision", "professor", "venue", "year", "title", "matched_name", "affiliation", "reason", "url",
                  "note"]
-SELF_REPORTED = BACKEND / "self_reported.csv"  # hand-kept: what professors list on their own pages
+SELF_REPORTED = CSV_DIR / "self_reported.csv"  # hand-kept: what professors list on their own pages
 # A paper placed in Findings was not accepted to the main track, at any conference: it counts as a rejection there,
 # and it is also listed and counted with the workshop papers
 FINDINGS_NOTE = "placed in Findings, which counts as rejected from the main track and as a workshop paper"
@@ -808,7 +809,7 @@ def write_ai_scores(professors):
 
 def review_scores(url):
     """Reviewers' "score(confidence), ..." for an OpenReview paper, from reviews.json (fetch_reviews.py)."""
-    path = BACKEND / "reviews.json"
+    path = JSON_DIR / "reviews.json"
     if not hasattr(review_scores, "table"):
         review_scores.table = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
     m = re.search(r"openreview\.net/forum\?id=([\w-]+)", url or "")
@@ -836,7 +837,7 @@ def write_otd_scores(entries):
 
 def submission_id(url):
     """The paper's submission number on OpenReview (submission_numbers.json, from fetch_reviews.py); else empty."""
-    path = BACKEND / "submission_numbers.json"
+    path = JSON_DIR / "submission_numbers.json"
     if not hasattr(submission_id, "table"):
         submission_id.table = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
     m = re.search(r"openreview\.net/forum\?id=([\w-]+)", url or "")
@@ -1493,7 +1494,7 @@ def main():
         i["score"] = round(math.prod(v + 1 for v in i["score_areas"].values()) ** (1 / len(VENUE_GROUPS)), 2)
     institutions.sort(key=lambda i: (-i["score"], -i["accepted"], -i["official"], i["name"]))
     # Vietnamese names, confirmed by hand (institution_names.csv); the Vietnamese site shows them
-    names_vi = {r["name"]: r["name_vi"] for r in read_csv(BACKEND / "institution_names.csv")}
+    names_vi = {r["name"]: r["name_vi"] for r in read_csv(CSV_DIR / "institution_names.csv")}
     for i in institutions:
         i["name_vi"] = names_vi.get(i["name"], i["name"])
     write_json(DATA / "institution_names.json", names_vi)
@@ -1544,7 +1545,7 @@ def main():
     # or not, has been decided; a name shared with a roster person is only a note. A student (by the OpenReview post)
     # is not shown, unless a faculty page or a last-author paper says otherwise.
     roster_ids = {i for p in roster for i in p["openreview_ids"]}
-    leads = [r for r in (read_csv(BACKEND / "staff_leads.csv") if (BACKEND / "staff_leads.csv").exists() else [])
+    leads = [r for r in (read_csv(CSV_DIR / "staff_leads.csv") if (CSV_DIR / "staff_leads.csv").exists() else [])
              if r["openreview_id"] not in roster_ids]
     def student(c):
         return c.get("openreview_class") == "student" and not c["faculty_page"] and not int(c["senior_author"])
@@ -1558,7 +1559,7 @@ def main():
                for p in roster if p["approved"] != "yes" and p["approved"] != "no"]
 
     # Google Scholar: a one-time snapshot (fetch_scholar.py), shown as it was on the day it was read
-    scholar = json.loads((BACKEND / "scholar.json").read_text(encoding="utf-8")) if (BACKEND / "scholar.json").exists() else {}
+    scholar = json.loads((JSON_DIR / "scholar.json").read_text(encoding="utf-8")) if (JSON_DIR / "scholar.json").exists() else {}
     for p in professors:
         s = scholar.get(p["slug"])
         if not s:
@@ -1574,7 +1575,7 @@ def main():
 
     # pictures checked by hand (images.csv, copied into static/img by fetch_images.py --apply)
     for kind, items, key in (("person", professors, "slug"), ("institution", institutions, "slug"), ("venue", venues, "key")):
-        found = {r["key"]: r for r in read_csv(BACKEND / "images.csv") if r["kind"] == kind and r["approved"] == "yes"}
+        found = {r["key"]: r for r in read_csv(CSV_DIR / "images.csv") if r["kind"] == kind and r["approved"] == "yes"}
         folder = FRONTEND / "static" / "img" / {"person": "people", "institution": "institutions", "venue": "venues"}[kind]
         for item in items:
             files = sorted(folder.glob(f"{item[key]}.*")) if item[key] in found else []
@@ -1584,7 +1585,7 @@ def main():
     # people in Vietnam with ICLR submissions but no accepted paper (find_iclr_only.py), for the local
     # Candidates page; tracked in git like the rest of the data, at the site maintainer's request
     on_roster = {i for p in roster for i in p["openreview_ids"]}
-    attempted = [{**r, "not_accepted": int(r["not_accepted"])} for r in read_csv(BACKEND / "iclr_only.csv")
+    attempted = [{**r, "not_accepted": int(r["not_accepted"])} for r in read_csv(CSV_DIR / "iclr_only.csv")
                  if r["openreview_id"] not in on_roster and not set(r["openreview_id"].split(";")) & on_roster]
     students_attempted = [r for r in attempted if post_class(r["position"]) == "student"]
     attempted = [r for r in attempted if post_class(r["position"]) != "student"]
@@ -1623,7 +1624,7 @@ def main():
     # the acceptance rate each conference reports for its main track, all years on record together
     # (venue_rates.csv: submitted and accepted per year, with the source of each)
     reported = collections.defaultdict(lambda: [0, 0, []])
-    for r in read_csv(BACKEND / "venue_rates.csv"):
+    for r in read_csv(CSV_DIR / "venue_rates.csv"):
         if r["submitted"].isdigit() and r["accepted"].isdigit():
             t = reported[r["venue"].lower()]
             t[0] += int(r["submitted"]); t[1] += int(r["accepted"]); t[2].append(int(r["year"]))
@@ -1703,7 +1704,7 @@ def main():
             f["papers"].append(f"{VENUE_NAME[r['venue']]} {r['year']}")
             f["with"].update(mine)
             f["slugs"].update({w["slug"] for w in owners[key]})
-    vietprofs = {name_key(r["name"]): r for r in read_csv(BACKEND / "vietprofs.csv") if r["checked"] == "yes"}
+    vietprofs = {name_key(r["name"]): r for r in read_csv(CSV_DIR / "vietprofs.csv") if r["checked"] == "yes"}
     international = international_graph(
         [{**f, "vp_id": vietprofs[k]["vp_id"], "country": vietprofs[k]["country"]} for k, f in foreign.items()
          if k in vietprofs and len(f["papers"]) > FOREIGN_MIN_PAPERS],
@@ -1764,7 +1765,7 @@ def main():
                                          "waiting": waiting, "excluded": excluded, "foreign": foreign_coauthors,
                                          "companies": companies, "unconfirmed": unconfirmed,
                                          # hand-kept: faculty in Vietnam known in the press as AI/ML pioneers
-                                         "pioneers": read_csv(BACKEND / "pioneers.csv"),
+                                         "pioneers": read_csv(CSV_DIR / "pioneers.csv"),
                                          # notes on a professor's record (inferred outcomes, missing records, ...): local only
                                          "flags": [{"slug": p["slug"], "name": p["name"], "text": f} for p in professors for f in p["flags"]],
                                          "to_confirm": [{"slug": p["slug"], "name": p["name"], "institution": p["institution_short"],

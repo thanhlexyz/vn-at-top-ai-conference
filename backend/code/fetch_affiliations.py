@@ -22,11 +22,12 @@ import subprocess
 import time
 import urllib.request
 
+from common import CSV_DIR  # backend/data/
 from common import BACKEND, FRONTEND, norm_title, read_csv, strip_accents, vn_institutions
 
 PDF_DIR = BACKEND / "raw" / "pdf"
 HEADERS = BACKEND / "work" / "pdf_headers"
-CSV = BACKEND / "affiliations.csv"
+CSV = CSV_DIR / "affiliations.csv"
 FIELDS = ["venue", "year", "title", "position", "author", "affiliation", "checked"]
 
 
@@ -91,7 +92,7 @@ def main():
             p = papers.get((e["venue"], e["year"], norm_title(e["title"])))
             if p and not e.get("unofficial") and not any(a["aff"] for a in p["authors"]) and pdf_url(p["url"], p.get("pdf")):
                 wanted[(p["venue"], p["year"], norm_title(p["title"]))] = p
-    for r in read_csv(BACKEND / "review.csv"):
+    for r in read_csv(CSV_DIR / "review.csv"):
         p = papers.get((r["venue"], int(r["year"]), norm_title(r["title"])))
         if not r["decision"].strip() and p and not any(a["aff"] for a in p["authors"]) and pdf_url(p["url"], p.get("pdf")):
             wanted[(p["venue"], p["year"], norm_title(p["title"]))] = p

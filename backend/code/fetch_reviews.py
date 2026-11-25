@@ -15,11 +15,12 @@ import json
 import re
 import sys
 
+from common import JSON_DIR  # backend/data/
 from common import BACKEND, FRONTEND, write_json
 from fetch_openreview import login, val, with_retry
 
-OUT = BACKEND / "reviews.json"
-NUMBERS = BACKEND / "submission_numbers.json"   # {forum id: the submission's number at its venue}
+OUT = JSON_DIR / "reviews.json"
+NUMBERS = JSON_DIR / "submission_numbers.json"   # {forum id: the submission's number at its venue}
 VENUES = ("iclr", "neurips", "icml")
 SCORE_KEYS = ("rating", "overall_recommendation", "recommendation")
 

@@ -13,16 +13,19 @@ import re
 import unicodedata
 from pathlib import Path
 
-BACKEND = Path(__file__).resolve().parent
+BACKEND = Path(__file__).resolve().parent.parent  # backend/: code/ holds the scripts
+CSV_DIR = BACKEND / "data" / "csv"  # hand-kept and generated tables
+JSON_DIR = BACKEND / "data" / "json"  # snapshots kept in the repository (Scholar, reviews, submission numbers)
+TXT_DIR = BACKEND / "data" / "txt"  # announcement texts
 FRONTEND = BACKEND.parent / "frontend"
 RAW = BACKEND / "raw"  # downloaded source files, re-creatable
 WORK = BACKEND / "work"  # intermediate files, re-creatable
 ACCEPTED = WORK / "accepted.jsonl.gz"  # every accepted paper of the tracked venues, normalized
 OPENREVIEW_RAW = RAW / "openreview"  # one <slug>.json per person, written by fetch_openreview.py
 
-ROSTER = BACKEND / "roster.csv"  # hand-edited: who is on the site
-REVIEW = BACKEND / "review.csv"  # uncertain matches; the build appends rows, you fill in `decision`
-CANDIDATES = BACKEND / "candidates.csv"  # generated: people found but not on the roster
+ROSTER = CSV_DIR / "roster.csv"  # hand-edited: who is on the site
+REVIEW = CSV_DIR / "review.csv"  # uncertain matches; the build appends rows, you fill in `decision`
+CANDIDATES = CSV_DIR / "candidates.csv"  # generated: people found but not on the roster
 
 FIRST_YEAR = 2020
 # ICLR 2027 submissions have been public on OpenReview since October 2026, so the year starts early.
@@ -493,11 +496,11 @@ def with_pdf_affiliations(papers, warnings):
     """Fill the empty affiliations of a list from affiliations.csv (read from the PDF, checked by hand). A paper whose
     authors there do not match the list, name by name, is left as it is and reported."""
     fixes = collections.defaultdict(list)
-    for r in read_csv(BACKEND / "affiliation_fixes.csv"):
+    for r in read_csv(CSV_DIR / "affiliation_fixes.csv"):
         if r["checked"] == "yes":
             fixes[(r["venue"], int(r["year"]), norm_title(r["title"]))].append(r)
     rows = collections.defaultdict(list)
-    for r in read_csv(BACKEND / "affiliations.csv"):
+    for r in read_csv(CSV_DIR / "affiliations.csv"):
         if r["checked"] == "yes":
             rows[(r["venue"], int(r["year"]), norm_title(r["title"]))].append(r)
     for p in papers:

@@ -89,14 +89,14 @@
 
 {{- with $c.no_photo }}
 <li><details><summary>Find a photo for these professors ({{ len . }})</summary>
-<p class="note">A staff page, a lab page, their own site or Google Scholar; a row in <code>backend/images.csv</code> and the file in <code>static/img/people/</code>.</p>
+<p class="note">A staff page, a lab page, their own site or Google Scholar; a row in <code>backend/data/csv/images.csv</code> and the file in <code>static/img/people/</code>.</p>
 <ul>{{ range . }}<li><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ .name }}</a> ({{ .institution }})</li>{{ end }}</ul>
 </details></li>
 {{- end }}
 
 {{- with $c.no_scholar }}
 <li><details><summary>Find the Google Scholar profile of these professors ({{ len . }})</summary>
-<p class="note">Not linked from their OpenReview profile or roster pages, or the link no longer works; a snapshot goes in <code>backend/scholar.json</code>.</p>
+<p class="note">Not linked from their OpenReview profile or roster pages, or the link no longer works; a snapshot goes in <code>backend/data/json/scholar.json</code>.</p>
 <ul>{{ range . }}<li><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ .name }}</a> ({{ .institution }})</li>{{ end }}</ul>
 </details></li>
 {{- end }}
@@ -149,7 +149,7 @@
 {{- with $c.lookup_pending }}
 <li><details><summary>Finish the OpenReview lookup of candidates ({{ . }} not looked up yet)</summary>
 <p class="note">
-	<code>python fetch_openreview.py --candidates 600</code> in <code>backend/</code>, then <code>find_candidates.py</code> and a rebuild. OpenReview allows about 126 profile searches
+	<code>python fetch_openreview.py --candidates 600</code> in <code>backend/code/</code>, then <code>find_candidates.py</code> and a rebuild. OpenReview allows about 126 profile searches
 	per half hour, so it runs for a while; until a person is looked up, a student among them cannot be hidden and a lecturer cannot reach the list above.
 </p>
 </details></li>
@@ -162,7 +162,7 @@
 	{{- with $c.students_hidden }} Not listed: {{ . }} students (by their OpenReview post).{{ end }}
 	{{- with $c.researchers }} {{ . }} are researchers, not lecturers.{{ end }}
 	{{- with $c.left }} {{ . }} have a post in Vietnam that has ended.{{ end }}
-	{{- if gt $c.total (len $c.people) }} The first {{ len $c.people }} are shown; the full list is in <code>backend/candidates.csv</code>.{{ end }}
+	{{- if gt $c.total (len $c.people) }} The first {{ len $c.people }} are shown; the full list is in <code>backend/data/csv/candidates.csv</code>.{{ end }}
 </p>
 <div class="scroll">
 <table>
@@ -200,7 +200,7 @@
 {{- with $a.people }}
 <li><details><summary>People in Vietnam with ICLR submissions and no accepted paper ({{ len . }})</summary>
 <p class="note">
-	From <code>backend/find_iclr_only.py</code>; lecturers and professors among them are in the list above. A "same name" note means an accepted paper carries the same name.
+	From <code>backend/code/find_iclr_only.py</code>; lecturers and professors among them are in the list above. A "same name" note means an accepted paper carries the same name.
 	{{- with $a.students_hidden }} Not listed: {{ . }} students.{{ end }}
 </p>
 <div class="scroll">

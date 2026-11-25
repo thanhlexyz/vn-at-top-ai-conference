@@ -24,11 +24,12 @@ import sys
 import urllib.parse
 from pathlib import Path
 
+from common import CSV_DIR  # backend/data/
 from common import BACKEND, FRONTEND, OPENREVIEW_RAW, RAW, load_roster, norm_name, read_csv
 
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
 CANDIDATES = RAW / "images"
-TABLE = BACKEND / "images.csv"   # hand-checked: kind, key, approved, image_url, source_page, note
+TABLE = CSV_DIR / "images.csv"   # hand-checked: kind, key, approved, image_url, source_page, note
 STATIC = FRONTEND / "static" / "img"
 FIELDS = ["kind", "key", "approved", "image_url", "source_page", "note"]
 

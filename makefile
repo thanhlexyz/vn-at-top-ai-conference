@@ -7,25 +7,25 @@ install:
 
 # download the public accepted-paper lists (cached), list candidates, rebuild the site data
 data:
-	cd backend && $(PYTHON) fetch_accepted.py && $(PYTHON) find_candidates.py && $(PYTHON) build_site_data.py
+	cd backend/code && $(PYTHON) fetch_accepted.py && $(PYTHON) find_candidates.py && $(PYTHON) build_site_data.py
 
 # needs OPENREVIEW_USERNAME and OPENREVIEW_PASSWORD: the only source of rejected and withdrawn papers
 openreview:
-	cd backend && $(PYTHON) fetch_openreview.py && $(PYTHON) build_site_data.py
+	cd backend/code && $(PYTHON) fetch_openreview.py && $(PYTHON) build_site_data.py
 
 # PDFs of accepted papers whose list prints no affiliations; new rows in backend/affiliations.csv are filled and
 # marked checked=yes by hand from backend/work/pdf_headers/, then the site data is rebuilt
 affiliations:
-	cd backend && $(PYTHON) fetch_affiliations.py && $(PYTHON) build_site_data.py
+	cd backend/code && $(PYTHON) fetch_affiliations.py && $(PYTHON) build_site_data.py
 
 # save the professors' own pages and list their lines about the eight venues in backend/work/homepage_hits.txt;
 # copying papers from there into backend/self_reported.csv is done by hand
 homepages:
-	cd backend && $(PYTHON) fetch_homepages.py
+	cd backend/code && $(PYTHON) fetch_homepages.py
 
 # download the accepted-paper lists again, for example after a conference has published its papers
 refresh:
-	cd backend && $(PYTHON) fetch_accepted.py --refresh && $(PYTHON) find_candidates.py && $(PYTHON) build_site_data.py
+	cd backend/code && $(PYTHON) fetch_accepted.py --refresh && $(PYTHON) find_candidates.py && $(PYTHON) build_site_data.py
 
 # --buildDrafts shows the local-only pages (Candidates, Not tracked); `make build` leaves drafts out
 run:
@@ -47,7 +47,7 @@ GIT_NAME := $(shell git config user.name)
 GIT_EMAIL := $(shell git config user.email)
 
 publish:
-	@cd backend && $(PYTHON) open_flags.py
+	@cd backend/code && $(PYTHON) open_flags.py
 	rm -rf frontend/public
 	cd frontend && hugo --config hugo.toml,publish.toml
 	touch frontend/public/.nojekyll
@@ -61,7 +61,7 @@ publish:
 		$$(gh run list --repo $(PAGES_REPO) --branch gh-pages --limit 1 --json databaseId --jq '.[0].databaseId')
 
 test:
-	cd backend && $(PYTHON) -m unittest discover -s tests
+	cd backend/code && $(PYTHON) -m unittest discover -s tests
 
 clean:
 	rm -rf frontend/public frontend/resources backend/work

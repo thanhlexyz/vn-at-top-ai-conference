@@ -27,6 +27,7 @@ import re
 import sys
 import urllib.parse
 
+from common import CSV_DIR  # backend/data/
 from common import (with_pdf_affiliations, ACCEPTED, BACKEND, CANDIDATES, FIRST_YEAR, OPENREVIEW_RAW, PARENT, ROSTER, ROSTER_FIELDS, VENUE_KEYS,
                     VENUE_NAME, load_roster, name_key, norm_name, post_class, read_csv, read_jsonl_gz, slugify, vn_institution,
                     vn_institutions,
@@ -37,7 +38,7 @@ EVIDENCE_FIELDS = ["papers", "senior_author", "first_year", "last_year", "venues
                    "affiliations", "openreview_position", "sample_paper", "sample_url", "first_paper", "first_url",
                    "openreview_url", "openreview_match", "openreview_class"]
 PROFILES = OPENREVIEW_RAW / "_candidates.json"  # written by fetch_openreview.py --candidates
-FACULTY = BACKEND / "faculty.csv"  # hand-kept: names and titles copied from the universities' faculty pages
+FACULTY = CSV_DIR / "faculty.csv"  # hand-kept: names and titles copied from the universities' faculty pages
 MATCH_ORDER = {"exact": 0, "likely": 1, "possible": 2}
 
 

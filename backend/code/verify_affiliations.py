@@ -19,6 +19,7 @@ import subprocess
 import time
 import urllib.request
 
+from common import CSV_DIR  # backend/data/
 from common import BACKEND, FRONTEND, norm_title, read_csv, strip_accents, vn_institutions
 
 PDF_DIR = BACKEND / "raw" / "pdf"
@@ -117,7 +118,7 @@ def main():
         p = json.loads(line)
         papers[(p["venue"], p["year"], norm_title(p["title"]))] = p
     checked = {(r["venue"], int(r["year"]), norm_title(r["title"]))
-               for f in ("affiliations.csv", "affiliation_fixes.csv") for r in read_csv(BACKEND / f)}
+               for f in ("affiliations.csv", "affiliation_fixes.csv") for r in read_csv(CSV_DIR / f)}
     people = {p["slug"]: p for p in json.load(open(FRONTEND / "data" / "professors.json"))}
     PDF_DIR.mkdir(parents=True, exist_ok=True)
     rows = []

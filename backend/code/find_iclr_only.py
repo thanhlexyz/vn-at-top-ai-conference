@@ -30,11 +30,12 @@ import re
 import sys
 import time
 
+from common import CSV_DIR  # backend/data/
 from common import (ACCEPTED, BACKEND, LAST_YEAR, OPENREVIEW_RAW, YEARS, classify_status, load_roster, name_key,
                     read_jsonl_gz, same_institution, vn_institution, vn_institutions, write_csv)
 from fetch_openreview import profile_summary, split_authors, val, vietnam_post
 
-OUT = BACKEND / "iclr_only.csv"
+OUT = CSV_DIR / "iclr_only.csv"
 FIELDS = ["name", "openreview_id", "profile", "position", "institution", "since", "faculty", "not_accepted",
           "rejected", "withdrawn", "desk_rejected", "years", "same_name_accepted", "sample_paper", "sample_url"]
 FACULTY = re.compile(r"lecturer|professor|instructor|teacher|faculty|dean|head of|director", re.I)

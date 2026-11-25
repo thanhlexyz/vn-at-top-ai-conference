@@ -31,12 +31,13 @@ import time
 import urllib.parse
 import urllib.request
 
+from common import CSV_DIR  # backend/data/
 from common import (BACKEND, WORK, YEARS, load_roster, name_key, norm_title, post_class,
                     token_key, vn_institutions, PARENT)
 
 SOURCES = {"aaai": "S4210191458", "ijcai": "S4306419999"}   # OpenAlex sources: AAAI and IJCAI proceedings
 OUT = WORK / "openalex_vn.csv"
-LEADS = BACKEND / "staff_leads.csv"
+LEADS = CSV_DIR / "staff_leads.csv"
 LEAD_FIELDS = ["name", "openreview_id", "post", "institution_on_paper", "papers", "paper_url", "note", "found"]
 FIELDS = ["venue", "year", "title", "track", "url", "author", "openalex_author", "printed_affiliation", "institutions",
           "on_roster", "roster_approved"]

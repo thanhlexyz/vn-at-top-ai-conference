@@ -18,9 +18,10 @@ import subprocess
 import sys
 import time
 
+from common import JSON_DIR  # backend/data/
 from common import BACKEND, OPENREVIEW_RAW, load_roster, norm_name
 
-OUT = BACKEND / "scholar.json"
+OUT = JSON_DIR / "scholar.json"
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
 SCHOLAR_ID = re.compile(r"scholar\.google\.[a-z.]+/citations\?(?:[^\"'<> ]*&(?:amp;)?)?user=([A-Za-z0-9_-]{12})")
 
