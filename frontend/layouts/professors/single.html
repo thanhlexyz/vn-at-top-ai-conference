@@ -156,6 +156,22 @@
 <p>{{ T "none" }}</p>
 {{- end }}
 
+{{- $under := slice }}
+{{- with hugo.Data.under_review }}{{ range .papers }}{{ $r := . }}{{ range .professors }}{{ if eq .slug $p.slug }}{{ $under = $under | append $r }}{{ end }}{{ end }}{{ end }}{{ end }}
+{{- with $under }}
+<h2>{{ T "under_review_papers" (len .) }}</h2>
+<ul class="under-list">
+	{{- range . }}
+	<li><span class="tag">ICLR {{ hugo.Data.under_review.year }}</span> <span class="tag under">{{ T "status_under_review" }}</span>
+	{{- if site.Params.local }}
+		{{- with .likely }} <span class="tag likely-{{ . }}">{{ T (printf "likely_%s" .) }}</span>{{ end }}
+		<a href="https://openreview.net/forum?id={{ .forum }}">{{ .title }}</a> <span class="note">({{ range $n, $r := .reviews }}{{ if $n }}, {{ end }}{{ index $r 0 }}{{ end }}{{ with .ai }}; AI {{ . }}%{{ end }}; <a href="{{ .preprint }}">{{ T "preprint" }}</a>)</span>
+	{{- else }} <span class="redacted">{{ T "redacted" }}</span>{{ end }}</li>
+	{{- end }}
+</ul>
+<p class="note">{{ T "under_review_note" }}</p>
+{{- end }}
+
 {{- if $p.not_accepted_papers }}
 <h2>{{ T "rejected_papers" (len $p.not_accepted_papers) }}</h2>
 <p class="note">{{ T "rejected_note" }}</p>

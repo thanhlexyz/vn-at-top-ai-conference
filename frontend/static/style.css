@@ -338,11 +338,11 @@ tr.off-page { display: none ; }
 .scores { white-space: nowrap ; font-variant-numeric: tabular-nums ; }
 a.tag-link:hover .tag { text-decoration: underline ; border-color: var(--fg) ; }
 
-.tag.accepted {
+.tag.accepted, .tag.likely-accept {
     background: var(--good) ;
 }
 
-.tag.rejected, .tag.withdrawn, .tag.desk_rejected {
+.tag.rejected, .tag.withdrawn, .tag.desk_rejected, .tag.likely-reject {
     background: var(--bad) ;
 }
 
@@ -654,3 +654,6 @@ svg.net .node text.sub { font-size: 12px ; fill: var(--muted) ; }
 /* local build only: ICLR submissions under review matched to tracked professors (Papers page) */
 .tag.under { background: color-mix(in srgb, #ab8704 18%, var(--bg)) ; border-color: #ab8704 ; }
 tr.under-review td { background: color-mix(in srgb, #ab8704 6%, var(--bg)) ; }
+.redacted { color: var(--muted) ; font-style: italic ; }
+ul.under-list { list-style: none ; padding-left: 0 ; }
+ul.under-list li { margin: 0.4em 0 ; }

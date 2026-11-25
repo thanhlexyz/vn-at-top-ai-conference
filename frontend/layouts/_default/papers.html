@@ -26,27 +26,30 @@
 	</tr>
 	</thead>
 	<tbody>
-	{{- /* LOCAL BUILD ONLY: ICLR submissions under review whose title matches a preprint by tracked professors
-	       (backend/match_under_review.py, data/under_review.json is git-ignored). Naming authors during
-	       double-blind review is not for the public site, so publish.toml (local = false) leaves these rows out. */}}
-	{{- if site.Params.local }}{{ with hugo.Data.under_review }}{{ $year := .year }}
+	{{- /* ICLR submissions under review whose title matches a preprint with an author in Vietnam
+	       (backend/match_under_review.py; data/under_review.json is git-ignored). The published build redacts the
+	       professors and the preprint (publish.toml: local = false), at the maintainer's choice. */}}
+	{{- with hugo.Data.under_review }}{{ $year := .year }}
 	{{- range .papers }}{{ $row := . }}
 	<tr class="under-review">
 		<td class="l venue-year"><a href="{{ "venues/iclr/" | relLangURL }}">ICLR</a>&rsquo;{{ printf "%02d" (mod $year 100) }}</td>
-		<td class="l"><a class="tag-link" href="https://openreview.net/forum?id={{ .forum }}" title="{{ T "tip_under_review" }}"><span class="tag under">{{ T "status_under_review" }}</span></a></td>
-		<td class="xcol na" data-last>&ndash;</td>
+		<td class="l"><a class="tag-link" href="https://openreview.net/forum?id={{ .forum }}" title="{{ T "tip_under_review" }}"><span class="tag under">{{ T "status_under_review" }}</span></a>
+			{{- with .likely }} <span class="tag likely-{{ . }}" title="{{ T "tip_likely" (dict "Mean" $row.mean) }}">{{ T (printf "likely_%s" .) }}</span>{{ end }}</td>
+		{{- with .number }}<td class="xcol"><a href="https://openreview.net/forum?id={{ $row.forum }}">{{ . }}</a></td>{{ else }}<td class="xcol na" data-last>&ndash;</td>{{ end }}
 		<td class="l xcol scores">{{ range $n, $r := .reviews }}{{ if $n }}, {{ end }}{{ index $r 0 }}({{ index $r 1 }}){{ end }}</td>
 		{{- if $otd }}
 		{{- with .ai }}<td class="xcol"><a href="https://opentextdetector.com/?collection=iclr/{{ $year }}&q={{ $row.forum }}">{{ . }}%</a></td>{{ else }}<td class="xcol na" data-last>&ndash;</td>{{ end }}
 		{{- end }}
 		<td class="l">
+			{{- if site.Params.local }}
 			{{- range $n, $o := .professors }}{{ if $n }}, {{ end }}{{ $p := index (where hugo.Data.professors "slug" $o.slug) 0 }}<a href="{{ printf "professors/%s/" $o.slug | relLangURL }}">{{ with $p }}{{ partial "pname.html" . }}{{ else }}{{ $o.name }}{{ end }}</a>{{ end -}}
+			{{- else }}<span class="redacted">{{ T "redacted" }}</span>{{ end -}}
 		</td>
-		<td class="l"><a href="https://openreview.net/forum?id={{ .forum }}">{{ .title }}</a> <span class="note">(<a href="{{ .preprint }}">{{ T "preprint" }}</a>)</span></td>
+		<td class="l"><a href="https://openreview.net/forum?id={{ .forum }}">{{ .title }}</a>{{ if site.Params.local }} <span class="note">(<a href="{{ .preprint }}">{{ T "preprint" }}</a>)</span>{{ end }}</td>
 		{{- if $ai }}<td class="na">&ndash;</td><td class="na">&ndash;</td>{{ end }}
 	</tr>
 	{{- end }}
-	{{- end }}{{ end }}
+	{{- end }}
 	{{- range $k, $_ := $papers }}
 	<tr{{ if ge $k 50 }} class="off-page"{{ end }}>
 		<td class="l venue-year"><a href="{{ printf "venues/%s/" .venue | relLangURL }}">{{ .venue_name }}</a>&rsquo;{{ printf "%02d" (mod .year 100) }}</td>

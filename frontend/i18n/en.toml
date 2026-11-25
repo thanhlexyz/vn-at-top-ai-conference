@@ -253,9 +253,25 @@ other = "Show fewer rows"
 [status_under_review]
 other = "under review"
 [tip_under_review]
-other = "Under review; matched to tracked professors through a public preprint with the same title (local build only)"
+other = "Under review; matched to tracked professors through a public preprint with the same title (the published site redacts the professors)"
 [preprint]
 other = "preprint"
+[likely_accept]
+other = "potential accept"
+[likely_reject]
+other = "potential reject"
+[tip_likely]
+other = "Mean review score {{ .Mean }}; above 2.6 counts as a potential accept"
+[redacted]
+other = "redacted"
+[under_review_papers]
+other = "Under review ({{ . }})"
+[under_review_note]
+other = "Submissions still under review, found through a public preprint with the same title; details are withheld while reviewing goes on."
+[th_under_review]
+other = "under review"
+[tip_under_review_col]
+other = "Submissions under review by professors on the list, found through public preprints"
 [cols_show]
 other = "Show {n} more columns"
 [cols_show_inst]

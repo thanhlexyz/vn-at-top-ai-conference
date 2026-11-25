@@ -1006,6 +1006,22 @@ VENUE_CHART_TEXT = {
 }
 
 
+ACCEPT_SCORE = 2.6   # mean review score above which a submission under review counts as likely accepted (maintainer)
+
+
+def likely_accepted(year):
+    """How many ICLR submissions under review, matched to tracked professors (work/under_review.json), have a mean
+    review score above ACCEPT_SCORE; None when that local list is missing or for another year."""
+    path = WORK / "under_review.json"
+    if not path.exists():
+        return None
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if data.get("year") != year:
+        return None
+    means = [sum(r[0] for r in p["reviews"]) / len(p["reviews"]) for p in data["papers"] if p.get("reviews")]
+    return sum(1 for m in means if m > ACCEPT_SCORE)
+
+
 def iclr_projection(entries, year, k=2):
     """(accepted, rejected) projected for an ICLR year under review, from its withdrawals so far: each withdrawn paper
     stands for 1 / (withdrawal share) submissions and accepts at the acceptance rate of its professors, both their own
@@ -1585,6 +1601,12 @@ def main():
                 # under review: the rejections on record so far, and a projection of the rest
                 pa, pr = iclr_projection(projection_entries, y["year"])
                 extra = max(pr - c["not_accepted"], 0)
+                # the accepted part, where the submissions under review matched to tracked professors are known
+                # (match_under_review.py, local data): each whose mean review score is above ACCEPT_SCORE.
+                # Only this count reaches the public chart, never a title or a name.
+                crawled = likely_accepted(y["year"])
+                if crawled is not None:
+                    pa = crawled
                 rows.append({"year": y["year"], "counts": True, "accepted": 0, "iclr_not_accepted": c["not_accepted"],
                              "estimated": 0, "projected_accepted": pa, "projected_rejected": extra,
                              "total": c["not_accepted"] + extra + pa})

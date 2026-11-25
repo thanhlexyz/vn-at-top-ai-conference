@@ -122,6 +122,8 @@ The local-only pages (Candidates, Not tracked) are drafts, but their data (`cand
   accepted at its professors' rate: withdrawal share from each professor's own previous three ICLR years, acceptance
   from the previous year, both pulled toward the group's by 2 papers. Papers whose professors did not submit to ICLR the
   year before count as one rejection only.
+  When `work/under_review.json` exists (match_under_review.py), the projected acceptances are instead the matched
+  submissions with a mean review score above 2.6 (`ACCEPT_SCORE`, the maintainer's threshold); only the count is public.
 - **Authorship charts:** "majority" = strictly more than half of all authors at the institution; "first" = the first
   author. Only papers with at least one printed affiliation are judged.
 - **Co-author figures:** averages over all counted papers; the minimum over accepted papers; the maximum also over
@@ -173,13 +175,18 @@ The About section is `{{% ai-only %}}` in `about.{en,vi}.md`; keep it in step wi
   "Review scores" (score(confidence), from `fetch_reviews.py` into `reviews.json`) and "AI score" columns are
   `data-extra`: hidden until the reader presses "More columns".
 
-## ICLR submissions under review (local only)
+## ICLR submissions under review
 
 `match_under_review.py` matches ICLR submissions still under review to public preprints by title (OpenAlex, an author in
-Vietnam) and keeps those with a tracked professor on the preprint, with review scores and the Open Text Detector share.
-Naming authors during double-blind review is not for the public site (decided with the maintainer on 2026-11-25): the
-data (`work/under_review.json`, `frontend/data/under_review.json`) is git-ignored and the Papers page shows the rows
-only when `local` is true (hugo.toml); publish.toml turns it off. Check the published build has none before publishing.
+Vietnam), with the submission number, review scores, their mean (above 2.6 = potential accept, `ACCEPT_SCORE`) and the
+Open Text Detector share. The data (`work/under_review.json`, `frontend/data/under_review.json`) is git-ignored: the
+repository never holds it. What shows, as the maintainer decided on 2026-11-25:
+- local build (`local` true): everything, with professor names and the preprint link; the Candidates page lists the
+  other authors in Vietnam on those preprints who are not on the roster;
+- published build: Papers page rows with title, scores, AI share and the potential tag, professors shown as "redacted",
+  no preprint link; professor pages show "ICLR 2027 · under review · redacted" only; the Venues table counts them; the
+  ICLR projection takes its accepted part from the potential accepts.
+The maintainer accepted that a title can be searched to find the preprint's authors.
 
 ## Score
 

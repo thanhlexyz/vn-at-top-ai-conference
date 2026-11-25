@@ -57,6 +57,15 @@
 </details></li>
 {{- end }}
 
+{{- with hugo.Data.under_review }}{{ $people := dict }}
+{{- range (.papers | append .outside) }}{{ $r := . }}{{ range .others }}{{ $people = merge $people (dict .name (dict "name" .name "institution" .institution "title" $r.title "forum" $r.forum "mean" $r.mean)) }}{{ end }}{{ end }}
+{{- with $people }}
+<li><details><summary>Look at people in Vietnam on ICLR {{ hugo.Data.under_review.year }} submissions under review who are not on the list ({{ len . }})</summary>
+<p class="note">Authors listed at an institution in Vietnam on a preprint whose title matches a submission under review (backend/match_under_review.py). Check each one's OpenReview profile; students are not candidates.</p>
+<ul>{{ range . }}<li>{{ .name }} ({{ .institution }}): <a href="https://openreview.net/forum?id={{ .forum }}">{{ .title }}</a>{{ with .mean }}, mean score {{ . }}{{ end }}</li>{{ end }}</ul>
+</details></li>
+{{- end }}{{ end }}
+
 {{- with $c.no_photo }}
 <li><details><summary>Find a photo for these professors ({{ len . }})</summary>
 <p class="note">A staff page, a lab page, their own site or Google Scholar; a row in <code>backend/images.csv</code> and the file in <code>static/img/people/</code>.</p>

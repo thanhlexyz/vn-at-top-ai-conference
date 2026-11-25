@@ -14,6 +14,7 @@
 		<th class="est" title="{{ T "tip_rejected_est_venue" }}">{{ T "th_Rejected_est" }}</th>
 		<th class="sub" title="{{ T "tip_submitted_est" }}">{{ T "th_Submitted_est" }}</th>
 		<th class="rate" title="{{ T "tip_rate_venue" }}">{{ T "th_rate_venue" }}</th>
+		<th title="{{ T "tip_under_review_col" }}">{{ T "th_under_review" }}</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -53,6 +54,8 @@
 		{{- /* ours (estimated where rejections are hidden) / the rate the conference reports, all years together */}}
 		<td class="rate" title="{{ with .reported_detail }}{{ T "tip_reported_detail" . }}{{ end }}">
 			{{- with .acceptance_rate }}{{ if ne $v.rejections "full" }}~{{ end }}{{ . }}%{{ else }}&ndash;{{ end }} / {{ with .reported_rate }}{{ . }}%{{ else }}&ndash;{{ end }}</td>
+		{{- $ur := 0 }}{{ with hugo.Data.under_review }}{{ if eq $v.key "iclr" }}{{ $ur = len .papers }}{{ end }}{{ end }}
+		{{ partial "numc.html" (dict "v" $ur "cls" "under") }}
 	</tr>
 	{{- end }}
 	</tbody>

@@ -5,7 +5,8 @@ Submissions under review are anonymous. A submission whose title matches a publi
 Vietnam) that lists a tracked professor is probably theirs; this is how clareLab's ICLR 2027 posters tie scores to
 institutions. Naming people during double-blind review is not for the public site, so everything here stays local:
 the output is work/under_review.json and frontend/data/under_review.json, both git-ignored, and the Papers page
-shows the rows only in a local build (site param `local`; publish.toml turns it off). Decided by the maintainer on
+shows them; the published site redacts the professors' names and the preprint (a title can still be searched, which
+the maintainer accepted on 2026-11-25). Decided by the maintainer on
 2026-11-25.
 
 For each match it keeps the submission's forum id, the preprint, the professors on it, the reviewers' scores
@@ -25,6 +26,7 @@ from common import FRONTEND, OPENREVIEW_RAW, WORK, LAST_YEAR, load_roster, norm_
 OUT = WORK / "under_review.json"
 PAGE = FRONTEND / "data" / "under_review.json"
 SINCE = f"{LAST_YEAR - 1}-05-01"   # preprints posted in the months before the ICLR deadline and after
+ACCEPT_SCORE = 2.6   # a mean review score above this is a potential accept (the maintainer's threshold)
 
 
 def openalex(params):
@@ -49,7 +51,11 @@ def preprints():
         for w in d["results"]:
             out.append({"id": w["id"].rsplit("/", 1)[-1], "title": w["title"] or "", "date": w["publication_date"],
                         "url": ((w.get("primary_location") or {}).get("landing_page_url") or ""),
-                        "authors": [a["author"]["display_name"] for a in w["authorships"]]})
+                        "authors": [a["author"]["display_name"] for a in w["authorships"]],
+                        # authors listed at an institution in Vietnam, with that institution
+                        "in_vn": {a["author"]["display_name"]: "; ".join(i["display_name"] for i in a.get("institutions") or []
+                                                                        if i.get("country_code") == "VN")
+                                  for a in w["authorships"] if "VN" in (a.get("countries") or [])}})
         if len(d["results"]) < 200:
             return out
         page += 1
@@ -61,6 +67,8 @@ def main():
     subs = json.load(gzip.open(OPENREVIEW_RAW / f"iclr-{year}.json.gz"))
     under = {norm_title(s["title"]): s for s in subs if s["status"] == "unknown" and s.get("title")}
     roster = [p for p in load_roster() if p["approved"] == "yes"]
+    # anyone on the roster, approved or not, has been decided: not suggested again
+    decided = {token_key(n) for p in load_roster() for n in [p["name"], *p["variants"], p.get("name_vi") or ""] if n}
     names = {}
     for p in roster:
         for n in [p["name"], *p["variants"], p.get("name_vi") or ""]:
@@ -74,28 +82,38 @@ def main():
         if not s:
             continue
         people = {names[token_key(a)]["slug"]: names[token_key(a)]["name"] for a in w["authors"] if token_key(a) in names}
-        if not people:
+        # authors in Vietnam who are not on the roster at all: people the maintainer may want to track
+        others = {a: inst for a, inst in w["in_vn"].items() if token_key(a) not in names and token_key(a) not in decided}
+        if not people and not others:
             continue
         m = matches.setdefault(s["forum"], {"forum": s["forum"], "title": s["title"], "preprint": w["url"] or f"https://openalex.org/{w['id']}",
-                                            "posted": w["date"], "authors": w["authors"], "professors": {}})
+                                            "posted": w["date"], "authors": w["authors"], "professors": {}, "others": {}})
         m["professors"].update(people)
-    print(f"{len(matches)} submissions under review match a preprint with a tracked professor")
+        m["others"].update(others)
+    print(f"{len(matches)} submissions under review match a preprint with an author in Vietnam "
+          f"({sum(1 for m in matches.values() if m['professors'])} with a tracked professor)")
 
     from fetch_openreview import login   # needs the OpenReview variables
-    from fetch_reviews import reviews_of
+    from fetch_reviews import reviews_of, submission_number
     from fetch_opentextdetector import lookup, COLLECTIONS, MODE, MIN_SENTENCES
     v2, _ = login()
-    old = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
     for forum, m in matches.items():
+        m["number"] = submission_number(v2, forum)
         m["reviews"] = reviews_of(v2, forum)
+        scores = [r[0] for r in m["reviews"]]
+        m["mean"] = round(sum(scores) / len(scores), 2) if scores else None
+        m["likely"] = None if m["mean"] is None else ("accept" if m["mean"] > ACCEPT_SCORE else "reject")
         item = lookup(COLLECTIONS[("iclr", year)], forum)
         counts = ((item or {}).get("flags") or {}).get(MODE)
         m["ai"] = round(100 * counts[0] / counts[1]) if counts and counts[1] >= MIN_SENTENCES else None
         m["professors"] = [{"slug": s, "name": n} for s, n in sorted(m["professors"].items())]
-        print(f"  {forum}: {m['title'][:60]} | {[p['name'] for p in m['professors']]} | {m['reviews']} | AI {m['ai']}")
+        m["others"] = [{"name": n, "institution": i} for n, i in sorted(m["others"].items())]
+        print(f"  #{m['number']} {m['title'][:50]} | {[p['name'] for p in m['professors']]} + {len(m['others'])} others | "
+              f"mean {m['mean']} {m['likely']} | AI {m['ai']}")
         time.sleep(0.5)
-    rows = sorted(matches.values(), key=lambda m: (m["professors"][0]["name"], m["title"]))
-    data = {"year": year, "fetched": time.strftime("%Y-%m-%d"), "papers": rows}
+    rows = sorted((m for m in matches.values() if m["professors"]), key=lambda m: (-(m["mean"] or 0), m["title"]))
+    outside = sorted((m for m in matches.values() if not m["professors"]), key=lambda m: m["title"])
+    data = {"year": year, "fetched": time.strftime("%Y-%m-%d"), "threshold": ACCEPT_SCORE, "papers": rows, "outside": outside}
     for path in (OUT, PAGE):
         path.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"-> {OUT} and {PAGE} (both git-ignored)")

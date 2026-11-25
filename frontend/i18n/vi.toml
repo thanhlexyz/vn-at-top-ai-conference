@@ -251,9 +251,25 @@ other = "Thu gọn"
 [status_under_review]
 other = "đang phản biện"
 [tip_under_review]
-other = "Đang phản biện; khớp với giảng viên trong danh sách qua bản preprint công khai cùng tên bài (chỉ ở bản dựng cục bộ)"
+other = "Đang phản biện; khớp với giảng viên trong danh sách qua bản preprint công khai cùng tên bài (bản công khai ẩn tên giảng viên)"
 [preprint]
 other = "bản preprint"
+[likely_accept]
+other = "có thể được nhận"
+[likely_reject]
+other = "có thể bị từ chối"
+[tip_likely]
+other = "Điểm phản biện trung bình {{ .Mean }}; trên 2,6 được coi là có thể được nhận"
+[redacted]
+other = "đã ẩn"
+[under_review_papers]
+other = "Đang phản biện ({{ . }})"
+[under_review_note]
+other = "Các bài đang trong quá trình phản biện, được xác định qua bản preprint công khai cùng tên bài; thông tin chi tiết được ẩn trong thời gian phản biện."
+[th_under_review]
+other = "đang phản biện"
+[tip_under_review_col]
+other = "Số bài đang phản biện của các giảng viên trong danh sách, xác định qua bản preprint công khai"
 [cols_show]
 other = "Hiện thêm {n} cột"
 [cols_show_inst]
