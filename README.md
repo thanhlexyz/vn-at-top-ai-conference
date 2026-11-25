@@ -10,30 +10,30 @@ Publications are tracked from 2020 onward across ten flagship conferences in fou
 
 **Live Website:** <https://thanhle.xyz/ranking>
 
-### Sample data: top 10 by CSRankings score (2026-11-23)
+### Sample data: top 10 by CSRankings score (2026-11-25)
 
-Accepted main-track papers per area and the CSRankings score; the full table is on the [live site](https://thanhle.xyz/ranking).
+Accepted main-track papers per area (unofficial acceptances included) and the CSRankings score; the full table is on the [live site](https://thanhle.xyz/ranking).
 
-| # | Professor | Institution | AI | ML | CV | NLP | CSRankings score |
+| # | Professor | University | AI | ML | CV | NLP | CSRankings score |
 |---:|---|---|---:|---:|---:|---:|---:|
 | 1 | Đàm Quang Tuấn | HUST | 0 | 12 | 0 | 0 | 5.48 |
 | 2 | Ngô Văn Linh | HUST | 6 | 8 | 1 | 15 | 4.96 |
-| 3 | Đoàn Đăng Khoa | VinUni | 2 | 15 | 3 | 0 | 3.81 |
+| 3 | Đoàn Đăng Khoa | VinUni | 2 | 18 | 3 | 0 | 4.13 |
 | 4 | Nguyễn Phi Lê | HUST | 1 | 9 | 6 | 2 | 3.19 |
 | 5 | Phạm Văn Cường | PTIT | 2 | 2 | 9 | 0 | 2.52 |
-| 6 | Lê Duy Dũng | VinUni | 2 | 7 | 1 | 1 | 2.36 |
-| 7 | Thân Quang Khoát | HUST | 1 | 7 | 1 | 1 | 1.84 |
-| 8 | Huỳnh Thị Thanh Bình | HUST | 3 | 2 | 0 | 1 | 1.70 |
-| 9 | Phạm Văn Cảnh | Phenikaa | 4 | 1 | 0 | 0 | 1.25 |
-| 10 | Nguyễn Tuấn Bình | VinUni | 0 | 4 | 0 | 0 | 1.08 |
+| 6 | Lê Duy Dũng | VinUni | 2 | 9 | 1 | 1 | 2.47 |
+| 7 | Huỳnh Thị Thanh Bình | HUST | 3 | 3 | 0 | 1 | 1.87 |
+| 8 | Thân Quang Khoát | HUST | 1 | 7 | 1 | 1 | 1.84 |
+| 9 | Quản Thành Thơ | HCMUT | 1 | 1 | 0 | 5 | 1.47 |
+| 10 | Phạm Văn Cảnh | Phenikaa | 4 | 1 | 0 | 0 | 1.25 |
 
-![Accepted, recorded rejected and estimated rejected papers of all listed professors per year](docs/submissions.png)
+![Accepted, recorded rejected and estimated rejected papers of all listed professors per year](frontend/static/readme/submissions.png)
 
-*Submissions per year across all listed faculty: accepted papers, recorded rejections (all ICLR submissions, public NeurIPS rejections, and Findings papers), and estimated submissions at non-disclosing venues projected from each researcher's ICLR record using Laplace smoothing.*
+*Submissions per year across all listed faculty: accepted papers, recorded rejections (all ICLR submissions, public NeurIPS rejections, and Findings papers), and estimated submissions at non-disclosing venues projected from each professor's ICLR record using Laplace smoothing.*
 
-![Researcher collaboration graph: professors on the list joined by the papers they share](docs/researcher-graph.png)
+![Domestic cooperation graph: professors on the list joined by the papers they share](frontend/static/readme/domestic-cooperation.png)
 
-*Co-authorship network: each node represents a tracked faculty member, colored by university affiliation. Connecting edges indicate shared publications, with shorter distances representing stronger collaboration.*
+*Domestic cooperation: each circle is a professor on the list, coloured by university. Lines join co-authors, and the number on a line counts their shared papers.*
 
 ---
 
@@ -42,20 +42,20 @@ Accepted main-track papers per area and the CSRankings score; the full table is 
 - **Scope & Criteria:** Tracks Vietnamese lecturers, assistant professors, associate professors, and full professors whose primary appointment is at a university in Vietnam. Only official full-length Main Track papers (Long Papers) are counted toward primary rankings.
 - **CSRankings Scoring:** Each paper receives 1.0 point divided equally among all authors (`1 / N`). An institution's score is the geometric mean of `(Area Score + 1)` across all four subfields.
 - **Authorship Perspectives:** Provides dedicated filters for **first-author** and **majority-institution (>50%)** publications, highlighting direct lab mentoring and internal student guidance versus broad external collaborations.
-- **Submission Modeling:** Accounts for differing review disclosure policies across venues. Confirmed acceptances at confidential venues are extrapolated based on the researcher's demonstrated ICLR submission and acceptance rates.
-- **Interactive Visualizations:** Includes institution and co-author collaboration graphs, annual publication trends, and venue distributions.
+- **Submission Modeling:** Accounts for differing review disclosure policies across venues. Confirmed acceptances at confidential venues are extrapolated based on the professor's demonstrated ICLR submission and acceptance rates.
+- **Interactive Visualizations:** Includes the domestic and international cooperation graphs, annual publication trends, and venue distributions.
 
 ---
 
 ## How to Maintain
 
-The site is designed to be maintained with the assistance of an AI coding agent (such as Claude Code or Gemini via Antigravity) through natural language requests. All operational rules and maintenance workflows are documented in [CLAUDE.md](CLAUDE.md).
+The site is designed to be maintained with the assistance of an AI coding agent (such as Claude Code or Gemini via Antigravity) through natural language requests. All operational rules and maintenance workflows are documented in [AGENT.md](AGENT.md).
 
 Common maintenance requests:
 - *"Track `<OpenReview profile URL>`, they are a lecturer at `<university>`."*
 - *"Add these unofficial acceptances from `<announcement link or text>`."*
 - *"Update profile photo for `<name>` from `<link>`."*
-- *"Fix attribution for `<link>` (reassign institution or resolve namesake). "*
+- *"Fix attribution for `<link>` (reassign university or resolve namesake). "*
 - *"Refresh the data after new conference proceedings are released."*
 - *"Publish updates."*
 
@@ -87,6 +87,6 @@ export OPENREVIEW_PASSWORD="your-password"
 make run       # Start local development server at http://localhost:1313
 make data      # Rebuild JSON data and content stubs from raw caches
 make build     # Build production site with Hugo (must have zero warnings)
-make test      # Run all 33 backend verification and scoring unit tests
+make test      # Run all 30 backend unit tests
 make publish   # Build the production site and deploy to GitHub Pages
 ```
