@@ -750,9 +750,21 @@ def paper_order(r):
     return -r["year"], VENUE_KEYS.index(r["venue"]), r["title"].lower()
 
 
+def review_means(url):
+    review_scores(url)
+    m = re.search(r"openreview\.net/forum\?id=([\w-]+)", url or "")
+    pairs = review_scores.table.get(m.group(1), []) if m else []
+    if not pairs:
+        return None
+    confs = [c for _, c in pairs if c is not None]
+    return sum(s for s, _ in pairs) / len(pairs), sum(confs) / len(confs) if confs else 0
+
+
 def decision_order(r):
     date = DECISION_DATES.get(r["venue"], {}).get(r["year"], "9999")
-    return [-ord(c) for c in date], VENUE_KEYS.index(r["venue"]), r["title"].lower()
+    means = review_means(r.get("url"))
+    return ([-ord(c) for c in date], VENUE_KEYS.index(r["venue"]), means is None,
+            -(means or (0, 0))[0], -(means or (0, 0))[1], r["title"].lower())
 
 
 def projection(p):

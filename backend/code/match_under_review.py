@@ -284,7 +284,10 @@ def main():
                 judged[o["name"]] = judge(v2, o["name"], o["institution"])
                 print(f"    {o['name']} ({o['institution'][:40]}): {judged[o['name']]['verdict']} {judged[o['name']]['id']} {judged[o['name']]['post'][:60]}")
             o["openreview"] = judged[o["name"]]
-    rows = sorted((m for m in matches.values() if m["professors"]), key=lambda m: (-(m["mean"] or 0), m["title"]))
+    def confidence(m):
+        c = [r[1] for r in m["reviews"] if r[1] is not None]
+        return sum(c) / len(c) if c else 0
+    rows = sorted((m for m in matches.values() if m["professors"]), key=lambda m: (-(m["mean"] or 0), -confidence(m), m["title"]))
     outside = sorted((m for m in matches.values() if not m["professors"]), key=lambda m: m["title"])
     data = {"year": year, "fetched": time.strftime("%Y-%m-%d"), "papers": rows, "outside": outside}
     for path in (OUT, PAGE):

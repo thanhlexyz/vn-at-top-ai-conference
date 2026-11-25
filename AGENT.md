@@ -267,7 +267,9 @@ matched only by affiliation can drop out; confirm it in `review.csv` if it is th
 keeps those whose title page names a university in Vietnam, so that `find_candidates.py`, which applies the checked
 rows, lists their authors on the Candidates page), then `verify_affiliations.py` to check every counted official paper against its PDF;
 fix what it flags. Add the venue-year's notification date to `DECISION_DATES` in `common.py`: the Papers page lists
-the newest decisions first (the build warns about a venue-year with accepted papers and no date). NeurIPS PDFs become public only after the conference.
+the newest decisions first (the build warns about a venue-year with accepted papers and no date); within one
+conference and date, by mean review score, then mean reviewer confidence (highest first), papers without scores last
+(`decision_order`; the under-review rows sort the same way). NeurIPS PDFs become public only after the conference.
 
 Since November 2026 `ojs.aaai.org` answers scripts with a bot check, so AAAI PDFs cannot be downloaded by a script (do
 not try to get around it; the maintainer can save PDFs by hand). IJCAI is unaffected: `fetch_affiliations.py --scan ijcai
