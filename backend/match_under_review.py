@@ -268,6 +268,18 @@ def main():
             m["professors"].update(f["professors"])
     decisions = json.loads(DECISIONS.read_text(encoding="utf-8")) if DECISIONS.exists() else {}
     by_slug = {p["slug"]: p["name"] for p in roster}
+    # a hand match the automatic ones miss (retitled, abstract rewritten): {"add": arXiv id, "professors": [slugs]}
+    if ABSTRACTS.exists():
+        sub_by_forum = {x["forum"]: x for x in under_all}
+        cached = json.loads(ARXIV.read_text(encoding="utf-8")) if ARXIV.exists() else {}
+        by_id = {e["id"]: e for entries in cached.values() for e in entries}
+        for forum, d in decisions.items():
+            if "add" in d and forum not in matches and forum in sub_by_forum and d["add"] in by_id:
+                s, e = sub_by_forum[forum], by_id[d["add"]]
+                matches[forum] = {"forum": forum, "title": s["title"], "preprint": e.get("url") or f"https://arxiv.org/abs/{e['id']}",
+                                  "posted": e["date"], "authors": e["authors"], "professors": {}, "others": {},
+                                  "method": f"by hand (arXiv: {e['title']})"}
+                print(f"  by hand: {s['title'][:60]} <- {e['title'][:60]}")
     for forum, d in decisions.items():
         if forum in matches and "drop" in d:
             del matches[forum]
