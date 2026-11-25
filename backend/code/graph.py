@@ -593,7 +593,7 @@ def researcher_graph(professors, records):
     return build(nodes, papers_of, lambda n: color.get(n["group"], "c0"), legend)
 
 
-def institution_graph(professors, records):
+def institution_links(professors, records):
     roster = {}
     for p in professors:
         roster.setdefault(p["institution_slug"], {"name": p["institution"], "short": p["institution_short"]})
@@ -602,8 +602,7 @@ def institution_graph(professors, records):
         exact = [s for s, i in roster.items() if i["short"] == short or i["name"] == full]
         return exact[0] if exact else None
 
-    nodes = {s: {"name": i["short"], "name_vi": i["short"], "full": i["name"], "url": f"universities/{s}/",
-                 "group": "roster"} for s, i in roster.items()}
+    nodes = {s: {"name": i["short"], "full": i["name"], "url": f"universities/{s}/"} for s, i in roster.items()}
     papers_of = collections.defaultdict(set)
     for r, p in records:
         members = papers_of[paper_key(r)]
@@ -615,12 +614,17 @@ def institution_graph(professors, records):
                 if resolve(full, short) is not None or any(PARENT.get(i["short"]) == short for i in roster.values()):
                     continue
                 s = "x-" + slugify(short)
-                nodes.setdefault(s, {"name": short, "name_vi": short, "full": full, "url": "", "group": "other"})
+                nodes.setdefault(s, {"name": short, "full": full, "url": ""})
                 members.add(s)
     for members in papers_of.values():
         shorts = {nodes[m]["name"] for m in members}
         for m in list(members):
             if any(PARENT.get(x) == nodes[m]["name"] for x in shorts):
                 members.discard(m)
-    legend = [{"label": "roster", "color": "c1"}, {"label": "other", "color": "c2"}]
-    return build(nodes, papers_of, lambda n: "c1" if n["group"] == "roster" else "c2", legend)
+    edges = collections.Counter()
+    for members in papers_of.values():
+        for a, b in itertools.combinations(sorted(members), 2):
+            edges[(a, b)] += 1
+    linked = {m for e in edges for m in e}
+    return {"nodes": [{"id": s, "name": n["name"], "full": n["full"], "url": n["url"]} for s, n in sorted(nodes.items()) if s in linked],
+            "edges": [{"a": a, "b": b, "weight": w} for (a, b), w in sorted(edges.items(), key=lambda e: (-e[1], e[0]))]}

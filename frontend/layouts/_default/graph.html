@@ -1,16 +1,13 @@
 {{ define "main" -}}{{- $g := index hugo.Data .Params.data }}
 {{- $vi := eq site.Language.Lang "vi" }}
 {{ .Content }}
-{{- if ne .Params.data "graph_people" }}
-<p class="note">{{ T "graph_summary" (dict "Nodes" (len (where $g.nodes "linked" true)) "Edges" (len $g.edges) "Shared" $g.shared "Papers" $g.papers) }}</p>
-{{- end }}
 <div class="with-toc graph-page">
 <aside class="toc legend-box" aria-label="{{ T "graph_legend_title" }}">
 <p class="toc-title">{{ T "graph_legend_title" }}</p>
 <ul class="graph-legend">
 	{{- range $g.legend }}
 	{{- $inst := index (where hugo.Data.institutions "slug" (lower (urlize .label))) 0 }}
-	<li data-color="{{ .color }}"><span class="dot {{ .color }}"></span>{{ with and $inst $inst.image }}<img class="legend-logo" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}{{ if eq .label "" }}{{ T "graph_other" }}{{ else if eq .label "roster" }}{{ T "graph_roster" }}{{ else if eq .label "other" }}{{ T "graph_not_roster" }}{{ else if $inst }}<a href="{{ printf "universities/%s/" $inst.slug | relLangURL }}" title="{{ partial "iname.html" $inst.name }}">{{ .label }}</a>{{ else }}{{ .label }}{{ end }}</li>
+	<li data-color="{{ .color }}"><span class="dot {{ .color }}"></span>{{ with and $inst $inst.image }}<img class="legend-logo" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}{{ if eq .label "" }}{{ T "graph_other" }}{{ else if $inst }}<a href="{{ printf "universities/%s/" $inst.slug | relLangURL }}" title="{{ partial "iname.html" $inst.name }}">{{ .label }}</a>{{ else }}{{ .label }}{{ end }}</li>
 	{{- end }}
 	<li class="edge-key"><span class="line-key"></span>{{ T "graph_edge_key" }}</li>
 </ul>
@@ -31,19 +28,12 @@
 		<circle cx="{{ .x }}" cy="{{ .y }}" r="{{ .r }}"{{ if hasPrefix .color "ring" }} style="stroke-width: {{ math.Round (mul .r 0.3) }}px"{{ end }}/>
 		<text class="deg" x="{{ .x }}" y="{{ add .y 4 }}" text-anchor="middle">{{ .degree }}</text>
 		<text x="{{ .lx }}" y="{{ .ly }}" text-anchor="{{ .anchor }}">{{ $label }}</text>
-		<title>{{ $label }}{{ with .full }} ({{ . }}){{ end }}: {{ T "graph_papers" (int .papers) }}, {{ T "graph_degree" .degree }}</title>
+		<title>{{ $label }}: {{ T "graph_papers" (int .papers) }}, {{ T "graph_degree" .degree }}</title>
 	</a>
 	{{- end }}
 </svg>
-{{- if ne $.Params.data "graph_people" }}
-<figcaption class="note">{{ T "graph_caption" }}</figcaption>
-{{- end }}
 </figure>
 
-{{- if ne .Params.data "graph_people" }}{{ with where $g.nodes "linked" false }}
-<p class="note">{{ T "graph_isolated" }}
-{{- range $k, $n := . }}{{ if $k }},{{ end }} {{ if $n.url }}<a href="{{ $n.url | relLangURL }}">{{ cond (and $vi $n.name_vi) $n.name_vi $n.name }}</a>{{ else }}{{ $n.name }}{{ end }}{{ end }}.</p>
-{{- end }}{{ end }}
 </div>
 </div>
 

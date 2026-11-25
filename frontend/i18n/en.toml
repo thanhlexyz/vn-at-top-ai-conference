@@ -333,8 +333,6 @@ other = "Each column is one year's accepted papers; grey papers are known only f
 other = "Co-author universities and institutes"
 [coauthor_institutions_note_short]
 other = "Universities and institutes in Vietnam that share papers with this university (accepted, rejected or workshop) and the number of shared papers; those abroad are left out."
-[coauthor_institutions_note]
-other = "Universities and institutes in Vietnam that share papers with this university (accepted, rejected or workshop) and the number of shared papers; those abroad are left out. See <a href=\"{{ . }}\">Institution collaboration</a> for the whole graph."
 [coauthors_on_site]
 other = "Co-authors"
 [coauthors_on_site_note]
@@ -409,16 +407,10 @@ other = "{{ .Name }}: papers submitted, accepted and rejected by professors and 
 [also_published_as]
 other = "Also published as: {{ . }}"
 
-[graph_summary]
-other = "{{ .Nodes }} connected, {{ .Edges }} links; {{ .Shared }} of {{ .Papers }} papers are shared."
 [graph_legend_title]
 other = "Universities"
 [graph_other]
 other = "other"
-[graph_roster]
-other = "university of someone on the list"
-[graph_not_roster]
-other = "other institution in Vietnam"
 [graph_edge_key]
 other = "line width and number: papers together; number in a circle: number of links"
 [graph_papers]
@@ -426,11 +418,6 @@ one = "{{ . }} paper"
 other = "{{ . }} papers"
 [graph_degree]
 other = "{{ . }} links"
-[graph_caption]
-other = "Hover over a circle to highlight its links; hover over a line for the pair and the number of papers."
-[graph_isolated]
-other = "No shared paper with anyone else here:"
-
 [intl_vn]
 other = "professor on the list"
 [intl_abroad]

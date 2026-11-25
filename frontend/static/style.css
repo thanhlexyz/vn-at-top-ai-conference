@@ -484,7 +484,6 @@ svg.net a.node:not([href]) { cursor: default ; }
 svg.net.focus .edge:not(.hl), svg.net.focus .ew:not(.hl), svg.net.focus .node:not(.hl) { opacity: 0.12 ; }
 svg.net.focus .edge.hl { stroke: var(--chart-value) ; }
 .c1 circle, .dot.c1 { fill: #2a78d6 ; background: #2a78d6 ; }
-.c2 circle, .dot.c2 { fill: #eb6834 ; background: #eb6834 ; }
 .c3 circle, .dot.c3 { fill: #1baf7a ; background: #1baf7a ; }
 .c4 circle, .dot.c4 { fill: #eda100 ; background: #eda100 ; }
 .c0 circle, .dot.c0 { fill: #9a9890 ; background: #9a9890 ; }

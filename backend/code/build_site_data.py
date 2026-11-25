@@ -1451,7 +1451,7 @@ def main():
     shown_by_slug = {p["slug"]: p for p in professors}
     recs_for_graph = [(r, shown_by_slug[s]) for r, s in graph_recs if s in shown_by_slug]
     write_json(DATA / "graph_people.json", graph.researcher_graph(professors, recs_for_graph + under_review_links(recs_for_graph, shown_by_slug)))
-    write_json(DATA / "graph_institutions.json", graph.institution_graph(professors, recs_for_graph))
+    write_json(DATA / "institution_links.json", graph.institution_links(professors, recs_for_graph))
     for venue, year in sorted({(r["venue"], r["year"]) for r in papers if r["status"] == "accepted"}):
         if year not in DECISION_DATES.get(venue, {}):
             print(f"warning: no decision date for {VENUE_NAME[venue]} {year} in common.DECISION_DATES; "

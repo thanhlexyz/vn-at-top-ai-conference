@@ -1,0 +1,259 @@
+{
+ "nodes": [
+  {
+   "id": "dhtl",
+   "name": "DHTL",
+   "full": "Thang Long University",
+   "url": "universities/dhtl/"
+  },
+  {
+   "id": "fptu",
+   "name": "FPTU",
+   "full": "FPT University",
+   "url": "universities/fptu/"
+  },
+  {
+   "id": "haui",
+   "name": "HaUI",
+   "full": "Hanoi University of Industry",
+   "url": "universities/haui/"
+  },
+  {
+   "id": "hcmiu",
+   "name": "HCMIU",
+   "full": "International University, VNU-HCM",
+   "url": "universities/hcmiu/"
+  },
+  {
+   "id": "hcmue",
+   "name": "HCMUE",
+   "full": "Ho Chi Minh City University of Education",
+   "url": "universities/hcmue/"
+  },
+  {
+   "id": "hcmus",
+   "name": "HCMUS",
+   "full": "University of Science, VNU-HCM",
+   "url": "universities/hcmus/"
+  },
+  {
+   "id": "hcmut",
+   "name": "HCMUT",
+   "full": "Ho Chi Minh City University of Technology",
+   "url": "universities/hcmut/"
+  },
+  {
+   "id": "hust",
+   "name": "HUST",
+   "full": "Hanoi University of Science and Technology",
+   "url": "universities/hust/"
+  },
+  {
+   "id": "neu",
+   "name": "NEU",
+   "full": "National Economics University",
+   "url": "universities/neu/"
+  },
+  {
+   "id": "phenikaa",
+   "name": "Phenikaa",
+   "full": "Phenikaa University",
+   "url": "universities/phenikaa/"
+  },
+  {
+   "id": "ptit",
+   "name": "PTIT",
+   "full": "Posts and Telecommunications Institute of Technology",
+   "url": "universities/ptit/"
+  },
+  {
+   "id": "rmit",
+   "name": "RMIT",
+   "full": "RMIT University Vietnam",
+   "url": "universities/rmit/"
+  },
+  {
+   "id": "ueh",
+   "name": "UEH",
+   "full": "University of Economics Ho Chi Minh City",
+   "url": "universities/ueh/"
+  },
+  {
+   "id": "uit",
+   "name": "UIT",
+   "full": "University of Information Technology, VNU-HCM",
+   "url": "universities/uit/"
+  },
+  {
+   "id": "vinuni",
+   "name": "VinUni",
+   "full": "VinUniversity",
+   "url": "universities/vinuni/"
+  },
+  {
+   "id": "vnu-uet",
+   "name": "VNU-UET",
+   "full": "VNU University of Engineering and Technology",
+   "url": "universities/vnu-uet/"
+  },
+  {
+   "id": "x-fpt",
+   "name": "FPT",
+   "full": "FPT Software AI Center",
+   "url": ""
+  },
+  {
+   "id": "x-vinai",
+   "name": "VinAI",
+   "full": "VinAI Research",
+   "url": ""
+  }
+ ],
+ "edges": [
+  {
+   "a": "hust",
+   "b": "x-vinai",
+   "weight": 14
+  },
+  {
+   "a": "hust",
+   "b": "x-fpt",
+   "weight": 13
+  },
+  {
+   "a": "hust",
+   "b": "vinuni",
+   "weight": 11
+  },
+  {
+   "a": "hust",
+   "b": "vnu-uet",
+   "weight": 10
+  },
+  {
+   "a": "ptit",
+   "b": "x-vinai",
+   "weight": 9
+  },
+  {
+   "a": "vinuni",
+   "b": "x-fpt",
+   "weight": 8
+  },
+  {
+   "a": "hcmut",
+   "b": "rmit",
+   "weight": 6
+  },
+  {
+   "a": "hcmus",
+   "b": "vinuni",
+   "weight": 4
+  },
+  {
+   "a": "vinuni",
+   "b": "x-vinai",
+   "weight": 3
+  },
+  {
+   "a": "vnu-uet",
+   "b": "x-fpt",
+   "weight": 3
+  },
+  {
+   "a": "x-fpt",
+   "b": "x-vinai",
+   "weight": 3
+  },
+  {
+   "a": "fptu",
+   "b": "phenikaa",
+   "weight": 2
+  },
+  {
+   "a": "hcmus",
+   "b": "x-vinai",
+   "weight": 2
+  },
+  {
+   "a": "hcmut",
+   "b": "x-vinai",
+   "weight": 2
+  },
+  {
+   "a": "hust",
+   "b": "phenikaa",
+   "weight": 2
+  },
+  {
+   "a": "rmit",
+   "b": "x-fpt",
+   "weight": 2
+  },
+  {
+   "a": "vinuni",
+   "b": "vnu-uet",
+   "weight": 2
+  },
+  {
+   "a": "dhtl",
+   "b": "hust",
+   "weight": 1
+  },
+  {
+   "a": "haui",
+   "b": "hust",
+   "weight": 1
+  },
+  {
+   "a": "hcmiu",
+   "b": "hcmus",
+   "weight": 1
+  },
+  {
+   "a": "hcmiu",
+   "b": "vinuni",
+   "weight": 1
+  },
+  {
+   "a": "hcmue",
+   "b": "uit",
+   "weight": 1
+  },
+  {
+   "a": "hcmus",
+   "b": "uit",
+   "weight": 1
+  },
+  {
+   "a": "neu",
+   "b": "phenikaa",
+   "weight": 1
+  },
+  {
+   "a": "phenikaa",
+   "b": "ptit",
+   "weight": 1
+  },
+  {
+   "a": "ptit",
+   "b": "x-fpt",
+   "weight": 1
+  },
+  {
+   "a": "rmit",
+   "b": "vinuni",
+   "weight": 1
+  },
+  {
+   "a": "ueh",
+   "b": "x-fpt",
+   "weight": 1
+  },
+  {
+   "a": "uit",
+   "b": "x-vinai",
+   "weight": 1
+  }
+ ]
+}

@@ -13,7 +13,7 @@ Naming (the maintainer's choice, 2026-11-25), in both languages and in the addre
 (`/universities/`, formerly `/institutions/`), **conferences** (`/conferences/`, formerly `/venues/`), **professors**,
 and the professors' graph is **Domestic cooperation** (`/domestic/`, formerly `/graph-people/` and `/graph-professors/`),
 the counterpart of International cooperation. Old addresses redirect (Hugo aliases; `write_stubs(..., former=...)`).
-"Institutions" stays only where companies and institutes are included (co-author institutions, the institution graph).
+"Institutions" stays only where companies and institutes are included (the co-author institutions on university pages).
 Internal names (data files such as `institutions.json`, `venues.json`, `graph_people.json`, `img/people/`) are unchanged.
 
 
@@ -147,7 +147,8 @@ The local-only pages (Candidates, Not tracked) are drafts, but their data (`cand
   author. Only papers with at least one printed affiliation are judged.
 - **Co-author figures:** averages over all counted papers; the minimum over accepted papers; the maximum also over
   workshop papers; affiliation figures need the person found on the paper and an affiliation printed.
-- **Institution collaboration** (graph and the co-author institutions on institution pages): a paper links the roster
+- **Institution collaboration** (the co-author institutions on university pages, `institution_links.json` from
+  `graph.institution_links`; there is no institution graph any more, removed 2026-11-25): a paper links the roster
   institutions of its listed professors, plus Vietnamese institutions printed on it that have nobody on the list
   (companies, institutes such as VinAI or FPT). An institution with professors on the list joins a paper only through
   one of them, never through a student or untracked co-author, so its shared papers are always among its own
@@ -291,7 +292,7 @@ the build are parsed by templates (a reason starting with `before `, a track end
 
 **Collaboration graphs** (`backend/code/graph.py`; the professors' graph is Domestic cooperation at `/domestic/`): line length follows shared papers (more papers, closer); no line passes
 through a circle; labels never overlap lines or other labels and never leave the drawing; crossings few. After any
-change, check crossings and label clearance for both graphs and look at screenshots. They use every counted
+change, check crossings and label clearance and look at screenshots. They use every counted
 submission (rejected and withdrawn included) plus workshop papers from the Vietnam years, and feed the co-author
 lists. Researcher colours: HUST red, VinUni blue, HCMUS cyan (logo hues), the next three institutions ochre, green
 and purple, the three after them rings of those colours (never a brand colour as a ring), the rest grey; the six

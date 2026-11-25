@@ -333,8 +333,6 @@ other = "Mỗi cột là số bài được nhận trong một năm; phần xám
 other = "Đơn vị đồng tác giả"
 [coauthor_institutions_note_short]
 other = "Các trường, viện ở Việt Nam có bài chung với đơn vị này (được nhận, bị từ chối hoặc workshop) và số bài chung; không tính đơn vị ở nước ngoài."
-[coauthor_institutions_note]
-other = "Các trường, viện ở Việt Nam có bài chung với đơn vị này (được nhận, bị từ chối hoặc workshop) và số bài chung; không tính đơn vị ở nước ngoài. Xem toàn bộ ở mục <a href=\"{{ . }}\">Trường hợp tác</a>."
 [coauthors_on_site]
 other = "Đồng tác giả"
 [coauthors_on_site_note]
@@ -409,27 +407,16 @@ other = "{{ .Name }}: số bài nộp, được chấp nhận và bị từ ch�
 [also_published_as]
 other = "Tên khác trên các bài báo: {{ . }}"
 
-[graph_summary]
-other = "{{ .Nodes }} nút có liên kết, {{ .Edges }} đường nối; {{ .Shared }} trên {{ .Papers }} bài là bài chung."
 [graph_legend_title]
 other = "Trường"
 [graph_other]
 other = "khác"
-[graph_roster]
-other = "trường của giảng viên trong danh sách"
-[graph_not_roster]
-other = "đơn vị khác ở Việt Nam"
 [graph_edge_key]
 other = "độ dày và con số trên đường: số bài chung; số trong vòng tròn: số liên kết"
 [graph_papers]
 other = "{{ . }} bài"
 [graph_degree]
 other = "{{ . }} liên kết"
-[graph_caption]
-other = "Di chuột lên vòng tròn để làm nổi các liên kết; di chuột lên đường nối để xem cặp và số bài chung."
-[graph_isolated]
-other = "Không có bài chung với ai khác ở đây:"
-
 [intl_vn]
 other = "giảng viên trong danh sách"
 [intl_abroad]
