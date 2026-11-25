@@ -34,7 +34,8 @@
 	<tr class="under-review">
 		<td class="l venue-year"><a href="{{ "venues/iclr/" | relLangURL }}">ICLR</a>&rsquo;{{ printf "%02d" (mod $year 100) }}</td>
 		<td class="l"><a class="tag-link" href="https://openreview.net/forum?id={{ .forum }}" title="{{ T "tip_under_review" }}"><span class="tag under">{{ T "status_under_review" }}</span></a>
-			{{- with .likely }} <span class="tag likely-{{ . }}" title="{{ T "tip_likely" (dict "Mean" $row.mean) }}">{{ T (printf "likely_%s" .) }}</span>{{ end }}</td>
+			{{- with .likely }} <span class="tag likely-{{ . }}" title="{{ T "tip_likely" (dict "Mean" $row.mean) }}">{{ T (printf "likely_%s" .) }}</span>{{ end }}
+			{{- if and .mean (gt .mean 3.3) }} <span class="tag likely-spotlight" title="{{ T "tip_spotlight" (dict "Mean" $row.mean) }}">{{ T "likely_spotlight" }}</span>{{ end }}</td>
 		{{- with .number }}<td class="xcol"><a href="https://openreview.net/forum?id={{ $row.forum }}">{{ . }}</a></td>{{ else }}<td class="xcol na" data-last>&ndash;</td>{{ end }}
 		<td class="l xcol scores">{{ range $n, $r := .reviews }}{{ if $n }}, {{ end }}{{ index $r 0 }}({{ index $r 1 }}){{ end }}</td>
 		{{- if $otd }}

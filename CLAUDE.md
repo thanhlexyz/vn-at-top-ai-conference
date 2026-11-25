@@ -185,7 +185,9 @@ repository never holds it. What shows, as the maintainer decided on 2026-11-25:
   other authors in Vietnam on those preprints who are not on the roster;
 - published build: Papers page rows with title, scores, AI share and the potential tag, professors shown as "redacted",
   no preprint link; professor pages show "ICLR 2027 · under review · redacted" only; the Venues table counts them; the
-  ICLR projection takes its accepted part from the potential accepts.
+  ICLR chart's 2027 bar is counted from them (potential accepts, recorded rejections, potential rejects); each potential
+  accept counts as an unofficial +1 in every counting table and in the score (`potential_records`: title, co-authors
+  and links redacted in the data files); a mean above 3.3 is tagged potential spotlight.
 The maintainer accepted that a title can be searched to find the preprint's authors.
 
 ## Score
@@ -196,8 +198,8 @@ professors' scores in each of the four areas, combined as CSRankings does: the g
 (area count + 1) (`score_areas` and `score` in `build_site_data.py`).
 The front table marks each professor's rank change (▲n / ▼n; the beginner mark for anyone with no accepted paper
 outside it, i.e. new to the list) against the same ranking
-without the papers of `RANK_BASELINE` in `build_site_data.py` (today NeurIPS 2026: the latest results announced);
-move it to the next venue-year when its results arrive. Shown only for professors with accepted papers.
+without the papers of `RANK_BASELINE` in `build_site_data.py`: today "potential", the potential ICLR 2027
+acceptances (`potential_records`); when ICLR's decisions arrive, set it to the next venue-year with results. Shown only for professors with accepted papers.
 It is explained in About and in two callouts: the professor score on the front page, the institution score on the Institutions page; keep them in step.
 
 ## Tables, sorting and cups (`frontend/static/site.js`, `partials/professor-table.html`)

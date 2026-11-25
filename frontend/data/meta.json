@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25 02:07 UTC",
+ "generated": "2026-11-25 02:30 UTC",
  "generated_date": "2026-11-25",
  "first_year": 2020,
  "last_year": 2027,
@@ -13,7 +13,8 @@
   2026,
   2027
  ],
- "rank_baseline": "NeurIPS'26",
+ "rank_baseline": "ICLR'27",
+ "rank_potential": true,
  "venues": [
   {
    "key": "iclr",
@@ -1246,8 +1247,8 @@
   }
  ],
  "professors": 92,
- "papers": 338,
- "accepted": 192,
+ "papers": 344,
+ "accepted": 198,
  "preliminary": true,
  "pending_review": 0,
  "provisional": []

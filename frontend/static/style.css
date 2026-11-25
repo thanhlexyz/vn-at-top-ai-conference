@@ -338,7 +338,7 @@ tr.off-page { display: none ; }
 .scores { white-space: nowrap ; font-variant-numeric: tabular-nums ; }
 a.tag-link:hover .tag { text-decoration: underline ; border-color: var(--fg) ; }
 
-.tag.accepted, .tag.likely-accept {
+.tag.accepted, .tag.likely-accept, .tag.likely-spotlight {
     background: var(--good) ;
 }
 
@@ -657,3 +657,4 @@ tr.under-review td { background: color-mix(in srgb, #ab8704 6%, var(--bg)) ; }
 .redacted { color: var(--muted) ; font-style: italic ; }
 ul.under-list { list-style: none ; padding-left: 0 ; }
 ul.under-list li { margin: 0.4em 0 ; }
+.tag.likely-spotlight { font-weight: 600 ; }

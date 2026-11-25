@@ -165,6 +165,7 @@
 	<li><span class="tag">ICLR {{ hugo.Data.under_review.year }}</span> <span class="tag under">{{ T "status_under_review" }}</span>
 	{{- if site.Params.local }}
 		{{- with .likely }} <span class="tag likely-{{ . }}">{{ T (printf "likely_%s" .) }}</span>{{ end }}
+		{{- if and .mean (gt .mean 3.3) }} <span class="tag likely-spotlight">{{ T "likely_spotlight" }}</span>{{ end }}
 		<a href="https://openreview.net/forum?id={{ .forum }}">{{ .title }}</a> <span class="note">({{ range $n, $r := .reviews }}{{ if $n }}, {{ end }}{{ index $r 0 }}{{ end }}{{ with .ai }}; AI {{ . }}%{{ end }}; <a href="{{ .preprint }}">{{ T "preprint" }}</a>)</span>
 	{{- else }} <span class="redacted">{{ T "redacted" }}</span>{{ end }}</li>
 	{{- end }}

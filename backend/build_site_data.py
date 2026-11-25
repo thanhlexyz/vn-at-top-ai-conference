@@ -25,6 +25,7 @@ import charts
 import graph
 import difflib
 import html
+import hashlib
 import json
 import math
 import re
@@ -50,7 +51,7 @@ TRACK_REASON = {"datasets_benchmarks": "Datasets & Benchmarks track", "position"
                 "tiny_papers": "Tiny Papers track"}
 MAX_CANDIDATES_ON_SITE = 250
 # the front page shows how each professor's rank moved when this venue-year's results came in
-RANK_BASELINE = ("neurips", 2026)
+RANK_BASELINE = "potential"   # the potential ICLR acceptances (potential_records); or a (venue, year) pair
 FOREIGN_MIN_PAPERS = 3   # authors outside Vietnam on more than this many counted papers (4 or more) are suggested
 AREA_ALIAS = {"Miscellaneous Aspects of Machine Learning": "General Machine Learning"}  # renamed in 2025
 
@@ -845,7 +846,8 @@ def submission_id(url):
 def rank_keys_without(counted, venue_year):
     """Score, accepted and official counts over the counted papers outside one venue-year, and whether the
     professor has an accepted paper outside it (without one they are new to the list: the beginner mark)."""
-    rest = [r for r in counted if (r["venue"], r["year"]) != venue_year]
+    rest = [r for r in counted if not r.get("potential")] if venue_year == "potential" else \
+        [r for r in counted if (r["venue"], r["year"]) != venue_year]
     acc = [r for r in rest if r["status"] == "accepted"]
     main = [r for r in rest if r.get("track", "main") == "main"]
     return {"score": round(sum(1 / max(len(r["authors"]), 1) for r in acc), 2), "accepted": len(acc),
@@ -862,7 +864,7 @@ def page_entry(r, people=None):
          "url": r["url"], "status": r["status"], "status_label": STATUS_LABEL[r["status"]], "pres": r["pres"],
          "authors": ", ".join(r["authors"]), "match": r["match"], "note": r.get("note", ""),
          "reason": r.get("reason", ""), "later": r.get("later", ""), "unofficial": bool(r.get("unofficial")),
-         "workshop": r.get("workshop", ""), "_authors": list(r["authors"])}
+         "workshop": r.get("workshop", ""), "_authors": list(r["authors"]), "potential": bool(r.get("potential"))}
     if people is not None:
         e["professors"] = people
         e["reviews"] = review_scores(r["url"])
@@ -1009,6 +1011,18 @@ VENUE_CHART_TEXT = {
 ACCEPT_SCORE = 2.6   # mean review score above which a submission under review counts as likely accepted (maintainer)
 
 
+def likely_rejected(year):
+    """How many of those submissions have a mean review score at or below ACCEPT_SCORE; None without the list."""
+    path = WORK / "under_review.json"
+    if not path.exists():
+        return None
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if data.get("year") != year:
+        return None
+    means = [sum(r[0] for r in p["reviews"]) / len(p["reviews"]) for p in data["papers"] if p.get("reviews")]
+    return sum(1 for m in means if m <= ACCEPT_SCORE)
+
+
 def likely_accepted(year):
     """How many ICLR submissions under review, matched to tracked professors (work/under_review.json), have a mean
     review score above ACCEPT_SCORE; None when that local list is missing or for another year."""
@@ -1020,6 +1034,33 @@ def likely_accepted(year):
         return None
     means = [sum(r[0] for r in p["reviews"]) / len(p["reviews"]) for p in data["papers"] if p.get("reviews")]
     return sum(1 for m in means if m > ACCEPT_SCORE)
+
+
+_UNDER_REVIEW = None
+
+
+def potential_records(person):
+    """Potential acceptances: ICLR submissions under review matched to this professor through a public preprint
+    (match_under_review.py, local data) whose mean review score is above ACCEPT_SCORE. They count as unofficial (+N)
+    everywhere a paper is counted. Title, co-authors and links are redacted here, so that the public data files
+    never hold them; the tag in the title only keeps two such papers apart (a hash of the forum id)."""
+    global _UNDER_REVIEW
+    if _UNDER_REVIEW is None:
+        path = WORK / "under_review.json"
+        _UNDER_REVIEW = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"papers": []}
+    out = []
+    for p in _UNDER_REVIEW.get("papers", []):
+        if p.get("likely") != "accept" or person["slug"] not in {o["slug"] for o in p["professors"]}:
+            continue
+        n = len(p.get("authors") or []) or 1
+        tag = hashlib.sha1(p["forum"].encode()).hexdigest()[:6]
+        out.append({"venue": "iclr", "year": _UNDER_REVIEW["year"], "track": "main", "title": f"redacted {tag}",
+                    "status": "accepted", "note": "", "pres": "", "url": "", "authors": ["redacted"] * n,
+                    "people": [{"name": "redacted", "aff": ""}] * n, "self": None, "topic": "",
+                    "unofficial": True, "potential": True,
+                    "match": f"potential: mean review score {p['mean']} (above {ACCEPT_SCORE}) on a submission under "
+                             f"review, matched through a public preprint"})
+    return out
 
 
 def iclr_projection(entries, year, k=2):
@@ -1277,6 +1318,7 @@ def main():
                                                       own_pages.get(person["slug"], ()),
                                                       shared.get(person["slug"], ()))
         mark_later_acceptance(recs, acc)
+        recs += potential_records(person)
         counted, excluded, workshop = apply_rules(person, recs)
         if not counted:
             hidden.append(person["name"])  # on the roster, but shown only once they have a counted submission
@@ -1336,7 +1378,7 @@ def main():
         })
         all_counted += [{**r, "_who": person} for r in counted]
         # the collaboration graphs use workshop papers too, from the years in Vietnam
-        graph_recs += [(r, person["slug"]) for r in counted]
+        graph_recs += [(r, person["slug"]) for r in counted if not r.get("potential")]   # under review: not drawn
         graph_recs += [(r, person["slug"]) for r in workshop if in_vietnam(person, r["year"])]
     # most accepted first; people with none accepted yet come last, most submissions first
     # accepted papers, official and unofficial together, more official ones first among equals, as the tables sort them
@@ -1601,6 +1643,11 @@ def main():
                 # under review: the rejections on record so far, and a projection of the rest
                 pa, pr = iclr_projection(projection_entries, y["year"])
                 extra = max(pr - c["not_accepted"], 0)
+                # counted, not extrapolated, where the matched submissions under review are known: the potential
+                # rejects (mean review score at or below ACCEPT_SCORE) are the rest of the bar
+                counted_rejects = likely_rejected(y["year"])
+                if counted_rejects is not None:
+                    extra = counted_rejects
                 # the accepted part, where the submissions under review matched to tracked professors are known
                 # (match_under_review.py, local data): each whose mean review score is above ACCEPT_SCORE.
                 # Only this count reaches the public chart, never a title or a name.
@@ -1628,7 +1675,7 @@ def main():
         if year not in DECISION_DATES.get(venue, {}):
             print(f"warning: no decision date for {VENUE_NAME[venue]} {year} in common.DECISION_DATES; "
                   "its papers sort first on the Papers page")
-    page_papers = [with_owners(r) for r in sorted(papers, key=decision_order)]
+    page_papers = [with_owners(r) for r in sorted((r for r in papers if not r.get("potential")), key=decision_order)]
     write_json(DATA / "papers.json", page_papers)
     write_otd_scores(page_papers)
     write_ai_scores(professors)
@@ -1723,7 +1770,9 @@ def main():
     write_json(DATA / "meta.json", {
         "generated": now.strftime("%Y-%m-%d %H:%M %Z"), "generated_date": now.strftime("%Y-%m-%d"),
         "first_year": YEARS[0], "last_year": YEARS[-1], "years": YEARS,
-        "rank_baseline": f"{VENUE_NAME[RANK_BASELINE[0]]}'{RANK_BASELINE[1] % 100:02d}",
+        "rank_baseline": f"ICLR'{LAST_YEAR % 100:02d}" if RANK_BASELINE == "potential" else
+                         f"{VENUE_NAME[RANK_BASELINE[0]]}'{RANK_BASELINE[1] % 100:02d}",
+        "rank_potential": RANK_BASELINE == "potential",
         "venues": VENUES, "venue_keys": VENUE_KEYS, "venue_groups": VENUE_GROUPS, "coverage": coverage,
         "professors": len(professors), "papers": len(papers),
         "accepted": sum(r["status"] == "accepted" for r in papers),

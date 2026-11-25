@@ -227,11 +227,11 @@ other = "Hiện có {{ .Count }} trường hợp trùng tên chưa được xác
 [inst_score_callout]
 other = "<strong>Cách tính điểm của trường:</strong> Điểm tổng hợp của một trường được tính bằng cách cộng điểm của các giảng viên theo từng lĩnh vực trong 4 lĩnh vực chính (AI, ML, CV, NLP), sau đó lấy trung bình nhân (geometric mean) của 4 giá trị này (mỗi giá trị cộng thêm 1) theo phương pháp của CSRankings."
 [rank_was]
-other = "Hạng trước {{ .Base }}: {{ .Rank }}"
+other = "Hạng khi chưa tính các bài có thể được nhận ở {{ .Base }}: {{ .Rank }}"
 [rank_new]
-other = "Mới vào danh sách nhờ {{ .Base }}"
+other = "Mới vào danh sách nhờ một bài có thể được nhận ở {{ .Base }}"
 [rank_note]
-other = "<span class=\"rk up\">&#9650;</span> / <span class=\"rk down\">&#9660;</span> số bậc tăng hoặc giảm sau kết quả {{ .Base }}; <span class=\"rk new\"></span> mới vào danh sách."
+other = "<span class=\"rk up\">&#9650;</span> / <span class=\"rk down\">&#9660;</span> số bậc tăng hoặc giảm khi tính các bài có thể được nhận ở {{ .Base }} (+N); <span class=\"rk new\"></span> mới vào danh sách."
 [home_score_callout]
 other = "<strong>Cách tính điểm:</strong> Điểm số được tính theo phương pháp hiệu chỉnh của <a href=\"https://csrankings.org/\">CSRankings</a>: mỗi bài báo được nhận có giá trị <strong>1 chia cho tổng số tác giả</strong> (1/N). Điểm của mỗi giảng viên là tổng điểm đóng góp từ các bài báo của mình (ví dụ: bài có 4 tác giả đóng góp 0,25 điểm; bài có 10 tác giả đóng góp 0,1 điểm)."
 [cols_hidden]
@@ -270,6 +270,12 @@ other = "Các bài đang trong quá trình phản biện, được xác định 
 other = "đang phản biện"
 [tip_under_review_col]
 other = "Số bài đang phản biện của các giảng viên trong danh sách, xác định qua bản preprint công khai"
+[potential_tag]
+other = "có thể được nhận"
+[likely_spotlight]
+other = "có thể được spotlight"
+[tip_spotlight]
+other = "Điểm phản biện trung bình {{ .Mean }}; trên 3,3 được coi là có thể được spotlight"
 [cols_show]
 other = "Hiện thêm {n} cột"
 [cols_show_inst]

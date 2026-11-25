@@ -4,18 +4,18 @@
   "name": "ICLR",
   "full_name": "International Conference on Learning Representations",
   "rejections": "full",
-  "accepted": 14,
-  "own_page": 0,
+  "accepted": 20,
+  "own_page": 6,
   "official": 14,
   "venues": {
    "iclr": {
-    "accepted": 14,
+    "accepted": 20,
     "rejected": 39,
     "withdrawn": 62,
     "desk_rejected": 6,
     "not_accepted": 107,
-    "submitted": 121,
-    "own_page": 0,
+    "submitted": 127,
+    "own_page": 6,
     "official": 14
    },
    "neurips": {
@@ -1095,13 +1095,13 @@
     "counts": true,
     "venues": {
      "iclr": {
-      "accepted": 0,
+      "accepted": 6,
       "rejected": 0,
       "withdrawn": 31,
       "desk_rejected": 0,
       "not_accepted": 31,
-      "submitted": 31,
-      "own_page": 0,
+      "submitted": 37,
+      "own_page": 6,
       "official": 0,
       "available": false,
       "held": true,
@@ -1225,8 +1225,8 @@
       "provisional": false
      }
     },
-    "accepted": 0,
-    "own_page": 0,
+    "accepted": 6,
+    "own_page": 6,
     "official": 0,
     "rejected_estimated": 31
    }
@@ -1249,6 +1249,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "thanh-duc-ngo",
@@ -1303,6 +1304,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "son-ha-xuan",
@@ -1362,6 +1364,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -1407,6 +1410,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "thanh-binh-nguyen",
@@ -1452,6 +1456,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "hien-d-nguyen",
@@ -1510,6 +1515,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "son-ha-xuan",
@@ -1565,6 +1571,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -1610,6 +1617,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "minh-nhat-vu",
@@ -1659,6 +1667,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "thi-thuy-uyen-nguyen",
@@ -1736,6 +1745,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "son-ha-xuan",
@@ -1800,6 +1810,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -1845,6 +1856,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -1890,6 +1902,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "hieu-pham",
@@ -1935,6 +1948,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "son-ha-xuan",
@@ -1990,6 +2004,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "xuan-bach-le",
@@ -2047,6 +2062,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -2096,6 +2112,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khiem-nguyen",
@@ -2133,6 +2150,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "minh-nhat-vu",
@@ -2186,6 +2204,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "son-ha-xuan",
@@ -2241,6 +2260,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -2286,6 +2306,386 @@
     "year": 2027,
     "venue": "iclr",
     "venue_name": "ICLR",
+    "title": "redacted 107e3e",
+    "ai_key": "iclr-2027-redacted107e3e",
+    "url": "",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "redacted, redacted, redacted, redacted, redacted, redacted, redacted, redacted, redacted, redacted, redacted, redacted, redacted, redacted, redacted, redacted",
+    "match": "potential: mean review score 3.0 (above 2.6) on a submission under review, matched through a public preprint",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": true,
+    "workshop": "",
+    "potential": true,
+    "professors": [
+     {
+      "slug": "dung-d-le",
+      "name": "Dung D. Le",
+      "name_vi": "Lê Duy Dũng"
+     },
+     {
+      "slug": "khoa-d-doan",
+      "name": "Khoa D. Doan",
+      "name_vi": "Đoàn Đăng Khoa"
+     },
+     {
+      "slug": "an-thai-le",
+      "name": "An Thai Le",
+      "name_vi": "Lê Thái An"
+     },
+     {
+      "slug": "vu-n-duong",
+      "name": "Vu N. Duong",
+      "name_vi": "Dương Nguyên Vũ"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2027,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "redacted 1ebf9a",
+    "ai_key": "iclr-2027-redacted1ebf9a",
+    "url": "",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "redacted, redacted, redacted, redacted, redacted, redacted",
+    "match": "potential: mean review score 3.0 (above 2.6) on a submission under review, matched through a public preprint",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": true,
+    "workshop": "",
+    "potential": true,
+    "professors": [
+     {
+      "slug": "huynh-thi-thanh-binh",
+      "name": "Huynh Thi Thanh Binh",
+      "name_vi": "Huỳnh Thị Thanh Bình"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2027,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "redacted 5095f2",
+    "ai_key": "iclr-2027-redacted5095f2",
+    "url": "",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "redacted, redacted, redacted, redacted, redacted, redacted",
+    "match": "potential: mean review score 2.67 (above 2.6) on a submission under review, matched through a public preprint",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": true,
+    "workshop": "",
+    "potential": true,
+    "professors": [
+     {
+      "slug": "ngoc-thanh-dinh",
+      "name": "Ngoc-Thanh Dinh",
+      "name_vi": "Đinh Ngọc Thạnh"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2027,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "redacted 8357c3",
+    "ai_key": "iclr-2027-redacted8357c3",
+    "url": "",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "redacted, redacted, redacted, redacted",
+    "match": "potential: mean review score 2.67 (above 2.6) on a submission under review, matched through a public preprint",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": true,
+    "workshop": "",
+    "potential": true,
+    "professors": [
+     {
+      "slug": "minh-triet-tran",
+      "name": "Minh-Triet Tran",
+      "name_vi": "Trần Minh Triết"
+     },
+     {
+      "slug": "trung-nghia-le",
+      "name": "Trung-Nghia Le",
+      "name_vi": "Lê Trung Nghĩa"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2027,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "redacted 984273",
+    "ai_key": "iclr-2027-redacted984273",
+    "url": "",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "redacted, redacted, redacted, redacted, redacted, redacted",
+    "match": "potential: mean review score 3.33 (above 2.6) on a submission under review, matched through a public preprint",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": true,
+    "workshop": "",
+    "potential": true,
+    "professors": [
+     {
+      "slug": "khoa-d-doan",
+      "name": "Khoa D. Doan",
+      "name_vi": "Đoàn Đăng Khoa"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2027,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "redacted e7283a",
+    "ai_key": "iclr-2027-redactede7283a",
+    "url": "",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "redacted, redacted, redacted, redacted, redacted, redacted, redacted",
+    "match": "potential: mean review score 2.67 (above 2.6) on a submission under review, matched through a public preprint",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": true,
+    "workshop": "",
+    "potential": true,
+    "professors": [
+     {
+      "slug": "thanh-duc-ngo",
+      "name": "Thanh Duc Ngo",
+      "name_vi": "Ngô Đức Thành"
+     }
+    ],
+    "reviews": "",
+    "sub_id": "",
+    "author_links": [
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2027,
+    "venue": "iclr",
+    "venue_name": "ICLR",
     "title": "Restoring Co-Adaptation: An Endpoint Audit of Asymmetric Training in Multi-Agent Market Making",
     "ai_key": "iclr-2027-restoringcoadaptationanendpointauditofas",
     "url": "https://openreview.net/forum?id=8CnkhUHvlx",
@@ -2299,6 +2699,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "minh-triet-tran",
@@ -2350,6 +2751,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "long-hoang-dang",
@@ -2399,6 +2801,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "thanh-duc-ngo",
@@ -2440,6 +2843,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "huynh-thi-thanh-binh",
@@ -2498,6 +2902,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -2567,6 +2972,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -2612,6 +3018,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -2653,6 +3060,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phat-t-tran-truong",
@@ -2698,6 +3106,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "minh-triet-tran",
@@ -2749,6 +3158,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -2782,6 +3192,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "hieu-pham",
@@ -2831,6 +3242,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -2916,6 +3328,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -2953,6 +3366,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -2998,6 +3412,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -3051,6 +3466,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -3104,6 +3520,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "huynh-thi-thanh-binh",
@@ -3171,6 +3588,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "hoang-thanh-tung",
@@ -3216,6 +3634,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -3269,6 +3688,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -3302,6 +3722,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tho-quan",
@@ -3359,6 +3780,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -3417,6 +3839,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -3466,6 +3889,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -3511,6 +3935,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -3596,6 +4021,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "danh-le-phuoc",
@@ -3650,6 +4076,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -3699,6 +4126,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "doanh-cao-bui",
@@ -3744,6 +4172,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "hoang-thanh-tung",
@@ -3797,6 +4226,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "quang-vinh-dang",
@@ -3834,6 +4264,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -3875,6 +4306,7 @@
     "later": "NeurIPS 2026",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -3916,6 +4348,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -3975,6 +4408,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "thanh-binh-nguyen",
@@ -4032,6 +4466,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "long-dao-van",
@@ -4141,6 +4576,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "vo-nguyen-le-duy",
@@ -4190,6 +4626,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -4259,6 +4696,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dinh-cuong-hoang",
@@ -4309,6 +4747,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cong-tinh-dao",
@@ -4368,6 +4807,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -4437,6 +4877,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -4482,6 +4923,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -4527,6 +4969,7 @@
     "later": "NeurIPS 2026",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -4585,6 +5028,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "binh-t-nguyen",
@@ -4635,6 +5079,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "hoang-son-do",
@@ -4688,6 +5133,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -4733,6 +5179,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "minh-do",
@@ -4774,6 +5221,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "minh-tran",
@@ -4807,6 +5255,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -4857,6 +5306,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngoc-hoang-luong",
@@ -4894,6 +5344,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -4951,6 +5402,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "canh-v-pham",
@@ -5001,6 +5453,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -5050,6 +5503,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "nam-le-hai",
@@ -5107,6 +5561,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "minh-triet-tran",
@@ -5165,6 +5620,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngoc-hoang-luong",
@@ -5207,6 +5663,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -5264,6 +5721,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "nguyen-viet-ha",
@@ -5305,6 +5763,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -5366,6 +5825,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -5419,6 +5879,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -5468,6 +5929,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "minh-triet-tran",
@@ -5509,6 +5971,7 @@
     "later": "NeurIPS 2025",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -5559,6 +6022,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "thanh-duc-ngo",
@@ -5612,6 +6076,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -5666,6 +6131,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -5725,6 +6191,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tien-vu-van",
@@ -5770,6 +6237,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "minh-triet-tran",
@@ -5824,6 +6292,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "binh-t-nguyen",
@@ -5869,6 +6338,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -5926,6 +6396,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "vo-nguyen-le-duy",
@@ -5975,6 +6446,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "vo-nguyen-le-duy",
@@ -6024,6 +6496,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -6085,6 +6558,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "van-duc-nguyen",
@@ -6147,6 +6621,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-viet-ta",
@@ -6208,6 +6683,7 @@
     "later": "NeurIPS 2025",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -6249,6 +6725,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -6302,6 +6779,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -6364,6 +6842,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -6421,6 +6900,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-pham",
@@ -6467,6 +6947,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "hoan-cong-nguyen",
@@ -6536,6 +7017,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngoc-hoang-luong",
@@ -6578,6 +7060,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -6632,6 +7115,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -6685,6 +7169,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -6730,6 +7215,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -6783,6 +7269,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-pham",
@@ -6837,6 +7324,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "hoa-tien-nguyen",
@@ -6886,6 +7374,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -6931,6 +7420,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -6980,6 +7470,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "minh-n-h-nguyen",
@@ -7021,6 +7512,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "man-ngo",
@@ -7066,6 +7558,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -7115,6 +7608,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -7152,6 +7646,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "man-ngo",
@@ -7205,6 +7700,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -7258,6 +7754,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tho-quan",
@@ -7299,6 +7796,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "nghia-duong-tan",
@@ -7356,6 +7854,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "hieu-trung-thai",
@@ -7405,6 +7904,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -7466,6 +7966,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -7490,13 +7991,13 @@
   "image": "img/venues/iclr.svg",
   "image_source": "https://iclr.cc/",
   "rejected_estimated": 107,
-  "acceptance_rate": 12,
+  "acceptance_rate": 16,
   "reported_rate": 30,
   "reported_detail": "15537 / 52327 (2020–2026)",
-  "ratio": "8.6",
+  "ratio": "6.3",
   "chart": {
-   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at ICLR\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"pa\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Accepted, projected</text><rect class=\"pr\" x=\"418.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"436.0\" y=\"18\">Rejected, projected</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">40</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">60</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">80</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"not\" d=\"M138.2,270.0 V270.0 Q138.2,267.2 141.1,267.2 H159.4 Q162.2,267.2 162.2,270.0 V270.0 Z\"><title>2021: 1 rejected, recorded</title></path><text class=\"value\" x=\"150.2\" y=\"261.2\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V267.2 Q211.8,267.2 211.8,267.2 H235.8 Q235.8,267.2 235.8,267.2 V270.0 Z\"><title>2022: 1 accepted</title></path><path class=\"not\" d=\"M211.8,265.2 V254.4 Q211.8,250.4 215.8,250.4 H231.8 Q235.8,250.4 235.8,254.4 V265.2 Z\"><title>2022: 6 rejected, recorded</title></path><text class=\"value\" x=\"223.8\" y=\"244.4\" text-anchor=\"middle\">7</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V267.2 Q285.2,267.2 285.2,267.2 H309.2 Q309.2,267.2 309.2,267.2 V270.0 Z\"><title>2023: 1 accepted</title></path><path class=\"not\" d=\"M285.2,265.2 V265.2 Q285.2,261.6 288.9,261.6 H305.6 Q309.2,261.6 309.2,265.2 V265.2 Z\"><title>2023: 2 rejected, recorded</title></path><text class=\"value\" x=\"297.2\" y=\"255.6\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V267.2 Q358.8,267.2 358.8,267.2 H382.8 Q382.8,267.2 382.8,267.2 V270.0 Z\"><title>2024: 1 accepted</title></path><path class=\"not\" d=\"M358.8,265.2 V243.2 Q358.8,239.2 362.8,239.2 H378.8 Q382.8,239.2 382.8,243.2 V265.2 Z\"><title>2024: 10 rejected, recorded</title></path><text class=\"value\" x=\"370.8\" y=\"233.2\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V253.2 Q432.2,253.2 432.2,253.2 H456.2 Q456.2,253.2 456.2,253.2 V270.0 Z\"><title>2025: 6 accepted</title></path><path class=\"not\" d=\"M432.2,251.2 V187.2 Q432.2,183.2 436.2,183.2 H452.2 Q456.2,183.2 456.2,187.2 V251.2 Z\"><title>2025: 25 rejected, recorded</title></path><text class=\"value\" x=\"444.2\" y=\"177.2\" text-anchor=\"middle\">31</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V256.0 Q505.8,256.0 505.8,256.0 H529.8 Q529.8,256.0 529.8,256.0 V270.0 Z\"><title>2026: 5 accepted</title></path><path class=\"not\" d=\"M505.8,254.0 V170.4 Q505.8,166.4 509.8,166.4 H525.8 Q529.8,166.4 529.8,170.4 V254.0 Z\"><title>2026: 32 rejected, recorded</title></path><text class=\"value\" x=\"517.8\" y=\"160.4\" text-anchor=\"middle\">37</text><text class=\"tick\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text><path class=\"pa\" d=\"M579.2,270.0 V253.2 Q579.2,253.2 579.2,253.2 H603.2 Q603.2,253.2 603.2,253.2 V270.0 Z\"><title>2027: about 6 accepted (projected)</title></path><path class=\"not\" d=\"M579.2,251.2 V166.4 Q579.2,166.4 579.2,166.4 H603.2 Q603.2,166.4 603.2,166.4 V251.2 Z\"><title>2027: 31 rejected, recorded</title></path><path class=\"pr\" d=\"M579.2,164.4 V75.0 Q579.2,71.0 583.2,71.0 H599.2 Q603.2,71.0 603.2,75.0 V164.4 Z\"><title>2027: about 34 more rejected (projected)</title></path><text class=\"value\" x=\"591.2\" y=\"65.0\" text-anchor=\"middle\">about 71</text></svg>",
-   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại ICLR\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"pa\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Được nhận, dự báo</text><rect class=\"pr\" x=\"424.40000000000003\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"442.40000000000003\" y=\"18\">Bị từ chối, dự báo</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">40</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">60</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">80</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"not\" d=\"M138.2,270.0 V270.0 Q138.2,267.2 141.1,267.2 H159.4 Q162.2,267.2 162.2,270.0 V270.0 Z\"><title>2021: 1 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"150.2\" y=\"261.2\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V267.2 Q211.8,267.2 211.8,267.2 H235.8 Q235.8,267.2 235.8,267.2 V270.0 Z\"><title>2022: 1 bài được nhận</title></path><path class=\"not\" d=\"M211.8,265.2 V254.4 Q211.8,250.4 215.8,250.4 H231.8 Q235.8,250.4 235.8,254.4 V265.2 Z\"><title>2022: 6 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"223.8\" y=\"244.4\" text-anchor=\"middle\">7</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V267.2 Q285.2,267.2 285.2,267.2 H309.2 Q309.2,267.2 309.2,267.2 V270.0 Z\"><title>2023: 1 bài được nhận</title></path><path class=\"not\" d=\"M285.2,265.2 V265.2 Q285.2,261.6 288.9,261.6 H305.6 Q309.2,261.6 309.2,265.2 V265.2 Z\"><title>2023: 2 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"297.2\" y=\"255.6\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V267.2 Q358.8,267.2 358.8,267.2 H382.8 Q382.8,267.2 382.8,267.2 V270.0 Z\"><title>2024: 1 bài được nhận</title></path><path class=\"not\" d=\"M358.8,265.2 V243.2 Q358.8,239.2 362.8,239.2 H378.8 Q382.8,239.2 382.8,243.2 V265.2 Z\"><title>2024: 10 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"370.8\" y=\"233.2\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V253.2 Q432.2,253.2 432.2,253.2 H456.2 Q456.2,253.2 456.2,253.2 V270.0 Z\"><title>2025: 6 bài được nhận</title></path><path class=\"not\" d=\"M432.2,251.2 V187.2 Q432.2,183.2 436.2,183.2 H452.2 Q456.2,183.2 456.2,187.2 V251.2 Z\"><title>2025: 25 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"444.2\" y=\"177.2\" text-anchor=\"middle\">31</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V256.0 Q505.8,256.0 505.8,256.0 H529.8 Q529.8,256.0 529.8,256.0 V270.0 Z\"><title>2026: 5 bài được nhận</title></path><path class=\"not\" d=\"M505.8,254.0 V170.4 Q505.8,166.4 509.8,166.4 H525.8 Q529.8,166.4 529.8,170.4 V254.0 Z\"><title>2026: 32 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"517.8\" y=\"160.4\" text-anchor=\"middle\">37</text><text class=\"tick\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text><path class=\"pa\" d=\"M579.2,270.0 V253.2 Q579.2,253.2 579.2,253.2 H603.2 Q603.2,253.2 603.2,253.2 V270.0 Z\"><title>2027: khoảng 6 bài được nhận (dự báo)</title></path><path class=\"not\" d=\"M579.2,251.2 V166.4 Q579.2,166.4 579.2,166.4 H603.2 Q603.2,166.4 603.2,166.4 V251.2 Z\"><title>2027: 31 bài bị từ chối, đếm được</title></path><path class=\"pr\" d=\"M579.2,164.4 V75.0 Q579.2,71.0 583.2,71.0 H599.2 Q603.2,71.0 603.2,75.0 V164.4 Z\"><title>2027: khoảng 34 bài bị từ chối nữa (dự báo)</title></path><text class=\"value\" x=\"591.2\" y=\"65.0\" text-anchor=\"middle\">~71</text></svg>"
+   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at ICLR\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"pa\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Accepted, projected</text><rect class=\"pr\" x=\"418.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"436.0\" y=\"18\">Rejected, projected</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"225.2\" x2=\"628\" y2=\"225.2\"/><text class=\"tick\" x=\"34\" y=\"229.2\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"180.4\" x2=\"628\" y2=\"180.4\"/><text class=\"tick\" x=\"34\" y=\"184.4\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"135.6\" x2=\"628\" y2=\"135.6\"/><text class=\"tick\" x=\"34\" y=\"139.6\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"90.8\" x2=\"628\" y2=\"90.8\"/><text class=\"tick\" x=\"34\" y=\"94.8\" text-anchor=\"end\">40</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">50</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"not\" d=\"M138.2,270.0 V269.5 Q138.2,265.5 142.2,265.5 H158.2 Q162.2,265.5 162.2,269.5 V270.0 Z\"><title>2021: 1 rejected, recorded</title></path><text class=\"value\" x=\"150.2\" y=\"259.5\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V265.5 Q211.8,265.5 211.8,265.5 H235.8 Q235.8,265.5 235.8,265.5 V270.0 Z\"><title>2022: 1 accepted</title></path><path class=\"not\" d=\"M211.8,263.5 V242.6 Q211.8,238.6 215.8,238.6 H231.8 Q235.8,238.6 235.8,242.6 V263.5 Z\"><title>2022: 6 rejected, recorded</title></path><text class=\"value\" x=\"223.8\" y=\"232.6\" text-anchor=\"middle\">7</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V265.5 Q285.2,265.5 285.2,265.5 H309.2 Q309.2,265.5 309.2,265.5 V270.0 Z\"><title>2023: 1 accepted</title></path><path class=\"not\" d=\"M285.2,263.5 V260.6 Q285.2,256.6 289.2,256.6 H305.2 Q309.2,256.6 309.2,260.6 V263.5 Z\"><title>2023: 2 rejected, recorded</title></path><text class=\"value\" x=\"297.2\" y=\"250.6\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V265.5 Q358.8,265.5 358.8,265.5 H382.8 Q382.8,265.5 382.8,265.5 V270.0 Z\"><title>2024: 1 accepted</title></path><path class=\"not\" d=\"M358.8,263.5 V224.7 Q358.8,220.7 362.8,220.7 H378.8 Q382.8,220.7 382.8,224.7 V263.5 Z\"><title>2024: 10 rejected, recorded</title></path><text class=\"value\" x=\"370.8\" y=\"214.7\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V243.1 Q432.2,243.1 432.2,243.1 H456.2 Q456.2,243.1 456.2,243.1 V270.0 Z\"><title>2025: 6 accepted</title></path><path class=\"not\" d=\"M432.2,241.1 V135.1 Q432.2,131.1 436.2,131.1 H452.2 Q456.2,131.1 456.2,135.1 V241.1 Z\"><title>2025: 25 rejected, recorded</title></path><text class=\"value\" x=\"444.2\" y=\"125.1\" text-anchor=\"middle\">31</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V247.6 Q505.8,247.6 505.8,247.6 H529.8 Q529.8,247.6 529.8,247.6 V270.0 Z\"><title>2026: 5 accepted</title></path><path class=\"not\" d=\"M505.8,245.6 V108.2 Q505.8,104.2 509.8,104.2 H525.8 Q529.8,104.2 529.8,108.2 V245.6 Z\"><title>2026: 32 rejected, recorded</title></path><text class=\"value\" x=\"517.8\" y=\"98.2\" text-anchor=\"middle\">37</text><text class=\"tick\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text><path class=\"pa\" d=\"M579.2,270.0 V243.1 Q579.2,243.1 579.2,243.1 H603.2 Q603.2,243.1 603.2,243.1 V270.0 Z\"><title>2027: about 6 accepted (projected)</title></path><path class=\"not\" d=\"M579.2,241.1 V104.2 Q579.2,104.2 579.2,104.2 H603.2 Q603.2,104.2 603.2,104.2 V241.1 Z\"><title>2027: 31 rejected, recorded</title></path><path class=\"pr\" d=\"M579.2,102.2 V90.3 Q579.2,86.3 583.2,86.3 H599.2 Q603.2,86.3 603.2,90.3 V102.2 Z\"><title>2027: about 4 more rejected (projected)</title></path><text class=\"value\" x=\"591.2\" y=\"80.3\" text-anchor=\"middle\">about 41</text></svg>",
+   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại ICLR\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"pa\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Được nhận, dự báo</text><rect class=\"pr\" x=\"424.40000000000003\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"442.40000000000003\" y=\"18\">Bị từ chối, dự báo</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"225.2\" x2=\"628\" y2=\"225.2\"/><text class=\"tick\" x=\"34\" y=\"229.2\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"180.4\" x2=\"628\" y2=\"180.4\"/><text class=\"tick\" x=\"34\" y=\"184.4\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"135.6\" x2=\"628\" y2=\"135.6\"/><text class=\"tick\" x=\"34\" y=\"139.6\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"90.8\" x2=\"628\" y2=\"90.8\"/><text class=\"tick\" x=\"34\" y=\"94.8\" text-anchor=\"end\">40</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">50</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"not\" d=\"M138.2,270.0 V269.5 Q138.2,265.5 142.2,265.5 H158.2 Q162.2,265.5 162.2,269.5 V270.0 Z\"><title>2021: 1 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"150.2\" y=\"259.5\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V265.5 Q211.8,265.5 211.8,265.5 H235.8 Q235.8,265.5 235.8,265.5 V270.0 Z\"><title>2022: 1 bài được nhận</title></path><path class=\"not\" d=\"M211.8,263.5 V242.6 Q211.8,238.6 215.8,238.6 H231.8 Q235.8,238.6 235.8,242.6 V263.5 Z\"><title>2022: 6 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"223.8\" y=\"232.6\" text-anchor=\"middle\">7</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V265.5 Q285.2,265.5 285.2,265.5 H309.2 Q309.2,265.5 309.2,265.5 V270.0 Z\"><title>2023: 1 bài được nhận</title></path><path class=\"not\" d=\"M285.2,263.5 V260.6 Q285.2,256.6 289.2,256.6 H305.2 Q309.2,256.6 309.2,260.6 V263.5 Z\"><title>2023: 2 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"297.2\" y=\"250.6\" text-anchor=\"middle\">3</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V265.5 Q358.8,265.5 358.8,265.5 H382.8 Q382.8,265.5 382.8,265.5 V270.0 Z\"><title>2024: 1 bài được nhận</title></path><path class=\"not\" d=\"M358.8,263.5 V224.7 Q358.8,220.7 362.8,220.7 H378.8 Q382.8,220.7 382.8,224.7 V263.5 Z\"><title>2024: 10 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"370.8\" y=\"214.7\" text-anchor=\"middle\">11</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V243.1 Q432.2,243.1 432.2,243.1 H456.2 Q456.2,243.1 456.2,243.1 V270.0 Z\"><title>2025: 6 bài được nhận</title></path><path class=\"not\" d=\"M432.2,241.1 V135.1 Q432.2,131.1 436.2,131.1 H452.2 Q456.2,131.1 456.2,135.1 V241.1 Z\"><title>2025: 25 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"444.2\" y=\"125.1\" text-anchor=\"middle\">31</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V247.6 Q505.8,247.6 505.8,247.6 H529.8 Q529.8,247.6 529.8,247.6 V270.0 Z\"><title>2026: 5 bài được nhận</title></path><path class=\"not\" d=\"M505.8,245.6 V108.2 Q505.8,104.2 509.8,104.2 H525.8 Q529.8,104.2 529.8,108.2 V245.6 Z\"><title>2026: 32 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"517.8\" y=\"98.2\" text-anchor=\"middle\">37</text><text class=\"tick\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text><path class=\"pa\" d=\"M579.2,270.0 V243.1 Q579.2,243.1 579.2,243.1 H603.2 Q603.2,243.1 603.2,243.1 V270.0 Z\"><title>2027: khoảng 6 bài được nhận (dự báo)</title></path><path class=\"not\" d=\"M579.2,241.1 V104.2 Q579.2,104.2 579.2,104.2 H603.2 Q603.2,104.2 603.2,104.2 V241.1 Z\"><title>2027: 31 bài bị từ chối, đếm được</title></path><path class=\"pr\" d=\"M579.2,102.2 V90.3 Q579.2,86.3 583.2,86.3 H599.2 Q603.2,86.3 603.2,90.3 V102.2 Z\"><title>2027: khoảng 4 bài bị từ chối nữa (dự báo)</title></path><text class=\"value\" x=\"591.2\" y=\"80.3\" text-anchor=\"middle\">~41</text></svg>"
   }
  },
  {
@@ -8028,7 +8529,7 @@
     "accepted": 3,
     "own_page": 0,
     "official": 3,
-    "rejected_estimated": 5
+    "rejected_estimated": 4
    },
    {
     "year": 2023,
@@ -8168,7 +8669,7 @@
     "accepted": 3,
     "own_page": 0,
     "official": 3,
-    "rejected_estimated": 12
+    "rejected_estimated": 9
    },
    {
     "year": 2024,
@@ -8448,7 +8949,7 @@
     "accepted": 13,
     "own_page": 0,
     "official": 13,
-    "rejected_estimated": 31
+    "rejected_estimated": 28
    },
    {
     "year": 2026,
@@ -8588,7 +9089,7 @@
     "accepted": 36,
     "own_page": 0,
     "official": 36,
-    "rejected_estimated": 90
+    "rejected_estimated": 77
    },
    {
     "year": 2027,
@@ -8749,6 +9250,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-do",
@@ -8802,6 +9304,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "huynh-thi-thanh-binh",
@@ -8844,6 +9347,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -8889,6 +9393,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "binh-t-nguyen",
@@ -8930,6 +9435,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngoc-thanh-dinh",
@@ -8983,6 +9489,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "huynh-thi-thanh-binh",
@@ -9033,6 +9540,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -9086,6 +9594,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "uyen-n-b-vo",
@@ -9144,6 +9653,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -9201,6 +9711,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -9254,6 +9765,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "quynh-trang-pham-thi",
@@ -9304,6 +9816,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "hoang-son-do",
@@ -9357,6 +9870,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -9394,6 +9908,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -9444,6 +9959,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "binh-t-nguyen",
@@ -9489,6 +10005,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -9538,6 +10055,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -9579,6 +10097,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-do",
@@ -9653,6 +10172,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "trung-nghia-le",
@@ -9698,6 +10218,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -9767,6 +10288,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngoc-nam-pham",
@@ -9812,6 +10334,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -9857,6 +10380,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -9911,6 +10435,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -9969,6 +10494,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "trung-nghia-le",
@@ -10014,6 +10540,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -10079,6 +10606,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -10132,6 +10660,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "thuy-t-nguyen",
@@ -10173,6 +10702,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "nhat-quang-tran",
@@ -10223,6 +10753,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -10272,6 +10803,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -10321,6 +10853,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -10358,6 +10891,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-do",
@@ -10419,6 +10953,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-do",
@@ -10493,6 +11028,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -10551,6 +11087,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -10592,6 +11129,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "hoang-son-do",
@@ -10641,6 +11179,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "thanh-binh-nguyen",
@@ -10694,6 +11233,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tran-thai-son",
@@ -10743,6 +11283,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "nhan-phu-chung",
@@ -10800,6 +11341,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "canh-v-pham",
@@ -10853,6 +11395,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -10922,6 +11465,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -10976,6 +11520,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -11047,6 +11592,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -11084,6 +11630,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -11117,6 +11664,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-viet-ta",
@@ -11154,6 +11702,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -11203,6 +11752,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -11256,6 +11806,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -11313,6 +11864,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "nhan-phu-chung",
@@ -11358,6 +11910,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -11399,6 +11952,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -11444,6 +11998,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "thanh-binh-nguyen",
@@ -11513,6 +12068,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -11554,6 +12110,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -11599,6 +12156,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -11656,6 +12214,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -11705,6 +12264,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "thanh-binh-nguyen",
@@ -11782,6 +12342,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -11839,6 +12400,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "man-ngo",
@@ -11884,6 +12446,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -11925,6 +12488,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-pham",
@@ -11974,6 +12538,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -12013,14 +12578,14 @@
   ],
   "image": "img/venues/neurips.svg",
   "image_source": "https://neurips.cc/",
-  "rejected_estimated": 151,
-  "acceptance_rate": 24,
+  "rejected_estimated": 132,
+  "acceptance_rate": 27,
   "reported_rate": 25,
   "reported_detail": "27349 / 109298 (2020–2026)",
-  "ratio": "3.6",
+  "ratio": "3.2",
   "chart": {
-   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at NeurIPS\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"est\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">50</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">100</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">150</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"acc\" d=\"M138.2,270.0 V268.5 Q138.2,268.5 138.2,268.5 H162.2 Q162.2,268.5 162.2,268.5 V270.0 Z\"><title>2021: 1 accepted</title></path><path class=\"est\" d=\"M138.2,266.5 V266.5 Q138.2,265.5 139.2,265.5 H161.3 Q162.2,265.5 162.2,266.5 V266.5 Z\"><title>2021: about 2 rejected (estimate)</title></path><text class=\"value\" x=\"150.2\" y=\"259.5\" text-anchor=\"middle\">about 3</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V265.5 Q211.8,265.5 211.8,265.5 H235.8 Q235.8,265.5 235.8,265.5 V270.0 Z\"><title>2022: 3 accepted</title></path><path class=\"est\" d=\"M211.8,263.5 V262.1 Q211.8,258.1 215.8,258.1 H231.8 Q235.8,258.1 235.8,262.1 V263.5 Z\"><title>2022: about 5 rejected (estimate)</title></path><text class=\"value\" x=\"223.8\" y=\"252.1\" text-anchor=\"middle\">about 8</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V265.5 Q285.2,265.5 285.2,265.5 H309.2 Q309.2,265.5 309.2,265.5 V270.0 Z\"><title>2023: 3 accepted</title></path><path class=\"est\" d=\"M285.2,263.5 V251.6 Q285.2,247.6 289.2,247.6 H305.2 Q309.2,247.6 309.2,251.6 V263.5 Z\"><title>2023: about 12 rejected (estimate)</title></path><text class=\"value\" x=\"297.2\" y=\"241.6\" text-anchor=\"middle\">about 15</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V265.5 Q358.8,265.5 358.8,265.5 H382.8 Q382.8,265.5 382.8,265.5 V270.0 Z\"><title>2024: 3 accepted</title></path><path class=\"not\" d=\"M358.8,263.5 V263.0 Q358.8,263.0 358.8,263.0 H382.8 Q382.8,263.0 382.8,263.0 V263.5 Z\"><title>2024: 1 rejected, recorded</title></path><path class=\"est\" d=\"M358.8,262.0 V251.6 Q358.8,247.6 362.8,247.6 H378.8 Q382.8,247.6 382.8,251.6 V262.0 Z\"><title>2024: about 11 rejected (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"241.6\" text-anchor=\"middle\">about 15</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V250.6 Q432.2,250.6 432.2,250.6 H456.2 Q456.2,250.6 456.2,250.6 V270.0 Z\"><title>2025: 13 accepted</title></path><path class=\"not\" d=\"M432.2,248.6 V246.1 Q432.2,246.1 432.2,246.1 H456.2 Q456.2,246.1 456.2,246.1 V248.6 Z\"><title>2025: 3 rejected, recorded</title></path><path class=\"est\" d=\"M432.2,244.1 V208.3 Q432.2,204.3 436.2,204.3 H452.2 Q456.2,204.3 456.2,208.3 V244.1 Z\"><title>2025: about 28 rejected (estimate)</title></path><text class=\"value\" x=\"444.2\" y=\"198.3\" text-anchor=\"middle\">about 44</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V216.2 Q505.8,216.2 505.8,216.2 H529.8 Q529.8,216.2 529.8,216.2 V270.0 Z\"><title>2026: 36 accepted</title></path><path class=\"not\" d=\"M505.8,214.2 V213.7 Q505.8,213.7 505.8,213.7 H529.8 Q529.8,213.7 529.8,213.7 V214.2 Z\"><title>2026: 1 rejected, recorded</title></path><path class=\"est\" d=\"M505.8,212.7 V85.8 Q505.8,81.8 509.8,81.8 H525.8 Q529.8,81.8 529.8,85.8 V212.7 Z\"><title>2026: about 89 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"75.8\" text-anchor=\"middle\">about 126</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
-   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại NeurIPS\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"est\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">50</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">100</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">150</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"acc\" d=\"M138.2,270.0 V268.5 Q138.2,268.5 138.2,268.5 H162.2 Q162.2,268.5 162.2,268.5 V270.0 Z\"><title>2021: 1 bài được nhận</title></path><path class=\"est\" d=\"M138.2,266.5 V266.5 Q138.2,265.5 139.2,265.5 H161.3 Q162.2,265.5 162.2,266.5 V266.5 Z\"><title>2021: khoảng 2 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"150.2\" y=\"259.5\" text-anchor=\"middle\">~3</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V265.5 Q211.8,265.5 211.8,265.5 H235.8 Q235.8,265.5 235.8,265.5 V270.0 Z\"><title>2022: 3 bài được nhận</title></path><path class=\"est\" d=\"M211.8,263.5 V262.1 Q211.8,258.1 215.8,258.1 H231.8 Q235.8,258.1 235.8,262.1 V263.5 Z\"><title>2022: khoảng 5 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"223.8\" y=\"252.1\" text-anchor=\"middle\">~8</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V265.5 Q285.2,265.5 285.2,265.5 H309.2 Q309.2,265.5 309.2,265.5 V270.0 Z\"><title>2023: 3 bài được nhận</title></path><path class=\"est\" d=\"M285.2,263.5 V251.6 Q285.2,247.6 289.2,247.6 H305.2 Q309.2,247.6 309.2,251.6 V263.5 Z\"><title>2023: khoảng 12 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"297.2\" y=\"241.6\" text-anchor=\"middle\">~15</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V265.5 Q358.8,265.5 358.8,265.5 H382.8 Q382.8,265.5 382.8,265.5 V270.0 Z\"><title>2024: 3 bài được nhận</title></path><path class=\"not\" d=\"M358.8,263.5 V263.0 Q358.8,263.0 358.8,263.0 H382.8 Q382.8,263.0 382.8,263.0 V263.5 Z\"><title>2024: 1 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M358.8,262.0 V251.6 Q358.8,247.6 362.8,247.6 H378.8 Q382.8,247.6 382.8,251.6 V262.0 Z\"><title>2024: khoảng 11 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"241.6\" text-anchor=\"middle\">~15</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V250.6 Q432.2,250.6 432.2,250.6 H456.2 Q456.2,250.6 456.2,250.6 V270.0 Z\"><title>2025: 13 bài được nhận</title></path><path class=\"not\" d=\"M432.2,248.6 V246.1 Q432.2,246.1 432.2,246.1 H456.2 Q456.2,246.1 456.2,246.1 V248.6 Z\"><title>2025: 3 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M432.2,244.1 V208.3 Q432.2,204.3 436.2,204.3 H452.2 Q456.2,204.3 456.2,208.3 V244.1 Z\"><title>2025: khoảng 28 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"444.2\" y=\"198.3\" text-anchor=\"middle\">~44</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V216.2 Q505.8,216.2 505.8,216.2 H529.8 Q529.8,216.2 529.8,216.2 V270.0 Z\"><title>2026: 36 bài được nhận</title></path><path class=\"not\" d=\"M505.8,214.2 V213.7 Q505.8,213.7 505.8,213.7 H529.8 Q529.8,213.7 529.8,213.7 V214.2 Z\"><title>2026: 1 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M505.8,212.7 V85.8 Q505.8,81.8 509.8,81.8 H525.8 Q529.8,81.8 529.8,85.8 V212.7 Z\"><title>2026: khoảng 89 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"75.8\" text-anchor=\"middle\">~126</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
+   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at NeurIPS\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"est\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"225.2\" x2=\"628\" y2=\"225.2\"/><text class=\"tick\" x=\"34\" y=\"229.2\" text-anchor=\"end\">25</text><line class=\"grid\" x1=\"40\" y1=\"180.4\" x2=\"628\" y2=\"180.4\"/><text class=\"tick\" x=\"34\" y=\"184.4\" text-anchor=\"end\">50</text><line class=\"grid\" x1=\"40\" y1=\"135.6\" x2=\"628\" y2=\"135.6\"/><text class=\"tick\" x=\"34\" y=\"139.6\" text-anchor=\"end\">75</text><line class=\"grid\" x1=\"40\" y1=\"90.8\" x2=\"628\" y2=\"90.8\"/><text class=\"tick\" x=\"34\" y=\"94.8\" text-anchor=\"end\">100</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">125</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"acc\" d=\"M138.2,270.0 V268.2 Q138.2,268.2 138.2,268.2 H162.2 Q162.2,268.2 162.2,268.2 V270.0 Z\"><title>2021: 1 accepted</title></path><path class=\"est\" d=\"M138.2,266.2 V266.2 Q138.2,264.6 139.8,264.6 H160.7 Q162.2,264.6 162.2,266.2 V266.2 Z\"><title>2021: about 2 rejected (estimate)</title></path><text class=\"value\" x=\"150.2\" y=\"258.6\" text-anchor=\"middle\">about 3</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V264.6 Q211.8,264.6 211.8,264.6 H235.8 Q235.8,264.6 235.8,264.6 V270.0 Z\"><title>2022: 3 accepted</title></path><path class=\"est\" d=\"M211.8,262.6 V261.5 Q211.8,257.5 215.8,257.5 H231.8 Q235.8,257.5 235.8,261.5 V262.6 Z\"><title>2022: about 4 rejected (estimate)</title></path><text class=\"value\" x=\"223.8\" y=\"251.5\" text-anchor=\"middle\">about 7</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V264.6 Q285.2,264.6 285.2,264.6 H309.2 Q309.2,264.6 309.2,264.6 V270.0 Z\"><title>2023: 3 accepted</title></path><path class=\"est\" d=\"M285.2,262.6 V252.5 Q285.2,248.5 289.2,248.5 H305.2 Q309.2,248.5 309.2,252.5 V262.6 Z\"><title>2023: about 9 rejected (estimate)</title></path><text class=\"value\" x=\"297.2\" y=\"242.5\" text-anchor=\"middle\">about 12</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V264.6 Q358.8,264.6 358.8,264.6 H382.8 Q382.8,264.6 382.8,264.6 V270.0 Z\"><title>2024: 3 accepted</title></path><path class=\"not\" d=\"M358.8,262.6 V262.1 Q358.8,262.1 358.8,262.1 H382.8 Q382.8,262.1 382.8,262.1 V262.6 Z\"><title>2024: 1 rejected, recorded</title></path><path class=\"est\" d=\"M358.8,260.8 V247.1 Q358.8,243.1 362.8,243.1 H378.8 Q382.8,243.1 382.8,247.1 V260.8 Z\"><title>2024: about 11 rejected (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"237.1\" text-anchor=\"middle\">about 15</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V246.7 Q432.2,246.7 432.2,246.7 H456.2 Q456.2,246.7 456.2,246.7 V270.0 Z\"><title>2025: 13 accepted</title></path><path class=\"not\" d=\"M432.2,244.7 V241.3 Q432.2,241.3 432.2,241.3 H456.2 Q456.2,241.3 456.2,241.3 V244.7 Z\"><title>2025: 3 rejected, recorded</title></path><path class=\"est\" d=\"M432.2,239.3 V200.5 Q432.2,196.5 436.2,196.5 H452.2 Q456.2,196.5 456.2,200.5 V239.3 Z\"><title>2025: about 25 rejected (estimate)</title></path><text class=\"value\" x=\"444.2\" y=\"190.5\" text-anchor=\"middle\">about 41</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V205.5 Q505.8,205.5 505.8,205.5 H529.8 Q529.8,205.5 529.8,205.5 V270.0 Z\"><title>2026: 36 accepted</title></path><path class=\"not\" d=\"M505.8,203.5 V203.0 Q505.8,203.0 505.8,203.0 H529.8 Q529.8,203.0 529.8,203.0 V203.5 Z\"><title>2026: 1 rejected, recorded</title></path><path class=\"est\" d=\"M505.8,201.7 V71.5 Q505.8,67.5 509.8,67.5 H525.8 Q529.8,67.5 529.8,71.5 V201.7 Z\"><title>2026: about 76 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"61.5\" text-anchor=\"middle\">about 113</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
+   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại NeurIPS\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"est\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"225.2\" x2=\"628\" y2=\"225.2\"/><text class=\"tick\" x=\"34\" y=\"229.2\" text-anchor=\"end\">25</text><line class=\"grid\" x1=\"40\" y1=\"180.4\" x2=\"628\" y2=\"180.4\"/><text class=\"tick\" x=\"34\" y=\"184.4\" text-anchor=\"end\">50</text><line class=\"grid\" x1=\"40\" y1=\"135.6\" x2=\"628\" y2=\"135.6\"/><text class=\"tick\" x=\"34\" y=\"139.6\" text-anchor=\"end\">75</text><line class=\"grid\" x1=\"40\" y1=\"90.8\" x2=\"628\" y2=\"90.8\"/><text class=\"tick\" x=\"34\" y=\"94.8\" text-anchor=\"end\">100</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">125</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"acc\" d=\"M138.2,270.0 V268.2 Q138.2,268.2 138.2,268.2 H162.2 Q162.2,268.2 162.2,268.2 V270.0 Z\"><title>2021: 1 bài được nhận</title></path><path class=\"est\" d=\"M138.2,266.2 V266.2 Q138.2,264.6 139.8,264.6 H160.7 Q162.2,264.6 162.2,266.2 V266.2 Z\"><title>2021: khoảng 2 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"150.2\" y=\"258.6\" text-anchor=\"middle\">~3</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V264.6 Q211.8,264.6 211.8,264.6 H235.8 Q235.8,264.6 235.8,264.6 V270.0 Z\"><title>2022: 3 bài được nhận</title></path><path class=\"est\" d=\"M211.8,262.6 V261.5 Q211.8,257.5 215.8,257.5 H231.8 Q235.8,257.5 235.8,261.5 V262.6 Z\"><title>2022: khoảng 4 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"223.8\" y=\"251.5\" text-anchor=\"middle\">~7</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V264.6 Q285.2,264.6 285.2,264.6 H309.2 Q309.2,264.6 309.2,264.6 V270.0 Z\"><title>2023: 3 bài được nhận</title></path><path class=\"est\" d=\"M285.2,262.6 V252.5 Q285.2,248.5 289.2,248.5 H305.2 Q309.2,248.5 309.2,252.5 V262.6 Z\"><title>2023: khoảng 9 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"297.2\" y=\"242.5\" text-anchor=\"middle\">~12</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V264.6 Q358.8,264.6 358.8,264.6 H382.8 Q382.8,264.6 382.8,264.6 V270.0 Z\"><title>2024: 3 bài được nhận</title></path><path class=\"not\" d=\"M358.8,262.6 V262.1 Q358.8,262.1 358.8,262.1 H382.8 Q382.8,262.1 382.8,262.1 V262.6 Z\"><title>2024: 1 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M358.8,260.8 V247.1 Q358.8,243.1 362.8,243.1 H378.8 Q382.8,243.1 382.8,247.1 V260.8 Z\"><title>2024: khoảng 11 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"237.1\" text-anchor=\"middle\">~15</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V246.7 Q432.2,246.7 432.2,246.7 H456.2 Q456.2,246.7 456.2,246.7 V270.0 Z\"><title>2025: 13 bài được nhận</title></path><path class=\"not\" d=\"M432.2,244.7 V241.3 Q432.2,241.3 432.2,241.3 H456.2 Q456.2,241.3 456.2,241.3 V244.7 Z\"><title>2025: 3 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M432.2,239.3 V200.5 Q432.2,196.5 436.2,196.5 H452.2 Q456.2,196.5 456.2,200.5 V239.3 Z\"><title>2025: khoảng 25 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"444.2\" y=\"190.5\" text-anchor=\"middle\">~41</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V205.5 Q505.8,205.5 505.8,205.5 H529.8 Q529.8,205.5 529.8,205.5 V270.0 Z\"><title>2026: 36 bài được nhận</title></path><path class=\"not\" d=\"M505.8,203.5 V203.0 Q505.8,203.0 505.8,203.0 H529.8 Q529.8,203.0 529.8,203.0 V203.5 Z\"><title>2026: 1 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M505.8,201.7 V71.5 Q505.8,67.5 509.8,67.5 H525.8 Q529.8,67.5 529.8,71.5 V201.7 Z\"><title>2026: khoảng 76 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"61.5\" text-anchor=\"middle\">~113</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
   }
  },
  {
@@ -12552,7 +13117,7 @@
     "accepted": 1,
     "own_page": 0,
     "official": 1,
-    "rejected_estimated": 5
+    "rejected_estimated": 3
    },
    {
     "year": 2023,
@@ -12972,7 +13537,7 @@
     "accepted": 5,
     "own_page": 0,
     "official": 5,
-    "rejected_estimated": 21
+    "rejected_estimated": 20
    },
    {
     "year": 2026,
@@ -13112,7 +13677,7 @@
     "accepted": 14,
     "own_page": 0,
     "official": 14,
-    "rejected_estimated": 43
+    "rejected_estimated": 41
    },
    {
     "year": 2027,
@@ -13273,6 +13838,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -13330,6 +13896,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "son-ha-xuan",
@@ -13383,6 +13950,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -13436,6 +14004,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -13485,6 +14054,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -13621,6 +14191,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tho-quan",
@@ -13678,6 +14249,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -13731,6 +14303,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-pham",
@@ -13785,6 +14358,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "binh-t-nguyen",
@@ -13826,6 +14400,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -13859,6 +14434,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-do",
@@ -13916,6 +14492,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -13974,6 +14551,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "kim-hung-le",
@@ -14023,6 +14601,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -14077,6 +14656,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -14130,6 +14710,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -14183,6 +14764,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -14228,6 +14810,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-dam",
@@ -14261,6 +14844,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -14319,6 +14903,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -14364,6 +14949,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "vo-nguyen-le-duy",
@@ -14417,6 +15003,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -14478,6 +15065,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -14525,14 +15113,14 @@
   ],
   "image": "img/venues/icml.svg",
   "image_source": "https://icml.cc/",
-  "rejected_estimated": 79,
-  "acceptance_rate": 21,
+  "rejected_estimated": 74,
+  "acceptance_rate": 22,
   "reported_rate": 26,
   "reported_detail": "17555 / 68169 (2020–2026)",
-  "ratio": "4.4",
+  "ratio": "4.2",
   "chart": {
-   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at ICML\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"est\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">40</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">60</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><path class=\"acc\" d=\"M64.8,270.0 V266.3 Q64.8,266.3 64.8,266.3 H88.8 Q88.8,266.3 88.8,266.3 V270.0 Z\"><title>2020: 1 accepted</title></path><path class=\"est\" d=\"M64.8,264.3 V262.8 Q64.8,258.8 68.8,258.8 H84.8 Q88.8,258.8 88.8,262.8 V264.3 Z\"><title>2020: about 2 rejected (estimate)</title></path><text class=\"value\" x=\"76.8\" y=\"252.8\" text-anchor=\"middle\">about 3</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V266.3 Q211.8,266.3 211.8,266.3 H235.8 Q235.8,266.3 235.8,266.3 V270.0 Z\"><title>2022: 1 accepted</title></path><path class=\"est\" d=\"M211.8,264.3 V251.6 Q211.8,247.6 215.8,247.6 H231.8 Q235.8,247.6 235.8,251.6 V264.3 Z\"><title>2022: about 5 rejected (estimate)</title></path><text class=\"value\" x=\"223.8\" y=\"241.6\" text-anchor=\"middle\">about 6</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V262.5 Q358.8,262.5 358.8,262.5 H382.8 Q382.8,262.5 382.8,262.5 V270.0 Z\"><title>2024: 2 accepted</title></path><path class=\"est\" d=\"M358.8,260.5 V236.7 Q358.8,232.7 362.8,232.7 H378.8 Q382.8,232.7 382.8,236.7 V260.5 Z\"><title>2024: about 8 rejected (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"226.7\" text-anchor=\"middle\">about 10</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V251.3 Q432.2,251.3 432.2,251.3 H456.2 Q456.2,251.3 456.2,251.3 V270.0 Z\"><title>2025: 5 accepted</title></path><path class=\"est\" d=\"M432.2,249.3 V176.9 Q432.2,172.9 436.2,172.9 H452.2 Q456.2,172.9 456.2,176.9 V249.3 Z\"><title>2025: about 21 rejected (estimate)</title></path><text class=\"value\" x=\"444.2\" y=\"166.9\" text-anchor=\"middle\">about 26</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V217.7 Q505.8,217.7 505.8,217.7 H529.8 Q529.8,217.7 529.8,217.7 V270.0 Z\"><title>2026: 14 accepted</title></path><path class=\"est\" d=\"M505.8,215.7 V61.2 Q505.8,57.2 509.8,57.2 H525.8 Q529.8,57.2 529.8,61.2 V215.7 Z\"><title>2026: about 43 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"51.2\" text-anchor=\"middle\">about 57</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
-   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại ICML\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"est\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">40</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">60</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><path class=\"acc\" d=\"M64.8,270.0 V266.3 Q64.8,266.3 64.8,266.3 H88.8 Q88.8,266.3 88.8,266.3 V270.0 Z\"><title>2020: 1 bài được nhận</title></path><path class=\"est\" d=\"M64.8,264.3 V262.8 Q64.8,258.8 68.8,258.8 H84.8 Q88.8,258.8 88.8,262.8 V264.3 Z\"><title>2020: khoảng 2 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"76.8\" y=\"252.8\" text-anchor=\"middle\">~3</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V266.3 Q211.8,266.3 211.8,266.3 H235.8 Q235.8,266.3 235.8,266.3 V270.0 Z\"><title>2022: 1 bài được nhận</title></path><path class=\"est\" d=\"M211.8,264.3 V251.6 Q211.8,247.6 215.8,247.6 H231.8 Q235.8,247.6 235.8,251.6 V264.3 Z\"><title>2022: khoảng 5 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"223.8\" y=\"241.6\" text-anchor=\"middle\">~6</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V262.5 Q358.8,262.5 358.8,262.5 H382.8 Q382.8,262.5 382.8,262.5 V270.0 Z\"><title>2024: 2 bài được nhận</title></path><path class=\"est\" d=\"M358.8,260.5 V236.7 Q358.8,232.7 362.8,232.7 H378.8 Q382.8,232.7 382.8,236.7 V260.5 Z\"><title>2024: khoảng 8 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"226.7\" text-anchor=\"middle\">~10</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V251.3 Q432.2,251.3 432.2,251.3 H456.2 Q456.2,251.3 456.2,251.3 V270.0 Z\"><title>2025: 5 bài được nhận</title></path><path class=\"est\" d=\"M432.2,249.3 V176.9 Q432.2,172.9 436.2,172.9 H452.2 Q456.2,172.9 456.2,176.9 V249.3 Z\"><title>2025: khoảng 21 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"444.2\" y=\"166.9\" text-anchor=\"middle\">~26</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V217.7 Q505.8,217.7 505.8,217.7 H529.8 Q529.8,217.7 529.8,217.7 V270.0 Z\"><title>2026: 14 bài được nhận</title></path><path class=\"est\" d=\"M505.8,215.7 V61.2 Q505.8,57.2 509.8,57.2 H525.8 Q529.8,57.2 529.8,61.2 V215.7 Z\"><title>2026: khoảng 43 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"51.2\" text-anchor=\"middle\">~57</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
+   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at ICML\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"est\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">40</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">60</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><path class=\"acc\" d=\"M64.8,270.0 V266.3 Q64.8,266.3 64.8,266.3 H88.8 Q88.8,266.3 88.8,266.3 V270.0 Z\"><title>2020: 1 accepted</title></path><path class=\"est\" d=\"M64.8,264.3 V262.8 Q64.8,258.8 68.8,258.8 H84.8 Q88.8,258.8 88.8,262.8 V264.3 Z\"><title>2020: about 2 rejected (estimate)</title></path><text class=\"value\" x=\"76.8\" y=\"252.8\" text-anchor=\"middle\">about 3</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V266.3 Q211.8,266.3 211.8,266.3 H235.8 Q235.8,266.3 235.8,266.3 V270.0 Z\"><title>2022: 1 accepted</title></path><path class=\"est\" d=\"M211.8,264.3 V259.1 Q211.8,255.1 215.8,255.1 H231.8 Q235.8,255.1 235.8,259.1 V264.3 Z\"><title>2022: about 3 rejected (estimate)</title></path><text class=\"value\" x=\"223.8\" y=\"249.1\" text-anchor=\"middle\">about 4</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V262.5 Q358.8,262.5 358.8,262.5 H382.8 Q382.8,262.5 382.8,262.5 V270.0 Z\"><title>2024: 2 accepted</title></path><path class=\"est\" d=\"M358.8,260.5 V236.7 Q358.8,232.7 362.8,232.7 H378.8 Q382.8,232.7 382.8,236.7 V260.5 Z\"><title>2024: about 8 rejected (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"226.7\" text-anchor=\"middle\">about 10</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V251.3 Q432.2,251.3 432.2,251.3 H456.2 Q456.2,251.3 456.2,251.3 V270.0 Z\"><title>2025: 5 accepted</title></path><path class=\"est\" d=\"M432.2,249.3 V180.7 Q432.2,176.7 436.2,176.7 H452.2 Q456.2,176.7 456.2,180.7 V249.3 Z\"><title>2025: about 20 rejected (estimate)</title></path><text class=\"value\" x=\"444.2\" y=\"170.7\" text-anchor=\"middle\">about 25</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V217.7 Q505.8,217.7 505.8,217.7 H529.8 Q529.8,217.7 529.8,217.7 V270.0 Z\"><title>2026: 14 accepted</title></path><path class=\"est\" d=\"M505.8,215.7 V68.7 Q505.8,64.7 509.8,64.7 H525.8 Q529.8,64.7 529.8,68.7 V215.7 Z\"><title>2026: about 41 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"58.7\" text-anchor=\"middle\">about 55</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
+   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại ICML\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"est\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">40</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">60</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><path class=\"acc\" d=\"M64.8,270.0 V266.3 Q64.8,266.3 64.8,266.3 H88.8 Q88.8,266.3 88.8,266.3 V270.0 Z\"><title>2020: 1 bài được nhận</title></path><path class=\"est\" d=\"M64.8,264.3 V262.8 Q64.8,258.8 68.8,258.8 H84.8 Q88.8,258.8 88.8,262.8 V264.3 Z\"><title>2020: khoảng 2 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"76.8\" y=\"252.8\" text-anchor=\"middle\">~3</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V266.3 Q211.8,266.3 211.8,266.3 H235.8 Q235.8,266.3 235.8,266.3 V270.0 Z\"><title>2022: 1 bài được nhận</title></path><path class=\"est\" d=\"M211.8,264.3 V259.1 Q211.8,255.1 215.8,255.1 H231.8 Q235.8,255.1 235.8,259.1 V264.3 Z\"><title>2022: khoảng 3 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"223.8\" y=\"249.1\" text-anchor=\"middle\">~4</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V262.5 Q358.8,262.5 358.8,262.5 H382.8 Q382.8,262.5 382.8,262.5 V270.0 Z\"><title>2024: 2 bài được nhận</title></path><path class=\"est\" d=\"M358.8,260.5 V236.7 Q358.8,232.7 362.8,232.7 H378.8 Q382.8,232.7 382.8,236.7 V260.5 Z\"><title>2024: khoảng 8 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"226.7\" text-anchor=\"middle\">~10</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V251.3 Q432.2,251.3 432.2,251.3 H456.2 Q456.2,251.3 456.2,251.3 V270.0 Z\"><title>2025: 5 bài được nhận</title></path><path class=\"est\" d=\"M432.2,249.3 V180.7 Q432.2,176.7 436.2,176.7 H452.2 Q456.2,176.7 456.2,180.7 V249.3 Z\"><title>2025: khoảng 20 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"444.2\" y=\"170.7\" text-anchor=\"middle\">~25</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V217.7 Q505.8,217.7 505.8,217.7 H529.8 Q529.8,217.7 529.8,217.7 V270.0 Z\"><title>2026: 14 bài được nhận</title></path><path class=\"est\" d=\"M505.8,215.7 V68.7 Q505.8,64.7 509.8,64.7 H525.8 Q529.8,64.7 529.8,68.7 V215.7 Z\"><title>2026: khoảng 41 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"58.7\" text-anchor=\"middle\">~55</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
   }
  },
  {
@@ -14924,7 +15512,7 @@
     "accepted": 2,
     "own_page": 0,
     "official": 2,
-    "rejected_estimated": 8
+    "rejected_estimated": 4
    },
    {
     "year": 2022,
@@ -15624,7 +16212,7 @@
     "accepted": 8,
     "own_page": 0,
     "official": 8,
-    "rejected_estimated": 20
+    "rejected_estimated": 17
    },
    {
     "year": 2027,
@@ -15785,6 +16373,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -15855,6 +16444,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "duc-trong-le",
@@ -15900,6 +16490,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -15973,6 +16564,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-pham",
@@ -16018,6 +16610,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -16075,6 +16668,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "Findings",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -16124,6 +16718,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -16178,6 +16773,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-pham",
@@ -16239,6 +16835,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "Findings",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -16288,6 +16885,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "Findings",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -16341,6 +16939,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "Findings",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -16406,6 +17005,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "Findings",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -16443,6 +17043,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "Findings",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-pham",
@@ -16496,6 +17097,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "duc-dung-nguyen",
@@ -16549,6 +17151,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-pham",
@@ -16602,6 +17205,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-do",
@@ -16651,6 +17255,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-pham",
@@ -16696,6 +17301,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-pham",
@@ -16753,6 +17359,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-pham",
@@ -16806,6 +17413,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "trung-thanh-ngo",
@@ -16847,6 +17455,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "minh-triet-tran",
@@ -16909,6 +17518,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "minh-triet-tran",
@@ -16952,14 +17562,14 @@
   ],
   "image": "img/venues/cvpr.svg",
   "image_source": "https://cvpr.thecvf.com/",
-  "rejected_estimated": 36,
-  "acceptance_rate": 25,
+  "rejected_estimated": 30,
+  "acceptance_rate": 29,
   "reported_rate": 24,
   "reported_detail": "17236 / 70828 (2020–2026)",
-  "ratio": "3.2",
+  "ratio": "2.9",
   "chart": {
-   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at CVPR\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"est\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">30</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"acc\" d=\"M138.2,270.0 V255.1 Q138.2,255.1 138.2,255.1 H162.2 Q162.2,255.1 162.2,255.1 V270.0 Z\"><title>2021: 2 accepted</title></path><path class=\"est\" d=\"M138.2,253.1 V199.3 Q138.2,195.3 142.2,195.3 H158.2 Q162.2,195.3 162.2,199.3 V253.1 Z\"><title>2021: about 8 rejected (estimate)</title></path><text class=\"value\" x=\"150.2\" y=\"189.3\" text-anchor=\"middle\">about 10</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V255.1 Q285.2,255.1 285.2,255.1 H309.2 Q309.2,255.1 309.2,255.1 V270.0 Z\"><title>2023: 2 accepted</title></path><path class=\"est\" d=\"M285.2,253.1 V244.1 Q285.2,240.1 289.2,240.1 H305.2 Q309.2,240.1 309.2,244.1 V253.1 Z\"><title>2023: about 2 rejected (estimate)</title></path><text class=\"value\" x=\"297.2\" y=\"234.1\" text-anchor=\"middle\">about 4</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V240.1 Q358.8,240.1 358.8,240.1 H382.8 Q382.8,240.1 382.8,240.1 V270.0 Z\"><title>2024: 4 accepted</title></path><path class=\"est\" d=\"M358.8,238.1 V199.3 Q358.8,195.3 362.8,195.3 H378.8 Q382.8,195.3 382.8,199.3 V238.1 Z\"><title>2024: about 6 rejected (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"189.3\" text-anchor=\"middle\">about 10</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V210.3 Q505.8,210.3 505.8,210.3 H529.8 Q529.8,210.3 529.8,210.3 V270.0 Z\"><title>2026: 8 accepted</title></path><path class=\"not\" d=\"M505.8,208.3 V165.5 Q505.8,165.5 505.8,165.5 H529.8 Q529.8,165.5 529.8,165.5 V208.3 Z\"><title>2026: 6 rejected, recorded</title></path><path class=\"est\" d=\"M505.8,163.5 V64.9 Q505.8,60.9 509.8,60.9 H525.8 Q529.8,60.9 529.8,64.9 V163.5 Z\"><title>2026: about 14 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"54.9\" text-anchor=\"middle\">about 28</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
-   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại CVPR\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"est\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">30</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"acc\" d=\"M138.2,270.0 V255.1 Q138.2,255.1 138.2,255.1 H162.2 Q162.2,255.1 162.2,255.1 V270.0 Z\"><title>2021: 2 bài được nhận</title></path><path class=\"est\" d=\"M138.2,253.1 V199.3 Q138.2,195.3 142.2,195.3 H158.2 Q162.2,195.3 162.2,199.3 V253.1 Z\"><title>2021: khoảng 8 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"150.2\" y=\"189.3\" text-anchor=\"middle\">~10</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V255.1 Q285.2,255.1 285.2,255.1 H309.2 Q309.2,255.1 309.2,255.1 V270.0 Z\"><title>2023: 2 bài được nhận</title></path><path class=\"est\" d=\"M285.2,253.1 V244.1 Q285.2,240.1 289.2,240.1 H305.2 Q309.2,240.1 309.2,244.1 V253.1 Z\"><title>2023: khoảng 2 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"297.2\" y=\"234.1\" text-anchor=\"middle\">~4</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V240.1 Q358.8,240.1 358.8,240.1 H382.8 Q382.8,240.1 382.8,240.1 V270.0 Z\"><title>2024: 4 bài được nhận</title></path><path class=\"est\" d=\"M358.8,238.1 V199.3 Q358.8,195.3 362.8,195.3 H378.8 Q382.8,195.3 382.8,199.3 V238.1 Z\"><title>2024: khoảng 6 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"189.3\" text-anchor=\"middle\">~10</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V210.3 Q505.8,210.3 505.8,210.3 H529.8 Q529.8,210.3 529.8,210.3 V270.0 Z\"><title>2026: 8 bài được nhận</title></path><path class=\"not\" d=\"M505.8,208.3 V165.5 Q505.8,165.5 505.8,165.5 H529.8 Q529.8,165.5 529.8,165.5 V208.3 Z\"><title>2026: 6 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M505.8,163.5 V64.9 Q505.8,60.9 509.8,60.9 H525.8 Q529.8,60.9 529.8,64.9 V163.5 Z\"><title>2026: khoảng 14 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"54.9\" text-anchor=\"middle\">~28</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
+   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at CVPR\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"est\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"225.2\" x2=\"628\" y2=\"225.2\"/><text class=\"tick\" x=\"34\" y=\"229.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"180.4\" x2=\"628\" y2=\"180.4\"/><text class=\"tick\" x=\"34\" y=\"184.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"135.6\" x2=\"628\" y2=\"135.6\"/><text class=\"tick\" x=\"34\" y=\"139.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"90.8\" x2=\"628\" y2=\"90.8\"/><text class=\"tick\" x=\"34\" y=\"94.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"acc\" d=\"M138.2,270.0 V252.1 Q138.2,252.1 138.2,252.1 H162.2 Q162.2,252.1 162.2,252.1 V270.0 Z\"><title>2021: 2 accepted</title></path><path class=\"est\" d=\"M138.2,250.1 V220.2 Q138.2,216.2 142.2,216.2 H158.2 Q162.2,216.2 162.2,220.2 V250.1 Z\"><title>2021: about 4 rejected (estimate)</title></path><text class=\"value\" x=\"150.2\" y=\"210.2\" text-anchor=\"middle\">about 6</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V252.1 Q285.2,252.1 285.2,252.1 H309.2 Q309.2,252.1 309.2,252.1 V270.0 Z\"><title>2023: 2 accepted</title></path><path class=\"est\" d=\"M285.2,250.1 V238.2 Q285.2,234.2 289.2,234.2 H305.2 Q309.2,234.2 309.2,238.2 V250.1 Z\"><title>2023: about 2 rejected (estimate)</title></path><text class=\"value\" x=\"297.2\" y=\"228.2\" text-anchor=\"middle\">about 4</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V234.2 Q358.8,234.2 358.8,234.2 H382.8 Q382.8,234.2 382.8,234.2 V270.0 Z\"><title>2024: 4 accepted</title></path><path class=\"est\" d=\"M358.8,232.2 V184.4 Q358.8,180.4 362.8,180.4 H378.8 Q382.8,180.4 382.8,184.4 V232.2 Z\"><title>2024: about 6 rejected (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"174.4\" text-anchor=\"middle\">about 10</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V198.3 Q505.8,198.3 505.8,198.3 H529.8 Q529.8,198.3 529.8,198.3 V270.0 Z\"><title>2026: 8 accepted</title></path><path class=\"not\" d=\"M505.8,196.3 V144.6 Q505.8,144.6 505.8,144.6 H529.8 Q529.8,144.6 529.8,144.6 V196.3 Z\"><title>2026: 6 rejected, recorded</title></path><path class=\"est\" d=\"M505.8,142.6 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V142.6 Z\"><title>2026: about 11 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">about 25</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
+   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại CVPR\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"est\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"225.2\" x2=\"628\" y2=\"225.2\"/><text class=\"tick\" x=\"34\" y=\"229.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"180.4\" x2=\"628\" y2=\"180.4\"/><text class=\"tick\" x=\"34\" y=\"184.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"135.6\" x2=\"628\" y2=\"135.6\"/><text class=\"tick\" x=\"34\" y=\"139.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"90.8\" x2=\"628\" y2=\"90.8\"/><text class=\"tick\" x=\"34\" y=\"94.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"acc\" d=\"M138.2,270.0 V252.1 Q138.2,252.1 138.2,252.1 H162.2 Q162.2,252.1 162.2,252.1 V270.0 Z\"><title>2021: 2 bài được nhận</title></path><path class=\"est\" d=\"M138.2,250.1 V220.2 Q138.2,216.2 142.2,216.2 H158.2 Q162.2,216.2 162.2,220.2 V250.1 Z\"><title>2021: khoảng 4 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"150.2\" y=\"210.2\" text-anchor=\"middle\">~6</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V252.1 Q285.2,252.1 285.2,252.1 H309.2 Q309.2,252.1 309.2,252.1 V270.0 Z\"><title>2023: 2 bài được nhận</title></path><path class=\"est\" d=\"M285.2,250.1 V238.2 Q285.2,234.2 289.2,234.2 H305.2 Q309.2,234.2 309.2,238.2 V250.1 Z\"><title>2023: khoảng 2 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"297.2\" y=\"228.2\" text-anchor=\"middle\">~4</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V234.2 Q358.8,234.2 358.8,234.2 H382.8 Q382.8,234.2 382.8,234.2 V270.0 Z\"><title>2024: 4 bài được nhận</title></path><path class=\"est\" d=\"M358.8,232.2 V184.4 Q358.8,180.4 362.8,180.4 H378.8 Q382.8,180.4 382.8,184.4 V232.2 Z\"><title>2024: khoảng 6 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"174.4\" text-anchor=\"middle\">~10</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V198.3 Q505.8,198.3 505.8,198.3 H529.8 Q529.8,198.3 529.8,198.3 V270.0 Z\"><title>2026: 8 bài được nhận</title></path><path class=\"not\" d=\"M505.8,196.3 V144.6 Q505.8,144.6 505.8,144.6 H529.8 Q529.8,144.6 529.8,144.6 V196.3 Z\"><title>2026: 6 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M505.8,142.6 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V142.6 Z\"><title>2026: khoảng 11 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">~25</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
   }
  },
  {
@@ -18212,6 +18822,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -18266,6 +18877,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -18319,6 +18931,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "hoang-thanh-tung",
@@ -18360,6 +18973,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dinh-viet-sang",
@@ -18409,6 +19023,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -18454,6 +19069,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -18535,6 +19151,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-pham",
@@ -18576,6 +19193,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-pham",
@@ -19438,7 +20056,7 @@
     "accepted": 5,
     "own_page": 0,
     "official": 5,
-    "rejected_estimated": 8
+    "rejected_estimated": 6
    },
    {
     "year": 2025,
@@ -19879,6 +20497,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "minh-do",
@@ -19936,6 +20555,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -19977,6 +20597,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "van-dinh-nguyen",
@@ -20026,6 +20647,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -20071,6 +20693,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "trung-thanh-ngo",
@@ -20112,6 +20735,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -20157,6 +20781,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "van-dinh-nguyen",
@@ -20206,6 +20831,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-pham",
@@ -20249,14 +20875,14 @@
   ],
   "image": "img/venues/eccv.svg",
   "image_source": "https://eccv.ecva.net/",
-  "rejected_estimated": 14,
-  "acceptance_rate": 26,
+  "rejected_estimated": 12,
+  "acceptance_rate": 29,
   "reported_rate": 27,
   "reported_detail": "8258 / 30856 (2020–2026)",
-  "ratio": "2.8",
+  "ratio": "2.5",
   "chart": {
-   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at ECCV\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"est\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">15</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick off\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick off\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V195.3 Q358.8,195.3 358.8,195.3 H382.8 Q382.8,195.3 382.8,195.3 V270.0 Z\"><title>2024: 5 accepted</title></path><path class=\"est\" d=\"M358.8,193.3 V79.9 Q358.8,75.9 362.8,75.9 H378.8 Q382.8,75.9 382.8,79.9 V193.3 Z\"><title>2024: about 8 rejected (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"69.9\" text-anchor=\"middle\">about 13</text><text class=\"tick off\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V225.2 Q505.8,225.2 505.8,225.2 H529.8 Q529.8,225.2 529.8,225.2 V270.0 Z\"><title>2026: 3 accepted</title></path><path class=\"est\" d=\"M505.8,223.2 V139.6 Q505.8,135.6 509.8,135.6 H525.8 Q529.8,135.6 529.8,139.6 V223.2 Z\"><title>2026: about 6 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"129.6\" text-anchor=\"middle\">about 9</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
-   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại ECCV\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"est\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">15</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick off\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick off\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V195.3 Q358.8,195.3 358.8,195.3 H382.8 Q382.8,195.3 382.8,195.3 V270.0 Z\"><title>2024: 5 bài được nhận</title></path><path class=\"est\" d=\"M358.8,193.3 V79.9 Q358.8,75.9 362.8,75.9 H378.8 Q382.8,75.9 382.8,79.9 V193.3 Z\"><title>2024: khoảng 8 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"69.9\" text-anchor=\"middle\">~13</text><text class=\"tick off\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V225.2 Q505.8,225.2 505.8,225.2 H529.8 Q529.8,225.2 529.8,225.2 V270.0 Z\"><title>2026: 3 bài được nhận</title></path><path class=\"est\" d=\"M505.8,223.2 V139.6 Q505.8,135.6 509.8,135.6 H525.8 Q529.8,135.6 529.8,139.6 V223.2 Z\"><title>2026: khoảng 6 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"129.6\" text-anchor=\"middle\">~9</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
+   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at ECCV\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"est\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">15</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick off\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick off\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V195.3 Q358.8,195.3 358.8,195.3 H382.8 Q382.8,195.3 382.8,195.3 V270.0 Z\"><title>2024: 5 accepted</title></path><path class=\"est\" d=\"M358.8,193.3 V109.7 Q358.8,105.7 362.8,105.7 H378.8 Q382.8,105.7 382.8,109.7 V193.3 Z\"><title>2024: about 6 rejected (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"99.7\" text-anchor=\"middle\">about 11</text><text class=\"tick off\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V225.2 Q505.8,225.2 505.8,225.2 H529.8 Q529.8,225.2 529.8,225.2 V270.0 Z\"><title>2026: 3 accepted</title></path><path class=\"est\" d=\"M505.8,223.2 V139.6 Q505.8,135.6 509.8,135.6 H525.8 Q529.8,135.6 529.8,139.6 V223.2 Z\"><title>2026: about 6 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"129.6\" text-anchor=\"middle\">about 9</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
+   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại ECCV\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"est\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">15</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick off\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick off\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V195.3 Q358.8,195.3 358.8,195.3 H382.8 Q382.8,195.3 382.8,195.3 V270.0 Z\"><title>2024: 5 bài được nhận</title></path><path class=\"est\" d=\"M358.8,193.3 V109.7 Q358.8,105.7 362.8,105.7 H378.8 Q382.8,105.7 382.8,109.7 V193.3 Z\"><title>2024: khoảng 6 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"99.7\" text-anchor=\"middle\">~11</text><text class=\"tick off\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V225.2 Q505.8,225.2 505.8,225.2 H529.8 Q529.8,225.2 529.8,225.2 V270.0 Z\"><title>2026: 3 bài được nhận</title></path><path class=\"est\" d=\"M505.8,223.2 V139.6 Q505.8,135.6 509.8,135.6 H525.8 Q529.8,135.6 529.8,139.6 V223.2 Z\"><title>2026: khoảng 6 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"129.6\" text-anchor=\"middle\">~9</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
   }
  },
  {
@@ -21509,6 +22135,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-do",
@@ -21562,6 +22189,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -21625,6 +22253,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -21692,6 +22321,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -21749,6 +22379,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -21802,6 +22433,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -21851,6 +22483,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -21924,6 +22557,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -21986,6 +22620,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -22048,6 +22683,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tho-quan",
@@ -22097,6 +22733,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -22159,6 +22796,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -22227,6 +22865,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -22285,6 +22924,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -22326,6 +22966,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -22379,6 +23020,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -23085,7 +23727,7 @@
     "accepted": 3,
     "own_page": 0,
     "official": 3,
-    "rejected_estimated": 9
+    "rejected_estimated": 7
    },
    {
     "year": 2024,
@@ -23666,6 +24308,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -23731,6 +24374,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "huynh-thi-thanh-binh",
@@ -23785,6 +24429,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "huynh-quyet-thang",
@@ -23846,6 +24491,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -23908,6 +24554,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "thinh-pham",
@@ -23965,6 +24612,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -24022,6 +24670,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "nguyen-thi-hanh",
@@ -24071,6 +24720,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -24128,6 +24778,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -24185,6 +24836,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -24242,6 +24894,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -24304,6 +24957,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tho-quan",
@@ -24365,6 +25019,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -24418,6 +25073,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -24471,6 +25127,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -24528,6 +25185,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "huynh-quyet-thang",
@@ -24577,6 +25235,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -24635,6 +25294,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -24680,6 +25340,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "huynh-thi-thanh-binh",
@@ -24747,6 +25408,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tho-quan",
@@ -24800,6 +25462,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tuan-do",
@@ -24861,6 +25524,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -24918,6 +25582,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tho-quan",
@@ -24959,6 +25624,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "son-ha-xuan",
@@ -25010,6 +25676,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -25068,6 +25735,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -25130,6 +25798,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -25197,6 +25866,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -25254,6 +25924,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -25316,6 +25987,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "son-ha-xuan",
@@ -25369,6 +26041,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -25431,6 +26104,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -25480,6 +26154,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -25529,6 +26204,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -25582,6 +26258,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -25635,6 +26312,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -25697,6 +26375,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "Findings",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -25746,6 +26425,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "duc-trong-le",
@@ -25795,6 +26475,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "thanh-binh-nguyen",
@@ -25864,6 +26545,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -25909,6 +26591,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "Findings",
+    "potential": false,
     "professors": [
      {
       "slug": "nam-le-hai",
@@ -25966,6 +26649,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -26015,6 +26699,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tho-quan",
@@ -26046,14 +26731,14 @@
   ],
   "image": "img/venues/emnlp.png",
   "image_source": "https://2026.emnlp.org/",
-  "rejected_estimated": 46,
-  "acceptance_rate": 29,
+  "rejected_estimated": 43,
+  "acceptance_rate": 30,
   "reported_rate": 22,
   "reported_detail": "6550 / 30337 (2020–2025)",
-  "ratio": "3.1",
+  "ratio": "3.0",
   "chart": {
-   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at EMNLP\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"est\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"acc\" d=\"M138.2,270.0 V264.4 Q138.2,264.4 138.2,264.4 H162.2 Q162.2,264.4 162.2,264.4 V270.0 Z\"><title>2021: 1 accepted</title></path><path class=\"est\" d=\"M138.2,262.4 V257.2 Q138.2,253.2 142.2,253.2 H158.2 Q162.2,253.2 162.2,257.2 V262.4 Z\"><title>2021: about 2 rejected (estimate)</title></path><text class=\"value\" x=\"150.2\" y=\"247.2\" text-anchor=\"middle\">about 3</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"not\" d=\"M211.8,270.0 V268.4 Q211.8,264.4 215.8,264.4 H231.8 Q235.8,264.4 235.8,268.4 V270.0 Z\"><title>2022: 1 rejected, recorded</title></path><text class=\"value\" x=\"223.8\" y=\"258.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V253.2 Q285.2,253.2 285.2,253.2 H309.2 Q309.2,253.2 309.2,253.2 V270.0 Z\"><title>2023: 3 accepted</title></path><path class=\"not\" d=\"M285.2,251.2 V242.0 Q285.2,242.0 285.2,242.0 H309.2 Q309.2,242.0 309.2,242.0 V251.2 Z\"><title>2023: 2 rejected, recorded</title></path><path class=\"est\" d=\"M285.2,240.0 V206.8 Q285.2,202.8 289.2,202.8 H305.2 Q309.2,202.8 309.2,206.8 V240.0 Z\"><title>2023: about 7 rejected (estimate)</title></path><text class=\"value\" x=\"297.2\" y=\"196.8\" text-anchor=\"middle\">about 12</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V253.2 Q358.8,253.2 358.8,253.2 H382.8 Q382.8,253.2 382.8,253.2 V270.0 Z\"><title>2024: 3 accepted</title></path><path class=\"not\" d=\"M358.8,251.2 V242.0 Q358.8,242.0 358.8,242.0 H382.8 Q382.8,242.0 382.8,242.0 V251.2 Z\"><title>2024: 2 rejected, recorded</title></path><path class=\"est\" d=\"M358.8,240.0 V206.8 Q358.8,202.8 362.8,202.8 H378.8 Q382.8,202.8 382.8,206.8 V240.0 Z\"><title>2024: about 7 rejected (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"196.8\" text-anchor=\"middle\">about 12</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V264.4 Q432.2,264.4 432.2,264.4 H456.2 Q456.2,264.4 456.2,264.4 V270.0 Z\"><title>2025: 1 accepted</title></path><path class=\"not\" d=\"M432.2,262.4 V240.4 Q432.2,236.4 436.2,236.4 H452.2 Q456.2,236.4 456.2,240.4 V262.4 Z\"><title>2025: 5 rejected, recorded</title></path><text class=\"value\" x=\"444.2\" y=\"230.4\" text-anchor=\"middle\">6</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V191.6 Q505.8,191.6 505.8,191.6 H529.8 Q529.8,191.6 529.8,191.6 V270.0 Z\"><title>2026: 14 accepted</title></path><path class=\"not\" d=\"M505.8,189.6 V130.0 Q505.8,130.0 505.8,130.0 H529.8 Q529.8,130.0 529.8,130.0 V189.6 Z\"><title>2026: 11 rejected, recorded</title></path><path class=\"est\" d=\"M505.8,128.0 V61.2 Q505.8,57.2 509.8,57.2 H525.8 Q529.8,57.2 529.8,61.2 V128.0 Z\"><title>2026: about 13 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"51.2\" text-anchor=\"middle\">about 38</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
-   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại EMNLP\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"est\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"acc\" d=\"M138.2,270.0 V264.4 Q138.2,264.4 138.2,264.4 H162.2 Q162.2,264.4 162.2,264.4 V270.0 Z\"><title>2021: 1 bài được nhận</title></path><path class=\"est\" d=\"M138.2,262.4 V257.2 Q138.2,253.2 142.2,253.2 H158.2 Q162.2,253.2 162.2,257.2 V262.4 Z\"><title>2021: khoảng 2 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"150.2\" y=\"247.2\" text-anchor=\"middle\">~3</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"not\" d=\"M211.8,270.0 V268.4 Q211.8,264.4 215.8,264.4 H231.8 Q235.8,264.4 235.8,268.4 V270.0 Z\"><title>2022: 1 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"223.8\" y=\"258.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V253.2 Q285.2,253.2 285.2,253.2 H309.2 Q309.2,253.2 309.2,253.2 V270.0 Z\"><title>2023: 3 bài được nhận</title></path><path class=\"not\" d=\"M285.2,251.2 V242.0 Q285.2,242.0 285.2,242.0 H309.2 Q309.2,242.0 309.2,242.0 V251.2 Z\"><title>2023: 2 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M285.2,240.0 V206.8 Q285.2,202.8 289.2,202.8 H305.2 Q309.2,202.8 309.2,206.8 V240.0 Z\"><title>2023: khoảng 7 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"297.2\" y=\"196.8\" text-anchor=\"middle\">~12</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V253.2 Q358.8,253.2 358.8,253.2 H382.8 Q382.8,253.2 382.8,253.2 V270.0 Z\"><title>2024: 3 bài được nhận</title></path><path class=\"not\" d=\"M358.8,251.2 V242.0 Q358.8,242.0 358.8,242.0 H382.8 Q382.8,242.0 382.8,242.0 V251.2 Z\"><title>2024: 2 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M358.8,240.0 V206.8 Q358.8,202.8 362.8,202.8 H378.8 Q382.8,202.8 382.8,206.8 V240.0 Z\"><title>2024: khoảng 7 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"196.8\" text-anchor=\"middle\">~12</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V264.4 Q432.2,264.4 432.2,264.4 H456.2 Q456.2,264.4 456.2,264.4 V270.0 Z\"><title>2025: 1 bài được nhận</title></path><path class=\"not\" d=\"M432.2,262.4 V240.4 Q432.2,236.4 436.2,236.4 H452.2 Q456.2,236.4 456.2,240.4 V262.4 Z\"><title>2025: 5 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"444.2\" y=\"230.4\" text-anchor=\"middle\">6</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V191.6 Q505.8,191.6 505.8,191.6 H529.8 Q529.8,191.6 529.8,191.6 V270.0 Z\"><title>2026: 14 bài được nhận</title></path><path class=\"not\" d=\"M505.8,189.6 V130.0 Q505.8,130.0 505.8,130.0 H529.8 Q529.8,130.0 529.8,130.0 V189.6 Z\"><title>2026: 11 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M505.8,128.0 V61.2 Q505.8,57.2 509.8,57.2 H525.8 Q529.8,57.2 529.8,61.2 V128.0 Z\"><title>2026: khoảng 13 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"51.2\" text-anchor=\"middle\">~38</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
+   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at EMNLP\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"est\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"acc\" d=\"M138.2,270.0 V264.4 Q138.2,264.4 138.2,264.4 H162.2 Q162.2,264.4 162.2,264.4 V270.0 Z\"><title>2021: 1 accepted</title></path><path class=\"est\" d=\"M138.2,262.4 V257.2 Q138.2,253.2 142.2,253.2 H158.2 Q162.2,253.2 162.2,257.2 V262.4 Z\"><title>2021: about 2 rejected (estimate)</title></path><text class=\"value\" x=\"150.2\" y=\"247.2\" text-anchor=\"middle\">about 3</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"not\" d=\"M211.8,270.0 V268.4 Q211.8,264.4 215.8,264.4 H231.8 Q235.8,264.4 235.8,268.4 V270.0 Z\"><title>2022: 1 rejected, recorded</title></path><text class=\"value\" x=\"223.8\" y=\"258.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V253.2 Q285.2,253.2 285.2,253.2 H309.2 Q309.2,253.2 309.2,253.2 V270.0 Z\"><title>2023: 3 accepted</title></path><path class=\"not\" d=\"M285.2,251.2 V242.0 Q285.2,242.0 285.2,242.0 H309.2 Q309.2,242.0 309.2,242.0 V251.2 Z\"><title>2023: 2 rejected, recorded</title></path><path class=\"est\" d=\"M285.2,240.0 V218.0 Q285.2,214.0 289.2,214.0 H305.2 Q309.2,214.0 309.2,218.0 V240.0 Z\"><title>2023: about 5 rejected (estimate)</title></path><text class=\"value\" x=\"297.2\" y=\"208.0\" text-anchor=\"middle\">about 10</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V253.2 Q358.8,253.2 358.8,253.2 H382.8 Q382.8,253.2 382.8,253.2 V270.0 Z\"><title>2024: 3 accepted</title></path><path class=\"not\" d=\"M358.8,251.2 V242.0 Q358.8,242.0 358.8,242.0 H382.8 Q382.8,242.0 382.8,242.0 V251.2 Z\"><title>2024: 2 rejected, recorded</title></path><path class=\"est\" d=\"M358.8,240.0 V206.8 Q358.8,202.8 362.8,202.8 H378.8 Q382.8,202.8 382.8,206.8 V240.0 Z\"><title>2024: about 7 rejected (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"196.8\" text-anchor=\"middle\">about 12</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V264.4 Q432.2,264.4 432.2,264.4 H456.2 Q456.2,264.4 456.2,264.4 V270.0 Z\"><title>2025: 1 accepted</title></path><path class=\"not\" d=\"M432.2,262.4 V240.4 Q432.2,236.4 436.2,236.4 H452.2 Q456.2,236.4 456.2,240.4 V262.4 Z\"><title>2025: 5 rejected, recorded</title></path><text class=\"value\" x=\"444.2\" y=\"230.4\" text-anchor=\"middle\">6</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V191.6 Q505.8,191.6 505.8,191.6 H529.8 Q529.8,191.6 529.8,191.6 V270.0 Z\"><title>2026: 14 accepted</title></path><path class=\"not\" d=\"M505.8,189.6 V130.0 Q505.8,130.0 505.8,130.0 H529.8 Q529.8,130.0 529.8,130.0 V189.6 Z\"><title>2026: 11 rejected, recorded</title></path><path class=\"est\" d=\"M505.8,128.0 V61.2 Q505.8,57.2 509.8,57.2 H525.8 Q529.8,57.2 529.8,61.2 V128.0 Z\"><title>2026: about 13 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"51.2\" text-anchor=\"middle\">about 38</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
+   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại EMNLP\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"est\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">30</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">40</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"acc\" d=\"M138.2,270.0 V264.4 Q138.2,264.4 138.2,264.4 H162.2 Q162.2,264.4 162.2,264.4 V270.0 Z\"><title>2021: 1 bài được nhận</title></path><path class=\"est\" d=\"M138.2,262.4 V257.2 Q138.2,253.2 142.2,253.2 H158.2 Q162.2,253.2 162.2,257.2 V262.4 Z\"><title>2021: khoảng 2 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"150.2\" y=\"247.2\" text-anchor=\"middle\">~3</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"not\" d=\"M211.8,270.0 V268.4 Q211.8,264.4 215.8,264.4 H231.8 Q235.8,264.4 235.8,268.4 V270.0 Z\"><title>2022: 1 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"223.8\" y=\"258.4\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V253.2 Q285.2,253.2 285.2,253.2 H309.2 Q309.2,253.2 309.2,253.2 V270.0 Z\"><title>2023: 3 bài được nhận</title></path><path class=\"not\" d=\"M285.2,251.2 V242.0 Q285.2,242.0 285.2,242.0 H309.2 Q309.2,242.0 309.2,242.0 V251.2 Z\"><title>2023: 2 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M285.2,240.0 V218.0 Q285.2,214.0 289.2,214.0 H305.2 Q309.2,214.0 309.2,218.0 V240.0 Z\"><title>2023: khoảng 5 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"297.2\" y=\"208.0\" text-anchor=\"middle\">~10</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V253.2 Q358.8,253.2 358.8,253.2 H382.8 Q382.8,253.2 382.8,253.2 V270.0 Z\"><title>2024: 3 bài được nhận</title></path><path class=\"not\" d=\"M358.8,251.2 V242.0 Q358.8,242.0 358.8,242.0 H382.8 Q382.8,242.0 382.8,242.0 V251.2 Z\"><title>2024: 2 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M358.8,240.0 V206.8 Q358.8,202.8 362.8,202.8 H378.8 Q382.8,202.8 382.8,206.8 V240.0 Z\"><title>2024: khoảng 7 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"196.8\" text-anchor=\"middle\">~12</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V264.4 Q432.2,264.4 432.2,264.4 H456.2 Q456.2,264.4 456.2,264.4 V270.0 Z\"><title>2025: 1 bài được nhận</title></path><path class=\"not\" d=\"M432.2,262.4 V240.4 Q432.2,236.4 436.2,236.4 H452.2 Q456.2,236.4 456.2,240.4 V262.4 Z\"><title>2025: 5 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"444.2\" y=\"230.4\" text-anchor=\"middle\">6</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V191.6 Q505.8,191.6 505.8,191.6 H529.8 Q529.8,191.6 529.8,191.6 V270.0 Z\"><title>2026: 14 bài được nhận</title></path><path class=\"not\" d=\"M505.8,189.6 V130.0 Q505.8,130.0 505.8,130.0 H529.8 Q529.8,130.0 529.8,130.0 V189.6 Z\"><title>2026: 11 bài bị từ chối, đếm được</title></path><path class=\"est\" d=\"M505.8,128.0 V61.2 Q505.8,57.2 509.8,57.2 H525.8 Q529.8,57.2 529.8,61.2 V128.0 Z\"><title>2026: khoảng 13 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"51.2\" text-anchor=\"middle\">~38</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
   }
  },
  {
@@ -26725,7 +27410,7 @@
     "accepted": 2,
     "own_page": 0,
     "official": 2,
-    "rejected_estimated": 8
+    "rejected_estimated": 5
    },
    {
     "year": 2024,
@@ -26865,7 +27550,7 @@
     "accepted": 5,
     "own_page": 0,
     "official": 5,
-    "rejected_estimated": 12
+    "rejected_estimated": 10
    },
    {
     "year": 2025,
@@ -27005,7 +27690,7 @@
     "accepted": 8,
     "own_page": 0,
     "official": 8,
-    "rejected_estimated": 16
+    "rejected_estimated": 13
    },
    {
     "year": 2026,
@@ -27145,7 +27830,7 @@
     "accepted": 8,
     "own_page": 0,
     "official": 8,
-    "rejected_estimated": 19
+    "rejected_estimated": 16
    },
    {
     "year": 2027,
@@ -27306,6 +27991,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -27347,6 +28033,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-do",
@@ -27396,6 +28083,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -27450,6 +28138,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -27499,6 +28188,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "huynh-thi-thanh-binh",
@@ -27544,6 +28234,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "huynh-thi-thanh-binh",
@@ -27597,6 +28288,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "thanh-binh-nguyen",
@@ -27662,6 +28354,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "thanh-binh-nguyen",
@@ -27715,6 +28408,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -27776,6 +28470,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -27829,6 +28524,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "huynh-thi-thanh-binh",
@@ -27870,6 +28566,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -27919,6 +28616,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "hoang-thanh-tung",
@@ -27964,6 +28662,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "long-hoang-dang",
@@ -28013,6 +28712,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-pham",
@@ -28067,6 +28767,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "duc-dung-nguyen",
@@ -28124,6 +28825,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -28173,6 +28875,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-pham",
@@ -28222,6 +28925,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "tho-quan",
@@ -28267,6 +28971,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "minh-triet-tran",
@@ -28325,6 +29030,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "than-quang-khoat",
@@ -28374,6 +29080,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "khoa-d-doan",
@@ -28419,6 +29126,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "dung-d-le",
@@ -28464,6 +29172,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "ngo-van-linh",
@@ -28509,6 +29218,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "duc-trong-le",
@@ -28536,14 +29246,14 @@
   ],
   "image": "img/venues/aaai.svg",
   "image_source": "https://commons.wikimedia.org/wiki/File:AAAI_logo_(2023).svg",
-  "rejected_estimated": 58,
-  "acceptance_rate": 28,
+  "rejected_estimated": 47,
+  "acceptance_rate": 32,
   "reported_rate": 21,
   "reported_detail": "11727 / 56264 (2020–2025)",
-  "ratio": "3.3",
+  "ratio": "2.9",
   "chart": {
-   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at AAAI\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"est\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">30</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"acc\" d=\"M138.2,270.0 V266.5 Q138.2,262.5 142.2,262.5 H158.2 Q162.2,262.5 162.2,266.5 V270.0 Z\"><title>2021: 1 accepted</title></path><text class=\"value\" x=\"150.2\" y=\"256.5\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V262.5 Q211.8,262.5 211.8,262.5 H235.8 Q235.8,262.5 235.8,262.5 V270.0 Z\"><title>2022: 1 accepted</title></path><path class=\"est\" d=\"M211.8,260.5 V251.6 Q211.8,247.6 215.8,247.6 H231.8 Q235.8,247.6 235.8,251.6 V260.5 Z\"><title>2022: about 2 rejected (estimate)</title></path><text class=\"value\" x=\"223.8\" y=\"241.6\" text-anchor=\"middle\">about 3</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V255.1 Q285.2,255.1 285.2,255.1 H309.2 Q309.2,255.1 309.2,255.1 V270.0 Z\"><title>2023: 2 accepted</title></path><path class=\"est\" d=\"M285.2,253.1 V199.3 Q285.2,195.3 289.2,195.3 H305.2 Q309.2,195.3 309.2,199.3 V253.1 Z\"><title>2023: about 8 rejected (estimate)</title></path><text class=\"value\" x=\"297.2\" y=\"189.3\" text-anchor=\"middle\">about 10</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V232.7 Q358.8,232.7 358.8,232.7 H382.8 Q382.8,232.7 382.8,232.7 V270.0 Z\"><title>2024: 5 accepted</title></path><path class=\"est\" d=\"M358.8,230.7 V147.1 Q358.8,143.1 362.8,143.1 H378.8 Q382.8,143.1 382.8,147.1 V230.7 Z\"><title>2024: about 12 rejected (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"137.1\" text-anchor=\"middle\">about 17</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V210.3 Q432.2,210.3 432.2,210.3 H456.2 Q456.2,210.3 456.2,210.3 V270.0 Z\"><title>2025: 8 accepted</title></path><path class=\"est\" d=\"M432.2,208.3 V94.8 Q432.2,90.8 436.2,90.8 H452.2 Q456.2,90.8 456.2,94.8 V208.3 Z\"><title>2025: about 16 rejected (estimate)</title></path><text class=\"value\" x=\"444.2\" y=\"84.8\" text-anchor=\"middle\">about 24</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V210.3 Q505.8,210.3 505.8,210.3 H529.8 Q529.8,210.3 529.8,210.3 V270.0 Z\"><title>2026: 8 accepted</title></path><path class=\"est\" d=\"M505.8,208.3 V72.4 Q505.8,68.4 509.8,68.4 H525.8 Q529.8,68.4 529.8,72.4 V208.3 Z\"><title>2026: about 19 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"62.4\" text-anchor=\"middle\">about 27</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
-   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại AAAI\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"est\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"195.3\" x2=\"628\" y2=\"195.3\"/><text class=\"tick\" x=\"34\" y=\"199.3\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"120.7\" x2=\"628\" y2=\"120.7\"/><text class=\"tick\" x=\"34\" y=\"124.7\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">30</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"acc\" d=\"M138.2,270.0 V266.5 Q138.2,262.5 142.2,262.5 H158.2 Q162.2,262.5 162.2,266.5 V270.0 Z\"><title>2021: 1 bài được nhận</title></path><text class=\"value\" x=\"150.2\" y=\"256.5\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V262.5 Q211.8,262.5 211.8,262.5 H235.8 Q235.8,262.5 235.8,262.5 V270.0 Z\"><title>2022: 1 bài được nhận</title></path><path class=\"est\" d=\"M211.8,260.5 V251.6 Q211.8,247.6 215.8,247.6 H231.8 Q235.8,247.6 235.8,251.6 V260.5 Z\"><title>2022: khoảng 2 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"223.8\" y=\"241.6\" text-anchor=\"middle\">~3</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V255.1 Q285.2,255.1 285.2,255.1 H309.2 Q309.2,255.1 309.2,255.1 V270.0 Z\"><title>2023: 2 bài được nhận</title></path><path class=\"est\" d=\"M285.2,253.1 V199.3 Q285.2,195.3 289.2,195.3 H305.2 Q309.2,195.3 309.2,199.3 V253.1 Z\"><title>2023: khoảng 8 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"297.2\" y=\"189.3\" text-anchor=\"middle\">~10</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V232.7 Q358.8,232.7 358.8,232.7 H382.8 Q382.8,232.7 382.8,232.7 V270.0 Z\"><title>2024: 5 bài được nhận</title></path><path class=\"est\" d=\"M358.8,230.7 V147.1 Q358.8,143.1 362.8,143.1 H378.8 Q382.8,143.1 382.8,147.1 V230.7 Z\"><title>2024: khoảng 12 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"137.1\" text-anchor=\"middle\">~17</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V210.3 Q432.2,210.3 432.2,210.3 H456.2 Q456.2,210.3 456.2,210.3 V270.0 Z\"><title>2025: 8 bài được nhận</title></path><path class=\"est\" d=\"M432.2,208.3 V94.8 Q432.2,90.8 436.2,90.8 H452.2 Q456.2,90.8 456.2,94.8 V208.3 Z\"><title>2025: khoảng 16 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"444.2\" y=\"84.8\" text-anchor=\"middle\">~24</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V210.3 Q505.8,210.3 505.8,210.3 H529.8 Q529.8,210.3 529.8,210.3 V270.0 Z\"><title>2026: 8 bài được nhận</title></path><path class=\"est\" d=\"M505.8,208.3 V72.4 Q505.8,68.4 509.8,68.4 H525.8 Q529.8,68.4 529.8,72.4 V208.3 Z\"><title>2026: khoảng 19 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"62.4\" text-anchor=\"middle\">~27</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
+   "en": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers accepted and rejected per year at AAAI\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"est\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"225.2\" x2=\"628\" y2=\"225.2\"/><text class=\"tick\" x=\"34\" y=\"229.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"180.4\" x2=\"628\" y2=\"180.4\"/><text class=\"tick\" x=\"34\" y=\"184.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"135.6\" x2=\"628\" y2=\"135.6\"/><text class=\"tick\" x=\"34\" y=\"139.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"90.8\" x2=\"628\" y2=\"90.8\"/><text class=\"tick\" x=\"34\" y=\"94.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"acc\" d=\"M138.2,270.0 V265.0 Q138.2,261.0 142.2,261.0 H158.2 Q162.2,261.0 162.2,265.0 V270.0 Z\"><title>2021: 1 accepted</title></path><text class=\"value\" x=\"150.2\" y=\"255.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V261.0 Q211.8,261.0 211.8,261.0 H235.8 Q235.8,261.0 235.8,261.0 V270.0 Z\"><title>2022: 1 accepted</title></path><path class=\"est\" d=\"M211.8,259.0 V247.1 Q211.8,243.1 215.8,243.1 H231.8 Q235.8,243.1 235.8,247.1 V259.0 Z\"><title>2022: about 2 rejected (estimate)</title></path><text class=\"value\" x=\"223.8\" y=\"237.1\" text-anchor=\"middle\">about 3</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V252.1 Q285.2,252.1 285.2,252.1 H309.2 Q309.2,252.1 309.2,252.1 V270.0 Z\"><title>2023: 2 accepted</title></path><path class=\"est\" d=\"M285.2,250.1 V211.3 Q285.2,207.3 289.2,207.3 H305.2 Q309.2,207.3 309.2,211.3 V250.1 Z\"><title>2023: about 5 rejected (estimate)</title></path><text class=\"value\" x=\"297.2\" y=\"201.3\" text-anchor=\"middle\">about 7</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V225.2 Q358.8,225.2 358.8,225.2 H382.8 Q382.8,225.2 382.8,225.2 V270.0 Z\"><title>2024: 5 accepted</title></path><path class=\"est\" d=\"M358.8,223.2 V139.6 Q358.8,135.6 362.8,135.6 H378.8 Q382.8,135.6 382.8,139.6 V223.2 Z\"><title>2024: about 10 rejected (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"129.6\" text-anchor=\"middle\">about 15</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V198.3 Q432.2,198.3 432.2,198.3 H456.2 Q456.2,198.3 456.2,198.3 V270.0 Z\"><title>2025: 8 accepted</title></path><path class=\"est\" d=\"M432.2,196.3 V85.8 Q432.2,81.8 436.2,81.8 H452.2 Q456.2,81.8 456.2,85.8 V196.3 Z\"><title>2025: about 13 rejected (estimate)</title></path><text class=\"value\" x=\"444.2\" y=\"75.8\" text-anchor=\"middle\">about 21</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V198.3 Q505.8,198.3 505.8,198.3 H529.8 Q529.8,198.3 529.8,198.3 V270.0 Z\"><title>2026: 8 accepted</title></path><path class=\"est\" d=\"M505.8,196.3 V59.0 Q505.8,55.0 509.8,55.0 H525.8 Q529.8,55.0 529.8,59.0 V196.3 Z\"><title>2026: about 16 rejected (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"49.0\" text-anchor=\"middle\">about 24</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>",
+   "vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài được nhận và bị từ chối theo năm tại AAAI\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"est\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"225.2\" x2=\"628\" y2=\"225.2\"/><text class=\"tick\" x=\"34\" y=\"229.2\" text-anchor=\"end\">5</text><line class=\"grid\" x1=\"40\" y1=\"180.4\" x2=\"628\" y2=\"180.4\"/><text class=\"tick\" x=\"34\" y=\"184.4\" text-anchor=\"end\">10</text><line class=\"grid\" x1=\"40\" y1=\"135.6\" x2=\"628\" y2=\"135.6\"/><text class=\"tick\" x=\"34\" y=\"139.6\" text-anchor=\"end\">15</text><line class=\"grid\" x1=\"40\" y1=\"90.8\" x2=\"628\" y2=\"90.8\"/><text class=\"tick\" x=\"34\" y=\"94.8\" text-anchor=\"end\">20</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">25</text><text class=\"tick\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><path class=\"acc\" d=\"M138.2,270.0 V265.0 Q138.2,261.0 142.2,261.0 H158.2 Q162.2,261.0 162.2,265.0 V270.0 Z\"><title>2021: 1 bài được nhận</title></path><text class=\"value\" x=\"150.2\" y=\"255.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><path class=\"acc\" d=\"M211.8,270.0 V261.0 Q211.8,261.0 211.8,261.0 H235.8 Q235.8,261.0 235.8,261.0 V270.0 Z\"><title>2022: 1 bài được nhận</title></path><path class=\"est\" d=\"M211.8,259.0 V247.1 Q211.8,243.1 215.8,243.1 H231.8 Q235.8,243.1 235.8,247.1 V259.0 Z\"><title>2022: khoảng 2 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"223.8\" y=\"237.1\" text-anchor=\"middle\">~3</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><path class=\"acc\" d=\"M285.2,270.0 V252.1 Q285.2,252.1 285.2,252.1 H309.2 Q309.2,252.1 309.2,252.1 V270.0 Z\"><title>2023: 2 bài được nhận</title></path><path class=\"est\" d=\"M285.2,250.1 V211.3 Q285.2,207.3 289.2,207.3 H305.2 Q309.2,207.3 309.2,211.3 V250.1 Z\"><title>2023: khoảng 5 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"297.2\" y=\"201.3\" text-anchor=\"middle\">~7</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V225.2 Q358.8,225.2 358.8,225.2 H382.8 Q382.8,225.2 382.8,225.2 V270.0 Z\"><title>2024: 5 bài được nhận</title></path><path class=\"est\" d=\"M358.8,223.2 V139.6 Q358.8,135.6 362.8,135.6 H378.8 Q382.8,135.6 382.8,139.6 V223.2 Z\"><title>2024: khoảng 10 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"129.6\" text-anchor=\"middle\">~15</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"acc\" d=\"M432.2,270.0 V198.3 Q432.2,198.3 432.2,198.3 H456.2 Q456.2,198.3 456.2,198.3 V270.0 Z\"><title>2025: 8 bài được nhận</title></path><path class=\"est\" d=\"M432.2,196.3 V85.8 Q432.2,81.8 436.2,81.8 H452.2 Q456.2,81.8 456.2,85.8 V196.3 Z\"><title>2025: khoảng 13 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"444.2\" y=\"75.8\" text-anchor=\"middle\">~21</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V198.3 Q505.8,198.3 505.8,198.3 H529.8 Q529.8,198.3 529.8,198.3 V270.0 Z\"><title>2026: 8 bài được nhận</title></path><path class=\"est\" d=\"M505.8,196.3 V59.0 Q505.8,55.0 509.8,55.0 H525.8 Q529.8,55.0 529.8,59.0 V196.3 Z\"><title>2026: khoảng 16 bài bị từ chối (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"49.0\" text-anchor=\"middle\">~24</text><text class=\"tick off\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text></svg>"
   }
  },
  {
@@ -29796,6 +30506,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "canh-v-pham",
@@ -29846,6 +30557,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "canh-v-pham",
@@ -29892,6 +30604,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "phi-le-nguyen",
@@ -29977,6 +30690,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "minh-do",
@@ -30018,6 +30732,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "canh-v-pham",
@@ -30068,6 +30783,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "cuong-viet-ta",
@@ -30105,6 +30821,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "canh-v-pham",
@@ -30150,6 +30867,7 @@
     "later": "",
     "unofficial": false,
     "workshop": "",
+    "potential": false,
     "professors": [
      {
       "slug": "trung-thanh-nguyen",
