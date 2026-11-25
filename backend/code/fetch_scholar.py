@@ -18,8 +18,7 @@ import subprocess
 import sys
 import time
 
-from common import JSON_DIR  # backend/data/
-from common import BACKEND, OPENREVIEW_RAW, load_roster, norm_name
+from common import JSON_DIR, OPENREVIEW_RAW, load_roster, norm_name
 
 OUT = JSON_DIR / "scholar.json"
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
@@ -32,7 +31,6 @@ def get(url):
 
 def from_openreview():
     """Scholar IDs written on the professors' OpenReview profiles (needs the OpenReview login)."""
-    import openreview
     from fetch_openreview import login
     v2, _ = login()
     found = {}

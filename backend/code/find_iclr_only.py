@@ -30,8 +30,7 @@ import re
 import sys
 import time
 
-from common import CSV_DIR  # backend/data/
-from common import (ACCEPTED, BACKEND, LAST_YEAR, OPENREVIEW_RAW, YEARS, classify_status, load_roster, name_key,
+from common import (ACCEPTED, CSV_DIR, LAST_YEAR, OPENREVIEW_RAW, YEARS, classify_status, load_roster, name_key,
                     read_jsonl_gz, same_institution, vn_institution, vn_institutions, write_csv)
 from fetch_openreview import profile_summary, split_authors, val, vietnam_post
 

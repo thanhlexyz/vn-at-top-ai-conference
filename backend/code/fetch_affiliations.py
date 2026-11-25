@@ -22,8 +22,7 @@ import subprocess
 import time
 import urllib.request
 
-from common import CSV_DIR  # backend/data/
-from common import BACKEND, FRONTEND, norm_title, read_csv, strip_accents, vn_institutions
+from common import BACKEND, CSV_DIR, FRONTEND, norm_title, read_csv, strip_accents, vn_institutions
 
 PDF_DIR = BACKEND / "raw" / "pdf"
 HEADERS = BACKEND / "work" / "pdf_headers"

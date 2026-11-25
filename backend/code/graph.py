@@ -336,13 +336,12 @@ def untangle(pos, edges, labels, rounds=40, gap=40, cross_cost=100000):
                         for push in (1.0, 1.4, 2.0):
                             spots.append((fx + (fx - ox) * push, fy + (fy - oy) * push))
             for nx, ny in spots:
-                if True:
-                    pos[i] = [nx, ny]
-                    for j, (jx, jy) in carried.items():
-                        pos[j] = [jx + nx - ox, jy + ny - oy]
-                    c = cost(pos) + 0.05 * math.hypot(nx - home[i][0], ny - home[i][1])
-                    if c < best - 1:
-                        best, best_xy = c, (nx, ny)
+                pos[i] = [nx, ny]
+                for j, (jx, jy) in carried.items():
+                    pos[j] = [jx + nx - ox, jy + ny - oy]
+                c = cost(pos) + 0.05 * math.hypot(nx - home[i][0], ny - home[i][1])
+                if c < best - 1:
+                    best, best_xy = c, (nx, ny)
             pos[i] = [ox, oy] if best_xy is None else list(best_xy)
             for j, (jx, jy) in carried.items():
                 pos[j] = [jx, jy] if best_xy is None else [jx + best_xy[0] - ox, jy + best_xy[1] - oy]
@@ -628,7 +627,6 @@ def build(nodes, papers_of, color_of, legend):
             "papers": len(papers_of), "shared": sum(1 for m in papers_of.values() if len(m) > 1)}
 
 
-PALETTE = ["c1", "c2", "c3", "c4"]   # classes styled in style.css; the rest are "c0" (other)
 # institutions drawn in the main colour of their logo; the next largest groups take the colours left after these
 BRAND = {"HUST": "c-red", "VinUni": "c-blue", "HCMUS": "c-cyan"}
 # the next largest institutions: three more solid colours, then the same three as rings (a tinted centre and a

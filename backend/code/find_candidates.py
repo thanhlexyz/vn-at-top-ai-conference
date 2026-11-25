@@ -27,8 +27,7 @@ import re
 import sys
 import urllib.parse
 
-from common import CSV_DIR  # backend/data/
-from common import (with_pdf_affiliations, ACCEPTED, BACKEND, CANDIDATES, FIRST_YEAR, OPENREVIEW_RAW, PARENT, ROSTER, ROSTER_FIELDS, VENUE_KEYS,
+from common import (with_pdf_affiliations, ACCEPTED, CSV_DIR, CANDIDATES, FIRST_YEAR, OPENREVIEW_RAW, PARENT, ROSTER, ROSTER_FIELDS, VENUE_KEYS,
                     VENUE_NAME, load_roster, name_key, norm_name, post_class, read_csv, read_jsonl_gz, slugify, vn_institution,
                     vn_institutions,
                     write_csv)

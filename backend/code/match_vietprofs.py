@@ -10,8 +10,7 @@ Run after a build (it reads frontend/data/candidates.json).
 import json
 import urllib.request
 
-from common import CSV_DIR  # backend/data/
-from common import BACKEND, FRONTEND, name_key, norm_name, read_csv, write_csv
+from common import BACKEND, CSV_DIR, FRONTEND, norm_name, read_csv, write_csv
 
 URL = "https://vietprofs.roars.dev/data.json"
 RAW = BACKEND / "raw" / "vietprofs" / "data.json"

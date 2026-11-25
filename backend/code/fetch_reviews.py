@@ -15,8 +15,7 @@ import json
 import re
 import sys
 
-from common import JSON_DIR  # backend/data/
-from common import BACKEND, FRONTEND, write_json
+from common import JSON_DIR, FRONTEND, write_json
 from fetch_openreview import login, val, with_retry
 
 OUT = JSON_DIR / "reviews.json"

@@ -31,8 +31,7 @@ import math
 import re
 import urllib.parse
 
-from common import CSV_DIR, JSON_DIR  # backend/data/
-from common import (with_pdf_affiliations, ACCEPTED, DECISION_DATES, BACKEND, CANDIDATES, FRONTEND, LAST_YEAR, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
+from common import (with_pdf_affiliations, ACCEPTED, DECISION_DATES, BACKEND, CSV_DIR, JSON_DIR, CANDIDATES, FRONTEND, LAST_YEAR, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
                     STATUS_LABEL, VENUE_GROUPS, VENUE_KEYS, VENUE_NAME, VENUES, WORK, YEARS, classify_status, held, in_vietnam,
                     load_roster, name_key, norm_name, norm_title, openreview_venue, PARENT, post_class, presentation, read_csv,
                     read_jsonl_gz, same_institution, slugify, token_key, vn_institutions, write_json)
@@ -781,30 +780,8 @@ def unique(records):
     return list(seen.values())
 
 
-AI_SCORES = WORK / "ai_scores.csv"   # written by score_ai_text.py
-
-
 def ai_key(venue, year, title):
     return f"{venue}-{year}-{norm_title(title)[:40]}"
-
-
-def write_ai_scores(professors):
-    """AI-text figures for the front end (frontend/data/ai_scores.json, git-ignored until the maintainer decides to
-    publish it): per paper, the share of flagged sentences and the document score; per professor, the mean share
-    over their scanned papers (counted and workshop papers, each once)."""
-    papers = {ai_key(r["venue"], int(r["year"]), r["title"]):
-              {"pct": float(r["flagged_pct"]), "flagged": int(r["flagged_sentences"]), "sentences": int(r["sentences"]),
-               "p_ai": float(r["p_ai"])}
-              for r in read_csv(AI_SCORES) if r["flagged_pct"] != ""}
-    if not papers:
-        return
-    people = {}
-    for p in professors:
-        keys = {e["ai_key"] for k in ("accepted_papers", "not_accepted_papers", "workshop_papers") for e in p[k]}
-        shares = [papers[k]["pct"] for k in sorted(keys) if k in papers]
-        if shares:
-            people[p["slug"]] = {"avg": round(sum(shares) / len(shares), 1), "scanned": len(shares)}
-    write_json(DATA / "ai_scores.json", {"papers": papers, "professors": people})
 
 
 def review_scores(url):
@@ -944,8 +921,6 @@ def overview(professors, acc):
     keys = ["accepted", "recorded", "estimated"]
     out = {
         "total": total, "rows": rows, "provisional": provisional,
-        "provisional_lists": [f"{VENUE_NAME[v]} {y}" for v, y in sorted(acc.provisional)],
-        "submissions": sum(total.values()),
     }
     for lang, suffix in (("en", ""), ("vi", "_vi")):
         w = CHART_TEXT[lang]
@@ -1272,7 +1247,7 @@ def international_graph(authors, by_slug):
     """Bipartite drawing for the International cooperation page: professors on the list on the left, co-authors
     abroad who have a VietProfs profile (vietprofs.csv) on the right; a line is the number of papers they share."""
     authors = sorted(authors, key=lambda f: (-len(f["papers"]), f["name"]))
-    row, left_w, top, step = 0, 300, 40, 46
+    top, step = 40, 46
     right = []
     for i, f in enumerate(authors):
         right.append({"name": f["name"], "affiliation": f["affs"].most_common(1)[0][0], "papers": len(f["papers"]),
@@ -1682,7 +1657,6 @@ def main():
     page_papers = [with_owners(r) for r in sorted((r for r in papers if not r.get("potential")), key=decision_order)]
     write_json(DATA / "papers.json", page_papers)
     write_otd_scores(page_papers)
-    write_ai_scores(professors)
     # approved = no: checked and left off for good; `notes` says why
     excluded = [{"name": p["name"], "institution": p["institution_short"], "reason": p["notes"],
                  "homepage": p["homepage"], "openreview_ids": p["openreview_ids"]}
@@ -1764,8 +1738,6 @@ def main():
                                          "lookup_pending": lookup_pending,
                                          "waiting": waiting, "excluded": excluded, "foreign": foreign_coauthors,
                                          "companies": companies, "unconfirmed": unconfirmed,
-                                         # hand-kept: faculty in Vietnam known in the press as AI/ML pioneers
-                                         "pioneers": read_csv(CSV_DIR / "pioneers.csv"),
                                          # notes on a professor's record (inferred outcomes, missing records, ...): local only
                                          "flags": [{"slug": p["slug"], "name": p["name"], "text": f} for p in professors for f in p["flags"]],
                                          "to_confirm": [{"slug": p["slug"], "name": p["name"], "institution": p["institution_short"],
@@ -1785,15 +1757,14 @@ def main():
              for k, v in enumerate(g["venues"])], top_value, words) for g in VENUE_GROUPS]
     write_json(DATA / "meta.json", {
         "coverage_charts": coverage_charts,
-        "generated": now.strftime("%Y-%m-%d %H:%M %Z"), "generated_date": now.strftime("%Y-%m-%d"),
+        "generated_date": now.strftime("%Y-%m-%d"),
         "first_year": YEARS[0], "last_year": YEARS[-1], "years": YEARS,
         "rank_baseline": f"ICLR'{LAST_YEAR % 100:02d}" if RANK_BASELINE == "potential" else
                          f"{VENUE_NAME[RANK_BASELINE[0]]}'{RANK_BASELINE[1] % 100:02d}",
-        "rank_potential": RANK_BASELINE == "potential",
         "venues": VENUES, "venue_keys": VENUE_KEYS, "venue_groups": VENUE_GROUPS, "coverage": coverage,
         "professors": len(professors), "papers": len(papers),
         "accepted": sum(r["status"] == "accepted" for r in papers),
-        "preliminary": any(p["flags"] for p in professors), "pending_review": len(pending),
+        "pending_review": len(pending),
         "provisional": [{"venue": v, "name": VENUE_NAME[v], "year": y} for v, y in sorted(acc.provisional)],
     })
     write_stubs("professors", [(p["slug"], p["name"], p["name_vi"]) for p in professors])

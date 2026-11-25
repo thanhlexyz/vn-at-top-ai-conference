@@ -315,7 +315,7 @@ def main():
             o["openreview"] = judged[o["name"]]
     rows = sorted((m for m in matches.values() if m["professors"]), key=lambda m: (-(m["mean"] or 0), m["title"]))
     outside = sorted((m for m in matches.values() if not m["professors"]), key=lambda m: m["title"])
-    data = {"year": year, "fetched": time.strftime("%Y-%m-%d"), "threshold": ACCEPT_SCORE, "papers": rows, "outside": outside}
+    data = {"year": year, "fetched": time.strftime("%Y-%m-%d"), "papers": rows, "outside": outside}
     for path in (OUT, PAGE):
         path.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"-> {OUT} and {PAGE} (both git-ignored)")

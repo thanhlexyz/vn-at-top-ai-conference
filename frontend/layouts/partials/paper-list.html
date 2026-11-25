@@ -3,7 +3,6 @@
 {{- $owners := .owners }}{{ $self := .self }}
 <ul class="papers">
 	{{- range .papers }}
-	{{- $key := .ai_key }}
 	{{- if .potential }}
 	{{- /* a potential acceptance under review: counted as unofficial, everything about it redacted */}}
 	<li><a class="tag-link" href="{{ printf "conferences/%s/" .venue | relLangURL }}"><span class="tag accepted">{{ .venue_name }} {{ .year }}</span></a><span class="tag own" title="{{ .match }}">{{ T "potential_tag" }}</span> <span class="redacted">{{ T "redacted" }}</span></li>
@@ -18,8 +17,6 @@
 		{{- if site.Params.local }}{{ with .note }}<br><span class="note">{{ . }}</span>{{ end }}{{ end }}
 		{{- with .later }}<br><span class="note">{{ T "later_accepted" . }}</span>{{ end }}
 		{{- if .unofficial }}<br><span class="note">{{ T "unofficial_because" .match }}</span>{{ end }}
-		{{- if site.Params.showAiScores }}{{ with hugo.Data.ai_scores }}{{ with index .papers $key }}
-		<br><span class="tag other" title="{{ T "ai_share_hint" (dict "Flagged" .flagged "Sentences" .sentences) }}">{{ T "ai_share" .pct }}</span> <span class="tag other" title="{{ T "ai_p_hint" }}">{{ T "ai_p" (printf "%.1f" (mul .p_ai 100)) }}</span>{{ end }}{{ end }}{{ end }}
 		<br><span class="authors">
 		{{- with .author_links }}{{ range $k, $a := . }}{{ if $k }}, {{ end }}{{ if and $self (eq $a.slug $self) }}<strong>{{ $a.name }}</strong>{{ else if $a.slug }}<a href="{{ printf "professors/%s/" $a.slug | relLangURL }}">{{ $a.name }}</a>{{ else }}{{ $a.name }}{{ end }}{{ end }}
 		{{- else }}{{ .authors }}{{ end }}

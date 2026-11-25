@@ -22,10 +22,8 @@ import re
 import subprocess
 import sys
 import urllib.parse
-from pathlib import Path
 
-from common import CSV_DIR  # backend/data/
-from common import BACKEND, FRONTEND, OPENREVIEW_RAW, RAW, load_roster, norm_name, read_csv
+from common import CSV_DIR, FRONTEND, OPENREVIEW_RAW, RAW, load_roster, norm_name, read_csv
 
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
 CANDIDATES = RAW / "images"

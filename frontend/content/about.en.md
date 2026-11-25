@@ -66,17 +66,6 @@ For instance, 9 ICLR submissions and 1 acceptance gives `(9 + 1) / (1 + 1) = 5`,
 
 Importantly, this projection only applies to conferences where submissions are certain because the professor has at least one accepted paper. For example, if a professor has 1 accepted paper at AAAI and a submission record at ICLR, we extrapolate their submissions at AAAI. If they have no accepted papers at AAAI, no submissions are estimated for that conference because there is no evidence that they submitted there.
 
-{{% ai-only %}}
-## AI-Generated Text Scanning
-
-Each scanned paper displays two experimental metrics from [MELD](https://huggingface.co/anon-review-meld-2026/meld) (v8, MIT license), an open ~1B-parameter encoder detector run locally on the main body text extracted via `pdftotext` (abstract to references/acknowledgments, dropping blocks under 15 words and papers under 300 words):
-
-- **% AI Sentences:** Share of main-body sentences (8+ tokens) scoring above the detector's 1% false-positive threshold on general human text.
-- **p_AI:** Holistic document score (0–100%) from the mean of the top quartile of token scores.
-
-**How to interpret:** These are model estimates of text patterns, not proof of authorship or research quality. Because LLM-assisted proofreading and copy-editing are now widespread, `p_AI` approaches 100% on most 2025–2026 papers globally, so `% AI sentences` is the more informative indicator. Equations, tables, code, and heavy editing can also shift scores.
-{{% /ai-only %}}
-
 ## Credits & Resources
 
 This project was conceived, designed, and curated by **Thanh Le** ([thanhle.xyz](http://thanhle.xyz)), built with the assistance of [Claude](https://www.anthropic.com/claude), with writing and editorial revisions assisted by [Gemini](https://gemini.google.com/). I created this site out of personal curiosity to offer a transparent reference for the Vietnamese academic community and anyone following AI research in Vietnam.

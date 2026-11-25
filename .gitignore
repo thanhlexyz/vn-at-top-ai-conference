@@ -225,16 +225,6 @@ frontend/resources/
 frontend/.hugo_build.lock
 __pycache__/
 
-# detector weights live outside the repository (see backend/fetch_detector_model.py); never commit them
-models/
-*.safetensors
-*.gguf
-*.ckpt
-*.pt
-*.pth
-*.onnx
-frontend/data/ai_scores.json
-
 # ICLR submissions under review matched to tracked professors: local only, never published (match_under_review.py)
 frontend/data/under_review.json
 frontend/data/under_review_reviewed.json

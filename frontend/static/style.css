@@ -227,17 +227,8 @@ figure {
     stroke-dasharray: 3 2 ;
 }
 
-.chart .s1 {
-    fill: var(--accepted) ;
-}
 
-.chart .s2 {
-    fill: #eb6834 ;
-}
 
-.chart .s3 {
-    fill: #1baf7a ;
-}
 
 .chart .hollow {
     fill: var(--not-accepted) ;
@@ -248,10 +239,6 @@ figure {
 
 /* the five conferences, in the fixed order of the palette */
 .chart .v1 { fill: #2a78d6 ; stroke: #2a78d6 ; }
-.chart .v2 { fill: #eb6834 ; stroke: #eb6834 ; }
-.chart .v3 { fill: #1baf7a ; stroke: #1baf7a ; }
-.chart .v4 { fill: #eda100 ; stroke: #eda100 ; }
-.chart .v5 { fill: #e87ba4 ; stroke: #e87ba4 ; }
 
 .chart .line {
     fill: none ;
@@ -265,9 +252,6 @@ figure {
     stroke-width: 2 ;
 }
 
-.chart rect.v1, .chart rect.v2, .chart rect.v3, .chart rect.v4, .chart rect.v5 {
-    stroke: none ;
-}
 
 .chart .slice {
     stroke: var(--bg) ;
@@ -566,8 +550,6 @@ svg.net .node.ring text.deg { fill: var(--fg) ; }
 .graph-legend li { display: inline-flex ; align-items: center ; gap: 6px ; }
 .graph-legend .dot { display: inline-block ; width: 12px ; height: 12px ; border-radius: 50% ; }
 .graph-legend .line-key { display: inline-block ; width: 22px ; height: 4px ; border-radius: 2px ; background: var(--axis) ; }
-.chart .v6 { fill: #8a63d2 ; stroke: #8a63d2 ; }
-.chart .v7 { fill: #6b6a66 ; stroke: #6b6a66 ; }
 
 /* authorship charts: from the institution, from elsewhere, not judged */
 .chart .own-inst { fill: #2a78d6 ; }

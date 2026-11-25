@@ -1,7 +1,6 @@
 {{ define "main" -}}
 {{ .Content }}
 {{- $papers := hugo.Data.papers }}
-{{- $ai := cond site.Params.showAiScores hugo.Data.ai_scores nil }}
 {{- $otd := cond site.Params.showOtdScores hugo.Data.otd_scores nil }}
 {{- if not site.Params.showNonAcceptedTitles }}{{ $papers = where $papers "status" "accepted" }}{{ end }}
 <div class="table-box">
@@ -19,10 +18,6 @@
 		{{- end }}
 		<th class="l">{{ T "th_professors" }}</th>
 		<th class="l">{{ T "th_title" }}</th>
-		{{- if $ai }}
-		<th title="{{ T "tip_ai_share" }}">{{ T "th_ai_share" }}</th>
-		<th title="{{ T "ai_p_hint" }}">{{ T "th_p_ai" }}</th>
-		{{- end }}
 	</tr>
 	</thead>
 	<tbody>
@@ -47,7 +42,6 @@
 			{{- else }}<span class="redacted">{{ T "redacted" }}</span>{{ end -}}
 		</td>
 		<td class="l"><a href="https://openreview.net/forum?id={{ .forum }}">{{ .title }}</a>{{ if site.Params.local }} <span class="note">(<a href="{{ .preprint }}">{{ T "preprint" }}</a>)</span>{{ end }}</td>
-		{{- if $ai }}<td class="na">&ndash;</td><td class="na">&ndash;</td>{{ end }}
 	</tr>
 	{{- end }}
 	{{- end }}
@@ -69,14 +63,6 @@
 			{{- range $n, $o := .professors }}{{ if $n }}, {{ end }}<a href="{{ printf "professors/%s/" $o.slug | relLangURL }}">{{ partial "pname.html" $o }}</a>{{ end -}}
 		</td>
 		<td class="l">{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</td>
-		{{- if $ai }}
-		{{- with index $ai.papers .ai_key }}
-		<td title="{{ T "ai_share_hint" (dict "Flagged" .flagged "Sentences" .sentences) }}">{{ printf "%.1f" .pct }}%</td>
-		<td>{{ printf "%.1f" (mul .p_ai 100) }}%</td>
-		{{- else }}
-		<td class="na">&ndash;</td><td class="na">&ndash;</td>
-		{{- end }}
-		{{- end }}
 	</tr>
 	{{- end }}
 	</tbody>

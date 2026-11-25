@@ -68,17 +68,6 @@ Chẳng hạn, với 9 bài nộp ICLR và 1 bài được nhận, tỷ lệ là
 
 Đáng chú ý, phép ước tính này chỉ áp dụng cho những hội nghị chắc chắn có bài nộp dựa trên minh chứng là có ít nhất một bài được nhận. Chẳng hạn, nếu một giảng viên có 1 bài được nhận tại AAAI và có lịch sử nộp bài tại ICLR, hệ thống mới ngoại suy số lượt nộp tại AAAI. Nếu giảng viên không có bài nào được nhận tại AAAI, hệ thống hoàn toàn không ước tính lượt nộp nào cho hội nghị đó vì không có căn cứ xác định họ có nộp bài hay không.
 
-{{% ai-only %}}
-## Thử nghiệm: quét văn bản AI
-
-Mỗi bài báo có PDF công khai hiển thị hai chỉ số thử nghiệm từ mô hình mở [MELD](https://huggingface.co/anon-review-meld-2026/meld) (v8, giấy phép MIT, ~1 tỷ tham số), chạy cục bộ trên phần văn bản chính trích xuất bằng `pdftotext` (từ tóm tắt đến trước tài liệu tham khảo/lời cảm ơn, lược bỏ các khối dưới 15 từ và các bài dưới 300 từ):
-
-- **% câu AI:** Tỷ lệ câu trong phần nội dung chính (từ 8 token trở lên) có điểm vượt ngưỡng 1% dương tính giả được hiệu chỉnh trên văn bản thông thường.
-- **p_AI:** Điểm xác suất toàn văn bản (0–100%), tính từ trung bình 25% token có điểm cao nhất.
-
-**Lưu ý khi đọc:** Đây là ước lượng thống kê về mặt văn bản, không phải kết luận về tác giả hay chất lượng khoa học. Do việc dùng LLM để biên tập và trau chuốt tiếng Anh đã trở nên phổ biến, `p_AI` của hầu hết bài báo năm 2025–2026 đều gần 100%, vì vậy chỉ số `% câu AI` mang tính tham khảo tốt hơn. Công thức toán, bảng biểu, mã nguồn và mức độ biên tập cũng có thể làm thay đổi chỉ số.
-{{% /ai-only %}}
-
 ## Thông tin dự án và lời cảm ơn
 
 Dự án này do **Lê Thành** ([thanhle.xyz](http://thanhle.xyz)) lên ý tưởng, thiết kế và quản lý nội dung, được xây dựng với sự trợ giúp của [Claude](https://www.anthropic.com/claude) và biên tập, hoàn thiện văn phong với sự hỗ trợ của [Gemini](https://gemini.google.com/). Tôi thực hiện trang web này từ sự tò mò cá nhân, với hy vọng đóng góp một nguồn tham khảo minh bạch, hữu ích cho cộng đồng học thuật và những ai quan tâm đến nghiên cứu AI tại Việt Nam.

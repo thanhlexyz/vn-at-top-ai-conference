@@ -18,8 +18,6 @@ other = "Language"
 other = "On this page"
 
 # ---------------------------------------------------------------- shared words
-[venues_five]
-other = "the ten conferences"
 [none]
 other = "None."
 [titles_hidden]
@@ -34,16 +32,6 @@ other = "rejected"
 other = "rejected"
 [status_desk_rejected]
 other = "desk-rejected"
-[not_held]
-other = "not held this year"
-[not_published_yet]
-other = "not published yet"
-[list_not_published]
-other = "list not published yet"
-[not_yet_in_vietnam]
-other = "not yet at a Vietnamese university"
-[incomplete_star]
-other = "incomplete or unconfirmed, see the professor's page"
 [own_page_more]
 other = "{{ .Count }} more from personal pages, not in the official list yet"
 [reason_before]
@@ -52,26 +40,6 @@ other = "before {{ .Year }}, when they joined a Vietnamese university"
 other = "{{ .Track }} track"
 [not_counted]
 other = "Not counted: {{ .Reason }}."
-[ai_share]
-other = "{{ . }}% AI sentences"
-[th_ai_avg]
-other = "AI sentences, mean"
-[tip_ai_avg]
-other = "Mean over this professor\u2019s scanned papers of the share of main-body sentences the MELD detector flags. A model estimate for the papers, not a finding about the person; papers without a public PDF are not scanned."
-[ai_avg_cell]
-other = "{{ . }} papers scanned"
-[th_ai_share]
-other = "AI sentences"
-[th_p_ai]
-other = "p_AI"
-[tip_ai_share]
-other = "Share of main-body sentences the MELD detector flags. A model estimate for the paper, not a finding about its authors; see About."
-[ai_p]
-other = "{{ . }}% p_AI"
-[ai_p_hint]
-other = "The detector\u2019s score for the whole main body, as a percentage. It is high for almost every recent paper, so the share of flagged sentences is the more telling number."
-[ai_share_hint]
-other = "{{ .Flagged }} of {{ .Sentences }} sentences of the main body are flagged by the MELD detector. A model estimate for this paper alone, not a finding about its authors; the threshold is calibrated on whole documents."
 [later_accepted]
 other = "The same title was accepted at {{ . }}."
 [unofficial_because]
@@ -84,8 +52,6 @@ other = "Professor"
 other = "Professors"
 [th_institution]
 other = "University"
-[th_year]
-other = "Year"
 [th_venue]
 other = "Conference"
 [th_title]
@@ -94,8 +60,6 @@ other = "Title"
 other = "Outcome"
 [th_accepted_at]
 other = "Accepted at"
-[split_sentence]
-other = "{{ .Before }} accepted before {{ .Year }}, {{ .From }} from {{ .Year }}."
 [th_accepted_before]
 other = "before {{ . }}"
 [tip_accepted_before]
@@ -114,8 +78,6 @@ other = "Co-authors"
 other = "Workshop"
 [tip_workshop]
 other = "Workshop papers at ICLR, NeurIPS and ICML found on OpenReview, and papers placed in Findings. Listed on the professor's page for reference; not counted anywhere."
-[th_topic_areas]
-other = "Topic areas"
 [th_topic_area]
 other = "Topic area"
 [th_topic]
@@ -142,20 +104,10 @@ other = "Submitted"
 other = "Accepted"
 [th_Rejected]
 other = "Rejected"
-[th_Rejected_public]
-other = "Rejected (public)"
 [th_Submitted_est]
 other = "Submitted, estimated"
 [th_Rejected_est]
 other = "Rejected, estimated"
-[th_rejected_iclr]
-other = "Rejected at ICLR"
-[th_rejected_iclr_recorded]
-other = "Rejected, recorded"
-[th_rejected_elsewhere_est]
-other = "Rejected elsewhere, estimated"
-[th_submitted_est]
-other = "Submitted, estimated"
 [th_majority]
 other = "majority"
 [th_first_author]
@@ -182,18 +134,12 @@ other = "other institutions*"
 other = "Not judged"
 [th_public]
 other = "Rejected papers public?"
-[th_list_source]
-other = "Source of the accepted list"
-
-# hover text of the headings
 [tip_rejected]
 other = "rejected, withdrawn or desk-rejected"
 [tip_rejected_total]
 other = "rejected, withdrawn or desk-rejected, where public: all of ICLR, and the papers authors made public elsewhere"
 [tip_rejected_est]
 other = "rejections on record (ICLR, public NeurIPS rejections, Findings) plus the papers estimated to have been rejected at the conferences that hide them, from each professor's own ICLR record (see About)"
-[tip_rejected_est_inst]
-other = "rejected at ICLR plus the papers estimated to have been rejected at the other conferences, from the university's own ICLR record"
 [tip_rejected_est_venue]
 other = "counted at ICLR; estimated elsewhere from the ICLR record of each paper's listed authors"
 [tip_own_institution]
@@ -214,18 +160,12 @@ other = "average number of co-authors per paper who are at an institution outsid
 other = "average number of co-authors per paper who are at another university or institution, in Vietnam or abroad"
 [tip_not_judged]
 other = "accepted papers without an affiliation for each author, left out"
-[tip_iclr_missing]
-other = "ICLR submissions are missing for some professors"
 [tip_rejected_where_public]
 other = "rejected, withdrawn or desk-rejected, where public"
 
 # ---------------------------------------------------------------- front page
 [home_title]
 other = "Conference papers by professors and lecturers in Vietnam, {{ .First }}&ndash;{{ .Last }}"
-[home_flag_incomplete]
-other = "Some records are incomplete or still to be confirmed. Those professors are marked with * and their pages say what is missing."
-[home_flag_pending]
-other = "{{ .Count }} uncertain matches wait for a decision, see <a href=\"{{ .URL }}\">Candidates</a>."
 [inst_score_callout]
 other = "<strong>How a university's score is calculated:</strong> A university's overall score aggregates its faculty's adjusted counts across the four core areas (AI, ML, CV, NLP) and computes the geometric mean of these four totals (each plus 1), following the CSRankings methodology."
 [rank_was]
@@ -300,36 +240,8 @@ other = "Fig. 3. Cumulative distribution of CSRankings scores, professors with a
 other = "Fig. 2. Total accepted papers and total rejected papers per year."
 
 # ---------------------------------------------------------------- professor page
-[prof_since]
-other = "At a Vietnamese university since {{ . }}"
-[prof_homepage]
-other = "Homepage"
-[prof_accepted_summary]
-one = "{{ .Count }} accepted paper at the ten conferences since {{ .Year }}"
-other = "{{ .Count }} accepted papers at the ten conferences since {{ .Year }}"
-[prof_own_page_part]
-other = " ({{ .Official }} in official conference proceedings and {{ .Own }} from personal or lab pages, shown as +{{ .Own }} with an \"unofficial\" badge below)"
-[prof_iclr_summary]
-other = "ICLR: {{ .Submitted }} submitted, {{ .Accepted }} accepted, {{ .Rejected }} rejected."
 [by_year]
 other = "By year"
-[prof_note_year]
-other = """Only ICLR publishes every submission, so the other conferences show accepted papers only."""
-[prof_note_neurips_public]
-one = "NeurIPS: {{ .Count }} rejected or withdrawn paper was made public by the authors and is listed below."
-other = "NeurIPS: {{ .Count }} rejected or withdrawn papers were made public by the authors and are listed below."
-[majority_title]
-other = "Papers with a majority of authors from {{ . }}"
-[majority_note]
-other = """Accepted papers on which more than half of the authors list {{ .Inst }}.
-Only papers from a list that prints an affiliation for each author can be judged: {{ .Judged }} here."""
-[majority_left_out]
-one = " The other {{ .Count }} accepted paper is left out of this table and the next."
-other = " The other {{ .Count }} accepted papers are left out of this table and the next."
-[first_title]
-other = "Papers with a first author from {{ . }}"
-[first_note]
-other = "Accepted papers whose first author lists {{ . }}."
 [chart_title]
 other = "Submitted and accepted per year"
 [chart_note]
@@ -390,27 +302,6 @@ other = "Papers with a first author from the professor's university"
 other = "Accepted papers whose first author lists the professor's current university."
 
 # ---------------------------------------------------------------- institutions
-[inst_list_majority]
-other = "Papers with a majority of authors from the university"
-[inst_list_majority_note]
-other = """Accepted papers on which more than half of the authors list the university.
-Only papers from a list that prints an affiliation for each author can be judged; the others are counted under "Not judged" and left out of this table and the next."""
-[inst_list_first]
-other = "Papers with a first author from the university"
-[inst_list_first_note]
-other = "Accepted papers whose first author lists the university."
-[inst_summary]
-other = "{{ .Profs }} professors listed, {{ .Accepted }} accepted papers at the ten conferences"
-[inst_summary_own]
-other = ", {{ . }} of them known only from personal pages (unofficial)"
-[inst_iclr]
-other = "ICLR: {{ .Submitted }} submitted, {{ .Accepted }} accepted, {{ .Rejected }} rejected."
-[inst_estimated]
-other = " Counting the rejections hidden at the other conferences, estimated from this ICLR record, about {{ . }} papers were rejected in all."
-[inst_once]
-other = "A paper with several professors of this university is counted once."
-[inst_incomplete]
-other = "The OpenReview records of at least one professor have not been fetched, so the ICLR submitted and rejected numbers are too low."
 [inst_professors]
 other = "Professors"
 
@@ -427,22 +318,6 @@ other = "no"
 other = "{{ . }}*"
 [venue_list_note]
 other = "* Self-disclosed and Findings-track papers are counted as rejected."
-[venue_full]
-other = "{{ . }} publishes every submission and its outcome on OpenReview, so submitted and rejected papers can be counted."
-[venue_partial]
-other = "{{ . }} publishes accepted papers. A rejected paper is public only when its authors chose to make it so, which means the rejected numbers below are a lower bound and submitted numbers cannot be given."
-[venue_none]
-other = "{{ . }} publishes accepted papers only, so submitted and rejected papers cannot be counted; the only rejections on record are papers placed in Findings and rejections their authors made public."
-[venue_once]
-other = "The numbers cover the listed professors; a paper with several of them is counted once."
-[venue_own_page]
-other = "{{ .Count }} accepted papers are known only from personal pages. They are shown as +{{ .Count }}, tagged \"unofficial\" in the list, and stay so until the conference publishes them."
-[venue_estimate_note]
-other = "{{ .Name }} does not publish its rejections, so they are estimated from the ICLR record of each paper's listed authors, as on their pages: about {{ .Ratio }} submissions per accepted paper (see About)."
-[tip_estimated_venue_year]
-other = "estimated from the ICLR record of each paper's listed authors"
-
-# ---------------------------------------------------------------- feedback form
 [fb_title]
 other = "Title"
 [fb_title_placeholder]
@@ -455,13 +330,6 @@ other = "What is incorrect or missing, on which page, and a link that shows it, 
 other = "Continue on GitHub"
 [fb_submit_mail]
 other = "Send by e-mail"
-[fb_note]
-other = "Feedback on GitHub is public, so we kindly ask you not to include private contact details there; you are also welcome to <a href=\"{{ . }}\">read the feedback already received</a>. Feedback by e-mail goes only to the site maintainer."
-
-# ---------------------------------------------------------------- about page table
-[cov_no_aff]
-other = "no affiliations in this list"
-
 [img_source]
 other = "Source of the picture"
 
@@ -642,9 +510,6 @@ other = "different topic labels the conference gave the papers, as in the topic 
 
 [prof_pie_caption]
 other = "All years: {{ .Accepted }} accepted, {{ .Recorded }} rejected and on record, and about {{ .Estimated }} rejected elsewhere (estimate), so about {{ .Total }} submissions."
-
-[prof_other_rejected]
-other = "Rejected and on record at other conferences (public rejections and papers placed in Findings): {{ . }}."
 
 [role_source]
 other = "Source of this role"

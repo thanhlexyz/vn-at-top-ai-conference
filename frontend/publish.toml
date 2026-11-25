@@ -5,8 +5,6 @@ baseURL = 'https://thanhlexyz.github.io/vn-at-top-ai-conference/'
 [params]
   # lets search engines index the public site
   local = false
-  # AI-text shares per paper stay off the public site until the maintainer decides otherwise
-  showAiScores = false
   showOtdScores = true
   # the public site lists the titles of rejected and withdrawn papers; false shows the counts only
   showNonAcceptedTitles = true

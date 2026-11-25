@@ -26,13 +26,11 @@ import datetime
 import gzip
 import json
 import os
-import sys
 import time
 import urllib.parse
 import urllib.request
 
-from common import CSV_DIR  # backend/data/
-from common import (BACKEND, WORK, YEARS, load_roster, name_key, norm_title, post_class,
+from common import (CSV_DIR, WORK, YEARS, load_roster, name_key, norm_title, post_class,
                     token_key, vn_institutions, PARENT)
 
 SOURCES = {"aaai": "S4210191458", "ijcai": "S4306419999"}   # OpenAlex sources: AAAI and IJCAI proceedings

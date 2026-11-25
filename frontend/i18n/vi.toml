@@ -17,8 +17,6 @@ other = "Ngôn ngữ"
 other = "Trên trang này"
 
 # ---------------------------------------------------------------- shared words
-[venues_five]
-other = "mười hội nghị"
 [none]
 other = "Chưa có."
 [titles_hidden]
@@ -33,16 +31,6 @@ other = "bị từ chối"
 other = "bị từ chối"
 [status_desk_rejected]
 other = "bị loại sơ bộ"
-[not_held]
-other = "không tổ chức năm này"
-[not_published_yet]
-other = "chưa công bố"
-[list_not_published]
-other = "danh sách chưa công bố"
-[not_yet_in_vietnam]
-other = "chưa công tác tại Việt Nam"
-[incomplete_star]
-other = "Hồ sơ chưa đầy đủ hoặc đang chờ xác nhận; chi tiết xin xem tại trang của giảng viên"
 [own_page_more]
 other = "Thêm {{ .Count }} bài được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm, chưa có trong danh sách chính thức"
 [reason_before]
@@ -51,26 +39,6 @@ other = "công bố trước năm {{ .Year }}, thời điểm giảng viên về
 other = "nhánh {{ .Track }}"
 [not_counted]
 other = "Không tính: {{ .Reason }}."
-[ai_share]
-other = "{{ . }}% câu AI"
-[th_ai_avg]
-other = "Câu AI, trung bình"
-[tip_ai_avg]
-other = "Trung bình, trên các bài đã quét của giảng viên, tỷ lệ câu trong phần nội dung chính bị bộ phát hiện MELD đánh dấu. Đây chỉ là ước lượng của mô hình cho các bài báo, không phải kết luận về người; bài không có PDF công khai chưa được quét."
-[ai_avg_cell]
-other = "{{ . }} bài đã quét"
-[th_ai_share]
-other = "Câu AI"
-[th_p_ai]
-other = "p_AI"
-[tip_ai_share]
-other = "Tỷ lệ câu trong phần nội dung chính bị bộ phát hiện MELD đánh dấu. Đây chỉ là ước lượng của mô hình cho bài báo, không phải kết luận về tác giả; xem trang Giới thiệu."
-[ai_p]
-other = "{{ . }}% p_AI"
-[ai_p_hint]
-other = "Điểm của bộ phát hiện cho toàn bộ phần nội dung chính, tính theo phần trăm. Điểm này cao ở hầu hết bài báo gần đây, nên tỷ lệ câu bị đánh dấu cho biết nhiều hơn."
-[ai_share_hint]
-other = "{{ .Flagged }} trên {{ .Sentences }} câu của phần nội dung chính bị bộ phát hiện MELD đánh dấu. Đây chỉ là ước lượng của mô hình cho riêng bài báo này, không phải kết luận về tác giả; ngưỡng được hiệu chỉnh trên cả văn bản."
 [later_accepted]
 other = "Bài có cùng tiêu đề sau đó đã được chấp nhận tại {{ . }}."
 [unofficial_because]
@@ -83,8 +51,6 @@ other = "Giảng viên"
 other = "Giảng viên"
 [th_institution]
 other = "Trường"
-[th_year]
-other = "Năm"
 [th_venue]
 other = "Hội nghị"
 [th_title]
@@ -93,8 +59,6 @@ other = "Tên bài"
 other = "Kết quả"
 [th_accepted_at]
 other = "Được nhận tại"
-[split_sentence]
-other = "{{ .Before }} bài được nhận trước năm {{ .Year }}, {{ .From }} bài từ năm {{ .Year }}."
 [th_accepted_before]
 other = "trước {{ . }}"
 [tip_accepted_before]
@@ -113,8 +77,6 @@ other = "Đồng tác giả"
 other = "Workshop"
 [tip_workshop]
 other = "Số bài workshop ở ICLR, NeurIPS và ICML có trên OpenReview, cùng các bài được xếp vào Findings. Liệt kê ở trang của từng người để tham khảo; không được tính trong thống kê."
-[th_topic_areas]
-other = "Số lĩnh vực"
 [th_topic_area]
 other = "Lĩnh vực"
 [th_topic]
@@ -141,20 +103,10 @@ other = "Đã nộp"
 other = "Được nhận"
 [th_Rejected]
 other = "Bị từ chối"
-[th_Rejected_public]
-other = "Bị từ chối (công khai)"
 [th_Submitted_est]
 other = "Đã nộp, ước tính"
 [th_Rejected_est]
 other = "Bị từ chối, ước tính"
-[th_rejected_iclr]
-other = "Bị từ chối ở ICLR"
-[th_rejected_iclr_recorded]
-other = "Bị từ chối, đếm được"
-[th_rejected_elsewhere_est]
-other = "Bị từ chối ở nơi khác, ước tính"
-[th_submitted_est]
-other = "Đã nộp, ước tính"
 [th_majority]
 other = "đa số tác giả"
 [th_first_author]
@@ -181,17 +133,12 @@ other = "đơn vị khác*"
 other = "Không xác định"
 [th_public]
 other = "Công khai bài bị từ chối?"
-[th_list_source]
-other = "Nguồn danh sách bài được nhận"
-
 [tip_rejected]
 other = "bị từ chối, rút bài hoặc bị loại sơ bộ"
 [tip_rejected_total]
 other = "bị từ chối, rút bài hoặc bị loại sơ bộ, nếu công khai: toàn bộ ICLR, và các bài tác giả tự công khai ở hội nghị khác"
 [tip_rejected_est]
 other = "bài bị từ chối có ghi nhận (ICLR, bài bị từ chối công khai tại NeurIPS, bài Findings) cộng số bài ước tính bị từ chối ở các hội nghị không công khai, theo kết quả ICLR của chính giảng viên (xem trang Giới thiệu)"
-[tip_rejected_est_inst]
-other = "bị từ chối ở ICLR cộng số bài ước tính bị từ chối ở các hội nghị khác, theo kết quả ICLR của chính trường"
 [tip_rejected_est_venue]
 other = "đếm được ở ICLR; ở các hội nghị khác ước tính theo kết quả ICLR của các tác giả trong danh sách của từng bài"
 [tip_own_institution]
@@ -212,18 +159,12 @@ other = "số đồng tác giả trung bình mỗi bài ở đơn vị ngoài Vi
 other = "số đồng tác giả trung bình mỗi bài ở trường hoặc đơn vị khác, trong nước hay nước ngoài"
 [tip_not_judged]
 other = "bài được nhận không ghi đơn vị của từng tác giả, không tính"
-[tip_iclr_missing]
-other = "còn thiếu bài nộp ICLR của một số giảng viên"
 [tip_rejected_where_public]
 other = "bị từ chối, rút bài hoặc bị loại sơ bộ, nếu công khai"
 
 # ---------------------------------------------------------------- front page
 [home_title]
 other = "Bài báo tại các hội nghị AI hàng đầu của giảng viên ở Việt Nam, {{ .First }}&ndash;{{ .Last }}"
-[home_flag_incomplete]
-other = "Một số hồ sơ hiện chưa đầy đủ hoặc đang chờ xác nhận. Các giảng viên này được đánh dấu * và trang của từng giảng viên có ghi rõ những thông tin còn thiếu."
-[home_flag_pending]
-other = "Hiện có {{ .Count }} trường hợp trùng tên chưa được xác nhận, xin xem tại trang <a href=\"{{ .URL }}\">Ứng viên</a>."
 [inst_score_callout]
 other = "<strong>Cách tính điểm của trường:</strong> Điểm tổng hợp của một trường được tính bằng cách cộng điểm của các giảng viên theo từng lĩnh vực trong 4 lĩnh vực chính (AI, ML, CV, NLP), sau đó lấy trung bình nhân (geometric mean) của 4 giá trị này (mỗi giá trị cộng thêm 1) theo phương pháp của CSRankings."
 [rank_was]
@@ -298,33 +239,8 @@ other = "Hình 3. Phân bố tích luỹ điểm CSRankings của các giảng v
 other = "Hình 2. Tổng số bài được chấp nhận và tổng số bài bị từ chối theo từng năm."
 
 # ---------------------------------------------------------------- professor page
-[prof_since]
-other = "Công tác tại Việt Nam từ năm {{ . }}"
-[prof_homepage]
-other = "Trang cá nhân"
-[prof_accepted_summary]
-other = "Từ năm {{ .Year }}, giảng viên có {{ .Count }} bài báo được chấp nhận tại mười hội nghị hàng đầu"
-[prof_own_page_part]
-other = " (gồm {{ .Official }} bài trong kỷ yếu chính thức và {{ .Own }} bài được công bố sớm từ trang cá nhân hoặc lab, hiển thị dưới dạng +{{ .Own }} kèm nhãn \"chưa chính thức\" bên dưới)"
-[prof_iclr_summary]
-other = "Tại ICLR: {{ .Submitted }} bài nộp, {{ .Accepted }} bài được chấp nhận, {{ .Rejected }} bài bị từ chối."
 [by_year]
 other = "Theo năm"
-[prof_note_year]
-other = """Do chỉ ICLR công khai toàn bộ bài nộp, các hội nghị còn lại chỉ có số liệu về bài được chấp nhận."""
-[prof_note_neurips_public]
-other = "Tại NeurIPS, có {{ .Count }} bài bị từ chối hoặc rút được tác giả tự công khai; các bài này được liệt kê bên dưới."
-[majority_title]
-other = "Bài có đa số tác giả thuộc {{ . }}"
-[majority_note]
-other = """Các bài được chấp nhận có hơn một nửa số tác giả ghi đơn vị công tác là {{ .Inst }}.
-Chỉ có thể xét các bài trong danh sách có ghi đơn vị công tác của từng tác giả: {{ .Judged }} bài."""
-[majority_left_out]
-other = " {{ .Count }} bài được chấp nhận còn lại không được đưa vào bảng này và bảng tiếp theo."
-[first_title]
-other = "Bài có tác giả đầu thuộc {{ . }}"
-[first_note]
-other = "Các bài được chấp nhận có tác giả đứng đầu ghi đơn vị công tác là {{ . }}."
 [chart_title]
 other = "Số bài nộp và được nhận theo năm"
 [chart_note]
@@ -385,27 +301,6 @@ other = "Bài có tác giả đầu cùng trường với giảng viên"
 other = "Các bài được chấp nhận có tác giả đứng đầu ghi đơn vị công tác là trường hiện tại của giảng viên."
 
 # ---------------------------------------------------------------- institutions
-[inst_list_majority]
-other = "Bài có đa số tác giả thuộc trường"
-[inst_list_majority_note]
-other = """Các bài được chấp nhận có hơn một nửa số tác giả ghi đơn vị công tác là trường.
-Chỉ có thể xét các bài trong danh sách có ghi đơn vị công tác của từng tác giả; các bài còn lại được thống kê ở cột "Không xác định" và không được đưa vào bảng này và bảng tiếp theo."""
-[inst_list_first]
-other = "Bài có tác giả đầu thuộc trường"
-[inst_list_first_note]
-other = "Các bài được chấp nhận có tác giả đứng đầu ghi đơn vị công tác là trường."
-[inst_summary]
-other = "Trường có {{ .Profs }} giảng viên trong danh sách, với {{ .Accepted }} bài được chấp nhận tại mười hội nghị"
-[inst_summary_own]
-other = ", trong đó {{ . }} bài chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm (chưa chính thức)"
-[inst_iclr]
-other = "Tại ICLR: {{ .Submitted }} bài nộp, {{ .Accepted }} bài được chấp nhận, {{ .Rejected }} bài bị từ chối."
-[inst_estimated]
-other = " Nếu tính cả số bài bị từ chối không được công khai tại các hội nghị khác (ước tính dựa trên kết quả ICLR nêu trên), tổng số bài bị từ chối vào khoảng {{ . }} bài."
-[inst_once]
-other = "Một bài có nhiều giảng viên của trường chỉ được tính một lần."
-[inst_incomplete]
-other = "Hồ sơ OpenReview của ít nhất một giảng viên chưa được thu thập, nên số bài nộp và số bài bị từ chối tại ICLR thấp hơn thực tế."
 [inst_professors]
 other = "Giảng viên"
 
@@ -422,22 +317,6 @@ other = "không"
 other = "{{ . }}*"
 [venue_list_note]
 other = "* Bài tác giả tự công khai và bài thuộc Findings được tính là bị từ chối."
-[venue_full]
-other = "{{ . }} công khai toàn bộ bài nộp cùng kết quả trên OpenReview, do đó có thể thống kê số bài nộp và số bài bị từ chối."
-[venue_partial]
-other = "{{ . }} công khai các bài được chấp nhận. Bài bị từ chối chỉ được công khai khi tác giả lựa chọn, vì vậy số bài bị từ chối dưới đây là con số tối thiểu và không có số liệu về số bài nộp."
-[venue_none]
-other = "{{ . }} chỉ công khai các bài được chấp nhận, do đó không thể thống kê số bài nộp và số bài bị từ chối; bài bị từ chối duy nhất có ghi nhận là bài được xếp vào Findings và bài bị từ chối do tác giả tự công khai."
-[venue_once]
-other = "Số liệu được tính cho các giảng viên trong danh sách; một bài có nhiều giảng viên trong danh sách chỉ được tính một lần."
-[venue_own_page]
-other = "Có {{ .Count }} bài được chấp nhận chỉ được công bố trên trang công khai của giảng viên hoặc phòng thí nghiệm. Các bài này được thể hiện dưới dạng +{{ .Count }} và gắn nhãn \"chưa chính thức\" trong danh sách cho đến khi hội nghị công bố."
-[venue_estimate_note]
-other = "{{ .Name }} không công khai bài bị từ chối, nên số này được ước tính theo kết quả ICLR của các tác giả trong danh sách của từng bài, như trên trang của họ: khoảng {{ .Ratio }} lần nộp cho mỗi bài được nhận (xem trang Giới thiệu)."
-[tip_estimated_venue_year]
-other = "ước tính theo kết quả ICLR của các tác giả trong danh sách của từng bài"
-
-# ---------------------------------------------------------------- feedback form
 [fb_title]
 other = "Tiêu đề"
 [fb_title_placeholder]
@@ -450,13 +329,6 @@ other = "Thông tin nào chưa chính xác hoặc còn thiếu, ở trang nào, 
 other = "Tiếp tục trên GitHub"
 [fb_submit_mail]
 other = "Gửi qua email"
-[fb_note]
-other = "Góp ý trên GitHub được công khai, kính mong quý thầy cô và anh chị không ghi thông tin liên lạc riêng ở đó; quý thầy cô và anh chị cũng có thể <a href=\"{{ . }}\">xem các góp ý đã có</a>. Góp ý qua email chỉ được gửi riêng tới người quản lý trang."
-
-# ---------------------------------------------------------------- about page table
-[cov_no_aff]
-other = "danh sách này không ghi đơn vị"
-
 [img_source]
 other = "Nguồn hình ảnh"
 
@@ -635,9 +507,6 @@ other = "số nhãn chủ đề khác nhau mà hội nghị gán cho bài, như 
 
 [prof_pie_caption]
 other = "Mọi năm: {{ .Accepted }} bài được nhận, {{ .Recorded }} bài bị từ chối có ghi nhận và khoảng {{ .Estimated }} bài bị từ chối ở nơi khác (ước tính), tức khoảng {{ .Total }} lần nộp."
-
-[prof_other_rejected]
-other = "Bài bị từ chối có ghi nhận ở các hội nghị khác (bài bị từ chối công khai và bài được xếp vào Findings): {{ . }}."
 
 [role_source]
 other = "Nguồn của chức vụ này"
