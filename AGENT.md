@@ -290,7 +290,10 @@ explains (refer to About instead). Surfaces, grid and text are CSS tokens define
 and table hues (accepted green, rejected red, graph colours) are fixed and checked on both. Some English strings from
 the build are parsed by templates (a reason starting with `before `, a track ending in ` track`): keep that wording.
 
-**Collaboration graphs** (`backend/code/graph.py`; the professors' graph is Domestic cooperation at `/domestic/`): line length follows shared papers (more papers, closer); no line passes
+**Collaboration graphs** (`backend/code/graph.py`; the professors' graph is Domestic cooperation at `/domestic/`): line length follows shared
+papers only loosely (more papers, closer; the maintainer allowed relaxing it on 2026-11-25 so that labels and crossings
+come first); it also links professors who share an ICLR submission under review (`under_review_links`, no titles, the
+maintainer's decision of 2026-11-25); no line passes
 through a circle; labels never overlap lines or other labels and never leave the drawing; crossings few. After any
 change, check crossings and label clearance and look at screenshots. They use every counted
 submission (rejected and withdrawn included) plus workshop papers from the Vietnam years, and feed the co-author
