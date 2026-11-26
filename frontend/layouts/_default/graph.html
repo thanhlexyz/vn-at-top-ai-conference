@@ -13,6 +13,8 @@
 </ul>
 </aside>
 <div class="toc-body">
+{{- $names := slice }}{{ range where $g.nodes "linked" true }}{{ $names = $names | append (cond (and $vi .name_vi) .name_vi .name) }}{{ end }}
+{{ partial "graph-tools.html" $names }}
 <figure class="graph">
 <svg class="net" viewBox="0 0 {{ $g.width }} {{ $g.height }}" role="img" aria-label="{{ .Title }}">
 	{{- range $g.edges }}
@@ -24,7 +26,7 @@
 	{{- range where $g.nodes "linked" true }}
 	{{- $n := . }}
 	{{- $label := cond (and $vi .name_vi) .name_vi .name }}
-	<a {{ with .url }}href="{{ . | relLangURL }}"{{ end }} class="node {{ .color }}" data-id="{{ .id }}" data-color="{{ .color }}">
+	<a {{ with .url }}href="{{ . | relLangURL }}"{{ end }} class="node {{ .color }}" data-id="{{ .id }}" data-color="{{ .color }}" data-name="{{ $label }}" data-alt="{{ cond (eq $label .name) (.name_vi | default "") .name }}">
 		<circle cx="{{ .x }}" cy="{{ .y }}" r="{{ .r }}"{{ if hasPrefix .color "ring" }} style="stroke-width: {{ math.Round (mul .r 0.3) }}px"{{ end }}/>
 		<text class="deg" x="{{ .x }}" y="{{ add .y 4 }}" text-anchor="middle">{{ .degree }}</text>
 		<text x="{{ .lx }}" y="{{ .ly }}" text-anchor="{{ .anchor }}">{{ $label }}</text>

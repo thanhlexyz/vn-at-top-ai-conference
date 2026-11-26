@@ -481,6 +481,18 @@ svg.net .node text { font-size: 14px ; fill: var(--fg) ; paint-order: stroke ; s
 svg.net .node text.deg { font-size: 12px ; font-weight: 700 ; fill: #ffffff ; stroke: none ; pointer-events: none ; }
 svg.net .node.c4 text.deg, svg.net .node.c0 text.deg { fill: #1d1d1f ; }
 svg.net .node { cursor: pointer ; transition: opacity .15s ; }
+svg.net { user-select: none ; -webkit-user-select: none ; }
+svg.net.zoomed { cursor: grab ; touch-action: none ; }
+svg.net.panning { cursor: grabbing ; }
+.zoom-tools { display: flex ; flex-wrap: wrap ; align-items: center ; gap: 0.4em ; margin: 0.4em 0 0 ; }
+.zoom-tools[hidden] { display: none ; }
+.zoom-tools button { background: none ; border: 1px solid var(--line) ; color: var(--link) ; font: inherit ; cursor: pointer ; border-radius: 4px ; padding: 0.1em 0.65em ; min-width: 2.2em ; }
+.zoom-tools button:focus-visible { outline: 2px solid var(--link) ; outline-offset: 2px ; }
+.zoom-tools .note { margin-left: 0.5em ; }
+.graph-tools { position: sticky ; top: 0 ; z-index: 2 ; background: var(--bg) ; padding: 0.3em 0 0.2em ; }
+.graph-search { display: flex ; flex-wrap: wrap ; align-items: center ; gap: 0.4em ; margin: 0 ; }
+.graph-search[hidden] { display: none ; }
+.graph-search input { font: inherit ; padding: 0.15em 0.4em ; border: 1px solid var(--line) ; background: var(--bg) ; color: var(--fg) ; border-radius: 4px ; width: 16em ; max-width: 60vw ; }
 svg.net a.node:not([href]) { cursor: default ; }
 svg.net.focus .edge:not(.hl), svg.net.focus .ew:not(.hl), svg.net.focus .node:not(.hl) { opacity: 0.12 ; }
 svg.net.focus .edge.hl { stroke: var(--chart-value) ; }

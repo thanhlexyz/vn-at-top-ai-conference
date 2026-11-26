@@ -590,3 +590,19 @@ other = "xem"
 other = "Tại {{ .Name }}, các giảng viên trong danh sách theo dõi chưa có bài báo nào được nhận kể từ năm {{ .Year }}."
 [chance_inline]
 other = "khả năng được nhận {{ . }}%"
+[graph_find]
+other = "Tìm theo tên"
+[graph_find_placeholder]
+other = "Tên"
+[graph_find_none]
+other = "Không có ai trên đồ thị khớp với “{q}”."
+[zoom_in]
+other = "Phóng to"
+[zoom_out]
+other = "Thu nhỏ"
+[zoom_reset]
+other = "Đặt lại"
+[zoom_reset_tip]
+other = "Xem toàn bộ đồ thị"
+[zoom_hint]
+other = "Ctrl/⌘ + cuộn chuột hoặc chụm hai ngón để phóng to, kéo để di chuyển"

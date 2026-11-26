@@ -322,7 +322,14 @@ through a circle (`repair` ends each layout: a seeded search moves circles off l
 group's area, at the cost of a crossing if need be); labels never overlap lines or other labels and never leave the drawing; crossings few. After any
 change, check crossings and label clearance and look at screenshots. Hovering a circle lights it, its links and its
 neighbours; hovering a university in the legend (dot, logo or name) lights that university's professors, their one-hop
-neighbours, the links between them and the legend entries of the universities reached (`site.js`). They use every counted
+neighbours, the links between them and the legend entries of the universities reached (`site.js`).
+**Search and zoom** (both cooperation pages; `partials/graph-tools.html`, the last two blocks of `site.js`; taken from
+the maintainer's awesome-nnv site, 2026-11-26): the search box pins a person (`svg.pin`), so the highlight stays until
+the box is cleared; it matches the name shown and the other language's form (`data-name`, `data-alt`), without
+accents, whole words before prefixes before substrings. Zoom rewrites the SVG `viewBox`, never the data:
+Ctrl/⌘ + wheel (and trackpad pinch) zooms about the pointer, a plain wheel scrolls the page, the +/−/Reset buttons
+show only with JavaScript, zoom 1–6×, pan clamped to the drawing; a drag pans only after 4 px and only when zoomed,
+so a click on a circle still opens the page. They use every counted
 submission (rejected and withdrawn included) plus workshop papers from the Vietnam years, and feed the co-author
 lists. Researcher colours: HUST red, VinUni blue, HCMUS cyan (logo hues), the next three institutions ochre, green
 and purple, the three after them rings of those colours (never a brand colour as a ring), the rest grey; the six

@@ -595,3 +595,19 @@ other = "view"
 other = "At {{ .Name }}, professors on the list have no accepted paper yet since {{ .Year }}."
 [chance_inline]
 other = "acceptance chance {{ . }}%"
+[graph_find]
+other = "Search by name"
+[graph_find_placeholder]
+other = "Name"
+[graph_find_none]
+other = "No one on the graph matches “{q}”."
+[zoom_in]
+other = "Zoom in"
+[zoom_out]
+other = "Zoom out"
+[zoom_reset]
+other = "Reset"
+[zoom_reset_tip]
+other = "Show the whole graph"
+[zoom_hint]
+other = "Ctrl/⌘ + scroll or pinch to zoom, drag to pan"
