@@ -103,6 +103,12 @@
    "url": ""
   },
   {
+   "id": "x-tdtu",
+   "name": "TDTU",
+   "full": "Ton Duc Thang University",
+   "url": ""
+  },
+  {
    "id": "x-vinai",
    "name": "VinAI",
    "full": "VinAI Research",
@@ -112,13 +118,13 @@
  "edges": [
   {
    "a": "hust",
-   "b": "x-vinai",
-   "weight": 14
+   "b": "x-fpt",
+   "weight": 15
   },
   {
    "a": "hust",
-   "b": "x-fpt",
-   "weight": 13
+   "b": "x-vinai",
+   "weight": 14
   },
   {
    "a": "hust",
@@ -201,6 +207,11 @@
    "weight": 1
   },
   {
+   "a": "fptu",
+   "b": "x-fpt",
+   "weight": 1
+  },
+  {
    "a": "haui",
    "b": "hust",
    "weight": 1
@@ -223,6 +234,11 @@
   {
    "a": "hcmus",
    "b": "uit",
+   "weight": 1
+  },
+  {
+   "a": "hust",
+   "b": "x-tdtu",
    "weight": 1
   },
   {
@@ -253,6 +269,11 @@
   {
    "a": "uit",
    "b": "x-vinai",
+   "weight": 1
+  },
+  {
+   "a": "x-fpt",
+   "b": "x-tdtu",
    "weight": 1
   }
  ]

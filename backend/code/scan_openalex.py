@@ -4,17 +4,23 @@ import datetime
 import gzip
 import json
 import os
+import re
 import time
 import urllib.parse
 import urllib.request
 
-from common import (CSV_DIR, WORK, YEARS, load_roster, name_key, norm_title, post_class,
+from common import (CSV_DIR, WORK, YEARS, load_roster, name_key, norm_title, post_class, read_csv,
                     token_key, vn_institutions, PARENT)
 
-SOURCES = {"aaai": "S4210191458", "ijcai": "S4306419999"}
+SOURCES = {"aaai": "primary_location.source.id:S4210191458", "ijcai": "primary_location.source.id:S4306419999",
+           "icra": "doi_starts_with:10.1109/icra", "iros": "doi_starts_with:10.1109/iros",
+           "rss": "doi_starts_with:10.15607/rss."}
+BY_DOI = {"icra": re.compile(r"10\.1109/icra\d+\.(20\d\d)\."), "iros": re.compile(r"10\.1109/iros\d+\.(20\d\d)\."),
+          "rss": re.compile(r"10\.15607/rss\.(20\d\d)\.")}
 OUT = WORK / "openalex_vn.csv"
 LEADS = CSV_DIR / "staff_leads.csv"
-LEAD_FIELDS = ["name", "openreview_id", "post", "institution_on_paper", "papers", "paper_url", "note", "found"]
+LEAD_FIELDS = ["name", "openreview_id", "post", "institution_on_paper", "papers", "paper_url", "note", "found",
+               "staff_page", "source"]
 FIELDS = ["venue", "year", "title", "track", "url", "author", "openalex_author", "printed_affiliation", "institutions",
           "on_roster", "roster_approved"]
 
@@ -88,7 +94,10 @@ def write_leads(rows, roster):
                       "institution_on_paper": paper_inst[:80],
                       "papers": "; ".join(f"{r['venue'].upper()} {r['year']}: {r['title']}" for r in papers),
                       "paper_url": papers[0].get("url", ""), "note": "; ".join(note),
-                      "found": datetime.date.today().isoformat()})
+                      "found": datetime.date.today().isoformat(), "staff_page": "", "source": "scan"})
+    scanned = {token_key(lead["name"]) for lead in leads}
+    by_hand = [r for r in read_csv(LEADS) if r.get("source") == "by hand"] if LEADS.exists() else []
+    leads += [r for r in by_hand if token_key(r["name"]) not in scanned]
     with open(LEADS, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=LEAD_FIELDS)
         w.writeheader()
@@ -97,7 +106,7 @@ def write_leads(rows, roster):
 
 
 def main():
-    ap = argparse.ArgumentParser(description='Leads for AAAI and IJCAI papers with an author at an institution in Vietnam, from OpenAlex.')
+    ap = argparse.ArgumentParser(description='Leads for AAAI, IJCAI, ICRA, IROS and RSS papers with an author at an institution in Vietnam, from OpenAlex.')
     ap.add_argument("--leads", action="store_true", help="look the names up on OpenReview and write staff_leads.csv")
     args = ap.parse_args()
     tracks = {}
@@ -111,17 +120,24 @@ def main():
                 roster[name_key(n)] = p
     rows = []
     for venue, source in SOURCES.items():
-        for year in range(min(YEARS), max(YEARS) + 1):
+        for year in ([None] if venue in BY_DOI else range(min(YEARS), max(YEARS) + 1)):
             page = 1
             while True:
-                d = get({"filter": f"primary_location.source.id:{source},publication_year:{year},authorships.countries:VN",
-                         "per-page": 100, "page": page, "select": "title,publication_year,authorships"})
+                when = "" if year is None else f",publication_year:{year}"
+                d = get({"filter": f"{source}{when},authorships.countries:VN",
+                         "per-page": 100, "page": page, "select": "doi,title,publication_year,authorships"})
                 for w in d["results"]:
+                    held = year
+                    if venue in BY_DOI:
+                        m = BY_DOI[venue].search((w.get("doi") or "").lower())
+                        if not m or int(m.group(1)) not in YEARS:
+                            continue
+                        held = int(m.group(1))
                     for a in w["authorships"]:
                         if "VN" not in (a.get("countries") or []):
                             continue
                         who = roster.get(name_key(a["author"]["display_name"]))
-                        rows.append({"venue": venue, "year": year, "title": w["title"],
+                        rows.append({"venue": venue, "year": held, "title": w["title"],
                                      "track": tracks.get((venue, norm_title(w["title"] or "")), ("not in the site's list", ""))[0],
                                      "url": tracks.get((venue, norm_title(w["title"] or "")), ("", ""))[1],
                                      "author": a["author"]["display_name"],

@@ -83,7 +83,7 @@ other = "đã nộp"
 [th_score]
 other = "điểm CSRankings"
 [tip_score_inst]
-other = "Theo cách CSRankings xếp hạng các trường: điểm hiệu chỉnh của các giảng viên được cộng lại theo từng lĩnh vực (AI, ML, CV, NLP), và điểm là trung bình nhân của (điểm lĩnh vực + 1) trên các lĩnh vực; bảng được xếp theo điểm này"
+other = "Theo cách CSRankings xếp hạng các trường: điểm hiệu chỉnh của các giảng viên được cộng lại theo từng lĩnh vực (AI, ML, CV, NLP, RB), và điểm là trung bình nhân của (điểm lĩnh vực + 1) trên các lĩnh vực; bảng được xếp theo điểm này"
 [tip_score]
 other = "Mỗi bài được nhận tính 1 / (số tác giả của bài), như CSRankings; bảng được xếp theo điểm này"
 [th_accepted]
@@ -160,7 +160,7 @@ other = "bị từ chối, rút bài hoặc bị loại sơ bộ, nếu công kh
 [home_title]
 other = "Bài báo tại các hội nghị AI hàng đầu của giảng viên ở Việt Nam, {{ .First }}&ndash;{{ .Last }}"
 [inst_score_callout]
-other = "<strong>Cách tính điểm của trường:</strong> Điểm tổng hợp của một trường được tính bằng cách cộng điểm của các giảng viên theo từng lĩnh vực trong 4 lĩnh vực chính (AI, ML, CV, NLP), sau đó lấy trung bình nhân (geometric mean) của 4 giá trị này (mỗi giá trị cộng thêm 1) theo phương pháp của CSRankings."
+other = "<strong>Cách tính điểm của trường:</strong> Điểm tổng hợp của một trường được tính bằng cách cộng điểm của các giảng viên theo từng lĩnh vực trong 5 lĩnh vực (AI, ML, CV, NLP, RB), sau đó lấy trung bình nhân (geometric mean) của 5 giá trị này (mỗi giá trị cộng thêm 1) theo phương pháp của CSRankings."
 [rank_was]
 other = "Hạng khi chưa tính các bài có thể được nhận ở {{ .Base }}: {{ .Rank }}"
 [rank_new]
@@ -372,7 +372,7 @@ other = "Wikipedia"
 other = "ResearchGate"
 
 [scholar_note]
-other = "Số liệu được ghi lại từ <a href=\"{{ .URL }}\">hồ sơ Google Scholar</a> vào ngày {{ .Date }} và không được cập nhật tự động. Google Scholar thống kê toàn bộ công bố, không chỉ riêng mười hội nghị."
+other = "Số liệu được ghi lại từ <a href=\"{{ .URL }}\">hồ sơ Google Scholar</a> vào ngày {{ .Date }} và không được cập nhật tự động. Google Scholar thống kê toàn bộ công bố, không chỉ riêng mười ba hội nghị."
 
 [scholar_all]
 other = "Tất cả"
@@ -396,10 +396,10 @@ other = "Số trích dẫn theo năm, theo Google Scholar tại ngày ghi nhận
 other = "Theo hồ sơ Google Scholar của từng giảng viên, ghi nhận ngày 2026-10-02; Google Scholar thống kê toàn bộ công bố"
 
 [seo_professor]
-other = "{{ .Name }} ({{ .Inst }}): {{ .Accepted }} bài được chấp nhận tại AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL và EMNLP; {{ .Submitted }} bài nộp ICLR, {{ .Rejected }} bài bị từ chối."
+other = "{{ .Name }} ({{ .Inst }}): {{ .Accepted }} bài được chấp nhận tại AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP, ICRA, IROS và RSS; {{ .Submitted }} bài nộp ICLR, {{ .Rejected }} bài bị từ chối."
 
 [seo_institution]
-other = "{{ .Name }}: {{ .Profs }} giảng viên, {{ .Accepted }} bài được chấp nhận tại AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL và EMNLP; {{ .Submitted }} bài nộp ICLR, {{ .Rejected }} bài bị từ chối."
+other = "{{ .Name }}: {{ .Profs }} giảng viên, {{ .Accepted }} bài được chấp nhận tại AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP, ICRA, IROS và RSS; {{ .Submitted }} bài nộp ICLR, {{ .Rejected }} bài bị từ chối."
 
 [seo_venue]
 other = "{{ .Name }}: số bài nộp, được chấp nhận và bị từ chối của giảng viên tại Việt Nam từ năm 2020; {{ .Accepted }} bài được chấp nhận."
@@ -507,7 +507,7 @@ other = "Chưa có bài được nhận nên chỉ số này không so sánh đ�
 other = "hội nghị công bố, số bài được nhận / số bài nộp = {{ . }}"
 
 [venue_rate_finding]
-other = "ICLR là hội nghị duy nhất công khai toàn bộ bài nộp. Tại đây, tỉ lệ được nhận của các giảng viên trong danh sách là {{ .Ours }}%, {{ .Share }} tỉ lệ chung {{ .Theirs }}% do ICLR công bố. Ngược lại, ở chín hội nghị còn lại, tỉ lệ ước tính trên trang này ({{ .OursLo }}–{{ .OursHi }}%) tương đương hoặc cao hơn tỉ lệ do các hội nghị công bố ({{ .TheirsLo }}–{{ .TheirsHi }}%)."
+other = "ICLR là hội nghị duy nhất công khai toàn bộ bài nộp. Tại đây, tỉ lệ được nhận của các giảng viên trong danh sách là {{ .Ours }}%, {{ .Share }} tỉ lệ chung {{ .Theirs }}% do ICLR công bố. Ngược lại, ở {{ .N }} hội nghị còn lại có công bố tỉ lệ, tỉ lệ ước tính trên trang này ({{ .OursLo }}–{{ .OursHi }}%) tương đương hoặc cao hơn tỉ lệ do các hội nghị công bố ({{ .TheirsLo }}–{{ .TheirsHi }}%)."
 
 [inst_fun_fact]
 other = "Một điều thú vị: một số trường vốn không chuyên về khoa học máy tính, như <a href=\"{{ .HMU }}\">Trường Đại học Y Hà Nội</a> và <a href=\"{{ .FTU }}\">Trường Đại học Ngoại thương</a>, cũng đã có bài nộp tại ICLR. Không chỉ dừng ở bài nộp, <a href=\"{{ .NEU }}\">Đại học Kinh tế Quốc dân</a> đã có một bài được nhận chính thức tại NeurIPS 2026, và <a href=\"{{ .UEH }}\">Đại học Kinh tế TP. Hồ Chí Minh</a> có hai bài tại NeurIPS 2025."
@@ -523,9 +523,9 @@ other = "{{ .Count }} bài"
 [ent_n_profs]
 other = "{{ .Count }} giảng viên"
 [ent_prof_accepted]
-other = "Trong giai đoạn công tác tại Việt Nam, giảng viên có {{ .Papers }} tại mười hội nghị AI hàng đầu{{ .Part }}."
+other = "Trong giai đoạn công tác tại Việt Nam, giảng viên có {{ .Papers }} tại mười ba hội nghị hàng đầu{{ .Part }}."
 [ent_prof_none]
-other = "Trong giai đoạn công tác tại Việt Nam, giảng viên chưa có bài báo nào được nhận tại mười hội nghị AI hàng đầu."
+other = "Trong giai đoạn công tác tại Việt Nam, giảng viên chưa có bài báo nào được nhận tại mười ba hội nghị hàng đầu."
 [ent_prof_iclr]
 other = "Về dữ liệu phản biện công khai, tác giả đã nộp {{ .Papers }} tại ICLR ({{ .Detail }}){{ .Other }}."
 [ent_acc_rej]
@@ -541,7 +541,7 @@ other = "Ngoài ra, tác giả có {{ .Count }} bài thuộc Findings hoặc b�
 [ent_and]
 other = " và "
 [ent_uni_summary]
-other = "Hiện có {{ .Profs }} của {{ .Name }} nằm trong danh sách theo dõi, với tổng cộng {{ .Papers }} tại mười hội nghị hàng đầu{{ .Part }}."
+other = "Hiện có {{ .Profs }} của {{ .Name }} nằm trong danh sách theo dõi, với tổng cộng {{ .Papers }} tại mười ba hội nghị hàng đầu{{ .Part }}."
 [ent_uni_once]
 other = "Công trình có nhiều giảng viên trong trường cùng tham gia chỉ tính một lần cho trường."
 [ent_uni_iclr]
@@ -586,3 +586,5 @@ other = "Khả năng được nhận do goodpapers.org ước tính, cho các b�
 other = "Xem bài này trên goodpapers.org"
 [chance_open]
 other = "xem"
+[ent_conf_empty]
+other = "Tại {{ .Name }}, các giảng viên trong danh sách theo dõi chưa có bài báo nào được nhận kể từ năm {{ .Year }}."

@@ -7308,6 +7308,118 @@
  },
  {
   "year": 2026,
+  "venue": "icra",
+  "venue_name": "ICRA",
+  "title": "AeroScene: Progressive Scene Synthesis for Aerial Robotics",
+  "ai_key": "icra-2026-aerosceneprogressivescenesynthesisforaer",
+  "url": "https://doi.org/10.1109/ICRA57385.2026.11695823",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Nghia Vu, Tuong Do, Dzung Tran, Binh X. Nguyen, Hoan Nguyen, Erman Tjiputra, Quang D. Tran, Hai-Nguyen Nguyen, Anh Nguyen",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "potential": false,
+  "professors": [
+   {
+    "slug": "hoan-cong-nguyen",
+    "name": "Hoan Cong Nguyen",
+    "name_vi": "Nguyễn Công Hoan"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Nghia Vu",
+    "slug": ""
+   },
+   {
+    "name": "Tuong Do",
+    "slug": ""
+   },
+   {
+    "name": "Dzung Tran",
+    "slug": ""
+   },
+   {
+    "name": "Binh X. Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Hoan Nguyen",
+    "slug": "hoan-cong-nguyen"
+   },
+   {
+    "name": "Erman Tjiputra",
+    "slug": ""
+   },
+   {
+    "name": "Quang D. Tran",
+    "slug": ""
+   },
+   {
+    "name": "Hai-Nguyen Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Anh Nguyen",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2026,
+  "venue": "icra",
+  "venue_name": "ICRA",
+  "title": "CLOT: Multi-robot Motion Planning via Collaborative Optimal Transport under Signal Temporal Logic Tasks",
+  "ai_key": "icra-2026-clotmultirobotmotionplanningviacollabora",
+  "url": "https://doi.org/10.1109/ICRA57385.2026.11696217",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Ying Zhang, Yunyi Zhang, An T. Le, Meng Guo",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "potential": false,
+  "professors": [
+   {
+    "slug": "an-thai-le",
+    "name": "An Thai Le",
+    "name_vi": "Lê Thái An"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Ying Zhang",
+    "slug": ""
+   },
+   {
+    "name": "Yunyi Zhang",
+    "slug": ""
+   },
+   {
+    "name": "An T. Le",
+    "slug": "an-thai-le"
+   },
+   {
+    "name": "Meng Guo",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2026,
   "venue": "iclr",
   "venue_name": "ICLR",
   "title": "A Multi-Institutional Multimodal EEG Benchmark for Foundation Model Generalization and Early Neurological Diagnosis",
@@ -10866,6 +10978,80 @@
    },
    {
     "name": "Trung Le",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2025,
+  "venue": "iros",
+  "venue_name": "IROS",
+  "title": "SplineFormer: An Explainable Transformer Network for Autonomous Endovascular Navigation",
+  "ai_key": "iros-2025-splineformeranexplainabletransformernetw",
+  "url": "https://doi.org/10.1109/IROS60139.2025.11246898",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Tudor Jianu, Shayan Doust, Mengyun Li, Baoru Huang, Tuong Do, Hoan Nguyen, Karl Bates, Tung D. Ta, Sebastiano Fichera, Pierre Berthet-Rayne, Anh Nguyen",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "potential": false,
+  "professors": [
+   {
+    "slug": "hoan-cong-nguyen",
+    "name": "Hoan Cong Nguyen",
+    "name_vi": "Nguyễn Công Hoan"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Tudor Jianu",
+    "slug": ""
+   },
+   {
+    "name": "Shayan Doust",
+    "slug": ""
+   },
+   {
+    "name": "Mengyun Li",
+    "slug": ""
+   },
+   {
+    "name": "Baoru Huang",
+    "slug": ""
+   },
+   {
+    "name": "Tuong Do",
+    "slug": ""
+   },
+   {
+    "name": "Hoan Nguyen",
+    "slug": "hoan-cong-nguyen"
+   },
+   {
+    "name": "Karl Bates",
+    "slug": ""
+   },
+   {
+    "name": "Tung D. Ta",
+    "slug": ""
+   },
+   {
+    "name": "Sebastiano Fichera",
+    "slug": ""
+   },
+   {
+    "name": "Pierre Berthet-Rayne",
+    "slug": ""
+   },
+   {
+    "name": "Anh Nguyen",
     "slug": ""
    }
   ]
@@ -14663,6 +14849,64 @@
  },
  {
   "year": 2024,
+  "venue": "iros",
+  "venue_name": "IROS",
+  "title": "HabiCrowd: A High Performance Simulator for Crowd-Aware Visual Navigation",
+  "ai_key": "iros-2024-habicrowdahighperformancesimulatorforcro",
+  "url": "https://doi.org/10.1109/IROS58592.2024.10801823",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "An Vuong, Toan Nguyen, Minh Nhat Vu, Baoru Huang, Huynh Thi Thanh Binh, Thieu Vo, Anh Nguyen",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "potential": false,
+  "professors": [
+   {
+    "slug": "huynh-thi-thanh-binh",
+    "name": "Huynh Thi Thanh Binh",
+    "name_vi": "Huỳnh Thị Thanh Bình"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "An Vuong",
+    "slug": ""
+   },
+   {
+    "name": "Toan Nguyen",
+    "slug": ""
+   },
+   {
+    "name": "Minh Nhat Vu",
+    "slug": ""
+   },
+   {
+    "name": "Baoru Huang",
+    "slug": ""
+   },
+   {
+    "name": "Huynh Thi Thanh Binh",
+    "slug": "huynh-thi-thanh-binh"
+   },
+   {
+    "name": "Thieu Vo",
+    "slug": ""
+   },
+   {
+    "name": "Anh Nguyen",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2024,
   "venue": "acl",
   "venue_name": "ACL",
   "title": "A Curious Case of Searching for the Correlation between Training Data and Adversarial Robustness of Transformer Textual Models",
@@ -15150,6 +15394,68 @@
    },
    {
     "name": "Khoi Nguyen",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2024,
+  "venue": "icra",
+  "venue_name": "ICRA",
+  "title": "Grasp-Anything: Large-scale Grasp Dataset from Foundation Models",
+  "ai_key": "icra-2024-graspanythinglargescalegraspdatasetfromf",
+  "url": "https://doi.org/10.1109/ICRA57147.2024.10611277",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Vuong Dinh An, Minh Nhat Vu, Hieu Le, Baoru Huang, Huynh Thi Thanh Binh, Thieu Vo, Andreas Kugi, Anh Nguyen",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "potential": false,
+  "professors": [
+   {
+    "slug": "huynh-thi-thanh-binh",
+    "name": "Huynh Thi Thanh Binh",
+    "name_vi": "Huỳnh Thị Thanh Bình"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Vuong Dinh An",
+    "slug": ""
+   },
+   {
+    "name": "Minh Nhat Vu",
+    "slug": ""
+   },
+   {
+    "name": "Hieu Le",
+    "slug": ""
+   },
+   {
+    "name": "Baoru Huang",
+    "slug": ""
+   },
+   {
+    "name": "Huynh Thi Thanh Binh",
+    "slug": "huynh-thi-thanh-binh"
+   },
+   {
+    "name": "Thieu Vo",
+    "slug": ""
+   },
+   {
+    "name": "Andreas Kugi",
+    "slug": ""
+   },
+   {
+    "name": "Anh Nguyen",
     "slug": ""
    }
   ]
@@ -17099,6 +17405,48 @@
    },
    {
     "name": "Stanley Osher",
+    "slug": ""
+   }
+  ]
+ },
+ {
+  "year": 2022,
+  "venue": "icra",
+  "venue_name": "ICRA",
+  "title": "Context-Aware Grasp Generation in Cluttered Scenes",
+  "ai_key": "icra-2022-contextawaregraspgenerationinclutteredsc",
+  "url": "https://doi.org/10.1109/ICRA46639.2022.9811371",
+  "status": "accepted",
+  "status_label": "accepted",
+  "pres": "",
+  "authors": "Dinh-Cuong Hoang, Johannes A. Stork, Todor Stoyanov",
+  "match": "name and affiliation",
+  "note": "",
+  "reason": "",
+  "later": "",
+  "unofficial": false,
+  "workshop": "",
+  "potential": false,
+  "professors": [
+   {
+    "slug": "dinh-cuong-hoang",
+    "name": "Dinh-Cuong Hoang",
+    "name_vi": "Hoàng Đình Cường"
+   }
+  ],
+  "reviews": "",
+  "sub_id": "",
+  "author_links": [
+   {
+    "name": "Dinh-Cuong Hoang",
+    "slug": "dinh-cuong-hoang"
+   },
+   {
+    "name": "Johannes A. Stork",
+    "slug": ""
+   },
+   {
+    "name": "Todor Stoyanov",
     "slug": ""
    }
   ]

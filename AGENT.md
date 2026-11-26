@@ -1,7 +1,7 @@
 # AGENT.md: how to operate and maintain this site
 
 You are maintaining a public, bilingual (Vietnamese at `/`, English at `/en/`) Hugo site that counts papers of
-lecturers and professors in Vietnam at ten AI conferences, grouped as CSRankings does. The maintainer gives short requests in plain words; this
+lecturers and professors in Vietnam at thirteen AI and robotics conferences, grouped as CSRankings does. The maintainer gives short requests in plain words; this
 file tells you how to carry them out. Read it before changing anything. It is the only instruction file: keep it up to date
 when the code or the rules change.
 
@@ -80,11 +80,23 @@ The local-only pages (Candidates, Not tracked) are drafts, but their data (`cand
 ## Counting rules (the About page states them; keep both in sync)
 
 - Venues, grouped as CSRankings does (`VENUE_GROUPS` in `common.py`): AI (AAAI, IJCAI), ML (ICLR, NeurIPS, ICML),
-  CV (CVPR, ICCV in odd years, ECCV in even years), NLP (ACL, EMNLP; NAACL is not tracked, being CORE rank A and not A*); years 2020 on, conference years (IJCAI-PRICAI 2020 met in January 2021 and is 2020). AAAI main
+  CV (CVPR, ICCV in odd years, ECCV in even years), NLP (ACL, EMNLP; NAACL is not tracked, being CORE rank A and not A*),
+  RB, robotics (ICRA, IROS, RSS; added 2026-11-26 at the maintainer's request); years 2020 on, conference years (IJCAI-PRICAI 2020 met in January 2021 and is 2020). AAAI main
   track = the "AAAI Technical Track on ..." sections of ojs.aaai.org issues; IJCAI = the "Main Track" section of
   ijcai.org/proceedings; ACL = the long-paper volumes, never the short-paper ones (no short papers anywhere); the volumes that mix long and short (ACL 2020, EMNLP) cannot be split, so check each counted paper there by its page count in the bib (long papers run 12 pages and more with references); not Findings. The AAAI and IJCAI lists, like ACL and EMNLP,
   print no affiliations: their name matches go through `fetch_affiliations.py` (which also reads the matches waiting
   in `review.csv`) before the institution rule can apply. AAAI and IJCAI publish no rejections.
+- **Robotics lists** (`fetch_accepted.py`): ICRA and IROS = the papers DBLP lists on the proceedings page of the year
+  (`dblp_toc`, DBLP's SPARQL service at sparql.dblp.org; dblp.org itself answers scripts with a bot check, do not get
+  around it), which is what CSRankings counts: RA-L and other journal papers presented there are not in it. RSS = the
+  index page of roboticsproceedings.org (`parse_rss`). The affiliations are the publisher's, read from OpenAlex by DOI
+  prefix (`openalex_affiliations`, cached in `raw/openalex/`; `OPENALEX_API_KEY` is set only in the maintainer's
+  interactive shell, so run a download as `zsh -ic 'python fetch_accepted.py'`). The metadata sometimes drops the
+  country or the parent university ("University of Information Technology", "RMIT University"): when a tracked
+  professor's paper is skipped for that, read the title page (arXiv) and add an `affiliation_fixes.csv` row. ICRA and
+  IROS PDFs are behind IEEE's paywall, so `verify_affiliations.py` reports them as "no PDF"; RSS PDFs are open. None
+  of the three publishes rejections. The `DECISION_DATES` of ICRA 2022, IROS 2022-2026 and RSS 2021-2023 and 2026 are
+  from the conference sites; the other robotics dates are approximate (they only order the Papers page).
 - People: Vietnamese lecturers, assistant/associate professors, professors whose main post is at a university in
   Vietnam. Not students, researchers or industry staff. To join, a person needs at least one counted submission:
   an accepted paper, an ICLR record (rejected/withdrawn/desk-rejected counts) or a Findings paper. Workshop papers
@@ -200,7 +212,7 @@ The maintainer accepted that a title can be searched to find the preprint's auth
 
 The front-page and institution tables are ordered by CSRankings' adjusted count: each accepted paper (official and
 unofficial) is worth 1 / (number of authors) to each listed professor; an institution's score adds up its
-professors' scores in each of the four areas, combined as CSRankings does: the geometric mean over AI, ML, CV, NLP of
+professors' scores in each of the five areas, combined as CSRankings does: the geometric mean over AI, ML, CV, NLP, RB of
 (area count + 1) (`score_areas` and `score` in `build_site_data.py`).
 The front table marks each professor's rank change (▲n / ▼n; the beginner mark for anyone with no accepted paper
 outside it, i.e. new to the list) against the same ranking
@@ -277,7 +289,7 @@ merges them without fetching anything; the "Acceptance chance" column (hidden un
 Since November 2026 `ojs.aaai.org` answers scripts with a bot check, so AAAI PDFs cannot be downloaded by a script (do
 not try to get around it; the maintainer can save PDFs by hand). IJCAI is unaffected: `fetch_affiliations.py --scan ijcai
 --min-names 1` reads every paper with at least one Vietnamese family name (default 2), and a download that is not a PDF
-is skipped, never cached. For AAAI (and as a cross-check for IJCAI) run `scan_openalex.py`: OpenAlex lists the authors in
+is skipped, never cached. For AAAI (and as a cross-check for IJCAI), and for ICRA, IROS and RSS, run `scan_openalex.py`: OpenAlex lists the authors in
 Vietnam of every paper, with the affiliation as printed (`work/openalex_vn.csv`). They are leads: look up each one's
 OpenReview profile, and do not suggest anyone whose profile says they are a student.
 
@@ -287,8 +299,9 @@ in Vietnam (`fetch_openreview.py --candidates N`, then `find_candidates.py`; Ope
 per half hour) and lecturers with an ICLR record (`iclr_only.csv`), most papers first. Students are never listed. A yes
 is a roster row with `approved = yes`, a no a row with `approved = no` and the reason (decided by OpenReview ID, so the
 name leaves the list). Everything else on the page is a closed checklist line that opens to its table.
-`scan_openalex.py --leads` rewrites `staff_leads.csv`: the hand-added lead Hoang-Quynh Le (ACL 2026, post ended 2026)
-is not from the scan, so add her row back after a rerun until she is decided.
+`scan_openalex.py --leads` rewrites `staff_leads.csv` but keeps the rows with `source = by hand` (people the scan cannot
+find: no OpenReview profile, or a paper outside the scanned lists). A hand row needs the evidence of the post: an
+OpenReview ID, or a `staff_page` address when there is no profile; it leaves the list once the person is on the roster.
 
 **Both languages, always:** the Vietnamese site (`/`) mirrors the English one (`/en/`). Any change to a page, whether
 text added, removed or reworded, a section, a caption, a column or a layout change, is made in both languages in the
@@ -350,6 +363,9 @@ and needs the OpenReview variables; extend its `PMLR_VOLUME` (ICML) and `DOMAINS
 
 The introductory text on entity pages (`/professors/<slug>/`, `/universities/<slug>/`, `/conferences/<slug>/` or `/venues/<slug>/`) must be smooth, natural, and human-friendly.
 Past AI-generated text was overly dense, robotic, and read like a mechanical dump of database fields. When writing or updating these pages (via layout templates and `i18n/{vi,en}.toml`), follow these principles and templates strictly.
+
+The site tracks thirteen conferences since 2026-11-26: where the templates below say "ten" / "mười", the site's
+strings say "thirteen" / "mười ba", and "AI conferences" is plain "conferences".
 
 ### Core Writing Principles
 1. **Human Academic Register:** Write as a professional academic editor presenting a scholar, university, or conference. Sentences must be complete, active, and conversational rather than telegraphic dumps of numbers.

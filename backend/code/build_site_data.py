@@ -844,7 +844,7 @@ CHART_TEXT = {
            "short_not": "recorded", "short_est": "estimated", "total": "total", "incomplete": "list still being completed",
            "cdf_label": "Cumulative distribution of the CSRankings scores of professors with an accepted paper",
            "cdf_x": "CSRankings score", "cdf_tip": "{count} professors ({share}) score {score} or less",
-           "areas_label": "Accepted papers per year in each area (AI, ML, CV, NLP), all listed professors"},
+           "areas_label": "Accepted papers per year in each area (AI, ML, CV, NLP, RB), all listed professors"},
     "vi": {"aria": "Số bài nộp và được nhận theo năm của {name}; số liệu ở bảng bên dưới",
            "acc": "Được nhận", "not": "Bị từ chối, đếm được", "est": "Bị từ chối ở nơi khác, ước tính",
            "tip_acc": "{n} bài được nhận", "tip_not": "{n} bài bị từ chối, đếm được", "tip_est": "khoảng {n} bài bị từ chối ở nơi khác (ước tính)",
@@ -854,7 +854,7 @@ CHART_TEXT = {
            "short_not": "đếm được", "short_est": "ước tính", "total": "tổng", "incomplete": "danh sách còn đang bổ sung",
            "cdf_label": "Phân bố tích luỹ điểm CSRankings của các giảng viên đã có bài được nhận",
            "cdf_x": "Điểm CSRankings", "cdf_tip": "{count} giảng viên ({share}) có điểm từ {score} trở xuống",
-           "areas_label": "Số bài được nhận theo từng năm ở mỗi lĩnh vực (AI, ML, CV, NLP), tính chung các giảng viên"},
+           "areas_label": "Số bài được nhận theo từng năm ở mỗi lĩnh vực (AI, ML, CV, NLP, RB), tính chung các giảng viên"},
 }
 
 
@@ -1352,8 +1352,9 @@ def main():
     companies = [c for c in found if c["at_university"] != "yes"]
     unconfirmed = [c for c in found if c["at_university"] == "yes" and neurips_2026_only(c)]
     roster_ids = {i for p in roster for i in p["openreview_ids"]}
+    roster_names = {token_key(n) for p in roster for n in [p["name"], *p["variants"], p.get("name_vi") or ""] if n}
     leads = [r for r in (read_csv(CSV_DIR / "staff_leads.csv") if (CSV_DIR / "staff_leads.csv").exists() else [])
-             if r["openreview_id"] not in roster_ids]
+             if r["openreview_id"] not in roster_ids and (r["openreview_id"] or token_key(r["name"]) not in roster_names)]
     def student(c):
         return c.get("openreview_class") == "student" and not c["faculty_page"] and not int(c["senior_author"])
     students = [c for c in candidates if student(c)]
@@ -1516,9 +1517,10 @@ def main():
         seen_names.add(key)
         to_validate.append(row)
     for r in leads:
-        add({"name": r["name"], "profile": f"https://openreview.net/profile?id={r['openreview_id']}", "post": r["post"],
-             "evidence": r["papers"], "paper_url": r["paper_url"], "flag": r["note"], "source": "AAAI/IJCAI scan",
-             "weight": len(r["papers"].split("; "))}, {r["openreview_id"]})
+        add({"name": r["name"], "post": r["post"], "evidence": r["papers"], "paper_url": r["paper_url"], "flag": r["note"],
+             "profile": f"https://openreview.net/profile?id={r['openreview_id']}" if r["openreview_id"] else r.get("staff_page", ""),
+             "source": "staff page, by hand" if r.get("source") == "by hand" else "OpenAlex scan",
+             "weight": len(r["papers"].split("; "))}, {r["openreview_id"]} if r["openreview_id"] else set())
     for c in candidates:
         if c.get("openreview_class") == "staff":
             staff_posts = [x for x in c["openreview_position"].split("; ") if post_class(x.split(": ", 1)[-1]) == "staff"]

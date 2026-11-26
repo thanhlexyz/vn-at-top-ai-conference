@@ -1,31 +1,32 @@
 # Vietnam AIRankings
 
-An open-source, data-driven bilingual (Vietnamese / English) static site that tracks and benchmarks scientific publications from faculty at Vietnamese universities at premier international conferences in artificial intelligence.
+An open-source, data-driven bilingual (Vietnamese / English) static site that tracks and benchmarks scientific publications from faculty at Vietnamese universities at premier international conferences in artificial intelligence and robotics.
 
-Publications are tracked from 2020 onward across ten flagship conferences in four core subfields following the [CSRankings](https://csrankings.org/) model:
+Publications are tracked from 2020 onward across thirteen flagship conferences in five subfields following the [CSRankings](https://csrankings.org/) model:
 - **AI:** AAAI, IJCAI
 - **ML:** ICLR, NeurIPS, ICML
 - **CV:** CVPR, ICCV (odd years), ECCV (even years)
 - **NLP:** ACL, EMNLP
+- **RB (robotics):** ICRA, IROS, RSS
 
 **Live Website:** <https://thanhle.xyz/ranking>
 
-### Sample data: top 10 by CSRankings score (2026-11-25)
+### Sample data: top 10 by CSRankings score (2026-11-26)
 
 Accepted main-track papers per area (unofficial acceptances included) and the CSRankings score; the full table is on the [live site](https://thanhle.xyz/ranking).
 
-| # | Professor | University | AI | ML | CV | NLP | CSRankings score |
-|---:|---|---|---:|---:|---:|---:|---:|
-| 1 | Đàm Quang Tuấn | HUST | 0 | 12 | 0 | 0 | 5.48 |
-| 2 | Ngô Văn Linh | HUST | 6 | 8 | 1 | 15 | 4.96 |
-| 3 | Đoàn Đăng Khoa | VinUni | 2 | 18 | 3 | 0 | 4.13 |
-| 4 | Nguyễn Phi Lê | HUST | 1 | 9 | 6 | 2 | 3.19 |
-| 5 | Phạm Văn Cường | PTIT | 2 | 2 | 9 | 0 | 2.52 |
-| 6 | Lê Duy Dũng | VinUni | 2 | 9 | 1 | 1 | 2.47 |
-| 7 | Huỳnh Thị Thanh Bình | HUST | 3 | 3 | 0 | 1 | 1.87 |
-| 8 | Thân Quang Khoát | HUST | 1 | 7 | 1 | 1 | 1.84 |
-| 9 | Quản Thành Thơ | HCMUT | 1 | 1 | 0 | 5 | 1.47 |
-| 10 | Phạm Văn Cảnh | Phenikaa | 4 | 1 | 0 | 0 | 1.25 |
+| # | Professor | University | AI | ML | CV | NLP | RB | CSRankings score |
+|---:|---|---|---:|---:|---:|---:|---:|---:|
+| 1 | Đàm Quang Tuấn | HUST | 0 | 12 | 0 | 0 | 0 | 5.48 |
+| 2 | Ngô Văn Linh | HUST | 6 | 8 | 1 | 15 | 0 | 4.96 |
+| 3 | Đoàn Đăng Khoa | VinUni | 2 | 18 | 3 | 0 | 0 | 4.13 |
+| 4 | Nguyễn Phi Lê | HUST | 1 | 9 | 6 | 2 | 0 | 3.19 |
+| 5 | Phạm Văn Cường | PTIT | 2 | 2 | 9 | 0 | 0 | 2.52 |
+| 6 | Lê Duy Dũng | VinUni | 2 | 9 | 1 | 1 | 0 | 2.47 |
+| 7 | Huỳnh Thị Thanh Bình | HUST | 3 | 3 | 0 | 1 | 2 | 2.13 |
+| 8 | Thân Quang Khoát | HUST | 1 | 7 | 1 | 1 | 0 | 1.84 |
+| 9 | Quản Thành Thơ | HCMUT | 1 | 1 | 0 | 5 | 0 | 1.47 |
+| 10 | Phạm Văn Cảnh | Phenikaa | 4 | 1 | 0 | 0 | 0 | 1.25 |
 
 ![Accepted, recorded rejected and estimated rejected papers of all listed professors per year](frontend/static/readme/submissions.png)
 
@@ -40,7 +41,7 @@ Accepted main-track papers per area (unofficial acceptances included) and the CS
 ## Key Features & Methodology
 
 - **Scope & Criteria:** Tracks Vietnamese lecturers, assistant professors, associate professors, and full professors whose primary appointment is at a university in Vietnam. Only official full-length Main Track papers (Long Papers) are counted toward primary rankings.
-- **CSRankings Scoring:** Each paper receives 1.0 point divided equally among all authors (`1 / N`). An institution's score is the geometric mean of `(Area Score + 1)` across all four subfields.
+- **CSRankings Scoring:** Each paper receives 1.0 point divided equally among all authors (`1 / N`). An institution's score is the geometric mean of `(Area Score + 1)` across all five subfields.
 - **Authorship Perspectives:** Provides dedicated filters for **first-author** and **majority-institution (>50%)** publications, highlighting direct lab mentoring and internal student guidance versus broad external collaborations.
 - **Submission Modeling:** Accounts for differing review disclosure policies across venues. Confirmed acceptances at confidential venues are extrapolated based on the professor's demonstrated ICLR submission and acceptance rates.
 - **Interactive Visualizations:** Includes the domestic and international cooperation graphs, annual publication trends, and venue distributions.
@@ -87,6 +88,6 @@ export OPENREVIEW_PASSWORD="your-password"
 make run       # Start local development server at http://localhost:1313
 make data      # Rebuild JSON data and content stubs from raw caches
 make build     # Build production site with Hugo (must have zero warnings)
-make test      # Run all 30 backend unit tests
+make test      # Run all 33 backend unit tests
 make publish   # Build the production site and deploy to GitHub Pages
 ```

@@ -3,21 +3,21 @@ title: "About"
 toc: true
 ---
 
-**Vietnam AIRankings** is an open-source, data-driven project that tracks publications by Vietnamese university faculty at premier international artificial intelligence conferences.
+**Vietnam AIRankings** is an open-source, data-driven project that tracks publications by Vietnamese university faculty at premier international artificial intelligence and robotics conferences.
 
-In computer science, peer-reviewed flagship conferences are the primary conferences for publishing cutting-edge research. By tracking publications from 2020 onward across the top 10 conferences in AI, Machine Learning, Computer Vision, and Natural Language Processing, this site aims to provide a transparent, objective overview of academic AI research originating from universities in Vietnam.
+In computer science, peer-reviewed flagship conferences are the primary conferences for publishing cutting-edge research. By tracking publications from 2020 onward across 13 top conferences in AI, Machine Learning, Computer Vision, Natural Language Processing, and Robotics, this site aims to provide a transparent, objective overview of academic AI research originating from universities in Vietnam.
 
 ## Scope & Data Collection
 
 ### Tracked Conferences
-We track ten flagship conferences from 2020 onward, grouped into four subfields following [CSRankings](https://csrankings.org/): **AI** (AAAI, IJCAI), **ML** (ICLR, NeurIPS, ICML), **CV** (CVPR, ICCV in odd years, ECCV in even years), and **NLP** (ACL, EMNLP).
+We track thirteen flagship conferences from 2020 onward, grouped into five subfields following [CSRankings](https://csrankings.org/): **AI** (AAAI, IJCAI), **ML** (ICLR, NeurIPS, ICML), **CV** (CVPR, ICCV in odd years, ECCV in even years), **NLP** (ACL, EMNLP), and **RB**, robotics (ICRA, IROS, RSS).
 
-Only full-length Main Track papers (Long Papers) are counted. Short papers, workshops, position papers, Datasets & Benchmarks tracks, journal tracks, blog posts, and Tiny Papers are excluded from the main counts and listed separately under "Not main track" on profile pages. Papers accepted to *Findings* are counted alongside main-track rejections and listed with workshop papers.
+Only full-length Main Track papers (Long Papers) are counted. Short papers, workshops, position papers, Datasets & Benchmarks tracks, journal tracks, blog posts, and Tiny Papers are excluded from the main counts and listed separately under "Not main track" on profile pages. Papers accepted to *Findings* are counted alongside main-track rejections and listed with workshop papers. For ICRA and IROS, the counted papers are those in the conference proceedings, as CSRankings counts them. Journal papers presented at these conferences (for example, RA-L papers) are not counted.
 
 ### Tracked Professors
 We track Vietnamese lecturers, assistant professors, associate professors, and full professors whose primary appointment is currently at a university in Vietnam. Lecturers (*Giảng viên*) are included because Associate Professor and Professor titles in Vietnam are conferred by a centralized national council under criteria distinct from international tenure tracks, and many lecturers lead labs and advise PhD students just as Assistant or Associate Professors do abroad.
 
-Students, foreign faculty, and researchers based solely at corporate labs or non-university institutes are excluded. The roster is curated by hand. A professor appears once verified and having at least one counted submission (accepted or rejected) at the ten conferences.
+Students, foreign faculty, and researchers based solely at corporate labs or non-university institutes are excluded. The roster is curated by hand. A professor appears once verified and having at least one counted submission (accepted or rejected) at the thirteen conferences.
 
 Papers count starting from the year a professor joined a Vietnamese university. An accepted paper counts only if the camera-ready PDF explicitly lists the professor at their Vietnamese university. Papers from an earlier appointment at another university in Vietnam also count, provided the professor held a faculty position (lecturer or higher) there that year. In contrast, papers published while the author was a student or PhD candidate do not count. Papers written solely under corporate or institute affiliations without an accompanying university affiliation are also excluded.
 
@@ -38,7 +38,7 @@ OpenReview papers are matched directly by confirmed profile ID. Proceedings entr
 Each accepted paper is worth `1 / N` (where `N` is the total number of authors) to each listed professor on the paper, following the [CSRankings](https://csrankings.org/) fractional model. A professor's score is the sum of their fractional shares across all qualifying papers.
 
 ### University Score
-Faculty scores are summed within each of the four subfields (AI, ML, CV, NLP). The university's overall score is the geometric mean across the four areas of `(Area Score + 1)`—the 4th root of their product. Adding 1 keeps a subfield with zero papers from zeroing out the entire score, while the geometric mean rewards balanced research strength across subfields.
+Faculty scores are summed within each of the five subfields (AI, ML, CV, NLP, RB). The university's overall score is the geometric mean across the five areas of `(Area Score + 1)`—the 5th root of their product. Adding 1 keeps a subfield with zero papers from zeroing out the entire score, while the geometric mean rewards balanced research strength across subfields.
 
 ### Authorship Roles and Lab Mentoring
 University and professor pages also feature two stricter charts tracking accepted papers where the university accounts for the **first author** or **more than half (>50%) of the authors**. Prospective graduate students and research interns choosing an advisor should pay close attention to this breakdown: it offers an important signal of how a professor works. A high proportion of lead-author and majority-university papers generally indicates that the professor invests significant time directly mentoring students within their own lab, whereas a record dominated by external affiliations often reflects broader collaborative networks where primary day-to-day mentoring may occur outside.
@@ -53,7 +53,7 @@ Conferences differ significantly in what submission data and review outcomes the
 | **ICLR** | Public | Public for all submissions |
 | **NeurIPS** | Public | Public only when authors opt in |
 | **ACL, EMNLP, CVPR** | Public | Not public (except for papers published in the Findings track) |
-| **ICML, ICCV, ECCV, AAAI, IJCAI** | Public | Not public |
+| **ICML, ICCV, ECCV, AAAI, IJCAI, ICRA, IROS, RSS** | Public | Not public |
 
 Conferences such as ACL, EMNLP, and CVPR do not disclose rejections directly, but publishing in the Findings track reveals that a paper was not accepted to the Main Track (without exposing the rest of the rejected submissions). Consequently, comprehensive submission and rejection records exist only for ICLR. In our tables, recorded **Rejected** counts combine reviewer rejections, withdrawals, desk rejections, and Findings papers, while **Submitted** is accepted plus rejected. A professor who submits frequently to ICLR will thus show more recorded rejections than one who does not submit to ICLR.
 

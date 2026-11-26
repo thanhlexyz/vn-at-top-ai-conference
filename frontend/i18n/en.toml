@@ -85,7 +85,7 @@ other = "accepted"
 [th_score]
 other = "CSRankings score"
 [tip_score_inst]
-other = "As CSRankings ranks universities: the adjusted counts of its professors are added up in each area (AI, ML, CV, NLP), and the score is the geometric mean over the areas of (count + 1); the table is ordered by it"
+other = "As CSRankings ranks universities: the adjusted counts of its professors are added up in each area (AI, ML, CV, NLP, RB), and the score is the geometric mean over the areas of (count + 1); the table is ordered by it"
 [tip_score]
 other = "Each accepted paper counts 1 / (number of its authors), as in CSRankings; the table is ordered by it"
 [th_rejected]
@@ -160,7 +160,7 @@ other = "rejected, withdrawn or desk-rejected, where public"
 [home_title]
 other = "Conference papers by professors and lecturers in Vietnam, {{ .First }}&ndash;{{ .Last }}"
 [inst_score_callout]
-other = "<strong>How a university's score is calculated:</strong> A university's overall score aggregates its faculty's adjusted counts across the four core areas (AI, ML, CV, NLP) and computes the geometric mean of these four totals (each plus 1), following the CSRankings methodology."
+other = "<strong>How a university's score is calculated:</strong> A university's overall score aggregates its faculty's adjusted counts across the five areas (AI, ML, CV, NLP, RB) and computes the geometric mean of these five totals (each plus 1), following the CSRankings methodology."
 [rank_was]
 other = "Rank without the potential {{ .Base }} acceptances: {{ .Rank }}"
 [rank_new]
@@ -372,7 +372,7 @@ other = "Wikipedia"
 other = "ResearchGate"
 
 [scholar_note]
-other = "A snapshot of the <a href=\"{{ .URL }}\">Google Scholar profile</a> taken on {{ .Date }}; it is not updated. Google Scholar counts every publication, not only the ten conferences."
+other = "A snapshot of the <a href=\"{{ .URL }}\">Google Scholar profile</a> taken on {{ .Date }}; it is not updated. Google Scholar counts every publication, not only the thirteen conferences."
 
 [scholar_all]
 other = "All"
@@ -396,10 +396,10 @@ other = "Citations per year, as shown on Google Scholar on the day of the snapsh
 other = "From each Google Scholar profile, as on 2026-10-02; Scholar counts every publication"
 
 [seo_professor]
-other = "{{ .Name }} ({{ .Inst }}): {{ .Accepted }} papers accepted at AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP; {{ .Submitted }} ICLR submissions, {{ .Rejected }} rejected."
+other = "{{ .Name }} ({{ .Inst }}): {{ .Accepted }} papers accepted at AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP, ICRA, IROS and RSS; {{ .Submitted }} ICLR submissions, {{ .Rejected }} rejected."
 
 [seo_institution]
-other = "{{ .Name }}: {{ .Profs }} professors, {{ .Accepted }} papers accepted at AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL and EMNLP; {{ .Submitted }} ICLR submissions, {{ .Rejected }} rejected."
+other = "{{ .Name }}: {{ .Profs }} professors, {{ .Accepted }} papers accepted at AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP, ICRA, IROS and RSS; {{ .Submitted }} ICLR submissions, {{ .Rejected }} rejected."
 
 [seo_venue]
 other = "{{ .Name }}: papers submitted, accepted and rejected by professors and lecturers in Vietnam since 2020; {{ .Accepted }} accepted."
@@ -509,7 +509,7 @@ other = "No accepted paper yet, so this figure is not comparable; it sorts last"
 other = "reported by the conference, accepted / submitted = {{ . }}"
 
 [venue_rate_finding]
-other = "ICLR is the only conference that makes every submission public. There, the listed professors have an acceptance rate of {{ .Ours }}%, {{ .Share }} the {{ .Theirs }}% that ICLR reports across all submissions. At the other nine conferences, by contrast, the rates estimated here ({{ .OursLo }}–{{ .OursHi }}%) match or exceed those the conferences report ({{ .TheirsLo }}–{{ .TheirsHi }}%)."
+other = "ICLR is the only conference that makes every submission public. There, the listed professors have an acceptance rate of {{ .Ours }}%, {{ .Share }} the {{ .Theirs }}% that ICLR reports across all submissions. At the {{ .N }} other conferences with a reported rate, by contrast, the rates estimated here ({{ .OursLo }}–{{ .OursHi }}%) match or exceed those the conferences report ({{ .TheirsLo }}–{{ .TheirsHi }}%)."
 
 [inst_fun_fact]
 other = "Fun fact: universities that are not known for computer science, such as <a href=\"{{ .HMU }}\">Hanoi Medical University</a> and <a href=\"{{ .FTU }}\">Foreign Trade University</a>, have also submitted papers to ICLR. Beyond submissions, the <a href=\"{{ .NEU }}\">National Economics University</a> has a paper officially accepted at NeurIPS 2026, and the <a href=\"{{ .UEH }}\">University of Economics Ho Chi Minh City</a> has two at NeurIPS 2025."
@@ -528,9 +528,9 @@ other = "{{ .Count }} papers"
 one = "{{ .Count }} tracked professor"
 other = "{{ .Count }} tracked professors"
 [ent_prof_accepted]
-other = "While based in Vietnam, this professor has published {{ .Papers }} across the ten tracked flagship conferences{{ .Part }}."
+other = "While based in Vietnam, this professor has published {{ .Papers }} across the thirteen tracked flagship conferences{{ .Part }}."
 [ent_prof_none]
-other = "While based in Vietnam, this professor has no accepted paper yet at the ten tracked flagship conferences."
+other = "While based in Vietnam, this professor has no accepted paper yet at the thirteen tracked flagship conferences."
 [ent_prof_iclr]
 other = "Based on public review records, they have submitted {{ .Papers }} to ICLR ({{ .Detail }}){{ .Other }}."
 [ent_acc_rej]
@@ -546,7 +546,7 @@ other = "They also have {{ .Count }} recorded rejections or Findings papers at {
 [ent_and]
 other = " and "
 [ent_uni_summary]
-other = "{{ .Name }} has {{ .Profs }} with a combined total of {{ .Papers }} across the ten tracked AI conferences{{ .Part }}."
+other = "{{ .Name }} has {{ .Profs }} with a combined total of {{ .Papers }} across the thirteen tracked conferences{{ .Part }}."
 [ent_uni_once]
 other = "Papers co-authored by several professors of the university are counted once toward its total."
 [ent_uni_iclr]
@@ -591,3 +591,5 @@ other = "Chance of acceptance estimated by goodpapers.org, for ICLR 2027 submiss
 other = "Open this submission on goodpapers.org"
 [chance_open]
 other = "view"
+[ent_conf_empty]
+other = "At {{ .Name }}, professors on the list have no accepted paper yet since {{ .Year }}."

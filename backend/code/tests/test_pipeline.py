@@ -133,6 +133,41 @@ class Sources(unittest.TestCase):
                          [("Paper A", "main", "oral", "abc"), ("Paper B", "datasets_benchmarks", "", "")])
 
 
+class Robotics(unittest.TestCase):
+    def test_dblp_list_with_openalex_affiliations(self):
+        def row(paper, title, order, name, doi):
+            return {"p": {"value": paper}, "title": {"value": title}, "ord": {"value": str(order)},
+                    "name": {"value": name}, "doi": {"value": doi}}
+        doi = "https://doi.org/10.1109/ICRA57147.2024.10610000"
+        rows = [row("rec/1", "A Robot Paper.", 2, "Minh Nhat Vu", doi), row("rec/1", "A Robot Paper.", 1, "An Thai Le 0001", doi),
+                row("rec/2", "What Next?", 1, "X Y", "https://doi.org/10.1109/ICRA57147.2024.10610001")]
+        papers = fetch_accepted.parse_dblp("icra", 2024, rows)
+        self.assertEqual([p["title"] for p in papers], ["A Robot Paper", "What Next?"])
+        self.assertEqual([a["name"] for a in papers[0]["authors"]], ["An Thai Le", "Minh Nhat Vu"])
+        self.assertEqual(fetch_accepted.doi_prefixes(papers * 3), ["10.1109/icra57147.2024"])
+        listed = {"10.1109/icra57147.2024.10610000": [["An T. Le", "VinUniversity"], ["Vu Minh Nhat", "TU Wien"]],
+                  "10.1109/icra57147.2024.10610001": [["Someone Else", "MIT"]]}
+        papers = fetch_accepted.with_affiliations(papers, listed)
+        self.assertEqual([a["aff"] for a in papers[0]["authors"]], ["VinUniversity", "TU Wien"])
+        self.assertEqual(papers[1]["authors"][0]["aff"], "MIT")
+        self.assertNotIn("doi", papers[0])
+
+    def test_rss_proceedings_page(self):
+        page = ('<a href="p001.html">Stein Variational Ergodic Search</a><br>\n<i>Darrick Lee, Ian Abraham</i><br>\n'
+                '<a href="p001.pdf"><img></a>\n<a href="p002.html">Second &amp; Last</a><br>\n<i>A B</i><br>')
+        papers = fetch_accepted.parse_rss(2024, page)
+        self.assertEqual([p["title"] for p in papers], ["Stein Variational Ergodic Search", "Second & Last"])
+        self.assertEqual([a["name"] for a in papers[0]["authors"]], ["Darrick Lee", "Ian Abraham"])
+        self.assertEqual(papers[0]["doi"], "10.15607/rss.2024.xx.001")
+        self.assertEqual(papers[1]["pdf"], "https://www.roboticsproceedings.org/rss20/p002.pdf")
+        self.assertEqual(fetch_accepted.roman(22), "XXII")
+
+    def test_robotics_group(self):
+        group = next(g for g in common.VENUE_GROUPS if g["key"] == "rb")
+        self.assertEqual(group["venues"], ["icra", "iros", "rss"])
+        self.assertTrue(all(v in common.VENUE_KEYS and v in common.DECISION_DATES for v in group["venues"]))
+
+
 class FacultyPages(unittest.TestCase):
     faculty = [{"institution_short": "VinUni", "name": "Doan Dang Khoa", "rank": "Assistant Professor"},
                {"institution_short": "VNU-UET", "name": "Tạ Việt Cường", "rank": "Lecturer with PhD"},

@@ -46,6 +46,12 @@ VENUES = [
      "rejections": "none"},
     {"key": "ijcai", "name": "IJCAI", "full_name": "International Joint Conference on Artificial Intelligence",
      "rejections": "none"},
+    {"key": "icra", "name": "ICRA", "full_name": "IEEE International Conference on Robotics and Automation",
+     "rejections": "none"},
+    {"key": "iros", "name": "IROS", "full_name": "IEEE/RSJ International Conference on Intelligent Robots and Systems",
+     "rejections": "none"},
+    {"key": "rss", "name": "RSS", "full_name": "Robotics: Science and Systems",
+     "rejections": "none"},
 ]
 VENUE_KEYS = [v["key"] for v in VENUES]
 
@@ -68,6 +74,12 @@ DECISION_DATES = {
                 2025: "2025-05-15", 2026: "2026-04-15"},
     "emnlp":   {2020: "2020-09-14", 2021: "2021-08-25", 2022: "2022-10-06", 2023: "2023-10-07", 2024: "2024-09-20",
                 2025: "2025-08-20", 2026: "2026-08-20"},
+    "icra":    {2020: "2020-01-21", 2021: "2021-02-28", 2022: "2022-01-31", 2023: "2023-01-16", 2024: "2024-01-29",
+                2025: "2025-01-27", 2026: "2026-01-31"},
+    "iros":    {2020: "2020-06-30", 2021: "2021-06-30", 2022: "2022-06-30", 2023: "2023-06-30", 2024: "2024-06-30",
+                2025: "2025-06-30", 2026: "2026-06-16"},
+    "rss":     {2020: "2020-05-11", 2021: "2021-05-10", 2022: "2022-04-15", 2023: "2023-04-22", 2024: "2024-05-10",
+                2025: "2025-04-10", 2026: "2026-04-27"},
 }
 
 
@@ -77,7 +89,8 @@ VENUE_NAME = {v["key"]: v["name"] for v in VENUES}
 VENUE_GROUPS = [{"key": "ai", "name": "AI", "venues": ["aaai", "ijcai"]},
                 {"key": "ml", "name": "ML", "venues": ["iclr", "neurips", "icml"]},
                 {"key": "cv", "name": "CV", "venues": ["cvpr", "iccv", "eccv"]},
-                {"key": "nlp", "name": "NLP", "venues": ["acl", "emnlp"]}]
+                {"key": "nlp", "name": "NLP", "venues": ["acl", "emnlp"]},
+                {"key": "rb", "name": "RB", "venues": ["icra", "iros", "rss"]}]
 for _g in VENUE_GROUPS:
     _g["names"] = [VENUE_NAME[k] for k in _g["venues"]]
 
@@ -123,7 +136,7 @@ VN_INSTITUTIONS = [
      "Hanoi University of Science and Technology", "HUST", True),
     (r"university of science and technology of ha ?noi|\busth\b",
      "University of Science and Technology of Hanoi", "USTH", True),
-    (r"ha ?noi university of industry|\bhaui\b|dai hoc cong nghiep ha ?noi",
+    (r"ha ?noi (university|institute) of industry|\bhaui\b|dai hoc cong nghiep ha ?noi",
      "Hanoi University of Industry", "HaUI", True),
     (r"ha ?noi university of science\b(?! (and |& )?tech)|vnu university of science|vnu\W+hus\b",
      "VNU University of Science, Hanoi", "VNU-HUS", True),
@@ -132,7 +145,8 @@ VN_INSTITUTIONS = [
     (r"\bhcmut\b|ho chi minh (city )?university of technology(?! and education)|bach khoa",
      "Ho Chi Minh City University of Technology, VNU-HCM", "HCMUT", True),
     (r"\bhcmus\b|university of science\W+(vnu|vietnam national|ho chi minh|hcm)"
-     r"|ho chi minh (city )?university of science\b|(vnu\W?hcm|vnuhcm)\W+university of science",
+     r"|ho chi minh (city )?university of science\b|(vnu\W?hcm|vnuhcm)\W+university of science"
+     r"|university of science\b(?! (and |& )?tech)[^;|]{0,80}?ho chi minh",
      "University of Science, VNU-HCM", "HCMUS", True),
     (r"university of information technology\W+(vnu|vietnam|ho chi minh|hcm)|\buit\b\W+(vnu|ho chi minh|hcm)",
      "University of Information Technology, VNU-HCM", "UIT", True),

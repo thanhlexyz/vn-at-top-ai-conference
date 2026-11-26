@@ -3,21 +3,21 @@ title: "Giới thiệu"
 toc: true
 ---
 
-**Vietnam AIRankings** là dự án mã nguồn mở định hướng dữ liệu (open-source, data-driven), nhằm theo dõi và thống kê các công bố khoa học của đội ngũ giảng viên tại các trường đại học ở Việt Nam tại các hội nghị quốc tế hàng đầu về trí tuệ nhân tạo (AI).
+**Vietnam AIRankings** là dự án mã nguồn mở định hướng dữ liệu (open-source, data-driven), nhằm theo dõi và thống kê các công bố khoa học của đội ngũ giảng viên tại các trường đại học ở Việt Nam tại các hội nghị quốc tế hàng đầu về trí tuệ nhân tạo (AI) và robot.
 
-Trong ngành khoa học máy tính, các hội nghị chuyên ngành hàng đầu (top-tier conferences) là nơi công bố những nghiên cứu mới nhất và có sức ảnh hưởng học thuật lớn nhất. Bằng việc theo dõi dữ liệu từ năm 2020 đến nay tại 10 hội nghị hàng đầu thuộc bốn phân ngành cốt lõi (AI, Machine Learning, Computer Vision và NLP), dự án hướng tới cung cấp một góc nhìn khách quan, minh bạch và toàn diện về năng lực nghiên cứu AI tại các trường đại học ở Việt Nam.
+Trong ngành khoa học máy tính, các hội nghị chuyên ngành hàng đầu (top-tier conferences) là nơi công bố những nghiên cứu mới nhất và có sức ảnh hưởng học thuật lớn nhất. Bằng việc theo dõi dữ liệu từ năm 2020 đến nay tại 13 hội nghị hàng đầu thuộc năm phân ngành (AI, Machine Learning, Computer Vision, NLP và Robotics), dự án hướng tới cung cấp một góc nhìn khách quan, minh bạch và toàn diện về năng lực nghiên cứu AI tại các trường đại học ở Việt Nam.
 
 ## Phạm vi và thu thập dữ liệu
 
 ### Hội nghị theo dõi
-Dự án theo dõi 10 hội nghị hàng đầu từ năm 2020, được phân chia thành 4 lĩnh vực theo chuẩn của [CSRankings](https://csrankings.org/): **AI** (AAAI, IJCAI), **ML** (ICLR, NeurIPS, ICML), **CV** (CVPR, ICCV năm lẻ, ECCV năm chẵn) và **NLP** (ACL, EMNLP).
+Dự án theo dõi 13 hội nghị hàng đầu từ năm 2020, được phân chia thành 5 lĩnh vực theo chuẩn của [CSRankings](https://csrankings.org/): **AI** (AAAI, IJCAI), **ML** (ICLR, NeurIPS, ICML), **CV** (CVPR, ICCV năm lẻ, ECCV năm chẵn), **NLP** (ACL, EMNLP) và **RB**, tức robotics (ICRA, IROS, RSS).
 
-Về loại hình bài báo, hệ thống chỉ thống kê các công trình chính thức dạng Long Papers tại Main Track. Những bài báo ngắn (Short papers), bài workshop, position papers, Datasets & Benchmarks track, journal track, blog posts và Tiny Papers không tính vào số liệu chính mà được thống kê riêng ở mục "Ngoài Main Track". Các bài báo thuộc phân nhánh *Findings* được xếp cùng nhóm với các bài không vào Main Track và hiển thị cùng các bài workshop.
+Về loại hình bài báo, hệ thống chỉ thống kê các công trình chính thức dạng Long Papers tại Main Track. Những bài báo ngắn (Short papers), bài workshop, position papers, Datasets & Benchmarks track, journal track, blog posts và Tiny Papers không tính vào số liệu chính mà được thống kê riêng ở mục "Ngoài Main Track". Các bài báo thuộc phân nhánh *Findings* được xếp cùng nhóm với các bài không vào Main Track và hiển thị cùng các bài workshop. Với ICRA và IROS, hệ thống chỉ tính các bài trong kỷ yếu hội nghị, giống cách CSRankings thống kê. Các bài tạp chí được trình bày tại hai hội nghị này (ví dụ bài RA-L) không được tính.
 
 ### Đối tượng thống kê
 Đối tượng được theo dõi là các giảng viên, phó giáo sư và giáo sư người Việt Nam hiện có vị trí công tác chính thức tại một trường đại học ở Việt Nam. Danh sách bao gồm cả ngạch Giảng viên, bởi chức danh Phó Giáo sư và Giáo sư tại Việt Nam do Hội đồng Giáo sư Nhà nước công nhận với quy trình đặc thù so với hệ thống tenure-track quốc tế, trong khi nhiều giảng viên trẻ hiện đã chủ trì phòng thí nghiệm và trực tiếp hướng dẫn nghiên cứu sinh tương đương vị trí Assistant hoặc Associate Professor ở nước ngoài.
 
-Ngược lại, sinh viên, giảng viên nước ngoài cùng các nghiên cứu viên làm việc thuần túy tại doanh nghiệp hoặc viện nghiên cứu độc lập không nằm trong phạm vi thống kê của dự án. Danh sách nhân sự này được rà soát và đối chiếu thủ công, trong đó một giảng viên chỉ xuất hiện trên bảng xếp hạng sau khi đã được xác thực thông tin và có ít nhất một bài nộp được ghi nhận tại 10 hội nghị.
+Ngược lại, sinh viên, giảng viên nước ngoài cùng các nghiên cứu viên làm việc thuần túy tại doanh nghiệp hoặc viện nghiên cứu độc lập không nằm trong phạm vi thống kê của dự án. Danh sách nhân sự này được rà soát và đối chiếu thủ công, trong đó một giảng viên chỉ xuất hiện trên bảng xếp hạng sau khi đã được xác thực thông tin và có ít nhất một bài nộp được ghi nhận tại 13 hội nghị.
 
 Công trình nghiên cứu được tính từ năm giảng viên bắt đầu công tác tại một trường đại học ở Việt Nam. Trên bản in PDF chính thức, bài báo cần ghi rõ tên trường đại học tại Việt Nam của tác giả. Trường hợp giảng viên từng công tác tại một trường đại học khác trong nước, các bài báo giai đoạn đó vẫn được ghi nhận nếu tác giả đã đảm nhiệm vị trí từ giảng viên trở lên. Ngược lại, những bài báo công bố trong thời gian làm sinh viên hoặc nghiên cứu sinh sẽ không được tính. Hệ thống cũng không ghi nhận những bài báo chỉ ghi tên doanh nghiệp hoặc viện nghiên cứu mà không có tên trường đại học đi kèm.
 
@@ -40,7 +40,7 @@ Khi danh sách chính thức từ hội nghị chưa được phát hành đầy
 Mỗi bài báo được nhận có tổng điểm là 1,0, chia đều cho số tác giả của bài (`1 / N`). Điểm của giảng viên là tổng điểm phân đoạn từ các bài báo hợp lệ theo mô hình của [CSRankings](https://csrankings.org/).
 
 ### Điểm trường
-Điểm của các giảng viên thuộc trường được cộng riêng theo từng lĩnh vực (AI, ML, CV, NLP). Điểm chung cuộc của trường là trung bình nhân (geometric mean) của `(Điểm lĩnh vực + 1)` trên cả 4 lĩnh vực (căn bậc 4 của tích). Việc cộng 1 giúp một lĩnh vực chưa có bài không kéo tổng điểm về 0, đồng thời khuyến khích sự phát triển đồng đều giữa các phân ngành.
+Điểm của các giảng viên thuộc trường được cộng riêng theo từng lĩnh vực (AI, ML, CV, NLP, RB). Điểm chung cuộc của trường là trung bình nhân (geometric mean) của `(Điểm lĩnh vực + 1)` trên cả 5 lĩnh vực (căn bậc 5 của tích). Việc cộng 1 giúp một lĩnh vực chưa có bài không kéo tổng điểm về 0, đồng thời khuyến khích sự phát triển đồng đều giữa các phân ngành.
 
 ### Vai trò tác giả và hướng dẫn sinh viên
 Trang thông tin của từng trường và giảng viên cung cấp thêm hai biểu đồ lọc riêng các bài báo mà trường hoặc giảng viên giữ vị trí **tác giả đầu (first author)** hoặc chiếm **đa số (>50%) số tác giả**. Đối với các bạn sinh viên và nghiên cứu sinh đang tìm kiếm giáo sư hướng dẫn (advisor), đây là một chỉ dấu rất đáng quan tâm: tỷ lệ bài báo có tác giả đầu hoặc đa số tác giả cùng trường cao thường phản ánh giảng viên dành nhiều thời gian làm việc và trực tiếp hướng dẫn sinh viên trong phòng lab của mình. Ngược lại, nếu tỷ lệ này thấp, điều đó thường cho thấy giảng viên dành nhiều thời gian hơn cho các dự án hợp tác đối ngoại với các nhóm nghiên cứu bên ngoài.
@@ -55,7 +55,7 @@ Chính sách công khai dữ liệu phản biện giữa các hội nghị có s
 | **ICLR** | Công khai | Công khai toàn bộ bài nộp |
 | **NeurIPS** | Công khai | Chỉ công khai khi tác giả tự nguyện chia sẻ |
 | **ACL, EMNLP, CVPR** | Công khai | Không công khai (ngoại trừ các bài xuất bản ở Findings track) |
-| **ICML, ICCV, ECCV, AAAI, IJCAI** | Công khai | Hoàn toàn bảo mật |
+| **ICML, ICCV, ECCV, AAAI, IJCAI, ICRA, IROS, RSS** | Công khai | Hoàn toàn bảo mật |
 
 Các hội nghị như ACL, EMNLP hay CVPR không công khai bài bị từ chối, nhưng các bài được công bố ở Findings track cho biết bài đó không được nhận vào Main Track (dù vẫn không thể biết được toàn bộ các bài bị từ chối khác). Do đó, vì chỉ riêng ICLR công khai đầy đủ số liệu bài nộp và bài bị từ chối, một giảng viên nộp bài thường xuyên tại ICLR sẽ có số lượng bài bị từ chối hiển thị nhiều hơn so với người không nộp ICLR. Trên hệ thống, số bài **Bị từ chối** có ghi nhận bao gồm các bài bị từ chối sau phản biện, bài tác giả tự rút, bài bị loại sơ bộ (desk-rejected) và bài chuyển sang Findings. Số bài **Đã nộp** được tính bằng tổng số bài được nhận và số bài bị từ chối được ghi nhận.
 

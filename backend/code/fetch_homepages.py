@@ -14,7 +14,8 @@ USER_AGENT = "vn-conference-stats/1.0 (personal research script)"
 VENUE = re.compile(r"NeurIPS|NIPS\b|Neural Information Processing|ICLR|Learning Representations|ICML|"
                    r"International Conference on Machine Learning|CVPR|Computer Vision and Pattern Recognition|"
                    r"\bACL\b|Association for Computational Linguistics|EMNLP|Empirical Methods in Natural Language|"
-                   r"ICCV|ECCV|Computer Vision|AAAI|IJCAI|Joint Conference on Artificial Intelligence")
+                   r"ICCV|ECCV|Computer Vision|AAAI|IJCAI|Joint Conference on Artificial Intelligence|"
+                   r"ICRA|IROS|\bRSS\b|Robotics and Automation|Intelligent Robots and Systems|Robotics: Science and Systems")
 YEAR = re.compile(r"20(2[0-9])|[’'](2[0-9])\b")
 
 
@@ -33,7 +34,7 @@ def text_lines(data):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Save the professors' own pages and pull out the lines that mention one of the ten venues.")
+    ap = argparse.ArgumentParser(description="Save the professors' own pages and pull out the lines that mention one of the thirteen venues.")
     ap.add_argument("--only", nargs="+", metavar="SLUG", help="fetch only these people")
     args = ap.parse_args()
 

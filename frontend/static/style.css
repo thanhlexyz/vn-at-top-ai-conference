@@ -407,6 +407,7 @@ form.feedback .fb-actions { display: flex ; flex-wrap: wrap ; gap: 0.6em ; }
 .chart .ar-ml { fill: #2d66bd ; }
 .chart .ar-cv { fill: #009cba ; }
 .chart .ar-nlp { fill: #8e479d ; }
+.chart .ar-rb { fill: #1b7e2a ; }
 .chart .edge { fill: none ; stroke: none ; }
 .chart .edge.est { stroke: var(--not-accepted) ; stroke-width: 1.5 ; stroke-linejoin: round ; }
 .chart .gap { fill: none ; stroke: var(--bg) ; stroke-width: 2 ; stroke-linejoin: round ; }

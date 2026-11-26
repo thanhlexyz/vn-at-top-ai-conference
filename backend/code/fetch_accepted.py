@@ -3,15 +3,17 @@ import collections
 import gzip
 import html
 import json
+import os
 import re
 import sys
 import time
 import unicodedata
 import urllib.error
+import urllib.parse
 import urllib.request
 
-from common import (ACCEPTED, LAST_YEAR, RAW, WORK, YEARS, held, norm_title, presentation, virtual_track, write_json,
-                    write_jsonl_gz)
+from common import (ACCEPTED, LAST_YEAR, RAW, WORK, YEARS, held, norm_title, presentation, token_key, virtual_track,
+                    write_json, write_jsonl_gz)
 
 USER_AGENT = "vn-conference-stats/1.0 (personal research script)"
 VIRTUAL_SITE = {"iclr": "https://iclr.cc", "neurips": "https://neurips.cc", "icml": "https://icml.cc",
@@ -20,7 +22,7 @@ CVPR2020_DAYS = ["2020-06-16", "2020-06-17", "2020-06-18"]
 PRES_ORDER = {"": 0, "highlight": 1, "spotlight": 1, "oral": 2}
 
 
-def fetch(url, name, refresh=False):
+def fetch(url, name, refresh=False, headers=None):
     path = RAW / (name + ".gz")
     missing = RAW / (name + ".missing")
     if not refresh:
@@ -29,8 +31,8 @@ def fetch(url, name, refresh=False):
         if missing.exists() and time.time() - missing.stat().st_mtime < 86400:
             return None
     path.parent.mkdir(parents=True, exist_ok=True)
-    print(f"  downloading {url}", file=sys.stderr)
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    print(f"  downloading {url[:160]}", file=sys.stderr)
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, **(headers or {})})
     for attempt in range(3):
         try:
             with urllib.request.urlopen(req, timeout=180) as r:
@@ -305,6 +307,115 @@ def parse_ijcai(year, page):
     return out
 
 
+DBLP_SPARQL = "https://sparql.dblp.org/sparql"
+RSS_SITE = "https://www.roboticsproceedings.org"
+
+
+def roman(n):
+    out = ""
+    for value, letters in ((1000, "M"), (900, "CM"), (500, "D"), (400, "CD"), (100, "C"), (90, "XC"), (50, "L"),
+                           (40, "XL"), (10, "X"), (9, "IX"), (5, "V"), (4, "IV"), (1, "I")):
+        while n >= value:
+            out += letters
+            n -= value
+    return out
+
+
+def dblp_toc(venue, year, refresh=False):
+    query = ("PREFIX dblp: <https://dblp.org/rdf/schema#> SELECT ?p ?title ?doi ?pages ?ord ?name WHERE { "
+             f"?p dblp:listedOnTocPage <https://dblp.org/db/conf/{venue}/{venue}{year}> ; dblp:title ?title ; "
+             "dblp:hasSignature ?s . ?s dblp:signatureOrdinal ?ord ; dblp:signatureDblpName ?name . "
+             "OPTIONAL { ?p dblp:doi ?doi } OPTIONAL { ?p dblp:pagination ?pages } }")
+    name = f"dblp/{venue}-{year}.json"
+    data = fetch(f"{DBLP_SPARQL}?{urllib.parse.urlencode({'query': query})}", name, refresh,
+                 headers={"Accept": "application/sparql-results+json"})
+    rows = json.loads(data)["results"]["bindings"] if data else []
+    if data and not rows:
+        (RAW / (name + ".gz")).unlink(missing_ok=True)
+        (RAW / (name + ".missing")).write_text("no papers listed yet\n")
+    return rows
+
+
+def parse_dblp(venue, year, rows):
+    papers = {}
+    for r in rows:
+        p = papers.setdefault(r["p"]["value"], {"title": r["title"]["value"], "doi": r.get("doi", {}).get("value", ""),
+                                                "authors": {}})
+        p["authors"][int(r["ord"]["value"])] = re.sub(r"\s+\d{4}$", "", r["name"]["value"])
+    return [{"venue": venue, "year": year, "track": "main", "title": re.sub(r"(?<!\.)\.$", "", p["title"]),
+             "authors": [{"name": n, "aff": ""} for _, n in sorted(p["authors"].items())],
+             "url": p["doi"] or key, "pdf": "", "forum": "", "pres": "", "topic": "", "source": "dblp.org",
+             "doi": p["doi"].split("doi.org/")[-1].lower()}
+            for key, p in sorted(papers.items())]
+
+
+def parse_rss(year, page):
+    n = year - 2004
+    return [{"venue": "rss", "year": year, "track": "main", "title": text_of(m.group(3)),
+             "authors": [{"name": a.strip(), "aff": ""} for a in text_of(m.group(4)).split(",") if a.strip()],
+             "url": f"{RSS_SITE}/rss{n}/{m.group(1)}.html", "pdf": f"{RSS_SITE}/rss{n}/{m.group(1)}.pdf",
+             "forum": "", "pres": "", "topic": "", "source": "roboticsproceedings.org",
+             "doi": f"10.15607/rss.{year}.{roman(n).lower()}.{m.group(2)}"}
+            for m in re.finditer(r'<a href="(p(\d+))\.html">(.*?)</a>\s*<br>\s*<i>(.*?)</i>', page, re.S)]
+
+
+def openalex_affiliations(prefixes, name, refresh=False):
+    path = RAW / (name + ".gz")
+    if path.exists() and not refresh:
+        return json.loads(gzip.decompress(path.read_bytes()))
+    key = os.environ.get("OPENALEX_API_KEY")
+    out = {}
+    for prefix in prefixes:
+        page = 1
+        while True:
+            params = {"filter": f"doi_starts_with:{prefix}", "per-page": 200, "page": page, "select": "doi,authorships"}
+            if key:
+                params["api_key"] = key
+            req = urllib.request.Request("https://api.openalex.org/works?" + urllib.parse.urlencode(params),
+                                         headers={"User-Agent": USER_AGENT})
+            for attempt in range(4):
+                try:
+                    with urllib.request.urlopen(req, timeout=120) as r:
+                        data = json.load(r)
+                    break
+                except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+                    err = str(e).replace(key or "\0", "***")
+                    time.sleep(5 * (attempt + 1))
+            else:
+                print(f"  warning: OpenAlex did not answer for {prefix}: {err}", file=sys.stderr)
+                return out
+            for w in data["results"]:
+                out[w["doi"].split("doi.org/")[-1].lower()] = [
+                    [a["author"]["display_name"], "; ".join(a.get("raw_affiliation_strings") or [])]
+                    for a in w["authorships"]]
+            if len(data["results"]) < 200:
+                break
+            page += 1
+            time.sleep(0.2)
+    if out:
+        print(f"  OpenAlex affiliations for {', '.join(prefixes)}: {len(out)} papers", file=sys.stderr)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(gzip.compress(json.dumps(out, ensure_ascii=False).encode("utf-8")))
+    return out
+
+
+def with_affiliations(rows, affiliations):
+    for p in rows:
+        listed = affiliations.get(p.pop("doi", ""), [])
+        by_name = {token_key(n): a for n, a in listed}
+        for k, author in enumerate(p["authors"]):
+            aff = by_name.get(token_key(author["name"]))
+            if aff is None and len(listed) == len(p["authors"]):
+                aff = listed[k][1]
+            author["aff"] = aff or ""
+    return rows
+
+
+def doi_prefixes(rows):
+    counts = collections.Counter(p["doi"].rsplit(".", 1)[0] for p in rows if p["doi"])
+    return [prefix for prefix, n in counts.most_common() if n >= 5]
+
+
 def collect(years, refresh=False):
     papers, coverage = [], []
 
@@ -382,11 +493,22 @@ def collect(years, refresh=False):
         page = fetch(f"https://www.ijcai.org/proceedings/{year}/", f"ijcai/{year}.html", refresh)
         rows = parse_ijcai(year, page.decode("utf-8", "replace")) if page else []
         add("ijcai", year, rows, ["ijcai.org"] if rows else [])
+
+        recent = refresh and year >= LAST_YEAR - 1
+        for venue in ("icra", "iros"):
+            rows = parse_dblp(venue, year, dblp_toc(venue, year, recent))
+            affiliations = openalex_affiliations(doi_prefixes(rows), f"openalex/{venue}-{year}.json", recent) if rows else {}
+            add(venue, year, with_affiliations(rows, affiliations), ["dblp.org", "openalex.org"] if rows else [])
+
+        page = fetch(f"{RSS_SITE}/rss{year - 2004}/index.html", f"rss/{year}.html", recent)
+        rows = parse_rss(year, page.decode("utf-8", "replace")) if page else []
+        affiliations = openalex_affiliations([f"10.15607/rss.{year}."], f"openalex/rss-{year}.json", recent) if rows else {}
+        add("rss", year, with_affiliations(rows, affiliations), ["roboticsproceedings.org", "openalex.org"] if rows else [])
     return papers, coverage
 
 
 def main():
-    ap = argparse.ArgumentParser(description='Download the public accepted-paper lists of the ten venues and normalize them.')
+    ap = argparse.ArgumentParser(description='Download the public accepted-paper lists of the thirteen venues and normalize them.')
     ap.add_argument("--refresh", action="store_true", help="download everything again instead of using raw/")
     args = ap.parse_args()
 

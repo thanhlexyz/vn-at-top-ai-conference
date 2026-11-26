@@ -8,8 +8,12 @@
 {{ partial "picture.html" (dict "src" $v.image "source" $v.image_source "alt" $v.name "cls" "logo venue") }}
 {{- $part := "" }}{{ if gt (int $t.own_page) 0 }}{{ $part = T "ent_unofficial_part" (dict "Official" $t.official "Own" $t.own_page) }}{{ end }}
 <p>
+	{{- if gt (int $v.accepted) 0 }}
 	{{ T "ent_conf_summary" (dict "Name" $v.name "Papers" (T "ent_n_accepted" (dict "Count" (int $v.accepted))) "Year" hugo.Data.meta.first_year "Part" $part) }}
 	{{ T "ent_conf_once" }}
+	{{- else }}
+	{{ T "ent_conf_empty" (dict "Name" $v.name "Year" hugo.Data.meta.first_year) }}
+	{{- end }}
 </p>
 <p>
 	{{- if eq $v.rejections "full" }}
@@ -17,7 +21,7 @@
 	{{- else if eq $v.rejections "partial" }}
 	{{ T "ent_conf_partial" $v.name }}{{ with $v.ratio }} {{ T "ent_conf_ratio" . }}{{ end }}
 	{{- else }}
-	{{ T "ent_conf_none" (dict "Name" $v.name "Ratio" (cond (ne $v.ratio nil) (T "ent_conf_ratio_part" $v.ratio) "")) }}
+	{{ T "ent_conf_none" (dict "Name" $v.name "Ratio" (cond (and (ne $v.ratio nil) (gt (int $v.accepted) 0)) (T "ent_conf_ratio_part" $v.ratio) "")) }}
 	{{- end }}
 </p>
 <h2>{{ T "by_year" }}</h2>
