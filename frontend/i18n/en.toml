@@ -593,3 +593,5 @@ other = "Open this submission on goodpapers.org"
 other = "view"
 [ent_conf_empty]
 other = "At {{ .Name }}, professors on the list have no accepted paper yet since {{ .Year }}."
+[chance_inline]
+other = "acceptance chance {{ . }}%"

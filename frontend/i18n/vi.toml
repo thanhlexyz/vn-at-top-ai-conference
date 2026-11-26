@@ -588,3 +588,5 @@ other = "Xem bài này trên goodpapers.org"
 other = "xem"
 [ent_conf_empty]
 other = "Tại {{ .Name }}, các giảng viên trong danh sách theo dõi chưa có bài báo nào được nhận kể từ năm {{ .Year }}."
+[chance_inline]
+other = "khả năng được nhận {{ . }}%"

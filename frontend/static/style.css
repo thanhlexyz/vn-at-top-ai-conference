@@ -341,7 +341,7 @@ ul.papers li {
     margin-bottom: 0.6em ;
 }
 
-ul.papers .authors {
+ul.papers .authors, ul.under-list .authors {
     font-size: 0.85em ;
     color: var(--muted) ;
 }
