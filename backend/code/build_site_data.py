@@ -1519,7 +1519,7 @@ def main():
     for r in leads:
         add({"name": r["name"], "post": r["post"], "evidence": r["papers"], "paper_url": r["paper_url"], "flag": r["note"],
              "profile": f"https://openreview.net/profile?id={r['openreview_id']}" if r["openreview_id"] else r.get("staff_page", ""),
-             "source": "staff page, by hand" if r.get("source") == "by hand" else "OpenAlex scan",
+             "source": "added by hand" if r.get("source") == "by hand" else "OpenAlex scan",
              "weight": len(r["papers"].split("; "))}, {r["openreview_id"]} if r["openreview_id"] else set())
     for c in candidates:
         if c.get("openreview_class") == "staff":

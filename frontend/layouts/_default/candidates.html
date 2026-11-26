@@ -5,13 +5,13 @@
 <h2>To validate ({{ len $c.to_validate }})</h2>
 {{- if $c.to_validate }}
 <p>
-	People whose OpenReview profile shows a post at a university in Vietnam of lecturer or higher, with a paper at the thirteen venues. Students are never listed.
+	People whose OpenReview profile or staff page shows a post at a university in Vietnam of lecturer or higher, with a paper at the thirteen venues. Students are never listed.
 	Say yes or no for each: yes adds a roster row with <code>approved = yes</code>; no adds one with <code>approved = no</code> and the reason, which takes the name off this list.
 	Most papers first. A note about different institutions matters, since a paper counts only if it names the person's roster institution.
 </p>
 <div class="scroll">
 <table class="validate">
-	<thead><tr><th class="l">Name</th><th>Papers</th><th class="l">Post on OpenReview</th><th class="l">Evidence</th><th class="l">Note</th></tr></thead>
+	<thead><tr><th class="l">Name</th><th>Papers</th><th class="l">Post</th><th class="l">Evidence</th><th class="l">Note</th></tr></thead>
 	<tbody>
 	{{- range $c.to_validate }}
 	<tr>
