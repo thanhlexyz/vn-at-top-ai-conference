@@ -484,11 +484,11 @@ other = "{{ .Count }} papers"
 one = "{{ .Count }} tracked professor"
 other = "{{ .Count }} tracked professors"
 [ent_prof_accepted]
-other = "While based in Vietnam, this professor has published {{ .Papers }} across the thirteen tracked flagship conferences{{ .Part }}."
+other = "While based in Vietnam, {{ .Who }} has published {{ .Papers }} across the thirteen tracked flagship conferences{{ .Part }}."
 [ent_prof_none]
-other = "While based in Vietnam, this professor has no accepted paper yet at the thirteen tracked flagship conferences."
+other = "While based in Vietnam, {{ . }} has no accepted paper yet at the thirteen tracked flagship conferences."
 [ent_prof_iclr]
-other = "Based on public review records, they have submitted {{ .Papers }} to ICLR ({{ .Detail }}){{ .Other }}."
+other = "Based on public review records, {{ .Who }} has submitted {{ .Papers }} to ICLR ({{ .Detail }}){{ .Other }}."
 [ent_acc_rej]
 other = "{{ .Accepted }} accepted, {{ .Rejected }} rejected or withdrawn"
 [ent_acc_only]
@@ -498,7 +498,7 @@ other = "{{ . }} rejected or withdrawn"
 [ent_other_part]
 other = ", alongside {{ .Count }} recorded rejections or Findings papers at {{ .Venues }}"
 [ent_other_only]
-other = "They also have {{ .Count }} recorded rejections or Findings papers at {{ .Venues }}."
+other = "{{ .Who }} also has {{ .Count }} recorded rejections or Findings papers at {{ .Venues }}."
 [ent_and]
 other = " and "
 [ent_uni_summary]
@@ -611,7 +611,7 @@ other = "The paper's row on the Papers page"
 [ch_fig_label]
 other = "Papers by topic and year; a curve joins a paper to an earlier paper of the same professor that it cites"
 [ch_fig_caption]
-other = "Papers and submissions by topic and year. Each dot is one paper (click to open it); a curve joins a paper to an earlier one of this professor that it cites."
+other = "Papers and submissions by topic and year. Each dot is one paper (click to open it); a curve joins a paper to an earlier one that it cites."
 [ch_words]
 other = "Most distinctive words in the topic's abstracts"
 [ch_desc]
