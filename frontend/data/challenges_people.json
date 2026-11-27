@@ -6552,12 +6552,550 @@
   "name_vi": "Huỳnh Thị Thanh Bình",
   "institution": "HUST",
   "image": "img/people/huynh-thi-thanh-binh.jpg",
-  "figure": null,
-  "open_summary": "",
-  "open_summary_vi": "",
-  "overview": "The central thread is LLM-based evolutionary program search, in which a large language model writes and revises heuristic code while an evolutionary algorithm selects among candidates. Contributions include balancing exploration and exploitation with harmony search and diversity measures, jointly evolving several interdependent solver components through turn-based interaction, extending heuristic design to multi-objective problems with Pareto-grid guidance, and multi-turn reflective refinement of groups of heuristics from structured performance feedback. A related line treats retrieval of optimization templates, used when LLMs translate natural-language problems into solver code, as a policy learned from past successes and failures. Reinforcement learning appears in multi-agent LLM coordination for writing related-work sections and in constrained multi-objective reinforcement learning when preferences and safety budgets drift and are only partially observed. Earlier work produced robotics resources, a large grasp dataset generated with foundation models and a simulator for crowd-aware visual navigation, and recent work reduces temporal hallucinations in video LLMs without retraining.",
-  "overview_vi": "Hướng trung tâm là tìm kiếm chương trình tiến hóa dựa trên LLM, trong đó mô hình ngôn ngữ lớn viết và chỉnh sửa mã heuristic còn thuật toán tiến hóa chọn lọc giữa các ứng viên. Các đóng góp gồm cân bằng giữa khám phá và khai thác bằng harmony search và các thước đo đa dạng, tiến hóa đồng thời nhiều thành phần phụ thuộc lẫn nhau của bộ giải thông qua tương tác theo lượt, mở rộng thiết kế heuristic sang bài toán đa mục tiêu với sự dẫn hướng của lưới Pareto, và tinh chỉnh phản tư nhiều lượt cho từng nhóm heuristic dựa trên phản hồi hiệu năng có cấu trúc. Một hướng liên quan coi việc truy xuất mẫu bài toán tối ưu, dùng khi LLM chuyển bài toán mô tả bằng ngôn ngữ tự nhiên thành mã cho bộ giải, là một chính sách học được từ các lần thành công và thất bại trước đó. Học tăng cường xuất hiện trong việc phối hợp nhiều tác tử LLM để viết phần Related Work, và trong học tăng cường đa mục tiêu có ràng buộc khi sở thích và ngân sách an toàn thay đổi theo thời gian và chỉ quan sát được một phần. Các công trình trước đó tạo ra tài nguyên cho robot, gồm bộ dữ liệu gắp vật quy mô lớn sinh bằng foundation model và bộ mô phỏng điều hướng thị giác có đám đông, còn công trình gần đây giảm ảo giác về thời gian trong video LLM mà không cần huấn luyện lại.",
-  "topics": [],
+  "figure": {
+   "width": 930,
+   "height": 274,
+   "years": [
+    {
+     "year": 2024,
+     "x": 490.0
+    },
+    {
+     "year": 2025,
+     "x": 610.0
+    },
+    {
+     "year": 2026,
+     "x": 730.0
+    },
+    {
+     "year": 2027,
+     "x": 850.0
+    }
+   ],
+   "rows": [
+    {
+     "y": 57.0,
+     "color": "tc0",
+     "title": "LLM-evolved heuristics for combinatorial optimization",
+     "title_vi": "Heuristic do LLM tiến hóa cho tối ưu tổ hợp",
+     "dots": [
+      {
+       "id": "emnlp2026-revel-multi-turn-reflective-llm-guided-heuristic-evolution-v",
+       "x": 710.5,
+       "y": 57.0,
+       "title": "ReVEL: Multi-Turn Reflective LLM-Guided Heuristic Evolution via Structured Performance Feedback",
+       "label": "EMNLP 2026"
+      },
+      {
+       "id": "iclr2026-cognitively-inspired-reflective-evolution-interactive-multi-",
+       "x": 723.5,
+       "y": 57.0,
+       "title": "Cognitively Inspired Reflective Evolution: Interactive Multi-Turn LLM–EA Synthesis of Heuristics for Combinatorial Optimization",
+       "label": "ICLR 2026"
+      },
+      {
+       "id": "aaai2026-motif-multi-strategy-optimization-via-turn-based-interactive",
+       "x": 736.5,
+       "y": 57.0,
+       "title": "MOTIF: Multi-strategy Optimization via Turn-based Interactive Framework",
+       "label": "AAAI 2026"
+      },
+      {
+       "id": "aaai2026-pareto-grid-guided-large-language-models-for-fast-and-high-q",
+       "x": 749.5,
+       "y": 57.0,
+       "title": "Pareto-Grid-Guided Large Language Models for Fast and High-Quality Heuristics Design in Multi-Objective Combinatorial Optimization",
+       "label": "AAAI 2026"
+      },
+      {
+       "id": "aaai2025-hsevo-elevating-automatic-heuristic-design-with-diversity-dr",
+       "x": 610.0,
+       "y": 57.0,
+       "title": "HSEvo: Elevating Automatic Heuristic Design with Diversity-Driven Harmony Search and Genetic Algorithm Using LLMs",
+       "label": "AAAI 2025"
+      }
+     ]
+    },
+    {
+     "y": 103.0,
+     "color": "tc1",
+     "title": "Constrained multi-objective RL under drift",
+     "title_vi": "Học tăng cường đa mục tiêu có ràng buộc khi mục tiêu trôi dạt",
+     "dots": [
+      {
+       "id": "neurips2026-becon-belief-conditioned-constrained-multi-objective-reinfor",
+       "x": 730.0,
+       "y": 103.0,
+       "title": "BECON: Belief-Conditioned Constrained Multi-Objective Reinforcement Learning under Drifting Preferences and Budgets",
+       "label": "NeurIPS 2026"
+      }
+     ]
+    },
+    {
+     "y": 149.0,
+     "color": "tc2",
+     "title": "Reinforcement learning to steer LLM pipelines",
+     "title_vi": "Học tăng cường điều khiển quy trình LLM",
+     "dots": [
+      {
+       "id": "neurips2026-compass-composable-policy-amortized-structured-search-for-ll",
+       "x": 723.5,
+       "y": 149.0,
+       "title": "COMPASS: Composable Policy-Amortized Structured Search for LLM-Based Optimization Modeling",
+       "label": "NeurIPS 2026"
+      },
+      {
+       "id": "emnlp2026-assembling-the-crew-a-collaborative-multi-agent-reinforcemen",
+       "x": 736.5,
+       "y": 149.0,
+       "title": "Assembling the CREW: A Collaborative Multi-agent Reinforcement Learning Framework for Automated Related Work Generation",
+       "label": "EMNLP 2026"
+      }
+     ]
+    },
+    {
+     "y": 195.0,
+     "color": "tc3",
+     "title": "Simulators and synthetic data for robots",
+     "title_vi": "Trình mô phỏng và dữ liệu tổng hợp cho robot",
+     "dots": [
+      {
+       "id": "iros2024-habicrowd-a-high-performance-simulator-for-crowd-aware-visua",
+       "x": 483.5,
+       "y": 195.0,
+       "title": "HabiCrowd: A High Performance Simulator for Crowd-Aware Visual Navigation",
+       "label": "IROS 2024"
+      },
+      {
+       "id": "icra2024-grasp-anything-large-scale-grasp-dataset-from-foundation-mod",
+       "x": 496.5,
+       "y": 195.0,
+       "title": "Grasp-Anything: Large-scale Grasp Dataset from Foundation Models",
+       "label": "ICRA 2024"
+      }
+     ]
+    },
+    {
+     "y": 241.0,
+     "color": "tc4",
+     "title": "Temporal hallucination in video LLMs",
+     "title_vi": "Ảo giác thời gian trong LLM cho video",
+     "dots": [
+      {
+       "id": "iclr2027-training-free-positive-spatiotemporal-enhancement-for-mitiga",
+       "x": 850.0,
+       "y": 241.0,
+       "title": "Training-Free Positive Spatiotemporal Enhancement for Mitigating Temporal Hallucinations in Video-LLMs",
+       "label": "ICLR 2027"
+      }
+     ]
+    }
+   ],
+   "edges": [
+    {
+     "d": "M710.5,57.0 Q660.25,26.94 610.0,57.0"
+    },
+    {
+     "d": "M736.5,57.0 Q673.25,23.82 610.0,57.0"
+    },
+    {
+     "d": "M749.5,57.0 Q679.75,22.26 610.0,57.0"
+    },
+    {
+     "d": "M496.5,195.0 Q490.0,175.44 483.5,195.0"
+    }
+   ]
+  },
+  "open_summary": "Balancing exploration and exploitation in LLM-driven heuristic search remains central, and CIRE's reflection is tested only on bin packing without component ablations. BECON limits cost per step rather than over a cumulative budget, and assumes rather than verifies that history reveals the hidden task context. It is unclear whether COMPASS's gains come from its learned retrieval policy or from its hand-built template graph and noisy end-to-end rewards.",
+  "open_summary_vi": "Cân bằng giữa khám phá và khai thác trong tìm kiếm heuristic bằng LLM vẫn là vấn đề trọng tâm, và cơ chế phản tư của CIRE mới chỉ được thử trên bài toán xếp thùng, không có ablation cho từng thành phần. BECON giới hạn chi phí theo từng bước chứ không theo ngân sách tích lũy, và giả định chứ chưa kiểm chứng rằng lịch sử đủ để suy ra ngữ cảnh nhiệm vụ ẩn. Chưa rõ mức tăng của COMPASS đến từ chính sách truy xuất học được hay từ đồ thị mẫu xây dựng thủ công và phần thưởng đầu-cuối nhiễu.",
+  "overview": "Most of Huynh Thi Thanh Binh's papers use large language models or learned policies to automate design and decision tasks. LLMs paired with evolutionary search generate heuristic code for NP-hard combinatorial problems, with added diversity control, multi-turn reflection, multi-objective selection and two-agent turns. BECON infers drifting preferences and safety budgets from recent interaction history and fuses them with unreliable observed signals to condition a constrained multi-objective reinforcement-learning policy. COMPASS learns a deep Q-network that retrieves optimization templates for LLM-written solver code; CREW trains LLM agents with multi-agent reinforcement learning to write related-work sections.",
+  "overview_vi": "Phần lớn các bài báo của cô Bình dùng mô hình ngôn ngữ lớn hoặc chính sách học được để tự động hóa các bài toán thiết kế và ra quyết định. LLM kết hợp với tìm kiếm tiến hóa sinh mã heuristic cho các bài toán tổ hợp NP-khó, có thêm kiểm soát độ đa dạng, phản tư nhiều lượt, chọn lọc đa mục tiêu và lượt luân phiên giữa hai tác tử. BECON suy ra sở thích và ngân sách an toàn đang trôi dạt từ lịch sử tương tác gần đây và kết hợp chúng với tín hiệu quan sát không đáng tin cậy để điều kiện hóa một chính sách học tăng cường đa mục tiêu có ràng buộc. COMPASS học một mạng Q sâu để truy xuất mẫu mô hình tối ưu cho mã bộ giải do LLM viết; CREW huấn luyện các tác tử LLM bằng học tăng cường đa tác tử để viết phần công trình liên quan.",
+  "topics": [
+   {
+    "title": "LLM-evolved heuristics for combinatorial optimization",
+    "title_vi": "Heuristic do LLM tiến hóa cho tối ưu tổ hợp",
+    "gist": "LLMs paired with evolutionary search generate heuristic code for NP-hard combinatorial problems, with added diversity control, multi-turn reflection, multi-objective selection and two-agent turns.",
+    "gist_vi": "LLM kết hợp với tìm kiếm tiến hóa sinh mã heuristic cho các bài toán tổ hợp NP-khó, có thêm kiểm soát độ đa dạng, phản tư nhiều lượt, chọn lọc đa mục tiêu và lượt luân phiên giữa hai tác tử.",
+    "open_gist": "Balancing exploration and exploitation in LLM-driven heuristic search remains central, and CIRE's reflection is tested only on bin packing without component ablations.",
+    "open_gist_vi": "Cân bằng giữa khám phá và khai thác trong tìm kiếm heuristic bằng LLM vẫn là vấn đề trọng tâm, và cơ chế phản tư của CIRE mới chỉ được thử trên bài toán xếp thùng, không có ablation cho từng thành phần.",
+    "summary": "LLM-based evolutionary program search lets an LLM write and modify heuristic code for NP-hard problems inside an evolutionary loop. HSEvo measures search diversity and balances it with harmony search, MPaGE uses a Pareto grid for multi-objective problems, MOTIF has two LLM agents take turns improving solver components, and CIRE and ReVEL let the LLM reflect on groups of heuristics over several turns. Most of the papers report gains over earlier LLM-based baselines, and MPaGE reports results competitive with traditional multi-objective evolutionary algorithms at shorter runtime.",
+    "summary_vi": "Tìm kiếm chương trình tiến hóa dựa trên LLM để LLM viết và sửa mã heuristic cho các bài toán NP-khó bên trong một vòng lặp tiến hóa. HSEvo đo độ đa dạng của quá trình tìm kiếm và cân bằng nó bằng tìm kiếm hòa âm, MPaGE dùng lưới Pareto cho bài toán đa mục tiêu, MOTIF để hai tác tử LLM luân phiên cải thiện các thành phần của bộ giải, còn CIRE và ReVEL để LLM phản tư trên các nhóm heuristic qua nhiều lượt. Phần lớn các bài báo báo cáo kết quả tốt hơn các baseline dựa trên LLM trước đó, và MPaGE báo cáo kết quả cạnh tranh với thuật toán tiến hóa đa mục tiêu truyền thống với thời gian chạy ngắn hơn.",
+    "open": [
+     {
+      "text": "The authors claim the proposed method is for “CO”, but actually only for the bin packing problem.",
+      "text_vi": "Các tác giả khẳng định phương pháp được đề xuất dành cho “CO” (tối ưu tổ hợp), nhưng thực ra chỉ dành cho bài toán xếp thùng.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "iclr2026-cognitively-inspired-reflective-evolution-interactive-multi-"
+      ]
+     },
+     {
+      "text": "There is no ablation isolating the effects of clustering, entropy-based grouping, or reflective multi-turn reasoning on performance.",
+      "text_vi": "Không có ablation nào tách riêng tác động của việc phân cụm, cách lập nhóm dựa trên entropy hay suy luận phản tư nhiều lượt lên hiệu năng.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "iclr2026-cognitively-inspired-reflective-evolution-interactive-multi-"
+      ]
+     },
+     {
+      "text": "The computational cost of multi-turn LLM reasoning is not reported.",
+      "text_vi": "Chi phí tính toán của suy luận LLM nhiều lượt không được báo cáo.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "iclr2026-cognitively-inspired-reflective-evolution-interactive-multi-"
+      ]
+     },
+     {
+      "text": "The HSEvo authors describe understanding the properties of heuristic search spaces and balancing exploration with exploitation as open gaps in LLM-based evolutionary program search.",
+      "text_vi": "Các tác giả HSEvo nêu việc hiểu các tính chất của không gian tìm kiếm heuristic và cân bằng giữa khám phá với khai thác là những khoảng trống còn mở trong tìm kiếm chương trình tiến hóa dựa trên LLM.",
+      "source": "reviewers",
+      "quote": false,
+      "papers": [
+       "aaai2025-hsevo-elevating-automatic-heuristic-design-with-diversity-dr"
+      ]
+     }
+    ],
+    "papers": [
+     "emnlp2026-revel-multi-turn-reflective-llm-guided-heuristic-evolution-v",
+     "iclr2026-cognitively-inspired-reflective-evolution-interactive-multi-",
+     "aaai2026-motif-multi-strategy-optimization-via-turn-based-interactive",
+     "aaai2026-pareto-grid-guided-large-language-models-for-fast-and-high-q",
+     "aaai2025-hsevo-elevating-automatic-heuristic-design-with-diversity-dr"
+    ],
+    "score": 1.04,
+    "color": "tc0",
+    "words": [
+     {
+      "word": "combinatorial optimization",
+      "share": 100
+     },
+     {
+      "word": "heuristic",
+      "share": 87
+     },
+     {
+      "word": "evolutionary",
+      "share": 80
+     },
+     {
+      "word": "search",
+      "share": 69
+     },
+     {
+      "word": "llms",
+      "share": 50
+     },
+     {
+      "word": "multi-turn",
+      "share": 45
+     }
+    ]
+   },
+   {
+    "title": "Constrained multi-objective RL under drift",
+    "title_vi": "Học tăng cường đa mục tiêu có ràng buộc khi mục tiêu trôi dạt",
+    "gist": "BECON infers drifting preferences and safety budgets from recent interaction history and fuses them with unreliable observed signals to condition a constrained multi-objective reinforcement-learning policy.",
+    "gist_vi": "BECON suy ra sở thích và ngân sách an toàn đang trôi dạt từ lịch sử tương tác gần đây và kết hợp chúng với tín hiệu quan sát không đáng tin cậy để điều kiện hóa một chính sách học tăng cường đa mục tiêu có ràng buộc.",
+    "open_gist": "BECON limits cost per step rather than over a cumulative budget, and assumes rather than verifies that history reveals the hidden task context.",
+    "open_gist_vi": "BECON giới hạn chi phí theo từng bước chứ không theo ngân sách tích lũy, và giả định chứ chưa kiểm chứng rằng lịch sử đủ để suy ra ngữ cảnh nhiệm vụ ẩn.",
+    "summary": "In constrained multi-objective reinforcement learning (MORL), a policy is conditioned on a preference over several rewards and on a cost budget, which are usually assumed to be observed exactly. BECON treats them as partially observed, infers them from recent history and fuses the estimates with the observed signals through uncertainty-dependent gates. The paper bounds the performance loss by fusion and cost-model errors and reports better constraint satisfaction and adaptation than MORL baselines under drift.",
+    "summary_vi": "Trong học tăng cường đa mục tiêu có ràng buộc (MORL), chính sách được điều kiện hóa theo một sở thích giữa nhiều phần thưởng và một ngân sách chi phí, vốn thường được giả định là quan sát chính xác. BECON coi chúng là quan sát được một phần, suy ra chúng từ lịch sử gần đây và kết hợp các ước lượng với tín hiệu quan sát qua các cổng phụ thuộc vào độ bất định. Bài báo chặn tổn thất hiệu năng bằng sai số kết hợp và sai số mô hình chi phí, và báo cáo mức thỏa mãn ràng buộc và khả năng thích ứng tốt hơn các baseline MORL khi có trôi dạt.",
+    "open": [
+     {
+      "text": "BECON enforces a cost limit at each decision step rather than a cumulative or remaining budget, so it does not directly capture long-horizon resource depletion.",
+      "text_vi": "BECON áp giới hạn chi phí tại từng bước quyết định chứ không theo ngân sách tích lũy hay ngân sách còn lại, nên không trực tiếp mô tả sự cạn kiệt tài nguyên trong dài hạn.",
+      "source": "authors",
+      "quote": false,
+      "papers": [
+       "neurips2026-becon-belief-conditioned-constrained-multi-objective-reinfor"
+      ]
+     },
+     {
+      "text": "the identifiability of latent task context from history is assumed in Assumption 2 but not empirically verified.",
+      "text_vi": "khả năng nhận dạng ngữ cảnh nhiệm vụ ẩn từ lịch sử được giả định trong Giả thiết 2 nhưng chưa được kiểm chứng bằng thực nghiệm.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "neurips2026-becon-belief-conditioned-constrained-multi-objective-reinfor"
+      ]
+     },
+     {
+      "text": "The empirical evaluation is mostly conducted on relatively simple or toy environments.",
+      "text_vi": "Phần đánh giá thực nghiệm chủ yếu được thực hiện trên các môi trường tương đối đơn giản hoặc mang tính đồ chơi.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "neurips2026-becon-belief-conditioned-constrained-multi-objective-reinfor"
+      ]
+     },
+     {
+      "text": "there are other types of dynamics that could lead to uncertainty, as in open agent systems: agent openness, task openness, type openness, frame openness, etc.",
+      "text_vi": "còn có những loại động lực khác có thể gây ra bất định, như trong các hệ tác tử mở: tính mở về tác tử, về nhiệm vụ, về kiểu và về khung, v.v.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "neurips2026-becon-belief-conditioned-constrained-multi-objective-reinfor"
+      ]
+     }
+    ],
+    "papers": [
+     "neurips2026-becon-belief-conditioned-constrained-multi-objective-reinfor"
+    ],
+    "score": 0.5,
+    "color": "tc1",
+    "words": [
+     {
+      "word": "preferences",
+      "share": 100
+     },
+     {
+      "word": "budgets",
+      "share": 100
+     },
+     {
+      "word": "morl",
+      "share": 100
+     },
+     {
+      "word": "becon belief-conditioned",
+      "share": 80
+     },
+     {
+      "word": "belief-conditioned constrained",
+      "share": 80
+     },
+     {
+      "word": "constrained preference-conditioned",
+      "share": 80
+     }
+    ]
+   },
+   {
+    "title": "Reinforcement learning to steer LLM pipelines",
+    "title_vi": "Học tăng cường điều khiển quy trình LLM",
+    "gist": "COMPASS learns a deep Q-network that retrieves optimization templates for LLM-written solver code; CREW trains LLM agents with multi-agent reinforcement learning to write related-work sections.",
+    "gist_vi": "COMPASS học một mạng Q sâu để truy xuất mẫu mô hình tối ưu cho mã bộ giải do LLM viết; CREW huấn luyện các tác tử LLM bằng học tăng cường đa tác tử để viết phần công trình liên quan.",
+    "open_gist": "It is unclear whether COMPASS's gains come from its learned retrieval policy or from its hand-built template graph and noisy end-to-end rewards.",
+    "open_gist_vi": "Chưa rõ mức tăng của COMPASS đến từ chính sách truy xuất học được hay từ đồ thị mẫu xây dựng thủ công và phần thưởng đầu-cuối nhiễu.",
+    "summary": "Both papers train a reinforcement-learning policy to control a pipeline built around LLMs. COMPASS treats retrieval of optimization-modeling templates as a walk over a directed acyclic graph, learned by a deep Q-network from solver and LLM-judge feedback, and reports the largest gains on complex and mixed-category problems. CREW lets LLM agents choose actions such as Retrieve, Compose and Critique under a policy trained with Independent Proximal Policy Optimization (IPPO), and reports better related-work sections at lower token cost.",
+    "summary_vi": "Cả hai bài báo huấn luyện một chính sách học tăng cường để điều khiển một quy trình xây dựng quanh LLM. COMPASS coi việc truy xuất mẫu mô hình hóa tối ưu là một hành trình trên đồ thị có hướng không chu trình, được một mạng Q sâu học từ phản hồi của bộ giải và của LLM giám khảo, và báo cáo mức tăng lớn nhất ở các bài toán phức tạp và thuộc nhiều loại kết hợp. CREW để các tác tử LLM chọn hành động như Retrieve, Compose và Critique theo một chính sách được huấn luyện bằng Independent Proximal Policy Optimization (IPPO), và báo cáo phần công trình liên quan tốt hơn với chi phí token thấp hơn.",
+    "open": [
+     {
+      "text": "The current evidence is insufficient to prove that the model has genuinely learned transferable modeling knowledge, rather than merely memorizing template preferences for specific benchmarks.",
+      "text_vi": "Bằng chứng hiện tại chưa đủ để chứng minh rằng mô hình thực sự học được tri thức mô hình hóa có thể chuyển giao, thay vì chỉ ghi nhớ sở thích chọn mẫu cho các benchmark cụ thể.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "neurips2026-compass-composable-policy-amortized-structured-search-for-ll"
+      ]
+     },
+     {
+      "text": "the action space is heavily constrained by the manually constructed DAG. Consequently, the true performance driver might be the template graph itself, rather than the RL-based policy.",
+      "text_vi": "không gian hành động bị ràng buộc chặt bởi DAG được xây dựng thủ công. Do đó, yếu tố thực sự quyết định hiệu năng có thể là chính đồ thị mẫu, chứ không phải chính sách dựa trên RL.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "neurips2026-compass-composable-policy-amortized-structured-search-for-ll"
+      ]
+     },
+     {
+      "text": "errors could originate from code generation, data parsing, solver configurations, or template merging, and not necessarily from a specific retrieval node.",
+      "text_vi": "lỗi có thể bắt nguồn từ khâu sinh mã, phân tích dữ liệu, cấu hình bộ giải hoặc ghép mẫu, chứ không nhất thiết từ một nút truy xuất cụ thể.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "neurips2026-compass-composable-policy-amortized-structured-search-for-ll"
+      ]
+     },
+     {
+      "text": "CREW's experiments use a single standard related-work-generation benchmark.",
+      "text_vi": "Các thí nghiệm của CREW chỉ dùng một benchmark chuẩn về sinh phần công trình liên quan.",
+      "source": "reviewers",
+      "quote": false,
+      "papers": [
+       "emnlp2026-assembling-the-crew-a-collaborative-multi-agent-reinforcemen"
+      ]
+     }
+    ],
+    "papers": [
+     "neurips2026-compass-composable-policy-amortized-structured-search-for-ll",
+     "emnlp2026-assembling-the-crew-a-collaborative-multi-agent-reinforcemen"
+    ],
+    "score": 0.45,
+    "color": "tc2",
+    "words": [
+     {
+      "word": "retrieval",
+      "share": 100
+     },
+     {
+      "word": "template",
+      "share": 83
+     },
+     {
+      "word": "related generation",
+      "share": 80
+     },
+     {
+      "word": "compass",
+      "share": 67
+     },
+     {
+      "word": "crew collaborative",
+      "share": 53
+     },
+     {
+      "word": "modeling",
+      "share": 50
+     }
+    ]
+   },
+   {
+    "title": "Simulators and synthetic data for robots",
+    "title_vi": "Trình mô phỏng và dữ liệu tổng hợp cho robot",
+    "gist": "HabiCrowd adds simulated crowds to photorealistic 3D scenes for visual navigation, and Grasp-Anything synthesizes one million grasp samples with foundation models.",
+    "gist_vi": "HabiCrowd đưa đám đông mô phỏng vào các cảnh 3D ảnh thực cho bài toán điều hướng thị giác, còn Grasp-Anything dùng mô hình nền tảng để tổng hợp một triệu mẫu gắp.",
+    "open_gist": "Both resources depend on models for their data: crowd behaviour comes from a simulated dynamics model, and grasp samples are synthesized by foundation models.",
+    "open_gist_vi": "Cả hai nguồn tài nguyên đều dựa vào mô hình để tạo dữ liệu: hành vi đám đông đến từ một mô hình động lực mô phỏng, còn mẫu gắp được tổng hợp bởi các mô hình nền tảng.",
+    "summary": "HabiCrowd is a benchmark simulator for crowd-aware visual navigation that adds a crowd dynamics model to photorealistic Habitat 2.0 environments; the paper reports state-of-the-art collision avoidance and higher computational efficiency for its human model. Grasp-Anything is a grasp-detection dataset of 1M samples with text descriptions and more than 3M objects synthesized from foundation models, which the paper reports supports zero-shot grasp detection, including in real-world robot experiments.",
+    "summary_vi": "HabiCrowd là một trình mô phỏng làm benchmark cho điều hướng thị giác có đám đông, thêm mô hình động lực đám đông vào các môi trường ảnh thực của Habitat 2.0; bài báo báo cáo mô hình con người của mình đạt kết quả tránh va chạm tốt nhất hiện nay và hiệu quả tính toán cao hơn. Grasp-Anything là một tập dữ liệu phát hiện điểm gắp gồm 1 triệu mẫu kèm mô tả văn bản và hơn 3 triệu vật thể được tổng hợp từ mô hình nền tảng, và bài báo báo cáo nó hỗ trợ phát hiện điểm gắp zero-shot, kể cả trong thí nghiệm robot thực.",
+    "open": [
+     {
+      "text": "HabiCrowd builds on the Habitat 2.0 simulator, with crowd behaviour produced by the paper's own human dynamics model and an agent that perceives the scene only through egocentric (first-person) inputs.",
+      "text_vi": "HabiCrowd xây trên trình mô phỏng Habitat 2.0, với hành vi đám đông do mô hình động lực con người của chính bài báo tạo ra và tác tử chỉ nhận biết khung cảnh qua đầu vào góc nhìn thứ nhất (egocentric).",
+      "source": "reviewers",
+      "quote": false,
+      "papers": [
+       "iros2024-habicrowd-a-high-performance-simulator-for-crowd-aware-visua"
+      ]
+     },
+     {
+      "text": "Grasp-Anything's samples are synthesized from foundation models, whose knowledge of everyday objects is what the dataset relies on for its diversity.",
+      "text_vi": "Các mẫu của Grasp-Anything được tổng hợp từ mô hình nền tảng, và độ đa dạng của tập dữ liệu dựa vào tri thức của các mô hình này về đồ vật thường ngày.",
+      "source": "reviewers",
+      "quote": false,
+      "papers": [
+       "icra2024-grasp-anything-large-scale-grasp-dataset-from-foundation-mod"
+      ]
+     }
+    ],
+    "papers": [
+     "iros2024-habicrowd-a-high-performance-simulator-for-crowd-aware-visua",
+     "icra2024-grasp-anything-large-scale-grasp-dataset-from-foundation-mod"
+    ],
+    "score": 0.27,
+    "color": "tc3",
+    "words": [
+     {
+      "word": "visual navigation",
+      "share": 100
+     },
+     {
+      "word": "grasp",
+      "share": 75
+     },
+     {
+      "word": "foundation",
+      "share": 75
+     },
+     {
+      "word": "crowd-aware visual",
+      "share": 60
+     },
+     {
+      "word": "human dynamics",
+      "share": 60
+     },
+     {
+      "word": "habicrowd",
+      "share": 50
+     }
+    ]
+   },
+   {
+    "title": "Temporal hallucination in video LLMs",
+    "title_vi": "Ảo giác thời gian trong LLM cho video",
+    "gist": "Feature Enhance, a training-free method, strengthens foreground objects and inter-frame changes in visual tokens to reduce event-order and motion errors of video LLMs.",
+    "gist_vi": "Feature Enhance, một phương pháp không cần huấn luyện, làm nổi bật vật thể tiền cảnh và thay đổi giữa các khung hình trong token thị giác để giảm lỗi về thứ tự sự kiện và chuyển động của LLM cho video.",
+    "open_gist": "It is not yet shown that unused cross-frame motion information causes these errors, or which component of the method produces the gains.",
+    "open_gist_vi": "Vẫn chưa chứng minh được rằng thông tin chuyển động giữa các khung hình không được sử dụng là nguyên nhân gây lỗi, hay thành phần nào của phương pháp tạo ra mức tăng.",
+    "summary": "Video large language models (Video-LLMs) often answer questions about event order, motion direction and object-state change incorrectly. The paper reports that motion information is partly decodable from object-level visual features but not used in the final prediction, and proposes Feature Enhance, which reweights foreground tokens and injects inter-frame feature differences without training. It reports accuracy gains over the unmodified models on three backbones.",
+    "summary_vi": "Các mô hình ngôn ngữ lớn cho video (Video-LLM) thường trả lời sai các câu hỏi về thứ tự sự kiện, hướng chuyển động và sự thay đổi trạng thái của vật thể. Bài báo báo cáo rằng thông tin chuyển động có thể giải mã một phần từ đặc trưng thị giác ở mức vật thể nhưng không được dùng trong dự đoán cuối cùng, và đề xuất Feature Enhance, đánh trọng số lại các token tiền cảnh và đưa hiệu đặc trưng giữa các khung hình vào mà không cần huấn luyện. Bài báo báo cáo độ chính xác tăng so với các mô hình gốc trên ba backbone.",
+    "open": [
+     {
+      "text": "The authors plan to explore motion-aligned correspondence, adaptive frame sampling and causal interventions to better characterise and improve how the model uses temporal information.",
+      "text_vi": "Các tác giả dự định tìm hiểu phép tương ứng theo chuyển động, lấy mẫu khung hình thích ứng và can thiệp nhân quả để mô tả rõ hơn và cải thiện cách mô hình sử dụng thông tin thời gian.",
+      "source": "authors",
+      "quote": false,
+      "papers": [
+       "iclr2027-training-free-positive-spatiotemporal-enhancement-for-mitiga"
+      ]
+     },
+     {
+      "text": "In Table 2, the gains mainly come from non-temporal categories (e.g., SDH up to +8.50), while TPH gains only 1.71–3.87.",
+      "text_vi": "Ở Bảng 2, mức tăng chủ yếu đến từ các hạng mục không liên quan đến thời gian (ví dụ SDH tăng tới +8,50), trong khi TPH chỉ tăng 1,71–3,87.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "iclr2027-training-free-positive-spatiotemporal-enhancement-for-mitiga"
+      ]
+     },
+     {
+      "text": "The diagnostic evidence does not sufficiently establish the proposed failure mechanism.",
+      "text_vi": "Bằng chứng chẩn đoán chưa đủ để xác lập cơ chế gây lỗi mà bài báo đề xuất.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "iclr2027-training-free-positive-spatiotemporal-enhancement-for-mitiga"
+      ]
+     },
+     {
+      "text": "the existing ablations do not isolate the contribution of the temporal residual.",
+      "text_vi": "các ablation hiện có không tách riêng được đóng góp của phần dư theo thời gian (temporal residual).",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "iclr2027-training-free-positive-spatiotemporal-enhancement-for-mitiga"
+      ]
+     }
+    ],
+    "papers": [
+     "iclr2027-training-free-positive-spatiotemporal-enhancement-for-mitiga"
+    ],
+    "score": 0.17,
+    "color": "tc4",
+    "words": [
+     {
+      "word": "object-centric",
+      "share": 100
+     },
+     {
+      "word": "temporal hallucinations",
+      "share": 80
+     },
+     {
+      "word": "yet they",
+      "share": 80
+     },
+     {
+      "word": "same object",
+      "share": 80
+     },
+     {
+      "word": "visual representations",
+      "share": 80
+     },
+     {
+      "word": "feature enhance",
+      "share": 80
+     }
+    ]
+   }
+  ],
   "papers": [
    {
     "id": "iclr2027-training-free-positive-spatiotemporal-enhancement-for-mitiga",
@@ -6606,34 +7144,34 @@
     "year": 2026,
     "credit": 0.5,
     "status": "accepted",
-    "problem": "Constrained multi-objective reinforcement learning (MORL) conditioned on user preferences usually assumes that the given preference weights and safety budgets are accurate and fixed. In deployment these signals can drift or be noisy, delayed or incomplete, so the paper treats them as partial observations of a latent task specification.",
-    "problem_vi": "Học tăng cường đa mục tiêu (MORL) có ràng buộc, điều kiện theo sở thích người dùng, thường giả định trọng số sở thích và ngân sách an toàn được cung cấp là chính xác và cố định. Khi triển khai thực tế, các tín hiệu này có thể trôi dạt hoặc bị nhiễu, trễ, thiếu, nên bài báo xem chúng là quan sát một phần của một đặc tả nhiệm vụ ẩn.",
-    "technique": "BECON infers a latent task context from recent interaction histories to estimate preferences and budgets, fuses these estimates with the given task signal through uncertainty-dependent gates, and uses the fused context to condition both the policy and a context-dependent constraint penalty (dual variable).",
-    "technique_vi": "BECON suy ra ngữ cảnh nhiệm vụ ẩn từ lịch sử tương tác gần đây để ước lượng sở thích và ngân sách, kết hợp các ước lượng này với tín hiệu nhiệm vụ được cung cấp qua các cổng phụ thuộc độ bất định, rồi dùng ngữ cảnh đã kết hợp để điều kiện hóa cả chính sách lẫn hình phạt ràng buộc theo ngữ cảnh (biến đối ngẫu).",
-    "strength": "The paper decomposes performance loss into preference-fusion, budget-fusion and cost-model errors, characterizes the history-length trade-off under drift, and reports improved feasible-front quality, online adaptation and constraint satisfaction over MORL baselines on several benchmarks.",
-    "strength_vi": "Bài báo phân rã mức suy giảm hiệu năng thành sai số kết hợp sở thích, sai số kết hợp ngân sách và sai số mô hình chi phí, phân tích sự đánh đổi về độ dài lịch sử khi có trôi dạt, và báo cáo cải thiện chất lượng mặt Pareto khả thi, khả năng thích nghi trực tuyến và mức thỏa mãn ràng buộc so với các baseline MORL trên nhiều benchmark.",
+    "problem": "Constrained multi-objective reinforcement learning (MORL) trains one policy that trades off several rewards according to a given preference while keeping costs under a safety budget, and usually assumes these preferences and budgets are observed exactly; in deployment they may drift or be noisy, delayed or incomplete.",
+    "problem_vi": "Học tăng cường đa mục tiêu có ràng buộc (MORL) huấn luyện một chính sách cân đối nhiều phần thưởng theo một sở thích cho trước trong khi giữ chi phí dưới một ngân sách an toàn, và thường giả định sở thích và ngân sách được quan sát chính xác; khi triển khai thực tế, chúng có thể trôi dạt hoặc bị nhiễu, trễ hay thiếu.",
+    "technique": "BECON infers the latent task context from recent interaction history, estimates the preference and budget from it, fuses these estimates with the observed signals through uncertainty-dependent gates, and uses the fused context to condition both the policy and a context-dependent constraint penalty (dual variable).",
+    "technique_vi": "BECON suy ra ngữ cảnh nhiệm vụ ẩn từ lịch sử tương tác gần đây, ước lượng sở thích và ngân sách từ đó, kết hợp các ước lượng này với tín hiệu quan sát được qua các cổng phụ thuộc vào độ bất định, rồi dùng ngữ cảnh đã kết hợp để điều kiện hóa cả chính sách lẫn mức phạt ràng buộc phụ thuộc ngữ cảnh (biến đối ngẫu).",
+    "strength": "The paper decomposes performance loss into preference-fusion, budget-fusion and cost-model errors, characterises the history-length trade-off under drift, and reports better feasible-front quality, online adaptation and constraint satisfaction than MORL baselines on several benchmarks.",
+    "strength_vi": "Bài báo tách tổn thất hiệu năng thành sai số kết hợp sở thích, sai số kết hợp ngân sách và sai số mô hình chi phí, mô tả sự đánh đổi về độ dài lịch sử khi có trôi dạt, và báo cáo chất lượng mặt Pareto khả thi, khả năng thích ứng trực tuyến và mức thỏa mãn ràng buộc tốt hơn các baseline MORL trên nhiều benchmark.",
     "authors": [
      {
-      "text": "BECON enforces stage-wise admissible cost levels at each decision step rather than cumulative or remaining-budget constraints, so it does not directly capture long-horizon resource depletion or trade-offs with the future remaining budget.",
-      "text_vi": "BECON áp ràng buộc mức chi phí cho phép tại từng bước quyết định thay vì ràng buộc chi phí tích lũy hay ngân sách còn lại, nên chưa trực tiếp mô hình hóa sự cạn kiệt tài nguyên trong dài hạn hay sự đánh đổi với ngân sách còn lại trong tương lai."
+      "text": "BECON enforces a cost limit at each decision step rather than a cumulative or remaining budget, so it does not directly capture long-horizon resource depletion or trade-offs with the budget remaining in the future.",
+      "text_vi": "BECON áp giới hạn chi phí tại từng bước quyết định chứ không theo ngân sách tích lũy hay ngân sách còn lại, nên không trực tiếp mô tả sự cạn kiệt tài nguyên trong dài hạn hay sự đánh đổi với ngân sách còn lại trong tương lai."
      }
     ],
     "reviewers": [
      {
-      "quote": "Without those, it is hard to tell whether BECON is solving the advertised partial-observability problem or simply benefiting from a stronger recurrent/regularized architecture.",
-      "quote_vi": "Thiếu những thứ đó, khó biết BECON đang thực sự giải quyết bài toán quan sát một phần như đã nêu hay chỉ đơn giản được lợi từ một kiến trúc hồi quy/có điều chuẩn mạnh hơn."
-     },
-     {
-      "quote": "The analysis is diagnostic, not prescriptive: it bounds the loss in terms of fusion and cost-model errors but never shows that training actually drives those errors down.",
-      "quote_vi": "Phân tích mang tính chẩn đoán chứ không mang tính chỉ dẫn: nó chặn mức suy giảm theo sai số kết hợp và sai số mô hình chi phí nhưng không hề chỉ ra rằng quá trình huấn luyện thực sự làm giảm các sai số đó."
+      "quote": "The theoretical section assumes that recent histories are informative enough to recover the latent preference and budget, but the experiments mainly report downstream FHV/FUT/SR/PCU numbers.",
+      "quote_vi": "Phần lý thuyết giả định rằng lịch sử gần đây đủ thông tin để khôi phục sở thích và ngân sách ẩn, nhưng các thí nghiệm chủ yếu báo cáo các chỉ số đầu ra FHV/FUT/SR/PCU."
      },
      {
       "quote": "If most policies are comfortably below threshold, the safety dimension may not be testing the proposed context-dependent constraint mechanism.",
-      "quote_vi": "Nếu hầu hết các chính sách đều nằm thoải mái dưới ngưỡng, khía cạnh an toàn có thể không thực sự kiểm tra cơ chế ràng buộc phụ thuộc ngữ cảnh được đề xuất."
+      "quote_vi": "Nếu phần lớn chính sách đều nằm thoải mái dưới ngưỡng, khía cạnh an toàn có thể không thực sự kiểm tra cơ chế ràng buộc phụ thuộc ngữ cảnh được đề xuất."
      },
      {
       "quote": "The empirical evaluation is mostly conducted on relatively simple or toy environments.",
-      "quote_vi": "Đánh giá thực nghiệm chủ yếu được thực hiện trên các môi trường tương đối đơn giản hoặc mang tính đồ chơi."
+      "quote_vi": "Phần đánh giá thực nghiệm chủ yếu được thực hiện trên các môi trường tương đối đơn giản hoặc mang tính đồ chơi."
+     },
+     {
+      "quote": "there are other types of dynamics that could lead to uncertainty, as in open agent systems: agent openness, task openness, type openness, frame openness, etc.",
+      "quote_vi": "còn có những loại động lực khác có thể gây ra bất định, như trong các hệ tác tử mở: tính mở về tác tử, về nhiệm vụ, về kiểu và về khung, v.v."
      }
     ]
    },
@@ -6645,29 +7183,29 @@
     "year": 2026,
     "credit": 0.25,
     "status": "accepted",
-    "problem": "LLMs can translate natural-language optimization problems into solver code, but their reliability depends on retrieving the right modeling template. Existing structured retrieval traverses a template taxonomy with fixed or LLM-driven rules and cannot improve from past successes and failures.",
-    "problem_vi": "LLM có thể chuyển các bài toán tối ưu mô tả bằng ngôn ngữ tự nhiên thành mã cho solver, nhưng độ tin cậy phụ thuộc vào việc truy xuất đúng template mô hình hóa. Các phương pháp truy xuất có cấu trúc hiện có duyệt cây phân loại template theo luật cố định hoặc do LLM quyết định, và không học được từ các lần thành công hay thất bại trước đó.",
-    "technique": "COMPASS represents the template library as a directed acyclic graph (DAG) and treats retrieval as a sequential decision process over its nodes, learning a traversal policy with a deep Q-network (DQN) from LLM template judgments and solver execution feedback; problems and templates share an embedding space so newly added templates can be scored from their text.",
-    "technique_vi": "COMPASS biểu diễn thư viện template dưới dạng đồ thị có hướng không chu trình (DAG) và coi việc truy xuất là quá trình ra quyết định tuần tự trên các nút, học chính sách duyệt đồ thị bằng mạng Q sâu (DQN) từ đánh giá template của LLM và phản hồi khi chạy solver; bài toán và template dùng chung không gian embedding nên template mới thêm vào có thể được chấm điểm từ mô tả văn bản.",
-    "strength": "Across several LLM backbones and optimization-modeling benchmarks, the paper reports consistent improvements over heuristic structured retrieval, with the largest gains on structurally complex and mixed-category problems.",
-    "strength_vi": "Trên nhiều LLM nền và benchmark mô hình hóa tối ưu, bài báo báo cáo cải thiện nhất quán so với truy xuất có cấu trúc dựa trên heuristic, với mức tăng lớn nhất ở các bài toán có cấu trúc phức tạp và thuộc nhiều loại.",
+    "problem": "Large language models (LLMs) can translate optimization problems written in natural language into solver code, but their reliability depends on retrieving the right modeling template, and existing structured retrieval uses fixed or LLM-driven traversal rules that do not improve from past successes and failures.",
+    "problem_vi": "Mô hình ngôn ngữ lớn (LLM) có thể chuyển các bài toán tối ưu viết bằng ngôn ngữ tự nhiên thành mã cho bộ giải, nhưng độ tin cậy phụ thuộc vào việc truy xuất đúng mẫu mô hình hóa, và các cách truy xuất có cấu trúc hiện có dùng quy tắc duyệt cố định hoặc do LLM quyết định, không cải thiện được từ thành công và thất bại trước đó.",
+    "technique": "COMPASS stores the template library as a directed acyclic graph (DAG) and treats retrieval as a sequence of moves between nodes, learned by a deep Q-network from LLM judgments of template fit and solver execution feedback; problems and templates share an embedding space so new templates can be scored from their text.",
+    "technique_vi": "COMPASS lưu thư viện mẫu dưới dạng đồ thị có hướng không chu trình (DAG) và coi việc truy xuất là một chuỗi bước di chuyển giữa các nút, được một mạng Q sâu (deep Q-network) học từ đánh giá của LLM về độ phù hợp của mẫu và từ phản hồi khi chạy bộ giải; bài toán và mẫu dùng chung một không gian nhúng nên mẫu mới có thể được chấm điểm từ mô tả văn bản.",
+    "strength": "The paper reports gains over heuristic structured retrieval across several LLM backbones and optimization-modeling benchmarks, largest on complex and mixed-category problems.",
+    "strength_vi": "Bài báo báo cáo kết quả tốt hơn cách truy xuất có cấu trúc dựa trên heuristic trên nhiều LLM nền và benchmark mô hình hóa tối ưu, với mức tăng lớn nhất ở các bài toán phức tạp và thuộc nhiều loại kết hợp.",
     "authors": [],
     "reviewers": [
      {
       "quote": "The current evidence is insufficient to prove that the model has genuinely learned transferable modeling knowledge, rather than merely memorizing template preferences for specific benchmarks.",
-      "quote_vi": "Bằng chứng hiện tại chưa đủ để chứng minh mô hình thực sự học được tri thức mô hình hóa có thể chuyển giao, thay vì chỉ ghi nhớ sở thích template cho các benchmark cụ thể."
+      "quote_vi": "Bằng chứng hiện tại chưa đủ để chứng minh rằng mô hình thực sự học được tri thức mô hình hóa có thể chuyển giao, thay vì chỉ ghi nhớ sở thích chọn mẫu cho các benchmark cụ thể."
      },
      {
       "quote": "the action space is heavily constrained by the manually constructed DAG. Consequently, the true performance driver might be the template graph itself, rather than the RL-based policy.",
-      "quote_vi": "không gian hành động bị ràng buộc nặng nề bởi DAG được xây dựng thủ công. Do đó, yếu tố thực sự tạo ra hiệu năng có thể là chính đồ thị template chứ không phải chính sách học tăng cường."
+      "quote_vi": "không gian hành động bị ràng buộc chặt bởi DAG được xây dựng thủ công. Do đó, yếu tố thực sự quyết định hiệu năng có thể là chính đồ thị mẫu, chứ không phải chính sách dựa trên RL."
+     },
+     {
+      "quote": "The paper relies on both an LLM judge and LLM-generated new templates, which introduces circularity into the training signal.",
+      "quote_vi": "Bài báo dựa vào cả một LLM làm giám khảo lẫn các mẫu mới do LLM sinh ra, điều này tạo ra tính vòng lặp trong tín hiệu huấn luyện."
      },
      {
       "quote": "errors could originate from code generation, data parsing, solver configurations, or template merging, and not necessarily from a specific retrieval node.",
-      "quote_vi": "lỗi có thể bắt nguồn từ việc sinh mã, phân tích dữ liệu, cấu hình solver hoặc việc ghép template, chứ không nhất thiết từ một nút truy xuất cụ thể."
-     },
-     {
-      "quote": "The template composition operator is described too cursorily, despite being the fundamental core of whether the system can actually handle mixed-structure problems.",
-      "quote_vi": "Toán tử ghép template được mô tả quá sơ sài, dù đây là cốt lõi quyết định hệ thống có thực sự xử lý được các bài toán có cấu trúc hỗn hợp hay không."
+      "quote_vi": "lỗi có thể bắt nguồn từ khâu sinh mã, phân tích dữ liệu, cấu hình bộ giải hoặc ghép mẫu, chứ không nhất thiết từ một nút truy xuất cụ thể."
      }
     ]
    },
@@ -6696,12 +7234,12 @@
     "year": 2026,
     "credit": 0.1429,
     "status": "rejected",
-    "problem": "Designing good heuristics for NP-hard combinatorial optimization problems takes considerable expertise, and recent LLM-guided evolutionary methods that generate heuristics automatically mostly refine each heuristic on its own or with limited pairwise feedback.",
-    "problem_vi": "Thiết kế heuristic tốt cho các bài toán tối ưu tổ hợp NP-khó đòi hỏi nhiều chuyên môn, và các phương pháp tiến hóa có LLM dẫn dắt gần đây, vốn tự động sinh heuristic, chủ yếu tinh chỉnh từng heuristic riêng lẻ hoặc chỉ với phản hồi theo cặp hạn chế.",
-    "technique": "ReVEL organizes heuristics into behavior-aware groups, with similarity-driven groups for local refinement and diversity-driven groups for exploration, and has the LLM refine each group over multiple turns using accumulated performance feedback, so related heuristics are analyzed and improved together across evolutionary iterations.",
-    "technique_vi": "ReVEL chia các heuristic thành các nhóm theo hành vi, gồm nhóm dựa trên độ tương đồng để tinh chỉnh cục bộ và nhóm dựa trên độ đa dạng để khám phá, rồi để LLM tinh chỉnh từng nhóm qua nhiều lượt dựa trên phản hồi hiệu năng tích lũy, nhờ đó các heuristic liên quan được phân tích và cải thiện cùng nhau qua các vòng tiến hóa.",
-    "strength": "On standard combinatorial optimization benchmarks ReVEL generally beats existing LLM-guided evolutionary methods across settings and LLM backbones, and analyses suggest behavior-aware grouping makes refinement more consistent.",
-    "strength_vi": "Trên các bộ đánh giá tối ưu tổ hợp chuẩn, ReVEL nhìn chung vượt các phương pháp tiến hóa có LLM dẫn dắt hiện có ở nhiều thiết lập và mô hình nền, và các phân tích cho thấy việc nhóm theo hành vi giúp quá trình tinh chỉnh ổn định hơn.",
+    "problem": "Designing heuristics for NP-hard combinatorial optimization problems needs domain expertise, and LLM-guided evolutionary methods mostly refine each heuristic on its own or with pairwise feedback.",
+    "problem_vi": "Thiết kế heuristic cho các bài toán tối ưu tổ hợp NP-khó đòi hỏi chuyên môn, và các phương pháp tiến hóa có LLM dẫn dắt phần lớn tinh chỉnh từng heuristic riêng lẻ hoặc chỉ với phản hồi theo cặp.",
+    "technique": "ReVEL groups heuristics by behaviour, into similarity-driven groups for local refinement and diversity-driven groups for exploration, and has the LLM refine each group over several turns using accumulated performance feedback.",
+    "technique_vi": "ReVEL chia các heuristic thành nhóm theo hành vi, gồm nhóm theo độ tương đồng để tinh chỉnh cục bộ và nhóm theo độ đa dạng để khám phá, rồi để LLM tinh chỉnh từng nhóm qua nhiều lượt dựa trên phản hồi hiệu năng tích lũy.",
+    "strength": "The paper reports improvements over LLM-guided evolutionary baselines on standard benchmarks and several LLM backbones; in its cost analysis, variants without multi-turn reflection plateau at an optimality gap of about 18% while ReVEL reaches nearly 9%.",
+    "strength_vi": "Bài báo báo cáo kết quả tốt hơn các baseline tiến hóa có LLM dẫn dắt trên các benchmark chuẩn và nhiều LLM nền; trong phân tích chi phí, các biến thể không có phản tư nhiều lượt dừng cải thiện ở khoảng cách tối ưu khoảng 18%, còn ReVEL giảm xuống gần 9%.",
     "authors": [],
     "reviewers": []
    },
@@ -6713,25 +7251,29 @@
     "year": 2026,
     "credit": 0.1429,
     "status": "withdrawn",
-    "problem": "Methods that combine large language models with evolutionary algorithms to design heuristics for combinatorial optimization mostly use the LLM as a one-shot code generator, without letting it reason iteratively about why heuristics succeed or fail.",
-    "problem_vi": "Các phương pháp kết hợp mô hình ngôn ngữ lớn với thuật toán tiến hóa để thiết kế heuristic cho tối ưu tổ hợp chủ yếu dùng LLM như một bộ sinh mã một lần, không cho nó suy luận lặp lại về lý do heuristic thành công hay thất bại.",
-    "technique": "CIRE embeds the LLM as a multi-turn reflective reasoner inside an evolutionary algorithm: it clusters candidate heuristics by their performance profiles to give the LLM compact, behaviorally coherent context, prompts it to analyze strengths and weaknesses and propose targeted refinements, and uses an evolutionary meta-controller that selectively validates proposals to balance exploration and exploitation.",
-    "technique_vi": "CIRE đặt LLM làm bộ suy luận phản tư nhiều lượt bên trong thuật toán tiến hóa: phân cụm các heuristic ứng viên theo hồ sơ hiệu năng để cung cấp cho LLM ngữ cảnh gọn và nhất quán về hành vi, yêu cầu LLM phân tích điểm mạnh, điểm yếu và đề xuất cải tiến có mục tiêu, rồi dùng một bộ điều khiển tiến hóa kiểm chứng có chọn lọc các đề xuất để cân bằng giữa khám phá và khai thác.",
-    "strength": "Reviewers found every component well motivated, and experiments on online bin packing show more robust and diverse heuristics than existing LLM plus evolutionary methods.",
-    "strength_vi": "Mọi thành phần được đánh giá là có động cơ rõ ràng, và thí nghiệm trên bài toán xếp thùng trực tuyến (online bin packing) cho heuristic bền vững và đa dạng hơn các phương pháp kết hợp LLM với tiến hóa hiện có.",
+    "problem": "Reviewers describe the paper as targeting automated heuristic design for combinatorial optimization, where LLMs are typically used as one-shot code generators inside evolutionary algorithms.",
+    "problem_vi": "Theo các bản phản biện, bài báo nhắm tới thiết kế heuristic tự động cho tối ưu tổ hợp, nơi LLM thường chỉ được dùng để sinh mã một lần bên trong thuật toán tiến hóa.",
+    "technique": "According to the reviews, CIRE clusters candidate heuristics by performance profiles and CodeBLEU code similarity, forms similar and mixed groups for the LLM to critique and refine over several turns, and lets an evolutionary-algorithm meta-controller validate the proposals.",
+    "technique_vi": "Theo các bản phản biện, CIRE phân cụm các heuristic ứng viên theo hồ sơ hiệu năng và độ tương đồng mã CodeBLEU, lập các nhóm tương đồng và nhóm hỗn hợp để LLM phân tích và tinh chỉnh qua nhiều lượt, và dùng một bộ điều khiển tiến hóa ở mức trên để kiểm chứng các đề xuất.",
+    "strength": "Reviewers summarise experiments on online bin packing that report lower optimality gaps and excess-bin fractions than one-shot LLM code generation, genetic programming and evolutionary algorithms without LLM feedback.",
+    "strength_vi": "Các bản phản biện tóm tắt rằng thí nghiệm trên bài toán xếp thùng trực tuyến (online bin packing) cho khoảng cách tối ưu và tỉ lệ thùng dư thấp hơn so với sinh mã LLM một lần, lập trình di truyền và thuật toán tiến hóa không có phản hồi từ LLM.",
     "authors": [],
     "reviewers": [
      {
-      "text": "The method is validated only on online bin packing, and more combinatorial problems, datasets and LLMs are needed.",
-      "text_vi": "Phương pháp chỉ được kiểm chứng trên bài toán xếp thùng trực tuyến, cần thêm các bài toán tổ hợp, tập dữ liệu và LLM khác."
+      "quote": "The authors claim the proposed method is for “CO”, but actually only for the bin packing problem.",
+      "quote_vi": "Các tác giả khẳng định phương pháp được đề xuất dành cho “CO” (tối ưu tổ hợp), nhưng thực ra chỉ dành cho bài toán xếp thùng."
      },
      {
-      "text": "There is no ablation of the individual algorithmic components.",
-      "text_vi": "Chưa có ablation cho từng thành phần của thuật toán."
+      "quote": "There is no ablation isolating the effects of clustering, entropy-based grouping, or reflective multi-turn reasoning on performance. The improvement could stem from increased prompt diversity rather than the proposed reflective mechanism.",
+      "quote_vi": "Không có ablation nào tách riêng tác động của việc phân cụm, cách lập nhóm dựa trên entropy hay suy luận phản tư nhiều lượt lên hiệu năng. Mức cải thiện có thể đến từ việc prompt đa dạng hơn chứ không phải từ cơ chế phản tư được đề xuất."
      },
      {
-      "text": "How are the weights between behavioral and CodeBLEU similarity chosen, how sensitive are results to them and to clustering choices, and what stops the multi-turn refinement?",
-      "text_vi": "Trọng số giữa độ tương đồng hành vi và độ tương đồng CodeBLEU được chọn thế nào, kết quả nhạy đến đâu với chúng và với cách phân cụm, và điều gì dừng quá trình tinh chỉnh nhiều lượt?"
+      "quote": "The computational cost of multi-turn LLM reasoning is not reported.",
+      "quote_vi": "Chi phí tính toán của suy luận LLM nhiều lượt không được báo cáo."
+     },
+     {
+      "quote": "The results rely solely on a single proprietary model (DeepSeek V3), with no comparison across different LLMs or open-source baselines, hindering reproducibility.",
+      "quote_vi": "Kết quả chỉ dựa vào một mô hình độc quyền duy nhất (DeepSeek V3), không so sánh giữa các LLM khác nhau hay với các baseline mã nguồn mở, gây khó cho việc tái lập."
      }
     ]
    },
@@ -6743,12 +7285,12 @@
     "year": 2026,
     "credit": 0.25,
     "status": "accepted",
-    "problem": "LLM-based automatic design of solvers for NP-hard combinatorial optimization problems usually searches over a single component, typically a heuristic scoring function, and misses gains from improving several interdependent components together.",
-    "problem_vi": "Việc dùng LLM để tự động thiết kế bộ giải cho các bài toán tối ưu tổ hợp NP-khó thường chỉ tìm kiếm trên một thành phần, thường là hàm chấm điểm heuristic, và bỏ lỡ lợi ích từ việc cải thiện đồng thời nhiều thành phần phụ thuộc lẫn nhau.",
-    "technique": "The paper formulates solver design as multi-strategy optimization and proposes MOTIF, a Monte Carlo Tree Search-based framework in which two LLM agents take turns improving one component at a time, each using the history of its own and its opponent's updates, which creates both competitive pressure and emergent cooperation.",
-    "technique_vi": "Bài báo phát biểu việc thiết kế bộ giải thành bài toán tối ưu đa chiến lược và đề xuất MOTIF, khung dựa trên Monte Carlo Tree Search trong đó hai tác tử LLM lần lượt cải thiện từng thành phần, mỗi tác tử dùng lịch sử cập nhật của chính mình và của đối phương, tạo ra cả áp lực cạnh tranh lẫn sự hợp tác tự nảy sinh.",
-    "strength": "Across multiple combinatorial optimization domains it consistently outperforms state-of-the-art automated solver design methods.",
-    "strength_vi": "Trên nhiều miền tối ưu tổ hợp, phương pháp vượt một cách nhất quán các phương pháp thiết kế bộ giải tự động tốt nhất hiện có.",
+    "problem": "LLM-based solver design for NP-hard combinatorial optimization problems usually searches over a single component, commonly a heuristic scoring function, rather than the set of interdependent components a solver uses.",
+    "problem_vi": "Thiết kế bộ giải dựa trên LLM cho các bài toán tối ưu tổ hợp NP-khó thường chỉ tìm kiếm trên một thành phần, phổ biến là hàm chấm điểm heuristic, thay vì cả tập thành phần phụ thuộc lẫn nhau mà bộ giải sử dụng.",
+    "technique": "MOTIF casts solver design as jointly optimizing several components and runs Monte Carlo Tree Search over turns in which two LLM agents alternately improve one component, each using the history of its own and its opponent's updates.",
+    "technique_vi": "MOTIF xem thiết kế bộ giải là bài toán tối ưu đồng thời nhiều thành phần và chạy tìm kiếm cây Monte Carlo (MCTS) trên các lượt, trong đó hai tác tử LLM luân phiên cải thiện một thành phần, mỗi tác tử dùng lịch sử cập nhật của chính mình và của đối thủ.",
+    "strength": "The paper reports that MOTIF outperforms state-of-the-art methods across multiple combinatorial optimization domains.",
+    "strength_vi": "Bài báo báo cáo MOTIF vượt các phương pháp hiện đại nhất trên nhiều lĩnh vực tối ưu tổ hợp.",
     "authors": [],
     "reviewers": []
    },
@@ -6760,12 +7302,12 @@
     "year": 2026,
     "credit": 0.1667,
     "status": "accepted",
-    "problem": "Multi-objective combinatorial optimization problems require balancing conflicting objectives; traditional evolutionary algorithms depend on domain knowledge and repeated tuning, and LLM-based heuristic generation has focused on single-objective tasks while neglecting runtime and heuristic diversity.",
-    "problem_vi": "Các bài toán tối ưu tổ hợp đa mục tiêu đòi hỏi cân bằng các mục tiêu xung đột; thuật toán tiến hóa truyền thống phụ thuộc vào tri thức miền và việc chỉnh tham số lặp lại, còn việc sinh heuristic bằng LLM chủ yếu tập trung vào bài toán đơn mục tiêu và bỏ qua thời gian chạy cũng như độ đa dạng của heuristic.",
-    "technique": "MPaGE extends the Simple Evolutionary Multiobjective Optimization (SEMO) framework with LLMs and a Pareto Front Grid: it partitions the objective space into grids, keeps the top candidates in each to guide generation, and has the LLM prioritize heuristics with semantically distinct logical structures during variation to keep the population diverse and avoid redundancy.",
-    "technique_vi": "MPaGE mở rộng khung Simple Evolutionary Multiobjective Optimization (SEMO) bằng LLM và kỹ thuật lưới mặt Pareto (Pareto Front Grid): chia không gian mục tiêu thành các ô lưới, giữ các ứng viên tốt nhất trong mỗi ô để dẫn dắt việc sinh heuristic, và để LLM ưu tiên các heuristic có cấu trúc logic khác biệt về ngữ nghĩa khi biến đổi, giúp quần thể đa dạng và tránh trùng lặp.",
-    "strength": "It outperforms existing LLM-based frameworks and is competitive with traditional multi-objective evolutionary algorithms while running significantly faster.",
-    "strength_vi": "Phương pháp vượt các khung dựa trên LLM hiện có và cạnh tranh được với các thuật toán tiến hóa đa mục tiêu truyền thống trong khi chạy nhanh hơn đáng kể.",
+    "problem": "Multi-objective combinatorial optimization problems require trading off conflicting objectives; evolutionary algorithms for them depend on domain knowledge and parameter tuning, and LLM-based heuristic generation has mostly targeted single-objective tasks, neglecting runtime and heuristic diversity.",
+    "problem_vi": "Bài toán tối ưu tổ hợp đa mục tiêu đòi hỏi cân đối các mục tiêu xung đột; thuật toán tiến hóa cho chúng phụ thuộc vào tri thức chuyên ngành và việc tinh chỉnh tham số, còn sinh heuristic bằng LLM chủ yếu nhắm tới bài toán đơn mục tiêu, bỏ qua thời gian chạy và độ đa dạng của heuristic.",
+    "technique": "MPaGE extends the Simple Evolutionary Multiobjective Optimization (SEMO) framework: it partitions the objective space into a Pareto front grid, keeps top candidates per cell, and asks the LLM to favour heuristics with semantically distinct logic during variation.",
+    "technique_vi": "MPaGE mở rộng khung Simple Evolutionary Multiobjective Optimization (SEMO): chia không gian mục tiêu thành lưới mặt Pareto, giữ các ứng viên tốt nhất trong mỗi ô, và yêu cầu LLM ưu tiên các heuristic có cấu trúc logic khác biệt về ngữ nghĩa khi biến dị.",
+    "strength": "The paper reports better performance than existing LLM-based frameworks and results competitive with traditional multi-objective evolutionary algorithms at much shorter runtime.",
+    "strength_vi": "Bài báo báo cáo kết quả tốt hơn các khung dựa trên LLM hiện có và cạnh tranh với các thuật toán tiến hóa đa mục tiêu truyền thống, với thời gian chạy ngắn hơn nhiều.",
     "authors": [],
     "reviewers": []
    },
@@ -6777,12 +7319,12 @@
     "year": 2025,
     "credit": 0.3333,
     "status": "accepted",
-    "problem": "LLM-based Evolutionary Program Search (LLM-EPS), which couples large language models with evolutionary computation to automatically design heuristics for NP-hard combinatorial problems, lacks understanding of heuristic search spaces and struggles to balance exploration and exploitation.",
-    "problem_vi": "Tìm kiếm chương trình tiến hóa dựa trên LLM (LLM-EPS), kết hợp mô hình ngôn ngữ lớn với tính toán tiến hóa để tự động thiết kế heuristic cho các bài toán tổ hợp NP-khó, còn thiếu hiểu biết về không gian tìm kiếm heuristic và khó cân bằng giữa khám phá (exploration) và khai thác (exploitation).",
-    "technique": "The paper proposes two diversity metrics, uses them to analyze FunSearch, EoH and ReEvo, and introduces HSEvo, an adaptive LLM-EPS framework that uses harmony search together with a genetic algorithm to balance diversity and convergence.",
-    "technique_vi": "Bài báo đề xuất hai thước đo độ đa dạng, dùng chúng để phân tích FunSearch, EoH và ReEvo, rồi giới thiệu HSEvo, một khung LLM-EPS thích nghi dùng thuật toán harmony search kết hợp thuật toán di truyền để cân bằng giữa độ đa dạng và sự hội tụ.",
-    "strength": "The analysis shows EoH is diverse but unstable while ReEvo scores well but lacks diversity, and HSEvo reaches both high diversity and good objective scores at low cost.",
-    "strength_vi": "Phân tích cho thấy EoH đa dạng nhưng không ổn định, còn ReEvo đạt điểm tốt nhưng thiếu đa dạng, trong khi HSEvo đạt cả độ đa dạng cao lẫn điểm mục tiêu tốt với chi phí thấp.",
+    "problem": "LLM-based evolutionary program search generates heuristics automatically, but how diverse its search is and how it balances exploration and exploitation were not well understood.",
+    "problem_vi": "Tìm kiếm chương trình tiến hóa dựa trên LLM tự động sinh heuristic, nhưng độ đa dạng của quá trình tìm kiếm và cách nó cân bằng giữa khám phá và khai thác chưa được hiểu rõ.",
+    "technique": "The paper proposes two diversity metrics, uses them to analyse FunSearch, EoH and ReEvo, and introduces HSEvo, which combines harmony search with a genetic algorithm to balance diversity and convergence.",
+    "technique_vi": "Bài báo đề xuất hai thước đo độ đa dạng, dùng chúng để phân tích FunSearch, EoH và ReEvo, và giới thiệu HSEvo, kết hợp tìm kiếm hòa âm (harmony search) với thuật toán di truyền để cân bằng giữa đa dạng và hội tụ.",
+    "strength": "The analysis reports that EoH is more diverse but has unstable objective scores while ReEvo scores well but does not optimise diversity; HSEvo is reported to reach high diversity and good objective scores at low cost.",
+    "strength_vi": "Phân tích cho thấy EoH đa dạng hơn nhưng điểm mục tiêu không ổn định, còn ReEvo đạt điểm tốt nhưng không tối ưu được độ đa dạng; HSEvo được báo cáo đạt độ đa dạng cao và điểm mục tiêu tốt với chi phí thấp.",
     "authors": [],
     "reviewers": []
    },
@@ -6794,12 +7336,12 @@
     "year": 2024,
     "credit": 0.1429,
     "status": "accepted",
-    "problem": "Visual navigation, where an embodied agent moves through a 3D scene using camera input, is mostly studied in simulators without people, and existing simulators with human dynamics are computationally inefficient, leaving a gap to real-world use.",
-    "problem_vi": "Điều hướng thị giác (visual navigation), nơi một tác tử hiện thân (embodied agent) di chuyển trong cảnh 3D dựa trên hình ảnh camera, chủ yếu được nghiên cứu trong các trình mô phỏng không có con người, còn các trình mô phỏng có mô hình chuyển động người thì kém hiệu quả tính toán, tạo khoảng cách với ứng dụng thực tế.",
-    "technique": "HabiCrowd is a benchmark simulator that adds a crowd dynamics model with diverse human settings into photorealistic 3D environments for crowd-aware visual navigation.",
-    "technique_vi": "HabiCrowd là trình mô phỏng kiêm bộ đánh giá chuẩn (benchmark), đưa một mô hình động lực học đám đông với nhiều cấu hình người đa dạng vào môi trường 3D chân thực, phục vụ điều hướng thị giác có tính đến đám đông.",
-    "strength": "Its human dynamics model achieves state-of-the-art collision avoidance with better computational efficiency than comparable simulators, and the authors use it for several studies of crowd-aware navigation and human-robot interaction.",
-    "strength_vi": "Mô hình chuyển động người của nó đạt kết quả tốt nhất hiện nay về tránh va chạm với hiệu quả tính toán cao hơn các trình mô phỏng tương đương, và được tác giả dùng cho nhiều nghiên cứu về điều hướng trong đám đông và tương tác người - robot.",
+    "problem": "Most 3D simulators for visual navigation leave out human movement, which separates simulation from real-world use, and those that include humans are computationally inefficient.",
+    "problem_vi": "Phần lớn các trình mô phỏng 3D cho điều hướng thị giác không có chuyển động của con người, tạo khoảng cách giữa mô phỏng và ứng dụng thực tế, còn các trình mô phỏng có con người thì kém hiệu quả về tính toán.",
+    "technique": "HabiCrowd adds a crowd dynamics model with diverse human settings to photorealistic environments built on the Habitat 2.0 simulator, with an agent that perceives the scene only through egocentric (first-person) inputs.",
+    "technique_vi": "HabiCrowd thêm một mô hình động lực đám đông với nhiều thiết lập người khác nhau vào các môi trường ảnh thực xây trên trình mô phỏng Habitat 2.0, trong đó tác tử chỉ nhận biết khung cảnh qua đầu vào góc nhìn thứ nhất (egocentric).",
+    "strength": "The paper reports that its human dynamics model achieves state-of-the-art collision avoidance with higher computational efficiency than comparable models, and uses the simulator for studies of crowd-aware navigation and human-robot interaction.",
+    "strength_vi": "Bài báo báo cáo mô hình động lực con người của mình đạt kết quả tránh va chạm tốt nhất hiện nay với hiệu quả tính toán cao hơn các mô hình tương đương, và dùng trình mô phỏng cho các nghiên cứu về điều hướng có đám đông và tương tác người–robot.",
     "authors": [],
     "reviewers": []
    },
@@ -6811,12 +7353,12 @@
     "year": 2024,
     "credit": 0.125,
     "status": "accepted",
-    "problem": "Grasp detection, predicting where a robot gripper should grasp an object, is limited by datasets whose object diversity is far below that of the real world.",
-    "problem_vi": "Phát hiện điểm gắp (grasp detection), tức dự đoán vị trí kẹp của tay robot lên vật thể, bị giới hạn bởi các bộ dữ liệu có độ đa dạng vật thể kém xa thế giới thực.",
-    "technique": "Grasp-Anything is a dataset synthesized with foundation models such as ChatGPT to tap their broad knowledge of everyday objects, with 1M samples with text descriptions and more than 3M objects.",
-    "technique_vi": "Grasp-Anything là bộ dữ liệu được tổng hợp bằng các mô hình nền tảng (foundation model) như ChatGPT để khai thác hiểu biết rộng của chúng về đồ vật thường ngày, gồm 1 triệu mẫu kèm mô tả văn bản và hơn 3 triệu vật thể.",
-    "strength": "It surpasses prior grasp datasets in diversity and size and enables zero-shot grasp detection in vision benchmarks and real robot experiments.",
-    "strength_vi": "Bộ dữ liệu vượt các bộ dữ liệu gắp trước đây về độ đa dạng và quy mô, đồng thời cho phép phát hiện điểm gắp zero-shot (không cần dữ liệu huấn luyện cho vật mới) trong các tác vụ thị giác và thí nghiệm robot thật.",
+    "problem": "Grasp detection, predicting where a robot gripper should grasp an object, relies on datasets whose object diversity is limited compared with the real world.",
+    "problem_vi": "Phát hiện điểm gắp (grasp detection), tức dự đoán vị trí tay gắp của robot nên gắp vật, dựa vào các tập dữ liệu có độ đa dạng vật thể hạn chế so với thế giới thực.",
+    "technique": "Grasp-Anything synthesizes a grasp dataset from foundation models, drawing on their knowledge of everyday objects to produce samples with text descriptions.",
+    "technique_vi": "Grasp-Anything tổng hợp một tập dữ liệu gắp từ các mô hình nền tảng (foundation model), tận dụng tri thức của chúng về đồ vật thường ngày để tạo các mẫu kèm mô tả văn bản.",
+    "strength": "The dataset has 1M samples with text descriptions and more than 3M objects, and the paper reports that it supports zero-shot grasp detection on vision tasks and in real-world robot experiments.",
+    "strength_vi": "Tập dữ liệu có 1 triệu mẫu kèm mô tả văn bản và hơn 3 triệu vật thể, và bài báo báo cáo nó hỗ trợ phát hiện điểm gắp zero-shot trên các tác vụ thị giác và trong thí nghiệm robot thực.",
     "authors": [],
     "reviewers": []
    }
@@ -9302,34 +9844,34 @@
     "year": 2026,
     "credit": 0.5,
     "status": "accepted",
-    "problem": "Constrained multi-objective reinforcement learning (MORL) conditioned on user preferences usually assumes that the given preference weights and safety budgets are accurate and fixed. In deployment these signals can drift or be noisy, delayed or incomplete, so the paper treats them as partial observations of a latent task specification.",
-    "problem_vi": "Học tăng cường đa mục tiêu (MORL) có ràng buộc, điều kiện theo sở thích người dùng, thường giả định trọng số sở thích và ngân sách an toàn được cung cấp là chính xác và cố định. Khi triển khai thực tế, các tín hiệu này có thể trôi dạt hoặc bị nhiễu, trễ, thiếu, nên bài báo xem chúng là quan sát một phần của một đặc tả nhiệm vụ ẩn.",
-    "technique": "BECON infers a latent task context from recent interaction histories to estimate preferences and budgets, fuses these estimates with the given task signal through uncertainty-dependent gates, and uses the fused context to condition both the policy and a context-dependent constraint penalty (dual variable).",
-    "technique_vi": "BECON suy ra ngữ cảnh nhiệm vụ ẩn từ lịch sử tương tác gần đây để ước lượng sở thích và ngân sách, kết hợp các ước lượng này với tín hiệu nhiệm vụ được cung cấp qua các cổng phụ thuộc độ bất định, rồi dùng ngữ cảnh đã kết hợp để điều kiện hóa cả chính sách lẫn hình phạt ràng buộc theo ngữ cảnh (biến đối ngẫu).",
-    "strength": "The paper decomposes performance loss into preference-fusion, budget-fusion and cost-model errors, characterizes the history-length trade-off under drift, and reports improved feasible-front quality, online adaptation and constraint satisfaction over MORL baselines on several benchmarks.",
-    "strength_vi": "Bài báo phân rã mức suy giảm hiệu năng thành sai số kết hợp sở thích, sai số kết hợp ngân sách và sai số mô hình chi phí, phân tích sự đánh đổi về độ dài lịch sử khi có trôi dạt, và báo cáo cải thiện chất lượng mặt Pareto khả thi, khả năng thích nghi trực tuyến và mức thỏa mãn ràng buộc so với các baseline MORL trên nhiều benchmark.",
+    "problem": "Constrained multi-objective reinforcement learning (MORL) trains one policy that trades off several rewards according to a given preference while keeping costs under a safety budget, and usually assumes these preferences and budgets are observed exactly; in deployment they may drift or be noisy, delayed or incomplete.",
+    "problem_vi": "Học tăng cường đa mục tiêu có ràng buộc (MORL) huấn luyện một chính sách cân đối nhiều phần thưởng theo một sở thích cho trước trong khi giữ chi phí dưới một ngân sách an toàn, và thường giả định sở thích và ngân sách được quan sát chính xác; khi triển khai thực tế, chúng có thể trôi dạt hoặc bị nhiễu, trễ hay thiếu.",
+    "technique": "BECON infers the latent task context from recent interaction history, estimates the preference and budget from it, fuses these estimates with the observed signals through uncertainty-dependent gates, and uses the fused context to condition both the policy and a context-dependent constraint penalty (dual variable).",
+    "technique_vi": "BECON suy ra ngữ cảnh nhiệm vụ ẩn từ lịch sử tương tác gần đây, ước lượng sở thích và ngân sách từ đó, kết hợp các ước lượng này với tín hiệu quan sát được qua các cổng phụ thuộc vào độ bất định, rồi dùng ngữ cảnh đã kết hợp để điều kiện hóa cả chính sách lẫn mức phạt ràng buộc phụ thuộc ngữ cảnh (biến đối ngẫu).",
+    "strength": "The paper decomposes performance loss into preference-fusion, budget-fusion and cost-model errors, characterises the history-length trade-off under drift, and reports better feasible-front quality, online adaptation and constraint satisfaction than MORL baselines on several benchmarks.",
+    "strength_vi": "Bài báo tách tổn thất hiệu năng thành sai số kết hợp sở thích, sai số kết hợp ngân sách và sai số mô hình chi phí, mô tả sự đánh đổi về độ dài lịch sử khi có trôi dạt, và báo cáo chất lượng mặt Pareto khả thi, khả năng thích ứng trực tuyến và mức thỏa mãn ràng buộc tốt hơn các baseline MORL trên nhiều benchmark.",
     "authors": [
      {
-      "text": "BECON enforces stage-wise admissible cost levels at each decision step rather than cumulative or remaining-budget constraints, so it does not directly capture long-horizon resource depletion or trade-offs with the future remaining budget.",
-      "text_vi": "BECON áp ràng buộc mức chi phí cho phép tại từng bước quyết định thay vì ràng buộc chi phí tích lũy hay ngân sách còn lại, nên chưa trực tiếp mô hình hóa sự cạn kiệt tài nguyên trong dài hạn hay sự đánh đổi với ngân sách còn lại trong tương lai."
+      "text": "BECON enforces a cost limit at each decision step rather than a cumulative or remaining budget, so it does not directly capture long-horizon resource depletion or trade-offs with the budget remaining in the future.",
+      "text_vi": "BECON áp giới hạn chi phí tại từng bước quyết định chứ không theo ngân sách tích lũy hay ngân sách còn lại, nên không trực tiếp mô tả sự cạn kiệt tài nguyên trong dài hạn hay sự đánh đổi với ngân sách còn lại trong tương lai."
      }
     ],
     "reviewers": [
      {
-      "quote": "Without those, it is hard to tell whether BECON is solving the advertised partial-observability problem or simply benefiting from a stronger recurrent/regularized architecture.",
-      "quote_vi": "Thiếu những thứ đó, khó biết BECON đang thực sự giải quyết bài toán quan sát một phần như đã nêu hay chỉ đơn giản được lợi từ một kiến trúc hồi quy/có điều chuẩn mạnh hơn."
-     },
-     {
-      "quote": "The analysis is diagnostic, not prescriptive: it bounds the loss in terms of fusion and cost-model errors but never shows that training actually drives those errors down.",
-      "quote_vi": "Phân tích mang tính chẩn đoán chứ không mang tính chỉ dẫn: nó chặn mức suy giảm theo sai số kết hợp và sai số mô hình chi phí nhưng không hề chỉ ra rằng quá trình huấn luyện thực sự làm giảm các sai số đó."
+      "quote": "The theoretical section assumes that recent histories are informative enough to recover the latent preference and budget, but the experiments mainly report downstream FHV/FUT/SR/PCU numbers.",
+      "quote_vi": "Phần lý thuyết giả định rằng lịch sử gần đây đủ thông tin để khôi phục sở thích và ngân sách ẩn, nhưng các thí nghiệm chủ yếu báo cáo các chỉ số đầu ra FHV/FUT/SR/PCU."
      },
      {
       "quote": "If most policies are comfortably below threshold, the safety dimension may not be testing the proposed context-dependent constraint mechanism.",
-      "quote_vi": "Nếu hầu hết các chính sách đều nằm thoải mái dưới ngưỡng, khía cạnh an toàn có thể không thực sự kiểm tra cơ chế ràng buộc phụ thuộc ngữ cảnh được đề xuất."
+      "quote_vi": "Nếu phần lớn chính sách đều nằm thoải mái dưới ngưỡng, khía cạnh an toàn có thể không thực sự kiểm tra cơ chế ràng buộc phụ thuộc ngữ cảnh được đề xuất."
      },
      {
       "quote": "The empirical evaluation is mostly conducted on relatively simple or toy environments.",
-      "quote_vi": "Đánh giá thực nghiệm chủ yếu được thực hiện trên các môi trường tương đối đơn giản hoặc mang tính đồ chơi."
+      "quote_vi": "Phần đánh giá thực nghiệm chủ yếu được thực hiện trên các môi trường tương đối đơn giản hoặc mang tính đồ chơi."
+     },
+     {
+      "quote": "there are other types of dynamics that could lead to uncertainty, as in open agent systems: agent openness, task openness, type openness, frame openness, etc.",
+      "quote_vi": "còn có những loại động lực khác có thể gây ra bất định, như trong các hệ tác tử mở: tính mở về tác tử, về nhiệm vụ, về kiểu và về khung, v.v."
      }
     ]
    },
@@ -9341,29 +9883,29 @@
     "year": 2026,
     "credit": 0.25,
     "status": "accepted",
-    "problem": "LLMs can translate natural-language optimization problems into solver code, but their reliability depends on retrieving the right modeling template. Existing structured retrieval traverses a template taxonomy with fixed or LLM-driven rules and cannot improve from past successes and failures.",
-    "problem_vi": "LLM có thể chuyển các bài toán tối ưu mô tả bằng ngôn ngữ tự nhiên thành mã cho solver, nhưng độ tin cậy phụ thuộc vào việc truy xuất đúng template mô hình hóa. Các phương pháp truy xuất có cấu trúc hiện có duyệt cây phân loại template theo luật cố định hoặc do LLM quyết định, và không học được từ các lần thành công hay thất bại trước đó.",
-    "technique": "COMPASS represents the template library as a directed acyclic graph (DAG) and treats retrieval as a sequential decision process over its nodes, learning a traversal policy with a deep Q-network (DQN) from LLM template judgments and solver execution feedback; problems and templates share an embedding space so newly added templates can be scored from their text.",
-    "technique_vi": "COMPASS biểu diễn thư viện template dưới dạng đồ thị có hướng không chu trình (DAG) và coi việc truy xuất là quá trình ra quyết định tuần tự trên các nút, học chính sách duyệt đồ thị bằng mạng Q sâu (DQN) từ đánh giá template của LLM và phản hồi khi chạy solver; bài toán và template dùng chung không gian embedding nên template mới thêm vào có thể được chấm điểm từ mô tả văn bản.",
-    "strength": "Across several LLM backbones and optimization-modeling benchmarks, the paper reports consistent improvements over heuristic structured retrieval, with the largest gains on structurally complex and mixed-category problems.",
-    "strength_vi": "Trên nhiều LLM nền và benchmark mô hình hóa tối ưu, bài báo báo cáo cải thiện nhất quán so với truy xuất có cấu trúc dựa trên heuristic, với mức tăng lớn nhất ở các bài toán có cấu trúc phức tạp và thuộc nhiều loại.",
+    "problem": "Large language models (LLMs) can translate optimization problems written in natural language into solver code, but their reliability depends on retrieving the right modeling template, and existing structured retrieval uses fixed or LLM-driven traversal rules that do not improve from past successes and failures.",
+    "problem_vi": "Mô hình ngôn ngữ lớn (LLM) có thể chuyển các bài toán tối ưu viết bằng ngôn ngữ tự nhiên thành mã cho bộ giải, nhưng độ tin cậy phụ thuộc vào việc truy xuất đúng mẫu mô hình hóa, và các cách truy xuất có cấu trúc hiện có dùng quy tắc duyệt cố định hoặc do LLM quyết định, không cải thiện được từ thành công và thất bại trước đó.",
+    "technique": "COMPASS stores the template library as a directed acyclic graph (DAG) and treats retrieval as a sequence of moves between nodes, learned by a deep Q-network from LLM judgments of template fit and solver execution feedback; problems and templates share an embedding space so new templates can be scored from their text.",
+    "technique_vi": "COMPASS lưu thư viện mẫu dưới dạng đồ thị có hướng không chu trình (DAG) và coi việc truy xuất là một chuỗi bước di chuyển giữa các nút, được một mạng Q sâu (deep Q-network) học từ đánh giá của LLM về độ phù hợp của mẫu và từ phản hồi khi chạy bộ giải; bài toán và mẫu dùng chung một không gian nhúng nên mẫu mới có thể được chấm điểm từ mô tả văn bản.",
+    "strength": "The paper reports gains over heuristic structured retrieval across several LLM backbones and optimization-modeling benchmarks, largest on complex and mixed-category problems.",
+    "strength_vi": "Bài báo báo cáo kết quả tốt hơn cách truy xuất có cấu trúc dựa trên heuristic trên nhiều LLM nền và benchmark mô hình hóa tối ưu, với mức tăng lớn nhất ở các bài toán phức tạp và thuộc nhiều loại kết hợp.",
     "authors": [],
     "reviewers": [
      {
       "quote": "The current evidence is insufficient to prove that the model has genuinely learned transferable modeling knowledge, rather than merely memorizing template preferences for specific benchmarks.",
-      "quote_vi": "Bằng chứng hiện tại chưa đủ để chứng minh mô hình thực sự học được tri thức mô hình hóa có thể chuyển giao, thay vì chỉ ghi nhớ sở thích template cho các benchmark cụ thể."
+      "quote_vi": "Bằng chứng hiện tại chưa đủ để chứng minh rằng mô hình thực sự học được tri thức mô hình hóa có thể chuyển giao, thay vì chỉ ghi nhớ sở thích chọn mẫu cho các benchmark cụ thể."
      },
      {
       "quote": "the action space is heavily constrained by the manually constructed DAG. Consequently, the true performance driver might be the template graph itself, rather than the RL-based policy.",
-      "quote_vi": "không gian hành động bị ràng buộc nặng nề bởi DAG được xây dựng thủ công. Do đó, yếu tố thực sự tạo ra hiệu năng có thể là chính đồ thị template chứ không phải chính sách học tăng cường."
+      "quote_vi": "không gian hành động bị ràng buộc chặt bởi DAG được xây dựng thủ công. Do đó, yếu tố thực sự quyết định hiệu năng có thể là chính đồ thị mẫu, chứ không phải chính sách dựa trên RL."
+     },
+     {
+      "quote": "The paper relies on both an LLM judge and LLM-generated new templates, which introduces circularity into the training signal.",
+      "quote_vi": "Bài báo dựa vào cả một LLM làm giám khảo lẫn các mẫu mới do LLM sinh ra, điều này tạo ra tính vòng lặp trong tín hiệu huấn luyện."
      },
      {
       "quote": "errors could originate from code generation, data parsing, solver configurations, or template merging, and not necessarily from a specific retrieval node.",
-      "quote_vi": "lỗi có thể bắt nguồn từ việc sinh mã, phân tích dữ liệu, cấu hình solver hoặc việc ghép template, chứ không nhất thiết từ một nút truy xuất cụ thể."
-     },
-     {
-      "quote": "The template composition operator is described too cursorily, despite being the fundamental core of whether the system can actually handle mixed-structure problems.",
-      "quote_vi": "Toán tử ghép template được mô tả quá sơ sài, dù đây là cốt lõi quyết định hệ thống có thực sự xử lý được các bài toán có cấu trúc hỗn hợp hay không."
+      "quote_vi": "lỗi có thể bắt nguồn từ khâu sinh mã, phân tích dữ liệu, cấu hình bộ giải hoặc ghép mẫu, chứ không nhất thiết từ một nút truy xuất cụ thể."
      }
     ]
    }
@@ -17767,12 +18309,12 @@
     "year": 2026,
     "credit": 0.1429,
     "status": "rejected",
-    "problem": "Designing good heuristics for NP-hard combinatorial optimization problems takes considerable expertise, and recent LLM-guided evolutionary methods that generate heuristics automatically mostly refine each heuristic on its own or with limited pairwise feedback.",
-    "problem_vi": "Thiết kế heuristic tốt cho các bài toán tối ưu tổ hợp NP-khó đòi hỏi nhiều chuyên môn, và các phương pháp tiến hóa có LLM dẫn dắt gần đây, vốn tự động sinh heuristic, chủ yếu tinh chỉnh từng heuristic riêng lẻ hoặc chỉ với phản hồi theo cặp hạn chế.",
-    "technique": "ReVEL organizes heuristics into behavior-aware groups, with similarity-driven groups for local refinement and diversity-driven groups for exploration, and has the LLM refine each group over multiple turns using accumulated performance feedback, so related heuristics are analyzed and improved together across evolutionary iterations.",
-    "technique_vi": "ReVEL chia các heuristic thành các nhóm theo hành vi, gồm nhóm dựa trên độ tương đồng để tinh chỉnh cục bộ và nhóm dựa trên độ đa dạng để khám phá, rồi để LLM tinh chỉnh từng nhóm qua nhiều lượt dựa trên phản hồi hiệu năng tích lũy, nhờ đó các heuristic liên quan được phân tích và cải thiện cùng nhau qua các vòng tiến hóa.",
-    "strength": "On standard combinatorial optimization benchmarks ReVEL generally beats existing LLM-guided evolutionary methods across settings and LLM backbones, and analyses suggest behavior-aware grouping makes refinement more consistent.",
-    "strength_vi": "Trên các bộ đánh giá tối ưu tổ hợp chuẩn, ReVEL nhìn chung vượt các phương pháp tiến hóa có LLM dẫn dắt hiện có ở nhiều thiết lập và mô hình nền, và các phân tích cho thấy việc nhóm theo hành vi giúp quá trình tinh chỉnh ổn định hơn.",
+    "problem": "Designing heuristics for NP-hard combinatorial optimization problems needs domain expertise, and LLM-guided evolutionary methods mostly refine each heuristic on its own or with pairwise feedback.",
+    "problem_vi": "Thiết kế heuristic cho các bài toán tối ưu tổ hợp NP-khó đòi hỏi chuyên môn, và các phương pháp tiến hóa có LLM dẫn dắt phần lớn tinh chỉnh từng heuristic riêng lẻ hoặc chỉ với phản hồi theo cặp.",
+    "technique": "ReVEL groups heuristics by behaviour, into similarity-driven groups for local refinement and diversity-driven groups for exploration, and has the LLM refine each group over several turns using accumulated performance feedback.",
+    "technique_vi": "ReVEL chia các heuristic thành nhóm theo hành vi, gồm nhóm theo độ tương đồng để tinh chỉnh cục bộ và nhóm theo độ đa dạng để khám phá, rồi để LLM tinh chỉnh từng nhóm qua nhiều lượt dựa trên phản hồi hiệu năng tích lũy.",
+    "strength": "The paper reports improvements over LLM-guided evolutionary baselines on standard benchmarks and several LLM backbones; in its cost analysis, variants without multi-turn reflection plateau at an optimality gap of about 18% while ReVEL reaches nearly 9%.",
+    "strength_vi": "Bài báo báo cáo kết quả tốt hơn các baseline tiến hóa có LLM dẫn dắt trên các benchmark chuẩn và nhiều LLM nền; trong phân tích chi phí, các biến thể không có phản tư nhiều lượt dừng cải thiện ở khoảng cách tối ưu khoảng 18%, còn ReVEL giảm xuống gần 9%.",
     "authors": [],
     "reviewers": []
    },
@@ -17784,25 +18326,29 @@
     "year": 2026,
     "credit": 0.1429,
     "status": "withdrawn",
-    "problem": "Methods that combine large language models with evolutionary algorithms to design heuristics for combinatorial optimization mostly use the LLM as a one-shot code generator, without letting it reason iteratively about why heuristics succeed or fail.",
-    "problem_vi": "Các phương pháp kết hợp mô hình ngôn ngữ lớn với thuật toán tiến hóa để thiết kế heuristic cho tối ưu tổ hợp chủ yếu dùng LLM như một bộ sinh mã một lần, không cho nó suy luận lặp lại về lý do heuristic thành công hay thất bại.",
-    "technique": "CIRE embeds the LLM as a multi-turn reflective reasoner inside an evolutionary algorithm: it clusters candidate heuristics by their performance profiles to give the LLM compact, behaviorally coherent context, prompts it to analyze strengths and weaknesses and propose targeted refinements, and uses an evolutionary meta-controller that selectively validates proposals to balance exploration and exploitation.",
-    "technique_vi": "CIRE đặt LLM làm bộ suy luận phản tư nhiều lượt bên trong thuật toán tiến hóa: phân cụm các heuristic ứng viên theo hồ sơ hiệu năng để cung cấp cho LLM ngữ cảnh gọn và nhất quán về hành vi, yêu cầu LLM phân tích điểm mạnh, điểm yếu và đề xuất cải tiến có mục tiêu, rồi dùng một bộ điều khiển tiến hóa kiểm chứng có chọn lọc các đề xuất để cân bằng giữa khám phá và khai thác.",
-    "strength": "Reviewers found every component well motivated, and experiments on online bin packing show more robust and diverse heuristics than existing LLM plus evolutionary methods.",
-    "strength_vi": "Mọi thành phần được đánh giá là có động cơ rõ ràng, và thí nghiệm trên bài toán xếp thùng trực tuyến (online bin packing) cho heuristic bền vững và đa dạng hơn các phương pháp kết hợp LLM với tiến hóa hiện có.",
+    "problem": "Reviewers describe the paper as targeting automated heuristic design for combinatorial optimization, where LLMs are typically used as one-shot code generators inside evolutionary algorithms.",
+    "problem_vi": "Theo các bản phản biện, bài báo nhắm tới thiết kế heuristic tự động cho tối ưu tổ hợp, nơi LLM thường chỉ được dùng để sinh mã một lần bên trong thuật toán tiến hóa.",
+    "technique": "According to the reviews, CIRE clusters candidate heuristics by performance profiles and CodeBLEU code similarity, forms similar and mixed groups for the LLM to critique and refine over several turns, and lets an evolutionary-algorithm meta-controller validate the proposals.",
+    "technique_vi": "Theo các bản phản biện, CIRE phân cụm các heuristic ứng viên theo hồ sơ hiệu năng và độ tương đồng mã CodeBLEU, lập các nhóm tương đồng và nhóm hỗn hợp để LLM phân tích và tinh chỉnh qua nhiều lượt, và dùng một bộ điều khiển tiến hóa ở mức trên để kiểm chứng các đề xuất.",
+    "strength": "Reviewers summarise experiments on online bin packing that report lower optimality gaps and excess-bin fractions than one-shot LLM code generation, genetic programming and evolutionary algorithms without LLM feedback.",
+    "strength_vi": "Các bản phản biện tóm tắt rằng thí nghiệm trên bài toán xếp thùng trực tuyến (online bin packing) cho khoảng cách tối ưu và tỉ lệ thùng dư thấp hơn so với sinh mã LLM một lần, lập trình di truyền và thuật toán tiến hóa không có phản hồi từ LLM.",
     "authors": [],
     "reviewers": [
      {
-      "text": "The method is validated only on online bin packing, and more combinatorial problems, datasets and LLMs are needed.",
-      "text_vi": "Phương pháp chỉ được kiểm chứng trên bài toán xếp thùng trực tuyến, cần thêm các bài toán tổ hợp, tập dữ liệu và LLM khác."
+      "quote": "The authors claim the proposed method is for “CO”, but actually only for the bin packing problem.",
+      "quote_vi": "Các tác giả khẳng định phương pháp được đề xuất dành cho “CO” (tối ưu tổ hợp), nhưng thực ra chỉ dành cho bài toán xếp thùng."
      },
      {
-      "text": "There is no ablation of the individual algorithmic components.",
-      "text_vi": "Chưa có ablation cho từng thành phần của thuật toán."
+      "quote": "There is no ablation isolating the effects of clustering, entropy-based grouping, or reflective multi-turn reasoning on performance. The improvement could stem from increased prompt diversity rather than the proposed reflective mechanism.",
+      "quote_vi": "Không có ablation nào tách riêng tác động của việc phân cụm, cách lập nhóm dựa trên entropy hay suy luận phản tư nhiều lượt lên hiệu năng. Mức cải thiện có thể đến từ việc prompt đa dạng hơn chứ không phải từ cơ chế phản tư được đề xuất."
      },
      {
-      "text": "How are the weights between behavioral and CodeBLEU similarity chosen, how sensitive are results to them and to clustering choices, and what stops the multi-turn refinement?",
-      "text_vi": "Trọng số giữa độ tương đồng hành vi và độ tương đồng CodeBLEU được chọn thế nào, kết quả nhạy đến đâu với chúng và với cách phân cụm, và điều gì dừng quá trình tinh chỉnh nhiều lượt?"
+      "quote": "The computational cost of multi-turn LLM reasoning is not reported.",
+      "quote_vi": "Chi phí tính toán của suy luận LLM nhiều lượt không được báo cáo."
+     },
+     {
+      "quote": "The results rely solely on a single proprietary model (DeepSeek V3), with no comparison across different LLMs or open-source baselines, hindering reproducibility.",
+      "quote_vi": "Kết quả chỉ dựa vào một mô hình độc quyền duy nhất (DeepSeek V3), không so sánh giữa các LLM khác nhau hay với các baseline mã nguồn mở, gây khó cho việc tái lập."
      }
     ]
    }
@@ -18178,12 +18724,12 @@
     "year": 2026,
     "credit": 0.1429,
     "status": "rejected",
-    "problem": "Designing good heuristics for NP-hard combinatorial optimization problems takes considerable expertise, and recent LLM-guided evolutionary methods that generate heuristics automatically mostly refine each heuristic on its own or with limited pairwise feedback.",
-    "problem_vi": "Thiết kế heuristic tốt cho các bài toán tối ưu tổ hợp NP-khó đòi hỏi nhiều chuyên môn, và các phương pháp tiến hóa có LLM dẫn dắt gần đây, vốn tự động sinh heuristic, chủ yếu tinh chỉnh từng heuristic riêng lẻ hoặc chỉ với phản hồi theo cặp hạn chế.",
-    "technique": "ReVEL organizes heuristics into behavior-aware groups, with similarity-driven groups for local refinement and diversity-driven groups for exploration, and has the LLM refine each group over multiple turns using accumulated performance feedback, so related heuristics are analyzed and improved together across evolutionary iterations.",
-    "technique_vi": "ReVEL chia các heuristic thành các nhóm theo hành vi, gồm nhóm dựa trên độ tương đồng để tinh chỉnh cục bộ và nhóm dựa trên độ đa dạng để khám phá, rồi để LLM tinh chỉnh từng nhóm qua nhiều lượt dựa trên phản hồi hiệu năng tích lũy, nhờ đó các heuristic liên quan được phân tích và cải thiện cùng nhau qua các vòng tiến hóa.",
-    "strength": "On standard combinatorial optimization benchmarks ReVEL generally beats existing LLM-guided evolutionary methods across settings and LLM backbones, and analyses suggest behavior-aware grouping makes refinement more consistent.",
-    "strength_vi": "Trên các bộ đánh giá tối ưu tổ hợp chuẩn, ReVEL nhìn chung vượt các phương pháp tiến hóa có LLM dẫn dắt hiện có ở nhiều thiết lập và mô hình nền, và các phân tích cho thấy việc nhóm theo hành vi giúp quá trình tinh chỉnh ổn định hơn.",
+    "problem": "Designing heuristics for NP-hard combinatorial optimization problems needs domain expertise, and LLM-guided evolutionary methods mostly refine each heuristic on its own or with pairwise feedback.",
+    "problem_vi": "Thiết kế heuristic cho các bài toán tối ưu tổ hợp NP-khó đòi hỏi chuyên môn, và các phương pháp tiến hóa có LLM dẫn dắt phần lớn tinh chỉnh từng heuristic riêng lẻ hoặc chỉ với phản hồi theo cặp.",
+    "technique": "ReVEL groups heuristics by behaviour, into similarity-driven groups for local refinement and diversity-driven groups for exploration, and has the LLM refine each group over several turns using accumulated performance feedback.",
+    "technique_vi": "ReVEL chia các heuristic thành nhóm theo hành vi, gồm nhóm theo độ tương đồng để tinh chỉnh cục bộ và nhóm theo độ đa dạng để khám phá, rồi để LLM tinh chỉnh từng nhóm qua nhiều lượt dựa trên phản hồi hiệu năng tích lũy.",
+    "strength": "The paper reports improvements over LLM-guided evolutionary baselines on standard benchmarks and several LLM backbones; in its cost analysis, variants without multi-turn reflection plateau at an optimality gap of about 18% while ReVEL reaches nearly 9%.",
+    "strength_vi": "Bài báo báo cáo kết quả tốt hơn các baseline tiến hóa có LLM dẫn dắt trên các benchmark chuẩn và nhiều LLM nền; trong phân tích chi phí, các biến thể không có phản tư nhiều lượt dừng cải thiện ở khoảng cách tối ưu khoảng 18%, còn ReVEL giảm xuống gần 9%.",
     "authors": [],
     "reviewers": []
    },
@@ -18195,25 +18741,29 @@
     "year": 2026,
     "credit": 0.1429,
     "status": "withdrawn",
-    "problem": "Methods that combine large language models with evolutionary algorithms to design heuristics for combinatorial optimization mostly use the LLM as a one-shot code generator, without letting it reason iteratively about why heuristics succeed or fail.",
-    "problem_vi": "Các phương pháp kết hợp mô hình ngôn ngữ lớn với thuật toán tiến hóa để thiết kế heuristic cho tối ưu tổ hợp chủ yếu dùng LLM như một bộ sinh mã một lần, không cho nó suy luận lặp lại về lý do heuristic thành công hay thất bại.",
-    "technique": "CIRE embeds the LLM as a multi-turn reflective reasoner inside an evolutionary algorithm: it clusters candidate heuristics by their performance profiles to give the LLM compact, behaviorally coherent context, prompts it to analyze strengths and weaknesses and propose targeted refinements, and uses an evolutionary meta-controller that selectively validates proposals to balance exploration and exploitation.",
-    "technique_vi": "CIRE đặt LLM làm bộ suy luận phản tư nhiều lượt bên trong thuật toán tiến hóa: phân cụm các heuristic ứng viên theo hồ sơ hiệu năng để cung cấp cho LLM ngữ cảnh gọn và nhất quán về hành vi, yêu cầu LLM phân tích điểm mạnh, điểm yếu và đề xuất cải tiến có mục tiêu, rồi dùng một bộ điều khiển tiến hóa kiểm chứng có chọn lọc các đề xuất để cân bằng giữa khám phá và khai thác.",
-    "strength": "Reviewers found every component well motivated, and experiments on online bin packing show more robust and diverse heuristics than existing LLM plus evolutionary methods.",
-    "strength_vi": "Mọi thành phần được đánh giá là có động cơ rõ ràng, và thí nghiệm trên bài toán xếp thùng trực tuyến (online bin packing) cho heuristic bền vững và đa dạng hơn các phương pháp kết hợp LLM với tiến hóa hiện có.",
+    "problem": "Reviewers describe the paper as targeting automated heuristic design for combinatorial optimization, where LLMs are typically used as one-shot code generators inside evolutionary algorithms.",
+    "problem_vi": "Theo các bản phản biện, bài báo nhắm tới thiết kế heuristic tự động cho tối ưu tổ hợp, nơi LLM thường chỉ được dùng để sinh mã một lần bên trong thuật toán tiến hóa.",
+    "technique": "According to the reviews, CIRE clusters candidate heuristics by performance profiles and CodeBLEU code similarity, forms similar and mixed groups for the LLM to critique and refine over several turns, and lets an evolutionary-algorithm meta-controller validate the proposals.",
+    "technique_vi": "Theo các bản phản biện, CIRE phân cụm các heuristic ứng viên theo hồ sơ hiệu năng và độ tương đồng mã CodeBLEU, lập các nhóm tương đồng và nhóm hỗn hợp để LLM phân tích và tinh chỉnh qua nhiều lượt, và dùng một bộ điều khiển tiến hóa ở mức trên để kiểm chứng các đề xuất.",
+    "strength": "Reviewers summarise experiments on online bin packing that report lower optimality gaps and excess-bin fractions than one-shot LLM code generation, genetic programming and evolutionary algorithms without LLM feedback.",
+    "strength_vi": "Các bản phản biện tóm tắt rằng thí nghiệm trên bài toán xếp thùng trực tuyến (online bin packing) cho khoảng cách tối ưu và tỉ lệ thùng dư thấp hơn so với sinh mã LLM một lần, lập trình di truyền và thuật toán tiến hóa không có phản hồi từ LLM.",
     "authors": [],
     "reviewers": [
      {
-      "text": "The method is validated only on online bin packing, and more combinatorial problems, datasets and LLMs are needed.",
-      "text_vi": "Phương pháp chỉ được kiểm chứng trên bài toán xếp thùng trực tuyến, cần thêm các bài toán tổ hợp, tập dữ liệu và LLM khác."
+      "quote": "The authors claim the proposed method is for “CO”, but actually only for the bin packing problem.",
+      "quote_vi": "Các tác giả khẳng định phương pháp được đề xuất dành cho “CO” (tối ưu tổ hợp), nhưng thực ra chỉ dành cho bài toán xếp thùng."
      },
      {
-      "text": "There is no ablation of the individual algorithmic components.",
-      "text_vi": "Chưa có ablation cho từng thành phần của thuật toán."
+      "quote": "There is no ablation isolating the effects of clustering, entropy-based grouping, or reflective multi-turn reasoning on performance. The improvement could stem from increased prompt diversity rather than the proposed reflective mechanism.",
+      "quote_vi": "Không có ablation nào tách riêng tác động của việc phân cụm, cách lập nhóm dựa trên entropy hay suy luận phản tư nhiều lượt lên hiệu năng. Mức cải thiện có thể đến từ việc prompt đa dạng hơn chứ không phải từ cơ chế phản tư được đề xuất."
      },
      {
-      "text": "How are the weights between behavioral and CodeBLEU similarity chosen, how sensitive are results to them and to clustering choices, and what stops the multi-turn refinement?",
-      "text_vi": "Trọng số giữa độ tương đồng hành vi và độ tương đồng CodeBLEU được chọn thế nào, kết quả nhạy đến đâu với chúng và với cách phân cụm, và điều gì dừng quá trình tinh chỉnh nhiều lượt?"
+      "quote": "The computational cost of multi-turn LLM reasoning is not reported.",
+      "quote_vi": "Chi phí tính toán của suy luận LLM nhiều lượt không được báo cáo."
+     },
+     {
+      "quote": "The results rely solely on a single proprietary model (DeepSeek V3), with no comparison across different LLMs or open-source baselines, hindering reproducibility.",
+      "quote_vi": "Kết quả chỉ dựa vào một mô hình độc quyền duy nhất (DeepSeek V3), không so sánh giữa các LLM khác nhau hay với các baseline mã nguồn mở, gây khó cho việc tái lập."
      }
     ]
    }
