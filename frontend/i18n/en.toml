@@ -651,3 +651,13 @@ other = "Papers and submissions by topic and year. Each dot is one paper (click 
 other = "Most distinctive words in the topic's abstracts"
 [ch_desc]
 other = "Topic description"
+[ch_open_summary]
+other = "Open challenges."
+[ch_done]
+other = "written from the full material"
+[ch_building]
+other = "under construction"
+[ch_score]
+other = "CSRankings score"
+[ch_score_tip]
+other = "Sum of 1/N over the topic's papers, N being each paper's number of authors, as in CSRankings; topics are ordered by this score, then by how recent the papers are, with related topics next to each other"

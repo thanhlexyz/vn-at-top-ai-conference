@@ -7,9 +7,10 @@ ul.ch-index .inst { color: var(--muted) ; font-size: 0.9em ; }
 </style>
 {{ .Content }}
 {{- with hugo.Data.challenges }}
+<p class="note">✅ {{ T "ch_done" }} · 🚧 {{ T "ch_building" }}</p>
 <ul class="ch-index">
 {{- range .professors }}
-	<li><a href="{{ printf "challenges/%s/" .slug | relLangURL }}"><strong>{{ if $vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end }}</strong></a> <span class="inst">({{ .institution }})</span> {{ if $vi }}{{ .focus_vi }}{{ else }}{{ .focus }}{{ end }}</li>
+	<li><span class="st" title="{{ cond .done (T "ch_done") (T "ch_building") }}">{{ if .done }}✅{{ else }}🚧{{ end }}</span> <a href="{{ printf "challenges/%s/" .slug | relLangURL }}"><strong>{{ if $vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end }}</strong></a> <span class="inst">({{ .institution }})</span> {{ if $vi }}{{ .focus_vi }}{{ else }}{{ .focus }}{{ end }}</li>
 {{- end }}
 </ul>
 <p class="note">{{ T "ch_sources" (dict "Papers" .sources.papers "Text" .sources.with_text "Reviews" .sources.with_reviews "Date" .sources.date) }}</p>

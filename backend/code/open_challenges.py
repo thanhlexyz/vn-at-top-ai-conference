@@ -337,9 +337,9 @@ def order_topics(groups, mine, cache, cites):
 
     year = {x["id"]: x["year"] for x in mine}
     rest = [g for g in groups if not is_other(g)]
-    other = [g for g in groups if is_other(g)]
     if len(rest) < 3:
-        return sorted(rest, key=lambda g: -sum(year[i] for i in g["papers"]) / len(g["papers"])) + other
+        return sorted(rest, key=lambda g: -g["score"]) + [g for g in groups if is_other(g)]
+    other = [g for g in groups if is_other(g)]
 
     def vec(g):
         text = " ".join(x["title"] + " " + (cache.get(x["id"]) or "") for x in mine if x["id"] in g["papers"])
@@ -364,11 +364,14 @@ def order_topics(groups, mine, cache, cites):
     recency = {id(g): sum(year[i] for i in g["papers"]) / len(g["papers"]) for g in rest}
     lo, hi = min(recency.values()), max(recency.values())
     fresh = {k: (v - lo) / ((hi - lo) or 1) for k, v in recency.items()}
-    order = [max(rest, key=lambda g: (fresh[id(g)], len(g["papers"])))]
+    top = max(g["score"] for g in rest) or 1
+    care = {id(g): g["score"] / top for g in rest}
+    weight = {k: 0.65 * care[k] + 0.35 * fresh[k] for k in care}
+    order = [max(rest, key=lambda g: weight[id(g)])]
     left = [g for g in rest if g is not order[0]]
     while left:
         last = id(order[-1])
-        nxt = max(left, key=lambda g: cos(wv[last], wv[id(g)]) + 0.15 * linked[frozenset((last, id(g)))] + 0.25 * fresh[id(g)])
+        nxt = max(left, key=lambda g: 0.6 * cos(wv[last], wv[id(g)]) + 0.1 * linked[frozenset((last, id(g)))] + weight[id(g)])
         order.append(nxt)
         left.remove(nxt)
     return order + other
@@ -402,10 +405,33 @@ def figure(groups, mine, cites):
             for k, y in enumerate(years)], "rows": rows, "edges": edges}
 
 
+def flat(text):
+    return re.sub(r"[^a-z0-9]+", " ", text.lower()).strip()
+
+
+def verified(entries, papers):
+    where = {paper_id(p): PDF_DIR / AREA[p["venue"]] / f"{paper_id(p)}.md" for p in papers}
+    dropped = 0
+    for i, e in entries.items():
+        md = where.get(i)
+        source = flat(md.read_text(encoding="utf-8", errors="ignore")) if md and md.exists() else ""
+        keep = []
+        for r in e.get("reviewers") or []:
+            q = r.get("quote")
+            if isinstance(q, str) and not all(flat(part) in source for part in re.split(r"…|\.\.\.", q) if flat(part)):
+                dropped += 1
+                continue
+            keep.append(r)
+        e["reviewers"] = keep
+    return dropped
+
+
 def merge_papers(papers):
     entries = {}
     for f in sorted(FINAL.glob("chunk_*.json")):
         entries.update(json.loads(f.read_text(encoding="utf-8")))
+    print(f"{verified(entries, papers)} reviewer quotes not found verbatim, dropped", file=sys.stderr)
+    done = {f.stem[5:] for f in (OUT / "topics").glob("part_*.json")} | ({"phi-le-nguyen"} if (OUT / "topics" / "part_phi.json").exists() else set())
     professors = json.loads((FRONTEND / "data" / "professors.json").read_text(encoding="utf-8"))
     summaries = {}
     for f in sorted((OUT / "summary_in").glob("part_*.json")):
@@ -423,6 +449,7 @@ def merge_papers(papers):
             if not e or not any(o["slug"] == prof["slug"] for o in p.get("professors") or []):
                 continue
             mine.append({"id": paper_id(p), "title": p["title"], "venue": p["venue"], "venue_name": p["venue_name"], "year": p["year"],
+                         "credit": round(1 / max(len([a for a in (p.get("authors") or "").split(",") if a.strip()]), 1), 4),
                          "status": p["status"], **{k: e.get(k, "") for k in fields},
                          "authors": e.get("authors") or [], "reviewers": e.get("reviewers") or []})
         if not mine:
@@ -450,6 +477,9 @@ def merge_papers(papers):
             groups.append({"title": "Other work", "title_vi": "Các hướng khác", "summary": "", "summary_vi": "", "open": [],
                            "papers": rest})
         fig = None
+        credit = {x["id"]: x["credit"] for x in mine}
+        for g in groups:
+            g["score"] = round(sum(credit[i] for i in g["papers"]), 2)
         if groups:
             cites = citations(mine)
             groups = order_topics(groups, mine, abstracts, cites)
@@ -458,12 +488,19 @@ def merge_papers(papers):
             for g, ws in zip(groups, topic_words(groups, mine, abstracts)):
                 g["words"] = ws
             fig = figure(groups, mine, cites)
+            if t.get("intro") and all(g.get("gist") for g in groups):
+                t = {**t, "overview": " ".join([t["intro"]] + [g["gist"] for g in groups]),
+                     "overview_vi": " ".join([t.get("intro_vi", "")] + [g.get("gist_vi", "") for g in groups]).strip()}
+            if t.get("open_intro") and all(g.get("open_gist") for g in groups):
+                t = {**t, "open_summary": " ".join([t["open_intro"]] + [g["open_gist"] for g in groups]),
+                     "open_summary_vi": " ".join([t.get("open_intro_vi", "")] + [g.get("open_gist_vi", "") for g in groups]).strip()}
         people[prof["slug"]] = {"name": prof["name"], "name_vi": prof["name_vi"], "institution": prof["institution_short"],
                                 "image": prof.get("image") or "", "figure": fig,
+                                "open_summary": t.get("open_summary", ""), "open_summary_vi": t.get("open_summary_vi", ""),
                                 "overview": t.get("overview") or s.get("overview", ""),
                                 "overview_vi": t.get("overview_vi") or s.get("overview_vi", ""),
                                 "topics": groups, "papers": mine}
-        index.append({"slug": prof["slug"], "name": prof["name"], "name_vi": prof["name_vi"],
+        index.append({"slug": prof["slug"], "done": prof["slug"] in done, "name": prof["name"], "name_vi": prof["name_vi"],
                       "institution": prof["institution_short"], "papers": len(mine),
                       **{k: s.get(k, "") for k in ("focus", "focus_vi")}})
     (FRONTEND / "data" / "challenges_people.json").write_text(json.dumps(people, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -688,6 +725,35 @@ def topics_in(papers, size=110000, least=4):
     print(f"{len(blocks)} professors in {len(parts)} parts -> {out}", file=sys.stderr)
 
 
+FULL = OUT / "full"
+
+
+def full_bundle(papers, slug):
+    global PAPER_CHARS
+    PAPER_CHARS = 6000
+    profs = {p["slug"]: p for p in json.loads((FRONTEND / "data" / "professors.json").read_text(encoding="utf-8"))}
+    prof = profs[slug]
+    cache = json.loads(ABSTRACTS.read_text(encoding="utf-8")) if ABSTRACTS.exists() else {}
+    blocks = []
+    for p in papers:
+        if not any(o["slug"] == slug for o in p.get("professors") or []):
+            continue
+        i = paper_id(p)
+        base = PDF_DIR / AREA[p["venue"]] / i
+        own = paper_text(base.with_suffix(".pdf")) if base.with_suffix(".pdf").exists() else ""
+        if not cache.get(i) and base.with_suffix(".pdf").exists():
+            cache[i] = pdf_abstract(base.with_suffix(".pdf"))
+        blocks.append("\n".join([f"### {i} | {p['venue_name']} {p['year']} | {p['status']} | {p['title']}",
+                                  f"ABSTRACT: {cache.get(i) or '(not available)'}",
+                                  f"PAPER TEXT: {own or '(paper text not available)'}",
+                                  f"REVIEWS FILE: {base.with_suffix('.md') if base.with_suffix('.md').exists() else '(no public reviews)'}"]))
+    ABSTRACTS.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
+    FULL.mkdir(parents=True, exist_ok=True)
+    (FULL / f"{slug}.md").write_text(f"# {slug} | {prof['name']} | {prof['name_vi']} | {prof['institution_short']}\n\n"
+                                     + "\n\n".join(blocks) + "\n", encoding="utf-8")
+    return len(blocks)
+
+
 def main():
     papers = json.loads((FRONTEND / "data" / "papers.json").read_text(encoding="utf-8"))
     papers = [p for p in papers if p["venue"] in AREA]
@@ -707,6 +773,9 @@ def main():
         final_chunks(papers)
     if step == "topics":
         topics_in(papers)
+    if step == "full":
+        for slug in sys.argv[2:]:
+            print(slug, full_bundle(papers, slug), file=sys.stderr)
     if step == "merge":
         merge_papers(papers)
 

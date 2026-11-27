@@ -2,6 +2,7 @@
  "professors": [
   {
    "slug": "tuan-dam",
+   "done": false,
    "name": "Tuan Dam",
    "name_vi": "Đàm Quang Tuấn",
    "institution": "HUST",
@@ -11,6 +12,7 @@
   },
   {
    "slug": "ngo-van-linh",
+   "done": false,
    "name": "Ngo Van Linh",
    "name_vi": "Ngô Văn Linh",
    "institution": "HUST",
@@ -20,6 +22,7 @@
   },
   {
    "slug": "khoa-d-doan",
+   "done": false,
    "name": "Khoa D. Doan",
    "name_vi": "Đoàn Đăng Khoa",
    "institution": "VinUni",
@@ -29,6 +32,7 @@
   },
   {
    "slug": "phi-le-nguyen",
+   "done": false,
    "name": "Phi Le Nguyen",
    "name_vi": "Nguyễn Phi Lê",
    "institution": "HUST",
@@ -38,6 +42,7 @@
   },
   {
    "slug": "cuong-pham",
+   "done": false,
    "name": "Cuong Pham",
    "name_vi": "Phạm Văn Cường",
    "institution": "PTIT",
@@ -47,6 +52,7 @@
   },
   {
    "slug": "dung-d-le",
+   "done": false,
    "name": "Dung D. Le",
    "name_vi": "Lê Duy Dũng",
    "institution": "VinUni",
@@ -56,6 +62,7 @@
   },
   {
    "slug": "huynh-thi-thanh-binh",
+   "done": false,
    "name": "Huynh Thi Thanh Binh",
    "name_vi": "Huỳnh Thị Thanh Bình",
    "institution": "HUST",
@@ -65,6 +72,7 @@
   },
   {
    "slug": "than-quang-khoat",
+   "done": false,
    "name": "Than Quang Khoat",
    "name_vi": "Thân Quang Khoát",
    "institution": "HUST",
@@ -74,6 +82,7 @@
   },
   {
    "slug": "tho-quan",
+   "done": false,
    "name": "Tho Quan",
    "name_vi": "Quản Thành Thơ",
    "institution": "HCMUT",
@@ -83,6 +92,7 @@
   },
   {
    "slug": "canh-v-pham",
+   "done": false,
    "name": "Canh V. Pham",
    "name_vi": "Phạm Văn Cảnh",
    "institution": "Phenikaa",
@@ -92,6 +102,7 @@
   },
   {
    "slug": "binh-t-nguyen",
+   "done": false,
    "name": "Binh T. Nguyen",
    "name_vi": "Nguyễn Tuấn Bình",
    "institution": "VinUni",
@@ -101,6 +112,7 @@
   },
   {
    "slug": "thanh-binh-nguyen",
+   "done": false,
    "name": "Thanh-Binh Nguyen",
    "name_vi": "Nguyễn Thanh Bình",
    "institution": "HCMUS",
@@ -110,6 +122,7 @@
   },
   {
    "slug": "duc-trong-le",
+   "done": false,
    "name": "Duc-Trong Le",
    "name_vi": "Lê Đức Trọng",
    "institution": "VNU-UET",
@@ -119,6 +132,7 @@
   },
   {
    "slug": "cuong-viet-ta",
+   "done": false,
    "name": "Cuong Viet Ta",
    "name_vi": "Tạ Việt Cường",
    "institution": "VNU-UET",
@@ -128,6 +142,7 @@
   },
   {
    "slug": "hoang-thanh-tung",
+   "done": false,
    "name": "Hoang Thanh-Tung",
    "name_vi": "Hoàng Thanh Tùng",
    "institution": "VNU-UET",
@@ -137,6 +152,7 @@
   },
   {
    "slug": "nguyen-thi-ngoc-diep",
+   "done": false,
    "name": "Nguyen Thi Ngoc Diep",
    "name_vi": "Nguyễn Thị Ngọc Diệp",
    "institution": "VNU-UET",
@@ -146,6 +162,7 @@
   },
   {
    "slug": "tan-d-tran",
+   "done": false,
    "name": "Tan D. Tran",
    "name_vi": "Trần Đình Tân",
    "institution": "Phenikaa",
@@ -155,6 +172,7 @@
   },
   {
    "slug": "minh-do",
+   "done": false,
    "name": "Minh Do",
    "name_vi": "Đỗ Ngọc Minh",
    "institution": "VinUni",
@@ -164,6 +182,7 @@
   },
   {
    "slug": "tuan-do",
+   "done": false,
    "name": "Tuan Do",
    "name_vi": "Đỗ Ngọc Tuấn",
    "institution": "Phenikaa",
@@ -173,6 +192,7 @@
   },
   {
    "slug": "bui-trong-duc",
+   "done": true,
    "name": "Bui Trong Duc",
    "name_vi": "Bùi Trọng Đức",
    "institution": "HUST",
@@ -182,6 +202,7 @@
   },
   {
    "slug": "dinh-viet-sang",
+   "done": true,
    "name": "Dinh Viet Sang",
    "name_vi": "Đinh Viết Sang",
    "institution": "HUST",
@@ -191,6 +212,7 @@
   },
   {
    "slug": "minh-triet-tran",
+   "done": false,
    "name": "Minh-Triet Tran",
    "name_vi": "Trần Minh Triết",
    "institution": "HCMUS",
@@ -200,6 +222,7 @@
   },
   {
    "slug": "man-ngo",
+   "done": false,
    "name": "Man Ngo",
    "name_vi": "Ngô Minh Mẫn",
    "institution": "HCMUS",
@@ -209,6 +232,7 @@
   },
   {
    "slug": "trung-nghia-le",
+   "done": false,
    "name": "Trung-Nghia Le",
    "name_vi": "Lê Trung Nghĩa",
    "institution": "HCMUS",
@@ -218,6 +242,7 @@
   },
   {
    "slug": "trung-thanh-ngo",
+   "done": false,
    "name": "Trung Thanh Ngo",
    "name_vi": "Ngô Thành Trung",
    "institution": "HUST",
@@ -227,6 +252,7 @@
   },
   {
    "slug": "hoang-ta",
+   "done": true,
    "name": "Hoang Ta",
    "name_vi": "Tạ Duy Hoàng",
    "institution": "HUST",
@@ -236,6 +262,7 @@
   },
   {
    "slug": "nam-le-hai",
+   "done": false,
    "name": "Nam Le Hai",
    "name_vi": "Lê Hải Nam",
    "institution": "HUST",
@@ -245,6 +272,7 @@
   },
   {
    "slug": "thuy-t-nguyen",
+   "done": false,
    "name": "Thuy T. Nguyen",
    "name_vi": "Nguyễn Thị Thủy",
    "institution": "RMIT",
@@ -254,6 +282,7 @@
   },
   {
    "slug": "cuong-do",
+   "done": false,
    "name": "Cuong Do",
    "name_vi": "Đỗ Danh Cường",
    "institution": "VinUni",
@@ -263,6 +292,7 @@
   },
   {
    "slug": "trung-thanh-nguyen",
+   "done": true,
    "name": "Trung Thanh Nguyen",
    "name_vi": "Nguyễn Trung Thành",
    "institution": "NEU",
@@ -272,6 +302,7 @@
   },
   {
    "slug": "thanh-duc-ngo",
+   "done": false,
    "name": "Thanh Duc Ngo",
    "name_vi": "Ngô Đức Thành",
    "institution": "UIT",
@@ -281,6 +312,7 @@
   },
   {
    "slug": "an-thai-le",
+   "done": false,
    "name": "An Thai Le",
    "name_vi": "Lê Thái An",
    "institution": "VinUni",
@@ -290,6 +322,7 @@
   },
   {
    "slug": "hieu-pham",
+   "done": false,
    "name": "Hieu Pham",
    "name_vi": "Phạm Huy Hiệu",
    "institution": "VinUni",
@@ -299,6 +332,7 @@
   },
   {
    "slug": "nhan-phu-chung",
+   "done": false,
    "name": "Nhan-Phu Chung",
    "name_vi": "Chung Nhân Phú",
    "institution": "UEH",
@@ -308,6 +342,7 @@
   },
   {
    "slug": "thanh-trung-huynh",
+   "done": false,
    "name": "Thanh Trung Huynh",
    "name_vi": "Huỳnh Thành Trung",
    "institution": "VinUni",
@@ -317,6 +352,7 @@
   },
   {
    "slug": "uyen-n-b-vo",
+   "done": true,
    "name": "Uyen N.B. Vo",
    "name_vi": "Võ Ngọc Bích Uyên",
    "institution": "PTIT",
@@ -326,6 +362,7 @@
   },
   {
    "slug": "huyen-nguyen",
+   "done": false,
    "name": "Huyen Nguyen",
    "name_vi": "Nguyễn Thị Ngọc Huyền",
    "institution": "PTIT",
@@ -335,6 +372,7 @@
   },
   {
    "slug": "ngoc-thanh-dinh",
+   "done": false,
    "name": "Ngoc-Thanh Dinh",
    "name_vi": "Đinh Ngọc Thạnh",
    "institution": "VinUni",
@@ -344,6 +382,7 @@
   },
   {
    "slug": "dinh-cuong-hoang",
+   "done": false,
    "name": "Dinh-Cuong Hoang",
    "name_vi": "Hoàng Đình Cường",
    "institution": "FPTU",
@@ -353,6 +392,7 @@
   },
   {
    "slug": "duc-dung-nguyen",
+   "done": false,
    "name": "Duc-Dung Nguyen",
    "name_vi": "Nguyễn Đức Dũng",
    "institution": "HCMUT",
@@ -362,6 +402,7 @@
   },
   {
    "slug": "long-hoang-dang",
+   "done": true,
    "name": "Long Hoang Dang",
    "name_vi": "Đặng Hoàng Long",
    "institution": "PTIT",
@@ -371,6 +412,7 @@
   },
   {
    "slug": "ngoc-nam-pham",
+   "done": false,
    "name": "Ngoc Nam Pham",
    "name_vi": "Phạm Ngọc Nam",
    "institution": "VinUni",
@@ -380,6 +422,7 @@
   },
   {
    "slug": "nhat-quang-tran",
+   "done": false,
    "name": "Nhat-Quang Tran",
    "name_vi": "Trần Nhật Quang",
    "institution": "RMIT",
@@ -389,6 +432,7 @@
   },
   {
    "slug": "quynh-trang-pham-thi",
+   "done": false,
    "name": "Quynh-Trang Pham Thi",
    "name_vi": "Phạm Thị Quỳnh Trang",
    "institution": "VNU-UET",
@@ -398,6 +442,7 @@
   },
   {
    "slug": "hoan-cong-nguyen",
+   "done": false,
    "name": "Hoan Cong Nguyen",
    "name_vi": "Nguyễn Công Hoan",
    "institution": "UIT",
@@ -407,6 +452,7 @@
   },
   {
    "slug": "cong-tran",
+   "done": false,
    "name": "Cong Tran",
    "name_vi": "Trần Tiến Công",
    "institution": "PTIT",
@@ -416,6 +462,7 @@
   },
   {
    "slug": "kim-hung-le",
+   "done": false,
    "name": "Kim-Hung Le",
    "name_vi": "Lê Kim Hùng",
    "institution": "UIT",
@@ -425,6 +472,7 @@
   },
   {
    "slug": "tran-thai-son",
+   "done": false,
    "name": "Tran Thai Son",
    "name_vi": "Trần Thái Sơn",
    "institution": "HCMUS",
@@ -434,6 +482,7 @@
   },
   {
    "slug": "tran-thi-huong",
+   "done": true,
    "name": "Tran Thi Huong",
    "name_vi": "Trần Thị Hương",
    "institution": "HaUI",
@@ -443,15 +492,17 @@
   },
   {
    "slug": "son-ha-xuan",
+   "done": false,
    "name": "Son Ha Xuan",
    "name_vi": "Hà Xuân Sơn",
    "institution": "RMIT",
-   "papers": 8,
+   "papers": 9,
    "focus": "Trustworthy and efficient systems built on language models, including privacy accounting for private training, safety and deletion in agent memory, and evaluation of small language models.",
    "focus_vi": "Các hệ thống đáng tin cậy và hiệu quả dựa trên mô hình ngôn ngữ, gồm kế toán quyền riêng tư cho huấn luyện riêng tư, an toàn và xóa dữ liệu trong bộ nhớ tác tử, và đánh giá mô hình ngôn ngữ nhỏ."
   },
   {
    "slug": "vo-nguyen-le-duy",
+   "done": false,
    "name": "Vo Nguyen Le Duy",
    "name_vi": "Võ Nguyễn Lê Duy",
    "institution": "UIT",
@@ -461,6 +512,7 @@
   },
   {
    "slug": "thai-khanh-nguyen",
+   "done": false,
    "name": "Thai Khanh Nguyen",
    "name_vi": "Nguyễn Thái Khánh",
    "institution": "PTIT",
@@ -470,6 +522,7 @@
   },
   {
    "slug": "vu-n-duong",
+   "done": false,
    "name": "Vu N. Duong",
    "name_vi": "Dương Nguyên Vũ",
    "institution": "VinUni",
@@ -479,6 +532,7 @@
   },
   {
    "slug": "thinh-pham",
+   "done": true,
    "name": "Thinh Pham",
    "name_vi": "Phạm Đức Thịnh",
    "institution": "VinUni",
@@ -488,6 +542,7 @@
   },
   {
    "slug": "an-mai",
+   "done": false,
    "name": "An Mai",
    "name_vi": "An Mai",
    "institution": "HCMIU",
@@ -497,6 +552,7 @@
   },
   {
    "slug": "huynh-quyet-thang",
+   "done": true,
    "name": "Huynh Quyet Thang",
    "name_vi": "Huỳnh Quyết Thắng",
    "institution": "HUST",
@@ -506,6 +562,7 @@
   },
   {
    "slug": "nguyen-tu-uyen",
+   "done": false,
    "name": "Nguyen Tu Uyen",
    "name_vi": "Nguyễn Tú Uyên",
    "institution": "NEU",
@@ -515,6 +572,7 @@
   },
   {
    "slug": "minh-nhat-vu",
+   "done": true,
    "name": "Minh Nhat Vu",
    "name_vi": "Vũ Nhật Minh",
    "institution": "VinUni",
@@ -524,24 +582,27 @@
   },
   {
    "slug": "phat-t-tran-truong",
+   "done": true,
    "name": "Phat T. Tran-Truong",
    "name_vi": "Trần Trương Tuấn Phát",
    "institution": "HCMUT",
-   "papers": 5,
+   "papers": 7,
    "focus": "Trustworthy large language model (LLM) agents and private training: which guarantees about deletion, safety and privacy actually hold for persistent agent memory and for confidential differentially private training, alongside cost and data-quality questions in LLM pipelines.",
    "focus_vi": "Độ tin cậy của các tác tử dựa trên mô hình ngôn ngữ lớn (LLM) và huấn luyện bảo mật: những bảo đảm nào về xóa dữ liệu, an toàn và quyền riêng tư thực sự đứng vững đối với bộ nhớ lâu dài của tác tử và với huấn luyện differential privacy trong môi trường bảo mật, cùng các câu hỏi về chi phí và chất lượng dữ liệu trong các pipeline LLM."
   },
   {
    "slug": "xuan-bach-le",
+   "done": true,
    "name": "Xuan-Bach Le",
    "name_vi": "Lê Xuân Bách",
    "institution": "HCMUT",
-   "papers": 6,
+   "papers": 7,
    "focus": "Reliability and accountability of large language model (LLM) agents with long-lived memory: certified deletion, safety under model migration, preserving user commitments over long dialogues, and verifiable privacy accounting for private training.",
    "focus_vi": "Độ tin cậy và trách nhiệm giải trình của các tác tử mô hình ngôn ngữ lớn (LLM) có bộ nhớ lâu dài: chứng nhận việc xóa dữ liệu, an toàn khi chuyển đổi mô hình, giữ các cam kết với người dùng qua hội thoại dài, và kiểm chứng việc tính toán quyền riêng tư khi huấn luyện."
   },
   {
    "slug": "ngoc-hoang-luong",
+   "done": false,
    "name": "Ngoc Hoang Luong",
    "name_vi": "Lương Ngọc Hoàng",
    "institution": "UIT",
@@ -551,6 +612,7 @@
   },
   {
    "slug": "nguyen-thi-hanh",
+   "done": false,
    "name": "Nguyen Thi Hanh",
    "name_vi": "Nguyễn Thị Hạnh",
    "institution": "Phenikaa",
@@ -560,6 +622,7 @@
   },
   {
    "slug": "danh-le-phuoc",
+   "done": false,
    "name": "Danh Le-Phuoc",
    "name_vi": "Lê Phước Danh",
    "institution": "VinUni",
@@ -569,6 +632,7 @@
   },
   {
    "slug": "quan-minh-phan",
+   "done": false,
    "name": "Quan Minh Phan",
    "name_vi": "Phan Minh Quân",
    "institution": "UIT",
@@ -578,6 +642,7 @@
   },
   {
    "slug": "quy-van-tran",
+   "done": false,
    "name": "Quy Van Tran",
    "name_vi": "Trần Văn Quý",
    "institution": "HCMUS",
@@ -587,6 +652,7 @@
   },
   {
    "slug": "son-van-nguyen",
+   "done": false,
    "name": "Son Van Nguyen",
    "name_vi": "Nguyễn Văn Sơn",
    "institution": "Phenikaa",
@@ -596,6 +662,7 @@
   },
   {
    "slug": "vu-nguyen",
+   "done": false,
    "name": "Vu Nguyen",
    "name_vi": "Nguyễn Văn Vũ",
    "institution": "HCMUS",
@@ -605,6 +672,7 @@
   },
   {
    "slug": "cong-tinh-dao",
+   "done": false,
    "name": "Cong-Tinh Dao",
    "name_vi": "Cong-Tinh Dao",
    "institution": "CTU",
@@ -614,6 +682,7 @@
   },
   {
    "slug": "doanh-cao-bui",
+   "done": false,
    "name": "Doanh Cao Bui",
    "name_vi": "Bùi Cao Doanh",
    "institution": "UIT",
@@ -623,6 +692,7 @@
   },
   {
    "slug": "duy-dinh-le",
+   "done": false,
    "name": "Duy-Dinh Le",
    "name_vi": "Lê Đình Duy",
    "institution": "UIT",
@@ -632,6 +702,7 @@
   },
   {
    "slug": "hai-thanh-nguyen",
+   "done": false,
    "name": "Hai Thanh Nguyen",
    "name_vi": "Nguyễn Thanh Hải",
    "institution": "CTU",
@@ -641,6 +712,7 @@
   },
   {
    "slug": "hien-d-nguyen",
+   "done": false,
    "name": "Hien D. Nguyen",
    "name_vi": "Hien D. Nguyen",
    "institution": "UIT",
@@ -650,6 +722,7 @@
   },
   {
    "slug": "hieu-trung-thai",
+   "done": false,
    "name": "Hieu Trung Thai",
    "name_vi": "Thái Trung Hiếu",
    "institution": "QNU",
@@ -659,6 +732,7 @@
   },
   {
    "slug": "hoa-tien-nguyen",
+   "done": false,
    "name": "Hoa Tien Nguyen",
    "name_vi": "Nguyễn Tiến Hòa",
    "institution": "HUST",
@@ -668,6 +742,7 @@
   },
   {
    "slug": "hong-t-m-chu",
+   "done": false,
    "name": "Hong T.M. Chu",
    "name_vi": "Chu Thị Mai Hồng",
    "institution": "VinUni",
@@ -677,6 +752,7 @@
   },
   {
    "slug": "hung-nguyen",
+   "done": false,
    "name": "Hung Nguyen",
    "name_vi": "Nguyễn Viết Hưng",
    "institution": "HCMUE",
@@ -686,6 +762,7 @@
   },
   {
    "slug": "khiem-nguyen",
+   "done": true,
    "name": "Khiem Nguyen",
    "name_vi": "Nguyễn Tiến Tuấn Khiêm",
    "institution": "EIU",
@@ -695,6 +772,7 @@
   },
   {
    "slug": "long-dao-van",
+   "done": false,
    "name": "Long Dao Van",
    "name_vi": "Đào Văn Long",
    "institution": "HMU",
@@ -704,6 +782,7 @@
   },
   {
    "slug": "minh-tran",
+   "done": false,
    "name": "Minh Tran",
    "name_vi": "Trần Minh",
    "institution": "FTU",
@@ -713,6 +792,7 @@
   },
   {
    "slug": "nghia-duong-tan",
+   "done": false,
    "name": "Nghia Duong Tan",
    "name_vi": "Dương Tấn Nghĩa",
    "institution": "HUST",
@@ -722,6 +802,7 @@
   },
   {
    "slug": "nguyen-duc-minh",
+   "done": true,
    "name": "Nguyen Duc Minh",
    "name_vi": "Nguyễn Đức Minh",
    "institution": "DHTL",
@@ -731,6 +812,7 @@
   },
   {
    "slug": "quang-vinh-dang",
+   "done": false,
    "name": "Quang-Vinh Dang",
    "name_vi": "Đặng Quang Vinh",
    "institution": "BUV",
@@ -740,6 +822,7 @@
   },
   {
    "slug": "thanh-pham-chi",
+   "done": true,
    "name": "Thanh Pham Chi",
    "name_vi": "Phạm Chí Thanh",
    "institution": "RMIT",
@@ -749,6 +832,7 @@
   },
   {
    "slug": "thao-nguyen-minh-phan",
+   "done": false,
    "name": "Thao Nguyen Minh Phan",
    "name_vi": "Phan Nguyễn Minh Thảo",
    "institution": "CTU",
@@ -758,6 +842,7 @@
   },
   {
    "slug": "thi-thuy-uyen-nguyen",
+   "done": true,
    "name": "Thi Thuy Uyen Nguyen",
    "name_vi": "Nguyễn Thị Thùy Uyên",
    "institution": "Hue University",
@@ -767,6 +852,7 @@
   },
   {
    "slug": "tien-vu-van",
+   "done": false,
    "name": "Tien Vu-Van",
    "name_vi": "Vũ Văn Tiến",
    "institution": "HCMUT",
@@ -776,6 +862,7 @@
   },
   {
    "slug": "trinh-van-chien",
+   "done": false,
    "name": "Trinh Van Chien",
    "name_vi": "Trịnh Văn Chiến",
    "institution": "HUST",
@@ -785,6 +872,7 @@
   },
   {
    "slug": "van-duc-nguyen",
+   "done": false,
    "name": "Van Duc Nguyen",
    "name_vi": "Nguyễn Văn Đức",
    "institution": "HUST",
@@ -794,9 +882,9 @@
   }
  ],
  "sources": {
-  "papers": 320,
+  "papers": 322,
   "date": "2026-11-27",
-  "with_text": 185,
-  "with_reviews": 185
+  "with_text": 187,
+  "with_reviews": 186
  }
 }
