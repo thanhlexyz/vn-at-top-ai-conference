@@ -32,7 +32,7 @@
   },
   {
    "slug": "phi-le-nguyen",
-   "done": false,
+   "done": true,
    "name": "Phi Le Nguyen",
    "name_vi": "Nguyễn Phi Lê",
    "institution": "HUST",
@@ -216,7 +216,7 @@
    "name": "Minh-Triet Tran",
    "name_vi": "Trần Minh Triết",
    "institution": "HCMUS",
-   "papers": 7,
+   "papers": 8,
    "focus": "Computer vision and generative models, including diffusion-based segmentation and image editing, scene text recognition and multi-camera tracking, with recent work on auditing claims about multimodal and multi-agent systems.",
    "focus_vi": "Thị giác máy tính và mô hình sinh, gồm phân đoạn và chỉnh sửa ảnh dựa trên khuếch tán, nhận dạng chữ trong cảnh và theo dõi đối tượng đa camera, cùng các nghiên cứu gần đây về kiểm định các nhận định trong hệ đa phương thức và đa tác tử."
   },
@@ -242,7 +242,7 @@
   },
   {
    "slug": "trung-thanh-ngo",
-   "done": false,
+   "done": true,
    "name": "Trung Thanh Ngo",
    "name_vi": "Ngô Thành Trung",
    "institution": "HUST",
@@ -272,7 +272,7 @@
   },
   {
    "slug": "thuy-t-nguyen",
-   "done": false,
+   "done": true,
    "name": "Thuy T. Nguyen",
    "name_vi": "Nguyễn Thị Thủy",
    "institution": "RMIT",
@@ -362,7 +362,7 @@
   },
   {
    "slug": "huyen-nguyen",
-   "done": false,
+   "done": true,
    "name": "Huyen Nguyen",
    "name_vi": "Nguyễn Thị Ngọc Huyền",
    "institution": "PTIT",
@@ -372,7 +372,7 @@
   },
   {
    "slug": "ngoc-thanh-dinh",
-   "done": false,
+   "done": true,
    "name": "Ngoc-Thanh Dinh",
    "name_vi": "Đinh Ngọc Thạnh",
    "institution": "VinUni",
@@ -412,7 +412,7 @@
   },
   {
    "slug": "ngoc-nam-pham",
-   "done": false,
+   "done": true,
    "name": "Ngoc Nam Pham",
    "name_vi": "Phạm Ngọc Nam",
    "institution": "VinUni",
@@ -422,7 +422,7 @@
   },
   {
    "slug": "nhat-quang-tran",
-   "done": false,
+   "done": true,
    "name": "Nhat-Quang Tran",
    "name_vi": "Trần Nhật Quang",
    "institution": "RMIT",
@@ -432,7 +432,7 @@
   },
   {
    "slug": "quynh-trang-pham-thi",
-   "done": false,
+   "done": true,
    "name": "Quynh-Trang Pham Thi",
    "name_vi": "Phạm Thị Quỳnh Trang",
    "institution": "VNU-UET",
@@ -512,7 +512,7 @@
   },
   {
    "slug": "thai-khanh-nguyen",
-   "done": false,
+   "done": true,
    "name": "Thai Khanh Nguyen",
    "name_vi": "Nguyễn Thái Khánh",
    "institution": "PTIT",
@@ -562,7 +562,7 @@
   },
   {
    "slug": "nguyen-tu-uyen",
-   "done": false,
+   "done": true,
    "name": "Nguyen Tu Uyen",
    "name_vi": "Nguyễn Tú Uyên",
    "institution": "NEU",
@@ -642,11 +642,11 @@
   },
   {
    "slug": "quy-van-tran",
-   "done": false,
+   "done": true,
    "name": "Quy Van Tran",
    "name_vi": "Trần Văn Quý",
    "institution": "HCMUS",
-   "papers": 1,
+   "papers": 2,
    "focus": "Auditing the claims drawn from machine learning analyses, in particular whether statements that one input modality dominates a multimodal model's predictions hold up statistically, and auditing training schemes in multi-agent market making.",
    "focus_vi": "Kiểm định các kết luận rút ra từ phân tích mô hình học máy, đặc biệt là liệu nhận định rằng một modality đầu vào chi phối dự đoán của mô hình đa phương thức có đứng vững về mặt thống kê hay không, và kiểm định các cơ chế huấn luyện trong bài toán tạo lập thị trường đa tác tử."
   },
@@ -662,11 +662,11 @@
   },
   {
    "slug": "vu-nguyen",
-   "done": false,
+   "done": true,
    "name": "Vu Nguyen",
    "name_vi": "Nguyễn Văn Vũ",
    "institution": "HCMUS",
-   "papers": 1,
+   "papers": 2,
    "focus": "Rigorous auditing of conclusions in machine learning, such as claims that one modality dominates a multimodal predictor, together with the study of training dynamics among learning agents in market making.",
    "focus_vi": "Kiểm định chặt chẽ các kết luận trong học máy, như nhận định rằng một modality chi phối bộ dự đoán đa phương thức, cùng với nghiên cứu động lực huấn luyện giữa các tác tử học trong bài toán tạo lập thị trường."
   },
@@ -712,7 +712,7 @@
   },
   {
    "slug": "hien-d-nguyen",
-   "done": false,
+   "done": true,
    "name": "Hien D. Nguyen",
    "name_vi": "Hien D. Nguyen",
    "institution": "UIT",
@@ -752,7 +752,7 @@
   },
   {
    "slug": "hung-nguyen",
-   "done": false,
+   "done": true,
    "name": "Hung Nguyen",
    "name_vi": "Nguyễn Viết Hưng",
    "institution": "HCMUE",
@@ -882,9 +882,9 @@
   }
  ],
  "sources": {
-  "papers": 322,
+  "papers": 323,
   "date": "2026-11-27",
-  "with_text": 187,
-  "with_reviews": 186
+  "with_text": 188,
+  "with_reviews": 187
  }
 }
