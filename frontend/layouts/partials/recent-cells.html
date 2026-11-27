@@ -1,3 +1,4 @@
+{{- $trivial := false }}{{ if isset . "trivial" }}{{ $trivial = .trivial }}{{ else }}{{ $trivial = ne .p.projection.basis "own" }}{{ end }}
 {{- $A := slice }}{{ $B := slice }}
 {{- range $k, $x := slice .p .r }}
 {{- $rec := eq $k 1 }}
@@ -13,7 +14,7 @@
 {{- $sub := add (int $x.accepted) (int $x.rejected_estimated) }}
 {{- $row = $row | append (dict "cls" (printf "total sub%s" (cond (eq $sub 0) " zero" "")) "html" (string $sub)) }}
 {{- if eq $x.acceptance_rate nil }}{{ $row = $row | append (dict "cls" "na rate" "html" "&ndash;") }}
-{{- else if ne $.p.projection.basis "own" }}{{ $row = $row | append (dict "cls" "rate trivial" "html" (printf "%v%%" $x.acceptance_rate) "title" (T "tip_rate_trivial") "last" "1") }}
+{{- else if $trivial }}{{ $row = $row | append (dict "cls" "rate trivial" "html" (printf "%v%%" $x.acceptance_rate) "title" (T "tip_rate_trivial") "last" "1") }}
 {{- else }}{{ $row = $row | append (dict "cls" "rate" "html" (printf "%v%%" $x.acceptance_rate)) }}{{ end }}
 {{- end }}
 {{- if $rec }}{{ $B = $row }}{{ else }}{{ $A = $row }}{{ end }}

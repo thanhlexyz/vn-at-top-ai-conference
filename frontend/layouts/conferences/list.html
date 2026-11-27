@@ -4,52 +4,36 @@
 <table>
 	<thead>
 	<tr>
-		<th class="logo-col"></th>
-		<th class="l">{{ T "th_venue" }}</th>
-		<th class="l">{{ T "th_public" }}</th>
+		<th rowspan="2" class="logo-col"></th>
+		<th rowspan="2" class="l">{{ T "th_venue" }}</th>
+		<th rowspan="2" class="l">{{ T "th_public" }}</th>
+		{{- $from := time.Format (T "recent_from_layout") (time.AsTime (printf "%s-01" hugo.Data.meta.recent_from)) }}
+		<th colspan="6" class="period"><button type="button" class="period-toggle" aria-pressed="false" data-alt="{{ T "th_last_year" }}" data-alt-title="{{ T "tip_period_total" }}" title="{{ T "tip_period_recent" (dict "From" $from) }}">{{ T "th_total" }}</button></th>
+		<th rowspan="2" title="{{ T "tip_under_review_col" }}">{{ T "th_under_review" }}</th>
+	</tr>
+	<tr>
 		<th>{{ T "th_Submitted" }}</th>
 		<th class="good">{{ T "th_Accepted" }}</th>
 		<th class="bad">{{ T "th_Rejected" }}</th>
 		<th class="est" title="{{ T "tip_rejected_est_venue" }}">{{ T "th_Rejected_est" }}</th>
 		<th class="sub" title="{{ T "tip_submitted_est" }}">{{ T "th_Submitted_est" }}</th>
 		<th class="rate" title="{{ T "tip_rate_venue" }}">{{ T "th_rate_venue" }}</th>
-		<th title="{{ T "tip_under_review_col" }}">{{ T "th_under_review" }}</th>
 	</tr>
 	</thead>
 	<tbody>
 	{{- range sort (sort hugo.Data.venues "official" "desc") "accepted" "desc" }}
 	{{- $v := . }}
 	{{- $t := index .venues .key }}
+	{{- if or (gt (int .accepted) 0) (gt (int $t.submitted) 0) }}
 	<tr>
 		<td class="logo-col">{{ with .image }}<a href="{{ printf "conferences/%s/" $v.key | relLangURL }}" tabindex="-1"><img class="mini" src="{{ . | relURL }}" alt="{{ $v.name }}" loading="lazy"></a>{{ end }}</td>
 		<td class="l"><a href="{{ printf "conferences/%s/" .key | relLangURL }}">{{ .name }}</a></td>
-		{{- if eq .rejections "full" }}
-		<td class="l">{{ T "venue_public_full" }}</td>
-		{{ partial "num.html" $t.submitted }}
-		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
-		{{ partial "numc.html" (dict "v" $t.not_accepted "cls" "bad") }}
-		{{- else if eq .rejections "partial" }}
-		<td class="l">{{ T "venue_public_partial" }}</td>
-		<td class="na">&ndash;</td>
-		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
-		<td class="bad">{{ T "venue_n_public" $t.not_accepted }}</td>
-		{{- else }}
-		<td class="l">{{ if in (slice "acl" "emnlp" "cvpr") .key }}{{ T "venue_public_findings" }}{{ else }}{{ T "venue_public_none" }}{{ end }}</td>
-		<td class="na">&ndash;</td>
-		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
-		{{- if $t.not_accepted }}
-		<td class="bad" title="{{ T "tip_rejected_findings" }}">{{ T "venue_n_public" $t.not_accepted }}</td>
-		{{- else }}
-		<td class="na bad">&ndash;</td>
-		{{- end }}
-		{{- end }}
-		{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}
-		{{ partial "numc.html" (dict "v" (add (int .accepted) (int .rejected_estimated)) "cls" "total sub") }}
-		<td class="rate" title="{{ with .reported_detail }}{{ T "tip_reported_detail" . }}{{ end }}">
-			{{- with .acceptance_rate }}{{ if ne $v.rejections "full" }}~{{ end }}{{ . }}%{{ else }}&ndash;{{ end }} / {{ with .reported_rate }}{{ . }}%{{ else }}&ndash;{{ end }}</td>
+		<td class="l">{{ if eq .rejections "full" }}{{ T "venue_public_full" }}{{ else if eq .rejections "partial" }}{{ T "venue_public_partial" }}{{ else if in (slice "acl" "emnlp" "cvpr") .key }}{{ T "venue_public_findings" }}{{ else }}{{ T "venue_public_none" }}{{ end }}</td>
+		{{ partial "venue-cells.html" (dict "v" .) }}
 		{{- $ur := 0 }}{{ with hugo.Data.under_review }}{{ if eq $v.key "iclr" }}{{ $ur = len .papers }}{{ end }}{{ end }}
 		{{ partial "numc.html" (dict "v" $ur "cls" "under") }}
 	</tr>
+	{{- end }}
 	{{- end }}
 	</tbody>
 </table>

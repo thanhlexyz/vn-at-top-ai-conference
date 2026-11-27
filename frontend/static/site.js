@@ -228,6 +228,33 @@
 		});
 	});
 
+	document.querySelectorAll("button.graph-period").forEach(function (button) {
+		button.parentNode.hidden = false;
+		button.addEventListener("click", function () {
+			var recent = !button.classList.contains("on");
+			button.classList.toggle("on", recent);
+			button.setAttribute("aria-pressed", recent ? "true" : "false");
+			var label = button.textContent, title = button.title;
+			button.textContent = button.dataset.alt;
+			button.dataset.alt = label;
+			button.title = button.dataset.altTitle;
+			button.dataset.altTitle = title;
+			document.querySelectorAll("svg.net").forEach(function (svg) {
+				svg.classList.toggle("recent", recent);
+				svg.querySelectorAll("[data-rw]").forEach(function (el) {
+					var w = el.getAttribute("stroke-width");
+					el.setAttribute("stroke-width", el.dataset.rw);
+					el.dataset.rw = w;
+				});
+				svg.querySelectorAll("text[data-r]").forEach(function (el) {
+					var t = el.textContent;
+					el.textContent = el.dataset.r;
+					el.dataset.r = t;
+				});
+			});
+		});
+	});
+
 	document.querySelectorAll("table[data-page-size]").forEach(function (table) {
 		var size = parseInt(table.dataset.pageSize, 10), body = table.tBodies[0];
 		var nav = table.id && document.querySelector('nav.pager[aria-controls="' + table.id + '"]');

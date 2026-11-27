@@ -1,4 +1,5 @@
 import collections
+import itertools
 import csv
 import datetime
 import charts
@@ -806,6 +807,8 @@ def recent_totals(p, recs):
     acc = [r for r in recs if r["status"] == "accepted"]
     own = sum(1 for r in acc if r.get("unofficial"))
     out = {"score": round(sum(1 / max(len(r["authors"]), 1) for r in acc), 2), "accepted": len(acc),
+           "score_areas": {g["name"]: round(sum(1 / max(len(r["authors"]), 1) for r in acc if r["venue"] in g["venues"]), 4)
+                           for g in VENUE_GROUPS},
            "own_page": own, "official": len(acc) - own,
            "rejected": sum(1 for r in recs if r["status"] in NOT_ACCEPTED),
            "rejected_estimated": None, "acceptance_rate": None}
@@ -1144,13 +1147,34 @@ def place_weight_labels(edges):
         e["lx"], e["ly"] = round(x, 1), round(y + 4, 1)
 
 
+def graph_recent(g, records):
+    papers_of = collections.defaultdict(set)
+    for r, p in records:
+        if is_recent(r["venue"], r["year"]):
+            papers_of[graph.paper_key(r)].add(p["slug"])
+    weight = collections.Counter()
+    for slugs in papers_of.values():
+        for a, b in itertools.combinations(sorted(slugs), 2):
+            weight[(a, b)] += 1
+    degree = collections.Counter()
+    for e in g["edges"]:
+        e["recent"] = weight[tuple(sorted((e["a"], e["b"])))]
+        e["recent_width"] = round(1 + 1.6 * math.sqrt(e["recent"] - 1), 1) if e["recent"] else 0
+        if e["recent"]:
+            degree[e["a"]] += 1
+            degree[e["b"]] += 1
+    for n in g["nodes"]:
+        n["recent_degree"] = degree[n["id"]]
+    return g
+
+
 def international_graph(authors, by_slug):
     authors = sorted(authors, key=lambda f: (-len(f["papers"]), f["name"]))
     top, step = 40, 46
     right = []
     for i, f in enumerate(authors):
         right.append({"name": f["name"], "affiliation": f["affs"].most_common(1)[0][0], "papers": len(f["papers"]),
-                      "url": VIETPROFS_URL.format(f["vp_id"]), "country": f["country"], "flag": flag(f["country"]), "slugs": f["slugs"], "id": f"f{i}"})
+                      "url": VIETPROFS_URL.format(f["vp_id"]), "country": f["country"], "flag": flag(f["country"]), "slugs": f["slugs"], "recent": f["recent"], "recent_n": f["recent_n"], "id": f"f{i}"})
     slugs = sorted({s for f in right for s in f["slugs"] if s in by_slug})
     def centre(s):
         pos = [(i, f["slugs"][s]) for i, f in enumerate(right) if s in f["slugs"]]
@@ -1160,18 +1184,21 @@ def international_graph(authors, by_slug):
     right_step = (height - 2 * top) / max(len(right) - 1, 1) if len(right) > 1 else 0
     xl, xr = 380, 620
     left = [{"slug": s, "name": by_slug[s]["name"], "name_vi": by_slug[s]["name_vi"], "url": f"professors/{s}/",
-             "x": xl, "y": top + step * i, "papers": sum(f["slugs"][s] for f in right), "id": s}
+             "x": xl, "y": top + step * i, "papers": sum(f["slugs"][s] for f in right),
+             "recent": sum(f["recent"][s] for f in right), "id": s}
             for i, s in enumerate(slugs)]
     ly = {n["slug"]: n["y"] for n in left}
     for i, f in enumerate(right):
         f["x"], f["y"] = xr, round(top + right_step * i if len(right) > 1 else height / 2, 1)
         f["professors"] = len([s for s in f["slugs"] if s in ly])
     edges = [{"a": s, "b": f["id"], "weight": w, "x1": xl, "y1": ly[s], "x2": xr, "y2": f["y"],
-              "width": round(1 + 1.2 * w, 1), "a_name": by_slug[s]["name"], "a_name_vi": by_slug[s]["name_vi"],
+              "width": round(1 + 1.2 * w, 1), "recent": f["recent"][s], "recent_width": round(1 + 1.2 * f["recent"][s], 1),
+              "a_name": by_slug[s]["name"], "a_name_vi": by_slug[s]["name_vi"],
               "b_name": f["name"]}
              for f in right for s, w in sorted(f["slugs"].items()) if s in ly]
     place_weight_labels(edges)
     for f in right:
+        f["recent"] = f.pop("recent_n")
         del f["slugs"]
     return {"width": 1000, "height": height, "left": left, "right": right, "edges": edges,
             "authors": len(right), "professors": len(left), "papers": sum(e["weight"] for e in edges)}
@@ -1188,6 +1215,11 @@ def main():
     shared = shared_notes(approved)
 
     professors, all_counted, hidden, graph_recs = [], [], [], []
+    namesakes = collections.Counter(token_key(p["name"]) for p in approved)
+
+    def shown_name(person, name):
+        return f"{name} ({person['institution_short']})" if namesakes[token_key(person["name"])] > 1 else name
+
     for person in approved:
         recs, source, fetched, stale = person_records(person, acc, decisions, queue, warnings, skipped,
                                                       own_pages.get(person["slug"], ()),
@@ -1224,7 +1256,8 @@ def main():
         inst_slug = slugify(person["institution_short"])
         s = summary(counted, acc, person["vn_since"])
         professors.append({
-            "slug": person["slug"], "name": person["name"], "name_vi": person["name_vi"] or person["name"],
+            "slug": person["slug"], "name": shown_name(person, person["name"]),
+            "name_vi": shown_name(person, person["name_vi"] or person["name"]),
             "aliases": [a for a in dict.fromkeys(person["name_forms"]) if norm_name(a) not in
                         {norm_name(person["name"]), norm_name(person["name_vi"] or "")}],
             "institution": person["institution"],
@@ -1350,6 +1383,23 @@ def main():
         mine = [p for p in professors if p["institution_slug"] == i["slug"]]
         i["score_areas"] = {g["name"]: round(sum(p["score_areas"][g["name"]] for p in mine), 2) for g in VENUE_GROUPS}
         i["score"] = round(math.prod(v + 1 for v in i["score_areas"].values()) ** (1 / len(VENUE_GROUPS)), 2)
+    for i in institutions:
+        mine = [p for p in professors if p["institution_slug"] == i["slug"]]
+        recs = [r for r in owned_by(lambda p: slugify(p["institution_short"]) == i["slug"]) if is_recent(r["venue"], r["year"])]
+        acc_r = [r for r in recs if r["status"] == "accepted"]
+        own = sum(1 for r in acc_r if r.get("unofficial"))
+        iclr = i["venues"]["iclr"]
+        ratio = (iclr["submitted"] + 1) / (iclr["accepted"] + 1)
+        iclr_acc = sum(1 for r in acc_r if r["venue"] == "iclr")
+        iclr_not = sum(1 for r in recs if r["venue"] == "iclr" and r["status"] in NOT_ACCEPTED)
+        other = sum(1 for r in recs if r["venue"] != "iclr" and r["status"] in NOT_ACCEPTED)
+        est = round(iclr_not + other + max((len(acc_r) - iclr_acc) * (ratio - 1) - other, 0)) if recs else None
+        areas = {g["name"]: sum(p["recent"]["score_areas"][g["name"]] for p in mine) for g in VENUE_GROUPS}
+        total = len(acc_r) + (est or 0)
+        i["recent"] = {"score": round(math.prod(v + 1 for v in areas.values()) ** (1 / len(VENUE_GROUPS)), 2) if acc_r else 0.0,
+                       "accepted": len(acc_r), "own_page": own, "official": len(acc_r) - own,
+                       "rejected": iclr_not + other, "rejected_estimated": est,
+                       "acceptance_rate": round(100 * len(acc_r) / total) if est is not None and total else None}
     institutions.sort(key=lambda i: (-i["score"], -i["accepted"], -i["official"], i["name"]))
     names_vi = {r["name"]: r["name_vi"] for r in read_csv(CSV_DIR / "institution_names.csv")}
     for i in institutions:
@@ -1445,8 +1495,9 @@ def main():
     def ratios(r):
         return [ratio_of[o["slug"]] for o in owners[(r["venue"], r["year"], norm_title(r["title"]))] if o["slug"] in ratio_of]
 
-    def venue_estimate(key, year=None):
-        recs = [r for r in papers if r["venue"] == key and (year is None or r["year"] == year)]
+    def venue_estimate(key, year=None, recent=False):
+        recs = [r for r in papers if r["venue"] == key and (year is None or r["year"] == year)
+                and (not recent or is_recent(r["venue"], r["year"]))]
         acc_recs = [r for r in recs if r["status"] == "accepted"]
         rej_recs = [r for r in recs if r["status"] != "accepted"]
         if key == "iclr":
@@ -1468,6 +1519,15 @@ def main():
     projection_entries = [with_owners(r) for r in papers]
     for v in venues:
         v["rejected_estimated"], v["acceptance_rate"] = venue_estimate(v["key"])
+        mine = [r for r in papers if r["venue"] == v["key"] and is_recent(r["venue"], r["year"])]
+        t = tally(mine)[v["key"]]
+        est, rate = venue_estimate(v["key"], recent=True)
+        rep = [r for r in read_csv(CSV_DIR / "venue_rates.csv") if r["venue"].lower() == v["key"] and r["submitted"].isdigit()
+               and r["accepted"].isdigit() and is_recent(v["key"], int(r["year"]))]
+        rs, ra = sum(int(r["submitted"]) for r in rep), sum(int(r["accepted"]) for r in rep)
+        v["recent"] = {**t, "rejected_estimated": est, "acceptance_rate": rate,
+                       "reported_rate": round(100 * ra / rs) if rs else None,
+                       "reported_detail": f"{ra} / {rs} ({', '.join(sorted({r['year'] for r in rep}))})" if rs else ""}
         sub, acc_n, yrs = reported.get(v["key"], (0, 0, []))
         v["reported_rate"] = round(100 * acc_n / sub) if sub else None
         v["reported_detail"] = f"{acc_n} / {sub} ({min(yrs)}–{max(yrs)})" if sub else ""
@@ -1505,6 +1565,8 @@ def main():
     recs_for_graph = [(r, shown_by_slug[s]) for r, s in graph_recs if s in shown_by_slug]
     if "--keep-graph" not in sys.argv or not (DATA / "graph_people.json").exists():
         write_json(DATA / "graph_people.json", graph.researcher_graph(professors, recs_for_graph + under_review_links(recs_for_graph, shown_by_slug)))
+    write_json(DATA / "graph_people.json", graph_recent(json.loads((DATA / "graph_people.json").read_text(encoding="utf-8")),
+                                                         recs_for_graph + under_review_links(recs_for_graph, shown_by_slug)))
     write_json(DATA / "institution_links.json", graph.institution_links(professors, recs_for_graph))
     for venue, year in sorted({(r["venue"], r["year"]) for r in papers if r["status"] == "accepted"}):
         if year not in DECISION_DATES.get(venue, {}):
@@ -1527,11 +1589,15 @@ def main():
                 continue
             f = foreign.setdefault(name_key(a["name"]), {"name": a["name"], "affs": collections.Counter(),
                                                          "papers": [], "with": collections.Counter(),
-                                                         "slugs": collections.Counter()})
+                                                         "slugs": collections.Counter(), "recent": collections.Counter(),
+                                                         "recent_n": 0})
             f["affs"][aff] += 1
             f["papers"].append(f"{VENUE_NAME[r['venue']]} {r['year']}")
             f["with"].update(mine)
             f["slugs"].update({w["slug"] for w in owners[key]})
+            if is_recent(r["venue"], r["year"]):
+                f["recent"].update({w["slug"] for w in owners[key]})
+                f["recent_n"] += 1
     vietprofs = {name_key(r["name"]): r for r in read_csv(CSV_DIR / "vietprofs.csv") if r["checked"] == "yes"}
     international = international_graph(
         [{**f, "vp_id": vietprofs[k]["vp_id"], "country": vietprofs[k]["country"]} for k, f in foreign.items()

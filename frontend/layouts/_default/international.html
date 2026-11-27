@@ -9,16 +9,16 @@
 {{- $names := slice }}{{ range $g.left }}{{ $names = $names | append (cond (and $vi .name_vi) .name_vi .name) }}{{ end }}{{ range $g.right }}{{ $names = $names | append .name }}{{ end }}
 {{ partial "graph-tools.html" $names }}
 <figure class="graph">
-<svg class="net" viewBox="0 0 {{ $g.width }} {{ $g.height }}" role="img" aria-label="{{ .Title }}">
+<svg class="net" viewBox="0 0 {{ $g.width }} {{ $g.height }}" style="--w: {{ $g.width }}" role="img" aria-label="{{ .Title }}">
 	{{- range $g.edges }}
-	<line class="edge" data-a="{{ .a }}" data-b="{{ .b }}" x1="{{ .x1 }}" y1="{{ .y1 }}" x2="{{ .x2 }}" y2="{{ .y2 }}" stroke-width="{{ .width }}"><title>{{ if $vi }}{{ .a_name_vi }}{{ else }}{{ .a_name }}{{ end }} – {{ .b_name }}: {{ T "graph_papers" (int .weight) }}</title></line>
+	<line class="edge{{ if not .recent }} r0{{ end }}" data-a="{{ .a }}" data-b="{{ .b }}" x1="{{ .x1 }}" y1="{{ .y1 }}" x2="{{ .x2 }}" y2="{{ .y2 }}" stroke-width="{{ .width }}" data-rw="{{ .recent_width }}"><title>{{ if $vi }}{{ .a_name_vi }}{{ else }}{{ .a_name }}{{ end }} – {{ .b_name }}: {{ T "graph_papers" (int .weight) }}</title></line>
 	{{- end }}
 	{{- range $g.edges }}{{ if ge (int .weight) 2 }}
-	<text class="ew" data-a="{{ .a }}" data-b="{{ .b }}" x="{{ .lx }}" y="{{ .ly }}" text-anchor="middle">{{ .weight }}</text>
+	<text class="ew{{ if lt (int .recent) 2 }} r0{{ end }}" data-a="{{ .a }}" data-b="{{ .b }}" x="{{ .lx }}" y="{{ .ly }}" text-anchor="middle" data-r="{{ .recent }}">{{ .weight }}</text>
 	{{- end }}{{ end }}
 	{{- range $g.left }}
 	{{- $label := cond (and $vi .name_vi) .name_vi .name }}
-	<a href="{{ .url | relLangURL }}" class="node c0" data-id="{{ .id }}" data-name="{{ $label }}" data-alt="{{ cond (eq $label .name) (.name_vi | default "") .name }}">
+	<a href="{{ .url | relLangURL }}" class="node c0{{ if not .recent }} r0{{ end }}" data-id="{{ .id }}" data-name="{{ $label }}" data-alt="{{ cond (eq $label .name) (.name_vi | default "") .name }}">
 		<circle cx="{{ .x }}" cy="{{ .y }}" r="9"/>
 		<text x="{{ sub .x 16 }}" y="{{ add .y 5 }}" text-anchor="end">{{ $label }}</text>
 		<title>{{ $label }}: {{ T "graph_papers" (int .papers) }}</title>
@@ -26,7 +26,7 @@
 	{{- end }}
 	{{- range $g.right }}
 	{{- $a := . }}
-	<a href="{{ .url }}" class="node c1" data-id="{{ .id }}" data-name="{{ .name }}" target="_blank" rel="noopener">
+	<a href="{{ .url }}" class="node c1{{ if not .recent }} r0{{ end }}" data-id="{{ .id }}" data-name="{{ .name }}" target="_blank" rel="noopener">
 		<circle cx="{{ .x }}" cy="{{ .y }}" r="13"/>
 		{{- $nx := 20 }}{{ with .flag }}{{ $nx = 52 }}
 		<image href="{{ printf "img/flags/%s.svg" . | relURL }}" x="{{ add $a.x 20 }}" y="{{ sub $a.y 9 }}" width="24" height="18"/>{{ end }}

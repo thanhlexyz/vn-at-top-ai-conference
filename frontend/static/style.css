@@ -454,6 +454,10 @@ th.sortable { cursor: pointer ; }
 .period-toggle::after { content: " \21C4" ; font-size: 0.85em ; }
 .period-toggle:hover { text-decoration-style: solid ; }
 table.recent .rk-all, table:not(.recent) .rk-recent { display: none ; }
+.period-tools { margin: 0.4em 0 ; }
+.graph-period { font: inherit ; font-weight: 600 ; color: var(--fg) ; background: var(--th) ; border: 1px solid var(--axis) ; border-radius: 4px ; padding: 0.15em 0.7em ; cursor: pointer ; }
+.graph-period::after { content: " \21C4" ; font-size: 0.85em ; }
+svg.net.recent .r0 { display: none ; }
 th.sortable:hover { text-decoration: underline ; }
 th[aria-sort="descending"]::after { content: " \25BC" ; font-size: 0.7em ; }
 th[aria-sort="ascending"]::after { content: " \25B2" ; font-size: 0.7em ; }
@@ -532,8 +536,8 @@ svg.net .node.ring text.deg { fill: var(--fg) ; }
 .legend-box .edge-key { margin-top: 0.8em !important ; color: var(--muted) ; font-size: 0.95em ; }
 @media (min-width: 900px) { .graph-page { grid-template-columns: minmax(0, 1fr) 11rem ; } }
 main.wide { max-width: none ; padding: 0 2rem ; }
-main.wide svg.net { max-width: none ; }
-@media (min-width: 900px) { main.wide .graph-page { grid-template-columns: minmax(0, 1fr) 16rem ; } }
+main.wide svg.net { max-width: calc(var(--w, 1000) * 1px) ; margin: 0 auto ; }
+@media (min-width: 900px) { main.wide .graph-page { grid-template-columns: minmax(0, 1fr) 12rem ; gap: 1.5rem ; } }
 @media (max-width: 600px) { main.wide { padding: 0 1em ; } }
 .legend-box .legend-logo { height: 1.3em ; width: 1.6em ; object-fit: contain ; margin-right: 2px ; }
 .graph-legend li { display: inline-flex ; align-items: center ; gap: 6px ; }
@@ -600,7 +604,7 @@ svg.net .node text.sub { font-size: 12px ; fill: var(--muted) ; }
 	header h1 { margin-top: 0.7em ; }
 
 	figure.graph { overflow-x: auto ; margin-left: -0.5em ; margin-right: -0.5em ; }
-	figure.graph svg.net { min-width: 760px ; }
+	figure.graph svg.net { min-width: calc(var(--w, 1000) * 0.76px) ; }
 
 	figure:not(.portrait):not(.logo):not(.graph) { overflow-x: auto ; }
 	figure .chart { min-width: 500px ; }

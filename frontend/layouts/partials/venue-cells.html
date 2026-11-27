@@ -1,0 +1,35 @@
+{{- $v := .v }}{{ $t := index $v.venues $v.key }}{{ $r := $v.recent }}
+{{- $sets := slice
+	(dict "sub" $t.submitted "off" $t.official "own" $t.own_page "nacc" $t.not_accepted "acc" $v.accepted "est" $v.rejected_estimated "rate" $v.acceptance_rate "rep" $v.reported_rate "det" $v.reported_detail)
+	(dict "sub" $r.submitted "off" $r.official "own" $r.own_page "nacc" $r.not_accepted "acc" $r.accepted "est" $r.rejected_estimated "rate" $r.acceptance_rate "rep" $r.reported_rate "det" $r.reported_detail) }}
+{{- $A := slice }}{{ $B := slice }}
+{{- range $k, $x := $sets }}
+{{- $row := slice }}
+{{- if eq $v.rejections "full" }}
+{{- $row = $row | append (dict "cls" (cond (eq (int $x.sub) 0) "zero" "") "html" (string $x.sub)) }}
+{{- else }}
+{{- $row = $row | append (dict "cls" "na" "html" "&ndash;") }}
+{{- end }}
+{{- $acc := string $x.off }}{{ if gt (int $x.own) 0 }}{{ $acc = printf "%s <span class=\"own\" title=\"%s\">+%d</span>" $acc (T "own_page_more" (dict "Count" $x.own)) (int $x.own) }}{{ end }}
+{{- $row = $row | append (dict "cls" (printf "good%s" (cond (and (eq (int $x.off) 0) (eq (int $x.own) 0)) " zero" "")) "html" $acc) }}
+{{- if eq $v.rejections "full" }}
+{{- $row = $row | append (dict "cls" (printf "bad%s" (cond (eq (int $x.nacc) 0) " zero" "")) "html" (string $x.nacc)) }}
+{{- else if eq $v.rejections "partial" }}
+{{- $row = $row | append (dict "cls" "bad" "html" (T "venue_n_public" $x.nacc)) }}
+{{- else if $x.nacc }}
+{{- $row = $row | append (dict "cls" "bad" "html" (T "venue_n_public" $x.nacc) "title" (T "tip_rejected_findings")) }}
+{{- else }}
+{{- $row = $row | append (dict "cls" "na bad" "html" "&ndash;") }}
+{{- end }}
+{{- $row = $row | append (dict "cls" (printf "total est%s" (cond (eq (int $x.est) 0) " zero" "")) "html" (string (int $x.est))) }}
+{{- $sub := add (int $x.acc) (int $x.est) }}
+{{- $row = $row | append (dict "cls" (printf "total sub%s" (cond (eq $sub 0) " zero" "")) "html" (string $sub)) }}
+{{- $ours := "&ndash;" }}{{ with $x.rate }}{{ $ours = printf "%s%v%%" (cond (ne $v.rejections "full") "~" "") . }}{{ end }}
+{{- $theirs := "&ndash;" }}{{ with $x.rep }}{{ $theirs = printf "%v%%" . }}{{ end }}
+{{- $tip := "" }}{{ with $x.det }}{{ $tip = T "tip_reported_detail" . }}{{ end }}
+{{- $row = $row | append (dict "cls" "rate" "html" (printf "%s / %s" $ours $theirs) "title" $tip) }}
+{{- if $k }}{{ $B = $row }}{{ else }}{{ $A = $row }}{{ end }}
+{{- end }}
+{{- range $k, $a := $A }}
+{{ partial "period-cell.html" (dict "a" $a "b" (index $B $k)) }}
+{{- end }}

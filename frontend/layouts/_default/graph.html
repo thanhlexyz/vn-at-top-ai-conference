@@ -16,19 +16,19 @@
 {{- $names := slice }}{{ range where $g.nodes "linked" true }}{{ $names = $names | append (cond (and $vi .name_vi) .name_vi .name) }}{{ end }}
 {{ partial "graph-tools.html" $names }}
 <figure class="graph">
-<svg class="net" viewBox="0 0 {{ $g.width }} {{ $g.height }}" role="img" aria-label="{{ .Title }}">
+<svg class="net" viewBox="0 0 {{ $g.width }} {{ $g.height }}" style="--w: {{ $g.width }}" role="img" aria-label="{{ .Title }}">
 	{{- range $g.edges }}
-	<line class="edge" data-a="{{ .a }}" data-b="{{ .b }}" x1="{{ .x1 }}" y1="{{ .y1 }}" x2="{{ .x2 }}" y2="{{ .y2 }}" stroke-width="{{ .width }}"><title>{{ if $vi }}{{ .a_name_vi }} – {{ .b_name_vi }}{{ else }}{{ .a_name }} – {{ .b_name }}{{ end }}: {{ T "graph_papers" (int .weight) }}</title></line>
+	<line class="edge{{ if not .recent }} r0{{ end }}" data-a="{{ .a }}" data-b="{{ .b }}" x1="{{ .x1 }}" y1="{{ .y1 }}" x2="{{ .x2 }}" y2="{{ .y2 }}" stroke-width="{{ .width }}" data-rw="{{ .recent_width }}"><title>{{ if $vi }}{{ .a_name_vi }} – {{ .b_name_vi }}{{ else }}{{ .a_name }} – {{ .b_name }}{{ end }}: {{ T "graph_papers" (int .weight) }}</title></line>
 	{{- end }}
 	{{- range $g.edges }}{{ if ge (int .weight) 2 }}
-	<text class="ew" data-a="{{ .a }}" data-b="{{ .b }}" x="{{ .wx }}" y="{{ add .wy 4 }}" text-anchor="middle">{{ .weight }}</text>
+	<text class="ew{{ if lt (int .recent) 2 }} r0{{ end }}" data-a="{{ .a }}" data-b="{{ .b }}" x="{{ .wx }}" y="{{ add .wy 4 }}" text-anchor="middle" data-r="{{ .recent }}">{{ .weight }}</text>
 	{{- end }}{{ end }}
 	{{- range where $g.nodes "linked" true }}
 	{{- $n := . }}
 	{{- $label := cond (and $vi .name_vi) .name_vi .name }}
-	<a {{ with .url }}href="{{ . | relLangURL }}"{{ end }} class="node {{ .color }}" data-id="{{ .id }}" data-color="{{ .color }}" data-name="{{ $label }}" data-alt="{{ cond (eq $label .name) (.name_vi | default "") .name }}">
+	<a {{ with .url }}href="{{ . | relLangURL }}"{{ end }} class="node {{ .color }}{{ if not .recent_degree }} r0{{ end }}" data-id="{{ .id }}" data-color="{{ .color }}" data-name="{{ $label }}" data-alt="{{ cond (eq $label .name) (.name_vi | default "") .name }}">
 		<circle cx="{{ .x }}" cy="{{ .y }}" r="{{ .r }}"{{ if hasPrefix .color "ring" }} style="stroke-width: {{ math.Round (mul .r 0.3) }}px"{{ end }}/>
-		<text class="deg" x="{{ .x }}" y="{{ add .y 4 }}" text-anchor="middle">{{ .degree }}</text>
+		<text class="deg" x="{{ .x }}" y="{{ add .y 4 }}" text-anchor="middle" data-r="{{ .recent_degree }}">{{ .degree }}</text>
 		<text x="{{ .lx }}" y="{{ .ly }}" text-anchor="{{ .anchor }}">{{ $label }}</text>
 		<title>{{ $label }}: {{ T "graph_papers" (int .papers) }}, {{ T "graph_degree" .degree }}</title>
 	</a>

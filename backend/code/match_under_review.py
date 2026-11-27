@@ -48,6 +48,18 @@ def preprints():
         time.sleep(0.3)
 
 
+def known_institutions(text):
+    return {short for full, short, _ in vn_institutions(text) if short != full}
+
+
+def elsewhere(affiliation, person):
+    theirs = known_institutions(affiliation)
+    if theirs and not theirs & (known_institutions(person["institution"]) | {person["institution_short"]}):
+        print(f"  namesake (at {', '.join(sorted(theirs))} on OpenAlex, not {person['institution_short']}): {person['name']}")
+        return True
+    return False
+
+
 def judge(v2, name, institution):
     from fetch_openreview import profile_summary, vietnam_post
     try:
@@ -211,7 +223,8 @@ def main():
         s = under.get(norm_title(w["title"]))
         if not s:
             continue
-        people = {names[token_key(a)]["slug"]: names[token_key(a)]["name"] for a in w["authors"] if token_key(a) in names}
+        people = {names[token_key(a)]["slug"]: names[token_key(a)]["name"] for a in w["authors"]
+                  if token_key(a) in names and not elsewhere(w["in_vn"].get(a), names[token_key(a)])}
         others = {a: inst for a, inst in w["in_vn"].items() if token_key(a) not in names and token_key(a) not in decided}
         if not people and not others:
             continue

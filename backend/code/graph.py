@@ -6,6 +6,7 @@ import random
 from common import PARENT, norm_title, slugify, vn_institutions
 
 W, H = 1000, 720
+PAGE_WIDTH = 1500
 BIG_GROUP = 5
 BAND_HEIGHT = 360
 
@@ -649,7 +650,101 @@ def researcher_graph(professors, records):
     color = {g: color_of_group(g, top) for g in top}
     top.sort(key=lambda g: (color[g].startswith("ring"), ranked.index(g)))
     legend = [{"label": g, "color": color[g]} for g in top] + [{"label": "", "color": "c0"}]
-    return build(nodes, papers_of, lambda n: color.get(n["group"], "c0"), legend)
+    return pack(build(nodes, papers_of, lambda n: color.get(n["group"], "c0"), legend))
+
+
+def pack(g, width=PAGE_WIDTH, gap=60, pad=30, span=400):
+    placed = [n for n in g["nodes"] if n.get("x") is not None]
+    parent = {n["id"]: n["id"] for n in placed}
+
+    def find(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+    for e in g["edges"]:
+        if e["a"] in parent and e["b"] in parent:
+            parent[find(e["a"])] = find(e["b"])
+    comps = collections.defaultdict(list)
+    for n in placed:
+        comps[find(n["id"])].append(n)
+
+    biggest = max(comps.values(), key=len)
+    for members in comps.values():
+        if members is biggest or len(members) < 3:
+            continue
+        xs, ys = [n["x"] for n in members], [n["y"] for n in members]
+        f = min(1.0, span / max(max(xs) - min(xs), max(ys) - min(ys), 1))
+        if f >= 1:
+            continue
+        ox, oy = min(xs), min(ys)
+        ids = {n["id"] for n in members}
+        for n in members:
+            nx, ny = ox + (n["x"] - ox) * f, oy + (n["y"] - oy) * f
+            if "lx" in n:
+                n["lx"], n["ly"] = n["lx"] + nx - n["x"], n["ly"] + ny - n["y"]
+            n["x"], n["y"] = nx, ny
+        at = {n["id"]: n for n in members}
+        for e in g["edges"]:
+            if e["a"] in ids:
+                e["x1"], e["y1"], e["x2"], e["y2"] = at[e["a"]]["x"], at[e["a"]]["y"], at[e["b"]]["x"], at[e["b"]]["y"]
+                if "wx" in e:
+                    e["wx"], e["wy"] = ox + (e["wx"] - ox) * f, oy + (e["wy"] - oy) * f
+
+    def box(members):
+        x0 = y0 = math.inf
+        x1 = y1 = -math.inf
+        for n in members:
+            w = CHAR * max(len(n["name"]), len(n["name_vi"]))
+            lx = n.get("lx", n["x"])
+            left = {"start": lx, "end": lx - w, "middle": lx - w / 2}[n.get("anchor", "start")]
+            x0, x1 = min(x0, n["x"] - n["r"], left), max(x1, n["x"] + n["r"], left + w)
+            y0, y1 = min(y0, n["y"] - n["r"], n.get("ly", n["y"]) - 16), max(y1, n["y"] + n["r"], n.get("ly", n["y"]) + 6)
+        return x0, y0, x1, y1
+    blocks = sorted(((box(m), m) for m in comps.values()), key=lambda b: (-len(b[1]), b[0][1], b[0][0]))
+    moves = {}
+
+    def put(b, x, y):
+        (x0, y0, _, _), members = b
+        for n in members:
+            moves[n["id"]] = (x - x0, y - y0)
+    (mx0, my0, mx1, my1), _ = blocks[0]
+    put(blocks[0], pad, pad)
+    bottom = pad + my1 - my0
+    rest, left = blocks[1:], []
+    x, y, row = pad + mx1 - mx0 + gap, pad, 0
+    for b in rest:
+        (x0, y0, x1, y1), _ = b
+        w, h = x1 - x0, y1 - y0
+        if x + w > width - pad:
+            x, y, row = pad + mx1 - mx0 + gap, y + row + gap / 2, 0
+        if x + w > width - pad or y + h > bottom:
+            left.append(b)
+            continue
+        put(b, x, y)
+        x, row = x + w + gap, max(row, h)
+    x, y, row = pad, bottom + gap, 0
+    for b in left:
+        (x0, y0, x1, y1), _ = b
+        w, h = x1 - x0, y1 - y0
+        if x > pad and x + w > width - pad:
+            x, y, row = pad, y + row + gap / 2, 0
+        put(b, x, y)
+        x, row = x + w + gap, max(row, h)
+    for n in placed:
+        dx, dy = moves[n["id"]]
+        n["x"], n["y"] = round(n["x"] + dx, 1), round(n["y"] + dy, 1)
+        if "lx" in n:
+            n["lx"], n["ly"] = round(n["lx"] + dx, 1), round(n["ly"] + dy, 1)
+    for e in g["edges"]:
+        if e["a"] in moves:
+            dx, dy = moves[e["a"]]
+            for k, v in (("x1", dx), ("x2", dx), ("wx", dx), ("y1", dy), ("y2", dy), ("wy", dy)):
+                if k in e:
+                    e[k] = round(e[k] + v, 1)
+    ys = [n["y"] + n["r"] for n in placed] + [n.get("ly", 0) + 6 for n in placed]
+    g["width"], g["height"] = width, round(max(ys, default=0) + pad)
+    return g
 
 
 def institution_links(professors, records):

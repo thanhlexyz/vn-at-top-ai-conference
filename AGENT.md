@@ -195,6 +195,8 @@ The MELD detector was removed on 2026-11-25 in commit 4118d8b (its parent, 8d267
 Hand matches go in `work/under_review_decisions.json`: `{"add": <arXiv id or page address>, "professors": [slugs]}` for a
 submission the automatic match misses (a page address when a professor's own page lists it as under review), `drop`
 for a namesake.
+A name match is skipped when OpenAlex puts that preprint author at a different known Vietnamese institution than the
+professor's (`elsewhere`, printed as a namesake); `professors` in a decision removes a namesake from a shared paper.
 `match_under_review.py` matches ICLR submissions still under review to public preprints by title (OpenAlex, an author in
 Vietnam), with the submission number, review scores, their mean (above 2.6 = potential accept, `ACCEPT_SCORE`) and the
 Open Text Detector share. The data (`work/under_review.json`, `frontend/data/under_review.json`) is git-ignored: the
@@ -225,8 +227,19 @@ It is explained in About and in two callouts: the professor score on the front p
 - "x +y" (official, unofficial) sorts as x + y; among equal totals, more official papers first. The default order of
   the professor, institution and venue tables follows the same rule (`professors.sort`, `institutions.sort`, and the
   sort in `venues/list.html`), so the cups match the order on load.
+- Two tracked professors with the same name are shown as "Name (ABBR)" everywhere (`shown_name` in
+  `build_site_data.py`, from `institution_short`); the slug and matching keep the plain name.
 - The cooperation graph pages (layouts `graph` and `international`) use the full window width (`main.wide`, as on
-  awesome-nnv); every other page keeps the 72rem column.
+  awesome-nnv); every other page keeps the 72rem column. Each SVG is drawn at most at its own size (`--w`), so labels stay
+  14px next to the 16px text. The domestic graph is laid out on the 1000-wide canvas and then `graph.pack` moves whole
+  clusters (main cluster left, the rest beside it, then rows) on a `PAGE_WIDTH` (1500) canvas; clusters other than the
+  main one are shrunk to at most `span` (400) so they fit beside it. `pack` only translates, so it can be rerun on a
+  saved layout without the 10-minute layout.
+- Total ⇄ Last year also on the Universities list (`institutions[].recent`), the Conferences list (`venues[].recent`,
+  `partials/venue-cells.html`; venues with no paper are hidden there but still tracked), the professor table on each
+  university page (with only "Accepted at" and Total shown, the rest behind "More columns") and both graphs: edges carry
+  `recent` and `recent_width` (`graph_recent`, rewritten on every build, also with `--keep-graph`), nodes `recent_degree`
+  or `recent`; the `graph-period` button hides what has no last-year paper (`.r0`).
 - The front page opens on the all-time totals. Clicking the "Total" heading flips the five Total columns (score,
   accepted, rejected, submitted and rate, estimated) to "Last year" and re-sorts by that score (ties keep the all-time
   order); clicking "Last year" flips back. Last year means papers decided on or after `RECENT_FROM` in `common.py`, the

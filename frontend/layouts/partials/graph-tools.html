@@ -1,4 +1,6 @@
 <div class="graph-tools">
+{{- $from := time.Format (T "recent_from_layout") (time.AsTime (printf "%s-01" hugo.Data.meta.recent_from)) }}
+<p class="period-tools" hidden><button type="button" class="graph-period" aria-pressed="false" data-alt="{{ T "th_last_year" }}" data-alt-title="{{ T "tip_period_total" }}" title="{{ T "tip_period_recent" (dict "From" $from) }}">{{ T "th_total" }}</button></p>
 <p class="graph-search" hidden><label for="graph-search-input">{{ T "graph_find" }}</label> <input id="graph-search-input" type="search" list="graph-names" placeholder="{{ T "graph_find_placeholder" }}" autocomplete="off" data-none="{{ T "graph_find_none" }}"> <span class="search-status note" aria-live="polite"></span></p>
 <datalist id="graph-names">{{ range sort (uniq .) }}<option value="{{ . }}"></option>{{ end }}</datalist>
 <p class="zoom-tools" hidden><button type="button" data-zoom="in" title="{{ T "zoom_in" }}" aria-label="{{ T "zoom_in" }}">+</button><button type="button" data-zoom="out" title="{{ T "zoom_out" }}" aria-label="{{ T "zoom_out" }}">&minus;</button><button type="button" data-zoom="reset" title="{{ T "zoom_reset_tip" }}">{{ T "zoom_reset" }}</button><span class="note">{{ T "zoom_hint" }}</span></p>
