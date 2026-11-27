@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hợp tác trong nước | Vietnam AIRankings</title>
+	<link rel="icon" href="/vn-at-top-ai-conference/favicon.svg" type="image/svg+xml">
+	<link rel="icon" href="/vn-at-top-ai-conference/favicon-32.png" type="image/png" sizes="32x32">
+	<link rel="apple-touch-icon" href="/vn-at-top-ai-conference/apple-touch-icon.png">
+	<script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+	<link rel="stylesheet" type="text/css" href="/vn-at-top-ai-conference/style.css?v=1786604248">
+	<meta name="description" content="Mạng lưới đồng tác giả giữa các giảng viên tại Việt Nam qua các bài báo được nhận, bị từ chối và workshop.">
+	<link rel="canonical" href="https://thanhlexyz.github.io/vn-at-top-ai-conference/domestic/">
+	<meta property="og:site_name" content="Vietnam AIRankings">
+	<meta property="og:title" content="Hợp tác trong nước">
+	<meta property="og:description" content="Mạng lưới đồng tác giả giữa các giảng viên tại Việt Nam qua các bài báo được nhận, bị từ chối và workshop.">
+	<meta property="og:url" content="https://thanhlexyz.github.io/vn-at-top-ai-conference/domestic/">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="vi_VN">
+	<meta name="twitter:card" content="summary">
+	<meta name="google-site-verification" content="ZF2zUtE9LsOWiwg3KrNvNiRSP0EQ4ULBMv6SMDXSTQQ">
+
+	<meta name="robots" content="index, follow">
+	<link rel="alternate" hreflang="vi" href="https://thanhlexyz.github.io/vn-at-top-ai-conference/domestic/">
+	<link rel="alternate" hreflang="en" href="https://thanhlexyz.github.io/vn-at-top-ai-conference/en/domestic/">
+</head>
+<body>
+<nav>
+	<span class="lang" aria-label="Ngôn ngữ">
+	<a href="/vn-at-top-ai-conference/domestic/" hreflang="vi" lang="vi" class="current" aria-current="true">🇻🇳 VI</a>
+	<a href="/vn-at-top-ai-conference/en/domestic/" hreflang="en" lang="en">🇬🇧 EN</a>
+	<button class="theme" type="button" title="Chuyển giữa giao diện sáng và tối" aria-label="Chuyển giữa giao diện sáng và tối">🌙</button>
+	</span>
+	<a class="site" href="/vn-at-top-ai-conference/">Vietnam AIRankings</a>
+	<span class="links">
+	<a href="/vn-at-top-ai-conference/">Giảng viên</a>
+	<a href="/vn-at-top-ai-conference/universities/">Trường</a>
+	<a href="/vn-at-top-ai-conference/conferences/">Hội nghị</a>
+	<a href="/vn-at-top-ai-conference/papers/">Bài báo</a>
+	<a href="/vn-at-top-ai-conference/domestic/" class="current">Hợp tác trong nước</a>
+	<a href="/vn-at-top-ai-conference/international/">Hợp tác quốc tế</a>
+	<a href="/vn-at-top-ai-conference/research/">Hướng nghiên cứu</a>
+	<a href="/vn-at-top-ai-conference/about/">Giới thiệu</a>
+	<a href="/vn-at-top-ai-conference/feedback/">Góp ý</a>
+	</span>
+</nav>
+<main class="wide">
+<header><h1>Hợp tác trong nước</h1></header>
+<article>
+
+<p>Biểu đồ trực quan hóa mạng lưới đồng tác giả giữa các giảng viên trong danh sách theo dõi. Mỗi vòng tròn đại diện cho một giảng viên, đường nối thể hiện mối quan hệ hợp tác công bố chung và con số trên mỗi đường biểu thị số lượng bài báo cùng thực hiện.</p>
+
+<div class="with-toc graph-page">
+<aside class="toc legend-box" aria-label="Trường">
+<p class="toc-title">Trường</p>
+<ul class="graph-legend">
+	<li data-color="c-blue"><span class="dot c-blue"></span><img class="legend-logo" src="/vn-at-top-ai-conference/img/institutions/vinuni.png" alt="" loading="lazy"><a href="/vn-at-top-ai-conference/universities/vinuni/" title="Trường Đại học VinUni">VinUni</a></li>
+	<li data-color="c-red"><span class="dot c-red"></span><img class="legend-logo" src="/vn-at-top-ai-conference/img/institutions/hust.svg" alt="" loading="lazy"><a href="/vn-at-top-ai-conference/universities/hust/" title="Đại học Bách khoa Hà Nội">HUST</a></li>
+	<li data-color="g-ochre"><span class="dot g-ochre"></span><img class="legend-logo" src="/vn-at-top-ai-conference/img/institutions/uit.svg" alt="" loading="lazy"><a href="/vn-at-top-ai-conference/universities/uit/" title="Trường Đại học Công nghệ Thông tin, ĐHQG-HCM">UIT</a></li>
+	<li data-color="c-cyan"><span class="dot c-cyan"></span><img class="legend-logo" src="/vn-at-top-ai-conference/img/institutions/hcmus.png" alt="" loading="lazy"><a href="/vn-at-top-ai-conference/universities/hcmus/" title="Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM">HCMUS</a></li>
+	<li data-color="g-green"><span class="dot g-green"></span><img class="legend-logo" src="/vn-at-top-ai-conference/img/institutions/ptit.png" alt="" loading="lazy"><a href="/vn-at-top-ai-conference/universities/ptit/" title="Học viện Công nghệ Bưu chính Viễn thông">PTIT</a></li>
+	<li data-color="g-purple"><span class="dot g-purple"></span><img class="legend-logo" src="/vn-at-top-ai-conference/img/institutions/phenikaa.png" alt="" loading="lazy"><a href="/vn-at-top-ai-conference/universities/phenikaa/" title="Trường Đại học Phenikaa">Phenikaa</a></li>
+	<li data-color="ring g-ochre"><span class="dot ring g-ochre"></span><img class="legend-logo" src="/vn-at-top-ai-conference/img/institutions/vnu-uet.svg" alt="" loading="lazy"><a href="/vn-at-top-ai-conference/universities/vnu-uet/" title="Trường Đại học Công nghệ, ĐHQGHN">VNU-UET</a></li>
+	<li data-color="ring g-green"><span class="dot ring g-green"></span><img class="legend-logo" src="/vn-at-top-ai-conference/img/institutions/hcmut.svg" alt="" loading="lazy"><a href="/vn-at-top-ai-conference/universities/hcmut/" title="Ho Chi Minh City University of Technology">HCMUT</a></li>
+	<li data-color="ring g-purple"><span class="dot ring g-purple"></span><img class="legend-logo" src="/vn-at-top-ai-conference/img/institutions/rmit.svg" alt="" loading="lazy"><a href="/vn-at-top-ai-conference/universities/rmit/" title="Đại học RMIT Việt Nam">RMIT</a></li>
+	<li data-color="c0"><span class="dot c0"></span>khác</li>
+	<li class="edge-key"><span class="line-key"></span>độ dày và con số trên đường: số bài chung; số trong vòng tròn: số liên kết</li>
+</ul>
+</aside>
+<div class="toc-body">
+<div class="graph-tools">
+<p class="period-tools" hidden><button type="button" class="graph-period" aria-pressed="false" data-alt="Năm qua" data-alt-title="Bấm để xem tổng từ 2020" title="Bấm để chỉ xem năm qua (các bài có kết quả từ 11/2025)">Tổng</button></p>
+<p class="graph-search" hidden><label for="graph-search-input">Tìm theo tên</label> <input id="graph-search-input" type="search" list="graph-names" placeholder="Tên" autocomplete="off" data-none="Không có ai trên đồ thị khớp với “{q}”."> <span class="search-status note" aria-live="polite"></span></p>
+<datalist id="graph-names"><option value="An Mai"></option><option value="Bùi Trọng Đức"></option><option value="Chu Thị Mai Hồng"></option><option value="Cong-Tinh Dao"></option><option value="Dương Nguyên Vũ"></option><option value="Đàm Quang Tuấn"></option><option value="Đặng Hoàng Long"></option><option value="Đinh Ngọc Thạnh"></option><option value="Đinh Viết Sang"></option><option value="Đoàn Đăng Khoa"></option><option value="Đỗ Ngọc Minh"></option><option value="Đỗ Ngọc Tuấn"></option><option value="Hà Xuân Sơn"></option><option value="Hien D. Nguyen"></option><option value="Hoàng Đình Cường"></option><option value="Hoàng Thanh Tùng"></option><option value="Huỳnh Thành Trung"></option><option value="Huỳnh Thị Thanh Bình"></option><option value="Lê Duy Dũng"></option><option value="Lê Đình Duy"></option><option value="Lê Đức Trọng"></option><option value="Lê Hải Nam"></option><option value="Lê Minh Huy"></option><option value="Lê Phước Danh"></option><option value="Lê Thái An"></option><option value="Lê Trung Nghĩa"></option><option value="Lê Xuân Bách"></option><option value="Lương Ngọc Hoàng"></option><option value="Ngô Đức Thành"></option><option value="Ngô Văn Linh"></option><option value="Nguyễn Đức Minh"></option><option value="Nguyễn Phi Lê"></option><option value="Nguyễn Thái Khánh"></option><option value="Nguyễn Thanh Bình"></option><option value="Nguyễn Thanh Hải"></option><option value="Nguyễn Thị Hạnh"></option><option value="Nguyễn Thị Ngọc Diệp"></option><option value="Nguyễn Thị Ngọc Huyền"></option><option value="Nguyễn Thị Thủy"></option><option value="Nguyễn Tú Uyên"></option><option value="Nguyễn Tuấn Bình"></option><option value="Nguyễn Văn Đức"></option><option value="Nguyễn Văn Sơn"></option><option value="Nguyễn Văn Vũ"></option><option value="Nguyễn Viết Hưng"></option><option value="Phạm Chí Thanh"></option><option value="Phạm Huy Hiệu"></option><option value="Phạm Thị Quỳnh Trang"></option><option value="Phạm Văn Cảnh"></option><option value="Phạm Văn Cường"></option><option value="Phan Minh Quân"></option><option value="Phan Nguyễn Minh Thảo"></option><option value="Tạ Duy Hoàng"></option><option value="Thân Quang Khoát"></option><option value="Trần Đình Tân"></option><option value="Trần Minh Triết"></option><option value="Trần Nhật Quang"></option><option value="Trần Thị Hương"></option><option value="Trần Tiến Công"></option><option value="Trần Trương Tuấn Phát"></option><option value="Trần Văn Quý"></option><option value="Trịnh Văn Chiến"></option><option value="Võ Ngọc Bích Uyên"></option><option value="Vũ Nhật Minh"></option></datalist>
+<p class="zoom-tools" hidden><button type="button" data-zoom="in" title="Phóng to" aria-label="Phóng to">+</button><button type="button" data-zoom="out" title="Thu nhỏ" aria-label="Thu nhỏ">&minus;</button><button type="button" data-zoom="reset" title="Xem toàn bộ đồ thị">Đặt lại</button><span class="note">Ctrl/⌘ &#43; cuộn chuột hoặc chụm hai ngón để phóng to, kéo để di chuyển</span></p>
+</div>
+
+<figure class="graph">
+<svg class="net" viewBox="0 0 1500 1172" style="--w: 1500" role="img" aria-label="Hợp tác trong nước">
+	<line class="edge" data-a="ngo-van-linh" data-b="nguyen-thi-ngoc-diep" x1="656.9" y1="693.5" x2="614.4" y2="740.9" stroke-width="5.5" data-rw="4.6"><title>Ngô Văn Linh – Nguyễn Thị Ngọc Diệp: 9 bài</title></line>
+	<line class="edge" data-a="dinh-viet-sang" data-b="ngo-van-linh" x1="506" y1="705" x2="656.9" y2="693.5" stroke-width="4.9" data-rw="2.6"><title>Đinh Viết Sang – Ngô Văn Linh: 7 bài</title></line>
+	<line class="edge" data-a="nam-le-hai" data-b="ngo-van-linh" x1="664.2" y1="832.7" x2="656.9" y2="693.5" stroke-width="4.9" data-rw="3.8"><title>Lê Hải Nam – Ngô Văn Linh: 7 bài</title></line>
+	<line class="edge" data-a="phat-t-tran-truong" data-b="son-ha-xuan" x1="269.1" y1="211" x2="293.9" y2="340" stroke-width="4.6" data-rw="4.6"><title>Trần Trương Tuấn Phát – Hà Xuân Sơn: 6 bài</title></line>
+	<line class="edge" data-a="phat-t-tran-truong" data-b="xuan-bach-le" x1="269.1" y1="211" x2="241.5" y2="278.5" stroke-width="4.6" data-rw="4.6"><title>Trần Trương Tuấn Phát – Lê Xuân Bách: 6 bài</title></line>
+	<line class="edge" data-a="son-ha-xuan" data-b="xuan-bach-le" x1="293.9" y1="340" x2="241.5" y2="278.5" stroke-width="4.6" data-rw="4.6"><title>Hà Xuân Sơn – Lê Xuân Bách: 6 bài</title></line>
+	<line class="edge" data-a="minh-triet-tran" data-b="trung-nghia-le" x1="273.6" y1="1024.9" x2="248.8" y2="1127.7" stroke-width="4.2" data-rw="2.6"><title>Trần Minh Triết – Lê Trung Nghĩa: 5 bài</title></line>
+	<line class="edge" data-a="an-thai-le" data-b="khoa-d-doan" x1="739.5" y1="543.2" x2="568.4" y2="639.2" stroke-width="3.8" data-rw="3.8"><title>Lê Thái An – Đoàn Đăng Khoa: 4 bài</title></line>
+	<line class="edge" data-a="an-thai-le" data-b="vu-n-duong" x1="739.5" y1="543.2" x2="817.9" y2="656.7" stroke-width="3.8" data-rw="3.8"><title>Lê Thái An – Dương Nguyên Vũ: 4 bài</title></line>
+	<line class="edge" data-a="binh-t-nguyen" data-b="khoa-d-doan" x1="599.7" y1="375.8" x2="568.4" y2="639.2" stroke-width="3.8" data-rw="3.8"><title>Nguyễn Tuấn Bình – Đoàn Đăng Khoa: 4 bài</title></line>
+	<line class="edge" data-a="canh-v-pham" data-b="tan-d-tran" x1="1030.9" y1="346.5" x2="1048.9" y2="392.5" stroke-width="3.8" data-rw="2.6"><title>Phạm Văn Cảnh – Trần Đình Tân: 4 bài</title></line>
+	<line class="edge" data-a="khoa-d-doan" data-b="thanh-binh-nguyen" x1="568.4" y1="639.2" x2="465.3" y2="486.8" stroke-width="3.8" data-rw="1"><title>Đoàn Đăng Khoa – Nguyễn Thanh Bình: 4 bài</title></line>
+	<line class="edge" data-a="phi-le-nguyen" data-b="thanh-trung-huynh" x1="295.3" y1="643.2" x2="354.6" y2="755.5" stroke-width="3.8" data-rw="3.3"><title>Nguyễn Phi Lê – Huỳnh Thành Trung: 4 bài</title></line>
+	<line class="edge" data-a="bui-trong-duc" data-b="huynh-thi-thanh-binh" x1="892" y1="265.5" x2="779" y2="241" stroke-width="3.3" data-rw="3.3"><title>Bùi Trọng Đức – Huỳnh Thị Thanh Bình: 3 bài</title></line>
+	<line class="edge r0" data-a="cong-tran" data-b="cuong-pham" x1="1238" y1="1041.5" x2="1150.6" y2="991.6" stroke-width="3.3" data-rw="0"><title>Trần Tiến Công – Phạm Văn Cường: 3 bài</title></line>
+	<line class="edge" data-a="duy-dinh-le" data-b="thanh-duc-ngo" x1="543.9" y1="1042.2" x2="431.5" y2="1047.7" stroke-width="3.3" data-rw="3.3"><title>Lê Đình Duy – Ngô Đức Thành: 3 bài</title></line>
+	<line class="edge r0" data-a="hieu-pham" data-b="phi-le-nguyen" x1="217.9" y1="769.5" x2="295.3" y2="643.2" stroke-width="3.3" data-rw="0"><title>Phạm Huy Hiệu – Nguyễn Phi Lê: 3 bài</title></line>
+	<line class="edge" data-a="hoang-ta" data-b="tuan-dam" x1="879.9" y1="411.8" x2="738.6" y2="421" stroke-width="3.3" data-rw="3.3"><title>Tạ Duy Hoàng – Đàm Quang Tuấn: 3 bài</title></line>
+	<line class="edge" data-a="khoa-d-doan" data-b="vu-n-duong" x1="568.4" y1="639.2" x2="817.9" y2="656.7" stroke-width="3.3" data-rw="3.3"><title>Đoàn Đăng Khoa – Dương Nguyên Vũ: 3 bài</title></line>
+	<line class="edge" data-a="nam-le-hai" data-b="nguyen-thi-ngoc-diep" x1="664.2" y1="832.7" x2="614.4" y2="740.9" stroke-width="3.3" data-rw="1"><title>Lê Hải Nam – Nguyễn Thị Ngọc Diệp: 3 bài</title></line>
+	<line class="edge" data-a="an-thai-le" data-b="dung-d-le" x1="739.5" y1="543.2" x2="684.8" y2="615.5" stroke-width="2.6" data-rw="2.6"><title>Lê Thái An – Lê Duy Dũng: 2 bài</title></line>
+	<line class="edge" data-a="an-thai-le" data-b="minh-nhat-vu" x1="739.5" y1="543.2" x2="686.9" y2="538.1" stroke-width="2.6" data-rw="2.6"><title>Lê Thái An – Vũ Nhật Minh: 2 bài</title></line>
+	<line class="edge" data-a="an-thai-le" data-b="tuan-dam" x1="739.5" y1="543.2" x2="738.6" y2="421" stroke-width="2.6" data-rw="2.6"><title>Lê Thái An – Đàm Quang Tuấn: 2 bài</title></line>
+	<line class="edge" data-a="danh-le-phuoc" data-b="khoa-d-doan" x1="444.4" y1="352.7" x2="568.4" y2="639.2" stroke-width="2.6" data-rw="1"><title>Lê Phước Danh – Đoàn Đăng Khoa: 2 bài</title></line>
+	<line class="edge" data-a="dinh-cuong-hoang" data-b="minhhuy-le" x1="1029.6" y1="447.2" x2="1047.6" y2="493.2" stroke-width="2.6" data-rw="2.6"><title>Hoàng Đình Cường – Lê Minh Huy: 2 bài</title></line>
+	<line class="edge" data-a="dinh-viet-sang" data-b="nguyen-thi-ngoc-diep" x1="506" y1="705" x2="614.4" y2="740.9" stroke-width="2.6" data-rw="1"><title>Đinh Viết Sang – Nguyễn Thị Ngọc Diệp: 2 bài</title></line>
+	<line class="edge" data-a="duc-trong-le" data-b="quynh-trang-pham-thi" x1="1245.1" y1="346.1" x2="1263.1" y2="392.1" stroke-width="2.6" data-rw="2.6"><title>Lê Đức Trọng – Phạm Thị Quỳnh Trang: 2 bài</title></line>
+	<line class="edge" data-a="dung-d-le" data-b="vu-n-duong" x1="684.8" y1="615.5" x2="817.9" y2="656.7" stroke-width="2.6" data-rw="2.6"><title>Lê Duy Dũng – Dương Nguyên Vũ: 2 bài</title></line>
+	<line class="edge" data-a="hieu-pham" data-b="thanh-trung-huynh" x1="217.9" y1="769.5" x2="354.6" y2="755.5" stroke-width="2.6" data-rw="2.6"><title>Phạm Huy Hiệu – Huỳnh Thành Trung: 2 bài</title></line>
+	<line class="edge r0" data-a="hoang-thanh-tung" data-b="khoa-d-doan" x1="664.8" y1="401.4" x2="568.4" y2="639.2" stroke-width="2.6" data-rw="0"><title>Hoàng Thanh Tùng – Đoàn Đăng Khoa: 2 bài</title></line>
+	<line class="edge" data-a="huynh-thi-thanh-binh" data-b="nguyen-thi-hanh" x1="779" y1="241" x2="625" y2="210.1" stroke-width="2.6" data-rw="2.6"><title>Huỳnh Thị Thanh Bình – Nguyễn Thị Hạnh: 2 bài</title></line>
+	<line class="edge" data-a="huynh-thi-thanh-binh" data-b="son-van-nguyen" x1="779" y1="241" x2="733.6" y2="89.3" stroke-width="2.6" data-rw="2.6"><title>Huỳnh Thị Thanh Bình – Nguyễn Văn Sơn: 2 bài</title></line>
+	<line class="edge" data-a="khoa-d-doan" data-b="minh-nhat-vu" x1="568.4" y1="639.2" x2="686.9" y2="538.1" stroke-width="2.6" data-rw="2.6"><title>Đoàn Đăng Khoa – Vũ Nhật Minh: 2 bài</title></line>
+	<line class="edge" data-a="khoa-d-doan" data-b="tuan-dam" x1="568.4" y1="639.2" x2="738.6" y2="421" stroke-width="2.6" data-rw="2.6"><title>Đoàn Đăng Khoa – Đàm Quang Tuấn: 2 bài</title></line>
+	<line class="edge" data-a="minh-triet-tran" data-b="quy-van-tran" x1="273.6" y1="1024.9" x2="143.9" y2="1022.5" stroke-width="2.6" data-rw="2.6"><title>Trần Minh Triết – Trần Văn Quý: 2 bài</title></line>
+	<line class="edge" data-a="minh-triet-tran" data-b="vu-nguyen" x1="273.6" y1="1024.9" x2="207.8" y2="918.6" stroke-width="2.6" data-rw="2.6"><title>Trần Minh Triết – Nguyễn Văn Vũ: 2 bài</title></line>
+	<line class="edge r0" data-a="ngoc-hoang-luong" data-b="quan-minh-phan" x1="1249" y1="447.2" x2="1267" y2="493.2" stroke-width="2.6" data-rw="0"><title>Lương Ngọc Hoàng – Phan Minh Quân: 2 bài</title></line>
+	<line class="edge" data-a="nguyen-thi-hanh" data-b="son-van-nguyen" x1="625" y1="210.1" x2="733.6" y2="89.3" stroke-width="2.6" data-rw="2.6"><title>Nguyễn Thị Hạnh – Nguyễn Văn Sơn: 2 bài</title></line>
+	<line class="edge" data-a="quy-van-tran" data-b="vu-nguyen" x1="143.9" y1="1022.5" x2="207.8" y2="918.6" stroke-width="2.6" data-rw="2.6"><title>Trần Văn Quý – Nguyễn Văn Vũ: 2 bài</title></line>
+	<line class="edge r0" data-a="an-mai" data-b="khoa-d-doan" x1="334.1" y1="577.5" x2="568.4" y2="639.2" stroke-width="1" data-rw="0"><title>An Mai – Đoàn Đăng Khoa: 1 bài</title></line>
+	<line class="edge r0" data-a="an-mai" data-b="thanh-binh-nguyen" x1="334.1" y1="577.5" x2="465.3" y2="486.8" stroke-width="1" data-rw="0"><title>An Mai – Nguyễn Thanh Bình: 1 bài</title></line>
+	<line class="edge" data-a="binh-t-nguyen" data-b="danh-le-phuoc" x1="599.7" y1="375.8" x2="444.4" y2="352.7" stroke-width="1" data-rw="1"><title>Nguyễn Tuấn Bình – Lê Phước Danh: 1 bài</title></line>
+	<line class="edge" data-a="binh-t-nguyen" data-b="hong-t-m-chu" x1="599.7" y1="375.8" x2="451.2" y2="298.3" stroke-width="1" data-rw="1"><title>Nguyễn Tuấn Bình – Chu Thị Mai Hồng: 1 bài</title></line>
+	<line class="edge" data-a="cong-tinh-dao" data-b="hai-thanh-nguyen" x1="1138.9" y1="269.1" x2="1248.9" y2="246.1" stroke-width="1" data-rw="1"><title>Cong-Tinh Dao – Nguyễn Thanh Hải: 1 bài</title></line>
+	<line class="edge" data-a="cong-tinh-dao" data-b="thao-nguyen-minh-phan" x1="1138.9" y1="269.1" x2="1248.9" y2="292.1" stroke-width="1" data-rw="1"><title>Cong-Tinh Dao – Phan Nguyễn Minh Thảo: 1 bài</title></line>
+	<line class="edge r0" data-a="cong-tran" data-b="huyen-nguyen" x1="1238" y1="1041.5" x2="1265.1" y2="918.1" stroke-width="1" data-rw="0"><title>Trần Tiến Công – Nguyễn Thị Ngọc Huyền: 1 bài</title></line>
+	<line class="edge r0" data-a="cuong-pham" data-b="huyen-nguyen" x1="1150.6" y1="991.6" x2="1265.1" y2="918.1" stroke-width="1" data-rw="0"><title>Phạm Văn Cường – Nguyễn Thị Ngọc Huyền: 1 bài</title></line>
+	<line class="edge" data-a="cuong-pham" data-b="uyen-n-b-vo" x1="1150.6" y1="991.6" x2="1006.7" y2="981.8" stroke-width="1" data-rw="1"><title>Phạm Văn Cường – Võ Ngọc Bích Uyên: 1 bài</title></line>
+	<line class="edge" data-a="danh-le-phuoc" data-b="son-ha-xuan" x1="444.4" y1="352.7" x2="293.9" y2="340" stroke-width="1" data-rw="1"><title>Lê Phước Danh – Hà Xuân Sơn: 1 bài</title></line>
+	<line class="edge r0" data-a="danh-le-phuoc" data-b="thanh-binh-nguyen" x1="444.4" y1="352.7" x2="465.3" y2="486.8" stroke-width="1" data-rw="0"><title>Lê Phước Danh – Nguyễn Thanh Bình: 1 bài</title></line>
+	<line class="edge r0" data-a="dinh-viet-sang" data-b="nam-le-hai" x1="506" y1="705" x2="664.2" y2="832.7" stroke-width="1" data-rw="0"><title>Đinh Viết Sang – Lê Hải Nam: 1 bài</title></line>
+	<line class="edge" data-a="dung-d-le" data-b="khoa-d-doan" x1="684.8" y1="615.5" x2="568.4" y2="639.2" stroke-width="1" data-rw="1"><title>Lê Duy Dũng – Đoàn Đăng Khoa: 1 bài</title></line>
+	<line class="edge r0" data-a="dung-d-le" data-b="than-quang-khoat" x1="684.8" y1="615.5" x2="838.2" y2="703.4" stroke-width="1" data-rw="0"><title>Lê Duy Dũng – Thân Quang Khoát: 1 bài</title></line>
+	<line class="edge" data-a="hai-thanh-nguyen" data-b="thao-nguyen-minh-phan" x1="1248.9" y1="246.1" x2="1248.9" y2="292.1" stroke-width="1" data-rw="1"><title>Nguyễn Thanh Hải – Phan Nguyễn Minh Thảo: 1 bài</title></line>
+	<line class="edge" data-a="hien-d-nguyen" data-b="hung-nguyen" x1="1028.3" y1="545.7" x2="1046.3" y2="591.7" stroke-width="1" data-rw="1"><title>Hien D. Nguyen – Nguyễn Viết Hưng: 1 bài</title></line>
+	<line class="edge r0" data-a="hoang-thanh-tung" data-b="huynh-thi-thanh-binh" x1="664.8" y1="401.4" x2="779" y2="241" stroke-width="1" data-rw="0"><title>Hoàng Thanh Tùng – Huỳnh Thị Thanh Bình: 1 bài</title></line>
+	<line class="edge" data-a="huynh-thi-thanh-binh" data-b="nguyen-duc-minh" x1="779" y1="241" x2="794.9" y2="41" stroke-width="1" data-rw="1"><title>Huỳnh Thị Thanh Bình – Nguyễn Đức Minh: 1 bài</title></line>
+	<line class="edge" data-a="huynh-thi-thanh-binh" data-b="tran-thi-huong" x1="779" y1="241" x2="880.8" y2="92.9" stroke-width="1" data-rw="1"><title>Huỳnh Thị Thanh Bình – Trần Thị Hương: 1 bài</title></line>
+	<line class="edge r0" data-a="khoa-d-doan" data-b="minh-do" x1="568.4" y1="639.2" x2="487.9" y2="668.2" stroke-width="1" data-rw="0"><title>Đoàn Đăng Khoa – Đỗ Ngọc Minh: 1 bài</title></line>
+	<line class="edge" data-a="khoa-d-doan" data-b="ngo-van-linh" x1="568.4" y1="639.2" x2="656.9" y2="693.5" stroke-width="1" data-rw="1"><title>Đoàn Đăng Khoa – Ngô Văn Linh: 1 bài</title></line>
+	<line class="edge" data-a="long-hoang-dang" data-b="tuan-do" x1="1029.6" y1="102.1" x2="1047.6" y2="148.1" stroke-width="1" data-rw="1"><title>Đặng Hoàng Long – Đỗ Ngọc Tuấn: 1 bài</title></line>
+	<line class="edge" data-a="minh-do" data-b="phi-le-nguyen" x1="487.9" y1="668.2" x2="295.3" y2="643.2" stroke-width="1" data-rw="1"><title>Đỗ Ngọc Minh – Nguyễn Phi Lê: 1 bài</title></line>
+	<line class="edge" data-a="minh-do" data-b="thanh-trung-huynh" x1="487.9" y1="668.2" x2="354.6" y2="755.5" stroke-width="1" data-rw="1"><title>Đỗ Ngọc Minh – Huỳnh Thành Trung: 1 bài</title></line>
+	<line class="edge" data-a="minh-nhat-vu" data-b="tuan-dam" x1="686.9" y1="538.1" x2="738.6" y2="421" stroke-width="1" data-rw="1"><title>Vũ Nhật Minh – Đàm Quang Tuấn: 1 bài</title></line>
+	<line class="edge" data-a="minh-nhat-vu" data-b="vu-n-duong" x1="686.9" y1="538.1" x2="817.9" y2="656.7" stroke-width="1" data-rw="1"><title>Vũ Nhật Minh – Dương Nguyên Vũ: 1 bài</title></line>
+	<line class="edge r0" data-a="minh-triet-tran" data-b="thanh-duc-ngo" x1="273.6" y1="1024.9" x2="431.5" y2="1047.7" stroke-width="1" data-rw="0"><title>Trần Minh Triết – Ngô Đức Thành: 1 bài</title></line>
+	<line class="edge" data-a="ngo-van-linh" data-b="ngoc-thanh-dinh" x1="656.9" y1="693.5" x2="788.9" y2="803.5" stroke-width="1" data-rw="1"><title>Ngô Văn Linh – Đinh Ngọc Thạnh: 1 bài</title></line>
+	<line class="edge" data-a="ngo-van-linh" data-b="than-quang-khoat" x1="656.9" y1="693.5" x2="838.2" y2="703.4" stroke-width="1" data-rw="1"><title>Ngô Văn Linh – Thân Quang Khoát: 1 bài</title></line>
+	<line class="edge" data-a="nguyen-tu-uyen" data-b="tuan-do" x1="1029.6" y1="194.1" x2="1047.6" y2="148.1" stroke-width="1" data-rw="1"><title>Nguyễn Tú Uyên – Đỗ Ngọc Tuấn: 1 bài</title></line>
+	<line class="edge" data-a="nhat-quang-tran" data-b="thuy-t-nguyen" x1="1263.1" y1="545.7" x2="1281.1" y2="591.7" stroke-width="1" data-rw="1"><title>Trần Nhật Quang – Nguyễn Thị Thủy: 1 bài</title></line>
+	<line class="edge" data-a="phat-t-tran-truong" data-b="thanh-pham-chi" x1="269.1" y1="211" x2="87.4" y2="307" stroke-width="1" data-rw="1"><title>Trần Trương Tuấn Phát – Phạm Chí Thanh: 1 bài</title></line>
+	<line class="edge" data-a="son-ha-xuan" data-b="thanh-pham-chi" x1="293.9" y1="340" x2="87.4" y2="307" stroke-width="1" data-rw="1"><title>Hà Xuân Sơn – Phạm Chí Thanh: 1 bài</title></line>
+	<line class="edge" data-a="thai-khanh-nguyen" data-b="uyen-n-b-vo" x1="865.1" y1="977.3" x2="1006.7" y2="981.8" stroke-width="1" data-rw="1"><title>Nguyễn Thái Khánh – Võ Ngọc Bích Uyên: 1 bài</title></line>
+	<line class="edge" data-a="thanh-pham-chi" data-b="xuan-bach-le" x1="87.4" y1="307" x2="241.5" y2="278.5" stroke-width="1" data-rw="1"><title>Phạm Chí Thanh – Lê Xuân Bách: 1 bài</title></line>
+	<line class="edge r0" data-a="trinh-van-chien" data-b="van-duc-nguyen" x1="1028.3" y1="644.8" x2="1046.3" y2="690.8" stroke-width="1" data-rw="0"><title>Trịnh Văn Chiến – Nguyễn Văn Đức: 1 bài</title></line>
+	<line class="edge" data-a="tuan-dam" data-b="vu-n-duong" x1="738.6" y1="421" x2="817.9" y2="656.7" stroke-width="1" data-rw="1"><title>Đàm Quang Tuấn – Dương Nguyên Vũ: 1 bài</title></line>
+	<text class="ew" data-a="ngo-van-linh" data-b="nguyen-thi-ngoc-diep" x="639.1" y="717.4" text-anchor="middle" data-r="6">9</text>
+	<text class="ew" data-a="dinh-viet-sang" data-b="ngo-van-linh" x="581.5" y="703.2" text-anchor="middle" data-r="2">7</text>
+	<text class="ew" data-a="nam-le-hai" data-b="ngo-van-linh" x="660.6" y="767.1" text-anchor="middle" data-r="4">7</text>
+	<text class="ew" data-a="phat-t-tran-truong" data-b="son-ha-xuan" x="281.5" y="279.5" text-anchor="middle" data-r="6">6</text>
+	<text class="ew" data-a="phat-t-tran-truong" data-b="xuan-bach-le" x="255.3" y="248.8" text-anchor="middle" data-r="6">6</text>
+	<text class="ew" data-a="son-ha-xuan" data-b="xuan-bach-le" x="267.7" y="313.2" text-anchor="middle" data-r="6">6</text>
+	<text class="ew" data-a="minh-triet-tran" data-b="trung-nghia-le" x="261.2" y="1080.3" text-anchor="middle" data-r="2">5</text>
+	<text class="ew" data-a="an-thai-le" data-b="khoa-d-doan" x="667.6" y="587.5" text-anchor="middle" data-r="4">4</text>
+	<text class="ew" data-a="an-thai-le" data-b="vu-n-duong" x="772.4" y="594.9" text-anchor="middle" data-r="4">4</text>
+	<text class="ew" data-a="binh-t-nguyen" data-b="khoa-d-doan" x="584.1" y="511.5" text-anchor="middle" data-r="4">4</text>
+	<text class="ew" data-a="canh-v-pham" data-b="tan-d-tran" x="1039.9" y="373.5" text-anchor="middle" data-r="2">4</text>
+	<text class="ew r0" data-a="khoa-d-doan" data-b="thanh-binh-nguyen" x="516.9" y="567" text-anchor="middle" data-r="1">4</text>
+	<text class="ew" data-a="phi-le-nguyen" data-b="thanh-trung-huynh" x="324.9" y="703.4" text-anchor="middle" data-r="3">4</text>
+	<text class="ew" data-a="bui-trong-duc" data-b="huynh-thi-thanh-binh" x="835.5" y="257.2" text-anchor="middle" data-r="3">3</text>
+	<text class="ew r0" data-a="cong-tran" data-b="cuong-pham" x="1194.2" y="1020.5" text-anchor="middle" data-r="0">3</text>
+	<text class="ew" data-a="duy-dinh-le" data-b="thanh-duc-ngo" x="487.7" y="1049" text-anchor="middle" data-r="3">3</text>
+	<text class="ew r0" data-a="hieu-pham" data-b="phi-le-nguyen" x="256.6" y="710.4" text-anchor="middle" data-r="0">3</text>
+	<text class="ew" data-a="hoang-ta" data-b="tuan-dam" x="809.2" y="420.4" text-anchor="middle" data-r="3">3</text>
+	<text class="ew" data-a="khoa-d-doan" data-b="vu-n-duong" x="693.2" y="652" text-anchor="middle" data-r="3">3</text>
+	<text class="ew r0" data-a="nam-le-hai" data-b="nguyen-thi-ngoc-diep" x="639.3" y="790.8" text-anchor="middle" data-r="1">3</text>
+	<text class="ew" data-a="an-thai-le" data-b="dung-d-le" x="707.8" y="589.1" text-anchor="middle" data-r="2">2</text>
+	<text class="ew" data-a="an-thai-le" data-b="minh-nhat-vu" x="713.2" y="544.7" text-anchor="middle" data-r="2">2</text>
+	<text class="ew" data-a="an-thai-le" data-b="tuan-dam" x="739" y="486.1" text-anchor="middle" data-r="2">2</text>
+	<text class="ew r0" data-a="danh-le-phuoc" data-b="khoa-d-doan" x="506.4" y="500" text-anchor="middle" data-r="1">2</text>
+	<text class="ew" data-a="dinh-cuong-hoang" data-b="minhhuy-le" x="1038.6" y="474.2" text-anchor="middle" data-r="2">2</text>
+	<text class="ew r0" data-a="dinh-viet-sang" data-b="nguyen-thi-ngoc-diep" x="560.2" y="727" text-anchor="middle" data-r="1">2</text>
+	<text class="ew" data-a="duc-trong-le" data-b="quynh-trang-pham-thi" x="1254.1" y="373.1" text-anchor="middle" data-r="2">2</text>
+	<text class="ew" data-a="dung-d-le" data-b="vu-n-duong" x="751.4" y="640.1" text-anchor="middle" data-r="2">2</text>
+	<text class="ew" data-a="hieu-pham" data-b="thanh-trung-huynh" x="297.2" y="765.4" text-anchor="middle" data-r="2">2</text>
+	<text class="ew r0" data-a="hoang-thanh-tung" data-b="khoa-d-doan" x="616.6" y="524.3" text-anchor="middle" data-r="0">2</text>
+	<text class="ew" data-a="huynh-thi-thanh-binh" data-b="nguyen-thi-hanh" x="702" y="229.6" text-anchor="middle" data-r="2">2</text>
+	<text class="ew" data-a="huynh-thi-thanh-binh" data-b="son-van-nguyen" x="756.3" y="169.2" text-anchor="middle" data-r="2">2</text>
+	<text class="ew" data-a="khoa-d-doan" data-b="minh-nhat-vu" x="637.1" y="584.6" text-anchor="middle" data-r="2">2</text>
+	<text class="ew" data-a="khoa-d-doan" data-b="tuan-dam" x="639.9" y="551.6" text-anchor="middle" data-r="2">2</text>
+	<text class="ew" data-a="minh-triet-tran" data-b="quy-van-tran" x="208.8" y="1027.7" text-anchor="middle" data-r="2">2</text>
+	<text class="ew" data-a="minh-triet-tran" data-b="vu-nguyen" x="240.7" y="975.7" text-anchor="middle" data-r="2">2</text>
+	<text class="ew r0" data-a="ngoc-hoang-luong" data-b="quan-minh-phan" x="1258" y="474.2" text-anchor="middle" data-r="0">2</text>
+	<text class="ew" data-a="nguyen-thi-hanh" data-b="son-van-nguyen" x="679.3" y="153.7" text-anchor="middle" data-r="2">2</text>
+	<text class="ew" data-a="quy-van-tran" data-b="vu-nguyen" x="175.9" y="974.5" text-anchor="middle" data-r="2">2</text>
+	<a href="/vn-at-top-ai-conference/professors/khoa-d-doan/" class="node c-blue" data-id="khoa-d-doan" data-color="c-blue" data-name="Đoàn Đăng Khoa" data-alt="Khoa D. Doan">
+		<circle cx="568.4" cy="639.2" r="22"/>
+		<text class="deg" x="568.4" y="643.2" text-anchor="middle" data-r="9">12</text>
+		<text x="568.4" y="678.2" text-anchor="middle">Đoàn Đăng Khoa</text>
+		<title>Đoàn Đăng Khoa: 52 bài, 12 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/ngo-van-linh/" class="node c-red" data-id="ngo-van-linh" data-color="c-red" data-name="Ngô Văn Linh" data-alt="Ngo Van Linh">
+		<circle cx="656.9" cy="693.5" r="22"/>
+		<text class="deg" x="656.9" y="697.5" text-anchor="middle" data-r="6">6</text>
+		<text x="682.9" y="698.5" text-anchor="start">Ngô Văn Linh</text>
+		<title>Ngô Văn Linh: 52 bài, 6 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/phi-le-nguyen/" class="node c-red" data-id="phi-le-nguyen" data-color="c-red" data-name="Nguyễn Phi Lê" data-alt="Phi Le Nguyen">
+		<circle cx="295.3" cy="643.2" r="19.5"/>
+		<text class="deg" x="295.3" y="647.2" text-anchor="middle" data-r="2">3</text>
+		<text x="271.8" y="648.2" text-anchor="end">Nguyễn Phi Lê</text>
+		<title>Nguyễn Phi Lê: 34 bài, 3 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/dung-d-le/" class="node c-blue" data-id="dung-d-le" data-color="c-blue" data-name="Lê Duy Dũng" data-alt="Dung D. Le">
+		<circle cx="684.8" cy="615.5" r="18.7"/>
+		<text class="deg" x="684.8" y="619.5" text-anchor="middle" data-r="3">4</text>
+		<text x="684.8" y="651.2" text-anchor="middle">Lê Duy Dũng</text>
+		<title>Lê Duy Dũng: 29 bài, 4 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/tuan-dam/" class="node c-red" data-id="tuan-dam" data-color="c-red" data-name="Đàm Quang Tuấn" data-alt="Tuan Dam">
+		<circle cx="738.6" cy="421" r="17.6"/>
+		<text class="deg" x="738.6" y="425" text-anchor="middle" data-r="5">5</text>
+		<text x="752.9" y="449.3" text-anchor="start">Đàm Quang Tuấn</text>
+		<title>Đàm Quang Tuấn: 23 bài, 5 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/than-quang-khoat/" class="node c-red" data-id="than-quang-khoat" data-color="c-red" data-name="Thân Quang Khoát" data-alt="Than Quang Khoat">
+		<circle cx="838.2" cy="703.4" r="16.6"/>
+		<text class="deg" x="838.2" y="707.4" text-anchor="middle" data-r="1">2</text>
+		<text x="838.2" y="737" text-anchor="middle">Thân Quang Khoát</text>
+		<title>Thân Quang Khoát: 18 bài, 2 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/cuong-pham/" class="node g-green" data-id="cuong-pham" data-color="g-green" data-name="Phạm Văn Cường" data-alt="Cuong Pham">
+		<circle cx="1150.6" cy="991.6" r="16.2"/>
+		<text class="deg" x="1150.6" y="995.6" text-anchor="middle" data-r="1">3</text>
+		<text x="1170.8" y="996.6" text-anchor="start">Phạm Văn Cường</text>
+		<title>Phạm Văn Cường: 16 bài, 3 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/huynh-thi-thanh-binh/" class="node c-red" data-id="huynh-thi-thanh-binh" data-color="c-red" data-name="Huỳnh Thị Thanh Bình" data-alt="Huynh Thi Thanh Binh">
+		<circle cx="779" cy="241" r="16"/>
+		<text class="deg" x="779" y="245" text-anchor="middle" data-r="5">6</text>
+		<text x="792.2" y="223.8" text-anchor="start">Huỳnh Thị Thanh Bình</text>
+		<title>Huỳnh Thị Thanh Bình: 15 bài, 6 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/thanh-binh-nguyen/" class="node c-cyan" data-id="thanh-binh-nguyen" data-color="c-cyan" data-name="Nguyễn Thanh Bình" data-alt="Thanh-Binh Nguyen">
+		<circle cx="465.3" cy="486.8" r="15.7"/>
+		<text class="deg" x="465.3" y="490.8" text-anchor="middle" data-r="1">3</text>
+		<text x="445.6" y="491.8" text-anchor="end">Nguyễn Thanh Bình</text>
+		<title>Nguyễn Thanh Bình: 14 bài, 3 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/minh-triet-tran/" class="node c-cyan" data-id="minh-triet-tran" data-color="c-cyan" data-name="Trần Minh Triết" data-alt="Minh-Triet Tran">
+		<circle cx="273.6" cy="1024.9" r="15.5"/>
+		<text class="deg" x="273.6" y="1028.9" text-anchor="middle" data-r="3">4</text>
+		<text x="286.5" y="1008.1" text-anchor="start">Trần Minh Triết</text>
+		<title>Trần Minh Triết: 13 bài, 4 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/binh-t-nguyen/" class="node c-blue" data-id="binh-t-nguyen" data-color="c-blue" data-name="Nguyễn Tuấn Bình" data-alt="Binh T. Nguyen">
+		<circle cx="599.7" cy="375.8" r="15"/>
+		<text class="deg" x="599.7" y="379.8" text-anchor="middle" data-r="3">3</text>
+		<text x="618.7" y="380.8" text-anchor="start">Nguyễn Tuấn Bình</text>
+		<title>Nguyễn Tuấn Bình: 11 bài, 3 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/an-thai-le/" class="node c-blue" data-id="an-thai-le" data-color="c-blue" data-name="Lê Thái An" data-alt="An Thai Le">
+		<circle cx="739.5" cy="543.2" r="14.4"/>
+		<text class="deg" x="739.5" y="547.2" text-anchor="middle" data-r="5">5</text>
+		<text x="757.9" y="548.2" text-anchor="start">Lê Thái An</text>
+		<title>Lê Thái An: 9 bài, 5 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/hieu-pham/" class="node c-blue" data-id="hieu-pham" data-color="c-blue" data-name="Phạm Huy Hiệu" data-alt="Hieu Pham">
+		<circle cx="217.9" cy="769.5" r="14.4"/>
+		<text class="deg" x="217.9" y="773.5" text-anchor="middle" data-r="1">2</text>
+		<text x="199.5" y="774.5" text-anchor="end">Phạm Huy Hiệu</text>
+		<title>Phạm Huy Hiệu: 9 bài, 2 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/nam-le-hai/" class="node c-red" data-id="nam-le-hai" data-color="c-red" data-name="Lê Hải Nam" data-alt="Nam Le Hai">
+		<circle cx="664.2" cy="832.7" r="14.4"/>
+		<text class="deg" x="664.2" y="836.7" text-anchor="middle" data-r="2">3</text>
+		<text x="682.6" y="837.7" text-anchor="start">Lê Hải Nam</text>
+		<title>Lê Hải Nam: 9 bài, 3 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/nguyen-thi-ngoc-diep/" class="node ring g-ochre" data-id="nguyen-thi-ngoc-diep" data-color="ring g-ochre" data-name="Nguyễn Thị Ngọc Diệp" data-alt="Nguyen Thi Ngoc Diep">
+		<circle cx="614.4" cy="740.9" r="14.4" style="stroke-width: 4px"/>
+		<text class="deg" x="614.4" y="744.9" text-anchor="middle" data-r="3">3</text>
+		<text x="602.3" y="767" text-anchor="end">Nguyễn Thị Ngọc Diệp</text>
+		<title>Nguyễn Thị Ngọc Diệp: 9 bài, 3 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/son-ha-xuan/" class="node ring g-purple" data-id="son-ha-xuan" data-color="ring g-purple" data-name="Hà Xuân Sơn" data-alt="Son Ha Xuan">
+		<circle cx="293.9" cy="340" r="14.4" style="stroke-width: 4px"/>
+		<text class="deg" x="293.9" y="344" text-anchor="middle" data-r="4">4</text>
+		<text x="293.9" y="371.4" text-anchor="middle">Hà Xuân Sơn</text>
+		<title>Hà Xuân Sơn: 9 bài, 4 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/dinh-viet-sang/" class="node c-red" data-id="dinh-viet-sang" data-color="c-red" data-name="Đinh Viết Sang" data-alt="Dinh Viet Sang">
+		<circle cx="506" cy="705" r="14.1"/>
+		<text class="deg" x="506" y="709" text-anchor="middle" data-r="2">3</text>
+		<text x="487.9" y="710" text-anchor="end">Đinh Viết Sang</text>
+		<title>Đinh Viết Sang: 8 bài, 3 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/thanh-duc-ngo/" class="node g-ochre" data-id="thanh-duc-ngo" data-color="g-ochre" data-name="Ngô Đức Thành" data-alt="Thanh Duc Ngo">
+		<circle cx="431.5" cy="1047.7" r="14.1"/>
+		<text class="deg" x="431.5" y="1051.7" text-anchor="middle" data-r="1">2</text>
+		<text x="431.5" y="1026.6" text-anchor="middle">Ngô Đức Thành</text>
+		<title>Ngô Đức Thành: 8 bài, 2 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/xuan-bach-le/" class="node ring g-green" data-id="xuan-bach-le" data-color="ring g-green" data-name="Lê Xuân Bách" data-alt="Xuan-Bach Le">
+		<circle cx="241.5" cy="278.5" r="14.1" style="stroke-width: 4px"/>
+		<text class="deg" x="241.5" y="282.5" text-anchor="middle" data-r="3">3</text>
+		<text x="229.6" y="304.4" text-anchor="end">Lê Xuân Bách</text>
+		<title>Lê Xuân Bách: 8 bài, 3 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/hoang-thanh-tung/" class="node ring g-ochre r0" data-id="hoang-thanh-tung" data-color="ring g-ochre" data-name="Hoàng Thanh Tùng" data-alt="Hoang Thanh-Tung">
+		<circle cx="664.8" cy="401.4" r="13.8" style="stroke-width: 4px"/>
+		<text class="deg" x="664.8" y="405.4" text-anchor="middle" data-r="0">2</text>
+		<text x="647" y="406.4" text-anchor="end">Hoàng Thanh Tùng</text>
+		<title>Hoàng Thanh Tùng: 7 bài, 2 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/phat-t-tran-truong/" class="node ring g-green" data-id="phat-t-tran-truong" data-color="ring g-green" data-name="Trần Trương Tuấn Phát" data-alt="Phat T. Tran-Truong">
+		<circle cx="269.1" cy="211" r="13.8" style="stroke-width: 4px"/>
+		<text class="deg" x="269.1" y="215" text-anchor="middle" data-r="3">3</text>
+		<text x="286.9" y="216" text-anchor="start">Trần Trương Tuấn Phát</text>
+		<title>Trần Trương Tuấn Phát: 7 bài, 3 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/trung-nghia-le/" class="node c-cyan" data-id="trung-nghia-le" data-color="c-cyan" data-name="Lê Trung Nghĩa" data-alt="Trung-Nghia Le">
+		<circle cx="248.8" cy="1127.7" r="13.8"/>
+		<text class="deg" x="248.8" y="1131.7" text-anchor="middle" data-r="1">1</text>
+		<text x="266.6" y="1132.7" text-anchor="start">Lê Trung Nghĩa</text>
+		<title>Lê Trung Nghĩa: 7 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/canh-v-pham/" class="node g-purple" data-id="canh-v-pham" data-color="g-purple" data-name="Phạm Văn Cảnh" data-alt="Canh V. Pham">
+		<circle cx="1030.9" cy="346.5" r="13.4"/>
+		<text class="deg" x="1030.9" y="350.5" text-anchor="middle" data-r="1">1</text>
+		<text x="1048.3" y="351.5" text-anchor="start">Phạm Văn Cảnh</text>
+		<title>Phạm Văn Cảnh: 6 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/thanh-trung-huynh/" class="node c-blue" data-id="thanh-trung-huynh" data-color="c-blue" data-name="Huỳnh Thành Trung" data-alt="Thanh Trung Huynh">
+		<circle cx="354.6" cy="755.5" r="13.4"/>
+		<text class="deg" x="354.6" y="759.5" text-anchor="middle" data-r="3">3</text>
+		<text x="354.6" y="785.9" text-anchor="middle">Huỳnh Thành Trung</text>
+		<title>Huỳnh Thành Trung: 6 bài, 3 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/tuan-do/" class="node g-purple" data-id="tuan-do" data-color="g-purple" data-name="Đỗ Ngọc Tuấn" data-alt="Tuan Do">
+		<circle cx="1047.6" cy="148.1" r="13.4"/>
+		<text class="deg" x="1047.6" y="152.1" text-anchor="middle" data-r="2">2</text>
+		<text x="1065" y="153.1" text-anchor="start">Đỗ Ngọc Tuấn</text>
+		<title>Đỗ Ngọc Tuấn: 6 bài, 2 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/duc-trong-le/" class="node ring g-ochre" data-id="duc-trong-le" data-color="ring g-ochre" data-name="Lê Đức Trọng" data-alt="Duc-Trong Le">
+		<circle cx="1245.1" cy="346.1" r="13" style="stroke-width: 4px"/>
+		<text class="deg" x="1245.1" y="350.1" text-anchor="middle" data-r="1">1</text>
+		<text x="1262.1" y="351.1" text-anchor="start">Lê Đức Trọng</text>
+		<title>Lê Đức Trọng: 5 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/minh-do/" class="node c-blue" data-id="minh-do" data-color="c-blue" data-name="Đỗ Ngọc Minh" data-alt="Minh Do">
+		<circle cx="487.9" cy="668.2" r="13"/>
+		<text class="deg" x="487.9" y="672.2" text-anchor="middle" data-r="2">3</text>
+		<text x="470.9" y="673.2" text-anchor="end">Đỗ Ngọc Minh</text>
+		<title>Đỗ Ngọc Minh: 5 bài, 3 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/minh-nhat-vu/" class="node c-blue" data-id="minh-nhat-vu" data-color="c-blue" data-name="Vũ Nhật Minh" data-alt="Minh Nhat Vu">
+		<circle cx="686.9" cy="538.1" r="12.6"/>
+		<text class="deg" x="686.9" y="542.1" text-anchor="middle" data-r="4">4</text>
+		<text x="686.9" y="518.5" text-anchor="middle">Vũ Nhật Minh</text>
+		<title>Vũ Nhật Minh: 4 bài, 4 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/tan-d-tran/" class="node g-purple" data-id="tan-d-tran" data-color="g-purple" data-name="Trần Đình Tân" data-alt="Tan D. Tran">
+		<circle cx="1048.9" cy="392.5" r="12.6"/>
+		<text class="deg" x="1048.9" y="396.5" text-anchor="middle" data-r="1">1</text>
+		<text x="1065.5" y="397.5" text-anchor="start">Trần Đình Tân</text>
+		<title>Trần Đình Tân: 4 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/vu-n-duong/" class="node c-blue" data-id="vu-n-duong" data-color="c-blue" data-name="Dương Nguyên Vũ" data-alt="Vu N. Duong">
+		<circle cx="817.9" cy="656.7" r="12.6"/>
+		<text class="deg" x="817.9" y="660.7" text-anchor="middle" data-r="5">5</text>
+		<text x="834.5" y="661.7" text-anchor="start">Dương Nguyên Vũ</text>
+		<title>Dương Nguyên Vũ: 4 bài, 5 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/bui-trong-duc/" class="node c-red" data-id="bui-trong-duc" data-color="c-red" data-name="Bùi Trọng Đức" data-alt="Bui Trong Duc">
+		<circle cx="892" cy="265.5" r="12.1"/>
+		<text class="deg" x="892" y="269.5" text-anchor="middle" data-r="1">1</text>
+		<text x="892" y="294.6" text-anchor="middle">Bùi Trọng Đức</text>
+		<title>Bùi Trọng Đức: 3 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/cong-tran/" class="node g-green r0" data-id="cong-tran" data-color="g-green" data-name="Trần Tiến Công" data-alt="Cong Tran">
+		<circle cx="1238" cy="1041.5" r="12.1"/>
+		<text class="deg" x="1238" y="1045.5" text-anchor="middle" data-r="0">2</text>
+		<text x="1254.1" y="1046.5" text-anchor="start">Trần Tiến Công</text>
+		<title>Trần Tiến Công: 3 bài, 2 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/danh-le-phuoc/" class="node c-blue" data-id="danh-le-phuoc" data-color="c-blue" data-name="Lê Phước Danh" data-alt="Danh Le-Phuoc">
+		<circle cx="444.4" cy="352.7" r="12.1"/>
+		<text class="deg" x="444.4" y="356.7" text-anchor="middle" data-r="3">4</text>
+		<text x="433.9" y="338.2" text-anchor="end">Lê Phước Danh</text>
+		<title>Lê Phước Danh: 3 bài, 4 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/dinh-cuong-hoang/" class="node c0" data-id="dinh-cuong-hoang" data-color="c0" data-name="Hoàng Đình Cường" data-alt="Dinh-Cuong Hoang">
+		<circle cx="1029.6" cy="447.2" r="12.1"/>
+		<text class="deg" x="1029.6" y="451.2" text-anchor="middle" data-r="1">1</text>
+		<text x="1045.7" y="452.2" text-anchor="start">Hoàng Đình Cường</text>
+		<title>Hoàng Đình Cường: 3 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/duy-dinh-le/" class="node g-ochre" data-id="duy-dinh-le" data-color="g-ochre" data-name="Lê Đình Duy" data-alt="Duy-Dinh Le">
+		<circle cx="543.9" cy="1042.2" r="12.1"/>
+		<text class="deg" x="543.9" y="1046.2" text-anchor="middle" data-r="1">1</text>
+		<text x="560" y="1047.2" text-anchor="start">Lê Đình Duy</text>
+		<title>Lê Đình Duy: 3 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/hoang-ta/" class="node c-red" data-id="hoang-ta" data-color="c-red" data-name="Tạ Duy Hoàng" data-alt="Hoang Ta">
+		<circle cx="879.9" cy="411.8" r="12.1"/>
+		<text class="deg" x="879.9" y="415.8" text-anchor="middle" data-r="1">1</text>
+		<text x="879.9" y="392.7" text-anchor="middle">Tạ Duy Hoàng</text>
+		<title>Tạ Duy Hoàng: 3 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/long-hoang-dang/" class="node g-green" data-id="long-hoang-dang" data-color="g-green" data-name="Đặng Hoàng Long" data-alt="Long Hoang Dang">
+		<circle cx="1029.6" cy="102.1" r="12.1"/>
+		<text class="deg" x="1029.6" y="106.1" text-anchor="middle" data-r="1">1</text>
+		<text x="1045.7" y="107.1" text-anchor="start">Đặng Hoàng Long</text>
+		<title>Đặng Hoàng Long: 3 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/ngoc-hoang-luong/" class="node g-ochre r0" data-id="ngoc-hoang-luong" data-color="g-ochre" data-name="Lương Ngọc Hoàng" data-alt="Ngoc Hoang Luong">
+		<circle cx="1249" cy="447.2" r="12.1"/>
+		<text class="deg" x="1249" y="451.2" text-anchor="middle" data-r="0">1</text>
+		<text x="1265.1" y="452.2" text-anchor="start">Lương Ngọc Hoàng</text>
+		<title>Lương Ngọc Hoàng: 3 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/nguyen-thi-hanh/" class="node g-purple" data-id="nguyen-thi-hanh" data-color="g-purple" data-name="Nguyễn Thị Hạnh" data-alt="Nguyen Thi Hanh">
+		<circle cx="625" cy="210.1" r="12.1"/>
+		<text class="deg" x="625" y="214.1" text-anchor="middle" data-r="2">2</text>
+		<text x="608.9" y="215.1" text-anchor="end">Nguyễn Thị Hạnh</text>
+		<title>Nguyễn Thị Hạnh: 3 bài, 2 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/thuy-t-nguyen/" class="node ring g-purple" data-id="thuy-t-nguyen" data-color="ring g-purple" data-name="Nguyễn Thị Thủy" data-alt="Thuy T. Nguyen">
+		<circle cx="1281.1" cy="591.7" r="12.1" style="stroke-width: 4px"/>
+		<text class="deg" x="1281.1" y="595.7" text-anchor="middle" data-r="1">1</text>
+		<text x="1297.2" y="596.7" text-anchor="start">Nguyễn Thị Thủy</text>
+		<title>Nguyễn Thị Thủy: 3 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/minhhuy-le/" class="node g-purple" data-id="minhhuy-le" data-color="g-purple" data-name="Lê Minh Huy" data-alt="Minhhuy Le">
+		<circle cx="1047.6" cy="493.2" r="11.5"/>
+		<text class="deg" x="1047.6" y="497.2" text-anchor="middle" data-r="1">1</text>
+		<text x="1063.1" y="498.2" text-anchor="start">Lê Minh Huy</text>
+		<title>Lê Minh Huy: 2 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/ngoc-thanh-dinh/" class="node c-blue" data-id="ngoc-thanh-dinh" data-color="c-blue" data-name="Đinh Ngọc Thạnh" data-alt="Ngoc-Thanh Dinh">
+		<circle cx="788.9" cy="803.5" r="11.5"/>
+		<text class="deg" x="788.9" y="807.5" text-anchor="middle" data-r="1">1</text>
+		<text x="804.4" y="808.5" text-anchor="start">Đinh Ngọc Thạnh</text>
+		<title>Đinh Ngọc Thạnh: 2 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/quan-minh-phan/" class="node g-ochre r0" data-id="quan-minh-phan" data-color="g-ochre" data-name="Phan Minh Quân" data-alt="Quan Minh Phan">
+		<circle cx="1267" cy="493.2" r="11.5"/>
+		<text class="deg" x="1267" y="497.2" text-anchor="middle" data-r="0">1</text>
+		<text x="1282.5" y="498.2" text-anchor="start">Phan Minh Quân</text>
+		<title>Phan Minh Quân: 2 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/quy-van-tran/" class="node c-cyan" data-id="quy-van-tran" data-color="c-cyan" data-name="Trần Văn Quý" data-alt="Quy Van Tran">
+		<circle cx="143.9" cy="1022.5" r="11.5"/>
+		<text class="deg" x="143.9" y="1026.5" text-anchor="middle" data-r="2">2</text>
+		<text x="128.4" y="1027.5" text-anchor="end">Trần Văn Quý</text>
+		<title>Trần Văn Quý: 2 bài, 2 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/quynh-trang-pham-thi/" class="node ring g-ochre" data-id="quynh-trang-pham-thi" data-color="ring g-ochre" data-name="Phạm Thị Quỳnh Trang" data-alt="Quynh-Trang Pham Thi">
+		<circle cx="1263.1" cy="392.1" r="11.5" style="stroke-width: 3px"/>
+		<text class="deg" x="1263.1" y="396.1" text-anchor="middle" data-r="1">1</text>
+		<text x="1278.6" y="397.1" text-anchor="start">Phạm Thị Quỳnh Trang</text>
+		<title>Phạm Thị Quỳnh Trang: 2 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/son-van-nguyen/" class="node g-purple" data-id="son-van-nguyen" data-color="g-purple" data-name="Nguyễn Văn Sơn" data-alt="Son Van Nguyen">
+		<circle cx="733.6" cy="89.3" r="11.5"/>
+		<text class="deg" x="733.6" y="93.3" text-anchor="middle" data-r="2">2</text>
+		<text x="718.1" y="94.3" text-anchor="end">Nguyễn Văn Sơn</text>
+		<title>Nguyễn Văn Sơn: 2 bài, 2 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/thai-khanh-nguyen/" class="node g-green" data-id="thai-khanh-nguyen" data-color="g-green" data-name="Nguyễn Thái Khánh" data-alt="Thai Khanh Nguyen">
+		<circle cx="865.1" cy="977.3" r="11.5"/>
+		<text class="deg" x="865.1" y="981.3" text-anchor="middle" data-r="1">1</text>
+		<text x="849.6" y="982.3" text-anchor="end">Nguyễn Thái Khánh</text>
+		<title>Nguyễn Thái Khánh: 2 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/uyen-n-b-vo/" class="node g-green" data-id="uyen-n-b-vo" data-color="g-green" data-name="Võ Ngọc Bích Uyên" data-alt="Uyen N.B. Vo">
+		<circle cx="1006.7" cy="981.8" r="11.5"/>
+		<text class="deg" x="1006.7" y="985.8" text-anchor="middle" data-r="2">2</text>
+		<text x="1006.7" y="963.3" text-anchor="middle">Võ Ngọc Bích Uyên</text>
+		<title>Võ Ngọc Bích Uyên: 2 bài, 2 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/vu-nguyen/" class="node c-cyan" data-id="vu-nguyen" data-color="c-cyan" data-name="Nguyễn Văn Vũ" data-alt="Vu Nguyen">
+		<circle cx="207.8" cy="918.6" r="11.5"/>
+		<text class="deg" x="207.8" y="922.6" text-anchor="middle" data-r="2">2</text>
+		<text x="223.3" y="923.6" text-anchor="start">Nguyễn Văn Vũ</text>
+		<title>Nguyễn Văn Vũ: 2 bài, 2 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/an-mai/" class="node c0 r0" data-id="an-mai" data-color="c0" data-name="An Mai" data-alt="An Mai">
+		<circle cx="334.1" cy="577.5" r="10.8"/>
+		<text class="deg" x="334.1" y="581.5" text-anchor="middle" data-r="0">2</text>
+		<text x="319.3" y="582.5" text-anchor="end">An Mai</text>
+		<title>An Mai: 1 bài, 2 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/cong-tinh-dao/" class="node c0" data-id="cong-tinh-dao" data-color="c0" data-name="Cong-Tinh Dao" data-alt="Cong-Tinh Dao">
+		<circle cx="1138.9" cy="269.1" r="10.8"/>
+		<text class="deg" x="1138.9" y="273.1" text-anchor="middle" data-r="2">2</text>
+		<text x="1124.1" y="274.1" text-anchor="end">Cong-Tinh Dao</text>
+		<title>Cong-Tinh Dao: 1 bài, 2 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/hai-thanh-nguyen/" class="node c0" data-id="hai-thanh-nguyen" data-color="c0" data-name="Nguyễn Thanh Hải" data-alt="Hai Thanh Nguyen">
+		<circle cx="1248.9" cy="246.1" r="10.8"/>
+		<text class="deg" x="1248.9" y="250.1" text-anchor="middle" data-r="2">2</text>
+		<text x="1263.7" y="251.1" text-anchor="start">Nguyễn Thanh Hải</text>
+		<title>Nguyễn Thanh Hải: 1 bài, 2 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/hien-d-nguyen/" class="node g-ochre" data-id="hien-d-nguyen" data-color="g-ochre" data-name="Hien D. Nguyen" data-alt="Hien D. Nguyen">
+		<circle cx="1028.3" cy="545.7" r="10.8"/>
+		<text class="deg" x="1028.3" y="549.7" text-anchor="middle" data-r="1">1</text>
+		<text x="1043.1" y="550.7" text-anchor="start">Hien D. Nguyen</text>
+		<title>Hien D. Nguyen: 1 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/hong-t-m-chu/" class="node c-blue" data-id="hong-t-m-chu" data-color="c-blue" data-name="Chu Thị Mai Hồng" data-alt="Hong T.M. Chu">
+		<circle cx="451.2" cy="298.3" r="10.8"/>
+		<text class="deg" x="451.2" y="302.3" text-anchor="middle" data-r="1">1</text>
+		<text x="436.4" y="303.3" text-anchor="end">Chu Thị Mai Hồng</text>
+		<title>Chu Thị Mai Hồng: 1 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/hung-nguyen/" class="node c0" data-id="hung-nguyen" data-color="c0" data-name="Nguyễn Viết Hưng" data-alt="Hung Nguyen">
+		<circle cx="1046.3" cy="591.7" r="10.8"/>
+		<text class="deg" x="1046.3" y="595.7" text-anchor="middle" data-r="1">1</text>
+		<text x="1061.1" y="596.7" text-anchor="start">Nguyễn Viết Hưng</text>
+		<title>Nguyễn Viết Hưng: 1 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/huyen-nguyen/" class="node g-green r0" data-id="huyen-nguyen" data-color="g-green" data-name="Nguyễn Thị Ngọc Huyền" data-alt="Huyen Nguyen">
+		<circle cx="1265.1" cy="918.1" r="10.8"/>
+		<text class="deg" x="1265.1" y="922.1" text-anchor="middle" data-r="0">2</text>
+		<text x="1279.9" y="923.1" text-anchor="start">Nguyễn Thị Ngọc Huyền</text>
+		<title>Nguyễn Thị Ngọc Huyền: 1 bài, 2 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/nguyen-duc-minh/" class="node c0" data-id="nguyen-duc-minh" data-color="c0" data-name="Nguyễn Đức Minh" data-alt="Nguyen Duc Minh">
+		<circle cx="794.9" cy="41" r="10.8"/>
+		<text class="deg" x="794.9" y="45" text-anchor="middle" data-r="1">1</text>
+		<text x="809.7" y="46" text-anchor="start">Nguyễn Đức Minh</text>
+		<title>Nguyễn Đức Minh: 1 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/nguyen-tu-uyen/" class="node c0" data-id="nguyen-tu-uyen" data-color="c0" data-name="Nguyễn Tú Uyên" data-alt="Nguyen Tu Uyen">
+		<circle cx="1029.6" cy="194.1" r="10.8"/>
+		<text class="deg" x="1029.6" y="198.1" text-anchor="middle" data-r="1">1</text>
+		<text x="1044.4" y="199.1" text-anchor="start">Nguyễn Tú Uyên</text>
+		<title>Nguyễn Tú Uyên: 1 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/nhat-quang-tran/" class="node ring g-purple" data-id="nhat-quang-tran" data-color="ring g-purple" data-name="Trần Nhật Quang" data-alt="Nhat-Quang Tran">
+		<circle cx="1263.1" cy="545.7" r="10.8" style="stroke-width: 3px"/>
+		<text class="deg" x="1263.1" y="549.7" text-anchor="middle" data-r="1">1</text>
+		<text x="1277.9" y="550.7" text-anchor="start">Trần Nhật Quang</text>
+		<title>Trần Nhật Quang: 1 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/thanh-pham-chi/" class="node ring g-purple" data-id="thanh-pham-chi" data-color="ring g-purple" data-name="Phạm Chí Thanh" data-alt="Thanh Pham Chi">
+		<circle cx="87.4" cy="307" r="10.8" style="stroke-width: 3px"/>
+		<text class="deg" x="87.4" y="311" text-anchor="middle" data-r="3">3</text>
+		<text x="87.4" y="334.8" text-anchor="middle">Phạm Chí Thanh</text>
+		<title>Phạm Chí Thanh: 1 bài, 3 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/thao-nguyen-minh-phan/" class="node c0" data-id="thao-nguyen-minh-phan" data-color="c0" data-name="Phan Nguyễn Minh Thảo" data-alt="Thao Nguyen Minh Phan">
+		<circle cx="1248.9" cy="292.1" r="10.8"/>
+		<text class="deg" x="1248.9" y="296.1" text-anchor="middle" data-r="2">2</text>
+		<text x="1263.7" y="297.1" text-anchor="start">Phan Nguyễn Minh Thảo</text>
+		<title>Phan Nguyễn Minh Thảo: 1 bài, 2 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/tran-thi-huong/" class="node c0" data-id="tran-thi-huong" data-color="c0" data-name="Trần Thị Hương" data-alt="Tran Thi Huong">
+		<circle cx="880.8" cy="92.9" r="10.8"/>
+		<text class="deg" x="880.8" y="96.9" text-anchor="middle" data-r="1">1</text>
+		<text x="880.8" y="75.1" text-anchor="middle">Trần Thị Hương</text>
+		<title>Trần Thị Hương: 1 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/trinh-van-chien/" class="node c-red r0" data-id="trinh-van-chien" data-color="c-red" data-name="Trịnh Văn Chiến" data-alt="Trinh Van Chien">
+		<circle cx="1028.3" cy="644.8" r="10.8"/>
+		<text class="deg" x="1028.3" y="648.8" text-anchor="middle" data-r="0">1</text>
+		<text x="1043.1" y="649.8" text-anchor="start">Trịnh Văn Chiến</text>
+		<title>Trịnh Văn Chiến: 1 bài, 1 liên kết</title>
+	</a>
+	<a href="/vn-at-top-ai-conference/professors/van-duc-nguyen/" class="node c-red r0" data-id="van-duc-nguyen" data-color="c-red" data-name="Nguyễn Văn Đức" data-alt="Van Duc Nguyen">
+		<circle cx="1046.3" cy="690.8" r="10.8"/>
+		<text class="deg" x="1046.3" y="694.8" text-anchor="middle" data-r="0">1</text>
+		<text x="1061.1" y="695.8" text-anchor="start">Nguyễn Văn Đức</text>
+		<title>Nguyễn Văn Đức: 1 bài, 1 liên kết</title>
+	</a>
+</svg>
+</figure>
+
+</div>
+</div>
+</article>
+</main>
+<footer>
+	Số liệu cập nhật đến ngày 2026-11-27, giai đoạn 2020&ndash;2027.
+	<a href="/vn-at-top-ai-conference/about/">Nguồn và giới hạn</a>
+</footer>
+<script src="/vn-at-top-ai-conference/site.js?v=4461717211" defer></script>
+<script data-goatcounter="https://thanhlexyz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hướng nghiên cứu: Trần Tiến Công | Vietnam AIRankings</title>
+	<link rel="icon" href="/vn-at-top-ai-conference/favicon.svg" type="image/svg+xml">
+	<link rel="icon" href="/vn-at-top-ai-conference/favicon-32.png" type="image/png" sizes="32x32">
+	<link rel="apple-touch-icon" href="/vn-at-top-ai-conference/apple-touch-icon.png">
+	<script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+	<link rel="stylesheet" type="text/css" href="/vn-at-top-ai-conference/style.css?v=1786604248">
+	<meta name="description" content="Số bài của giảng viên tại Việt Nam ở mười ba hội nghị AI và robot hàng đầu (AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP, ICRA, IROS, RSS) từ năm 2020, xếp hạng theo điểm CSRankings.">
+	<link rel="canonical" href="https://thanhlexyz.github.io/vn-at-top-ai-conference/research/cong-tran/">
+	<meta property="og:site_name" content="Vietnam AIRankings">
+	<meta property="og:title" content="Hướng nghiên cứu: Trần Tiến Công">
+	<meta property="og:description" content="Số bài của giảng viên tại Việt Nam ở mười ba hội nghị AI và robot hàng đầu (AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP, ICRA, IROS, RSS) từ năm 2020, xếp hạng theo điểm CSRankings.">
+	<meta property="og:url" content="https://thanhlexyz.github.io/vn-at-top-ai-conference/research/cong-tran/">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="vi_VN">
+	<meta name="twitter:card" content="summary">
+	<meta name="google-site-verification" content="ZF2zUtE9LsOWiwg3KrNvNiRSP0EQ4ULBMv6SMDXSTQQ">
+
+	<meta name="robots" content="index, follow">
+	<link rel="alternate" hreflang="vi" href="https://thanhlexyz.github.io/vn-at-top-ai-conference/research/cong-tran/">
+	<link rel="alternate" hreflang="en" href="https://thanhlexyz.github.io/vn-at-top-ai-conference/en/research/cong-tran/">
+</head>
+<body>
+<nav>
+	<span class="lang" aria-label="Ngôn ngữ">
+	<a href="/vn-at-top-ai-conference/research/cong-tran/" hreflang="vi" lang="vi" class="current" aria-current="true">🇻🇳 VI</a>
+	<a href="/vn-at-top-ai-conference/en/research/cong-tran/" hreflang="en" lang="en">🇬🇧 EN</a>
+	<button class="theme" type="button" title="Chuyển giữa giao diện sáng và tối" aria-label="Chuyển giữa giao diện sáng và tối">🌙</button>
+	</span>
+	<a class="site" href="/vn-at-top-ai-conference/">Vietnam AIRankings</a>
+	<span class="links">
+	<a href="/vn-at-top-ai-conference/">Giảng viên</a>
+	<a href="/vn-at-top-ai-conference/universities/">Trường</a>
+	<a href="/vn-at-top-ai-conference/conferences/">Hội nghị</a>
+	<a href="/vn-at-top-ai-conference/papers/">Bài báo</a>
+	<a href="/vn-at-top-ai-conference/domestic/">Hợp tác trong nước</a>
+	<a href="/vn-at-top-ai-conference/international/">Hợp tác quốc tế</a>
+	<a href="/vn-at-top-ai-conference/research/" class="current">Hướng nghiên cứu</a>
+	<a href="/vn-at-top-ai-conference/about/">Giới thiệu</a>
+	<a href="/vn-at-top-ai-conference/feedback/">Góp ý</a>
+	</span>
+</nav>
+<main>
+<header><h1>Hướng nghiên cứu: Trần Tiến Công</h1></header>
+<article>
+
+<style>
+.ch-tools { display: flex ; gap: 1em ; align-items: baseline ; flex-wrap: wrap ; }
+.ch-tools button { font: inherit ; font-size: 0.9em ; color: var(--link) ; background: none ; border: 1px solid var(--line) ; border-radius: 4px ; padding: 0.15em 0.6em ; cursor: pointer ; }
+section.ch-topic { margin: 1.8em 0 ; }
+section.ch-topic h2 { font-size: 1.15em ; margin: 0 0 0.3em ; }
+section.ch-topic h2 .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; }
+section.ch-topic h3 { font-size: 0.95em ; margin: 0.8em 0 0.2em ; }
+section.ch-topic ul.open { margin: 0.2em 0 0.6em ; padding-left: 1.4em ; line-height: 1.55 ; }
+.tr { color: var(--muted) ; }
+section.ch-topic ul.open .src { color: var(--muted) ; font-size: 0.85em ; }
+details.ch-papers > summary, details.ch-desc > summary, details.ch-open > summary { cursor: pointer ; color: var(--link) ; margin: 0.4em 0 ; }
+details.ch-paper { margin: 0.4em 0 0.4em 1em ; border-left: 2px solid var(--line) ; padding-left: 0.8em ; }
+details.ch-paper > summary { cursor: pointer ; line-height: 1.5 ; }
+details.ch-paper > summary .t { font-weight: 600 ; }
+details.ch-paper > summary .meta { color: var(--muted) ; font-size: 0.88em ; }
+details.ch-paper dl { margin: 0.4em 0 ; }
+details.ch-paper dt { font-weight: 600 ; margin-top: 0.5em ; }
+details.ch-paper dd { margin: 0.1em 0 0 1.2em ; line-height: 1.55 ; }
+details.ch-paper ul { margin: 0.2em 0 0 ; padding-left: 1.4em ; line-height: 1.55 ; }
+details.ch-paper .ch-link { font-size: 0.88em ; margin: 0.3em 0 0.6em ; }
+</style>
+<p class="ch-tools"><span><a href="/vn-at-top-ai-conference/professors/cong-tran/">Trần Tiến Công</a> (PTIT) · <a href="/vn-at-top-ai-conference/research/">Tất cả thầy cô</a></span> <button type="button" class="ch-expand" data-open="Mở tất cả" data-close="Thu gọn tất cả">Mở tất cả</button></p>
+<div class="ch-head"><img src="/vn-at-top-ai-conference/img/people/cong-tran.jpg" alt="" loading="lazy"><div><p>Các bài báo của thầy Công áp dụng các phương pháp dựa trên học và đồ thị cho dữ liệu mạng và ảnh. Các công trình về <a href="#aaai2025-rem-a-scalable-reinforced-multi-expert-framework-for-multipl">chọn nút gốc bằng học tăng cường</a> để lan truyền ảnh hưởng trên mạng đa lớp, và chọn nút cần gán nhãn trong đồ thị không đầy đủ. Các công trình về <a href="#iclr2024-leveraging-graph-neural-networks-to-boost-fine-grained-image">mạng nơ-ron đồ thị</a> tinh chỉnh đặc trưng ảnh để cải thiện phân loại chi tiết các lớp giống nhau về thị giác, như loài chim và giống chó.</p><p><strong>Các hướng nghiên cứu mở.</strong> Các công trình về <a href="#aaai2025-rem-a-scalable-reinforced-multi-expert-framework-for-multipl">chọn nút gốc để lan truyền ảnh hưởng</a> còn bỏ ngỏ các mẫu lan truyền chưa biết, việc thiếu mẫu huấn luyện chất lượng cao, và học chủ động trên đồ thị có liên kết bị thiếu. Các công trình về <a href="#iclr2024-leveraging-graph-neural-networks-to-boost-fine-grained-image">mạng đồ thị</a> cho nhận dạng ảnh chi tiết còn bỏ ngỏ vì sao cần đồ thị và kết quả phụ thuộc thế nào vào kích thước batch và cách lấy mẫu.</p></div></div>
+<figure>
+<svg class="ch-fig" viewBox="0 0 565 136" style="--w: 565" role="img" aria-label="Các bài báo theo chủ đề và năm; đường cong nối một bài với bài trước đó của cùng thầy cô mà bài này trích dẫn"><line class="grid" x1="365" y1="22" x2="365" y2="132"/><text class="yr" x="365" y="16" text-anchor="middle">2024</text><line class="grid" x1="485" y1="22" x2="485" y2="132"/><text class="yr" x="485" y="16" text-anchor="middle">2025</text>
+	<g class="tc0"><text x="8" y="61">Khai phá dữ liệu và học trên đồ thị</text><a href="#aaai2025-rem-a-scalable-reinforced-multi-expert-framework-for-multipl"><circle cx="485" cy="57" r="7"/><title>REM: A Scalable Reinforced Multi-Expert Framework for Multiplex Influence Maximization (AAAI 2025)</title></a><a href="#iclr2024-alin-an-active-learning-framework-for-incomplete-networks"><circle cx="365" cy="57" r="7"/><title>ALIN: An Active Learning Framework for Incomplete Networks (ICLR 2024)</title></a></g>
+	<g class="tc1"><text x="8" y="107">Thị giác máy tính và học đa phương thức</text><a href="#iclr2024-leveraging-graph-neural-networks-to-boost-fine-grained-image"><circle cx="365" cy="103" r="7"/><title>Leveraging Graph Neural Networks to Boost Fine-Grained Image Classification (ICLR 2024)</title></a></g>
+</svg>
+<figcaption class="note">Các bài báo và bài nộp theo chủ đề và năm. Mỗi chấm là một bài (bấm để mở); đường cong nối một bài với một bài trước đó mà nó trích dẫn.</figcaption>
+</figure>
+<section class="ch-topic tc0">
+<h2>Khai phá dữ liệu và học trên đồ thị <span class="n" title="Tổng 1/N trên các bài của chủ đề (với N là số tác giả mỗi bài, theo chuẩn CSRankings); các chủ đề được sắp xếp theo điểm này từ cao xuống thấp">(2 bài · điểm CSRankings 0.53)</span></h2>
+<details class="ch-desc"><summary>Mô tả chủ đề</summary>
+<p>Tối đa hóa ảnh hưởng chọn các người dùng gốc để thông tin lan rộng nhất có thể; với mạng đa lớp, quá trình lan truyền được mã hóa bằng hỗn hợp các chuyên gia và một mô hình sinh đóng vai chính sách học tăng cường sinh ra và cải thiện các tập nút gốc, với mức lan truyền ảnh hưởng, khả năng mở rộng và thời gian suy luận tốt hơn các phương pháp trước trên dữ liệu thực. Học chủ động trên đồ thị có liên kết bị thiếu kết hợp các hàm mất mát phân loại nút và dự đoán liên kết có trọng số với truy vấn theo lô, với kết quả vượt các baseline hiện đại trên bốn bộ dữ liệu trích dẫn.</p><div class="ch-words" aria-label="Các từ đặc trưng nhất trong tóm tắt của chủ đề"><span class="w">graphs</span><span class="b" style="width: 100%"></span><span class="w">influence</span><span class="b" style="width: 86%"></span><span class="w">rem</span><span class="b" style="width: 71%"></span><span class="w">alin</span><span class="b" style="width: 71%"></span><span class="w">active</span><span class="b" style="width: 71%"></span><span class="w">maximization</span><span class="b" style="width: 57%"></span></div>
+</details>
+<details class="ch-open"><summary>Vấn đề còn mở (2)</summary>
+<ul class="open"><li>Các phương pháp tối đa hóa ảnh hưởng dựa trên học không xử lý được các mẫu khuếch tán chưa biết và phụ thuộc vào mẫu huấn luyện chất lượng cao. <span class="src">(phản biện nêu)</span></li><li>Đồ thị thực tế thường thiếu liên kết, mà các cách tiếp cận học chủ động hiện có cho đồ thị có thể chưa xử lý đủ. <span class="src">(phản biện nêu)</span></li></ul>
+</details>
+<details class="ch-papers"><summary>Các bài (2)</summary>
+<details class="ch-paper" id="aaai2025-rem-a-scalable-reinforced-multi-expert-framework-for-multipl">
+<summary><span class="t">REM: A Scalable Reinforced Multi-Expert Framework for Multiplex Influence Maximization</span> <span class="meta">AAAI 2025 · <span class="tag accepted">được nhận</span></span></summary>
+<dl><dt>Bài toán</dt><dd>Bài toán tối đa hóa ảnh hưởng chọn một tập nhỏ người dùng hạt giống trong mạng xã hội để thông tin lan truyền rộng nhất; với mạng đa lớp (gồm nhiều mạng liên kết với nhau), bài báo nêu rằng các phương pháp dựa trên học máy không xử lý được các kiểu lan truyền chưa biết và phụ thuộc vào mẫu huấn luyện chất lượng cao.</dd><dt>Ý tưởng</dt><dd>REM (Reinforced Expert Maximization) mã hóa quá trình lan truyền động trên mạng đa lớp lớn bằng một Propagation Mixture of Experts và coi một mô hình sinh là chính sách, sinh ra các tập hạt giống và học cách cải thiện chúng theo hướng học tăng cường.</dd><dt>Điểm mạnh</dt><dd>Bài báo báo cáo rằng trên nhiều bộ dữ liệu thực tế, REM vượt các phương pháp trước về độ lan truyền ảnh hưởng, khả năng mở rộng và thời gian suy luận.</dd>
+</dl>
+<p class="ch-link"><a href="/vn-at-top-ai-conference/papers/#aaai2025-rem-a-scalable-reinforced-multi-expert-framework-for-multipl" title="Dòng của bài này ở trang Bài báo">Liên kết</a> · <a href="https://ojs.aaai.org/index.php/AAAI/article/view/34917" title="Nguồn chính thức của bài báo">Nguồn</a></p>
+</details>
+
+<details class="ch-paper" id="iclr2024-alin-an-active-learning-framework-for-incomplete-networks">
+<summary><span class="t">ALIN: An Active Learning Framework for Incomplete Networks</span> <span class="meta">ICLR 2024 · <span class="tag desk_rejected">bị loại sơ bộ</span></span></summary>
+<dl><dt>Bài toán</dt><dd>Các đồ thị thực tế thường thiếu liên kết, điều mà các phương pháp học chủ động hiện có cho mạng đồ thị có thể chưa xử lý thỏa đáng.</dd><dt>Ý tưởng</dt><dd>ALIN dùng mạng nơ-ron đồ thị để tạo embedding nút, kết hợp các hàm mất mát phân loại nút và dự đoán liên kết bằng các trọng số, cập nhật mạng lặp lại và truy vấn các nút theo lô.</dd><dt>Điểm mạnh</dt><dd>Bài báo báo cáo ALIN vượt các đường cơ sở hàng đầu trên Cora, Citeseer, Pubmed và CoauthorCS.</dd>
+</dl>
+<p class="ch-link"><a href="/vn-at-top-ai-conference/papers/#iclr2024-alin-an-active-learning-framework-for-incomplete-networks" title="Dòng của bài này ở trang Bài báo">Liên kết</a> · <a href="https://openreview.net/forum?id=ap2UMxs8qJ" title="Trang OpenReview của bài, kèm nhận xét phản biện công khai">OpenReview</a></p>
+</details>
+
+</details>
+</section>
+<section class="ch-topic tc1">
+<h2>Thị giác máy tính và học đa phương thức <span class="n" title="Tổng 1/N trên các bài của chủ đề (với N là số tác giả mỗi bài, theo chuẩn CSRankings); các chủ đề được sắp xếp theo điểm này từ cao xuống thấp">(1 bài · điểm CSRankings 0.20)</span></h2>
+<details class="ch-desc"><summary>Mô tả chủ đề</summary>
+<p>Các khối mạng nơ-ron đồ thị, được thêm như một mô-đun cắm thêm cho nhiều kiến trúc, tinh chỉnh các vector đặc trưng do mạng sâu trích xuất cho phân loại chi tiết bằng cách coi chúng là các nút đồ thị, với độ chính xác trung bình tăng 2,78% trên CUB200-2011 và 3,83% trên Stanford Dogs và kết quả hiện đại 95,79% trên Stanford Dogs.</p><div class="ch-words" aria-label="Các từ đặc trưng nhất trong tóm tắt của chủ đề"><span class="w">fine-grained</span><span class="b" style="width: 100%"></span><span class="w">image classification</span><span class="b" style="width: 64%"></span><span class="w">computer vision</span><span class="b" style="width: 64%"></span><span class="w">neural network</span><span class="b" style="width: 64%"></span><span class="w">gnn blocks</span><span class="b" style="width: 64%"></span><span class="w">feature vectors</span><span class="b" style="width: 64%"></span></div>
+</details>
+<details class="ch-open"><summary>Vấn đề còn mở (2)</summary>
+<ul class="open"><li><q>My main concern is the lack of motivation for using a graph-based approach.</q> <span class="tr">(Mối quan ngại chính của tôi là thiếu động cơ cho việc dùng phương pháp dựa trên đồ thị.)</span> <span class="src">(phản biện nêu)</span></li><li><q>It is challenging to deploy and evaluate the trained model because its test performance is tied to both the test batch size and the data sampling method.</q> <span class="tr">(Việc triển khai và đánh giá mô hình đã huấn luyện là khó vì hiệu năng kiểm thử gắn với cả kích thước batch khi kiểm thử lẫn phương pháp lấy mẫu dữ liệu.)</span> <span class="src">(phản biện nêu)</span></li></ul>
+</details>
+<details class="ch-papers"><summary>Các bài (1)</summary>
+<details class="ch-paper" id="iclr2024-leveraging-graph-neural-networks-to-boost-fine-grained-image">
+<summary><span class="t">Leveraging Graph Neural Networks to Boost Fine-Grained Image Classification</span> <span class="meta">ICLR 2024 · <span class="tag rejected">bị từ chối</span></span></summary>
+<dl><dt>Bài toán</dt><dd>Phân loại ảnh chi tiết mịn đòi hỏi phân biệt chính xác giữa các lớp đối tượng giống nhau về mặt thị giác.</dd><dt>Ý tưởng</dt><dd>Các khối mạng nơ-ron đồ thị (GNN) tinh chỉnh các vectơ đặc trưng do mạng sâu trích xuất, mô hình hóa chúng như các nút đồ thị để nắm bắt sự phụ thuộc, dưới dạng mô-đun cắm thêm vào nhiều kiến trúc.</dd><dt>Điểm mạnh</dt><dd>Bài báo báo cáo độ chính xác tăng trung bình 2,78% trên CUB200-2011 và 3,83% trên Stanford Dogs, và kết quả hàng đầu 95,79% trên Stanford Dogs.</dd><dt>Câu hỏi của phản biện</dt><dd><ul><li><q>How can a GPH augmented model perform similarly when the batch size is 1?</q> <span class="tr">(Làm sao một mô hình được tăng cường GPH có thể cho kết quả tương tự khi kích thước batch là 1?)</span></li><li><q>The method proposed in the paper uses a fully connected graph, so there isn’t really a structure that the GNN can exploit.</q> <span class="tr">(Phương pháp đề xuất dùng đồ thị đầy đủ, nên thực ra không có cấu trúc nào để GNN khai thác.)</span></li><li><q>It is challenging to deploy and evaluate the trained model because its test performance is tied to both the test batch size and the data sampling method.</q> <span class="tr">(Việc triển khai và đánh giá mô hình đã huấn luyện là khó vì hiệu năng kiểm tra gắn với cả kích thước batch kiểm tra lẫn phương pháp lấy mẫu dữ liệu.)</span></li><li><q>My main concern is the lack of motivation for using a graph-based approach.</q> <span class="tr">(Mối quan ngại chính của tôi là thiếu động cơ cho việc dùng cách tiếp cận dựa trên đồ thị.)</span></li></ul></dd>
+</dl>
+<p class="ch-link"><a href="/vn-at-top-ai-conference/papers/#iclr2024-leveraging-graph-neural-networks-to-boost-fine-grained-image" title="Dòng của bài này ở trang Bài báo">Liên kết</a> · <a href="https://openreview.net/forum?id=NJ6nyv3XWH" title="Trang OpenReview của bài, kèm nhận xét phản biện công khai">OpenReview</a></p>
+</details>
+
+</details>
+</section>
+<script>
+(function () {
+	var b = document.querySelector("button.ch-expand");
+	function all() { return document.querySelectorAll("details.ch-desc, details.ch-open, details.ch-papers, details.ch-paper"); }
+	if (b) b.addEventListener("click", function () {
+		var open = b.textContent === b.dataset.open;
+		all().forEach(function (d) { d.open = open; });
+		b.textContent = open ? b.dataset.close : b.dataset.open;
+	});
+	function reveal() {
+		var t = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+		for (var e = t; e; e = e.parentElement) if (e.tagName === "DETAILS") e.open = true;
+		if (t) t.scrollIntoView({ block: "start" });
+	}
+	window.addEventListener("hashchange", reveal);
+	reveal();
+})();
+</script>
+</article>
+</main>
+<footer>
+	Số liệu cập nhật đến ngày 2026-11-27, giai đoạn 2020&ndash;2027.
+	<a href="/vn-at-top-ai-conference/about/">Nguồn và giới hạn</a>
+</footer>
+<script src="/vn-at-top-ai-conference/site.js?v=4461717211" defer></script>
+<script data-goatcounter="https://thanhlexyz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

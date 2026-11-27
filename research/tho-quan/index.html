@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hướng nghiên cứu: Quản Thành Thơ | Vietnam AIRankings</title>
+	<link rel="icon" href="/vn-at-top-ai-conference/favicon.svg" type="image/svg+xml">
+	<link rel="icon" href="/vn-at-top-ai-conference/favicon-32.png" type="image/png" sizes="32x32">
+	<link rel="apple-touch-icon" href="/vn-at-top-ai-conference/apple-touch-icon.png">
+	<script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+	<link rel="stylesheet" type="text/css" href="/vn-at-top-ai-conference/style.css?v=1786604248">
+	<meta name="description" content="Số bài của giảng viên tại Việt Nam ở mười ba hội nghị AI và robot hàng đầu (AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP, ICRA, IROS, RSS) từ năm 2020, xếp hạng theo điểm CSRankings.">
+	<link rel="canonical" href="https://thanhlexyz.github.io/vn-at-top-ai-conference/research/tho-quan/">
+	<meta property="og:site_name" content="Vietnam AIRankings">
+	<meta property="og:title" content="Hướng nghiên cứu: Quản Thành Thơ">
+	<meta property="og:description" content="Số bài của giảng viên tại Việt Nam ở mười ba hội nghị AI và robot hàng đầu (AAAI, IJCAI, ICLR, NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP, ICRA, IROS, RSS) từ năm 2020, xếp hạng theo điểm CSRankings.">
+	<meta property="og:url" content="https://thanhlexyz.github.io/vn-at-top-ai-conference/research/tho-quan/">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="vi_VN">
+	<meta name="twitter:card" content="summary">
+	<meta name="google-site-verification" content="ZF2zUtE9LsOWiwg3KrNvNiRSP0EQ4ULBMv6SMDXSTQQ">
+
+	<meta name="robots" content="index, follow">
+	<link rel="alternate" hreflang="vi" href="https://thanhlexyz.github.io/vn-at-top-ai-conference/research/tho-quan/">
+	<link rel="alternate" hreflang="en" href="https://thanhlexyz.github.io/vn-at-top-ai-conference/en/research/tho-quan/">
+</head>
+<body>
+<nav>
+	<span class="lang" aria-label="Ngôn ngữ">
+	<a href="/vn-at-top-ai-conference/research/tho-quan/" hreflang="vi" lang="vi" class="current" aria-current="true">🇻🇳 VI</a>
+	<a href="/vn-at-top-ai-conference/en/research/tho-quan/" hreflang="en" lang="en">🇬🇧 EN</a>
+	<button class="theme" type="button" title="Chuyển giữa giao diện sáng và tối" aria-label="Chuyển giữa giao diện sáng và tối">🌙</button>
+	</span>
+	<a class="site" href="/vn-at-top-ai-conference/">Vietnam AIRankings</a>
+	<span class="links">
+	<a href="/vn-at-top-ai-conference/">Giảng viên</a>
+	<a href="/vn-at-top-ai-conference/universities/">Trường</a>
+	<a href="/vn-at-top-ai-conference/conferences/">Hội nghị</a>
+	<a href="/vn-at-top-ai-conference/papers/">Bài báo</a>
+	<a href="/vn-at-top-ai-conference/domestic/">Hợp tác trong nước</a>
+	<a href="/vn-at-top-ai-conference/international/">Hợp tác quốc tế</a>
+	<a href="/vn-at-top-ai-conference/research/" class="current">Hướng nghiên cứu</a>
+	<a href="/vn-at-top-ai-conference/about/">Giới thiệu</a>
+	<a href="/vn-at-top-ai-conference/feedback/">Góp ý</a>
+	</span>
+</nav>
+<main>
+<header><h1>Hướng nghiên cứu: Quản Thành Thơ</h1></header>
+<article>
+
+<style>
+.ch-tools { display: flex ; gap: 1em ; align-items: baseline ; flex-wrap: wrap ; }
+.ch-tools button { font: inherit ; font-size: 0.9em ; color: var(--link) ; background: none ; border: 1px solid var(--line) ; border-radius: 4px ; padding: 0.15em 0.6em ; cursor: pointer ; }
+section.ch-topic { margin: 1.8em 0 ; }
+section.ch-topic h2 { font-size: 1.15em ; margin: 0 0 0.3em ; }
+section.ch-topic h2 .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; }
+section.ch-topic h3 { font-size: 0.95em ; margin: 0.8em 0 0.2em ; }
+section.ch-topic ul.open { margin: 0.2em 0 0.6em ; padding-left: 1.4em ; line-height: 1.55 ; }
+.tr { color: var(--muted) ; }
+section.ch-topic ul.open .src { color: var(--muted) ; font-size: 0.85em ; }
+details.ch-papers > summary, details.ch-desc > summary, details.ch-open > summary { cursor: pointer ; color: var(--link) ; margin: 0.4em 0 ; }
+details.ch-paper { margin: 0.4em 0 0.4em 1em ; border-left: 2px solid var(--line) ; padding-left: 0.8em ; }
+details.ch-paper > summary { cursor: pointer ; line-height: 1.5 ; }
+details.ch-paper > summary .t { font-weight: 600 ; }
+details.ch-paper > summary .meta { color: var(--muted) ; font-size: 0.88em ; }
+details.ch-paper dl { margin: 0.4em 0 ; }
+details.ch-paper dt { font-weight: 600 ; margin-top: 0.5em ; }
+details.ch-paper dd { margin: 0.1em 0 0 1.2em ; line-height: 1.55 ; }
+details.ch-paper ul { margin: 0.2em 0 0 ; padding-left: 1.4em ; line-height: 1.55 ; }
+details.ch-paper .ch-link { font-size: 0.88em ; margin: 0.3em 0 0.6em ; }
+</style>
+<p class="ch-tools"><span><a href="/vn-at-top-ai-conference/professors/tho-quan/">Quản Thành Thơ</a> (HCMUT) · <a href="/vn-at-top-ai-conference/research/">Tất cả thầy cô</a></span> <button type="button" class="ch-expand" data-open="Mở tất cả" data-close="Thu gọn tất cả">Mở tất cả</button></p>
+<div class="ch-head"><img src="/vn-at-top-ai-conference/img/people/tho-quan.jpg" alt="" loading="lazy"><div><p>Phương pháp mô hình ngôn ngữ cho mã nguồn, văn bản đa ngôn ngữ và tiếng Việt, cùng lý thuyết về định tuyến mixture-of-experts thưa. Các công trình về <a href="#emnlp2026-fast-and-focused-interactive-repository-level-fill-in-the-mi">thích nghi mô hình ngôn ngữ</a> trong hoàn thành mã, tinh chỉnh, căn chỉnh đa ngôn ngữ, paraphrase, tóm tắt và hình thái tiếng Việt. Các công trình về <a href="#iclr2022-grounding-language-representation-with-visual-object-informa">grounding thị giác theo đối tượng</a> nhằm cải thiện biểu diễn ngôn ngữ qua tiền huấn luyện đa phương thức, đánh giá trên các tác vụ hiểu ngôn ngữ. Các công trình về <a href="#icml2026-geometric-and-stochastic-analysis-of-discontinuities-in-spar">gián đoạn định tuyến mixture-of-experts thưa</a>, phân loại chúng theo hình học và làm mượt việc chọn expert gần các gián đoạn.</p><p><strong>Các hướng nghiên cứu mở.</strong> Các công trình về <a href="#emnlp2026-fast-and-focused-interactive-repository-level-fill-in-the-mi">mở rộng đánh giá, phương pháp</a> sang mô hình quy mô tiên phong và ngôn ngữ ít tài nguyên vẫn còn mở. Các công trình về <a href="#iclr2022-grounding-language-representation-with-visual-object-informa">grounding thị giác theo đối tượng</a> còn thiếu phân tích đóng góp của từng thành phần và so sánh với các baseline mạnh gần đây. Các công trình về <a href="#icml2026-geometric-and-stochastic-analysis-of-discontinuities-in-spar">làm mượt định tuyến expert</a> mới được chứng minh trên mô hình nhỏ và lý thuyết nhiễu loạn ngẫu nhiên, còn bỏ ngỏ hành vi ở quy mô lớn và với nhiễu có cấu trúc.</p></div></div>
+<figure>
+<svg class="ch-fig" viewBox="0 0 834 182" style="--w: 834" role="img" aria-label="Các bài báo theo chủ đề và năm; đường cong nối một bài với bài trước đó của cùng thầy cô mà bài này trích dẫn"><line class="grid" x1="394" y1="22" x2="394" y2="178"/><text class="yr" x="394" y="16" text-anchor="middle">2021</text><line class="grid" x1="514" y1="22" x2="514" y2="178"/><text class="yr" x="514" y="16" text-anchor="middle">2022</text><line class="grid" x1="634" y1="22" x2="634" y2="178"/><text class="yr" x="634" y="16" text-anchor="middle">2024</text><line class="grid" x1="754" y1="22" x2="754" y2="178"/><text class="yr" x="754" y="16" text-anchor="middle">2026</text>
+	<g class="tc0"><text x="8" y="61">Mô hình ngôn ngữ và xử lý ngôn ngữ tự nhiên</text><a href="#emnlp2026-fast-and-focused-interactive-repository-level-fill-in-the-mi"><circle cx="734.5" cy="57" r="7"/><title>Fast and Focused: Interactive Repository-Level Fill-in-the-Middle Code Completion with Hybrid Structural Retrieval (EMNLP 2026)</title></a><a href="#emnlp2026-simpa-restricting-what-experts-see-not-what-they-produce-in-"><circle cx="747.5" cy="57" r="7"/><title>SIMPA: Restricting What Experts See, Not What They Produce, in MoE-PEFT (EMNLP 2026)</title></a><a href="#emnlp2026-transporting-concepts-across-languages-optimal-transport-tow"><circle cx="760.5" cy="57" r="7"/><title>Transporting Concepts Across Languages: Optimal Transport Toward English-Level Performance in Multilingual LLMs (EMNLP 2026)</title></a><a href="#acl2026-when-morphology-hides-in-plain-sight-breaking-the-isolation-"><circle cx="773.5" cy="57" r="7"/><title>When Morphology Hides in Plain Sight: Breaking the Isolation in Vietnamese and Beyond (ACL 2026)</title></a><a href="#aaai2024-lampat-low-rank-adaption-for-multilingual-paraphrasing-using"><circle cx="634" cy="57" r="7"/><title>LAMPAT: Low-Rank Adaption for Multilingual Paraphrasing Using Adversarial Training (AAAI 2024)</title></a><a href="#emnlp2021-enriching-and-controlling-global-semantics-for-text-summariz"><circle cx="394" cy="57" r="7"/><title>Enriching and Controlling Global Semantics for Text Summarization (EMNLP 2021)</title></a></g>
+	<g class="tc1"><text x="8" y="107">Thị giác máy tính và học đa phương thức</text><a href="#iclr2022-grounding-language-representation-with-visual-object-informa"><circle cx="514" cy="103" r="7"/><title>Grounding Language Representation with Visual Object Information via Cross Modal Pretraining (ICLR 2022)</title></a></g>
+	<g class="tc2"><text x="8" y="153">Học sâu và học biểu diễn</text><a href="#icml2026-geometric-and-stochastic-analysis-of-discontinuities-in-spar"><circle cx="747.5" cy="149" r="7"/><title>Geometric and Stochastic Analysis of Discontinuities in Sparse Mixture-of-Experts (ICML 2026)</title></a><a href="#iclr2026-discontinuities-in-sparse-mixture-of-experts-a-measure-stoch"><circle cx="760.5" cy="149" r="7"/><title>Discontinuities in Sparse Mixture-of-Experts: A Measure-Stochastic Analysis (ICLR 2026)</title></a></g>
+</svg>
+<figcaption class="note">Các bài báo và bài nộp theo chủ đề và năm. Mỗi chấm là một bài (bấm để mở); đường cong nối một bài với một bài trước đó mà nó trích dẫn.</figcaption>
+</figure>
+<section class="ch-topic tc0">
+<h2>Mô hình ngôn ngữ và xử lý ngôn ngữ tự nhiên <span class="n" title="Tổng 1/N trên các bài của chủ đề (với N là số tác giả mỗi bài, theo chuẩn CSRankings); các chủ đề được sắp xếp theo điểm này từ cao xuống thấp">(6 bài · điểm CSRankings 1.32)</span></h2>
+<details class="ch-desc"><summary>Mô tả chủ đề</summary>
+<p>Các bài báo gồm hoàn thành mã bằng truy xuất trên cấu trúc kho mã, tinh chỉnh hiệu quả tham số cho mô hình ngôn ngữ mixture-of-experts, căn chỉnh đa ngôn ngữ bằng vận chuyển tối ưu, và bộ mã hóa nhận biết hình vị cho tiếng Việt. Ngoài ra còn có sinh paraphrase đa ngôn ngữ không giám sát và tóm tắt dùng thông tin chủ đề mức tài liệu. Đánh giá dùng các benchmark chuẩn như RepoEval, GLUE, XNLI và CNN/DailyMail.</p><div class="ch-words" aria-label="Các từ đặc trưng nhất trong tóm tắt của chủ đề"><span class="w">code</span><span class="b" style="width: 100%"></span><span class="w">languages</span><span class="b" style="width: 88%"></span><span class="w">english</span><span class="b" style="width: 88%"></span><span class="w">global semantics</span><span class="b" style="width: 80%"></span><span class="w">structural</span><span class="b" style="width: 75%"></span><span class="w">acar</span><span class="b" style="width: 63%"></span></div>
+</details>
+<details class="ch-open"><summary>Vấn đề còn mở (4)</summary>
+<ul class="open"><li>Đánh giá trên các mô hình mã quy mô tiên phong được để lại cho công việc tương lai. <span class="src">(tác giả nêu)</span></li><li>Việc mở rộng mixture-of-experts trong tiền huấn luyện, một cài đặt kernel riêng và quét đầy đủ kích thước khối được để lại cho công việc tương lai. <span class="src">(tác giả nêu)</span></li><li>Các điểm neo thích ứng riêng cho từng ngôn ngữ và căn chỉnh vận chuyển tối ưu trên trạng thái linear-attention được đề xuất làm công việc tương lai. <span class="src">(tác giả nêu)</span></li><li>Mô hình paraphrase vẫn cần cải thiện với thành ngữ, và tập đánh giá chỉ gồm 13 ngôn ngữ, bỏ sót nhiều ngôn ngữ ít tài nguyên. <span class="src">(tác giả nêu)</span></li></ul>
+</details>
+<details class="ch-papers"><summary>Các bài (6)</summary>
+<details class="ch-paper" id="emnlp2026-fast-and-focused-interactive-repository-level-fill-in-the-mi">
+<summary><span class="t">Fast and Focused: Interactive Repository-Level Fill-in-the-Middle Code Completion with Hybrid Structural Retrieval</span> <span class="meta">EMNLP 2026 · <span class="tag accepted">được nhận</span></span></summary>
+<dl><dt>Bài toán</dt><dd>Hoàn thành mã ở mức kho mã (fill-in-the-middle: dự đoán đoạn mã thiếu giữa tiền tố và hậu tố cho trước) khó với mô hình ngôn ngữ khi bằng chứng cần thiết là mã và quan hệ cấu trúc trải rộng qua nhiều tệp thay vì cục bộ.</dd><dt>Ý tưởng</dt><dd>Kết hợp truy xuất từ vựng với truy xuất cấu trúc dựa trên cây cú pháp trừu tượng (AST) và language server protocol (LSP) qua hợp nhất thứ hạng nghịch đảo (reciprocal rank fusion) ở mức dòng, rồi áp dụng hậu xử lý nhận biết cú pháp để căn chỉnh phần hoàn thành với mã xung quanh.</dd><dt>Điểm mạnh</dt><dd>Trên RepoEval, ReccEval và CrossCodeEval (Python, Java, TypeScript, C#; hơn 3.000 kho mã) với Qwen2.5-Coder-3B, báo cáo 42,98 exact match (EM) trên ReccEval và 32,86 trên CrossCodeEval, so với 36,25 và 28,40 của baseline truy xuất mạnh nhất, với chi phí ngoài giải mã 87-95 ms khi bộ nhớ đệm đã nóng.</dd><dt>Vấn đề mở tác giả nêu</dt><dd><ul><li>Đánh giá trên các mô hình mã quy mô tiên phong được để lại cho công việc tương lai.</li></ul></dd>
+</dl>
+<p class="ch-link"><a href="/vn-at-top-ai-conference/papers/#emnlp2026-fast-and-focused-interactive-repository-level-fill-in-the-mi" title="Dòng của bài này ở trang Bài báo">Liên kết</a> · <a href="https://aclanthology.org/2026.emnlp-main.81/" title="Nguồn chính thức của bài báo">Nguồn</a></p>
+</details>
+
+<details class="ch-paper" id="emnlp2026-simpa-restricting-what-experts-see-not-what-they-produce-in-">
+<summary><span class="t">SIMPA: Restricting What Experts See, Not What They Produce, in MoE-PEFT</span> <span class="meta">EMNLP 2026 · <span class="tag accepted">được nhận</span></span></summary>
+<dl><dt>Bài toán</dt><dd>Trong tinh chỉnh hiệu quả tham số kiểu mixture-of-experts (MoE-PEFT), định tuyến bị sụp đổ: trên LLaMA-3 8B với MixLoRA, một expert hấp thụ 82,5% token, và các biện pháp trước đây tác động lên đầu ra của expert nhưng để nguyên góc nhìn đầu vào của từng expert.</dd><dt>Ý tưởng</dt><dd>Giới hạn những gì expert nhìn thấy thay vì những gì chúng tạo ra: đầu vào được ngưỡng hóa theo độ lớn điều khiển một nhánh LoRA (thích nghi hạng thấp) thưa có định tuyến, một nhánh LoRA dày song song đóng vai trò bảo toàn thông tin, và một cổng theo cột hợp nhất hai nhánh. Cùng mặt nạ căn theo khối này điều khiển một kernel GPU Triton.</dd><dt>Điểm mạnh</dt><dd>Với cùng ngân sách 2,9% tham số huấn luyện được, báo cáo 86,2% trên bảy tác vụ suy luận LLaMA-3 8B (&#43;3,9 so với MixDoRA), 38,4 HumanEval Pass@1 và 59,4 GSM8K, cùng 88,7 GLUE / 77,7 SuperGLUE trên T5-base; độ chồng lấn Jaccard của đầu vào expert là 0,184 so với 1,000 của MixLoRA, và tăng tốc suy luận đầu-cuối 1,46 lần trên A100.</dd><dt>Vấn đề mở tác giả nêu</dt><dd><ul><li>Việc mở rộng mixture-of-experts trong giai đoạn tiền huấn luyện vẫn còn bỏ ngỏ.</li><li>Một cài đặt kernel riêng được để lại cho công việc tương lai.</li><li>Quét đầy đủ kích thước khối và tinh chỉnh độ thưa theo từng vị trí được để lại cho công việc tương lai.</li></ul></dd>
+</dl>
+<p class="ch-link"><a href="/vn-at-top-ai-conference/papers/#emnlp2026-simpa-restricting-what-experts-see-not-what-they-produce-in-" title="Dòng của bài này ở trang Bài báo">Liên kết</a> · <a href="https://aclanthology.org/2026.emnlp-main.726/" title="Nguồn chính thức của bài báo">Nguồn</a></p>
+</details>
+
+<details class="ch-paper" id="emnlp2026-transporting-concepts-across-languages-optimal-transport-tow">
+<summary><span class="t">Transporting Concepts Across Languages: Optimal Transport Toward English-Level Performance in Multilingual LLMs</span> <span class="meta">EMNLP 2026 · <span class="tag accepted">được nhận</span></span></summary>
+<dl><dt>Bài toán</dt><dd>Mô hình ngôn ngữ lớn hoạt động mạnh với tiếng Anh, vốn chiếm ưu thế trong dữ liệu tiền huấn luyện, nhưng không đồng đều với các ngôn ngữ khác; căn chỉnh đa ngôn ngữ bằng contrastive làm nhiễu biểu diễn tiếng Anh một cách đối xứng và làm suy giảm năng lực được dùng làm tham chiếu.</dd><dt>Ý tưởng</dt><dd>Một khung vận chuyển tối ưu (optimal transport, OT) ánh xạ phân phối hidden state của ngôn ngữ không phải tiếng Anh về phía tiếng Anh ở các tầng transformer giữa qua các vòng lặp Sinkhorn có điều chuẩn entropy, trong khi một số hạng điều chuẩn nhất quán tiếng Anh giữ điểm neo tiếng Anh đứng yên.</dd><dt>Điểm mạnh</dt><dd>Trên XNLI, XQuAD và MMMLU, báo cáo cải thiện chuyển giao đa ngôn ngữ mà không bị suy giảm tiếng Anh như baseline contrastive; ablation cho thấy cả ba thành phần của hàm mục tiêu đều cần thiết.</dd><dt>Vấn đề mở tác giả nêu</dt><dd><ul><li>Căn chỉnh vận chuyển tối ưu trên trạng thái linear-attention (trạng thái hồi quy nén thay vì hidden state mức token) được để lại cho công việc tương lai.</li><li>Các điểm neo thích ứng, riêng cho từng ngôn ngữ, được đề xuất làm công việc tương lai.</li></ul></dd>
+</dl>
+<p class="ch-link"><a href="/vn-at-top-ai-conference/papers/#emnlp2026-transporting-concepts-across-languages-optimal-transport-tow" title="Dòng của bài này ở trang Bài báo">Liên kết</a> · <a href="https://aclanthology.org/2026.emnlp-main.861/" title="Nguồn chính thức của bài báo">Nguồn</a></p>
+</details>
+
+<details class="ch-paper" id="acl2026-when-morphology-hides-in-plain-sight-breaking-the-isolation-">
+<summary><span class="t">When Morphology Hides in Plain Sight: Breaking the Isolation in Vietnamese and Beyond</span> <span class="meta">ACL 2026 · <span class="tag accepted">được nhận</span></span></summary>
+<dl><dt>Bài toán</dt><dd>Trong các ngôn ngữ đơn lập như tiếng Việt, cấu trúc hình thái được mã hóa bằng cách ghép và sắp xếp các hình vị đơn âm tiết thay vì biến tố, và các bộ mã hóa Transformer chuẩn phần lớn bỏ qua tín hiệu này.</dd><dt>Ý tưởng</dt><dd>Bổ sung cho bộ mã hóa tiếng Việt đã huấn luyện trước hai thiên kiến quy nạp nhẹ: embedding ranh giới hình vị (nhãn BMES: đầu, giữa, cuối, đơn) được hợp nhất vào biểu diễn token qua một cổng học được, và một ma trận attention cấu trúc cố định được đưa vào các tầng self-attention đầu. Thiết kế tương tự được áp dụng cho Chinese-BERT-wwm.</dd><dt>Điểm mạnh</dt><dd>Báo cáo cải thiện nhất quán so với các baseline mạnh trên gán nhãn từ loại (POS), nhận dạng thực thể (NER) và phân loại câu tiếng Việt, lớn nhất ở các tác vụ cú pháp; trên POS và NER tiếng Trung, mô hình điều chỉnh đạt F1 83,16% so với 78,16% với độ chính xác giảm 0,91 điểm phần trăm.</dd><dt>Vấn đề mở tác giả nêu</dt><dd><ul><li>Việc tích hợp với các khung phân đoạn - gán nhãn đồng thời được để lại cho công việc tương lai.</li></ul></dd>
+</dl>
+<p class="ch-link"><a href="/vn-at-top-ai-conference/papers/#acl2026-when-morphology-hides-in-plain-sight-breaking-the-isolation-" title="Dòng của bài này ở trang Bài báo">Liên kết</a> · <a href="https://aclanthology.org/2026.acl-long.472/" title="Nguồn chính thức của bài báo">Nguồn</a></p>
+</details>
+
+<details class="ch-paper" id="aaai2024-lampat-low-rank-adaption-for-multilingual-paraphrasing-using">
+<summary><span class="t">LAMPAT: Low-Rank Adaption for Multilingual Paraphrasing Using Adversarial Training</span> <span class="meta">AAAI 2024 · <span class="tag accepted">được nhận</span></span></summary>
+<dl><dt>Bài toán</dt><dd>Sinh paraphrase đa ngôn ngữ qua dịch máy zero-shot đòi hỏi tập dữ liệu dịch song song, nên không áp dụng được cho các ngôn ngữ không có ngữ liệu song song.</dd><dt>Ý tưởng</dt><dd>Một mô hình sinh paraphrase đa ngôn ngữ không giám sát, dùng thích nghi hạng thấp (LoRA) kết hợp huấn luyện đối kháng và gán nhãn ảo, chỉ cần dữ liệu đơn ngữ.</dd><dt>Điểm mạnh</dt><dd>Báo cáo sinh được câu giống người và đa dạng, hoạt động tốt với tiếng Anh và tổng quát hóa sang các ngôn ngữ chưa thấy, đồng thời đóng góp một tập đánh giá đa ngôn ngữ, đa lĩnh vực gồm 13 ngôn ngữ.</dd><dt>Vấn đề mở tác giả nêu</dt><dd><ul><li>Mô hình vẫn cần cải thiện trong việc xử lý các thành ngữ.</li><li>Tập đánh giá chỉ bao gồm 13 ngôn ngữ, bỏ sót nhiều ngôn ngữ, nhất là các ngôn ngữ ít tài nguyên.</li></ul></dd>
+</dl>
+<p class="ch-link"><a href="/vn-at-top-ai-conference/papers/#aaai2024-lampat-low-rank-adaption-for-multilingual-paraphrasing-using" title="Dòng của bài này ở trang Bài báo">Liên kết</a> · <a href="https://ojs.aaai.org/index.php/AAAI/article/view/29804" title="Nguồn chính thức của bài báo">Nguồn</a></p>
+</details>
+
+<details class="ch-paper" id="emnlp2021-enriching-and-controlling-global-semantics-for-text-summariz">
+<summary><span class="t">Enriching and Controlling Global Semantics for Text Summarization</span> <span class="meta">EMNLP 2021 · <span class="tag accepted">được nhận</span></span></summary>
+<dl><dt>Bài toán</dt><dd>Các mô hình tóm tắt trừu tượng dựa trên Transformer gặp vấn đề phụ thuộc tầm ngắn, tạo ra bản tóm tắt bỏ sót các ý chính của tài liệu.</dd><dt>Ý tưởng</dt><dd>Một mô hình chủ đề nơ-ron được tăng cường bằng normalizing flow nắm bắt ngữ nghĩa toàn cục của tài liệu và đưa vào mô hình tóm tắt, trong khi cơ chế gating theo ngữ cảnh kiểm soát lượng ngữ nghĩa toàn cục đưa vào mô-đun sinh văn bản.</dd><dt>Điểm mạnh</dt><dd>Báo cáo vượt các mô hình tóm tắt tiên tiến trên CNN/DailyMail, XSum, Reddit TIFU, arXiv và PubMed; trên XSum, ROUGE-1 là 49,57 với mô hình đầy đủ so với 48,13 khi dùng mô hình chủ đề dựa trên VAE và 46,83 khi không có gating.</dd>
+</dl>
+<p class="ch-link"><a href="/vn-at-top-ai-conference/papers/#emnlp2021-enriching-and-controlling-global-semantics-for-text-summariz" title="Dòng của bài này ở trang Bài báo">Liên kết</a> · <a href="https://aclanthology.org/2021.emnlp-main.744/" title="Nguồn chính thức của bài báo">Nguồn</a></p>
+</details>
+
+</details>
+</section>
+<section class="ch-topic tc1">
+<h2>Thị giác máy tính và học đa phương thức <span class="n" title="Tổng 1/N trên các bài của chủ đề (với N là số tác giả mỗi bài, theo chuẩn CSRankings); các chủ đề được sắp xếp theo điểm này từ cao xuống thấp">(1 bài · điểm CSRankings 0.33)</span></h2>
+<details class="ch-desc"><summary>Mô tả chủ đề</summary>
+<p>Công trình đặt biểu diễn ngôn ngữ trên thông tin thị giác ở mức đối tượng thay vì đặc trưng CNN của toàn ảnh. Công trình kết hợp mô hình văn bản dựa trên BERT, bộ mã hóa thị giác cho quan hệ giữa đối tượng và cross-modal Transformer, và báo cáo cải thiện so với các mô hình ngôn ngữ baseline trên các tác vụ GLUE và SQuAD.</p><div class="ch-words" aria-label="Các từ đặc trưng nhất trong tóm tắt của chủ đề"><span class="w">visual</span><span class="b" style="width: 100%"></span><span class="w">grounded</span><span class="b" style="width: 67%"></span><span class="w">language representation</span><span class="b" style="width: 53%"></span><span class="w">whole image</span><span class="b" style="width: 53%"></span><span class="w">objects</span><span class="b" style="width: 50%"></span><span class="w">grounding</span><span class="b" style="width: 33%"></span></div>
+</details>
+<details class="ch-open"><summary>Vấn đề còn mở (3)</summary>
+<ul class="open"><li><q>The paper&#39;s ablation studies are lacking analysis of the performance of each of the individual contributions.</q> <span class="tr">(Các ablation của bài báo thiếu phân tích hiệu quả của từng đóng góp riêng lẻ.)</span> <span class="src">(phản biện nêu)</span></li><li><q>The paper does not compare with recent strong baselines</q> <span class="tr">(Bài báo không so sánh với các baseline mạnh gần đây)</span> <span class="src">(phản biện nêu)</span></li><li><q>motivations are not well supported by experiments and analyses.</q> <span class="tr">(các động cơ chưa được hỗ trợ tốt bằng thí nghiệm và phân tích.)</span> <span class="src">(phản biện nêu)</span></li></ul>
+</details>
+<details class="ch-papers"><summary>Các bài (1)</summary>
+<details class="ch-paper" id="iclr2022-grounding-language-representation-with-visual-object-informa">
+<summary><span class="t">Grounding Language Representation with Visual Object Information via Cross Modal Pretraining</span> <span class="meta">ICLR 2022 · <span class="tag withdrawn">bị từ chối</span></span></summary>
+<dl><dt>Bài toán</dt><dd>Học ngôn ngữ có nền tảng thị giác thường trích đặc trưng CNN từ toàn bộ ảnh, vốn chứa nhiều đối tượng và nền hơn câu mô tả và không nắm bắt được quan hệ giữa các đối tượng.</dd><dt>Ý tưởng</dt><dd>Một khung học ngôn ngữ có nền tảng ở mức đối tượng với ba thành phần: mô hình văn bản dựa trên BERT được tiền huấn luyện đa phương thức với cơ chế text-grounding, bộ mã hóa thị giác biểu diễn quan hệ giữa các đối tượng, và cross-modal Transformer căn chỉnh ảnh với văn bản.</dd><dt>Điểm mạnh</dt><dd>Báo cáo vượt các mô hình ngôn ngữ baseline trên các tác vụ của GLUE và SQuAD.</dd><dt>Câu hỏi của phản biện</dt><dd><ul><li><q>The paper&#39;s ablation studies are lacking analysis of the performance of each of the individual contributions.</q> <span class="tr">(Các ablation của bài báo thiếu phân tích hiệu quả của từng đóng góp riêng lẻ.)</span></li><li><q>The paper does not compare with recent strong baselines</q> <span class="tr">(Bài báo không so sánh với các baseline mạnh gần đây)</span></li><li><q>motivations are not well supported by experiments and analyses.</q> <span class="tr">(các động cơ chưa được hỗ trợ tốt bằng thí nghiệm và phân tích.)</span></li></ul></dd>
+</dl>
+<p class="ch-link"><a href="/vn-at-top-ai-conference/papers/#iclr2022-grounding-language-representation-with-visual-object-informa" title="Dòng của bài này ở trang Bài báo">Liên kết</a> · <a href="https://openreview.net/forum?id=Mdn3eM7VHFn" title="Trang OpenReview của bài, kèm nhận xét phản biện công khai">OpenReview</a></p>
+</details>
+
+</details>
+</section>
+<section class="ch-topic tc2">
+<h2>Học sâu và học biểu diễn <span class="n" title="Tổng 1/N trên các bài của chủ đề (với N là số tác giả mỗi bài, theo chuẩn CSRankings); các chủ đề được sắp xếp theo điểm này từ cao xuống thấp">(2 bài · điểm CSRankings 0.29)</span></h2>
+<details class="ch-desc"><summary>Mô tả chủ đề</summary>
+<p>Hai bài báo nghiên cứu sự gián đoạn mà định tuyến Top-k gây ra trong các lớp mixture-of-experts thưa. Các bài phân loại gián đoạn theo bậc bằng lập luận lý thuyết độ đo và phân tích nhiễu loạn ngẫu nhiên như một quá trình khuếch tán, chứng minh rằng gián đoạn bậc thấp chiếm ưu thế. Một cơ chế làm mượt kích hoạt mềm các expert lân cận được đề xuất và đánh giá trên các tác vụ ngôn ngữ và thị giác.</p><div class="ch-words" aria-label="Các từ đặc trưng nhất trong tóm tắt của chủ đề"><span class="w">discontinuity</span><span class="b" style="width: 100%"></span><span class="w">discontinuities</span><span class="b" style="width: 64%"></span><span class="w">sparse mixture-of-experts</span><span class="b" style="width: 58%"></span><span class="w">conditional routing</span><span class="b" style="width: 58%"></span><span class="w">analysis</span><span class="b" style="width: 45%"></span><span class="w">smoe</span><span class="b" style="width: 45%"></span></div>
+</details>
+<details class="ch-open"><summary>Vấn đề còn mở (4)</summary>
+<ul class="open"><li>Các nhiễu loạn đối kháng hoặc có cấu trúc có thể lệch khỏi khuếch tán ngẫu nhiên và khó nghiên cứu hơn; việc xử lý chúng được để lại cho công việc tương lai. <span class="src">(tác giả nêu)</span></li><li><q>All experiments are conducted on relatively small-scale models (e.g., BERT-large with 16 experts, ViT-S/16 with 6 experts).</q> <span class="tr">(Mọi thí nghiệm đều được thực hiện trên các mô hình quy mô tương đối nhỏ (ví dụ BERT-large với 16 expert, ViT-S/16 với 6 expert).)</span> <span class="src">(phản biện nêu)</span></li><li><q>The theoretical analysis establishes that order-1 discontinuities dominate (Theorems 4.2–4.7, 5.1, 5.3), but the smoothing mechanism does not use this.</q> <span class="tr">(Phân tích lý thuyết chứng minh rằng các gián đoạn bậc 1 chiếm ưu thế (Định lý 4.2–4.7, 5.1, 5.3), nhưng cơ chế làm mượt không sử dụng điều này.)</span> <span class="src">(phản biện nêu)</span></li><li><q>they fail to provide any direct empirical comparisons, even on tasks where those methods are perfectly applicable, such as the GLUE benchmark or DomainBed classification.</q> <span class="tr">(họ không cung cấp bất kỳ so sánh thực nghiệm trực tiếp nào, kể cả trên các tác vụ mà những phương pháp đó hoàn toàn áp dụng được, như benchmark GLUE hoặc phân loại DomainBed.)</span> <span class="src">(phản biện nêu)</span></li></ul>
+</details>
+<details class="ch-papers"><summary>Các bài (2)</summary>
+<details class="ch-paper" id="icml2026-geometric-and-stochastic-analysis-of-discontinuities-in-spar">
+<summary><span class="t">Geometric and Stochastic Analysis of Discontinuities in Sparse Mixture-of-Experts</span> <span class="meta">ICML 2026 · <span class="tag accepted">được nhận</span></span></summary>
+<dl><dt>Bài toán</dt><dd>Việc chọn top-k expert trong các lớp sparse mixture-of-experts (SMoE) làm ánh xạ đầu vào - đầu ra gián đoạn: các đầu vào gần nhau tùy ý có thể kích hoạt các tập expert khác nhau và cho đầu ra khác biệt đáng kể.</dd><dt>Ý tưởng</dt><dd>Phân loại các gián đoạn theo bậc (số expert bằng điểm tại một sự kiện chuyển đổi), ước lượng thể tích bằng kỹ thuật cắt lát lý thuyết độ đo, mô hình hóa nhiễu loạn đầu vào ngẫu nhiên bằng quá trình khuếch tán để chặn thời gian chạm và thời gian lưu, và đề xuất cơ chế làm mượt đưa mềm các expert gần gián đoạn vào.</dd><dt>Điểm mạnh</dt><dd>Chứng minh rằng các tập gián đoạn bậc thấp chiếm ưu thế về thể tích và lần chạm đầu tiên của đường khuếch tán gần như chắc chắn nằm trên gián đoạn bậc 1; báo cáo rằng làm mượt đảm bảo tính liên tục và cải thiện hiệu quả trên các tác vụ ngôn ngữ và thị giác.</dd><dt>Câu hỏi của phản biện</dt><dd><ul><li><q>The primary stochastic analysis is based on a driftless diffusion $dx_t = \sigma dB_t$, which substantially departs from practical scenarios such as adversarial perturbations or SGD noise.</q> <span class="tr">(Phân tích ngẫu nhiên chính dựa trên một khuếch tán không có drift $dx_t = \sigma dB_t$, khác đáng kể so với các kịch bản thực tế như nhiễu loạn đối kháng hoặc nhiễu SGD.)</span></li><li><q>All experiments are conducted on relatively small-scale models (e.g., BERT-large with 16 experts, ViT-S/16 with 6 experts).</q> <span class="tr">(Mọi thí nghiệm đều được thực hiện trên các mô hình quy mô tương đối nhỏ (ví dụ BERT-large với 16 expert, ViT-S/16 với 6 expert).)</span></li><li><q>The theoretical analysis establishes that order-1 discontinuities dominate (Theorems 4.2–4.7, 5.1, 5.3), but the smoothing mechanism does not use this.</q> <span class="tr">(Phân tích lý thuyết chứng minh rằng các gián đoạn bậc 1 chiếm ưu thế (Định lý 4.2–4.7, 5.1, 5.3), nhưng cơ chế làm mượt không sử dụng điều này.)</span></li><li><q>The claim of &#34;consistent improvements&#34; in Sections 7.3–7.4 overstates what the numbers show.</q> <span class="tr">(Khẳng định về &#34;cải thiện nhất quán&#34; trong các Mục 7.3–7.4 phóng đại những gì các con số cho thấy.)</span></li></ul></dd>
+</dl>
+<p class="ch-link"><a href="/vn-at-top-ai-conference/papers/#icml2026-geometric-and-stochastic-analysis-of-discontinuities-in-spar" title="Dòng của bài này ở trang Bài báo">Liên kết</a> · <a href="https://openreview.net/forum?id=AyrNR1ExN5" title="Trang OpenReview của bài, kèm nhận xét phản biện công khai">OpenReview</a></p>
+</details>
+
+<details class="ch-paper" id="iclr2026-discontinuities-in-sparse-mixture-of-experts-a-measure-stoch">
+<summary><span class="t">Discontinuities in Sparse Mixture-of-Experts: A Measure-Stochastic Analysis</span> <span class="meta">ICLR 2026 · <span class="tag desk_rejected">bị loại sơ bộ</span></span></summary>
+<dl><dt>Bài toán</dt><dd>Việc chọn top-k expert trong các lớp sparse mixture-of-experts (SMoE) làm ánh xạ đầu vào - đầu ra gián đoạn: các đầu vào gần nhau tùy ý có thể kích hoạt các tập expert khác nhau và cho đầu ra khác biệt đáng kể.</dd><dt>Ý tưởng</dt><dd>Phân loại các gián đoạn theo bậc (số expert bằng điểm tại một sự kiện chuyển đổi), ước lượng thể tích bằng kỹ thuật cắt lát lý thuyết độ đo, mô hình hóa nhiễu loạn đầu vào ngẫu nhiên bằng quá trình khuếch tán để chặn thời gian chạm và thời gian lưu, và đề xuất cơ chế làm mượt đưa mềm các expert gần gián đoạn vào.</dd><dt>Điểm mạnh</dt><dd>Chứng minh rằng các tập gián đoạn bậc thấp chiếm ưu thế về thể tích và lần chạm đầu tiên của đường khuếch tán gần như chắc chắn nằm trên gián đoạn bậc 1, với chặn xác suất hữu hạn tường minh; báo cáo cơ chế làm mượt giữ chi phí tính toán thêm ở mức nhỏ.</dd><dt>Vấn đề mở tác giả nêu</dt><dd><ul><li>Các nhiễu loạn đối kháng hoặc có cấu trúc có thể lệch khỏi khuếch tán ngẫu nhiên và khó nghiên cứu hơn; việc xử lý chúng được để lại cho công việc tương lai.</li></ul></dd><dt>Câu hỏi của phản biện</dt><dd><ul><li><q>Moreover what matters in practice, e.g. in an adversarial setting or for gradients under the proposed smoothing method, is distance in $x$ space.</q> <span class="tr">(Hơn nữa, điều quan trọng trong thực tế, ví dụ trong bối cảnh đối kháng hoặc với gradient dưới phương pháp làm mượt được đề xuất, là khoảng cách trong không gian $x$.)</span></li><li><q>Is the smoothing useful at test or does it primarily help by giving more informative gradients during training?</q> <span class="tr">(Làm mượt có hữu ích khi kiểm thử hay chủ yếu giúp bằng cách cho gradient nhiều thông tin hơn trong lúc huấn luyện?)</span></li><li><q>they fail to provide any direct empirical comparisons, even on tasks where those methods are perfectly applicable, such as the GLUE benchmark or DomainBed classification.</q> <span class="tr">(họ không cung cấp bất kỳ so sánh thực nghiệm trực tiếp nào, kể cả trên các tác vụ mà những phương pháp đó hoàn toàn áp dụng được, như benchmark GLUE hoặc phân loại DomainBed.)</span></li><li><q>Smoothing ablation on very large LLMs (e.g., &gt;7B) not shown.</q> <span class="tr">(Chưa trình bày ablation làm mượt trên các LLM rất lớn (ví dụ &gt;7B).)</span></li></ul></dd>
+</dl>
+<p class="ch-link"><a href="/vn-at-top-ai-conference/papers/#iclr2026-discontinuities-in-sparse-mixture-of-experts-a-measure-stoch" title="Dòng của bài này ở trang Bài báo">Liên kết</a> · <a href="https://openreview.net/forum?id=hQElhp8NWW" title="Trang OpenReview của bài, kèm nhận xét phản biện công khai">OpenReview</a></p>
+</details>
+
+</details>
+</section>
+<script>
+(function () {
+	var b = document.querySelector("button.ch-expand");
+	function all() { return document.querySelectorAll("details.ch-desc, details.ch-open, details.ch-papers, details.ch-paper"); }
+	if (b) b.addEventListener("click", function () {
+		var open = b.textContent === b.dataset.open;
+		all().forEach(function (d) { d.open = open; });
+		b.textContent = open ? b.dataset.close : b.dataset.open;
+	});
+	function reveal() {
+		var t = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+		for (var e = t; e; e = e.parentElement) if (e.tagName === "DETAILS") e.open = true;
+		if (t) t.scrollIntoView({ block: "start" });
+	}
+	window.addEventListener("hashchange", reveal);
+	reveal();
+})();
+</script>
+</article>
+</main>
+<footer>
+	Số liệu cập nhật đến ngày 2026-11-27, giai đoạn 2020&ndash;2027.
+	<a href="/vn-at-top-ai-conference/about/">Nguồn và giới hạn</a>
+</footer>
+<script src="/vn-at-top-ai-conference/site.js?v=4461717211" defer></script>
+<script data-goatcounter="https://thanhlexyz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
