@@ -491,9 +491,9 @@ def merge_papers(papers):
             if t.get("intro") and all(g.get("gist") for g in groups):
                 t = {**t, "overview": " ".join([t["intro"]] + [g["gist"] for g in groups]),
                      "overview_vi": " ".join([t.get("intro_vi", "")] + [g.get("gist_vi", "") for g in groups]).strip()}
-            if t.get("open_intro") and all(g.get("open_gist") for g in groups):
-                t = {**t, "open_summary": " ".join([t["open_intro"]] + [g["open_gist"] for g in groups]),
-                     "open_summary_vi": " ".join([t.get("open_intro_vi", "")] + [g.get("open_gist_vi", "") for g in groups]).strip()}
+            if all(g.get("open_gist") for g in groups):
+                t = {**t, "open_summary": " ".join(g["open_gist"] for g in groups),
+                     "open_summary_vi": " ".join(g.get("open_gist_vi", "") for g in groups).strip()}
         people[prof["slug"]] = {"name": prof["name"], "name_vi": prof["name_vi"], "institution": prof["institution_short"],
                                 "image": prof.get("image") or "", "figure": fig,
                                 "open_summary": t.get("open_summary", ""), "open_summary_vi": t.get("open_summary_vi", ""),
