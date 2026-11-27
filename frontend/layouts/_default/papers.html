@@ -5,8 +5,9 @@
 {{- if not site.Params.showNonAcceptedTitles }}{{ $papers = where $papers "status" "accepted" }}{{ end }}
 <div class="table-box">
 <p class="table-tools"><button type="button" class="more-columns" aria-expanded="false" data-names="{{ T "cols_hidden" }}" aria-controls="papers-table" data-show="{{ T "cols_show" }}" data-show-one="{{ T "cols_show_one" }}" data-hide="{{ T "cols_hide" }}">{{ T "cols_show" }}</button></p>
+<nav class="pager" aria-controls="papers-table" aria-label="{{ T "pager_label" }}" data-prev="{{ T "pager_prev" }}" data-next="{{ T "pager_next" }}" hidden></nav>
 <div class="scroll">
-<table id="papers-table" class="collapsed" data-collapsible data-page-size="50">
+<table id="papers-table" class="collapsed" data-collapsible data-page-size="25">
 	<thead>
 	<tr>
 		<th class="l">{{ T "th_venue" }}</th>

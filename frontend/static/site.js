@@ -259,32 +259,45 @@
 
 	document.querySelectorAll("table[data-page-size]").forEach(function (table) {
 		var size = parseInt(table.dataset.pageSize, 10), body = table.tBodies[0];
-		var nav = table.id && document.querySelector('nav.pager[aria-controls="' + table.id + '"]');
-		if (!size || !nav) return;
+		var navs = table.id ? Array.prototype.slice.call(document.querySelectorAll('nav.pager[aria-controls="' + table.id + '"]')) : [];
+		if (!size || !navs.length) return;
 		function rows() { return Array.prototype.filter.call(body.rows, function (tr) { return !tr.classList.contains("total"); }); }
-		function link(label, page, current, disabled) {
+		function link(nav, label, page, current, disabled) {
 			var b = document.createElement("button");
 			b.type = "button";
 			b.textContent = label;
 			if (current) b.setAttribute("aria-current", "page");
 			if (disabled) b.disabled = true;
-			b.addEventListener("click", function () { show(page, true); });
+			b.addEventListener("click", function () { show(page, nav, label); });
 			return b;
 		}
-		function show(page, scroll) {
+		function show(page, from, label) {
+			var keep = from && from.nodeType ? from : null;
+			var before = keep ? keep.getBoundingClientRect().top : 0;
 			var all = rows(), pages = Math.max(1, Math.ceil(all.length / size));
 			page = Math.max(0, Math.min(page, pages - 1));
 			all.forEach(function (tr, k) { tr.classList.toggle("off-page", Math.floor(k / size) !== page); });
-			nav.innerHTML = "";
-			nav.hidden = pages < 2;
-			nav.appendChild(link(nav.dataset.prev, page - 1, false, page === 0));
-			for (var p = 0; p < pages; p++) nav.appendChild(link(String(p + 1), p, p === page, false));
-			nav.appendChild(link(nav.dataset.next, page + 1, false, page === pages - 1));
-			if (scroll) table.scrollIntoView({ block: "start" });
+			navs.forEach(function (nav) {
+				nav.innerHTML = "";
+				nav.hidden = pages < 2;
+				nav.appendChild(link(nav, nav.dataset.prev, page - 1, false, page === 0));
+				for (var p = 0; p < pages; p++) nav.appendChild(link(nav, String(p + 1), p, p === page, false));
+				nav.appendChild(link(nav, nav.dataset.next, page + 1, false, page === pages - 1));
+			});
 			window.dispatchEvent(new Event("resize"));
+			if (keep) {
+				window.scrollBy(0, keep.getBoundingClientRect().top - before);
+				requestAnimationFrame(function () { window.scrollBy(0, keep.getBoundingClientRect().top - before); });
+				var again = Array.prototype.find.call(keep.querySelectorAll("button"), function (b) { return b.textContent === label && !b.disabled; })
+					|| keep.querySelector('[aria-current="page"]');
+				if (again) again.focus({ preventScroll: true });
+			}
 		}
 		table.paginate = show;
-		show(0, false);
+		var target = location.hash ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
+		var index = target ? rows().indexOf(target) : -1;
+		show(index > 0 ? Math.floor(index / size) : 0, false);
+		if (index >= 0) target.scrollIntoView({ block: "center" });
 	});
 
 	document.querySelectorAll("table").forEach(function (table) {
