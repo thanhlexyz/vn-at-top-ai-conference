@@ -7,6 +7,7 @@ ul.ch-index:not(.all) li.zero { display: none ; }
 ul.ch-index .gist { margin: 0.25em 0 0 0 ; }
 ul.ch-index ul.gl { margin: 0.2em 0 0 0 ; padding-left: 1.3em ; list-style: disc ; }
 ul.ch-index ul.gl li { margin: 0.2em 0 ; }
+ul.ch-index .cnt { color: var(--muted) ; font-size: 0.88em ; white-space: nowrap ; }
 ul.ch-index .inst { color: var(--muted) ; font-size: 0.9em ; }
 .ch-filter { display: flex ; flex-wrap: wrap ; gap: 0.4em ; position: sticky ; top: 0 ; z-index: 5 ; background: var(--bg) ; padding: 0.5em 0 ; border-bottom: 1px solid var(--line) ; }
 .ch-filter button.hl { background: color-mix(in srgb, var(--link) 22%, var(--bg)) ; border-color: var(--link) ; box-shadow: 0 0 0 2px color-mix(in srgb, var(--link) 35%, transparent) ; }
@@ -25,9 +26,9 @@ h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; 
 {{- range .professors }}
 	<li data-areas="{{ range .areas }}{{ .key }}:{{ .score }} {{ end }}" data-score="{{ .score }}"><span class="st" title="{{ cond .done (T "ch_done") (T "ch_building") }}">{{ if .done }}✅{{ else }}🚧{{ end }}</span> <a href="{{ printf "challenges/%s/" .slug | relLangURL }}"><strong>{{ if $vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end }}</strong></a> <span class="inst">({{ .institution }} · <span class="sc" title="{{ T "ch_top_score_tip" }}"><b>{{ printf "%.2f" .score }}</b></span>)</span> {{- $base := printf "href=\"%s#" (printf "challenges/%s/" .slug | relLangURL) }}
 	<div class="gist" data-area="">
-	{{- if .gist_list }}<ul class="gl">{{ range .gist_list }}<li data-topic="{{ .key }}">{{ replace (cond $vi .vi .en) "href=\"#" $base | safeHTML }}</li>{{ end }}</ul>
+	{{- if .gist_list }}<ul class="gl">{{ range .gist_list }}<li data-topic="{{ .key }}">{{ replace (cond $vi .vi .en) "href=\"#" $base | safeHTML }} <span class="cnt" title="{{ T "ch_line_tip" }}">({{ T "ch_n_papers" .n }} · {{ printf "%.2f" .score }})</span></li>{{ end }}</ul>
 	{{- else }}{{ if $vi }}{{ .focus_vi }}{{ else }}{{ .focus }}{{ end }}{{ end }}</div>
-	{{- range $k, $v := .gists }}<div class="gist" data-area="{{ $k }}" hidden>{{ replace (cond $vi $v.vi $v.en) "href=\"#" $base | safeHTML }}</div>{{ end }}</li>
+	{{- range $k, $v := .gists }}<div class="gist" data-area="{{ $k }}" hidden>{{ replace (cond $vi $v.vi $v.en) "href=\"#" $base | safeHTML }} <span class="cnt" title="{{ T "ch_line_tip" }}">({{ T "ch_n_papers" $v.n }} · {{ printf "%.2f" $v.score }})</span></div>{{ end }}</li>
 {{- end }}
 </ul>
 <p class="table-tools"><button type="button" class="ch-more" hidden data-show="{{ T "ch_more_show" }}" data-hide="{{ T "ch_more_hide" }}"></button></p>

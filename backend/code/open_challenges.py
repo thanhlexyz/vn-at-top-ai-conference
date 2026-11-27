@@ -623,10 +623,10 @@ def merge_papers(papers):
         for g in sorted(d["topics"], key=lambda g: -g["score_accepted"]):
             for k in ([g["key"]] if g.get("key") else labels.get((x["slug"], g["title"]), [])):
                 if k not in gists and g.get("gist"):
-                    gists[k] = {"en": linkify(g.get("gist", ""), valid),
+                    gists[k] = {"n": len(g["papers"]), "score": g["score_accepted"], "en": linkify(g.get("gist", ""), valid),
                                 "vi": polite_text(linkify(g.get("gist_vi", ""), valid), honor.get(x["slug"]), x["name_vi"], x["name"])}
         x["gists"] = gists
-        x["gist_list"] = [{"key": g.get("key") or next(iter(labels.get((x["slug"], g["title"]), [])), ""), "en": linkify(g["gist"], valid),
+        x["gist_list"] = [{"n": len(g["papers"]), "score": g["score_accepted"], "key": g.get("key") or next(iter(labels.get((x["slug"], g["title"]), [])), ""), "en": linkify(g["gist"], valid),
                            "vi": polite_text(linkify(g.get("gist_vi", ""), valid), honor.get(x["slug"]), x["name_vi"], x["name"])}
                           for g in d["topics"] if g.get("gist")]
     counts = {t["key"]: sum(1 for x in index if any(r["key"] == t["key"] and r["score"] > 0 for r in x["areas"])) for t in taxonomy["topics"]}
