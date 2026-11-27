@@ -606,3 +606,35 @@ other = "Năm qua"
 other = "Bấm để chỉ xem năm qua (các bài có kết quả từ {{ .From }})"
 [tip_period_total]
 other = "Bấm để xem tổng từ 2020"
+[ch_none]
+other = "Chưa có tổng hợp."
+[ch_sources]
+other = "Viết từ {{ .Papers }} bài ở trang Bài báo: tóm tắt của bài, chính văn bản bài khi đọc được ({{ .Text }} bài) và nhận xét phản biện công khai trên OpenReview ({{ .Reviews }} bài), đọc ngày {{ .Date }}."
+[ch_all]
+other = "Tất cả giảng viên"
+[ch_problem]
+other = "Bài toán"
+[ch_technique]
+other = "Ý tưởng"
+[ch_strength]
+other = "Điểm mạnh"
+[ch_authors]
+other = "Tác giả còn để ngỏ"
+[ch_reviewers]
+other = "Câu hỏi của phản biện"
+[ch_expand]
+other = "Mở tất cả"
+[ch_collapse]
+other = "Thu gọn tất cả"
+[ch_n_papers]
+other = "{{ . }} bài"
+[ch_papers]
+other = "Các bài ({{ . }})"
+[ch_open]
+other = "Vấn đề còn mở"
+[ch_src_authors]
+other = "tác giả nêu"
+[ch_src_reviewers]
+other = "phản biện nêu"
+[ch_on_papers]
+other = "Bài này ở trang Bài báo"

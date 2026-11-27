@@ -190,6 +190,31 @@ The MELD detector was removed on 2026-11-25 in commit 4118d8b (its parent, 8d267
   "Review scores" (score(confidence), from `fetch_reviews.py` into `reviews.json`) and "AI score" columns are
   `data-extra`: hidden until the reader presses "More columns".
 
+## Open challenges (`/challenges/`, `/challenges/<professor>/`)
+
+Public pages, written for students and researchers from any area of computer science (jargon explained), from the
+papers on the Papers page only (never from under-review submissions). `/challenges/` lists each professor with a
+plain summary of what they work on, linked to their page; a professor page has an overview of their work and then,
+paper by paper (rejected and withdrawn included, outcome shown as on the Papers page): the problem, the idea, its
+strengths, what the authors leave open and the questions raised in the public reviews. Each paper title links to
+its row on the Papers page (`papers/#<id>`, the pager opens the right page).
+`backend/code/open_challenges.py <step>`:
+- `pdfs`: PDFs that are not on OpenReview (ACL Anthology, IJCAI, CVF, then OpenAlex and arXiv by exact title; AAAI and
+  IEEE only through arXiv, their sites block scripts). `orpdfs`: OpenReview PDFs through the logged-in API (`get_pdf`;
+  the website answers 403); the account is rate limited, so run one worker.
+- `reviews`: OpenReview decision, meta-review and reviews of ICLR, NeurIPS and ICML papers as Markdown.
+- `chunks`: per-paper bundles of the paper's own limitations / future work and the reviewers' weaknesses and
+  questions (`backend/work/challenges/papers/`); agents write draft points per paper into `chunk_<k>.json`.
+- `about`: abstracts (OpenAlex, else the PDF's first page) into `abstracts.json`.
+- `final`: bundles of abstract, review summaries and the draft points (`final/`); agents write the plain-language
+  `problem`, `technique`, `strength`, `authors`, `reviewers` per paper (both languages) into `final/chunk_<k>.json`.
+  Professor profiles (`focus` for the list, `overview` for the page) go into `summary_in/part_<k>.json`.
+- `merge`: everything into `frontend/data/challenges.json` (the list) and `challenges_people.json`, and one content
+  page per professor with at least one paper entry.
+PDFs, bundles and agent output live in the git-ignored `backend/work/`; only the merged data and pages are committed.
+Never name reviewers or mention scores, decisions, originality allegations or discussion-period dates; a missing PDF
+means the text was unavailable, never that a paper states no limitations. Rerun from `chunks` when more PDFs arrive.
+
 ## ICLR submissions under review
 
 Hand matches go in `work/under_review_decisions.json`: `{"add": <arXiv id or page address>, "professors": [slugs]}` for a

@@ -611,3 +611,35 @@ other = "Last year"
 other = "Click to show the last year only (papers decided since {{ .From }})"
 [tip_period_total]
 other = "Click to show the totals since 2020"
+[ch_none]
+other = "No summary yet."
+[ch_sources]
+other = "Written from {{ .Papers }} papers on the Papers page: their abstracts, their own text where we could read it ({{ .Text }} papers) and the public OpenReview reviews ({{ .Reviews }} papers), read {{ .Date }}."
+[ch_all]
+other = "All professors"
+[ch_problem]
+other = "The problem"
+[ch_technique]
+other = "The idea"
+[ch_strength]
+other = "Strengths"
+[ch_authors]
+other = "What the authors leave open"
+[ch_reviewers]
+other = "Questions raised by reviewers"
+[ch_expand]
+other = "Expand all"
+[ch_collapse]
+other = "Collapse all"
+[ch_n_papers]
+other = "{{ . }} papers"
+[ch_papers]
+other = "Papers ({{ . }})"
+[ch_open]
+other = "Open questions"
+[ch_src_authors]
+other = "stated by the authors"
+[ch_src_reviewers]
+other = "raised by reviewers"
+[ch_on_papers]
+other = "This paper on the Papers page"

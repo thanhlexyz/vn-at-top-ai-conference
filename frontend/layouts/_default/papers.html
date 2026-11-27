@@ -45,7 +45,7 @@
 	{{- end }}
 	{{- end }}
 	{{- range $k, $_ := $papers }}
-	<tr{{ if ge $k 50 }} class="off-page"{{ end }}>
+	<tr id="{{ .id }}"{{ if ge $k 30 }} class="off-page"{{ end }}>
 		<td class="l venue-year"><a href="{{ printf "conferences/%s/" .venue | relLangURL }}">{{ .venue_name }}</a>&rsquo;{{ printf "%02d" (mod .year 100) }}</td>
 		<td class="l">{{ $tag := printf "<span class=\"tag %s\">%s</span>" .status (T (printf "status_%s" .status)) }}
 			{{- if strings.Contains .url "openreview.net" }}<a class="tag-link" href="{{ .url }}" title="{{ T "tip_openreview_decision" }}">{{ $tag | safeHTML }}</a>{{ else }}{{ $tag | safeHTML }}{{ end }}{{ with .pres }} {{ . }}{{ if in (slice "oral" "spotlight" "highlight") (lower .) }} 🎉{{ end }}{{ end }}{{ if .unofficial }} <span class="tag own" title="{{ .match }}">{{ T "unofficial" }}</span>{{ end }}</td>

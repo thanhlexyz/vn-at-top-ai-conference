@@ -1,0 +1,12 @@
+{{- $vi := .vi }}{{ $p := .p }}
+<details class="ch-paper" id="{{ $p.id }}">
+<summary><span class="t">{{ $p.title }}</span> <span class="meta">{{ $p.venue_name }} {{ $p.year }}{{ if ne $p.status "accepted" }} · <span class="tag {{ $p.status }}">{{ T (printf "status_%s" $p.status) }}</span>{{ end }}</span></summary>
+<dl>
+	{{- with (cond $vi $p.problem_vi $p.problem) }}<dt>{{ T "ch_problem" }}</dt><dd>{{ . }}</dd>{{ end }}
+	{{- with (cond $vi $p.technique_vi $p.technique) }}<dt>{{ T "ch_technique" }}</dt><dd>{{ . }}</dd>{{ end }}
+	{{- with (cond $vi $p.strength_vi $p.strength) }}<dt>{{ T "ch_strength" }}</dt><dd>{{ . }}</dd>{{ end }}
+	{{- with $p.authors }}<dt>{{ T "ch_authors" }}</dt><dd><ul>{{ range . }}<li>{{ if $vi }}{{ .text_vi }}{{ else }}{{ .text }}{{ end }}</li>{{ end }}</ul></dd>{{ end }}
+	{{- with $p.reviewers }}<dt>{{ T "ch_reviewers" }}</dt><dd><ul>{{ range . }}<li>{{ if $vi }}{{ .text_vi }}{{ else }}{{ .text }}{{ end }}</li>{{ end }}</ul></dd>{{ end }}
+</dl>
+<p class="ch-link"><a href="{{ printf "papers/#%s" $p.id | relLangURL }}">{{ T "ch_on_papers" }}</a></p>
+</details>

@@ -131,6 +131,36 @@ def name_key(s):
     return " ".join(sorted(full if len(full) >= 2 else tokens))
 
 
+ACRONYMS = {"LLM": "LLM", "LLMS": "LLMs", "LARS": "LARS", "AI": "AI", "3D": "3D", "2D": "2D", "GNN": "GNN", "GNNS": "GNNs",
+            "RL": "RL", "RLVR": "RLVR", "VLA": "VLA", "VLM": "VLM", "VLMS": "VLMs", "NLP": "NLP", "OOD": "OOD", "GAN": "GAN",
+            "CNN": "CNN", "ML": "ML", "MLP": "MLP", "DPO": "DPO", "SGD": "SGD", "EEG": "EEG", "CT": "CT", "PET": "PET",
+            "LORA": "LoRA", "VIT": "ViT", "VITS": "ViTs", "QA": "QA", "RAG": "RAG"}
+SMALL_WORDS = {"a", "an", "the", "and", "or", "but", "for", "nor", "of", "in", "on", "at", "to", "by", "via", "with", "from",
+               "as", "vs", "into", "over", "under"}
+
+
+def nice_title(title):
+    letters = [c for c in title if c.isalpha()]
+    if not letters or sum(c.isupper() for c in letters) < 0.7 * len(letters):
+        return title
+
+    def word(w, first):
+        if w.upper() in ACRONYMS:
+            return ACRONYMS[w.upper()]
+        if not first and w.lower() in SMALL_WORDS:
+            return w.lower()
+        return w[:1].upper() + w[1:].lower()
+    out, first = [], True
+    for token in re.split(r"(\s+)", title):
+        if not token.strip():
+            out.append(token)
+            continue
+        parts = re.split(r"(-)", token)
+        out.append("".join(p if p == "-" else word(p, first and k == 0) for k, p in enumerate(parts)))
+        first = token.endswith(":")
+    return "".join(out)
+
+
 def norm_title(s):
     s = strip_accents(html.unescape(s or ""))
     s = re.sub(r"\\[a-zA-Z]+|\\.", "", s)

@@ -13,7 +13,7 @@ import sys
 import re
 import urllib.parse
 
-from common import (with_pdf_affiliations, ACCEPTED, DECISION_DATES, RECENT_FROM, is_recent, BACKEND, CSV_DIR, JSON_DIR, CANDIDATES, FRONTEND, LAST_YEAR, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
+from common import (nice_title, with_pdf_affiliations, ACCEPTED, DECISION_DATES, RECENT_FROM, is_recent, BACKEND, CSV_DIR, JSON_DIR, CANDIDATES, FRONTEND, LAST_YEAR, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
                     STATUS_LABEL, VENUE_GROUPS, VENUE_KEYS, VENUE_NAME, VENUES, WORK, YEARS, classify_status, held, in_vietnam,
                     load_roster, name_key, norm_name, norm_title, openreview_venue, PARENT, post_class, presentation, read_csv,
                     read_jsonl_gz, same_institution, slugify, token_key, vn_institutions, write_json)
@@ -735,7 +735,7 @@ def rank_keys_without(counted, venue_year):
 
 
 def page_entry(r, people=None):
-    e = {"year": r["year"], "venue": r["venue"], "venue_name": VENUE_NAME[r["venue"]], "title": r["title"],
+    e = {"year": r["year"], "venue": r["venue"], "venue_name": VENUE_NAME[r["venue"]], "title": nice_title(r["title"]),
          "ai_key": ai_key(r["venue"], r["year"], r["title"]),
          "url": r["url"], "status": r["status"], "status_label": STATUS_LABEL[r["status"]], "pres": r["pres"],
          "authors": ", ".join(r["authors"]), "match": r["match"], "note": r.get("note", ""),
@@ -1426,6 +1426,7 @@ def main():
         e = page_entry(r, [{"slug": p["slug"], "name": p["name"], "name_vi": p["name_vi"]} for p in who])
         mine = {p["slug"] for p in who}
         e["author_links"] = [{"name": a, "slug": holder_of(a, mine)} for a in e.pop("_authors")]
+        e["id"] = f"{r['venue']}{r['year']}-{slugify(r['title'])[:60]}"
         return e
 
     venues = []

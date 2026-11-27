@@ -58,10 +58,15 @@ disableKinds = ['taxonomy', 'term', 'rss']
   pageRef = '/international'
   weight = 6
 [[languages.en.menus.main]]
+  name = 'Open challenges'
+  identifier = 'challenges'
+  pageRef = '/challenges'
+  weight = 7
+[[languages.en.menus.main]]
   name = 'About'
   identifier = 'about'
   pageRef = '/about'
-  weight = 7
+  weight = 8
 
 [[languages.vi.menus.main]]
   name = 'Giảng viên'
@@ -94,7 +99,12 @@ disableKinds = ['taxonomy', 'term', 'rss']
   pageRef = '/international'
   weight = 6
 [[languages.vi.menus.main]]
+  name = 'Thách thức còn mở'
+  identifier = 'challenges'
+  pageRef = '/challenges'
+  weight = 7
+[[languages.vi.menus.main]]
   name = 'Giới thiệu'
   identifier = 'about'
   pageRef = '/about'
-  weight = 7
+  weight = 8
