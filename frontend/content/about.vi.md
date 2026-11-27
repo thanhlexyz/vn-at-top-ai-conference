@@ -75,7 +75,7 @@ Dự án này do **Lê Thành** ([thanhle.xyz](http://thanhle.xyz)) lên ý tư�
 Toàn bộ mã nguồn và dữ liệu được công khai tại [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). Nếu thấy trang hữu ích, bạn có thể tặng dự án một ngôi sao ⭐ trên GitHub, hoặc gửi thông tin bổ sung, đính chính qua trang [Góp ý](../feedback/). Lượt truy cập được thống kê bằng [GoatCounter](https://www.goatcounter.com/) (không dùng cookie và không lưu dữ liệu cá nhân).
 
 **Lời cảm ơn:**
-- **TS. [Võ Sỹ Nam](https://vingen.vinbigdata.org/teams/vo-sy-nam/):** Đã góp ý và gợi ý tách số liệu trên trang [Hội nghị](../conferences/) thành giai đoạn trước và từ năm 2026 để thấy rõ bước chuyển của nghiên cứu AI.
+- **TS. [Võ Sỹ Nam](https://vingen.vinbigdata.org/teams/vo-sy-nam/):** Đã góp ý và gợi ý xem riêng số liệu gần đây để thấy rõ bước chuyển của nghiên cứu AI, nay là chế độ **Năm qua** của bảng trên [trang chủ](../) (bấm **Tổng**).
 - **GS. [Huỳnh Thị Thanh Bình](../professors/huynh-thi-thanh-binh/):** Đã góp ý mở rộng theo dõi thêm EMNLP, ICCV, ECCV, AAAI, IJCAI và phân nhóm theo chuẩn CSRankings.
 - **GS. [ThanhVu Nguyen](https://tvn.roars.dev/):** Tác giả của bộ công cụ đã truyền cảm hứng cho dự án này:
   - [CS Picks](https://cspicks.roars.dev/) — so sánh giảng viên và trường đại học ngành Khoa học Máy tính tại Mỹ theo hướng nghiên cứu và tài trợ NSF.

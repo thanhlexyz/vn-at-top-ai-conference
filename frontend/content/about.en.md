@@ -73,7 +73,7 @@ This project was conceived, designed, and curated by **Thanh Le** ([thanhle.xyz]
 The code and data are open source on [GitHub](https://github.com/thanhlexyz/vn-at-top-ai-conference). If you find this site useful, please consider giving it a ⭐ on GitHub, and feel free to submit corrections on the [Feedback](../feedback/) page. Visitor statistics use [GoatCounter](https://www.goatcounter.com/), which sets no cookies and stores no personal data.
 
 **Acknowledgements:**
-- **Dr. [Vo Sy Nam](https://vingen.vinbigdata.org/teams/vo-sy-nam/):** For insightful feedback and suggesting the pre-/post-2026 split on the [Conferences](../conferences/) page.
+- **Dr. [Vo Sy Nam](https://vingen.vinbigdata.org/teams/vo-sy-nam/):** For insightful feedback and suggesting a recent view of the numbers, now the **Last year** view of the table on the [front page](../) (click **Total**).
 - **Prof. [Huynh Thi Thanh Binh](../professors/huynh-thi-thanh-binh/):** For suggesting the addition of EMNLP, ICCV, ECCV, AAAI, and IJCAI, as well as the CSRankings subfield grouping.
 - **Prof. [ThanhVu Nguyen](https://tvn.roars.dev/):** Whose academic tools inspired this site:
   - [CS Picks](https://cspicks.roars.dev/) — compares US computer science faculty and universities by research strengths and NSF funding.

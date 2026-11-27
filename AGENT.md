@@ -128,7 +128,7 @@ The local-only pages (Candidates, Not tracked) are drafts, but their data (`cand
   in a colleague's record.
 - **Provisional lists:** only ICLR, NeurIPS and ICML lists of the current year (`LAST_YEAR`, today's year in `common.py`)
   can be provisional (fewer than half the entries have a start time, `fetch_accepted.is_provisional`). On 1 January the
-  year rolls over: `YEARS` gains the new year and the before/from split moves. Hard-coded 2026 to update together:
+  year rolls over: `YEARS` gains the new year. Hard-coded 2026 to update together:
   `neurips_2026_only` in `build_site_data.py`, and the heading of `not-tracked.html`.
 - **Matching** (`person_records`): OpenReview records by profile ID first (an OpenReview "rejected" paper that is in an
   accepted list counts as accepted; an unknown outcome becomes rejected when that list exists). Then accepted lists by

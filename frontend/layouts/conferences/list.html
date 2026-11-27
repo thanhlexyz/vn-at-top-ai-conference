@@ -9,7 +9,6 @@
 		<th class="l">{{ T "th_public" }}</th>
 		<th>{{ T "th_Submitted" }}</th>
 		<th class="good">{{ T "th_Accepted" }}</th>
-		{{ partial "split-heads.html" (dict "split" (sub hugo.Data.meta.last_year 1)) }}
 		<th class="bad">{{ T "th_Rejected" }}</th>
 		<th class="est" title="{{ T "tip_rejected_est_venue" }}">{{ T "th_Rejected_est" }}</th>
 		<th class="sub" title="{{ T "tip_submitted_est" }}">{{ T "th_Submitted_est" }}</th>
@@ -28,19 +27,16 @@
 		<td class="l">{{ T "venue_public_full" }}</td>
 		{{ partial "num.html" $t.submitted }}
 		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
-		{{ partial "split-cells.html" (merge . (dict "split" (sub hugo.Data.meta.last_year 1))) }}
 		{{ partial "numc.html" (dict "v" $t.not_accepted "cls" "bad") }}
 		{{- else if eq .rejections "partial" }}
 		<td class="l">{{ T "venue_public_partial" }}</td>
 		<td class="na">&ndash;</td>
 		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
-		{{ partial "split-cells.html" (merge . (dict "split" (sub hugo.Data.meta.last_year 1))) }}
 		<td class="bad">{{ T "venue_n_public" $t.not_accepted }}</td>
 		{{- else }}
 		<td class="l">{{ if in (slice "acl" "emnlp" "cvpr") .key }}{{ T "venue_public_findings" }}{{ else }}{{ T "venue_public_none" }}{{ end }}</td>
 		<td class="na">&ndash;</td>
 		{{ partial "acc.html" (merge $t (dict "cls" "good")) }}
-		{{ partial "split-cells.html" (merge . (dict "split" (sub hugo.Data.meta.last_year 1))) }}
 		{{- if $t.not_accepted }}
 		<td class="bad" title="{{ T "tip_rejected_findings" }}">{{ T "venue_n_public" $t.not_accepted }}</td>
 		{{- else }}

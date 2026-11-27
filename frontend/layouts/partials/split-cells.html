@@ -1,6 +1,0 @@
-{{- $last := .split | default hugo.Data.meta.last_year }}
-{{- $from := 0 }}{{ $from_own := 0 }}
-{{- range .years }}{{ if ge (int .year) (int $last) }}{{ $from = add $from (int .official) }}{{ $from_own = add $from_own (int .own_page) }}{{ end }}{{ end }}
-{{- $before := sub (int .official) $from }}{{ $before_own := sub (int .own_page) $from_own }}
-<td class="good">{{ $before }}{{ if gt $before_own 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" $before_own) }}">+{{ $before_own }}</span>{{ end }}</td>
-<td class="good">{{ $from }}{{ if gt $from_own 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" $from_own) }}">+{{ $from_own }}</span>{{ end }}</td>

@@ -54,14 +54,6 @@ other = "Title"
 other = "Outcome"
 [th_accepted_at]
 other = "Accepted at"
-[th_accepted_before]
-other = "before {{ . }}"
-[tip_accepted_before]
-other = "accepted papers before {{ . }}"
-[th_accepted_year]
-other = "from {{ . }}"
-[tip_accepted_year]
-other = "accepted papers from {{ . }} on"
 [th_total]
 other = "Total"
 [th_own_institution]
