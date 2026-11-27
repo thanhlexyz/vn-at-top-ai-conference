@@ -385,6 +385,30 @@ def verified(entries, papers):
     return dropped
 
 
+def polite(node, title, name_vi, name):
+    if not title or not name_vi or name_vi == name:
+        return node
+    given = name_vi.split()[-1]
+    names = sorted({n for n in (name_vi, name) if n}, key=len, reverse=True)
+    pattern = re.compile(r"(?:(?:thầy|cô|Thầy|Cô)\s+)?(" + "|".join(re.escape(n) for n in names) + r")")
+
+    def fix(text):
+        def one(m):
+            start = m.start() == 0 or re.search(r"[.!?]\s*$", text[:m.start()])
+            return f"{title.capitalize() if start else title} {given}"
+        return pattern.sub(one, text)
+    if isinstance(node, dict):
+        for k, v in node.items():
+            if isinstance(v, str) and k.endswith("_vi") and k != "name_vi":
+                node[k] = fix(v)
+            elif isinstance(v, (dict, list)):
+                polite(v, title, name_vi, name)
+    elif isinstance(node, list):
+        for v in node:
+            polite(v, title, name_vi, name)
+    return node
+
+
 def merge_papers(papers):
     entries = {}
     for f in sorted(FINAL.glob("chunk_*.json")):
@@ -463,6 +487,11 @@ def merge_papers(papers):
         index.append({"slug": prof["slug"], "done": prof["slug"] in done, "name": prof["name"], "name_vi": prof["name_vi"],
                       "institution": prof["institution_short"], "papers": len(mine),
                       **{k: s.get(k, "") for k in ("focus", "focus_vi")}})
+    honor = json.loads((OUT / "honorifics.json").read_text(encoding="utf-8")) if (OUT / "honorifics.json").exists() else {}
+    for slug, d in people.items():
+        polite(d, honor.get(slug), d["name_vi"], d["name"])
+    for x in index:
+        polite(x, honor.get(x["slug"]), x["name_vi"], x["name"])
     (FRONTEND / "data" / "challenges_people.json").write_text(json.dumps(people, ensure_ascii=False, indent=1), encoding="utf-8")
     shown = {x["id"] for p in people.values() for x in p["papers"]}
     known = {paper_id(p): p for p in papers}

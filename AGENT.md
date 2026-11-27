@@ -192,28 +192,31 @@ The MELD detector was removed on 2026-11-25 in commit 4118d8b (its parent, 8d267
 
 ## Open challenges (`/challenges/`, `/challenges/<professor>/`)
 
-Public pages, written for students and researchers from any area of computer science (jargon explained), from the
-papers on the Papers page only (never from under-review submissions). `/challenges/` lists each professor with a
-plain summary of what they work on, linked to their page; a professor page has an overview of their work and then,
-paper by paper (rejected and withdrawn included, outcome shown as on the Papers page): the problem, the idea, its
-strengths, what the authors leave open and the questions raised in the public reviews. Each paper title links to
-its row on the Papers page (`papers/#<id>`, the pager opens the right page).
-`backend/code/open_challenges.py <step>`:
-- `pdfs`: PDFs that are not on OpenReview (ACL Anthology, IJCAI, CVF, then OpenAlex and arXiv by exact title; AAAI and
-  IEEE only through arXiv, their sites block scripts). `orpdfs`: OpenReview PDFs through the logged-in API (`get_pdf`;
-  the website answers 403); the account is rate limited, so run one worker.
-- `reviews`: OpenReview decision, meta-review and reviews of ICLR, NeurIPS and ICML papers as Markdown.
-- `chunks`: per-paper bundles of the paper's own limitations / future work and the reviewers' weaknesses and
-  questions (`backend/work/challenges/papers/`); agents write draft points per paper into `chunk_<k>.json`.
-- `about`: abstracts (OpenAlex, else the PDF's first page) into `abstracts.json`.
-- `final`: bundles of abstract, review summaries and the draft points (`final/`); agents write the plain-language
-  `problem`, `technique`, `strength`, `authors`, `reviewers` per paper (both languages) into `final/chunk_<k>.json`.
-  Professor profiles (`focus` for the list, `overview` for the page) go into `summary_in/part_<k>.json`.
-- `merge`: everything into `frontend/data/challenges.json` (the list) and `challenges_people.json`, and one content
-  page per professor with at least one paper entry.
-PDFs, bundles and agent output live in the git-ignored `backend/work/`; only the merged data and pages are committed.
-Never name reviewers or mention scores, decisions, originality allegations or discussion-period dates; a missing PDF
-means the text was unavailable, never that a paper states no limitations. Rerun from `chunks` when more PDFs arrive.
+Public pages, objective and data-driven: every statement traces to a paper's abstract, its own text or its public
+OpenReview reviews; reviewer concerns are verbatim quotes (checked word for word at merge, unmatched quotes dropped);
+no praise or opinion. Written at the level of a computer-science undergraduate. Built from the Papers page only (never
+from under-review submissions).
+- `/challenges/`: each professor with a short focus line, ✅ when written from the full material, 🚧 otherwise.
+- `/challenges/<slug>/`: portrait; overview and open-challenges paragraphs covering the three top topics; a
+  topic × year figure (dots = papers, curves = citations between the professor's papers, found in the PDFs'
+  reference lists); then topics ordered by their CSRankings score (sum of 1/N authors over the topic's papers, shown
+  in the heading), each with a folded description, topic words, folded open questions (every topic has some) and
+  folded papers (problem, idea, reported results, what the authors leave open, reviewer quotes, outcome tag).
+- Professor pages quote the two paragraphs and link to the challenge page.
+- Vietnamese text calls a professor "thầy/cô + given name" (`polite` in `open_challenges.py`, titles from
+  `backend/work/challenges/honorifics.json`, judged from the portraits); without a photo or a Vietnamese name form the
+  full name stays.
+
+`backend/code/open_challenges.py <step>`: `pdfs` (non-OpenReview PDFs: ACL Anthology, IJCAI, CVF, then OpenAlex and
+arXiv by exact title; AAAI and IEEE only through arXiv), `orpdfs` (OpenReview PDFs through the logged-in API; the
+account is rate limited, run one worker), `reviews` (OpenReview reviews as Markdown), `about` (abstracts), `full
+<slugs>` (one bundle per professor in `backend/work/challenges/full/`: abstract, the paper's own limitations text, path
+of the reviews file), `merge` (agent output `final/chunk_<slug>.json` and `topics/part_<slug>.json` into
+`frontend/data/challenges.json`, `challenges_people.json` and the content pages). A professor is written when all of
+their PDFs are in; the agent brief is kept with the session (fields: per paper problem/technique/strength/authors/
+reviewers quotes; per professor intro and topics with gist, open_gist, summary, open items, papers). PDFs, bundles
+and agent output stay in the git-ignored `backend/work/`. Never mention scores, decisions, originality allegations or
+discussion-period dates; a missing PDF never means a paper states no limitations.
 
 ## ICLR submissions under review
 
