@@ -267,6 +267,141 @@ def review_text(md):
     return " … ".join(out)[:REVIEW_CHARS]
 
 
+TOPIC_COLORS = ["tc0", "tc1", "tc2", "tc3", "tc4", "tc5"]
+STOPWORDS = set("""a an the and or of for in on to by via with from as at is are be been this that these those we our it its their
+which while where when what how than then such can may also into over under between based using use used new novel approach
+approaches method methods model models paper propose proposed show shows results result data task tasks learning framework
+existing however both each more most other only one two three first via through across without within about large significantly
+state art performance achieve achieves improve improves improved study work works problem problems different set even often
+well high low further many several various strong without while including include provide provides make makes thus extensive
+experiments experimental demonstrate demonstrates benchmark benchmarks effective efficient""".split())
+
+
+def reference_text(pdf):
+    run = subprocess.run(["pdftotext", str(pdf), "-"], capture_output=True, timeout=120)
+    text = run.stdout.decode("utf-8", "ignore")
+    m = re.search(r"^\s*references\s*$", text, re.I | re.M)
+    return norm_title(text[m.end():] if m else text[-60000:])
+
+
+def citations(mine):
+    out = []
+    by_year = {x["id"]: x["year"] for x in mine}
+    keys = {x["id"]: norm_title(x["title"]) for x in mine}
+    for x in mine:
+        pdf = PDF_DIR / AREA[x["venue"]] / f"{x['id']}.pdf"
+        if not pdf.exists():
+            continue
+        refs = reference_text(pdf)
+        for y in mine:
+            if y["id"] != x["id"] and len(keys[y["id"]]) > 25 and keys[y["id"]] in refs and by_year[y["id"]] <= by_year[x["id"]]:
+                out.append({"from": x["id"], "to": y["id"]})
+    return out
+
+
+def topic_words(groups, mine, cache, n=6):
+    import collections
+    import math
+
+    def words(text):
+        ws = [w for w in re.findall(r"[a-z][a-z0-9-]{2,}", text.lower()) if w not in STOPWORDS]
+        return ws + [f"{a} {b}" for a, b in zip(ws, ws[1:])]
+    docs = []
+    for g in groups:
+        text = " ".join(x["title"] + " " + (cache.get(x["id"]) or "") for x in mine if x["id"] in g["papers"])
+        docs.append(collections.Counter(words(text)))
+    df = collections.Counter(w for d in docs for w in d)
+    out = []
+    for d in docs:
+        scored = {w: c * math.log(1 + len(docs) / df[w]) * (1.6 if " " in w else 1) for w, c in d.items() if c >= 2}
+        top = sorted(scored.items(), key=lambda kv: -kv[1])
+        picked = []
+        for w, v in top:
+            if any(w in q or q in w for q, _ in picked):
+                continue
+            picked.append((w, v))
+            if len(picked) == n:
+                break
+        m = picked[0][1] if picked else 1
+        out.append([{"word": w, "share": round(100 * v / m)} for w, v in picked])
+    return out
+
+
+def is_other(g):
+    return g["title"].lower().startswith("other")
+
+
+def order_topics(groups, mine, cache, cites):
+    import collections
+    import math
+
+    year = {x["id"]: x["year"] for x in mine}
+    rest = [g for g in groups if not is_other(g)]
+    other = [g for g in groups if is_other(g)]
+    if len(rest) < 3:
+        return sorted(rest, key=lambda g: -sum(year[i] for i in g["papers"]) / len(g["papers"])) + other
+
+    def vec(g):
+        text = " ".join(x["title"] + " " + (cache.get(x["id"]) or "") for x in mine if x["id"] in g["papers"])
+        return collections.Counter(w for w in re.findall(r"[a-z][a-z0-9-]{3,}", text.lower()) if w not in STOPWORDS)
+    vecs = {id(g): vec(g) for g in rest}
+    df = collections.Counter(w for v in vecs.values() for w in v)
+
+    def weight(v):
+        return {w: c * math.log(1 + len(rest) / df[w]) for w, c in v.items()}
+    wv = {k: weight(v) for k, v in vecs.items()}
+
+    def cos(a, b):
+        num = sum(a[w] * b.get(w, 0) for w in a)
+        den = math.sqrt(sum(x * x for x in a.values())) * math.sqrt(sum(x * x for x in b.values())) or 1
+        return num / den
+    topic_of = {i: id(g) for g in rest for i in g["papers"]}
+    linked = collections.Counter()
+    for e in cites:
+        a, b = topic_of.get(e["from"]), topic_of.get(e["to"])
+        if a and b and a != b:
+            linked[frozenset((a, b))] += 1
+    recency = {id(g): sum(year[i] for i in g["papers"]) / len(g["papers"]) for g in rest}
+    lo, hi = min(recency.values()), max(recency.values())
+    fresh = {k: (v - lo) / ((hi - lo) or 1) for k, v in recency.items()}
+    order = [max(rest, key=lambda g: (fresh[id(g)], len(g["papers"])))]
+    left = [g for g in rest if g is not order[0]]
+    while left:
+        last = id(order[-1])
+        nxt = max(left, key=lambda g: cos(wv[last], wv[id(g)]) + 0.15 * linked[frozenset((last, id(g)))] + 0.25 * fresh[id(g)])
+        order.append(nxt)
+        left.remove(nxt)
+    return order + other
+
+
+def figure(groups, mine, cites):
+    years = sorted({x["year"] for x in mine})
+    longest = max(max(len(g["title"]), len(g.get("title_vi") or "")) for g in groups)
+    left, col, row, top = round(min(430, 7.2 * longest + 24)), 120, 46, 34
+    width = left + col * len(years) + 20
+    pos, rows = {}, []
+    for k, g in enumerate(groups):
+        y = top + row * k + row / 2
+        dots = []
+        cell = {}
+        for x in mine:
+            if x["id"] not in g["papers"]:
+                continue
+            i = cell.setdefault(x["year"], 0)
+            cell[x["year"]] += 1
+            cx = left + col * years.index(x["year"]) + col / 2 + (i - 0) * 13 - 13 * (sum(1 for z in mine if z["id"] in g["papers"] and z["year"] == x["year"]) - 1) / 2
+            pos[x["id"]] = (round(cx, 1), round(y, 1))
+            dots.append({"id": x["id"], "x": round(cx, 1), "y": round(y, 1), "title": x["title"], "label": f"{x['venue_name']} {x['year']}"})
+        rows.append({"y": round(y, 1), "color": g["color"], "title": g["title"], "title_vi": g["title_vi"], "dots": dots})
+    edges = []
+    for e in cites:
+        (x1, y1), (x2, y2) = pos[e["from"]], pos[e["to"]]
+        bend = -18 if y1 == y2 else 0
+        edges.append({"d": f"M{x1},{y1} Q{(x1 + x2) / 2},{(y1 + y2) / 2 + bend - abs(x1 - x2) * 0.12} {x2},{y2}"})
+    return {"width": width, "height": round(top + row * len(groups) + 10), "years": [{"year": y, "x": left + col * k + col / 2}
+            for k, y in enumerate(years)], "rows": rows, "edges": edges}
+
+
 def merge_papers(papers):
     entries = {}
     for f in sorted(FINAL.glob("chunk_*.json")):
@@ -275,6 +410,7 @@ def merge_papers(papers):
     summaries = {}
     for f in sorted((OUT / "summary_in").glob("part_*.json")):
         summaries.update(json.loads(f.read_text(encoding="utf-8")))
+    abstracts = json.loads(ABSTRACTS.read_text(encoding="utf-8")) if ABSTRACTS.exists() else {}
     topics = {}
     for f in sorted((OUT / "topics").glob("part_*.json")):
         topics.update(json.loads(f.read_text(encoding="utf-8")))
@@ -286,7 +422,7 @@ def merge_papers(papers):
             e = entries.get(paper_id(p))
             if not e or not any(o["slug"] == prof["slug"] for o in p.get("professors") or []):
                 continue
-            mine.append({"id": paper_id(p), "title": p["title"], "venue_name": p["venue_name"], "year": p["year"],
+            mine.append({"id": paper_id(p), "title": p["title"], "venue": p["venue"], "venue_name": p["venue_name"], "year": p["year"],
                          "status": p["status"], **{k: e.get(k, "") for k in fields},
                          "authors": e.get("authors") or [], "reviewers": e.get("reviewers") or []})
         if not mine:
@@ -295,16 +431,35 @@ def merge_papers(papers):
         t = topics.get(prof["slug"], {})
         ids = [x["id"] for x in mine]
         groups, used = [], set()
+        has_authors = {x["id"] for x in mine if x["authors"]}
         for g in t.get("topics", []):
-            keep = [i for i in g.get("papers", []) if i in ids and i not in used]
+            want = set(g.get("papers", [])) - used
+            keep = [i for i in ids if i in want]
             used.update(keep)
+            opens = []
+            for o in g.get("open", [])[:4]:
+                if not o.get("text"):
+                    continue
+                if o.get("source") == "authors" and not has_authors & set(o.get("papers", [])):
+                    o = {**o, "source": "reviewers"}
+                opens.append(o)
             if keep:
-                groups.append({**g, "papers": keep, "open": [o for o in g.get("open", []) if o.get("text")]})
+                groups.append({**g, "papers": keep, "open": opens})
         rest = [i for i in ids if i not in used]
         if groups and rest:
             groups.append({"title": "Other work", "title_vi": "Các hướng khác", "summary": "", "summary_vi": "", "open": [],
                            "papers": rest})
+        fig = None
+        if groups:
+            cites = citations(mine)
+            groups = order_topics(groups, mine, abstracts, cites)
+            for k, g in enumerate(groups):
+                g["color"] = TOPIC_COLORS[k] if not is_other(g) and k < len(TOPIC_COLORS) else "tc-other"
+            for g, ws in zip(groups, topic_words(groups, mine, abstracts)):
+                g["words"] = ws
+            fig = figure(groups, mine, cites)
         people[prof["slug"]] = {"name": prof["name"], "name_vi": prof["name_vi"], "institution": prof["institution_short"],
+                                "image": prof.get("image") or "", "figure": fig,
                                 "overview": t.get("overview") or s.get("overview", ""),
                                 "overview_vi": t.get("overview_vi") or s.get("overview_vi", ""),
                                 "topics": groups, "papers": mine}

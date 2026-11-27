@@ -23,13 +23,28 @@ details.ch-paper .ch-link { font-size: 0.88em ; margin: 0.3em 0 0.6em ; }
 </style>
 {{- with $d }}
 <p class="ch-tools"><span><a href="{{ printf "professors/%s/" $.Params.professor | relLangURL }}">{{ if $vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end }}</a> ({{ .institution }}) · <a href="{{ "challenges/" | relLangURL }}">{{ T "ch_all" }}</a></span> <button type="button" class="ch-expand" data-open="{{ T "ch_expand" }}" data-close="{{ T "ch_collapse" }}">{{ T "ch_expand" }}</button></p>
-<p>{{ if $vi }}{{ .overview_vi }}{{ else }}{{ .overview }}{{ end }}</p>
+<div class="ch-head">{{ with .image }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}<p>{{ if $vi }}{{ .overview_vi }}{{ else }}{{ .overview }}{{ end }}</p></div>
+{{- with .figure }}
+{{- $h := .height }}
+<figure>
+<svg class="ch-fig" viewBox="0 0 {{ .width }} {{ .height }}" style="--w: {{ .width }}" role="img" aria-label="{{ T "ch_fig_label" }}">
+	{{- range .years }}<line class="grid" x1="{{ .x }}" y1="22" x2="{{ .x }}" y2="{{ sub $h 4 }}"/><text class="yr" x="{{ .x }}" y="16" text-anchor="middle">{{ .year }}</text>{{ end }}
+	{{- range .edges }}<path class="cite" d="{{ .d }}"/>{{ end }}
+	{{- range .rows }}
+	<g class="{{ .color }}"><text x="8" y="{{ add .y 4 }}">{{ if $vi }}{{ .title_vi }}{{ else }}{{ .title }}{{ end }}</text>
+	{{- range .dots }}<a href="#{{ .id }}"><circle cx="{{ .x }}" cy="{{ .y }}" r="7"/><title>{{ .title }} ({{ .label }})</title></a>{{ end }}</g>
+	{{- end }}
+</svg>
+<figcaption class="note">{{ T "ch_fig_caption" }}</figcaption>
+</figure>
+{{- end }}
 {{- $by := dict }}{{ range .papers }}{{ $by = merge $by (dict .id .) }}{{ end }}
 {{- with .topics }}
 {{- range . }}
-<section class="ch-topic">
+<section class="ch-topic {{ .color }}">
 <h2>{{ if $vi }}{{ .title_vi }}{{ else }}{{ .title }}{{ end }} <span class="n">({{ T "ch_n_papers" (len .papers) }})</span></h2>
 <p>{{ if $vi }}{{ .summary_vi }}{{ else }}{{ .summary }}{{ end }}</p>
+{{- with .words }}<div class="ch-words" aria-label="{{ T "ch_words" }}">{{ range . }}<span class="w">{{ .word }}</span><span class="b" style="width: {{ .share }}%"></span>{{ end }}</div>{{ end }}
 {{- with .open }}
 <h3>{{ T "ch_open" }}</h3>
 <ul class="open">{{ range . }}<li>{{ if $vi }}{{ .text_vi }}{{ else }}{{ .text }}{{ end }} <span class="src">({{ if eq .source "reviewers" }}{{ T "ch_src_reviewers" }}{{ else }}{{ T "ch_src_authors" }}{{ end }})</span></li>{{ end }}</ul>

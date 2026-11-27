@@ -632,3 +632,17 @@ ul.under-list li { margin: 0.4em 0 ; }
 .chart .pt { stroke-width: 2 ; }
 .chart .pt.hollow { fill: var(--bg) ; }
 .fig-row.coverage figure { margin-top: 0.5em ; }
+.tc0 { --tc: #2d66bd ; } .tc1 { --tc: #ca5558 ; } .tc2 { --tc: #009cba ; } .tc3 { --tc: #1b7e2a ; } .tc4 { --tc: #8e479d ; } .tc5 { --tc: #ab8704 ; } .tc-other { --tc: #8a8a8a ; }
+svg.ch-fig { width: 100% ; max-width: calc(var(--w) * 1px) ; height: auto ; display: block ; margin: 0.6em 0 0.2em ; }
+svg.ch-fig text { fill: var(--fg) ; font-size: 13px ; }
+svg.ch-fig text.yr { fill: var(--muted) ; font-size: 12px ; }
+svg.ch-fig line.grid { stroke: var(--line) ; opacity: 0.45 ; }
+svg.ch-fig path.cite { fill: none ; stroke: var(--muted) ; stroke-width: 1.4 ; opacity: 0.7 ; }
+svg.ch-fig circle { fill: var(--tc) ; stroke: var(--bg) ; stroke-width: 2 ; }
+svg.ch-fig a:hover circle { stroke: var(--fg) ; }
+.ch-head { display: flex ; gap: 1.2em ; align-items: flex-start ; }
+.ch-head img { width: 96px ; height: 96px ; object-fit: cover ; border-radius: 50% ; flex: none ; }
+section.ch-topic { border-left: 4px solid var(--tc) ; padding-left: 0.9em ; }
+.ch-words { display: grid ; grid-template-columns: max-content 1fr ; gap: 2px 0.6em ; max-width: 26rem ; font-size: 0.85em ; margin: 0.3em 0 0.6em ; }
+.ch-words .w { color: var(--muted) ; text-align: right ; }
+.ch-words .b { align-self: center ; height: 8px ; border-radius: 4px ; background: var(--tc) ; opacity: 0.8 ; }
