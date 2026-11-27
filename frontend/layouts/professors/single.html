@@ -4,7 +4,7 @@
 {{- $iclr := $p.venues.iclr }}
 {{- $fig := 0 }}
 {{- $hon := index hugo.Data.honorifics $p.slug }}
-{{- $who := cond (eq site.Language.Lang "vi") ($hon | default (partial "pname.html" $p)) (cond (ne ($hon | default "") "") (printf "Prof. %s" (index (split $hon " ") 1)) (printf "Prof. %s" $p.name)) }}
+{{- $who := cond (eq site.Language.Lang "vi") ($hon | default (partial "pname.html" $p)) (index hugo.Data.honorifics_en $p.slug | default (printf "Prof. %s" $p.name)) }}
 {{ partial "picture.html" (dict "src" $p.image "source" $p.image_source "alt" (partial "pname.html" $p) "cls" "portrait") }}
 <p>
 	{{ with $p.rank }}{{ if eq site.Language.Lang "vi" }}{{ index (dict "Professor" "Giáo sư" "Full Professor" "Giáo sư" "Associate Professor" "Phó giáo sư" "Assistant Professor" "Trợ lý giáo sư" "Senior Lecturer" "Giảng viên chính" "Lecturer" "Giảng viên" "Lecturer with PhD" "Giảng viên có bằng tiến sĩ" "Instructor" "Giảng viên" "Researcher" "Nghiên cứu viên") . | default . }}{{ else }}{{ . }}{{ end }}, {{ end }}

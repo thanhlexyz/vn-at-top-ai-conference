@@ -1,5 +1,6 @@
 import datetime
 import json
+import unicodedata
 import os
 import re
 import subprocess
@@ -597,6 +598,27 @@ def merge_papers(papers):
         polite(x, honor.get(x["slug"]), x["name_vi"], x["name"])
     who = {slug: f"{honor[slug]} {d['name_vi'].split()[-1]}" for slug, d in people.items() if honor.get(slug) and d.get("name_vi") and d["name_vi"] != d["name"]}
     (FRONTEND / "data" / "honorifics.json").write_text(json.dumps(who, ensure_ascii=False, indent=1), encoding="utf-8")
+    plain = lambda w: unicodedata.normalize("NFD", w.replace("Đ", "D").replace("đ", "d")).encode("ascii", "ignore").decode()
+    who_en = {slug: f"Prof. {plain(w.split()[-1])}" for slug, w in who.items()}
+    (FRONTEND / "data" / "honorifics_en.json").write_text(json.dumps(who_en, ensure_ascii=False, indent=1), encoding="utf-8")
+
+    def prof_en(node, name, label):
+        if isinstance(node, dict):
+            for k, v in node.items():
+                if k in ("papers", "name", "name_vi") or k.endswith("_vi"):
+                    continue
+                if isinstance(v, str):
+                    node[k] = v.replace(name, label)
+                else:
+                    prof_en(v, name, label)
+        elif isinstance(node, list):
+            for i, v in enumerate(node):
+                if isinstance(v, str):
+                    node[i] = v.replace(name, label)
+                else:
+                    prof_en(v, name, label)
+    for slug, d in people.items():
+        prof_en(d, d["name"], who_en.get(slug, f"Prof. {d['name']}"))
     (FRONTEND / "data" / "challenges_people.json").write_text(json.dumps(people, ensure_ascii=False, indent=1), encoding="utf-8")
     shown = {x["id"] for p in people.values() for x in p["papers"]}
     known = {paper_id(p): p for p in papers}
