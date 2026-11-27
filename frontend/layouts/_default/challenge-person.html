@@ -24,8 +24,8 @@ details.ch-paper .ch-link { font-size: 0.88em ; margin: 0.3em 0 0.6em ; }
 </style>
 {{- with $d }}
 <p class="ch-tools"><span><a href="{{ printf "professors/%s/" $.Params.professor | relLangURL }}">{{ if $vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end }}</a> ({{ .institution }}) · <a href="{{ "challenges/" | relLangURL }}">{{ T "ch_all" }}</a></span> <button type="button" class="ch-expand" data-open="{{ T "ch_expand" }}" data-close="{{ T "ch_collapse" }}">{{ T "ch_expand" }}</button></p>
-<div class="ch-head">{{ with .image }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}<div><p>{{ if $vi }}{{ .overview_vi }}{{ else }}{{ .overview }}{{ end }}</p>
-{{- with (cond $vi .open_summary_vi .open_summary) }}<p><strong>{{ T "ch_open_summary" }}</strong> {{ . }}</p>{{ end }}</div></div>
+<div class="ch-head">{{ with .image }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}<div><p>{{ cond $vi .overview_vi .overview | safeHTML }}</p>
+{{- with (cond $vi .open_summary_vi .open_summary) }}<p><strong>{{ T "ch_open_summary" }}</strong> {{ . | safeHTML }}</p>{{ end }}</div></div>
 {{- with .figure }}
 {{- $h := .height }}
 <figure>

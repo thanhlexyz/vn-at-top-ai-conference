@@ -1,23 +1,6 @@
 {
  "professors": [
   {
-   "slug": "tuan-dam",
-   "done": false,
-   "name": "Tuan Dam",
-   "name_vi": "Đàm Quang Tuấn",
-   "institution": "HUST",
-   "papers": 18,
-   "focus": "Sampling-based planning and pure-exploration algorithms for stochastic sequential decision making, centred on Monte-Carlo Tree Search (MCTS) and best-arm identification in multi-armed bandits.",
-   "focus_vi": "Các thuật toán lập kế hoạch dựa trên lấy mẫu và khám phá thuần túy (pure exploration) cho bài toán ra quyết định tuần tự ngẫu nhiên, xoay quanh Monte-Carlo Tree Search (MCTS) và bài toán xác định nhánh tốt nhất (best-arm identification) trong multi-armed bandit.",
-   "score": 5.48,
-   "areas": [
-    {
-     "key": "rl-planning",
-     "score": 5.48
-    }
-   ]
-  },
-  {
    "slug": "ngo-van-linh",
    "done": false,
    "name": "Ngo Van Linh",
@@ -48,6 +31,23 @@
     {
      "key": "efficient-dl",
      "score": 2.36
+    }
+   ]
+  },
+  {
+   "slug": "tuan-dam",
+   "done": true,
+   "name": "Tuan Dam",
+   "name_vi": "Đàm Quang Tuấn",
+   "institution": "HUST",
+   "papers": 19,
+   "focus": "Sampling-based planning and pure-exploration algorithms for stochastic sequential decision making, centred on Monte-Carlo Tree Search (MCTS) and best-arm identification in multi-armed bandits.",
+   "focus_vi": "Các thuật toán lập kế hoạch dựa trên lấy mẫu và khám phá thuần túy (pure exploration) cho bài toán ra quyết định tuần tự ngẫu nhiên, xoay quanh Monte-Carlo Tree Search (MCTS) và bài toán xác định nhánh tốt nhất (best-arm identification) trong multi-armed bandit.",
+   "score": 2.2,
+   "areas": [
+    {
+     "key": "rl-planning",
+     "score": 2.2
     }
    ]
   },
@@ -226,7 +226,7 @@
   },
   {
    "slug": "cuong-pham",
-   "done": false,
+   "done": true,
    "name": "Cuong Pham",
    "name_vi": "Phạm Văn Cường",
    "institution": "PTIT",
@@ -238,10 +238,6 @@
     {
      "key": "vision-multimodal",
      "score": 0.78
-    },
-    {
-     "key": "efficient-dl",
-     "score": 0.6
     }
    ]
   },
@@ -1734,7 +1730,7 @@
    "key": "efficient-dl",
    "title": "Neural network training and efficiency",
    "title_vi": "Huấn luyện và hiệu quả mạng nơ-ron",
-   "count": 17
+   "count": 16
   },
   {
    "key": "trustworthy-ai",
@@ -1792,9 +1788,9 @@
   }
  ],
  "sources": {
-  "papers": 324,
+  "papers": 325,
   "date": "2026-11-27",
-  "with_text": 289,
-  "with_reviews": 187
+  "with_text": 290,
+  "with_reviews": 188
  }
 }

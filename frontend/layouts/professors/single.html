@@ -15,8 +15,9 @@
 {{- $ov := cond $vi .overview_vi .overview }}{{ $op := cond $vi .open_summary_vi .open_summary }}
 {{- if or $ov $op }}
 <blockquote class="ch-quote">
-{{- with $ov }}<p>{{ . }}</p>{{ end }}
-{{- with $op }}<p><strong>{{ T "ch_open_summary" }}</strong> {{ . }}</p>{{ end }}
+{{- $base := printf "href=\"%s#" (printf "challenges/%s/" $p.slug | relLangURL) }}
+{{- with $ov }}<p>{{ replace . "href=\"#" $base | safeHTML }}</p>{{ end }}
+{{- with $op }}<p><strong>{{ T "ch_open_summary" }}</strong> {{ replace . "href=\"#" $base | safeHTML }}</p>{{ end }}
 <p class="ch-more"><a href="{{ printf "challenges/%s/" $p.slug | relLangURL }}">{{ T "ch_read_more" }} →</a></p>
 </blockquote>
 {{- end }}

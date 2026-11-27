@@ -385,6 +385,14 @@ def verified(entries, papers):
     return dropped
 
 
+LINK = re.compile(r"\[([^\]]+)\]\(([^)\s]+)\)")
+
+
+def linkify(text, valid):
+    import html
+    return LINK.sub(lambda m: f'<a href="#{m.group(2)}">{m.group(1)}</a>' if m.group(2) in valid else m.group(1), html.escape(text or "", quote=False))
+
+
 def polite(node, title, name_vi, name):
     if not title or not name_vi or name_vi == name:
         return node
@@ -495,6 +503,9 @@ def merge_papers(papers):
     honor = json.loads((OUT / "honorifics.json").read_text(encoding="utf-8")) if (OUT / "honorifics.json").exists() else {}
     for slug, d in people.items():
         polite(d, honor.get(slug), d["name_vi"], d["name"])
+        valid = {x["id"] for x in d["papers"]}
+        for k in ("overview", "overview_vi", "open_summary", "open_summary_vi"):
+            d[k] = linkify(d.get(k, ""), valid)
     for x in index:
         polite(x, honor.get(x["slug"]), x["name_vi"], x["name"])
     (FRONTEND / "data" / "challenges_people.json").write_text(json.dumps(people, ensure_ascii=False, indent=1), encoding="utf-8")
