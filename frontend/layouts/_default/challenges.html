@@ -2,7 +2,9 @@
 {{- $vi := eq site.Language.Lang "vi" }}
 <style>
 ul.ch-index { list-style: none ; padding: 0 ; }
-ul.ch-index li { margin: 0 0 1.1em ; line-height: 1.55 ; }
+ul.ch-index > li { margin: 0 0 0.9em ; padding: 0.8em 1em ; line-height: 1.55 ; border: 1px solid var(--line) ; border-left: 4px solid var(--line) ; border-radius: 6px ; }
+ul.ch-index > li.odd { background: color-mix(in srgb, var(--link) 5%, var(--bg)) ; border-left-color: var(--link) ; }
+ul.ch-index > li > a { font-size: 1.05em ; }
 ul.ch-index:not(.all) li.zero { display: none ; }
 ul.ch-index .gist { margin: 0.25em 0 0 0 ; }
 ul.ch-index ul.gl { margin: 0.2em 0 0 0 ; padding-left: 1.3em ; list-style: disc ; }
@@ -42,11 +44,18 @@ h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; 
 		return m ? parseFloat(m[1]) : -1;
 	}
 	var more = document.querySelector(".ch-more");
-	more.addEventListener("click", function () { list.classList.toggle("all"); label(); });
+	more.addEventListener("click", function () { list.classList.toggle("all"); label(); stripe(); });
 	function label() {
 		var n = list.querySelectorAll("li.zero:not([hidden])").length;
 		more.hidden = n === 0;
 		more.textContent = list.classList.contains("all") ? more.dataset.hide : more.dataset.show.replace("{n}", n);
+	}
+	function stripe() {
+		var n = 0;
+		items.forEach(function (li) {
+			var shown = !li.hidden && (!li.classList.contains("zero") || list.classList.contains("all"));
+			li.classList.toggle("odd", shown && (n++ % 2 === 1));
+		});
 	}
 	function apply(key) {
 		buttons.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.area === key ? "true" : "false"); });
@@ -62,6 +71,7 @@ h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; 
 			list.appendChild(li);
 		});
 		label();
+		stripe();
 	}
 	function mark(on, e) {
 		var li = e.target.closest ? e.target.closest("li[data-topic]") : null;
