@@ -608,6 +608,13 @@ def merge_papers(papers):
             ident = line.split(" | ")[0]
             slug, _, title = ident.partition("#")
             labels[(slug, title)] = list(dict.fromkeys(into.get(k, k) for k in by_id.get(ident, []) if into.get(k, k) in keys))
+    inst = {i["slug"]: i for i in json.loads((FRONTEND / "data" / "institutions.json").read_text(encoding="utf-8"))}
+    by_prof = {p["slug"]: p for p in professors}
+    for x in index:
+        i = inst.get(by_prof[x["slug"]]["institution_slug"], {})
+        x["institution_slug"] = i.get("slug", "")
+        x["logo"] = i.get("image") or ""
+        x["institution_name"] = i.get("name", x["institution"])
     for x in index:
         d = people[x["slug"]]
         best = {}

@@ -5,6 +5,9 @@ ul.ch-index { list-style: none ; padding: 0 ; }
 ul.ch-index > li { margin: 0 0 0.9em ; padding: 0.8em 1em ; line-height: 1.55 ; border: 1px solid var(--line) ; border-left: 4px solid var(--line) ; border-radius: 6px ; }
 ul.ch-index > li.odd { background: color-mix(in srgb, var(--link) 5%, var(--bg)) ; border-left-color: var(--link) ; }
 ul.ch-index > li > a { font-size: 1.05em ; }
+ul.ch-index > li > a.lg { font-size: inherit ; }
+ul.ch-index img.mini { height: 1.5em ; width: 3.4em ; vertical-align: middle ; object-fit: contain ; margin: 0 0.2em ; }
+ul.ch-index .lgph { display: inline-block ; width: 3.8em ; }
 ul.ch-index:not(.all) li.zero { display: none ; }
 ul.ch-index .gist { margin: 0.25em 0 0 0 ; }
 ul.ch-index ul.gl { margin: 0.2em 0 0 0 ; padding-left: 1.3em ; list-style: disc ; }
@@ -25,8 +28,8 @@ h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; 
 <p class="ch-filter"><button type="button" data-area="" aria-pressed="true">{{ T "ch_all_topics" }} ({{ len .professors }})</button> {{ range .areas }}<button type="button" data-area="{{ .key }}" aria-pressed="false">{{ if $vi }}{{ .title_vi }}{{ else }}{{ .title }}{{ end }} ({{ .count }})</button> {{ end }}</p>
 <p class="note">{{ T "ch_topics_note" }} {{ range $k, $c := .cfp }}{{ if $k }}, {{ end }}<a href="{{ $c.url }}"{{ with $c.note }} title="{{ . }}"{{ end }}>{{ $c.name }} {{ $c.edition }}</a>{{ end }}.</p>
 <ul class="ch-index" id="ch-list">
-{{- range .professors }}
-	<li data-areas="{{ range .areas }}{{ .key }}:{{ .score }} {{ end }}" data-score="{{ .score }}"><span class="st" title="{{ cond .done (T "ch_done") (T "ch_building") }}">{{ if .done }}✅{{ else }}🚧{{ end }}</span> <a href="{{ printf "challenges/%s/" .slug | relLangURL }}"><strong>{{ if $vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end }}</strong></a> <span class="inst">({{ .institution }} · <span class="sc" title="{{ T "ch_top_score_tip" }}"><b>{{ printf "%.2f" .score }}</b></span>)</span> {{- $base := printf "href=\"%s#" (printf "challenges/%s/" .slug | relLangURL) }}
+{{- range .professors }}{{ $p := . }}
+	<li data-areas="{{ range .areas }}{{ .key }}:{{ .score }} {{ end }}" data-score="{{ .score }}"><span class="st" title="{{ cond .done (T "ch_done") (T "ch_building") }}">{{ if .done }}✅{{ else }}🚧{{ end }}</span>{{ with .logo }} <a class="lg" href="{{ printf "universities/%s/" $p.institution_slug | relLangURL }}" tabindex="-1"><img class="mini" src="{{ . | relURL }}" alt="{{ $p.institution }}" title="{{ $p.institution_name }}" loading="lazy"></a>{{ else }}<span class="lgph"></span>{{ end }} <a href="{{ printf "challenges/%s/" .slug | relLangURL }}"><strong>{{ if $vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end }}</strong></a> <span class="inst">({{ .institution }} · <span class="sc" title="{{ T "ch_top_score_tip" }}"><b>{{ printf "%.2f" .score }}</b></span>)</span> {{- $base := printf "href=\"%s#" (printf "challenges/%s/" .slug | relLangURL) }}
 	<div class="gist" data-area="">
 	{{- if .gist_list }}<ul class="gl">{{ range .gist_list }}<li data-topic="{{ .key }}">{{ replace (cond $vi .vi .en) "href=\"#" $base | safeHTML }} <span class="cnt" title="{{ T "ch_line_tip" }}">({{ T "ch_n_papers" (int .n) }} · {{ printf "%.2f" .score }})</span></li>{{ end }}</ul>
 	{{- else }}{{ if $vi }}{{ .focus_vi }}{{ else }}{{ .focus }}{{ end }}{{ end }}</div>

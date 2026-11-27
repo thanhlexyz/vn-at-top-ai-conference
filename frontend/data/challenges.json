@@ -10,6 +10,9 @@
    "focus": "Sampling-based planning and pure-exploration algorithms for stochastic sequential decision making, centred on Monte-Carlo Tree Search (MCTS) and best-arm identification in multi-armed bandits.",
    "focus_vi": "Các thuật toán lập kế hoạch dựa trên lấy mẫu và khám phá thuần túy (pure exploration) cho bài toán ra quyết định tuần tự ngẫu nhiên, xoay quanh Monte-Carlo Tree Search (MCTS) và bài toán xác định nhánh tốt nhất (best-arm identification) trong multi-armed bandit.",
    "score": 5.49,
+   "institution_slug": "hust",
+   "logo": "img/institutions/hust.svg",
+   "institution_name": "Hanoi University of Science and Technology",
    "areas": [
     {
      "key": "rl-planning-agents",
@@ -78,6 +81,9 @@
    "focus": "Knowledge distillation and efficient representation learning for large language and vision-language models, together with neural topic modeling and continual learning for information extraction.",
    "focus_vi": "Chưng cất tri thức (knowledge distillation) và học biểu diễn hiệu quả cho mô hình ngôn ngữ lớn và mô hình thị giác - ngôn ngữ, cùng với mô hình chủ đề neural (neural topic model) và học liên tục (continual learning) cho bài toán trích xuất thông tin.",
    "score": 4.96,
+   "institution_slug": "hust",
+   "logo": "img/institutions/hust.svg",
+   "institution_name": "Hanoi University of Science and Technology",
    "areas": [
     {
      "key": "language-nlp",
@@ -101,6 +107,9 @@
    "focus": "Security of machine learning, chiefly backdoor (data-poisoning) attacks and defences, together with the training dynamics and alignment of large language models.",
    "focus_vi": "An toàn cho học máy, chủ yếu là tấn công và phòng thủ backdoor (đầu độc dữ liệu), cùng với động lực huấn luyện và alignment của mô hình ngôn ngữ lớn.",
    "score": 3.35,
+   "institution_slug": "vinuni",
+   "logo": "img/institutions/vinuni.png",
+   "institution_name": "VinUniversity",
    "areas": [
     {
      "key": "trustworthy-ai",
@@ -140,6 +149,9 @@
    "focus": "Data-efficient and trustworthy machine learning for healthcare and other low-resource settings, spanning medical imaging and EEG models, offline black-box optimization and multimodal federated learning.",
    "focus_vi": "Học máy hiệu quả về dữ liệu và đáng tin cậy cho y tế và các bối cảnh ít tài nguyên, bao gồm mô hình cho ảnh y khoa và EEG, tối ưu hộp đen ngoại tuyến (offline black-box optimization) và federated learning đa phương thức.",
    "score": 2.94,
+   "institution_slug": "hust",
+   "logo": "img/institutions/hust.svg",
+   "institution_name": "Hanoi University of Science and Technology",
    "areas": [
     {
      "key": "health-science",
@@ -310,6 +322,9 @@
    "focus": "Fast and controllable image generation with diffusion models, and image restoration, especially deblurring, learned without paired training data.",
    "focus_vi": "Sinh ảnh nhanh và có kiểm soát bằng mô hình khuếch tán (diffusion model), cùng với khôi phục ảnh, đặc biệt là khử mờ, được học mà không cần dữ liệu huấn luyện ghép cặp.",
    "score": 2.52,
+   "institution_slug": "ptit",
+   "logo": "img/institutions/ptit.png",
+   "institution_name": "Posts and Telecommunications Institute of Technology",
    "areas": [
     {
      "key": "vision-multimodal",
@@ -412,6 +427,9 @@
    "focus": "Efficient and adaptable deep learning across vision-language models such as CLIP, federated learning and unlearning, and multi-objective optimization with hypernetworks.",
    "focus_vi": "Học sâu hiệu quả và dễ thích nghi, trải rộng trên mô hình thị giác - ngôn ngữ như CLIP, federated learning và machine unlearning, và tối ưu đa mục tiêu bằng hypernetwork.",
    "score": 2.36,
+   "institution_slug": "vinuni",
+   "logo": "img/institutions/vinuni.png",
+   "institution_name": "VinUniversity",
    "areas": [
     {
      "key": "deep-learning",
@@ -435,6 +453,9 @@
    "focus": "Automatic design of heuristics for NP-hard combinatorial optimization by coupling large language models with evolutionary computation.",
    "focus_vi": "Thiết kế heuristic tự động cho các bài toán tối ưu tổ hợp NP-khó bằng cách kết hợp mô hình ngôn ngữ lớn với tính toán tiến hóa (evolutionary computation).",
    "score": 1.97,
+   "institution_slug": "hust",
+   "logo": "img/institutions/hust.svg",
+   "institution_name": "Hanoi University of Science and Technology",
    "areas": [
     {
      "key": "optimization",
@@ -537,6 +558,9 @@
    "focus": "Theoretical foundations of deep learning, especially generalization error bounds, alongside practical methods for continual learning and for compressing neural networks by pruning.",
    "focus_vi": "Nền tảng lý thuyết của học sâu, đặc biệt là các cận sai số tổng quát hóa (generalization bound), song song với các phương pháp thực tiễn cho học liên tục (continual learning) và nén mạng nơ-ron bằng tỉa trọng số (pruning).",
    "score": 1.84,
+   "institution_slug": "hust",
+   "logo": "img/institutions/hust.svg",
+   "institution_name": "Hanoi University of Science and Technology",
    "areas": [
     {
      "key": "learning-theory",
@@ -560,6 +584,9 @@
    "focus": "Natural language processing with large language models, spanning multilingual and Vietnamese language modeling, repository-level code completion, and the theory and fine-tuning of sparse Mixture-of-Experts (MoE) models.",
    "focus_vi": "Xử lý ngôn ngữ tự nhiên với mô hình ngôn ngữ lớn, trải rộng từ mô hình hóa đa ngôn ngữ và tiếng Việt, gợi ý mã nguồn ở mức kho mã (repository), đến lý thuyết và tinh chỉnh các mô hình Mixture-of-Experts (MoE) thưa.",
    "score": 1.47,
+   "institution_slug": "hcmut",
+   "logo": "img/institutions/hcmut.svg",
+   "institution_name": "Ho Chi Minh City University of Technology",
    "areas": [
     {
      "key": "language-nlp",
@@ -583,6 +610,9 @@
    "focus": "Approximation algorithms for submodular maximization, particularly fast parallel algorithms for non-monotone objectives under cardinality, knapsack and matroid constraints.",
    "focus_vi": "Thuật toán xấp xỉ cho bài toán cực đại hóa hàm submodular, đặc biệt là các thuật toán song song nhanh cho hàm mục tiêu không đơn điệu dưới ràng buộc lực lượng, ràng buộc knapsack và ràng buộc matroid.",
    "score": 1.25,
+   "institution_slug": "phenikaa",
+   "logo": "img/institutions/phenikaa.png",
+   "institution_name": "Phenikaa University",
    "areas": [
     {
      "key": "optimization",
@@ -606,6 +636,9 @@
    "focus": "Mathematical analysis of modern machine learning: why low-rank adaptation works, how reinforcement learning shapes the reasoning of large language models, and the theory of regularized optimal transport.",
    "focus_vi": "Phân tích toán học cho học máy hiện đại: vì sao thích nghi hạng thấp (LoRA) hiệu quả, học tăng cường định hình khả năng suy luận của mô hình ngôn ngữ lớn ra sao, và lý thuyết vận chuyển tối ưu có chính quy hóa.",
    "score": 1.08,
+   "institution_slug": "vinuni",
+   "logo": "img/institutions/vinuni.png",
+   "institution_name": "VinUniversity",
    "areas": [
     {
      "key": "learning-theory",
@@ -629,6 +662,9 @@
    "focus": "Multimodal and multi-label learning, especially keeping modalities balanced when some are missing, and learning new classes incrementally.",
    "focus_vi": "Học đa phương thức và đa nhãn, đặc biệt là giữ cân bằng giữa các phương thức khi một số bị thiếu, và học tăng dần các lớp mới.",
    "score": 1.03,
+   "institution_slug": "vnu-uet",
+   "logo": "img/institutions/vnu-uet.svg",
+   "institution_name": "VNU University of Engineering and Technology",
    "areas": [
     {
      "key": "vision-multimodal",
@@ -652,6 +688,9 @@
    "focus": "Graph representation learning in non-Euclidean geometries, such as hyperbolic and pseudo-Riemannian spaces, for static and temporal graphs.",
    "focus_vi": "Học biểu diễn đồ thị trong các hình học phi Euclid như không gian hyperbolic và giả Riemann, cho cả đồ thị tĩnh và đồ thị theo thời gian.",
    "score": 1.0,
+   "institution_slug": "vnu-uet",
+   "logo": "img/institutions/vnu-uet.svg",
+   "institution_name": "VNU University of Engineering and Technology",
    "areas": [
     {
      "key": "data-mining-graphs",
@@ -675,6 +714,9 @@
    "focus": "Natural language processing with large language models, centered on knowledge distillation across different tokenizers, cross-lingual topic modeling and graph-based retrieval and memory for LLMs.",
    "focus_vi": "Xử lý ngôn ngữ tự nhiên với mô hình ngôn ngữ lớn, tập trung vào chưng cất tri thức giữa các mô hình dùng bộ tách từ (tokenizer) khác nhau, mô hình chủ đề xuyên ngôn ngữ, và truy hồi cùng bộ nhớ dựa trên đồ thị cho LLM.",
    "score": 0.96,
+   "institution_slug": "vnu-uet",
+   "logo": "img/institutions/vnu-uet.svg",
+   "institution_name": "VNU University of Engineering and Technology",
    "areas": [
     {
      "key": "language-nlp",
@@ -709,6 +751,9 @@
    "focus": "A broad range of machine learning: efficient Transformers and sparse Mixture-of-Experts, aligning large language models with human preferences, federated and continual learning, and applied AI for medicine and Vietnamese text.",
    "focus_vi": "Nhiều chủ đề học máy: Transformer hiệu quả và Mixture-of-Experts thưa, căn chỉnh mô hình ngôn ngữ lớn theo sở thích con người, học liên kết (federated learning) và học liên tục, cùng các ứng dụng AI cho y tế và văn bản tiếng Việt.",
    "score": 0.85,
+   "institution_slug": "hcmus",
+   "logo": "img/institutions/hcmus.png",
+   "institution_name": "University of Science, VNU-HCM",
    "areas": [
     {
      "key": "deep-learning",
@@ -732,6 +777,9 @@
    "focus": "Parallel approximation algorithms for submodular maximization with non-monotone objectives under cardinality, knapsack and matroid constraints.",
    "focus_vi": "Thuật toán xấp xỉ song song cho cực đại hóa hàm submodular không đơn điệu dưới ràng buộc lực lượng, ràng buộc knapsack và ràng buộc matroid.",
    "score": 0.83,
+   "institution_slug": "phenikaa",
+   "logo": "img/institutions/phenikaa.png",
+   "institution_name": "Phenikaa University",
    "areas": [
     {
      "key": "optimization",
@@ -755,6 +803,9 @@
    "focus": "Multimodal and representation learning, especially robustness to missing modalities, efficient contrastive alignment, and synthetic data generation for computer vision.",
    "focus_vi": "Học đa phương thức và học biểu diễn, đặc biệt là độ bền vững khi thiếu phương thức, căn chỉnh tương phản (contrastive) hiệu quả, và sinh dữ liệu tổng hợp cho thị giác máy tính.",
    "score": 0.8,
+   "institution_slug": "vinuni",
+   "logo": "img/institutions/vinuni.png",
+   "institution_name": "VinUniversity",
    "areas": [
     {
      "key": "vision-multimodal",
@@ -840,6 +891,9 @@
    "focus": "Theoretical machine learning: identifiability and sample complexity for causal discovery, activation steering and world models, together with structure-preserving neural operators and learning in games.",
    "focus_vi": "Học máy lý thuyết: tính khả nhận dạng (identifiability) và độ phức tạp mẫu cho khám phá nhân quả, điều hướng kích hoạt và mô hình thế giới (world model), cùng với toán tử nơ-ron bảo toàn cấu trúc và học trong trò chơi.",
    "score": 0.76,
+   "institution_slug": "phenikaa",
+   "logo": "img/institutions/phenikaa.png",
+   "institution_name": "Phenikaa University",
    "areas": [
     {
      "key": "learning-theory",
@@ -908,6 +962,9 @@
    "focus": "Reinforcement learning and LLM-based decision systems, specifically constrained multi-objective reinforcement learning and the translation of natural-language optimization problems into solver code.",
    "focus_vi": "Học tăng cường và hệ ra quyết định dựa trên LLM, cụ thể là học tăng cường đa mục tiêu có ràng buộc và chuyển các bài toán tối ưu mô tả bằng ngôn ngữ tự nhiên thành mã cho bộ giải.",
    "score": 0.75,
+   "institution_slug": "hust",
+   "logo": "img/institutions/hust.svg",
+   "institution_name": "Hanoi University of Science and Technology",
    "areas": [
     {
      "key": "rl-planning-agents",
@@ -959,6 +1016,9 @@
    "focus": "Trustworthiness of deep generative and language models, in particular machine unlearning in large language models, backdoor attacks and learning from noisy labels.",
    "focus_vi": "Độ tin cậy của mô hình sinh và mô hình ngôn ngữ sâu, đặc biệt là xóa tri thức (machine unlearning) trong mô hình ngôn ngữ lớn, tấn công cửa hậu (backdoor) và học với nhãn nhiễu.",
    "score": 0.73,
+   "institution_slug": "vnu-uet",
+   "logo": "img/institutions/vnu-uet.svg",
+   "institution_name": "VNU University of Engineering and Technology",
    "areas": [
     {
      "key": "trustworthy-ai",
@@ -982,6 +1042,9 @@
    "focus": "Neural topic modeling and representation learning, along with knowledge distillation for vision-language embedding models and learning from partial labels in computer vision.",
    "focus_vi": "Mô hình chủ đề nơ-ron và học biểu diễn, cùng với chưng cất tri thức cho mô hình embedding thị giác-ngôn ngữ và học với nhãn không đầy đủ trong thị giác máy tính.",
    "score": 0.7,
+   "institution_slug": "hust",
+   "logo": "img/institutions/hust.svg",
+   "institution_name": "Hanoi University of Science and Technology",
    "areas": [
     {
      "key": "vision-multimodal",
@@ -1050,6 +1113,9 @@
    "focus": "Physics-based computer vision, in particular inverse rendering of translucent objects: recovering shape, reflectance and subsurface scattering from images.",
    "focus_vi": "Thị giác máy tính dựa trên vật lý, đặc biệt là kết xuất ngược (inverse rendering) cho vật thể trong mờ: khôi phục hình dạng, độ phản xạ và tán xạ dưới bề mặt từ ảnh.",
    "score": 0.67,
+   "institution_slug": "hust",
+   "logo": "img/institutions/hust.svg",
+   "institution_name": "Hanoi University of Science and Technology",
    "areas": [
     {
      "key": "vision-multimodal",
@@ -1084,6 +1150,9 @@
    "focus": "Pure exploration and planning under uncertainty, including best-arm identification in multi-armed bandits and Monte Carlo tree search in stochastic environments.",
    "focus_vi": "Khám phá thuần túy (pure exploration) và lập kế hoạch dưới bất định, gồm xác định nhánh tốt nhất trong bài toán máy đánh bạc nhiều tay (multi-armed bandit) và tìm kiếm cây Monte Carlo trong môi trường ngẫu nhiên.",
    "score": 0.65,
+   "institution_slug": "hust",
+   "logo": "img/institutions/hust.svg",
+   "institution_name": "Hanoi University of Science and Technology",
    "areas": [
     {
      "key": "learning-theory",
@@ -1135,6 +1204,9 @@
    "focus": "Large language models for software engineering, including code generation, unit test generation and code-understanding benchmarks, alongside continual relation extraction and retrieval for LLMs.",
    "focus_vi": "Mô hình ngôn ngữ lớn cho kỹ nghệ phần mềm, gồm sinh mã, sinh kiểm thử đơn vị và các bộ đánh giá năng lực hiểu mã, cùng với trích xuất quan hệ liên tục và truy hồi cho LLM.",
    "score": 0.62,
+   "institution_slug": "hust",
+   "logo": "img/institutions/hust.svg",
+   "institution_name": "Hanoi University of Science and Technology",
    "areas": [
     {
      "key": "language-nlp",
@@ -1154,6 +1226,9 @@
    "focus": "Adapting foundation models and training multimodal networks, with emphasis on routing collapse in time-series mixtures of adapters and on under-used weak modalities.",
    "focus_vi": "Thích nghi mô hình nền tảng và huấn luyện mạng đa phương thức, tập trung vào hiện tượng sụp đổ định tuyến trong hỗn hợp adapter cho chuỗi thời gian và việc các phương thức yếu bị khai thác chưa đủ.",
    "score": 0.58,
+   "institution_slug": "rmit",
+   "logo": "img/institutions/rmit.svg",
+   "institution_name": "RMIT University Vietnam",
    "areas": [
     {
      "key": "vision-multimodal",
@@ -1205,6 +1280,9 @@
    "focus": "Reliable and privacy-preserving machine learning for real-world domains such as medical imaging and air quality forecasting.",
    "focus_vi": "Học máy đáng tin cậy và bảo vệ quyền riêng tư cho các lĩnh vực thực tế như ảnh y tế và dự báo chất lượng không khí.",
    "score": 0.57,
+   "institution_slug": "vinuni",
+   "logo": "img/institutions/vinuni.png",
+   "institution_name": "VinUniversity",
    "areas": [
     {
      "key": "trustworthy-ai",
@@ -1228,6 +1306,9 @@
    "focus": "Algorithmic fair division: computing allocations of indivisible goods that balance fairness and efficiency.",
    "focus_vi": "Thuật toán phân chia công bằng: tính toán cách phân bổ các vật phẩm không chia nhỏ được sao cho cân bằng giữa công bằng và hiệu quả.",
    "score": 0.5,
+   "institution_slug": "neu",
+   "logo": "img/institutions/neu.png",
+   "institution_name": "National Economics University",
    "areas": [
     {
      "key": "rl-planning-agents",
@@ -1262,6 +1343,9 @@
    "focus": "Computer vision and generative models, including diffusion-based segmentation and image editing, scene text recognition and multi-camera tracking, with recent work on auditing claims about multimodal and multi-agent systems.",
    "focus_vi": "Thị giác máy tính và mô hình sinh, gồm phân đoạn và chỉnh sửa ảnh dựa trên khuếch tán, nhận dạng chữ trong cảnh và theo dõi đối tượng đa camera, cùng các nghiên cứu gần đây về kiểm định các nhận định trong hệ đa phương thức và đa tác tử.",
    "score": 0.45,
+   "institution_slug": "hcmus",
+   "logo": "img/institutions/hcmus.png",
+   "institution_name": "University of Science, VNU-HCM",
    "areas": [
     {
      "key": "vision-multimodal",
@@ -1285,6 +1369,9 @@
    "focus": "Generative models for images, particularly controllable text-to-image diffusion, image editing and diffusion-based segmentation.",
    "focus_vi": "Mô hình sinh ảnh, đặc biệt là sinh ảnh từ văn bản bằng mô hình khuếch tán có kiểm soát, chỉnh sửa ảnh và phân đoạn dựa trên khuếch tán.",
    "score": 0.42,
+   "institution_slug": "hcmus",
+   "logo": "img/institutions/hcmus.png",
+   "institution_name": "University of Science, VNU-HCM",
    "areas": [
     {
      "key": "generative-models",
@@ -1304,6 +1391,9 @@
    "focus": "Robust and interpretable deep learning, covering domain generalization, neuron-level interpretability, continual learning, and machine learning for computational pathology.",
    "focus_vi": "Học sâu bền vững và diễn giải được, gồm tổng quát hóa miền, diễn giải ở mức nơ-ron, học liên tục, và học máy cho bệnh học tính toán.",
    "score": 0.4,
+   "institution_slug": "vinuni",
+   "logo": "img/institutions/vinuni.png",
+   "institution_name": "VinUniversity",
    "areas": [
     {
      "key": "deep-learning",
@@ -1372,6 +1462,9 @@
    "focus": "Mathematical analysis of machine learning models and of optimal transport, using tools from dynamical systems and measure theory.",
    "focus_vi": "Phân tích toán học cho mô hình học máy và vận chuyển tối ưu, dùng công cụ từ hệ động lực và lý thuyết độ đo.",
    "score": 0.39,
+   "institution_slug": "ueh",
+   "logo": "img/institutions/ueh.png",
+   "institution_name": "University of Economics Ho Chi Minh City",
    "areas": [
     {
      "key": "learning-theory",
@@ -1395,6 +1488,9 @@
    "focus": "Scalable learning for computational pathology and multimodal federated learning with incomplete data.",
    "focus_vi": "Học có khả năng mở rộng cho bệnh học tính toán và học liên kết đa phương thức với dữ liệu không đầy đủ.",
    "score": 0.37,
+   "institution_slug": "vinuni",
+   "logo": "img/institutions/vinuni.png",
+   "institution_name": "VinUniversity",
    "areas": [
     {
      "key": "efficient-scalable",
@@ -1446,6 +1542,9 @@
    "focus": "Stability of sequence models, through control-theoretic regularization of language-model hidden states and better-conditioned state space models.",
    "focus_vi": "Tính ổn định của mô hình chuỗi, thông qua chính quy hóa trạng thái ẩn của mô hình ngôn ngữ dựa trên lý thuyết điều khiển và mô hình không gian trạng thái có điều kiện số tốt hơn.",
    "score": 0.37,
+   "institution_slug": "ptit",
+   "logo": "img/institutions/ptit.png",
+   "institution_name": "Posts and Telecommunications Institute of Technology",
    "areas": [
     {
      "key": "deep-learning",
@@ -1497,6 +1596,9 @@
    "focus": "Robotic perception and vision, including grasp generation in cluttered scenes and text-conditioned image editing.",
    "focus_vi": "Nhận thức cho robot và thị giác máy tính, gồm sinh tư thế gắp trong cảnh lộn xộn và chỉnh sửa ảnh theo mô tả văn bản.",
    "score": 0.33,
+   "institution_slug": "fptu",
+   "logo": "img/institutions/fptu.svg",
+   "institution_name": "FPT University",
    "areas": [
     {
      "key": "robotics",
@@ -1520,6 +1622,9 @@
    "focus": "Computer vision, including few-shot object detection with synthetic data and scene text recognition, plus careful evaluation of 3D reconstruction defenses and conversational image retrieval.",
    "focus_vi": "Thị giác máy tính, gồm phát hiện đối tượng ít mẫu với dữ liệu tổng hợp và nhận dạng chữ trong cảnh, cùng với đánh giá cẩn trọng các cơ chế phòng vệ cho tái dựng 3D và truy hồi ảnh dạng hội thoại.",
    "score": 0.31,
+   "institution_slug": "uit",
+   "logo": "img/institutions/uit.svg",
+   "institution_name": "University of Information Technology, VNU-HCM",
    "areas": [
     {
      "key": "vision-multimodal",
@@ -1571,6 +1676,9 @@
    "focus": "Efficient computer vision for image restoration and 3D scene understanding, such as lightweight super-resolution and semi-supervised 3D semantic scene completion.",
    "focus_vi": "Thị giác máy tính hiệu quả cho phục hồi ảnh và hiểu cảnh 3D, như siêu phân giải gọn nhẹ và hoàn thiện cảnh ngữ nghĩa 3D bán giám sát.",
    "score": 0.31,
+   "institution_slug": "hcmut",
+   "logo": "img/institutions/hcmut.svg",
+   "institution_name": "Ho Chi Minh City University of Technology",
    "areas": [
     {
      "key": "vision-multimodal",
@@ -1605,6 +1713,9 @@
    "focus": "Vision-language models, covering grounded compositional reasoning and fairness of multimodal large language models in medical imaging, plus structure-preserving neural operators.",
    "focus_vi": "Mô hình thị giác-ngôn ngữ, gồm suy luận tổ hợp có định vị (grounded) và tính công bằng của mô hình ngôn ngữ lớn đa phương thức trong ảnh y tế, cùng với toán tử nơ-ron bảo toàn cấu trúc.",
    "score": 0.3,
+   "institution_slug": "ptit",
+   "logo": "img/institutions/ptit.png",
+   "institution_name": "Posts and Telecommunications Institute of Technology",
    "areas": [
     {
      "key": "vision-multimodal",
@@ -1673,6 +1784,9 @@
    "focus": "Robot learning and motion planning, from adapting vision-language-action models with few demonstrations to multi-robot planning under temporal-logic specifications.",
    "focus_vi": "Học cho robot và lập kế hoạch chuyển động, từ thích nghi mô hình thị giác-ngôn ngữ-hành động với ít minh họa đến lập kế hoạch đa robot theo đặc tả logic thời gian.",
    "score": 0.29,
+   "institution_slug": "vinuni",
+   "logo": "img/institutions/vinuni.png",
+   "institution_name": "VinUniversity",
    "areas": [
     {
      "key": "robotics",
@@ -1696,6 +1810,9 @@
    "focus": "Out-of-distribution generalization and memory in neural networks, drawing on cognitive mechanisms such as analogy and indirection.",
    "focus_vi": "Tổng quát hóa ngoài phân phối và bộ nhớ trong mạng nơ-ron, lấy cảm hứng từ các cơ chế nhận thức như suy luận tương tự (analogy) và gián tiếp (indirection).",
    "score": 0.25,
+   "institution_slug": "hcmus",
+   "logo": "img/institutions/hcmus.png",
+   "institution_name": "University of Science, VNU-HCM",
    "areas": [
     {
      "key": "deep-learning",
@@ -1719,6 +1836,9 @@
    "focus": "Training quantum neural networks with the help of classical reinforcement learning.",
    "focus_vi": "Huấn luyện mạng nơ-ron lượng tử với sự hỗ trợ của học tăng cường cổ điển.",
    "score": 0.25,
+   "institution_slug": "vinuni",
+   "logo": "img/institutions/vinuni.png",
+   "institution_name": "VinUniversity",
    "areas": [
     {
      "key": "optimization",
@@ -1753,6 +1873,9 @@
    "focus": "Adapting time series foundation models, focusing on why mixture-of-experts adapter heads collapse and how to fix it.",
    "focus_vi": "Thích nghi mô hình nền tảng cho chuỗi thời gian, tập trung vào nguyên nhân khiến đầu adapter dạng mixture-of-experts bị sụp đổ và cách khắc phục.",
    "score": 0.25,
+   "institution_slug": "rmit",
+   "logo": "img/institutions/rmit.svg",
+   "institution_name": "RMIT University Vietnam",
    "areas": [
     {
      "key": "deep-learning",
@@ -1787,6 +1910,9 @@
    "focus": "Class-incremental learning, where a model must learn new classes over time without forgetting old ones.",
    "focus_vi": "Học tăng dần theo lớp, trong đó mô hình phải học thêm lớp mới theo thời gian mà không quên các lớp cũ.",
    "score": 0.25,
+   "institution_slug": "vnu-uet",
+   "logo": "img/institutions/vnu-uet.svg",
+   "institution_name": "VNU University of Engineering and Technology",
    "areas": [
     {
      "key": "deep-learning",
@@ -1821,6 +1947,9 @@
    "focus": "Influence maximization on multiplex social networks with learning-based methods.",
    "focus_vi": "Tối đa hóa ảnh hưởng trên mạng xã hội đa tầng (multiplex) bằng các phương pháp dựa trên học máy.",
    "score": 0.2,
+   "institution_slug": "ptit",
+   "logo": "img/institutions/ptit.png",
+   "institution_name": "Posts and Telecommunications Institute of Technology",
    "areas": [
     {
      "key": "data-mining-graphs",
@@ -1855,6 +1984,9 @@
    "focus": "Robot learning for medical and aerial robotics, including autonomous endovascular navigation and generative scene synthesis for drone simulation.",
    "focus_vi": "Học cho robot trong y tế và robot bay, gồm điều hướng nội mạch tự động và tổng hợp cảnh bằng mô hình sinh cho mô phỏng drone.",
    "score": 0.2,
+   "institution_slug": "uit",
+   "logo": "img/institutions/uit.svg",
+   "institution_name": "University of Information Technology, VNU-HCM",
    "areas": [
     {
      "key": "robotics",
@@ -1874,6 +2006,9 @@
    "focus": "Learning on graphs and networks, including influence maximization on multiplex networks, active learning on incomplete networks and graph-based image classification.",
    "focus_vi": "Học trên đồ thị và mạng, gồm tối đa hóa ảnh hưởng trên mạng đa tầng, học chủ động trên mạng không đầy đủ và phân loại ảnh dựa trên đồ thị.",
    "score": 0.2,
+   "institution_slug": "ptit",
+   "logo": "img/institutions/ptit.png",
+   "institution_name": "Posts and Telecommunications Institute of Technology",
    "areas": [
     {
      "key": "data-mining-graphs",
@@ -1925,6 +2060,9 @@
    "focus": "Anomaly detection on tabular data that works without data-specific hyperparameter tuning.",
    "focus_vi": "Phát hiện bất thường trên dữ liệu dạng bảng mà không cần tinh chỉnh siêu tham số theo từng bộ dữ liệu.",
    "score": 0.2,
+   "institution_slug": "uit",
+   "logo": "img/institutions/uit.svg",
+   "institution_name": "University of Information Technology, VNU-HCM",
    "areas": [
     {
      "key": "data-mining-graphs",
@@ -1959,6 +2097,9 @@
    "focus": "Robust alignment between visual and textual features in large multimodal models.",
    "focus_vi": "Căn chỉnh bền vững giữa đặc trưng thị giác và văn bản trong mô hình đa phương thức lớn.",
    "score": 0.2,
+   "institution_slug": "hcmus",
+   "logo": "img/institutions/hcmus.png",
+   "institution_name": "University of Science, VNU-HCM",
    "areas": [
     {
      "key": "vision-multimodal",
@@ -1993,6 +2134,9 @@
    "focus": "Multi-agent large language model systems for scientific writing, specifically automatic generation of related-work sections.",
    "focus_vi": "Hệ đa tác tử dựa trên mô hình ngôn ngữ lớn cho viết khoa học, cụ thể là tự động sinh phần tổng quan công trình liên quan (related work).",
    "score": 0.2,
+   "institution_slug": "haui",
+   "logo": "img/institutions/haui.png",
+   "institution_name": "Hanoi University of Industry",
    "areas": [
     {
      "key": "rl-planning-agents",
@@ -2027,6 +2171,9 @@
    "focus": "Preference and safety alignment of generative models, framed as density ratio matching.",
    "focus_vi": "Căn chỉnh mô hình sinh theo sở thích và yêu cầu an toàn, được phát biểu như bài toán khớp tỷ số mật độ.",
    "score": 0.17,
+   "institution_slug": "vinuni",
+   "logo": "img/institutions/vinuni.png",
+   "institution_name": "VinUniversity",
    "areas": [
     {
      "key": "language-nlp",
@@ -2078,6 +2225,9 @@
    "focus": "Trustworthy and efficient systems built on language models, including privacy accounting for private training, safety and deletion in agent memory, and evaluation of small language models.",
    "focus_vi": "Các hệ thống đáng tin cậy và hiệu quả dựa trên mô hình ngôn ngữ, gồm kế toán quyền riêng tư cho huấn luyện riêng tư, an toàn và xóa dữ liệu trong bộ nhớ tác tử, và đánh giá mô hình ngôn ngữ nhỏ.",
    "score": 0.17,
+   "institution_slug": "rmit",
+   "logo": "img/institutions/rmit.svg",
+   "institution_name": "RMIT University Vietnam",
    "areas": [
     {
      "key": "data-mining-graphs",
@@ -2180,6 +2330,9 @@
    "focus": "Stability of language model hidden states, using regularization derived from control theory.",
    "focus_vi": "Tính ổn định của trạng thái ẩn trong mô hình ngôn ngữ, dùng chính quy hóa dẫn xuất từ lý thuyết điều khiển.",
    "score": 0.17,
+   "institution_slug": "ptit",
+   "logo": "img/institutions/ptit.png",
+   "institution_name": "Posts and Telecommunications Institute of Technology",
    "areas": [
     {
      "key": "language-nlp",
@@ -2214,6 +2367,9 @@
    "focus": "Evaluating language models for safety-critical language understanding, using air traffic control communication as a testbed.",
    "focus_vi": "Đánh giá mô hình ngôn ngữ cho các tác vụ hiểu ngôn ngữ đòi hỏi an toàn cao, lấy giao tiếp điều khiển không lưu làm môi trường thử nghiệm.",
    "score": 0.14,
+   "institution_slug": "vinuni",
+   "logo": "img/institutions/vinuni.png",
+   "institution_name": "VinUniversity",
    "areas": [
     {
      "key": "datasets-evaluation",
@@ -2248,6 +2404,9 @@
    "focus": "Aligning large language models with human preferences, specifically curbing reward over-optimization in direct alignment methods.",
    "focus_vi": "Căn chỉnh mô hình ngôn ngữ lớn theo sở thích con người, cụ thể là hạn chế tối ưu hóa quá mức phần thưởng trong các phương pháp căn chỉnh trực tiếp.",
    "score": 0.12,
+   "institution_slug": "hcmiu",
+   "logo": "img/institutions/hcmiu.svg",
+   "institution_name": "International University, VNU-HCM",
    "areas": [
     {
      "key": "language-nlp",
@@ -2282,6 +2441,9 @@
    "focus": "AI for software engineering and security, including identifying libraries affected by vulnerabilities and evaluating LLM code generation for functional programming languages.",
    "focus_vi": "AI cho kỹ nghệ phần mềm và an ninh phần mềm, gồm xác định thư viện bị ảnh hưởng bởi lỗ hổng và đánh giá khả năng sinh mã của LLM cho các ngôn ngữ lập trình hàm.",
    "score": 0.12,
+   "institution_slug": "hust",
+   "logo": "img/institutions/hust.svg",
+   "institution_name": "Hanoi University of Science and Technology",
    "areas": [
     {
      "key": "knowledge-reasoning",
@@ -2333,6 +2495,9 @@
    "focus": "Game-theoretic learning, specifically learning in policy transparency games.",
    "focus_vi": "Học trong lý thuyết trò chơi, cụ thể là học trong trò chơi minh bạch chính sách.",
    "score": 0.1,
+   "institution_slug": "neu",
+   "logo": "img/institutions/neu.png",
+   "institution_name": "National Economics University",
    "areas": [
     {
      "key": "rl-planning-agents",
@@ -2367,6 +2532,9 @@
    "focus": "Data-efficient adaptation of vision-language-action models for robot control.",
    "focus_vi": "Thích nghi hiệu quả dữ liệu cho mô hình thị giác-ngôn ngữ-hành động trong điều khiển robot.",
    "score": 0.04,
+   "institution_slug": "vinuni",
+   "logo": "img/institutions/vinuni.png",
+   "institution_name": "VinUniversity",
    "areas": [
     {
      "key": "robotics",
@@ -2401,6 +2569,9 @@
    "focus": "Robot learning and control, including data-efficient adaptation of vision-language-action models, interactive identification of articulated objects and physics-informed dynamics models.",
    "focus_vi": "Học và điều khiển cho robot, gồm thích nghi hiệu quả dữ liệu cho mô hình thị giác-ngôn ngữ-hành động, nhận dạng vật thể có khớp qua tương tác, và mô hình động lực học có thông tin vật lý.",
    "score": 0.04,
+   "institution_slug": "vinuni",
+   "logo": "img/institutions/vinuni.png",
+   "institution_name": "VinUniversity",
    "areas": [
     {
      "key": "robotics",
@@ -2435,6 +2606,9 @@
    "focus": "Statistical inference for the outputs of deep learning models, using selective inference to give valid p-values for attention maps and detected anomalies.",
    "focus_vi": "Suy diễn thống kê cho đầu ra của mô hình học sâu, dùng suy diễn chọn lọc (selective inference) để cho giá trị p hợp lệ đối với bản đồ attention và các bất thường được phát hiện.",
    "score": 0,
+   "institution_slug": "uit",
+   "logo": "img/institutions/uit.svg",
+   "institution_name": "University of Information Technology, VNU-HCM",
    "areas": [
     {
      "key": "probabilistic-causal",
@@ -2458,6 +2632,9 @@
    "focus": "Trustworthy large language model (LLM) agents and private training: which guarantees about deletion, safety and privacy actually hold for persistent agent memory and for confidential differentially private training, alongside cost and data-quality questions in LLM pipelines.",
    "focus_vi": "Độ tin cậy của các tác tử dựa trên mô hình ngôn ngữ lớn (LLM) và huấn luyện bảo mật: những bảo đảm nào về xóa dữ liệu, an toàn và quyền riêng tư thực sự đứng vững đối với bộ nhớ lâu dài của tác tử và với huấn luyện differential privacy trong môi trường bảo mật, cùng các câu hỏi về chi phí và chất lượng dữ liệu trong các pipeline LLM.",
    "score": 0,
+   "institution_slug": "hcmut",
+   "logo": "img/institutions/hcmut.svg",
+   "institution_name": "Ho Chi Minh City University of Technology",
    "areas": [
     {
      "key": "trustworthy-ai",
@@ -2543,6 +2720,9 @@
    "focus": "Reliability and accountability of large language model (LLM) agents with long-lived memory: certified deletion, safety under model migration, preserving user commitments over long dialogues, and verifiable privacy accounting for private training.",
    "focus_vi": "Độ tin cậy và trách nhiệm giải trình của các tác tử mô hình ngôn ngữ lớn (LLM) có bộ nhớ lâu dài: chứng nhận việc xóa dữ liệu, an toàn khi chuyển đổi mô hình, giữ các cam kết với người dùng qua hội thoại dài, và kiểm chứng việc tính toán quyền riêng tư khi huấn luyện.",
    "score": 0,
+   "institution_slug": "hcmut",
+   "logo": "img/institutions/hcmut.svg",
+   "institution_name": "Ho Chi Minh City University of Technology",
    "areas": [
     {
      "key": "trustworthy-ai",
@@ -2611,6 +2791,9 @@
    "focus": "Evolutionary and multi-objective optimization applied to deep learning, mainly neural architecture search (NAS) guided by cheap zero-cost proxies and black-box adversarial testing of dialogue models.",
    "focus_vi": "Tối ưu tiến hóa và tối ưu đa mục tiêu ứng dụng cho học sâu, chủ yếu là tìm kiếm kiến trúc mạng nơ-ron (NAS) được dẫn dắt bởi các zero-cost proxy chi phí thấp và kiểm thử đối kháng hộp đen cho mô hình hội thoại.",
    "score": 0,
+   "institution_slug": "uit",
+   "logo": "img/institutions/uit.svg",
+   "institution_name": "University of Information Technology, VNU-HCM",
    "areas": [
     {
      "key": "optimization",
@@ -2634,6 +2817,9 @@
    "focus": "Using large language models (LLMs) inside evolutionary algorithms to automatically design heuristics for NP-hard combinatorial optimization, and building recommender systems that adapt when user intent drifts.",
    "focus_vi": "Dùng mô hình ngôn ngữ lớn (LLM) bên trong thuật toán tiến hóa để tự động thiết kế heuristic cho các bài toán tối ưu tổ hợp NP-khó, và xây dựng hệ gợi ý có khả năng thích nghi khi ý định người dùng thay đổi.",
    "score": 0,
+   "institution_slug": "phenikaa",
+   "logo": "img/institutions/phenikaa.png",
+   "institution_name": "Phenikaa University",
    "areas": [
     {
      "key": "optimization",
@@ -2685,6 +2871,9 @@
    "focus": "Federated learning under realistic conditions: clients with heterogeneous data and unreliable connections, and federated class-incremental learning where new classes arrive over time without old ones being forgotten.",
    "focus_vi": "Học liên kết (federated learning) trong điều kiện thực tế: các máy khách có dữ liệu không đồng nhất và kết nối không ổn định, và học tăng dần theo lớp trong môi trường liên kết, khi các lớp mới xuất hiện theo thời gian mà không được quên các lớp cũ.",
    "score": 0,
+   "institution_slug": "vinuni",
+   "logo": "img/institutions/vinuni.png",
+   "institution_name": "VinUniversity",
    "areas": [
     {
      "key": "efficient-scalable",
@@ -2736,6 +2925,9 @@
    "focus": "Making neural architecture search (NAS) cheap by relying on zero-cost proxies, scores that estimate a network's quality without training it.",
    "focus_vi": "Làm cho tìm kiếm kiến trúc mạng nơ-ron (NAS) rẻ hơn bằng zero-cost proxy, các chỉ số ước lượng chất lượng của mạng mà không cần huấn luyện.",
    "score": 0,
+   "institution_slug": "uit",
+   "logo": "img/institutions/uit.svg",
+   "institution_name": "University of Information Technology, VNU-HCM",
    "areas": [
     {
      "key": "deep-learning",
@@ -2759,6 +2951,9 @@
    "focus": "Auditing the claims drawn from machine learning analyses, in particular whether statements that one input modality dominates a multimodal model's predictions hold up statistically, and auditing training schemes in multi-agent market making.",
    "focus_vi": "Kiểm định các kết luận rút ra từ phân tích mô hình học máy, đặc biệt là liệu nhận định rằng một modality đầu vào chi phối dự đoán của mô hình đa phương thức có đứng vững về mặt thống kê hay không, và kiểm định các cơ chế huấn luyện trong bài toán tạo lập thị trường đa tác tử.",
    "score": 0,
+   "institution_slug": "hcmus",
+   "logo": "img/institutions/hcmus.png",
+   "institution_name": "University of Science, VNU-HCM",
    "areas": [
     {
      "key": "trustworthy-ai",
@@ -2810,6 +3005,9 @@
    "focus": "Automatic design of heuristics for NP-hard combinatorial optimization problems by letting large language models (LLMs) generate and refine them inside evolutionary algorithms.",
    "focus_vi": "Tự động thiết kế heuristic cho các bài toán tối ưu tổ hợp NP-khó bằng cách để mô hình ngôn ngữ lớn (LLM) sinh và tinh chỉnh heuristic bên trong thuật toán tiến hóa.",
    "score": 0,
+   "institution_slug": "phenikaa",
+   "logo": "img/institutions/phenikaa.png",
+   "institution_name": "Phenikaa University",
    "areas": [
     {
      "key": "optimization",
@@ -2844,6 +3042,9 @@
    "focus": "Rigorous auditing of conclusions in machine learning, such as claims that one modality dominates a multimodal predictor, together with the study of training dynamics among learning agents in market making.",
    "focus_vi": "Kiểm định chặt chẽ các kết luận trong học máy, như nhận định rằng một modality chi phối bộ dự đoán đa phương thức, cùng với nghiên cứu động lực huấn luyện giữa các tác tử học trong bài toán tạo lập thị trường.",
    "score": 0,
+   "institution_slug": "hcmus",
+   "logo": "img/institutions/hcmus.png",
+   "institution_name": "University of Science, VNU-HCM",
    "areas": [
     {
      "key": "trustworthy-ai",
@@ -2895,6 +3096,9 @@
    "focus": "Automatic medical diagnosis with graph neural networks, by building knowledge graphs that link patients through their symptoms.",
    "focus_vi": "Chẩn đoán y khoa tự động bằng mạng nơ-ron đồ thị, thông qua xây dựng đồ thị tri thức liên kết bệnh nhân với nhau qua các triệu chứng.",
    "score": 0,
+   "institution_slug": "ctu",
+   "logo": "img/institutions/ctu.svg",
+   "institution_name": "Can Tho University",
    "areas": [
     {
      "key": "health-science",
@@ -2929,6 +3133,9 @@
    "focus": "Domain adaptation, transferring a model trained on one data distribution to another, through knowledge distillation guided by gradients.",
    "focus_vi": "Thích ứng miền (domain adaptation), chuyển một mô hình đã huấn luyện trên một phân phối dữ liệu sang phân phối khác, thông qua knowledge distillation được dẫn dắt bởi gradient.",
    "score": 0,
+   "institution_slug": "uit",
+   "logo": "img/institutions/uit.svg",
+   "institution_name": "University of Information Technology, VNU-HCM",
    "areas": [
     {
      "key": "vision-multimodal",
@@ -2963,6 +3170,9 @@
    "focus": "Evaluation of conversational image retrieval, where a user refines a search for a target image over several dialogue turns, and in particular whether a late-turn performance plateau really means no further improvement is possible.",
    "focus_vi": "Đánh giá bài toán truy xuất ảnh hội thoại, khi người dùng tinh chỉnh việc tìm một ảnh đích qua nhiều lượt hội thoại, đặc biệt là liệu hiện tượng hiệu năng chững lại ở các lượt cuối có thực sự nghĩa là không thể cải thiện thêm hay không.",
    "score": 0,
+   "institution_slug": "uit",
+   "logo": "img/institutions/uit.svg",
+   "institution_name": "University of Information Technology, VNU-HCM",
    "areas": [
     {
      "key": "vision-multimodal",
@@ -2997,6 +3207,9 @@
    "focus": "Machine learning for healthcare, specifically automatic diagnosis by learning knowledge graphs that connect patients through shared symptoms.",
    "focus_vi": "Học máy cho y tế, cụ thể là chẩn đoán tự động bằng cách học các đồ thị tri thức nối các bệnh nhân qua những triệu chứng chung.",
    "score": 0,
+   "institution_slug": "ctu",
+   "logo": "img/institutions/ctu.svg",
+   "institution_name": "Can Tho University",
    "areas": [
     {
      "key": "health-science",
@@ -3031,6 +3244,9 @@
    "focus": "Regularization for representation learning with polynomial features, designing penalties that order model capacity by polynomial degree without breaking down near zero.",
    "focus_vi": "Điều chuẩn (regularization) cho học biểu diễn với đặc trưng đa thức, thiết kế các hàm phạt sắp xếp năng lực mô hình theo bậc đa thức mà không bị sai lệch gần giá trị 0.",
    "score": 0,
+   "institution_slug": "uit",
+   "logo": "img/institutions/uit.svg",
+   "institution_name": "University of Information Technology, VNU-HCM",
    "areas": [
     {
      "key": "optimization",
@@ -3065,6 +3281,9 @@
    "focus": "Transfer learning studied through ideas from topology.",
    "focus_vi": "Học chuyển giao (transfer learning) được nghiên cứu qua các ý tưởng từ tô-pô.",
    "score": 0,
+   "institution_slug": "qnu",
+   "logo": "img/institutions/qnu.png",
+   "institution_name": "Quy Nhon University",
    "areas": [
     {
      "key": "deep-learning",
@@ -3088,6 +3307,9 @@
    "focus": "Optimization for large-batch training of deep neural networks, aiming to keep good generalization when the batch size is very large.",
    "focus_vi": "Tối ưu cho huấn luyện mạng nơ-ron sâu với batch lớn, nhằm giữ khả năng tổng quát hóa tốt khi kích thước batch rất lớn.",
    "score": 0,
+   "institution_slug": "hust",
+   "logo": "img/institutions/hust.svg",
+   "institution_name": "Hanoi University of Science and Technology",
    "areas": [
     {
      "key": "optimization",
@@ -3122,6 +3344,9 @@
    "focus": "Robustness of deep neural networks to distribution shifts measured in the Wasserstein distance, both certifying robustness and attacking it.",
    "focus_vi": "Độ bền vững của mạng nơ-ron sâu trước các dịch chuyển phân phối đo bằng khoảng cách Wasserstein, gồm cả chứng nhận độ bền vững lẫn tấn công.",
    "score": 0,
+   "institution_slug": "vinuni",
+   "logo": "img/institutions/vinuni.png",
+   "institution_name": "VinUniversity",
    "areas": [
     {
      "key": "trustworthy-ai",
@@ -3156,6 +3381,9 @@
    "focus": "Designing convex regularizers that encode polynomial degree as a hierarchy of complexity when learning representations.",
    "focus_vi": "Thiết kế các hàm điều chuẩn lồi mã hóa bậc đa thức như một thang độ phức tạp khi học biểu diễn.",
    "score": 0,
+   "institution_slug": "hcmue",
+   "logo": "",
+   "institution_name": "Ho Chi Minh City University of Education",
    "areas": [
     {
      "key": "optimization",
@@ -3190,6 +3418,9 @@
    "focus": "Neural network architectures that model multiplicative and power-law interactions directly, through a stable continuous power-product gating unit.",
    "focus_vi": "Kiến trúc mạng nơ-ron mô hình hóa trực tiếp các tương tác nhân và quy luật lũy thừa, thông qua một đơn vị gating dạng tích lũy thừa liên tục và ổn định.",
    "score": 0,
+   "institution_slug": "eiu",
+   "logo": "",
+   "institution_name": "Eastern International University",
    "areas": [
     {
      "key": "deep-learning",
@@ -3224,6 +3455,9 @@
    "focus": "Data resources for AI in gastrointestinal endoscopy, in particular a large multi-center dataset for automatic polyp detection and segmentation in colonoscopy.",
    "focus_vi": "Nguồn dữ liệu cho AI trong nội soi tiêu hóa, cụ thể là một bộ dữ liệu lớn đa trung tâm phục vụ phát hiện và phân vùng polyp tự động trong nội soi đại tràng.",
    "score": 0,
+   "institution_slug": "hmu",
+   "logo": "img/institutions/hmu.png",
+   "institution_name": "Hanoi Medical University",
    "areas": [
     {
      "key": "health-science",
@@ -3258,6 +3492,9 @@
    "focus": "Evaluating language models for healthcare in Vietnamese, through a large verified benchmark of medical questions.",
    "focus_vi": "Đánh giá mô hình ngôn ngữ cho lĩnh vực y tế bằng tiếng Việt, thông qua một bộ chuẩn đánh giá lớn gồm các câu hỏi y khoa đã được kiểm chứng.",
    "score": 0,
+   "institution_slug": "ftu",
+   "logo": "img/institutions/ftu.svg",
+   "institution_name": "Foreign Trade University",
    "areas": [
     {
      "key": "health-science",
@@ -3292,6 +3529,9 @@
    "focus": "Recommender systems based on neighborhood methods that combine user-user and item-item similarity in a hybrid model.",
    "focus_vi": "Hệ gợi ý dựa trên phương pháp láng giềng, kết hợp độ tương đồng giữa người dùng với nhau và giữa sản phẩm với nhau trong một mô hình lai.",
    "score": 0,
+   "institution_slug": "hust",
+   "logo": "img/institutions/hust.svg",
+   "institution_name": "Hanoi University of Science and Technology",
    "areas": [
     {
      "key": "data-mining-graphs",
@@ -3315,6 +3555,9 @@
    "focus": "Reducing temporal hallucinations in video large language models (Video-LLMs), such as misreading event order or motion direction, without retraining the model.",
    "focus_vi": "Giảm ảo giác thời gian (temporal hallucination) trong các mô hình ngôn ngữ lớn cho video (Video-LLM), như hiểu sai thứ tự sự kiện hay hướng chuyển động, mà không cần huấn luyện lại mô hình.",
    "score": 0,
+   "institution_slug": "dhtl",
+   "logo": "img/institutions/dhtl.png",
+   "institution_name": "Thang Long University",
    "areas": [
     {
      "key": "vision-multimodal",
@@ -3349,6 +3592,9 @@
    "focus": "Uncertainty-aware time-series analysis that combines selective state-space models with Bayesian graph attention.",
    "focus_vi": "Phân tích chuỗi thời gian có ước lượng độ bất định, kết hợp mô hình không gian trạng thái chọn lọc với cơ chế chú ý đồ thị Bayes.",
    "score": 0,
+   "institution_slug": "buv",
+   "logo": "img/institutions/buv.svg",
+   "institution_name": "British University Vietnam",
    "areas": [
     {
      "key": "probabilistic-causal",
@@ -3383,6 +3629,9 @@
    "focus": "Safety and privacy of persistent memory in large language model (LLM) agents when that memory is carried over to a different underlying model.",
    "focus_vi": "An toàn và quyền riêng tư của bộ nhớ lâu dài trong các tác tử mô hình ngôn ngữ lớn (LLM) khi bộ nhớ đó được chuyển sang một mô hình nền khác.",
    "score": 0,
+   "institution_slug": "rmit",
+   "logo": "img/institutions/rmit.svg",
+   "institution_name": "RMIT University Vietnam",
    "areas": [
     {
      "key": "trustworthy-ai",
@@ -3417,6 +3666,9 @@
    "focus": "Graph-based learning for automatic medical diagnosis, connecting patients through their symptoms in a knowledge graph.",
    "focus_vi": "Học trên đồ thị cho chẩn đoán y khoa tự động, nối các bệnh nhân với nhau qua triệu chứng trong một đồ thị tri thức.",
    "score": 0,
+   "institution_slug": "ctu",
+   "logo": "img/institutions/ctu.svg",
+   "institution_name": "Can Tho University",
    "areas": [
     {
      "key": "health-science",
@@ -3451,6 +3703,9 @@
    "focus": "Computational pathology with foundation models: combining several pretrained pathology vision-language models when only a few labelled examples are available.",
    "focus_vi": "Bệnh học tính toán với foundation model: kết hợp nhiều mô hình thị giác - ngôn ngữ bệnh học đã huấn luyện sẵn khi chỉ có ít mẫu được gán nhãn.",
    "score": 0,
+   "institution_slug": "hue-university",
+   "logo": "",
+   "institution_name": "Hue University",
    "areas": [
     {
      "key": "health-science",
@@ -3485,6 +3740,9 @@
    "focus": "Compressing convolutional neural networks (CNNs) for resource-limited hardware by pruning filters according to information-theoretic importance.",
    "focus_vi": "Nén mạng nơ-ron tích chập (CNN) cho phần cứng tài nguyên hạn chế bằng cách cắt tỉa bộ lọc theo mức độ quan trọng dựa trên lý thuyết thông tin.",
    "score": 0,
+   "institution_slug": "hcmut",
+   "logo": "img/institutions/hcmut.svg",
+   "institution_name": "Ho Chi Minh City University of Technology",
    "areas": [
     {
      "key": "efficient-scalable",
@@ -3519,6 +3777,9 @@
    "focus": "Personalized federated learning that decides, layer by layer, which parts of a model should be shared across clients and which should stay client-specific.",
    "focus_vi": "Học liên kết cá nhân hóa (personalized federated learning) quyết định theo từng tầng phần nào của mô hình nên dùng chung giữa các máy khách và phần nào nên giữ riêng cho từng máy khách.",
    "score": 0,
+   "institution_slug": "hust",
+   "logo": "img/institutions/hust.svg",
+   "institution_name": "Hanoi University of Science and Technology",
    "areas": [
     {
      "key": "efficient-scalable",
@@ -3553,6 +3814,9 @@
    "focus": "Layer-wise personalization in federated learning, using disagreement between clients' gradients to choose which layers to keep local.",
    "focus_vi": "Cá nhân hóa theo tầng trong học liên kết, dùng sự bất đồng giữa gradient của các máy khách để chọn tầng nào giữ cục bộ.",
    "score": 0,
+   "institution_slug": "hust",
+   "logo": "img/institutions/hust.svg",
+   "institution_name": "Hanoi University of Science and Technology",
    "areas": [
     {
      "key": "efficient-scalable",
