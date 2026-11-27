@@ -431,7 +431,10 @@ def merge_papers(papers):
             e = entries.get(paper_id(p))
             if not e or not any(o["slug"] == prof["slug"] for o in p.get("professors") or []):
                 continue
+            url = p.get("url") or ""
             mine.append({"id": paper_id(p), "title": p["title"], "venue": p["venue"], "venue_name": p["venue_name"], "year": p["year"],
+                         "source": "" if "openreview.net" in url else url,
+                         "openreview": f"https://openreview.net/forum?id={forum_of(p)}" if forum_of(p) else "",
                          "credit": round(1 / max(len([a for a in (p.get("authors") or "").split(",") if a.strip()]), 1), 4),
                          "status": p["status"], **{k: e.get(k, "") for k in fields},
                          "authors": e.get("authors") or [], "reviewers": e.get("reviewers") or []})

@@ -8,5 +8,5 @@
 	{{- with $p.authors }}<dt>{{ T "ch_authors" }}</dt><dd><ul>{{ range . }}<li>{{ if $vi }}{{ .text_vi }}{{ else }}{{ .text }}{{ end }}</li>{{ end }}</ul></dd>{{ end }}
 	{{- with $p.reviewers }}<dt>{{ T "ch_reviewers" }}</dt><dd><ul>{{ range . }}<li>{{ partial "challenge-quote.html" (dict "x" . "vi" $vi) }}</li>{{ end }}</ul></dd>{{ end }}
 </dl>
-<p class="ch-link"><a href="{{ printf "papers/#%s" $p.id | relLangURL }}">{{ T "ch_on_papers" }}</a></p>
+<p class="ch-link"><a href="{{ printf "papers/#%s" $p.id | relLangURL }}" title="{{ T "ch_on_papers" }}">{{ T "ch_link" }}</a>{{ with $p.source }} · <a href="{{ . }}" title="{{ T "ch_source_tip" }}">{{ T "ch_source" }}</a>{{ end }}{{ with $p.openreview }} · <a href="{{ . }}" title="{{ T "ch_openreview_tip" }}">OpenReview</a>{{ end }}</p>
 </details>

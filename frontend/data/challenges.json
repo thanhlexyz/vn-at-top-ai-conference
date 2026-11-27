@@ -230,7 +230,7 @@
    "name": "Cuong Pham",
    "name_vi": "Phạm Văn Cường",
    "institution": "PTIT",
-   "papers": 15,
+   "papers": 16,
    "focus": "Fast and controllable image generation with diffusion models, and image restoration, especially deblurring, learned without paired training data.",
    "focus_vi": "Sinh ảnh nhanh và có kiểm soát bằng mô hình khuếch tán (diffusion model), cùng với khôi phục ảnh, đặc biệt là khử mờ, được học mà không cần dữ liệu huấn luyện ghép cặp.",
    "score": 0.78,
@@ -527,23 +527,6 @@
    ]
   },
   {
-   "slug": "hieu-pham",
-   "done": false,
-   "name": "Hieu Pham",
-   "name_vi": "Phạm Huy Hiệu",
-   "institution": "VinUni",
-   "papers": 5,
-   "focus": "Robust and interpretable deep learning, covering domain generalization, neuron-level interpretability, continual learning, and machine learning for computational pathology.",
-   "focus_vi": "Học sâu bền vững và diễn giải được, gồm tổng quát hóa miền, diễn giải ở mức nơ-ron, học liên tục, và học máy cho bệnh học tính toán.",
-   "score": 0.4,
-   "areas": [
-    {
-     "key": "trustworthy-ai",
-     "score": 0.4
-    }
-   ]
-  },
-  {
    "slug": "nhan-phu-chung",
    "done": false,
    "name": "Nhan-Phu Chung",
@@ -793,6 +776,23 @@
    ]
   },
   {
+   "slug": "hieu-pham",
+   "done": true,
+   "name": "Hieu Pham",
+   "name_vi": "Phạm Huy Hiệu",
+   "institution": "VinUni",
+   "papers": 5,
+   "focus": "Robust and interpretable deep learning, covering domain generalization, neuron-level interpretability, continual learning, and machine learning for computational pathology.",
+   "focus_vi": "Học sâu bền vững và diễn giải được, gồm tổng quát hóa miền, diễn giải ở mức nơ-ron, học liên tục, và học máy cho bệnh học tính toán.",
+   "score": 0.2,
+   "areas": [
+    {
+     "key": "trustworthy-ai",
+     "score": 0.2
+    }
+   ]
+  },
+  {
    "slug": "thanh-trung-huynh",
    "done": true,
    "name": "Thanh Trung Huynh",
@@ -882,11 +882,11 @@
   },
   {
    "slug": "cong-tran",
-   "done": false,
+   "done": true,
    "name": "Cong Tran",
    "name_vi": "Trần Tiến Công",
    "institution": "PTIT",
-   "papers": 2,
+   "papers": 3,
    "focus": "Learning on graphs and networks, including influence maximization on multiplex networks, active learning on incomplete networks and graph-based image classification.",
    "focus_vi": "Học trên đồ thị và mạng, gồm tối đa hóa ảnh hưởng trên mạng đa tầng, học chủ động trên mạng không đầy đủ và phân loại ảnh dựa trên đồ thị.",
    "score": 0.2,
@@ -1792,9 +1792,9 @@
   }
  ],
  "sources": {
-  "papers": 323,
+  "papers": 324,
   "date": "2026-11-27",
-  "with_text": 288,
+  "with_text": 289,
   "with_reviews": 187
  }
 }

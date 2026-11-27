@@ -642,7 +642,7 @@ other = "stated by the authors"
 [ch_src_reviewers]
 other = "raised by reviewers"
 [ch_on_papers]
-other = "This paper on the Papers page"
+other = "The paper's row on the Papers page"
 [ch_fig_label]
 other = "Papers by topic and year; a curve joins a paper to an earlier paper of the same professor that it cites"
 [ch_fig_caption]
@@ -673,3 +673,11 @@ other = "All topics"
 other = "Show {n} more with no accepted papers"
 [ch_more_hide]
 other = "Hide them"
+[ch_link]
+other = "Link"
+[ch_source]
+other = "Source"
+[ch_source_tip]
+other = "The official source of the paper"
+[ch_openreview_tip]
+other = "The paper's page on OpenReview, with its public reviews"
