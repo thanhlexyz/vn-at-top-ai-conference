@@ -669,3 +669,7 @@ other = "score (accepted papers)"
 other = "CSRankings score (sum of 1/N authors) over the accepted papers of the professor's highest-scoring topic, or of the selected topic when filtering; the list is sorted by it. Rejected and withdrawn papers are not counted here"
 [ch_all_topics]
 other = "All topics"
+[ch_more_show]
+other = "Show {n} more with no accepted papers"
+[ch_more_hide]
+other = "Hide them"

@@ -3,6 +3,7 @@
 <style>
 ul.ch-index { list-style: none ; padding: 0 ; }
 ul.ch-index li { margin: 0 0 1.1em ; line-height: 1.55 ; }
+ul.ch-index:not(.all) li.zero { display: none ; }
 ul.ch-index .inst { color: var(--muted) ; font-size: 0.9em ; }
 .ch-filter { display: flex ; flex-wrap: wrap ; gap: 0.4em ; }
 .ch-filter button { font: inherit ; font-size: 0.88em ; color: var(--link) ; background: none ; border: 1px solid var(--line) ; border-radius: 999px ; padding: 0.2em 0.8em ; cursor: pointer ; }
@@ -19,6 +20,7 @@ h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; 
 	<li data-areas="{{ range .areas }}{{ .key }}:{{ .score }} {{ end }}" data-score="{{ .score }}"><span class="st" title="{{ cond .done (T "ch_done") (T "ch_building") }}">{{ if .done }}✅{{ else }}🚧{{ end }}</span> <a href="{{ printf "challenges/%s/" .slug | relLangURL }}"><strong>{{ if $vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end }}</strong></a> <span class="inst">({{ .institution }} · <span class="sc" title="{{ T "ch_top_score_tip" }}"><b>{{ printf "%.2f" .score }}</b></span>)</span> {{ if $vi }}{{ .focus_vi }}{{ else }}{{ .focus }}{{ end }}</li>
 {{- end }}
 </ul>
+<p class="table-tools"><button type="button" class="ch-more" hidden data-show="{{ T "ch_more_show" }}" data-hide="{{ T "ch_more_hide" }}"></button></p>
 <script>
 (function () {
 	var list = document.getElementById("ch-list"), items = Array.prototype.slice.call(list.children);
@@ -28,20 +30,29 @@ h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; 
 		var m = (" " + li.dataset.areas).match(new RegExp(" " + key + ":([0-9.]+)"));
 		return m ? parseFloat(m[1]) : -1;
 	}
+	var more = document.querySelector(".ch-more");
+	more.addEventListener("click", function () { list.classList.toggle("all"); label(); });
+	function label() {
+		var n = list.querySelectorAll("li.zero:not([hidden])").length;
+		more.hidden = n === 0;
+		more.textContent = list.classList.contains("all") ? more.dataset.hide : more.dataset.show.replace("{n}", n);
+	}
 	function apply(key) {
 		buttons.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.area === key ? "true" : "false"); });
 		items.sort(function (a, b) { return scoreIn(b, key) - scoreIn(a, key); });
 		items.forEach(function (li) {
 			var v = scoreIn(li, key);
 			li.hidden = key && v < 0;
+			li.classList.toggle("zero", v === 0);
 			var sc = li.querySelector(".sc b");
 			if (sc && v >= 0) sc.textContent = v.toFixed(2);
 			list.appendChild(li);
 		});
+		label();
 	}
 	buttons.forEach(function (b) { b.addEventListener("click", function () { apply(b.dataset.area); location.hash = b.dataset.area ? "topic-" + b.dataset.area : ""; }); });
 	var m = location.hash.match(/^#topic-([\w-]+)$/);
-	if (m) apply(m[1]);
+	apply(m ? m[1] : "");
 })();
 </script>
 <p class="note">{{ T "ch_sources" (dict "Papers" .sources.papers "Text" .sources.with_text "Reviews" .sources.with_reviews "Date" .sources.date) }}</p>
