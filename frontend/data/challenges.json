@@ -99,45 +99,176 @@
   },
   {
    "slug": "khoa-d-doan",
-   "done": false,
+   "done": true,
    "name": "Khoa D. Doan",
    "name_vi": "Đoàn Đăng Khoa",
    "institution": "VinUni",
-   "papers": 34,
+   "papers": 35,
    "focus": "Security of machine learning, chiefly backdoor (data-poisoning) attacks and defences, together with the training dynamics and alignment of large language models.",
    "focus_vi": "An toàn cho học máy, chủ yếu là tấn công và phòng thủ backdoor (đầu độc dữ liệu), cùng với động lực huấn luyện và alignment của mô hình ngôn ngữ lớn.",
-   "score": 3.35,
+   "score": 3.56,
    "institution_slug": "vinuni",
    "logo": "img/institutions/vinuni.png",
    "institution_name": "VinUniversity",
    "areas": [
     {
      "key": "trustworthy-ai",
-     "score": 1.71
+     "score": 1.91
     },
     {
      "key": "language-nlp",
-     "score": 0.9
+     "score": 0.74
     },
     {
      "key": "generative-models",
      "score": 0.33
     },
     {
-     "key": "robotics",
-     "score": 0.21
+     "key": "efficient-scalable",
+     "score": 0.2
+    },
+    {
+     "key": "datasets-evaluation",
+     "score": 0.17
     },
     {
      "key": "vision-multimodal",
-     "score": 0.21
+     "score": 0.1
+    },
+    {
+     "key": "health-science",
+     "score": 0.07
+    },
+    {
+     "key": "robotics",
+     "score": 0.04
     },
     {
      "key": "deep-learning",
      "score": 0
     }
    ],
-   "gists": {},
-   "gist_list": []
+   "gists": {
+    "trustworthy-ai": {
+     "n": 15,
+     "score": 1.91,
+     "en": "Work on <a href=\"#iclr2024-forget-me-not-making-backdoor-hard-to-be-forgotten-in-fine-t\">backdoor attacks that survive defenses</a>, plus randomized and patch-based defenses, across images, language, federated, molecular and 3D-scene models.",
+     "vi": "Các công trình về <a href=\"#iclr2024-forget-me-not-making-backdoor-hard-to-be-forgotten-in-fine-t\">backdoor vượt qua phòng thủ</a>, cùng phòng thủ ngẫu nhiên và theo patch, trên mô hình ảnh, ngôn ngữ, học liên kết, phân tử và cảnh 3D."
+    },
+    "language-nlp": {
+     "n": 8,
+     "score": 0.74,
+     "en": "Work on <a href=\"#neurips2025-mitigating-reward-over-optimization-in-direct-alignment-algo\">aligning language models</a> with preference optimization and verifiable-reward reinforcement learning, and on reasoning-model behavior.",
+     "vi": "Các công trình về <a href=\"#neurips2025-mitigating-reward-over-optimization-in-direct-alignment-algo\">căn chỉnh mô hình ngôn ngữ</a> bằng tối ưu hóa sở thích và học tăng cường với phần thưởng kiểm chứng được, cùng hành vi của các mô hình suy luận."
+    },
+    "generative-models": {
+     "n": 2,
+     "score": 0.33,
+     "en": "Work on <a href=\"#neurips2025-unveiling-concept-attribution-in-diffusion-models\">attributing concepts to model parameters</a> in text-to-image diffusion models, then editing them at inference time to erase or amplify a concept.",
+     "vi": "Các công trình về <a href=\"#neurips2025-unveiling-concept-attribution-in-diffusion-models\">quy khái niệm cho tham số</a> trong mô hình khuếch tán sinh ảnh, rồi chỉnh sửa lúc suy luận để xóa hoặc khuếch đại một khái niệm."
+    },
+    "efficient-scalable": {
+     "n": 3,
+     "score": 0.2,
+     "en": "Work on <a href=\"#cvpr2026-onboarding-without-forgetting-hypernetwork-personalization-w\">federated learning with evolving clients</a> and domain shift, using aggregation, hypernetworks and server-side synthetic data without sharing raw client data.",
+     "vi": "Các công trình về <a href=\"#cvpr2026-onboarding-without-forgetting-hypernetwork-personalization-w\">học liên kết client biến động</a> và dịch chuyển miền, dùng tổng hợp mô hình, hypernetwork và dữ liệu tổng hợp ở máy chủ mà không chia sẻ dữ liệu thô."
+    },
+    "datasets-evaluation": {
+     "n": 1,
+     "score": 0.17,
+     "en": "Work on <a href=\"#icml2025-llm-srbench-a-new-benchmark-for-scientific-equation-discover\">benchmarking scientific equation discovery</a> with large language models, using problems built to resist memorization of well-known equations.",
+     "vi": "Các công trình về <a href=\"#icml2025-llm-srbench-a-new-benchmark-for-scientific-equation-discover\">benchmark khám phá phương trình</a> khoa học với mô hình ngôn ngữ lớn, dùng các bài toán được thiết kế để chống việc ghi nhớ các phương trình nổi tiếng."
+    },
+    "vision-multimodal": {
+     "n": 2,
+     "score": 0.1,
+     "en": "Work on <a href=\"#neurips2025-how-many-tokens-do-3d-point-cloud-transformer-architectures-\">token merging and missing modalities</a>, shrinking redundant tokens in 3D point cloud transformers and reconstructing absent modalities with uncertainty estimates.",
+     "vi": "Các công trình về <a href=\"#neurips2025-how-many-tokens-do-3d-point-cloud-transformer-architectures-\">gộp token và modality bị thiếu</a>, giảm token dư thừa trong transformer đám mây điểm 3D và tái tạo modality bị thiếu kèm ước lượng độ bất định."
+    },
+    "health-science": {
+     "n": 1,
+     "score": 0.07,
+     "en": "Work on <a href=\"#iclr2026-facet-a-fragment-aware-conformer-ensemble-transformer\">predicting molecular properties</a> by fusing 2D molecular graphs with 3D conformer ensembles, using a transformer that approximates an expensive optimal-transport distance.",
+     "vi": "Các công trình về <a href=\"#iclr2026-facet-a-fragment-aware-conformer-ensemble-transformer\">dự đoán tính chất phân tử</a> bằng cách hợp nhất đồ thị phân tử 2D với tập cấu dạng 3D, dùng một transformer xấp xỉ một khoảng cách vận tải tối ưu tốn kém."
+    },
+    "robotics": {
+     "n": 1,
+     "score": 0.04,
+     "en": "Work on <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">few-shot robot policy adaptation</a> that conditions vision-language-action models on predicted future embeddings instead of predicted pixels.",
+     "vi": "Các công trình về <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">thích nghi robot ít mẫu</a> điều kiện hóa mô hình vision-language-action trên embedding tương lai được dự đoán thay vì điểm ảnh."
+    },
+    "deep-learning": {
+     "n": 2,
+     "score": 0,
+     "en": "Work on <a href=\"#iclr2025-forget-but-recall-incremental-latent-rectification-in-contin\">continual learning by mapping representations</a> back to earlier tasks, and on gradient boosting that uses shallow neural networks as weak learners.",
+     "vi": "Các công trình về <a href=\"#iclr2025-forget-but-recall-incremental-latent-rectification-in-contin\">học liên tục bằng ánh xạ</a> biểu diễn về các tác vụ trước, và về gradient boosting dùng mạng nơ-ron nông làm bộ học yếu."
+    }
+   },
+   "gist_list": [
+    {
+     "n": 15,
+     "score": 1.91,
+     "key": "trustworthy-ai",
+     "en": "Work on <a href=\"#iclr2024-forget-me-not-making-backdoor-hard-to-be-forgotten-in-fine-t\">backdoor attacks that survive defenses</a>, plus randomized and patch-based defenses, across images, language, federated, molecular and 3D-scene models.",
+     "vi": "Các công trình về <a href=\"#iclr2024-forget-me-not-making-backdoor-hard-to-be-forgotten-in-fine-t\">backdoor vượt qua phòng thủ</a>, cùng phòng thủ ngẫu nhiên và theo patch, trên mô hình ảnh, ngôn ngữ, học liên kết, phân tử và cảnh 3D."
+    },
+    {
+     "n": 8,
+     "score": 0.74,
+     "key": "language-nlp",
+     "en": "Work on <a href=\"#neurips2025-mitigating-reward-over-optimization-in-direct-alignment-algo\">aligning language models</a> with preference optimization and verifiable-reward reinforcement learning, and on reasoning-model behavior.",
+     "vi": "Các công trình về <a href=\"#neurips2025-mitigating-reward-over-optimization-in-direct-alignment-algo\">căn chỉnh mô hình ngôn ngữ</a> bằng tối ưu hóa sở thích và học tăng cường với phần thưởng kiểm chứng được, cùng hành vi của các mô hình suy luận."
+    },
+    {
+     "n": 2,
+     "score": 0.33,
+     "key": "generative-models",
+     "en": "Work on <a href=\"#neurips2025-unveiling-concept-attribution-in-diffusion-models\">attributing concepts to model parameters</a> in text-to-image diffusion models, then editing them at inference time to erase or amplify a concept.",
+     "vi": "Các công trình về <a href=\"#neurips2025-unveiling-concept-attribution-in-diffusion-models\">quy khái niệm cho tham số</a> trong mô hình khuếch tán sinh ảnh, rồi chỉnh sửa lúc suy luận để xóa hoặc khuếch đại một khái niệm."
+    },
+    {
+     "n": 3,
+     "score": 0.2,
+     "key": "efficient-scalable",
+     "en": "Work on <a href=\"#cvpr2026-onboarding-without-forgetting-hypernetwork-personalization-w\">federated learning with evolving clients</a> and domain shift, using aggregation, hypernetworks and server-side synthetic data without sharing raw client data.",
+     "vi": "Các công trình về <a href=\"#cvpr2026-onboarding-without-forgetting-hypernetwork-personalization-w\">học liên kết client biến động</a> và dịch chuyển miền, dùng tổng hợp mô hình, hypernetwork và dữ liệu tổng hợp ở máy chủ mà không chia sẻ dữ liệu thô."
+    },
+    {
+     "n": 2,
+     "score": 0.1,
+     "key": "vision-multimodal",
+     "en": "Work on <a href=\"#neurips2025-how-many-tokens-do-3d-point-cloud-transformer-architectures-\">token merging and missing modalities</a>, shrinking redundant tokens in 3D point cloud transformers and reconstructing absent modalities with uncertainty estimates.",
+     "vi": "Các công trình về <a href=\"#neurips2025-how-many-tokens-do-3d-point-cloud-transformer-architectures-\">gộp token và modality bị thiếu</a>, giảm token dư thừa trong transformer đám mây điểm 3D và tái tạo modality bị thiếu kèm ước lượng độ bất định."
+    },
+    {
+     "n": 2,
+     "score": 0,
+     "key": "deep-learning",
+     "en": "Work on <a href=\"#iclr2025-forget-but-recall-incremental-latent-rectification-in-contin\">continual learning by mapping representations</a> back to earlier tasks, and on gradient boosting that uses shallow neural networks as weak learners.",
+     "vi": "Các công trình về <a href=\"#iclr2025-forget-but-recall-incremental-latent-rectification-in-contin\">học liên tục bằng ánh xạ</a> biểu diễn về các tác vụ trước, và về gradient boosting dùng mạng nơ-ron nông làm bộ học yếu."
+    },
+    {
+     "n": 1,
+     "score": 0.17,
+     "key": "datasets-evaluation",
+     "en": "Work on <a href=\"#icml2025-llm-srbench-a-new-benchmark-for-scientific-equation-discover\">benchmarking scientific equation discovery</a> with large language models, using problems built to resist memorization of well-known equations.",
+     "vi": "Các công trình về <a href=\"#icml2025-llm-srbench-a-new-benchmark-for-scientific-equation-discover\">benchmark khám phá phương trình</a> khoa học với mô hình ngôn ngữ lớn, dùng các bài toán được thiết kế để chống việc ghi nhớ các phương trình nổi tiếng."
+    },
+    {
+     "n": 1,
+     "score": 0.07,
+     "key": "health-science",
+     "en": "Work on <a href=\"#iclr2026-facet-a-fragment-aware-conformer-ensemble-transformer\">predicting molecular properties</a> by fusing 2D molecular graphs with 3D conformer ensembles, using a transformer that approximates an expensive optimal-transport distance.",
+     "vi": "Các công trình về <a href=\"#iclr2026-facet-a-fragment-aware-conformer-ensemble-transformer\">dự đoán tính chất phân tử</a> bằng cách hợp nhất đồ thị phân tử 2D với tập cấu dạng 3D, dùng một transformer xấp xỉ một khoảng cách vận tải tối ưu tốn kém."
+    },
+    {
+     "n": 1,
+     "score": 0.04,
+     "key": "robotics",
+     "en": "Work on <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">few-shot robot policy adaptation</a> that conditions vision-language-action models on predicted future embeddings instead of predicted pixels.",
+     "vi": "Các công trình về <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">thích nghi robot ít mẫu</a> điều kiện hóa mô hình vision-language-action trên embedding tương lai được dự đoán thay vì điểm ảnh."
+    }
+   ]
   },
   {
    "slug": "phi-le-nguyen",
@@ -653,6 +784,32 @@
    "gist_list": []
   },
   {
+   "slug": "thanh-binh-nguyen",
+   "done": false,
+   "name": "Thanh-Binh Nguyen",
+   "name_vi": "Nguyễn Thanh Bình",
+   "institution": "HCMUS",
+   "papers": 12,
+   "focus": "A broad range of machine learning: efficient Transformers and sparse Mixture-of-Experts, aligning large language models with human preferences, federated and continual learning, and applied AI for medicine and Vietnamese text.",
+   "focus_vi": "Nhiều chủ đề học máy: Transformer hiệu quả và Mixture-of-Experts thưa, căn chỉnh mô hình ngôn ngữ lớn theo sở thích con người, học liên kết (federated learning) và học liên tục, cùng các ứng dụng AI cho y tế và văn bản tiếng Việt.",
+   "score": 1.05,
+   "institution_slug": "hcmus",
+   "logo": "img/institutions/hcmus.png",
+   "institution_name": "University of Science, VNU-HCM",
+   "areas": [
+    {
+     "key": "deep-learning",
+     "score": 1.05
+    },
+    {
+     "key": "language-nlp",
+     "score": 1.05
+    }
+   ],
+   "gists": {},
+   "gist_list": []
+  },
+  {
    "slug": "duc-trong-le",
    "done": false,
    "name": "Duc-Trong Le",
@@ -740,32 +897,6 @@
      "vi": "Các công trình về <a href=\"#emnlp2025-emo-embedding-model-distillation-via-intra-model-relation-an\">chưng cất mô hình văn bản</a> giữa các tokenizer khác nhau còn gồm mô hình chủ đề đa ngôn ngữ, bộ nhớ đồ thị cho LLM và trích xuất quan hệ liên tục."
     }
    ]
-  },
-  {
-   "slug": "thanh-binh-nguyen",
-   "done": false,
-   "name": "Thanh-Binh Nguyen",
-   "name_vi": "Nguyễn Thanh Bình",
-   "institution": "HCMUS",
-   "papers": 11,
-   "focus": "A broad range of machine learning: efficient Transformers and sparse Mixture-of-Experts, aligning large language models with human preferences, federated and continual learning, and applied AI for medicine and Vietnamese text.",
-   "focus_vi": "Nhiều chủ đề học máy: Transformer hiệu quả và Mixture-of-Experts thưa, căn chỉnh mô hình ngôn ngữ lớn theo sở thích con người, học liên kết (federated learning) và học liên tục, cùng các ứng dụng AI cho y tế và văn bản tiếng Việt.",
-   "score": 0.85,
-   "institution_slug": "hcmus",
-   "logo": "img/institutions/hcmus.png",
-   "institution_name": "University of Science, VNU-HCM",
-   "areas": [
-    {
-     "key": "deep-learning",
-     "score": 0.85
-    },
-    {
-     "key": "language-nlp",
-     "score": 0.85
-    }
-   ],
-   "gists": {},
-   "gist_list": []
   },
   {
    "slug": "tan-d-tran",
@@ -2545,8 +2676,8 @@
     "robotics": {
      "n": 1,
      "score": 0.04,
-     "en": "Work on <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">few-shot adaptation of vision-language-action models</a> trains them to anticipate future interactions and goals in latent space from few demonstrations.",
-     "vi": "Các công trình về <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">thích nghi mô hình thị giác-ngôn ngữ-hành động</a> từ ít minh họa huấn luyện mô hình dự đoán trước tương tác và mục tiêu tương lai trong không gian ẩn."
+     "en": "Work on <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">few-shot robot policy adaptation</a> that conditions vision-language-action models on predicted future embeddings instead of predicted pixels.",
+     "vi": "Các công trình về <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">thích nghi robot ít mẫu</a> điều kiện hóa mô hình vision-language-action trên embedding tương lai được dự đoán thay vì điểm ảnh."
     }
    },
    "gist_list": [
@@ -2554,8 +2685,8 @@
      "n": 1,
      "score": 0.04,
      "key": "robotics",
-     "en": "Work on <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">few-shot adaptation of vision-language-action models</a> trains them to anticipate future interactions and goals in latent space from few demonstrations.",
-     "vi": "Các công trình về <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">thích nghi mô hình thị giác-ngôn ngữ-hành động</a> từ ít minh họa huấn luyện mô hình dự đoán trước tương tác và mục tiêu tương lai trong không gian ẩn."
+     "en": "Work on <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">few-shot robot policy adaptation</a> that conditions vision-language-action models on predicted future embeddings instead of predicted pixels.",
+     "vi": "Các công trình về <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">thích nghi robot ít mẫu</a> điều kiện hóa mô hình vision-language-action trên embedding tương lai được dự đoán thay vì điểm ảnh."
     }
    ]
   },
@@ -2878,40 +3009,23 @@
     {
      "key": "efficient-scalable",
      "score": 0
-    },
-    {
-     "key": "deep-learning",
-     "score": 0
     }
    ],
    "gists": {
     "efficient-scalable": {
-     "n": 1,
+     "n": 2,
      "score": 0,
-     "en": "Work on <a href=\"#iclr2026-feddtw-federated-digital-twin-weighting-for-mitigating-clien\">forecasting missing clients' models</a> lets a federated learning server estimate them from past weights, so training continues when devices drop out.",
-     "vi": "Các công trình về <a href=\"#iclr2026-feddtw-federated-digital-twin-weighting-for-mitigating-clien\">dự báo mô hình của client vắng mặt</a> cho phép máy chủ học liên kết ước lượng chúng từ trọng số trước đó, để việc huấn luyện tiếp tục khi thiết bị rời mạng."
-    },
-    "deep-learning": {
-     "n": 1,
-     "score": 0,
-     "en": "Work on <a href=\"#iclr2025-overcoming-catastrophic-forgetting-in-federated-class-increm\">server-trained generators of synthetic data</a> that reduce catastrophic forgetting in federated class-incremental learning.",
-     "vi": "Các công trình về <a href=\"#iclr2025-overcoming-catastrophic-forgetting-in-federated-class-increm\">bộ sinh dữ liệu tổng hợp huấn luyện trên máy chủ</a> nhằm giảm hiện tượng quên thảm khốc trong học tăng dần theo lớp trong môi trường liên kết."
+     "en": "Work on <a href=\"#iclr2026-feddtw-federated-digital-twin-weighting-for-mitigating-clien\">forecasting absent clients' model updates</a> at the server in cross-device federated learning when selected clients fail to participate.",
+     "vi": "Các công trình về <a href=\"#iclr2026-feddtw-federated-digital-twin-weighting-for-mitigating-clien\">dự báo cập nhật mô hình của client vắng mặt</a> trên máy chủ trong học liên kết giữa nhiều thiết bị khi các client được chọn không tham gia."
     }
    },
    "gist_list": [
     {
-     "n": 1,
+     "n": 2,
      "score": 0,
      "key": "efficient-scalable",
-     "en": "Work on <a href=\"#iclr2026-feddtw-federated-digital-twin-weighting-for-mitigating-clien\">forecasting missing clients' models</a> lets a federated learning server estimate them from past weights, so training continues when devices drop out.",
-     "vi": "Các công trình về <a href=\"#iclr2026-feddtw-federated-digital-twin-weighting-for-mitigating-clien\">dự báo mô hình của client vắng mặt</a> cho phép máy chủ học liên kết ước lượng chúng từ trọng số trước đó, để việc huấn luyện tiếp tục khi thiết bị rời mạng."
-    },
-    {
-     "n": 1,
-     "score": 0,
-     "key": "deep-learning",
-     "en": "Work on <a href=\"#iclr2025-overcoming-catastrophic-forgetting-in-federated-class-increm\">server-trained generators of synthetic data</a> that reduce catastrophic forgetting in federated class-incremental learning.",
-     "vi": "Các công trình về <a href=\"#iclr2025-overcoming-catastrophic-forgetting-in-federated-class-increm\">bộ sinh dữ liệu tổng hợp huấn luyện trên máy chủ</a> nhằm giảm hiện tượng quên thảm khốc trong học tăng dần theo lớp trong môi trường liên kết."
+     "en": "Work on <a href=\"#iclr2026-feddtw-federated-digital-twin-weighting-for-mitigating-clien\">forecasting absent clients' model updates</a> at the server in cross-device federated learning when selected clients fail to participate.",
+     "vi": "Các công trình về <a href=\"#iclr2026-feddtw-federated-digital-twin-weighting-for-mitigating-clien\">dự báo cập nhật mô hình của client vắng mặt</a> trên máy chủ trong học liên kết giữa nhiều thiết bị khi các client được chọn không tham gia."
     }
    ]
   },
@@ -3886,6 +4000,12 @@
    "count": 7
   },
   {
+   "key": "health-science",
+   "title": "AI for health and science",
+   "title_vi": "AI cho y tế và khoa học",
+   "count": 6
+  },
+  {
    "key": "generative-models",
    "title": "Generative models",
    "title_vi": "Mô hình sinh",
@@ -3898,12 +4018,6 @@
    "count": 6
   },
   {
-   "key": "health-science",
-   "title": "AI for health and science",
-   "title_vi": "AI cho y tế và khoa học",
-   "count": 5
-  },
-  {
    "key": "trustworthy-ai",
    "title": "Trustworthy AI",
    "title_vi": "AI đáng tin cậy",
@@ -3913,13 +4027,13 @@
    "key": "efficient-scalable",
    "title": "Efficient and scalable systems",
    "title_vi": "Hệ thống hiệu quả và có khả năng mở rộng",
-   "count": 4
+   "count": 5
   },
   {
    "key": "datasets-evaluation",
    "title": "Datasets, benchmarks, evaluation",
    "title_vi": "Bộ dữ liệu, benchmark và đánh giá",
-   "count": 1
+   "count": 2
   },
   {
    "key": "hri-dialogue",
@@ -4041,9 +4155,9 @@
   }
  ],
  "sources": {
-  "papers": 325,
+  "papers": 326,
   "date": "2026-11-27",
-  "with_text": 290,
+  "with_text": 301,
   "with_reviews": 188
  }
 }

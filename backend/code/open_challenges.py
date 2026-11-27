@@ -448,7 +448,8 @@ def merge_papers(papers):
     for f in sorted(FINAL.glob("chunk_*.json")):
         entries.update(json.loads(f.read_text(encoding="utf-8")))
     print(f"{verified(entries, papers)} reviewer quotes not found verbatim, dropped", file=sys.stderr)
-    done = {f.stem[5:] for f in (OUT / "topics").glob("part_*.json")} | ({"phi-le-nguyen"} if (OUT / "topics" / "part_phi.json").exists() else set())
+    done = {f.stem[5:] for f in (OUT / "topics").glob("part_*.json")} | ({"phi-le-nguyen"} if (OUT / "topics" / "part_phi.json").exists() else set()) \
+        | {f.stem[5:] for f in (OUT / "topics2").glob("part_*.json")}
     professors = json.loads((FRONTEND / "data" / "professors.json").read_text(encoding="utf-8"))
     summaries = {}
     for f in sorted((OUT / "summary_in").glob("part_*.json")):
@@ -486,6 +487,8 @@ def merge_papers(papers):
             continue
         s = summaries.get(prof["slug"], {})
         t = topics.get(prof["slug"], {})
+        if not t.get("intro") and prof["slug"] in topics2:
+            t = {**t, "intro": topics2[prof["slug"]].get("intro", ""), "intro_vi": topics2[prof["slug"]].get("intro_vi", "")}
         ids = [x["id"] for x in mine]
         groups, used = [], set()
         has_authors = {x["id"] for x in mine if x["authors"]}
