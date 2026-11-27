@@ -10,6 +10,17 @@
 	{{- $names := slice }}{{ if ne (partial "pname.html" $p) $p.name }}{{ $names = $names | append $p.name }}{{ else if ne $p.name_vi $p.name }}{{ $names = $names | append $p.name_vi }}{{ end }}
 	{{- with ($names | append $p.aliases) }}<br><span class="note">{{ T "also_published_as" (delimit . ", ") }}.</span>{{ end }}
 </p>
+{{- with index (hugo.Data.challenges_people | default dict) $p.slug }}
+{{- $vi := eq site.Language.Lang "vi" }}
+{{- $ov := cond $vi .overview_vi .overview }}{{ $op := cond $vi .open_summary_vi .open_summary }}
+{{- if or $ov $op }}
+<blockquote class="ch-quote">
+{{- with $ov }}<p>{{ . }}</p>{{ end }}
+{{- with $op }}<p><strong>{{ T "ch_open_summary" }}</strong> {{ . }}</p>{{ end }}
+<p class="ch-more"><a href="{{ printf "challenges/%s/" $p.slug | relLangURL }}">{{ T "ch_read_more" }} →</a></p>
+</blockquote>
+{{- end }}
+{{- end }}
 <p>
 	{{- $part := "" }}{{ if gt (int $p.own_page) 0 }}{{ $part = T "ent_unofficial_part" (dict "Official" $p.official "Own" $p.own_page) }}{{ end }}
 	{{- if gt (int $p.accepted) 0 }}

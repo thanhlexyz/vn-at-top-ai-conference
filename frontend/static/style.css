@@ -646,3 +646,6 @@ section.ch-topic { border-left: 4px solid var(--tc) ; padding-left: 0.9em ; }
 .ch-words { display: grid ; grid-template-columns: max-content 1fr ; gap: 2px 0.6em ; max-width: 26rem ; font-size: 0.85em ; margin: 0.3em 0 0.6em ; }
 .ch-words .w { color: var(--muted) ; text-align: right ; }
 .ch-words .b { align-self: center ; height: 8px ; border-radius: 4px ; background: var(--tc) ; opacity: 0.8 ; }
+blockquote.ch-quote { margin: 1em 0 ; padding: 0.4em 1em ; border-left: 4px solid var(--link) ; background: color-mix(in srgb, var(--link) 5%, var(--bg)) ; }
+blockquote.ch-quote p { margin: 0.5em 0 ; line-height: 1.55 ; }
+blockquote.ch-quote .ch-more { font-size: 0.92em ; }
