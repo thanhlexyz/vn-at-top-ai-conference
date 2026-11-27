@@ -515,31 +515,32 @@ def merge_papers(papers):
         d = people[x["slug"]]
         tops = [g["score_accepted"] for g in d["topics"] if not is_other(g)] or [g["score_accepted"] for g in d["topics"]]
         x["score"] = max(tops) if tops else round(sum(p["credit"] for p in d["papers"] if p["status"] == "accepted"), 2)
-    areas_file = OUT / "areas.json"
-    grouping = json.loads(areas_file.read_text(encoding="utf-8")) if areas_file.exists() else {"areas": [], "assign": {}}
-    keys = {a["key"] for a in grouping["areas"]}
+    taxonomy = json.loads((FRONTEND / "data" / "challenge_topics.json").read_text(encoding="utf-8"))
+    keys = {t["key"] for t in taxonomy["topics"]}
     labels = {}
     lines_file, labels_file = OUT / "topic_lines.txt", OUT / "topic_areas.json"
     if lines_file.exists() and labels_file.exists():
         by_id = json.loads(labels_file.read_text(encoding="utf-8"))
         for line in lines_file.read_text(encoding="utf-8").splitlines():
-            ident, title = line.split(" | ")[:2]
-            labels[(ident.split("#")[0], title)] = [k for k in by_id.get(ident, []) if k in keys]
+            ident = line.split(" | ")[0]
+            slug, _, title = ident.partition("#")
+            labels[(slug, title)] = [k for k in by_id.get(ident, []) if k in keys]
     for x in index:
         d = people[x["slug"]]
         best = {}
         for g in d["topics"]:
             for k in labels.get((x["slug"], g["title"]), []):
                 best[k] = max(best.get(k, 0), g["score_accepted"])
-        fallback = grouping["assign"].get(x["slug"])
-        if not best and fallback in keys:
-            best[fallback] = x["score"]
+        if not best:
+            for k in labels.get((x["slug"], "focus"), []):
+                best[k] = x["score"]
         x["areas"] = [{"key": k, "score": v} for k, v in sorted(best.items(), key=lambda kv: -kv[1])]
-    counts = {a["key"]: sum(1 for x in index if any(r["key"] == a["key"] for r in x["areas"])) for a in grouping["areas"]}
-    areas = [{**a, "count": counts[a["key"]]} for a in grouping["areas"] if counts[a["key"]]]
+    counts = {t["key"]: sum(1 for x in index if any(r["key"] == t["key"] for r in x["areas"])) for t in taxonomy["topics"]}
+    areas = [{"key": t["key"], "title": t["title"], "title_vi": t["title_vi"], "count": counts[t["key"]]}
+             for t in taxonomy["topics"] if counts[t["key"]]]
     areas.sort(key=lambda a: -a["count"])
     index.sort(key=lambda x: -x["score"])
-    meta = {"professors": index, "areas": areas, "sources": {"papers": len(shown), "date": datetime.date.today().isoformat(),
+    meta = {"professors": index, "areas": areas, "cfp": taxonomy["sources"], "sources": {"papers": len(shown), "date": datetime.date.today().isoformat(),
                                              "with_text": sum(1 for i in shown if (PDF_DIR / AREA[known[i]["venue"]] / f"{i}.pdf").exists()),
                                              "with_reviews": sum(1 for i in shown if (PDF_DIR / AREA[known[i]["venue"]] / f"{i}.md").exists())}}
     (FRONTEND / "data" / "challenges.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")

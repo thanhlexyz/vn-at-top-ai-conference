@@ -12,7 +12,15 @@
    "score": 4.96,
    "areas": [
     {
-     "key": "efficient-dl",
+     "key": "efficient-scalable",
+     "score": 4.96
+    },
+    {
+     "key": "language-models-code",
+     "score": 4.96
+    },
+    {
+     "key": "multimodal-vision-language",
      "score": 4.96
     }
    ]
@@ -29,7 +37,15 @@
    "score": 2.36,
    "areas": [
     {
-     "key": "efficient-dl",
+     "key": "multimodal-vision-language",
+     "score": 2.36
+    },
+    {
+     "key": "core-ml",
+     "score": 2.36
+    },
+    {
+     "key": "optimization",
      "score": 2.36
     }
    ]
@@ -46,8 +62,20 @@
    "score": 2.2,
    "areas": [
     {
-     "key": "rl-planning",
+     "key": "planning-search",
      "score": 2.2
+    },
+    {
+     "key": "reinforcement-learning",
+     "score": 2.2
+    },
+    {
+     "key": "learning-theory",
+     "score": 0.7
+    },
+    {
+     "key": "optimization",
+     "score": 0.17
     }
    ]
   },
@@ -65,6 +93,14 @@
     {
      "key": "learning-theory",
      "score": 1.84
+    },
+    {
+     "key": "efficient-scalable",
+     "score": 1.84
+    },
+    {
+     "key": "core-ml",
+     "score": 1.84
     }
    ]
   },
@@ -80,27 +116,43 @@
    "score": 1.71,
    "areas": [
     {
-     "key": "trustworthy-ai",
+     "key": "robustness-safety",
      "score": 1.71
     },
     {
-     "key": "vision-multimodal",
-     "score": 1.71
-    },
-    {
-     "key": "llm-nlp",
+     "key": "language-models-code",
      "score": 0.9
     },
     {
-     "key": "rl-planning",
-     "score": 0.9
+     "key": "generative-models",
+     "score": 0.33
     },
     {
-     "key": "robotics",
+     "key": "ethics-fairness-privacy",
+     "score": 0.33
+    },
+    {
+     "key": "geometry-imaging-graphics",
+     "score": 0.33
+    },
+    {
+     "key": "robot-learning-manipulation",
      "score": 0.21
     },
     {
-     "key": "federated-continual",
+     "key": "science-sustainability",
+     "score": 0.21
+    },
+    {
+     "key": "multimodal-vision-language",
+     "score": 0.21
+    },
+    {
+     "key": "core-ml",
+     "score": 0
+    },
+    {
+     "key": "representation-transfer",
      "score": 0
     }
    ]
@@ -117,7 +169,11 @@
    "score": 1.47,
    "areas": [
     {
-     "key": "llm-nlp",
+     "key": "language-models-code",
+     "score": 1.47
+    },
+    {
+     "key": "language-structure",
      "score": 1.47
     }
    ]
@@ -136,6 +192,10 @@
     {
      "key": "optimization",
      "score": 1.25
+    },
+    {
+     "key": "learning-theory",
+     "score": 1.25
     }
    ]
   },
@@ -153,6 +213,14 @@
     {
      "key": "learning-theory",
      "score": 1.08
+    },
+    {
+     "key": "language-models-code",
+     "score": 1.08
+    },
+    {
+     "key": "optimization",
+     "score": 1.08
     }
    ]
   },
@@ -168,7 +236,11 @@
    "score": 1.03,
    "areas": [
     {
-     "key": "vision-multimodal",
+     "key": "multimodal-vision-language",
+     "score": 1.03
+    },
+    {
+     "key": "core-ml",
      "score": 1.03
     }
    ]
@@ -185,7 +257,11 @@
    "score": 1.0,
    "areas": [
     {
-     "key": "graphs-data-mining",
+     "key": "data-mining-graphs",
+     "score": 1.0
+    },
+    {
+     "key": "representation-transfer",
      "score": 1.0
     }
    ]
@@ -202,7 +278,15 @@
    "score": 0.85,
    "areas": [
     {
-     "key": "efficient-dl",
+     "key": "deep-learning",
+     "score": 0.85
+    },
+    {
+     "key": "language-models-code",
+     "score": 0.85
+    },
+    {
+     "key": "core-ml",
      "score": 0.85
     }
    ]
@@ -221,6 +305,10 @@
     {
      "key": "optimization",
      "score": 0.83
+    },
+    {
+     "key": "learning-theory",
+     "score": 0.83
     }
    ]
   },
@@ -236,8 +324,32 @@
    "score": 0.78,
    "areas": [
     {
-     "key": "vision-multimodal",
+     "key": "geometry-imaging-graphics",
      "score": 0.78
+    },
+    {
+     "key": "generative-models",
+     "score": 0.74
+    },
+    {
+     "key": "efficient-scalable",
+     "score": 0.74
+    },
+    {
+     "key": "deep-learning",
+     "score": 0.6
+    },
+    {
+     "key": "data-mining-graphs",
+     "score": 0.6
+    },
+    {
+     "key": "recognition-video",
+     "score": 0.39
+    },
+    {
+     "key": "datasets-evaluation",
+     "score": 0.39
     }
    ]
   },
@@ -253,11 +365,11 @@
    "score": 0.77,
    "areas": [
     {
-     "key": "vision-multimodal",
+     "key": "multimodal-vision-language",
      "score": 0.77
     },
     {
-     "key": "federated-continual",
+     "key": "representation-transfer",
      "score": 0.77
     },
     {
@@ -265,19 +377,39 @@
      "score": 0.7
     },
     {
-     "key": "medical-ai",
+     "key": "science-sustainability",
+     "score": 0.7
+    },
+    {
+     "key": "health-biomed",
      "score": 0.61
     },
     {
-     "key": "learning-theory",
+     "key": "core-ml",
+     "score": 0.61
+    },
+    {
+     "key": "datasets-evaluation",
      "score": 0.48
     },
     {
-     "key": "trustworthy-ai",
+     "key": "probabilistic-causal",
+     "score": 0.48
+    },
+    {
+     "key": "interpretability",
      "score": 0.29
     },
     {
-     "key": "efficient-dl",
+     "key": "robustness-safety",
+     "score": 0.29
+    },
+    {
+     "key": "deep-learning",
+     "score": 0.1
+    },
+    {
+     "key": "cognitive-neuro",
      "score": 0.1
     }
    ]
@@ -298,23 +430,39 @@
      "score": 0.75
     },
     {
-     "key": "llm-nlp",
+     "key": "language-models-code",
      "score": 0.75
     },
     {
-     "key": "rl-planning",
+     "key": "planning-search",
+     "score": 0.75
+    },
+    {
+     "key": "reinforcement-learning",
      "score": 0.5
     },
     {
-     "key": "robotics",
+     "key": "qa-retrieval",
+     "score": 0.45
+    },
+    {
+     "key": "autonomous-navigation",
      "score": 0.27
     },
     {
-     "key": "vision-multimodal",
+     "key": "datasets-evaluation",
+     "score": 0.27
+    },
+    {
+     "key": "robot-learning-manipulation",
+     "score": 0.27
+    },
+    {
+     "key": "multimodal-vision-language",
      "score": 0
     },
     {
-     "key": "trustworthy-ai",
+     "key": "recognition-video",
      "score": 0
     }
    ]
@@ -331,7 +479,11 @@
    "score": 0.75,
    "areas": [
     {
-     "key": "rl-planning",
+     "key": "optimization",
+     "score": 0.75
+    },
+    {
+     "key": "reinforcement-learning",
      "score": 0.75
     }
    ]
@@ -348,7 +500,15 @@
    "score": 0.73,
    "areas": [
     {
-     "key": "trustworthy-ai",
+     "key": "robustness-safety",
+     "score": 0.73
+    },
+    {
+     "key": "generative-models",
+     "score": 0.73
+    },
+    {
+     "key": "language-models-code",
      "score": 0.73
     }
    ]
@@ -365,7 +525,7 @@
    "score": 0.67,
    "areas": [
     {
-     "key": "vision-multimodal",
+     "key": "geometry-imaging-graphics",
      "score": 0.67
     }
    ]
@@ -382,7 +542,15 @@
    "score": 0.62,
    "areas": [
     {
-     "key": "llm-nlp",
+     "key": "language-models-code",
+     "score": 0.62
+    },
+    {
+     "key": "language-structure",
+     "score": 0.62
+    },
+    {
+     "key": "qa-retrieval",
      "score": 0.62
     }
    ]
@@ -399,7 +567,11 @@
    "score": 0.58,
    "areas": [
     {
-     "key": "efficient-dl",
+     "key": "deep-learning",
+     "score": 0.58
+    },
+    {
+     "key": "core-ml",
      "score": 0.58
     }
    ]
@@ -416,7 +588,15 @@
    "score": 0.57,
    "areas": [
     {
-     "key": "trustworthy-ai",
+     "key": "health-biomed",
+     "score": 0.57
+    },
+    {
+     "key": "ethics-fairness-privacy",
+     "score": 0.57
+    },
+    {
+     "key": "core-ml",
      "score": 0.57
     }
    ]
@@ -432,6 +612,10 @@
    "focus_vi": "Thuật toán phân chia công bằng: tính toán cách phân bổ các vật phẩm không chia nhỏ được sao cho cân bằng giữa công bằng và hiệu quả.",
    "score": 0.5,
    "areas": [
+    {
+     "key": "game-theory",
+     "score": 0.5
+    },
     {
      "key": "optimization",
      "score": 0.5
@@ -450,7 +634,15 @@
    "score": 0.45,
    "areas": [
     {
-     "key": "vision-multimodal",
+     "key": "generative-models",
+     "score": 0.45
+    },
+    {
+     "key": "recognition-video",
+     "score": 0.45
+    },
+    {
+     "key": "geometry-imaging-graphics",
      "score": 0.45
     }
    ]
@@ -467,7 +659,11 @@
    "score": 0.45,
    "areas": [
     {
-     "key": "rl-planning",
+     "key": "planning-search",
+     "score": 0.45
+    },
+    {
+     "key": "reinforcement-learning",
      "score": 0.45
     },
     {
@@ -488,19 +684,31 @@
    "score": 0.43,
    "areas": [
     {
-     "key": "efficient-dl",
+     "key": "language-models-code",
      "score": 0.43
     },
     {
-     "key": "llm-nlp",
+     "key": "efficient-scalable",
      "score": 0.43
     },
     {
-     "key": "federated-continual",
+     "key": "language-structure",
+     "score": 0.37
+    },
+    {
+     "key": "data-mining-graphs",
+     "score": 0.37
+    },
+    {
+     "key": "representation-transfer",
      "score": 0.17
     },
     {
-     "key": "graphs-data-mining",
+     "key": "qa-retrieval",
+     "score": 0
+    },
+    {
+     "key": "knowledge-reasoning",
      "score": 0
     }
    ]
@@ -517,7 +725,11 @@
    "score": 0.42,
    "areas": [
     {
-     "key": "vision-multimodal",
+     "key": "generative-models",
+     "score": 0.42
+    },
+    {
+     "key": "recognition-video",
      "score": 0.42
     }
    ]
@@ -536,6 +748,10 @@
     {
      "key": "learning-theory",
      "score": 0.39
+    },
+    {
+     "key": "optimization",
+     "score": 0.39
     }
    ]
   },
@@ -551,8 +767,24 @@
    "score": 0.37,
    "areas": [
     {
+     "key": "probabilistic-causal",
+     "score": 0.37
+    },
+    {
      "key": "learning-theory",
      "score": 0.37
+    },
+    {
+     "key": "science-sustainability",
+     "score": 0.23
+    },
+    {
+     "key": "deep-learning",
+     "score": 0.23
+    },
+    {
+     "key": "language-structure",
+     "score": 0.17
     }
    ]
   },
@@ -568,11 +800,11 @@
    "score": 0.37,
    "areas": [
     {
-     "key": "efficient-dl",
+     "key": "deep-learning",
      "score": 0.37
     },
     {
-     "key": "llm-nlp",
+     "key": "learning-theory",
      "score": 0.37
     }
    ]
@@ -589,12 +821,24 @@
    "score": 0.33,
    "areas": [
     {
-     "key": "vision-multimodal",
+     "key": "multimodal-vision-language",
      "score": 0.33
     },
     {
-     "key": "learning-theory",
+     "key": "representation-transfer",
      "score": 0.33
+    },
+    {
+     "key": "generative-models",
+     "score": 0.14
+    },
+    {
+     "key": "efficient-scalable",
+     "score": 0.14
+    },
+    {
+     "key": "datasets-evaluation",
+     "score": 0.14
     }
    ]
   },
@@ -610,7 +854,11 @@
    "score": 0.33,
    "areas": [
     {
-     "key": "robotics",
+     "key": "robot-learning-manipulation",
+     "score": 0.33
+    },
+    {
+     "key": "generative-models",
      "score": 0.33
     }
    ]
@@ -627,15 +875,27 @@
    "score": 0.31,
    "areas": [
     {
-     "key": "vision-multimodal",
+     "key": "recognition-video",
      "score": 0.31
     },
     {
-     "key": "trustworthy-ai",
+     "key": "generative-models",
+     "score": 0.31
+    },
+    {
+     "key": "robustness-safety",
      "score": 0
     },
     {
-     "key": "ai-evaluation",
+     "key": "geometry-imaging-graphics",
+     "score": 0
+    },
+    {
+     "key": "qa-retrieval",
+     "score": 0
+    },
+    {
+     "key": "multimodal-vision-language",
      "score": 0
     }
    ]
@@ -652,7 +912,11 @@
    "score": 0.31,
    "areas": [
     {
-     "key": "vision-multimodal",
+     "key": "geometry-imaging-graphics",
+     "score": 0.31
+    },
+    {
+     "key": "efficient-scalable",
      "score": 0.31
     }
    ]
@@ -669,7 +933,11 @@
    "score": 0.29,
    "areas": [
     {
-     "key": "robotics",
+     "key": "robot-learning-manipulation",
+     "score": 0.29
+    },
+    {
+     "key": "planning-search",
      "score": 0.29
     }
    ]
@@ -686,7 +954,15 @@
    "score": 0.25,
    "areas": [
     {
-     "key": "learning-theory",
+     "key": "representation-transfer",
+     "score": 0.25
+    },
+    {
+     "key": "cognitive-neuro",
+     "score": 0.25
+    },
+    {
+     "key": "deep-learning",
      "score": 0.25
     }
    ]
@@ -703,7 +979,11 @@
    "score": 0.25,
    "areas": [
     {
-     "key": "efficient-dl",
+     "key": "optimization",
+     "score": 0.25
+    },
+    {
+     "key": "deep-learning",
      "score": 0.25
     }
    ]
@@ -720,7 +1000,11 @@
    "score": 0.25,
    "areas": [
     {
-     "key": "efficient-dl",
+     "key": "deep-learning",
+     "score": 0.25
+    },
+    {
+     "key": "core-ml",
      "score": 0.25
     }
    ]
@@ -737,7 +1021,11 @@
    "score": 0.25,
    "areas": [
     {
-     "key": "federated-continual",
+     "key": "core-ml",
+     "score": 0.25
+    },
+    {
+     "key": "representation-transfer",
      "score": 0.25
     }
    ]
@@ -754,20 +1042,36 @@
    "score": 0.2,
    "areas": [
     {
-     "key": "vision-multimodal",
+     "key": "recognition-video",
      "score": 0.2
     },
     {
-     "key": "llm-nlp",
+     "key": "core-ml",
+     "score": 0.2
+    },
+    {
+     "key": "language-structure",
      "score": 0.17
     },
     {
-     "key": "efficient-dl",
+     "key": "data-mining-graphs",
      "score": 0.17
     },
     {
-     "key": "federated-continual",
+     "key": "multimodal-vision-language",
      "score": 0.17
+    },
+    {
+     "key": "efficient-scalable",
+     "score": 0.17
+    },
+    {
+     "key": "learning-theory",
+     "score": 0.17
+    },
+    {
+     "key": "deep-learning",
+     "score": 0
     }
    ]
   },
@@ -783,8 +1087,24 @@
    "score": 0.2,
    "areas": [
     {
-     "key": "trustworthy-ai",
+     "key": "interpretability",
      "score": 0.2
+    },
+    {
+     "key": "health-biomed",
+     "score": 0.2
+    },
+    {
+     "key": "efficient-scalable",
+     "score": 0.2
+    },
+    {
+     "key": "representation-transfer",
+     "score": 0
+    },
+    {
+     "key": "robustness-safety",
+     "score": 0
     }
    ]
   },
@@ -800,15 +1120,19 @@
    "score": 0.2,
    "areas": [
     {
-     "key": "vision-multimodal",
+     "key": "data-mining-graphs",
      "score": 0.2
     },
     {
-     "key": "federated-continual",
+     "key": "optimization",
      "score": 0.2
     },
     {
-     "key": "medical-ai",
+     "key": "multimodal-vision-language",
+     "score": 0.17
+    },
+    {
+     "key": "core-ml",
      "score": 0.17
     }
    ]
@@ -825,7 +1149,15 @@
    "score": 0.2,
    "areas": [
     {
-     "key": "graphs-data-mining",
+     "key": "ethics-fairness-privacy",
+     "score": 0.2
+    },
+    {
+     "key": "health-biomed",
+     "score": 0.2
+    },
+    {
+     "key": "multimodal-vision-language",
      "score": 0.2
     }
    ]
@@ -842,19 +1174,27 @@
    "score": 0.2,
    "areas": [
     {
-     "key": "vision-multimodal",
+     "key": "science-sustainability",
      "score": 0.2
     },
     {
-     "key": "learning-theory",
+     "key": "deep-learning",
+     "score": 0.2
+    },
+    {
+     "key": "robot-learning-manipulation",
      "score": 0.1
     },
     {
-     "key": "medical-ai",
-     "score": 0
+     "key": "health-biomed",
+     "score": 0.1
     },
     {
-     "key": "trustworthy-ai",
+     "key": "autonomous-navigation",
+     "score": 0.1
+    },
+    {
+     "key": "multimodal-vision-language",
      "score": 0
     }
    ]
@@ -871,7 +1211,11 @@
    "score": 0.2,
    "areas": [
     {
-     "key": "robotics",
+     "key": "data-mining-graphs",
+     "score": 0.2
+    },
+    {
+     "key": "reinforcement-learning",
      "score": 0.2
     }
    ]
@@ -888,8 +1232,16 @@
    "score": 0.2,
    "areas": [
     {
-     "key": "graphs-data-mining",
+     "key": "recognition-video",
      "score": 0.2
+    },
+    {
+     "key": "data-mining-graphs",
+     "score": 0.2
+    },
+    {
+     "key": "core-ml",
+     "score": 0
     }
    ]
   },
@@ -905,7 +1257,11 @@
    "score": 0.2,
    "areas": [
     {
-     "key": "graphs-data-mining",
+     "key": "multimodal-vision-language",
+     "score": 0.2
+    },
+    {
+     "key": "robustness-safety",
      "score": 0.2
     }
    ]
@@ -922,7 +1278,15 @@
    "score": 0.2,
    "areas": [
     {
-     "key": "vision-multimodal",
+     "key": "agents-multiagent",
+     "score": 0.2
+    },
+    {
+     "key": "text-generation-translation",
+     "score": 0.2
+    },
+    {
+     "key": "qa-retrieval",
      "score": 0.2
     }
    ]
@@ -939,7 +1303,11 @@
    "score": 0.2,
    "areas": [
     {
-     "key": "llm-nlp",
+     "key": "robustness-safety",
+     "score": 0.2
+    },
+    {
+     "key": "language-models-code",
      "score": 0.2
     }
    ]
@@ -956,11 +1324,11 @@
    "score": 0.17,
    "areas": [
     {
-     "key": "llm-nlp",
+     "key": "language-models-code",
      "score": 0.17
     },
     {
-     "key": "trustworthy-ai",
+     "key": "efficient-scalable",
      "score": 0.17
     }
    ]
@@ -977,23 +1345,39 @@
    "score": 0.17,
    "areas": [
     {
-     "key": "graphs-data-mining",
+     "key": "language-models-code",
      "score": 0.17
     },
     {
-     "key": "llm-nlp",
+     "key": "deep-learning",
+     "score": 0.17
+    },
+    {
+     "key": "agents-multiagent",
      "score": 0
     },
     {
-     "key": "efficient-dl",
+     "key": "robustness-safety",
      "score": 0
     },
     {
-     "key": "trustworthy-ai",
+     "key": "ethics-fairness-privacy",
      "score": 0
     },
     {
-     "key": "federated-continual",
+     "key": "learning-theory",
+     "score": 0
+    },
+    {
+     "key": "core-ml",
+     "score": 0
+    },
+    {
+     "key": "efficient-scalable",
+     "score": 0
+    },
+    {
+     "key": "data-mining-graphs",
      "score": 0
     }
    ]
@@ -1010,11 +1394,15 @@
    "score": 0.17,
    "areas": [
     {
-     "key": "efficient-dl",
+     "key": "datasets-evaluation",
      "score": 0.17
     },
     {
-     "key": "llm-nlp",
+     "key": "speech-audio",
+     "score": 0.17
+    },
+    {
+     "key": "language-structure",
      "score": 0.17
     }
    ]
@@ -1031,11 +1419,11 @@
    "score": 0.14,
    "areas": [
     {
-     "key": "ai-evaluation",
+     "key": "robustness-safety",
      "score": 0.14
     },
     {
-     "key": "llm-nlp",
+     "key": "language-models-code",
      "score": 0.14
     }
    ]
@@ -1052,7 +1440,15 @@
    "score": 0.12,
    "areas": [
     {
-     "key": "llm-nlp",
+     "key": "language-models-code",
+     "score": 0.12
+    },
+    {
+     "key": "data-mining-graphs",
+     "score": 0.12
+    },
+    {
+     "key": "knowledge-reasoning",
      "score": 0.12
     }
    ]
@@ -1069,7 +1465,11 @@
    "score": 0.12,
    "areas": [
     {
-     "key": "llm-nlp",
+     "key": "game-theory",
+     "score": 0.12
+    },
+    {
+     "key": "agents-multiagent",
      "score": 0.12
     }
    ]
@@ -1086,7 +1486,11 @@
    "score": 0.1,
    "areas": [
     {
-     "key": "learning-theory",
+     "key": "robot-learning-manipulation",
+     "score": 0.1
+    },
+    {
+     "key": "multimodal-vision-language",
      "score": 0.1
     }
    ]
@@ -1103,7 +1507,11 @@
    "score": 0.04,
    "areas": [
     {
-     "key": "robotics",
+     "key": "robot-learning-manipulation",
+     "score": 0.04
+    },
+    {
+     "key": "probabilistic-causal",
      "score": 0.04
     }
    ]
@@ -1120,8 +1528,24 @@
    "score": 0.04,
    "areas": [
     {
-     "key": "robotics",
+     "key": "probabilistic-causal",
      "score": 0.04
+    },
+    {
+     "key": "interpretability",
+     "score": 0.04
+    },
+    {
+     "key": "learning-theory",
+     "score": 0.04
+    },
+    {
+     "key": "robot-learning-manipulation",
+     "score": 0
+    },
+    {
+     "key": "multimodal-vision-language",
+     "score": 0
     }
    ]
   },
@@ -1137,7 +1561,15 @@
    "score": 0,
    "areas": [
     {
-     "key": "learning-theory",
+     "key": "agents-multiagent",
+     "score": 0
+    },
+    {
+     "key": "robustness-safety",
+     "score": 0
+    },
+    {
+     "key": "ethics-fairness-privacy",
      "score": 0
     }
    ]
@@ -1154,15 +1586,35 @@
    "score": 0,
    "areas": [
     {
-     "key": "trustworthy-ai",
+     "key": "language-models-code",
      "score": 0
     },
     {
-     "key": "llm-nlp",
+     "key": "datasets-evaluation",
      "score": 0
     },
     {
-     "key": "rl-planning",
+     "key": "reinforcement-learning",
+     "score": 0
+    },
+    {
+     "key": "probabilistic-causal",
+     "score": 0
+    },
+    {
+     "key": "ethics-fairness-privacy",
+     "score": 0
+    },
+    {
+     "key": "learning-theory",
+     "score": 0
+    },
+    {
+     "key": "agents-multiagent",
+     "score": 0
+    },
+    {
+     "key": "robustness-safety",
      "score": 0
     }
    ]
@@ -1179,11 +1631,39 @@
    "score": 0,
    "areas": [
     {
-     "key": "trustworthy-ai",
+     "key": "language-models-code",
      "score": 0
     },
     {
-     "key": "llm-nlp",
+     "key": "datasets-evaluation",
+     "score": 0
+    },
+    {
+     "key": "agents-multiagent",
+     "score": 0
+    },
+    {
+     "key": "robustness-safety",
+     "score": 0
+    },
+    {
+     "key": "efficient-scalable",
+     "score": 0
+    },
+    {
+     "key": "ethics-fairness-privacy",
+     "score": 0
+    },
+    {
+     "key": "learning-theory",
+     "score": 0
+    },
+    {
+     "key": "optimization",
+     "score": 0
+    },
+    {
+     "key": "deep-learning",
      "score": 0
     }
    ]
@@ -1202,6 +1682,14 @@
     {
      "key": "optimization",
      "score": 0
+    },
+    {
+     "key": "language-models-code",
+     "score": 0
+    },
+    {
+     "key": "planning-search",
+     "score": 0
     }
    ]
   },
@@ -1217,15 +1705,15 @@
    "score": 0,
    "areas": [
     {
-     "key": "optimization",
+     "key": "data-mining-graphs",
      "score": 0
     },
     {
-     "key": "llm-nlp",
+     "key": "knowledge-reasoning",
      "score": 0
     },
     {
-     "key": "graphs-data-mining",
+     "key": "core-ml",
      "score": 0
     }
    ]
@@ -1242,7 +1730,11 @@
    "score": 0,
    "areas": [
     {
-     "key": "federated-continual",
+     "key": "optimization",
+     "score": 0
+    },
+    {
+     "key": "deep-learning",
      "score": 0
     }
    ]
@@ -1259,7 +1751,11 @@
    "score": 0,
    "areas": [
     {
-     "key": "optimization",
+     "key": "datasets-evaluation",
+     "score": 0
+    },
+    {
+     "key": "probabilistic-causal",
      "score": 0
     }
    ]
@@ -1276,7 +1772,15 @@
    "score": 0,
    "areas": [
     {
-     "key": "ai-evaluation",
+     "key": "optimization",
+     "score": 0
+    },
+    {
+     "key": "language-models-code",
+     "score": 0
+    },
+    {
+     "key": "planning-search",
      "score": 0
     }
    ]
@@ -1293,11 +1797,11 @@
    "score": 0,
    "areas": [
     {
-     "key": "optimization",
+     "key": "datasets-evaluation",
      "score": 0
     },
     {
-     "key": "llm-nlp",
+     "key": "probabilistic-causal",
      "score": 0
     }
    ]
@@ -1314,7 +1818,15 @@
    "score": 0,
    "areas": [
     {
-     "key": "ai-evaluation",
+     "key": "health-biomed",
+     "score": 0
+    },
+    {
+     "key": "hri-dialogue",
+     "score": 0
+    },
+    {
+     "key": "language-models-code",
      "score": 0
     }
    ]
@@ -1331,11 +1843,11 @@
    "score": 0,
    "areas": [
     {
-     "key": "medical-ai",
+     "key": "representation-transfer",
      "score": 0
     },
     {
-     "key": "graphs-data-mining",
+     "key": "efficient-scalable",
      "score": 0
     }
    ]
@@ -1352,11 +1864,15 @@
    "score": 0,
    "areas": [
     {
-     "key": "efficient-dl",
+     "key": "qa-retrieval",
      "score": 0
     },
     {
-     "key": "vision-multimodal",
+     "key": "datasets-evaluation",
+     "score": 0
+    },
+    {
+     "key": "hri-dialogue",
      "score": 0
     }
    ]
@@ -1373,11 +1889,15 @@
    "score": 0,
    "areas": [
     {
-     "key": "vision-multimodal",
+     "key": "health-biomed",
      "score": 0
     },
     {
-     "key": "ai-evaluation",
+     "key": "data-mining-graphs",
+     "score": 0
+    },
+    {
+     "key": "language-models-code",
      "score": 0
     }
    ]
@@ -1394,11 +1914,11 @@
    "score": 0,
    "areas": [
     {
-     "key": "medical-ai",
+     "key": "learning-theory",
      "score": 0
     },
     {
-     "key": "graphs-data-mining",
+     "key": "core-ml",
      "score": 0
     }
    ]
@@ -1414,6 +1934,10 @@
    "focus_vi": "Điều chuẩn (regularization) cho học biểu diễn với đặc trưng đa thức, thiết kế các hàm phạt sắp xếp năng lực mô hình theo bậc đa thức mà không bị sai lệch gần giá trị 0.",
    "score": 0,
    "areas": [
+    {
+     "key": "representation-transfer",
+     "score": 0
+    },
     {
      "key": "learning-theory",
      "score": 0
@@ -1432,7 +1956,11 @@
    "score": 0,
    "areas": [
     {
-     "key": "learning-theory",
+     "key": "optimization",
+     "score": 0
+    },
+    {
+     "key": "deep-learning",
      "score": 0
     }
    ]
@@ -1449,7 +1977,11 @@
    "score": 0,
    "areas": [
     {
-     "key": "efficient-dl",
+     "key": "robustness-safety",
+     "score": 0
+    },
+    {
+     "key": "optimization",
      "score": 0
     }
    ]
@@ -1466,7 +1998,11 @@
    "score": 0,
    "areas": [
     {
-     "key": "trustworthy-ai",
+     "key": "learning-theory",
+     "score": 0
+    },
+    {
+     "key": "core-ml",
      "score": 0
     }
    ]
@@ -1483,7 +2019,7 @@
    "score": 0,
    "areas": [
     {
-     "key": "learning-theory",
+     "key": "deep-learning",
      "score": 0
     }
    ]
@@ -1500,7 +2036,11 @@
    "score": 0,
    "areas": [
     {
-     "key": "efficient-dl",
+     "key": "health-biomed",
+     "score": 0
+    },
+    {
+     "key": "datasets-evaluation",
      "score": 0
     }
    ]
@@ -1517,7 +2057,15 @@
    "score": 0,
    "areas": [
     {
-     "key": "medical-ai",
+     "key": "health-biomed",
+     "score": 0
+    },
+    {
+     "key": "datasets-evaluation",
+     "score": 0
+    },
+    {
+     "key": "language-models-code",
      "score": 0
     }
    ]
@@ -1534,11 +2082,7 @@
    "score": 0,
    "areas": [
     {
-     "key": "medical-ai",
-     "score": 0
-    },
-    {
-     "key": "ai-evaluation",
+     "key": "data-mining-graphs",
      "score": 0
     }
    ]
@@ -1555,7 +2099,11 @@
    "score": 0,
    "areas": [
     {
-     "key": "graphs-data-mining",
+     "key": "multimodal-vision-language",
+     "score": 0
+    },
+    {
+     "key": "recognition-video",
      "score": 0
     }
    ]
@@ -1572,11 +2120,7 @@
    "score": 0,
    "areas": [
     {
-     "key": "vision-multimodal",
-     "score": 0
-    },
-    {
-     "key": "trustworthy-ai",
+     "key": "agents-multiagent",
      "score": 0
     }
    ]
@@ -1593,7 +2137,11 @@
    "score": 0,
    "areas": [
     {
-     "key": "graphs-data-mining",
+     "key": "data-mining-graphs",
+     "score": 0
+    },
+    {
+     "key": "probabilistic-causal",
      "score": 0
     }
    ]
@@ -1610,11 +2158,15 @@
    "score": 0,
    "areas": [
     {
-     "key": "trustworthy-ai",
+     "key": "agents-multiagent",
      "score": 0
     },
     {
-     "key": "llm-nlp",
+     "key": "robustness-safety",
+     "score": 0
+    },
+    {
+     "key": "ethics-fairness-privacy",
      "score": 0
     }
    ]
@@ -1631,11 +2183,15 @@
    "score": 0,
    "areas": [
     {
-     "key": "medical-ai",
+     "key": "health-biomed",
      "score": 0
     },
     {
-     "key": "graphs-data-mining",
+     "key": "hri-dialogue",
+     "score": 0
+    },
+    {
+     "key": "language-models-code",
      "score": 0
     }
    ]
@@ -1652,11 +2208,11 @@
    "score": 0,
    "areas": [
     {
-     "key": "medical-ai",
+     "key": "health-biomed",
      "score": 0
     },
     {
-     "key": "vision-multimodal",
+     "key": "multimodal-vision-language",
      "score": 0
     }
    ]
@@ -1673,7 +2229,11 @@
    "score": 0,
    "areas": [
     {
-     "key": "efficient-dl",
+     "key": "efficient-scalable",
+     "score": 0
+    },
+    {
+     "key": "deep-learning",
      "score": 0
     }
    ]
@@ -1690,7 +2250,7 @@
    "score": 0,
    "areas": [
     {
-     "key": "federated-continual",
+     "key": "core-ml",
      "score": 0
     }
    ]
@@ -1707,7 +2267,7 @@
    "score": 0,
    "areas": [
     {
-     "key": "federated-continual",
+     "key": "core-ml",
      "score": 0
     }
    ]
@@ -1715,76 +2275,302 @@
  ],
  "areas": [
   {
-   "key": "llm-nlp",
-   "title": "Language models, NLP and code",
-   "title_vi": "Mô hình ngôn ngữ, NLP và mã nguồn",
+   "key": "language-models-code",
+   "title": "Language models and code",
+   "title_vi": "Mô hình ngôn ngữ lớn và mã nguồn",
+   "count": 22
+  },
+  {
+   "key": "core-ml",
+   "title": "Core machine learning methods",
+   "title_vi": "Các phương pháp học máy cốt lõi",
    "count": 19
-  },
-  {
-   "key": "vision-multimodal",
-   "title": "Computer vision and multimodal learning",
-   "title_vi": "Thị giác máy tính và học đa phương thức",
-   "count": 19
-  },
-  {
-   "key": "efficient-dl",
-   "title": "Neural network training and efficiency",
-   "title_vi": "Huấn luyện và hiệu quả mạng nơ-ron",
-   "count": 16
-  },
-  {
-   "key": "trustworthy-ai",
-   "title": "Trustworthy and secure AI",
-   "title_vi": "AI đáng tin cậy và an toàn",
-   "count": 15
-  },
-  {
-   "key": "learning-theory",
-   "title": "Learning theory and statistical methods",
-   "title_vi": "Lý thuyết học máy và phương pháp thống kê",
-   "count": 14
-  },
-  {
-   "key": "graphs-data-mining",
-   "title": "Graph learning and data mining",
-   "title_vi": "Học trên đồ thị và khai phá dữ liệu",
-   "count": 12
-  },
-  {
-   "key": "federated-continual",
-   "title": "Federated and continual learning",
-   "title_vi": "Federated learning và học liên tục",
-   "count": 10
-  },
-  {
-   "key": "medical-ai",
-   "title": "Medical and health AI",
-   "title_vi": "AI trong y tế và sức khỏe",
-   "count": 9
   },
   {
    "key": "optimization",
-   "title": "Optimization and evolutionary algorithms",
-   "title_vi": "Tối ưu hóa và thuật toán tiến hóa",
-   "count": 9
+   "title": "Optimization methods",
+   "title_vi": "Các phương pháp tối ưu hóa",
+   "count": 18
   },
   {
-   "key": "robotics",
-   "title": "Robotics and embodied AI",
-   "title_vi": "Robot học và embodied AI",
-   "count": 7
+   "key": "multimodal-vision-language",
+   "title": "Multimodal and vision-language learning",
+   "title_vi": "Học đa phương thức và thị giác-ngôn ngữ",
+   "count": 17
   },
   {
-   "key": "ai-evaluation",
-   "title": "AI evaluation and auditing",
-   "title_vi": "Đánh giá và kiểm định AI",
+   "key": "learning-theory",
+   "title": "Learning theory",
+   "title_vi": "Lý thuyết học máy",
+   "count": 17
+  },
+  {
+   "key": "deep-learning",
+   "title": "Deep learning and foundation models",
+   "title_vi": "Học sâu và mô hình nền tảng",
+   "count": 17
+  },
+  {
+   "key": "robustness-safety",
+   "title": "Robustness, safety, alignment",
+   "title_vi": "Độ bền vững, an toàn và căn chỉnh AI",
+   "count": 14
+  },
+  {
+   "key": "efficient-scalable",
+   "title": "Efficient and scalable systems",
+   "title_vi": "Hệ thống hiệu quả và có khả năng mở rộng",
+   "count": 13
+  },
+  {
+   "key": "data-mining-graphs",
+   "title": "Data mining and graph learning",
+   "title_vi": "Khai phá dữ liệu và học trên đồ thị",
+   "count": 13
+  },
+  {
+   "key": "datasets-evaluation",
+   "title": "Datasets, benchmarks, evaluation",
+   "title_vi": "Bộ dữ liệu, benchmark và đánh giá",
+   "count": 12
+  },
+  {
+   "key": "health-biomed",
+   "title": "AI for health and medicine",
+   "title_vi": "AI cho y tế và y sinh",
+   "count": 11
+  },
+  {
+   "key": "representation-transfer",
+   "title": "Representation, transfer, self-supervised learning",
+   "title_vi": "Học biểu diễn, học chuyển giao và tự giám sát",
+   "count": 10
+  },
+  {
+   "key": "robot-learning-manipulation",
+   "title": "Robot learning and manipulation",
+   "title_vi": "Học cho robot và thao tác",
+   "count": 8
+  },
+  {
+   "key": "ethics-fairness-privacy",
+   "title": "Ethics, fairness, privacy, society",
+   "title_vi": "Đạo đức, công bằng, quyền riêng tư và xã hội",
+   "count": 8
+  },
+  {
+   "key": "generative-models",
+   "title": "Generative models",
+   "title_vi": "Mô hình sinh",
+   "count": 8
+  },
+  {
+   "key": "recognition-video",
+   "title": "Visual recognition and video",
+   "title_vi": "Nhận dạng thị giác và video",
+   "count": 8
+  },
+  {
+   "key": "agents-multiagent",
+   "title": "Agents and multi-agent systems",
+   "title_vi": "Tác tử và hệ đa tác tử",
+   "count": 8
+  },
+  {
+   "key": "probabilistic-causal",
+   "title": "Probabilistic methods and causality",
+   "title_vi": "Phương pháp xác suất và nhân quả",
+   "count": 8
+  },
+  {
+   "key": "geometry-imaging-graphics",
+   "title": "3D vision, imaging, graphics",
+   "title_vi": "Thị giác 3D, ảnh tính toán và đồ họa",
    "count": 6
   },
   {
-   "key": "rl-planning",
-   "title": "Reinforcement learning and planning",
-   "title_vi": "Học tăng cường và lập kế hoạch",
+   "key": "reinforcement-learning",
+   "title": "Reinforcement learning and decisions",
+   "title_vi": "Học tăng cường và ra quyết định",
    "count": 6
+  },
+  {
+   "key": "planning-search",
+   "title": "Planning, search, constraint solving",
+   "title_vi": "Lập kế hoạch, tìm kiếm và giải ràng buộc",
+   "count": 6
+  },
+  {
+   "key": "language-structure",
+   "title": "Linguistics, semantics, text analysis",
+   "title_vi": "Ngôn ngữ học, ngữ nghĩa và phân tích văn bản",
+   "count": 6
+  },
+  {
+   "key": "qa-retrieval",
+   "title": "Question answering and retrieval",
+   "title_vi": "Hỏi đáp và truy xuất thông tin",
+   "count": 6
+  },
+  {
+   "key": "science-sustainability",
+   "title": "AI for science and sustainability",
+   "title_vi": "AI cho khoa học và phát triển bền vững",
+   "count": 4
+  },
+  {
+   "key": "hri-dialogue",
+   "title": "Human-AI interaction and dialogue",
+   "title_vi": "Tương tác người-AI và hội thoại",
+   "count": 3
+  },
+  {
+   "key": "interpretability",
+   "title": "Interpretability and explainability",
+   "title_vi": "Khả năng diễn giải và giải thích được",
+   "count": 3
+  },
+  {
+   "key": "knowledge-reasoning",
+   "title": "Knowledge representation and reasoning",
+   "title_vi": "Biểu diễn tri thức và suy luận",
+   "count": 3
+  },
+  {
+   "key": "autonomous-navigation",
+   "title": "Autonomous vehicles and navigation",
+   "title_vi": "Phương tiện tự hành và định vị dẫn đường",
+   "count": 2
+  },
+  {
+   "key": "cognitive-neuro",
+   "title": "Cognitive science and neuroscience",
+   "title_vi": "Khoa học nhận thức và thần kinh học",
+   "count": 2
+  },
+  {
+   "key": "game-theory",
+   "title": "Game theory and mechanism design",
+   "title_vi": "Lý thuyết trò chơi và thiết kế cơ chế",
+   "count": 2
+  },
+  {
+   "key": "speech-audio",
+   "title": "Speech and audio processing",
+   "title_vi": "Xử lý tiếng nói và âm thanh",
+   "count": 1
+  },
+  {
+   "key": "text-generation-translation",
+   "title": "Text generation and translation",
+   "title_vi": "Sinh văn bản và dịch máy",
+   "count": 1
+  }
+ ],
+ "cfp": [
+  {
+   "key": "iclr",
+   "name": "ICLR",
+   "edition": "2026",
+   "url": "https://iclr.cc/Conferences/2026/CallForPapers",
+   "note": "Flat 'non-exhaustive list of relevant topics' under Subject Areas. ICLR 2027 CFP also exists (adds 'and sparse coding' to metric learning, kernel learning).",
+   "terms": 20
+  },
+  {
+   "key": "neurips",
+   "name": "NeurIPS",
+   "edition": "2026",
+   "url": "https://neurips.cc/Conferences/2026/CallForPapers",
+   "note": "Flat list of topics in the main-track CFP, no sub-items.",
+   "terms": 21
+  },
+  {
+   "key": "icml",
+   "name": "ICML",
+   "edition": "2026",
+   "url": "https://icml.cc/Conferences/2026/CallForPapers",
+   "note": "Topics of interest, each with parenthetical examples; examples split on commas (trailing 'etc.' dropped). Application-driven item kept as one sentence. ICML 2027 CFP lists the same topics.",
+   "terms": 43
+  },
+  {
+   "key": "aaai",
+   "name": "AAAI",
+   "edition": "2027",
+   "url": "https://aaai.org/conference/aaai/aaai-27/areas-and-topics/",
+   "note": "AAAI-27 'Areas and topics' page (41st AAAI, 17 submission areas). Page text had two garbled run-together labels (GTEP coordination bullet, ROB other-foundations bullet); the label matching the sibling bullets' pattern was used. 'APP: Natural Sciences' appears as a separate bullet next to 'APP: AI for Science (Natural & Physical Sciences)' as on the page.",
+   "terms": 203
+  },
+  {
+   "key": "ijcai",
+   "name": "IJCAI",
+   "edition": "2026",
+   "url": "https://2026.ijcai.org/ijcai-ecai-2026-call-for-papers-main-track/",
+   "note": "The IJCAI-ECAI 2026 (and IJCAI-27, 2025) main-track CFP gives no topic list ('any aspect of AI'; the keyword list is only on the submission site). Groups below are the CFP's official special tracks, plus the topic lists of the AI and Health (https://2026.ijcai.org/ijcai-ecai-2026-call-for-papers-ai-and-health/), AI and Social Good (.../ijcai-ecai-2026-call-for-papers-ai4good/) and AI and Robotics (.../ijcai-ecai-2026-call-for-papers-ai-and-robotics/, topic headings only) special tracks. AI4Tech and Human-Centred AI special tracks give only prose scopes, not included.",
+   "terms": 48
+  },
+  {
+   "key": "cvpr",
+   "name": "CVPR",
+   "edition": "2026",
+   "url": "https://cvpr.thecvf.com/Conferences/2026/CallForPapers",
+   "note": "Flat list of topics, no sub-headings (the page has one visual break in the list). Page text read through a summarising fetch tool.",
+   "terms": 37
+  },
+  {
+   "key": "iccv",
+   "name": "ICCV",
+   "edition": "2025",
+   "url": "https://iccv.thecvf.com/Conferences/2025/CallForPapers",
+   "note": "Flat list of topics, no sub-headings. Page text read through a summarising fetch tool.",
+   "terms": 37
+  },
+  {
+   "key": "eccv",
+   "name": "ECCV",
+   "edition": "2026",
+   "url": "https://eccv.ecva.net/Conferences/2026/CallForPapers",
+   "note": "Flat list of topics under one heading 'Topics', no sub-headings. Page text read through a summarising fetch tool.",
+   "terms": 44
+  },
+  {
+   "key": "acl",
+   "name": "ACL",
+   "edition": "2026",
+   "url": "https://2026.aclweb.org/calls/main_conference_papers/",
+   "note": "Theme-track discussion questions omitted (not topic names). Industry Track, Student Research Workshop, System Demonstration are separate tracks, not listed.",
+   "terms": 34
+  },
+  {
+   "key": "emnlp",
+   "name": "EMNLP",
+   "edition": "2026",
+   "url": "https://2026.emnlp.org/calls/main_conference_papers/",
+   "note": "Theme sub-items taken without their descriptive examples.",
+   "terms": 34
+  },
+  {
+   "key": "icra",
+   "name": "ICRA",
+   "edition": "2026",
+   "url": "https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra/icra-keywords/",
+   "note": "The ICRA 2026 CFP (https://2026.ieee-icra.org/contribute/call-for-icra-2026-papers-now-accepting-submissions/) gives no topic list itself; it points to the official IEEE RAS ICRA keyword list (authors select at least three), used here, grouped by RAS Subject Area.",
+   "terms": 230
+  },
+  {
+   "key": "iros",
+   "name": "IROS",
+   "edition": "2026",
+   "url": "https://2026.ieee-iros.org/contribute/call-for-papers/",
+   "note": "The CFP gives one flat, ungrouped list of topics ('related (but not limited) to the following').",
+   "terms": 17
+  },
+  {
+   "key": "rss",
+   "name": "RSS",
+   "edition": "2026",
+   "url": "https://roboticsconference.org/2026/information/cfp/",
+   "note": "No topic list: the RSS 2026 and RSS 2027 CFPs only say they welcome Science/Systems papers reporting novel scientific and systems contributions; no subject areas, tracks or keywords published.",
+   "terms": 0
   }
  ],
  "sources": {

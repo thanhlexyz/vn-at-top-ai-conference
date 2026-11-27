@@ -203,6 +203,18 @@ from under-review submissions).
   in the heading), each with a folded description, topic words, folded open questions (every topic has some) and
   folded papers (problem, idea, reported results, what the authors leave open, reviewer quotes, outcome tag).
 - Professor pages quote the two paragraphs and link to the challenge page.
+- The filter on `/challenges/` uses ONE topic list synthesised from the official calls for papers of the 13 tracked
+  conferences (`frontend/data/challenge_topics.json`: 34 topics, each with the conferences whose CFP terms it merges, plus the
+  CFP addresses shown under the filter). Sources: ICLR/NeurIPS/ICML/CVPR/ECCV/ACL/EMNLP/ICRA/IROS 2026, ICCV 2025,
+  AAAI-27 (the 2026 edition lists none); IJCAI's CFP has no topic list (its special tracks and the AI-and-Health,
+  Social-Good, Robotics lists were used); RSS publishes none; the IEEE and AAAI sites block scripts, so those pages came
+  through a summarising fetch tool. Rebuild by collecting the CFPs into `backend/work/cfp/*.json`, merging them into
+  `topics.json` (every CFP term in exactly one topic), then labelling each professor topic (`topic_lines.txt` →
+  `topic_areas.json`, 1-3 keys each); `merge` reads both. The list is sorted by the score of a professor's topics in the
+  chosen filter, counting accepted papers only; professors with a zero score are folded behind a button.
+- The summary paragraphs describe the work by topic ("Work on <what>" + one `[phrase](paper-id)` link marker per
+  sentence, turned into `#paper-id` links by `linkify`), never naming papers or methods, so a reader with no context
+  understands them.
 - Vietnamese text calls a professor "thầy/cô + given name" (`polite` in `open_challenges.py`, titles from
   `backend/work/challenges/honorifics.json`, judged from the portraits); without a photo or a Vietnamese name form the
   full name stays.

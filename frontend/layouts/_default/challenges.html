@@ -15,6 +15,7 @@ h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; 
 {{- with hugo.Data.challenges }}
 <p class="note">✅ {{ T "ch_done" }} · 🚧 {{ T "ch_building" }}</p>
 <p class="ch-filter"><button type="button" data-area="" aria-pressed="true">{{ T "ch_all_topics" }} ({{ len .professors }})</button> {{ range .areas }}<button type="button" data-area="{{ .key }}" aria-pressed="false">{{ if $vi }}{{ .title_vi }}{{ else }}{{ .title }}{{ end }} ({{ .count }})</button> {{ end }}</p>
+<p class="note">{{ T "ch_topics_note" }} {{ range $k, $c := .cfp }}{{ if $k }}, {{ end }}<a href="{{ $c.url }}"{{ with $c.note }} title="{{ . }}"{{ end }}>{{ $c.name }} {{ $c.edition }}</a>{{ end }}.</p>
 <ul class="ch-index" id="ch-list">
 {{- range .professors }}
 	<li data-areas="{{ range .areas }}{{ .key }}:{{ .score }} {{ end }}" data-score="{{ .score }}"><span class="st" title="{{ cond .done (T "ch_done") (T "ch_building") }}">{{ if .done }}✅{{ else }}🚧{{ end }}</span> <a href="{{ printf "challenges/%s/" .slug | relLangURL }}"><strong>{{ if $vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end }}</strong></a> <span class="inst">({{ .institution }} · <span class="sc" title="{{ T "ch_top_score_tip" }}"><b>{{ printf "%.2f" .score }}</b></span>)</span> {{ if $vi }}{{ .focus_vi }}{{ else }}{{ .focus }}{{ end }}</li>
