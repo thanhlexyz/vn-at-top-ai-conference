@@ -2742,34 +2742,34 @@
     "year": 2026,
     "credit": 0.0435,
     "status": "accepted",
-    "problem": "Vision-Language-Action (VLA) models map camera images and language instructions to robot actions after large-scale multimodal pretraining, but the paper's stress test shows that their performance drops sharply when they are adapted to new tasks from few demonstrations (few-shot imitation learning).",
-    "problem_vi": "Các mô hình Thị giác-Ngôn ngữ-Hành động (Vision-Language-Action, VLA) ánh xạ hình ảnh camera và chỉ dẫn ngôn ngữ thành hành động của robot sau khi tiền huấn luyện đa phương thức quy mô lớn, nhưng thử nghiệm sức chịu đựng của bài báo cho thấy hiệu năng của chúng giảm mạnh khi được thích nghi sang nhiệm vụ mới chỉ từ ít minh họa (học bắt chước few-shot).",
-    "technique": "FOCA adds future-oriented objectives during adaptation: explicit prediction of embeddings of future task-relevant interaction regions and implicit contrastive alignment with future goal observations, so the model reasons about the future in latent space without predicting pixels; the implicit objective needs no action labels, which allows co-training on synthetic videos from video world models.",
-    "technique_vi": "FOCA thêm các mục tiêu hướng tới tương lai khi thích nghi: dự đoán tường minh các embedding của vùng tương tác liên quan đến nhiệm vụ trong tương lai và căn chỉnh ngầm theo kiểu tương phản (contrastive) với các quan sát mục tiêu tương lai, nhờ đó mô hình suy luận về tương lai trong không gian ẩn mà không cần dự đoán điểm ảnh; mục tiêu ngầm không cần nhãn hành động nên cho phép đồng huấn luyện với video tổng hợp từ các mô hình thế giới video.",
-    "strength": "The abstract reports 95.7% success with 20 demonstrations on the LIBERO benchmark, 7-12% improvements on RoboCasa and up to 26% absolute gains on real robots.",
-    "strength_vi": "Phần tóm tắt báo cáo tỉ lệ thành công 95,7% với 20 minh họa trên benchmark LIBERO, cải thiện 7-12% trên RoboCasa và tăng tuyệt đối tới 26% trên robot thực.",
+    "problem": "Vision-Language-Action (VLA) models map camera observations and language instructions to robot actions after large-scale multimodal pretraining. The paper's stress test of state-of-the-art VLA models shows that their performance degrades sharply as the number of demonstrations for a new task is reduced (few-shot imitation learning).",
+    "problem_vi": "Các mô hình Vision-Language-Action (VLA) ánh xạ quan sát từ camera và chỉ dẫn bằng ngôn ngữ thành hành động của robot sau khi được tiền huấn luyện đa phương thức quy mô lớn. Bài kiểm tra sức chịu đựng (stress test) trong bài báo trên các mô hình VLA hiện đại cho thấy hiệu năng giảm mạnh khi số lượng minh họa cho một tác vụ mới giảm đi (học bắt chước với ít mẫu, few-shot imitation learning).",
+    "technique": "FOCA adds future-oriented conditioning during adaptation: explicit prediction of task-grounded future interaction embeddings and implicit contrastive alignment with future goal observations, so that long-horizon reasoning happens in latent space without pixel-level prediction. Because the implicit objective needs no action labels, it also supports co-training on synthetic videos from video world models.",
+    "technique_vi": "FOCA bổ sung điều kiện hướng tới tương lai trong quá trình thích nghi: dự đoán tường minh các embedding tương tác trong tương lai gắn với tác vụ, và căn chỉnh ngầm theo kiểu tương phản (contrastive) với các quan sát mục tiêu trong tương lai, để việc suy luận dài hạn diễn ra trong không gian ẩn mà không cần dự đoán ở mức điểm ảnh. Vì mục tiêu ngầm không cần nhãn hành động, phương pháp còn cho phép đồng huấn luyện với video tổng hợp do các video world model sinh ra.",
+    "strength": "The paper reports 95.7% success with 20 demonstrations on LIBERO, improvements of 7–12% on RoboCasa and up to 26% absolute gains on real robots.",
+    "strength_vi": "Bài báo báo cáo tỉ lệ thành công 95,7% với 20 minh họa trên LIBERO, cải thiện 7–12% trên RoboCasa và tăng tới 26% tuyệt đối trên robot thật.",
     "authors": [
      {
-      "text": "Extending offline-RL-style guarantees, which penalize out-of-distribution value estimates, to the representation-level occupancy estimation behind FOCA remains open.",
-      "text_vi": "Việc mở rộng các bảo đảm kiểu học tăng cường ngoại tuyến (offline RL), vốn phạt các ước lượng giá trị ngoài phân phối, sang ước lượng occupancy ở mức biểu diễn mà FOCA sử dụng vẫn còn bỏ ngỏ."
+      "text": "The authors point to an analogy with offline reinforcement learning methods that penalise out-of-distribution value estimates, but state that extending those guarantees to occupancy estimation at the representation level remains open.",
+      "text_vi": "Nhóm tác giả chỉ ra sự tương đồng với các phương pháp học tăng cường offline phạt các ước lượng giá trị nằm ngoài phân phối, nhưng cho biết việc mở rộng các bảo đảm đó sang ước lượng occupancy ở mức biểu diễn vẫn còn bỏ ngỏ."
      }
     ],
     "reviewers": [
      {
+      "quote": "the explicit future prediction module is disabled when training on DreamGen videos.",
+      "quote_vi": "mô-đun dự đoán tương lai tường minh bị tắt khi huấn luyện trên video DreamGen."
+     },
+     {
       "quote": "The paper does not thoroughly analyze how errors or failures in this grounding model affect the overall system, which introduces a potential point of failure in novel domains.",
-      "quote_vi": "Bài báo không phân tích kỹ lỗi hoặc thất bại của mô hình định vị đối tượng (grounding) này ảnh hưởng thế nào đến toàn hệ thống, điều tạo ra một điểm có thể gây hỏng trong các miền mới."
+      "quote_vi": "Bài báo chưa phân tích kỹ việc lỗi hoặc thất bại của mô hình định vị đối tượng (grounding model) này ảnh hưởng thế nào đến toàn hệ thống, điều này tạo ra một điểm có thể gây lỗi trong các miền mới."
      },
      {
       "quote": "If the dataset contains low-quality or failed demonstrations (common in real-world robot data), aligning with these \"negative\" futures could misguide the policy.",
-      "quote_vi": "Nếu tập dữ liệu chứa các minh họa chất lượng thấp hoặc thất bại (thường gặp trong dữ liệu robot thực), việc căn chỉnh theo những tương lai \"tiêu cực\" này có thể dẫn chính sách đi sai."
+      "quote_vi": "Nếu tập dữ liệu chứa các minh họa chất lượng thấp hoặc thất bại (thường gặp trong dữ liệu robot thực tế), việc căn chỉnh theo những tương lai “tiêu cực” này có thể dẫn chính sách đi sai hướng."
      },
      {
-      "quote": "However, the explicit future prediction module is disabled when training on DreamGen videos.",
-      "quote_vi": "Tuy nhiên, mô-đun dự đoán tương lai tường minh bị tắt khi huấn luyện trên video DreamGen."
-     },
-     {
-      "quote": "FOCA does assume a certain breed of VLA that can be composed into VLM and action expert and is thus not architecture-agnostic.",
-      "quote_vi": "FOCA giả định một loại VLA có thể tách thành VLM và bộ chuyên gia hành động, do đó không độc lập với kiến trúc."
+      "quote": "Rigidly fixing explicit tokens as static parameters during deployment may impair out-of-distribution generalization",
+      "quote_vi": "Việc cố định cứng các token tường minh thành tham số tĩnh khi triển khai có thể làm giảm khả năng tổng quát hóa ngoài phân phối"
      }
     ]
    },
@@ -9011,8 +9011,8 @@
       "text_vi": "Kiến trúc phù hợp với các hệ Hamilton kín; các hệ tiêu tán như khuếch tán nhiệt, dòng chảy nhớt, phản ứng - khuếch tán và động lực học Navier-Stokes không được bảo đảm học đúng, và việc tách mô hình thành một phần symplectic và một phần hiệu chỉnh nằm ngoài phạm vi bài báo."
      },
      {
-      "text": "Each Fourier mode has fewer trainable parameters, which the authors say can be offset by stacking additional layers.",
-      "text_vi": "Mỗi mode Fourier có ít tham số huấn luyện hơn, điều mà các tác giả cho rằng có thể bù lại bằng cách xếp thêm lớp."
+      "text": "Each mode has fewer trainable parameters, which the authors say can be offset by stacking additional layers.",
+      "text_vi": "Mỗi mode có ít tham số huấn luyện hơn, điều mà các tác giả cho rằng có thể bù lại bằng cách xếp thêm lớp."
      }
     ],
     "reviewers": [
@@ -11120,18 +11120,18 @@
    ],
    "edges": []
   },
-  "open_summary": "The open challenges below come from the authors' stated limitations and the public reviews. Both fixes depend on their setting: raw-input routing is specific to normalizers that strip per-window statistics and needs a frozen backbone, and probe-guided gradient boosting shows its gains mainly under SGD rather than Adam.",
-  "open_summary_vi": "Các thách thức mở dưới đây lấy từ những hạn chế do tác giả nêu và các bài review công khai. Cả hai cách khắc phục đều phụ thuộc vào thiết lập: định tuyến theo đầu vào thô chỉ áp dụng cho các phép chuẩn hóa xóa thống kê theo cửa sổ và cần backbone cố định, còn khuếch đại gradient theo probe chủ yếu cho thấy cải thiện với SGD chứ không với Adam.",
-  "overview": "Thuy T. Nguyen's two NeurIPS 2026 papers each diagnose a failure in model training and propose a targeted fix. The papers study cases where one component takes over during training, either a single expert in mixture-of-experts adapters for time series foundation models or a dominant modality in multimodal networks.",
-  "overview_vi": "Hai bài báo NeurIPS 2026 của Nguyễn Thị Thủy đều chẩn đoán một lỗi trong quá trình huấn luyện mô hình và đề xuất cách khắc phục nhắm đúng vào lỗi đó. Các bài báo nghiên cứu những trường hợp một thành phần lấn át trong khi huấn luyện, hoặc là một expert duy nhất trong các adapter mixture-of-experts cho foundation model chuỗi thời gian, hoặc là một phương thức trội trong mạng đa phương thức.",
+  "open_summary": "The open challenges below come from the authors' stated limitations and the public reviews. Both fixes depend on their setting: raw-input routing is specific to normalizers that strip per-window statistics, and probe-guided gradient boosting shows its gains mainly under stochastic gradient descent (SGD) rather than Adam.",
+  "open_summary_vi": "Các thách thức mở dưới đây lấy từ những hạn chế do tác giả nêu và các bài review công khai. Cả hai cách khắc phục đều phụ thuộc vào thiết lập: định tuyến theo đầu vào thô chỉ áp dụng cho các phép chuẩn hóa xóa thống kê theo cửa sổ, còn khuếch đại gradient theo probe chủ yếu cho thấy cải thiện với stochastic gradient descent (SGD) chứ không với Adam.",
+  "overview": "Thuy T. Nguyen's two NeurIPS 2026 papers each diagnose a failure in model training and propose a fix for it. The papers study cases where one component takes over during training, either a single expert in mixture-of-experts adapters for time series foundation models or a dominant modality in multimodal networks.",
+  "overview_vi": "Hai bài báo NeurIPS 2026 của Nguyễn Thị Thủy đều chẩn đoán một lỗi trong quá trình huấn luyện mô hình và đề xuất cách khắc phục lỗi đó. Các bài báo nghiên cứu những trường hợp một thành phần lấn át trong khi huấn luyện, hoặc là một expert duy nhất trong các adapter mixture-of-experts cho foundation model chuỗi thời gian, hoặc là một phương thức trội trong mạng đa phương thức.",
   "topics": [
    {
     "title": "Expert and modality imbalance in training",
     "title_vi": "Mất cân bằng expert và phương thức khi huấn luyện",
     "gist": "The papers study cases where one component takes over during training, either a single expert in mixture-of-experts adapters for time series foundation models or a dominant modality in multimodal networks.",
     "gist_vi": "Các bài báo nghiên cứu những trường hợp một thành phần lấn át trong khi huấn luyện, hoặc là một expert duy nhất trong các adapter mixture-of-experts cho foundation model chuỗi thời gian, hoặc là một phương thức trội trong mạng đa phương thức.",
-    "open_gist": "Both fixes depend on their setting: raw-input routing is specific to normalizers that strip per-window statistics and needs a frozen backbone, and probe-guided gradient boosting shows its gains mainly under SGD rather than Adam.",
-    "open_gist_vi": "Cả hai cách khắc phục đều phụ thuộc vào thiết lập: định tuyến theo đầu vào thô chỉ áp dụng cho các phép chuẩn hóa xóa thống kê theo cửa sổ và cần backbone cố định, còn khuếch đại gradient theo probe chủ yếu cho thấy cải thiện với SGD chứ không với Adam.",
+    "open_gist": "Both fixes depend on their setting: raw-input routing is specific to normalizers that strip per-window statistics, and probe-guided gradient boosting shows its gains mainly under stochastic gradient descent (SGD) rather than Adam.",
+    "open_gist_vi": "Cả hai cách khắc phục đều phụ thuộc vào thiết lập: định tuyến theo đầu vào thô chỉ áp dụng cho các phép chuẩn hóa xóa thống kê theo cửa sổ, còn khuếch đại gradient theo probe chủ yếu cho thấy cải thiện với stochastic gradient descent (SGD) chứ không với Adam.",
     "summary": "On instance-normalized time series foundation models, a mixture-of-experts head collapses onto one expert because normalization removes the per-window statistics the router needs; RR-MoA routes on the raw input and, the paper reports, wins 54 of 54 comparisons against the strongest fixed adapter with a frozen backbone. In multimodal learning, PGGB attaches stop-gradient linear probes to each modality and scales up gradients of the weaker modality according to the probe accuracy gap, reporting the largest gain on CREMA-D when combined with the throttling method OGM-GE.",
     "summary_vi": "Trên các foundation model chuỗi thời gian dùng instance normalization, đầu mixture-of-experts sụp về một expert vì phép chuẩn hóa xóa mất thống kê theo cửa sổ mà bộ định tuyến cần; RR-MoA định tuyến theo đầu vào thô và, theo bài báo, thắng cả 54 trên 54 phép so sánh với adapter cố định mạnh nhất khi giữ nguyên backbone. Trong học đa phương thức, PGGB gắn probe tuyến tính chặn gradient vào từng phương thức và khuếch đại gradient của phương thức yếu theo khoảng chênh độ chính xác của probe, với cải thiện lớn nhất được báo cáo trên CREMA-D khi kết hợp với phương pháp kìm hãm OGM-GE.",
     "open": [
@@ -11217,8 +11217,8 @@
     "status": "accepted",
     "problem": "Time series foundation models (TSFMs) usually adapt to new data through a single trainable head on a frozen backbone; replacing that head with a mixture of experts (MoE) fails on instance-normalized backbones, the dominant TSFM design, where routing entropy collapses to zero and one expert absorbs every input, a failure the paper calls normalization-induced routing collapse.",
     "problem_vi": "Các foundation model cho chuỗi thời gian (TSFM) thường thích nghi với dữ liệu mới bằng một đầu ra huấn luyện được gắn trên backbone cố định; thay đầu này bằng mixture of experts (MoE) lại thất bại trên các backbone dùng instance normalization, kiểu thiết kế TSFM phổ biến nhất: entropy định tuyến sụp về 0 và một expert nhận toàn bộ đầu vào, hiện tượng bài báo gọi là sụp đổ định tuyến do chuẩn hóa.",
-    "technique": "The paper locates the cause in the router's input: instance normalization before the encoder removes each window's mean and standard deviation, which a router needs to tell regimes apart. A mutual-information decomposition yields a signal ratio computed before training, eight causal controls isolate normalization as the cause, and Raw-Routed Mixture of Adapters (RR-MoA) routes on the raw, pre-normalization input while the experts use the frozen backbone's features.",
-    "technique_vi": "Bài báo xác định nguyên nhân nằm ở đầu vào của bộ định tuyến: instance normalization trước encoder xóa trung bình và độ lệch chuẩn của từng cửa sổ, vốn là thông tin bộ định tuyến cần để phân biệt các chế độ dữ liệu. Một phép phân rã thông tin tương hỗ cho ra tỷ số tín hiệu tính được trước khi huấn luyện, tám phép kiểm soát nhân quả xác định chuẩn hóa là nguyên nhân, và Raw-Routed Mixture of Adapters (RR-MoA) định tuyến dựa trên đầu vào thô trước chuẩn hóa trong khi các expert dùng đặc trưng của backbone cố định.",
+    "technique": "The paper locates the cause in the router's input: instance normalization before the encoder removes each window's mean and standard deviation, which a router needs to tell regimes apart. A mutual-information decomposition yields a signal ratio computed before training, eight causal controls are reported to isolate normalization as the cause, and Raw-Routed Mixture of Adapters (RR-MoA) routes on the raw, pre-normalization input while the experts use the frozen backbone's features.",
+    "technique_vi": "Bài báo xác định nguyên nhân nằm ở đầu vào của bộ định tuyến: instance normalization trước encoder xóa trung bình và độ lệch chuẩn của từng cửa sổ, vốn là thông tin bộ định tuyến cần để phân biệt các chế độ dữ liệu. Một phép phân rã thông tin tương hỗ cho ra tỷ số tín hiệu tính được trước khi huấn luyện, bài báo báo cáo tám phép kiểm soát nhân quả xác định chuẩn hóa là nguyên nhân, và Raw-Routed Mixture of Adapters (RR-MoA) định tuyến dựa trên đầu vào thô trước chuẩn hóa trong khi các expert dùng đặc trưng của backbone cố định.",
     "strength": "The paper reports that with a strictly frozen backbone RR-MoA wins 54 of 54 comparisons against the strongest fixed adapter, outperforms LoRA, TRACE, AdaMix and full fine-tuning, holds across six backbones and an imputation task, and that the signal ratio predicts dataset vulnerability with Spearman correlation -0.88.",
     "strength_vi": "Bài báo báo cáo rằng với backbone hoàn toàn cố định, RR-MoA thắng cả 54 trên 54 phép so sánh với adapter cố định mạnh nhất, vượt LoRA, TRACE, AdaMix và tinh chỉnh toàn bộ, đúng trên sáu backbone và một tác vụ điền khuyết dữ liệu, và tỷ số tín hiệu dự đoán mức dễ tổn thương của bộ dữ liệu với hệ số tương quan Spearman -0,88.",
     "authors": [
@@ -11548,23 +11548,40 @@
     "year": 2027,
     "credit": 0.2,
     "status": "withdrawn",
-    "problem": "In conversational image retrieval, where a user and system talk over several turns to find a target image, accuracy tends to plateau in late turns, but a plateau does not show that all opportunities for improvement have been exhausted.",
-    "problem_vi": "Trong truy xuất ảnh qua hội thoại, khi người dùng và hệ thống trao đổi nhiều lượt để tìm một ảnh mục tiêu, độ chính xác thường chững lại ở các lượt cuối, nhưng sự chững lại đó không chứng tỏ mọi khả năng cải thiện đã cạn.",
-    "technique": "The paper measures retrieval headroom through three controlled comparisons: continuing without new target observations, alternative representations of a fixed dialogue, and adding extra target-grounded observations such as a human sketch.",
-    "technique_vi": "Bài báo đo dư địa cải thiện truy xuất bằng ba phép so sánh có kiểm soát: tiếp tục hội thoại mà không có quan sát mới về ảnh mục tiêu, dùng các cách biểu diễn khác cho cùng một đoạn hội thoại, và bổ sung quan sát gắn với ảnh mục tiêu như một bản phác thảo của người.",
-    "strength": "It reveals large untapped headroom: simply mean-pooling the dialogue raises current H@10 (hit rate in the top 10) on VisDial from 62.2 to 74.9 with ChatIR-FT and from 51.6 to 79.9 with BLIP-ITC, and a paired human sketch improves all twelve dialogue-state and retrieval-space pairs by 9.8 to 22.7 points.",
-    "strength_vi": "Nghiên cứu chỉ ra dư địa lớn chưa được khai thác: chỉ cần lấy trung bình (mean pooling) biểu diễn hội thoại đã nâng H@10 hiện tại (tỷ lệ trúng trong top 10) trên VisDial từ 62,2 lên 74,9 với ChatIR-FT và từ 51,6 lên 79,9 với BLIP-ITC, còn thêm một bản phác thảo của người giúp cả mười hai cặp trạng thái hội thoại và không gian truy xuất tăng từ 9,8 đến 22,7 điểm.",
+    "problem": "In conversational image retrieval, a system asks about a target image, receives answers and updates its ranking over dialogue turns. The paper argues that a plateau in late turns summarises the outcome of an interaction but does not establish which opportunities for improvement have been exhausted.",
+    "problem_vi": "Trong truy xuất ảnh qua hội thoại (conversational image retrieval), hệ thống đặt câu hỏi về ảnh cần tìm, nhận câu trả lời và cập nhật thứ hạng qua từng lượt hội thoại. Bài báo lập luận rằng hiện tượng kết quả chững lại ở các lượt cuối chỉ tóm tắt kết quả của cuộc tương tác, chứ không cho biết những cơ hội cải thiện nào đã thực sự cạn.",
+    "technique": "The paper separates three sources of remaining headroom through controlled comparisons: continuations without additional target observations (historical exposure), alternative representations of a fixed dialogue (representation headroom), and additional target-grounded observations such as a human sketch (evidence-access headroom).",
+    "technique_vi": "Bài báo tách ba nguồn dư địa cải thiện còn lại qua các phép so sánh có kiểm soát: tiếp tục hội thoại mà không có thêm quan sát về ảnh đích (mức tiếp xúc lịch sử), các cách biểu diễn khác nhau cho cùng một đoạn hội thoại cố định (dư địa biểu diễn), và các quan sát bổ sung gắn với ảnh đích như một bản phác thảo do người vẽ (dư địa tiếp cận bằng chứng).",
+    "strength": "On FS-COCO-Dialog, reordering a frozen top-100 shortlist after four turns raises cumulative Hit@10 from 39.7 to 50.5 while current Hit@10 falls from 30.9 to 6.0; on VisDial, mean pooling raises current Hit@10 from 62.2 to 74.9 under ChatIR-FT and from 51.6 to 79.9 under BLIP-ITC; and a paired human sketch improves all twelve dialogue-state–retrieval-space pairs by 9.8–22.7 points.",
+    "strength_vi": "Trên FS-COCO-Dialog, sắp xếp lại một danh sách top-100 cố định sau bốn lượt làm Hit@10 tích lũy tăng từ 39,7 lên 50,5 trong khi Hit@10 hiện tại giảm từ 30,9 xuống 6,0; trên VisDial, mean pooling nâng Hit@10 hiện tại từ 62,2 lên 74,9 với ChatIR-FT và từ 51,6 lên 79,9 với BLIP-ITC; và một bản phác thảo đi kèm do người vẽ cải thiện cả mười hai cặp trạng thái hội thoại–không gian truy xuất thêm 9,8–22,7 điểm.",
     "authors": [
      {
-      "text": "The evidence relies on generated FS-COCO-Dialog answers of uncertain fidelity and on human sketches from FS-COCO alone.",
-      "text_vi": "Bằng chứng dựa trên các câu trả lời FS-COCO-Dialog được sinh tự động với độ trung thực chưa chắc chắn và chỉ trên các bản phác thảo của người từ FS-COCO."
+      "text": "The evidence rests on generated FS-COCO-Dialog answers whose fidelity is uncertain.",
+      "text_vi": "Bằng chứng dựa trên các câu trả lời được sinh tự động trong FS-COCO-Dialog với độ trung thực chưa chắc chắn."
      },
      {
-      "text": "Only a fixed linear fusion rule is studied for combining modalities.",
-      "text_vi": "Chỉ có một quy tắc kết hợp tuyến tính cố định được nghiên cứu để gộp các phương thức."
+      "text": "Human sketches come from FS-COCO alone, and sketch and dialogue are combined with a single fixed linear fusion rule.",
+      "text_vi": "Các bản phác thảo do người vẽ chỉ lấy từ FS-COCO, và phác thảo với hội thoại được kết hợp bằng một quy tắc hợp nhất tuyến tính cố định duy nhất."
      }
     ],
-    "reviewers": []
+    "reviewers": [
+     {
+      "quote": "PlugIR already distinguishes current from cumulative retrieval and studies dialogue reformulation, while pooling, query rewriting, and sketch-based retrieval are established families of techniques.",
+      "quote_vi": "PlugIR đã phân biệt truy xuất hiện tại với truy xuất tích lũy và nghiên cứu việc diễn đạt lại hội thoại, trong khi pooling, viết lại truy vấn và truy xuất dựa trên phác thảo đều là những họ kỹ thuật đã có."
+     },
+     {
+      "quote": "A substantial portion of the representation and sketch analysis relies on FS-COCO-Dialog, a generated benchmark whose answer fidelity is uncertain: the two automated judges agree on only 57.8% of sampled answers.",
+      "quote_vi": "Một phần đáng kể của phân tích về biểu diễn và phác thảo dựa vào FS-COCO-Dialog, một benchmark được sinh tự động với độ trung thực của câu trả lời chưa chắc chắn: hai bộ chấm tự động chỉ đồng ý trên 57,8% số câu trả lời được lấy mẫu."
+     },
+     {
+      "quote": "A sketch is created with access to the target image and may contain information absent from the dialogue, restate existing facts in a more retrieval-friendly form, or correct inaccurate dialogue answers.",
+      "quote_vi": "Bản phác thảo được tạo ra khi có quyền xem ảnh đích, nên có thể chứa thông tin không có trong hội thoại, diễn đạt lại các sự kiện đã có theo dạng thuận lợi hơn cho truy xuất, hoặc sửa các câu trả lời sai trong hội thoại."
+     },
+     {
+      "quote": "the paper does not provide a human evaluation of whether these rewrites preserve the dialogue's information, omit important details, or introduce unsupported attributes.",
+      "quote_vi": "bài báo không cung cấp đánh giá của con người về việc các bản viết lại này có giữ được thông tin của hội thoại, bỏ sót chi tiết quan trọng, hay thêm vào các thuộc tính không có căn cứ hay không."
+     }
+    ]
    },
    {
     "id": "iclr2025-multi-perspective-data-augmentation-for-few-shot-object-dete",
@@ -11627,34 +11644,34 @@
     "year": 2026,
     "credit": 0.0435,
     "status": "accepted",
-    "problem": "Vision-Language-Action (VLA) models map camera images and language instructions to robot actions after large-scale multimodal pretraining, but the paper's stress test shows that their performance drops sharply when they are adapted to new tasks from few demonstrations (few-shot imitation learning).",
-    "problem_vi": "Các mô hình Thị giác-Ngôn ngữ-Hành động (Vision-Language-Action, VLA) ánh xạ hình ảnh camera và chỉ dẫn ngôn ngữ thành hành động của robot sau khi tiền huấn luyện đa phương thức quy mô lớn, nhưng thử nghiệm sức chịu đựng của bài báo cho thấy hiệu năng của chúng giảm mạnh khi được thích nghi sang nhiệm vụ mới chỉ từ ít minh họa (học bắt chước few-shot).",
-    "technique": "FOCA adds future-oriented objectives during adaptation: explicit prediction of embeddings of future task-relevant interaction regions and implicit contrastive alignment with future goal observations, so the model reasons about the future in latent space without predicting pixels; the implicit objective needs no action labels, which allows co-training on synthetic videos from video world models.",
-    "technique_vi": "FOCA thêm các mục tiêu hướng tới tương lai khi thích nghi: dự đoán tường minh các embedding của vùng tương tác liên quan đến nhiệm vụ trong tương lai và căn chỉnh ngầm theo kiểu tương phản (contrastive) với các quan sát mục tiêu tương lai, nhờ đó mô hình suy luận về tương lai trong không gian ẩn mà không cần dự đoán điểm ảnh; mục tiêu ngầm không cần nhãn hành động nên cho phép đồng huấn luyện với video tổng hợp từ các mô hình thế giới video.",
-    "strength": "The abstract reports 95.7% success with 20 demonstrations on the LIBERO benchmark, 7-12% improvements on RoboCasa and up to 26% absolute gains on real robots.",
-    "strength_vi": "Phần tóm tắt báo cáo tỉ lệ thành công 95,7% với 20 minh họa trên benchmark LIBERO, cải thiện 7-12% trên RoboCasa và tăng tuyệt đối tới 26% trên robot thực.",
+    "problem": "Vision-Language-Action (VLA) models map camera observations and language instructions to robot actions after large-scale multimodal pretraining. The paper's stress test of state-of-the-art VLA models shows that their performance degrades sharply as the number of demonstrations for a new task is reduced (few-shot imitation learning).",
+    "problem_vi": "Các mô hình Vision-Language-Action (VLA) ánh xạ quan sát từ camera và chỉ dẫn bằng ngôn ngữ thành hành động của robot sau khi được tiền huấn luyện đa phương thức quy mô lớn. Bài kiểm tra sức chịu đựng (stress test) trong bài báo trên các mô hình VLA hiện đại cho thấy hiệu năng giảm mạnh khi số lượng minh họa cho một tác vụ mới giảm đi (học bắt chước với ít mẫu, few-shot imitation learning).",
+    "technique": "FOCA adds future-oriented conditioning during adaptation: explicit prediction of task-grounded future interaction embeddings and implicit contrastive alignment with future goal observations, so that long-horizon reasoning happens in latent space without pixel-level prediction. Because the implicit objective needs no action labels, it also supports co-training on synthetic videos from video world models.",
+    "technique_vi": "FOCA bổ sung điều kiện hướng tới tương lai trong quá trình thích nghi: dự đoán tường minh các embedding tương tác trong tương lai gắn với tác vụ, và căn chỉnh ngầm theo kiểu tương phản (contrastive) với các quan sát mục tiêu trong tương lai, để việc suy luận dài hạn diễn ra trong không gian ẩn mà không cần dự đoán ở mức điểm ảnh. Vì mục tiêu ngầm không cần nhãn hành động, phương pháp còn cho phép đồng huấn luyện với video tổng hợp do các video world model sinh ra.",
+    "strength": "The paper reports 95.7% success with 20 demonstrations on LIBERO, improvements of 7–12% on RoboCasa and up to 26% absolute gains on real robots.",
+    "strength_vi": "Bài báo báo cáo tỉ lệ thành công 95,7% với 20 minh họa trên LIBERO, cải thiện 7–12% trên RoboCasa và tăng tới 26% tuyệt đối trên robot thật.",
     "authors": [
      {
-      "text": "Extending offline-RL-style guarantees, which penalize out-of-distribution value estimates, to the representation-level occupancy estimation behind FOCA remains open.",
-      "text_vi": "Việc mở rộng các bảo đảm kiểu học tăng cường ngoại tuyến (offline RL), vốn phạt các ước lượng giá trị ngoài phân phối, sang ước lượng occupancy ở mức biểu diễn mà FOCA sử dụng vẫn còn bỏ ngỏ."
+      "text": "The authors point to an analogy with offline reinforcement learning methods that penalise out-of-distribution value estimates, but state that extending those guarantees to occupancy estimation at the representation level remains open.",
+      "text_vi": "Nhóm tác giả chỉ ra sự tương đồng với các phương pháp học tăng cường offline phạt các ước lượng giá trị nằm ngoài phân phối, nhưng cho biết việc mở rộng các bảo đảm đó sang ước lượng occupancy ở mức biểu diễn vẫn còn bỏ ngỏ."
      }
     ],
     "reviewers": [
      {
+      "quote": "the explicit future prediction module is disabled when training on DreamGen videos.",
+      "quote_vi": "mô-đun dự đoán tương lai tường minh bị tắt khi huấn luyện trên video DreamGen."
+     },
+     {
       "quote": "The paper does not thoroughly analyze how errors or failures in this grounding model affect the overall system, which introduces a potential point of failure in novel domains.",
-      "quote_vi": "Bài báo không phân tích kỹ lỗi hoặc thất bại của mô hình định vị đối tượng (grounding) này ảnh hưởng thế nào đến toàn hệ thống, điều tạo ra một điểm có thể gây hỏng trong các miền mới."
+      "quote_vi": "Bài báo chưa phân tích kỹ việc lỗi hoặc thất bại của mô hình định vị đối tượng (grounding model) này ảnh hưởng thế nào đến toàn hệ thống, điều này tạo ra một điểm có thể gây lỗi trong các miền mới."
      },
      {
       "quote": "If the dataset contains low-quality or failed demonstrations (common in real-world robot data), aligning with these \"negative\" futures could misguide the policy.",
-      "quote_vi": "Nếu tập dữ liệu chứa các minh họa chất lượng thấp hoặc thất bại (thường gặp trong dữ liệu robot thực), việc căn chỉnh theo những tương lai \"tiêu cực\" này có thể dẫn chính sách đi sai."
+      "quote_vi": "Nếu tập dữ liệu chứa các minh họa chất lượng thấp hoặc thất bại (thường gặp trong dữ liệu robot thực tế), việc căn chỉnh theo những tương lai “tiêu cực” này có thể dẫn chính sách đi sai hướng."
      },
      {
-      "quote": "However, the explicit future prediction module is disabled when training on DreamGen videos.",
-      "quote_vi": "Tuy nhiên, mô-đun dự đoán tương lai tường minh bị tắt khi huấn luyện trên video DreamGen."
-     },
-     {
-      "quote": "FOCA does assume a certain breed of VLA that can be composed into VLM and action expert and is thus not architecture-agnostic.",
-      "quote_vi": "FOCA giả định một loại VLA có thể tách thành VLM và bộ chuyên gia hành động, do đó không độc lập với kiến trúc."
+      "quote": "Rigidly fixing explicit tokens as static parameters during deployment may impair out-of-distribution generalization",
+      "quote_vi": "Việc cố định cứng các token tường minh thành tham số tĩnh khi triển khai có thể làm giảm khả năng tổng quát hóa ngoài phân phối"
      }
     ]
    },
@@ -12262,8 +12279,8 @@
    ],
    "edges": []
   },
-  "open_summary": "No public reviews or author-stated limitations are available, so the open challenges below restate the problem and scope the paper sets for itself. The paper frames unknown diffusion patterns and the need for high-quality training samples as the main obstacles for learning-based influence maximization, with evidence limited to several real-world datasets.",
-  "open_summary_vi": "Không có bài review công khai hay hạn chế do tác giả nêu, nên các thách thức mở dưới đây nhắc lại vấn đề và phạm vi mà bài báo tự đặt ra. Bài báo xem các kiểu lan truyền chưa biết và nhu cầu về mẫu huấn luyện chất lượng cao là trở ngại chính cho tối đa hóa ảnh hưởng dựa trên học máy, với bằng chứng giới hạn ở một số bộ dữ liệu thực tế.",
+  "open_summary": "The open challenges below restate the scope the paper sets for itself. The paper's scope is seed selection in multiplex social networks, evaluated on influence spread, scalability and inference time on several real-world datasets.",
+  "open_summary_vi": "Các thách thức mở dưới đây nhắc lại phạm vi mà bài báo tự đặt ra. Phạm vi của bài báo là chọn hạt giống trên mạng xã hội đa lớp, được đánh giá về độ lan truyền ảnh hưởng, khả năng mở rộng và thời gian suy luận trên một số bộ dữ liệu thực tế.",
   "overview": "Huyen Nguyen's listed work is an AAAI 2025 paper on learning-based methods for spreading information in social networks. The paper selects seed users in multiplex social networks with a propagation mixture of experts and a generative policy trained by reinforcement learning.",
   "overview_vi": "Công trình được liệt kê của Nguyễn Thị Ngọc Huyền là một bài báo AAAI 2025 về các phương pháp dựa trên học máy để lan truyền thông tin trên mạng xã hội. Bài báo chọn người dùng hạt giống trên mạng xã hội đa lớp bằng một propagation mixture of experts và một chính sách sinh được huấn luyện bằng học tăng cường.",
   "topics": [
@@ -12272,14 +12289,14 @@
     "title_vi": "Tối đa hóa ảnh hưởng trên mạng đa lớp",
     "gist": "The paper selects seed users in multiplex social networks with a propagation mixture of experts and a generative policy trained by reinforcement learning.",
     "gist_vi": "Bài báo chọn người dùng hạt giống trên mạng xã hội đa lớp bằng một propagation mixture of experts và một chính sách sinh được huấn luyện bằng học tăng cường.",
-    "open_gist": "The paper frames unknown diffusion patterns and the need for high-quality training samples as the main obstacles for learning-based influence maximization, with evidence limited to several real-world datasets.",
-    "open_gist_vi": "Bài báo xem các kiểu lan truyền chưa biết và nhu cầu về mẫu huấn luyện chất lượng cao là trở ngại chính cho tối đa hóa ảnh hưởng dựa trên học máy, với bằng chứng giới hạn ở một số bộ dữ liệu thực tế.",
+    "open_gist": "The paper's scope is seed selection in multiplex social networks, evaluated on influence spread, scalability and inference time on several real-world datasets.",
+    "open_gist_vi": "Phạm vi của bài báo là chọn hạt giống trên mạng xã hội đa lớp, được đánh giá về độ lan truyền ảnh hưởng, khả năng mở rộng và thời gian suy luận trên một số bộ dữ liệu thực tế.",
     "summary": "Influence maximization chooses seed users so that information spreads as widely as possible; in multiplex networks, made of several interconnected layers, the paper states that learning-based methods struggle with unknown diffusion patterns and depend on high-quality training samples. REM encodes propagation with a Propagation Mixture of Experts and treats a generative model as a reinforcement-learning policy that generates and improves seed sets. The paper reports better influence spread, scalability and inference time than prior methods on several real-world datasets.",
     "summary_vi": "Tối đa hóa ảnh hưởng chọn người dùng hạt giống để thông tin lan truyền rộng nhất; trên mạng đa lớp gồm nhiều mạng liên kết với nhau, bài báo nêu rằng các phương pháp dựa trên học máy gặp khó với các kiểu lan truyền chưa biết và phụ thuộc vào mẫu huấn luyện chất lượng cao. REM mã hóa quá trình lan truyền bằng Propagation Mixture of Experts và coi một mô hình sinh là chính sách học tăng cường để sinh và cải thiện các tập hạt giống. Bài báo báo cáo độ lan truyền ảnh hưởng, khả năng mở rộng và thời gian suy luận tốt hơn các phương pháp trước trên nhiều bộ dữ liệu thực tế.",
     "open": [
      {
-      "text": "The paper names two obstacles for learning-based multiplex influence maximization: handling unknown diffusion patterns and relying on high-quality training samples.",
-      "text_vi": "Bài báo nêu hai trở ngại cho tối đa hóa ảnh hưởng trên mạng đa lớp dựa trên học máy: xử lý các kiểu lan truyền chưa biết và sự phụ thuộc vào mẫu huấn luyện chất lượng cao.",
+      "text": "The method is designed for multiplex networks, where seed users are chosen across several interconnected network layers.",
+      "text_vi": "Phương pháp được thiết kế cho mạng đa lớp, nơi người dùng hạt giống được chọn trên nhiều lớp mạng liên kết với nhau.",
       "source": "reviewers",
       "quote": false,
       "papers": [
@@ -12287,8 +12304,8 @@
       ]
      },
      {
-      "text": "The reported evidence covers influence spread, scalability and inference time on several real-world datasets.",
-      "text_vi": "Bằng chứng được báo cáo gồm độ lan truyền ảnh hưởng, khả năng mở rộng và thời gian suy luận trên một số bộ dữ liệu thực tế.",
+      "text": "The reported experiments measure influence spread, scalability and inference time on several real-world datasets.",
+      "text_vi": "Các thí nghiệm được báo cáo đo độ lan truyền ảnh hưởng, khả năng mở rộng và thời gian suy luận trên một số bộ dữ liệu thực tế.",
       "source": "reviewers",
       "quote": false,
       "papers": [
@@ -12705,8 +12722,8 @@
    ],
    "edges": []
   },
-  "open_summary": "The open challenges below come from the authors' stated limits, the papers' scope and the public reviews. Reviewers question whether correlations between data-level discrepancies and fairness gaps show which source causes unfairness, and whether the gaps reflect differences in clinical case mix rather than the models. The paper ties weak compositional reasoning partly to missing intermediate connections in existing datasets, and its own hierarchical training data come from a single source, Visual Genome. Symplectic structure alone does not guarantee exact conservation of energy, and dissipative systems such as viscous flows fall outside what the architecture is guaranteed to learn.",
-  "open_summary_vi": "Các thách thức mở dưới đây lấy từ những giới hạn do tác giả nêu, phạm vi của các bài báo và các bài review công khai. Các reviewer đặt câu hỏi liệu tương quan giữa chênh lệch ở mức dữ liệu và khoảng cách công bằng có chỉ ra được nguồn nào gây bất công bằng hay không, và liệu các khoảng cách đó có phản ánh khác biệt về cơ cấu ca bệnh thay vì do mô hình. Bài báo cho rằng khả năng suy luận tổ hợp yếu một phần là do các bộ dữ liệu hiện có thiếu liên kết trung gian, và dữ liệu huấn luyện phân cấp của chính nó chỉ đến từ một nguồn là Visual Genome. Riêng cấu trúc symplectic không bảo đảm bảo toàn chính xác năng lượng, và các hệ tiêu tán như dòng chảy nhớt nằm ngoài những gì kiến trúc được bảo đảm học đúng.",
+  "open_summary": "The open challenges below come from the authors' stated limits, the papers' scope and the public reviews. Reviewers question whether correlations between data-level discrepancies and fairness gaps show which source causes unfairness, and whether the gaps reflect differences in clinical case mix rather than the models. The reported evaluation covers visual grounding and compositional question answering, with hierarchical training data derived from Visual Genome. Symplectic structure alone does not guarantee exact conservation of energy, and dissipative systems such as viscous flows fall outside what the architecture is guaranteed to learn.",
+  "open_summary_vi": "Các thách thức mở dưới đây lấy từ những giới hạn do tác giả nêu, phạm vi của các bài báo và các bài review công khai. Các reviewer đặt câu hỏi liệu tương quan giữa chênh lệch ở mức dữ liệu và khoảng cách công bằng có chỉ ra được nguồn nào gây bất công bằng hay không, và liệu các khoảng cách đó có phản ánh khác biệt về cơ cấu ca bệnh thay vì do mô hình. Phần đánh giá được báo cáo gồm định vị thị giác và hỏi đáp tổ hợp, với dữ liệu huấn luyện phân cấp được dựng từ Visual Genome. Riêng cấu trúc symplectic không bảo đảm bảo toàn chính xác năng lượng, và các hệ tiêu tán như dòng chảy nhớt nằm ngoài những gì kiến trúc được bảo đảm học đúng.",
   "overview": "Long Hoang Dang's papers span three separate lines of machine learning research. In medical imaging, a benchmark and an upper bound attribute demographic unfairness in multimodal large language models to five data-level sources of bias. For vision-language models, text is aligned with image regions progressively from simple to complex concepts to support grounded compositional reasoning. For physical simulation, neural operators are built from symplectic layers so that the learned dynamics keep the geometry of Hamiltonian systems over long rollouts.",
   "overview_vi": "Các bài báo của Đặng Hoàng Long trải trên ba hướng nghiên cứu học máy riêng biệt. Trong ảnh y khoa, một benchmark cùng một cận trên quy bất công bằng nhân khẩu học trong các mô hình ngôn ngữ lớn đa phương thức về năm nguồn thiên lệch ở mức dữ liệu. Với các mô hình thị giác - ngôn ngữ, văn bản được căn với vùng ảnh lần lượt từ khái niệm đơn giản đến phức tạp để hỗ trợ suy luận tổ hợp có định vị. Với mô phỏng vật lý, neural operator được ghép từ các lớp symplectic để động lực học học được giữ nguyên cấu trúc hình học của hệ Hamilton qua các rollout dài.",
   "topics": [
@@ -12785,20 +12802,11 @@
     "title_vi": "Định vị tổ hợp trong mô hình thị giác - ngôn ngữ",
     "gist": "For vision-language models, text is aligned with image regions progressively from simple to complex concepts to support grounded compositional reasoning.",
     "gist_vi": "Với các mô hình thị giác - ngôn ngữ, văn bản được căn với vùng ảnh lần lượt từ khái niệm đơn giản đến phức tạp để hỗ trợ suy luận tổ hợp có định vị.",
-    "open_gist": "The paper ties weak compositional reasoning partly to missing intermediate connections in existing datasets, and its own hierarchical training data come from a single source, Visual Genome.",
-    "open_gist_vi": "Bài báo cho rằng khả năng suy luận tổ hợp yếu một phần là do các bộ dữ liệu hiện có thiếu liên kết trung gian, và dữ liệu huấn luyện phân cấp của chính nó chỉ đến từ một nguồn là Visual Genome.",
+    "open_gist": "The reported evaluation covers visual grounding and compositional question answering, with hierarchical training data derived from Visual Genome.",
+    "open_gist_vi": "Phần đánh giá được báo cáo gồm định vị thị giác và hỏi đáp tổ hợp, với dữ liệu huấn luyện phân cấp được dựng từ Visual Genome.",
     "summary": "Large vision-language models (LVLMs) match concepts across images and text but, the paper states, struggle with compositional concepts and relationships between entities. PromViL builds a hierarchy of image-text alignments, aligning descriptions with image regions from simple to complex so lower levels inform higher ones, and generates a nested compositional dataset (CompoVL) from Visual Genome. The paper reports gains over baselines on visual grounding and compositional question answering.",
     "summary_vi": "Các mô hình thị giác - ngôn ngữ lớn (LVLM) ghép được khái niệm giữa ảnh và văn bản nhưng, theo bài báo, gặp khó với khái niệm tổ hợp và quan hệ giữa các thực thể. PromViL xây dựng phân cấp các liên kết ảnh - văn bản, căn mô tả với vùng ảnh từ đơn giản đến phức tạp để mức thấp hỗ trợ mức cao, và sinh bộ dữ liệu tổ hợp lồng nhau CompoVL từ Visual Genome. Bài báo báo cáo kết quả tốt hơn các phương pháp so sánh trên định vị thị giác và hỏi đáp tổ hợp.",
     "open": [
-     {
-      "text": "The paper attributes LVLMs' difficulty with compositional reasoning partly to the lack of intermediate connections in existing datasets, a gap it addresses with generated data.",
-      "text_vi": "Bài báo cho rằng khó khăn của LVLM với suy luận tổ hợp một phần bắt nguồn từ việc các bộ dữ liệu hiện có thiếu liên kết trung gian, khoảng trống mà nó lấp bằng dữ liệu được sinh ra.",
-      "source": "reviewers",
-      "quote": false,
-      "papers": [
-       "aaai2025-progressive-multi-granular-alignments-for-grounded-reasoning"
-      ]
-     },
      {
       "text": "The hierarchical training data are derived from Visual Genome, and the reported evaluation covers visual grounding and compositional question answering tasks.",
       "text_vi": "Dữ liệu huấn luyện phân cấp được dựng từ Visual Genome, và phần đánh giá được báo cáo gồm các tác vụ định vị thị giác và hỏi đáp tổ hợp.",
@@ -12848,8 +12856,8 @@
     "gist_vi": "Với mô phỏng vật lý, neural operator được ghép từ các lớp symplectic để động lực học học được giữ nguyên cấu trúc hình học của hệ Hamilton qua các rollout dài.",
     "open_gist": "Symplectic structure alone does not guarantee exact conservation of energy, and dissipative systems such as viscous flows fall outside what the architecture is guaranteed to learn.",
     "open_gist_vi": "Riêng cấu trúc symplectic không bảo đảm bảo toàn chính xác năng lượng, và các hệ tiêu tán như dòng chảy nhớt nằm ngoài những gì kiến trúc được bảo đảm học đúng.",
-    "summary": "Neural operators for partial differential equations (PDEs) often break physical structure and drift over long rollouts. SympFNO composes Fourier Shear, Nonlinear Shear and Physical Rotation layers that are provably symplectic, so the learned map preserves the phase-space geometry of Hamiltonian dynamics. On five Hamiltonian PDE benchmarks the paper reports lower trajectory error, better conservation of invariants and up to two orders of magnitude fewer parameters than FNO and PINO.",
-    "summary_vi": "Neural operator cho phương trình đạo hàm riêng (PDE) thường phá vỡ cấu trúc vật lý và bị trôi khi rollout dài. SympFNO ghép các lớp Fourier Shear, Nonlinear Shear và Physical Rotation đã được chứng minh là symplectic, để ánh xạ học được giữ nguyên hình học không gian pha của động lực học Hamilton. Trên năm bài toán PDE Hamilton, bài báo báo cáo sai số quỹ đạo thấp hơn, bảo toàn bất biến tốt hơn và số tham số ít hơn tới hai bậc độ lớn so với FNO và PINO.",
+    "summary": "Neural operators for partial differential equations (PDEs) often break physical structure and drift over long rollouts. SympFNO composes Fourier Shear, Nonlinear Shear and Physical Rotation layers that are provably symplectic, so the learned map preserves the phase-space geometry of Hamiltonian dynamics. On five Hamiltonian PDE benchmarks the paper reports lower trajectory error, better conservation of invariants and up to two orders of magnitude fewer parameters than the Fourier Neural Operator (FNO) and the physics-informed neural operator (PINO).",
+    "summary_vi": "Neural operator cho phương trình đạo hàm riêng (PDE) thường phá vỡ cấu trúc vật lý và bị trôi khi rollout dài. SympFNO ghép các lớp Fourier Shear, Nonlinear Shear và Physical Rotation đã được chứng minh là symplectic, để ánh xạ học được giữ nguyên hình học không gian pha của động lực học Hamilton. Trên năm bài toán PDE Hamilton, bài báo báo cáo sai số quỹ đạo thấp hơn, bảo toàn bất biến tốt hơn và số tham số ít hơn tới hai bậc độ lớn so với Fourier Neural Operator (FNO) và physics-informed neural operator (PINO).",
     "open": [
      {
       "text": "Exact symplecticity does not guarantee exact conservation of energy or other invariants; adding energy, mass or momentum constraints, projection-based post-processing or multi-step training is left to future work.",
@@ -12980,8 +12988,8 @@
       "text_vi": "Kiến trúc phù hợp với các hệ Hamilton kín; các hệ tiêu tán như khuếch tán nhiệt, dòng chảy nhớt, phản ứng - khuếch tán và động lực học Navier-Stokes không được bảo đảm học đúng, và việc tách mô hình thành một phần symplectic và một phần hiệu chỉnh nằm ngoài phạm vi bài báo."
      },
      {
-      "text": "Each Fourier mode has fewer trainable parameters, which the authors say can be offset by stacking additional layers.",
-      "text_vi": "Mỗi mode Fourier có ít tham số huấn luyện hơn, điều mà các tác giả cho rằng có thể bù lại bằng cách xếp thêm lớp."
+      "text": "Each mode has fewer trainable parameters, which the authors say can be offset by stacking additional layers.",
+      "text_vi": "Mỗi mode có ít tham số huấn luyện hơn, điều mà các tác giả cho rằng có thể bù lại bằng cách xếp thêm lớp."
      }
     ],
     "reviewers": [
@@ -13221,14 +13229,14 @@
   },
   "open_summary": "The open challenges below come from the authors' stated limitations and the public reviews. The fix is specific to normalizers that strip per-window statistics and relies on a frozen backbone, and reviewers note that a small linear model still beats it in absolute error.",
   "open_summary_vi": "Các thách thức mở dưới đây lấy từ những hạn chế do tác giả nêu và các bài review công khai. Cách khắc phục chỉ áp dụng cho các phép chuẩn hóa xóa thống kê theo cửa sổ và dựa vào backbone cố định, và các reviewer lưu ý rằng một mô hình tuyến tính nhỏ vẫn có sai số tuyệt đối thấp hơn.",
-  "overview": "Nhat-Quang Tran's listed work is a NeurIPS 2026 paper on adapting pretrained time series models. The paper explains why mixture-of-experts adapters on frozen time series foundation models collapse onto a single expert and fixes it by routing on the raw, unnormalized input.",
-  "overview_vi": "Công trình được liệt kê của Trần Nhật Quang là một bài báo NeurIPS 2026 về việc thích nghi các mô hình chuỗi thời gian đã huấn luyện sẵn. Bài báo giải thích vì sao các adapter mixture-of-experts trên foundation model chuỗi thời gian cố định sụp về một expert duy nhất và khắc phục bằng cách định tuyến theo đầu vào thô chưa chuẩn hóa.",
+  "overview": "Nhat-Quang Tran's listed work is a NeurIPS 2026 paper on adapting pretrained time series models. The paper attributes the collapse of mixture-of-experts adapters onto a single expert, on frozen time series foundation models, to input normalization and proposes routing on the raw, unnormalized input.",
+  "overview_vi": "Công trình được liệt kê của Trần Nhật Quang là một bài báo NeurIPS 2026 về việc thích nghi các mô hình chuỗi thời gian đã huấn luyện sẵn. Bài báo quy hiện tượng các adapter mixture-of-experts trên foundation model chuỗi thời gian cố định sụp về một expert duy nhất cho phép chuẩn hóa đầu vào, và đề xuất định tuyến theo đầu vào thô chưa chuẩn hóa.",
   "topics": [
    {
     "title": "Routing collapse in time-series adapters",
     "title_vi": "Sụp đổ định tuyến trong adapter chuỗi thời gian",
-    "gist": "The paper explains why mixture-of-experts adapters on frozen time series foundation models collapse onto a single expert and fixes it by routing on the raw, unnormalized input.",
-    "gist_vi": "Bài báo giải thích vì sao các adapter mixture-of-experts trên foundation model chuỗi thời gian cố định sụp về một expert duy nhất và khắc phục bằng cách định tuyến theo đầu vào thô chưa chuẩn hóa.",
+    "gist": "The paper attributes the collapse of mixture-of-experts adapters onto a single expert, on frozen time series foundation models, to input normalization and proposes routing on the raw, unnormalized input.",
+    "gist_vi": "Bài báo quy hiện tượng các adapter mixture-of-experts trên foundation model chuỗi thời gian cố định sụp về một expert duy nhất cho phép chuẩn hóa đầu vào, và đề xuất định tuyến theo đầu vào thô chưa chuẩn hóa.",
     "open_gist": "The fix is specific to normalizers that strip per-window statistics and relies on a frozen backbone, and reviewers note that a small linear model still beats it in absolute error.",
     "open_gist_vi": "Cách khắc phục chỉ áp dụng cho các phép chuẩn hóa xóa thống kê theo cửa sổ và dựa vào backbone cố định, và các reviewer lưu ý rằng một mô hình tuyến tính nhỏ vẫn có sai số tuyệt đối thấp hơn.",
     "summary": "Time series foundation models (TSFMs) normalize each input window before encoding, which, the paper argues, removes the statistics a mixture-of-experts router needs, so routing entropy collapses to zero. A mutual-information analysis gives a signal ratio that predicts vulnerability before training (Spearman -0.88), and Raw-Routed Mixture of Adapters (RR-MoA) routes on the raw input. With a frozen backbone the paper reports 54 of 54 wins against the strongest fixed adapter and gains over LoRA, TRACE, AdaMix and full fine-tuning across six backbones.",
@@ -13315,8 +13323,8 @@
     "status": "accepted",
     "problem": "Time series foundation models (TSFMs) usually adapt to new data through a single trainable head on a frozen backbone; replacing that head with a mixture of experts (MoE) fails on instance-normalized backbones, the dominant TSFM design, where routing entropy collapses to zero and one expert absorbs every input, a failure the paper calls normalization-induced routing collapse.",
     "problem_vi": "Các foundation model cho chuỗi thời gian (TSFM) thường thích nghi với dữ liệu mới bằng một đầu ra huấn luyện được gắn trên backbone cố định; thay đầu này bằng mixture of experts (MoE) lại thất bại trên các backbone dùng instance normalization, kiểu thiết kế TSFM phổ biến nhất: entropy định tuyến sụp về 0 và một expert nhận toàn bộ đầu vào, hiện tượng bài báo gọi là sụp đổ định tuyến do chuẩn hóa.",
-    "technique": "The paper locates the cause in the router's input: instance normalization before the encoder removes each window's mean and standard deviation, which a router needs to tell regimes apart. A mutual-information decomposition yields a signal ratio computed before training, eight causal controls isolate normalization as the cause, and Raw-Routed Mixture of Adapters (RR-MoA) routes on the raw, pre-normalization input while the experts use the frozen backbone's features.",
-    "technique_vi": "Bài báo xác định nguyên nhân nằm ở đầu vào của bộ định tuyến: instance normalization trước encoder xóa trung bình và độ lệch chuẩn của từng cửa sổ, vốn là thông tin bộ định tuyến cần để phân biệt các chế độ dữ liệu. Một phép phân rã thông tin tương hỗ cho ra tỷ số tín hiệu tính được trước khi huấn luyện, tám phép kiểm soát nhân quả xác định chuẩn hóa là nguyên nhân, và Raw-Routed Mixture of Adapters (RR-MoA) định tuyến dựa trên đầu vào thô trước chuẩn hóa trong khi các expert dùng đặc trưng của backbone cố định.",
+    "technique": "The paper locates the cause in the router's input: instance normalization before the encoder removes each window's mean and standard deviation, which a router needs to tell regimes apart. A mutual-information decomposition yields a signal ratio computed before training, eight causal controls are reported to isolate normalization as the cause, and Raw-Routed Mixture of Adapters (RR-MoA) routes on the raw, pre-normalization input while the experts use the frozen backbone's features.",
+    "technique_vi": "Bài báo xác định nguyên nhân nằm ở đầu vào của bộ định tuyến: instance normalization trước encoder xóa trung bình và độ lệch chuẩn của từng cửa sổ, vốn là thông tin bộ định tuyến cần để phân biệt các chế độ dữ liệu. Một phép phân rã thông tin tương hỗ cho ra tỷ số tín hiệu tính được trước khi huấn luyện, bài báo báo cáo tám phép kiểm soát nhân quả xác định chuẩn hóa là nguyên nhân, và Raw-Routed Mixture of Adapters (RR-MoA) định tuyến dựa trên đầu vào thô trước chuẩn hóa trong khi các expert dùng đặc trưng của backbone cố định.",
     "strength": "The paper reports that with a strictly frozen backbone RR-MoA wins 54 of 54 comparisons against the strongest fixed adapter, outperforms LoRA, TRACE, AdaMix and full fine-tuning, holds across six backbones and an imputation task, and that the signal ratio predicts dataset vulnerability with Spearman correlation -0.88.",
     "strength_vi": "Bài báo báo cáo rằng với backbone hoàn toàn cố định, RR-MoA thắng cả 54 trên 54 phép so sánh với adapter cố định mạnh nhất, vượt LoRA, TRACE, AdaMix và tinh chỉnh toàn bộ, đúng trên sáu backbone và một tác vụ điền khuyết dữ liệu, và tỷ số tín hiệu dự đoán mức dễ tổn thương của bộ dữ liệu với hệ số tương quan Spearman -0,88.",
     "authors": [
@@ -13385,14 +13393,14 @@
   },
   "open_summary": "The open challenges below come from the authors' stated limitations and the public reviews. The theory does not guarantee that past-task predictions are retained, and reviewers find that the polar and hierarchical components add little beyond the Fourier dispersion while the method needs many design choices.",
   "open_summary_vi": "Các thách thức mở dưới đây lấy từ những hạn chế do tác giả nêu và các bài review công khai. Lý thuyết không bảo đảm giữ được dự đoán cho các tác vụ cũ, và các reviewer nhận thấy thành phần cực và phân cấp đóng góp ít so với sự phân tán nhờ Fourier, trong khi phương pháp đòi hỏi nhiều lựa chọn thiết kế.",
-  "overview": "Quynh-Trang Pham Thi's listed work is a NeurIPS 2026 paper on continual learning with pretrained vision models. The paper reduces forgetting in exemplar-free class-incremental learning with Fourier-projected polar adapters and a hierarchical memory of adapter tiers.",
-  "overview_vi": "Công trình được liệt kê của Phạm Thị Quỳnh Trang là một bài báo NeurIPS 2026 về học liên tục với các mô hình thị giác đã huấn luyện sẵn. Bài báo giảm hiện tượng quên trong học tăng dần theo lớp không lưu mẫu cũ bằng adapter cực chiếu qua Fourier và một bộ nhớ phân cấp gồm nhiều tầng adapter.",
+  "overview": "Quynh-Trang Pham Thi's listed work is a NeurIPS 2026 paper on continual learning with pretrained vision models. The paper targets forgetting in exemplar-free class-incremental learning with Fourier-projected polar adapters and a hierarchical memory of adapter tiers.",
+  "overview_vi": "Công trình được liệt kê của Phạm Thị Quỳnh Trang là một bài báo NeurIPS 2026 về học liên tục với các mô hình thị giác đã huấn luyện sẵn. Bài báo nhắm tới hiện tượng quên trong học tăng dần theo lớp không lưu mẫu cũ bằng adapter cực chiếu qua Fourier và một bộ nhớ phân cấp gồm nhiều tầng adapter.",
   "topics": [
    {
     "title": "Forgetting in class-incremental learning",
     "title_vi": "Hiện tượng quên trong học tăng dần theo lớp",
-    "gist": "The paper reduces forgetting in exemplar-free class-incremental learning with Fourier-projected polar adapters and a hierarchical memory of adapter tiers.",
-    "gist_vi": "Bài báo giảm hiện tượng quên trong học tăng dần theo lớp không lưu mẫu cũ bằng adapter cực chiếu qua Fourier và một bộ nhớ phân cấp gồm nhiều tầng adapter.",
+    "gist": "The paper targets forgetting in exemplar-free class-incremental learning with Fourier-projected polar adapters and a hierarchical memory of adapter tiers.",
+    "gist_vi": "Bài báo nhắm tới hiện tượng quên trong học tăng dần theo lớp không lưu mẫu cũ bằng adapter cực chiếu qua Fourier và một bộ nhớ phân cấp gồm nhiều tầng adapter.",
     "open_gist": "The theory does not guarantee that past-task predictions are retained, and reviewers find that the polar and hierarchical components add little beyond the Fourier dispersion while the method needs many design choices.",
     "open_gist_vi": "Lý thuyết không bảo đảm giữ được dự đoán cho các tác vụ cũ, và các reviewer nhận thấy thành phần cực và phân cấp đóng góp ít so với sự phân tán nhờ Fourier, trong khi phương pháp đòi hỏi nhiều lựa chọn thiết kế.",
     "summary": "In class-incremental learning (CIL) without stored past samples, models forget earlier classes as they learn new ones. HiPo spreads adapter updates across feature coordinates with a fixed Fourier transform, parameterizes complex block-diagonal adapters by magnitude and phase, and consolidates weights from a working tier into deeper long-term tiers guided by Snapshot Fisher importance scores. With a frozen ViT-B/16 backbone the paper reports competitive results, holding up on longer ImageNet-R task sequences, with ablations attributing most of the gain to the Fourier dispersion.",
@@ -13408,8 +13416,8 @@
       ]
      },
      {
-      "text": "Contribution of the proposed polar adapter is marginal compared with “Spatial-Cartesian” version",
-      "text_vi": "Đóng góp của polar adapter được đề xuất là không đáng kể so với phiên bản “Spatial-Cartesian”",
+      "text": "In the ablation study, removing polar disentanglement or hierarchical consolidation still gives performance close to the full model in several ImageNet-R settings, which weakens the claim that each component is strictly necessary.",
+      "text_vi": "Trong nghiên cứu ablation, bỏ tách cực hoặc hợp nhất phân cấp vẫn cho hiệu năng gần với mô hình đầy đủ ở nhiều thiết lập ImageNet-R, điều này làm yếu đi khẳng định rằng mỗi thành phần đều thực sự cần thiết.",
       "source": "reviewers",
       "quote": true,
       "papers": [
@@ -14424,12 +14432,119 @@
   "name_vi": "Dương Nguyên Vũ",
   "institution": "VinUni",
   "image": "img/people/vu-n-duong.jpg",
-  "figure": null,
-  "open_summary": "",
-  "open_summary_vi": "",
-  "overview": "A systematic stress test shows that Vision-Language-Action (VLA) models degrade sharply as the number of demonstrations shrinks. FOCA addresses this with future-oriented conditioning: it explicitly predicts task-grounded future interaction embeddings and implicitly aligns with future goal observations, enabling long-horizon reasoning in latent space without predicting pixels.",
-  "overview_vi": "Một kiểm tra áp lực có hệ thống cho thấy mô hình Vision-Language-Action (VLA) suy giảm mạnh khi số minh họa giảm. FOCA giải quyết vấn đề này bằng điều kiện hóa hướng tương lai: dự đoán tường minh embedding tương tác tương lai gắn với tác vụ và căn chỉnh ngầm với quan sát mục tiêu tương lai, cho phép suy luận tầm xa trong không gian ẩn mà không cần dự đoán điểm ảnh.",
-  "topics": [],
+  "figure": {
+   "width": 474,
+   "height": 90,
+   "years": [
+    {
+     "year": 2026,
+     "x": 394.0
+    }
+   ],
+   "rows": [
+    {
+     "y": 57.0,
+     "color": "tc0",
+     "title": "Few-shot adaptation of robot VLA models",
+     "title_vi": "Thích nghi ít mẫu cho mô hình VLA của robot",
+     "dots": [
+      {
+       "id": "icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-",
+       "x": 394.0,
+       "y": 57.0,
+       "title": "FOCA: Future-Oriented Conditioning for Data-Efficient Vision-Language-Action Adaptation",
+       "label": "ICML 2026"
+      }
+     ]
+    }
+   ],
+   "edges": []
+  },
+  "open_summary": "The authors' outlook and the public reviews point to the following open challenges. Open questions concern the explicit prediction branch, which is switched off for synthetic videos and depends on an external grounding model, robustness to failed demonstrations, and theoretical guarantees for the learned representation.",
+  "open_summary_vi": "Định hướng do chính nhóm tác giả nêu và các bài phản biện công khai chỉ ra những thách thức còn mở sau đây. Các câu hỏi mở xoay quanh nhánh dự đoán tường minh, vốn bị tắt khi dùng video tổng hợp và phụ thuộc vào một mô hình định vị đối tượng bên ngoài, độ bền vững trước các minh họa thất bại, và các bảo đảm lý thuyết cho biểu diễn học được.",
+  "overview": "Vu N. Duong's recent paper concerns robot learning with large pretrained models. It adapts pretrained vision-language-action models to new robot tasks from few demonstrations by training them to anticipate future interactions and goals in latent space.",
+  "overview_vi": "Bài báo gần đây của Dương Nguyên Vũ thuộc lĩnh vực học cho robot với các mô hình tiền huấn luyện lớn. Nghiên cứu giúp các mô hình vision-language-action đã tiền huấn luyện thích nghi với tác vụ robot mới từ ít minh họa, bằng cách huấn luyện mô hình dự đoán trước các tương tác và mục tiêu tương lai trong không gian ẩn.",
+  "topics": [
+   {
+    "title": "Few-shot adaptation of robot VLA models",
+    "title_vi": "Thích nghi ít mẫu cho mô hình VLA của robot",
+    "gist": "It adapts pretrained vision-language-action models to new robot tasks from few demonstrations by training them to anticipate future interactions and goals in latent space.",
+    "gist_vi": "Nghiên cứu giúp các mô hình vision-language-action đã tiền huấn luyện thích nghi với tác vụ robot mới từ ít minh họa, bằng cách huấn luyện mô hình dự đoán trước các tương tác và mục tiêu tương lai trong không gian ẩn.",
+    "open_gist": "Open questions concern the explicit prediction branch, which is switched off for synthetic videos and depends on an external grounding model, robustness to failed demonstrations, and theoretical guarantees for the learned representation.",
+    "open_gist_vi": "Các câu hỏi mở xoay quanh nhánh dự đoán tường minh, vốn bị tắt khi dùng video tổng hợp và phụ thuộc vào một mô hình định vị đối tượng bên ngoài, độ bền vững trước các minh họa thất bại, và các bảo đảm lý thuyết cho biểu diễn học được.",
+    "summary": "FOCA combines explicit prediction of future interaction embeddings with implicit contrastive alignment to future goal observations, and the implicit part allows co-training on action-free synthetic videos from video world models. The paper reports 95.7% success with 20 demonstrations on LIBERO, 7–12% improvements on RoboCasa and up to 26% absolute gains on real robots.",
+    "summary_vi": "FOCA kết hợp dự đoán tường minh các embedding tương tác trong tương lai với căn chỉnh ngầm kiểu tương phản theo các quan sát mục tiêu tương lai, và phần ngầm cho phép đồng huấn luyện với video tổng hợp không có nhãn hành động từ các video world model. Bài báo báo cáo tỉ lệ thành công 95,7% với 20 minh họa trên LIBERO, cải thiện 7–12% trên RoboCasa và tăng tới 26% tuyệt đối trên robot thật.",
+    "open": [
+     {
+      "text": "the explicit future prediction module is disabled when training on DreamGen videos.",
+      "text_vi": "mô-đun dự đoán tương lai tường minh bị tắt khi huấn luyện trên video DreamGen.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-"
+      ]
+     },
+     {
+      "text": "The paper does not thoroughly analyze how errors or failures in this grounding model affect the overall system, which introduces a potential point of failure in novel domains.",
+      "text_vi": "Bài báo chưa phân tích kỹ việc lỗi hoặc thất bại của mô hình định vị đối tượng (grounding model) này ảnh hưởng thế nào đến toàn hệ thống, điều này tạo ra một điểm có thể gây lỗi trong các miền mới.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-"
+      ]
+     },
+     {
+      "text": "If the dataset contains low-quality or failed demonstrations (common in real-world robot data), aligning with these \"negative\" futures could misguide the policy.",
+      "text_vi": "Nếu tập dữ liệu chứa các minh họa chất lượng thấp hoặc thất bại (thường gặp trong dữ liệu robot thực tế), việc căn chỉnh theo những tương lai “tiêu cực” này có thể dẫn chính sách đi sai hướng.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-"
+      ]
+     },
+     {
+      "text": "Extending offline reinforcement learning guarantees, which penalise out-of-distribution value estimates, to occupancy estimation at the representation level remains open.",
+      "text_vi": "Việc mở rộng các bảo đảm của học tăng cường offline, vốn phạt các ước lượng giá trị ngoài phân phối, sang ước lượng occupancy ở mức biểu diễn vẫn còn bỏ ngỏ.",
+      "source": "authors",
+      "quote": false,
+      "papers": [
+       "icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-"
+      ]
+     }
+    ],
+    "papers": [
+     "icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-"
+    ],
+    "score": 0.04,
+    "color": "tc0",
+    "words": [
+     {
+      "word": "foca",
+      "share": 100
+     },
+     {
+      "word": "adaptation",
+      "share": 100
+     },
+     {
+      "word": "vla",
+      "share": 100
+     },
+     {
+      "word": "future-oriented conditioning",
+      "share": 80
+     },
+     {
+      "word": "conditioning data-efficient",
+      "share": 80
+     },
+     {
+      "word": "vision-language-action",
+      "share": 50
+     }
+    ]
+   }
+  ],
   "papers": [
    {
     "id": "icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-",
@@ -14439,34 +14554,34 @@
     "year": 2026,
     "credit": 0.0435,
     "status": "accepted",
-    "problem": "Vision-Language-Action (VLA) models map camera images and language instructions to robot actions after large-scale multimodal pretraining, but the paper's stress test shows that their performance drops sharply when they are adapted to new tasks from few demonstrations (few-shot imitation learning).",
-    "problem_vi": "Các mô hình Thị giác-Ngôn ngữ-Hành động (Vision-Language-Action, VLA) ánh xạ hình ảnh camera và chỉ dẫn ngôn ngữ thành hành động của robot sau khi tiền huấn luyện đa phương thức quy mô lớn, nhưng thử nghiệm sức chịu đựng của bài báo cho thấy hiệu năng của chúng giảm mạnh khi được thích nghi sang nhiệm vụ mới chỉ từ ít minh họa (học bắt chước few-shot).",
-    "technique": "FOCA adds future-oriented objectives during adaptation: explicit prediction of embeddings of future task-relevant interaction regions and implicit contrastive alignment with future goal observations, so the model reasons about the future in latent space without predicting pixels; the implicit objective needs no action labels, which allows co-training on synthetic videos from video world models.",
-    "technique_vi": "FOCA thêm các mục tiêu hướng tới tương lai khi thích nghi: dự đoán tường minh các embedding của vùng tương tác liên quan đến nhiệm vụ trong tương lai và căn chỉnh ngầm theo kiểu tương phản (contrastive) với các quan sát mục tiêu tương lai, nhờ đó mô hình suy luận về tương lai trong không gian ẩn mà không cần dự đoán điểm ảnh; mục tiêu ngầm không cần nhãn hành động nên cho phép đồng huấn luyện với video tổng hợp từ các mô hình thế giới video.",
-    "strength": "The abstract reports 95.7% success with 20 demonstrations on the LIBERO benchmark, 7-12% improvements on RoboCasa and up to 26% absolute gains on real robots.",
-    "strength_vi": "Phần tóm tắt báo cáo tỉ lệ thành công 95,7% với 20 minh họa trên benchmark LIBERO, cải thiện 7-12% trên RoboCasa và tăng tuyệt đối tới 26% trên robot thực.",
+    "problem": "Vision-Language-Action (VLA) models map camera observations and language instructions to robot actions after large-scale multimodal pretraining. The paper's stress test of state-of-the-art VLA models shows that their performance degrades sharply as the number of demonstrations for a new task is reduced (few-shot imitation learning).",
+    "problem_vi": "Các mô hình Vision-Language-Action (VLA) ánh xạ quan sát từ camera và chỉ dẫn bằng ngôn ngữ thành hành động của robot sau khi được tiền huấn luyện đa phương thức quy mô lớn. Bài kiểm tra sức chịu đựng (stress test) trong bài báo trên các mô hình VLA hiện đại cho thấy hiệu năng giảm mạnh khi số lượng minh họa cho một tác vụ mới giảm đi (học bắt chước với ít mẫu, few-shot imitation learning).",
+    "technique": "FOCA adds future-oriented conditioning during adaptation: explicit prediction of task-grounded future interaction embeddings and implicit contrastive alignment with future goal observations, so that long-horizon reasoning happens in latent space without pixel-level prediction. Because the implicit objective needs no action labels, it also supports co-training on synthetic videos from video world models.",
+    "technique_vi": "FOCA bổ sung điều kiện hướng tới tương lai trong quá trình thích nghi: dự đoán tường minh các embedding tương tác trong tương lai gắn với tác vụ, và căn chỉnh ngầm theo kiểu tương phản (contrastive) với các quan sát mục tiêu trong tương lai, để việc suy luận dài hạn diễn ra trong không gian ẩn mà không cần dự đoán ở mức điểm ảnh. Vì mục tiêu ngầm không cần nhãn hành động, phương pháp còn cho phép đồng huấn luyện với video tổng hợp do các video world model sinh ra.",
+    "strength": "The paper reports 95.7% success with 20 demonstrations on LIBERO, improvements of 7–12% on RoboCasa and up to 26% absolute gains on real robots.",
+    "strength_vi": "Bài báo báo cáo tỉ lệ thành công 95,7% với 20 minh họa trên LIBERO, cải thiện 7–12% trên RoboCasa và tăng tới 26% tuyệt đối trên robot thật.",
     "authors": [
      {
-      "text": "Extending offline-RL-style guarantees, which penalize out-of-distribution value estimates, to the representation-level occupancy estimation behind FOCA remains open.",
-      "text_vi": "Việc mở rộng các bảo đảm kiểu học tăng cường ngoại tuyến (offline RL), vốn phạt các ước lượng giá trị ngoài phân phối, sang ước lượng occupancy ở mức biểu diễn mà FOCA sử dụng vẫn còn bỏ ngỏ."
+      "text": "The authors point to an analogy with offline reinforcement learning methods that penalise out-of-distribution value estimates, but state that extending those guarantees to occupancy estimation at the representation level remains open.",
+      "text_vi": "Nhóm tác giả chỉ ra sự tương đồng với các phương pháp học tăng cường offline phạt các ước lượng giá trị nằm ngoài phân phối, nhưng cho biết việc mở rộng các bảo đảm đó sang ước lượng occupancy ở mức biểu diễn vẫn còn bỏ ngỏ."
      }
     ],
     "reviewers": [
      {
+      "quote": "the explicit future prediction module is disabled when training on DreamGen videos.",
+      "quote_vi": "mô-đun dự đoán tương lai tường minh bị tắt khi huấn luyện trên video DreamGen."
+     },
+     {
       "quote": "The paper does not thoroughly analyze how errors or failures in this grounding model affect the overall system, which introduces a potential point of failure in novel domains.",
-      "quote_vi": "Bài báo không phân tích kỹ lỗi hoặc thất bại của mô hình định vị đối tượng (grounding) này ảnh hưởng thế nào đến toàn hệ thống, điều tạo ra một điểm có thể gây hỏng trong các miền mới."
+      "quote_vi": "Bài báo chưa phân tích kỹ việc lỗi hoặc thất bại của mô hình định vị đối tượng (grounding model) này ảnh hưởng thế nào đến toàn hệ thống, điều này tạo ra một điểm có thể gây lỗi trong các miền mới."
      },
      {
       "quote": "If the dataset contains low-quality or failed demonstrations (common in real-world robot data), aligning with these \"negative\" futures could misguide the policy.",
-      "quote_vi": "Nếu tập dữ liệu chứa các minh họa chất lượng thấp hoặc thất bại (thường gặp trong dữ liệu robot thực), việc căn chỉnh theo những tương lai \"tiêu cực\" này có thể dẫn chính sách đi sai."
+      "quote_vi": "Nếu tập dữ liệu chứa các minh họa chất lượng thấp hoặc thất bại (thường gặp trong dữ liệu robot thực tế), việc căn chỉnh theo những tương lai “tiêu cực” này có thể dẫn chính sách đi sai hướng."
      },
      {
-      "quote": "However, the explicit future prediction module is disabled when training on DreamGen videos.",
-      "quote_vi": "Tuy nhiên, mô-đun dự đoán tương lai tường minh bị tắt khi huấn luyện trên video DreamGen."
-     },
-     {
-      "quote": "FOCA does assume a certain breed of VLA that can be composed into VLM and action expert and is thus not architecture-agnostic.",
-      "quote_vi": "FOCA giả định một loại VLA có thể tách thành VLM và bộ chuyên gia hành động, do đó không độc lập với kiến trúc."
+      "quote": "Rigidly fixing explicit tokens as static parameters during deployment may impair out-of-distribution generalization",
+      "quote_vi": "Việc cố định cứng các token tường minh thành tham số tĩnh khi triển khai có thể làm giảm khả năng tổng quát hóa ngoài phân phối"
      }
     ]
    }
@@ -15313,34 +15428,34 @@
     "year": 2026,
     "credit": 0.0435,
     "status": "accepted",
-    "problem": "Vision-Language-Action (VLA) models map camera images and language instructions to robot actions after large-scale multimodal pretraining, but the paper's stress test shows that their performance drops sharply when they are adapted to new tasks from few demonstrations (few-shot imitation learning).",
-    "problem_vi": "Các mô hình Thị giác-Ngôn ngữ-Hành động (Vision-Language-Action, VLA) ánh xạ hình ảnh camera và chỉ dẫn ngôn ngữ thành hành động của robot sau khi tiền huấn luyện đa phương thức quy mô lớn, nhưng thử nghiệm sức chịu đựng của bài báo cho thấy hiệu năng của chúng giảm mạnh khi được thích nghi sang nhiệm vụ mới chỉ từ ít minh họa (học bắt chước few-shot).",
-    "technique": "FOCA adds future-oriented objectives during adaptation: explicit prediction of embeddings of future task-relevant interaction regions and implicit contrastive alignment with future goal observations, so the model reasons about the future in latent space without predicting pixels; the implicit objective needs no action labels, which allows co-training on synthetic videos from video world models.",
-    "technique_vi": "FOCA thêm các mục tiêu hướng tới tương lai khi thích nghi: dự đoán tường minh các embedding của vùng tương tác liên quan đến nhiệm vụ trong tương lai và căn chỉnh ngầm theo kiểu tương phản (contrastive) với các quan sát mục tiêu tương lai, nhờ đó mô hình suy luận về tương lai trong không gian ẩn mà không cần dự đoán điểm ảnh; mục tiêu ngầm không cần nhãn hành động nên cho phép đồng huấn luyện với video tổng hợp từ các mô hình thế giới video.",
-    "strength": "The abstract reports 95.7% success with 20 demonstrations on the LIBERO benchmark, 7-12% improvements on RoboCasa and up to 26% absolute gains on real robots.",
-    "strength_vi": "Phần tóm tắt báo cáo tỉ lệ thành công 95,7% với 20 minh họa trên benchmark LIBERO, cải thiện 7-12% trên RoboCasa và tăng tuyệt đối tới 26% trên robot thực.",
+    "problem": "Vision-Language-Action (VLA) models map camera observations and language instructions to robot actions after large-scale multimodal pretraining. The paper's stress test of state-of-the-art VLA models shows that their performance degrades sharply as the number of demonstrations for a new task is reduced (few-shot imitation learning).",
+    "problem_vi": "Các mô hình Vision-Language-Action (VLA) ánh xạ quan sát từ camera và chỉ dẫn bằng ngôn ngữ thành hành động của robot sau khi được tiền huấn luyện đa phương thức quy mô lớn. Bài kiểm tra sức chịu đựng (stress test) trong bài báo trên các mô hình VLA hiện đại cho thấy hiệu năng giảm mạnh khi số lượng minh họa cho một tác vụ mới giảm đi (học bắt chước với ít mẫu, few-shot imitation learning).",
+    "technique": "FOCA adds future-oriented conditioning during adaptation: explicit prediction of task-grounded future interaction embeddings and implicit contrastive alignment with future goal observations, so that long-horizon reasoning happens in latent space without pixel-level prediction. Because the implicit objective needs no action labels, it also supports co-training on synthetic videos from video world models.",
+    "technique_vi": "FOCA bổ sung điều kiện hướng tới tương lai trong quá trình thích nghi: dự đoán tường minh các embedding tương tác trong tương lai gắn với tác vụ, và căn chỉnh ngầm theo kiểu tương phản (contrastive) với các quan sát mục tiêu trong tương lai, để việc suy luận dài hạn diễn ra trong không gian ẩn mà không cần dự đoán ở mức điểm ảnh. Vì mục tiêu ngầm không cần nhãn hành động, phương pháp còn cho phép đồng huấn luyện với video tổng hợp do các video world model sinh ra.",
+    "strength": "The paper reports 95.7% success with 20 demonstrations on LIBERO, improvements of 7–12% on RoboCasa and up to 26% absolute gains on real robots.",
+    "strength_vi": "Bài báo báo cáo tỉ lệ thành công 95,7% với 20 minh họa trên LIBERO, cải thiện 7–12% trên RoboCasa và tăng tới 26% tuyệt đối trên robot thật.",
     "authors": [
      {
-      "text": "Extending offline-RL-style guarantees, which penalize out-of-distribution value estimates, to the representation-level occupancy estimation behind FOCA remains open.",
-      "text_vi": "Việc mở rộng các bảo đảm kiểu học tăng cường ngoại tuyến (offline RL), vốn phạt các ước lượng giá trị ngoài phân phối, sang ước lượng occupancy ở mức biểu diễn mà FOCA sử dụng vẫn còn bỏ ngỏ."
+      "text": "The authors point to an analogy with offline reinforcement learning methods that penalise out-of-distribution value estimates, but state that extending those guarantees to occupancy estimation at the representation level remains open.",
+      "text_vi": "Nhóm tác giả chỉ ra sự tương đồng với các phương pháp học tăng cường offline phạt các ước lượng giá trị nằm ngoài phân phối, nhưng cho biết việc mở rộng các bảo đảm đó sang ước lượng occupancy ở mức biểu diễn vẫn còn bỏ ngỏ."
      }
     ],
     "reviewers": [
      {
+      "quote": "the explicit future prediction module is disabled when training on DreamGen videos.",
+      "quote_vi": "mô-đun dự đoán tương lai tường minh bị tắt khi huấn luyện trên video DreamGen."
+     },
+     {
       "quote": "The paper does not thoroughly analyze how errors or failures in this grounding model affect the overall system, which introduces a potential point of failure in novel domains.",
-      "quote_vi": "Bài báo không phân tích kỹ lỗi hoặc thất bại của mô hình định vị đối tượng (grounding) này ảnh hưởng thế nào đến toàn hệ thống, điều tạo ra một điểm có thể gây hỏng trong các miền mới."
+      "quote_vi": "Bài báo chưa phân tích kỹ việc lỗi hoặc thất bại của mô hình định vị đối tượng (grounding model) này ảnh hưởng thế nào đến toàn hệ thống, điều này tạo ra một điểm có thể gây lỗi trong các miền mới."
      },
      {
       "quote": "If the dataset contains low-quality or failed demonstrations (common in real-world robot data), aligning with these \"negative\" futures could misguide the policy.",
-      "quote_vi": "Nếu tập dữ liệu chứa các minh họa chất lượng thấp hoặc thất bại (thường gặp trong dữ liệu robot thực), việc căn chỉnh theo những tương lai \"tiêu cực\" này có thể dẫn chính sách đi sai."
+      "quote_vi": "Nếu tập dữ liệu chứa các minh họa chất lượng thấp hoặc thất bại (thường gặp trong dữ liệu robot thực tế), việc căn chỉnh theo những tương lai “tiêu cực” này có thể dẫn chính sách đi sai hướng."
      },
      {
-      "quote": "However, the explicit future prediction module is disabled when training on DreamGen videos.",
-      "quote_vi": "Tuy nhiên, mô-đun dự đoán tương lai tường minh bị tắt khi huấn luyện trên video DreamGen."
-     },
-     {
-      "quote": "FOCA does assume a certain breed of VLA that can be composed into VLM and action expert and is thus not architecture-agnostic.",
-      "quote_vi": "FOCA giả định một loại VLA có thể tách thành VLM và bộ chuyên gia hành động, do đó không độc lập với kiến trúc."
+      "quote": "Rigidly fixing explicit tokens as static parameters during deployment may impair out-of-distribution generalization",
+      "quote_vi": "Việc cố định cứng các token tường minh thành tham số tĩnh khi triển khai có thể làm giảm khả năng tổng quát hóa ngoài phân phối"
      }
     ]
    }
@@ -17690,12 +17805,119 @@
   "name_vi": "Lê Đình Duy",
   "institution": "UIT",
   "image": "img/people/duy-dinh-le.jpg",
-  "figure": null,
-  "open_summary": "",
-  "open_summary_vi": "",
-  "overview": "The work argues that a plateau in retrieval success at late dialogue turns summarizes an interaction's outcome but does not show which opportunities for improvement have been exhausted. It studies retrieval headroom, the remaining room for improvement, through three controlled comparisons: continuing the dialogue without new observations of the target, using alternative representations of a fixed dialogue, and varying access to the target. This separates the effects of historical success, query construction and target access, which are usually conflated when reading such plateaus.",
-  "overview_vi": "Công trình lập luận rằng việc tỉ lệ truy xuất thành công chững lại ở các lượt hội thoại cuối chỉ tóm tắt kết quả của tương tác, chứ không cho biết những cơ hội cải thiện nào đã thực sự cạn. Công trình nghiên cứu headroom của truy xuất, tức là khoảng còn có thể cải thiện, qua ba phép so sánh có kiểm soát: tiếp tục hội thoại mà không có thêm quan sát về ảnh đích, dùng các cách biểu diễn khác nhau cho cùng một đoạn hội thoại, và thay đổi mức truy cập tới ảnh đích. Cách làm này tách riêng ảnh hưởng của thành công trước đó, cách xây dựng truy vấn và khả năng truy cập ảnh đích, vốn thường bị lẫn vào nhau khi diễn giải hiện tượng chững lại.",
-  "topics": [],
+  "figure": {
+   "width": 459,
+   "height": 90,
+   "years": [
+    {
+     "year": 2027,
+     "x": 379.0
+    }
+   ],
+   "rows": [
+    {
+     "y": 57.0,
+     "color": "tc0",
+     "title": "Evaluating conversational image retrieval",
+     "title_vi": "Đánh giá truy xuất ảnh qua hội thoại",
+     "dots": [
+      {
+       "id": "iclr2027-a-plateau-is-not-a-ceiling-evaluating-headroom-in-conversati",
+       "x": 379.0,
+       "y": 57.0,
+       "title": "A Plateau Is Not a Ceiling: Evaluating Headroom in Conversational Image Retrieval",
+       "label": "ICLR 2027"
+      }
+     ]
+    }
+   ],
+   "edges": []
+  },
+  "open_summary": "The authors' stated limitations and the public reviews point to the following open challenges. The main open questions are whether the findings hold on dialogues with verified answers, and whether sketch gains come from new information or from restating or correcting what the dialogue already says.",
+  "open_summary_vi": "Những hạn chế do chính nhóm tác giả nêu và các bài phản biện công khai chỉ ra những thách thức còn mở sau đây. Các câu hỏi mở chính là liệu kết quả có còn đúng trên các hội thoại có câu trả lời đã được kiểm chứng hay không, và mức cải thiện nhờ phác thảo đến từ thông tin mới hay chỉ từ việc diễn đạt lại hoặc sửa những gì hội thoại đã nói.",
+  "overview": "Duy-Dinh Le's recent paper is an evaluation study in multimodal retrieval. It asks whether a late-turn plateau in conversational image retrieval means that no more information can be gained, by separating historical success, query representation and access to new target evidence.",
+  "overview_vi": "Bài báo gần đây của Lê Đình Duy là một nghiên cứu về đánh giá trong truy xuất đa phương thức. Nghiên cứu đặt câu hỏi liệu việc kết quả chững lại ở các lượt cuối trong truy xuất ảnh qua hội thoại có nghĩa là không còn thông tin nào để khai thác hay không, bằng cách tách riêng thành công trong lịch sử, cách biểu diễn truy vấn và việc tiếp cận bằng chứng mới về ảnh đích.",
+  "topics": [
+   {
+    "title": "Evaluating conversational image retrieval",
+    "title_vi": "Đánh giá truy xuất ảnh qua hội thoại",
+    "gist": "It asks whether a late-turn plateau in conversational image retrieval means that no more information can be gained, by separating historical success, query representation and access to new target evidence.",
+    "gist_vi": "Nghiên cứu đặt câu hỏi liệu việc kết quả chững lại ở các lượt cuối trong truy xuất ảnh qua hội thoại có nghĩa là không còn thông tin nào để khai thác hay không, bằng cách tách riêng thành công trong lịch sử, cách biểu diễn truy vấn và việc tiếp cận bằng chứng mới về ảnh đích.",
+    "open_gist": "The main open questions are whether the findings hold on dialogues with verified answers, and whether sketch gains come from new information or from restating or correcting what the dialogue already says.",
+    "open_gist_vi": "Các câu hỏi mở chính là liệu kết quả có còn đúng trên các hội thoại có câu trả lời đã được kiểm chứng hay không, và mức cải thiện nhờ phác thảo đến từ thông tin mới hay chỉ từ việc diễn đạt lại hoặc sửa những gì hội thoại đã nói.",
+    "summary": "Using controlled comparisons on FS-COCO-Dialog and VisDial, the paper shows that cumulative success can rise while current retrieval falls, that different representations of the same dialogue (for example mean pooling) change retrieval substantially, and that a human sketch still helps after the dialogue has been reformulated. It concludes that saturation should be judged relative to the dialogue states and observations tested rather than read from a flat retrieval curve.",
+    "summary_vi": "Qua các phép so sánh có kiểm soát trên FS-COCO-Dialog và VisDial, bài báo cho thấy tỉ lệ thành công tích lũy có thể tăng trong khi chất lượng truy xuất hiện tại giảm, rằng các cách biểu diễn khác nhau cho cùng một hội thoại (ví dụ mean pooling) làm thay đổi đáng kể kết quả truy xuất, và rằng bản phác thảo do người vẽ vẫn có ích sau khi hội thoại đã được diễn đạt lại. Bài báo kết luận rằng mức bão hòa nên được đánh giá tương đối theo các trạng thái hội thoại và quan sát đã thử, thay vì suy ra từ một đường cong truy xuất đi ngang.",
+    "open": [
+     {
+      "text": "The evidence is limited to generated FS-COCO-Dialog answers of uncertain fidelity, human sketches from FS-COCO alone, and a fixed linear fusion rule.",
+      "text_vi": "Bằng chứng chỉ giới hạn ở các câu trả lời được sinh tự động trong FS-COCO-Dialog với độ trung thực chưa chắc chắn, các bản phác thảo do người vẽ chỉ lấy từ FS-COCO, và một quy tắc hợp nhất tuyến tính cố định.",
+      "source": "authors",
+      "quote": false,
+      "papers": [
+       "iclr2027-a-plateau-is-not-a-ceiling-evaluating-headroom-in-conversati"
+      ]
+     },
+     {
+      "text": "A sketch is created with access to the target image and may contain information absent from the dialogue, restate existing facts in a more retrieval-friendly form, or correct inaccurate dialogue answers.",
+      "text_vi": "Bản phác thảo được tạo ra khi có quyền xem ảnh đích, nên có thể chứa thông tin không có trong hội thoại, diễn đạt lại các sự kiện đã có theo dạng thuận lợi hơn cho truy xuất, hoặc sửa các câu trả lời sai trong hội thoại.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "iclr2027-a-plateau-is-not-a-ceiling-evaluating-headroom-in-conversati"
+      ]
+     },
+     {
+      "text": "PlugIR already distinguishes current from cumulative retrieval and studies dialogue reformulation, while pooling, query rewriting, and sketch-based retrieval are established families of techniques.",
+      "text_vi": "PlugIR đã phân biệt truy xuất hiện tại với truy xuất tích lũy và nghiên cứu việc diễn đạt lại hội thoại, trong khi pooling, viết lại truy vấn và truy xuất dựa trên phác thảo đều là những họ kỹ thuật đã có.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "iclr2027-a-plateau-is-not-a-ceiling-evaluating-headroom-in-conversati"
+      ]
+     },
+     {
+      "text": "the paper does not provide a human evaluation of whether these rewrites preserve the dialogue's information, omit important details, or introduce unsupported attributes.",
+      "text_vi": "bài báo không cung cấp đánh giá của con người về việc các bản viết lại này có giữ được thông tin của hội thoại, bỏ sót chi tiết quan trọng, hay thêm vào các thuộc tính không có căn cứ hay không.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "iclr2027-a-plateau-is-not-a-ceiling-evaluating-headroom-in-conversati"
+      ]
+     }
+    ],
+    "papers": [
+     "iclr2027-a-plateau-is-not-a-ceiling-evaluating-headroom-in-conversati"
+    ],
+    "score": 0.2,
+    "color": "tc0",
+    "words": [
+     {
+      "word": "conversational image",
+      "share": 100
+     },
+     {
+      "word": "image retrieval",
+      "share": 100
+     },
+     {
+      "word": "target access",
+      "share": 100
+     },
+     {
+      "word": "additional",
+      "share": 94
+     },
+     {
+      "word": "plateau",
+      "share": 63
+     },
+     {
+      "word": "not",
+      "share": 63
+     }
+    ]
+   }
+  ],
   "papers": [
    {
     "id": "iclr2027-a-plateau-is-not-a-ceiling-evaluating-headroom-in-conversati",
@@ -17705,23 +17927,40 @@
     "year": 2027,
     "credit": 0.2,
     "status": "withdrawn",
-    "problem": "In conversational image retrieval, where a user and system talk over several turns to find a target image, accuracy tends to plateau in late turns, but a plateau does not show that all opportunities for improvement have been exhausted.",
-    "problem_vi": "Trong truy xuất ảnh qua hội thoại, khi người dùng và hệ thống trao đổi nhiều lượt để tìm một ảnh mục tiêu, độ chính xác thường chững lại ở các lượt cuối, nhưng sự chững lại đó không chứng tỏ mọi khả năng cải thiện đã cạn.",
-    "technique": "The paper measures retrieval headroom through three controlled comparisons: continuing without new target observations, alternative representations of a fixed dialogue, and adding extra target-grounded observations such as a human sketch.",
-    "technique_vi": "Bài báo đo dư địa cải thiện truy xuất bằng ba phép so sánh có kiểm soát: tiếp tục hội thoại mà không có quan sát mới về ảnh mục tiêu, dùng các cách biểu diễn khác cho cùng một đoạn hội thoại, và bổ sung quan sát gắn với ảnh mục tiêu như một bản phác thảo của người.",
-    "strength": "It reveals large untapped headroom: simply mean-pooling the dialogue raises current H@10 (hit rate in the top 10) on VisDial from 62.2 to 74.9 with ChatIR-FT and from 51.6 to 79.9 with BLIP-ITC, and a paired human sketch improves all twelve dialogue-state and retrieval-space pairs by 9.8 to 22.7 points.",
-    "strength_vi": "Nghiên cứu chỉ ra dư địa lớn chưa được khai thác: chỉ cần lấy trung bình (mean pooling) biểu diễn hội thoại đã nâng H@10 hiện tại (tỷ lệ trúng trong top 10) trên VisDial từ 62,2 lên 74,9 với ChatIR-FT và từ 51,6 lên 79,9 với BLIP-ITC, còn thêm một bản phác thảo của người giúp cả mười hai cặp trạng thái hội thoại và không gian truy xuất tăng từ 9,8 đến 22,7 điểm.",
+    "problem": "In conversational image retrieval, a system asks about a target image, receives answers and updates its ranking over dialogue turns. The paper argues that a plateau in late turns summarises the outcome of an interaction but does not establish which opportunities for improvement have been exhausted.",
+    "problem_vi": "Trong truy xuất ảnh qua hội thoại (conversational image retrieval), hệ thống đặt câu hỏi về ảnh cần tìm, nhận câu trả lời và cập nhật thứ hạng qua từng lượt hội thoại. Bài báo lập luận rằng hiện tượng kết quả chững lại ở các lượt cuối chỉ tóm tắt kết quả của cuộc tương tác, chứ không cho biết những cơ hội cải thiện nào đã thực sự cạn.",
+    "technique": "The paper separates three sources of remaining headroom through controlled comparisons: continuations without additional target observations (historical exposure), alternative representations of a fixed dialogue (representation headroom), and additional target-grounded observations such as a human sketch (evidence-access headroom).",
+    "technique_vi": "Bài báo tách ba nguồn dư địa cải thiện còn lại qua các phép so sánh có kiểm soát: tiếp tục hội thoại mà không có thêm quan sát về ảnh đích (mức tiếp xúc lịch sử), các cách biểu diễn khác nhau cho cùng một đoạn hội thoại cố định (dư địa biểu diễn), và các quan sát bổ sung gắn với ảnh đích như một bản phác thảo do người vẽ (dư địa tiếp cận bằng chứng).",
+    "strength": "On FS-COCO-Dialog, reordering a frozen top-100 shortlist after four turns raises cumulative Hit@10 from 39.7 to 50.5 while current Hit@10 falls from 30.9 to 6.0; on VisDial, mean pooling raises current Hit@10 from 62.2 to 74.9 under ChatIR-FT and from 51.6 to 79.9 under BLIP-ITC; and a paired human sketch improves all twelve dialogue-state–retrieval-space pairs by 9.8–22.7 points.",
+    "strength_vi": "Trên FS-COCO-Dialog, sắp xếp lại một danh sách top-100 cố định sau bốn lượt làm Hit@10 tích lũy tăng từ 39,7 lên 50,5 trong khi Hit@10 hiện tại giảm từ 30,9 xuống 6,0; trên VisDial, mean pooling nâng Hit@10 hiện tại từ 62,2 lên 74,9 với ChatIR-FT và từ 51,6 lên 79,9 với BLIP-ITC; và một bản phác thảo đi kèm do người vẽ cải thiện cả mười hai cặp trạng thái hội thoại–không gian truy xuất thêm 9,8–22,7 điểm.",
     "authors": [
      {
-      "text": "The evidence relies on generated FS-COCO-Dialog answers of uncertain fidelity and on human sketches from FS-COCO alone.",
-      "text_vi": "Bằng chứng dựa trên các câu trả lời FS-COCO-Dialog được sinh tự động với độ trung thực chưa chắc chắn và chỉ trên các bản phác thảo của người từ FS-COCO."
+      "text": "The evidence rests on generated FS-COCO-Dialog answers whose fidelity is uncertain.",
+      "text_vi": "Bằng chứng dựa trên các câu trả lời được sinh tự động trong FS-COCO-Dialog với độ trung thực chưa chắc chắn."
      },
      {
-      "text": "Only a fixed linear fusion rule is studied for combining modalities.",
-      "text_vi": "Chỉ có một quy tắc kết hợp tuyến tính cố định được nghiên cứu để gộp các phương thức."
+      "text": "Human sketches come from FS-COCO alone, and sketch and dialogue are combined with a single fixed linear fusion rule.",
+      "text_vi": "Các bản phác thảo do người vẽ chỉ lấy từ FS-COCO, và phác thảo với hội thoại được kết hợp bằng một quy tắc hợp nhất tuyến tính cố định duy nhất."
      }
     ],
-    "reviewers": []
+    "reviewers": [
+     {
+      "quote": "PlugIR already distinguishes current from cumulative retrieval and studies dialogue reformulation, while pooling, query rewriting, and sketch-based retrieval are established families of techniques.",
+      "quote_vi": "PlugIR đã phân biệt truy xuất hiện tại với truy xuất tích lũy và nghiên cứu việc diễn đạt lại hội thoại, trong khi pooling, viết lại truy vấn và truy xuất dựa trên phác thảo đều là những họ kỹ thuật đã có."
+     },
+     {
+      "quote": "A substantial portion of the representation and sketch analysis relies on FS-COCO-Dialog, a generated benchmark whose answer fidelity is uncertain: the two automated judges agree on only 57.8% of sampled answers.",
+      "quote_vi": "Một phần đáng kể của phân tích về biểu diễn và phác thảo dựa vào FS-COCO-Dialog, một benchmark được sinh tự động với độ trung thực của câu trả lời chưa chắc chắn: hai bộ chấm tự động chỉ đồng ý trên 57,8% số câu trả lời được lấy mẫu."
+     },
+     {
+      "quote": "A sketch is created with access to the target image and may contain information absent from the dialogue, restate existing facts in a more retrieval-friendly form, or correct inaccurate dialogue answers.",
+      "quote_vi": "Bản phác thảo được tạo ra khi có quyền xem ảnh đích, nên có thể chứa thông tin không có trong hội thoại, diễn đạt lại các sự kiện đã có theo dạng thuận lợi hơn cho truy xuất, hoặc sửa các câu trả lời sai trong hội thoại."
+     },
+     {
+      "quote": "the paper does not provide a human evaluation of whether these rewrites preserve the dialogue's information, omit important details, or introduce unsupported attributes.",
+      "quote_vi": "bài báo không cung cấp đánh giá của con người về việc các bản viết lại này có giữ được thông tin của hội thoại, bỏ sót chi tiết quan trọng, hay thêm vào các thuộc tính không có căn cứ hay không."
+     }
+    ]
    }
   ]
  },
