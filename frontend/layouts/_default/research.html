@@ -22,6 +22,7 @@ ul.ch-index .inst { color: var(--muted) ; font-size: 0.9em ; }
 ul.ch-index ul.gl li:hover { background: color-mix(in srgb, var(--fg) 7%, var(--bg)) ; border-radius: 4px ; }
 .ch-filter button { font: inherit ; font-size: 0.88em ; color: var(--fg) ; background: var(--bg) ; border: 1px solid var(--muted) ; border-radius: 999px ; padding: 0.2em 0.8em ; cursor: pointer ; }
 .ch-filter button[aria-pressed="true"] { background: var(--link) ; color: var(--bg) ; border-color: var(--link) ; }
+@media (max-width: 700px) { .ch-filter { flex-wrap: nowrap ; overflow-x: auto ; padding: 0.4em 0.6em ; -webkit-overflow-scrolling: touch ; } .ch-filter button { flex: 0 0 auto ; white-space: nowrap ; } }
 h2.ch-area { font-size: 1.15em ; margin: 1.6em 0 0.6em ; }
 h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; }
 </style>
