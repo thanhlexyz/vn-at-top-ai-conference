@@ -660,4 +660,4 @@ other = "under construction"
 [ch_score]
 other = "CSRankings score"
 [ch_score_tip]
-other = "Sum of 1/N over the topic's papers, N being each paper's number of authors, as in CSRankings; topics are ordered by this score, then by how recent the papers are, with related topics next to each other"
+other = "Sum of 1/N over the topic's papers, N being each paper's number of authors, as in CSRankings; topics are ordered by this score, highest first"

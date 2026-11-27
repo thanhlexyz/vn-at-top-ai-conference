@@ -1827,149 +1827,149 @@
     {
      "y": 57.0,
      "color": "tc0",
-     "title": "Reasoning and alignment of LLMs",
-     "title_vi": "Suy luận và căn chỉnh LLM",
-     "dots": [
-      {
-       "id": "neurips2026-on-the-primacy-bias-in-rlvr-training",
-       "x": 912.0,
-       "y": 57.0,
-       "title": "On the Primacy Bias in RLVR Training",
-       "label": "NeurIPS 2026"
-      },
-      {
-       "id": "neurips2026-decoding-the-critique-mechanism-in-large-reasoning-models",
-       "x": 925.0,
-       "y": 57.0,
-       "title": "Decoding the Critique Mechanism in Large Reasoning Models",
-       "label": "NeurIPS 2026"
-      },
-      {
-       "id": "neurips2026-the-reasoning-boundary-paradox-how-reinforcement-learning-co",
-       "x": 938.0,
-       "y": 57.0,
-       "title": "The Reasoning Boundary Paradox: How Reinforcement Learning Constrains Language Models",
-       "label": "NeurIPS 2026"
-      },
-      {
-       "id": "icml2026-tokenratio-principled-token-level-preference-optimization-vi",
-       "x": 951.0,
-       "y": 57.0,
-       "title": "TokenRatio: Principled Token-Level Preference Optimization via Ratio Matching",
-       "label": "ICML 2026"
-      },
-      {
-       "id": "iclr2026-the-reasoning-boundary-paradox-how-reinforcement-learning-co",
-       "x": 964.0,
-       "y": 57.0,
-       "title": "The Reasoning Boundary Paradox: How Reinforcement Learning Constrains Language Models",
-       "label": "ICLR 2026"
-      },
-      {
-       "id": "neurips2025-mitigating-reward-over-optimization-in-direct-alignment-algo",
-       "x": 798.5,
-       "y": 57.0,
-       "title": "Mitigating Reward Over-optimization in Direct Alignment Algorithms with Importance Sampling",
-       "label": "NeurIPS 2025"
-      },
-      {
-       "id": "neurips2025-weak-to-strong-generalization-via-formative-learning-from-st",
-       "x": 811.5,
-       "y": 57.0,
-       "title": "Weak-to-strong Generalization via Formative Learning from Student Demonstrations & Teacher Evaluation",
-       "label": "NeurIPS 2025"
-      },
-      {
-       "id": "icml2025-llm-srbench-a-new-benchmark-for-scientific-equation-discover",
-       "x": 824.5,
-       "y": 57.0,
-       "title": "LLM-SRBench: A New Benchmark for Scientific Equation Discovery with Large Language Models",
-       "label": "ICML 2025"
-      },
-      {
-       "id": "iclr2025-mitigating-reward-over-optimization-in-direct-alignment-algo",
-       "x": 837.5,
-       "y": 57.0,
-       "title": "Mitigating Reward Over-optimization in Direct Alignment Algorithms with Adaptive Importance Sampling",
-       "label": "ICLR 2025"
-      }
-     ]
-    },
-    {
-     "y": 103.0,
-     "color": "tc1",
      "title": "Backdoor attacks and defenses",
      "title_vi": "Tấn công và phòng thủ backdoor",
      "dots": [
       {
        "id": "neurips2026-rethinking-molecular-graph-backdoors-under-chemistry-aware-a",
        "x": 931.5,
-       "y": 103.0,
+       "y": 57.0,
        "title": "Rethinking Molecular Graph Backdoors under Chemistry-aware Admission",
        "label": "NeurIPS 2026"
       },
       {
        "id": "aaai2026-clean-label-physical-backdoor-attacks-with-data-distillation",
        "x": 944.5,
-       "y": 103.0,
+       "y": 57.0,
        "title": "Clean-Label Physical Backdoor Attacks with Data Distillation",
        "label": "AAAI 2026"
       },
       {
        "id": "neurips2025-triggercraft-a-framework-for-enabling-scalable-physical-back",
        "x": 805.0,
-       "y": 103.0,
+       "y": 57.0,
        "title": "TriggerCraft: A Framework for Enabling Scalable Physical Backdoor Dataset Generation with Generative Models",
        "label": "NeurIPS 2025"
       },
       {
        "id": "iclr2025-wicked-oddities-selectively-poisoning-for-effective-clean-la",
        "x": 818.0,
-       "y": 103.0,
+       "y": 57.0,
        "title": "Wicked Oddities: Selectively Poisoning for Effective Clean-Label Backdoor Attacks",
        "label": "ICLR 2025"
       },
       {
        "id": "iclr2025-synthesizing-physical-backdoor-datasets-an-automated-framewo",
        "x": 831.0,
-       "y": 103.0,
+       "y": 57.0,
        "title": "Synthesizing Physical Backdoor Datasets: An Automated Framework Leveraging Deep Generative Models",
        "label": "ICLR 2025"
       },
       {
        "id": "eccv2024-flatness-aware-sequential-learning-generates-resilient-backd",
        "x": 691.5,
-       "y": 103.0,
+       "y": 57.0,
        "title": "Flatness-aware Sequential Learning Generates Resilient Backdoors",
        "label": "ECCV 2024"
       },
       {
        "id": "iclr2024-forget-me-not-making-backdoor-hard-to-be-forgotten-in-fine-t",
        "x": 704.5,
-       "y": 103.0,
+       "y": 57.0,
        "title": "Forget-Me-Not: Making Backdoor Hard to be Forgotten in Fine-tuning",
        "label": "ICLR 2024"
       },
       {
        "id": "neurips2023-iba-towards-irreversible-backdoor-attacks-in-federated-learn",
        "x": 571.5,
-       "y": 103.0,
+       "y": 57.0,
        "title": "IBA: Towards Irreversible Backdoor Attacks in Federated Learning",
        "label": "NeurIPS 2023"
       },
       {
        "id": "aaai2023-defending-backdoor-attacks-on-vision-transformer-via-patch-p",
        "x": 584.5,
-       "y": 103.0,
+       "y": 57.0,
        "title": "Defending Backdoor Attacks on Vision Transformer via Patch Processing",
        "label": "AAAI 2023"
       },
       {
        "id": "neurips2022-marksman-backdoor-backdoor-attacks-with-arbitrary-target-cla",
        "x": 458.0,
-       "y": 103.0,
+       "y": 57.0,
        "title": "Marksman Backdoor: Backdoor Attacks with Arbitrary Target Class",
        "label": "NeurIPS 2022"
+      }
+     ]
+    },
+    {
+     "y": 103.0,
+     "color": "tc1",
+     "title": "Reasoning and alignment of LLMs",
+     "title_vi": "Suy luận và căn chỉnh LLM",
+     "dots": [
+      {
+       "id": "neurips2026-on-the-primacy-bias-in-rlvr-training",
+       "x": 912.0,
+       "y": 103.0,
+       "title": "On the Primacy Bias in RLVR Training",
+       "label": "NeurIPS 2026"
+      },
+      {
+       "id": "neurips2026-decoding-the-critique-mechanism-in-large-reasoning-models",
+       "x": 925.0,
+       "y": 103.0,
+       "title": "Decoding the Critique Mechanism in Large Reasoning Models",
+       "label": "NeurIPS 2026"
+      },
+      {
+       "id": "neurips2026-the-reasoning-boundary-paradox-how-reinforcement-learning-co",
+       "x": 938.0,
+       "y": 103.0,
+       "title": "The Reasoning Boundary Paradox: How Reinforcement Learning Constrains Language Models",
+       "label": "NeurIPS 2026"
+      },
+      {
+       "id": "icml2026-tokenratio-principled-token-level-preference-optimization-vi",
+       "x": 951.0,
+       "y": 103.0,
+       "title": "TokenRatio: Principled Token-Level Preference Optimization via Ratio Matching",
+       "label": "ICML 2026"
+      },
+      {
+       "id": "iclr2026-the-reasoning-boundary-paradox-how-reinforcement-learning-co",
+       "x": 964.0,
+       "y": 103.0,
+       "title": "The Reasoning Boundary Paradox: How Reinforcement Learning Constrains Language Models",
+       "label": "ICLR 2026"
+      },
+      {
+       "id": "neurips2025-mitigating-reward-over-optimization-in-direct-alignment-algo",
+       "x": 798.5,
+       "y": 103.0,
+       "title": "Mitigating Reward Over-optimization in Direct Alignment Algorithms with Importance Sampling",
+       "label": "NeurIPS 2025"
+      },
+      {
+       "id": "neurips2025-weak-to-strong-generalization-via-formative-learning-from-st",
+       "x": 811.5,
+       "y": 103.0,
+       "title": "Weak-to-strong Generalization via Formative Learning from Student Demonstrations & Teacher Evaluation",
+       "label": "NeurIPS 2025"
+      },
+      {
+       "id": "icml2025-llm-srbench-a-new-benchmark-for-scientific-equation-discover",
+       "x": 824.5,
+       "y": 103.0,
+       "title": "LLM-SRBench: A New Benchmark for Scientific Equation Discovery with Large Language Models",
+       "label": "ICML 2025"
+      },
+      {
+       "id": "iclr2025-mitigating-reward-over-optimization-in-direct-alignment-algo",
+       "x": 837.5,
+       "y": 103.0,
+       "title": "Mitigating Reward Over-optimization in Direct Alignment Algorithms with Adaptive Importance Sampling",
+       "label": "ICLR 2025"
       }
      ]
     },
@@ -2012,58 +2012,58 @@
     {
      "y": 195.0,
      "color": "tc3",
-     "title": "Forgetting in continual and federated learning",
-     "title_vi": "Hiện tượng quên trong học liên tục và học liên kết",
-     "dots": [
-      {
-       "id": "cvpr2026-onboarding-without-forgetting-hypernetwork-personalization-w",
-       "x": 938.0,
-       "y": 195.0,
-       "title": "Onboarding Without Forgetting: Hypernetwork Personalization with Data-Free Replay for Personalized Federated Learning",
-       "label": "CVPR 2026"
-      },
-      {
-       "id": "iclr2025-overcoming-catastrophic-forgetting-in-federated-class-increm",
-       "x": 811.5,
-       "y": 195.0,
-       "title": "Overcoming Catastrophic Forgetting in Federated Class-Incremental Learning via Federated Global Twin Generator",
-       "label": "ICLR 2025"
-      },
-      {
-       "id": "iclr2025-forget-but-recall-incremental-latent-rectification-in-contin",
-       "x": 824.5,
-       "y": 195.0,
-       "title": "Forget but Recall: Incremental Latent Rectification in Continual Learning",
-       "label": "ICLR 2025"
-      }
-     ]
-    },
-    {
-     "y": 241.0,
-     "color": "tc4",
      "title": "Defenses against query-based adversarial attacks",
      "title_vi": "Phòng thủ trước tấn công đối kháng dựa trên truy vấn",
      "dots": [
       {
        "id": "acl2024-fooling-the-textual-fooler-via-randomizing-latent-representa",
        "x": 685.0,
-       "y": 241.0,
+       "y": 195.0,
        "title": "Fooling the Textual Fooler via Randomizing Latent Representations",
        "label": "ACL 2024"
       },
       {
        "id": "iclr2024-understanding-the-robustness-of-randomized-feature-defense-a",
        "x": 698.0,
-       "y": 241.0,
+       "y": 195.0,
        "title": "Understanding the Robustness of Randomized Feature Defense Against Query-Based Adversarial Attacks",
        "label": "ICLR 2024"
       },
       {
        "id": "iclr2024-fooling-the-textual-fooler-via-randomizing-latent-representa",
        "x": 711.0,
-       "y": 241.0,
+       "y": 195.0,
        "title": "Fooling the Textual Fooler via Randomizing Latent Representations",
        "label": "ICLR 2024"
+      }
+     ]
+    },
+    {
+     "y": 241.0,
+     "color": "tc4",
+     "title": "Forgetting in continual and federated learning",
+     "title_vi": "Hiện tượng quên trong học liên tục và học liên kết",
+     "dots": [
+      {
+       "id": "cvpr2026-onboarding-without-forgetting-hypernetwork-personalization-w",
+       "x": 938.0,
+       "y": 241.0,
+       "title": "Onboarding Without Forgetting: Hypernetwork Personalization with Data-Free Replay for Personalized Federated Learning",
+       "label": "CVPR 2026"
+      },
+      {
+       "id": "iclr2025-overcoming-catastrophic-forgetting-in-federated-class-increm",
+       "x": 811.5,
+       "y": 241.0,
+       "title": "Overcoming Catastrophic Forgetting in Federated Class-Incremental Learning via Federated Global Twin Generator",
+       "label": "ICLR 2025"
+      },
+      {
+       "id": "iclr2025-forget-but-recall-incremental-latent-rectification-in-contin",
+       "x": 824.5,
+       "y": 241.0,
+       "title": "Forget but Recall: Incremental Latent Rectification in Continual Learning",
+       "label": "ICLR 2025"
       }
      ]
     },
@@ -2113,16 +2113,16 @@
    ],
    "edges": [
     {
-     "d": "M944.5,103.0 Q887.75,71.38 831.0,103.0"
+     "d": "M944.5,57.0 Q887.75,25.380000000000003 831.0,57.0"
     },
     {
-     "d": "M691.5,103.0 Q631.5,70.6 571.5,103.0"
+     "d": "M691.5,57.0 Q631.5,24.6 571.5,57.0"
     },
     {
-     "d": "M691.5,103.0 Q574.75,56.980000000000004 458.0,103.0"
+     "d": "M691.5,57.0 Q574.75,10.98 458.0,57.0"
     },
     {
-     "d": "M584.5,103.0 Q521.25,69.82 458.0,103.0"
+     "d": "M584.5,57.0 Q521.25,23.82 458.0,57.0"
     }
    ]
   },
@@ -2131,6 +2131,91 @@
   "overview": "Khoa D. Doan works mainly on trustworthy machine learning, above all backdoor attacks and defenses, and on reasoning and preference alignment of large language models (LLMs). Further lines cover hidden content, watermarking and concept erasure in generative models, randomized defenses against query-based adversarial attacks, and catastrophic forgetting in continual and federated learning. The common thread is studying how models can be manipulated or fail under realistic conditions, analysing why, and proposing simple fixes.",
   "overview_vi": "Khoa D. Doan nghiên cứu chủ yếu về học máy đáng tin cậy, trọng tâm là tấn công và phòng thủ backdoor, cùng với khả năng suy luận và căn chỉnh theo sở thích (preference alignment) của mô hình ngôn ngữ lớn (LLM). Các hướng khác gồm nội dung ẩn, watermark và xóa khái niệm trong mô hình sinh, phòng thủ ngẫu nhiên hóa trước tấn công đối kháng dựa trên truy vấn, và hiện tượng quên thảm khốc (catastrophic forgetting) trong học liên tục và học liên kết. Điểm chung là tìm hiểu mô hình có thể bị thao túng hoặc thất bại thế nào trong điều kiện thực tế, phân tích nguyên nhân và đề xuất các cách khắc phục đơn giản.",
   "topics": [
+   {
+    "title": "Backdoor attacks and defenses",
+    "title_vi": "Tấn công và phòng thủ backdoor",
+    "summary": "In a backdoor attack a model is secretly trained to misbehave whenever it sees a trigger; this work studies such attacks on image classifiers, vision transformers (ViTs), federated learning and molecular graph neural networks under realistic threat models such as physical-world trigger objects, attackers who only supply target-class data, and chemical validity checks. Techniques include clean-label poisoning through hard-sample selection and dataset distillation, generative pipelines that synthesize physical-trigger datasets, training schemes that keep backdoors alive through fine-tuning defenses, class-conditional trigger generators that reach any target class, and a patch-processing defense that exploits a ViT-specific property. Attacks are validated on real photos captured by several devices and against many existing defenses.",
+    "summary_vi": "Trong tấn công backdoor, mô hình bị huấn luyện ngầm để hoạt động sai mỗi khi gặp một dấu hiệu kích hoạt (trigger); các công trình này nghiên cứu kiểu tấn công đó trên bộ phân loại ảnh, vision transformer (ViT), học liên kết và mạng nơ-ron đồ thị cho phân tử, với các mô hình mối đe dọa sát thực tế như trigger là vật thể vật lý, kẻ tấn công chỉ cung cấp dữ liệu của lớp đích, hay các bước kiểm tra tính hợp lệ hóa học. Kỹ thuật gồm đầu độc clean-label (không đổi nhãn) bằng cách chọn mẫu khó học và chưng cất dữ liệu (dataset distillation), quy trình dùng mô hình sinh để tổng hợp bộ dữ liệu trigger vật lý, cách huấn luyện giúp backdoor tồn tại qua các phòng thủ bằng fine-tuning, bộ sinh trigger có điều kiện theo lớp để nhắm tới bất kỳ lớp nào, và một phòng thủ xử lý patch khai thác đặc tính riêng của ViT. Các tấn công được kiểm chứng trên ảnh thật chụp bằng nhiều thiết bị và trước nhiều phòng thủ hiện có.",
+    "open": [
+     {
+      "text": "Defenses against backdoors that survive fine-tuning still need to be built, and more sophisticated anomaly detection could catch more backdoored inputs in vision transformers with few false negatives.",
+      "text_vi": "Vẫn cần xây dựng phòng thủ trước các backdoor sống sót qua fine-tuning, và các kỹ thuật phát hiện bất thường tinh vi hơn có thể phát hiện nhiều đầu vào chứa backdoor hơn trong vision transformer mà vẫn ít bỏ sót.",
+      "source": "authors",
+      "papers": [
+       "eccv2024-flatness-aware-sequential-learning-generates-resilient-backd",
+       "aaai2023-defending-backdoor-attacks-on-vision-transformer-via-patch-p"
+      ]
+     },
+     {
+      "text": "Physical-trigger datasets made with generative models leave unexplained gaps: lower clean accuracy on real than on synthetic data, unstable appearance of generic triggers such as books, and trigger objects that may already occur in clean training data.",
+      "text_vi": "Bộ dữ liệu trigger vật lý tạo bằng mô hình sinh còn những khoảng trống chưa được giải thích: độ chính xác trên dữ liệu sạch thật thấp hơn dữ liệu tổng hợp, ngoại hình không ổn định của trigger phổ biến như quyển sách, và vật thể trigger có thể đã xuất hiện sẵn trong dữ liệu huấn luyện sạch.",
+      "source": "reviewers",
+      "papers": [
+       "neurips2025-triggercraft-a-framework-for-enabling-scalable-physical-back",
+       "iclr2025-synthesizing-physical-backdoor-datasets-an-automated-framewo"
+      ]
+     },
+     {
+      "text": "Attacks need testing against a wider range of defenses (pruning-based, adaptive and non-scanning defenses, early stopping), more architectures, and stronger baselines such as durable federated attacks and existing sample-selection methods, with a clearer explanation of why the backdoors persist.",
+      "text_vi": "Các tấn công cần được thử trước nhiều loại phòng thủ hơn (dựa trên cắt tỉa nơ-ron, phòng thủ thích ứng, phòng thủ không dựa trên quét, dừng sớm), trên nhiều kiến trúc hơn và so với các baseline mạnh hơn như tấn công bền vững trong học liên kết hay các phương pháp chọn mẫu hiện có, kèm giải thích rõ hơn vì sao backdoor tồn tại lâu.",
+      "source": "reviewers",
+      "papers": [
+       "iclr2025-wicked-oddities-selectively-poisoning-for-effective-clean-la",
+       "iclr2024-forget-me-not-making-backdoor-hard-to-be-forgotten-in-fine-t",
+       "neurips2023-iba-towards-irreversible-backdoor-attacks-in-federated-learn",
+       "neurips2022-marksman-backdoor-backdoor-attacks-with-arbitrary-target-cla"
+      ]
+     },
+     {
+      "text": "For molecular backdoors it is open whether the admission checks reflect real pipelines that also filter by synthesizability, drug-likeness or near-duplicates, and whether poisoned molecules look plausible beyond basic validity.",
+      "text_vi": "Với backdoor trên phân tử, còn bỏ ngỏ liệu các bước kiểm tra đầu vào có phản ánh quy trình thực tế, vốn còn lọc theo khả năng tổng hợp, tính giống thuốc hay mẫu gần trùng lặp, và liệu phân tử bị đầu độc có trông hợp lý ngoài tính hợp lệ cơ bản hay không.",
+      "source": "reviewers",
+      "papers": [
+       "neurips2026-rethinking-molecular-graph-backdoors-under-chemistry-aware-a"
+      ]
+     }
+    ],
+    "papers": [
+     "neurips2026-rethinking-molecular-graph-backdoors-under-chemistry-aware-a",
+     "aaai2026-clean-label-physical-backdoor-attacks-with-data-distillation",
+     "neurips2025-triggercraft-a-framework-for-enabling-scalable-physical-back",
+     "iclr2025-wicked-oddities-selectively-poisoning-for-effective-clean-la",
+     "iclr2025-synthesizing-physical-backdoor-datasets-an-automated-framewo",
+     "eccv2024-flatness-aware-sequential-learning-generates-resilient-backd",
+     "iclr2024-forget-me-not-making-backdoor-hard-to-be-forgotten-in-fine-t",
+     "neurips2023-iba-towards-irreversible-backdoor-attacks-in-federated-learn",
+     "aaai2023-defending-backdoor-attacks-on-vision-transformer-via-patch-p",
+     "neurips2022-marksman-backdoor-backdoor-attacks-with-arbitrary-target-cla"
+    ],
+    "score": 2.23,
+    "color": "tc0",
+    "words": [
+     {
+      "word": "backdoor",
+      "share": 100
+     },
+     {
+      "word": "attacks",
+      "share": 36
+     },
+     {
+      "word": "target class",
+      "share": 29
+     },
+     {
+      "word": "physical",
+      "share": 26
+     },
+     {
+      "word": "attack success",
+      "share": 17
+     },
+     {
+      "word": "vits",
+      "share": 16
+     }
+    ]
+   },
    {
     "title": "Reasoning and alignment of LLMs",
     "title_vi": "Suy luận và căn chỉnh LLM",
@@ -2191,7 +2276,7 @@
      "iclr2025-mitigating-reward-over-optimization-in-direct-alignment-algo"
     ],
     "score": 1.57,
-    "color": "tc0",
+    "color": "tc1",
     "words": [
      {
       "word": "rlvr",
@@ -2216,91 +2301,6 @@
      {
       "word": "language",
       "share": 43
-     }
-    ]
-   },
-   {
-    "title": "Backdoor attacks and defenses",
-    "title_vi": "Tấn công và phòng thủ backdoor",
-    "summary": "In a backdoor attack a model is secretly trained to misbehave whenever it sees a trigger; this work studies such attacks on image classifiers, vision transformers (ViTs), federated learning and molecular graph neural networks under realistic threat models such as physical-world trigger objects, attackers who only supply target-class data, and chemical validity checks. Techniques include clean-label poisoning through hard-sample selection and dataset distillation, generative pipelines that synthesize physical-trigger datasets, training schemes that keep backdoors alive through fine-tuning defenses, class-conditional trigger generators that reach any target class, and a patch-processing defense that exploits a ViT-specific property. Attacks are validated on real photos captured by several devices and against many existing defenses.",
-    "summary_vi": "Trong tấn công backdoor, mô hình bị huấn luyện ngầm để hoạt động sai mỗi khi gặp một dấu hiệu kích hoạt (trigger); các công trình này nghiên cứu kiểu tấn công đó trên bộ phân loại ảnh, vision transformer (ViT), học liên kết và mạng nơ-ron đồ thị cho phân tử, với các mô hình mối đe dọa sát thực tế như trigger là vật thể vật lý, kẻ tấn công chỉ cung cấp dữ liệu của lớp đích, hay các bước kiểm tra tính hợp lệ hóa học. Kỹ thuật gồm đầu độc clean-label (không đổi nhãn) bằng cách chọn mẫu khó học và chưng cất dữ liệu (dataset distillation), quy trình dùng mô hình sinh để tổng hợp bộ dữ liệu trigger vật lý, cách huấn luyện giúp backdoor tồn tại qua các phòng thủ bằng fine-tuning, bộ sinh trigger có điều kiện theo lớp để nhắm tới bất kỳ lớp nào, và một phòng thủ xử lý patch khai thác đặc tính riêng của ViT. Các tấn công được kiểm chứng trên ảnh thật chụp bằng nhiều thiết bị và trước nhiều phòng thủ hiện có.",
-    "open": [
-     {
-      "text": "Defenses against backdoors that survive fine-tuning still need to be built, and more sophisticated anomaly detection could catch more backdoored inputs in vision transformers with few false negatives.",
-      "text_vi": "Vẫn cần xây dựng phòng thủ trước các backdoor sống sót qua fine-tuning, và các kỹ thuật phát hiện bất thường tinh vi hơn có thể phát hiện nhiều đầu vào chứa backdoor hơn trong vision transformer mà vẫn ít bỏ sót.",
-      "source": "authors",
-      "papers": [
-       "eccv2024-flatness-aware-sequential-learning-generates-resilient-backd",
-       "aaai2023-defending-backdoor-attacks-on-vision-transformer-via-patch-p"
-      ]
-     },
-     {
-      "text": "Physical-trigger datasets made with generative models leave unexplained gaps: lower clean accuracy on real than on synthetic data, unstable appearance of generic triggers such as books, and trigger objects that may already occur in clean training data.",
-      "text_vi": "Bộ dữ liệu trigger vật lý tạo bằng mô hình sinh còn những khoảng trống chưa được giải thích: độ chính xác trên dữ liệu sạch thật thấp hơn dữ liệu tổng hợp, ngoại hình không ổn định của trigger phổ biến như quyển sách, và vật thể trigger có thể đã xuất hiện sẵn trong dữ liệu huấn luyện sạch.",
-      "source": "reviewers",
-      "papers": [
-       "neurips2025-triggercraft-a-framework-for-enabling-scalable-physical-back",
-       "iclr2025-synthesizing-physical-backdoor-datasets-an-automated-framewo"
-      ]
-     },
-     {
-      "text": "Attacks need testing against a wider range of defenses (pruning-based, adaptive and non-scanning defenses, early stopping), more architectures, and stronger baselines such as durable federated attacks and existing sample-selection methods, with a clearer explanation of why the backdoors persist.",
-      "text_vi": "Các tấn công cần được thử trước nhiều loại phòng thủ hơn (dựa trên cắt tỉa nơ-ron, phòng thủ thích ứng, phòng thủ không dựa trên quét, dừng sớm), trên nhiều kiến trúc hơn và so với các baseline mạnh hơn như tấn công bền vững trong học liên kết hay các phương pháp chọn mẫu hiện có, kèm giải thích rõ hơn vì sao backdoor tồn tại lâu.",
-      "source": "reviewers",
-      "papers": [
-       "iclr2025-wicked-oddities-selectively-poisoning-for-effective-clean-la",
-       "iclr2024-forget-me-not-making-backdoor-hard-to-be-forgotten-in-fine-t",
-       "neurips2023-iba-towards-irreversible-backdoor-attacks-in-federated-learn",
-       "neurips2022-marksman-backdoor-backdoor-attacks-with-arbitrary-target-cla"
-      ]
-     },
-     {
-      "text": "For molecular backdoors it is open whether the admission checks reflect real pipelines that also filter by synthesizability, drug-likeness or near-duplicates, and whether poisoned molecules look plausible beyond basic validity.",
-      "text_vi": "Với backdoor trên phân tử, còn bỏ ngỏ liệu các bước kiểm tra đầu vào có phản ánh quy trình thực tế, vốn còn lọc theo khả năng tổng hợp, tính giống thuốc hay mẫu gần trùng lặp, và liệu phân tử bị đầu độc có trông hợp lý ngoài tính hợp lệ cơ bản hay không.",
-      "source": "reviewers",
-      "papers": [
-       "neurips2026-rethinking-molecular-graph-backdoors-under-chemistry-aware-a"
-      ]
-     }
-    ],
-    "papers": [
-     "neurips2026-rethinking-molecular-graph-backdoors-under-chemistry-aware-a",
-     "aaai2026-clean-label-physical-backdoor-attacks-with-data-distillation",
-     "neurips2025-triggercraft-a-framework-for-enabling-scalable-physical-back",
-     "iclr2025-wicked-oddities-selectively-poisoning-for-effective-clean-la",
-     "iclr2025-synthesizing-physical-backdoor-datasets-an-automated-framewo",
-     "eccv2024-flatness-aware-sequential-learning-generates-resilient-backd",
-     "iclr2024-forget-me-not-making-backdoor-hard-to-be-forgotten-in-fine-t",
-     "neurips2023-iba-towards-irreversible-backdoor-attacks-in-federated-learn",
-     "aaai2023-defending-backdoor-attacks-on-vision-transformer-via-patch-p",
-     "neurips2022-marksman-backdoor-backdoor-attacks-with-arbitrary-target-cla"
-    ],
-    "score": 2.23,
-    "color": "tc1",
-    "words": [
-     {
-      "word": "backdoor",
-      "share": 100
-     },
-     {
-      "word": "attacks",
-      "share": 36
-     },
-     {
-      "word": "target class",
-      "share": 29
-     },
-     {
-      "word": "physical",
-      "share": 26
-     },
-     {
-      "word": "attack success",
-      "share": 17
-     },
-     {
-      "word": "vits",
-      "share": 16
      }
     ]
    },
@@ -2381,72 +2381,6 @@
     ]
    },
    {
-    "title": "Forgetting in continual and federated learning",
-    "title_vi": "Hiện tượng quên trong học liên tục và học liên kết",
-    "summary": "Models that keep learning, whether new tasks, new classes or newly joining federated clients, tend to forget what they learned before (catastrophic forgetting). Proposed techniques include a central hypernetwork with binary masks and server-side data-free replay for personalized federated learning, two server-trained generators of synthetic images and features for federated class-incremental learning, and a chain of small rectifier units that map the current latent space back to that of earlier tasks. The methods keep old knowledge without sharing client data or storing large memory buffers, at small extra parameter or communication cost.",
-    "summary_vi": "Mô hình liên tục học thêm, dù là tác vụ mới, lớp mới hay client mới tham gia học liên kết, thường quên những gì đã học trước đó (catastrophic forgetting). Kỹ thuật đề xuất gồm một hypernetwork trung tâm với mặt nạ nhị phân và cơ chế phát lại không cần dữ liệu ở máy chủ cho học liên kết cá nhân hóa, hai bộ sinh ảnh và đặc trưng tổng hợp huấn luyện tại máy chủ cho học liên kết tăng dần theo lớp, và một chuỗi các khối hiệu chỉnh nhỏ ánh xạ không gian tiềm ẩn hiện tại về không gian của các tác vụ trước. Các phương pháp giữ được tri thức cũ mà không cần chia sẻ dữ liệu client hay lưu bộ nhớ đệm lớn, với chi phí tham số hoặc truyền thông tăng thêm nhỏ.",
-    "open": [
-     {
-      "text": "Scalability is open: inference through a chain of rectifiers slows linearly as tasks accumulate, and parameter, memory and generator costs on large data such as full ImageNet are not measured.",
-      "text_vi": "Khả năng mở rộng còn bỏ ngỏ: suy luận qua chuỗi khối hiệu chỉnh chậm dần tuyến tính khi số tác vụ tăng, và chi phí tham số, bộ nhớ và bộ sinh trên dữ liệu lớn như ImageNet đầy đủ chưa được đo.",
-      "source": "reviewers",
-      "papers": [
-       "iclr2025-overcoming-catastrophic-forgetting-in-federated-class-increm",
-       "iclr2025-forget-but-recall-incremental-latent-rectification-in-contin"
-      ]
-     },
-     {
-      "text": "It is unclear how to prevent error accumulation or drift along a rectifier chain, where one poorly learned unit can break the whole chain.",
-      "text_vi": "Chưa rõ cách ngăn sai số tích lũy hay trôi phân phối dọc chuỗi khối hiệu chỉnh, khi chỉ một khối học kém cũng có thể làm hỏng cả chuỗi.",
-      "source": "reviewers",
-      "papers": [
-       "iclr2025-forget-but-recall-incremental-latent-rectification-in-contin"
-      ]
-     },
-     {
-      "text": "Combinations of existing losses need a principled justification and testing on higher-resolution data and more backbones.",
-      "text_vi": "Việc kết hợp các hàm mất mát có sẵn cần được lý giải có nguyên tắc và kiểm tra trên dữ liệu độ phân giải cao hơn với nhiều backbone hơn.",
-      "source": "reviewers",
-      "papers": [
-       "iclr2025-overcoming-catastrophic-forgetting-in-federated-class-increm"
-      ]
-     }
-    ],
-    "papers": [
-     "cvpr2026-onboarding-without-forgetting-hypernetwork-personalization-w",
-     "iclr2025-overcoming-catastrophic-forgetting-in-federated-class-increm",
-     "iclr2025-forget-but-recall-incremental-latent-rectification-in-contin"
-    ],
-    "score": 0.53,
-    "color": "tc3",
-    "words": [
-     {
-      "word": "clients",
-      "share": 100
-     },
-     {
-      "word": "federated",
-      "share": 50
-     },
-     {
-      "word": "global",
-      "share": 40
-     },
-     {
-      "word": "generator",
-      "share": 40
-     },
-     {
-      "word": "data-free replay",
-      "share": 32
-     },
-     {
-      "word": "fcil",
-      "share": 30
-     }
-    ]
-   },
-   {
     "title": "Defenses against query-based adversarial attacks",
     "title_vi": "Phòng thủ trước tấn công đối kháng dựa trên truy vấn",
     "summary": "Attackers who only see a model's outputs can still craft adversarial examples by querying it repeatedly, for example to find and replace the most important words of a text. The proposed defense adds random noise to hidden features or latent representations at inference time, with a theoretical analysis of how this noise interacts with score-based and decision-based attacks and why the layer where it is added matters. It needs no adversarial training, adds almost no compute, barely affects clean accuracy and applies to any pretrained model, in both vision and natural language processing.",
@@ -2484,7 +2418,7 @@
      "iclr2024-fooling-the-textual-fooler-via-randomizing-latent-representa"
     ],
     "score": 0.53,
-    "color": "tc4",
+    "color": "tc3",
     "words": [
      {
       "word": "attacks",
@@ -2509,6 +2443,72 @@
      {
       "word": "advfooler",
       "share": 56
+     }
+    ]
+   },
+   {
+    "title": "Forgetting in continual and federated learning",
+    "title_vi": "Hiện tượng quên trong học liên tục và học liên kết",
+    "summary": "Models that keep learning, whether new tasks, new classes or newly joining federated clients, tend to forget what they learned before (catastrophic forgetting). Proposed techniques include a central hypernetwork with binary masks and server-side data-free replay for personalized federated learning, two server-trained generators of synthetic images and features for federated class-incremental learning, and a chain of small rectifier units that map the current latent space back to that of earlier tasks. The methods keep old knowledge without sharing client data or storing large memory buffers, at small extra parameter or communication cost.",
+    "summary_vi": "Mô hình liên tục học thêm, dù là tác vụ mới, lớp mới hay client mới tham gia học liên kết, thường quên những gì đã học trước đó (catastrophic forgetting). Kỹ thuật đề xuất gồm một hypernetwork trung tâm với mặt nạ nhị phân và cơ chế phát lại không cần dữ liệu ở máy chủ cho học liên kết cá nhân hóa, hai bộ sinh ảnh và đặc trưng tổng hợp huấn luyện tại máy chủ cho học liên kết tăng dần theo lớp, và một chuỗi các khối hiệu chỉnh nhỏ ánh xạ không gian tiềm ẩn hiện tại về không gian của các tác vụ trước. Các phương pháp giữ được tri thức cũ mà không cần chia sẻ dữ liệu client hay lưu bộ nhớ đệm lớn, với chi phí tham số hoặc truyền thông tăng thêm nhỏ.",
+    "open": [
+     {
+      "text": "Scalability is open: inference through a chain of rectifiers slows linearly as tasks accumulate, and parameter, memory and generator costs on large data such as full ImageNet are not measured.",
+      "text_vi": "Khả năng mở rộng còn bỏ ngỏ: suy luận qua chuỗi khối hiệu chỉnh chậm dần tuyến tính khi số tác vụ tăng, và chi phí tham số, bộ nhớ và bộ sinh trên dữ liệu lớn như ImageNet đầy đủ chưa được đo.",
+      "source": "reviewers",
+      "papers": [
+       "iclr2025-overcoming-catastrophic-forgetting-in-federated-class-increm",
+       "iclr2025-forget-but-recall-incremental-latent-rectification-in-contin"
+      ]
+     },
+     {
+      "text": "It is unclear how to prevent error accumulation or drift along a rectifier chain, where one poorly learned unit can break the whole chain.",
+      "text_vi": "Chưa rõ cách ngăn sai số tích lũy hay trôi phân phối dọc chuỗi khối hiệu chỉnh, khi chỉ một khối học kém cũng có thể làm hỏng cả chuỗi.",
+      "source": "reviewers",
+      "papers": [
+       "iclr2025-forget-but-recall-incremental-latent-rectification-in-contin"
+      ]
+     },
+     {
+      "text": "Combinations of existing losses need a principled justification and testing on higher-resolution data and more backbones.",
+      "text_vi": "Việc kết hợp các hàm mất mát có sẵn cần được lý giải có nguyên tắc và kiểm tra trên dữ liệu độ phân giải cao hơn với nhiều backbone hơn.",
+      "source": "reviewers",
+      "papers": [
+       "iclr2025-overcoming-catastrophic-forgetting-in-federated-class-increm"
+      ]
+     }
+    ],
+    "papers": [
+     "cvpr2026-onboarding-without-forgetting-hypernetwork-personalization-w",
+     "iclr2025-overcoming-catastrophic-forgetting-in-federated-class-increm",
+     "iclr2025-forget-but-recall-incremental-latent-rectification-in-contin"
+    ],
+    "score": 0.53,
+    "color": "tc4",
+    "words": [
+     {
+      "word": "clients",
+      "share": 100
+     },
+     {
+      "word": "federated",
+      "share": 50
+     },
+     {
+      "word": "global",
+      "share": 40
+     },
+     {
+      "word": "generator",
+      "share": 40
+     },
+     {
+      "word": "data-free replay",
+      "share": 32
+     },
+     {
+      "word": "fcil",
+      "share": 30
      }
     ]
    },
@@ -3565,186 +3565,186 @@
     {
      "y": 57.0,
      "color": "tc0",
-     "title": "Missing modalities and distribution shift",
-     "title_vi": "Thiếu phương thức và dịch chuyển phân phối",
-     "dots": [
-      {
-       "id": "icml2026-cross-modal-knowledge-distillation-without-paired-data-theor",
-       "x": 635.0,
-       "y": 57.0,
-       "title": "Cross-Modal Knowledge Distillation without Paired Data: Theoretical Foundation and Algorithm",
-       "label": "ICML 2026"
-      },
-      {
-       "id": "cvpr2026-dual-strategies-for-test-time-adaptation",
-       "x": 648.0,
-       "y": 57.0,
-       "title": "Dual Strategies for Test-Time Adaptation",
-       "label": "CVPR 2026"
-      },
-      {
-       "id": "iclr2026-diffusion-inspired-reconfiguration-of-transformers-for-uncer",
-       "x": 661.0,
-       "y": 57.0,
-       "title": "Diffusion-Inspired Reconfiguration of Transformers for Uncertainty Quantification",
-       "label": "ICLR 2026"
-      },
-      {
-       "id": "neurips2025-learning-reconfigurable-representations-for-multimodal-feder",
-       "x": 515.0,
-       "y": 57.0,
-       "title": "Learning Reconfigurable Representations for Multimodal Federated Learning with Missing Data",
-       "label": "NeurIPS 2025"
-      },
-      {
-       "id": "iccv2025-conststyle-robust-domain-generalization-with-unified-style-t",
-       "x": 528.0,
-       "y": 57.0,
-       "title": "ConstStyle:  Robust Domain Generalization with Unified Style Transformation",
-       "label": "ICCV 2025"
-      },
-      {
-       "id": "iccv2025-federated-prompt-tuning-with-heterogeneous-and-incomplete-mu",
-       "x": 541.0,
-       "y": 57.0,
-       "title": "Federated Prompt-Tuning with Heterogeneous and Incomplete Multimodal Client Data",
-       "label": "ICCV 2025"
-      }
-     ]
-    },
-    {
-     "y": 103.0,
-     "color": "tc1",
-     "title": "Medical imaging and clinical AI",
-     "title_vi": "AI cho ảnh y tế và lâm sàng",
-     "dots": [
-      {
-       "id": "iclr2027-vimed-struct-structured-emr-generation-from-vietnamese-clini",
-       "x": 768.0,
-       "y": 103.0,
-       "title": "ViMed-Struct: Structured EMR Generation from Vietnamese Clinical Speech",
-       "label": "ICLR 2027"
-      },
-      {
-       "id": "neurips2026-nonparametric-distribution-matching-for-self-supervised-whol",
-       "x": 635.0,
-       "y": 103.0,
-       "title": "Nonparametric Distribution Matching for Self-Supervised Whole-Slide Image Condensation",
-       "label": "NeurIPS 2026"
-      },
-      {
-       "id": "acl2026-region-grounded-report-generation-for-3d-medical-imaging-a-f",
-       "x": 648.0,
-       "y": 103.0,
-       "title": "Region-Grounded Report Generation for 3D Medical Imaging: A Fine-Grained Dataset and Graph-Enhanced Framework",
-       "label": "ACL 2026"
-      },
-      {
-       "id": "iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h",
-       "x": 661.0,
-       "y": 103.0,
-       "title": "Nonparametric Unsupervised Data Condensation for Gigapixel Histological Images",
-       "label": "ICLR 2026"
-      },
-      {
-       "id": "iccv2025-seeing-the-trees-for-the-forest-rethinking-weakly-supervised",
-       "x": 521.5,
-       "y": 103.0,
-       "title": "Seeing the Trees for the Forest: Rethinking Weakly-Supervised Medical Visual Grounding",
-       "label": "ICCV 2025"
-      },
-      {
-       "id": "ijcai2025-localizing-before-answering-a-benchmark-for-grounded-medical",
-       "x": 534.5,
-       "y": 103.0,
-       "title": "Localizing Before Answering: A Benchmark for Grounded Medical Visual Question Answering",
-       "label": "IJCAI 2025"
-      },
-      {
-       "id": "emnlp2024-carer-clinical-reasoning-enhanced-representation-for-tempora",
-       "x": 408.0,
-       "y": 103.0,
-       "title": "CARER - ClinicAl Reasoning-Enhanced Representation for Temporal Health Risk Prediction",
-       "label": "EMNLP 2024"
-      }
-     ]
-    },
-    {
-     "y": 149.0,
-     "color": "tc2",
-     "title": "Hallucination, backdoors and interpretability",
-     "title_vi": "Ảo giác, backdoor và diễn giải mô hình",
-     "dots": [
-      {
-       "id": "cvpr2026-beyond-the-global-scores-fine-grained-token-grounding-as-a-r",
-       "x": 635.0,
-       "y": 149.0,
-       "title": "Beyond the Global Scores: Fine-Grained Token Grounding as a Robust Detector of LVLM Hallucinations",
-       "label": "CVPR 2026"
-      },
-      {
-       "id": "cvpr2026-overthinking-causes-hallucination-tracing-confounder-propaga",
-       "x": 648.0,
-       "y": 149.0,
-       "title": "Overthinking Causes Hallucination: Tracing Confounder Propagation in Vision Language Models",
-       "label": "CVPR 2026"
-      },
-      {
-       "id": "cvpr2026-phantasia-context-adaptive-backdoors-in-vision-language-mode",
-       "x": 661.0,
-       "y": 149.0,
-       "title": "Phantasia: Context-Adaptive Backdoors in Vision Language Models",
-       "label": "CVPR 2026"
-      },
-      {
-       "id": "iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-",
-       "x": 528.0,
-       "y": 149.0,
-       "title": "NeurFlow: Interpreting Neural Networks through Neuron Groups and Functional Interactions",
-       "label": "ICLR 2025"
-      }
-     ]
-    },
-    {
-     "y": 195.0,
-     "color": "tc3",
      "title": "Offline black-box optimization",
      "title_vi": "Tối ưu hộp đen ngoại tuyến",
      "dots": [
       {
        "id": "neurips2025-root-rethinking-offline-optimization-as-distributional-trans",
        "x": 521.5,
-       "y": 195.0,
+       "y": 57.0,
        "title": "ROOT: Rethinking Offline Optimization as Distributional Translation via Probabilistic Bridge",
        "label": "NeurIPS 2025"
       },
       {
        "id": "iclr2025-from-low-to-high-value-designs-offline-optimization-via-gene",
        "x": 534.5,
-       "y": 195.0,
+       "y": 57.0,
        "title": "From Low to High-Value Designs: Offline Optimization via Generalized Diffusion",
        "label": "ICLR 2025"
       },
       {
        "id": "neurips2024-incorporating-surrogate-gradient-norm-to-improve-offline-opt",
        "x": 395.0,
-       "y": 195.0,
+       "y": 57.0,
        "title": "Incorporating Surrogate Gradient Norm to Improve Offline Optimization Techniques",
        "label": "NeurIPS 2024"
       },
       {
        "id": "icml2024-boosting-offline-optimizers-with-surrogate-sensitivity",
        "x": 408.0,
-       "y": 195.0,
+       "y": 57.0,
        "title": "Boosting Offline Optimizers with Surrogate Sensitivity",
        "label": "ICML 2024"
       },
       {
        "id": "iclr2024-sensitivity-informed-regularization-for-offline-black-box-op",
        "x": 421.0,
-       "y": 195.0,
+       "y": 57.0,
        "title": "Sensitivity-Informed Regularization for Offline Black-Box Optimization",
        "label": "ICLR 2024"
+      }
+     ]
+    },
+    {
+     "y": 103.0,
+     "color": "tc1",
+     "title": "Missing modalities and distribution shift",
+     "title_vi": "Thiếu phương thức và dịch chuyển phân phối",
+     "dots": [
+      {
+       "id": "icml2026-cross-modal-knowledge-distillation-without-paired-data-theor",
+       "x": 635.0,
+       "y": 103.0,
+       "title": "Cross-Modal Knowledge Distillation without Paired Data: Theoretical Foundation and Algorithm",
+       "label": "ICML 2026"
+      },
+      {
+       "id": "cvpr2026-dual-strategies-for-test-time-adaptation",
+       "x": 648.0,
+       "y": 103.0,
+       "title": "Dual Strategies for Test-Time Adaptation",
+       "label": "CVPR 2026"
+      },
+      {
+       "id": "iclr2026-diffusion-inspired-reconfiguration-of-transformers-for-uncer",
+       "x": 661.0,
+       "y": 103.0,
+       "title": "Diffusion-Inspired Reconfiguration of Transformers for Uncertainty Quantification",
+       "label": "ICLR 2026"
+      },
+      {
+       "id": "neurips2025-learning-reconfigurable-representations-for-multimodal-feder",
+       "x": 515.0,
+       "y": 103.0,
+       "title": "Learning Reconfigurable Representations for Multimodal Federated Learning with Missing Data",
+       "label": "NeurIPS 2025"
+      },
+      {
+       "id": "iccv2025-conststyle-robust-domain-generalization-with-unified-style-t",
+       "x": 528.0,
+       "y": 103.0,
+       "title": "ConstStyle:  Robust Domain Generalization with Unified Style Transformation",
+       "label": "ICCV 2025"
+      },
+      {
+       "id": "iccv2025-federated-prompt-tuning-with-heterogeneous-and-incomplete-mu",
+       "x": 541.0,
+       "y": 103.0,
+       "title": "Federated Prompt-Tuning with Heterogeneous and Incomplete Multimodal Client Data",
+       "label": "ICCV 2025"
+      }
+     ]
+    },
+    {
+     "y": 149.0,
+     "color": "tc2",
+     "title": "Medical imaging and clinical AI",
+     "title_vi": "AI cho ảnh y tế và lâm sàng",
+     "dots": [
+      {
+       "id": "iclr2027-vimed-struct-structured-emr-generation-from-vietnamese-clini",
+       "x": 768.0,
+       "y": 149.0,
+       "title": "ViMed-Struct: Structured EMR Generation from Vietnamese Clinical Speech",
+       "label": "ICLR 2027"
+      },
+      {
+       "id": "neurips2026-nonparametric-distribution-matching-for-self-supervised-whol",
+       "x": 635.0,
+       "y": 149.0,
+       "title": "Nonparametric Distribution Matching for Self-Supervised Whole-Slide Image Condensation",
+       "label": "NeurIPS 2026"
+      },
+      {
+       "id": "acl2026-region-grounded-report-generation-for-3d-medical-imaging-a-f",
+       "x": 648.0,
+       "y": 149.0,
+       "title": "Region-Grounded Report Generation for 3D Medical Imaging: A Fine-Grained Dataset and Graph-Enhanced Framework",
+       "label": "ACL 2026"
+      },
+      {
+       "id": "iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h",
+       "x": 661.0,
+       "y": 149.0,
+       "title": "Nonparametric Unsupervised Data Condensation for Gigapixel Histological Images",
+       "label": "ICLR 2026"
+      },
+      {
+       "id": "iccv2025-seeing-the-trees-for-the-forest-rethinking-weakly-supervised",
+       "x": 521.5,
+       "y": 149.0,
+       "title": "Seeing the Trees for the Forest: Rethinking Weakly-Supervised Medical Visual Grounding",
+       "label": "ICCV 2025"
+      },
+      {
+       "id": "ijcai2025-localizing-before-answering-a-benchmark-for-grounded-medical",
+       "x": 534.5,
+       "y": 149.0,
+       "title": "Localizing Before Answering: A Benchmark for Grounded Medical Visual Question Answering",
+       "label": "IJCAI 2025"
+      },
+      {
+       "id": "emnlp2024-carer-clinical-reasoning-enhanced-representation-for-tempora",
+       "x": 408.0,
+       "y": 149.0,
+       "title": "CARER - ClinicAl Reasoning-Enhanced Representation for Temporal Health Risk Prediction",
+       "label": "EMNLP 2024"
+      }
+     ]
+    },
+    {
+     "y": 195.0,
+     "color": "tc3",
+     "title": "Hallucination, backdoors and interpretability",
+     "title_vi": "Ảo giác, backdoor và diễn giải mô hình",
+     "dots": [
+      {
+       "id": "cvpr2026-beyond-the-global-scores-fine-grained-token-grounding-as-a-r",
+       "x": 635.0,
+       "y": 195.0,
+       "title": "Beyond the Global Scores: Fine-Grained Token Grounding as a Robust Detector of LVLM Hallucinations",
+       "label": "CVPR 2026"
+      },
+      {
+       "id": "cvpr2026-overthinking-causes-hallucination-tracing-confounder-propaga",
+       "x": 648.0,
+       "y": 195.0,
+       "title": "Overthinking Causes Hallucination: Tracing Confounder Propagation in Vision Language Models",
+       "label": "CVPR 2026"
+      },
+      {
+       "id": "cvpr2026-phantasia-context-adaptive-backdoors-in-vision-language-mode",
+       "x": 661.0,
+       "y": 195.0,
+       "title": "Phantasia: Context-Adaptive Backdoors in Vision Language Models",
+       "label": "CVPR 2026"
+      },
+      {
+       "id": "iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-",
+       "x": 528.0,
+       "y": 195.0,
+       "title": "NeurFlow: Interpreting Neural Networks through Neuron Groups and Functional Interactions",
+       "label": "ICLR 2025"
       }
      ]
     },
@@ -3830,30 +3830,113 @@
    ],
    "edges": [
     {
-     "d": "M648.0,57.0 Q588.0,24.6 528.0,57.0"
+     "d": "M648.0,103.0 Q588.0,70.6 528.0,103.0"
     },
     {
-     "d": "M521.5,195.0 Q458.25,161.82 395.0,195.0"
+     "d": "M521.5,57.0 Q458.25,23.82 395.0,57.0"
     },
     {
-     "d": "M521.5,195.0 Q464.75,163.38 408.0,195.0"
+     "d": "M521.5,57.0 Q464.75,25.380000000000003 408.0,57.0"
     },
     {
-     "d": "M515.0,57.0 Q528.0,35.88 541.0,57.0"
+     "d": "M515.0,103.0 Q528.0,81.88 541.0,103.0"
     },
     {
-     "d": "M534.5,103.0 Q528.0,83.44 521.5,103.0"
+     "d": "M534.5,149.0 Q528.0,129.44 521.5,149.0"
     },
     {
-     "d": "M395.0,195.0 Q401.5,175.44 408.0,195.0"
+     "d": "M395.0,57.0 Q401.5,37.44 408.0,57.0"
     }
    ]
   },
-  "open_summary": "For incomplete and shifted data, the UCMKD authors name large-scale multimodal transfer as an open direction, while reviewers noted that the unpaired and missing-data settings were simulated from complete datasets and that the uncertainty method was tested only on small, shallow transformers. For the medical work, the CARER authors note that proprietary or large LLMs may be impractical in clinics, and reviewers questioned the use of scripted rather than natural clinical speech, whether slide-condensation gains come from larger prototype budgets, and evaluation limited to public TCGA and PANDA slides. For interpretability, the NeurFlow authors leave activation patterns beyond the top-k for future work, and reviewers noted that the method was evaluated only on CNNs and that its claims go beyond the evidence shown. For offline optimization, the authors note that the effect of the bridge design is still an open question and that the sensitivity regularizer depends on the optimizer it is attached to, while reviewers asked whether synthetic Gaussian-process functions reflect real tasks and noted smaller gains at the median and 75th percentiles. In EEG modelling, the MAGE authors note that the model still depends on a hand-tuned list of patch sizes, and reviewers pointed to a large pretraining-data gap with the baselines, evaluation by linear probing only, and comparisons against just two existing foundation models. Among the other papers, the authors name multimodal inputs for code-writing LLM agents and more signers and recording environments for sign language data as next steps, while reviewers noted that CoupledFlow is judged mainly by prediction error and that the causal method's downsampling has no theoretical guarantee.",
-  "open_summary_vi": "Với dữ liệu không đầy đủ và bị dịch chuyển, nhóm tác giả UCMKD nêu chuyển giao đa phương thức quy mô lớn là hướng còn mở, còn phản biện lưu ý rằng các thiết lập không ghép cặp và thiếu dữ liệu được mô phỏng từ bộ dữ liệu đầy đủ, và phương pháp định lượng bất định mới chỉ được thử trên transformer nhỏ và nông. Với các công trình y tế, nhóm tác giả CARER lưu ý rằng LLM độc quyền hoặc cỡ lớn có thể khó dùng trong bệnh viện, còn phản biện đặt câu hỏi về việc dùng lời nói đọc theo kịch bản thay vì lời nói lâm sàng tự nhiên, về việc mức tăng của cô đọng tiêu bản có đến từ ngân sách nguyên mẫu lớn hơn hay không, và về việc chỉ đánh giá trên các tiêu bản công khai TCGA và PANDA. Về khả năng diễn giải, nhóm tác giả NeurFlow để lại các mẫu kích hoạt ngoài top-k cho nghiên cứu sau, còn phản biện lưu ý phương pháp mới chỉ được đánh giá trên CNN và các tuyên bố vượt quá bằng chứng đưa ra. Với tối ưu ngoại tuyến, tác giả lưu ý ảnh hưởng của thiết kế cầu vẫn là câu hỏi mở và bộ chính quy hóa theo độ nhạy phụ thuộc vào bộ tối ưu đi kèm, còn phản biện đặt câu hỏi liệu các hàm tổng hợp từ Gaussian process có phản ánh tác vụ thực tế, và lưu ý mức cải thiện nhỏ hơn ở phân vị 50 và 75. Trong mô hình hóa EEG, nhóm tác giả MAGE lưu ý mô hình vẫn phụ thuộc vào danh sách kích thước patch tinh chỉnh thủ công, còn phản biện chỉ ra chênh lệch lớn về dữ liệu tiền huấn luyện so với các mô hình đối chứng, việc chỉ đánh giá bằng linear probing, và việc chỉ so sánh với hai mô hình nền tảng hiện có. Ở các bài báo khác, tác giả nêu đầu vào đa phương thức cho các tác tử LLM viết mã và thêm người ký hiệu cùng môi trường ghi hình cho dữ liệu ngôn ngữ ký hiệu là các bước tiếp theo, còn phản biện lưu ý CoupledFlow chủ yếu được đánh giá qua sai số dự đoán và bước lấy mẫu giảm của phương pháp nhân quả không có bảo đảm lý thuyết.",
-  "overview": "Phi Le Nguyen's research has a common thread: machine learning when data are limited, incomplete or shifted, often together with new datasets for low-resource settings such as Vietnamese. When data are incomplete or shift between training and testing, the papers handle missing modalities in federated learning, distill knowledge across modalities without paired samples, adapt models at test time or to unseen domains, and estimate uncertainty in transformers. In medicine, the papers condense gigapixel pathology slides, steer vision-language models toward disease regions, generate region-grounded PET/CT reports, add LLM reasoning to risk prediction from health records, and build Vietnamese clinical datasets. To understand and stress-test vision models, the papers detect object hallucination from patch-level and layer-wise internal signals, design context-adaptive backdoor attacks on vision-language models, and interpret CNNs through circuits of neuron groups. In offline black-box optimization, the papers regularize surrogate models by their sensitivity or sharpness and recast the search as translating low-value designs into high-value ones with a probabilistic bridge trained on Gaussian-process data. For EEG and other time series, the papers build foundation models and representations that combine several timescales, use fewer parameters or resist noise, and add a multi-institutional clinical EEG dataset collected outside the US. Other papers introduce a multi-view Vietnamese sign language dataset, self-supervised detection of distant scene text, a benchmark of LLM-written machine learning code, a one-step neural operator for coupled multi-physics PDEs, and a scalable causal discovery method.",
-  "overview_vi": "Các nghiên cứu của Nguyễn Phi Lê có một điểm chung: học máy khi dữ liệu khan hiếm, không đầy đủ hoặc bị dịch chuyển, thường đi kèm các bộ dữ liệu mới cho bối cảnh ít tài nguyên như tiếng Việt. Khi dữ liệu không đầy đủ hoặc thay đổi giữa lúc huấn luyện và kiểm thử, các bài báo xử lý việc thiếu phương thức trong học liên kết, chưng cất tri thức xuyên phương thức không cần mẫu ghép cặp, thích ứng mô hình lúc kiểm thử hoặc với miền chưa thấy, và ước lượng độ bất định cho transformer. Trong y tế, các bài báo cô đọng ảnh tiêu bản giải phẫu bệnh kích thước gigapixel, hướng mô hình thị giác-ngôn ngữ vào vùng bệnh, sinh báo cáo PET/CT gắn với từng vùng tổn thương, bổ sung lập luận của LLM vào dự đoán nguy cơ từ hồ sơ sức khỏe, và xây dựng các bộ dữ liệu lâm sàng tiếng Việt. Để hiểu và kiểm tra sức chịu đựng của mô hình thị giác, các bài báo phát hiện ảo giác đối tượng từ tín hiệu bên trong ở mức patch và theo từng tầng, thiết kế tấn công backdoor thích ứng ngữ cảnh trên mô hình thị giác-ngôn ngữ, và diễn giải CNN qua các mạch gồm những nhóm nơ-ron. Trong tối ưu hộp đen ngoại tuyến, các bài báo chính quy hóa mô hình thay thế theo độ nhạy hoặc độ sắc, và phát biểu lại việc tìm kiếm thành phép dịch các thiết kế giá trị thấp sang giá trị cao bằng một cầu xác suất huấn luyện trên dữ liệu sinh từ Gaussian process. Với EEG và các chuỗi thời gian khác, các bài báo xây dựng mô hình nền tảng và biểu diễn kết hợp nhiều thang thời gian, dùng ít tham số hơn hoặc chống chịu nhiễu, và bổ sung một bộ dữ liệu EEG lâm sàng đa cơ sở thu thập ngoài nước Mỹ. Các bài báo khác giới thiệu một bộ dữ liệu ngôn ngữ ký hiệu tiếng Việt đa góc quay, phương pháp tự giám sát phát hiện chữ trong cảnh ở xa, một bộ đánh giá mã học máy do LLM viết, một neural operator một bước cho PDE đa vật lý ghép cặp, và một phương pháp khám phá nhân quả mở rộng được cho dữ liệu lớn.",
+  "open_summary": "For offline optimization, the authors note that the effect of the bridge design is still an open question and that the sensitivity regularizer depends on the optimizer it is attached to, while reviewers asked whether synthetic Gaussian-process functions reflect real tasks and noted smaller gains at the median and 75th percentiles. For incomplete and shifted data, the UCMKD authors name large-scale multimodal transfer as an open direction, while reviewers noted that the unpaired and missing-data settings were simulated from complete datasets and that the uncertainty method was tested only on small, shallow transformers. For the medical work, the CARER authors note that proprietary or large LLMs may be impractical in clinics, and reviewers questioned the use of scripted rather than natural clinical speech, whether slide-condensation gains come from larger prototype budgets, and evaluation limited to public TCGA and PANDA slides.",
+  "open_summary_vi": "Với tối ưu ngoại tuyến, tác giả lưu ý ảnh hưởng của thiết kế cầu vẫn là câu hỏi mở và bộ chính quy hóa theo độ nhạy phụ thuộc vào bộ tối ưu đi kèm, còn phản biện đặt câu hỏi liệu các hàm tổng hợp từ Gaussian process có phản ánh tác vụ thực tế, và lưu ý mức cải thiện nhỏ hơn ở phân vị 50 và 75. Với dữ liệu không đầy đủ và bị dịch chuyển, nhóm tác giả UCMKD nêu chuyển giao đa phương thức quy mô lớn là hướng còn mở, còn phản biện lưu ý rằng các thiết lập không ghép cặp và thiếu dữ liệu được mô phỏng từ bộ dữ liệu đầy đủ, và phương pháp định lượng bất định mới chỉ được thử trên transformer nhỏ và nông. Với các công trình y tế, nhóm tác giả CARER lưu ý rằng LLM độc quyền hoặc cỡ lớn có thể khó dùng trong bệnh viện, còn phản biện đặt câu hỏi về việc dùng lời nói đọc theo kịch bản thay vì lời nói lâm sàng tự nhiên, về việc mức tăng của cô đọng tiêu bản có đến từ ngân sách nguyên mẫu lớn hơn hay không, và về việc chỉ đánh giá trên các tiêu bản công khai TCGA và PANDA.",
+  "overview": "Phi Le Nguyen's research has a common thread: machine learning when data are limited, incomplete or shifted, often together with new datasets for low-resource settings such as Vietnamese. In offline black-box optimization, the papers regularize surrogate models by their sensitivity or sharpness and recast the search as translating low-value designs into high-value ones with a probabilistic bridge trained on Gaussian-process data. When data are incomplete or shift between training and testing, the papers handle missing modalities in federated learning, distill knowledge across modalities without paired samples, adapt models at test time or to unseen domains, and estimate uncertainty in transformers. In medicine, the papers condense gigapixel pathology slides, steer vision-language models toward disease regions, generate region-grounded PET/CT reports, add LLM reasoning to risk prediction from health records, and build Vietnamese clinical datasets.",
+  "overview_vi": "Các nghiên cứu của Nguyễn Phi Lê có một điểm chung: học máy khi dữ liệu khan hiếm, không đầy đủ hoặc bị dịch chuyển, thường đi kèm các bộ dữ liệu mới cho bối cảnh ít tài nguyên như tiếng Việt. Trong tối ưu hộp đen ngoại tuyến, các bài báo chính quy hóa mô hình thay thế theo độ nhạy hoặc độ sắc, và phát biểu lại việc tìm kiếm thành phép dịch các thiết kế giá trị thấp sang giá trị cao bằng một cầu xác suất huấn luyện trên dữ liệu sinh từ Gaussian process. Khi dữ liệu không đầy đủ hoặc thay đổi giữa lúc huấn luyện và kiểm thử, các bài báo xử lý việc thiếu phương thức trong học liên kết, chưng cất tri thức xuyên phương thức không cần mẫu ghép cặp, thích ứng mô hình lúc kiểm thử hoặc với miền chưa thấy, và ước lượng độ bất định cho transformer. Trong y tế, các bài báo cô đọng ảnh tiêu bản giải phẫu bệnh kích thước gigapixel, hướng mô hình thị giác-ngôn ngữ vào vùng bệnh, sinh báo cáo PET/CT gắn với từng vùng tổn thương, bổ sung lập luận của LLM vào dự đoán nguy cơ từ hồ sơ sức khỏe, và xây dựng các bộ dữ liệu lâm sàng tiếng Việt.",
   "topics": [
+   {
+    "title": "Offline black-box optimization",
+    "title_vi": "Tối ưu hộp đen ngoại tuyến",
+    "gist": "In offline black-box optimization, the papers regularize surrogate models by their sensitivity or sharpness and recast the search as translating low-value designs into high-value ones with a probabilistic bridge trained on Gaussian-process data.",
+    "gist_vi": "Trong tối ưu hộp đen ngoại tuyến, các bài báo chính quy hóa mô hình thay thế theo độ nhạy hoặc độ sắc, và phát biểu lại việc tìm kiếm thành phép dịch các thiết kế giá trị thấp sang giá trị cao bằng một cầu xác suất huấn luyện trên dữ liệu sinh từ Gaussian process.",
+    "summary": "Offline black-box optimization searches for designs, such as materials, molecules or robot morphologies, that maximize an unknown function using only a fixed dataset of past evaluations. One line of papers regularizes the learned surrogate model as an add-on to existing optimizers, penalizing its sensitivity to parameter perturbations (ICLR 2024 submission, ICML 2024) or its sharpness via the gradient norm (IGNITE, NeurIPS 2024); another recasts the task as translating low-value designs into high-value ones with a diffusion-style bridge trained on synthetic data from Gaussian processes (ICLR 2025 submission, ROOT at NeurIPS 2025). The papers report gains on Design-Bench tasks, up to 9.6% for IGNITE, and new best results for ROOT.",
+    "summary_vi": "Tối ưu hộp đen ngoại tuyến tìm các thiết kế, như vật liệu, phân tử hay hình thái robot, làm cực đại một hàm chưa biết chỉ dựa trên tập dữ liệu cố định gồm các lần đánh giá trước đó. Một hướng chính quy hóa mô hình thay thế như phần bổ sung cho các bộ tối ưu có sẵn, phạt độ nhạy với nhiễu tham số (nộp ICLR 2024, ICML 2024) hoặc độ sắc qua chuẩn gradient (IGNITE, NeurIPS 2024); hướng còn lại xem bài toán là dịch thiết kế giá trị thấp thành giá trị cao bằng một cầu kiểu khuếch tán huấn luyện trên dữ liệu tổng hợp từ Gaussian process (nộp ICLR 2025, ROOT tại NeurIPS 2025). Các bài báo báo cáo cải thiện trên các tác vụ Design-Bench, tới 9,6% với IGNITE, và kết quả tốt nhất mới với ROOT.",
+    "open_gist": "For offline optimization, the authors note that the effect of the bridge design is still an open question and that the sensitivity regularizer depends on the optimizer it is attached to, while reviewers asked whether synthetic Gaussian-process functions reflect real tasks and noted smaller gains at the median and 75th percentiles.",
+    "open_gist_vi": "Với tối ưu ngoại tuyến, tác giả lưu ý ảnh hưởng của thiết kế cầu vẫn là câu hỏi mở và bộ chính quy hóa theo độ nhạy phụ thuộc vào bộ tối ưu đi kèm, còn phản biện đặt câu hỏi liệu các hàm tổng hợp từ Gaussian process có phản ánh tác vụ thực tế, và lưu ý mức cải thiện nhỏ hơn ở phân vị 50 và 75.",
+    "open": [
+     {
+      "text": "How the choice of bridge design affects learning performance is stated as an open question; alternative bridge parameterizations and more complex optimization settings are named as future directions.",
+      "text_vi": "Việc lựa chọn thiết kế cầu ảnh hưởng thế nào đến hiệu quả học được nêu là câu hỏi mở; các cách tham số hóa cầu khác và các bài toán tối ưu phức tạp hơn được nêu là hướng tương lai.",
+      "source": "authors",
+      "quote": false,
+      "papers": [
+       "neurips2025-root-rethinking-offline-optimization-as-distributional-trans"
+      ]
+     },
+     {
+      "text": "The sensitivity-informed regularizer is not a standalone method: its effectiveness depends on the base performance of the optimizer it is coupled with.",
+      "text_vi": "Bộ chính quy hóa dựa trên độ nhạy không phải phương pháp độc lập: hiệu quả của nó phụ thuộc vào hiệu năng gốc của bộ tối ưu được ghép cùng.",
+      "source": "authors",
+      "quote": false,
+      "papers": [
+       "icml2024-boosting-offline-optimizers-with-surrogate-sensitivity"
+      ]
+     },
+     {
+      "text": "One potential concern is that the synthetic functions may not closely reflect real-world tasks, such as biological sequence design.",
+      "text_vi": "Một lo ngại tiềm ẩn là các hàm tổng hợp có thể không phản ánh sát các tác vụ thực tế, chẳng hạn thiết kế chuỗi sinh học.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "neurips2025-root-rethinking-offline-optimization-as-distributional-trans"
+      ]
+     },
+     {
+      "text": "The method seems to improve the best-case performance of an algorithm, but performance at the 50th and 75th percentiles is a lot less impressive.",
+      "text_vi": "Phương pháp có vẻ cải thiện hiệu năng trong trường hợp tốt nhất của thuật toán, nhưng hiệu năng ở phân vị 50 và 75 kém ấn tượng hơn nhiều.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "iclr2024-sensitivity-informed-regularization-for-offline-black-box-op"
+      ]
+     }
+    ],
+    "papers": [
+     "neurips2025-root-rethinking-offline-optimization-as-distributional-trans",
+     "iclr2025-from-low-to-high-value-designs-offline-optimization-via-gene",
+     "neurips2024-incorporating-surrogate-gradient-norm-to-improve-offline-opt",
+     "icml2024-boosting-offline-optimizers-with-surrogate-sensitivity",
+     "iclr2024-sensitivity-informed-regularization-for-offline-black-box-op"
+    ],
+    "score": 1.15,
+    "color": "tc0",
+    "words": [
+     {
+      "word": "offline",
+      "share": 100
+     },
+     {
+      "word": "surrogate",
+      "share": 81
+     },
+     {
+      "word": "optimization",
+      "share": 52
+     },
+     {
+      "word": "sharpness",
+      "share": 33
+     },
+     {
+      "word": "function",
+      "share": 24
+     },
+     {
+      "word": "probabilistic bridge",
+      "share": 23
+     }
+    ]
+   },
    {
     "title": "Missing modalities and distribution shift",
     "title_vi": "Thiếu phương thức và dịch chuyển phân phối",
@@ -3910,7 +3993,7 @@
      "iccv2025-federated-prompt-tuning-with-heterogeneous-and-incomplete-mu"
     ],
     "score": 1.13,
-    "color": "tc0",
+    "color": "tc1",
     "words": [
      {
       "word": "domain",
@@ -3995,7 +4078,7 @@
      "emnlp2024-carer-clinical-reasoning-enhanced-representation-for-tempora"
     ],
     "score": 1.06,
-    "color": "tc1",
+    "color": "tc2",
     "words": [
      {
       "word": "clinical",
@@ -4068,7 +4151,7 @@
      "iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-"
     ],
     "score": 0.9,
-    "color": "tc2",
+    "color": "tc3",
     "words": [
      {
       "word": "hallucination detection",
@@ -4093,89 +4176,6 @@
      {
       "word": "backdoor attacks",
       "share": 60
-     }
-    ]
-   },
-   {
-    "title": "Offline black-box optimization",
-    "title_vi": "Tối ưu hộp đen ngoại tuyến",
-    "gist": "In offline black-box optimization, the papers regularize surrogate models by their sensitivity or sharpness and recast the search as translating low-value designs into high-value ones with a probabilistic bridge trained on Gaussian-process data.",
-    "gist_vi": "Trong tối ưu hộp đen ngoại tuyến, các bài báo chính quy hóa mô hình thay thế theo độ nhạy hoặc độ sắc, và phát biểu lại việc tìm kiếm thành phép dịch các thiết kế giá trị thấp sang giá trị cao bằng một cầu xác suất huấn luyện trên dữ liệu sinh từ Gaussian process.",
-    "summary": "Offline black-box optimization searches for designs, such as materials, molecules or robot morphologies, that maximize an unknown function using only a fixed dataset of past evaluations. One line of papers regularizes the learned surrogate model as an add-on to existing optimizers, penalizing its sensitivity to parameter perturbations (ICLR 2024 submission, ICML 2024) or its sharpness via the gradient norm (IGNITE, NeurIPS 2024); another recasts the task as translating low-value designs into high-value ones with a diffusion-style bridge trained on synthetic data from Gaussian processes (ICLR 2025 submission, ROOT at NeurIPS 2025). The papers report gains on Design-Bench tasks, up to 9.6% for IGNITE, and new best results for ROOT.",
-    "summary_vi": "Tối ưu hộp đen ngoại tuyến tìm các thiết kế, như vật liệu, phân tử hay hình thái robot, làm cực đại một hàm chưa biết chỉ dựa trên tập dữ liệu cố định gồm các lần đánh giá trước đó. Một hướng chính quy hóa mô hình thay thế như phần bổ sung cho các bộ tối ưu có sẵn, phạt độ nhạy với nhiễu tham số (nộp ICLR 2024, ICML 2024) hoặc độ sắc qua chuẩn gradient (IGNITE, NeurIPS 2024); hướng còn lại xem bài toán là dịch thiết kế giá trị thấp thành giá trị cao bằng một cầu kiểu khuếch tán huấn luyện trên dữ liệu tổng hợp từ Gaussian process (nộp ICLR 2025, ROOT tại NeurIPS 2025). Các bài báo báo cáo cải thiện trên các tác vụ Design-Bench, tới 9,6% với IGNITE, và kết quả tốt nhất mới với ROOT.",
-    "open_gist": "For offline optimization, the authors note that the effect of the bridge design is still an open question and that the sensitivity regularizer depends on the optimizer it is attached to, while reviewers asked whether synthetic Gaussian-process functions reflect real tasks and noted smaller gains at the median and 75th percentiles.",
-    "open_gist_vi": "Với tối ưu ngoại tuyến, tác giả lưu ý ảnh hưởng của thiết kế cầu vẫn là câu hỏi mở và bộ chính quy hóa theo độ nhạy phụ thuộc vào bộ tối ưu đi kèm, còn phản biện đặt câu hỏi liệu các hàm tổng hợp từ Gaussian process có phản ánh tác vụ thực tế, và lưu ý mức cải thiện nhỏ hơn ở phân vị 50 và 75.",
-    "open": [
-     {
-      "text": "How the choice of bridge design affects learning performance is stated as an open question; alternative bridge parameterizations and more complex optimization settings are named as future directions.",
-      "text_vi": "Việc lựa chọn thiết kế cầu ảnh hưởng thế nào đến hiệu quả học được nêu là câu hỏi mở; các cách tham số hóa cầu khác và các bài toán tối ưu phức tạp hơn được nêu là hướng tương lai.",
-      "source": "authors",
-      "quote": false,
-      "papers": [
-       "neurips2025-root-rethinking-offline-optimization-as-distributional-trans"
-      ]
-     },
-     {
-      "text": "The sensitivity-informed regularizer is not a standalone method: its effectiveness depends on the base performance of the optimizer it is coupled with.",
-      "text_vi": "Bộ chính quy hóa dựa trên độ nhạy không phải phương pháp độc lập: hiệu quả của nó phụ thuộc vào hiệu năng gốc của bộ tối ưu được ghép cùng.",
-      "source": "authors",
-      "quote": false,
-      "papers": [
-       "icml2024-boosting-offline-optimizers-with-surrogate-sensitivity"
-      ]
-     },
-     {
-      "text": "One potential concern is that the synthetic functions may not closely reflect real-world tasks, such as biological sequence design.",
-      "text_vi": "Một lo ngại tiềm ẩn là các hàm tổng hợp có thể không phản ánh sát các tác vụ thực tế, chẳng hạn thiết kế chuỗi sinh học.",
-      "source": "reviewers",
-      "quote": true,
-      "papers": [
-       "neurips2025-root-rethinking-offline-optimization-as-distributional-trans"
-      ]
-     },
-     {
-      "text": "The method seems to improve the best-case performance of an algorithm, but performance at the 50th and 75th percentiles is a lot less impressive.",
-      "text_vi": "Phương pháp có vẻ cải thiện hiệu năng trong trường hợp tốt nhất của thuật toán, nhưng hiệu năng ở phân vị 50 và 75 kém ấn tượng hơn nhiều.",
-      "source": "reviewers",
-      "quote": true,
-      "papers": [
-       "iclr2024-sensitivity-informed-regularization-for-offline-black-box-op"
-      ]
-     }
-    ],
-    "papers": [
-     "neurips2025-root-rethinking-offline-optimization-as-distributional-trans",
-     "iclr2025-from-low-to-high-value-designs-offline-optimization-via-gene",
-     "neurips2024-incorporating-surrogate-gradient-norm-to-improve-offline-opt",
-     "icml2024-boosting-offline-optimizers-with-surrogate-sensitivity",
-     "iclr2024-sensitivity-informed-regularization-for-offline-black-box-op"
-    ],
-    "score": 1.15,
-    "color": "tc3",
-    "words": [
-     {
-      "word": "offline",
-      "share": 100
-     },
-     {
-      "word": "surrogate",
-      "share": 81
-     },
-     {
-      "word": "optimization",
-      "share": 52
-     },
-     {
-      "word": "sharpness",
-      "share": 33
-     },
-     {
-      "word": "function",
-      "share": 24
-     },
-     {
-      "word": "probabilistic bridge",
-      "share": 23
      }
     ]
    },
@@ -9434,30 +9434,30 @@
     {
      "y": 149.0,
      "color": "tc2",
-     "title": "Distilling multimodal embedding models",
-     "title_vi": "Chưng cất mô hình embedding đa phương thức",
-     "dots": [
-      {
-       "id": "emnlp2026-pga-kd-principal-geometry-alignment-and-semantic-consistency",
-       "x": 521.0,
-       "y": 149.0,
-       "title": "PGA-KD: Principal Geometry Alignment and Semantic Consistency for VLM2Vec Distillation",
-       "label": "EMNLP 2026"
-      }
-     ]
-    },
-    {
-     "y": 195.0,
-     "color": "tc3",
      "title": "Multi-label learning from one label",
      "title_vi": "Học đa nhãn từ một nhãn duy nhất",
      "dots": [
       {
        "id": "iccv2025-more-reliable-pseudo-labels-better-performance-a-generalized",
        "x": 401.0,
-       "y": 195.0,
+       "y": 149.0,
        "title": "More Reliable Pseudo-labels, Better Performance: A Generalized Approach to Single Positive Multi-label Learning",
        "label": "ICCV 2025"
+      }
+     ]
+    },
+    {
+     "y": 195.0,
+     "color": "tc3",
+     "title": "Distilling multimodal embedding models",
+     "title_vi": "Chưng cất mô hình embedding đa phương thức",
+     "dots": [
+      {
+       "id": "emnlp2026-pga-kd-principal-geometry-alignment-and-semantic-consistency",
+       "x": 521.0,
+       "y": 195.0,
+       "title": "PGA-KD: Principal Geometry Alignment and Semantic Consistency for VLM2Vec Distillation",
+       "label": "EMNLP 2026"
       }
      ]
     },
@@ -9504,10 +9504,10 @@
     }
    ]
   },
-  "open_summary": "Neural topic models still need hand-tuned training schedules and well-chosen contrastive samples, and separating document representations from topic embeddings is stated to be an open problem. For cross-lingual topics, getting coherent, well-aligned topics without depending on bilingual dictionaries or many costly LLM calls is still described as a problem. In distillation, the mismatch between large and compact models in tokenization, dimensionality and multimodal representations is reduced but remains the central difficulty. With a single positive label per image, the noise that pseudo-labels introduce can be mitigated but not eliminated. In continual relation extraction, the added components bring extra computational cost.",
-  "open_summary_vi": "Mô hình chủ đề nơ-ron vẫn cần lịch huấn luyện chỉnh thủ công và mẫu tương phản được chọn kỹ, và việc tách bạch biểu diễn văn bản với embedding chủ đề được nêu là bài toán mở. Với chủ đề đa ngôn ngữ, việc có được chủ đề mạch lạc, căn chỉnh tốt mà không phụ thuộc vào từ điển song ngữ hay nhiều lần gọi LLM tốn kém vẫn được mô tả là một vấn đề. Trong chưng cất, sự chênh lệch giữa mô hình lớn và mô hình nhỏ về cách tách token, số chiều và biểu diễn đa phương thức được giảm bớt nhưng vẫn là khó khăn chính. Khi mỗi ảnh chỉ có một nhãn dương, nhiễu do nhãn giả gây ra có thể được giảm nhẹ nhưng không bị loại bỏ. Trong trích xuất quan hệ liên tục, các thành phần được thêm vào kéo theo chi phí tính toán tăng thêm.",
-  "overview": "Dinh Viet Sang's papers propose training objectives and model components for learning from text and images with limited supervision or limited model capacity. Further papers improve how neural topic models in general are trained, using optimal transport, clustering, contrastive learning and multi-objective optimization. Another line discovers topics shared across languages, aligning document and topic representations in a multilingual space and refining topics with black-box large language models (LLMs). One line compresses vision-language embedding models into compact students by aligning the geometry and semantics of their embeddings. In computer vision, one paper trains multi-label image classifiers when each image has only a single positive label, using noise-robust losses on vision-language pseudo-labels. Finally, one paper learns new relation types from a few examples over time, using orthogonal class prototypes and label descriptions to keep similar relations apart.",
-  "overview_vi": "Các bài báo của Đinh Viết Sang đề xuất các hàm mục tiêu huấn luyện và thành phần mô hình để học từ văn bản và hình ảnh khi giám sát hạn chế hoặc năng lực mô hình hạn chế. Các bài báo khác cải thiện cách huấn luyện mô hình chủ đề nơ-ron bằng vận chuyển tối ưu, phân cụm, học tương phản và tối ưu đa mục tiêu. Một hướng khác tìm các chủ đề chung giữa nhiều ngôn ngữ, căn chỉnh biểu diễn văn bản và chủ đề trong không gian đa ngôn ngữ và tinh chỉnh chủ đề bằng các mô hình ngôn ngữ lớn (LLM) dạng black-box. Một hướng nén các mô hình embedding thị giác-ngôn ngữ thành mô hình trò nhỏ gọn bằng cách căn chỉnh hình học và ngữ nghĩa của embedding. Trong thị giác máy tính, một bài báo huấn luyện bộ phân loại ảnh đa nhãn khi mỗi ảnh chỉ có một nhãn dương, dùng hàm mất mát bền vững với nhiễu trên nhãn giả sinh từ mô hình thị giác-ngôn ngữ. Cuối cùng, một bài báo học các loại quan hệ mới từ vài ví dụ theo thời gian, dùng nguyên mẫu lớp trực giao và mô tả nhãn để giữ các quan hệ tương tự tách biệt.",
+  "open_summary": "Neural topic models still need hand-tuned training schedules and well-chosen contrastive samples, and separating document representations from topic embeddings is stated to be an open problem. For cross-lingual topics, getting coherent, well-aligned topics without depending on bilingual dictionaries or many costly LLM calls is still described as a problem. With a single positive label per image, the noise that pseudo-labels introduce can be mitigated but not eliminated.",
+  "open_summary_vi": "Mô hình chủ đề nơ-ron vẫn cần lịch huấn luyện chỉnh thủ công và mẫu tương phản được chọn kỹ, và việc tách bạch biểu diễn văn bản với embedding chủ đề được nêu là bài toán mở. Với chủ đề đa ngôn ngữ, việc có được chủ đề mạch lạc, căn chỉnh tốt mà không phụ thuộc vào từ điển song ngữ hay nhiều lần gọi LLM tốn kém vẫn được mô tả là một vấn đề. Khi mỗi ảnh chỉ có một nhãn dương, nhiễu do nhãn giả gây ra có thể được giảm nhẹ nhưng không bị loại bỏ.",
+  "overview": "Dinh Viet Sang's papers propose training objectives and model components for learning from text and images with limited supervision or limited model capacity. Further papers improve how neural topic models in general are trained, using optimal transport, clustering, contrastive learning and multi-objective optimization. Another line discovers topics shared across languages, aligning document and topic representations in a multilingual space and refining topics with black-box large language models (LLMs). In computer vision, one paper trains multi-label image classifiers when each image has only a single positive label, using noise-robust losses on vision-language pseudo-labels.",
+  "overview_vi": "Các bài báo của Đinh Viết Sang đề xuất các hàm mục tiêu huấn luyện và thành phần mô hình để học từ văn bản và hình ảnh khi giám sát hạn chế hoặc năng lực mô hình hạn chế. Các bài báo khác cải thiện cách huấn luyện mô hình chủ đề nơ-ron bằng vận chuyển tối ưu, phân cụm, học tương phản và tối ưu đa mục tiêu. Một hướng khác tìm các chủ đề chung giữa nhiều ngôn ngữ, căn chỉnh biểu diễn văn bản và chủ đề trong không gian đa ngôn ngữ và tinh chỉnh chủ đề bằng các mô hình ngôn ngữ lớn (LLM) dạng black-box. Trong thị giác máy tính, một bài báo huấn luyện bộ phân loại ảnh đa nhãn khi mỗi ảnh chỉ có một nhãn dương, dùng hàm mất mát bền vững với nhiễu trên nhãn giả sinh từ mô hình thị giác-ngôn ngữ.",
   "topics": [
    {
     "title": "Better training for neural topic models",
@@ -9653,58 +9653,6 @@
     ]
    },
    {
-    "title": "Distilling multimodal embedding models",
-    "title_vi": "Chưng cất mô hình embedding đa phương thức",
-    "gist": "One line compresses vision-language embedding models into compact students by aligning the geometry and semantics of their embeddings.",
-    "gist_vi": "Một hướng nén các mô hình embedding thị giác-ngôn ngữ thành mô hình trò nhỏ gọn bằng cách căn chỉnh hình học và ngữ nghĩa của embedding.",
-    "open_gist": "In distillation, the mismatch between large and compact models in tokenization, dimensionality and multimodal representations is reduced but remains the central difficulty.",
-    "open_gist_vi": "Trong chưng cất, sự chênh lệch giữa mô hình lớn và mô hình nhỏ về cách tách token, số chiều và biểu diễn đa phương thức được giảm bớt nhưng vẫn là khó khăn chính.",
-    "summary": "Vision-language models adapted to produce embeddings (VLM2Vec) are hard to distil because teacher and student differ in tokenization, dimensionality and multimodal representations. PGA-KD aligns the principal geometric components of the two embedding spaces and maximises mutual information across intra- and inter-modal pairs. The paper reports gains over existing distillation methods on all four meta-tasks of the MMEB benchmark, in and out of distribution.",
-    "summary_vi": "Các mô hình thị giác-ngôn ngữ được điều chỉnh để sinh embedding (VLM2Vec) khó chưng cất vì mô hình thầy và trò khác nhau về cách tách token, số chiều và biểu diễn đa phương thức. PGA-KD căn chỉnh các thành phần hình học chính của hai không gian embedding và cực đại hóa thông tin tương hỗ giữa các cặp cùng và khác phương thức. Bài báo cho biết kết quả tốt hơn các phương pháp chưng cất hiện có trên cả bốn nhóm tác vụ của MMEB, cả trong và ngoài phân phối.",
-    "open": [
-     {
-      "text": "The paper describes the capacity mismatch between teacher and student (tokenization, embedding dimensionality, multimodal representations) as something its method mitigates rather than removes, and its evaluation is limited to the MMEB benchmark.",
-      "text_vi": "Bài báo mô tả sự chênh lệch năng lực giữa mô hình thầy và trò (cách tách token, số chiều embedding, biểu diễn đa phương thức) là điều phương pháp giảm nhẹ chứ không loại bỏ, và phần đánh giá chỉ giới hạn trên bộ chuẩn MMEB.",
-      "source": "reviewers",
-      "quote": false,
-      "papers": [
-       "emnlp2026-pga-kd-principal-geometry-alignment-and-semantic-consistency"
-      ]
-     }
-    ],
-    "papers": [
-     "emnlp2026-pga-kd-principal-geometry-alignment-and-semantic-consistency"
-    ],
-    "score": 0.17,
-    "color": "tc2",
-    "words": [
-     {
-      "word": "principal geometry",
-      "share": 100
-     },
-     {
-      "word": "geometry alignment",
-      "share": 100
-     },
-     {
-      "word": "semantic consistency",
-      "share": 100
-     },
-     {
-      "word": "distillation",
-      "share": 94
-     },
-     {
-      "word": "pga-kd",
-      "share": 62
-     },
-     {
-      "word": "vlm2vec",
-      "share": 62
-     }
-    ]
-   },
-   {
     "title": "Multi-label learning from one label",
     "title_vi": "Học đa nhãn từ một nhãn duy nhất",
     "gist": "In computer vision, one paper trains multi-label image classifiers when each image has only a single positive label, using noise-robust losses on vision-language pseudo-labels.",
@@ -9728,7 +9676,7 @@
      "iccv2025-more-reliable-pseudo-labels-better-performance-a-generalized"
     ],
     "score": 0.2,
-    "color": "tc3",
+    "color": "tc2",
     "words": [
      {
       "word": "multi-label",
@@ -9753,6 +9701,58 @@
      {
       "word": "generalized",
       "share": 50
+     }
+    ]
+   },
+   {
+    "title": "Distilling multimodal embedding models",
+    "title_vi": "Chưng cất mô hình embedding đa phương thức",
+    "gist": "One line compresses vision-language embedding models into compact students by aligning the geometry and semantics of their embeddings.",
+    "gist_vi": "Một hướng nén các mô hình embedding thị giác-ngôn ngữ thành mô hình trò nhỏ gọn bằng cách căn chỉnh hình học và ngữ nghĩa của embedding.",
+    "open_gist": "In distillation, the mismatch between large and compact models in tokenization, dimensionality and multimodal representations is reduced but remains the central difficulty.",
+    "open_gist_vi": "Trong chưng cất, sự chênh lệch giữa mô hình lớn và mô hình nhỏ về cách tách token, số chiều và biểu diễn đa phương thức được giảm bớt nhưng vẫn là khó khăn chính.",
+    "summary": "Vision-language models adapted to produce embeddings (VLM2Vec) are hard to distil because teacher and student differ in tokenization, dimensionality and multimodal representations. PGA-KD aligns the principal geometric components of the two embedding spaces and maximises mutual information across intra- and inter-modal pairs. The paper reports gains over existing distillation methods on all four meta-tasks of the MMEB benchmark, in and out of distribution.",
+    "summary_vi": "Các mô hình thị giác-ngôn ngữ được điều chỉnh để sinh embedding (VLM2Vec) khó chưng cất vì mô hình thầy và trò khác nhau về cách tách token, số chiều và biểu diễn đa phương thức. PGA-KD căn chỉnh các thành phần hình học chính của hai không gian embedding và cực đại hóa thông tin tương hỗ giữa các cặp cùng và khác phương thức. Bài báo cho biết kết quả tốt hơn các phương pháp chưng cất hiện có trên cả bốn nhóm tác vụ của MMEB, cả trong và ngoài phân phối.",
+    "open": [
+     {
+      "text": "The paper describes the capacity mismatch between teacher and student (tokenization, embedding dimensionality, multimodal representations) as something its method mitigates rather than removes, and its evaluation is limited to the MMEB benchmark.",
+      "text_vi": "Bài báo mô tả sự chênh lệch năng lực giữa mô hình thầy và trò (cách tách token, số chiều embedding, biểu diễn đa phương thức) là điều phương pháp giảm nhẹ chứ không loại bỏ, và phần đánh giá chỉ giới hạn trên bộ chuẩn MMEB.",
+      "source": "reviewers",
+      "quote": false,
+      "papers": [
+       "emnlp2026-pga-kd-principal-geometry-alignment-and-semantic-consistency"
+      ]
+     }
+    ],
+    "papers": [
+     "emnlp2026-pga-kd-principal-geometry-alignment-and-semantic-consistency"
+    ],
+    "score": 0.17,
+    "color": "tc3",
+    "words": [
+     {
+      "word": "principal geometry",
+      "share": 100
+     },
+     {
+      "word": "geometry alignment",
+      "share": 100
+     },
+     {
+      "word": "semantic consistency",
+      "share": 100
+     },
+     {
+      "word": "distillation",
+      "share": 94
+     },
+     {
+      "word": "pga-kd",
+      "share": 62
+     },
+     {
+      "word": "vlm2vec",
+      "share": 62
      }
     ]
    },
@@ -15527,29 +15527,29 @@
     {
      "y": 103.0,
      "color": "tc1",
-     "title": "Decision-relevant exploration for world models",
-     "title_vi": "Khám phá hướng quyết định cho world model",
+     "title": "Synthetic data for low-resource languages",
+     "title_vi": "Dữ liệu tổng hợp cho ngôn ngữ ít tài nguyên",
      "dots": [
       {
-       "id": "iclr2027-what-should-i-try-next-decision-relevant-counterfactual-info",
-       "x": 557.0,
+       "id": "emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth",
+       "x": 437.0,
        "y": 103.0,
-       "title": "What Should I Try Next? Decision-Relevant Counterfactual Information Gain for Active World Models",
-       "label": "ICLR 2027"
+       "title": "When Audit Quality Fails to Predict Downstream Utility: Synthetic-Data Selection for Low-Resource Classification",
+       "label": "EMNLP 2026"
       }
      ]
     },
     {
      "y": 149.0,
      "color": "tc2",
-     "title": "Choosing the language for code generation",
-     "title_vi": "Chọn ngôn ngữ cho sinh mã",
+     "title": "Decision-relevant exploration for world models",
+     "title_vi": "Khám phá hướng quyết định cho world model",
      "dots": [
       {
-       "id": "iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g",
+       "id": "iclr2027-what-should-i-try-next-decision-relevant-counterfactual-info",
        "x": 557.0,
        "y": 149.0,
-       "title": "LangSelect: Cost-Aware Target-Language Routing for LLM Code Generation",
+       "title": "What Should I Try Next? Decision-Relevant Counterfactual Information Gain for Active World Models",
        "label": "ICLR 2027"
       }
      ]
@@ -15557,14 +15557,14 @@
     {
      "y": 195.0,
      "color": "tc3",
-     "title": "Verifiable privacy accounting for DP-SGD",
-     "title_vi": "Kế toán quyền riêng tư kiểm chứng được cho DP-SGD",
+     "title": "Choosing the language for code generation",
+     "title_vi": "Chọn ngôn ngữ cho sinh mã",
      "dots": [
       {
-       "id": "iclr2027-attested-but-unaccounted-dp-sgd-privacy-accounting-as-a-prec",
+       "id": "iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g",
        "x": 557.0,
        "y": 195.0,
-       "title": "Attested but Unaccounted: DP-SGD Privacy Accounting as a Precondition of Every Step",
+       "title": "LangSelect: Cost-Aware Target-Language Routing for LLM Code Generation",
        "label": "ICLR 2027"
       }
      ]
@@ -15572,25 +15572,25 @@
     {
      "y": 241.0,
      "color": "tc4",
-     "title": "Synthetic data for low-resource languages",
-     "title_vi": "Dữ liệu tổng hợp cho ngôn ngữ ít tài nguyên",
+     "title": "Verifiable privacy accounting for DP-SGD",
+     "title_vi": "Kế toán quyền riêng tư kiểm chứng được cho DP-SGD",
      "dots": [
       {
-       "id": "emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth",
-       "x": 437.0,
+       "id": "iclr2027-attested-but-unaccounted-dp-sgd-privacy-accounting-as-a-prec",
+       "x": 557.0,
        "y": 241.0,
-       "title": "When Audit Quality Fails to Predict Downstream Utility: Synthetic-Data Selection for Low-Resource Classification",
-       "label": "EMNLP 2026"
+       "title": "Attested but Unaccounted: DP-SGD Privacy Accounting as a Precondition of Every Step",
+       "label": "ICLR 2027"
       }
      ]
     }
    ],
    "edges": []
   },
-  "open_summary": "For agent memory, it remains open whether the measured effects carry over from synthetic records and simulators to memory built during real agent use, and the labels behind the provenance gate are still unvalidated. For world-model exploration, the score has not yet been shown to improve control or to beat random acquisition, and it has been tested in a single synthetic environment. For language routing, reviewers asked whether the token savings remain against a concise Python prompt and once reasoning and input tokens are counted. For privacy accounting, the guarantee rests on trust assumptions, such as a register that only moves forward, that reviewers noted current confidential VMs do not provide. For synthetic-data selection, the study is capped by compute cost and cannot separate the effect of the quality gate from the accompanying change in training-set size.",
-  "open_summary_vi": "Với bộ nhớ của agent, vẫn còn bỏ ngỏ việc các hiệu ứng đo được trên bản ghi tổng hợp và bộ mô phỏng có còn đúng với bộ nhớ hình thành khi agent hoạt động thực tế hay không, và các nhãn làm cơ sở cho cổng kiểm soát nguồn gốc vẫn chưa được kiểm chứng. Với việc khám phá cho world model, điểm số này chưa được chứng minh là cải thiện điều khiển hay vượt cách chọn ngẫu nhiên, và mới chỉ được thử trong một môi trường tổng hợp duy nhất. Với việc định tuyến ngôn ngữ, các phản biện đặt câu hỏi liệu mức tiết kiệm token có còn khi so với một prompt Python ngắn gọn và khi tính cả token suy luận lẫn token đầu vào hay không. Với kế toán quyền riêng tư, đảm bảo dựa trên các giả định về độ tin cậy, chẳng hạn một thanh ghi chỉ tăng, mà các phản biện lưu ý rằng máy ảo bảo mật hiện nay chưa cung cấp. Với việc chọn dữ liệu tổng hợp, nghiên cứu bị giới hạn bởi chi phí tính toán và không tách được tác động của cổng lọc chất lượng khỏi sự thay đổi kích thước tập huấn luyện đi kèm.",
-  "overview": "Phat T. Tran-Truong's recent papers study the reliability, privacy and cost of machine learning systems, mostly through controlled studies that also report negative results. Work on LLM agents asks what happens to stored memory when it is moved to another model, deleted, or rewritten so that injected instructions slip past content filters. For model-based agents, an exploration score picks the real interactions that most reduce a world model's uncertainty about the futures that matter for decisions. In LLM code generation, the output programming language is treated as a choice that can reduce the number of generated tokens. For differentially private training in confidential virtual machines, a mechanism is proposed so that the published privacy guarantee covers every training step that actually read the data. For low-resource African languages, a controlled study tests whether synthetic examples rated highly by an LLM judge actually help downstream classification.",
-  "overview_vi": "Các bài báo gần đây của Trần Trương Tuấn Phát nghiên cứu độ tin cậy, quyền riêng tư và chi phí của các hệ thống học máy, chủ yếu qua các nghiên cứu có kiểm soát và báo cáo cả những kết quả âm tính. Nhánh nghiên cứu về agent LLM đặt câu hỏi điều gì xảy ra với bộ nhớ đã lưu khi nó được chuyển sang mô hình khác, bị xóa, hoặc bị viết lại khiến các chỉ thị bị chèn vào lọt qua bộ lọc nội dung. Với các agent dựa trên mô hình, một điểm số khám phá chọn những lần tương tác thật làm giảm nhiều nhất độ bất định của world model về các tương lai quan trọng cho việc ra quyết định. Trong sinh mã bằng LLM, ngôn ngữ lập trình đầu ra được xem như một lựa chọn có thể giảm số token sinh ra. Với huấn luyện có quyền riêng tư vi phân trong máy ảo bảo mật, một cơ chế được đề xuất để đảm bảo quyền riêng tư được công bố bao trùm mọi bước huấn luyện thực sự đã đọc dữ liệu. Với các ngôn ngữ châu Phi ít tài nguyên, một nghiên cứu có kiểm soát kiểm tra xem các mẫu tổng hợp được một LLM giám khảo chấm điểm cao có thực sự giúp ích cho bài toán phân loại hạ nguồn hay không.",
+  "open_summary": "For agent memory, it remains open whether the measured effects carry over from synthetic records and simulators to memory built during real agent use, and the labels behind the provenance gate are still unvalidated. For synthetic-data selection, the study is capped by compute cost and cannot separate the effect of the quality gate from the accompanying change in training-set size. For world-model exploration, the score has not yet been shown to improve control or to beat random acquisition, and it has been tested in a single synthetic environment.",
+  "open_summary_vi": "Với bộ nhớ của agent, vẫn còn bỏ ngỏ việc các hiệu ứng đo được trên bản ghi tổng hợp và bộ mô phỏng có còn đúng với bộ nhớ hình thành khi agent hoạt động thực tế hay không, và các nhãn làm cơ sở cho cổng kiểm soát nguồn gốc vẫn chưa được kiểm chứng. Với việc chọn dữ liệu tổng hợp, nghiên cứu bị giới hạn bởi chi phí tính toán và không tách được tác động của cổng lọc chất lượng khỏi sự thay đổi kích thước tập huấn luyện đi kèm. Với việc khám phá cho world model, điểm số này chưa được chứng minh là cải thiện điều khiển hay vượt cách chọn ngẫu nhiên, và mới chỉ được thử trong một môi trường tổng hợp duy nhất.",
+  "overview": "Phat T. Tran-Truong's recent papers study the reliability, privacy and cost of machine learning systems, mostly through controlled studies that also report negative results. Work on LLM agents asks what happens to stored memory when it is moved to another model, deleted, or rewritten so that injected instructions slip past content filters. For low-resource African languages, a controlled study tests whether synthetic examples rated highly by an LLM judge actually help downstream classification. For model-based agents, an exploration score picks the real interactions that most reduce a world model's uncertainty about the futures that matter for decisions.",
+  "overview_vi": "Các bài báo gần đây của Trần Trương Tuấn Phát nghiên cứu độ tin cậy, quyền riêng tư và chi phí của các hệ thống học máy, chủ yếu qua các nghiên cứu có kiểm soát và báo cáo cả những kết quả âm tính. Nhánh nghiên cứu về agent LLM đặt câu hỏi điều gì xảy ra với bộ nhớ đã lưu khi nó được chuyển sang mô hình khác, bị xóa, hoặc bị viết lại khiến các chỉ thị bị chèn vào lọt qua bộ lọc nội dung. Với các ngôn ngữ châu Phi ít tài nguyên, một nghiên cứu có kiểm soát kiểm tra xem các mẫu tổng hợp được một LLM giám khảo chấm điểm cao có thực sự giúp ích cho bài toán phân loại hạ nguồn hay không. Với các agent dựa trên mô hình, một điểm số khám phá chọn những lần tương tác thật làm giảm nhiều nhất độ bất định của world model về các tương lai quan trọng cho việc ra quyết định.",
   "topics": [
    {
     "title": "Trustworthy memory in LLM agents",
@@ -15674,6 +15674,67 @@
     ]
    },
    {
+    "title": "Synthetic data for low-resource languages",
+    "title_vi": "Dữ liệu tổng hợp cho ngôn ngữ ít tài nguyên",
+    "gist": "For low-resource African languages, a controlled study tests whether synthetic examples rated highly by an LLM judge actually help downstream classification.",
+    "gist_vi": "Với các ngôn ngữ châu Phi ít tài nguyên, một nghiên cứu có kiểm soát kiểm tra xem các mẫu tổng hợp được một LLM giám khảo chấm điểm cao có thực sự giúp ích cho bài toán phân loại hạ nguồn hay không.",
+    "open_gist": "For synthetic-data selection, the study is capped by compute cost and cannot separate the effect of the quality gate from the accompanying change in training-set size.",
+    "open_gist_vi": "Với việc chọn dữ liệu tổng hợp, nghiên cứu bị giới hạn bởi chi phí tính toán và không tách được tác động của cổng lọc chất lượng khỏi sự thay đổi kích thước tập huấn luyện đi kèm.",
+    "summary": "Seven selectors pick synthetic examples for two classification tasks in four African languages, and the paper compares the judged quality of the retained sets with downstream Macro-F1. It reports that the selector with the highest judged label correctness (CoSDA-V2) is outperformed downstream by AlpaGasus, that retention constraints such as label quotas explain more of the differences than ranking quality, and recommends reporting both metrics.",
+    "summary_vi": "Bảy bộ chọn lấy các mẫu tổng hợp cho hai tác vụ phân loại trong bốn ngôn ngữ châu Phi, và bài báo so sánh chất lượng được giám khảo chấm của các tập giữ lại với Macro-F1 ở tác vụ hạ nguồn. Bài báo báo cáo rằng bộ chọn có độ đúng nhãn theo giám khảo cao nhất (CoSDA-V2) lại bị AlpaGasus vượt ở tác vụ hạ nguồn, rằng các ràng buộc giữ mẫu như hạn ngạch nhãn giải thích phần lớn khác biệt hơn là chất lượng xếp hạng, và khuyến nghị báo cáo cả hai thước đo.",
+    "open": [
+     {
+      "text": "Each seed of fine-tunes plus the judge audit costs roughly one GPU-week, which the authors call the most consequential limitation and the factor that caps the study.",
+      "text_vi": "Mỗi seed gồm các lần fine-tune và bước kiểm định bằng giám khảo tốn khoảng một tuần GPU, điều mà nhóm tác giả gọi là hạn chế quan trọng nhất và là yếu tố giới hạn quy mô nghiên cứu.",
+      "source": "authors",
+      "quote": false,
+      "papers": [
+       "emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth"
+      ]
+     },
+     {
+      "text": "Because the audit's strict gate changes both pool composition and training-set size, the comparison measures their joint effect rather than the gate alone.",
+      "text_vi": "Vì cổng lọc nghiêm ngặt làm thay đổi cả thành phần tập ứng viên lẫn kích thước tập huấn luyện, phép so sánh chỉ đo được tác động chung của cả hai chứ không riêng tác động của cổng lọc.",
+      "source": "authors",
+      "quote": false,
+      "papers": [
+       "emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth"
+      ]
+     }
+    ],
+    "papers": [
+     "emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth"
+    ],
+    "score": 0.33,
+    "color": "tc1",
+    "words": [
+     {
+      "word": "downstream",
+      "share": 100
+     },
+     {
+      "word": "synthetic-data selection",
+      "share": 80
+     },
+     {
+      "word": "versus",
+      "share": 75
+     },
+     {
+      "word": "audit",
+      "share": 52
+     },
+     {
+      "word": "predict",
+      "share": 50
+     },
+     {
+      "word": "low-resource",
+      "share": 50
+     }
+    ]
+   },
+   {
     "title": "Decision-relevant exploration for world models",
     "title_vi": "Khám phá hướng quyết định cho world model",
     "gist": "For model-based agents, an exploration score picks the real interactions that most reduce a world model's uncertainty about the futures that matter for decisions.",
@@ -15724,7 +15785,7 @@
      "iclr2027-what-should-i-try-next-decision-relevant-counterfactual-info"
     ],
     "score": 0.25,
-    "color": "tc1",
+    "color": "tc2",
     "words": [
      {
       "word": "information gain",
@@ -15794,7 +15855,7 @@
      "iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g"
     ],
     "score": 0.25,
-    "color": "tc2",
+    "color": "tc3",
     "words": [
      {
       "word": "generation",
@@ -15873,7 +15934,7 @@
      "iclr2027-attested-but-unaccounted-dp-sgd-privacy-accounting-as-a-prec"
     ],
     "score": 0.2,
-    "color": "tc3",
+    "color": "tc4",
     "words": [
      {
       "word": "step",
@@ -15898,67 +15959,6 @@
      {
       "word": "privacy",
       "share": 70
-     }
-    ]
-   },
-   {
-    "title": "Synthetic data for low-resource languages",
-    "title_vi": "Dữ liệu tổng hợp cho ngôn ngữ ít tài nguyên",
-    "gist": "For low-resource African languages, a controlled study tests whether synthetic examples rated highly by an LLM judge actually help downstream classification.",
-    "gist_vi": "Với các ngôn ngữ châu Phi ít tài nguyên, một nghiên cứu có kiểm soát kiểm tra xem các mẫu tổng hợp được một LLM giám khảo chấm điểm cao có thực sự giúp ích cho bài toán phân loại hạ nguồn hay không.",
-    "open_gist": "For synthetic-data selection, the study is capped by compute cost and cannot separate the effect of the quality gate from the accompanying change in training-set size.",
-    "open_gist_vi": "Với việc chọn dữ liệu tổng hợp, nghiên cứu bị giới hạn bởi chi phí tính toán và không tách được tác động của cổng lọc chất lượng khỏi sự thay đổi kích thước tập huấn luyện đi kèm.",
-    "summary": "Seven selectors pick synthetic examples for two classification tasks in four African languages, and the paper compares the judged quality of the retained sets with downstream Macro-F1. It reports that the selector with the highest judged label correctness (CoSDA-V2) is outperformed downstream by AlpaGasus, that retention constraints such as label quotas explain more of the differences than ranking quality, and recommends reporting both metrics.",
-    "summary_vi": "Bảy bộ chọn lấy các mẫu tổng hợp cho hai tác vụ phân loại trong bốn ngôn ngữ châu Phi, và bài báo so sánh chất lượng được giám khảo chấm của các tập giữ lại với Macro-F1 ở tác vụ hạ nguồn. Bài báo báo cáo rằng bộ chọn có độ đúng nhãn theo giám khảo cao nhất (CoSDA-V2) lại bị AlpaGasus vượt ở tác vụ hạ nguồn, rằng các ràng buộc giữ mẫu như hạn ngạch nhãn giải thích phần lớn khác biệt hơn là chất lượng xếp hạng, và khuyến nghị báo cáo cả hai thước đo.",
-    "open": [
-     {
-      "text": "Each seed of fine-tunes plus the judge audit costs roughly one GPU-week, which the authors call the most consequential limitation and the factor that caps the study.",
-      "text_vi": "Mỗi seed gồm các lần fine-tune và bước kiểm định bằng giám khảo tốn khoảng một tuần GPU, điều mà nhóm tác giả gọi là hạn chế quan trọng nhất và là yếu tố giới hạn quy mô nghiên cứu.",
-      "source": "authors",
-      "quote": false,
-      "papers": [
-       "emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth"
-      ]
-     },
-     {
-      "text": "Because the audit's strict gate changes both pool composition and training-set size, the comparison measures their joint effect rather than the gate alone.",
-      "text_vi": "Vì cổng lọc nghiêm ngặt làm thay đổi cả thành phần tập ứng viên lẫn kích thước tập huấn luyện, phép so sánh chỉ đo được tác động chung của cả hai chứ không riêng tác động của cổng lọc.",
-      "source": "authors",
-      "quote": false,
-      "papers": [
-       "emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth"
-      ]
-     }
-    ],
-    "papers": [
-     "emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth"
-    ],
-    "score": 0.33,
-    "color": "tc4",
-    "words": [
-     {
-      "word": "downstream",
-      "share": 100
-     },
-     {
-      "word": "synthetic-data selection",
-      "share": 80
-     },
-     {
-      "word": "versus",
-      "share": 75
-     },
-     {
-      "word": "audit",
-      "share": 52
-     },
-     {
-      "word": "predict",
-      "share": 50
-     },
-     {
-      "word": "low-resource",
-      "share": 50
      }
     ]
    }
@@ -16262,29 +16262,29 @@
     {
      "y": 103.0,
      "color": "tc1",
-     "title": "Provenance-based defences for LLM agents",
-     "title_vi": "Phòng thủ dựa trên nguồn gốc cho agent LLM",
+     "title": "Synthetic data for low-resource languages",
+     "title_vi": "Dữ liệu tổng hợp cho ngôn ngữ ít tài nguyên",
      "dots": [
       {
-       "id": "iclr2027-provact-a-diagnostic-study-of-causal-provenance-gating-for-l",
-       "x": 528.0,
+       "id": "emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth",
+       "x": 408.0,
        "y": 103.0,
-       "title": "PROVACT: A Diagnostic Study of Causal Provenance Gating for LLM Agents",
-       "label": "ICLR 2027"
+       "title": "When Audit Quality Fails to Predict Downstream Utility: Synthetic-Data Selection for Low-Resource Classification",
+       "label": "EMNLP 2026"
       }
      ]
     },
     {
      "y": 149.0,
      "color": "tc2",
-     "title": "Cost-aware code generation",
-     "title_vi": "Sinh mã có tính đến chi phí",
+     "title": "Provenance-based defences for LLM agents",
+     "title_vi": "Phòng thủ dựa trên nguồn gốc cho agent LLM",
      "dots": [
       {
-       "id": "iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g",
+       "id": "iclr2027-provact-a-diagnostic-study-of-causal-provenance-gating-for-l",
        "x": 528.0,
        "y": 149.0,
-       "title": "LangSelect: Cost-Aware Target-Language Routing for LLM Code Generation",
+       "title": "PROVACT: A Diagnostic Study of Causal Provenance Gating for LLM Agents",
        "label": "ICLR 2027"
       }
      ]
@@ -16292,14 +16292,14 @@
     {
      "y": 195.0,
      "color": "tc3",
-     "title": "Privacy accounting for confidential training",
-     "title_vi": "Kế toán quyền riêng tư khi huấn luyện bảo mật",
+     "title": "Cost-aware code generation",
+     "title_vi": "Sinh mã có tính đến chi phí",
      "dots": [
       {
-       "id": "iclr2027-attested-but-unaccounted-dp-sgd-privacy-accounting-as-a-prec",
+       "id": "iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g",
        "x": 528.0,
        "y": 195.0,
-       "title": "Attested but Unaccounted: DP-SGD Privacy Accounting as a Precondition of Every Step",
+       "title": "LangSelect: Cost-Aware Target-Language Routing for LLM Code Generation",
        "label": "ICLR 2027"
       }
      ]
@@ -16307,25 +16307,25 @@
     {
      "y": 241.0,
      "color": "tc4",
-     "title": "Synthetic data for low-resource languages",
-     "title_vi": "Dữ liệu tổng hợp cho ngôn ngữ ít tài nguyên",
+     "title": "Privacy accounting for confidential training",
+     "title_vi": "Kế toán quyền riêng tư khi huấn luyện bảo mật",
      "dots": [
       {
-       "id": "emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth",
-       "x": 408.0,
+       "id": "iclr2027-attested-but-unaccounted-dp-sgd-privacy-accounting-as-a-prec",
+       "x": 528.0,
        "y": 241.0,
-       "title": "When Audit Quality Fails to Predict Downstream Utility: Synthetic-Data Selection for Low-Resource Classification",
-       "label": "EMNLP 2026"
+       "title": "Attested but Unaccounted: DP-SGD Privacy Accounting as a Precondition of Every Step",
+       "label": "ICLR 2027"
       }
      ]
     }
    ],
    "edges": []
   },
-  "open_summary": "For agent memory, the reviews ask for evidence beyond synthetic records and simulators, and for controllers that keep the history they are meant to protect. For provenance gating, the labels used for evaluation are unvalidated and the hypothesised causal mechanism is not supported by the paper's own study. For code generation, it remains unclear whether switching languages lowers total inference cost beyond what a terser prompt achieves. For private training, the protocol depends on trust and hardware assumptions that, according to the reviews, current confidential machines do not provide. For synthetic data selection, the effect of quality filtering cannot yet be separated from the change in training-set size it causes, and each seed costs about one GPU-week of compute.",
-  "open_summary_vi": "Với bộ nhớ của agent, các bản phản biện đòi hỏi bằng chứng vượt ra ngoài bản ghi tổng hợp và môi trường mô phỏng, cùng với các bộ điều khiển thực sự giữ lại phần lịch sử mà chúng được thiết kế để bảo vệ. Với cổng kiểm soát dựa trên nguồn gốc, các nhãn dùng để đánh giá chưa được kiểm chứng và cơ chế nhân quả được giả định không được chính nghiên cứu của bài báo ủng hộ. Với sinh mã, vẫn chưa rõ việc đổi ngôn ngữ có giảm tổng chi phí suy luận nhiều hơn so với chỉ dùng một prompt ngắn gọn hơn hay không. Với huấn luyện có bảo vệ quyền riêng tư, giao thức phụ thuộc vào các giả định về độ tin cậy và phần cứng mà theo các bản phản biện, máy bảo mật hiện nay chưa đáp ứng. Với việc chọn dữ liệu tổng hợp, tác động của việc lọc theo chất lượng chưa thể tách khỏi sự thay đổi kích thước tập huấn luyện mà nó gây ra, và mỗi seed tốn khoảng một tuần GPU tính toán.",
-  "overview": "Xuan-Bach Le's papers study the privacy, safety, evaluation and cost of machine-learning systems, most of them agents built on large language models (LLMs). Work on persistent memory in LLM agents asks whether stored records stay safe when a different model reads them, how to delete a record together with everything derived from it, and how to prune dialogue history without losing user commitments. For agent security, PROVACT tests whether tracking where an action's inputs came from can catch influence that survives when rewriting removes the string content defences match. For code generation, LangSelect routes each task to the programming language expected to give a shorter verified solution, falling back to another language on failure. In private training, DP-ATTEST makes differential-privacy accounting a precondition of every DP-SGD step, so that a restarted or misbehaving trainer cannot read data without its privacy cost being recorded. For synthetic training data, a controlled study tests whether quality ratings from an LLM judge predict how useful the data is for African-language classification.",
-  "overview_vi": "Các bài báo của Lê Xuân Bách nghiên cứu quyền riêng tư, độ an toàn, cách đánh giá và chi phí của các hệ thống học máy, phần lớn là agent xây dựng trên mô hình ngôn ngữ lớn (LLM). Nhóm công trình về bộ nhớ lâu dài của agent LLM đặt câu hỏi liệu các bản ghi đã lưu có còn an toàn khi một mô hình khác đọc chúng, làm sao xóa một bản ghi cùng mọi thứ dẫn xuất từ nó, và làm sao cắt bớt lịch sử hội thoại mà không đánh mất các cam kết với người dùng. Về an ninh của agent, PROVACT kiểm tra xem việc theo dõi nguồn gốc các đầu vào của một hành động có bắt được ảnh hưởng vẫn còn lại khi việc viết lại đã xóa chuỗi mà các cơ chế phòng thủ nội dung so khớp hay không. Với sinh mã, LangSelect định tuyến mỗi bài toán tới ngôn ngữ lập trình được kỳ vọng cho lời giải đã kiểm chứng ngắn hơn, và chuyển sang ngôn ngữ khác khi thất bại. Trong huấn luyện có bảo vệ quyền riêng tư, DP-ATTEST biến việc kế toán quyền riêng tư vi phân thành điều kiện tiên quyết của mỗi bước DP-SGD, để một trình huấn luyện bị khởi động lại hoặc hoạt động sai không thể đọc dữ liệu mà không bị ghi nhận chi phí quyền riêng tư. Với dữ liệu huấn luyện tổng hợp, một nghiên cứu có kiểm soát kiểm tra xem điểm chất lượng do giám khảo LLM chấm có dự đoán được mức hữu ích của dữ liệu cho bài toán phân loại ngôn ngữ châu Phi hay không.",
+  "open_summary": "For agent memory, the reviews ask for evidence beyond synthetic records and simulators, and for controllers that keep the history they are meant to protect. For synthetic data selection, the effect of quality filtering cannot yet be separated from the change in training-set size it causes, and each seed costs about one GPU-week of compute. For provenance gating, the labels used for evaluation are unvalidated and the hypothesised causal mechanism is not supported by the paper's own study.",
+  "open_summary_vi": "Với bộ nhớ của agent, các bản phản biện đòi hỏi bằng chứng vượt ra ngoài bản ghi tổng hợp và môi trường mô phỏng, cùng với các bộ điều khiển thực sự giữ lại phần lịch sử mà chúng được thiết kế để bảo vệ. Với việc chọn dữ liệu tổng hợp, tác động của việc lọc theo chất lượng chưa thể tách khỏi sự thay đổi kích thước tập huấn luyện mà nó gây ra, và mỗi seed tốn khoảng một tuần GPU tính toán. Với cổng kiểm soát dựa trên nguồn gốc, các nhãn dùng để đánh giá chưa được kiểm chứng và cơ chế nhân quả được giả định không được chính nghiên cứu của bài báo ủng hộ.",
+  "overview": "Xuan-Bach Le's papers study the privacy, safety, evaluation and cost of machine-learning systems, most of them agents built on large language models (LLMs). Work on persistent memory in LLM agents asks whether stored records stay safe when a different model reads them, how to delete a record together with everything derived from it, and how to prune dialogue history without losing user commitments. For synthetic training data, a controlled study tests whether quality ratings from an LLM judge predict how useful the data is for African-language classification. For agent security, PROVACT tests whether tracking where an action's inputs came from can catch influence that survives when rewriting removes the string content defences match.",
+  "overview_vi": "Các bài báo của Lê Xuân Bách nghiên cứu quyền riêng tư, độ an toàn, cách đánh giá và chi phí của các hệ thống học máy, phần lớn là agent xây dựng trên mô hình ngôn ngữ lớn (LLM). Nhóm công trình về bộ nhớ lâu dài của agent LLM đặt câu hỏi liệu các bản ghi đã lưu có còn an toàn khi một mô hình khác đọc chúng, làm sao xóa một bản ghi cùng mọi thứ dẫn xuất từ nó, và làm sao cắt bớt lịch sử hội thoại mà không đánh mất các cam kết với người dùng. Với dữ liệu huấn luyện tổng hợp, một nghiên cứu có kiểm soát kiểm tra xem điểm chất lượng do giám khảo LLM chấm có dự đoán được mức hữu ích của dữ liệu cho bài toán phân loại ngôn ngữ châu Phi hay không. Về an ninh của agent, PROVACT kiểm tra xem việc theo dõi nguồn gốc các đầu vào của một hành động có bắt được ảnh hưởng vẫn còn lại khi việc viết lại đã xóa chuỗi mà các cơ chế phòng thủ nội dung so khớp hay không.",
   "topics": [
    {
     "title": "Persistent memory in LLM agents",
@@ -16409,6 +16409,67 @@
     ]
    },
    {
+    "title": "Synthetic data for low-resource languages",
+    "title_vi": "Dữ liệu tổng hợp cho ngôn ngữ ít tài nguyên",
+    "gist": "For synthetic training data, a controlled study tests whether quality ratings from an LLM judge predict how useful the data is for African-language classification.",
+    "gist_vi": "Với dữ liệu huấn luyện tổng hợp, một nghiên cứu có kiểm soát kiểm tra xem điểm chất lượng do giám khảo LLM chấm có dự đoán được mức hữu ích của dữ liệu cho bài toán phân loại ngôn ngữ châu Phi hay không.",
+    "open_gist": "For synthetic data selection, the effect of quality filtering cannot yet be separated from the change in training-set size it causes, and each seed costs about one GPU-week of compute.",
+    "open_gist_vi": "Với việc chọn dữ liệu tổng hợp, tác động của việc lọc theo chất lượng chưa thể tách khỏi sự thay đổi kích thước tập huấn luyện mà nó gây ra, và mỗi seed tốn khoảng một tuần GPU tính toán.",
+    "summary": "The study replays seven synthetic-data selectors on two low-resource African-language classification tasks in four languages, keeping 64 examples per task–language cell. It reports that the selector with the highest judged label correctness (CoSDA-V2) is outperformed on downstream Macro-F1 by AlpaGasus, and that retention constraints explain more of the differences than ranking quality, so it recommends reporting both metrics.",
+    "summary_vi": "Nghiên cứu phát lại bảy bộ chọn dữ liệu tổng hợp trên hai tác vụ phân loại ngôn ngữ châu Phi ít tài nguyên với bốn ngôn ngữ, giữ 64 mẫu cho mỗi ô tác vụ–ngôn ngữ. Bài báo báo cáo rằng bộ chọn có độ đúng nhãn do giám khảo chấm cao nhất (CoSDA-V2) lại bị AlpaGasus vượt về Macro-F1 ở tác vụ đích, và rằng các ràng buộc giữ lại mẫu giải thích phần lớn khác biệt hơn là chất lượng xếp hạng, nên khuyến nghị báo cáo cả hai độ đo.",
+    "open": [
+     {
+      "text": "Adding the audit's strict gate changes both pool composition and training-set size, so the comparison measures their joint effect rather than the gate alone.",
+      "text_vi": "Thêm cổng lọc nghiêm ngặt của bước kiểm định làm thay đổi cả thành phần tập ứng viên lẫn kích thước tập huấn luyện, nên phép so sánh đo tác động chung của cả hai chứ không riêng cổng lọc.",
+      "source": "authors",
+      "quote": false,
+      "papers": [
+       "emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth"
+      ]
+     },
+     {
+      "text": "The fine-tunes plus the judge audit cost roughly one GPU-week per seed.",
+      "text_vi": "Các lần fine-tune cùng bước kiểm định bằng giám khảo tốn khoảng một tuần GPU cho mỗi seed.",
+      "source": "authors",
+      "quote": false,
+      "papers": [
+       "emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth"
+      ]
+     }
+    ],
+    "papers": [
+     "emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth"
+    ],
+    "score": 0.33,
+    "color": "tc1",
+    "words": [
+     {
+      "word": "downstream",
+      "share": 100
+     },
+     {
+      "word": "synthetic-data selection",
+      "share": 80
+     },
+     {
+      "word": "versus",
+      "share": 75
+     },
+     {
+      "word": "audit",
+      "share": 52
+     },
+     {
+      "word": "predict",
+      "share": 50
+     },
+     {
+      "word": "low-resource",
+      "share": 50
+     }
+    ]
+   },
+   {
     "title": "Provenance-based defences for LLM agents",
     "title_vi": "Phòng thủ dựa trên nguồn gốc cho agent LLM",
     "gist": "For agent security, PROVACT tests whether tracking where an action's inputs came from can catch influence that survives when rewriting removes the string content defences match.",
@@ -16441,7 +16502,7 @@
      "iclr2027-provact-a-diagnostic-study-of-causal-provenance-gating-for-l"
     ],
     "score": 0.25,
-    "color": "tc1",
+    "color": "tc2",
     "words": [
      {
       "word": "provact",
@@ -16511,7 +16572,7 @@
      "iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g"
     ],
     "score": 0.25,
-    "color": "tc2",
+    "color": "tc3",
     "words": [
      {
       "word": "generation",
@@ -16581,7 +16642,7 @@
      "iclr2027-attested-but-unaccounted-dp-sgd-privacy-accounting-as-a-prec"
     ],
     "score": 0.2,
-    "color": "tc3",
+    "color": "tc4",
     "words": [
      {
       "word": "step",
@@ -16606,67 +16667,6 @@
      {
       "word": "privacy",
       "share": 70
-     }
-    ]
-   },
-   {
-    "title": "Synthetic data for low-resource languages",
-    "title_vi": "Dữ liệu tổng hợp cho ngôn ngữ ít tài nguyên",
-    "gist": "For synthetic training data, a controlled study tests whether quality ratings from an LLM judge predict how useful the data is for African-language classification.",
-    "gist_vi": "Với dữ liệu huấn luyện tổng hợp, một nghiên cứu có kiểm soát kiểm tra xem điểm chất lượng do giám khảo LLM chấm có dự đoán được mức hữu ích của dữ liệu cho bài toán phân loại ngôn ngữ châu Phi hay không.",
-    "open_gist": "For synthetic data selection, the effect of quality filtering cannot yet be separated from the change in training-set size it causes, and each seed costs about one GPU-week of compute.",
-    "open_gist_vi": "Với việc chọn dữ liệu tổng hợp, tác động của việc lọc theo chất lượng chưa thể tách khỏi sự thay đổi kích thước tập huấn luyện mà nó gây ra, và mỗi seed tốn khoảng một tuần GPU tính toán.",
-    "summary": "The study replays seven synthetic-data selectors on two low-resource African-language classification tasks in four languages, keeping 64 examples per task–language cell. It reports that the selector with the highest judged label correctness (CoSDA-V2) is outperformed on downstream Macro-F1 by AlpaGasus, and that retention constraints explain more of the differences than ranking quality, so it recommends reporting both metrics.",
-    "summary_vi": "Nghiên cứu phát lại bảy bộ chọn dữ liệu tổng hợp trên hai tác vụ phân loại ngôn ngữ châu Phi ít tài nguyên với bốn ngôn ngữ, giữ 64 mẫu cho mỗi ô tác vụ–ngôn ngữ. Bài báo báo cáo rằng bộ chọn có độ đúng nhãn do giám khảo chấm cao nhất (CoSDA-V2) lại bị AlpaGasus vượt về Macro-F1 ở tác vụ đích, và rằng các ràng buộc giữ lại mẫu giải thích phần lớn khác biệt hơn là chất lượng xếp hạng, nên khuyến nghị báo cáo cả hai độ đo.",
-    "open": [
-     {
-      "text": "Adding the audit's strict gate changes both pool composition and training-set size, so the comparison measures their joint effect rather than the gate alone.",
-      "text_vi": "Thêm cổng lọc nghiêm ngặt của bước kiểm định làm thay đổi cả thành phần tập ứng viên lẫn kích thước tập huấn luyện, nên phép so sánh đo tác động chung của cả hai chứ không riêng cổng lọc.",
-      "source": "authors",
-      "quote": false,
-      "papers": [
-       "emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth"
-      ]
-     },
-     {
-      "text": "The fine-tunes plus the judge audit cost roughly one GPU-week per seed.",
-      "text_vi": "Các lần fine-tune cùng bước kiểm định bằng giám khảo tốn khoảng một tuần GPU cho mỗi seed.",
-      "source": "authors",
-      "quote": false,
-      "papers": [
-       "emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth"
-      ]
-     }
-    ],
-    "papers": [
-     "emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth"
-    ],
-    "score": 0.33,
-    "color": "tc4",
-    "words": [
-     {
-      "word": "downstream",
-      "share": 100
-     },
-     {
-      "word": "synthetic-data selection",
-      "share": 80
-     },
-     {
-      "word": "versus",
-      "share": 75
-     },
-     {
-      "word": "audit",
-      "share": 52
-     },
-     {
-      "word": "predict",
-      "share": 50
-     },
-     {
-      "word": "low-resource",
-      "share": 50
      }
     ]
    }

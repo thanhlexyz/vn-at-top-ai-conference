@@ -331,50 +331,9 @@ def is_other(g):
     return g["title"].lower().startswith("other")
 
 
-def order_topics(groups, mine, cache, cites):
-    import collections
-    import math
-
-    year = {x["id"]: x["year"] for x in mine}
-    rest = [g for g in groups if not is_other(g)]
-    if len(rest) < 3:
-        return sorted(rest, key=lambda g: -g["score"]) + [g for g in groups if is_other(g)]
-    other = [g for g in groups if is_other(g)]
-
-    def vec(g):
-        text = " ".join(x["title"] + " " + (cache.get(x["id"]) or "") for x in mine if x["id"] in g["papers"])
-        return collections.Counter(w for w in re.findall(r"[a-z][a-z0-9-]{3,}", text.lower()) if w not in STOPWORDS)
-    vecs = {id(g): vec(g) for g in rest}
-    df = collections.Counter(w for v in vecs.values() for w in v)
-
-    def weight(v):
-        return {w: c * math.log(1 + len(rest) / df[w]) for w, c in v.items()}
-    wv = {k: weight(v) for k, v in vecs.items()}
-
-    def cos(a, b):
-        num = sum(a[w] * b.get(w, 0) for w in a)
-        den = math.sqrt(sum(x * x for x in a.values())) * math.sqrt(sum(x * x for x in b.values())) or 1
-        return num / den
-    topic_of = {i: id(g) for g in rest for i in g["papers"]}
-    linked = collections.Counter()
-    for e in cites:
-        a, b = topic_of.get(e["from"]), topic_of.get(e["to"])
-        if a and b and a != b:
-            linked[frozenset((a, b))] += 1
-    recency = {id(g): sum(year[i] for i in g["papers"]) / len(g["papers"]) for g in rest}
-    lo, hi = min(recency.values()), max(recency.values())
-    fresh = {k: (v - lo) / ((hi - lo) or 1) for k, v in recency.items()}
-    top = max(g["score"] for g in rest) or 1
-    care = {id(g): g["score"] / top for g in rest}
-    weight = {k: 0.65 * care[k] + 0.35 * fresh[k] for k in care}
-    order = [max(rest, key=lambda g: weight[id(g)])]
-    left = [g for g in rest if g is not order[0]]
-    while left:
-        last = id(order[-1])
-        nxt = max(left, key=lambda g: 0.6 * cos(wv[last], wv[id(g)]) + 0.1 * linked[frozenset((last, id(g)))] + weight[id(g)])
-        order.append(nxt)
-        left.remove(nxt)
-    return order + other
+def order_topics(groups):
+    return sorted((g for g in groups if not is_other(g)), key=lambda g: (-g["score"], -len(g["papers"]))) + \
+        [g for g in groups if is_other(g)]
 
 
 def figure(groups, mine, cites):
@@ -482,18 +441,19 @@ def merge_papers(papers):
             g["score"] = round(sum(credit[i] for i in g["papers"]), 2)
         if groups:
             cites = citations(mine)
-            groups = order_topics(groups, mine, abstracts, cites)
+            groups = order_topics(groups)
             for k, g in enumerate(groups):
                 g["color"] = TOPIC_COLORS[k] if not is_other(g) and k < len(TOPIC_COLORS) else "tc-other"
             for g, ws in zip(groups, topic_words(groups, mine, abstracts)):
                 g["words"] = ws
             fig = figure(groups, mine, cites)
-            if t.get("intro") and all(g.get("gist") for g in groups):
-                t = {**t, "overview": " ".join([t["intro"]] + [g["gist"] for g in groups]),
-                     "overview_vi": " ".join([t.get("intro_vi", "")] + [g.get("gist_vi", "") for g in groups]).strip()}
-            if all(g.get("open_gist") for g in groups):
-                t = {**t, "open_summary": " ".join(g["open_gist"] for g in groups),
-                     "open_summary_vi": " ".join(g.get("open_gist_vi", "") for g in groups).strip()}
+            lead = [g for g in groups if not is_other(g)][:3] or groups[:1]
+            if t.get("intro") and all(g.get("gist") for g in lead):
+                t = {**t, "overview": " ".join([t["intro"]] + [g["gist"] for g in lead]),
+                     "overview_vi": " ".join([t.get("intro_vi", "")] + [g.get("gist_vi", "") for g in lead]).strip()}
+            if all(g.get("open_gist") for g in lead):
+                t = {**t, "open_summary": " ".join(g["open_gist"] for g in lead),
+                     "open_summary_vi": " ".join(g.get("open_gist_vi", "") for g in lead).strip()}
         people[prof["slug"]] = {"name": prof["name"], "name_vi": prof["name_vi"], "institution": prof["institution_short"],
                                 "image": prof.get("image") or "", "figure": fig,
                                 "open_summary": t.get("open_summary", ""), "open_summary_vi": t.get("open_summary_vi", ""),
