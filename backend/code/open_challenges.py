@@ -535,7 +535,7 @@ def merge_papers(papers):
             for k in labels.get((x["slug"], "focus"), []):
                 best[k] = x["score"]
         x["areas"] = [{"key": k, "score": v} for k, v in sorted(best.items(), key=lambda kv: -kv[1])]
-    counts = {t["key"]: sum(1 for x in index if any(r["key"] == t["key"] for r in x["areas"])) for t in taxonomy["topics"]}
+    counts = {t["key"]: sum(1 for x in index if any(r["key"] == t["key"] and r["score"] > 0 for r in x["areas"])) for t in taxonomy["topics"]}
     areas = [{"key": t["key"], "title": t["title"], "title_vi": t["title_vi"], "count": counts[t["key"]]}
              for t in taxonomy["topics"] if counts[t["key"]]]
     areas.sort(key=lambda a: -a["count"])
