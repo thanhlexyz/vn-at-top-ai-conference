@@ -15,10 +15,10 @@
 {{- $ov := cond $vi .overview_vi .overview }}{{ $op := cond $vi .open_summary_vi .open_summary }}
 {{- if or $ov $op }}
 <blockquote class="ch-quote">
-{{- $base := printf "href=\"%s#" (printf "challenges/%s/" $p.slug | relLangURL) }}
+{{- $base := printf "href=\"%s#" (printf "research/%s/" $p.slug | relLangURL) }}
 {{- with $ov }}<p>{{ replace . "href=\"#" $base | safeHTML }}</p>{{ end }}
 {{- with $op }}<p><strong>{{ T "ch_open_summary" }}</strong> {{ replace . "href=\"#" $base | safeHTML }}</p>{{ end }}
-<p class="ch-more"><a href="{{ printf "challenges/%s/" $p.slug | relLangURL }}">{{ T "ch_read_more" }} →</a></p>
+<p class="ch-more"><a href="{{ printf "research/%s/" $p.slug | relLangURL }}">{{ T "ch_read_more" }} →</a></p>
 </blockquote>
 {{- end }}
 {{- end }}
@@ -142,22 +142,28 @@
 	{{- else }}
 	<li class="note">{{ T "coauthors_no_aff" }}</li>
 	{{- end }}
-	{{- if $c.papers_with_topic }}
-	<li>
-		{{ T "topics_line" (dict "Topics" $c.topic_count "Count" $c.topic_areas "With" $c.papers_with_topic "Papers" $c.papers) }}
-		{{ range $n, $a := $c.areas }}{{ if $n }}, {{ end }}{{ $a.area }} ({{ $a.papers }}){{ end }}.
-	</li>
+	{{- $vi := eq site.Language.Lang "vi" }}
+	{{- $mine := index (hugo.Data.challenges_people | default dict) $p.slug }}
+	{{- $ent := slice }}{{ with where (hugo.Data.challenges.professors | default slice) "slug" $p.slug }}{{ with index . 0 }}{{ $ent = slice . }}{{ end }}{{ end }}
+	{{- $rows := slice }}
+	{{- if $mine }}{{ $rows = $mine.topics }}{{ end }}
+	{{- if not $rows }}{{ range $ent }}{{ range .areas }}{{ $rows = $rows | append (dict "key" .key "score_accepted" .score) }}{{ end }}{{ end }}{{ end }}
+	{{- if $rows }}
+	<li>{{ T "topics_line_ch" (dict "Count" (len $rows) "URL" (printf "research/%s/" $p.slug | relLangURL)) | safeHTML }}</li>
 	{{- else }}
 	<li class="note">{{ T "topics_none" }}</li>
 	{{- end }}
 </ul>
-{{- if $c.topics }}
+{{- $all := (hugo.Data.challenge_topics.topics | default slice) }}
+{{- if $rows }}
 <div class="scroll">
 <table>
-	<thead><tr><th class="l">{{ T "th_topic_area" }}</th><th class="l">{{ T "th_topic" }}</th><th>{{ T "th_papers" }}</th></tr></thead>
+	<thead><tr><th class="l">{{ T "th_topic" }}</th><th>{{ T "th_papers" }}</th><th title="{{ T "ch_line_tip" }}">{{ T "ch_score" }}</th></tr></thead>
 	<tbody>
-	{{- range $c.topics }}
-	<tr><td class="l">{{ .area }}</td><td class="l">{{ with .topic }}{{ . }}{{ else }}&ndash;{{ end }}</td><td>{{ .papers }}</td></tr>
+	{{- range $rows }}
+	{{- $key := .key }}{{ $title := "" }}
+	{{- with where $all "key" $key }}{{ with index . 0 }}{{ $title = cond $vi .title_vi .title }}{{ end }}{{ end }}
+	<tr><td class="l"><a href="{{ printf "research/#topic-%s" $key | relLangURL }}">{{ $title }}</a></td><td>{{ with .papers }}{{ len . }}{{ else }}&ndash;{{ end }}</td><td>{{ printf "%.2f" .score_accepted }}</td></tr>
 	{{- end }}
 	</tbody>
 </table>

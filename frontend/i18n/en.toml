@@ -473,7 +473,7 @@ other = "The decision on OpenReview"
 [th_topics]
 other = "Topics"
 [tip_topics]
-other = "different topic labels the conference gave the papers, as in the topic table on each professor's page"
+other = "the three topics (from the shared list on the Research directions page) where the professor has the highest CSRankings score; click a topic to see who else works on it"
 
 [prof_pie_caption]
 other = "All years: {{ .Accepted }} accepted, {{ .Recorded }} rejected and on record, and about {{ .Estimated }} rejected elsewhere (estimate), so about {{ .Total }} submissions."
@@ -686,3 +686,5 @@ other = "The paper's page on OpenReview, with its public reviews"
 other = "The topics above are the subject areas listed in the calls for papers of the conferences tracked on this site, merged into one list (RSS lists none; IJCAI lists only its special tracks):"
 [ch_line_tip]
 other = "Papers in this topic (accepted and rejected), and the CSRankings score of its accepted papers"
+[topics_line_ch]
+other = "{{ .Count }} topics from the shared list built from the calls for papers of the tracked conferences (accepted and rejected papers, with the CSRankings score of the accepted ones); the research summary and open challenges are on the <a href=\"{{ .URL }}\">Research directions page</a>."

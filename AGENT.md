@@ -190,20 +190,20 @@ The MELD detector was removed on 2026-11-25 in commit 4118d8b (its parent, 8d267
   "Review scores" (score(confidence), from `fetch_reviews.py` into `reviews.json`) and "AI score" columns are
   `data-extra`: hidden until the reader presses "More columns".
 
-## Open challenges (`/challenges/`, `/challenges/<professor>/`)
+## Research directions (`/research/`, `/research/<professor>/`; internal names still say "challenges": `open_challenges.py`, `frontend/data/challenges*.json`, `work/challenges/`)
 
 Public pages, objective and data-driven: every statement traces to a paper's abstract, its own text or its public
 OpenReview reviews; reviewer concerns are verbatim quotes (checked word for word at merge, unmatched quotes dropped);
 no praise or opinion. Written at the level of a computer-science undergraduate. Built from the Papers page only (never
 from under-review submissions).
-- `/challenges/`: each professor with a short focus line, ✅ when written from the full material, 🚧 otherwise.
-- `/challenges/<slug>/`: portrait; overview and open-challenges paragraphs covering the three top topics; a
+- `/research/`: each professor with a short focus line, ✅ when written from the full material, 🚧 otherwise.
+- `/research/<slug>/`: portrait; overview and open-challenges paragraphs covering the three top topics; a
   topic × year figure (dots = papers, curves = citations between the professor's papers, found in the PDFs'
   reference lists); then topics ordered by their CSRankings score (sum of 1/N authors over the topic's papers, shown
   in the heading), each with a folded description, topic words, folded open questions (every topic has some) and
   folded papers (problem, idea, reported results, what the authors leave open, reviewer quotes, outcome tag).
 - Professor pages quote the two paragraphs and link to the challenge page.
-- The filter on `/challenges/` uses ONE topic list synthesised from the official calls for papers of the 13 tracked
+- The filter on `/research/` uses ONE topic list synthesised from the official calls for papers of the 13 tracked
   conferences (`frontend/data/challenge_topics.json`: 34 topics, each with the conferences whose CFP terms it merges, plus the
   CFP addresses shown under the filter). Sources: ICLR/NeurIPS/ICML/CVPR/ECCV/ACL/EMNLP/ICRA/IROS 2026, ICCV 2025,
   AAAI-27 (the 2026 edition lists none); IJCAI's CFP has no topic list (its special tracks and the AI-and-Health,
@@ -218,7 +218,7 @@ from under-review submissions).
   maintainer live in `backend/data/json/topic_merges.json` (`open_challenges.py taxonomy` rebuilds the list,
   `regroup` writes the per-professor inputs, agents write `topics2/part_<slug>.json`). Co-authors see the same text for
   a shared paper: groups with identical paper sets are unified at merge (`unify`), overlapping ones are harmonized by an
-  agent (`harmonize_out.json`). `/challenges/` shows each professor's per-topic summary: all of them (best topic
+  agent (`harmonize_out.json`). `/research/` shows each professor's per-topic summary: all of them (best topic
   first) with no filter, only the chosen topic's with a filter.
 - The summary paragraphs describe the work by topic ("Work on <what>" + one `[phrase](paper-id)` link marker per
   sentence, turned into `#paper-id` links by `linkify`), never naming papers or methods, so a reader with no context

@@ -68,6 +68,26 @@ Chẳng hạn, với 9 bài nộp ICLR và 1 bài được nhận, tỷ lệ là
 
 Đáng chú ý, phép ước tính này chỉ áp dụng cho những hội nghị chắc chắn có bài nộp dựa trên minh chứng là có ít nhất một bài được nhận. Chẳng hạn, nếu một giảng viên có 1 bài được nhận tại AAAI và có lịch sử nộp bài tại ICLR, hệ thống mới ngoại suy số lượt nộp tại AAAI. Nếu giảng viên không có bài nào được nhận tại AAAI, hệ thống hoàn toàn không ước tính lượt nộp nào cho hội nghị đó vì không có căn cứ xác định họ có nộp bài hay không.
 
+## Hướng nghiên cứu
+
+Trang [Hướng nghiên cứu](../research/) trả lời câu hỏi mà bảng xếp hạng không trả lời được: *mỗi giảng viên thực sự đang làm gì, và công việc của họ còn dang dở ở đâu?* Trang được viết cho sinh viên đại học và cao học, ứng viên nghiên cứu sinh và những người làm ở lĩnh vực khác, và chỉ dựa trên tài liệu công khai: các bài báo trên trang này (được nhận và bị từ chối), phần tóm tắt và phần hạn chế của chính bài báo, cùng các nhận xét phản biện công khai trên OpenReview.
+
+### Trang cho thấy gì
+
+- **Danh sách chủ đề.** Các chủ đề lấy từ một danh sách chung mà chúng tôi xây dựng từ thư mời bài (call for papers) của các hội nghị được theo dõi ở đây (những lĩnh vực mà mỗi hội nghị yêu cầu tác giả chọn), gộp thành 19 chủ đề. Chọn một chủ đề, danh sách sẽ cho biết ai làm về chủ đề đó, xếp theo [điểm CSRankings](#phương-pháp-tính-điểm) trong chủ đề (chỉ tính bài được nhận).
+- **Một trang cho mỗi giảng viên.** Trang mở đầu bằng phần tổng quan ngắn và tóm tắt các thách thức còn mở, rồi đi lần lượt từng chủ đề. Mỗi chủ đề có mô tả ngắn, các câu hỏi còn bỏ ngỏ (điều tác giả nói chưa giải quyết được, và trích nguyên văn từ nhận xét phản biện công khai) và các bài báo, mỗi bài có bài toán, ý tưởng, kết quả và liên kết đến bài báo, nguồn chính thức và OpenReview.
+- **Một hình cho mỗi giảng viên.** Mỗi chấm là một bài báo theo chủ đề và năm, có đường cong nối bài với một bài trước đó của cùng giảng viên mà nó trích dẫn, để thấy một hướng nghiên cứu đã phát triển ra sao.
+
+### Trang giúp ích thế nào
+
+- **Chọn người hướng dẫn.** Phần tóm tắt theo chủ đề và điểm cho thấy giảng viên làm gì và phần lớn công bố của họ nằm ở chủ đề nào, điều mà tên hay trường không cho biết. Một giảng viên có nhiều bài gần đây ở chủ đề bạn thích phù hợp hơn một cái tên nổi tiếng ở lĩnh vực khác. Các bài báo liệt kê dưới mỗi chủ đề là nơi nên đọc trước khi viết thư cho thầy cô.
+- **Chọn đề tài.** Mỗi câu hỏi còn mở đánh dấu một điểm mà tác giả hoặc phản biện cho rằng chưa được giải quyết, ví dụ một bối cảnh chưa thử, một chi phí mà phương pháp thêm vào, hay một đối chứng mà phản biện yêu cầu. Với sinh viên, đó là những chỗ cụ thể để giúp người hướng dẫn: bắt đầu từ một câu hỏi, đọc bài báo được dẫn, rồi đề xuất một phần việc nhỏ, rõ ràng.
+- **Viết thư hay hơn.** Nêu một bài báo cụ thể và một câu hỏi còn mở của nó cho thấy bạn đã đọc công trình.
+
+### Giới hạn
+
+Các trang là bản tóm tắt, không phải đánh giá. Trang không có điểm số của bài báo hay phản biện và không nêu ý kiến về việc một hướng có đáng theo đuổi hay không. Bài nào chúng tôi không lấy được văn bản hoặc nhận xét thì chỉ được mô tả từ phần tóm tắt, và nhiều bài, như ở AAAI và ICRA, không có nhận xét công khai. Chuyên gia trong từng lĩnh vực biết lĩnh vực đang đi về đâu và bài toán nào đáng theo đuổi, và có thể cân nhắc điểm mạnh, điểm yếu khác đi; hãy xem các trang này như điểm khởi đầu và trao đổi trực tiếp với những người liên quan.
+
 ## Thông tin dự án và lời cảm ơn
 
 Dự án này do **Lê Thành** ([thanhle.xyz](http://thanhle.xyz)) lên ý tưởng, thiết kế và quản lý nội dung, được xây dựng với sự trợ giúp của [Claude](https://www.anthropic.com/claude) và biên tập, hoàn thiện văn phong với sự hỗ trợ của [Gemini](https://gemini.google.com/). Tôi thực hiện trang web này từ sự tò mò cá nhân, với hy vọng đóng góp một nguồn tham khảo minh bạch, hữu ích cho cộng đồng học thuật và những ai quan tâm đến nghiên cứu AI tại Việt Nam.

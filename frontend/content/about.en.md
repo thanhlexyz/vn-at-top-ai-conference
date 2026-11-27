@@ -66,6 +66,26 @@ For instance, 9 ICLR submissions and 1 acceptance gives `(9 + 1) / (1 + 1) = 5`,
 
 Importantly, this projection only applies to conferences where submissions are certain because the professor has at least one accepted paper. For example, if a professor has 1 accepted paper at AAAI and a submission record at ICLR, we extrapolate their submissions at AAAI. If they have no accepted papers at AAAI, no submissions are estimated for that conference because there is no evidence that they submitted there.
 
+## Research directions
+
+The [Research directions](../research/) page answers a question that rankings cannot: *what does each professor actually work on, and where is their work still unfinished?* It is written for undergraduate and master's students, PhD applicants and researchers from other fields, and it is built only from public material: the papers on this site (accepted and rejected), their abstracts and own limitation sections, and the public OpenReview reviews.
+
+### What it shows
+
+- **A list of topics.** The topics come from one shared list that we built from the calls for papers of the conferences tracked here (the subject areas each conference asks authors to choose from), merged into 19 topics. Pick a topic and the list shows who works on it, ranked by their [CSRankings score](#scoring-methodology) in that topic (accepted papers only).
+- **A page per professor.** It opens with a short overview and a summary of the open challenges, then goes topic by topic. Each topic has a short description, the questions it leaves open (what the authors say they have not solved, and verbatim quotes from public reviews) and the papers, each with the problem, the idea, what it reports and links to the paper, its official source and OpenReview.
+- **A figure per professor.** One dot per paper by topic and year, with curves where a paper cites an earlier one of the same professor, so you can see how a line of work developed.
+
+### How it can help you
+
+- **Choosing a supervisor.** The topic summaries and scores show what a professor works on and how much of their output sits in each topic, which a name or a university does not tell you. A professor with many papers in a topic you like, in recent years, is a stronger match than a famous name in another area. The papers listed under each topic are the place to read before you write to them.
+- **Choosing a thesis topic.** Every open question marks a point that the authors or reviewers say is not yet solved, such as a setting that was not tested, a cost the method adds, or a baseline reviewers asked for. For a student, those are concrete places to help a supervisor: start from a question, read the linked paper, and propose a small, well-defined piece of work.
+- **Writing a better email.** Citing a specific paper and one of its open questions shows that you have read the work.
+
+### Limits
+
+The pages are summaries, not evaluations. They contain no scores of papers or reviewers and no opinion about whether a direction is worthwhile. Papers whose text or reviews we could not obtain are described from their abstracts only, and many papers, such as those at AAAI and ICRA, have no public reviews. Experts in a field know where it is heading and which problems are worth pursuing, and may weigh strengths and weaknesses differently; use these pages as a starting point and talk to the people involved.
+
 ## Credits & Resources
 
 This project was conceived, designed, and curated by **Thanh Le** ([thanhle.xyz](http://thanhle.xyz)), built with the assistance of [Claude](https://www.anthropic.com/claude), with writing and editorial revisions assisted by [Gemini](https://gemini.google.com/). I created this site out of personal curiosity to offer a transparent reference for the Vietnamese academic community and anyone following AI research in Vietnam.

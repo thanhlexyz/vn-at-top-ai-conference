@@ -2,6 +2,7 @@
 {{- if reflect.IsMap . }}{{ $rows = .rows }}{{ $compact = .compact }}{{ $podium = .podium }}{{ $rank = or .rank .podium }}{{ $brief = .brief }}{{ $lite = .lite }}{{ end }}
 {{- $period := or $brief $lite }}
 {{- $last := hugo.Data.meta.last_year }}
+{{- $topics := (hugo.Data.challenge_topics.topics | default slice) }}
 {{- $from := time.Format (T "recent_from_layout") (time.AsTime (printf "%s-01" hugo.Data.meta.recent_from)) }}
 <div class="scroll pinned top">
 <table{{ if $podium }} class="podium{{ if $brief }} collapsed rows-collapsed{{ end }}{{ if $lite }} collapsed{{ end }}"{{ else if $brief }} class="collapsed rows-collapsed"{{ else if $lite }} class="collapsed"{{ end }}{{ if $brief }} id="professors-table" data-collapsible data-rows-collapsible{{ end }}{{ if $lite }} id="inst-professors" data-collapsible{{ end }}>
@@ -119,9 +120,13 @@
 		{{- end }}
 		{{- $cls := slice "" "ca-min" "ca-max" "ca-dom" "ca-for" "ca-same" "ca-other" "" }}
 		{{- $none := eq (int .accepted) 0 }}
+		{{- $mine := slice }}{{ with where (hugo.Data.challenges.professors | default slice) "slug" $p.slug }}{{ with index . 0 }}{{ $mine = first 3 .areas }}{{ end }}{{ end }}
 		{{- range $k, $v := slice .collab.avg_coauthors .collab.min_coauthors .collab.max_coauthors .collab.avg_domestic .collab.avg_foreign .collab.avg_same_institution .collab.avg_other_institution .collab.topic_count }}
 		{{- $c := index $cls $k }}
-		{{- if and $brief (lt $k 7) }}
+		{{- if eq $k 7 }}
+		{{- if $mine }}<td class="l">{{ range $i, $t := $mine }}{{ with where $topics "key" $t.key }}{{ with index . 0 }}{{ if $i }}, {{ end }}<a href="{{ printf "research/#topic-%s" .key | relLangURL }}">{{ if eq site.Language.Lang "vi" }}{{ .title_vi }}{{ else }}{{ .title }}{{ end }}</a>{{ end }}{{ end }}{{ end }}</td>
+		{{- else }}<td class="na">&ndash;</td>{{ end }}
+		{{- else if and $brief (lt $k 7) }}
 		{{- else if eq (string $v) "" }}
 		<td class="na {{ $c }}">&ndash;</td>
 		{{- else if and $none (lt $k 7) }}

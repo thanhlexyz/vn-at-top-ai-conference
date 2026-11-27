@@ -469,9 +469,9 @@ other = "Điểm của các phản biện, kèm độ tin cậy của phản bi�
 other = "Quyết định trên OpenReview"
 
 [th_topics]
-other = "Số chủ đề"
+other = "Chủ đề"
 [tip_topics]
-other = "số nhãn chủ đề khác nhau mà hội nghị gán cho bài, như bảng chủ đề trên trang của từng giảng viên"
+other = "ba chủ đề (trong danh sách chung ở trang Hướng nghiên cứu) mà giảng viên có điểm CSRankings cao nhất; bấm vào một chủ đề để xem những ai khác cùng làm"
 
 [prof_pie_caption]
 other = "Mọi năm: {{ .Accepted }} bài được nhận, {{ .Recorded }} bài bị từ chối có ghi nhận và khoảng {{ .Estimated }} bài bị từ chối ở nơi khác (ước tính), tức khoảng {{ .Total }} lần nộp."
@@ -680,3 +680,5 @@ other = "Trang OpenReview của bài, kèm nhận xét phản biện công khai"
 other = "Các chủ đề ở trên là những lĩnh vực được nêu trong thư mời bài (call for papers) của các hội nghị được theo dõi trên trang này, gộp thành một danh sách (RSS không nêu danh sách; IJCAI chỉ nêu các track đặc biệt):"
 [ch_line_tip]
 other = "Số bài trong chủ đề này (được nhận và bị từ chối), và điểm CSRankings của các bài được nhận"
+[topics_line_ch]
+other = "{{ .Count }} chủ đề trong danh sách chung được xây dựng từ thư mời bài của các hội nghị được theo dõi (gồm bài được nhận và bị từ chối, kèm điểm CSRankings của các bài được nhận); phần tóm tắt nghiên cứu và thách thức còn mở nằm ở <a href=\"{{ .URL }}\">trang Hướng nghiên cứu</a>."

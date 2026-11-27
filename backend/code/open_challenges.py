@@ -463,7 +463,8 @@ def merge_papers(papers):
     into = {old: new for new, m in merges.items() for old in m["from"]}
     raw_topic = {}
     for f in sorted(OUT.glob("paper_labels_*.json")):
-        raw_topic.update({i: v["key"] for i, v in json.loads(f.read_text(encoding="utf-8")).items()})
+        for i, v in json.loads(f.read_text(encoding="utf-8")).items():
+            raw_topic.setdefault(i, v["key"])
     paper_topic = {i: into.get(k, k) for i, k in raw_topic.items()}
     topics2 = {}
     for f in sorted((OUT / "topics2").glob("part_*.json")):
@@ -566,9 +567,11 @@ def merge_papers(papers):
         index.append({"slug": prof["slug"], "done": prof["slug"] in done, "name": prof["name"], "name_vi": prof["name_vi"],
                       "institution": prof["institution_short"], "papers": len(mine),
                       **{k: s.get(k, "") for k in ("focus", "focus_vi")}})
-    harmonized = OUT / "harmonize_out.json"
-    if harmonized.exists():
-        for ident, text in json.loads(harmonized.read_text(encoding="utf-8")).items():
+    harmonized_all = {}
+    for hf in sorted(OUT.glob("harmonize_out*.json")):
+        harmonized_all.update(json.loads(hf.read_text(encoding="utf-8")))
+    if harmonized_all:
+        for ident, text in harmonized_all.items():
             slug, _, key = ident.partition("#")
             for g in people.get(slug, {}).get("topics", []):
                 if g.get("key") == key:
@@ -648,12 +651,12 @@ def merge_papers(papers):
                                              "with_text": sum(1 for i in shown if (PDF_DIR / AREA[known[i]["venue"]] / f"{i}.pdf").exists()),
                                              "with_reviews": sum(1 for i in shown if (PDF_DIR / AREA[known[i]["venue"]] / f"{i}.md").exists())}}
     (FRONTEND / "data" / "challenges.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
-    content = FRONTEND / "content" / "challenges"
+    content = FRONTEND / "content" / "research"
     content.mkdir(parents=True, exist_ok=True)
     wanted = {}
     for slug, d in people.items():
-        for lang, title in (("en", f"Open challenges: {d['name']}"), ("vi", f"Thách thức còn mở: {d['name_vi']}")):
-            wanted[f"{slug}.{lang}.md"] = f'---\ntitle: "{title}"\nlayout: "challenge-person"\nprofessor: "{slug}"\n---\n'
+        for lang, title in (("en", f"Research directions: {d['name']}"), ("vi", f"Hướng nghiên cứu: {d['name_vi']}")):
+            wanted[f"{slug}.{lang}.md"] = f'---\ntitle: "{title}"\nlayout: "research-person"\nprofessor: "{slug}"\n---\n'
     for f in content.glob("*.md"):
         if not f.name.startswith("_index") and f.name not in wanted:
             f.unlink()
@@ -925,7 +928,8 @@ def regroup():
     taxonomy = {t["key"]: t for t in json.loads((FRONTEND / "data" / "challenge_topics.json").read_text(encoding="utf-8"))["topics"]}
     paper_topic = {}
     for f in sorted(OUT.glob("paper_labels_*.json")):
-        paper_topic.update({i: v["key"] for i, v in json.loads(f.read_text(encoding="utf-8")).items()})
+        for i, v in json.loads(f.read_text(encoding="utf-8")).items():
+            paper_topic.setdefault(i, v["key"])
     people = json.loads((FRONTEND / "data" / "challenges_people.json").read_text(encoding="utf-8"))
     done = {x["slug"] for x in json.loads((FRONTEND / "data" / "challenges.json").read_text(encoding="utf-8"))["professors"] if x["done"]}
     out = OUT / "regroup"
