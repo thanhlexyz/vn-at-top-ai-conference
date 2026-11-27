@@ -234,25 +234,18 @@
      "vi": "Các công trình về <a href=\"#cvpr2026-onboarding-without-forgetting-hypernetwork-personalization-w\">học liên kết client biến động</a> và dịch chuyển miền, dùng tổng hợp mô hình, hypernetwork và dữ liệu tổng hợp ở máy chủ mà không chia sẻ dữ liệu thô."
     },
     {
-     "n": 2,
-     "score": 0.1,
-     "key": "vision-multimodal",
-     "en": "Work on <a href=\"#neurips2025-how-many-tokens-do-3d-point-cloud-transformer-architectures-\">token merging and missing modalities</a>, shrinking redundant tokens in 3D point cloud transformers and reconstructing absent modalities with uncertainty estimates.",
-     "vi": "Các công trình về <a href=\"#neurips2025-how-many-tokens-do-3d-point-cloud-transformer-architectures-\">gộp token và modality bị thiếu</a>, giảm token dư thừa trong transformer đám mây điểm 3D và tái tạo modality bị thiếu kèm ước lượng độ bất định."
-    },
-    {
-     "n": 2,
-     "score": 0,
-     "key": "deep-learning",
-     "en": "Work on <a href=\"#iclr2025-forget-but-recall-incremental-latent-rectification-in-contin\">continual learning by mapping representations</a> back to earlier tasks, and on gradient boosting that uses shallow neural networks as weak learners.",
-     "vi": "Các công trình về <a href=\"#iclr2025-forget-but-recall-incremental-latent-rectification-in-contin\">học liên tục bằng ánh xạ</a> biểu diễn về các tác vụ trước, và về gradient boosting dùng mạng nơ-ron nông làm bộ học yếu."
-    },
-    {
      "n": 1,
      "score": 0.17,
      "key": "datasets-evaluation",
      "en": "Work on <a href=\"#icml2025-llm-srbench-a-new-benchmark-for-scientific-equation-discover\">benchmarking scientific equation discovery</a> with large language models, using problems built to resist memorization of well-known equations.",
      "vi": "Các công trình về <a href=\"#icml2025-llm-srbench-a-new-benchmark-for-scientific-equation-discover\">benchmark khám phá phương trình</a> khoa học với mô hình ngôn ngữ lớn, dùng các bài toán được thiết kế để chống việc ghi nhớ các phương trình nổi tiếng."
+    },
+    {
+     "n": 2,
+     "score": 0.1,
+     "key": "vision-multimodal",
+     "en": "Work on <a href=\"#neurips2025-how-many-tokens-do-3d-point-cloud-transformer-architectures-\">token merging and missing modalities</a>, shrinking redundant tokens in 3D point cloud transformers and reconstructing absent modalities with uncertainty estimates.",
+     "vi": "Các công trình về <a href=\"#neurips2025-how-many-tokens-do-3d-point-cloud-transformer-architectures-\">gộp token và modality bị thiếu</a>, giảm token dư thừa trong transformer đám mây điểm 3D và tái tạo modality bị thiếu kèm ước lượng độ bất định."
     },
     {
      "n": 1,
@@ -267,6 +260,13 @@
      "key": "robotics",
      "en": "Work on <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">few-shot robot policy adaptation</a> that conditions vision-language-action models on predicted future embeddings instead of predicted pixels.",
      "vi": "Các công trình về <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">thích nghi robot ít mẫu</a> điều kiện hóa mô hình vision-language-action trên embedding tương lai được dự đoán thay vì điểm ảnh."
+    },
+    {
+     "n": 2,
+     "score": 0,
+     "key": "deep-learning",
+     "en": "Work on <a href=\"#iclr2025-forget-but-recall-incremental-latent-rectification-in-contin\">continual learning by mapping representations</a> back to earlier tasks, and on gradient boosting that uses shallow neural networks as weak learners.",
+     "vi": "Các công trình về <a href=\"#iclr2025-forget-but-recall-incremental-latent-rectification-in-contin\">học liên tục bằng ánh xạ</a> biểu diễn về các tác vụ trước, và về gradient boosting dùng mạng nơ-ron nông làm bộ học yếu."
     }
    ]
   },
@@ -393,20 +393,6 @@
      "vi": "Các công trình về <a href=\"#icml2024-boosting-offline-optimizers-with-surrogate-sensitivity\">điều chuẩn mô hình thay thế trong tối ưu hóa ngoại tuyến</a> theo độ nhạy hoặc độ sắc, và về chuyển các thiết kế giá trị thấp thành thiết kế giá trị cao bằng một cầu xác suất."
     },
     {
-     "n": 4,
-     "score": 0.4,
-     "key": "deep-learning",
-     "en": "Work on <a href=\"#iccv2025-conststyle-robust-domain-generalization-with-unified-style-t\">domain generalization by unified style mapping</a>, cross-modal distillation without paired data, test-time adaptation and noise-resilient time-series representations.",
-     "vi": "Các công trình về <a href=\"#iccv2025-conststyle-robust-domain-generalization-with-unified-style-t\">tổng quát hóa miền</a> bằng ánh xạ phong cách thống nhất, chưng cất chéo phương thức không cần dữ liệu ghép cặp, thích ứng lúc kiểm thử và biểu diễn chuỗi thời gian chịu nhiễu."
-    },
-    {
-     "n": 2,
-     "score": 0.2,
-     "key": "trustworthy-ai",
-     "en": "Work on <a href=\"#iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-\">explaining neural networks through neuron groups</a> and on backdoor attacks on vision-language models whose poisoned outputs follow each input.",
-     "vi": "Các công trình về <a href=\"#iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-\">giải thích mạng nơ-ron qua các nhóm nơ-ron</a> và về tấn công backdoor vào mô hình thị giác-ngôn ngữ có đầu ra bị đầu độc bám theo từng đầu vào."
-    },
-    {
      "n": 3,
      "score": 0.42,
      "key": "vision-multimodal",
@@ -414,11 +400,11 @@
      "vi": "Các công trình về <a href=\"#cvpr2026-beyond-the-global-scores-fine-grained-token-grounding-as-a-r\">phát hiện ảo giác đối tượng trong mô hình thị giác-ngôn ngữ</a> từ các tín hiệu attention bên trong, và về phát hiện chữ ở xa trong video bằng tự giám sát."
     },
     {
-     "n": 2,
-     "score": 0,
-     "key": "probabilistic-causal",
-     "en": "Work on <a href=\"#iclr2026-diffusion-inspired-reconfiguration-of-transformers-for-uncer\">uncertainty quantification for pretrained transformers</a> with diffusion-style models, and on learning causal graphs from observational data faster.",
-     "vi": "Các công trình về <a href=\"#iclr2026-diffusion-inspired-reconfiguration-of-transformers-for-uncer\">định lượng độ bất định cho transformer tiền huấn luyện</a> bằng các mô hình kiểu khuếch tán, và về học đồ thị nhân quả từ dữ liệu quan sát nhanh hơn."
+     "n": 4,
+     "score": 0.4,
+     "key": "deep-learning",
+     "en": "Work on <a href=\"#iccv2025-conststyle-robust-domain-generalization-with-unified-style-t\">domain generalization by unified style mapping</a>, cross-modal distillation without paired data, test-time adaptation and noise-resilient time-series representations.",
+     "vi": "Các công trình về <a href=\"#iccv2025-conststyle-robust-domain-generalization-with-unified-style-t\">tổng quát hóa miền</a> bằng ánh xạ phong cách thống nhất, chưng cất chéo phương thức không cần dữ liệu ghép cặp, thích ứng lúc kiểm thử và biểu diễn chuỗi thời gian chịu nhiễu."
     },
     {
      "n": 2,
@@ -429,10 +415,10 @@
     },
     {
      "n": 2,
-     "score": 0,
-     "key": "datasets-evaluation",
-     "en": "Work on <a href=\"#iclr2027-trivis-a-large-scale-multi-view-benchmark-for-vietnamese-sig\">multi-view sign language recognition datasets</a> and on benchmarks testing whether LLMs can implement machine learning algorithms.",
-     "vi": "Các công trình về <a href=\"#iclr2027-trivis-a-large-scale-multi-view-benchmark-for-vietnamese-sig\">bộ dữ liệu nhận dạng ngôn ngữ ký hiệu đa góc nhìn</a> và các benchmark kiểm tra liệu LLM có triển khai được các thuật toán học máy hay không."
+     "score": 0.2,
+     "key": "trustworthy-ai",
+     "en": "Work on <a href=\"#iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-\">explaining neural networks through neuron groups</a> and on backdoor attacks on vision-language models whose poisoned outputs follow each input.",
+     "vi": "Các công trình về <a href=\"#iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-\">giải thích mạng nơ-ron qua các nhóm nơ-ron</a> và về tấn công backdoor vào mô hình thị giác-ngôn ngữ có đầu ra bị đầu độc bám theo từng đầu vào."
     },
     {
      "n": 2,
@@ -440,6 +426,20 @@
      "key": "learning-theory",
      "en": "Work on <a href=\"#neurips2026-mage-towards-generalizable-multi-timescale-eeg-representatio\">EEG foundation models</a> that process brain signals at several timescales or train an encoder with alignment and reconstruction objectives.",
      "vi": "Các công trình về <a href=\"#neurips2026-mage-towards-generalizable-multi-timescale-eeg-representatio\">mô hình nền tảng EEG</a> xử lý tín hiệu não ở nhiều thang thời gian hoặc huấn luyện bộ mã hóa với các mục tiêu căn chỉnh và tái tạo."
+    },
+    {
+     "n": 2,
+     "score": 0,
+     "key": "probabilistic-causal",
+     "en": "Work on <a href=\"#iclr2026-diffusion-inspired-reconfiguration-of-transformers-for-uncer\">uncertainty quantification for pretrained transformers</a> with diffusion-style models, and on learning causal graphs from observational data faster.",
+     "vi": "Các công trình về <a href=\"#iclr2026-diffusion-inspired-reconfiguration-of-transformers-for-uncer\">định lượng độ bất định cho transformer tiền huấn luyện</a> bằng các mô hình kiểu khuếch tán, và về học đồ thị nhân quả từ dữ liệu quan sát nhanh hơn."
+    },
+    {
+     "n": 2,
+     "score": 0,
+     "key": "datasets-evaluation",
+     "en": "Work on <a href=\"#iclr2027-trivis-a-large-scale-multi-view-benchmark-for-vietnamese-sig\">multi-view sign language recognition datasets</a> and on benchmarks testing whether LLMs can implement machine learning algorithms.",
+     "vi": "Các công trình về <a href=\"#iclr2027-trivis-a-large-scale-multi-view-benchmark-for-vietnamese-sig\">bộ dữ liệu nhận dạng ngôn ngữ ký hiệu đa góc nhìn</a> và các benchmark kiểm tra liệu LLM có triển khai được các thuật toán học máy hay không."
     }
    ]
   },
@@ -998,17 +998,17 @@
     },
     {
      "n": 1,
-     "score": 0,
-     "key": "health-science",
-     "en": "Work on <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">condensing gigapixel pathology slides</a> into a slide-adaptive set of concept prototypes by decomposing each slide, condensing, and pruning unused concepts.",
-     "vi": "Các công trình về <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">nén ảnh bệnh lý gigapixel</a> thành một tập prototype khái niệm thích ứng theo từng tiêu bản, bằng cách phân rã, nén và cắt tỉa các khái niệm không dùng."
-    },
-    {
-     "n": 1,
      "score": 0.14,
      "key": "generative-models",
      "en": "Work on <a href=\"#eccv2026-ac3s-adaptive-conditioning-for-3d-aware-synthetic-data-gener\">3D-aware synthetic image generation</a> with diffusion models, scaling down visual-prompt conditioning adaptively to avoid over-conditioning artifacts.",
      "vi": "Các công trình về <a href=\"#eccv2026-ac3s-adaptive-conditioning-for-3d-aware-synthetic-data-gener\">sinh ảnh tổng hợp nhận biết 3D</a> bằng mô hình khuếch tán, giảm cường độ điều kiện hóa bằng gợi ý thị giác một cách thích ứng để tránh lỗi do điều kiện hóa quá mức."
+    },
+    {
+     "n": 1,
+     "score": 0,
+     "key": "health-science",
+     "en": "Work on <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">condensing gigapixel pathology slides</a> into a slide-adaptive set of concept prototypes by decomposing each slide, condensing, and pruning unused concepts.",
+     "vi": "Các công trình về <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">nén ảnh bệnh lý gigapixel</a> thành một tập prototype khái niệm thích ứng theo từng tiêu bản, bằng cách phân rã, nén và cắt tỉa các khái niệm không dùng."
     }
    ]
   },
@@ -1212,18 +1212,18 @@
    },
    "gist_list": [
     {
-     "n": 5,
-     "score": 0.33,
-     "key": "language-nlp",
-     "en": "Work on <a href=\"#acl2026-llm-xtm-enhancing-cross-lingual-topic-models-with-large-lang\">cross-lingual topic modelling</a> and neural topic models, with LLMs, optimal transport and contrastive learning, and on few-shot continual relation extraction.",
-     "vi": "Các công trình về <a href=\"#acl2026-llm-xtm-enhancing-cross-lingual-topic-models-with-large-lang\">mô hình chủ đề đa ngôn ngữ</a> và mô hình chủ đề nơ-ron, dùng LLM, vận chuyển tối ưu, học tương phản, và trích xuất quan hệ few-shot."
-    },
-    {
      "n": 2,
      "score": 0.37,
      "key": "vision-multimodal",
      "en": "Work on <a href=\"#emnlp2026-pga-kd-principal-geometry-alignment-and-semantic-consistency\">compressing vision-language embedding models</a> trains small students to match large teachers, and on multi-label classification from one known label per image.",
      "vi": "Các công trình về <a href=\"#emnlp2026-pga-kd-principal-geometry-alignment-and-semantic-consistency\">nén mô hình embedding thị giác–ngôn ngữ</a> huấn luyện mô hình trò khớp mô hình thầy, và phân loại đa nhãn từ một nhãn đã biết mỗi ảnh."
+    },
+    {
+     "n": 5,
+     "score": 0.33,
+     "key": "language-nlp",
+     "en": "Work on <a href=\"#acl2026-llm-xtm-enhancing-cross-lingual-topic-models-with-large-lang\">cross-lingual topic modelling</a> and neural topic models, with LLMs, optimal transport and contrastive learning, and on few-shot continual relation extraction.",
+     "vi": "Các công trình về <a href=\"#acl2026-llm-xtm-enhancing-cross-lingual-topic-models-with-large-lang\">mô hình chủ đề đa ngôn ngữ</a> và mô hình chủ đề nơ-ron, dùng LLM, vận chuyển tối ưu, học tương phản, và trích xuất quan hệ few-shot."
     },
     {
      "n": 1,
@@ -1569,17 +1569,17 @@
     },
     {
      "n": 1,
-     "score": 0,
-     "key": "health-science",
-     "en": "Work on <a href=\"#iclr2027-is-h-e-image-to-spatial-transcriptomics-simpler-than-it-look\">predicting gene expression from tissue images</a> reweights supervision toward within-slide variation instead of slide-level averages.",
-     "vi": "Các công trình về <a href=\"#iclr2027-is-h-e-image-to-spatial-transcriptomics-simpler-than-it-look\">dự đoán biểu hiện gen theo không gian từ ảnh mô</a> tăng trọng số giám sát cho biến thiên trong cùng một slide thay vì giá trị trung bình cấp slide."
-    },
-    {
-     "n": 1,
      "score": 0.2,
      "key": "trustworthy-ai",
      "en": "Work on <a href=\"#iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-\">explaining neural networks through neuron groups</a>, grouping neurons by shared function into hierarchical circuits, including neurons that encode several unrelated features.",
      "vi": "Các công trình về <a href=\"#iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-\">giải thích mạng nơ-ron qua các nhóm nơ-ron</a>, gom nơ-ron theo chức năng chung thành các mạch phân cấp, kể cả các nơ-ron mã hóa nhiều đặc trưng không liên quan."
+    },
+    {
+     "n": 1,
+     "score": 0,
+     "key": "health-science",
+     "en": "Work on <a href=\"#iclr2027-is-h-e-image-to-spatial-transcriptomics-simpler-than-it-look\">predicting gene expression from tissue images</a> reweights supervision toward within-slide variation instead of slide-level averages.",
+     "vi": "Các công trình về <a href=\"#iclr2027-is-h-e-image-to-spatial-transcriptomics-simpler-than-it-look\">dự đoán biểu hiện gen theo không gian từ ảnh mô</a> tăng trọng số giám sát cho biến thiên trong cùng một slide thay vì giá trị trung bình cấp slide."
     }
    ]
   },
@@ -1648,18 +1648,18 @@
    },
    "gist_list": [
     {
-     "n": 2,
-     "score": 0.17,
-     "key": "health-science",
-     "en": "Work on <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">condensing gigapixel pathology slides</a> into prototypes that adapt to each slide, through concept decomposition and pruning or through distribution matching.",
-     "vi": "Các công trình về <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">nén ảnh bệnh lý gigapixel</a> thành các prototype thích ứng theo từng tiêu bản, bằng phân rã và cắt tỉa khái niệm hoặc bằng khớp phân phối."
-    },
-    {
      "n": 1,
      "score": 0.2,
      "key": "efficient-scalable",
      "en": "Work on <a href=\"#neurips2025-learning-reconfigurable-representations-for-multimodal-feder\">federated learning with missing modalities</a> learns client embeddings recording which modalities and features are absent, used to adapt the shared representation.",
      "vi": "Các công trình về <a href=\"#neurips2025-learning-reconfigurable-representations-for-multimodal-feder\">học liên kết với phương thức bị thiếu</a> học embedding phía client ghi lại phương thức và đặc trưng nào bị thiếu, để điều chỉnh biểu diễn chung."
+    },
+    {
+     "n": 2,
+     "score": 0.17,
+     "key": "health-science",
+     "en": "Work on <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">condensing gigapixel pathology slides</a> into prototypes that adapt to each slide, through concept decomposition and pruning or through distribution matching.",
+     "vi": "Các công trình về <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">nén ảnh bệnh lý gigapixel</a> thành các prototype thích ứng theo từng tiêu bản, bằng phân rã và cắt tỉa khái niệm hoặc bằng khớp phân phối."
     }
    ]
   },
@@ -1884,13 +1884,6 @@
    "gist_list": [
     {
      "n": 1,
-     "score": 0,
-     "key": "trustworthy-ai",
-     "en": "Work on <a href=\"#iclr2027-rethinking-fairness-in-multimodal-large-language-models-for-\">fairness of medical multimodal LLMs</a> bounds quality gaps between demographic groups by five differences in the data and benchmarks ten models.",
-     "vi": "Các công trình về <a href=\"#iclr2027-rethinking-fairness-in-multimodal-large-language-models-for-\">tính công bằng của LLM đa phương thức y tế</a> chặn trên chênh lệch chất lượng giữa các nhóm nhân khẩu theo năm khác biệt trong dữ liệu và đánh giá mười mô hình."
-    },
-    {
-     "n": 1,
      "score": 0.2,
      "key": "vision-multimodal",
      "en": "Work on <a href=\"#aaai2025-progressive-multi-granular-alignments-for-grounded-reasoning\">aligning text with image regions</a> step by step from simple to complex concepts, so vision-language models reason about object relations.",
@@ -1902,6 +1895,13 @@
      "key": "health-science",
      "en": "Work on <a href=\"#neurips2026-sympfno-structure-preserving-fourier-neural-operators-for-ph\">neural operators for Hamiltonian PDEs</a> builds layers that preserve the symplectic structure of energy-conserving dynamics so long-horizon rollouts stay stable.",
      "vi": "Các công trình về <a href=\"#neurips2026-sympfno-structure-preserving-fourier-neural-operators-for-ph\">toán tử nơ-ron cho PDE Hamilton</a> xây dựng các tầng bảo toàn cấu trúc symplectic của động lực học bảo toàn năng lượng để các lần dự báo chân trời dài vẫn ổn định."
+    },
+    {
+     "n": 1,
+     "score": 0,
+     "key": "trustworthy-ai",
+     "en": "Work on <a href=\"#iclr2027-rethinking-fairness-in-multimodal-large-language-models-for-\">fairness of medical multimodal LLMs</a> bounds quality gaps between demographic groups by five differences in the data and benchmarks ten models.",
+     "vi": "Các công trình về <a href=\"#iclr2027-rethinking-fairness-in-multimodal-large-language-models-for-\">tính công bằng của LLM đa phương thức y tế</a> chặn trên chênh lệch chất lượng giữa các nhóm nhân khẩu theo năm khác biệt trong dữ liệu và đánh giá mười mô hình."
     }
    ]
   },
@@ -2332,17 +2332,17 @@
    "gist_list": [
     {
      "n": 1,
-     "score": 0,
-     "key": "generative-models",
-     "en": "Work on <a href=\"#iclr2027-ratiodiff-aligning-diffusion-models-via-preference-ratio-mat\">preference alignment of diffusion models</a> fine-tunes text-to-image models offline with a loss matching preference ratios between denoising steps.",
-     "vi": "Các công trình về <a href=\"#iclr2027-ratiodiff-aligning-diffusion-models-via-preference-ratio-mat\">căn chỉnh sở thích cho mô hình khuếch tán</a> tinh chỉnh text-to-image ngoại tuyến bằng hàm mất mát khớp tỉ số sở thích giữa các bước khử nhiễu."
-    },
-    {
-     "n": 1,
      "score": 0.17,
      "key": "language-nlp",
      "en": "Work on <a href=\"#neurips2026-bso-safety-alignment-is-density-ratio-matching\">safety alignment as density ratio matching</a> derives single-stage preference losses from a closed-form likelihood ratio of the optimal safe policy.",
      "vi": "Các công trình về <a href=\"#neurips2026-bso-safety-alignment-is-density-ratio-matching\">căn chỉnh an toàn như khớp tỉ số mật độ</a> suy ra hàm mất mát một giai đoạn từ tỉ số khả năng của chính sách an toàn tối ưu."
+    },
+    {
+     "n": 1,
+     "score": 0,
+     "key": "generative-models",
+     "en": "Work on <a href=\"#iclr2027-ratiodiff-aligning-diffusion-models-via-preference-ratio-mat\">preference alignment of diffusion models</a> fine-tunes text-to-image models offline with a loss matching preference ratios between denoising steps.",
+     "vi": "Các công trình về <a href=\"#iclr2027-ratiodiff-aligning-diffusion-models-via-preference-ratio-mat\">căn chỉnh sở thích cho mô hình khuếch tán</a> tinh chỉnh text-to-image ngoại tuyến bằng hàm mất mát khớp tỉ số sở thích giữa các bước khử nhiễu."
     }
    ]
   },
@@ -2415,6 +2415,13 @@
    },
    "gist_list": [
     {
+     "n": 1,
+     "score": 0.17,
+     "key": "data-mining-graphs",
+     "en": "Work on <a href=\"#icml2026-automatic-unsupervised-ensemble-outlier-model-selection\">unsupervised outlier ensemble selection</a> learns from labelled datasets which detectors to add, then builds small ensembles for new unlabelled data.",
+     "vi": "Các công trình về <a href=\"#icml2026-automatic-unsupervised-ensemble-outlier-model-selection\">chọn ensemble phát hiện ngoại lai không giám sát</a> học từ các tập dữ liệu có nhãn nên thêm bộ phát hiện nào, rồi dựng ensemble nhỏ cho dữ liệu mới không nhãn."
+    },
+    {
      "n": 4,
      "score": 0,
      "key": "trustworthy-ai",
@@ -2441,13 +2448,6 @@
      "key": "efficient-scalable",
      "en": "Work on <a href=\"#iclr2026-feddtw-federated-digital-twin-weighting-for-mitigating-clien\">forecasting missing clients' models</a> lets a federated learning server estimate them from past weights, so training continues when devices drop out.",
      "vi": "Các công trình về <a href=\"#iclr2026-feddtw-federated-digital-twin-weighting-for-mitigating-clien\">dự báo mô hình của client vắng mặt</a> cho phép máy chủ học liên kết ước lượng chúng từ trọng số trước đó, để việc huấn luyện tiếp tục khi thiết bị rời mạng."
-    },
-    {
-     "n": 1,
-     "score": 0.17,
-     "key": "data-mining-graphs",
-     "en": "Work on <a href=\"#icml2026-automatic-unsupervised-ensemble-outlier-model-selection\">unsupervised outlier ensemble selection</a> learns from labelled datasets which detectors to add, then builds small ensembles for new unlabelled data.",
-     "vi": "Các công trình về <a href=\"#icml2026-automatic-unsupervised-ensemble-outlier-model-selection\">chọn ensemble phát hiện ngoại lai không giám sát</a> học từ các tập dữ liệu có nhãn nên thêm bộ phát hiện nào, rồi dựng ensemble nhỏ cho dữ liệu mới không nhãn."
     }
    ]
   },
@@ -2602,17 +2602,17 @@
    "gist_list": [
     {
      "n": 1,
-     "score": 0,
-     "key": "language-nlp",
-     "en": "Work on <a href=\"#emnlp2026-perish-or-flourish-a-holistic-evaluation-of-large-language-m\">evaluating LLM code in functional languages</a> benchmarks Haskell, OCaml and Scala on correctness, code style and maintainability.",
-     "vi": "Các công trình về <a href=\"#emnlp2026-perish-or-flourish-a-holistic-evaluation-of-large-language-m\">đánh giá việc LLM sinh mã trong ngôn ngữ hàm</a> lập benchmark Haskell, OCaml và Scala về tính đúng đắn, phong cách mã và khả năng bảo trì."
-    },
-    {
-     "n": 1,
      "score": 0.12,
      "key": "knowledge-reasoning",
      "en": "Work on <a href=\"#emnlp2026-athena-vulnerability-affected-library-identification-via-kno\">identifying libraries affected by vulnerabilities</a> casts the task as knowledge graph completion over a graph linking vulnerabilities, libraries and weakness types.",
      "vi": "Các công trình về <a href=\"#emnlp2026-athena-vulnerability-affected-library-identification-via-kno\">xác định thư viện bị ảnh hưởng bởi lỗ hổng</a> coi nhiệm vụ là hoàn thiện đồ thị tri thức trên đồ thị liên kết lỗ hổng, thư viện và loại điểm yếu."
+    },
+    {
+     "n": 1,
+     "score": 0,
+     "key": "language-nlp",
+     "en": "Work on <a href=\"#emnlp2026-perish-or-flourish-a-holistic-evaluation-of-large-language-m\">evaluating LLM code in functional languages</a> benchmarks Haskell, OCaml and Scala on correctness, code style and maintainability.",
+     "vi": "Các công trình về <a href=\"#emnlp2026-perish-or-flourish-a-holistic-evaluation-of-large-language-m\">đánh giá việc LLM sinh mã trong ngôn ngữ hàm</a> lập benchmark Haskell, OCaml và Scala về tính đúng đắn, phong cách mã và khả năng bảo trì."
     }
    ]
   },
@@ -4157,7 +4157,7 @@
  "sources": {
   "papers": 326,
   "date": "2026-11-27",
-  "with_text": 301,
+  "with_text": 314,
   "with_reviews": 188
  }
 }

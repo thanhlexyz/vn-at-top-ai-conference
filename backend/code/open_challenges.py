@@ -638,7 +638,7 @@ def merge_papers(papers):
         x["gists"] = gists
         x["gist_list"] = [{"n": len(g["papers"]), "score": g["score_accepted"], "key": g.get("key") or next(iter(labels.get((x["slug"], g["title"]), [])), ""), "en": linkify(g["gist"], valid),
                            "vi": polite_text(linkify(g.get("gist_vi", ""), valid), honor.get(x["slug"]), x["name_vi"], x["name"])}
-                          for g in d["topics"] if g.get("gist")]
+                          for g in sorted(d["topics"], key=lambda g: (-g["score_accepted"], -len(g["papers"]))) if g.get("gist")]
     counts = {t["key"]: sum(1 for x in index if any(r["key"] == t["key"] and r["score"] > 0 for r in x["areas"])) for t in taxonomy["topics"]}
     areas = [{"key": t["key"], "title": t["title"], "title_vi": t["title_vi"], "count": counts[t["key"]]}
              for t in taxonomy["topics"] if counts[t["key"]]]

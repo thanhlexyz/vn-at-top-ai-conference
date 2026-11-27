@@ -31,7 +31,7 @@ h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; 
 {{- range .professors }}{{ $p := . }}
 	<li data-areas="{{ range .areas }}{{ .key }}:{{ .score }} {{ end }}" data-score="{{ .score }}"><span class="st" title="{{ cond .done (T "ch_done") (T "ch_building") }}">{{ if .done }}✅{{ else }}🚧{{ end }}</span>{{ with .logo }} <a class="lg" href="{{ printf "universities/%s/" $p.institution_slug | relLangURL }}" tabindex="-1"><img class="mini" src="{{ . | relURL }}" alt="{{ $p.institution }}" title="{{ $p.institution_name }}" loading="lazy"></a>{{ else }}<span class="lgph"></span>{{ end }} <a href="{{ printf "challenges/%s/" .slug | relLangURL }}"><strong>{{ if $vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end }}</strong></a> <span class="inst">({{ .institution }} · <span class="sc" title="{{ T "ch_top_score_tip" }}"><b>{{ printf "%.2f" .score }}</b></span>)</span> {{- $base := printf "href=\"%s#" (printf "challenges/%s/" .slug | relLangURL) }}
 	<div class="gist" data-area="">
-	{{- if .gist_list }}<ul class="gl">{{ range .gist_list }}<li data-topic="{{ .key }}">{{ replace (cond $vi .vi .en) "href=\"#" $base | safeHTML }} <span class="cnt" title="{{ T "ch_line_tip" }}">({{ T "ch_n_papers" (int .n) }} · {{ printf "%.2f" .score }})</span></li>{{ end }}</ul>
+	{{- if .gist_list }}<ul class="gl">{{ range .gist_list }}<li data-topic="{{ .key }}"{{ if not .score }} class="zero"{{ end }}>{{ replace (cond $vi .vi .en) "href=\"#" $base | safeHTML }} <span class="cnt" title="{{ T "ch_line_tip" }}">({{ T "ch_n_papers" (int .n) }} · {{ printf "%.2f" .score }})</span></li>{{ end }}</ul>
 	{{- else }}{{ if $vi }}{{ .focus_vi }}{{ else }}{{ .focus }}{{ end }}{{ end }}</div>
 	{{- range $k, $v := .gists }}<div class="gist" data-area="{{ $k }}" hidden>{{ replace (cond $vi $v.vi $v.en) "href=\"#" $base | safeHTML }} <span class="cnt" title="{{ T "ch_line_tip" }}">({{ T "ch_n_papers" (int $v.n) }} · {{ printf "%.2f" $v.score }})</span></div>{{ end }}</li>
 {{- end }}
@@ -49,7 +49,9 @@ h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; 
 	var more = document.querySelector(".ch-more");
 	more.addEventListener("click", function () { list.classList.toggle("all"); label(); stripe(); });
 	function label() {
-		var n = list.querySelectorAll("li.zero:not([hidden])").length;
+		var n = Array.prototype.filter.call(list.querySelectorAll("li.zero:not([hidden])"), function (el) {
+			return !(el.parentElement && el.parentElement.closest("li.zero"));
+		}).length;
 		more.hidden = n === 0;
 		more.textContent = list.classList.contains("all") ? more.dataset.hide : more.dataset.show.replace("{n}", n);
 	}
