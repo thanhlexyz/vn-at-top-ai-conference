@@ -495,7 +495,24 @@ def merge_papers(papers):
     (FRONTEND / "data" / "challenges_people.json").write_text(json.dumps(people, ensure_ascii=False, indent=1), encoding="utf-8")
     shown = {x["id"] for p in people.values() for x in p["papers"]}
     known = {paper_id(p): p for p in papers}
-    meta = {"professors": index, "sources": {"papers": len(shown), "date": datetime.date.today().isoformat(),
+    for x in index:
+        d = people[x["slug"]]
+        tops = [g["score"] for g in d["topics"] if not is_other(g)] or [g["score"] for g in d["topics"]]
+        x["score"] = max(tops) if tops else round(sum(p["credit"] for p in d["papers"]), 2)
+    areas_file = OUT / "areas.json"
+    grouping = json.loads(areas_file.read_text(encoding="utf-8")) if areas_file.exists() else {"areas": [], "assign": {}}
+    keys = {a["key"] for a in grouping["areas"]}
+    buckets = {a["key"]: {**a, "professors": []} for a in grouping["areas"]}
+    rest = {"key": "other", "title": "Other areas", "title_vi": "Các hướng khác", "professors": []}
+    for x in index:
+        k = grouping["assign"].get(x["slug"])
+        (buckets[k] if k in keys else rest)["professors"].append(x)
+    areas = [b for b in buckets.values() if b["professors"]] + ([rest] if rest["professors"] else [])
+    for b in areas:
+        b["professors"].sort(key=lambda x: -x["score"])
+        b["score"] = round(sum(x["score"] for x in b["professors"]), 2)
+    areas.sort(key=lambda b: (b["key"] == "other", -b["score"]))
+    meta = {"professors": index, "areas": areas, "sources": {"papers": len(shown), "date": datetime.date.today().isoformat(),
                                              "with_text": sum(1 for i in shown if (PDF_DIR / AREA[known[i]["venue"]] / f"{i}.pdf").exists()),
                                              "with_reviews": sum(1 for i in shown if (PDF_DIR / AREA[known[i]["venue"]] / f"{i}.md").exists())}}
     (FRONTEND / "data" / "challenges.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -753,7 +770,10 @@ def main():
         fetch_reviews([p for p in papers if p["venue"] in OPENREVIEW])
     if step in ("orpdfs", "all"):
         k, n = (int(sys.argv[2]), int(sys.argv[3])) if len(sys.argv) > 3 else (0, 1)
-        fetch_openreview_pdfs([p for i, p in enumerate(q for q in papers if forum_of(q)) if i % n == k])
+        rank = {x["slug"]: r for r, x in enumerate(json.loads((FRONTEND / "data" / "professors.json").read_text(encoding="utf-8")))}
+        queue = sorted((q for q in papers if forum_of(q)),
+                       key=lambda q: min((rank.get(o["slug"], 999) for o in q.get("professors") or []), default=999))
+        fetch_openreview_pdfs([p for i, p in enumerate(queue) if i % n == k])
     if step in ("chunks", "all"):
         chunks(papers)
     if step in ("about", "all"):

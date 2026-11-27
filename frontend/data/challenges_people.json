@@ -3123,8 +3123,8 @@
     "strength_vi": "Theo tóm tắt của các phản biện, bài báo đánh giá SURE trên phân tích cảm xúc, phân loại thể loại và nhận dạng hành động, so với các phương pháp xử lý thiếu phương thức trước đây, và áp dụng nó cho nhiều kiến trúc đa phương thức tiền huấn luyện khác nhau.",
     "authors": [
      {
-      "text": "An imbalance left unexplored in the current SURE framework may limit the development of robust reconstruction modules; the authors name it a direction for future work.",
-      "text_vi": "Một sự mất cân bằng chưa được khảo sát trong khung SURE hiện tại có thể hạn chế việc phát triển các mô-đun tái tạo bền vững; các tác giả xem đây là một hướng nghiên cứu tiếp theo."
+      "text": "Certain modalities dominate the reconstruction process, which makes missing ones easier to predict but causes large performance drops when the dominant modalities are unavailable; this imbalance is unexplored in SURE and left for future work.",
+      "text_vi": "Một số phương thức chi phối quá trình tái tạo, khiến các phương thức bị thiếu dễ dự đoán hơn nhưng gây sụt giảm hiệu năng lớn khi chính các phương thức chi phối đó vắng mặt; sự mất cân bằng này chưa được khảo sát trong SURE và được để lại cho nghiên cứu sau."
      }
     ],
     "reviewers": [
@@ -4809,11 +4809,11 @@
     ],
     "reviewers": [
      {
-      "quote": "The “nonparametric” property arises mainly from pruning unused prototypes, not from a Bayesian nonparametric process.",
+      "quote": "The “nonparametric” property arises mainly from pruning unused prototypes, not from a Bayesian nonparametric process.",
       "quote_vi": "Tính chất “phi tham số” chủ yếu đến từ việc cắt bỏ các prototype không dùng tới, chứ không phải từ một quá trình Bayes phi tham số."
      },
      {
-      "quote": "Table 1 shows that NICER features still underperform the vanilla method (whole bag).",
+      "quote": "Table 1 shows that NICER features still underperform the vanilla method (whole bag).",
       "quote_vi": "Bảng 1 cho thấy đặc trưng của NICER vẫn kém hơn phương pháp gốc (dùng toàn bộ túi đặc trưng)."
      },
      {
@@ -9944,8 +9944,8 @@
       ]
      },
      {
-      "text": "An imbalance left unexplored in the current SURE framework may limit the development of robust reconstruction modules.",
-      "text_vi": "Một sự mất cân bằng chưa được khảo sát trong khung SURE hiện tại có thể hạn chế việc phát triển các mô-đun tái tạo bền vững.",
+      "text": "Certain modalities dominate reconstruction, so performance drops sharply when they are unavailable; this imbalance is unexplored in SURE.",
+      "text_vi": "Một số phương thức chi phối quá trình tái tạo, nên hiệu năng sụt giảm mạnh khi chúng vắng mặt; sự mất cân bằng này chưa được khảo sát trong SURE.",
       "source": "authors",
       "quote": false,
       "papers": [
@@ -10221,11 +10221,11 @@
     ],
     "reviewers": [
      {
-      "quote": "The “nonparametric” property arises mainly from pruning unused prototypes, not from a Bayesian nonparametric process.",
+      "quote": "The “nonparametric” property arises mainly from pruning unused prototypes, not from a Bayesian nonparametric process.",
       "quote_vi": "Tính chất “phi tham số” chủ yếu đến từ việc cắt bỏ các prototype không dùng tới, chứ không phải từ một quá trình Bayes phi tham số."
      },
      {
-      "quote": "Table 1 shows that NICER features still underperform the vanilla method (whole bag).",
+      "quote": "Table 1 shows that NICER features still underperform the vanilla method (whole bag).",
       "quote_vi": "Bảng 1 cho thấy đặc trưng của NICER vẫn kém hơn phương pháp gốc (dùng toàn bộ túi đặc trưng)."
      },
      {
@@ -10248,8 +10248,8 @@
     "status": "accepted",
     "problem": "Multimodal models must cope with modalities that are missing at inference time and with limited labelled data, which are common in real-world deployments.",
     "problem_vi": "Các mô hình đa phương thức phải xử lý được việc thiếu một số phương thức (modality) khi suy luận và việc có ít dữ liệu gán nhãn, vốn phổ biến khi triển khai thực tế.",
-    "technique": "Robult combines a soft Positive-Unlabeled (PU) contrastive loss that aligns task-relevant features while using unlabelled data in a semi-supervised setting, and a latent reconstruction loss that keeps information unique to each modality, within a modular design.",
-    "technique_vi": "Robult kết hợp một hàm mất mát tương phản Positive-Unlabeled (PU) mềm, căn chỉnh các đặc trưng liên quan đến tác vụ đồng thời tận dụng dữ liệu chưa gán nhãn trong bối cảnh bán giám sát, với một hàm mất mát tái tạo trong không gian ẩn giúp giữ thông tin riêng của từng phương thức, trong một thiết kế dạng mô-đun.",
+    "technique": "Robult combines a soft Positive-Unlabeled (PU) contrastive loss that aligns task-relevant features while making effective use of limited labelled data in a semi-supervised setting, and a latent reconstruction loss that keeps information unique to each modality, within a modular design.",
+    "technique_vi": "Robult kết hợp một hàm mất mát tương phản Positive-Unlabeled (PU) mềm, căn chỉnh các đặc trưng liên quan đến tác vụ đồng thời tận dụng hiệu quả lượng dữ liệu gán nhãn hạn chế trong bối cảnh bán giám sát, với một hàm mất mát tái tạo trong không gian ẩn giúp giữ thông tin riêng của từng phương thức, trong một thiết kế dạng mô-đun.",
     "strength": "The paper reports higher performance than existing approaches across diverse datasets in both semi-supervised and missing-modality settings, with a lightweight design that plugs into existing architectures.",
     "strength_vi": "Bài báo báo cáo hiệu năng cao hơn các phương pháp hiện có trên nhiều bộ dữ liệu, cả trong bối cảnh bán giám sát lẫn thiếu phương thức, với thiết kế gọn nhẹ có thể gắn vào các kiến trúc sẵn có.",
     "authors": [],
@@ -10271,8 +10271,8 @@
     "strength_vi": "Theo tóm tắt của các phản biện, bài báo đánh giá SURE trên phân tích cảm xúc, phân loại thể loại và nhận dạng hành động, so với các phương pháp xử lý thiếu phương thức trước đây, và áp dụng nó cho nhiều kiến trúc đa phương thức tiền huấn luyện khác nhau.",
     "authors": [
      {
-      "text": "An imbalance left unexplored in the current SURE framework may limit the development of robust reconstruction modules; the authors name it a direction for future work.",
-      "text_vi": "Một sự mất cân bằng chưa được khảo sát trong khung SURE hiện tại có thể hạn chế việc phát triển các mô-đun tái tạo bền vững; các tác giả xem đây là một hướng nghiên cứu tiếp theo."
+      "text": "Certain modalities dominate the reconstruction process, which makes missing ones easier to predict but causes large performance drops when the dominant modalities are unavailable; this imbalance is unexplored in SURE and left for future work.",
+      "text_vi": "Một số phương thức chi phối quá trình tái tạo, khiến các phương thức bị thiếu dễ dự đoán hơn nhưng gây sụt giảm hiệu năng lớn khi chính các phương thức chi phối đó vắng mặt; sự mất cân bằng này chưa được khảo sát trong SURE và được để lại cho nghiên cứu sau."
      }
     ],
     "reviewers": [
@@ -10382,8 +10382,8 @@
   },
   "open_summary": "The bounds depend on quantities unknown before learning, cover only two players or simple graphs well, and lack validation on real semantic targets. The guarantees cover only closed Hamiltonian systems or linear dynamics, leaving dissipative PDEs and nonlinear world models without theory. The characterization does not yet cover the full Strictly Local class with boundary markers, and its tier-based results assume the tier is already known.",
   "open_summary_vi": "Các cận phụ thuộc vào những đại lượng chưa biết trước khi học, chỉ áp dụng tốt cho hai người chơi hoặc đồ thị đơn giản, và chưa được kiểm chứng trên mục tiêu ngữ nghĩa thực. Các bảo đảm chỉ áp dụng cho hệ Hamilton kín hoặc động lực tuyến tính, nên các PDE tiêu tán và mô hình thế giới phi tuyến vẫn chưa có lý thuyết. Đặc trưng hóa này chưa bao phủ toàn bộ lớp Strictly Local có ký hiệu biên, và các kết quả theo tầng giả định tầng đã được biết trước.",
-  "overview": "Tuan Do's papers are mainly theoretical: they prove what can be learned or identified from data, how many samples it takes, and test the predictions in controlled experiments. Proves how many samples suffice to recover a causal graph's equivalence class, the incentives in transparency games, or a steering direction hidden among nuisance features. SympFNO builds symplectic structure into Fourier neural operators for Hamiltonian PDEs, and a spectral theory explains latent size, generalization and identifiability in linear world models. Links the subregular hierarchy of phonology to information theory, showing that Strictly Local patterns are exactly those produced by stationary Markov sources.",
-  "overview_vi": "Các bài báo của thầy Tuấn chủ yếu mang tính lý thuyết: chúng chứng minh điều gì có thể học hoặc nhận dạng được từ dữ liệu, cần bao nhiêu mẫu, và kiểm tra các dự đoán bằng thí nghiệm có kiểm soát. Chứng minh cần bao nhiêu mẫu để khôi phục lớp tương đương của một đồ thị nhân quả, động cơ trong trò chơi minh bạch, hoặc một hướng điều khiển mô hình bị lẫn giữa các đặc trưng nhiễu. SympFNO đưa cấu trúc symplectic vào toán tử nơ-ron Fourier cho các PDE Hamilton, và một lý thuyết phổ giải thích kích thước biểu diễn ẩn, khả năng tổng quát hóa và tính nhận dạng được của mô hình thế giới tuyến tính. Liên kết phân cấp subregular của âm vị học với lý thuyết thông tin, chỉ ra rằng các mẫu Strictly Local chính là những mẫu được sinh bởi nguồn Markov dừng.",
+  "overview": "Tuan Do's papers are mainly theoretical, proving what can be learned or identified from data and how many samples it takes. Proves how many samples suffice to recover a causal graph's equivalence class, the incentives in transparency games, or a steering direction hidden among nuisance features. SympFNO builds symplectic structure into Fourier neural operators for Hamiltonian PDEs, and a spectral theory explains latent size, generalization and identifiability in linear world models. Links the subregular hierarchy of phonology to information theory, showing that Strictly Local patterns are exactly those produced by stationary Markov sources.",
+  "overview_vi": "Các bài báo của thầy Tuấn chủ yếu mang tính lý thuyết, chứng minh điều gì có thể học hoặc nhận dạng được từ dữ liệu và cần bao nhiêu mẫu. Chứng minh cần bao nhiêu mẫu để khôi phục lớp tương đương của một đồ thị nhân quả, động cơ trong trò chơi minh bạch, hoặc một hướng điều khiển mô hình bị lẫn giữa các đặc trưng nhiễu. SympFNO đưa cấu trúc symplectic vào toán tử nơ-ron Fourier cho các PDE Hamilton, và một lý thuyết phổ giải thích kích thước biểu diễn ẩn, khả năng tổng quát hóa và tính nhận dạng được của mô hình thế giới tuyến tính. Liên kết phân cấp subregular của âm vị học với lý thuyết thông tin, chỉ ra rằng các mẫu Strictly Local chính là những mẫu được sinh bởi nguồn Markov dừng.",
   "topics": [
    {
     "title": "Sample complexity of structure recovery",
@@ -10784,8 +10784,8 @@
     "problem_vi": "Các cận độ phức tạp mẫu cổ điển cho học cấu trúc nhân quả mang tính minimax, chỉ mô tả độ khó trong trường hợp xấu nhất mà không phân biệt thể hiện dễ và khó của bài toán khôi phục lớp tương đương Markov (MEC), tức tập các đồ thị nhân quả cho cùng các quan hệ độc lập có điều kiện, trong mô hình phương trình cấu trúc (SEM) tuyến tính Gauss.",
     "technique": "The paper defines the Fisher dimension as the inverse squared minimum partial correlation that must be detected to recover the MEC, and bounds the sample complexity by it from below for any algorithm (via Le Cam's method) and from above for the PC algorithm.",
     "technique_vi": "Bài báo định nghĩa chiều Fisher là nghịch đảo bình phương của tương quan riêng phần nhỏ nhất cần phát hiện để khôi phục MEC, và dùng nó để chặn độ phức tạp mẫu từ dưới cho mọi thuật toán (qua phương pháp Le Cam) và từ trên cho thuật toán PC.",
-    "strength": "The bounds match up to logarithmic factors, the Fisher dimension is proved to be uniformly bounded regardless of graph structure in spectrally well-conditioned models, and experiments report strong correlation between the predictor and observed sample complexity for structured graph families such as chains and trees.",
-    "strength_vi": "Các cận khớp nhau đến thừa số logarit, chiều Fisher được chứng minh là bị chặn đều bất kể cấu trúc đồ thị trong các mô hình có điều kiện phổ tốt, và thí nghiệm báo cáo tương quan mạnh giữa đại lượng dự đoán này và độ phức tạp mẫu quan sát được cho các họ đồ thị có cấu trúc như chuỗi và cây.",
+    "strength": "The bounds match up to logarithmic factors, the Fisher dimension is proved to be uniformly bounded regardless of graph structure in spectrally well-conditioned models, and the experiments report that the predictor tracks observed sample complexity for structured graph families such as chains and trees.",
+    "strength_vi": "Các cận khớp nhau đến thừa số logarit, chiều Fisher được chứng minh là bị chặn đều bất kể cấu trúc đồ thị trong các mô hình có điều kiện phổ tốt, và thí nghiệm báo cáo rằng đại lượng dự đoán này bám sát độ phức tạp mẫu quan sát được cho các họ đồ thị có cấu trúc như chuỗi và cây.",
     "authors": [
      {
       "text": "A log d gap between the upper and lower bounds, coming from a union bound over the conditional-independence tests, remains an open problem.",
@@ -14232,11 +14232,11 @@
     ],
     "reviewers": [
      {
-      "quote": "The “nonparametric” property arises mainly from pruning unused prototypes, not from a Bayesian nonparametric process.",
+      "quote": "The “nonparametric” property arises mainly from pruning unused prototypes, not from a Bayesian nonparametric process.",
       "quote_vi": "Tính chất “phi tham số” chủ yếu đến từ việc cắt bỏ các prototype không dùng tới, chứ không phải từ một quá trình Bayes phi tham số."
      },
      {
-      "quote": "Table 1 shows that NICER features still underperform the vanilla method (whole bag).",
+      "quote": "Table 1 shows that NICER features still underperform the vanilla method (whole bag).",
       "quote_vi": "Bảng 1 cho thấy đặc trưng của NICER vẫn kém hơn phương pháp gốc (dùng toàn bộ túi đặc trưng)."
      },
      {
@@ -21531,38 +21531,42 @@
     "year": 2026,
     "credit": 0.2,
     "status": "rejected",
-    "problem": "Automatic diagnosis systems predict a disease from patient data, but the paper states that they mostly neglect detailed symptom analysis and that LLM-based approaches struggle to integrate structured medical knowledge into patient-centric representations.",
-    "problem_vi": "Các hệ thống chẩn đoán tự động dự đoán bệnh từ dữ liệu bệnh nhân, nhưng bài báo cho rằng chúng phần lớn bỏ qua việc phân tích triệu chứng chi tiết, và các cách tiếp cận dựa trên LLM gặp khó khi tích hợp tri thức y khoa có cấu trúc vào biểu diễn lấy bệnh nhân làm trung tâm.",
-    "technique": "SPKGDiag uses an LLM (GPT-4.1, per the reviews) to extract explicit and implicit symptoms from patient-doctor conversations, averages their text embeddings into a patient vector, links patients who share symptoms in a patient-centric knowledge graph, and classifies each patient node with a Message Passing Neural Network (MPNN) over 2-hop sampled neighbourhoods.",
-    "technique_vi": "SPKGDiag dùng một LLM (theo các phản biện là GPT-4.1) để trích xuất triệu chứng tường minh và ẩn từ hội thoại bác sĩ – bệnh nhân, lấy trung bình các embedding văn bản của chúng thành vector bệnh nhân, nối các bệnh nhân có chung triệu chứng trong một đồ thị tri thức lấy bệnh nhân làm trung tâm, và phân loại từng nút bệnh nhân bằng mạng nơ-ron truyền thông điệp (Message Passing Neural Network, MPNN) trên vùng lân cận 2 bước được lấy mẫu.",
-    "strength": "As summarised by the reviewers, the paper reports higher diagnostic accuracy than reinforcement-learning, Transformer and graph-based baselines on public benchmarks with 4, 10 and 90 disease classes (MZ-4, MZ-10, Dxy and a synthetic set) and on an internal dataset.",
-    "strength_vi": "Theo tóm tắt của các phản biện, bài báo báo cáo độ chính xác chẩn đoán cao hơn các baseline dựa trên học tăng cường, Transformer và đồ thị trên các benchmark công khai với 4, 10 và 90 lớp bệnh (MZ-4, MZ-10, Dxy và một tập tổng hợp) và trên một tập dữ liệu nội bộ.",
+    "problem": "According to the abstract, automated diagnosis systems mostly focus on predicting the disease and neglect thorough symptom analysis, while LLM-based approaches struggle to integrate structured medical knowledge into coherent, patient-centric representations.",
+    "problem_vi": "Theo phần tóm tắt, các hệ chẩn đoán tự động phần lớn chỉ tập trung dự đoán bệnh mà bỏ qua việc phân tích triệu chứng đầy đủ, còn các cách tiếp cận dựa trên LLM gặp khó khăn khi tích hợp tri thức y khoa có cấu trúc thành các biểu diễn mạch lạc, lấy bệnh nhân làm trung tâm.",
+    "technique": "SPKGDiag uses an LLM (GPT-4.1, per the reviews) to extract explicit and implicit symptoms from patient-doctor conversations, embeds and averages them into patient vectors, links patients who share symptoms into a patient-centric knowledge graph, and classifies diseases with a Message Passing Neural Network (MPNN) over sampled two-hop neighbourhoods.",
+    "technique_vi": "SPKGDiag dùng một LLM (theo các bản phản biện là GPT-4.1) để trích xuất triệu chứng tường minh và tiềm ẩn từ hội thoại giữa bệnh nhân và bác sĩ, nhúng rồi lấy trung bình chúng thành vector bệnh nhân, nối các bệnh nhân có chung triệu chứng thành một đồ thị tri thức lấy bệnh nhân làm trung tâm, và phân loại bệnh bằng mạng nơ-ron truyền thông điệp (Message Passing Neural Network, MPNN) trên các lân cận hai bước được lấy mẫu.",
+    "strength": "The reviews summarise evaluations on public benchmarks (MZ-4, MZ-10, Dxy and a synthetic set) and an internal dataset, where the paper reports higher accuracy than reinforcement-learning, Transformer and graph-based baselines.",
+    "strength_vi": "Các bản phản biện tóm tắt việc đánh giá trên các benchmark công khai (MZ-4, MZ-10, Dxy và một bộ dữ liệu tổng hợp) và một bộ dữ liệu nội bộ, trong đó bài báo báo cáo độ chính xác cao hơn các baseline dựa trên học tăng cường, Transformer và đồ thị.",
     "authors": [
      {
-      "text": "The authors plan to build the graph dynamically for evolving patient interactions, to model temporal and longitudinal clinical data to capture disease progression, and to encode symptom severity beyond mean pooling.",
-      "text_vi": "Các tác giả dự định xây dựng đồ thị động cho các tương tác bệnh nhân thay đổi theo thời gian, mô hình hóa dữ liệu lâm sàng theo thời gian và theo dõi dọc để nắm bắt diễn tiến bệnh, và mã hóa mức độ nghiêm trọng của triệu chứng thay vì chỉ lấy trung bình."
+      "text": "The authors plan to add dynamic graph construction for evolving patient interactions and to model temporal and longitudinal clinical data to capture disease progression.",
+      "text_vi": "Các tác giả dự định bổ sung việc dựng đồ thị động cho các tương tác bệnh nhân thay đổi theo thời gian và mô hình hóa dữ liệu lâm sàng theo thời gian, theo dõi dọc để nắm bắt diễn tiến bệnh."
      },
      {
-      "text": "The authors note that classifying from local feature similarity alone can let highly similar but semantically irrelevant neighbours influence the prediction.",
-      "text_vi": "Các tác giả lưu ý rằng việc phân loại chỉ dựa trên độ tương đồng đặc trưng cục bộ có thể khiến những láng giềng rất giống nhau nhưng không liên quan về ngữ nghĩa ảnh hưởng đến dự đoán."
+      "text": "Symptom severity is not encoded beyond mean pooling of symptom embeddings, which the authors list as future work.",
+      "text_vi": "Mức độ nặng của triệu chứng chưa được mã hóa ngoài phép lấy trung bình các embedding triệu chứng, điều mà các tác giả xếp vào hướng nghiên cứu sau."
+     },
+     {
+      "text": "The paper notes that relying solely on local feature similarity for classification can let highly similar yet semantically irrelevant neighbours influence the prediction.",
+      "text_vi": "Bài báo lưu ý rằng nếu chỉ dựa vào độ tương đồng đặc trưng cục bộ để phân loại thì các lân cận rất giống nhau nhưng không liên quan về ngữ nghĩa có thể ảnh hưởng tới dự đoán."
      }
     ],
     "reviewers": [
      {
-      "quote": "the task studied in this paper is presented as automatic diagnosis, but in practice it reduces to standard multi class classification.",
-      "quote_vi": "bài toán được nghiên cứu trong bài báo được trình bày như chẩn đoán tự động, nhưng trên thực tế nó quy về phân loại đa lớp thông thường."
-     },
-     {
       "quote": "The edge definition in the patient-centric KG, connecting nodes if they share even a single symptom (Equation 3), risks generating excessively dense graphs, especially given the prevalence of common symptoms like fever or cough in medical datasets.",
-      "quote_vi": "Định nghĩa cạnh trong đồ thị tri thức lấy bệnh nhân làm trung tâm, nối hai nút nếu chúng chỉ cần chung một triệu chứng (Phương trình 3), có nguy cơ tạo ra đồ thị quá dày, nhất là khi các triệu chứng phổ biến như sốt hay ho xuất hiện nhiều trong dữ liệu y khoa."
+      "quote_vi": "Cách định nghĩa cạnh trong KG lấy bệnh nhân làm trung tâm, nối hai nút nếu chúng chỉ cần chung một triệu chứng (Phương trình 3), có nguy cơ tạo ra đồ thị quá dày, nhất là khi các triệu chứng phổ biến như sốt hay ho rất thường gặp trong dữ liệu y khoa."
      },
      {
       "quote": "The symptom extraction process fully relies on GPT-4.1 without a clear evaluation of extraction accuracy or hallucination errors, which may introduce noise into the knowledge graph.",
-      "quote_vi": "Quá trình trích xuất triệu chứng hoàn toàn dựa vào GPT-4.1 mà không có đánh giá rõ ràng về độ chính xác trích xuất hay lỗi ảo giác, điều này có thể đưa nhiễu vào đồ thị tri thức."
+      "quote_vi": "Quá trình trích xuất triệu chứng hoàn toàn dựa vào GPT-4.1 mà không có đánh giá rõ ràng về độ chính xác trích xuất hay lỗi ảo giác, điều có thể đưa nhiễu vào đồ thị tri thức."
      },
      {
       "quote": "Nearly all main results are reported in terms of accuracy only, with no per class F1, no macro F1, no recall, no sensitivity, no top k recall.",
-      "quote_vi": "Gần như toàn bộ kết quả chính chỉ được báo cáo bằng độ chính xác (accuracy), không có F1 theo từng lớp, không có macro F1, không có recall, không có độ nhạy, không có top-k recall."
+      "quote_vi": "Gần như mọi kết quả chính chỉ được báo cáo bằng độ chính xác (accuracy), không có F1 theo từng lớp, không có macro F1, không có recall, không có độ nhạy, không có top-k recall."
+     },
+     {
+      "quote": "If the global graph is built before data splitting, test nodes could access training information through shared neighbors.",
+      "quote_vi": "Nếu đồ thị toàn cục được dựng trước khi chia dữ liệu, các nút kiểm thử có thể tiếp cận thông tin huấn luyện thông qua các lân cận chung."
      }
     ]
    }
@@ -22001,38 +22005,42 @@
     "year": 2026,
     "credit": 0.2,
     "status": "rejected",
-    "problem": "Automatic diagnosis systems predict a disease from patient data, but the paper states that they mostly neglect detailed symptom analysis and that LLM-based approaches struggle to integrate structured medical knowledge into patient-centric representations.",
-    "problem_vi": "Các hệ thống chẩn đoán tự động dự đoán bệnh từ dữ liệu bệnh nhân, nhưng bài báo cho rằng chúng phần lớn bỏ qua việc phân tích triệu chứng chi tiết, và các cách tiếp cận dựa trên LLM gặp khó khi tích hợp tri thức y khoa có cấu trúc vào biểu diễn lấy bệnh nhân làm trung tâm.",
-    "technique": "SPKGDiag uses an LLM (GPT-4.1, per the reviews) to extract explicit and implicit symptoms from patient-doctor conversations, averages their text embeddings into a patient vector, links patients who share symptoms in a patient-centric knowledge graph, and classifies each patient node with a Message Passing Neural Network (MPNN) over 2-hop sampled neighbourhoods.",
-    "technique_vi": "SPKGDiag dùng một LLM (theo các phản biện là GPT-4.1) để trích xuất triệu chứng tường minh và ẩn từ hội thoại bác sĩ – bệnh nhân, lấy trung bình các embedding văn bản của chúng thành vector bệnh nhân, nối các bệnh nhân có chung triệu chứng trong một đồ thị tri thức lấy bệnh nhân làm trung tâm, và phân loại từng nút bệnh nhân bằng mạng nơ-ron truyền thông điệp (Message Passing Neural Network, MPNN) trên vùng lân cận 2 bước được lấy mẫu.",
-    "strength": "As summarised by the reviewers, the paper reports higher diagnostic accuracy than reinforcement-learning, Transformer and graph-based baselines on public benchmarks with 4, 10 and 90 disease classes (MZ-4, MZ-10, Dxy and a synthetic set) and on an internal dataset.",
-    "strength_vi": "Theo tóm tắt của các phản biện, bài báo báo cáo độ chính xác chẩn đoán cao hơn các baseline dựa trên học tăng cường, Transformer và đồ thị trên các benchmark công khai với 4, 10 và 90 lớp bệnh (MZ-4, MZ-10, Dxy và một tập tổng hợp) và trên một tập dữ liệu nội bộ.",
+    "problem": "According to the abstract, automated diagnosis systems mostly focus on predicting the disease and neglect thorough symptom analysis, while LLM-based approaches struggle to integrate structured medical knowledge into coherent, patient-centric representations.",
+    "problem_vi": "Theo phần tóm tắt, các hệ chẩn đoán tự động phần lớn chỉ tập trung dự đoán bệnh mà bỏ qua việc phân tích triệu chứng đầy đủ, còn các cách tiếp cận dựa trên LLM gặp khó khăn khi tích hợp tri thức y khoa có cấu trúc thành các biểu diễn mạch lạc, lấy bệnh nhân làm trung tâm.",
+    "technique": "SPKGDiag uses an LLM (GPT-4.1, per the reviews) to extract explicit and implicit symptoms from patient-doctor conversations, embeds and averages them into patient vectors, links patients who share symptoms into a patient-centric knowledge graph, and classifies diseases with a Message Passing Neural Network (MPNN) over sampled two-hop neighbourhoods.",
+    "technique_vi": "SPKGDiag dùng một LLM (theo các bản phản biện là GPT-4.1) để trích xuất triệu chứng tường minh và tiềm ẩn từ hội thoại giữa bệnh nhân và bác sĩ, nhúng rồi lấy trung bình chúng thành vector bệnh nhân, nối các bệnh nhân có chung triệu chứng thành một đồ thị tri thức lấy bệnh nhân làm trung tâm, và phân loại bệnh bằng mạng nơ-ron truyền thông điệp (Message Passing Neural Network, MPNN) trên các lân cận hai bước được lấy mẫu.",
+    "strength": "The reviews summarise evaluations on public benchmarks (MZ-4, MZ-10, Dxy and a synthetic set) and an internal dataset, where the paper reports higher accuracy than reinforcement-learning, Transformer and graph-based baselines.",
+    "strength_vi": "Các bản phản biện tóm tắt việc đánh giá trên các benchmark công khai (MZ-4, MZ-10, Dxy và một bộ dữ liệu tổng hợp) và một bộ dữ liệu nội bộ, trong đó bài báo báo cáo độ chính xác cao hơn các baseline dựa trên học tăng cường, Transformer và đồ thị.",
     "authors": [
      {
-      "text": "The authors plan to build the graph dynamically for evolving patient interactions, to model temporal and longitudinal clinical data to capture disease progression, and to encode symptom severity beyond mean pooling.",
-      "text_vi": "Các tác giả dự định xây dựng đồ thị động cho các tương tác bệnh nhân thay đổi theo thời gian, mô hình hóa dữ liệu lâm sàng theo thời gian và theo dõi dọc để nắm bắt diễn tiến bệnh, và mã hóa mức độ nghiêm trọng của triệu chứng thay vì chỉ lấy trung bình."
+      "text": "The authors plan to add dynamic graph construction for evolving patient interactions and to model temporal and longitudinal clinical data to capture disease progression.",
+      "text_vi": "Các tác giả dự định bổ sung việc dựng đồ thị động cho các tương tác bệnh nhân thay đổi theo thời gian và mô hình hóa dữ liệu lâm sàng theo thời gian, theo dõi dọc để nắm bắt diễn tiến bệnh."
      },
      {
-      "text": "The authors note that classifying from local feature similarity alone can let highly similar but semantically irrelevant neighbours influence the prediction.",
-      "text_vi": "Các tác giả lưu ý rằng việc phân loại chỉ dựa trên độ tương đồng đặc trưng cục bộ có thể khiến những láng giềng rất giống nhau nhưng không liên quan về ngữ nghĩa ảnh hưởng đến dự đoán."
+      "text": "Symptom severity is not encoded beyond mean pooling of symptom embeddings, which the authors list as future work.",
+      "text_vi": "Mức độ nặng của triệu chứng chưa được mã hóa ngoài phép lấy trung bình các embedding triệu chứng, điều mà các tác giả xếp vào hướng nghiên cứu sau."
+     },
+     {
+      "text": "The paper notes that relying solely on local feature similarity for classification can let highly similar yet semantically irrelevant neighbours influence the prediction.",
+      "text_vi": "Bài báo lưu ý rằng nếu chỉ dựa vào độ tương đồng đặc trưng cục bộ để phân loại thì các lân cận rất giống nhau nhưng không liên quan về ngữ nghĩa có thể ảnh hưởng tới dự đoán."
      }
     ],
     "reviewers": [
      {
-      "quote": "the task studied in this paper is presented as automatic diagnosis, but in practice it reduces to standard multi class classification.",
-      "quote_vi": "bài toán được nghiên cứu trong bài báo được trình bày như chẩn đoán tự động, nhưng trên thực tế nó quy về phân loại đa lớp thông thường."
-     },
-     {
       "quote": "The edge definition in the patient-centric KG, connecting nodes if they share even a single symptom (Equation 3), risks generating excessively dense graphs, especially given the prevalence of common symptoms like fever or cough in medical datasets.",
-      "quote_vi": "Định nghĩa cạnh trong đồ thị tri thức lấy bệnh nhân làm trung tâm, nối hai nút nếu chúng chỉ cần chung một triệu chứng (Phương trình 3), có nguy cơ tạo ra đồ thị quá dày, nhất là khi các triệu chứng phổ biến như sốt hay ho xuất hiện nhiều trong dữ liệu y khoa."
+      "quote_vi": "Cách định nghĩa cạnh trong KG lấy bệnh nhân làm trung tâm, nối hai nút nếu chúng chỉ cần chung một triệu chứng (Phương trình 3), có nguy cơ tạo ra đồ thị quá dày, nhất là khi các triệu chứng phổ biến như sốt hay ho rất thường gặp trong dữ liệu y khoa."
      },
      {
       "quote": "The symptom extraction process fully relies on GPT-4.1 without a clear evaluation of extraction accuracy or hallucination errors, which may introduce noise into the knowledge graph.",
-      "quote_vi": "Quá trình trích xuất triệu chứng hoàn toàn dựa vào GPT-4.1 mà không có đánh giá rõ ràng về độ chính xác trích xuất hay lỗi ảo giác, điều này có thể đưa nhiễu vào đồ thị tri thức."
+      "quote_vi": "Quá trình trích xuất triệu chứng hoàn toàn dựa vào GPT-4.1 mà không có đánh giá rõ ràng về độ chính xác trích xuất hay lỗi ảo giác, điều có thể đưa nhiễu vào đồ thị tri thức."
      },
      {
       "quote": "Nearly all main results are reported in terms of accuracy only, with no per class F1, no macro F1, no recall, no sensitivity, no top k recall.",
-      "quote_vi": "Gần như toàn bộ kết quả chính chỉ được báo cáo bằng độ chính xác (accuracy), không có F1 theo từng lớp, không có macro F1, không có recall, không có độ nhạy, không có top-k recall."
+      "quote_vi": "Gần như mọi kết quả chính chỉ được báo cáo bằng độ chính xác (accuracy), không có F1 theo từng lớp, không có macro F1, không có recall, không có độ nhạy, không có top-k recall."
+     },
+     {
+      "quote": "If the global graph is built before data splitting, test nodes could access training information through shared neighbors.",
+      "quote_vi": "Nếu đồ thị toàn cục được dựng trước khi chia dữ liệu, các nút kiểm thử có thể tiếp cận thông tin huấn luyện thông qua các lân cận chung."
      }
     ]
    }
@@ -22451,8 +22459,8 @@
       ]
      },
      {
-      "text": "the assumptions required for tightness are restrictive, and the practical impact of the theoretical results is unclear.",
-      "text_vi": "các giả định cần thiết để đạt độ chặt là hạn chế, và tác động thực tiễn của các kết quả lý thuyết chưa rõ ràng.",
+      "text": "No experiments on ImageNet which is the common standard for papers in adversarial attacks currently.",
+      "text_vi": "Không có thí nghiệm trên ImageNet, vốn là tiêu chuẩn phổ biến hiện nay của các bài báo về tấn công đối kháng.",
       "source": "reviewers",
       "quote": true,
       "papers": [
@@ -23387,12 +23395,119 @@
   "name_vi": "Đặng Quang Vinh",
   "institution": "BUV",
   "image": "img/people/quang-vinh-dang.jpg",
-  "figure": null,
-  "open_summary": "",
-  "open_summary_vi": "",
-  "overview": "The work integrates selective state-space models, sequence models in the style of Mamba that decide which information to keep as they scan a long sequence, with Bayesian graph attention, which models relations between variables while treating attention weights probabilistically. The combination is meant to capture both long-range temporal dynamics and dependencies among series, and to provide uncertainty estimates alongside predictions.",
-  "overview_vi": "Công trình tích hợp mô hình không gian trạng thái chọn lọc (selective state-space model), loại mô hình chuỗi theo kiểu Mamba quyết định giữ lại thông tin nào khi quét qua chuỗi dài, với Bayesian graph attention, mô hình hóa quan hệ giữa các biến và coi trọng số chú ý theo nghĩa xác suất. Sự kết hợp này nhằm nắm bắt cả động lực thời gian dài hạn lẫn sự phụ thuộc giữa các chuỗi, đồng thời cung cấp ước lượng độ bất định đi kèm dự đoán.",
-  "topics": [],
+  "figure": {
+   "width": 502,
+   "height": 90,
+   "years": [
+    {
+     "year": 2026,
+     "x": 422.0
+    }
+   ],
+   "rows": [
+    {
+     "y": 57.0,
+     "color": "tc0",
+     "title": "Uncertainty-aware stock forecasting with graphs",
+     "title_vi": "Dự báo cổ phiếu kèm độ bất định bằng đồ thị",
+     "dots": [
+      {
+       "id": "iclr2026-integrating-selective-state-space-models-and-bayesian-graph-",
+       "x": 422.0,
+       "y": 57.0,
+       "title": "Integrating Selective State-Space Models and Bayesian Graph Attention for Uncertainty-aware Time-Series Analysis",
+       "label": "ICLR 2026"
+      }
+     ]
+    }
+   ],
+   "edges": []
+  },
+  "open_summary": "Daily-return correlations near 0.94 lack a leakage audit, and it is not shown which component drives the gains or what posterior sampling costs.",
+  "open_summary_vi": "Hệ số tương quan với lợi suất ngày gần 0,94 chưa được kiểm tra rò rỉ dữ liệu, và chưa rõ thành phần nào tạo ra mức tăng hay việc lấy mẫu hậu nghiệm tốn bao nhiêu chi phí.",
+  "overview": "Quang-Vinh Dang's listed paper builds a deep learning model for financial time series that also estimates its own uncertainty. Bi-Mamba Bayesian-MAGAC pairs a bidirectional state-space sequence encoder with a Bayesian graph over assets to forecast equities with uncertainty estimates.",
+  "overview_vi": "Bài báo được liệt kê của thầy Vinh xây dựng một mô hình học sâu cho chuỗi thời gian tài chính có kèm ước lượng độ bất định của chính nó. Bi-Mamba Bayesian-MAGAC ghép một bộ mã hóa chuỗi không gian trạng thái hai chiều với một đồ thị Bayes giữa các tài sản để dự báo cổ phiếu kèm ước lượng độ bất định.",
+  "topics": [
+   {
+    "title": "Uncertainty-aware stock forecasting with graphs",
+    "title_vi": "Dự báo cổ phiếu kèm độ bất định bằng đồ thị",
+    "gist": "Bi-Mamba Bayesian-MAGAC pairs a bidirectional state-space sequence encoder with a Bayesian graph over assets to forecast equities with uncertainty estimates.",
+    "gist_vi": "Bi-Mamba Bayesian-MAGAC ghép một bộ mã hóa chuỗi không gian trạng thái hai chiều với một đồ thị Bayes giữa các tài sản để dự báo cổ phiếu kèm ước lượng độ bất định.",
+    "open_gist": "Daily-return correlations near 0.94 lack a leakage audit, and it is not shown which component drives the gains or what posterior sampling costs.",
+    "open_gist_vi": "Hệ số tương quan với lợi suất ngày gần 0,94 chưa được kiểm tra rò rỉ dữ liệu, và chưa rõ thành phần nào tạo ra mức tăng hay việc lấy mẫu hậu nghiệm tốn bao nhiêu chi phí.",
+    "summary": "Financial forecasting needs long-range temporal modelling at linear cost, adaptive cross-asset structure and calibrated uncertainty. The framework combines a bidirectional Mamba encoder with MAGAC, a multi-head adaptive graph layer with Chebyshev spectral filtering, and obtains predictive variances by treating adjacencies and filters as random through Monte Carlo Dropout and DropEdge. It reports gains in point accuracy and calibration over established baselines on NASDAQ, NYSE and DJIA data.",
+    "summary_vi": "Dự báo tài chính cần mô hình hóa phụ thuộc thời gian dài hạn với chi phí tuyến tính, cấu trúc thích ứng giữa các tài sản và độ bất định được hiệu chỉnh. Framework kết hợp bộ mã hóa Mamba hai chiều với MAGAC, một lớp đồ thị thích ứng nhiều đầu có lọc phổ Chebyshev, và thu được phương sai dự báo bằng cách coi ma trận kề và bộ lọc là ngẫu nhiên qua Monte Carlo Dropout và DropEdge. Bài báo báo cáo cải thiện về độ chính xác dự báo điểm và độ hiệu chỉnh so với các baseline phổ biến trên dữ liệu NASDAQ, NYSE và DJIA.",
+    "open": [
+     {
+      "text": "The reported IC values are extraordinarily high for daily single-day returns (e.g., IC=0.9413 on NASDAQ).",
+      "text_vi": "Các giá trị IC được báo cáo cao bất thường đối với lợi suất từng ngày (ví dụ IC=0.9413 trên NASDAQ).",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "iclr2026-integrating-selective-state-space-models-and-bayesian-graph-"
+      ]
+     },
+     {
+      "text": "There is no ablation disentangling the gains from bidirectionality, Gaussian+attention blend, Chebyshev order, number of heads, Bayesian sampling, or DropEdge.",
+      "text_vi": "Không có ablation nào tách bạch mức tăng đến từ tính hai chiều, việc pha trộn Gauss và attention, bậc Chebyshev, số đầu attention, việc lấy mẫu Bayes hay DropEdge.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "iclr2026-integrating-selective-state-space-models-and-bayesian-graph-"
+      ]
+     },
+     {
+      "text": "Table-reported MACs are for S=1 while the method elsewhere enables S=10 at inference; the “no overhead” claim is therefore misleading.",
+      "text_vi": "Số MAC trong bảng được báo cáo với S=1, trong khi ở phần khác phương pháp dùng S=10 khi suy luận; vì vậy khẳng định “không tốn thêm chi phí” là gây hiểu lầm.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "iclr2026-integrating-selective-state-space-models-and-bayesian-graph-"
+      ]
+     },
+     {
+      "text": "Lighter approximate inference, such as small ensembles, variational Bayesian layers or structured dropout, could keep most of the Bayesian gains at lower training and inference cost; the authors leave this to future work.",
+      "text_vi": "Suy diễn xấp xỉ nhẹ hơn, như tập hợp nhỏ các mô hình, lớp Bayes biến phân hoặc dropout có cấu trúc, có thể giữ phần lớn lợi ích của cách tiếp cận Bayes với chi phí huấn luyện và suy luận thấp hơn; các tác giả để việc này cho nghiên cứu sau.",
+      "source": "authors",
+      "quote": false,
+      "papers": [
+       "iclr2026-integrating-selective-state-space-models-and-bayesian-graph-"
+      ]
+     }
+    ],
+    "papers": [
+     "iclr2026-integrating-selective-state-space-models-and-bayesian-graph-"
+    ],
+    "score": 0.5,
+    "color": "tc0",
+    "words": [
+     {
+      "word": "bayesian",
+      "share": 100
+     },
+     {
+      "word": "attention",
+      "share": 100
+     },
+     {
+      "word": "selective state-space",
+      "share": 80
+     },
+     {
+      "word": "uncertainty",
+      "share": 75
+     },
+     {
+      "word": "graph",
+      "share": 50
+     },
+     {
+      "word": "bimamba",
+      "share": 50
+     }
+    ]
+   }
+  ],
   "papers": [
    {
     "id": "iclr2026-integrating-selective-state-space-models-and-bayesian-graph-",
@@ -23402,25 +23517,34 @@
     "year": 2026,
     "credit": 0.5,
     "status": "rejected",
-    "problem": "Financial forecasting across many assets needs to model both long temporal dependencies in each price series and changing relationships between assets, while also quantifying uncertainty in the predictions.",
-    "problem_vi": "Dự báo tài chính trên nhiều tài sản cần mô hình hóa cả phụ thuộc thời gian dài trong từng chuỗi giá lẫn mối quan hệ thay đổi giữa các tài sản, đồng thời định lượng độ bất định của dự đoán.",
-    "technique": "Bi-Mamba Bayesian-MAGAC encodes each price window forward and backward with a bidirectional Mamba selective state-space model (a linear-time sequence model) and feeds the features to a Bayesian multi-head adaptive graph attention convolution layer, which builds an adaptive adjacency between assets by blending a Gaussian kernel on learnable node embeddings with attention scores and applies Chebyshev spectral filters.",
-    "technique_vi": "Bi-Mamba Bayesian-MAGAC mã hóa mỗi cửa sổ giá theo cả chiều xuôi và ngược bằng mô hình không gian trạng thái chọn lọc Mamba hai chiều (mô hình chuỗi có độ phức tạp tuyến tính), rồi đưa đặc trưng vào một lớp tích chập đồ thị chú ý đa đầu thích nghi theo kiểu Bayes, lớp này xây ma trận kề thích nghi giữa các tài sản bằng cách trộn nhân Gauss trên embedding nút học được với điểm attention và áp dụng bộ lọc phổ Chebyshev.",
-    "strength": "The lightweight architecture shows strong results on three financial datasets, with a coherent and potentially scalable combination of a linear-time temporal encoder and an adaptive graph network.",
-    "strength_vi": "Kiến trúc gọn nhẹ cho kết quả mạnh trên ba tập dữ liệu tài chính, với sự kết hợp hợp lý và có tiềm năng mở rộng giữa bộ mã hóa thời gian tuyến tính và mạng đồ thị thích nghi.",
-    "authors": [],
+    "problem": "Financial forecasting must capture long-range temporal dependencies across volatile market regimes at linear cost and learn adaptive relations between assets, while giving calibrated uncertainty for its predictions.",
+    "problem_vi": "Dự báo tài chính cần nắm bắt phụ thuộc thời gian dài hạn qua các giai đoạn thị trường biến động với chi phí tuyến tính, học được quan hệ thích ứng giữa các tài sản, đồng thời đưa ra độ bất định được hiệu chỉnh cho các dự báo.",
+    "technique": "BIMAMBA encodes sequences in both directions with selective state-space models (Mamba), and MAGAC (Multi-head Adaptive Graph Attention Convolution) builds dynamic adjacencies by blending a Gaussian kernel with attention before Chebyshev spectral filtering; the Bayesian extension treats adjacencies and filters as random via Monte Carlo Dropout and DropEdge and propagates the predictive variance in closed form.",
+    "technique_vi": "BIMAMBA mã hóa chuỗi theo cả hai chiều bằng mô hình không gian trạng thái chọn lọc (Mamba), còn MAGAC (Multi-head Adaptive Graph Attention Convolution) dựng ma trận kề động bằng cách pha trộn nhân Gauss với attention trước khi lọc phổ Chebyshev; phần mở rộng Bayes coi ma trận kề và bộ lọc là ngẫu nhiên thông qua Monte Carlo Dropout và DropEdge, rồi lan truyền phương sai dự báo ở dạng đóng.",
+    "strength": "The abstract reports improvements in both point prediction accuracy and uncertainty calibration over established baselines on U.S. equity indices (NASDAQ, NYSE and DJIA, per the reviews), with variance propagation at O(N) complexity.",
+    "strength_vi": "Phần tóm tắt báo cáo cải thiện cả độ chính xác dự báo điểm lẫn độ hiệu chỉnh của ước lượng bất định so với các baseline phổ biến trên các chỉ số cổ phiếu Mỹ (theo các bản phản biện là NASDAQ, NYSE và DJIA), với phép lan truyền phương sai có độ phức tạp O(N).",
+    "authors": [
+     {
+      "text": "The Bayesian components add training and inference overhead; lighter approximate inference such as small ensembles, variational Bayesian layers or structured dropout could retain most of the gains at lower cost, which the authors leave to future work.",
+      "text_vi": "Các thành phần Bayes làm tăng chi phí huấn luyện và suy luận; suy diễn xấp xỉ nhẹ hơn như tập hợp nhỏ các mô hình, lớp Bayes biến phân hoặc dropout có cấu trúc có thể giữ phần lớn lợi ích với chi phí thấp hơn, điều mà các tác giả để cho nghiên cứu sau."
+     }
+    ],
     "reviewers": [
      {
-      "text": "There are no ablation studies, for example showing whether bidirectional Mamba beats regular Mamba in accuracy and training time.",
-      "text_vi": "Chưa có thí nghiệm ablation, chẳng hạn để cho thấy Mamba hai chiều có tốt hơn Mamba thông thường về độ chính xác và thời gian huấn luyện hay không."
+      "quote": "The reported IC values are extraordinarily high for daily single-day returns (e.g., IC=0.9413 on NASDAQ).",
+      "quote_vi": "Các giá trị IC được báo cáo cao bất thường đối với lợi suất từng ngày (ví dụ IC=0.9413 trên NASDAQ)."
      },
      {
-      "text": "The very high information coefficient values for single-day stock returns call for safeguards against data leakage and a precise description of how labels and windows are formed.",
-      "text_vi": "Hệ số thông tin (information coefficient) rất cao cho lợi suất cổ phiếu một ngày đòi hỏi biện pháp chống rò rỉ dữ liệu và mô tả chính xác cách tạo nhãn và cửa sổ."
+      "quote": "There is no ablation disentangling the gains from bidirectionality, Gaussian+attention blend, Chebyshev order, number of heads, Bayesian sampling, or DropEdge.",
+      "quote_vi": "Không có ablation nào tách bạch mức tăng đến từ tính hai chiều, việc pha trộn Gauss và attention, bậc Chebyshev, số đầu attention, việc lấy mẫu Bayes hay DropEdge."
      },
      {
-      "text": "Evaluation uses only three datasets, reports no mean absolute error or confidence intervals, and training is slower than baselines.",
-      "text_vi": "Đánh giá chỉ dùng ba tập dữ liệu, không báo cáo sai số tuyệt đối trung bình (MAE) hay khoảng tin cậy, và huấn luyện chậm hơn các baseline."
+      "quote": "Table-reported MACs are for S=1 while the method elsewhere enables S=10 at inference; the “no overhead” claim is therefore misleading.",
+      "quote_vi": "Số MAC trong bảng được báo cáo với S=1, trong khi ở phần khác phương pháp dùng S=10 khi suy luận; vì vậy khẳng định “không tốn thêm chi phí” là gây hiểu lầm."
+     },
+     {
+      "quote": "the description in Section 3.2.1 appears to describe standard attention mechanisms, not specifically graph attention.",
+      "quote_vi": "phần mô tả ở Mục 3.2.1 có vẻ mô tả cơ chế attention thông thường, chứ không phải graph attention cụ thể."
      }
     ]
    }
@@ -23586,12 +23710,119 @@
   "name_vi": "Phan Nguyễn Minh Thảo",
   "institution": "CTU",
   "image": "img/people/thao-nguyen-minh-phan.jpg",
-  "figure": null,
-  "open_summary": "",
-  "open_summary_vi": "",
-  "overview": "The work, SPKGDiag, constructs symptom-linked patient knowledge graphs and learns to diagnose from them. Its graph neural network uses multi-hop similarity message passing, so that each patient's representation incorporates information from similar patients and symptoms several hops away. The design allows a diagnosis to exploit patterns shared across related cases.",
-  "overview_vi": "Công trình SPKGDiag xây dựng các đồ thị tri thức bệnh nhân liên kết qua triệu chứng và học cách chẩn đoán từ đó. Mạng nơ-ron đồ thị của công trình dùng multi-hop similarity message passing, để biểu diễn của mỗi bệnh nhân tích hợp thông tin từ các bệnh nhân và triệu chứng tương tự cách nhiều bước. Thiết kế này cho phép chẩn đoán tận dụng những mẫu hình chung giữa các ca bệnh liên quan.",
-  "topics": [],
+  "figure": {
+   "width": 466,
+   "height": 90,
+   "years": [
+    {
+     "year": 2026,
+     "x": 386.0
+    }
+   ],
+   "rows": [
+    {
+     "y": 57.0,
+     "color": "tc0",
+     "title": "Diagnosis from doctor-patient dialogues",
+     "title_vi": "Chẩn đoán từ hội thoại bác sĩ và bệnh nhân",
+     "dots": [
+      {
+       "id": "iclr2026-spkgdiag-learning-symptom-linked-patient-knowledge-graphs-vi",
+       "x": 386.0,
+       "y": 57.0,
+       "title": "SPKGDiag: Learning Symptom-Linked Patient Knowledge Graphs via Multi-Hop Similarity Message Passing for Automatic Diagnosis",
+       "label": "ICLR 2026"
+      }
+     ]
+    }
+   ],
+   "edges": []
+  },
+  "open_summary": "Linking patients who share one symptom may yield dense, noisy graphs built on unverified LLM extractions, and symptom severity and disease progression are not modelled.",
+  "open_summary_vi": "Việc nối các bệnh nhân chỉ cần chung một triệu chứng có thể tạo ra đồ thị dày và nhiễu, dựng trên kết quả trích xuất LLM chưa được kiểm chứng, và mức độ nặng của triệu chứng cũng như diễn tiến bệnh chưa được mô hình hóa.",
+  "overview": "Thao Nguyen Minh Phan's listed paper combines a large language model with a patient graph for automated medical diagnosis. SPKGDiag extracts symptoms from doctor-patient dialogues with an LLM, links patients who share symptoms into a graph, and predicts diseases by message passing.",
+  "overview_vi": "Bài báo được liệt kê của cô Thảo kết hợp mô hình ngôn ngữ lớn với đồ thị bệnh nhân để chẩn đoán y khoa tự động. SPKGDiag dùng LLM trích xuất triệu chứng từ hội thoại giữa bác sĩ và bệnh nhân, nối các bệnh nhân có chung triệu chứng thành một đồ thị và dự đoán bệnh bằng truyền thông điệp.",
+  "topics": [
+   {
+    "title": "Diagnosis from doctor-patient dialogues",
+    "title_vi": "Chẩn đoán từ hội thoại bác sĩ và bệnh nhân",
+    "gist": "SPKGDiag extracts symptoms from doctor-patient dialogues with an LLM, links patients who share symptoms into a graph, and predicts diseases by message passing.",
+    "gist_vi": "SPKGDiag dùng LLM trích xuất triệu chứng từ hội thoại giữa bác sĩ và bệnh nhân, nối các bệnh nhân có chung triệu chứng thành một đồ thị và dự đoán bệnh bằng truyền thông điệp.",
+    "open_gist": "Linking patients who share one symptom may yield dense, noisy graphs built on unverified LLM extractions, and symptom severity and disease progression are not modelled.",
+    "open_gist_vi": "Việc nối các bệnh nhân chỉ cần chung một triệu chứng có thể tạo ra đồ thị dày và nhiễu, dựng trên kết quả trích xuất LLM chưa được kiểm chứng, và mức độ nặng của triệu chứng cũng như diễn tiến bệnh chưa được mô hình hóa.",
+    "summary": "Automated diagnosis systems mostly predict a disease label without analysing symptoms in depth, and LLM-based methods struggle to use structured medical knowledge. SPKGDiag has an LLM extract explicit and implicit symptoms from patient-doctor conversations, builds a patient-centric knowledge graph whose nodes are patients linked by shared symptoms, and classifies each patient with an MPNN over two-hop neighbourhoods. The reviews summarise accuracy gains over reinforcement-learning, Transformer and graph-based baselines on MZ-4, MZ-10, Dxy, a synthetic set and an internal dataset.",
+    "summary_vi": "Các hệ chẩn đoán tự động phần lớn chỉ dự đoán nhãn bệnh mà không phân tích sâu triệu chứng, còn các phương pháp dựa trên LLM gặp khó khi sử dụng tri thức y khoa có cấu trúc. SPKGDiag để LLM trích xuất triệu chứng tường minh và tiềm ẩn từ hội thoại giữa bệnh nhân và bác sĩ, dựng một đồ thị tri thức lấy bệnh nhân làm trung tâm với các nút là bệnh nhân được nối qua triệu chứng chung, rồi phân loại từng bệnh nhân bằng MPNN trên lân cận hai bước. Các bản phản biện tóm tắt mức tăng độ chính xác so với các baseline dựa trên học tăng cường, Transformer và đồ thị trên MZ-4, MZ-10, Dxy, một bộ dữ liệu tổng hợp và một bộ dữ liệu nội bộ.",
+    "open": [
+     {
+      "text": "The edge definition in the patient-centric KG, connecting nodes if they share even a single symptom (Equation 3), risks generating excessively dense graphs, especially given the prevalence of common symptoms like fever or cough in medical datasets.",
+      "text_vi": "Cách định nghĩa cạnh trong KG lấy bệnh nhân làm trung tâm, nối hai nút nếu chúng chỉ cần chung một triệu chứng (Phương trình 3), có nguy cơ tạo ra đồ thị quá dày, nhất là khi các triệu chứng phổ biến như sốt hay ho rất thường gặp trong dữ liệu y khoa.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "iclr2026-spkgdiag-learning-symptom-linked-patient-knowledge-graphs-vi"
+      ]
+     },
+     {
+      "text": "The symptom extraction process fully relies on GPT-4.1 without a clear evaluation of extraction accuracy or hallucination errors, which may introduce noise into the knowledge graph.",
+      "text_vi": "Quá trình trích xuất triệu chứng hoàn toàn dựa vào GPT-4.1 mà không có đánh giá rõ ràng về độ chính xác trích xuất hay lỗi ảo giác, điều có thể đưa nhiễu vào đồ thị tri thức.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "iclr2026-spkgdiag-learning-symptom-linked-patient-knowledge-graphs-vi"
+      ]
+     },
+     {
+      "text": "If the global graph is built before data splitting, test nodes could access training information through shared neighbors.",
+      "text_vi": "Nếu đồ thị toàn cục được dựng trước khi chia dữ liệu, các nút kiểm thử có thể tiếp cận thông tin huấn luyện thông qua các lân cận chung.",
+      "source": "reviewers",
+      "quote": true,
+      "papers": [
+       "iclr2026-spkgdiag-learning-symptom-linked-patient-knowledge-graphs-vi"
+      ]
+     },
+     {
+      "text": "The authors plan dynamic graph construction for evolving patient interactions, temporal and longitudinal modelling of disease progression, and encoding of symptom severity beyond mean pooling.",
+      "text_vi": "Các tác giả dự định dựng đồ thị động cho các tương tác bệnh nhân thay đổi theo thời gian, mô hình hóa diễn tiến bệnh theo thời gian và theo dõi dọc, và mã hóa mức độ nặng của triệu chứng thay cho phép lấy trung bình.",
+      "source": "authors",
+      "quote": false,
+      "papers": [
+       "iclr2026-spkgdiag-learning-symptom-linked-patient-knowledge-graphs-vi"
+      ]
+     }
+    ],
+    "papers": [
+     "iclr2026-spkgdiag-learning-symptom-linked-patient-knowledge-graphs-vi"
+    ],
+    "score": 0.2,
+    "color": "tc0",
+    "words": [
+     {
+      "word": "knowledge",
+      "share": 100
+     },
+     {
+      "word": "message passing",
+      "share": 80
+     },
+     {
+      "word": "passing automatic",
+      "share": 80
+     },
+     {
+      "word": "spkgd iag",
+      "share": 80
+     },
+     {
+      "word": "patient-centric",
+      "share": 75
+     },
+     {
+      "word": "diagnosis",
+      "share": 50
+     }
+    ]
+   }
+  ],
   "papers": [
    {
     "id": "iclr2026-spkgdiag-learning-symptom-linked-patient-knowledge-graphs-vi",
@@ -23601,38 +23832,42 @@
     "year": 2026,
     "credit": 0.2,
     "status": "rejected",
-    "problem": "Automatic diagnosis systems predict a disease from patient data, but the paper states that they mostly neglect detailed symptom analysis and that LLM-based approaches struggle to integrate structured medical knowledge into patient-centric representations.",
-    "problem_vi": "Các hệ thống chẩn đoán tự động dự đoán bệnh từ dữ liệu bệnh nhân, nhưng bài báo cho rằng chúng phần lớn bỏ qua việc phân tích triệu chứng chi tiết, và các cách tiếp cận dựa trên LLM gặp khó khi tích hợp tri thức y khoa có cấu trúc vào biểu diễn lấy bệnh nhân làm trung tâm.",
-    "technique": "SPKGDiag uses an LLM (GPT-4.1, per the reviews) to extract explicit and implicit symptoms from patient-doctor conversations, averages their text embeddings into a patient vector, links patients who share symptoms in a patient-centric knowledge graph, and classifies each patient node with a Message Passing Neural Network (MPNN) over 2-hop sampled neighbourhoods.",
-    "technique_vi": "SPKGDiag dùng một LLM (theo các phản biện là GPT-4.1) để trích xuất triệu chứng tường minh và ẩn từ hội thoại bác sĩ – bệnh nhân, lấy trung bình các embedding văn bản của chúng thành vector bệnh nhân, nối các bệnh nhân có chung triệu chứng trong một đồ thị tri thức lấy bệnh nhân làm trung tâm, và phân loại từng nút bệnh nhân bằng mạng nơ-ron truyền thông điệp (Message Passing Neural Network, MPNN) trên vùng lân cận 2 bước được lấy mẫu.",
-    "strength": "As summarised by the reviewers, the paper reports higher diagnostic accuracy than reinforcement-learning, Transformer and graph-based baselines on public benchmarks with 4, 10 and 90 disease classes (MZ-4, MZ-10, Dxy and a synthetic set) and on an internal dataset.",
-    "strength_vi": "Theo tóm tắt của các phản biện, bài báo báo cáo độ chính xác chẩn đoán cao hơn các baseline dựa trên học tăng cường, Transformer và đồ thị trên các benchmark công khai với 4, 10 và 90 lớp bệnh (MZ-4, MZ-10, Dxy và một tập tổng hợp) và trên một tập dữ liệu nội bộ.",
+    "problem": "According to the abstract, automated diagnosis systems mostly focus on predicting the disease and neglect thorough symptom analysis, while LLM-based approaches struggle to integrate structured medical knowledge into coherent, patient-centric representations.",
+    "problem_vi": "Theo phần tóm tắt, các hệ chẩn đoán tự động phần lớn chỉ tập trung dự đoán bệnh mà bỏ qua việc phân tích triệu chứng đầy đủ, còn các cách tiếp cận dựa trên LLM gặp khó khăn khi tích hợp tri thức y khoa có cấu trúc thành các biểu diễn mạch lạc, lấy bệnh nhân làm trung tâm.",
+    "technique": "SPKGDiag uses an LLM (GPT-4.1, per the reviews) to extract explicit and implicit symptoms from patient-doctor conversations, embeds and averages them into patient vectors, links patients who share symptoms into a patient-centric knowledge graph, and classifies diseases with a Message Passing Neural Network (MPNN) over sampled two-hop neighbourhoods.",
+    "technique_vi": "SPKGDiag dùng một LLM (theo các bản phản biện là GPT-4.1) để trích xuất triệu chứng tường minh và tiềm ẩn từ hội thoại giữa bệnh nhân và bác sĩ, nhúng rồi lấy trung bình chúng thành vector bệnh nhân, nối các bệnh nhân có chung triệu chứng thành một đồ thị tri thức lấy bệnh nhân làm trung tâm, và phân loại bệnh bằng mạng nơ-ron truyền thông điệp (Message Passing Neural Network, MPNN) trên các lân cận hai bước được lấy mẫu.",
+    "strength": "The reviews summarise evaluations on public benchmarks (MZ-4, MZ-10, Dxy and a synthetic set) and an internal dataset, where the paper reports higher accuracy than reinforcement-learning, Transformer and graph-based baselines.",
+    "strength_vi": "Các bản phản biện tóm tắt việc đánh giá trên các benchmark công khai (MZ-4, MZ-10, Dxy và một bộ dữ liệu tổng hợp) và một bộ dữ liệu nội bộ, trong đó bài báo báo cáo độ chính xác cao hơn các baseline dựa trên học tăng cường, Transformer và đồ thị.",
     "authors": [
      {
-      "text": "The authors plan to build the graph dynamically for evolving patient interactions, to model temporal and longitudinal clinical data to capture disease progression, and to encode symptom severity beyond mean pooling.",
-      "text_vi": "Các tác giả dự định xây dựng đồ thị động cho các tương tác bệnh nhân thay đổi theo thời gian, mô hình hóa dữ liệu lâm sàng theo thời gian và theo dõi dọc để nắm bắt diễn tiến bệnh, và mã hóa mức độ nghiêm trọng của triệu chứng thay vì chỉ lấy trung bình."
+      "text": "The authors plan to add dynamic graph construction for evolving patient interactions and to model temporal and longitudinal clinical data to capture disease progression.",
+      "text_vi": "Các tác giả dự định bổ sung việc dựng đồ thị động cho các tương tác bệnh nhân thay đổi theo thời gian và mô hình hóa dữ liệu lâm sàng theo thời gian, theo dõi dọc để nắm bắt diễn tiến bệnh."
      },
      {
-      "text": "The authors note that classifying from local feature similarity alone can let highly similar but semantically irrelevant neighbours influence the prediction.",
-      "text_vi": "Các tác giả lưu ý rằng việc phân loại chỉ dựa trên độ tương đồng đặc trưng cục bộ có thể khiến những láng giềng rất giống nhau nhưng không liên quan về ngữ nghĩa ảnh hưởng đến dự đoán."
+      "text": "Symptom severity is not encoded beyond mean pooling of symptom embeddings, which the authors list as future work.",
+      "text_vi": "Mức độ nặng của triệu chứng chưa được mã hóa ngoài phép lấy trung bình các embedding triệu chứng, điều mà các tác giả xếp vào hướng nghiên cứu sau."
+     },
+     {
+      "text": "The paper notes that relying solely on local feature similarity for classification can let highly similar yet semantically irrelevant neighbours influence the prediction.",
+      "text_vi": "Bài báo lưu ý rằng nếu chỉ dựa vào độ tương đồng đặc trưng cục bộ để phân loại thì các lân cận rất giống nhau nhưng không liên quan về ngữ nghĩa có thể ảnh hưởng tới dự đoán."
      }
     ],
     "reviewers": [
      {
-      "quote": "the task studied in this paper is presented as automatic diagnosis, but in practice it reduces to standard multi class classification.",
-      "quote_vi": "bài toán được nghiên cứu trong bài báo được trình bày như chẩn đoán tự động, nhưng trên thực tế nó quy về phân loại đa lớp thông thường."
-     },
-     {
       "quote": "The edge definition in the patient-centric KG, connecting nodes if they share even a single symptom (Equation 3), risks generating excessively dense graphs, especially given the prevalence of common symptoms like fever or cough in medical datasets.",
-      "quote_vi": "Định nghĩa cạnh trong đồ thị tri thức lấy bệnh nhân làm trung tâm, nối hai nút nếu chúng chỉ cần chung một triệu chứng (Phương trình 3), có nguy cơ tạo ra đồ thị quá dày, nhất là khi các triệu chứng phổ biến như sốt hay ho xuất hiện nhiều trong dữ liệu y khoa."
+      "quote_vi": "Cách định nghĩa cạnh trong KG lấy bệnh nhân làm trung tâm, nối hai nút nếu chúng chỉ cần chung một triệu chứng (Phương trình 3), có nguy cơ tạo ra đồ thị quá dày, nhất là khi các triệu chứng phổ biến như sốt hay ho rất thường gặp trong dữ liệu y khoa."
      },
      {
       "quote": "The symptom extraction process fully relies on GPT-4.1 without a clear evaluation of extraction accuracy or hallucination errors, which may introduce noise into the knowledge graph.",
-      "quote_vi": "Quá trình trích xuất triệu chứng hoàn toàn dựa vào GPT-4.1 mà không có đánh giá rõ ràng về độ chính xác trích xuất hay lỗi ảo giác, điều này có thể đưa nhiễu vào đồ thị tri thức."
+      "quote_vi": "Quá trình trích xuất triệu chứng hoàn toàn dựa vào GPT-4.1 mà không có đánh giá rõ ràng về độ chính xác trích xuất hay lỗi ảo giác, điều có thể đưa nhiễu vào đồ thị tri thức."
      },
      {
       "quote": "Nearly all main results are reported in terms of accuracy only, with no per class F1, no macro F1, no recall, no sensitivity, no top k recall.",
-      "quote_vi": "Gần như toàn bộ kết quả chính chỉ được báo cáo bằng độ chính xác (accuracy), không có F1 theo từng lớp, không có macro F1, không có recall, không có độ nhạy, không có top-k recall."
+      "quote_vi": "Gần như mọi kết quả chính chỉ được báo cáo bằng độ chính xác (accuracy), không có F1 theo từng lớp, không có macro F1, không có recall, không có độ nhạy, không có top-k recall."
+     },
+     {
+      "quote": "If the global graph is built before data splitting, test nodes could access training information through shared neighbors.",
+      "quote_vi": "Nếu đồ thị toàn cục được dựng trước khi chia dữ liệu, các nút kiểm thử có thể tiếp cận thông tin huấn luyện thông qua các lân cận chung."
      }
     ]
    }

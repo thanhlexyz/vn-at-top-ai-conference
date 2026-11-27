@@ -663,3 +663,7 @@ other = "CSRankings score"
 other = "Sum of 1/N over the topic's papers, N being each paper's number of authors, as in CSRankings; topics are ordered by this score, highest first"
 [ch_read_more]
 other = "Topics, papers and open questions in detail"
+[ch_top_score]
+other = "top-topic score"
+[ch_top_score_tip]
+other = "CSRankings score (sum of 1/N authors) of the professor's highest-scoring topic; professors are grouped by the area of that topic"
