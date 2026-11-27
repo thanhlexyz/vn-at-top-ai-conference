@@ -1168,6 +1168,19 @@ def graph_recent(g, records):
     return g
 
 
+def one_per_forum(records):
+    forum = lambda r: (re.search(r"openreview\.net/forum\?id=([\w-]+)", r.get("url") or "") or [None, None])[1]
+    keep = {}
+    for r in records:
+        f = forum(r)
+        if f is None:
+            continue
+        k = (r["venue"], r["year"], f)
+        if k not in keep or (keep[k].get("match", "").startswith("OpenReview profile") and not r.get("match", "").startswith("OpenReview profile")):
+            keep[k] = r
+    return [r for r in records if forum(r) is None or keep[(r["venue"], r["year"], forum(r))] is r]
+
+
 def international_graph(authors, by_slug):
     authors = sorted(authors, key=lambda f: (-len(f["papers"]), f["name"]))
     top, step = 40, 46
@@ -1227,6 +1240,7 @@ def main():
         mark_later_acceptance(recs, acc)
         recs += potential_records(person)
         counted, excluded, workshop = apply_rules(person, recs)
+        counted = one_per_forum(counted)
         if not counted:
             hidden.append(person["name"])
             continue

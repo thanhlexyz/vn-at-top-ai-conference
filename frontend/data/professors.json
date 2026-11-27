@@ -20787,7 +20787,7 @@
    }
   ],
   "rank_before_recent": 17,
-  "rank_change_recent": -1,
+  "rank_change_recent": 0,
   "rank_before": 5,
   "rank_change": 0,
   "projection": {
@@ -35508,7 +35508,7 @@
   "excluded_papers": [],
   "workshop_papers": [],
   "rank_before_recent": 14,
-  "rank_change_recent": -1,
+  "rank_change_recent": 0,
   "rank_before": 10,
   "rank_change": 0,
   "projection": {
@@ -41388,8 +41388,8 @@
     ]
    }
   ],
-  "rank_before_recent": 20,
-  "rank_change_recent": 0,
+  "rank_before_recent": 19,
+  "rank_change_recent": -1,
   "rank_before": 12,
   "rank_change": 0,
   "projection": {
@@ -43774,7 +43774,7 @@
    }
   ],
   "rank_before_recent": 18,
-  "rank_change_recent": -1,
+  "rank_change_recent": 0,
   "rank_before": 13,
   "rank_change": 0,
   "projection": {
@@ -51344,7 +51344,7 @@
    }
   ],
   "rank_before_recent": 12,
-  "rank_change_recent": -1,
+  "rank_change_recent": 0,
   "rank_before": 15,
   "rank_change": -1,
   "projection": {
@@ -51474,2444 +51474,6 @@
   },
   "image": "img/people/nguyen-thi-ngoc-diep.jpg",
   "image_source": "https://scholar.google.com/citations?user=wn4c3z8AAAAJ"
- },
- {
-  "slug": "trung-nghia-le",
-  "name": "Trung-Nghia Le",
-  "name_vi": "Lê Trung Nghĩa",
-  "aliases": [
-   "Nghia Le Trung"
-  ],
-  "institution": "University of Science, VNU-HCM",
-  "institution_short": "HCMUS",
-  "institution_slug": "hcmus",
-  "rank": "Lecturer",
-  "role": "",
-  "role_vi": "",
-  "role_source": "",
-  "page_note": "",
-  "page_note_vi": "",
-  "homepage": "https://sites.google.com/view/ltnghia",
-  "vn_since": 2022,
-  "openreview_ids": [
-   "~Trung-Nghia_Le1"
-  ],
-  "openreview_source": "openreview",
-  "openreview_fetched": "2026-11-24",
-  "links": [
-   {
-    "kind": "homepage",
-    "url": "https://sites.google.com/view/ltnghia",
-    "label": "",
-    "text": "sites.google.com/view/ltnghia"
-   },
-   {
-    "kind": "openreview",
-    "url": "https://openreview.net/profile?id=~Trung-Nghia_Le1",
-    "label": "~Trung-Nghia_Le1",
-    "text": "openreview.net/profile?id=~Trung-Nghia_Le1"
-   },
-   {
-    "kind": "staff",
-    "url": "https://www.fit.hcmus.edu.vn/sau-dai-hoc/giang-vien",
-    "label": "",
-    "text": "fit.hcmus.edu.vn/sau-dai-hoc/giang-vien"
-   },
-   {
-    "kind": "scholar",
-    "url": "https://scholar.google.com/citations?user=n8ZQzx8AAAAJ",
-    "label": "",
-    "text": "scholar.google.com/citations?user=n8ZQzx8AAAAJ"
-   },
-   {
-    "kind": "dblp",
-    "url": "https://dblp.org/pid/00/11111",
-    "label": "",
-    "text": "dblp.org/pid/00/11111"
-   }
-  ],
-  "score": 0.92,
-  "score_areas": {
-   "AI": 0.1667,
-   "ML": 0.75,
-   "CV": 0,
-   "NLP": 0,
-   "RB": 0
-  },
-  "iclr_complete": true,
-  "flags": [
-   "1 accepted paper(s) are taken from personal pages and are not in an official list yet. They are unofficial until the conference publishes them."
-  ],
-  "accepted": 4,
-  "own_page": 1,
-  "official": 3,
-  "venues": {
-   "iclr": {
-    "accepted": 1,
-    "rejected": 1,
-    "withdrawn": 1,
-    "desk_rejected": 0,
-    "not_accepted": 2,
-    "submitted": 3,
-    "own_page": 1,
-    "official": 0
-   },
-   "neurips": {
-    "accepted": 2,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 2,
-    "own_page": 0,
-    "official": 2
-   },
-   "icml": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "cvpr": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "iccv": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "eccv": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "acl": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "emnlp": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "aaai": {
-    "accepted": 1,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 1,
-    "own_page": 0,
-    "official": 1
-   },
-   "ijcai": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "icra": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "iros": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   "rss": {
-    "accepted": 0,
-    "rejected": 0,
-    "withdrawn": 0,
-    "desk_rejected": 0,
-    "not_accepted": 0,
-    "submitted": 0,
-    "own_page": 0,
-    "official": 0
-   }
-  },
-  "years": [
-   {
-    "year": 2020,
-    "counts": false,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "eccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "aaai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "ijcai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icra": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iros": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "rss": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2021,
-    "counts": false,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "eccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "aaai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "ijcai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icra": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iros": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "rss": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2022,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "eccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "aaai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "ijcai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icra": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iros": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "rss": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2023,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "eccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "aaai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "ijcai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icra": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iros": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "rss": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2024,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "eccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "aaai": {
-      "accepted": 1,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 1,
-      "own_page": 0,
-      "official": 1,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "ijcai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icra": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iros": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "rss": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     }
-    },
-    "accepted": 1,
-    "own_page": 0,
-    "official": 1
-   },
-   {
-    "year": 2025,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 1,
-      "withdrawn": 1,
-      "desk_rejected": 0,
-      "not_accepted": 2,
-      "submitted": 2,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "eccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "aaai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "ijcai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icra": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iros": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "rss": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     }
-    },
-    "accepted": 0,
-    "own_page": 0,
-    "official": 0
-   },
-   {
-    "year": 2026,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 2,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 2,
-      "own_page": 0,
-      "official": 2,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "eccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "aaai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "ijcai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "icra": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     },
-     "iros": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": true,
-      "provisional": false
-     },
-     "rss": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": true,
-      "held": true,
-      "provisional": false
-     }
-    },
-    "accepted": 2,
-    "own_page": 0,
-    "official": 2
-   },
-   {
-    "year": 2027,
-    "counts": true,
-    "venues": {
-     "iclr": {
-      "accepted": 1,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 1,
-      "own_page": 1,
-      "official": 0,
-      "available": false,
-      "held": true,
-      "provisional": false
-     },
-     "neurips": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": true,
-      "provisional": false
-     },
-     "icml": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": true,
-      "provisional": false
-     },
-     "cvpr": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": true,
-      "provisional": false
-     },
-     "iccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": true,
-      "provisional": false
-     },
-     "eccv": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": false,
-      "provisional": false
-     },
-     "acl": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": true,
-      "provisional": false
-     },
-     "emnlp": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": true,
-      "provisional": false
-     },
-     "aaai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": true,
-      "provisional": false
-     },
-     "ijcai": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": true,
-      "provisional": false
-     },
-     "icra": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": true,
-      "provisional": false
-     },
-     "iros": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": true,
-      "provisional": false
-     },
-     "rss": {
-      "accepted": 0,
-      "rejected": 0,
-      "withdrawn": 0,
-      "desk_rejected": 0,
-      "not_accepted": 0,
-      "submitted": 0,
-      "own_page": 0,
-      "official": 0,
-      "available": false,
-      "held": true,
-      "provisional": false
-     }
-    },
-    "accepted": 1,
-    "own_page": 1,
-    "official": 0
-   }
-  ],
-  "collab": {
-   "papers": 6,
-   "avg_coauthors": "3.8",
-   "distinct_coauthors": 11,
-   "min_coauthors": 3,
-   "max_coauthors": 5,
-   "papers_with_affiliations": 3,
-   "avg_foreign": "1.7",
-   "avg_same_institution": "2.0",
-   "avg_other_vietnam": "0.0",
-   "avg_other_institution": "1.7",
-   "avg_domestic": "2.0",
-   "elsewhere": 4,
-   "elsewhere_abroad": 4,
-   "elsewhere_vietnam": 0,
-   "papers_with_topic": 2,
-   "topic_areas": 1,
-   "topic_count": 1,
-   "areas": [
-    {
-     "area": "Computer Vision",
-     "papers": 2
-    }
-   ],
-   "topics": [
-    {
-     "area": "Computer Vision",
-     "topic": "Image and Video Generation",
-     "papers": 2
-    }
-   ]
-  },
-  "authorship": {
-   "majority": {
-    "years": [
-     {
-      "year": 2020,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "iccv": 0,
-       "eccv": 0,
-       "acl": 0,
-       "emnlp": 0,
-       "aaai": 0,
-       "ijcai": 0,
-       "icra": 0,
-       "iros": 0,
-       "rss": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2021,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "iccv": 0,
-       "eccv": 0,
-       "acl": 0,
-       "emnlp": 0,
-       "aaai": 0,
-       "ijcai": 0,
-       "icra": 0,
-       "iros": 0,
-       "rss": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2022,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "iccv": 0,
-       "eccv": 0,
-       "acl": 0,
-       "emnlp": 0,
-       "aaai": 0,
-       "ijcai": 0,
-       "icra": 0,
-       "iros": 0,
-       "rss": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2023,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "iccv": 0,
-       "eccv": 0,
-       "acl": 0,
-       "emnlp": 0,
-       "aaai": 0,
-       "ijcai": 0,
-       "icra": 0,
-       "iros": 0,
-       "rss": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2024,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "iccv": 0,
-       "eccv": 0,
-       "acl": 0,
-       "emnlp": 0,
-       "aaai": 0,
-       "ijcai": 0,
-       "icra": 0,
-       "iros": 0,
-       "rss": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2025,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "iccv": 0,
-       "eccv": 0,
-       "acl": 0,
-       "emnlp": 0,
-       "aaai": 0,
-       "ijcai": 0,
-       "icra": 0,
-       "iros": 0,
-       "rss": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2026,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "iccv": 0,
-       "eccv": 0,
-       "acl": 0,
-       "emnlp": 0,
-       "aaai": 0,
-       "ijcai": 0,
-       "icra": 0,
-       "iros": 0,
-       "rss": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2027,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "iccv": 0,
-       "eccv": 0,
-       "acl": 0,
-       "emnlp": 0,
-       "aaai": 0,
-       "ijcai": 0,
-       "icra": 0,
-       "iros": 0,
-       "rss": 0
-      },
-      "total": 0
-     }
-    ],
-    "venues": {
-     "iclr": 0,
-     "neurips": 0,
-     "icml": 0,
-     "cvpr": 0,
-     "iccv": 0,
-     "eccv": 0,
-     "acl": 0,
-     "emnlp": 0,
-     "aaai": 0,
-     "ijcai": 0,
-     "icra": 0,
-     "iros": 0,
-     "rss": 0
-    },
-    "total": 0
-   },
-   "first_author": {
-    "years": [
-     {
-      "year": 2020,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "iccv": 0,
-       "eccv": 0,
-       "acl": 0,
-       "emnlp": 0,
-       "aaai": 0,
-       "ijcai": 0,
-       "icra": 0,
-       "iros": 0,
-       "rss": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2021,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "iccv": 0,
-       "eccv": 0,
-       "acl": 0,
-       "emnlp": 0,
-       "aaai": 0,
-       "ijcai": 0,
-       "icra": 0,
-       "iros": 0,
-       "rss": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2022,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "iccv": 0,
-       "eccv": 0,
-       "acl": 0,
-       "emnlp": 0,
-       "aaai": 0,
-       "ijcai": 0,
-       "icra": 0,
-       "iros": 0,
-       "rss": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2023,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "iccv": 0,
-       "eccv": 0,
-       "acl": 0,
-       "emnlp": 0,
-       "aaai": 0,
-       "ijcai": 0,
-       "icra": 0,
-       "iros": 0,
-       "rss": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2024,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "iccv": 0,
-       "eccv": 0,
-       "acl": 0,
-       "emnlp": 0,
-       "aaai": 1,
-       "ijcai": 0,
-       "icra": 0,
-       "iros": 0,
-       "rss": 0
-      },
-      "total": 1
-     },
-     {
-      "year": 2025,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "iccv": 0,
-       "eccv": 0,
-       "acl": 0,
-       "emnlp": 0,
-       "aaai": 0,
-       "ijcai": 0,
-       "icra": 0,
-       "iros": 0,
-       "rss": 0
-      },
-      "total": 0
-     },
-     {
-      "year": 2026,
-      "venues": {
-       "iclr": 0,
-       "neurips": 2,
-       "icml": 0,
-       "cvpr": 0,
-       "iccv": 0,
-       "eccv": 0,
-       "acl": 0,
-       "emnlp": 0,
-       "aaai": 0,
-       "ijcai": 0,
-       "icra": 0,
-       "iros": 0,
-       "rss": 0
-      },
-      "total": 2
-     },
-     {
-      "year": 2027,
-      "venues": {
-       "iclr": 0,
-       "neurips": 0,
-       "icml": 0,
-       "cvpr": 0,
-       "iccv": 0,
-       "eccv": 0,
-       "acl": 0,
-       "emnlp": 0,
-       "aaai": 0,
-       "ijcai": 0,
-       "icra": 0,
-       "iros": 0,
-       "rss": 0
-      },
-      "total": 0
-     }
-    ],
-    "venues": {
-     "iclr": 0,
-     "neurips": 2,
-     "icml": 0,
-     "cvpr": 0,
-     "iccv": 0,
-     "eccv": 0,
-     "acl": 0,
-     "emnlp": 0,
-     "aaai": 1,
-     "ijcai": 0,
-     "icra": 0,
-     "iros": 0,
-     "rss": 0
-    },
-    "total": 3
-   },
-   "judged": 3,
-   "unknown": 1,
-   "by_year": [
-    {
-     "year": 2020,
-     "accepted": 0,
-     "judged": 0,
-     "majority": 0,
-     "first": 0
-    },
-    {
-     "year": 2021,
-     "accepted": 0,
-     "judged": 0,
-     "majority": 0,
-     "first": 0
-    },
-    {
-     "year": 2022,
-     "accepted": 0,
-     "judged": 0,
-     "majority": 0,
-     "first": 0
-    },
-    {
-     "year": 2023,
-     "accepted": 0,
-     "judged": 0,
-     "majority": 0,
-     "first": 0
-    },
-    {
-     "year": 2024,
-     "accepted": 1,
-     "judged": 1,
-     "majority": 0,
-     "first": 1
-    },
-    {
-     "year": 2025,
-     "accepted": 0,
-     "judged": 0,
-     "majority": 0,
-     "first": 0
-    },
-    {
-     "year": 2026,
-     "accepted": 2,
-     "judged": 2,
-     "majority": 0,
-     "first": 2
-    },
-    {
-     "year": 2027,
-     "accepted": 1,
-     "judged": 0,
-     "majority": 0,
-     "first": 0
-    }
-   ]
-  },
-  "accepted_papers": [
-   {
-    "year": 2027,
-    "venue": "iclr",
-    "venue_name": "ICLR",
-    "title": "redacted 8357c3",
-    "ai_key": "iclr-2027-redacted8357c3",
-    "url": "",
-    "status": "accepted",
-    "status_label": "accepted",
-    "pres": "",
-    "authors": "redacted, redacted, redacted, redacted",
-    "match": "potential: mean review score 2.67 (above 2.6) on a submission under review, matched through a public preprint",
-    "note": "",
-    "reason": "",
-    "later": "",
-    "unofficial": true,
-    "workshop": "",
-    "potential": true,
-    "author_links": [
-     {
-      "name": "redacted",
-      "slug": ""
-     },
-     {
-      "name": "redacted",
-      "slug": ""
-     },
-     {
-      "name": "redacted",
-      "slug": ""
-     },
-     {
-      "name": "redacted",
-      "slug": ""
-     }
-    ]
-   },
-   {
-    "year": 2026,
-    "venue": "neurips",
-    "venue_name": "NeurIPS",
-    "title": "Learning to Generate Multiple Objects from Dense and Occluded Layouts",
-    "ai_key": "neurips-2026-learningtogeneratemultipleobjectsfromden",
-    "url": "https://openreview.net/forum?id=KXKtTAY4Fb",
-    "status": "accepted",
-    "status_label": "accepted",
-    "pres": "",
-    "authors": "Bach Hoang Ngo, Ngo Tri, Hieu Minh Le, Trung Nghia Le",
-    "match": "name, confirmed by hand",
-    "note": "",
-    "reason": "",
-    "later": "",
-    "unofficial": false,
-    "workshop": "",
-    "potential": false,
-    "author_links": [
-     {
-      "name": "Bach Hoang Ngo",
-      "slug": ""
-     },
-     {
-      "name": "Ngo Tri",
-      "slug": ""
-     },
-     {
-      "name": "Hieu Minh Le",
-      "slug": ""
-     },
-     {
-      "name": "Trung Nghia Le",
-      "slug": "trung-nghia-le"
-     }
-    ]
-   },
-   {
-    "year": 2026,
-    "venue": "neurips",
-    "venue_name": "NeurIPS",
-    "title": "Occlusion-Aware Text-To-Image Generation",
-    "ai_key": "neurips-2026-occlusionawaretexttoimagegeneration",
-    "url": "https://openreview.net/forum?id=KXKtTAY4Fb",
-    "status": "accepted",
-    "status_label": "accepted",
-    "pres": "",
-    "authors": "Bach Hoang Ngo, Ngo Tri Si, Hieu Le, Trung-Nghia Le",
-    "match": "OpenReview profile",
-    "note": "",
-    "reason": "",
-    "later": "",
-    "unofficial": false,
-    "workshop": "",
-    "potential": false,
-    "author_links": [
-     {
-      "name": "Bach Hoang Ngo",
-      "slug": ""
-     },
-     {
-      "name": "Ngo Tri Si",
-      "slug": ""
-     },
-     {
-      "name": "Hieu Le",
-      "slug": ""
-     },
-     {
-      "name": "Trung-Nghia Le",
-      "slug": "trung-nghia-le"
-     }
-    ]
-   },
-   {
-    "year": 2024,
-    "venue": "aaai",
-    "venue_name": "AAAI",
-    "title": "MaskDiff: Modeling Mask Distribution with Diffusion Probabilistic Model for Few-Shot Instance Segmentation",
-    "ai_key": "aaai-2024-maskdiffmodelingmaskdistributionwithdiff",
-    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/28068",
-    "status": "accepted",
-    "status_label": "accepted",
-    "pres": "",
-    "authors": "Minh-Quan Le, Tam V. Nguyen, Trung-Nghia Le, Thanh-Toan Do, Minh N. Do, Minh-Triet Tran",
-    "match": "name and affiliation",
-    "note": "",
-    "reason": "",
-    "later": "",
-    "unofficial": false,
-    "workshop": "",
-    "potential": false,
-    "author_links": [
-     {
-      "name": "Minh-Quan Le",
-      "slug": ""
-     },
-     {
-      "name": "Tam V. Nguyen",
-      "slug": ""
-     },
-     {
-      "name": "Trung-Nghia Le",
-      "slug": "trung-nghia-le"
-     },
-     {
-      "name": "Thanh-Toan Do",
-      "slug": ""
-     },
-     {
-      "name": "Minh N. Do",
-      "slug": ""
-     },
-     {
-      "name": "Minh-Triet Tran",
-      "slug": "minh-triet-tran"
-     }
-    ]
-   }
-  ],
-  "not_accepted_papers": [
-   {
-    "year": 2025,
-    "venue": "iclr",
-    "venue_name": "ICLR",
-    "title": "ConceptFlow: Unified Framework for Personalized Image Generation",
-    "ai_key": "iclr-2025-conceptflowunifiedframeworkforpersonaliz",
-    "url": "https://openreview.net/forum?id=EhSUM1FcJw",
-    "status": "withdrawn",
-    "status_label": "withdrawn",
-    "pres": "",
-    "authors": "Trong-Vu Hoang, Quang-Binh Nguyen, Thanh-Toan Do, Tam V. Nguyen, Minh-Triet Tran, Trung-Nghia Le",
-    "match": "OpenReview profile",
-    "note": "",
-    "reason": "",
-    "later": "",
-    "unofficial": false,
-    "workshop": "",
-    "potential": false,
-    "author_links": [
-     {
-      "name": "Trong-Vu Hoang",
-      "slug": ""
-     },
-     {
-      "name": "Quang-Binh Nguyen",
-      "slug": ""
-     },
-     {
-      "name": "Thanh-Toan Do",
-      "slug": ""
-     },
-     {
-      "name": "Tam V. Nguyen",
-      "slug": ""
-     },
-     {
-      "name": "Minh-Triet Tran",
-      "slug": "minh-triet-tran"
-     },
-     {
-      "name": "Trung-Nghia Le",
-      "slug": "trung-nghia-le"
-     }
-    ]
-   },
-   {
-    "year": 2025,
-    "venue": "iclr",
-    "venue_name": "ICLR",
-    "title": "Rethinking Attentions in Zero-Shot Real Image Editing",
-    "ai_key": "iclr-2025-rethinkingattentionsinzeroshotrealimagee",
-    "url": "https://openreview.net/forum?id=kn2OZa8rOf",
-    "status": "rejected",
-    "status_label": "rejected",
-    "pres": "",
-    "authors": "Dinh-Khoi Vo, Thanh-Toan Do, Tam V. Nguyen, Minh-Triet Tran, Trung-Nghia Le",
-    "match": "OpenReview profile",
-    "note": "",
-    "reason": "",
-    "later": "",
-    "unofficial": false,
-    "workshop": "",
-    "potential": false,
-    "author_links": [
-     {
-      "name": "Dinh-Khoi Vo",
-      "slug": ""
-     },
-     {
-      "name": "Thanh-Toan Do",
-      "slug": ""
-     },
-     {
-      "name": "Tam V. Nguyen",
-      "slug": ""
-     },
-     {
-      "name": "Minh-Triet Tran",
-      "slug": "minh-triet-tran"
-     },
-     {
-      "name": "Trung-Nghia Le",
-      "slug": "trung-nghia-le"
-     }
-    ]
-   }
-  ],
-  "excluded_papers": [],
-  "workshop_papers": [],
-  "rank_before_recent": 19,
-  "rank_change_recent": 8,
-  "rank_before": 23,
-  "rank_change": 6,
-  "projection": {
-   "basis": "own",
-   "ratio": "2.0",
-   "ratio_submitted": 3,
-   "ratio_accepted": 1,
-   "accepted": 4,
-   "total": "9",
-   "estimated": "3",
-   "svg": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers submitted and accepted per year by Trung-Nghia Le; the numbers are in the table below\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"est\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Rejected elsewhere, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">3</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">4</text><text class=\"tick off\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick off\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V214.0 Q358.8,214.0 358.8,214.0 H382.8 Q382.8,214.0 382.8,214.0 V270.0 Z\"><title>2024: 1 accepted</title></path><path class=\"est\" d=\"M358.8,212.0 V162.0 Q358.8,158.0 362.8,158.0 H378.8 Q382.8,158.0 382.8,162.0 V212.0 Z\"><title>2024: about 1 rejected elsewhere (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"152.0\" text-anchor=\"middle\">about 2</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"not\" d=\"M432.2,270.0 V162.0 Q432.2,158.0 436.2,158.0 H452.2 Q456.2,158.0 456.2,162.0 V270.0 Z\"><title>2025: 2 rejected, recorded</title></path><text class=\"value\" x=\"444.2\" y=\"152.0\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V158.0 Q505.8,158.0 505.8,158.0 H529.8 Q529.8,158.0 529.8,158.0 V270.0 Z\"><title>2026: 2 accepted</title></path><path class=\"est\" d=\"M505.8,156.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V156.0 Z\"><title>2026: about 2 rejected elsewhere (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">about 4</text><text class=\"tick\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text><path class=\"acc\" d=\"M579.2,270.0 V218.0 Q579.2,214.0 583.2,214.0 H599.2 Q603.2,214.0 603.2,218.0 V270.0 Z\"><title>2027: 1 accepted</title></path><text class=\"value\" x=\"591.2\" y=\"208.0\" text-anchor=\"middle\">1</text></svg>",
-   "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài nộp và được nhận theo năm của Trung-Nghia Le; số liệu ở bảng bên dưới\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"est\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Bị từ chối ở nơi khác, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"214.0\" x2=\"628\" y2=\"214.0\"/><text class=\"tick\" x=\"34\" y=\"218.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">2</text><line class=\"grid\" x1=\"40\" y1=\"102.0\" x2=\"628\" y2=\"102.0\"/><text class=\"tick\" x=\"34\" y=\"106.0\" text-anchor=\"end\">3</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">4</text><text class=\"tick off\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick off\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V214.0 Q358.8,214.0 358.8,214.0 H382.8 Q382.8,214.0 382.8,214.0 V270.0 Z\"><title>2024: 1 bài được nhận</title></path><path class=\"est\" d=\"M358.8,212.0 V162.0 Q358.8,158.0 362.8,158.0 H378.8 Q382.8,158.0 382.8,162.0 V212.0 Z\"><title>2024: khoảng 1 bài bị từ chối ở nơi khác (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"152.0\" text-anchor=\"middle\">~2</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"not\" d=\"M432.2,270.0 V162.0 Q432.2,158.0 436.2,158.0 H452.2 Q456.2,158.0 456.2,162.0 V270.0 Z\"><title>2025: 2 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"444.2\" y=\"152.0\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V158.0 Q505.8,158.0 505.8,158.0 H529.8 Q529.8,158.0 529.8,158.0 V270.0 Z\"><title>2026: 2 bài được nhận</title></path><path class=\"est\" d=\"M505.8,156.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V156.0 Z\"><title>2026: khoảng 2 bài bị từ chối ở nơi khác (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">~4</text><text class=\"tick\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text><path class=\"acc\" d=\"M579.2,270.0 V218.0 Q579.2,214.0 583.2,214.0 H599.2 Q603.2,214.0 603.2,218.0 V270.0 Z\"><title>2027: 1 bài được nhận</title></path><text class=\"value\" x=\"591.2\" y=\"208.0\" text-anchor=\"middle\">1</text></svg>",
-   "recorded": 2,
-   "rows": [
-    {
-     "year": 2020,
-     "counts": false
-    },
-    {
-     "year": 2021,
-     "counts": false
-    },
-    {
-     "year": 2022,
-     "counts": true,
-     "accepted": 0,
-     "iclr_not_accepted": 0,
-     "estimated": "0",
-     "total": "0"
-    },
-    {
-     "year": 2023,
-     "counts": true,
-     "accepted": 0,
-     "iclr_not_accepted": 0,
-     "estimated": "0",
-     "total": "0"
-    },
-    {
-     "year": 2024,
-     "counts": true,
-     "accepted": 1,
-     "iclr_not_accepted": 0,
-     "estimated": "1",
-     "total": "2"
-    },
-    {
-     "year": 2025,
-     "counts": true,
-     "accepted": 0,
-     "iclr_not_accepted": 2,
-     "estimated": "0",
-     "total": "2"
-    },
-    {
-     "year": 2026,
-     "counts": true,
-     "accepted": 2,
-     "iclr_not_accepted": 0,
-     "estimated": "2",
-     "total": "4"
-    },
-    {
-     "year": 2027,
-     "counts": true,
-     "accepted": 1,
-     "iclr_not_accepted": 0,
-     "estimated": "0",
-     "total": "1"
-    }
-   ],
-   "pie": "<svg class=\"chart\" viewBox=\"0 0 378 190\" role=\"img\" aria-label=\"Accepted, recorded rejected and estimated rejected papers, all listed professors\"><text class=\"value\" x=\"4.0\" y=\"16\">All years and venues</text><path class=\"acc slice\" d=\"M74.0,104.0 L74.0,34.0 A70,70 0 0 1 97.9,169.8 Z\"><title>All years and venues: 4 accepted, 44%</title></path><rect class=\"acc\" x=\"162.0\" y=\"72.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"82.0\">4 (44%)</text><text x=\"180.0\" y=\"97.0\">accepted</text><path class=\"not slice\" d=\"M74.0,104.0 L97.9,169.8 A70,70 0 0 1 13.4,139.0 Z\"><title>All years and venues: 2 rejected, recorded, 22%</title></path><rect class=\"not\" x=\"162.0\" y=\"112.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"122.0\">2 (22%)</text><text x=\"180.0\" y=\"137.0\">rejected, recorded</text><path class=\"est slice\" d=\"M74.0,104.0 L13.4,139.0 A70,70 0 0 1 74.0,34.0 Z\"><title>All years and venues: 3 rejected elsewhere, estimated, 33%</title></path><rect class=\"est\" x=\"162.0\" y=\"152.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"162.0\">3 (33%)</text><text x=\"180.0\" y=\"177.0\">rejected elsewhere, estimated</text></svg>",
-   "pie_vi": "<svg class=\"chart\" viewBox=\"0 0 390 190\" role=\"img\" aria-label=\"Bài được nhận, bị từ chối đếm được và bị từ chối ước tính, tất cả giảng viên trong danh sách\"><text class=\"value\" x=\"4.0\" y=\"16\">Mọi năm và hội nghị</text><path class=\"acc slice\" d=\"M74.0,104.0 L74.0,34.0 A70,70 0 0 1 97.9,169.8 Z\"><title>Mọi năm và hội nghị: 4 được nhận, 44%</title></path><rect class=\"acc\" x=\"162.0\" y=\"72.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"82.0\">4 (44%)</text><text x=\"180.0\" y=\"97.0\">được nhận</text><path class=\"not slice\" d=\"M74.0,104.0 L97.9,169.8 A70,70 0 0 1 13.4,139.0 Z\"><title>Mọi năm và hội nghị: 2 bị từ chối, đếm được, 22%</title></path><rect class=\"not\" x=\"162.0\" y=\"112.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"122.0\">2 (22%)</text><text x=\"180.0\" y=\"137.0\">bị từ chối, đếm được</text><path class=\"est slice\" d=\"M74.0,104.0 L13.4,139.0 A70,70 0 0 1 74.0,34.0 Z\"><title>Mọi năm và hội nghị: 3 bị từ chối ở nơi khác, ước tính, 33%</title></path><rect class=\"est\" x=\"162.0\" y=\"152.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"162.0\">3 (33%)</text><text x=\"180.0\" y=\"177.0\">bị từ chối ở nơi khác, ước tính</text></svg>"
-  },
-  "author_charts": {
-   "first": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from HCMUS\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from HCMUS</text><rect class=\"other-inst\" x=\"217.20000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"235.20000000000002\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"388.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"406.0\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">2</text><text class=\"tick off\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick off\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M358.8,230.0 V142.0 Q358.8,138.0 362.8,138.0 H378.8 Q382.8,138.0 382.8,142.0 V230.0 Z\"><title>2024: 1 first author from HCMUS</title></path><text class=\"value\" x=\"370.8\" y=\"132.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 2 first author from HCMUS</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text><path class=\"unjudged\" d=\"M579.2,230.0 V142.0 Q579.2,138.0 583.2,138.0 H599.2 Q603.2,138.0 603.2,142.0 V230.0 Z\"><title>2027: 1 affiliations not known yet</title></path><text class=\"value\" x=\"591.2\" y=\"132.0\" text-anchor=\"middle\">1</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng HCMUS\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng HCMUS</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"400.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"418.8\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">2</text><text class=\"tick off\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick off\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M358.8,230.0 V142.0 Q358.8,138.0 362.8,138.0 H378.8 Q382.8,138.0 382.8,142.0 V230.0 Z\"><title>2024: 1 bài tác giả đầu cùng HCMUS</title></path><text class=\"value\" x=\"370.8\" y=\"132.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 2 bài tác giả đầu cùng HCMUS</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text><path class=\"unjudged\" d=\"M579.2,230.0 V142.0 Q579.2,138.0 583.2,138.0 H599.2 Q603.2,138.0 603.2,142.0 V230.0 Z\"><title>2027: 1 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"591.2\" y=\"132.0\" text-anchor=\"middle\">1</text></svg>"
-   },
-   "majority": {
-    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from HCMUS\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from HCMUS</text><rect class=\"other-inst\" x=\"217.20000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"235.20000000000002\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"388.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"406.0\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">2</text><text class=\"tick off\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick off\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"other-inst\" d=\"M358.8,230.0 V142.0 Q358.8,138.0 362.8,138.0 H378.8 Q382.8,138.0 382.8,142.0 V230.0 Z\"><title>2024: 1 most authors elsewhere</title></path><text class=\"value\" x=\"370.8\" y=\"132.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"other-inst\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 2 most authors elsewhere</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text><path class=\"unjudged\" d=\"M579.2,230.0 V142.0 Q579.2,138.0 583.2,138.0 H599.2 Q603.2,138.0 603.2,142.0 V230.0 Z\"><title>2027: 1 affiliations not known yet</title></path><text class=\"value\" x=\"591.2\" y=\"132.0\" text-anchor=\"middle\">1</text></svg>",
-    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng HCMUS\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng HCMUS</text><rect class=\"other-inst\" x=\"223.60000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"241.60000000000002\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"426.40000000000003\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"444.40000000000003\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"138.0\" x2=\"628\" y2=\"138.0\"/><text class=\"tick\" x=\"34\" y=\"142.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">2</text><text class=\"tick off\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick off\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"other-inst\" d=\"M358.8,230.0 V142.0 Q358.8,138.0 362.8,138.0 H378.8 Q382.8,138.0 382.8,142.0 V230.0 Z\"><title>2024: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"370.8\" y=\"132.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"other-inst\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 2 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text><path class=\"unjudged\" d=\"M579.2,230.0 V142.0 Q579.2,138.0 583.2,138.0 H599.2 Q603.2,138.0 603.2,142.0 V230.0 Z\"><title>2027: 1 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"591.2\" y=\"132.0\" text-anchor=\"middle\">1</text></svg>"
-   }
-  },
-  "rejected_estimated": 5,
-  "acceptance_rate": 44,
-  "recent": {
-   "score": 0.75,
-   "accepted": 3,
-   "score_areas": {
-    "AI": 0,
-    "ML": 0.75,
-    "CV": 0,
-    "NLP": 0,
-    "RB": 0
-   },
-   "own_page": 1,
-   "official": 2,
-   "rejected": 0,
-   "rejected_estimated": 2,
-   "acceptance_rate": 60
-  },
-  "scholar": {
-   "user": "n8ZQzx8AAAAJ",
-   "url": "https://scholar.google.com/citations?user=n8ZQzx8AAAAJ",
-   "name": "Trung-Nghia Le",
-   "affiliation": "University of Science, VNU-HCM",
-   "citations": 2592,
-   "citations_since": 2418,
-   "h_index": 17,
-   "h_index_since": 17,
-   "i10_index": 33,
-   "i10_index_since": 27,
-   "since": 2021,
-   "found_on": "https://openreview.net/profile?id=~Trung-Nghia_Le1",
-   "fetched": "2026-11-24",
-   "svg": "<svg class=\"chart\" viewBox=\"0 0 640 208\" role=\"img\" aria-label=\"Citations per year, Google Scholar, 2026-11-24\"><line class=\"axis\" x1=\"34\" y1=\"184.0\" x2=\"630\" y2=\"184.0\"/><text x=\"28\" y=\"188.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"34\" y1=\"144.0\" x2=\"630\" y2=\"144.0\"/><text x=\"28\" y=\"148.0\" text-anchor=\"end\">200</text><line class=\"grid\" x1=\"34\" y1=\"104.0\" x2=\"630\" y2=\"104.0\"/><text x=\"28\" y=\"108.0\" text-anchor=\"end\">400</text><line class=\"grid\" x1=\"34\" y1=\"64.0\" x2=\"630\" y2=\"64.0\"/><text x=\"28\" y=\"68.0\" text-anchor=\"end\">600</text><line class=\"grid\" x1=\"34\" y1=\"24.0\" x2=\"630\" y2=\"24.0\"/><text x=\"28\" y=\"28.0\" text-anchor=\"end\">800</text><path class=\"v1\" d=\"M53.1,184 V184.0 Q53.1,180.4 56.7,180.4 H77.5 Q81.1,180.4 81.1,184.0 V184 Z\"><title>2018: 18 citations</title></path><text class=\"value\" x=\"67.1\" y=\"175.4\" text-anchor=\"middle\">18</text><text x=\"67.1\" y=\"201\" text-anchor=\"middle\">2018</text><path class=\"v1\" d=\"M119.3,184 V178.0 Q119.3,174.0 123.3,174.0 H143.3 Q147.3,174.0 147.3,178.0 V184 Z\"><title>2019: 50 citations</title></path><text class=\"value\" x=\"133.3\" y=\"169.0\" text-anchor=\"middle\">50</text><text x=\"133.3\" y=\"201\" text-anchor=\"middle\">2019</text><path class=\"v1\" d=\"M185.6,184 V171.8 Q185.6,167.8 189.6,167.8 H209.6 Q213.6,167.8 213.6,171.8 V184 Z\"><title>2020: 81 citations</title></path><text class=\"value\" x=\"199.6\" y=\"162.8\" text-anchor=\"middle\">81</text><text x=\"199.6\" y=\"201\" text-anchor=\"middle\">2020</text><path class=\"v1\" d=\"M251.8,184 V158.0 Q251.8,154.0 255.8,154.0 H275.8 Q279.8,154.0 279.8,158.0 V184 Z\"><title>2021: 150 citations</title></path><text class=\"value\" x=\"265.8\" y=\"149.0\" text-anchor=\"middle\">150</text><text x=\"265.8\" y=\"201\" text-anchor=\"middle\">2021</text><path class=\"v1\" d=\"M318.0,184 V153.0 Q318.0,149.0 322.0,149.0 H342.0 Q346.0,149.0 346.0,153.0 V184 Z\"><title>2022: 175 citations</title></path><text class=\"value\" x=\"332.0\" y=\"144.0\" text-anchor=\"middle\">175</text><text x=\"332.0\" y=\"201\" text-anchor=\"middle\">2022</text><path class=\"v1\" d=\"M384.2,184 V130.8 Q384.2,126.8 388.2,126.8 H408.2 Q412.2,126.8 412.2,130.8 V184 Z\"><title>2023: 286 citations</title></path><text class=\"value\" x=\"398.2\" y=\"121.8\" text-anchor=\"middle\">286</text><text x=\"398.2\" y=\"201\" text-anchor=\"middle\">2023</text><path class=\"v1\" d=\"M450.4,184 V87.8 Q450.4,83.8 454.4,83.8 H474.4 Q478.4,83.8 478.4,87.8 V184 Z\"><title>2024: 501 citations</title></path><text class=\"value\" x=\"464.4\" y=\"78.8\" text-anchor=\"middle\">501</text><text x=\"464.4\" y=\"201\" text-anchor=\"middle\">2024</text><path class=\"v1\" d=\"M516.7,184 V44.2 Q516.7,40.2 520.7,40.2 H540.7 Q544.7,40.2 544.7,44.2 V184 Z\"><title>2025: 719 citations</title></path><text class=\"value\" x=\"530.7\" y=\"35.2\" text-anchor=\"middle\">719</text><text x=\"530.7\" y=\"201\" text-anchor=\"middle\">2025</text><path class=\"v1\" d=\"M582.9,184 V72.2 Q582.9,68.2 586.9,68.2 H606.9 Q610.9,68.2 610.9,72.2 V184 Z\"><title>2026: 579 citations</title></path><text class=\"value\" x=\"596.9\" y=\"63.2\" text-anchor=\"middle\">579</text><text x=\"596.9\" y=\"201\" text-anchor=\"middle\">2026</text></svg>",
-   "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 208\" role=\"img\" aria-label=\"Số trích dẫn theo năm, Google Scholar, 2026-11-24\"><line class=\"axis\" x1=\"34\" y1=\"184.0\" x2=\"630\" y2=\"184.0\"/><text x=\"28\" y=\"188.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"34\" y1=\"144.0\" x2=\"630\" y2=\"144.0\"/><text x=\"28\" y=\"148.0\" text-anchor=\"end\">200</text><line class=\"grid\" x1=\"34\" y1=\"104.0\" x2=\"630\" y2=\"104.0\"/><text x=\"28\" y=\"108.0\" text-anchor=\"end\">400</text><line class=\"grid\" x1=\"34\" y1=\"64.0\" x2=\"630\" y2=\"64.0\"/><text x=\"28\" y=\"68.0\" text-anchor=\"end\">600</text><line class=\"grid\" x1=\"34\" y1=\"24.0\" x2=\"630\" y2=\"24.0\"/><text x=\"28\" y=\"28.0\" text-anchor=\"end\">800</text><path class=\"v1\" d=\"M53.1,184 V184.0 Q53.1,180.4 56.7,180.4 H77.5 Q81.1,180.4 81.1,184.0 V184 Z\"><title>2018: 18 trích dẫn</title></path><text class=\"value\" x=\"67.1\" y=\"175.4\" text-anchor=\"middle\">18</text><text x=\"67.1\" y=\"201\" text-anchor=\"middle\">2018</text><path class=\"v1\" d=\"M119.3,184 V178.0 Q119.3,174.0 123.3,174.0 H143.3 Q147.3,174.0 147.3,178.0 V184 Z\"><title>2019: 50 trích dẫn</title></path><text class=\"value\" x=\"133.3\" y=\"169.0\" text-anchor=\"middle\">50</text><text x=\"133.3\" y=\"201\" text-anchor=\"middle\">2019</text><path class=\"v1\" d=\"M185.6,184 V171.8 Q185.6,167.8 189.6,167.8 H209.6 Q213.6,167.8 213.6,171.8 V184 Z\"><title>2020: 81 trích dẫn</title></path><text class=\"value\" x=\"199.6\" y=\"162.8\" text-anchor=\"middle\">81</text><text x=\"199.6\" y=\"201\" text-anchor=\"middle\">2020</text><path class=\"v1\" d=\"M251.8,184 V158.0 Q251.8,154.0 255.8,154.0 H275.8 Q279.8,154.0 279.8,158.0 V184 Z\"><title>2021: 150 trích dẫn</title></path><text class=\"value\" x=\"265.8\" y=\"149.0\" text-anchor=\"middle\">150</text><text x=\"265.8\" y=\"201\" text-anchor=\"middle\">2021</text><path class=\"v1\" d=\"M318.0,184 V153.0 Q318.0,149.0 322.0,149.0 H342.0 Q346.0,149.0 346.0,153.0 V184 Z\"><title>2022: 175 trích dẫn</title></path><text class=\"value\" x=\"332.0\" y=\"144.0\" text-anchor=\"middle\">175</text><text x=\"332.0\" y=\"201\" text-anchor=\"middle\">2022</text><path class=\"v1\" d=\"M384.2,184 V130.8 Q384.2,126.8 388.2,126.8 H408.2 Q412.2,126.8 412.2,130.8 V184 Z\"><title>2023: 286 trích dẫn</title></path><text class=\"value\" x=\"398.2\" y=\"121.8\" text-anchor=\"middle\">286</text><text x=\"398.2\" y=\"201\" text-anchor=\"middle\">2023</text><path class=\"v1\" d=\"M450.4,184 V87.8 Q450.4,83.8 454.4,83.8 H474.4 Q478.4,83.8 478.4,87.8 V184 Z\"><title>2024: 501 trích dẫn</title></path><text class=\"value\" x=\"464.4\" y=\"78.8\" text-anchor=\"middle\">501</text><text x=\"464.4\" y=\"201\" text-anchor=\"middle\">2024</text><path class=\"v1\" d=\"M516.7,184 V44.2 Q516.7,40.2 520.7,40.2 H540.7 Q544.7,40.2 544.7,44.2 V184 Z\"><title>2025: 719 trích dẫn</title></path><text class=\"value\" x=\"530.7\" y=\"35.2\" text-anchor=\"middle\">719</text><text x=\"530.7\" y=\"201\" text-anchor=\"middle\">2025</text><path class=\"v1\" d=\"M582.9,184 V72.2 Q582.9,68.2 586.9,68.2 H606.9 Q610.9,68.2 610.9,72.2 V184 Z\"><title>2026: 579 trích dẫn</title></path><text class=\"value\" x=\"596.9\" y=\"63.2\" text-anchor=\"middle\">579</text><text x=\"596.9\" y=\"201\" text-anchor=\"middle\">2026</text></svg>"
-  },
-  "image": "img/people/trung-nghia-le.jpg",
-  "image_source": "https://www.fit.hcmus.edu.vn/sau-dai-hoc/giang-vien"
  },
  {
   "slug": "tan-d-tran",
@@ -56109,9 +53671,9 @@
   "excluded_papers": [],
   "workshop_papers": [],
   "rank_before_recent": 15,
-  "rank_change_recent": -1,
+  "rank_change_recent": 0,
   "rank_before": 16,
-  "rank_change": -2,
+  "rank_change": -1,
   "projection": {
    "basis": "own",
    "ratio": "2.0",
@@ -58537,10 +56099,10 @@
    }
   ],
   "workshop_papers": [],
-  "rank_before_recent": 21,
-  "rank_change_recent": 0,
+  "rank_before_recent": 20,
+  "rank_change_recent": -1,
   "rank_before": 17,
-  "rank_change": -2,
+  "rank_change": -1,
   "projection": {
    "basis": "own",
    "ratio": "2.0",
@@ -61075,7 +58637,7 @@
   "rank_before_recent": 10,
   "rank_change_recent": 0,
   "rank_before": 18,
-  "rank_change": -2,
+  "rank_change": -1,
   "projection": {
    "basis": "none",
    "ratio": "1.0",
@@ -63366,9 +60928,9 @@
    }
   ],
   "rank_before_recent": 11,
-  "rank_change_recent": -1,
+  "rank_change_recent": 0,
   "rank_before": 19,
-  "rank_change": -2,
+  "rank_change": -1,
   "projection": {
    "basis": "none",
    "ratio": "1.0",
@@ -66110,10 +63672,10 @@
     ]
    }
   ],
-  "rank_before_recent": 24,
-  "rank_change_recent": -1,
+  "rank_before_recent": 23,
+  "rank_change_recent": -2,
   "rank_before": 21,
-  "rank_change": -1,
+  "rank_change": 0,
   "projection": {
    "basis": "none",
    "ratio": "1.0",
@@ -68783,7 +66345,7 @@
   ],
   "rank_before_recent": null,
   "rank_change_recent": null,
-  "rank_before": 30,
+  "rank_before": 29,
   "rank_change": 7,
   "projection": {
    "basis": "own",
@@ -71152,7 +68714,7 @@
   "rank_before_recent": null,
   "rank_change_recent": null,
   "rank_before": 22,
-  "rank_change": -2,
+  "rank_change": -1,
   "projection": {
    "basis": "own",
    "ratio": "1.0",
@@ -71280,6 +68842,2407 @@
   },
   "image": "",
   "image_source": ""
+ },
+ {
+  "slug": "trung-nghia-le",
+  "name": "Trung-Nghia Le",
+  "name_vi": "Lê Trung Nghĩa",
+  "aliases": [
+   "Nghia Le Trung"
+  ],
+  "institution": "University of Science, VNU-HCM",
+  "institution_short": "HCMUS",
+  "institution_slug": "hcmus",
+  "rank": "Lecturer",
+  "role": "",
+  "role_vi": "",
+  "role_source": "",
+  "page_note": "",
+  "page_note_vi": "",
+  "homepage": "https://sites.google.com/view/ltnghia",
+  "vn_since": 2022,
+  "openreview_ids": [
+   "~Trung-Nghia_Le1"
+  ],
+  "openreview_source": "openreview",
+  "openreview_fetched": "2026-11-24",
+  "links": [
+   {
+    "kind": "homepage",
+    "url": "https://sites.google.com/view/ltnghia",
+    "label": "",
+    "text": "sites.google.com/view/ltnghia"
+   },
+   {
+    "kind": "openreview",
+    "url": "https://openreview.net/profile?id=~Trung-Nghia_Le1",
+    "label": "~Trung-Nghia_Le1",
+    "text": "openreview.net/profile?id=~Trung-Nghia_Le1"
+   },
+   {
+    "kind": "staff",
+    "url": "https://www.fit.hcmus.edu.vn/sau-dai-hoc/giang-vien",
+    "label": "",
+    "text": "fit.hcmus.edu.vn/sau-dai-hoc/giang-vien"
+   },
+   {
+    "kind": "scholar",
+    "url": "https://scholar.google.com/citations?user=n8ZQzx8AAAAJ",
+    "label": "",
+    "text": "scholar.google.com/citations?user=n8ZQzx8AAAAJ"
+   },
+   {
+    "kind": "dblp",
+    "url": "https://dblp.org/pid/00/11111",
+    "label": "",
+    "text": "dblp.org/pid/00/11111"
+   }
+  ],
+  "score": 0.67,
+  "score_areas": {
+   "AI": 0.1667,
+   "ML": 0.5,
+   "CV": 0,
+   "NLP": 0,
+   "RB": 0
+  },
+  "iclr_complete": true,
+  "flags": [
+   "1 accepted paper(s) are taken from personal pages and are not in an official list yet. They are unofficial until the conference publishes them."
+  ],
+  "accepted": 3,
+  "own_page": 1,
+  "official": 2,
+  "venues": {
+   "iclr": {
+    "accepted": 1,
+    "rejected": 1,
+    "withdrawn": 1,
+    "desk_rejected": 0,
+    "not_accepted": 2,
+    "submitted": 3,
+    "own_page": 1,
+    "official": 0
+   },
+   "neurips": {
+    "accepted": 1,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 1,
+    "own_page": 0,
+    "official": 1
+   },
+   "icml": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "cvpr": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "iccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "eccv": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "acl": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "emnlp": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "aaai": {
+    "accepted": 1,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 1,
+    "own_page": 0,
+    "official": 1
+   },
+   "ijcai": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "icra": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "iros": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   "rss": {
+    "accepted": 0,
+    "rejected": 0,
+    "withdrawn": 0,
+    "desk_rejected": 0,
+    "not_accepted": 0,
+    "submitted": 0,
+    "own_page": 0,
+    "official": 0
+   }
+  },
+  "years": [
+   {
+    "year": 2020,
+    "counts": false,
+    "venues": {
+     "iclr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "neurips": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icml": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "cvpr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "acl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "emnlp": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "aaai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "ijcai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icra": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iros": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "rss": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     }
+    },
+    "accepted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   {
+    "year": 2021,
+    "counts": false,
+    "venues": {
+     "iclr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "neurips": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icml": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "cvpr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "acl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "emnlp": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "aaai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "ijcai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icra": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iros": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "rss": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     }
+    },
+    "accepted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   {
+    "year": 2022,
+    "counts": true,
+    "venues": {
+     "iclr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "neurips": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icml": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "cvpr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "acl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "emnlp": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "aaai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "ijcai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icra": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iros": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "rss": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     }
+    },
+    "accepted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   {
+    "year": 2023,
+    "counts": true,
+    "venues": {
+     "iclr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "neurips": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icml": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "cvpr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "acl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "emnlp": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "aaai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "ijcai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icra": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iros": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "rss": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     }
+    },
+    "accepted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   {
+    "year": 2024,
+    "counts": true,
+    "venues": {
+     "iclr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "neurips": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icml": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "cvpr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "acl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "emnlp": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "aaai": {
+      "accepted": 1,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 1,
+      "own_page": 0,
+      "official": 1,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "ijcai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icra": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iros": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "rss": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     }
+    },
+    "accepted": 1,
+    "own_page": 0,
+    "official": 1
+   },
+   {
+    "year": 2025,
+    "counts": true,
+    "venues": {
+     "iclr": {
+      "accepted": 0,
+      "rejected": 1,
+      "withdrawn": 1,
+      "desk_rejected": 0,
+      "not_accepted": 2,
+      "submitted": 2,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "neurips": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icml": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "cvpr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "acl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "emnlp": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "aaai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "ijcai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icra": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iros": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "rss": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     }
+    },
+    "accepted": 0,
+    "own_page": 0,
+    "official": 0
+   },
+   {
+    "year": 2026,
+    "counts": true,
+    "venues": {
+     "iclr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "neurips": {
+      "accepted": 1,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 1,
+      "own_page": 0,
+      "official": 1,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icml": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "cvpr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "acl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "emnlp": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "aaai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "ijcai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "icra": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     },
+     "iros": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": true,
+      "provisional": false
+     },
+     "rss": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": true,
+      "held": true,
+      "provisional": false
+     }
+    },
+    "accepted": 1,
+    "own_page": 0,
+    "official": 1
+   },
+   {
+    "year": 2027,
+    "counts": true,
+    "venues": {
+     "iclr": {
+      "accepted": 1,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 1,
+      "own_page": 1,
+      "official": 0,
+      "available": false,
+      "held": true,
+      "provisional": false
+     },
+     "neurips": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": true,
+      "provisional": false
+     },
+     "icml": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": true,
+      "provisional": false
+     },
+     "cvpr": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": true,
+      "provisional": false
+     },
+     "iccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": true,
+      "provisional": false
+     },
+     "eccv": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": false,
+      "provisional": false
+     },
+     "acl": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": true,
+      "provisional": false
+     },
+     "emnlp": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": true,
+      "provisional": false
+     },
+     "aaai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": true,
+      "provisional": false
+     },
+     "ijcai": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": true,
+      "provisional": false
+     },
+     "icra": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": true,
+      "provisional": false
+     },
+     "iros": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": true,
+      "provisional": false
+     },
+     "rss": {
+      "accepted": 0,
+      "rejected": 0,
+      "withdrawn": 0,
+      "desk_rejected": 0,
+      "not_accepted": 0,
+      "submitted": 0,
+      "own_page": 0,
+      "official": 0,
+      "available": false,
+      "held": true,
+      "provisional": false
+     }
+    },
+    "accepted": 1,
+    "own_page": 1,
+    "official": 0
+   }
+  ],
+  "collab": {
+   "papers": 5,
+   "avg_coauthors": "4.0",
+   "distinct_coauthors": 11,
+   "min_coauthors": 3,
+   "max_coauthors": 5,
+   "papers_with_affiliations": 2,
+   "avg_foreign": "2.0",
+   "avg_same_institution": "2.0",
+   "avg_other_vietnam": "0.0",
+   "avg_other_institution": "2.0",
+   "avg_domestic": "2.0",
+   "elsewhere": 4,
+   "elsewhere_abroad": 4,
+   "elsewhere_vietnam": 0,
+   "papers_with_topic": 1,
+   "topic_areas": 1,
+   "topic_count": 1,
+   "areas": [
+    {
+     "area": "Computer Vision",
+     "papers": 1
+    }
+   ],
+   "topics": [
+    {
+     "area": "Computer Vision",
+     "topic": "Image and Video Generation",
+     "papers": 1
+    }
+   ]
+  },
+  "authorship": {
+   "majority": {
+    "years": [
+     {
+      "year": 2020,
+      "venues": {
+       "iclr": 0,
+       "neurips": 0,
+       "icml": 0,
+       "cvpr": 0,
+       "iccv": 0,
+       "eccv": 0,
+       "acl": 0,
+       "emnlp": 0,
+       "aaai": 0,
+       "ijcai": 0,
+       "icra": 0,
+       "iros": 0,
+       "rss": 0
+      },
+      "total": 0
+     },
+     {
+      "year": 2021,
+      "venues": {
+       "iclr": 0,
+       "neurips": 0,
+       "icml": 0,
+       "cvpr": 0,
+       "iccv": 0,
+       "eccv": 0,
+       "acl": 0,
+       "emnlp": 0,
+       "aaai": 0,
+       "ijcai": 0,
+       "icra": 0,
+       "iros": 0,
+       "rss": 0
+      },
+      "total": 0
+     },
+     {
+      "year": 2022,
+      "venues": {
+       "iclr": 0,
+       "neurips": 0,
+       "icml": 0,
+       "cvpr": 0,
+       "iccv": 0,
+       "eccv": 0,
+       "acl": 0,
+       "emnlp": 0,
+       "aaai": 0,
+       "ijcai": 0,
+       "icra": 0,
+       "iros": 0,
+       "rss": 0
+      },
+      "total": 0
+     },
+     {
+      "year": 2023,
+      "venues": {
+       "iclr": 0,
+       "neurips": 0,
+       "icml": 0,
+       "cvpr": 0,
+       "iccv": 0,
+       "eccv": 0,
+       "acl": 0,
+       "emnlp": 0,
+       "aaai": 0,
+       "ijcai": 0,
+       "icra": 0,
+       "iros": 0,
+       "rss": 0
+      },
+      "total": 0
+     },
+     {
+      "year": 2024,
+      "venues": {
+       "iclr": 0,
+       "neurips": 0,
+       "icml": 0,
+       "cvpr": 0,
+       "iccv": 0,
+       "eccv": 0,
+       "acl": 0,
+       "emnlp": 0,
+       "aaai": 0,
+       "ijcai": 0,
+       "icra": 0,
+       "iros": 0,
+       "rss": 0
+      },
+      "total": 0
+     },
+     {
+      "year": 2025,
+      "venues": {
+       "iclr": 0,
+       "neurips": 0,
+       "icml": 0,
+       "cvpr": 0,
+       "iccv": 0,
+       "eccv": 0,
+       "acl": 0,
+       "emnlp": 0,
+       "aaai": 0,
+       "ijcai": 0,
+       "icra": 0,
+       "iros": 0,
+       "rss": 0
+      },
+      "total": 0
+     },
+     {
+      "year": 2026,
+      "venues": {
+       "iclr": 0,
+       "neurips": 0,
+       "icml": 0,
+       "cvpr": 0,
+       "iccv": 0,
+       "eccv": 0,
+       "acl": 0,
+       "emnlp": 0,
+       "aaai": 0,
+       "ijcai": 0,
+       "icra": 0,
+       "iros": 0,
+       "rss": 0
+      },
+      "total": 0
+     },
+     {
+      "year": 2027,
+      "venues": {
+       "iclr": 0,
+       "neurips": 0,
+       "icml": 0,
+       "cvpr": 0,
+       "iccv": 0,
+       "eccv": 0,
+       "acl": 0,
+       "emnlp": 0,
+       "aaai": 0,
+       "ijcai": 0,
+       "icra": 0,
+       "iros": 0,
+       "rss": 0
+      },
+      "total": 0
+     }
+    ],
+    "venues": {
+     "iclr": 0,
+     "neurips": 0,
+     "icml": 0,
+     "cvpr": 0,
+     "iccv": 0,
+     "eccv": 0,
+     "acl": 0,
+     "emnlp": 0,
+     "aaai": 0,
+     "ijcai": 0,
+     "icra": 0,
+     "iros": 0,
+     "rss": 0
+    },
+    "total": 0
+   },
+   "first_author": {
+    "years": [
+     {
+      "year": 2020,
+      "venues": {
+       "iclr": 0,
+       "neurips": 0,
+       "icml": 0,
+       "cvpr": 0,
+       "iccv": 0,
+       "eccv": 0,
+       "acl": 0,
+       "emnlp": 0,
+       "aaai": 0,
+       "ijcai": 0,
+       "icra": 0,
+       "iros": 0,
+       "rss": 0
+      },
+      "total": 0
+     },
+     {
+      "year": 2021,
+      "venues": {
+       "iclr": 0,
+       "neurips": 0,
+       "icml": 0,
+       "cvpr": 0,
+       "iccv": 0,
+       "eccv": 0,
+       "acl": 0,
+       "emnlp": 0,
+       "aaai": 0,
+       "ijcai": 0,
+       "icra": 0,
+       "iros": 0,
+       "rss": 0
+      },
+      "total": 0
+     },
+     {
+      "year": 2022,
+      "venues": {
+       "iclr": 0,
+       "neurips": 0,
+       "icml": 0,
+       "cvpr": 0,
+       "iccv": 0,
+       "eccv": 0,
+       "acl": 0,
+       "emnlp": 0,
+       "aaai": 0,
+       "ijcai": 0,
+       "icra": 0,
+       "iros": 0,
+       "rss": 0
+      },
+      "total": 0
+     },
+     {
+      "year": 2023,
+      "venues": {
+       "iclr": 0,
+       "neurips": 0,
+       "icml": 0,
+       "cvpr": 0,
+       "iccv": 0,
+       "eccv": 0,
+       "acl": 0,
+       "emnlp": 0,
+       "aaai": 0,
+       "ijcai": 0,
+       "icra": 0,
+       "iros": 0,
+       "rss": 0
+      },
+      "total": 0
+     },
+     {
+      "year": 2024,
+      "venues": {
+       "iclr": 0,
+       "neurips": 0,
+       "icml": 0,
+       "cvpr": 0,
+       "iccv": 0,
+       "eccv": 0,
+       "acl": 0,
+       "emnlp": 0,
+       "aaai": 1,
+       "ijcai": 0,
+       "icra": 0,
+       "iros": 0,
+       "rss": 0
+      },
+      "total": 1
+     },
+     {
+      "year": 2025,
+      "venues": {
+       "iclr": 0,
+       "neurips": 0,
+       "icml": 0,
+       "cvpr": 0,
+       "iccv": 0,
+       "eccv": 0,
+       "acl": 0,
+       "emnlp": 0,
+       "aaai": 0,
+       "ijcai": 0,
+       "icra": 0,
+       "iros": 0,
+       "rss": 0
+      },
+      "total": 0
+     },
+     {
+      "year": 2026,
+      "venues": {
+       "iclr": 0,
+       "neurips": 1,
+       "icml": 0,
+       "cvpr": 0,
+       "iccv": 0,
+       "eccv": 0,
+       "acl": 0,
+       "emnlp": 0,
+       "aaai": 0,
+       "ijcai": 0,
+       "icra": 0,
+       "iros": 0,
+       "rss": 0
+      },
+      "total": 1
+     },
+     {
+      "year": 2027,
+      "venues": {
+       "iclr": 0,
+       "neurips": 0,
+       "icml": 0,
+       "cvpr": 0,
+       "iccv": 0,
+       "eccv": 0,
+       "acl": 0,
+       "emnlp": 0,
+       "aaai": 0,
+       "ijcai": 0,
+       "icra": 0,
+       "iros": 0,
+       "rss": 0
+      },
+      "total": 0
+     }
+    ],
+    "venues": {
+     "iclr": 0,
+     "neurips": 1,
+     "icml": 0,
+     "cvpr": 0,
+     "iccv": 0,
+     "eccv": 0,
+     "acl": 0,
+     "emnlp": 0,
+     "aaai": 1,
+     "ijcai": 0,
+     "icra": 0,
+     "iros": 0,
+     "rss": 0
+    },
+    "total": 2
+   },
+   "judged": 2,
+   "unknown": 1,
+   "by_year": [
+    {
+     "year": 2020,
+     "accepted": 0,
+     "judged": 0,
+     "majority": 0,
+     "first": 0
+    },
+    {
+     "year": 2021,
+     "accepted": 0,
+     "judged": 0,
+     "majority": 0,
+     "first": 0
+    },
+    {
+     "year": 2022,
+     "accepted": 0,
+     "judged": 0,
+     "majority": 0,
+     "first": 0
+    },
+    {
+     "year": 2023,
+     "accepted": 0,
+     "judged": 0,
+     "majority": 0,
+     "first": 0
+    },
+    {
+     "year": 2024,
+     "accepted": 1,
+     "judged": 1,
+     "majority": 0,
+     "first": 1
+    },
+    {
+     "year": 2025,
+     "accepted": 0,
+     "judged": 0,
+     "majority": 0,
+     "first": 0
+    },
+    {
+     "year": 2026,
+     "accepted": 1,
+     "judged": 1,
+     "majority": 0,
+     "first": 1
+    },
+    {
+     "year": 2027,
+     "accepted": 1,
+     "judged": 0,
+     "majority": 0,
+     "first": 0
+    }
+   ]
+  },
+  "accepted_papers": [
+   {
+    "year": 2027,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "redacted 8357c3",
+    "ai_key": "iclr-2027-redacted8357c3",
+    "url": "",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "redacted, redacted, redacted, redacted",
+    "match": "potential: mean review score 2.67 (above 2.6) on a submission under review, matched through a public preprint",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": true,
+    "workshop": "",
+    "potential": true,
+    "author_links": [
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     },
+     {
+      "name": "redacted",
+      "slug": ""
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "venue": "neurips",
+    "venue_name": "NeurIPS",
+    "title": "Learning to Generate Multiple Objects from Dense and Occluded Layouts",
+    "ai_key": "neurips-2026-learningtogeneratemultipleobjectsfromden",
+    "url": "https://openreview.net/forum?id=KXKtTAY4Fb",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Bach Hoang Ngo, Ngo Tri, Hieu Minh Le, Trung Nghia Le",
+    "match": "name, confirmed by hand",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "potential": false,
+    "author_links": [
+     {
+      "name": "Bach Hoang Ngo",
+      "slug": ""
+     },
+     {
+      "name": "Ngo Tri",
+      "slug": ""
+     },
+     {
+      "name": "Hieu Minh Le",
+      "slug": ""
+     },
+     {
+      "name": "Trung Nghia Le",
+      "slug": "trung-nghia-le"
+     }
+    ]
+   },
+   {
+    "year": 2024,
+    "venue": "aaai",
+    "venue_name": "AAAI",
+    "title": "MaskDiff: Modeling Mask Distribution with Diffusion Probabilistic Model for Few-Shot Instance Segmentation",
+    "ai_key": "aaai-2024-maskdiffmodelingmaskdistributionwithdiff",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/28068",
+    "status": "accepted",
+    "status_label": "accepted",
+    "pres": "",
+    "authors": "Minh-Quan Le, Tam V. Nguyen, Trung-Nghia Le, Thanh-Toan Do, Minh N. Do, Minh-Triet Tran",
+    "match": "name and affiliation",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "potential": false,
+    "author_links": [
+     {
+      "name": "Minh-Quan Le",
+      "slug": ""
+     },
+     {
+      "name": "Tam V. Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Trung-Nghia Le",
+      "slug": "trung-nghia-le"
+     },
+     {
+      "name": "Thanh-Toan Do",
+      "slug": ""
+     },
+     {
+      "name": "Minh N. Do",
+      "slug": ""
+     },
+     {
+      "name": "Minh-Triet Tran",
+      "slug": "minh-triet-tran"
+     }
+    ]
+   }
+  ],
+  "not_accepted_papers": [
+   {
+    "year": 2025,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "ConceptFlow: Unified Framework for Personalized Image Generation",
+    "ai_key": "iclr-2025-conceptflowunifiedframeworkforpersonaliz",
+    "url": "https://openreview.net/forum?id=EhSUM1FcJw",
+    "status": "withdrawn",
+    "status_label": "withdrawn",
+    "pres": "",
+    "authors": "Trong-Vu Hoang, Quang-Binh Nguyen, Thanh-Toan Do, Tam V. Nguyen, Minh-Triet Tran, Trung-Nghia Le",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "potential": false,
+    "author_links": [
+     {
+      "name": "Trong-Vu Hoang",
+      "slug": ""
+     },
+     {
+      "name": "Quang-Binh Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Thanh-Toan Do",
+      "slug": ""
+     },
+     {
+      "name": "Tam V. Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Minh-Triet Tran",
+      "slug": "minh-triet-tran"
+     },
+     {
+      "name": "Trung-Nghia Le",
+      "slug": "trung-nghia-le"
+     }
+    ]
+   },
+   {
+    "year": 2025,
+    "venue": "iclr",
+    "venue_name": "ICLR",
+    "title": "Rethinking Attentions in Zero-Shot Real Image Editing",
+    "ai_key": "iclr-2025-rethinkingattentionsinzeroshotrealimagee",
+    "url": "https://openreview.net/forum?id=kn2OZa8rOf",
+    "status": "rejected",
+    "status_label": "rejected",
+    "pres": "",
+    "authors": "Dinh-Khoi Vo, Thanh-Toan Do, Tam V. Nguyen, Minh-Triet Tran, Trung-Nghia Le",
+    "match": "OpenReview profile",
+    "note": "",
+    "reason": "",
+    "later": "",
+    "unofficial": false,
+    "workshop": "",
+    "potential": false,
+    "author_links": [
+     {
+      "name": "Dinh-Khoi Vo",
+      "slug": ""
+     },
+     {
+      "name": "Thanh-Toan Do",
+      "slug": ""
+     },
+     {
+      "name": "Tam V. Nguyen",
+      "slug": ""
+     },
+     {
+      "name": "Minh-Triet Tran",
+      "slug": "minh-triet-tran"
+     },
+     {
+      "name": "Trung-Nghia Le",
+      "slug": "trung-nghia-le"
+     }
+    ]
+   }
+  ],
+  "excluded_papers": [],
+  "workshop_papers": [],
+  "rank_before_recent": 25,
+  "rank_change_recent": 6,
+  "rank_before": 30,
+  "rank_change": 6,
+  "projection": {
+   "basis": "own",
+   "ratio": "2.0",
+   "ratio_submitted": 3,
+   "ratio_accepted": 1,
+   "accepted": 3,
+   "total": "7",
+   "estimated": "2",
+   "svg": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Papers submitted and accepted per year by Trung-Nghia Le; the numbers are in the table below\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Accepted</text><rect class=\"not\" x=\"121.2\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"139.2\" y=\"18\">Rejected, recorded</text><rect class=\"est\" x=\"266.4\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"284.4\" y=\"18\">Rejected elsewhere, estimated</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">2</text><text class=\"tick off\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick off\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V158.0 Q358.8,158.0 358.8,158.0 H382.8 Q382.8,158.0 382.8,158.0 V270.0 Z\"><title>2024: 1 accepted</title></path><path class=\"est\" d=\"M358.8,156.0 V50.0 Q358.8,46.0 362.8,46.0 H378.8 Q382.8,46.0 382.8,50.0 V156.0 Z\"><title>2024: about 1 rejected elsewhere (estimate)</title></path><text class=\"value\" x=\"370.8\" y=\"40.0\" text-anchor=\"middle\">about 2</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"not\" d=\"M432.2,270.0 V50.0 Q432.2,46.0 436.2,46.0 H452.2 Q456.2,46.0 456.2,50.0 V270.0 Z\"><title>2025: 2 rejected, recorded</title></path><text class=\"value\" x=\"444.2\" y=\"40.0\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V158.0 Q505.8,158.0 505.8,158.0 H529.8 Q529.8,158.0 529.8,158.0 V270.0 Z\"><title>2026: 1 accepted</title></path><path class=\"est\" d=\"M505.8,156.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V156.0 Z\"><title>2026: about 1 rejected elsewhere (estimate)</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">about 2</text><text class=\"tick\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text><path class=\"acc\" d=\"M579.2,270.0 V162.0 Q579.2,158.0 583.2,158.0 H599.2 Q603.2,158.0 603.2,162.0 V270.0 Z\"><title>2027: 1 accepted</title></path><text class=\"value\" x=\"591.2\" y=\"152.0\" text-anchor=\"middle\">1</text></svg>",
+   "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 300\" role=\"img\" aria-label=\"Số bài nộp và được nhận theo năm của Trung-Nghia Le; số liệu ở bảng bên dưới\"><rect class=\"acc\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Được nhận</text><rect class=\"not\" x=\"127.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"145.6\" y=\"18\">Bị từ chối, đếm được</text><rect class=\"est\" x=\"285.6\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"303.6\" y=\"18\">Bị từ chối ở nơi khác, ước tính</text><line class=\"axis\" x1=\"40\" y1=\"270.0\" x2=\"628\" y2=\"270.0\"/><text class=\"tick\" x=\"34\" y=\"274.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"158.0\" x2=\"628\" y2=\"158.0\"/><text class=\"tick\" x=\"34\" y=\"162.0\" text-anchor=\"end\">1</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">2</text><text class=\"tick off\" x=\"76.8\" y=\"288\" text-anchor=\"middle\">2020</text><text class=\"tick off\" x=\"150.2\" y=\"288\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"288\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"288\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"288\" text-anchor=\"middle\">2024</text><path class=\"acc\" d=\"M358.8,270.0 V158.0 Q358.8,158.0 358.8,158.0 H382.8 Q382.8,158.0 382.8,158.0 V270.0 Z\"><title>2024: 1 bài được nhận</title></path><path class=\"est\" d=\"M358.8,156.0 V50.0 Q358.8,46.0 362.8,46.0 H378.8 Q382.8,46.0 382.8,50.0 V156.0 Z\"><title>2024: khoảng 1 bài bị từ chối ở nơi khác (ước tính)</title></path><text class=\"value\" x=\"370.8\" y=\"40.0\" text-anchor=\"middle\">~2</text><text class=\"tick\" x=\"444.2\" y=\"288\" text-anchor=\"middle\">2025</text><path class=\"not\" d=\"M432.2,270.0 V50.0 Q432.2,46.0 436.2,46.0 H452.2 Q456.2,46.0 456.2,50.0 V270.0 Z\"><title>2025: 2 bài bị từ chối, đếm được</title></path><text class=\"value\" x=\"444.2\" y=\"40.0\" text-anchor=\"middle\">2</text><text class=\"tick\" x=\"517.8\" y=\"288\" text-anchor=\"middle\">2026</text><path class=\"acc\" d=\"M505.8,270.0 V158.0 Q505.8,158.0 505.8,158.0 H529.8 Q529.8,158.0 529.8,158.0 V270.0 Z\"><title>2026: 1 bài được nhận</title></path><path class=\"est\" d=\"M505.8,156.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V156.0 Z\"><title>2026: khoảng 1 bài bị từ chối ở nơi khác (ước tính)</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">~2</text><text class=\"tick\" x=\"591.2\" y=\"288\" text-anchor=\"middle\">2027</text><path class=\"acc\" d=\"M579.2,270.0 V162.0 Q579.2,158.0 583.2,158.0 H599.2 Q603.2,158.0 603.2,162.0 V270.0 Z\"><title>2027: 1 bài được nhận</title></path><text class=\"value\" x=\"591.2\" y=\"152.0\" text-anchor=\"middle\">1</text></svg>",
+   "recorded": 2,
+   "rows": [
+    {
+     "year": 2020,
+     "counts": false
+    },
+    {
+     "year": 2021,
+     "counts": false
+    },
+    {
+     "year": 2022,
+     "counts": true,
+     "accepted": 0,
+     "iclr_not_accepted": 0,
+     "estimated": "0",
+     "total": "0"
+    },
+    {
+     "year": 2023,
+     "counts": true,
+     "accepted": 0,
+     "iclr_not_accepted": 0,
+     "estimated": "0",
+     "total": "0"
+    },
+    {
+     "year": 2024,
+     "counts": true,
+     "accepted": 1,
+     "iclr_not_accepted": 0,
+     "estimated": "1",
+     "total": "2"
+    },
+    {
+     "year": 2025,
+     "counts": true,
+     "accepted": 0,
+     "iclr_not_accepted": 2,
+     "estimated": "0",
+     "total": "2"
+    },
+    {
+     "year": 2026,
+     "counts": true,
+     "accepted": 1,
+     "iclr_not_accepted": 0,
+     "estimated": "1",
+     "total": "2"
+    },
+    {
+     "year": 2027,
+     "counts": true,
+     "accepted": 1,
+     "iclr_not_accepted": 0,
+     "estimated": "0",
+     "total": "1"
+    }
+   ],
+   "pie": "<svg class=\"chart\" viewBox=\"0 0 378 190\" role=\"img\" aria-label=\"Accepted, recorded rejected and estimated rejected papers, all listed professors\"><text class=\"value\" x=\"4.0\" y=\"16\">All years and venues</text><path class=\"acc slice\" d=\"M74.0,104.0 L74.0,34.0 A70,70 0 0 1 104.4,167.1 Z\"><title>All years and venues: 3 accepted, 43%</title></path><rect class=\"acc\" x=\"162.0\" y=\"72.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"82.0\">3 (43%)</text><text x=\"180.0\" y=\"97.0\">accepted</text><path class=\"not slice\" d=\"M74.0,104.0 L104.4,167.1 A70,70 0 0 1 5.8,119.6 Z\"><title>All years and venues: 2 rejected, recorded, 29%</title></path><rect class=\"not\" x=\"162.0\" y=\"112.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"122.0\">2 (29%)</text><text x=\"180.0\" y=\"137.0\">rejected, recorded</text><path class=\"est slice\" d=\"M74.0,104.0 L5.8,119.6 A70,70 0 0 1 74.0,34.0 Z\"><title>All years and venues: 2 rejected elsewhere, estimated, 29%</title></path><rect class=\"est\" x=\"162.0\" y=\"152.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"162.0\">2 (29%)</text><text x=\"180.0\" y=\"177.0\">rejected elsewhere, estimated</text></svg>",
+   "pie_vi": "<svg class=\"chart\" viewBox=\"0 0 390 190\" role=\"img\" aria-label=\"Bài được nhận, bị từ chối đếm được và bị từ chối ước tính, tất cả giảng viên trong danh sách\"><text class=\"value\" x=\"4.0\" y=\"16\">Mọi năm và hội nghị</text><path class=\"acc slice\" d=\"M74.0,104.0 L74.0,34.0 A70,70 0 0 1 104.4,167.1 Z\"><title>Mọi năm và hội nghị: 3 được nhận, 43%</title></path><rect class=\"acc\" x=\"162.0\" y=\"72.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"82.0\">3 (43%)</text><text x=\"180.0\" y=\"97.0\">được nhận</text><path class=\"not slice\" d=\"M74.0,104.0 L104.4,167.1 A70,70 0 0 1 5.8,119.6 Z\"><title>Mọi năm và hội nghị: 2 bị từ chối, đếm được, 29%</title></path><rect class=\"not\" x=\"162.0\" y=\"112.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"122.0\">2 (29%)</text><text x=\"180.0\" y=\"137.0\">bị từ chối, đếm được</text><path class=\"est slice\" d=\"M74.0,104.0 L5.8,119.6 A70,70 0 0 1 74.0,34.0 Z\"><title>Mọi năm và hội nghị: 2 bị từ chối ở nơi khác, ước tính, 29%</title></path><rect class=\"est\" x=\"162.0\" y=\"152.0\" width=\"12\" height=\"12\"/><text class=\"value\" x=\"180.0\" y=\"162.0\">2 (29%)</text><text x=\"180.0\" y=\"177.0\">bị từ chối ở nơi khác, ước tính</text></svg>"
+  },
+  "author_charts": {
+   "first": {
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: First author from HCMUS\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">First author from HCMUS</text><rect class=\"other-inst\" x=\"217.20000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"235.20000000000002\" y=\"18\">First author elsewhere</text><rect class=\"unjudged\" x=\"388.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"406.0\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick off\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick off\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M358.8,230.0 V50.0 Q358.8,46.0 362.8,46.0 H378.8 Q382.8,46.0 382.8,50.0 V230.0 Z\"><title>2024: 1 first author from HCMUS</title></path><text class=\"value\" x=\"370.8\" y=\"40.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 1 first author from HCMUS</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text><path class=\"unjudged\" d=\"M579.2,230.0 V50.0 Q579.2,46.0 583.2,46.0 H599.2 Q603.2,46.0 603.2,50.0 V230.0 Z\"><title>2027: 1 affiliations not known yet</title></path><text class=\"value\" x=\"591.2\" y=\"40.0\" text-anchor=\"middle\">1</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Tác giả đầu cùng HCMUS\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Tác giả đầu cùng HCMUS</text><rect class=\"other-inst\" x=\"210.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"228.8\" y=\"18\">Tác giả đầu ở đơn vị khác</text><rect class=\"unjudged\" x=\"400.8\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"418.8\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick off\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick off\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"own-inst\" d=\"M358.8,230.0 V50.0 Q358.8,46.0 362.8,46.0 H378.8 Q382.8,46.0 382.8,50.0 V230.0 Z\"><title>2024: 1 bài tác giả đầu cùng HCMUS</title></path><text class=\"value\" x=\"370.8\" y=\"40.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"own-inst\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 1 bài tác giả đầu cùng HCMUS</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text><path class=\"unjudged\" d=\"M579.2,230.0 V50.0 Q579.2,46.0 583.2,46.0 H599.2 Q603.2,46.0 603.2,50.0 V230.0 Z\"><title>2027: 1 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"591.2\" y=\"40.0\" text-anchor=\"middle\">1</text></svg>"
+   },
+   "majority": {
+    "svg": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Accepted papers per year: Most authors from HCMUS\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Most authors from HCMUS</text><rect class=\"other-inst\" x=\"217.20000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"235.20000000000002\" y=\"18\">Most authors elsewhere</text><rect class=\"unjudged\" x=\"388.0\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"406.0\" y=\"18\">Affiliations not known yet</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick off\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick off\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"other-inst\" d=\"M358.8,230.0 V50.0 Q358.8,46.0 362.8,46.0 H378.8 Q382.8,46.0 382.8,50.0 V230.0 Z\"><title>2024: 1 most authors elsewhere</title></path><text class=\"value\" x=\"370.8\" y=\"40.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"other-inst\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 1 most authors elsewhere</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text><path class=\"unjudged\" d=\"M579.2,230.0 V50.0 Q579.2,46.0 583.2,46.0 H599.2 Q603.2,46.0 603.2,50.0 V230.0 Z\"><title>2027: 1 affiliations not known yet</title></path><text class=\"value\" x=\"591.2\" y=\"40.0\" text-anchor=\"middle\">1</text></svg>",
+    "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"Bài được nhận theo năm: Đa số tác giả cùng HCMUS\"><rect class=\"own-inst\" x=\"40\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"58\" y=\"18\">Đa số tác giả cùng HCMUS</text><rect class=\"other-inst\" x=\"223.60000000000002\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"241.60000000000002\" y=\"18\">Đa số tác giả ở đơn vị khác</text><rect class=\"unjudged\" x=\"426.40000000000003\" y=\"8\" width=\"12\" height=\"12\"/><text class=\"label\" x=\"444.40000000000003\" y=\"18\">Chưa rõ đơn vị</text><line class=\"axis\" x1=\"40\" y1=\"230.0\" x2=\"628\" y2=\"230.0\"/><text class=\"tick\" x=\"34\" y=\"234.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"40\" y1=\"46.0\" x2=\"628\" y2=\"46.0\"/><text class=\"tick\" x=\"34\" y=\"50.0\" text-anchor=\"end\">1</text><text class=\"tick off\" x=\"76.8\" y=\"248\" text-anchor=\"middle\">2020</text><text class=\"tick off\" x=\"150.2\" y=\"248\" text-anchor=\"middle\">2021</text><text class=\"tick\" x=\"223.8\" y=\"248\" text-anchor=\"middle\">2022</text><text class=\"tick\" x=\"297.2\" y=\"248\" text-anchor=\"middle\">2023</text><text class=\"tick\" x=\"370.8\" y=\"248\" text-anchor=\"middle\">2024</text><path class=\"other-inst\" d=\"M358.8,230.0 V50.0 Q358.8,46.0 362.8,46.0 H378.8 Q382.8,46.0 382.8,50.0 V230.0 Z\"><title>2024: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"370.8\" y=\"40.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"444.2\" y=\"248\" text-anchor=\"middle\">2025</text><text class=\"tick\" x=\"517.8\" y=\"248\" text-anchor=\"middle\">2026</text><path class=\"other-inst\" d=\"M505.8,230.0 V50.0 Q505.8,46.0 509.8,46.0 H525.8 Q529.8,46.0 529.8,50.0 V230.0 Z\"><title>2026: 1 bài đa số tác giả ở đơn vị khác</title></path><text class=\"value\" x=\"517.8\" y=\"40.0\" text-anchor=\"middle\">1</text><text class=\"tick\" x=\"591.2\" y=\"248\" text-anchor=\"middle\">2027</text><path class=\"unjudged\" d=\"M579.2,230.0 V50.0 Q579.2,46.0 583.2,46.0 H599.2 Q603.2,46.0 603.2,50.0 V230.0 Z\"><title>2027: 1 bài chưa rõ đơn vị</title></path><text class=\"value\" x=\"591.2\" y=\"40.0\" text-anchor=\"middle\">1</text></svg>"
+   }
+  },
+  "rejected_estimated": 4,
+  "acceptance_rate": 43,
+  "recent": {
+   "score": 0.5,
+   "accepted": 2,
+   "score_areas": {
+    "AI": 0,
+    "ML": 0.5,
+    "CV": 0,
+    "NLP": 0,
+    "RB": 0
+   },
+   "own_page": 1,
+   "official": 1,
+   "rejected": 0,
+   "rejected_estimated": 1,
+   "acceptance_rate": 67
+  },
+  "scholar": {
+   "user": "n8ZQzx8AAAAJ",
+   "url": "https://scholar.google.com/citations?user=n8ZQzx8AAAAJ",
+   "name": "Trung-Nghia Le",
+   "affiliation": "University of Science, VNU-HCM",
+   "citations": 2592,
+   "citations_since": 2418,
+   "h_index": 17,
+   "h_index_since": 17,
+   "i10_index": 33,
+   "i10_index_since": 27,
+   "since": 2021,
+   "found_on": "https://openreview.net/profile?id=~Trung-Nghia_Le1",
+   "fetched": "2026-11-24",
+   "svg": "<svg class=\"chart\" viewBox=\"0 0 640 208\" role=\"img\" aria-label=\"Citations per year, Google Scholar, 2026-11-24\"><line class=\"axis\" x1=\"34\" y1=\"184.0\" x2=\"630\" y2=\"184.0\"/><text x=\"28\" y=\"188.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"34\" y1=\"144.0\" x2=\"630\" y2=\"144.0\"/><text x=\"28\" y=\"148.0\" text-anchor=\"end\">200</text><line class=\"grid\" x1=\"34\" y1=\"104.0\" x2=\"630\" y2=\"104.0\"/><text x=\"28\" y=\"108.0\" text-anchor=\"end\">400</text><line class=\"grid\" x1=\"34\" y1=\"64.0\" x2=\"630\" y2=\"64.0\"/><text x=\"28\" y=\"68.0\" text-anchor=\"end\">600</text><line class=\"grid\" x1=\"34\" y1=\"24.0\" x2=\"630\" y2=\"24.0\"/><text x=\"28\" y=\"28.0\" text-anchor=\"end\">800</text><path class=\"v1\" d=\"M53.1,184 V184.0 Q53.1,180.4 56.7,180.4 H77.5 Q81.1,180.4 81.1,184.0 V184 Z\"><title>2018: 18 citations</title></path><text class=\"value\" x=\"67.1\" y=\"175.4\" text-anchor=\"middle\">18</text><text x=\"67.1\" y=\"201\" text-anchor=\"middle\">2018</text><path class=\"v1\" d=\"M119.3,184 V178.0 Q119.3,174.0 123.3,174.0 H143.3 Q147.3,174.0 147.3,178.0 V184 Z\"><title>2019: 50 citations</title></path><text class=\"value\" x=\"133.3\" y=\"169.0\" text-anchor=\"middle\">50</text><text x=\"133.3\" y=\"201\" text-anchor=\"middle\">2019</text><path class=\"v1\" d=\"M185.6,184 V171.8 Q185.6,167.8 189.6,167.8 H209.6 Q213.6,167.8 213.6,171.8 V184 Z\"><title>2020: 81 citations</title></path><text class=\"value\" x=\"199.6\" y=\"162.8\" text-anchor=\"middle\">81</text><text x=\"199.6\" y=\"201\" text-anchor=\"middle\">2020</text><path class=\"v1\" d=\"M251.8,184 V158.0 Q251.8,154.0 255.8,154.0 H275.8 Q279.8,154.0 279.8,158.0 V184 Z\"><title>2021: 150 citations</title></path><text class=\"value\" x=\"265.8\" y=\"149.0\" text-anchor=\"middle\">150</text><text x=\"265.8\" y=\"201\" text-anchor=\"middle\">2021</text><path class=\"v1\" d=\"M318.0,184 V153.0 Q318.0,149.0 322.0,149.0 H342.0 Q346.0,149.0 346.0,153.0 V184 Z\"><title>2022: 175 citations</title></path><text class=\"value\" x=\"332.0\" y=\"144.0\" text-anchor=\"middle\">175</text><text x=\"332.0\" y=\"201\" text-anchor=\"middle\">2022</text><path class=\"v1\" d=\"M384.2,184 V130.8 Q384.2,126.8 388.2,126.8 H408.2 Q412.2,126.8 412.2,130.8 V184 Z\"><title>2023: 286 citations</title></path><text class=\"value\" x=\"398.2\" y=\"121.8\" text-anchor=\"middle\">286</text><text x=\"398.2\" y=\"201\" text-anchor=\"middle\">2023</text><path class=\"v1\" d=\"M450.4,184 V87.8 Q450.4,83.8 454.4,83.8 H474.4 Q478.4,83.8 478.4,87.8 V184 Z\"><title>2024: 501 citations</title></path><text class=\"value\" x=\"464.4\" y=\"78.8\" text-anchor=\"middle\">501</text><text x=\"464.4\" y=\"201\" text-anchor=\"middle\">2024</text><path class=\"v1\" d=\"M516.7,184 V44.2 Q516.7,40.2 520.7,40.2 H540.7 Q544.7,40.2 544.7,44.2 V184 Z\"><title>2025: 719 citations</title></path><text class=\"value\" x=\"530.7\" y=\"35.2\" text-anchor=\"middle\">719</text><text x=\"530.7\" y=\"201\" text-anchor=\"middle\">2025</text><path class=\"v1\" d=\"M582.9,184 V72.2 Q582.9,68.2 586.9,68.2 H606.9 Q610.9,68.2 610.9,72.2 V184 Z\"><title>2026: 579 citations</title></path><text class=\"value\" x=\"596.9\" y=\"63.2\" text-anchor=\"middle\">579</text><text x=\"596.9\" y=\"201\" text-anchor=\"middle\">2026</text></svg>",
+   "svg_vi": "<svg class=\"chart\" viewBox=\"0 0 640 208\" role=\"img\" aria-label=\"Số trích dẫn theo năm, Google Scholar, 2026-11-24\"><line class=\"axis\" x1=\"34\" y1=\"184.0\" x2=\"630\" y2=\"184.0\"/><text x=\"28\" y=\"188.0\" text-anchor=\"end\">0</text><line class=\"grid\" x1=\"34\" y1=\"144.0\" x2=\"630\" y2=\"144.0\"/><text x=\"28\" y=\"148.0\" text-anchor=\"end\">200</text><line class=\"grid\" x1=\"34\" y1=\"104.0\" x2=\"630\" y2=\"104.0\"/><text x=\"28\" y=\"108.0\" text-anchor=\"end\">400</text><line class=\"grid\" x1=\"34\" y1=\"64.0\" x2=\"630\" y2=\"64.0\"/><text x=\"28\" y=\"68.0\" text-anchor=\"end\">600</text><line class=\"grid\" x1=\"34\" y1=\"24.0\" x2=\"630\" y2=\"24.0\"/><text x=\"28\" y=\"28.0\" text-anchor=\"end\">800</text><path class=\"v1\" d=\"M53.1,184 V184.0 Q53.1,180.4 56.7,180.4 H77.5 Q81.1,180.4 81.1,184.0 V184 Z\"><title>2018: 18 trích dẫn</title></path><text class=\"value\" x=\"67.1\" y=\"175.4\" text-anchor=\"middle\">18</text><text x=\"67.1\" y=\"201\" text-anchor=\"middle\">2018</text><path class=\"v1\" d=\"M119.3,184 V178.0 Q119.3,174.0 123.3,174.0 H143.3 Q147.3,174.0 147.3,178.0 V184 Z\"><title>2019: 50 trích dẫn</title></path><text class=\"value\" x=\"133.3\" y=\"169.0\" text-anchor=\"middle\">50</text><text x=\"133.3\" y=\"201\" text-anchor=\"middle\">2019</text><path class=\"v1\" d=\"M185.6,184 V171.8 Q185.6,167.8 189.6,167.8 H209.6 Q213.6,167.8 213.6,171.8 V184 Z\"><title>2020: 81 trích dẫn</title></path><text class=\"value\" x=\"199.6\" y=\"162.8\" text-anchor=\"middle\">81</text><text x=\"199.6\" y=\"201\" text-anchor=\"middle\">2020</text><path class=\"v1\" d=\"M251.8,184 V158.0 Q251.8,154.0 255.8,154.0 H275.8 Q279.8,154.0 279.8,158.0 V184 Z\"><title>2021: 150 trích dẫn</title></path><text class=\"value\" x=\"265.8\" y=\"149.0\" text-anchor=\"middle\">150</text><text x=\"265.8\" y=\"201\" text-anchor=\"middle\">2021</text><path class=\"v1\" d=\"M318.0,184 V153.0 Q318.0,149.0 322.0,149.0 H342.0 Q346.0,149.0 346.0,153.0 V184 Z\"><title>2022: 175 trích dẫn</title></path><text class=\"value\" x=\"332.0\" y=\"144.0\" text-anchor=\"middle\">175</text><text x=\"332.0\" y=\"201\" text-anchor=\"middle\">2022</text><path class=\"v1\" d=\"M384.2,184 V130.8 Q384.2,126.8 388.2,126.8 H408.2 Q412.2,126.8 412.2,130.8 V184 Z\"><title>2023: 286 trích dẫn</title></path><text class=\"value\" x=\"398.2\" y=\"121.8\" text-anchor=\"middle\">286</text><text x=\"398.2\" y=\"201\" text-anchor=\"middle\">2023</text><path class=\"v1\" d=\"M450.4,184 V87.8 Q450.4,83.8 454.4,83.8 H474.4 Q478.4,83.8 478.4,87.8 V184 Z\"><title>2024: 501 trích dẫn</title></path><text class=\"value\" x=\"464.4\" y=\"78.8\" text-anchor=\"middle\">501</text><text x=\"464.4\" y=\"201\" text-anchor=\"middle\">2024</text><path class=\"v1\" d=\"M516.7,184 V44.2 Q516.7,40.2 520.7,40.2 H540.7 Q544.7,40.2 544.7,44.2 V184 Z\"><title>2025: 719 trích dẫn</title></path><text class=\"value\" x=\"530.7\" y=\"35.2\" text-anchor=\"middle\">719</text><text x=\"530.7\" y=\"201\" text-anchor=\"middle\">2025</text><path class=\"v1\" d=\"M582.9,184 V72.2 Q582.9,68.2 586.9,68.2 H606.9 Q610.9,68.2 610.9,72.2 V184 Z\"><title>2026: 579 trích dẫn</title></path><text class=\"value\" x=\"596.9\" y=\"63.2\" text-anchor=\"middle\">579</text><text x=\"596.9\" y=\"201\" text-anchor=\"middle\">2026</text></svg>"
+  },
+  "image": "img/people/trung-nghia-le.jpg",
+  "image_source": "https://www.fit.hcmus.edu.vn/sau-dai-hoc/giang-vien"
  },
  {
   "slug": "trung-thanh-ngo",
@@ -73408,8 +73371,8 @@
   "workshop_papers": [],
   "rank_before_recent": null,
   "rank_change_recent": null,
-  "rank_before": 24,
-  "rank_change": -1,
+  "rank_before": 23,
+  "rank_change": -2,
   "projection": {
    "basis": "none",
    "ratio": "1.0",
@@ -75720,9 +75683,9 @@
   "excluded_papers": [],
   "workshop_papers": [],
   "rank_before_recent": 13,
-  "rank_change_recent": -1,
-  "rank_before": 25,
-  "rank_change": -1,
+  "rank_change_recent": 0,
+  "rank_before": 24,
+  "rank_change": -2,
   "projection": {
    "basis": "none",
    "ratio": "1.0",
@@ -78577,8 +78540,8 @@
   ],
   "rank_before_recent": 32,
   "rank_change_recent": -3,
-  "rank_before": 26,
-  "rank_change": -1,
+  "rank_before": 25,
+  "rank_change": -2,
   "projection": {
    "basis": "own",
    "ratio": "1.0",
@@ -80855,9 +80818,9 @@
    }
   ],
   "rank_before_recent": 16,
-  "rank_change_recent": -1,
-  "rank_before": 27,
-  "rank_change": -1,
+  "rank_change_recent": 0,
+  "rank_before": 26,
+  "rank_change": -2,
   "projection": {
    "basis": "none",
    "ratio": "1.0",
@@ -83161,10 +83124,10 @@
   "not_accepted_papers": [],
   "excluded_papers": [],
   "workshop_papers": [],
-  "rank_before_recent": 22,
-  "rank_change_recent": -1,
-  "rank_before": 28,
-  "rank_change": -1,
+  "rank_before_recent": 21,
+  "rank_change_recent": -2,
+  "rank_before": 27,
+  "rank_change": -2,
   "projection": {
    "basis": "none",
    "ratio": "1.0",
@@ -85376,8 +85339,8 @@
   "workshop_papers": [],
   "rank_before_recent": null,
   "rank_change_recent": null,
-  "rank_before": 29,
-  "rank_change": -1,
+  "rank_before": 28,
+  "rank_change": -2,
   "projection": {
    "basis": "none",
    "ratio": "1.0",
@@ -90956,8 +90919,8 @@
     ]
    }
   ],
-  "rank_before_recent": 25,
-  "rank_change_recent": 3,
+  "rank_before_recent": 24,
+  "rank_change_recent": 2,
   "rank_before": 40,
   "rank_change": 8,
   "projection": {
@@ -102799,8 +102762,8 @@
   "not_accepted_papers": [],
   "excluded_papers": [],
   "workshop_papers": [],
-  "rank_before_recent": 23,
-  "rank_change_recent": -1,
+  "rank_before_recent": 22,
+  "rank_change_recent": -2,
   "rank_before": 35,
   "rank_change": -2,
   "projection": {
