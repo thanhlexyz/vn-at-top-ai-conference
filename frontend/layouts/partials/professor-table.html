@@ -16,9 +16,10 @@
 		{{- if $compact }}
 		<th colspan="{{ len hugo.Data.meta.venue_groups }}">{{ T "th_accepted_at" }}</th>
 		{{- end }}
-		<th colspan="{{ cond $brief 5 8 }}">{{ T "th_total" }}</th>
 		{{- if $brief }}
-		<th rowspan="2" class="score" data-extra title="{{ T "tip_score_all" }}">{{ T "th_score_all" }}</th>
+		<th colspan="5" class="period"><button type="button" class="period-toggle" aria-pressed="false" data-alt="{{ T "th_last_year" }}" data-alt-title="{{ T "tip_period_total" }}" title="{{ T "tip_period_recent" (dict "From" $from) }}">{{ T "th_total" }}</button></th>
+		{{- else }}
+		<th colspan="8">{{ T "th_total" }}</th>
 		{{- end }}
 		<th rowspan="2" class="ws"{{ if $brief }} data-extra{{ end }} title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
 		<th colspan="2"{{ if $brief }} data-extra{{ end }} title="{{ T "tip_own_institution" }}">{{ T "th_own_institution" }}</th>
@@ -36,11 +37,7 @@
 		{{- if $compact }}
 		{{ partial "group-heads.html" . }}
 		{{- end }}
-		{{- if $brief }}
-		<th class="score"{{ if $podium }} data-podium{{ end }} title="{{ T "tip_score_recent" (dict "From" $from) }}">{{ T "th_score_recent" }}</th>
-		{{- else }}
 		<th class="score"{{ if $podium }} data-podium{{ end }} title="{{ T "tip_score" }}">{{ T "th_score" }}</th>
-		{{- end }}
 		<th class="good">{{ T "th_accepted" }}</th>
 		{{- if not $brief }}{{ partial "split-heads.html" . }}{{ end }}
 		<th class="bad" title="{{ T "tip_rejected_total" }}">{{ T "th_rejected" }}</th>
@@ -67,7 +64,8 @@
 	{{- range $n, $_ := $rows }}
 	{{- $p := . }}
 	{{- $iclr := .venues.iclr }}
-	<tr{{ if and $brief (eq (int .accepted) 0) }} class="more-row"{{ end }}>
+	{{- $r := .recent }}
+	<tr{{ if and $brief (eq (int .accepted) 0) }} class="more-row"{{ end }}{{ if $brief }} data-alt-more="{{ eq (int $r.accepted) 0 }}"{{ end }}>
 		{{- if $rank }}<td class="pin0 rank">{{ if $podium }}<span class="cup"></span>{{ end }}<span class="n">{{ add $n 1 }}</span></td>{{ end }}
 		<td class="l pin1"><a href="{{ printf "professors/%s/" .slug | relLangURL }}">{{ partial "pname.html" . }}</a>
 			{{- if and $brief (gt .score 0.0) }}{{ $base := hugo.Data.meta.rank_baseline }}
@@ -94,26 +92,23 @@
 		{{ partial "group-cells.html" .venues }}
 		{{- end }}
 		{{- if $brief }}
-		<td class="score" title="{{ T "score_recent_cell" (dict "Count" .accepted_recent "From" $from) }}">{{ printf "%.2f" .score_recent }}</td>
+		{{ partial "recent-cells.html" (dict "p" . "r" $r) }}
 		{{- else }}
 		<td class="score">{{ printf "%.2f" .score }}</td>
-		{{- end }}
 		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" .own_page) }}">+{{ .own_page }}</span>{{ end }}</td>
-		{{- if not $brief }}{{ partial "split-cells.html" . }}{{ end }}
+		{{ partial "split-cells.html" . }}
 		{{ partial "rejected-total.html" .venues }}
 		{{- if eq .rejected_estimated nil }}
 		{{- if not $brief }}<td class="na est">&ndash;</td>{{ end }}
 		<td class="na sub">&ndash;</td>
 		<td class="na rate">&ndash;</td>
 		{{- else }}
-		{{- if not $brief }}{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}{{ end }}
+		{{ partial "numc.html" (dict "v" .rejected_estimated "cls" "total est") }}
 		{{ partial "numc.html" (dict "v" (add (int .accepted) (int .rejected_estimated)) "cls" "total sub") }}
 		{{- if eq .acceptance_rate nil }}<td class="na rate">&ndash;</td>
 		{{- else if ne .projection.basis "own" }}<td class="rate trivial" data-last title="{{ T "tip_rate_trivial" }}">{{ .acceptance_rate }}%</td>
 		{{- else }}<td class="rate">{{ .acceptance_rate }}%</td>{{ end }}
 		{{- end }}
-		{{- if $brief }}
-		<td class="score">{{ printf "%.2f" .score }}</td>
 		{{- end }}
 		{{ partial "num.html" (len (.workshop_papers | default slice)) }}
 		{{- if eq (int .accepted) 0 }}

@@ -1,0 +1,23 @@
+{{- $A := slice }}{{ $B := slice }}
+{{- range $k, $x := slice .p .r }}
+{{- $rec := eq $k 1 }}
+{{- $rej := 0 }}{{ if $rec }}{{ $rej = int $x.rejected }}{{ else }}{{ range $x.venues }}{{ $rej = add $rej (int .not_accepted) }}{{ end }}{{ end }}
+{{- $acc := printf "%d" (int $x.official) }}
+{{- if gt (int $x.own_page) 0 }}{{ $acc = printf "%s <span class=\"own\" title=\"%s\">+%d</span>" $acc (T "own_page_more" (dict "Count" $x.own_page)) (int $x.own_page) }}{{ end }}
+{{- $row := slice (dict "cls" "score" "html" (printf "%.2f" (float $x.score)))
+	(dict "cls" "total good" "html" $acc)
+	(dict "cls" (printf "total bad%s" (cond (eq $rej 0) " zero" "")) "html" (string $rej) "title" (T "tip_rejected_where_public")) }}
+{{- if eq $x.rejected_estimated nil }}
+{{- $row = $row | append (dict "cls" "na sub" "html" "&ndash;") (dict "cls" "na rate" "html" "&ndash;") }}
+{{- else }}
+{{- $sub := add (int $x.accepted) (int $x.rejected_estimated) }}
+{{- $row = $row | append (dict "cls" (printf "total sub%s" (cond (eq $sub 0) " zero" "")) "html" (string $sub)) }}
+{{- if eq $x.acceptance_rate nil }}{{ $row = $row | append (dict "cls" "na rate" "html" "&ndash;") }}
+{{- else if ne $.p.projection.basis "own" }}{{ $row = $row | append (dict "cls" "rate trivial" "html" (printf "%v%%" $x.acceptance_rate) "title" (T "tip_rate_trivial") "last" "1") }}
+{{- else }}{{ $row = $row | append (dict "cls" "rate" "html" (printf "%v%%" $x.acceptance_rate)) }}{{ end }}
+{{- end }}
+{{- if $rec }}{{ $B = $row }}{{ else }}{{ $A = $row }}{{ end }}
+{{- end }}
+{{- range $k, $a := $A }}
+{{ partial "period-cell.html" (dict "a" $a "b" (index $B $k)) }}
+{{- end }}

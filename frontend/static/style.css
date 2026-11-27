@@ -450,6 +450,10 @@ td.ca-min, th.ca-min, td.ca-dom, th.ca-dom, td.ca-same, th.ca-same { background:
 td.ca-max, th.ca-max, td.ca-for, th.ca-for, td.ca-other, th.ca-other { background: var(--bad) ; }
 
 th.sortable { cursor: pointer ; }
+.period-toggle { font: inherit ; color: inherit ; background: none ; border: 0 ; padding: 0 ; cursor: pointer ; text-decoration: underline dotted ; text-underline-offset: 0.2em ; }
+.period-toggle::after { content: " \21C4" ; font-size: 0.85em ; }
+.period-toggle:hover { text-decoration-style: solid ; }
+table.recent .rk { display: none ; }
 th.sortable:hover { text-decoration: underline ; }
 th[aria-sort="descending"]::after { content: " \25BC" ; font-size: 0.7em ; }
 th[aria-sort="ascending"]::after { content: " \25B2" ; font-size: 0.7em ; }

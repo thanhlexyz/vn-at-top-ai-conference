@@ -225,11 +225,13 @@ It is explained in About and in two callouts: the professor score on the front p
 - "x +y" (official, unofficial) sorts as x + y; among equal totals, more official papers first. The default order of
   the professor, institution and venue tables follows the same rule (`professors.sort`, `institutions.sort`, and the
   sort in `venues/list.html`), so the cups match the order on load.
-- The front page ranks by the CSRankings score of the last 12 months (`score_recent`, papers decided on or after
-  `RECENT_FROM` in `common.py`, the first of the month 12 months before the build; undated papers such as ICLR 2027
-  potential count as recent), ties broken by the all-time order (`recent_order`). Rank change compares against the
-  same 12-month order without potential accepts. The all-time score is a hidden extra column; professors.json and the
-  other pages keep the all-time order.
+- The front page opens on the all-time totals. Clicking the "Total" heading flips the five Total columns (score,
+  accepted, rejected, submitted and rate, estimated) to "Last year" and re-sorts by that score (ties keep the all-time
+  order); clicking "Last year" flips back. Last year means papers decided on or after `RECENT_FROM` in `common.py`, the
+  first of the month 12 months before the build (undated papers such as ICLR 2027 potential count); the figures are
+  `recent` in professors.json (`recent_totals`, same estimate as `projection` with the all-time ICLR ratio). The cells
+  carry the other period in `data-alt*` attributes (`partials/recent-cells.html`, `period-cell.html`); rank arrows are
+  hidden in the last-year view. In the text, say "last year", not "12 months".
 - Cups (gold, silver, bronze) go to the top three distinct values of the sorted column; ties share a cup and the next
   value takes the next cup. Sorted largest first, zero gets none; sorted smallest first, zero is the best value.
   Sorted by a text column, there are none. Cups appear on the front page, the Institutions list and institution pages

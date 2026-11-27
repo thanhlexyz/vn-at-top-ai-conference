@@ -182,6 +182,51 @@
 		});
 	});
 
+	document.querySelectorAll("button.period-toggle").forEach(function (button) {
+		var table = button.closest("table");
+		var body = table.tBodies[0];
+		Array.prototype.forEach.call(body.rows, function (tr, k) { tr.dataset.i = k; });
+		var start = leafHeadings(table.tHead).filter(function (pair) { return pair[0].hasAttribute("data-podium"); })[0];
+		var more = document.querySelector('button.more-rows[aria-controls="' + table.id + '"]');
+		function flip(el, attr, data) {
+			var now = attr === "html" ? el.innerHTML : attr === "last" ? (el.hasAttribute("data-last") ? "1" : "") : (el.getAttribute(attr) || "");
+			var next = el.getAttribute(data) || "";
+			if (attr === "html") el.innerHTML = next;
+			else if (attr === "last") { if (next) el.setAttribute("data-last", ""); else el.removeAttribute("data-last"); }
+			else if (next) el.setAttribute(attr, next); else el.removeAttribute(attr);
+			el.setAttribute(data, now);
+		}
+		button.addEventListener("click", function () {
+			var recent = table.classList.toggle("recent");
+			button.setAttribute("aria-pressed", recent ? "true" : "false");
+			flip(button, "html", "data-alt");
+			flip(button, "title", "data-alt-title");
+			table.querySelectorAll("td[data-alt]").forEach(function (td) {
+				flip(td, "html", "data-alt");
+				flip(td, "class", "data-alt-class");
+				flip(td, "title", "data-alt-title");
+				flip(td, "last", "data-alt-last");
+			});
+			Array.prototype.forEach.call(body.rows, function (tr) {
+				if (!tr.hasAttribute("data-alt-more")) return;
+				var was = tr.classList.contains("more-row");
+				tr.classList.toggle("more-row", tr.getAttribute("data-alt-more") === "true");
+				tr.setAttribute("data-alt-more", was ? "true" : "false");
+			});
+			if (more && more.dataset.altShow) {
+				var show = more.dataset.show;
+				more.dataset.show = more.dataset.altShow;
+				more.dataset.altShow = show;
+				if (table.classList.contains("rows-collapsed")) more.textContent = more.dataset.show;
+			}
+			Array.prototype.slice.call(body.rows).sort(function (a, b) { return a.dataset.i - b.dataset.i; })
+				.forEach(function (tr) { body.appendChild(tr); });
+			table.querySelectorAll("th[aria-sort]").forEach(function (th) { th.removeAttribute("aria-sort"); });
+			if (recent && start) sortBy(table, start[1], start[0]);
+			else { renumber(table); podium(table, start ? start[1] : undefined); }
+		});
+	});
+
 	document.querySelectorAll("table[data-page-size]").forEach(function (table) {
 		var size = parseInt(table.dataset.pageSize, 10), body = table.tBodies[0];
 		var nav = table.id && document.querySelector('nav.pager[aria-controls="' + table.id + '"]');

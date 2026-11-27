@@ -727,7 +727,6 @@ def rank_keys_without(counted, venue_year):
     acc = [r for r in rest if r["status"] == "accepted"]
     main = [r for r in rest if r.get("track", "main") == "main"]
     return {"score": round(sum(1 / max(len(r["authors"]), 1) for r in acc), 2), "accepted": len(acc),
-            "score_recent": round(sum(1 / max(len(r["authors"]), 1) for r in acc if is_recent(r["venue"], r["year"])), 2),
             "official": sum(1 for r in acc if not r.get("unofficial")),
             "shown": bool(acc),
             "iclr_submitted": sum(1 for r in main if r["venue"] == "iclr"), "submitted": len(main)}
@@ -795,6 +794,33 @@ def projection(p):
     out["recorded"] = sum(r["iclr_not_accepted"] for r in counted)
     out["rows"] = [{**r, "estimated": f"{r['estimated']:.0f}", "total": f"{r['total']:.0f}"} if r["counts"] else r
                    for r in rows]
+    return out
+
+
+def recent_totals(p, recs):
+    complete = p["iclr_complete"]
+    i = p["venues"]["iclr"]
+    submitted, accepted = (i["submitted"], i["accepted"]) if complete else (0, 0)
+    ratio = (submitted + 1) / (accepted + 1)
+    acc = [r for r in recs if r["status"] == "accepted"]
+    own = sum(1 for r in acc if r.get("unofficial"))
+    out = {"score": round(sum(1 / max(len(r["authors"]), 1) for r in acc), 2), "accepted": len(acc),
+           "own_page": own, "official": len(acc) - own,
+           "rejected": sum(1 for r in recs if r["status"] in NOT_ACCEPTED),
+           "rejected_estimated": None, "acceptance_rate": None}
+    if not p["projection"]:
+        return out
+    estimated = 0.0
+    for y in {r["year"] for r in recs}:
+        ys = [r for r in recs if r["year"] == y]
+        other = sum(1 for r in ys if r["venue"] != "iclr" and r["status"] in NOT_ACCEPTED)
+        iclr = sum(1 for r in ys if r["venue"] == "iclr" and r["status"] in NOT_ACCEPTED) if complete else 0
+        elsewhere = sum(1 for r in ys if r["status"] == "accepted" and not (complete and r["venue"] == "iclr"))
+        estimated += iclr + other + max(elsewhere * (ratio - 1) - other, 0)
+    out["rejected_estimated"] = round(estimated)
+    total = out["accepted"] + out["rejected_estimated"]
+    if total:
+        out["acceptance_rate"] = round(100 * out["accepted"] / total)
     return out
 
 
@@ -1208,9 +1234,8 @@ def main():
             "openreview_ids": person["openreview_ids"], "openreview_source": source, "openreview_fetched": fetched,
             "links": person_links(person),
             "score": round(sum(1 / max(len(r["authors"]), 1) for r in counted if r["status"] == "accepted"), 2),
-            "score_recent": round(sum(1 / max(len(r["authors"]), 1) for r in counted
-                                      if r["status"] == "accepted" and is_recent(r["venue"], r["year"])), 2),
-            "accepted_recent": sum(1 for r in counted if r["status"] == "accepted" and is_recent(r["venue"], r["year"])),
+            "_recent": [r for r in counted if is_recent(r["venue"], r["year"])
+                        and (not person["vn_since"] or r["year"] >= person["vn_since"])],
             "score_areas": {g["name"]: round(sum(1 / max(len(r["authors"]), 1) for r in counted
                                                  if r["status"] == "accepted" and r["venue"] in g["venues"]), 4)
                             for g in VENUE_GROUPS},
@@ -1230,18 +1255,14 @@ def main():
                                    else -sum(v.get("submitted", 0) for v in p["venues"].values()), p["name"]))
 
     before = sorted((p for p in professors if p["_base"]["shown"]),
-                    key=lambda p: (-p["_base"]["score_recent"], -p["_base"]["score"], -p["_base"]["accepted"],
-                                   -p["_base"]["official"],
+                    key=lambda p: (-p["_base"]["score"], -p["_base"]["accepted"], -p["_base"]["official"],
                                    -p["_base"]["iclr_submitted"] if p["_base"]["accepted"] else -p["_base"]["submitted"],
                                    p["name"]))
     was = {p["slug"]: k + 1 for k, p in enumerate(before)}
-    all_time = {p["slug"]: k for k, p in enumerate(professors)}
-    for k, p in enumerate(sorted(professors, key=lambda p: (-p["score_recent"], all_time[p["slug"]]))):
-        p["recent_order"] = k + 1
+    for k, p in enumerate(professors):
+        p.pop("_base")
         p["rank_before"] = was.get(p["slug"])
         p["rank_change"] = (was[p["slug"]] - (k + 1)) if p["slug"] in was else None
-    for p in professors:
-        p.pop("_base")
 
     variants = {p["slug"]: p["variants"] for p in approved}
     lists = ("accepted_papers", "not_accepted_papers", "excluded_papers", "workshop_papers")
@@ -1289,6 +1310,7 @@ def main():
                 pr["pie" + suffix] = charts.pies(w["pie_label"], [(w["pie_title"], [(c, w[k], v) for c, k, v in parts])], fit=True)
             if int(pr["total"]):
                 p["acceptance_rate"] = round(100 * p["accepted"] / int(pr["total"]))
+        p["recent"] = recent_totals(p, p.pop("_recent"))
 
     institutions = []
     for slug in sorted({p["institution_slug"] for p in professors}):

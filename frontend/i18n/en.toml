@@ -168,7 +168,7 @@ other = "New on the list with a potential {{ .Base }} acceptance"
 [rank_note]
 other = "<span class=\"rk up\">&#9650;</span> / <span class=\"rk down\">&#9660;</span> places gained or lost with the potential {{ .Base }} acceptances (+N); <span class=\"rk new\"></span> new to the list."
 [home_score_callout]
-other = "<strong>How the score is calculated:</strong> We use the adjusted count model from <a href=\"https://csrankings.org/\">CSRankings</a>. Each accepted paper awards <strong>1 divided by its total number of authors</strong> (1/N) to each listed faculty co-author, and a professor's score is the sum of these fractional credits (e.g., a paper with 4 authors adds 0.25 points; a paper with 10 adds 0.10). The table is ordered by the score over the last 12 months, counting the papers decided since {{ .From }}; the score over all papers since 2020 is in the hidden columns."
+other = "<strong>How the score is calculated:</strong> We use the adjusted count model from <a href=\"https://csrankings.org/\">CSRankings</a>. Each accepted paper awards <strong>1 divided by its total number of authors</strong> (1/N) to each listed faculty co-author, and a professor's score is the sum of these fractional credits across all their papers (e.g., a paper with 4 authors adds 0.25 points; a paper with 10 adds 0.10). Click <strong>Total</strong> in the table heading to see the last year only (papers decided since {{ .From }}); click <strong>Last year</strong> to go back."
 [cols_hidden]
 other = "Hidden: {names}"
 [cols_show_one]
@@ -613,13 +613,9 @@ other = "Show the whole graph"
 other = "Ctrl/⌘ + scroll or pinch to zoom, drag to pan"
 [recent_from_layout]
 other = "Jan 2006"
-[th_score_recent]
-other = "CSRankings score, last 12 months"
-[th_score_all]
-other = "CSRankings score, all time"
-[tip_score_recent]
-other = "Each accepted paper counts 1 / (number of its authors), as in CSRankings. Only papers decided since {{ .From }} count (the last 12 months), and the table is ordered by this score"
-[tip_score_all]
-other = "The same score over all papers since 2020; the table is not ordered by it"
-[score_recent_cell]
-other = "{{ .Count }} accepted since {{ .From }}"
+[th_last_year]
+other = "Last year"
+[tip_period_recent]
+other = "Click to show the last year only (papers decided since {{ .From }})"
+[tip_period_total]
+other = "Click to show the totals since 2020"

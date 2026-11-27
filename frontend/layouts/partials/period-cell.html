@@ -1,0 +1,2 @@
+{{- $a := .a }}{{ $b := .b -}}
+<td class="{{ $a.cls }}"{{ with $a.title }} title="{{ . }}"{{ end }}{{ if $a.last }} data-last{{ end }} data-alt="{{ $b.html }}" data-alt-class="{{ $b.cls }}" data-alt-title="{{ $b.title }}" data-alt-last="{{ $b.last }}">{{ $a.html | safeHTML }}</td>
