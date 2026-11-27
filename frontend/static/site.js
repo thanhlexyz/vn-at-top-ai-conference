@@ -224,6 +224,7 @@
 			table.querySelectorAll("th[aria-sort]").forEach(function (th) { th.removeAttribute("aria-sort"); });
 			if (recent && start) sortBy(table, start[1], start[0]);
 			else { renumber(table); podium(table, start ? start[1] : undefined); }
+			window.dispatchEvent(new Event("resize"));
 		});
 	});
 

@@ -727,6 +727,7 @@ def rank_keys_without(counted, venue_year):
     acc = [r for r in rest if r["status"] == "accepted"]
     main = [r for r in rest if r.get("track", "main") == "main"]
     return {"score": round(sum(1 / max(len(r["authors"]), 1) for r in acc), 2), "accepted": len(acc),
+            "score_recent": round(sum(1 / max(len(r["authors"]), 1) for r in acc if is_recent(r["venue"], r["year"])), 2),
             "official": sum(1 for r in acc if not r.get("unofficial")),
             "shown": bool(acc),
             "iclr_submitted": sum(1 for r in main if r["venue"] == "iclr"), "submitted": len(main)}
@@ -1259,6 +1260,14 @@ def main():
                                    -p["_base"]["iclr_submitted"] if p["_base"]["accepted"] else -p["_base"]["submitted"],
                                    p["name"]))
     was = {p["slug"]: k + 1 for k, p in enumerate(before)}
+    order = {p["slug"]: k for k, p in enumerate(professors)}
+    was_recent = {p["slug"]: k + 1 for k, p in enumerate(sorted((p for p in professors if p["_base"]["score_recent"]),
+                                                              key=lambda p: (-p["_base"]["score_recent"], order[p["slug"]])))}
+    now_recent = sorted(professors, key=lambda p: (-round(sum(1 / max(len(r["authors"]), 1) for r in p["_recent"]
+                                                               if r["status"] == "accepted"), 2), order[p["slug"]]))
+    for k, p in enumerate(now_recent):
+        p["rank_before_recent"] = was_recent.get(p["slug"])
+        p["rank_change_recent"] = (was_recent[p["slug"]] - (k + 1)) if p["slug"] in was_recent else None
     for k, p in enumerate(professors):
         p.pop("_base")
         p["rank_before"] = was.get(p["slug"])

@@ -230,8 +230,9 @@ It is explained in About and in two callouts: the professor score on the front p
   order); clicking "Last year" flips back. Last year means papers decided on or after `RECENT_FROM` in `common.py`, the
   first of the month 12 months before the build (undated papers such as ICLR 2027 potential count); the figures are
   `recent` in professors.json (`recent_totals`, same estimate as `projection` with the all-time ICLR ratio). The cells
-  carry the other period in `data-alt*` attributes (`partials/recent-cells.html`, `period-cell.html`); rank arrows are
-  hidden in the last-year view. In the text, say "last year", not "12 months".
+  carry the other period in `data-alt*` attributes (`partials/recent-cells.html`, `period-cell.html`); the rank arrows
+  have a last-year version too (`rank_change_recent`, same ICLR baseline, `partials/rank-mark.html`). The
+  front table has no own-university or co-author columns; "Accepted at" is behind "More columns". In the text, say "last year", not "12 months".
 - Cups (gold, silver, bronze) go to the top three distinct values of the sorted column; ties share a cup and the next
   value takes the next cup. Sorted largest first, zero gets none; sorted smallest first, zero is the best value.
   Sorted by a text column, there are none. Cups appear on the front page, the Institutions list and institution pages

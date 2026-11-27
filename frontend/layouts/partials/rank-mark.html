@@ -1,0 +1,5 @@
+{{- $base := hugo.Data.meta.rank_baseline }}
+{{- if not .before }} <span class="rk new {{ .cls }}" role="img" aria-label="{{ T "rank_new" (dict "Base" $base) }}" title="{{ T "rank_new" (dict "Base" $base) }}"></span>
+{{- else if gt (int .change) 0 }} <span class="rk up {{ .cls }}" title="{{ T "rank_was" (dict "Base" $base "Rank" .before) }}">&#9650;{{ .change }}</span>
+{{- else if lt (int .change) 0 }} <span class="rk down {{ .cls }}" title="{{ T "rank_was" (dict "Base" $base "Rank" .before) }}">&#9660;{{ sub 0 (int .change) }}</span>
+{{- end }}

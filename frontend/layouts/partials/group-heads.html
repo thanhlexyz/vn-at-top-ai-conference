@@ -1,3 +1,4 @@
+{{- $extra := and (reflect.IsMap .) .extra }}
 {{- range hugo.Data.meta.venue_groups }}
-<th title="{{ delimit .names ", " }}">{{ .name }}</th>
+<th title="{{ delimit .names ", " }}"{{ if $extra }} data-extra{{ end }}>{{ .name }}</th>
 {{- end }}
