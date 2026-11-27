@@ -59,7 +59,7 @@
 	{{- with site.GetPage "/not-tracked" }}
 	<a href="{{ .RelPermalink }}"{{ if eq $.RelPermalink .RelPermalink }} class="current"{{ end }}>{{ T "nav_not_tracked" }}</a>
 	{{- end }}
-	{{- range where site.RegularPages "Params.local_tab" true }}
+	{{- range where site.Pages "Params.local_tab" true }}
 	<a href="{{ .RelPermalink }}"{{ if eq $.RelPermalink .RelPermalink }} class="current"{{ end }}>{{ .LinkTitle }}</a>
 	{{- end }}
 	{{- with site.GetPage "/feedback" }}
