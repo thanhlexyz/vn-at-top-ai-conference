@@ -10,7 +10,7 @@ section.ch-topic h2 .n { color: var(--muted) ; font-weight: normal ; font-size: 
 section.ch-topic h3 { font-size: 0.95em ; margin: 0.8em 0 0.2em ; }
 section.ch-topic ul.open { margin: 0.2em 0 0.6em ; padding-left: 1.4em ; line-height: 1.55 ; }
 section.ch-topic ul.open .src { color: var(--muted) ; font-size: 0.85em ; }
-details.ch-papers > summary, details.ch-desc > summary { cursor: pointer ; color: var(--link) ; margin: 0.4em 0 ; }
+details.ch-papers > summary, details.ch-desc > summary, details.ch-open > summary { cursor: pointer ; color: var(--link) ; margin: 0.4em 0 ; }
 details.ch-paper { margin: 0.4em 0 0.4em 1em ; border-left: 2px solid var(--line) ; padding-left: 0.8em ; }
 details.ch-paper > summary { cursor: pointer ; line-height: 1.5 ; }
 details.ch-paper > summary .t { font-weight: 600 ; }
@@ -50,8 +50,9 @@ details.ch-paper .ch-link { font-size: 0.88em ; margin: 0.3em 0 0.6em ; }
 </details>
 {{- end }}
 {{- with .open }}
-<h3>{{ T "ch_open" }}</h3>
+<details class="ch-open"><summary>{{ T "ch_open" }} ({{ len . }})</summary>
 <ul class="open">{{ range . }}<li>{{ if $vi }}{{ .text_vi }}{{ else }}{{ .text }}{{ end }} <span class="src">({{ if eq .source "reviewers" }}{{ T "ch_src_reviewers" }}{{ else }}{{ T "ch_src_authors" }}{{ end }})</span></li>{{ end }}</ul>
+</details>
 {{- end }}
 <details class="ch-papers"><summary>{{ T "ch_papers" (len .papers) }}</summary>
 {{- range .papers }}{{ with index $by . }}{{ partial "challenge-paper.html" (dict "p" . "vi" $vi) }}{{ end }}{{ end }}
@@ -67,7 +68,7 @@ details.ch-paper .ch-link { font-size: 0.88em ; margin: 0.3em 0 0.6em ; }
 <script>
 (function () {
 	var b = document.querySelector("button.ch-expand");
-	function all() { return document.querySelectorAll("details.ch-desc, details.ch-papers, details.ch-paper"); }
+	function all() { return document.querySelectorAll("details.ch-desc, details.ch-open, details.ch-papers, details.ch-paper"); }
 	if (b) b.addEventListener("click", function () {
 		var open = b.textContent === b.dataset.open;
 		all().forEach(function (d) { d.open = open; });
