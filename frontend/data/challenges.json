@@ -1,29 +1,6 @@
 {
  "professors": [
   {
-   "slug": "ngo-van-linh",
-   "done": false,
-   "name": "Ngo Van Linh",
-   "name_vi": "Ngô Văn Linh",
-   "institution": "HUST",
-   "papers": 52,
-   "focus": "Knowledge distillation and efficient representation learning for large language and vision-language models, together with neural topic modeling and continual learning for information extraction.",
-   "focus_vi": "Chưng cất tri thức (knowledge distillation) và học biểu diễn hiệu quả cho mô hình ngôn ngữ lớn và mô hình thị giác - ngôn ngữ, cùng với mô hình chủ đề neural (neural topic model) và học liên tục (continual learning) cho bài toán trích xuất thông tin.",
-   "score": 4.96,
-   "areas": [
-    {
-     "key": "language-nlp",
-     "score": 4.96
-    },
-    {
-     "key": "deep-learning",
-     "score": 4.96
-    }
-   ],
-   "gists": {},
-   "gist_list": []
-  },
-  {
    "slug": "tuan-dam",
    "done": true,
    "name": "Tuan Dam",
@@ -32,7 +9,7 @@
    "papers": 19,
    "focus": "Sampling-based planning and pure-exploration algorithms for stochastic sequential decision making, centred on Monte-Carlo Tree Search (MCTS) and best-arm identification in multi-armed bandits.",
    "focus_vi": "Các thuật toán lập kế hoạch dựa trên lấy mẫu và khám phá thuần túy (pure exploration) cho bài toán ra quyết định tuần tự ngẫu nhiên, xoay quanh Monte-Carlo Tree Search (MCTS) và bài toán xác định nhánh tốt nhất (best-arm identification) trong multi-armed bandit.",
-   "score": 4.42,
+   "score": 5.49,
    "areas": [
     {
      "key": "rl-planning-agents",
@@ -92,46 +69,23 @@
    ]
   },
   {
-   "slug": "dung-d-le",
+   "slug": "ngo-van-linh",
    "done": false,
-   "name": "Dung D. Le",
-   "name_vi": "Lê Duy Dũng",
-   "institution": "VinUni",
-   "papers": 22,
-   "focus": "Efficient and adaptable deep learning across vision-language models such as CLIP, federated learning and unlearning, and multi-objective optimization with hypernetworks.",
-   "focus_vi": "Học sâu hiệu quả và dễ thích nghi, trải rộng trên mô hình thị giác - ngôn ngữ như CLIP, federated learning và machine unlearning, và tối ưu đa mục tiêu bằng hypernetwork.",
-   "score": 2.36,
-   "areas": [
-    {
-     "key": "deep-learning",
-     "score": 2.36
-    },
-    {
-     "key": "optimization",
-     "score": 2.36
-    }
-   ],
-   "gists": {},
-   "gist_list": []
-  },
-  {
-   "slug": "than-quang-khoat",
-   "done": false,
-   "name": "Than Quang Khoat",
-   "name_vi": "Thân Quang Khoát",
+   "name": "Ngo Van Linh",
+   "name_vi": "Ngô Văn Linh",
    "institution": "HUST",
-   "papers": 18,
-   "focus": "Theoretical foundations of deep learning, especially generalization error bounds, alongside practical methods for continual learning and for compressing neural networks by pruning.",
-   "focus_vi": "Nền tảng lý thuyết của học sâu, đặc biệt là các cận sai số tổng quát hóa (generalization bound), song song với các phương pháp thực tiễn cho học liên tục (continual learning) và nén mạng nơ-ron bằng tỉa trọng số (pruning).",
-   "score": 1.84,
+   "papers": 52,
+   "focus": "Knowledge distillation and efficient representation learning for large language and vision-language models, together with neural topic modeling and continual learning for information extraction.",
+   "focus_vi": "Chưng cất tri thức (knowledge distillation) và học biểu diễn hiệu quả cho mô hình ngôn ngữ lớn và mô hình thị giác - ngôn ngữ, cùng với mô hình chủ đề neural (neural topic model) và học liên tục (continual learning) cho bài toán trích xuất thông tin.",
+   "score": 4.96,
    "areas": [
     {
-     "key": "learning-theory",
-     "score": 1.84
+     "key": "language-nlp",
+     "score": 4.96
     },
     {
      "key": "deep-learning",
-     "score": 1.84
+     "score": 4.96
     }
    ],
    "gists": {},
@@ -146,7 +100,7 @@
    "papers": 34,
    "focus": "Security of machine learning, chiefly backdoor (data-poisoning) attacks and defences, together with the training dynamics and alignment of large language models.",
    "focus_vi": "An toàn cho học máy, chủ yếu là tấn công và phòng thủ backdoor (đầu độc dữ liệu), cùng với động lực huấn luyện và alignment của mô hình ngôn ngữ lớn.",
-   "score": 1.71,
+   "score": 3.35,
    "areas": [
     {
      "key": "trustworthy-ai",
@@ -177,303 +131,6 @@
    "gist_list": []
   },
   {
-   "slug": "tho-quan",
-   "done": false,
-   "name": "Tho Quan",
-   "name_vi": "Quản Thành Thơ",
-   "institution": "HCMUT",
-   "papers": 9,
-   "focus": "Natural language processing with large language models, spanning multilingual and Vietnamese language modeling, repository-level code completion, and the theory and fine-tuning of sparse Mixture-of-Experts (MoE) models.",
-   "focus_vi": "Xử lý ngôn ngữ tự nhiên với mô hình ngôn ngữ lớn, trải rộng từ mô hình hóa đa ngôn ngữ và tiếng Việt, gợi ý mã nguồn ở mức kho mã (repository), đến lý thuyết và tinh chỉnh các mô hình Mixture-of-Experts (MoE) thưa.",
-   "score": 1.47,
-   "areas": [
-    {
-     "key": "language-nlp",
-     "score": 1.47
-    },
-    {
-     "key": "deep-learning",
-     "score": 1.47
-    }
-   ],
-   "gists": {},
-   "gist_list": []
-  },
-  {
-   "slug": "canh-v-pham",
-   "done": false,
-   "name": "Canh V. Pham",
-   "name_vi": "Phạm Văn Cảnh",
-   "institution": "Phenikaa",
-   "papers": 6,
-   "focus": "Approximation algorithms for submodular maximization, particularly fast parallel algorithms for non-monotone objectives under cardinality, knapsack and matroid constraints.",
-   "focus_vi": "Thuật toán xấp xỉ cho bài toán cực đại hóa hàm submodular, đặc biệt là các thuật toán song song nhanh cho hàm mục tiêu không đơn điệu dưới ràng buộc lực lượng, ràng buộc knapsack và ràng buộc matroid.",
-   "score": 1.25,
-   "areas": [
-    {
-     "key": "optimization",
-     "score": 1.25
-    },
-    {
-     "key": "efficient-scalable",
-     "score": 1.25
-    }
-   ],
-   "gists": {},
-   "gist_list": []
-  },
-  {
-   "slug": "binh-t-nguyen",
-   "done": false,
-   "name": "Binh T. Nguyen",
-   "name_vi": "Nguyễn Tuấn Bình",
-   "institution": "VinUni",
-   "papers": 7,
-   "focus": "Mathematical analysis of modern machine learning: why low-rank adaptation works, how reinforcement learning shapes the reasoning of large language models, and the theory of regularized optimal transport.",
-   "focus_vi": "Phân tích toán học cho học máy hiện đại: vì sao thích nghi hạng thấp (LoRA) hiệu quả, học tăng cường định hình khả năng suy luận của mô hình ngôn ngữ lớn ra sao, và lý thuyết vận chuyển tối ưu có chính quy hóa.",
-   "score": 1.08,
-   "areas": [
-    {
-     "key": "learning-theory",
-     "score": 1.08
-    },
-    {
-     "key": "language-nlp",
-     "score": 1.08
-    }
-   ],
-   "gists": {},
-   "gist_list": []
-  },
-  {
-   "slug": "duc-trong-le",
-   "done": false,
-   "name": "Duc-Trong Le",
-   "name_vi": "Lê Đức Trọng",
-   "institution": "VNU-UET",
-   "papers": 4,
-   "focus": "Multimodal and multi-label learning, especially keeping modalities balanced when some are missing, and learning new classes incrementally.",
-   "focus_vi": "Học đa phương thức và đa nhãn, đặc biệt là giữ cân bằng giữa các phương thức khi một số bị thiếu, và học tăng dần các lớp mới.",
-   "score": 1.03,
-   "areas": [
-    {
-     "key": "vision-multimodal",
-     "score": 1.03
-    },
-    {
-     "key": "deep-learning",
-     "score": 1.03
-    }
-   ],
-   "gists": {},
-   "gist_list": []
-  },
-  {
-   "slug": "cuong-viet-ta",
-   "done": false,
-   "name": "Cuong Viet Ta",
-   "name_vi": "Tạ Việt Cường",
-   "institution": "VNU-UET",
-   "papers": 2,
-   "focus": "Graph representation learning in non-Euclidean geometries, such as hyperbolic and pseudo-Riemannian spaces, for static and temporal graphs.",
-   "focus_vi": "Học biểu diễn đồ thị trong các hình học phi Euclid như không gian hyperbolic và giả Riemann, cho cả đồ thị tĩnh và đồ thị theo thời gian.",
-   "score": 1.0,
-   "areas": [
-    {
-     "key": "data-mining-graphs",
-     "score": 1.0
-    },
-    {
-     "key": "deep-learning",
-     "score": 1.0
-    }
-   ],
-   "gists": {},
-   "gist_list": []
-  },
-  {
-   "slug": "cuong-pham",
-   "done": true,
-   "name": "Cuong Pham",
-   "name_vi": "Phạm Văn Cường",
-   "institution": "PTIT",
-   "papers": 16,
-   "focus": "Fast and controllable image generation with diffusion models, and image restoration, especially deblurring, learned without paired training data.",
-   "focus_vi": "Sinh ảnh nhanh và có kiểm soát bằng mô hình khuếch tán (diffusion model), cùng với khôi phục ảnh, đặc biệt là khử mờ, được học mà không cần dữ liệu huấn luyện ghép cặp.",
-   "score": 0.98,
-   "areas": [
-    {
-     "key": "vision-multimodal",
-     "score": 0.98
-    },
-    {
-     "key": "generative-models",
-     "score": 0.94
-    },
-    {
-     "key": "data-mining-graphs",
-     "score": 0.2
-    },
-    {
-     "key": "deep-learning",
-     "score": 0.2
-    },
-    {
-     "key": "hri-dialogue",
-     "score": 0.2
-    }
-   ],
-   "gists": {
-    "vision-multimodal": {
-     "n": 6,
-     "score": 0.98,
-     "en": "Work on <a href=\"#cvpr2026-bluref-unsupervised-image-deblurring-with-dense-matching-ref\">unsupervised image deblurring</a> learns without paired data, alongside work on extreme-pose face data, 3D instance segmentation and fine-grained classification.",
-     "vi": "Các công trình về <a href=\"#cvpr2026-bluref-unsupervised-image-deblurring-with-dense-matching-ref\">khử mờ ảnh không giám sát</a> học không cần dữ liệu cặp, cùng khuôn mặt góc cực đoan, phân đoạn 3D và phân loại ảnh chi tiết."
-    },
-    "generative-models": {
-     "n": 6,
-     "score": 0.94,
-     "en": "Work on <a href=\"#iccv2025-supercharged-one-step-text-to-image-diffusion-models-with-ne\">one-step text-to-image diffusion</a> speeds up inpainting, personalization and negative prompts, and covers erasing narrow concepts and quality-controllable GANs.",
-     "vi": "Các công trình về <a href=\"#iccv2025-supercharged-one-step-text-to-image-diffusion-models-with-ne\">khuếch tán text-to-image một bước</a> tăng tốc inpainting, cá nhân hóa và prompt phủ định, và xóa khái niệm hẹp cùng GAN điều khiển chất lượng."
-    },
-    "data-mining-graphs": {
-     "n": 2,
-     "score": 0.2,
-     "en": "Work on <a href=\"#aaai2025-rem-a-scalable-reinforced-multi-expert-framework-for-multipl\">reinforcement-learning seed selection</a> for spreading influence across multiplex networks, and on choosing which nodes to label in incomplete graphs.",
-     "vi": "Các công trình về <a href=\"#aaai2025-rem-a-scalable-reinforced-multi-expert-framework-for-multipl\">chọn nút gốc bằng học tăng cường</a> để lan truyền ảnh hưởng trên mạng đa lớp, và chọn nút cần gán nhãn trong đồ thị không đầy đủ."
-    },
-    "deep-learning": {
-     "n": 1,
-     "score": 0.2,
-     "en": "Work on <a href=\"#icml2026-muonssm-orthogonalizing-state-space-models-for-sequence-mode\">state space models for sequences</a> adds a momentum pathway and spectrally conditioned updates to keep memory stable over long sequences.",
-     "vi": "Các công trình về <a href=\"#icml2026-muonssm-orthogonalizing-state-space-models-for-sequence-mode\">mô hình không gian trạng thái cho chuỗi</a> thêm đường động lượng và cập nhật điều kiện phổ để giữ bộ nhớ ổn định trên chuỗi dài."
-    },
-    "hri-dialogue": {
-     "n": 1,
-     "score": 0.2,
-     "en": "Work on <a href=\"#aaai2024-count-what-you-want-exemplar-identification-and-few-shot-cou\">few-shot action counting from wearable sensors</a> lets users give exemplars by voice and matches them to sensor sequences to estimate counts.",
-     "vi": "Các công trình về <a href=\"#aaai2024-count-what-you-want-exemplar-identification-and-few-shot-cou\">đếm hành động few-shot từ cảm biến đeo</a> cho người dùng đưa mẫu bằng giọng nói và đối sánh với chuỗi cảm biến để ước lượng số lần."
-    }
-   },
-   "gist_list": [
-    {
-     "n": 6,
-     "score": 0.98,
-     "key": "vision-multimodal",
-     "en": "Work on <a href=\"#cvpr2026-bluref-unsupervised-image-deblurring-with-dense-matching-ref\">unsupervised image deblurring</a> learns without paired data, alongside work on extreme-pose face data, 3D instance segmentation and fine-grained classification.",
-     "vi": "Các công trình về <a href=\"#cvpr2026-bluref-unsupervised-image-deblurring-with-dense-matching-ref\">khử mờ ảnh không giám sát</a> học không cần dữ liệu cặp, cùng khuôn mặt góc cực đoan, phân đoạn 3D và phân loại ảnh chi tiết."
-    },
-    {
-     "n": 6,
-     "score": 0.94,
-     "key": "generative-models",
-     "en": "Work on <a href=\"#iccv2025-supercharged-one-step-text-to-image-diffusion-models-with-ne\">one-step text-to-image diffusion</a> speeds up inpainting, personalization and negative prompts, and covers erasing narrow concepts and quality-controllable GANs.",
-     "vi": "Các công trình về <a href=\"#iccv2025-supercharged-one-step-text-to-image-diffusion-models-with-ne\">khuếch tán text-to-image một bước</a> tăng tốc inpainting, cá nhân hóa và prompt phủ định, và xóa khái niệm hẹp cùng GAN điều khiển chất lượng."
-    },
-    {
-     "n": 2,
-     "score": 0.2,
-     "key": "data-mining-graphs",
-     "en": "Work on <a href=\"#aaai2025-rem-a-scalable-reinforced-multi-expert-framework-for-multipl\">reinforcement-learning seed selection</a> for spreading influence across multiplex networks, and on choosing which nodes to label in incomplete graphs.",
-     "vi": "Các công trình về <a href=\"#aaai2025-rem-a-scalable-reinforced-multi-expert-framework-for-multipl\">chọn nút gốc bằng học tăng cường</a> để lan truyền ảnh hưởng trên mạng đa lớp, và chọn nút cần gán nhãn trong đồ thị không đầy đủ."
-    },
-    {
-     "n": 1,
-     "score": 0.2,
-     "key": "deep-learning",
-     "en": "Work on <a href=\"#icml2026-muonssm-orthogonalizing-state-space-models-for-sequence-mode\">state space models for sequences</a> adds a momentum pathway and spectrally conditioned updates to keep memory stable over long sequences.",
-     "vi": "Các công trình về <a href=\"#icml2026-muonssm-orthogonalizing-state-space-models-for-sequence-mode\">mô hình không gian trạng thái cho chuỗi</a> thêm đường động lượng và cập nhật điều kiện phổ để giữ bộ nhớ ổn định trên chuỗi dài."
-    },
-    {
-     "n": 1,
-     "score": 0.2,
-     "key": "hri-dialogue",
-     "en": "Work on <a href=\"#aaai2024-count-what-you-want-exemplar-identification-and-few-shot-cou\">few-shot action counting from wearable sensors</a> lets users give exemplars by voice and matches them to sensor sequences to estimate counts.",
-     "vi": "Các công trình về <a href=\"#aaai2024-count-what-you-want-exemplar-identification-and-few-shot-cou\">đếm hành động few-shot từ cảm biến đeo</a> cho người dùng đưa mẫu bằng giọng nói và đối sánh với chuỗi cảm biến để ước lượng số lần."
-    }
-   ]
-  },
-  {
-   "slug": "nguyen-thi-ngoc-diep",
-   "done": true,
-   "name": "Nguyen Thi Ngoc Diep",
-   "name_vi": "Nguyễn Thị Ngọc Diệp",
-   "institution": "VNU-UET",
-   "papers": 9,
-   "focus": "Natural language processing with large language models, centered on knowledge distillation across different tokenizers, cross-lingual topic modeling and graph-based retrieval and memory for LLMs.",
-   "focus_vi": "Xử lý ngôn ngữ tự nhiên với mô hình ngôn ngữ lớn, tập trung vào chưng cất tri thức giữa các mô hình dùng bộ tách từ (tokenizer) khác nhau, mô hình chủ đề xuyên ngôn ngữ, và truy hồi cùng bộ nhớ dựa trên đồ thị cho LLM.",
-   "score": 0.96,
-   "areas": [
-    {
-     "key": "language-nlp",
-     "score": 0.96
-    }
-   ],
-   "gists": {
-    "language-nlp": {
-     "n": 9,
-     "score": 0.96,
-     "en": "Work on <a href=\"#emnlp2025-emo-embedding-model-distillation-via-intra-model-relation-an\">distilling text models across tokenizers</a> also covers topic models across languages, graph memory for LLMs and continual relation extraction.",
-     "vi": "Các công trình về <a href=\"#emnlp2025-emo-embedding-model-distillation-via-intra-model-relation-an\">chưng cất mô hình văn bản</a> giữa các tokenizer khác nhau còn gồm mô hình chủ đề đa ngôn ngữ, bộ nhớ đồ thị cho LLM và trích xuất quan hệ liên tục."
-    }
-   },
-   "gist_list": [
-    {
-     "n": 9,
-     "score": 0.96,
-     "key": "language-nlp",
-     "en": "Work on <a href=\"#emnlp2025-emo-embedding-model-distillation-via-intra-model-relation-an\">distilling text models across tokenizers</a> also covers topic models across languages, graph memory for LLMs and continual relation extraction.",
-     "vi": "Các công trình về <a href=\"#emnlp2025-emo-embedding-model-distillation-via-intra-model-relation-an\">chưng cất mô hình văn bản</a> giữa các tokenizer khác nhau còn gồm mô hình chủ đề đa ngôn ngữ, bộ nhớ đồ thị cho LLM và trích xuất quan hệ liên tục."
-    }
-   ]
-  },
-  {
-   "slug": "thanh-binh-nguyen",
-   "done": false,
-   "name": "Thanh-Binh Nguyen",
-   "name_vi": "Nguyễn Thanh Bình",
-   "institution": "HCMUS",
-   "papers": 11,
-   "focus": "A broad range of machine learning: efficient Transformers and sparse Mixture-of-Experts, aligning large language models with human preferences, federated and continual learning, and applied AI for medicine and Vietnamese text.",
-   "focus_vi": "Nhiều chủ đề học máy: Transformer hiệu quả và Mixture-of-Experts thưa, căn chỉnh mô hình ngôn ngữ lớn theo sở thích con người, học liên kết (federated learning) và học liên tục, cùng các ứng dụng AI cho y tế và văn bản tiếng Việt.",
-   "score": 0.85,
-   "areas": [
-    {
-     "key": "deep-learning",
-     "score": 0.85
-    },
-    {
-     "key": "language-nlp",
-     "score": 0.85
-    }
-   ],
-   "gists": {},
-   "gist_list": []
-  },
-  {
-   "slug": "tan-d-tran",
-   "done": false,
-   "name": "Tan D. Tran",
-   "name_vi": "Trần Đình Tân",
-   "institution": "Phenikaa",
-   "papers": 4,
-   "focus": "Parallel approximation algorithms for submodular maximization with non-monotone objectives under cardinality, knapsack and matroid constraints.",
-   "focus_vi": "Thuật toán xấp xỉ song song cho cực đại hóa hàm submodular không đơn điệu dưới ràng buộc lực lượng, ràng buộc knapsack và ràng buộc matroid.",
-   "score": 0.83,
-   "areas": [
-    {
-     "key": "optimization",
-     "score": 0.83
-    },
-    {
-     "key": "efficient-scalable",
-     "score": 0.83
-    }
-   ],
-   "gists": {},
-   "gist_list": []
-  },
-  {
    "slug": "phi-le-nguyen",
    "done": true,
    "name": "Phi Le Nguyen",
@@ -482,7 +139,7 @@
    "papers": 31,
    "focus": "Data-efficient and trustworthy machine learning for healthcare and other low-resource settings, spanning medical imaging and EEG models, offline black-box optimization and multimodal federated learning.",
    "focus_vi": "Học máy hiệu quả về dữ liệu và đáng tin cậy cho y tế và các bối cảnh ít tài nguyên, bao gồm mô hình cho ảnh y khoa và EEG, tối ưu hộp đen ngoại tuyến (offline black-box optimization) và federated learning đa phương thức.",
-   "score": 0.75,
+   "score": 2.94,
    "areas": [
     {
      "key": "health-science",
@@ -644,6 +301,131 @@
    ]
   },
   {
+   "slug": "cuong-pham",
+   "done": true,
+   "name": "Cuong Pham",
+   "name_vi": "Phạm Văn Cường",
+   "institution": "PTIT",
+   "papers": 16,
+   "focus": "Fast and controllable image generation with diffusion models, and image restoration, especially deblurring, learned without paired training data.",
+   "focus_vi": "Sinh ảnh nhanh và có kiểm soát bằng mô hình khuếch tán (diffusion model), cùng với khôi phục ảnh, đặc biệt là khử mờ, được học mà không cần dữ liệu huấn luyện ghép cặp.",
+   "score": 2.52,
+   "areas": [
+    {
+     "key": "vision-multimodal",
+     "score": 0.98
+    },
+    {
+     "key": "generative-models",
+     "score": 0.94
+    },
+    {
+     "key": "data-mining-graphs",
+     "score": 0.2
+    },
+    {
+     "key": "deep-learning",
+     "score": 0.2
+    },
+    {
+     "key": "hri-dialogue",
+     "score": 0.2
+    }
+   ],
+   "gists": {
+    "vision-multimodal": {
+     "n": 6,
+     "score": 0.98,
+     "en": "Work on <a href=\"#cvpr2026-bluref-unsupervised-image-deblurring-with-dense-matching-ref\">unsupervised image deblurring</a> learns without paired data, alongside work on extreme-pose face data, 3D instance segmentation and fine-grained classification.",
+     "vi": "Các công trình về <a href=\"#cvpr2026-bluref-unsupervised-image-deblurring-with-dense-matching-ref\">khử mờ ảnh không giám sát</a> học không cần dữ liệu cặp, cùng khuôn mặt góc cực đoan, phân đoạn 3D và phân loại ảnh chi tiết."
+    },
+    "generative-models": {
+     "n": 6,
+     "score": 0.94,
+     "en": "Work on <a href=\"#iccv2025-supercharged-one-step-text-to-image-diffusion-models-with-ne\">one-step text-to-image diffusion</a> speeds up inpainting, personalization and negative prompts, and covers erasing narrow concepts and quality-controllable GANs.",
+     "vi": "Các công trình về <a href=\"#iccv2025-supercharged-one-step-text-to-image-diffusion-models-with-ne\">khuếch tán text-to-image một bước</a> tăng tốc inpainting, cá nhân hóa và prompt phủ định, và xóa khái niệm hẹp cùng GAN điều khiển chất lượng."
+    },
+    "data-mining-graphs": {
+     "n": 2,
+     "score": 0.2,
+     "en": "Work on <a href=\"#aaai2025-rem-a-scalable-reinforced-multi-expert-framework-for-multipl\">reinforcement-learning seed selection</a> for spreading influence across multiplex networks, and on choosing which nodes to label in incomplete graphs.",
+     "vi": "Các công trình về <a href=\"#aaai2025-rem-a-scalable-reinforced-multi-expert-framework-for-multipl\">chọn nút gốc bằng học tăng cường</a> để lan truyền ảnh hưởng trên mạng đa lớp, và chọn nút cần gán nhãn trong đồ thị không đầy đủ."
+    },
+    "deep-learning": {
+     "n": 1,
+     "score": 0.2,
+     "en": "Work on <a href=\"#icml2026-muonssm-orthogonalizing-state-space-models-for-sequence-mode\">state space models for sequences</a> adds a momentum pathway and spectrally conditioned updates to keep memory stable over long sequences.",
+     "vi": "Các công trình về <a href=\"#icml2026-muonssm-orthogonalizing-state-space-models-for-sequence-mode\">mô hình không gian trạng thái cho chuỗi</a> thêm đường động lượng và cập nhật điều kiện phổ để giữ bộ nhớ ổn định trên chuỗi dài."
+    },
+    "hri-dialogue": {
+     "n": 1,
+     "score": 0.2,
+     "en": "Work on <a href=\"#aaai2024-count-what-you-want-exemplar-identification-and-few-shot-cou\">few-shot action counting from wearable sensors</a> lets users give exemplars by voice and matches them to sensor sequences to estimate counts.",
+     "vi": "Các công trình về <a href=\"#aaai2024-count-what-you-want-exemplar-identification-and-few-shot-cou\">đếm hành động few-shot từ cảm biến đeo</a> cho người dùng đưa mẫu bằng giọng nói và đối sánh với chuỗi cảm biến để ước lượng số lần."
+    }
+   },
+   "gist_list": [
+    {
+     "n": 6,
+     "score": 0.98,
+     "key": "vision-multimodal",
+     "en": "Work on <a href=\"#cvpr2026-bluref-unsupervised-image-deblurring-with-dense-matching-ref\">unsupervised image deblurring</a> learns without paired data, alongside work on extreme-pose face data, 3D instance segmentation and fine-grained classification.",
+     "vi": "Các công trình về <a href=\"#cvpr2026-bluref-unsupervised-image-deblurring-with-dense-matching-ref\">khử mờ ảnh không giám sát</a> học không cần dữ liệu cặp, cùng khuôn mặt góc cực đoan, phân đoạn 3D và phân loại ảnh chi tiết."
+    },
+    {
+     "n": 6,
+     "score": 0.94,
+     "key": "generative-models",
+     "en": "Work on <a href=\"#iccv2025-supercharged-one-step-text-to-image-diffusion-models-with-ne\">one-step text-to-image diffusion</a> speeds up inpainting, personalization and negative prompts, and covers erasing narrow concepts and quality-controllable GANs.",
+     "vi": "Các công trình về <a href=\"#iccv2025-supercharged-one-step-text-to-image-diffusion-models-with-ne\">khuếch tán text-to-image một bước</a> tăng tốc inpainting, cá nhân hóa và prompt phủ định, và xóa khái niệm hẹp cùng GAN điều khiển chất lượng."
+    },
+    {
+     "n": 2,
+     "score": 0.2,
+     "key": "data-mining-graphs",
+     "en": "Work on <a href=\"#aaai2025-rem-a-scalable-reinforced-multi-expert-framework-for-multipl\">reinforcement-learning seed selection</a> for spreading influence across multiplex networks, and on choosing which nodes to label in incomplete graphs.",
+     "vi": "Các công trình về <a href=\"#aaai2025-rem-a-scalable-reinforced-multi-expert-framework-for-multipl\">chọn nút gốc bằng học tăng cường</a> để lan truyền ảnh hưởng trên mạng đa lớp, và chọn nút cần gán nhãn trong đồ thị không đầy đủ."
+    },
+    {
+     "n": 1,
+     "score": 0.2,
+     "key": "deep-learning",
+     "en": "Work on <a href=\"#icml2026-muonssm-orthogonalizing-state-space-models-for-sequence-mode\">state space models for sequences</a> adds a momentum pathway and spectrally conditioned updates to keep memory stable over long sequences.",
+     "vi": "Các công trình về <a href=\"#icml2026-muonssm-orthogonalizing-state-space-models-for-sequence-mode\">mô hình không gian trạng thái cho chuỗi</a> thêm đường động lượng và cập nhật điều kiện phổ để giữ bộ nhớ ổn định trên chuỗi dài."
+    },
+    {
+     "n": 1,
+     "score": 0.2,
+     "key": "hri-dialogue",
+     "en": "Work on <a href=\"#aaai2024-count-what-you-want-exemplar-identification-and-few-shot-cou\">few-shot action counting from wearable sensors</a> lets users give exemplars by voice and matches them to sensor sequences to estimate counts.",
+     "vi": "Các công trình về <a href=\"#aaai2024-count-what-you-want-exemplar-identification-and-few-shot-cou\">đếm hành động few-shot từ cảm biến đeo</a> cho người dùng đưa mẫu bằng giọng nói và đối sánh với chuỗi cảm biến để ước lượng số lần."
+    }
+   ]
+  },
+  {
+   "slug": "dung-d-le",
+   "done": false,
+   "name": "Dung D. Le",
+   "name_vi": "Lê Duy Dũng",
+   "institution": "VinUni",
+   "papers": 22,
+   "focus": "Efficient and adaptable deep learning across vision-language models such as CLIP, federated learning and unlearning, and multi-objective optimization with hypernetworks.",
+   "focus_vi": "Học sâu hiệu quả và dễ thích nghi, trải rộng trên mô hình thị giác - ngôn ngữ như CLIP, federated learning và machine unlearning, và tối ưu đa mục tiêu bằng hypernetwork.",
+   "score": 2.36,
+   "areas": [
+    {
+     "key": "deep-learning",
+     "score": 2.36
+    },
+    {
+     "key": "optimization",
+     "score": 2.36
+    }
+   ],
+   "gists": {},
+   "gist_list": []
+  },
+  {
    "slug": "huynh-thi-thanh-binh",
    "done": true,
    "name": "Huynh Thi Thanh Binh",
@@ -652,7 +434,7 @@
    "papers": 11,
    "focus": "Automatic design of heuristics for NP-hard combinatorial optimization by coupling large language models with evolutionary computation.",
    "focus_vi": "Thiết kế heuristic tự động cho các bài toán tối ưu tổ hợp NP-khó bằng cách kết hợp mô hình ngôn ngữ lớn với tính toán tiến hóa (evolutionary computation).",
-   "score": 0.75,
+   "score": 1.97,
    "areas": [
     {
      "key": "optimization",
@@ -746,103 +528,307 @@
    ]
   },
   {
-   "slug": "hoang-thanh-tung",
+   "slug": "than-quang-khoat",
    "done": false,
-   "name": "Hoang Thanh-Tung",
-   "name_vi": "Hoàng Thanh Tùng",
-   "institution": "VNU-UET",
-   "papers": 5,
-   "focus": "Trustworthiness of deep generative and language models, in particular machine unlearning in large language models, backdoor attacks and learning from noisy labels.",
-   "focus_vi": "Độ tin cậy của mô hình sinh và mô hình ngôn ngữ sâu, đặc biệt là xóa tri thức (machine unlearning) trong mô hình ngôn ngữ lớn, tấn công cửa hậu (backdoor) và học với nhãn nhiễu.",
-   "score": 0.73,
+   "name": "Than Quang Khoat",
+   "name_vi": "Thân Quang Khoát",
+   "institution": "HUST",
+   "papers": 18,
+   "focus": "Theoretical foundations of deep learning, especially generalization error bounds, alongside practical methods for continual learning and for compressing neural networks by pruning.",
+   "focus_vi": "Nền tảng lý thuyết của học sâu, đặc biệt là các cận sai số tổng quát hóa (generalization bound), song song với các phương pháp thực tiễn cho học liên tục (continual learning) và nén mạng nơ-ron bằng tỉa trọng số (pruning).",
+   "score": 1.84,
    "areas": [
     {
-     "key": "trustworthy-ai",
-     "score": 0.73
+     "key": "learning-theory",
+     "score": 1.84
     },
     {
-     "key": "generative-models",
-     "score": 0.73
+     "key": "deep-learning",
+     "score": 1.84
     }
    ],
    "gists": {},
    "gist_list": []
   },
   {
-   "slug": "trung-thanh-ngo",
-   "done": true,
-   "name": "Trung Thanh Ngo",
-   "name_vi": "Ngô Thành Trung",
-   "institution": "HUST",
-   "papers": 2,
-   "focus": "Physics-based computer vision, in particular inverse rendering of translucent objects: recovering shape, reflectance and subsurface scattering from images.",
-   "focus_vi": "Thị giác máy tính dựa trên vật lý, đặc biệt là kết xuất ngược (inverse rendering) cho vật thể trong mờ: khôi phục hình dạng, độ phản xạ và tán xạ dưới bề mặt từ ảnh.",
-   "score": 0.67,
+   "slug": "tho-quan",
+   "done": false,
+   "name": "Tho Quan",
+   "name_vi": "Quản Thành Thơ",
+   "institution": "HCMUT",
+   "papers": 9,
+   "focus": "Natural language processing with large language models, spanning multilingual and Vietnamese language modeling, repository-level code completion, and the theory and fine-tuning of sparse Mixture-of-Experts (MoE) models.",
+   "focus_vi": "Xử lý ngôn ngữ tự nhiên với mô hình ngôn ngữ lớn, trải rộng từ mô hình hóa đa ngôn ngữ và tiếng Việt, gợi ý mã nguồn ở mức kho mã (repository), đến lý thuyết và tinh chỉnh các mô hình Mixture-of-Experts (MoE) thưa.",
+   "score": 1.47,
+   "areas": [
+    {
+     "key": "language-nlp",
+     "score": 1.47
+    },
+    {
+     "key": "deep-learning",
+     "score": 1.47
+    }
+   ],
+   "gists": {},
+   "gist_list": []
+  },
+  {
+   "slug": "canh-v-pham",
+   "done": false,
+   "name": "Canh V. Pham",
+   "name_vi": "Phạm Văn Cảnh",
+   "institution": "Phenikaa",
+   "papers": 6,
+   "focus": "Approximation algorithms for submodular maximization, particularly fast parallel algorithms for non-monotone objectives under cardinality, knapsack and matroid constraints.",
+   "focus_vi": "Thuật toán xấp xỉ cho bài toán cực đại hóa hàm submodular, đặc biệt là các thuật toán song song nhanh cho hàm mục tiêu không đơn điệu dưới ràng buộc lực lượng, ràng buộc knapsack và ràng buộc matroid.",
+   "score": 1.25,
+   "areas": [
+    {
+     "key": "optimization",
+     "score": 1.25
+    },
+    {
+     "key": "efficient-scalable",
+     "score": 1.25
+    }
+   ],
+   "gists": {},
+   "gist_list": []
+  },
+  {
+   "slug": "binh-t-nguyen",
+   "done": false,
+   "name": "Binh T. Nguyen",
+   "name_vi": "Nguyễn Tuấn Bình",
+   "institution": "VinUni",
+   "papers": 7,
+   "focus": "Mathematical analysis of modern machine learning: why low-rank adaptation works, how reinforcement learning shapes the reasoning of large language models, and the theory of regularized optimal transport.",
+   "focus_vi": "Phân tích toán học cho học máy hiện đại: vì sao thích nghi hạng thấp (LoRA) hiệu quả, học tăng cường định hình khả năng suy luận của mô hình ngôn ngữ lớn ra sao, và lý thuyết vận chuyển tối ưu có chính quy hóa.",
+   "score": 1.08,
+   "areas": [
+    {
+     "key": "learning-theory",
+     "score": 1.08
+    },
+    {
+     "key": "language-nlp",
+     "score": 1.08
+    }
+   ],
+   "gists": {},
+   "gist_list": []
+  },
+  {
+   "slug": "duc-trong-le",
+   "done": false,
+   "name": "Duc-Trong Le",
+   "name_vi": "Lê Đức Trọng",
+   "institution": "VNU-UET",
+   "papers": 4,
+   "focus": "Multimodal and multi-label learning, especially keeping modalities balanced when some are missing, and learning new classes incrementally.",
+   "focus_vi": "Học đa phương thức và đa nhãn, đặc biệt là giữ cân bằng giữa các phương thức khi một số bị thiếu, và học tăng dần các lớp mới.",
+   "score": 1.03,
    "areas": [
     {
      "key": "vision-multimodal",
-     "score": 0.67
+     "score": 1.03
+    },
+    {
+     "key": "deep-learning",
+     "score": 1.03
+    }
+   ],
+   "gists": {},
+   "gist_list": []
+  },
+  {
+   "slug": "cuong-viet-ta",
+   "done": false,
+   "name": "Cuong Viet Ta",
+   "name_vi": "Tạ Việt Cường",
+   "institution": "VNU-UET",
+   "papers": 2,
+   "focus": "Graph representation learning in non-Euclidean geometries, such as hyperbolic and pseudo-Riemannian spaces, for static and temporal graphs.",
+   "focus_vi": "Học biểu diễn đồ thị trong các hình học phi Euclid như không gian hyperbolic và giả Riemann, cho cả đồ thị tĩnh và đồ thị theo thời gian.",
+   "score": 1.0,
+   "areas": [
+    {
+     "key": "data-mining-graphs",
+     "score": 1.0
+    },
+    {
+     "key": "deep-learning",
+     "score": 1.0
+    }
+   ],
+   "gists": {},
+   "gist_list": []
+  },
+  {
+   "slug": "nguyen-thi-ngoc-diep",
+   "done": true,
+   "name": "Nguyen Thi Ngoc Diep",
+   "name_vi": "Nguyễn Thị Ngọc Diệp",
+   "institution": "VNU-UET",
+   "papers": 9,
+   "focus": "Natural language processing with large language models, centered on knowledge distillation across different tokenizers, cross-lingual topic modeling and graph-based retrieval and memory for LLMs.",
+   "focus_vi": "Xử lý ngôn ngữ tự nhiên với mô hình ngôn ngữ lớn, tập trung vào chưng cất tri thức giữa các mô hình dùng bộ tách từ (tokenizer) khác nhau, mô hình chủ đề xuyên ngôn ngữ, và truy hồi cùng bộ nhớ dựa trên đồ thị cho LLM.",
+   "score": 0.96,
+   "areas": [
+    {
+     "key": "language-nlp",
+     "score": 0.96
+    }
+   ],
+   "gists": {
+    "language-nlp": {
+     "n": 9,
+     "score": 0.96,
+     "en": "Work on <a href=\"#emnlp2025-emo-embedding-model-distillation-via-intra-model-relation-an\">distilling text models across tokenizers</a> also covers topic models across languages, graph memory for LLMs and continual relation extraction.",
+     "vi": "Các công trình về <a href=\"#emnlp2025-emo-embedding-model-distillation-via-intra-model-relation-an\">chưng cất mô hình văn bản</a> giữa các tokenizer khác nhau còn gồm mô hình chủ đề đa ngôn ngữ, bộ nhớ đồ thị cho LLM và trích xuất quan hệ liên tục."
+    }
+   },
+   "gist_list": [
+    {
+     "n": 9,
+     "score": 0.96,
+     "key": "language-nlp",
+     "en": "Work on <a href=\"#emnlp2025-emo-embedding-model-distillation-via-intra-model-relation-an\">distilling text models across tokenizers</a> also covers topic models across languages, graph memory for LLMs and continual relation extraction.",
+     "vi": "Các công trình về <a href=\"#emnlp2025-emo-embedding-model-distillation-via-intra-model-relation-an\">chưng cất mô hình văn bản</a> giữa các tokenizer khác nhau còn gồm mô hình chủ đề đa ngôn ngữ, bộ nhớ đồ thị cho LLM và trích xuất quan hệ liên tục."
+    }
+   ]
+  },
+  {
+   "slug": "thanh-binh-nguyen",
+   "done": false,
+   "name": "Thanh-Binh Nguyen",
+   "name_vi": "Nguyễn Thanh Bình",
+   "institution": "HCMUS",
+   "papers": 11,
+   "focus": "A broad range of machine learning: efficient Transformers and sparse Mixture-of-Experts, aligning large language models with human preferences, federated and continual learning, and applied AI for medicine and Vietnamese text.",
+   "focus_vi": "Nhiều chủ đề học máy: Transformer hiệu quả và Mixture-of-Experts thưa, căn chỉnh mô hình ngôn ngữ lớn theo sở thích con người, học liên kết (federated learning) và học liên tục, cùng các ứng dụng AI cho y tế và văn bản tiếng Việt.",
+   "score": 0.85,
+   "areas": [
+    {
+     "key": "deep-learning",
+     "score": 0.85
+    },
+    {
+     "key": "language-nlp",
+     "score": 0.85
+    }
+   ],
+   "gists": {},
+   "gist_list": []
+  },
+  {
+   "slug": "tan-d-tran",
+   "done": false,
+   "name": "Tan D. Tran",
+   "name_vi": "Trần Đình Tân",
+   "institution": "Phenikaa",
+   "papers": 4,
+   "focus": "Parallel approximation algorithms for submodular maximization with non-monotone objectives under cardinality, knapsack and matroid constraints.",
+   "focus_vi": "Thuật toán xấp xỉ song song cho cực đại hóa hàm submodular không đơn điệu dưới ràng buộc lực lượng, ràng buộc knapsack và ràng buộc matroid.",
+   "score": 0.83,
+   "areas": [
+    {
+     "key": "optimization",
+     "score": 0.83
+    },
+    {
+     "key": "efficient-scalable",
+     "score": 0.83
+    }
+   ],
+   "gists": {},
+   "gist_list": []
+  },
+  {
+   "slug": "minh-do",
+   "done": true,
+   "name": "Minh Do",
+   "name_vi": "Đỗ Ngọc Minh",
+   "institution": "VinUni",
+   "papers": 5,
+   "focus": "Multimodal and representation learning, especially robustness to missing modalities, efficient contrastive alignment, and synthetic data generation for computer vision.",
+   "focus_vi": "Học đa phương thức và học biểu diễn, đặc biệt là độ bền vững khi thiếu phương thức, căn chỉnh tương phản (contrastive) hiệu quả, và sinh dữ liệu tổng hợp cho thị giác máy tính.",
+   "score": 0.8,
+   "areas": [
+    {
+     "key": "vision-multimodal",
+     "score": 0.33
+    },
+    {
+     "key": "deep-learning",
+     "score": 0.33
+    },
+    {
+     "key": "generative-models",
+     "score": 0.14
+    },
+    {
+     "key": "health-science",
+     "score": 0
     }
    ],
    "gists": {
     "vision-multimodal": {
      "n": 2,
-     "score": 0.67,
-     "en": "Work on <a href=\"#cvpr2023-inverse-rendering-of-translucent-objects-using-physical-and-\">inverse rendering of translucent objects</a> estimates shape and light scattering inside the material from very few images, using flash photos or polarized light.",
-     "vi": "Các công trình về <a href=\"#cvpr2023-inverse-rendering-of-translucent-objects-using-physical-and-\">suy ngược kết xuất vật thể trong mờ</a> ước lượng hình dạng và sự tán xạ ánh sáng bên trong vật liệu từ rất ít ảnh, dùng ảnh flash hoặc ánh sáng phân cực."
+     "score": 0.33,
+     "en": "Work on <a href=\"#ijcai2025-robult-leveraging-redundancy-and-modality-specific-features-\">multimodal learning with absent inputs</a> keeps models working when some modalities are missing, using contrastive and reconstruction losses and uncertainty estimates.",
+     "vi": "Các công trình về <a href=\"#ijcai2025-robult-leveraging-redundancy-and-modality-specific-features-\">học đa phương thức khi thiếu đầu vào</a> giữ mô hình hoạt động khi một số phương thức bị thiếu, bằng hàm mất mát tương phản, tái tạo và ước lượng độ bất định."
+    },
+    "deep-learning": {
+     "n": 1,
+     "score": 0.33,
+     "en": "Work on <a href=\"#iclr2026-unicon-unified-framework-for-efficient-contrastive-alignment\">closed-form contrastive alignment</a> replaces repeated minibatch gradient training with one spectral decomposition, for linear and kernelized encoders.",
+     "vi": "Các công trình về <a href=\"#iclr2026-unicon-unified-framework-for-efficient-contrastive-alignment\">căn chỉnh tương phản dạng đóng</a> thay việc huấn luyện gradient theo minibatch lặp lại bằng một phép phân rã phổ, cho bộ mã hóa tuyến tính và kernel."
+    },
+    "generative-models": {
+     "n": 1,
+     "score": 0.14,
+     "en": "Work on <a href=\"#eccv2026-ac3s-adaptive-conditioning-for-3d-aware-synthetic-data-gener\">3D-aware synthetic image generation</a> with diffusion models, scaling down visual-prompt conditioning adaptively to avoid over-conditioning artifacts.",
+     "vi": "Các công trình về <a href=\"#eccv2026-ac3s-adaptive-conditioning-for-3d-aware-synthetic-data-gener\">sinh ảnh tổng hợp nhận biết 3D</a> bằng mô hình khuếch tán, giảm cường độ điều kiện hóa bằng gợi ý thị giác một cách thích ứng để tránh lỗi do điều kiện hóa quá mức."
+    },
+    "health-science": {
+     "n": 1,
+     "score": 0,
+     "en": "Work on <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">condensing gigapixel pathology slides</a> into a slide-adaptive set of concept prototypes by decomposing each slide, condensing, and pruning unused concepts.",
+     "vi": "Các công trình về <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">nén ảnh bệnh lý gigapixel</a> thành một tập prototype khái niệm thích ứng theo từng tiêu bản, bằng cách phân rã, nén và cắt tỉa các khái niệm không dùng."
     }
    },
    "gist_list": [
     {
      "n": 2,
-     "score": 0.67,
+     "score": 0.33,
      "key": "vision-multimodal",
-     "en": "Work on <a href=\"#cvpr2023-inverse-rendering-of-translucent-objects-using-physical-and-\">inverse rendering of translucent objects</a> estimates shape and light scattering inside the material from very few images, using flash photos or polarized light.",
-     "vi": "Các công trình về <a href=\"#cvpr2023-inverse-rendering-of-translucent-objects-using-physical-and-\">suy ngược kết xuất vật thể trong mờ</a> ước lượng hình dạng và sự tán xạ ánh sáng bên trong vật liệu từ rất ít ảnh, dùng ảnh flash hoặc ánh sáng phân cực."
-    }
-   ]
-  },
-  {
-   "slug": "nam-le-hai",
-   "done": false,
-   "name": "Nam Le Hai",
-   "name_vi": "Lê Hải Nam",
-   "institution": "HUST",
-   "papers": 9,
-   "focus": "Large language models for software engineering, including code generation, unit test generation and code-understanding benchmarks, alongside continual relation extraction and retrieval for LLMs.",
-   "focus_vi": "Mô hình ngôn ngữ lớn cho kỹ nghệ phần mềm, gồm sinh mã, sinh kiểm thử đơn vị và các bộ đánh giá năng lực hiểu mã, cùng với trích xuất quan hệ liên tục và truy hồi cho LLM.",
-   "score": 0.62,
-   "areas": [
-    {
-     "key": "language-nlp",
-     "score": 0.62
-    }
-   ],
-   "gists": {},
-   "gist_list": []
-  },
-  {
-   "slug": "cuong-do",
-   "done": false,
-   "name": "Cuong Do",
-   "name_vi": "Đỗ Danh Cường",
-   "institution": "VinUni",
-   "papers": 3,
-   "focus": "Reliable and privacy-preserving machine learning for real-world domains such as medical imaging and air quality forecasting.",
-   "focus_vi": "Học máy đáng tin cậy và bảo vệ quyền riêng tư cho các lĩnh vực thực tế như ảnh y tế và dự báo chất lượng không khí.",
-   "score": 0.57,
-   "areas": [
-    {
-     "key": "trustworthy-ai",
-     "score": 0.57
+     "en": "Work on <a href=\"#ijcai2025-robult-leveraging-redundancy-and-modality-specific-features-\">multimodal learning with absent inputs</a> keeps models working when some modalities are missing, using contrastive and reconstruction losses and uncertainty estimates.",
+     "vi": "Các công trình về <a href=\"#ijcai2025-robult-leveraging-redundancy-and-modality-specific-features-\">học đa phương thức khi thiếu đầu vào</a> giữ mô hình hoạt động khi một số phương thức bị thiếu, bằng hàm mất mát tương phản, tái tạo và ước lượng độ bất định."
     },
     {
+     "n": 1,
+     "score": 0.33,
+     "key": "deep-learning",
+     "en": "Work on <a href=\"#iclr2026-unicon-unified-framework-for-efficient-contrastive-alignment\">closed-form contrastive alignment</a> replaces repeated minibatch gradient training with one spectral decomposition, for linear and kernelized encoders.",
+     "vi": "Các công trình về <a href=\"#iclr2026-unicon-unified-framework-for-efficient-contrastive-alignment\">căn chỉnh tương phản dạng đóng</a> thay việc huấn luyện gradient theo minibatch lặp lại bằng một phép phân rã phổ, cho bộ mã hóa tuyến tính và kernel."
+    },
+    {
+     "n": 1,
+     "score": 0,
      "key": "health-science",
-     "score": 0.57
+     "en": "Work on <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">condensing gigapixel pathology slides</a> into a slide-adaptive set of concept prototypes by decomposing each slide, condensing, and pruning unused concepts.",
+     "vi": "Các công trình về <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">nén ảnh bệnh lý gigapixel</a> thành một tập prototype khái niệm thích ứng theo từng tiêu bản, bằng cách phân rã, nén và cắt tỉa các khái niệm không dùng."
+    },
+    {
+     "n": 1,
+     "score": 0.14,
+     "key": "generative-models",
+     "en": "Work on <a href=\"#eccv2026-ac3s-adaptive-conditioning-for-3d-aware-synthetic-data-gener\">3D-aware synthetic image generation</a> with diffusion models, scaling down visual-prompt conditioning adaptively to avoid over-conditioning artifacts.",
+     "vi": "Các công trình về <a href=\"#eccv2026-ac3s-adaptive-conditioning-for-3d-aware-synthetic-data-gener\">sinh ảnh tổng hợp nhận biết 3D</a> bằng mô hình khuếch tán, giảm cường độ điều kiện hóa bằng gợi ý thị giác một cách thích ứng để tránh lỗi do điều kiện hóa quá mức."
     }
-   ],
-   "gists": {},
-   "gist_list": []
+   ]
   },
   {
    "slug": "tuan-do",
@@ -853,7 +839,7 @@
    "papers": 6,
    "focus": "Theoretical machine learning: identifiability and sample complexity for causal discovery, activation steering and world models, together with structure-preserving neural operators and learning in games.",
    "focus_vi": "Học máy lý thuyết: tính khả nhận dạng (identifiability) và độ phức tạp mẫu cho khám phá nhân quả, điều hướng kích hoạt và mô hình thế giới (world model), cùng với toán tử nơ-ron bảo toàn cấu trúc và học trong trò chơi.",
-   "score": 0.56,
+   "score": 0.76,
    "areas": [
     {
      "key": "learning-theory",
@@ -921,7 +907,7 @@
    "papers": 2,
    "focus": "Reinforcement learning and LLM-based decision systems, specifically constrained multi-objective reinforcement learning and the translation of natural-language optimization problems into solver code.",
    "focus_vi": "Học tăng cường và hệ ra quyết định dựa trên LLM, cụ thể là học tăng cường đa mục tiêu có ràng buộc và chuyển các bài toán tối ưu mô tả bằng ngôn ngữ tự nhiên thành mã cho bộ giải.",
-   "score": 0.5,
+   "score": 0.75,
    "areas": [
     {
      "key": "rl-planning-agents",
@@ -962,6 +948,275 @@
      "vi": "Các công trình về <a href=\"#neurips2026-compass-composable-policy-amortized-structured-search-for-ll\">truy xuất mẫu tối ưu hóa được học</a> cho mã bộ giải do LLM viết, huấn luyện bằng học tăng cường từ phản hồi của bộ giải và bộ đánh giá."
     }
    ]
+  },
+  {
+   "slug": "hoang-thanh-tung",
+   "done": false,
+   "name": "Hoang Thanh-Tung",
+   "name_vi": "Hoàng Thanh Tùng",
+   "institution": "VNU-UET",
+   "papers": 5,
+   "focus": "Trustworthiness of deep generative and language models, in particular machine unlearning in large language models, backdoor attacks and learning from noisy labels.",
+   "focus_vi": "Độ tin cậy của mô hình sinh và mô hình ngôn ngữ sâu, đặc biệt là xóa tri thức (machine unlearning) trong mô hình ngôn ngữ lớn, tấn công cửa hậu (backdoor) và học với nhãn nhiễu.",
+   "score": 0.73,
+   "areas": [
+    {
+     "key": "trustworthy-ai",
+     "score": 0.73
+    },
+    {
+     "key": "generative-models",
+     "score": 0.73
+    }
+   ],
+   "gists": {},
+   "gist_list": []
+  },
+  {
+   "slug": "dinh-viet-sang",
+   "done": true,
+   "name": "Dinh Viet Sang",
+   "name_vi": "Đinh Viết Sang",
+   "institution": "HUST",
+   "papers": 8,
+   "focus": "Neural topic modeling and representation learning, along with knowledge distillation for vision-language embedding models and learning from partial labels in computer vision.",
+   "focus_vi": "Mô hình chủ đề nơ-ron và học biểu diễn, cùng với chưng cất tri thức cho mô hình embedding thị giác-ngôn ngữ và học với nhãn không đầy đủ trong thị giác máy tính.",
+   "score": 0.7,
+   "areas": [
+    {
+     "key": "vision-multimodal",
+     "score": 0.37
+    },
+    {
+     "key": "language-nlp",
+     "score": 0.33
+    },
+    {
+     "key": "optimization",
+     "score": 0
+    }
+   ],
+   "gists": {
+    "vision-multimodal": {
+     "n": 2,
+     "score": 0.37,
+     "en": "Work on <a href=\"#emnlp2026-pga-kd-principal-geometry-alignment-and-semantic-consistency\">compressing vision-language embedding models</a> trains small students to match large teachers, and on multi-label classification from one known label per image.",
+     "vi": "Các công trình về <a href=\"#emnlp2026-pga-kd-principal-geometry-alignment-and-semantic-consistency\">nén mô hình embedding thị giác–ngôn ngữ</a> huấn luyện mô hình trò khớp mô hình thầy, và phân loại đa nhãn từ một nhãn đã biết mỗi ảnh."
+    },
+    "language-nlp": {
+     "n": 5,
+     "score": 0.33,
+     "en": "Work on <a href=\"#acl2026-llm-xtm-enhancing-cross-lingual-topic-models-with-large-lang\">cross-lingual topic modelling</a> and neural topic models, with LLMs, optimal transport and contrastive learning, and on few-shot continual relation extraction.",
+     "vi": "Các công trình về <a href=\"#acl2026-llm-xtm-enhancing-cross-lingual-topic-models-with-large-lang\">mô hình chủ đề đa ngôn ngữ</a> và mô hình chủ đề nơ-ron, dùng LLM, vận chuyển tối ưu, học tương phản, và trích xuất quan hệ few-shot."
+    },
+    "optimization": {
+     "n": 1,
+     "score": 0,
+     "en": "Work on <a href=\"#emnlp2025-multi-surrogate-objective-optimization-for-neural-topic-mode\">balancing losses in topic models</a> applies multi-objective optimization to surrogate losses with more balanced magnitudes.",
+     "vi": "Các công trình về <a href=\"#emnlp2025-multi-surrogate-objective-optimization-for-neural-topic-mode\">cân bằng hàm mất mát trong mô hình chủ đề</a> áp dụng tối ưu đa mục tiêu lên hàm mất mát thay thế cân bằng hơn."
+    }
+   },
+   "gist_list": [
+    {
+     "n": 5,
+     "score": 0.33,
+     "key": "language-nlp",
+     "en": "Work on <a href=\"#acl2026-llm-xtm-enhancing-cross-lingual-topic-models-with-large-lang\">cross-lingual topic modelling</a> and neural topic models, with LLMs, optimal transport and contrastive learning, and on few-shot continual relation extraction.",
+     "vi": "Các công trình về <a href=\"#acl2026-llm-xtm-enhancing-cross-lingual-topic-models-with-large-lang\">mô hình chủ đề đa ngôn ngữ</a> và mô hình chủ đề nơ-ron, dùng LLM, vận chuyển tối ưu, học tương phản, và trích xuất quan hệ few-shot."
+    },
+    {
+     "n": 2,
+     "score": 0.37,
+     "key": "vision-multimodal",
+     "en": "Work on <a href=\"#emnlp2026-pga-kd-principal-geometry-alignment-and-semantic-consistency\">compressing vision-language embedding models</a> trains small students to match large teachers, and on multi-label classification from one known label per image.",
+     "vi": "Các công trình về <a href=\"#emnlp2026-pga-kd-principal-geometry-alignment-and-semantic-consistency\">nén mô hình embedding thị giác–ngôn ngữ</a> huấn luyện mô hình trò khớp mô hình thầy, và phân loại đa nhãn từ một nhãn đã biết mỗi ảnh."
+    },
+    {
+     "n": 1,
+     "score": 0,
+     "key": "optimization",
+     "en": "Work on <a href=\"#emnlp2025-multi-surrogate-objective-optimization-for-neural-topic-mode\">balancing losses in topic models</a> applies multi-objective optimization to surrogate losses with more balanced magnitudes.",
+     "vi": "Các công trình về <a href=\"#emnlp2025-multi-surrogate-objective-optimization-for-neural-topic-mode\">cân bằng hàm mất mát trong mô hình chủ đề</a> áp dụng tối ưu đa mục tiêu lên hàm mất mát thay thế cân bằng hơn."
+    }
+   ]
+  },
+  {
+   "slug": "trung-thanh-ngo",
+   "done": true,
+   "name": "Trung Thanh Ngo",
+   "name_vi": "Ngô Thành Trung",
+   "institution": "HUST",
+   "papers": 2,
+   "focus": "Physics-based computer vision, in particular inverse rendering of translucent objects: recovering shape, reflectance and subsurface scattering from images.",
+   "focus_vi": "Thị giác máy tính dựa trên vật lý, đặc biệt là kết xuất ngược (inverse rendering) cho vật thể trong mờ: khôi phục hình dạng, độ phản xạ và tán xạ dưới bề mặt từ ảnh.",
+   "score": 0.67,
+   "areas": [
+    {
+     "key": "vision-multimodal",
+     "score": 0.67
+    }
+   ],
+   "gists": {
+    "vision-multimodal": {
+     "n": 2,
+     "score": 0.67,
+     "en": "Work on <a href=\"#cvpr2023-inverse-rendering-of-translucent-objects-using-physical-and-\">inverse rendering of translucent objects</a> estimates shape and light scattering inside the material from very few images, using flash photos or polarized light.",
+     "vi": "Các công trình về <a href=\"#cvpr2023-inverse-rendering-of-translucent-objects-using-physical-and-\">suy ngược kết xuất vật thể trong mờ</a> ước lượng hình dạng và sự tán xạ ánh sáng bên trong vật liệu từ rất ít ảnh, dùng ảnh flash hoặc ánh sáng phân cực."
+    }
+   },
+   "gist_list": [
+    {
+     "n": 2,
+     "score": 0.67,
+     "key": "vision-multimodal",
+     "en": "Work on <a href=\"#cvpr2023-inverse-rendering-of-translucent-objects-using-physical-and-\">inverse rendering of translucent objects</a> estimates shape and light scattering inside the material from very few images, using flash photos or polarized light.",
+     "vi": "Các công trình về <a href=\"#cvpr2023-inverse-rendering-of-translucent-objects-using-physical-and-\">suy ngược kết xuất vật thể trong mờ</a> ước lượng hình dạng và sự tán xạ ánh sáng bên trong vật liệu từ rất ít ảnh, dùng ảnh flash hoặc ánh sáng phân cực."
+    }
+   ]
+  },
+  {
+   "slug": "hoang-ta",
+   "done": true,
+   "name": "Hoang Ta",
+   "name_vi": "Tạ Duy Hoàng",
+   "institution": "HUST",
+   "papers": 3,
+   "focus": "Pure exploration and planning under uncertainty, including best-arm identification in multi-armed bandits and Monte Carlo tree search in stochastic environments.",
+   "focus_vi": "Khám phá thuần túy (pure exploration) và lập kế hoạch dưới bất định, gồm xác định nhánh tốt nhất trong bài toán máy đánh bạc nhiều tay (multi-armed bandit) và tìm kiếm cây Monte Carlo trong môi trường ngẫu nhiên.",
+   "score": 0.65,
+   "areas": [
+    {
+     "key": "learning-theory",
+     "score": 0.4
+    },
+    {
+     "key": "rl-planning-agents",
+     "score": 0.25
+    }
+   ],
+   "gists": {
+    "learning-theory": {
+     "n": 2,
+     "score": 0.4,
+     "en": "Work on <a href=\"#neurips2026-nearly-optimal-fixed-confidence-best-arm-identification-with\">best-arm identification with one-bit feedback</a> and variance-driven sampling gives guarantees for selecting the best option under limited information.",
+     "vi": "Các công trình về <a href=\"#neurips2026-nearly-optimal-fixed-confidence-best-arm-identification-with\">xác định cánh tay tốt nhất</a> với phản hồi một bit và lấy mẫu dựa trên phương sai đưa ra bảo đảm khi chọn phương án tốt nhất trong điều kiện thông tin hạn chế."
+    },
+    "rl-planning-agents": {
+     "n": 1,
+     "score": 0.25,
+     "en": "Work on <a href=\"#neurips2026-graph-based-stochastic-power-uct-monte-carlo-graph-search-wi\">graph-based Monte-Carlo planning</a> that shares states reached at the same depth across trajectories, making planning in stochastic environments more sample efficient.",
+     "vi": "Các công trình về <a href=\"#neurips2026-graph-based-stochastic-power-uct-monte-carlo-graph-search-wi\">lập kế hoạch Monte-Carlo dựa trên đồ thị</a> chia sẻ các trạng thái đạt được ở cùng độ sâu giữa các quỹ đạo để lập kế hoạch trong môi trường ngẫu nhiên tiết kiệm mẫu hơn."
+    }
+   },
+   "gist_list": [
+    {
+     "n": 2,
+     "score": 0.4,
+     "key": "learning-theory",
+     "en": "Work on <a href=\"#neurips2026-nearly-optimal-fixed-confidence-best-arm-identification-with\">best-arm identification with one-bit feedback</a> and variance-driven sampling gives guarantees for selecting the best option under limited information.",
+     "vi": "Các công trình về <a href=\"#neurips2026-nearly-optimal-fixed-confidence-best-arm-identification-with\">xác định cánh tay tốt nhất</a> với phản hồi một bit và lấy mẫu dựa trên phương sai đưa ra bảo đảm khi chọn phương án tốt nhất trong điều kiện thông tin hạn chế."
+    },
+    {
+     "n": 1,
+     "score": 0.25,
+     "key": "rl-planning-agents",
+     "en": "Work on <a href=\"#neurips2026-graph-based-stochastic-power-uct-monte-carlo-graph-search-wi\">graph-based Monte-Carlo planning</a> that shares states reached at the same depth across trajectories, making planning in stochastic environments more sample efficient.",
+     "vi": "Các công trình về <a href=\"#neurips2026-graph-based-stochastic-power-uct-monte-carlo-graph-search-wi\">lập kế hoạch Monte-Carlo dựa trên đồ thị</a> chia sẻ các trạng thái đạt được ở cùng độ sâu giữa các quỹ đạo để lập kế hoạch trong môi trường ngẫu nhiên tiết kiệm mẫu hơn."
+    }
+   ]
+  },
+  {
+   "slug": "nam-le-hai",
+   "done": false,
+   "name": "Nam Le Hai",
+   "name_vi": "Lê Hải Nam",
+   "institution": "HUST",
+   "papers": 9,
+   "focus": "Large language models for software engineering, including code generation, unit test generation and code-understanding benchmarks, alongside continual relation extraction and retrieval for LLMs.",
+   "focus_vi": "Mô hình ngôn ngữ lớn cho kỹ nghệ phần mềm, gồm sinh mã, sinh kiểm thử đơn vị và các bộ đánh giá năng lực hiểu mã, cùng với trích xuất quan hệ liên tục và truy hồi cho LLM.",
+   "score": 0.62,
+   "areas": [
+    {
+     "key": "language-nlp",
+     "score": 0.62
+    }
+   ],
+   "gists": {},
+   "gist_list": []
+  },
+  {
+   "slug": "thuy-t-nguyen",
+   "done": true,
+   "name": "Thuy T. Nguyen",
+   "name_vi": "Nguyễn Thị Thủy",
+   "institution": "RMIT",
+   "papers": 2,
+   "focus": "Adapting foundation models and training multimodal networks, with emphasis on routing collapse in time-series mixtures of adapters and on under-used weak modalities.",
+   "focus_vi": "Thích nghi mô hình nền tảng và huấn luyện mạng đa phương thức, tập trung vào hiện tượng sụp đổ định tuyến trong hỗn hợp adapter cho chuỗi thời gian và việc các phương thức yếu bị khai thác chưa đủ.",
+   "score": 0.58,
+   "areas": [
+    {
+     "key": "vision-multimodal",
+     "score": 0.33
+    },
+    {
+     "key": "deep-learning",
+     "score": 0.25
+    }
+   ],
+   "gists": {
+    "vision-multimodal": {
+     "n": 1,
+     "score": 0.33,
+     "en": "Work on <a href=\"#neurips2026-probe-guided-gradient-balancing-for-multimodal-learning\">balancing modalities in multimodal training</a> measures each modality's representation quality with linear probes and boosts the gradients of weaker modalities.",
+     "vi": "Các công trình về <a href=\"#neurips2026-probe-guided-gradient-balancing-for-multimodal-learning\">cân bằng các phương thức trong huấn luyện đa phương thức</a> đo chất lượng biểu diễn của từng phương thức bằng probe tuyến tính và khuếch đại gradient của các phương thức yếu hơn."
+    },
+    "deep-learning": {
+     "n": 1,
+     "score": 0.25,
+     "en": "Work on <a href=\"#neurips2026-raw-routed-mixture-of-adapters-a-causal-intervention-for-rou\">routing in mixtures of adapters</a> addresses one expert absorbing all inputs when time series foundation models use instance normalization.",
+     "vi": "Các công trình về <a href=\"#neurips2026-raw-routed-mixture-of-adapters-a-causal-intervention-for-rou\">định tuyến trong hỗn hợp adapter</a> xử lý việc một expert thu hết mọi đầu vào khi các foundation model chuỗi thời gian dùng instance normalization."
+    }
+   },
+   "gist_list": [
+    {
+     "n": 1,
+     "score": 0.33,
+     "key": "vision-multimodal",
+     "en": "Work on <a href=\"#neurips2026-probe-guided-gradient-balancing-for-multimodal-learning\">balancing modalities in multimodal training</a> measures each modality's representation quality with linear probes and boosts the gradients of weaker modalities.",
+     "vi": "Các công trình về <a href=\"#neurips2026-probe-guided-gradient-balancing-for-multimodal-learning\">cân bằng các phương thức trong huấn luyện đa phương thức</a> đo chất lượng biểu diễn của từng phương thức bằng probe tuyến tính và khuếch đại gradient của các phương thức yếu hơn."
+    },
+    {
+     "n": 1,
+     "score": 0.25,
+     "key": "deep-learning",
+     "en": "Work on <a href=\"#neurips2026-raw-routed-mixture-of-adapters-a-causal-intervention-for-rou\">routing in mixtures of adapters</a> addresses one expert absorbing all inputs when time series foundation models use instance normalization.",
+     "vi": "Các công trình về <a href=\"#neurips2026-raw-routed-mixture-of-adapters-a-causal-intervention-for-rou\">định tuyến trong hỗn hợp adapter</a> xử lý việc một expert thu hết mọi đầu vào khi các foundation model chuỗi thời gian dùng instance normalization."
+    }
+   ]
+  },
+  {
+   "slug": "cuong-do",
+   "done": false,
+   "name": "Cuong Do",
+   "name_vi": "Đỗ Danh Cường",
+   "institution": "VinUni",
+   "papers": 3,
+   "focus": "Reliable and privacy-preserving machine learning for real-world domains such as medical imaging and air quality forecasting.",
+   "focus_vi": "Học máy đáng tin cậy và bảo vệ quyền riêng tư cho các lĩnh vực thực tế như ảnh y tế và dự báo chất lượng không khí.",
+   "score": 0.57,
+   "areas": [
+    {
+     "key": "trustworthy-ai",
+     "score": 0.57
+    },
+    {
+     "key": "health-science",
+     "score": 0.57
+    }
+   ],
+   "gists": {},
+   "gist_list": []
   },
   {
    "slug": "trung-thanh-nguyen",
@@ -1040,53 +1295,70 @@
    "gist_list": []
   },
   {
-   "slug": "hoang-ta",
+   "slug": "hieu-pham",
    "done": true,
-   "name": "Hoang Ta",
-   "name_vi": "Tạ Duy Hoàng",
-   "institution": "HUST",
-   "papers": 3,
-   "focus": "Pure exploration and planning under uncertainty, including best-arm identification in multi-armed bandits and Monte Carlo tree search in stochastic environments.",
-   "focus_vi": "Khám phá thuần túy (pure exploration) và lập kế hoạch dưới bất định, gồm xác định nhánh tốt nhất trong bài toán máy đánh bạc nhiều tay (multi-armed bandit) và tìm kiếm cây Monte Carlo trong môi trường ngẫu nhiên.",
+   "name": "Hieu Pham",
+   "name_vi": "Phạm Huy Hiệu",
+   "institution": "VinUni",
+   "papers": 5,
+   "focus": "Robust and interpretable deep learning, covering domain generalization, neuron-level interpretability, continual learning, and machine learning for computational pathology.",
+   "focus_vi": "Học sâu bền vững và diễn giải được, gồm tổng quát hóa miền, diễn giải ở mức nơ-ron, học liên tục, và học máy cho bệnh học tính toán.",
    "score": 0.4,
    "areas": [
     {
-     "key": "learning-theory",
-     "score": 0.4
+     "key": "deep-learning",
+     "score": 0.2
     },
     {
-     "key": "rl-planning-agents",
-     "score": 0.25
+     "key": "trustworthy-ai",
+     "score": 0.2
+    },
+    {
+     "key": "health-science",
+     "score": 0
     }
    ],
    "gists": {
-    "learning-theory": {
-     "n": 2,
-     "score": 0.4,
-     "en": "Work on <a href=\"#neurips2026-nearly-optimal-fixed-confidence-best-arm-identification-with\">best-arm identification with one-bit feedback</a> and variance-driven sampling gives guarantees for selecting the best option under limited information.",
-     "vi": "Các công trình về <a href=\"#neurips2026-nearly-optimal-fixed-confidence-best-arm-identification-with\">xác định cánh tay tốt nhất</a> với phản hồi một bit và lấy mẫu dựa trên phương sai đưa ra bảo đảm khi chọn phương án tốt nhất trong điều kiện thông tin hạn chế."
+    "deep-learning": {
+     "n": 3,
+     "score": 0.2,
+     "en": "Work on <a href=\"#iccv2025-conststyle-robust-domain-generalization-with-unified-style-t\">domain generalization by unified style mapping</a>, closed-form continual learning under memory limits and noise-resilient time-series representations.",
+     "vi": "Các công trình về <a href=\"#iccv2025-conststyle-robust-domain-generalization-with-unified-style-t\">tổng quát hóa miền</a> bằng ánh xạ phong cách thống nhất, học liên tục dạng đóng dưới giới hạn bộ nhớ và biểu diễn chuỗi thời gian chịu nhiễu."
     },
-    "rl-planning-agents": {
+    "trustworthy-ai": {
      "n": 1,
-     "score": 0.25,
-     "en": "Work on <a href=\"#neurips2026-graph-based-stochastic-power-uct-monte-carlo-graph-search-wi\">graph-based Monte-Carlo planning</a> that shares states reached at the same depth across trajectories, making planning in stochastic environments more sample efficient.",
-     "vi": "Các công trình về <a href=\"#neurips2026-graph-based-stochastic-power-uct-monte-carlo-graph-search-wi\">lập kế hoạch Monte-Carlo dựa trên đồ thị</a> chia sẻ các trạng thái đạt được ở cùng độ sâu giữa các quỹ đạo để lập kế hoạch trong môi trường ngẫu nhiên tiết kiệm mẫu hơn."
+     "score": 0.2,
+     "en": "Work on <a href=\"#iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-\">explaining neural networks through neuron groups</a>, grouping neurons by shared function into hierarchical circuits, including neurons that encode several unrelated features.",
+     "vi": "Các công trình về <a href=\"#iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-\">giải thích mạng nơ-ron qua các nhóm nơ-ron</a>, gom nơ-ron theo chức năng chung thành các mạch phân cấp, kể cả các nơ-ron mã hóa nhiều đặc trưng không liên quan."
+    },
+    "health-science": {
+     "n": 1,
+     "score": 0,
+     "en": "Work on <a href=\"#iclr2027-is-h-e-image-to-spatial-transcriptomics-simpler-than-it-look\">predicting gene expression from tissue images</a> reweights supervision toward within-slide variation instead of slide-level averages.",
+     "vi": "Các công trình về <a href=\"#iclr2027-is-h-e-image-to-spatial-transcriptomics-simpler-than-it-look\">dự đoán biểu hiện gen theo không gian từ ảnh mô</a> tăng trọng số giám sát cho biến thiên trong cùng một slide thay vì giá trị trung bình cấp slide."
     }
    },
    "gist_list": [
     {
-     "n": 2,
-     "score": 0.4,
-     "key": "learning-theory",
-     "en": "Work on <a href=\"#neurips2026-nearly-optimal-fixed-confidence-best-arm-identification-with\">best-arm identification with one-bit feedback</a> and variance-driven sampling gives guarantees for selecting the best option under limited information.",
-     "vi": "Các công trình về <a href=\"#neurips2026-nearly-optimal-fixed-confidence-best-arm-identification-with\">xác định cánh tay tốt nhất</a> với phản hồi một bit và lấy mẫu dựa trên phương sai đưa ra bảo đảm khi chọn phương án tốt nhất trong điều kiện thông tin hạn chế."
+     "n": 3,
+     "score": 0.2,
+     "key": "deep-learning",
+     "en": "Work on <a href=\"#iccv2025-conststyle-robust-domain-generalization-with-unified-style-t\">domain generalization by unified style mapping</a>, closed-form continual learning under memory limits and noise-resilient time-series representations.",
+     "vi": "Các công trình về <a href=\"#iccv2025-conststyle-robust-domain-generalization-with-unified-style-t\">tổng quát hóa miền</a> bằng ánh xạ phong cách thống nhất, học liên tục dạng đóng dưới giới hạn bộ nhớ và biểu diễn chuỗi thời gian chịu nhiễu."
     },
     {
      "n": 1,
-     "score": 0.25,
-     "key": "rl-planning-agents",
-     "en": "Work on <a href=\"#neurips2026-graph-based-stochastic-power-uct-monte-carlo-graph-search-wi\">graph-based Monte-Carlo planning</a> that shares states reached at the same depth across trajectories, making planning in stochastic environments more sample efficient.",
-     "vi": "Các công trình về <a href=\"#neurips2026-graph-based-stochastic-power-uct-monte-carlo-graph-search-wi\">lập kế hoạch Monte-Carlo dựa trên đồ thị</a> chia sẻ các trạng thái đạt được ở cùng độ sâu giữa các quỹ đạo để lập kế hoạch trong môi trường ngẫu nhiên tiết kiệm mẫu hơn."
+     "score": 0,
+     "key": "health-science",
+     "en": "Work on <a href=\"#iclr2027-is-h-e-image-to-spatial-transcriptomics-simpler-than-it-look\">predicting gene expression from tissue images</a> reweights supervision toward within-slide variation instead of slide-level averages.",
+     "vi": "Các công trình về <a href=\"#iclr2027-is-h-e-image-to-spatial-transcriptomics-simpler-than-it-look\">dự đoán biểu hiện gen theo không gian từ ảnh mô</a> tăng trọng số giám sát cho biến thiên trong cùng một slide thay vì giá trị trung bình cấp slide."
+    },
+    {
+     "n": 1,
+     "score": 0.2,
+     "key": "trustworthy-ai",
+     "en": "Work on <a href=\"#iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-\">explaining neural networks through neuron groups</a>, grouping neurons by shared function into hierarchical circuits, including neurons that encode several unrelated features.",
+     "vi": "Các công trình về <a href=\"#iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-\">giải thích mạng nơ-ron qua các nhóm nơ-ron</a>, gom nơ-ron theo chức năng chung thành các mạch phân cấp, kể cả các nơ-ron mã hóa nhiều đặc trưng không liên quan."
     }
    ]
   },
@@ -1114,206 +1386,104 @@
    "gist_list": []
   },
   {
-   "slug": "dinh-viet-sang",
+   "slug": "thanh-trung-huynh",
    "done": true,
-   "name": "Dinh Viet Sang",
-   "name_vi": "Đinh Viết Sang",
-   "institution": "HUST",
-   "papers": 8,
-   "focus": "Neural topic modeling and representation learning, along with knowledge distillation for vision-language embedding models and learning from partial labels in computer vision.",
-   "focus_vi": "Mô hình chủ đề nơ-ron và học biểu diễn, cùng với chưng cất tri thức cho mô hình embedding thị giác-ngôn ngữ và học với nhãn không đầy đủ trong thị giác máy tính.",
+   "name": "Thanh Trung Huynh",
+   "name_vi": "Huỳnh Thành Trung",
+   "institution": "VinUni",
+   "papers": 3,
+   "focus": "Scalable learning for computational pathology and multimodal federated learning with incomplete data.",
+   "focus_vi": "Học có khả năng mở rộng cho bệnh học tính toán và học liên kết đa phương thức với dữ liệu không đầy đủ.",
    "score": 0.37,
    "areas": [
     {
-     "key": "vision-multimodal",
-     "score": 0.37
-    },
-    {
-     "key": "language-nlp",
-     "score": 0.33
-    },
-    {
-     "key": "optimization",
-     "score": 0
-    }
-   ],
-   "gists": {
-    "vision-multimodal": {
-     "n": 2,
-     "score": 0.37,
-     "en": "Work on <a href=\"#emnlp2026-pga-kd-principal-geometry-alignment-and-semantic-consistency\">compressing vision-language embedding models</a> trains small students to match large teachers, and on multi-label classification from one known label per image.",
-     "vi": "Các công trình về <a href=\"#emnlp2026-pga-kd-principal-geometry-alignment-and-semantic-consistency\">nén mô hình embedding thị giác–ngôn ngữ</a> huấn luyện mô hình trò khớp mô hình thầy, và phân loại đa nhãn từ một nhãn đã biết mỗi ảnh."
-    },
-    "language-nlp": {
-     "n": 5,
-     "score": 0.33,
-     "en": "Work on <a href=\"#acl2026-llm-xtm-enhancing-cross-lingual-topic-models-with-large-lang\">cross-lingual topic modelling</a> and neural topic models, with LLMs, optimal transport and contrastive learning, and on few-shot continual relation extraction.",
-     "vi": "Các công trình về <a href=\"#acl2026-llm-xtm-enhancing-cross-lingual-topic-models-with-large-lang\">mô hình chủ đề đa ngôn ngữ</a> và mô hình chủ đề nơ-ron, dùng LLM, vận chuyển tối ưu, học tương phản, và trích xuất quan hệ few-shot."
-    },
-    "optimization": {
-     "n": 1,
-     "score": 0,
-     "en": "Work on <a href=\"#emnlp2025-multi-surrogate-objective-optimization-for-neural-topic-mode\">balancing losses in topic models</a> applies multi-objective optimization to surrogate losses with more balanced magnitudes.",
-     "vi": "Các công trình về <a href=\"#emnlp2025-multi-surrogate-objective-optimization-for-neural-topic-mode\">cân bằng hàm mất mát trong mô hình chủ đề</a> áp dụng tối ưu đa mục tiêu lên hàm mất mát thay thế cân bằng hơn."
-    }
-   },
-   "gist_list": [
-    {
-     "n": 5,
-     "score": 0.33,
-     "key": "language-nlp",
-     "en": "Work on <a href=\"#acl2026-llm-xtm-enhancing-cross-lingual-topic-models-with-large-lang\">cross-lingual topic modelling</a> and neural topic models, with LLMs, optimal transport and contrastive learning, and on few-shot continual relation extraction.",
-     "vi": "Các công trình về <a href=\"#acl2026-llm-xtm-enhancing-cross-lingual-topic-models-with-large-lang\">mô hình chủ đề đa ngôn ngữ</a> và mô hình chủ đề nơ-ron, dùng LLM, vận chuyển tối ưu, học tương phản, và trích xuất quan hệ few-shot."
-    },
-    {
-     "n": 2,
-     "score": 0.37,
-     "key": "vision-multimodal",
-     "en": "Work on <a href=\"#emnlp2026-pga-kd-principal-geometry-alignment-and-semantic-consistency\">compressing vision-language embedding models</a> trains small students to match large teachers, and on multi-label classification from one known label per image.",
-     "vi": "Các công trình về <a href=\"#emnlp2026-pga-kd-principal-geometry-alignment-and-semantic-consistency\">nén mô hình embedding thị giác–ngôn ngữ</a> huấn luyện mô hình trò khớp mô hình thầy, và phân loại đa nhãn từ một nhãn đã biết mỗi ảnh."
-    },
-    {
-     "n": 1,
-     "score": 0,
-     "key": "optimization",
-     "en": "Work on <a href=\"#emnlp2025-multi-surrogate-objective-optimization-for-neural-topic-mode\">balancing losses in topic models</a> applies multi-objective optimization to surrogate losses with more balanced magnitudes.",
-     "vi": "Các công trình về <a href=\"#emnlp2025-multi-surrogate-objective-optimization-for-neural-topic-mode\">cân bằng hàm mất mát trong mô hình chủ đề</a> áp dụng tối ưu đa mục tiêu lên hàm mất mát thay thế cân bằng hơn."
-    }
-   ]
-  },
-  {
-   "slug": "minh-do",
-   "done": true,
-   "name": "Minh Do",
-   "name_vi": "Đỗ Ngọc Minh",
-   "institution": "VinUni",
-   "papers": 5,
-   "focus": "Multimodal and representation learning, especially robustness to missing modalities, efficient contrastive alignment, and synthetic data generation for computer vision.",
-   "focus_vi": "Học đa phương thức và học biểu diễn, đặc biệt là độ bền vững khi thiếu phương thức, căn chỉnh tương phản (contrastive) hiệu quả, và sinh dữ liệu tổng hợp cho thị giác máy tính.",
-   "score": 0.33,
-   "areas": [
-    {
-     "key": "vision-multimodal",
-     "score": 0.33
-    },
-    {
-     "key": "deep-learning",
-     "score": 0.33
-    },
-    {
-     "key": "generative-models",
-     "score": 0.14
+     "key": "efficient-scalable",
+     "score": 0.2
     },
     {
      "key": "health-science",
-     "score": 0
+     "score": 0.17
     }
    ],
    "gists": {
-    "vision-multimodal": {
-     "n": 2,
-     "score": 0.33,
-     "en": "Work on <a href=\"#ijcai2025-robult-leveraging-redundancy-and-modality-specific-features-\">multimodal learning with absent inputs</a> keeps models working when some modalities are missing, using contrastive and reconstruction losses and uncertainty estimates.",
-     "vi": "Các công trình về <a href=\"#ijcai2025-robult-leveraging-redundancy-and-modality-specific-features-\">học đa phương thức khi thiếu đầu vào</a> giữ mô hình hoạt động khi một số phương thức bị thiếu, bằng hàm mất mát tương phản, tái tạo và ước lượng độ bất định."
-    },
-    "deep-learning": {
+    "efficient-scalable": {
      "n": 1,
-     "score": 0.33,
-     "en": "Work on <a href=\"#iclr2026-unicon-unified-framework-for-efficient-contrastive-alignment\">closed-form contrastive alignment</a> replaces repeated minibatch gradient training with one spectral decomposition, for linear and kernelized encoders.",
-     "vi": "Các công trình về <a href=\"#iclr2026-unicon-unified-framework-for-efficient-contrastive-alignment\">căn chỉnh tương phản dạng đóng</a> thay việc huấn luyện gradient theo minibatch lặp lại bằng một phép phân rã phổ, cho bộ mã hóa tuyến tính và kernel."
-    },
-    "generative-models": {
-     "n": 1,
-     "score": 0.14,
-     "en": "Work on <a href=\"#eccv2026-ac3s-adaptive-conditioning-for-3d-aware-synthetic-data-gener\">3D-aware synthetic image generation</a> with diffusion models, scaling down visual-prompt conditioning adaptively to avoid over-conditioning artifacts.",
-     "vi": "Các công trình về <a href=\"#eccv2026-ac3s-adaptive-conditioning-for-3d-aware-synthetic-data-gener\">sinh ảnh tổng hợp nhận biết 3D</a> bằng mô hình khuếch tán, giảm cường độ điều kiện hóa bằng gợi ý thị giác một cách thích ứng để tránh lỗi do điều kiện hóa quá mức."
+     "score": 0.2,
+     "en": "Work on <a href=\"#neurips2025-learning-reconfigurable-representations-for-multimodal-feder\">federated learning with missing modalities</a> learns client embeddings recording which modalities and features are absent, used to adapt the shared representation.",
+     "vi": "Các công trình về <a href=\"#neurips2025-learning-reconfigurable-representations-for-multimodal-feder\">học liên kết với phương thức bị thiếu</a> học embedding phía client ghi lại phương thức và đặc trưng nào bị thiếu, để điều chỉnh biểu diễn chung."
     },
     "health-science": {
-     "n": 1,
-     "score": 0,
-     "en": "Work on <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">condensing gigapixel pathology slides</a> into a slide-adaptive set of concept prototypes by decomposing each slide, condensing, and pruning unused concepts.",
-     "vi": "Các công trình về <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">nén ảnh bệnh lý gigapixel</a> thành một tập prototype khái niệm thích ứng theo từng tiêu bản, bằng cách phân rã, nén và cắt tỉa các khái niệm không dùng."
+     "n": 2,
+     "score": 0.17,
+     "en": "Work on <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">condensing gigapixel pathology slides</a> into prototypes that adapt to each slide, through concept decomposition and pruning or through distribution matching.",
+     "vi": "Các công trình về <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">nén ảnh bệnh lý gigapixel</a> thành các prototype thích ứng theo từng tiêu bản, bằng phân rã và cắt tỉa khái niệm hoặc bằng khớp phân phối."
     }
    },
    "gist_list": [
     {
      "n": 2,
-     "score": 0.33,
-     "key": "vision-multimodal",
-     "en": "Work on <a href=\"#ijcai2025-robult-leveraging-redundancy-and-modality-specific-features-\">multimodal learning with absent inputs</a> keeps models working when some modalities are missing, using contrastive and reconstruction losses and uncertainty estimates.",
-     "vi": "Các công trình về <a href=\"#ijcai2025-robult-leveraging-redundancy-and-modality-specific-features-\">học đa phương thức khi thiếu đầu vào</a> giữ mô hình hoạt động khi một số phương thức bị thiếu, bằng hàm mất mát tương phản, tái tạo và ước lượng độ bất định."
-    },
-    {
-     "n": 1,
-     "score": 0.33,
-     "key": "deep-learning",
-     "en": "Work on <a href=\"#iclr2026-unicon-unified-framework-for-efficient-contrastive-alignment\">closed-form contrastive alignment</a> replaces repeated minibatch gradient training with one spectral decomposition, for linear and kernelized encoders.",
-     "vi": "Các công trình về <a href=\"#iclr2026-unicon-unified-framework-for-efficient-contrastive-alignment\">căn chỉnh tương phản dạng đóng</a> thay việc huấn luyện gradient theo minibatch lặp lại bằng một phép phân rã phổ, cho bộ mã hóa tuyến tính và kernel."
-    },
-    {
-     "n": 1,
-     "score": 0,
+     "score": 0.17,
      "key": "health-science",
-     "en": "Work on <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">condensing gigapixel pathology slides</a> into a slide-adaptive set of concept prototypes by decomposing each slide, condensing, and pruning unused concepts.",
-     "vi": "Các công trình về <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">nén ảnh bệnh lý gigapixel</a> thành một tập prototype khái niệm thích ứng theo từng tiêu bản, bằng cách phân rã, nén và cắt tỉa các khái niệm không dùng."
+     "en": "Work on <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">condensing gigapixel pathology slides</a> into prototypes that adapt to each slide, through concept decomposition and pruning or through distribution matching.",
+     "vi": "Các công trình về <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">nén ảnh bệnh lý gigapixel</a> thành các prototype thích ứng theo từng tiêu bản, bằng phân rã và cắt tỉa khái niệm hoặc bằng khớp phân phối."
     },
     {
      "n": 1,
-     "score": 0.14,
-     "key": "generative-models",
-     "en": "Work on <a href=\"#eccv2026-ac3s-adaptive-conditioning-for-3d-aware-synthetic-data-gener\">3D-aware synthetic image generation</a> with diffusion models, scaling down visual-prompt conditioning adaptively to avoid over-conditioning artifacts.",
-     "vi": "Các công trình về <a href=\"#eccv2026-ac3s-adaptive-conditioning-for-3d-aware-synthetic-data-gener\">sinh ảnh tổng hợp nhận biết 3D</a> bằng mô hình khuếch tán, giảm cường độ điều kiện hóa bằng gợi ý thị giác một cách thích ứng để tránh lỗi do điều kiện hóa quá mức."
+     "score": 0.2,
+     "key": "efficient-scalable",
+     "en": "Work on <a href=\"#neurips2025-learning-reconfigurable-representations-for-multimodal-feder\">federated learning with missing modalities</a> learns client embeddings recording which modalities and features are absent, used to adapt the shared representation.",
+     "vi": "Các công trình về <a href=\"#neurips2025-learning-reconfigurable-representations-for-multimodal-feder\">học liên kết với phương thức bị thiếu</a> học embedding phía client ghi lại phương thức và đặc trưng nào bị thiếu, để điều chỉnh biểu diễn chung."
     }
    ]
   },
   {
-   "slug": "thuy-t-nguyen",
+   "slug": "uyen-n-b-vo",
    "done": true,
-   "name": "Thuy T. Nguyen",
-   "name_vi": "Nguyễn Thị Thủy",
-   "institution": "RMIT",
+   "name": "Uyen N.B. Vo",
+   "name_vi": "Võ Ngọc Bích Uyên",
+   "institution": "PTIT",
    "papers": 2,
-   "focus": "Adapting foundation models and training multimodal networks, with emphasis on routing collapse in time-series mixtures of adapters and on under-used weak modalities.",
-   "focus_vi": "Thích nghi mô hình nền tảng và huấn luyện mạng đa phương thức, tập trung vào hiện tượng sụp đổ định tuyến trong hỗn hợp adapter cho chuỗi thời gian và việc các phương thức yếu bị khai thác chưa đủ.",
-   "score": 0.33,
+   "focus": "Stability of sequence models, through control-theoretic regularization of language-model hidden states and better-conditioned state space models.",
+   "focus_vi": "Tính ổn định của mô hình chuỗi, thông qua chính quy hóa trạng thái ẩn của mô hình ngôn ngữ dựa trên lý thuyết điều khiển và mô hình không gian trạng thái có điều kiện số tốt hơn.",
+   "score": 0.37,
    "areas": [
     {
-     "key": "vision-multimodal",
-     "score": 0.33
+     "key": "deep-learning",
+     "score": 0.2
     },
     {
-     "key": "deep-learning",
-     "score": 0.25
+     "key": "language-nlp",
+     "score": 0.17
     }
    ],
    "gists": {
-    "vision-multimodal": {
-     "n": 1,
-     "score": 0.33,
-     "en": "Work on <a href=\"#neurips2026-probe-guided-gradient-balancing-for-multimodal-learning\">balancing modalities in multimodal training</a> measures each modality's representation quality with linear probes and boosts the gradients of weaker modalities.",
-     "vi": "Các công trình về <a href=\"#neurips2026-probe-guided-gradient-balancing-for-multimodal-learning\">cân bằng các phương thức trong huấn luyện đa phương thức</a> đo chất lượng biểu diễn của từng phương thức bằng probe tuyến tính và khuếch đại gradient của các phương thức yếu hơn."
-    },
     "deep-learning": {
      "n": 1,
-     "score": 0.25,
-     "en": "Work on <a href=\"#neurips2026-raw-routed-mixture-of-adapters-a-causal-intervention-for-rou\">routing in mixtures of adapters</a> addresses one expert absorbing all inputs when time series foundation models use instance normalization.",
-     "vi": "Các công trình về <a href=\"#neurips2026-raw-routed-mixture-of-adapters-a-causal-intervention-for-rou\">định tuyến trong hỗn hợp adapter</a> xử lý việc một expert thu hết mọi đầu vào khi các foundation model chuỗi thời gian dùng instance normalization."
+     "score": 0.2,
+     "en": "Work on <a href=\"#icml2026-muonssm-orthogonalizing-state-space-models-for-sequence-mode\">state space models for sequences</a> adds a momentum pathway and spectrally conditioned updates to keep memory stable over long sequences.",
+     "vi": "Các công trình về <a href=\"#icml2026-muonssm-orthogonalizing-state-space-models-for-sequence-mode\">mô hình không gian trạng thái cho chuỗi</a> thêm đường động lượng và cập nhật điều kiện phổ để giữ bộ nhớ ổn định trên chuỗi dài."
+    },
+    "language-nlp": {
+     "n": 1,
+     "score": 0.17,
+     "en": "Work on <a href=\"#neurips2026-controljepa-principled-trajectory-regularization-via-lyapuno\">a stability-based loss for language models</a> that keeps hidden-state trajectories inside a bounded tube during fine-tuning, with no architectural change.",
+     "vi": "Các công trình về <a href=\"#neurips2026-controljepa-principled-trajectory-regularization-via-lyapuno\">hàm mất mát dựa trên tính ổn định cho mô hình ngôn ngữ</a> giữ quỹ đạo trạng thái ẩn trong một ống có biên khi tinh chỉnh, không thay đổi kiến trúc."
     }
    },
    "gist_list": [
     {
      "n": 1,
-     "score": 0.33,
-     "key": "vision-multimodal",
-     "en": "Work on <a href=\"#neurips2026-probe-guided-gradient-balancing-for-multimodal-learning\">balancing modalities in multimodal training</a> measures each modality's representation quality with linear probes and boosts the gradients of weaker modalities.",
-     "vi": "Các công trình về <a href=\"#neurips2026-probe-guided-gradient-balancing-for-multimodal-learning\">cân bằng các phương thức trong huấn luyện đa phương thức</a> đo chất lượng biểu diễn của từng phương thức bằng probe tuyến tính và khuếch đại gradient của các phương thức yếu hơn."
+     "score": 0.2,
+     "key": "deep-learning",
+     "en": "Work on <a href=\"#icml2026-muonssm-orthogonalizing-state-space-models-for-sequence-mode\">state space models for sequences</a> adds a momentum pathway and spectrally conditioned updates to keep memory stable over long sequences.",
+     "vi": "Các công trình về <a href=\"#icml2026-muonssm-orthogonalizing-state-space-models-for-sequence-mode\">mô hình không gian trạng thái cho chuỗi</a> thêm đường động lượng và cập nhật điều kiện phổ để giữ bộ nhớ ổn định trên chuỗi dài."
     },
     {
      "n": 1,
-     "score": 0.25,
-     "key": "deep-learning",
-     "en": "Work on <a href=\"#neurips2026-raw-routed-mixture-of-adapters-a-causal-intervention-for-rou\">routing in mixtures of adapters</a> addresses one expert absorbing all inputs when time series foundation models use instance normalization.",
-     "vi": "Các công trình về <a href=\"#neurips2026-raw-routed-mixture-of-adapters-a-causal-intervention-for-rou\">định tuyến trong hỗn hợp adapter</a> xử lý việc một expert thu hết mọi đầu vào khi các foundation model chuỗi thời gian dùng instance normalization."
+     "score": 0.17,
+     "key": "language-nlp",
+     "en": "Work on <a href=\"#neurips2026-controljepa-principled-trajectory-regularization-via-lyapuno\">a stability-based loss for language models</a> that keeps hidden-state trajectories inside a bounded tube during fine-tuning, with no architectural change.",
+     "vi": "Các công trình về <a href=\"#neurips2026-controljepa-principled-trajectory-regularization-via-lyapuno\">hàm mất mát dựa trên tính ổn định cho mô hình ngôn ngữ</a> giữ quỹ đạo trạng thái ẩn trong một ống có biên khi tinh chỉnh, không thay đổi kiến trúc."
     }
    ]
   },
@@ -1422,6 +1592,74 @@
      "key": "vision-multimodal",
      "en": "Work on <a href=\"#cvpr2026-ucan-unified-convolutional-attention-network-for-expansive-r\">lightweight image super-resolution</a> widens the receptive field at low computational cost, and work on 3D scene completion learns from few labels.",
      "vi": "Các công trình về <a href=\"#cvpr2026-ucan-unified-convolutional-attention-network-for-expansive-r\">siêu phân giải ảnh gọn nhẹ</a> mở rộng trường tiếp nhận với chi phí tính toán thấp, còn hoàn thiện cảnh 3D học từ ít nhãn."
+    }
+   ]
+  },
+  {
+   "slug": "long-hoang-dang",
+   "done": true,
+   "name": "Long Hoang Dang",
+   "name_vi": "Đặng Hoàng Long",
+   "institution": "PTIT",
+   "papers": 3,
+   "focus": "Vision-language models, covering grounded compositional reasoning and fairness of multimodal large language models in medical imaging, plus structure-preserving neural operators.",
+   "focus_vi": "Mô hình thị giác-ngôn ngữ, gồm suy luận tổ hợp có định vị (grounded) và tính công bằng của mô hình ngôn ngữ lớn đa phương thức trong ảnh y tế, cùng với toán tử nơ-ron bảo toàn cấu trúc.",
+   "score": 0.3,
+   "areas": [
+    {
+     "key": "vision-multimodal",
+     "score": 0.2
+    },
+    {
+     "key": "health-science",
+     "score": 0.1
+    },
+    {
+     "key": "trustworthy-ai",
+     "score": 0
+    }
+   ],
+   "gists": {
+    "vision-multimodal": {
+     "n": 1,
+     "score": 0.2,
+     "en": "Work on <a href=\"#aaai2025-progressive-multi-granular-alignments-for-grounded-reasoning\">aligning text with image regions</a> step by step from simple to complex concepts, so vision-language models reason about object relations.",
+     "vi": "Các công trình về <a href=\"#aaai2025-progressive-multi-granular-alignments-for-grounded-reasoning\">căn chỉnh văn bản với vùng ảnh</a> từng bước từ khái niệm đơn giản đến phức tạp, để mô hình ảnh-ngôn ngữ suy luận về quan hệ giữa các đối tượng."
+    },
+    "health-science": {
+     "n": 1,
+     "score": 0.1,
+     "en": "Work on <a href=\"#neurips2026-sympfno-structure-preserving-fourier-neural-operators-for-ph\">neural operators for Hamiltonian PDEs</a> builds layers that preserve the symplectic structure of energy-conserving dynamics so long-horizon rollouts stay stable.",
+     "vi": "Các công trình về <a href=\"#neurips2026-sympfno-structure-preserving-fourier-neural-operators-for-ph\">toán tử nơ-ron cho PDE Hamilton</a> xây dựng các tầng bảo toàn cấu trúc symplectic của động lực học bảo toàn năng lượng để các lần dự báo chân trời dài vẫn ổn định."
+    },
+    "trustworthy-ai": {
+     "n": 1,
+     "score": 0,
+     "en": "Work on <a href=\"#iclr2027-rethinking-fairness-in-multimodal-large-language-models-for-\">fairness of medical multimodal LLMs</a> bounds quality gaps between demographic groups by five differences in the data and benchmarks ten models.",
+     "vi": "Các công trình về <a href=\"#iclr2027-rethinking-fairness-in-multimodal-large-language-models-for-\">tính công bằng của LLM đa phương thức y tế</a> chặn trên chênh lệch chất lượng giữa các nhóm nhân khẩu theo năm khác biệt trong dữ liệu và đánh giá mười mô hình."
+    }
+   },
+   "gist_list": [
+    {
+     "n": 1,
+     "score": 0,
+     "key": "trustworthy-ai",
+     "en": "Work on <a href=\"#iclr2027-rethinking-fairness-in-multimodal-large-language-models-for-\">fairness of medical multimodal LLMs</a> bounds quality gaps between demographic groups by five differences in the data and benchmarks ten models.",
+     "vi": "Các công trình về <a href=\"#iclr2027-rethinking-fairness-in-multimodal-large-language-models-for-\">tính công bằng của LLM đa phương thức y tế</a> chặn trên chênh lệch chất lượng giữa các nhóm nhân khẩu theo năm khác biệt trong dữ liệu và đánh giá mười mô hình."
+    },
+    {
+     "n": 1,
+     "score": 0.2,
+     "key": "vision-multimodal",
+     "en": "Work on <a href=\"#aaai2025-progressive-multi-granular-alignments-for-grounded-reasoning\">aligning text with image regions</a> step by step from simple to complex concepts, so vision-language models reason about object relations.",
+     "vi": "Các công trình về <a href=\"#aaai2025-progressive-multi-granular-alignments-for-grounded-reasoning\">căn chỉnh văn bản với vùng ảnh</a> từng bước từ khái niệm đơn giản đến phức tạp, để mô hình ảnh-ngôn ngữ suy luận về quan hệ giữa các đối tượng."
+    },
+    {
+     "n": 1,
+     "score": 0.1,
+     "key": "health-science",
+     "en": "Work on <a href=\"#neurips2026-sympfno-structure-preserving-fourier-neural-operators-for-ph\">neural operators for Hamiltonian PDEs</a> builds layers that preserve the symplectic structure of energy-conserving dynamics so long-horizon rollouts stay stable.",
+     "vi": "Các công trình về <a href=\"#neurips2026-sympfno-structure-preserving-fourier-neural-operators-for-ph\">toán tử nơ-ron cho PDE Hamilton</a> xây dựng các tầng bảo toàn cấu trúc symplectic của động lực học bảo toàn năng lượng để các lần dự báo chân trời dài vẫn ổn định."
     }
    ]
   },
@@ -1574,176 +1812,6 @@
    ]
   },
   {
-   "slug": "hieu-pham",
-   "done": true,
-   "name": "Hieu Pham",
-   "name_vi": "Phạm Huy Hiệu",
-   "institution": "VinUni",
-   "papers": 5,
-   "focus": "Robust and interpretable deep learning, covering domain generalization, neuron-level interpretability, continual learning, and machine learning for computational pathology.",
-   "focus_vi": "Học sâu bền vững và diễn giải được, gồm tổng quát hóa miền, diễn giải ở mức nơ-ron, học liên tục, và học máy cho bệnh học tính toán.",
-   "score": 0.2,
-   "areas": [
-    {
-     "key": "deep-learning",
-     "score": 0.2
-    },
-    {
-     "key": "trustworthy-ai",
-     "score": 0.2
-    },
-    {
-     "key": "health-science",
-     "score": 0
-    }
-   ],
-   "gists": {
-    "deep-learning": {
-     "n": 3,
-     "score": 0.2,
-     "en": "Work on <a href=\"#iccv2025-conststyle-robust-domain-generalization-with-unified-style-t\">domain generalization by unified style mapping</a>, closed-form continual learning under memory limits and noise-resilient time-series representations.",
-     "vi": "Các công trình về <a href=\"#iccv2025-conststyle-robust-domain-generalization-with-unified-style-t\">tổng quát hóa miền</a> bằng ánh xạ phong cách thống nhất, học liên tục dạng đóng dưới giới hạn bộ nhớ và biểu diễn chuỗi thời gian chịu nhiễu."
-    },
-    "trustworthy-ai": {
-     "n": 1,
-     "score": 0.2,
-     "en": "Work on <a href=\"#iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-\">explaining neural networks through neuron groups</a>, grouping neurons by shared function into hierarchical circuits, including neurons that encode several unrelated features.",
-     "vi": "Các công trình về <a href=\"#iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-\">giải thích mạng nơ-ron qua các nhóm nơ-ron</a>, gom nơ-ron theo chức năng chung thành các mạch phân cấp, kể cả các nơ-ron mã hóa nhiều đặc trưng không liên quan."
-    },
-    "health-science": {
-     "n": 1,
-     "score": 0,
-     "en": "Work on <a href=\"#iclr2027-is-h-e-image-to-spatial-transcriptomics-simpler-than-it-look\">predicting gene expression from tissue images</a> reweights supervision toward within-slide variation instead of slide-level averages.",
-     "vi": "Các công trình về <a href=\"#iclr2027-is-h-e-image-to-spatial-transcriptomics-simpler-than-it-look\">dự đoán biểu hiện gen theo không gian từ ảnh mô</a> tăng trọng số giám sát cho biến thiên trong cùng một slide thay vì giá trị trung bình cấp slide."
-    }
-   },
-   "gist_list": [
-    {
-     "n": 3,
-     "score": 0.2,
-     "key": "deep-learning",
-     "en": "Work on <a href=\"#iccv2025-conststyle-robust-domain-generalization-with-unified-style-t\">domain generalization by unified style mapping</a>, closed-form continual learning under memory limits and noise-resilient time-series representations.",
-     "vi": "Các công trình về <a href=\"#iccv2025-conststyle-robust-domain-generalization-with-unified-style-t\">tổng quát hóa miền</a> bằng ánh xạ phong cách thống nhất, học liên tục dạng đóng dưới giới hạn bộ nhớ và biểu diễn chuỗi thời gian chịu nhiễu."
-    },
-    {
-     "n": 1,
-     "score": 0,
-     "key": "health-science",
-     "en": "Work on <a href=\"#iclr2027-is-h-e-image-to-spatial-transcriptomics-simpler-than-it-look\">predicting gene expression from tissue images</a> reweights supervision toward within-slide variation instead of slide-level averages.",
-     "vi": "Các công trình về <a href=\"#iclr2027-is-h-e-image-to-spatial-transcriptomics-simpler-than-it-look\">dự đoán biểu hiện gen theo không gian từ ảnh mô</a> tăng trọng số giám sát cho biến thiên trong cùng một slide thay vì giá trị trung bình cấp slide."
-    },
-    {
-     "n": 1,
-     "score": 0.2,
-     "key": "trustworthy-ai",
-     "en": "Work on <a href=\"#iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-\">explaining neural networks through neuron groups</a>, grouping neurons by shared function into hierarchical circuits, including neurons that encode several unrelated features.",
-     "vi": "Các công trình về <a href=\"#iclr2025-neurflow-interpreting-neural-networks-through-neuron-groups-\">giải thích mạng nơ-ron qua các nhóm nơ-ron</a>, gom nơ-ron theo chức năng chung thành các mạch phân cấp, kể cả các nơ-ron mã hóa nhiều đặc trưng không liên quan."
-    }
-   ]
-  },
-  {
-   "slug": "thanh-trung-huynh",
-   "done": true,
-   "name": "Thanh Trung Huynh",
-   "name_vi": "Huỳnh Thành Trung",
-   "institution": "VinUni",
-   "papers": 3,
-   "focus": "Scalable learning for computational pathology and multimodal federated learning with incomplete data.",
-   "focus_vi": "Học có khả năng mở rộng cho bệnh học tính toán và học liên kết đa phương thức với dữ liệu không đầy đủ.",
-   "score": 0.2,
-   "areas": [
-    {
-     "key": "efficient-scalable",
-     "score": 0.2
-    },
-    {
-     "key": "health-science",
-     "score": 0.17
-    }
-   ],
-   "gists": {
-    "efficient-scalable": {
-     "n": 1,
-     "score": 0.2,
-     "en": "Work on <a href=\"#neurips2025-learning-reconfigurable-representations-for-multimodal-feder\">federated learning with missing modalities</a> learns client embeddings recording which modalities and features are absent, used to adapt the shared representation.",
-     "vi": "Các công trình về <a href=\"#neurips2025-learning-reconfigurable-representations-for-multimodal-feder\">học liên kết với phương thức bị thiếu</a> học embedding phía client ghi lại phương thức và đặc trưng nào bị thiếu, để điều chỉnh biểu diễn chung."
-    },
-    "health-science": {
-     "n": 2,
-     "score": 0.17,
-     "en": "Work on <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">condensing gigapixel pathology slides</a> into prototypes that adapt to each slide, through concept decomposition and pruning or through distribution matching.",
-     "vi": "Các công trình về <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">nén ảnh bệnh lý gigapixel</a> thành các prototype thích ứng theo từng tiêu bản, bằng phân rã và cắt tỉa khái niệm hoặc bằng khớp phân phối."
-    }
-   },
-   "gist_list": [
-    {
-     "n": 2,
-     "score": 0.17,
-     "key": "health-science",
-     "en": "Work on <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">condensing gigapixel pathology slides</a> into prototypes that adapt to each slide, through concept decomposition and pruning or through distribution matching.",
-     "vi": "Các công trình về <a href=\"#iclr2026-nonparametric-unsupervised-data-condensation-for-gigapixel-h\">nén ảnh bệnh lý gigapixel</a> thành các prototype thích ứng theo từng tiêu bản, bằng phân rã và cắt tỉa khái niệm hoặc bằng khớp phân phối."
-    },
-    {
-     "n": 1,
-     "score": 0.2,
-     "key": "efficient-scalable",
-     "en": "Work on <a href=\"#neurips2025-learning-reconfigurable-representations-for-multimodal-feder\">federated learning with missing modalities</a> learns client embeddings recording which modalities and features are absent, used to adapt the shared representation.",
-     "vi": "Các công trình về <a href=\"#neurips2025-learning-reconfigurable-representations-for-multimodal-feder\">học liên kết với phương thức bị thiếu</a> học embedding phía client ghi lại phương thức và đặc trưng nào bị thiếu, để điều chỉnh biểu diễn chung."
-    }
-   ]
-  },
-  {
-   "slug": "uyen-n-b-vo",
-   "done": true,
-   "name": "Uyen N.B. Vo",
-   "name_vi": "Võ Ngọc Bích Uyên",
-   "institution": "PTIT",
-   "papers": 2,
-   "focus": "Stability of sequence models, through control-theoretic regularization of language-model hidden states and better-conditioned state space models.",
-   "focus_vi": "Tính ổn định của mô hình chuỗi, thông qua chính quy hóa trạng thái ẩn của mô hình ngôn ngữ dựa trên lý thuyết điều khiển và mô hình không gian trạng thái có điều kiện số tốt hơn.",
-   "score": 0.2,
-   "areas": [
-    {
-     "key": "deep-learning",
-     "score": 0.2
-    },
-    {
-     "key": "language-nlp",
-     "score": 0.17
-    }
-   ],
-   "gists": {
-    "deep-learning": {
-     "n": 1,
-     "score": 0.2,
-     "en": "Work on <a href=\"#icml2026-muonssm-orthogonalizing-state-space-models-for-sequence-mode\">state space models for sequences</a> adds a momentum pathway and spectrally conditioned updates to keep memory stable over long sequences.",
-     "vi": "Các công trình về <a href=\"#icml2026-muonssm-orthogonalizing-state-space-models-for-sequence-mode\">mô hình không gian trạng thái cho chuỗi</a> thêm đường động lượng và cập nhật điều kiện phổ để giữ bộ nhớ ổn định trên chuỗi dài."
-    },
-    "language-nlp": {
-     "n": 1,
-     "score": 0.17,
-     "en": "Work on <a href=\"#neurips2026-controljepa-principled-trajectory-regularization-via-lyapuno\">a stability-based loss for language models</a> that keeps hidden-state trajectories inside a bounded tube during fine-tuning, with no architectural change.",
-     "vi": "Các công trình về <a href=\"#neurips2026-controljepa-principled-trajectory-regularization-via-lyapuno\">hàm mất mát dựa trên tính ổn định cho mô hình ngôn ngữ</a> giữ quỹ đạo trạng thái ẩn trong một ống có biên khi tinh chỉnh, không thay đổi kiến trúc."
-    }
-   },
-   "gist_list": [
-    {
-     "n": 1,
-     "score": 0.2,
-     "key": "deep-learning",
-     "en": "Work on <a href=\"#icml2026-muonssm-orthogonalizing-state-space-models-for-sequence-mode\">state space models for sequences</a> adds a momentum pathway and spectrally conditioned updates to keep memory stable over long sequences.",
-     "vi": "Các công trình về <a href=\"#icml2026-muonssm-orthogonalizing-state-space-models-for-sequence-mode\">mô hình không gian trạng thái cho chuỗi</a> thêm đường động lượng và cập nhật điều kiện phổ để giữ bộ nhớ ổn định trên chuỗi dài."
-    },
-    {
-     "n": 1,
-     "score": 0.17,
-     "key": "language-nlp",
-     "en": "Work on <a href=\"#neurips2026-controljepa-principled-trajectory-regularization-via-lyapuno\">a stability-based loss for language models</a> that keeps hidden-state trajectories inside a bounded tube during fine-tuning, with no architectural change.",
-     "vi": "Các công trình về <a href=\"#neurips2026-controljepa-principled-trajectory-regularization-via-lyapuno\">hàm mất mát dựa trên tính ổn định cho mô hình ngôn ngữ</a> giữ quỹ đạo trạng thái ẩn trong một ống có biên khi tinh chỉnh, không thay đổi kiến trúc."
-    }
-   ]
-  },
-  {
    "slug": "huyen-nguyen",
    "done": true,
    "name": "Huyen Nguyen",
@@ -1774,74 +1842,6 @@
      "key": "data-mining-graphs",
      "en": "Work on <a href=\"#aaai2025-rem-a-scalable-reinforced-multi-expert-framework-for-multipl\">reinforcement-learning seed selection</a> in multiplex networks, using a mixture of experts and a generative policy.",
      "vi": "Các công trình về <a href=\"#aaai2025-rem-a-scalable-reinforced-multi-expert-framework-for-multipl\">chọn nút gốc bằng học tăng cường</a> trên mạng đa lớp, dùng một hỗn hợp chuyên gia và một chính sách sinh."
-    }
-   ]
-  },
-  {
-   "slug": "long-hoang-dang",
-   "done": true,
-   "name": "Long Hoang Dang",
-   "name_vi": "Đặng Hoàng Long",
-   "institution": "PTIT",
-   "papers": 3,
-   "focus": "Vision-language models, covering grounded compositional reasoning and fairness of multimodal large language models in medical imaging, plus structure-preserving neural operators.",
-   "focus_vi": "Mô hình thị giác-ngôn ngữ, gồm suy luận tổ hợp có định vị (grounded) và tính công bằng của mô hình ngôn ngữ lớn đa phương thức trong ảnh y tế, cùng với toán tử nơ-ron bảo toàn cấu trúc.",
-   "score": 0.2,
-   "areas": [
-    {
-     "key": "vision-multimodal",
-     "score": 0.2
-    },
-    {
-     "key": "health-science",
-     "score": 0.1
-    },
-    {
-     "key": "trustworthy-ai",
-     "score": 0
-    }
-   ],
-   "gists": {
-    "vision-multimodal": {
-     "n": 1,
-     "score": 0.2,
-     "en": "Work on <a href=\"#aaai2025-progressive-multi-granular-alignments-for-grounded-reasoning\">aligning text with image regions</a> step by step from simple to complex concepts, so vision-language models reason about object relations.",
-     "vi": "Các công trình về <a href=\"#aaai2025-progressive-multi-granular-alignments-for-grounded-reasoning\">căn chỉnh văn bản với vùng ảnh</a> từng bước từ khái niệm đơn giản đến phức tạp, để mô hình ảnh-ngôn ngữ suy luận về quan hệ giữa các đối tượng."
-    },
-    "health-science": {
-     "n": 1,
-     "score": 0.1,
-     "en": "Work on <a href=\"#neurips2026-sympfno-structure-preserving-fourier-neural-operators-for-ph\">neural operators for Hamiltonian PDEs</a> builds layers that preserve the symplectic structure of energy-conserving dynamics so long-horizon rollouts stay stable.",
-     "vi": "Các công trình về <a href=\"#neurips2026-sympfno-structure-preserving-fourier-neural-operators-for-ph\">toán tử nơ-ron cho PDE Hamilton</a> xây dựng các tầng bảo toàn cấu trúc symplectic của động lực học bảo toàn năng lượng để các lần dự báo chân trời dài vẫn ổn định."
-    },
-    "trustworthy-ai": {
-     "n": 1,
-     "score": 0,
-     "en": "Work on <a href=\"#iclr2027-rethinking-fairness-in-multimodal-large-language-models-for-\">fairness of medical multimodal LLMs</a> bounds quality gaps between demographic groups by five differences in the data and benchmarks ten models.",
-     "vi": "Các công trình về <a href=\"#iclr2027-rethinking-fairness-in-multimodal-large-language-models-for-\">tính công bằng của LLM đa phương thức y tế</a> chặn trên chênh lệch chất lượng giữa các nhóm nhân khẩu theo năm khác biệt trong dữ liệu và đánh giá mười mô hình."
-    }
-   },
-   "gist_list": [
-    {
-     "n": 1,
-     "score": 0,
-     "key": "trustworthy-ai",
-     "en": "Work on <a href=\"#iclr2027-rethinking-fairness-in-multimodal-large-language-models-for-\">fairness of medical multimodal LLMs</a> bounds quality gaps between demographic groups by five differences in the data and benchmarks ten models.",
-     "vi": "Các công trình về <a href=\"#iclr2027-rethinking-fairness-in-multimodal-large-language-models-for-\">tính công bằng của LLM đa phương thức y tế</a> chặn trên chênh lệch chất lượng giữa các nhóm nhân khẩu theo năm khác biệt trong dữ liệu và đánh giá mười mô hình."
-    },
-    {
-     "n": 1,
-     "score": 0.2,
-     "key": "vision-multimodal",
-     "en": "Work on <a href=\"#aaai2025-progressive-multi-granular-alignments-for-grounded-reasoning\">aligning text with image regions</a> step by step from simple to complex concepts, so vision-language models reason about object relations.",
-     "vi": "Các công trình về <a href=\"#aaai2025-progressive-multi-granular-alignments-for-grounded-reasoning\">căn chỉnh văn bản với vùng ảnh</a> từng bước từ khái niệm đơn giản đến phức tạp, để mô hình ảnh-ngôn ngữ suy luận về quan hệ giữa các đối tượng."
-    },
-    {
-     "n": 1,
-     "score": 0.1,
-     "key": "health-science",
-     "en": "Work on <a href=\"#neurips2026-sympfno-structure-preserving-fourier-neural-operators-for-ph\">neural operators for Hamiltonian PDEs</a> builds layers that preserve the symplectic structure of energy-conserving dynamics so long-horizon rollouts stay stable.",
-     "vi": "Các công trình về <a href=\"#neurips2026-sympfno-structure-preserving-fourier-neural-operators-for-ph\">toán tử nơ-ron cho PDE Hamilton</a> xây dựng các tầng bảo toàn cấu trúc symplectic của động lực học bảo toàn năng lượng để các lần dự báo chân trời dài vẫn ổn định."
     }
    ]
   },
@@ -2123,7 +2123,7 @@
      "n": 1,
      "score": 0,
      "en": "Work on <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">routing LLM code to cheaper languages</a> measures cost-quality trade-offs when the target programming language is chosen before generation, with fallback when tests fail.",
-     "vi": "Các công trình về <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">chọn ngôn ngữ rẻ hơn khi LLM sinh mã</a> đo các đánh đổi giữa chi phí và chất lượng khi chọn ngôn ngữ lập trình đích trước khi sinh, và chuyển ngôn ngữ khi không qua test."
+     "vi": "Các công trình về <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">chọn ngôn ngữ rẻ hơn</a> khi LLM sinh mã đo các đánh đổi giữa chi phí và chất lượng khi chọn ngôn ngữ lập trình đích trước khi sinh, và chuyển ngôn ngữ khi không qua test."
     },
     "efficient-scalable": {
      "n": 1,
@@ -2152,7 +2152,7 @@
      "score": 0,
      "key": "language-nlp",
      "en": "Work on <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">routing LLM code to cheaper languages</a> measures cost-quality trade-offs when the target programming language is chosen before generation, with fallback when tests fail.",
-     "vi": "Các công trình về <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">chọn ngôn ngữ rẻ hơn khi LLM sinh mã</a> đo các đánh đổi giữa chi phí và chất lượng khi chọn ngôn ngữ lập trình đích trước khi sinh, và chuyển ngôn ngữ khi không qua test."
+     "vi": "Các công trình về <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">chọn ngôn ngữ rẻ hơn</a> khi LLM sinh mã đo các đánh đổi giữa chi phí và chất lượng khi chọn ngôn ngữ lập trình đích trước khi sinh, và chuyển ngôn ngữ khi không qua test."
     },
     {
      "n": 1,
@@ -2377,8 +2377,8 @@
     "robotics": {
      "n": 1,
      "score": 0.04,
-     "en": "Work on <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">few-shot adaptation of robot vision-language-action models</a> trains them to anticipate future interactions and goals in latent space from few demonstrations.",
-     "vi": "Các công trình về <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">thích nghi mô hình thị giác-ngôn ngữ-hành động cho robot từ ít minh họa</a> huấn luyện mô hình dự đoán trước tương tác và mục tiêu tương lai trong không gian ẩn."
+     "en": "Work on <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">few-shot adaptation of vision-language-action models</a> trains them to anticipate future interactions and goals in latent space from few demonstrations.",
+     "vi": "Các công trình về <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">thích nghi mô hình thị giác-ngôn ngữ-hành động</a> từ ít minh họa huấn luyện mô hình dự đoán trước tương tác và mục tiêu tương lai trong không gian ẩn."
     }
    },
    "gist_list": [
@@ -2386,8 +2386,8 @@
      "n": 1,
      "score": 0.04,
      "key": "robotics",
-     "en": "Work on <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">few-shot adaptation of robot vision-language-action models</a> trains them to anticipate future interactions and goals in latent space from few demonstrations.",
-     "vi": "Các công trình về <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">thích nghi mô hình thị giác-ngôn ngữ-hành động cho robot từ ít minh họa</a> huấn luyện mô hình dự đoán trước tương tác và mục tiêu tương lai trong không gian ẩn."
+     "en": "Work on <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">few-shot adaptation of vision-language-action models</a> trains them to anticipate future interactions and goals in latent space from few demonstrations.",
+     "vi": "Các công trình về <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">thích nghi mô hình thị giác-ngôn ngữ-hành động</a> từ ít minh họa huấn luyện mô hình dự đoán trước tương tác và mục tiêu tương lai trong không gian ẩn."
     }
    ]
   },
@@ -2411,8 +2411,8 @@
     "robotics": {
      "n": 3,
      "score": 0.04,
-     "en": "Work on <a href=\"#iclr2027-probe2act-knowing-when-to-stop-probing-articulated-objects\">deciding when probing is enough</a> to open drawers, weighting physics against learned dynamics by uncertainty, and adapting vision-language-action models from few demonstrations.",
-     "vi": "Các công trình về <a href=\"#iclr2027-probe2act-knowing-when-to-stop-probing-articulated-objects\">quyết định khi nào thăm dò là đủ</a> để mở ngăn kéo, cân trọng số giữa vật lý và động lực học được học theo độ bất định, và thích nghi mô hình thị giác-ngôn ngữ-hành động từ vài minh họa."
+     "en": "Work on <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">few-shot adaptation of vision-language-action models</a>, deciding when probing is enough to open drawers, and weighting physics against learned dynamics by uncertainty.",
+     "vi": "Các công trình về <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">thích nghi mô hình thị giác-ngôn ngữ-hành động</a> từ ít minh họa, quyết định khi nào thăm dò là đủ để mở ngăn kéo, và cân trọng số giữa vật lý và động lực học được học theo độ bất định."
     }
    },
    "gist_list": [
@@ -2420,8 +2420,8 @@
      "n": 3,
      "score": 0.04,
      "key": "robotics",
-     "en": "Work on <a href=\"#iclr2027-probe2act-knowing-when-to-stop-probing-articulated-objects\">deciding when probing is enough</a> to open drawers, weighting physics against learned dynamics by uncertainty, and adapting vision-language-action models from few demonstrations.",
-     "vi": "Các công trình về <a href=\"#iclr2027-probe2act-knowing-when-to-stop-probing-articulated-objects\">quyết định khi nào thăm dò là đủ</a> để mở ngăn kéo, cân trọng số giữa vật lý và động lực học được học theo độ bất định, và thích nghi mô hình thị giác-ngôn ngữ-hành động từ vài minh họa."
+     "en": "Work on <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">few-shot adaptation of vision-language-action models</a>, deciding when probing is enough to open drawers, and weighting physics against learned dynamics by uncertainty.",
+     "vi": "Các công trình về <a href=\"#icml2026-foca-future-oriented-conditioning-for-data-efficient-vision-\">thích nghi mô hình thị giác-ngôn ngữ-hành động</a> từ ít minh họa, quyết định khi nào thăm dò là đủ để mở ngăn kéo, và cân trọng số giữa vật lý và động lực học được học theo độ bất định."
     }
    ]
   },
@@ -2487,13 +2487,13 @@
      "n": 1,
      "score": 0,
      "en": "Work on <a href=\"#emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth\">synthetic data for African languages</a> tests whether synthetic examples rated highly by an LLM judge actually help classification in low-resource languages.",
-     "vi": "Các công trình về <a href=\"#emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth\">dữ liệu tổng hợp cho các ngôn ngữ châu Phi</a> kiểm tra xem các ví dụ tổng hợp được giám khảo LLM chấm cao có thực sự giúp phân loại trong các ngôn ngữ ít tài nguyên hay không."
+     "vi": "Các công trình về <a href=\"#emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth\">dữ liệu tổng hợp</a> cho các ngôn ngữ châu Phi kiểm tra xem các ví dụ tổng hợp được giám khảo LLM chấm cao có thực sự giúp phân loại trong các ngôn ngữ ít tài nguyên hay không."
     },
     "language-nlp": {
      "n": 1,
      "score": 0,
      "en": "Work on <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">routing LLM code to cheaper languages</a> measures cost-quality trade-offs when the target programming language is chosen before generation, with fallback when tests fail.",
-     "vi": "Các công trình về <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">chọn ngôn ngữ rẻ hơn khi LLM sinh mã</a> đo các đánh đổi giữa chi phí và chất lượng khi chọn ngôn ngữ lập trình đích trước khi sinh, và chuyển ngôn ngữ khi không qua test."
+     "vi": "Các công trình về <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">chọn ngôn ngữ rẻ hơn</a> khi LLM sinh mã đo các đánh đổi giữa chi phí và chất lượng khi chọn ngôn ngữ lập trình đích trước khi sinh, và chuyển ngôn ngữ khi không qua test."
     },
     "rl-planning-agents": {
      "n": 1,
@@ -2515,14 +2515,14 @@
      "score": 0,
      "key": "datasets-evaluation",
      "en": "Work on <a href=\"#emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth\">synthetic data for African languages</a> tests whether synthetic examples rated highly by an LLM judge actually help classification in low-resource languages.",
-     "vi": "Các công trình về <a href=\"#emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth\">dữ liệu tổng hợp cho các ngôn ngữ châu Phi</a> kiểm tra xem các ví dụ tổng hợp được giám khảo LLM chấm cao có thực sự giúp phân loại trong các ngôn ngữ ít tài nguyên hay không."
+     "vi": "Các công trình về <a href=\"#emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth\">dữ liệu tổng hợp</a> cho các ngôn ngữ châu Phi kiểm tra xem các ví dụ tổng hợp được giám khảo LLM chấm cao có thực sự giúp phân loại trong các ngôn ngữ ít tài nguyên hay không."
     },
     {
      "n": 1,
      "score": 0,
      "key": "language-nlp",
      "en": "Work on <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">routing LLM code to cheaper languages</a> measures cost-quality trade-offs when the target programming language is chosen before generation, with fallback when tests fail.",
-     "vi": "Các công trình về <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">chọn ngôn ngữ rẻ hơn khi LLM sinh mã</a> đo các đánh đổi giữa chi phí và chất lượng khi chọn ngôn ngữ lập trình đích trước khi sinh, và chuyển ngôn ngữ khi không qua test."
+     "vi": "Các công trình về <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">chọn ngôn ngữ rẻ hơn</a> khi LLM sinh mã đo các đánh đổi giữa chi phí và chất lượng khi chọn ngôn ngữ lập trình đích trước khi sinh, và chuyển ngôn ngữ khi không qua test."
     },
     {
      "n": 1,
@@ -2567,14 +2567,14 @@
     "language-nlp": {
      "n": 2,
      "score": 0,
-     "en": "Work on <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">reducing LLM token cost</a> by choosing the programming language per task, and on pruning long dialogue history while preserving user commitments.",
-     "vi": "Các công trình về <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">giảm chi phí token của LLM</a> bằng cách chọn ngôn ngữ lập trình cho từng bài, và về cắt bớt lịch sử hội thoại dài mà vẫn giữ cam kết với người dùng."
+     "en": "Work on <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">routing LLM code to cheaper languages</a> and on pruning long dialogue history while preserving user commitments.",
+     "vi": "Các công trình về <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">chọn ngôn ngữ rẻ hơn</a> khi LLM sinh mã và về cắt bớt lịch sử hội thoại dài mà vẫn giữ cam kết với người dùng."
     },
     "datasets-evaluation": {
      "n": 1,
      "score": 0,
      "en": "Work on <a href=\"#emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth\">synthetic data for African languages</a> tests whether synthetic examples rated highly by an LLM judge actually help classification in low-resource languages.",
-     "vi": "Các công trình về <a href=\"#emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth\">dữ liệu tổng hợp cho các ngôn ngữ châu Phi</a> kiểm tra xem các ví dụ tổng hợp được giám khảo LLM chấm cao có thực sự giúp phân loại trong các ngôn ngữ ít tài nguyên hay không."
+     "vi": "Các công trình về <a href=\"#emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth\">dữ liệu tổng hợp</a> cho các ngôn ngữ châu Phi kiểm tra xem các ví dụ tổng hợp được giám khảo LLM chấm cao có thực sự giúp phân loại trong các ngôn ngữ ít tài nguyên hay không."
     }
    },
    "gist_list": [
@@ -2589,15 +2589,15 @@
      "n": 2,
      "score": 0,
      "key": "language-nlp",
-     "en": "Work on <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">reducing LLM token cost</a> by choosing the programming language per task, and on pruning long dialogue history while preserving user commitments.",
-     "vi": "Các công trình về <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">giảm chi phí token của LLM</a> bằng cách chọn ngôn ngữ lập trình cho từng bài, và về cắt bớt lịch sử hội thoại dài mà vẫn giữ cam kết với người dùng."
+     "en": "Work on <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">routing LLM code to cheaper languages</a> and on pruning long dialogue history while preserving user commitments.",
+     "vi": "Các công trình về <a href=\"#iclr2027-langselect-cost-aware-target-language-routing-for-llm-code-g\">chọn ngôn ngữ rẻ hơn</a> khi LLM sinh mã và về cắt bớt lịch sử hội thoại dài mà vẫn giữ cam kết với người dùng."
     },
     {
      "n": 1,
      "score": 0,
      "key": "datasets-evaluation",
      "en": "Work on <a href=\"#emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth\">synthetic data for African languages</a> tests whether synthetic examples rated highly by an LLM judge actually help classification in low-resource languages.",
-     "vi": "Các công trình về <a href=\"#emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth\">dữ liệu tổng hợp cho các ngôn ngữ châu Phi</a> kiểm tra xem các ví dụ tổng hợp được giám khảo LLM chấm cao có thực sự giúp phân loại trong các ngôn ngữ ít tài nguyên hay không."
+     "vi": "Các công trình về <a href=\"#emnlp2026-when-audit-quality-fails-to-predict-downstream-utility-synth\">dữ liệu tổng hợp</a> cho các ngôn ngữ châu Phi kiểm tra xem các ví dụ tổng hợp được giám khảo LLM chấm cao có thực sự giúp phân loại trong các ngôn ngữ ít tài nguyên hay không."
     }
    ]
   },

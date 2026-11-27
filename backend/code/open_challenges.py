@@ -594,8 +594,8 @@ def merge_papers(papers):
     known = {paper_id(p): p for p in papers}
     for x in index:
         d = people[x["slug"]]
-        tops = [g["score_accepted"] for g in d["topics"] if not is_other(g)] or [g["score_accepted"] for g in d["topics"]]
-        x["score"] = max(tops) if tops else round(sum(p["credit"] for p in d["papers"] if p["status"] == "accepted"), 2)
+        x["score"] = round(sum(g["score_accepted"] for g in d["topics"]), 2) if d["topics"] else \
+            round(sum(p["credit"] for p in d["papers"] if p["status"] == "accepted"), 2)
     taxonomy = json.loads((FRONTEND / "data" / "challenge_topics.json").read_text(encoding="utf-8"))
     keys = {t["key"] for t in taxonomy["topics"]}
     merges = json.loads((BACKEND / "data" / "json" / "topic_merges.json").read_text(encoding="utf-8"))
