@@ -531,6 +531,10 @@ svg.net .node.ring text.deg { fill: var(--fg) ; }
 .legend-box.focus .graph-legend li.hl a { color: var(--fg) ; font-weight: 600 ; }
 .legend-box .edge-key { margin-top: 0.8em !important ; color: var(--muted) ; font-size: 0.95em ; }
 @media (min-width: 900px) { .graph-page { grid-template-columns: minmax(0, 1fr) 11rem ; } }
+main.wide { max-width: none ; padding: 0 2rem ; }
+main.wide svg.net { max-width: none ; }
+@media (min-width: 900px) { main.wide .graph-page { grid-template-columns: minmax(0, 1fr) 16rem ; } }
+@media (max-width: 600px) { main.wide { padding: 0 1em ; } }
 .legend-box .legend-logo { height: 1.3em ; width: 1.6em ; object-fit: contain ; margin-right: 2px ; }
 .graph-legend li { display: inline-flex ; align-items: center ; gap: 6px ; }
 .graph-legend .dot { display: inline-block ; width: 12px ; height: 12px ; border-radius: 50% ; }

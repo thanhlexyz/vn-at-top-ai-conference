@@ -225,6 +225,8 @@ It is explained in About and in two callouts: the professor score on the front p
 - "x +y" (official, unofficial) sorts as x + y; among equal totals, more official papers first. The default order of
   the professor, institution and venue tables follows the same rule (`professors.sort`, `institutions.sort`, and the
   sort in `venues/list.html`), so the cups match the order on load.
+- The cooperation graph pages (layouts `graph` and `international`) use the full window width (`main.wide`, as on
+  awesome-nnv); every other page keeps the 72rem column.
 - The front page opens on the all-time totals. Clicking the "Total" heading flips the five Total columns (score,
   accepted, rejected, submitted and rate, estimated) to "Last year" and re-sorts by that score (ties keep the all-time
   order); clicking "Last year" flips back. Last year means papers decided on or after `RECENT_FROM` in `common.py`, the

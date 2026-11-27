@@ -64,7 +64,7 @@
 	{{- end }}
 	</span>
 </nav>
-<main>
+<main{{ if in (slice "graph" "international") .Layout }} class="wide"{{ end }}>
 <header><h1>{{ block "title" . }}{{ .Title }}{{ end }}</h1></header>
 <article>
 {{ block "main" . }}
