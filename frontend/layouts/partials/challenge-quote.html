@@ -1,0 +1,3 @@
+{{- $x := .x }}{{ $vi := .vi -}}
+{{- if $x.quote }}{{ if eq (printf "%T" $x.quote) "bool" }}<q>{{ $x.text }}</q>{{ if $vi }} <span class="tr">({{ $x.text_vi }})</span>{{ end }}{{ else }}<q>{{ $x.quote }}</q>{{ if $vi }} <span class="tr">({{ $x.quote_vi }})</span>{{ end }}{{ end }}
+{{- else }}{{ if $vi }}{{ $x.text_vi }}{{ else }}{{ $x.text }}{{ end }}{{ end -}}
