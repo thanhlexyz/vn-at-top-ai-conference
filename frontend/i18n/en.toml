@@ -228,34 +228,8 @@ other = "Fig. 2. Total accepted papers and total rejected papers per year."
 other = "By year"
 [chart_title]
 other = "Submitted and accepted per year"
-[chart_note]
-other = "Accepted papers and rejections on record (ICLR, public NeurIPS rejections, Findings) are counted; the light part estimates the rejections the other conferences do not publish."
-[chart_note_own]
-other = "The estimate uses this professor's ICLR record: {{ .Ratio }} submissions per accepted paper (see About)."
-[chart_note_own_page]
-other = "{{ . }} of the accepted papers are known only from personal pages."
-[chart_note_no_iclr]
-other = "No ICLR submissions, so no estimate is added."
-[chart_note_not_fetched]
-other = "OpenReview records not fetched yet, so no estimate is added."
-[coauthors_title]
-other = "Co-authors and topics"
-[coauthors_none]
-other = "No papers to compute these from."
-[coauthors_avg]
-other = "Average of {{ .Avg }} co-authors per paper across all submissions (min {{ .Min }} on an accepted paper, max {{ .Max }} on any submission), with {{ .Distinct }} unique co-authors across {{ .Papers }} papers."
-[coauthors_foreign]
-other = "Average of {{ . }} international co-authors per paper (co-authors affiliated exclusively with institutions outside Vietnam)."
-[coauthors_elsewhere]
-other = "{{ .Count }} distinct co-authors are affiliated with institutions other than {{ .Inst }} ({{ .Abroad }} abroad, {{ .Vietnam }} in Vietnam)."
-[coauthors_partial]
-other = "The last two figures use the {{ .With }} of {{ .Papers }} papers whose list prints an affiliation for each author."
-[coauthors_no_aff]
-other = "None of the paper lists prints affiliations, so foreign and other-institution co-authors cannot be counted."
 [topics_line]
 other = "{{ .Topics }} topics in {{ .Count }} areas, from the conference's own label on {{ .With }} of {{ .Papers }} papers:"
-[topics_none]
-other = "None of the papers carries a topic label from its conference."
 [accepted_papers]
 other = "Accepted papers ({{ . }})"
 [rejected_papers]
@@ -327,8 +301,6 @@ other = "Co-author universities and institutes"
 other = "Universities and institutes in Vietnam that share papers with this university (accepted, rejected or workshop) and the number of shared papers; those abroad are left out."
 [coauthors_on_site]
 other = "Co-authors"
-[coauthors_on_site_note]
-other = "Professors on this site who share papers with this professor, accepted, rejected or workshop, with their university today and the number of shared papers; see <a href=\"{{ . }}\">Domestic cooperation</a> for the whole graph."
 [links]
 other = "Links"
 
@@ -363,8 +335,6 @@ other = "Wikipedia"
 [link_researchgate]
 other = "ResearchGate"
 
-[scholar_note]
-other = "A snapshot of the <a href=\"{{ .URL }}\">Google Scholar profile</a> taken on {{ .Date }}; it is not updated. Google Scholar counts every publication, not only the thirteen conferences."
 
 [scholar_all]
 other = "All"
@@ -381,8 +351,6 @@ other = "h-index"
 [scholar_i10]
 other = "i10-index"
 
-[scholar_chart]
-other = "Citations per year, as shown on Google Scholar on the day of the snapshot."
 
 [tip_scholar]
 other = "From each Google Scholar profile, as on 2026-10-02; Scholar counts every publication"
@@ -396,8 +364,6 @@ other = "{{ .Name }}: {{ .Profs }} professors, {{ .Accepted }} papers accepted a
 [seo_venue]
 other = "{{ .Name }}: papers submitted, accepted and rejected by professors and lecturers in Vietnam since 2020; {{ .Accepted }} accepted."
 
-[also_published_as]
-other = "Also published as: {{ . }}"
 
 [graph_legend_title]
 other = "Universities"
@@ -475,8 +441,6 @@ other = "Topics"
 [tip_topics]
 other = "the three topics (from the shared list on the Research directions page) where the professor has the highest CSRankings score; click a topic to see who else works on it"
 
-[prof_pie_caption]
-other = "All years: {{ .Accepted }} accepted, {{ .Recorded }} rejected and on record, and about {{ .Estimated }} rejected elsewhere (estimate), so about {{ .Total }} submissions."
 
 [role_source]
 other = "Source of this role"
@@ -614,7 +578,7 @@ other = "Click to show the totals since 2020"
 [ch_none]
 other = "No summary yet."
 [ch_sources]
-other = "Written from {{ .Papers }} papers on the Papers page: their abstracts, their own text where we could read it ({{ .Text }} papers) and the public OpenReview reviews ({{ .Reviews }} papers), read {{ .Date }}."
+other = "Summarized from {{ .Papers }} papers on the Papers page, using their abstracts, full text where accessible ({{ .Text }} papers), and public OpenReview reviews ({{ .Reviews }} papers), as of {{ .Date }}."
 [ch_all]
 other = "All professors"
 [ch_problem]
@@ -667,7 +631,7 @@ other = "Topics, papers and open questions in detail"
 [ch_top_score]
 other = "score (accepted papers)"
 [ch_top_score_tip]
-other = "CSRankings score (sum of 1/N authors) over the professor's accepted papers in all topics; with a topic selected, over the accepted papers of that topic. The list is sorted by it. Rejected and withdrawn papers are not counted here"
+other = "CSRankings score (sum of 1/N, where N is the number of authors on each paper) across the professor's accepted papers in all topics, or in the selected topic when filtered. The list is sorted by this score; rejected and withdrawn papers are not counted."
 [ch_all_topics]
 other = "All topics"
 [ch_more_show]
@@ -683,6 +647,18 @@ other = "The official source of the paper"
 [ch_openreview_tip]
 other = "The paper's page on OpenReview, with its public reviews"
 [ch_line_tip]
-other = "Papers in this topic (accepted and rejected), and the CSRankings score of its accepted papers"
-[topics_line_ch]
-other = "{{ .Count }} topics from the shared list on the Research directions page (accepted and rejected papers, with the CSRankings score of the accepted ones); the research summary and open challenges are on the <a href=\"{{ .URL }}\">Research directions page</a>."
+other = "Total papers in this topic (both accepted and rejected), followed by the CSRankings score from accepted papers"
+[fig_n]
+other = "Fig. {{ . }}."
+[fig_scholar]
+other = "Citations per year on Google Scholar."
+[fig_pie]
+other = "Accepted papers, rejections on record and estimated rejections elsewhere, all years."
+[fig_year]
+other = "Submitted and accepted papers per year."
+[fig_first]
+other = "Accepted papers per year, by the first author's university."
+[fig_majority]
+other = "Accepted papers per year, by where most authors work."
+[topics_none]
+other = "No topics yet."

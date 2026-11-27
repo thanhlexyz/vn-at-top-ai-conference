@@ -2,13 +2,13 @@
 {{- $p := index (where hugo.Data.professors "slug" .Params.key) 0 }}
 {{- $meta := hugo.Data.meta }}
 {{- $iclr := $p.venues.iclr }}
+{{- $fig := 0 }}
+{{- $who := index hugo.Data.honorifics $p.slug | default (partial "pname.html" $p) }}
 {{ partial "picture.html" (dict "src" $p.image "source" $p.image_source "alt" (partial "pname.html" $p) "cls" "portrait") }}
 <p>
-	{{ with $p.rank }}{{ . }}, {{ end }}
+	{{ with $p.rank }}{{ if eq site.Language.Lang "vi" }}{{ index (dict "Professor" "Giáo sư" "Full Professor" "Giáo sư" "Associate Professor" "Phó giáo sư" "Assistant Professor" "Trợ lý giáo sư" "Senior Lecturer" "Giảng viên chính" "Lecturer" "Giảng viên" "Lecturer with PhD" "Giảng viên có bằng tiến sĩ" "Instructor" "Giảng viên" "Researcher" "Nghiên cứu viên") . | default . }}{{ else }}{{ . }}{{ end }}, {{ end }}
 	{{- with $p.role }}{{ $role := cond (eq site.Language.Lang "vi") $p.role_vi . }}{{ with $p.role_source }}<a href="{{ . }}" title="{{ T "role_source" }}">{{ $role }}</a>{{ else }}{{ $role }}{{ end }}, {{ end }}<a href="{{ printf "universities/%s/" $p.institution_slug | relLangURL }}">{{ partial "iname.html" $p.institution }}</a>.
 	{{- with $p.vn_since }} {{ T "ent_since" . }}{{ end }}
-	{{- $names := slice }}{{ if ne (partial "pname.html" $p) $p.name }}{{ $names = $names | append $p.name }}{{ else if ne $p.name_vi $p.name }}{{ $names = $names | append $p.name_vi }}{{ end }}
-	{{- with ($names | append $p.aliases) }}<br><span class="note">{{ T "also_published_as" (delimit . ", ") }}.</span>{{ end }}
 </p>
 {{- with index (hugo.Data.challenges_people | default dict) $p.slug }}
 {{- $vi := eq site.Language.Lang "vi" }}
@@ -25,9 +25,9 @@
 <p>
 	{{- $part := "" }}{{ if gt (int $p.own_page) 0 }}{{ $part = T "ent_unofficial_part" (dict "Official" $p.official "Own" $p.own_page) }}{{ end }}
 	{{- if gt (int $p.accepted) 0 }}
-	{{ T "ent_prof_accepted" (dict "Papers" (T "ent_n_accepted" (dict "Count" (int $p.accepted))) "Part" $part) }}
+	{{ T "ent_prof_accepted" (dict "Who" $who "Papers" (T "ent_n_accepted" (dict "Count" (int $p.accepted))) "Part" $part) }}
 	{{- else }}
-	{{ T "ent_prof_none" }}
+	{{ T "ent_prof_none" $who }}
 	{{- end }}
 	{{- $otherN := 0 }}{{ $otherV := slice }}
 	{{- range $meta.venues }}{{ if ne .key "iclr" }}{{ $c := index $p.venues .key }}{{ if gt (int $c.not_accepted) 0 }}{{ $otherN = add $otherN (int $c.not_accepted) }}{{ $otherV = $otherV | append .name }}{{ end }}{{ end }}{{ end }}
@@ -37,9 +37,9 @@
 	{{- $acc := int $iclr.official }}{{ $rej := int $iclr.not_accepted }}
 	{{- $detail := cond (and (gt $acc 0) (gt $rej 0)) (T "ent_acc_rej" (dict "Accepted" $acc "Rejected" $rej)) (cond (gt $acc 0) (T "ent_acc_only" $acc) (T "ent_rej_only" $rej)) }}
 	{{- $other := "" }}{{ if gt $otherN 0 }}{{ $other = T "ent_other_part" (dict "Count" $otherN "Venues" $venues) }}{{ end }}
-	{{ T "ent_prof_iclr" (dict "Papers" (T "ent_n_papers" (dict "Count" $submitted)) "Detail" $detail "Other" $other) }}
+	{{ T "ent_prof_iclr" (dict "Who" $who "Papers" (T "ent_n_papers" (dict "Count" $submitted)) "Detail" $detail "Other" $other) }}
 	{{- else if gt $otherN 0 }}
-	{{ T "ent_other_only" (dict "Count" $otherN "Venues" $venues) }}
+	{{ T "ent_other_only" (dict "Who" $who "Count" $otherN "Venues" $venues) }}
 	{{- end }}
 </p>
 
@@ -67,12 +67,10 @@
 	<li><a href="{{ printf "professors/%s/" $other | relLangURL }}">{{ $name }}</a> (<span title="{{ partial "iname.html" $o.institution }}">{{ $o.institution_short }}</span>): {{ T "graph_papers" (int .weight) }}</li>
 	{{- end }}
 </ol>
-<p class="note">{{ T "coauthors_on_site_note" (relLangURL "domestic/") | safeHTML }}</p>
 {{- end }}
 
 {{- with $p.scholar }}
 <h2>Google Scholar</h2>
-<p class="note">{{ T "scholar_note" (dict "Date" .fetched "URL" .url) | safeHTML }}</p>
 <div class="scroll">
 <table class="scholar">
 	<thead><tr><th></th><th>{{ T "scholar_all" }}</th><th>{{ T "scholar_since" .since }}</th></tr></thead>
@@ -85,7 +83,7 @@
 </div>
 <figure>
 {{ index . (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
-<figcaption class="note">{{ T "scholar_chart" }}</figcaption>
+{{- $fig = add $fig 1 }}<figcaption>{{ T "fig_n" $fig }} {{ T "fig_scholar" }}</figcaption>
 </figure>
 {{- end }}
 
@@ -94,23 +92,11 @@
 <div class="fig-row">
 <figure>
 	<div class="fill">{{ index . (cond (eq site.Language.Lang "vi") "pie_vi" "pie") | safeHTML }}</div>
-	<figcaption class="note">{{ T "prof_pie_caption" (dict "Accepted" .accepted "Recorded" .recorded "Estimated" .estimated "Total" .total) }}</figcaption>
+	{{- $fig = add $fig 1 }}<figcaption>{{ T "fig_n" $fig }} {{ T "fig_pie" }}</figcaption>
 </figure>
 <figure>
 	{{ index . (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
-	<figcaption class="note">
-		{{ T "chart_note" }}
-		{{- if eq .basis "own" }}
-		{{ T "chart_note_own" (dict "Submitted" .ratio_submitted "Accepted" .ratio_accepted "Ratio" .ratio) }}
-		{{- if gt (int $p.own_page) 0 }}
-		{{ T "chart_note_own_page" $p.own_page }}
-		{{- end }}
-		{{- else if $p.iclr_complete }}
-		{{ T "chart_note_no_iclr" }}
-		{{- else }}
-		{{ T "chart_note_not_fetched" }}
-		{{- end }}
-	</figcaption>
+	{{- $fig = add $fig 1 }}<figcaption>{{ T "fig_n" $fig }} {{ T "fig_year" }}</figcaption>
 </figure>
 </div>
 {{- end }}
@@ -119,41 +105,24 @@
 <div class="fig-row">
 <figure>
 {{ index $p.author_charts.first (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
+{{- $fig = add $fig 1 }}<figcaption>{{ T "fig_n" $fig }} {{ T "fig_first" }}</figcaption>
 </figure>
 <figure>
 {{ index $p.author_charts.majority (cond (eq site.Language.Lang "vi") "svg_vi" "svg") | safeHTML }}
+{{- $fig = add $fig 1 }}<figcaption>{{ T "fig_n" $fig }} {{ T "fig_majority" }}</figcaption>
 </figure>
 </div>
-<p class="note">{{ T "author_charts_note" $p.institution_short }}</p>
 
-<h2>{{ T "coauthors_title" }}</h2>
-{{- $c := $p.collab }}
-{{- if not $c.papers }}
-<p>{{ T "coauthors_none" }}</p>
-{{- else }}
-<ul>
-	<li>{{ T "coauthors_avg" (dict "Avg" $c.avg_coauthors "Min" $c.min_coauthors "Max" $c.max_coauthors "Distinct" $c.distinct_coauthors "Papers" $c.papers) }}</li>
-	{{- if $c.papers_with_affiliations }}
-	<li>{{ T "coauthors_foreign" $c.avg_foreign }}</li>
-	<li>{{ T "coauthors_elsewhere" (dict "Count" $c.elsewhere "Inst" $p.institution_short "Abroad" $c.elsewhere_abroad "Vietnam" $c.elsewhere_vietnam) }}</li>
-	{{- if lt (int $c.papers_with_affiliations) (int $c.papers) }}
-	<li class="note">{{ T "coauthors_partial" (dict "With" $c.papers_with_affiliations "Papers" $c.papers) }}</li>
-	{{- end }}
-	{{- else }}
-	<li class="note">{{ T "coauthors_no_aff" }}</li>
-	{{- end }}
-	{{- $vi := eq site.Language.Lang "vi" }}
-	{{- $mine := index (hugo.Data.challenges_people | default dict) $p.slug }}
-	{{- $ent := slice }}{{ with where (hugo.Data.challenges.professors | default slice) "slug" $p.slug }}{{ with index . 0 }}{{ $ent = slice . }}{{ end }}{{ end }}
-	{{- $rows := slice }}
-	{{- if $mine }}{{ $rows = $mine.topics }}{{ end }}
-	{{- if not $rows }}{{ range $ent }}{{ range .areas }}{{ $rows = $rows | append (dict "key" .key "score_accepted" .score) }}{{ end }}{{ end }}{{ end }}
-	{{- if $rows }}
-	<li>{{ T "topics_line_ch" (dict "Count" (len $rows) "URL" (printf "research/%s/" $p.slug | relLangURL)) | safeHTML }}</li>
-	{{- else }}
-	<li class="note">{{ T "topics_none" }}</li>
-	{{- end }}
-</ul>
+<h2>{{ T "th_topics" }}</h2>
+{{- $vi := eq site.Language.Lang "vi" }}
+{{- $mine := index (hugo.Data.challenges_people | default dict) $p.slug }}
+{{- $ent := slice }}{{ with where (hugo.Data.challenges.professors | default slice) "slug" $p.slug }}{{ with index . 0 }}{{ $ent = slice . }}{{ end }}{{ end }}
+{{- $rows := slice }}
+{{- if $mine }}{{ $rows = $mine.topics }}{{ end }}
+{{- if not $rows }}{{ range $ent }}{{ range .areas }}{{ $rows = $rows | append (dict "key" .key "score_accepted" .score) }}{{ end }}{{ end }}{{ end }}
+{{- if not $rows }}
+<p class="note">{{ T "topics_none" }}</p>
+{{- end }}
 {{- $all := (hugo.Data.challenge_topics.topics | default slice) }}
 {{- if $rows }}
 <div class="scroll">
@@ -168,7 +137,6 @@
 	</tbody>
 </table>
 </div>
-{{- end }}
 {{- end }}
 
 <h2>{{ T "accepted_papers" (len $p.accepted_papers) }}</h2>

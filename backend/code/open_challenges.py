@@ -595,6 +595,8 @@ def merge_papers(papers):
             d[k] = linkify(d.get(k, ""), valid)
     for x in index:
         polite(x, honor.get(x["slug"]), x["name_vi"], x["name"])
+    who = {slug: f"{honor[slug]} {d['name_vi'].split()[-1]}" for slug, d in people.items() if honor.get(slug) and d.get("name_vi") and d["name_vi"] != d["name"]}
+    (FRONTEND / "data" / "honorifics.json").write_text(json.dumps(who, ensure_ascii=False, indent=1), encoding="utf-8")
     (FRONTEND / "data" / "challenges_people.json").write_text(json.dumps(people, ensure_ascii=False, indent=1), encoding="utf-8")
     shown = {x["id"] for p in people.values() for x in p["papers"]}
     known = {paper_id(p): p for p in papers}

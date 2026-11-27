@@ -68,23 +68,23 @@ Importantly, this projection only applies to conferences where submissions are c
 
 ## Research directions
 
-The [Research directions](../research/) page answers a question that rankings cannot: *what does each professor actually work on, and where is their work still unfinished?* It is written for undergraduate and master's students, PhD applicants and researchers from other fields, and it is built only from public material: the papers on this site (accepted and rejected), their abstracts and own limitation sections, and the public OpenReview reviews.
+The [Research directions](../research/) page answers a question that numbers and rankings cannot: *what problems is each professor actively tackling, and what open questions remain?* It is designed for undergraduate and graduate students, prospective PhD applicants, and researchers exploring related areas. All summaries are compiled strictly from public material: papers tracked on this site (both accepted and rejected), their abstracts and author-stated limitations, and public reviews on OpenReview.
 
 ### What it shows
 
-- **A list of topics.** The topics come from one shared list of 19 topics that covers all the conferences tracked here. Pick a topic and the list shows who works on it, ranked by their [CSRankings score](#scoring-methodology) in that topic (accepted papers only).
-- **A page per professor.** It opens with a short overview and a summary of the open challenges, then goes topic by topic. Each topic has a short description, the questions it leaves open (what the authors say they have not solved, and verbatim quotes from public reviews) and the papers, each with the problem, the idea, what it reports and links to the paper, its official source and OpenReview.
-- **A figure per professor.** One dot per paper by topic and year, with curves where a paper cites an earlier one of the same professor, so you can see how a line of work developed.
+- **Shared topic list:** A catalog of 19 unified research topics covering all tracked conferences. Selecting a topic reveals which professors in Vietnam publish in that area, sorted by their [CSRankings score](#scoring-methodology) in that topic (accepted papers only).
+- **Dedicated professor pages:** Each profile begins with a concise overview and a summary of open challenges, followed by a breakdown organized by topic. Each topic section describes the problem, the core idea, reported outcomes, open questions (both author-stated limitations and direct quotes from public reviews), and links to the paper's official source and OpenReview page.
+- **Citation timeline diagrams:** An interactive chart mapping papers by topic and year. Curves link later papers to earlier publications by the same professor that they cite, helping you visualize how a research direction evolved over time.
 
 ### How it can help you
 
-- **Choosing a supervisor.** The topic summaries and scores show what a professor works on and how much of their output sits in each topic, which a name or a university does not tell you. A professor with many papers in a topic you like, in recent years, is a stronger match than a famous name in another area. The papers listed under each topic are the place to read before you write to them.
-- **Choosing a thesis topic.** Every open question marks a point that the authors or reviewers say is not yet solved, such as a setting that was not tested, a cost the method adds, or a baseline reviewers asked for. For a student, those are concrete places to help a supervisor: start from a question, read the linked paper, and propose a small, well-defined piece of work.
-- **Writing a better email.** Citing a specific paper and one of its open questions shows that you have read the work.
+- **Finding a research advisor:** Topic breakdowns and scores highlight where a professor's recent publications actually concentrate, which a faculty directory or university affiliation cannot tell you. A professor who actively publishes in your field of interest is often a much better match than a well-known name working in a different subfield. The papers listed under each topic provide an ideal reading list before reaching out.
+- **Selecting a thesis topic:** Every highlighted open question pinpoints an unresolved challenge identified by authors or peer reviewers—such as an untested domain, computational overhead, or baseline comparisons requested during review. For students, these offer concrete starting points: you can begin from an open question, read the linked paper, and propose a well-scoped research contribution.
+- **Writing more effective outreach emails:** Citing a specific recent paper and discussing one of its open questions demonstrates to prospective advisors that you have genuinely engaged with their research before reaching out.
 
-### Limits
+### Limitations
 
-The pages are summaries, not evaluations. They contain no scores of papers or reviewers and no opinion about whether a direction is worthwhile. Papers whose text or reviews we could not obtain are described from their abstracts only, and many papers, such as those at AAAI and ICRA, have no public reviews. Experts in a field know where it is heading and which problems are worth pursuing, and may weigh strengths and weaknesses differently; use these pages as a starting point and talk to the people involved.
+These pages provide summaries rather than qualitative evaluations. They contain no subjective ratings of papers or reviewers and offer no verdict on whether a research direction is worthwhile. Papers whose full text or peer reviews were not publicly accessible are summarized based on abstracts alone, and several conferences (such as AAAI and ICRA) do not release public reviews. Researchers working within each field understand where their community is heading and which problems are most impactful, and they may view strengths and limitations differently. We encourage you to use these summaries as a helpful starting point and discuss directions directly with the faculty and groups involved.
 
 ## Credits & Resources
 

@@ -3,7 +3,7 @@ title: "Giới thiệu"
 toc: true
 ---
 
-**Vietnam AIRankings** là dự án mã nguồn mở định hướng dữ liệu (open-source, data-driven), nhằm theo dõi và thống kê các công bố khoa học của đội ngũ giảng viên tại các trường đại học ở Việt Nam tại các hội nghị quốc tế hàng đầu về trí tuệ nhân tạo (AI) và robot.
+**Vietnam AIRankings** là dự án mã nguồn mở định hướng dữ liệu (open-source, data-driven), nhằm theo dõi và thống kê các công bố khoa học của đội ngũ giảng viên tại các trường đại học ở Việt Nam tại các hội nghị quốc tế hàng đầu về trí tuệ nhân tạo.
 
 Trong ngành khoa học máy tính, các hội nghị chuyên ngành hàng đầu (top-tier conferences) là nơi công bố những nghiên cứu mới nhất và có sức ảnh hưởng học thuật lớn nhất. Bằng việc theo dõi dữ liệu từ năm 2020 đến nay tại 13 hội nghị hàng đầu thuộc năm phân ngành (AI, Machine Learning, Computer Vision, NLP và Robotics), dự án hướng tới cung cấp một góc nhìn khách quan, minh bạch và toàn diện về năng lực nghiên cứu AI tại các trường đại học ở Việt Nam.
 
@@ -70,23 +70,23 @@ Chẳng hạn, với 9 bài nộp ICLR và 1 bài được nhận, tỷ lệ là
 
 ## Hướng nghiên cứu
 
-Trang [Hướng nghiên cứu](../research/) trả lời câu hỏi mà bảng xếp hạng không trả lời được: *mỗi giảng viên thực sự đang làm gì, và công việc của họ còn dang dở ở đâu?* Trang được viết cho sinh viên đại học và cao học, ứng viên nghiên cứu sinh và những người làm ở lĩnh vực khác, và chỉ dựa trên tài liệu công khai: các bài báo trên trang này (được nhận và bị từ chối), phần tóm tắt và phần hạn chế của chính bài báo, cùng các nhận xét phản biện công khai trên OpenReview.
+Trang [Hướng nghiên cứu](../research/) giúp giải đáp câu hỏi mà các con số xếp hạng đơn thuần không thể hiện được: *mỗi thầy cô thực sự đang giải quyết những bài toán nào, và đâu là những câu hỏi mở tiếp theo trong hướng đi đó?* Trang được thiết kế dành cho các bạn sinh viên, học viên cao học, ứng viên nghiên cứu sinh cũng như những người làm nghiên cứu ở các lĩnh vực liên quan. Nội dung hoàn toàn được tổng hợp từ nguồn tài liệu công khai: các bài báo được theo dõi trên hệ thống (cả bài được nhận và bài nộp), tóm tắt và phần giới hạn do chính tác giả nêu trong bài, cùng các nhận xét phản biện mở trên OpenReview.
 
 ### Trang cho thấy gì
 
-- **Danh sách chủ đề.** Các chủ đề lấy từ một danh sách chung gồm 19 chủ đề, bao phủ các hội nghị được theo dõi ở đây. Chọn một chủ đề, danh sách sẽ cho biết ai làm về chủ đề đó, xếp theo [điểm CSRankings](#phương-pháp-tính-điểm) trong chủ đề (chỉ tính bài được nhận).
-- **Một trang cho mỗi giảng viên.** Trang mở đầu bằng phần tổng quan ngắn và tóm tắt các thách thức còn mở, rồi đi lần lượt từng chủ đề. Mỗi chủ đề có mô tả ngắn, các câu hỏi còn bỏ ngỏ (điều tác giả nói chưa giải quyết được, và trích nguyên văn từ nhận xét phản biện công khai) và các bài báo, mỗi bài có bài toán, ý tưởng, kết quả và liên kết đến bài báo, nguồn chính thức và OpenReview.
-- **Một hình cho mỗi giảng viên.** Mỗi chấm là một bài báo theo chủ đề và năm, có đường cong nối bài với một bài trước đó của cùng giảng viên mà nó trích dẫn, để thấy một hướng nghiên cứu đã phát triển ra sao.
+- **Danh mục chủ đề chung:** Hệ thống quy tụ 19 chủ đề nghiên cứu bao quát các hội nghị được theo dõi. Khi chọn một chủ đề, bạn có thể xem ngay danh sách các thầy cô tại Việt Nam có công bố trong hướng đó, được sắp xếp theo [điểm CSRankings](#phương-pháp-tính-điểm) của chủ đề (chỉ tính bài được nhận).
+- **Trang chuyên biệt cho từng thầy cô:** Mỗi trang mở đầu bằng phần tổng quan và tóm tắt các thách thức còn mở, sau đó phân tích chi tiết theo từng chủ đề. Mỗi chủ đề bao gồm bài toán đặt ra, ý tưởng tiếp cận cốt lõi, kết quả đạt được, những câu hỏi mở (gồm hạn chế do tác giả chỉ ra và trích dẫn nhận xét phản biện công khai), cùng liên kết đến văn bản bài báo, nguồn phát hành chính thức và OpenReview.
+- **Biểu đồ phát triển hướng nghiên cứu:** Sơ đồ trực quan thể hiện các bài báo theo chủ đề và từng năm. Các đường cong nối một bài báo với công trình trước đó của cùng thầy cô mà bài này trích dẫn, giúp bạn hình dung mạch phát triển liên tục của một hướng nghiên cứu theo thời gian.
 
 ### Trang giúp ích thế nào
 
-- **Chọn người hướng dẫn.** Phần tóm tắt theo chủ đề và điểm cho thấy giảng viên làm gì và phần lớn công bố của họ nằm ở chủ đề nào, điều mà tên hay trường không cho biết. Một giảng viên có nhiều bài gần đây ở chủ đề bạn thích phù hợp hơn một cái tên nổi tiếng ở lĩnh vực khác. Các bài báo liệt kê dưới mỗi chủ đề là nơi nên đọc trước khi viết thư cho thầy cô.
-- **Chọn đề tài.** Mỗi câu hỏi còn mở đánh dấu một điểm mà tác giả hoặc phản biện cho rằng chưa được giải quyết, ví dụ một bối cảnh chưa thử, một chi phí mà phương pháp thêm vào, hay một đối chứng mà phản biện yêu cầu. Với sinh viên, đó là những chỗ cụ thể để giúp người hướng dẫn: bắt đầu từ một câu hỏi, đọc bài báo được dẫn, rồi đề xuất một phần việc nhỏ, rõ ràng.
-- **Viết thư hay hơn.** Nêu một bài báo cụ thể và một câu hỏi còn mở của nó cho thấy bạn đã đọc công trình.
+- **Tìm người hướng dẫn nghiên cứu:** Bảng tổng hợp theo chủ đề và điểm số cho thấy rõ các công bố gần đây của thầy cô tập trung vào lĩnh vực nào—điều mà tên tuổi hay trường công tác đơn thuần không phản ánh hết. Một thầy cô có nhiều bài báo gần đây trong đúng chủ đề bạn quan tâm sẽ là lựa chọn phù hợp hơn so với một tên tuổi lớn nhưng làm ở phân ngành khác. Danh sách bài báo dưới mỗi chủ đề cũng là tài liệu đọc lý tưởng trước khi bạn liên hệ với thầy cô.
+- **Lựa chọn đề tài nghiên cứu:** Mỗi câu hỏi mở đánh dấu một điểm mà tác giả hoặc phản biện nhận định là chưa được giải quyết trọn vẹn—chẳng hạn như một kịch bản thực nghiệm chưa thử nghiệm, chi phí tính toán phát sinh, hay một mô hình đối chứng (baseline) mà phản biện yêu cầu. Đối với sinh viên, đây là điểm xuất phát cụ thể để tham gia nghiên cứu cùng thầy cô: bắt đầu từ một câu hỏi mở, đọc kỹ bài báo liên quan và đề xuất một phần việc rõ ràng, vừa sức.
+- **Liên hệ với thầy cô hiệu quả hơn:** Việc nhắc đến một bài báo cụ thể và thảo luận về câu hỏi mở của công trình sẽ cho thấy bạn đã thực sự tìm hiểu và đọc bài nghiêm túc trước khi gửi email xin hướng dẫn.
 
 ### Giới hạn
 
-Các trang là bản tóm tắt, không phải đánh giá. Trang không có điểm số của bài báo hay phản biện và không nêu ý kiến về việc một hướng có đáng theo đuổi hay không. Bài nào chúng tôi không lấy được văn bản hoặc nhận xét thì chỉ được mô tả từ phần tóm tắt, và nhiều bài, như ở AAAI và ICRA, không có nhận xét công khai. Chuyên gia trong từng lĩnh vực biết lĩnh vực đang đi về đâu và bài toán nào đáng theo đuổi, và có thể cân nhắc điểm mạnh, điểm yếu khác đi; hãy xem các trang này như điểm khởi đầu và trao đổi trực tiếp với những người liên quan.
+Các trang nội dung này mang tính tóm tắt tổng hợp chứ không phải đánh giá định tính. Hệ thống không đưa ra điểm số đánh giá bài báo hay nhận xét chủ quan về việc một hướng nghiên cứu có đáng theo đuổi hay không. Với những bài báo không tiếp cận được toàn văn hoặc không có nhận xét phản biện mở (như ở AAAI hay ICRA), nội dung chỉ dựa trên phần tóm tắt (abstract). Các nhà nghiên cứu và thầy cô trong từng chuyên ngành luôn hiểu rõ xu hướng phát triển cũng như bài toán nào thực sự có tác động lớn, do đó có thể có góc nhìn đa chiều hơn. Bạn nên xem các tóm tắt này như một điểm tham khảo khởi đầu hữu ích và hãy trao đổi trực tiếp với thầy cô và nhóm nghiên cứu để có định hướng tốt nhất.
 
 ## Thông tin dự án và lời cảm ơn
 

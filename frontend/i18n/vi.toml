@@ -228,34 +228,8 @@ other = "Hình 2. Tổng số bài được chấp nhận và tổng số bài b
 other = "Theo năm"
 [chart_title]
 other = "Số bài nộp và được nhận theo năm"
-[chart_note]
-other = "Bài được nhận và bài bị từ chối có ghi nhận (ICLR, bài bị từ chối công khai tại NeurIPS, Findings) là số đếm trực tiếp; phần nhạt là ước tính số bài bị từ chối mà các hội nghị khác không công khai."
-[chart_note_own]
-other = "Phần ước tính dựa trên kết quả ICLR của giảng viên: {{ .Ratio }} lần nộp cho mỗi bài được nhận (xem trang Giới thiệu)."
-[chart_note_own_page]
-other = "Có {{ . }} bài được nhận chỉ biết qua trang cá nhân."
-[chart_note_no_iclr]
-other = "Chưa có bài nộp ICLR nên không có phần ước tính."
-[chart_note_not_fetched]
-other = "Chưa thu thập hồ sơ OpenReview nên không có phần ước tính."
-[coauthors_title]
-other = "Đồng tác giả và lĩnh vực"
-[coauthors_none]
-other = "Chưa có bài để tính các chỉ số này."
-[coauthors_avg]
-other = "Trung bình {{ .Avg }} đồng tác giả trên mỗi bài báo (ít nhất {{ .Min }} tác giả ở bài được nhận, nhiều nhất {{ .Max }} tác giả ở một bài nộp), với tổng cộng {{ .Distinct }} đồng tác giả khác nhau qua {{ .Papers }} công trình."
-[coauthors_foreign]
-other = "Trung bình {{ . }} đồng tác giả quốc tế mỗi bài (các đồng tác giả có đơn vị công tác hoàn toàn ở ngoài Việt Nam)."
-[coauthors_elsewhere]
-other = "{{ .Count }} đồng tác giả đến từ các trường hoặc đơn vị khác ngoài {{ .Inst }} ({{ .Abroad }} người ở nước ngoài, {{ .Vietnam }} người ở Việt Nam)."
-[coauthors_partial]
-other = "Hai chỉ số trên được tính trên {{ .With }}/{{ .Papers }} bài có danh sách ghi đơn vị công tác của từng tác giả."
-[coauthors_no_aff]
-other = "Các danh sách bài báo không ghi đơn vị công tác, nên không thể thống kê đồng tác giả nước ngoài hoặc ở đơn vị khác."
 [topics_line]
 other = "{{ .Topics }} chủ đề thuộc {{ .Count }} lĩnh vực, theo nhãn chủ đề do hội nghị gán cho {{ .With }}/{{ .Papers }} bài:"
-[topics_none]
-other = "Chưa có bài nào được hội nghị gán nhãn chủ đề."
 [accepted_papers]
 other = "Bài được nhận ({{ . }})"
 [rejected_papers]
@@ -327,8 +301,6 @@ other = "Đơn vị đồng tác giả"
 other = "Các trường, viện ở Việt Nam có bài chung với đơn vị này (được nhận, bị từ chối hoặc workshop) và số bài chung; không tính đơn vị ở nước ngoài."
 [coauthors_on_site]
 other = "Đồng tác giả"
-[coauthors_on_site_note]
-other = "Những giảng viên trên trang có bài chung với giảng viên này (được nhận, bị từ chối hoặc workshop), kèm trường hiện tại và số bài chung; xem toàn bộ ở mục <a href=\"{{ . }}\">Hợp tác trong nước</a>."
 [links]
 other = "Liên kết"
 
@@ -363,8 +335,6 @@ other = "Wikipedia"
 [link_researchgate]
 other = "ResearchGate"
 
-[scholar_note]
-other = "Số liệu được ghi lại từ <a href=\"{{ .URL }}\">hồ sơ Google Scholar</a> vào ngày {{ .Date }} và không được cập nhật tự động. Google Scholar thống kê toàn bộ công bố, không chỉ riêng mười ba hội nghị."
 
 [scholar_all]
 other = "Tất cả"
@@ -381,8 +351,6 @@ other = "Chỉ số h"
 [scholar_i10]
 other = "Chỉ số i10"
 
-[scholar_chart]
-other = "Số trích dẫn theo năm, theo Google Scholar tại ngày ghi nhận."
 
 [tip_scholar]
 other = "Theo hồ sơ Google Scholar của từng giảng viên, ghi nhận ngày 2026-10-02; Google Scholar thống kê toàn bộ công bố"
@@ -396,8 +364,6 @@ other = "{{ .Name }}: {{ .Profs }} giảng viên, {{ .Accepted }} bài được 
 [seo_venue]
 other = "{{ .Name }}: số bài nộp, được chấp nhận và bị từ chối của giảng viên tại Việt Nam từ năm 2020; {{ .Accepted }} bài được chấp nhận."
 
-[also_published_as]
-other = "Tên khác trên các bài báo: {{ . }}"
 
 [graph_legend_title]
 other = "Trường"
@@ -473,8 +439,6 @@ other = "Chủ đề"
 [tip_topics]
 other = "ba chủ đề (trong danh sách chung ở trang Hướng nghiên cứu) mà giảng viên có điểm CSRankings cao nhất; bấm vào một chủ đề để xem những ai khác cùng làm"
 
-[prof_pie_caption]
-other = "Mọi năm: {{ .Accepted }} bài được nhận, {{ .Recorded }} bài bị từ chối có ghi nhận và khoảng {{ .Estimated }} bài bị từ chối ở nơi khác (ước tính), tức khoảng {{ .Total }} lần nộp."
 
 [role_source]
 other = "Nguồn của chức vụ này"
@@ -515,11 +479,11 @@ other = "{{ .Count }} bài"
 [ent_n_profs]
 other = "{{ .Count }} giảng viên"
 [ent_prof_accepted]
-other = "Trong giai đoạn công tác tại Việt Nam, giảng viên có {{ .Papers }} tại mười ba hội nghị hàng đầu{{ .Part }}."
+other = "Trong giai đoạn công tác tại Việt Nam, {{ .Who }} có {{ .Papers }} tại mười ba hội nghị hàng đầu{{ .Part }}."
 [ent_prof_none]
-other = "Trong giai đoạn công tác tại Việt Nam, giảng viên chưa có bài báo nào được nhận tại mười ba hội nghị hàng đầu."
+other = "Trong giai đoạn công tác tại Việt Nam, {{ . }} chưa có bài báo nào được nhận tại mười ba hội nghị hàng đầu."
 [ent_prof_iclr]
-other = "Về dữ liệu phản biện công khai, tác giả đã nộp {{ .Papers }} tại ICLR ({{ .Detail }}){{ .Other }}."
+other = "Về dữ liệu phản biện công khai, {{ .Who }} đã nộp {{ .Papers }} tại ICLR ({{ .Detail }}){{ .Other }}."
 [ent_acc_rej]
 other = "{{ .Accepted }} bài được nhận và {{ .Rejected }} bài không được nhận"
 [ent_acc_only]
@@ -529,7 +493,7 @@ other = "{{ . }} bài không được nhận"
 [ent_other_part]
 other = ", cùng {{ .Count }} bài thuộc Findings hoặc bị từ chối công khai tại {{ .Venues }}"
 [ent_other_only]
-other = "Ngoài ra, tác giả có {{ .Count }} bài thuộc Findings hoặc bị từ chối công khai tại {{ .Venues }}."
+other = "Ngoài ra, {{ .Who }} có {{ .Count }} bài thuộc Findings hoặc bị từ chối công khai tại {{ .Venues }}."
 [ent_and]
 other = " và "
 [ent_uni_summary]
@@ -609,9 +573,9 @@ other = "Bấm để xem tổng từ 2020"
 [ch_none]
 other = "Chưa có tổng hợp."
 [ch_sources]
-other = "Viết từ {{ .Papers }} bài ở trang Bài báo: tóm tắt của bài, chính văn bản bài khi đọc được ({{ .Text }} bài) và nhận xét phản biện công khai trên OpenReview ({{ .Reviews }} bài), đọc ngày {{ .Date }}."
+other = "Tổng hợp từ {{ .Papers }} bài ở trang Bài báo, dựa trên phần tóm tắt, toàn văn bài báo đối với các bài đọc được ({{ .Text }} bài) và nhận xét phản biện công khai trên OpenReview ({{ .Reviews }} bài), cập nhật ngày {{ .Date }}."
 [ch_all]
-other = "Tất cả giảng viên"
+other = "Tất cả thầy cô"
 [ch_problem]
 other = "Bài toán"
 [ch_technique]
@@ -619,7 +583,7 @@ other = "Ý tưởng"
 [ch_strength]
 other = "Điểm mạnh"
 [ch_authors]
-other = "Tác giả còn để ngỏ"
+other = "Vấn đề mở tác giả nêu"
 [ch_reviewers]
 other = "Câu hỏi của phản biện"
 [ch_expand]
@@ -639,15 +603,15 @@ other = "phản biện nêu"
 [ch_on_papers]
 other = "Dòng của bài này ở trang Bài báo"
 [ch_fig_label]
-other = "Các bài theo chủ đề và năm; đường cong nối một bài với bài trước đó của cùng giảng viên mà nó trích dẫn"
+other = "Các bài báo theo chủ đề và năm; đường cong nối một bài với bài trước đó của cùng thầy cô mà bài này trích dẫn"
 [ch_fig_caption]
-other = "Các bài báo và bài nộp theo chủ đề và năm. Mỗi chấm là một bài (bấm để mở); đường cong nối một bài với bài trước đó của giảng viên này mà nó trích dẫn."
+other = "Các bài báo và bài nộp theo chủ đề và năm. Mỗi chấm là một bài (bấm để mở); đường cong nối một bài với bài trước đó của thầy cô này mà bài này trích dẫn."
 [ch_words]
 other = "Các từ đặc trưng nhất trong tóm tắt của chủ đề"
 [ch_desc]
 other = "Mô tả chủ đề"
 [ch_open_summary]
-other = "Thách thức còn mở."
+other = "Các hướng nghiên cứu mở."
 [ch_done]
 other = "đã viết từ đầy đủ tài liệu"
 [ch_building]
@@ -655,17 +619,17 @@ other = "đang hoàn thiện"
 [ch_score]
 other = "điểm CSRankings"
 [ch_score_tip]
-other = "Tổng 1/N trên các bài của chủ đề, N là số tác giả của mỗi bài, như CSRankings; các chủ đề được xếp theo điểm này, từ cao xuống thấp"
+other = "Tổng 1/N trên các bài của chủ đề (với N là số tác giả mỗi bài, theo chuẩn CSRankings); các chủ đề được sắp xếp theo điểm này từ cao xuống thấp"
 [ch_read_more]
 other = "Chi tiết các chủ đề, bài báo và vấn đề còn mở"
 [ch_top_score]
 other = "điểm (bài được nhận)"
 [ch_top_score_tip]
-other = "Điểm CSRankings (tổng 1/N tác giả) trên các bài được nhận của giảng viên ở mọi chủ đề; khi chọn một chủ đề, trên các bài được nhận của chủ đề đó. Danh sách xếp theo điểm này. Bài bị từ chối hoặc rút không được tính ở đây"
+other = "Điểm CSRankings (tổng 1/N, với N là số tác giả của mỗi bài) tính trên các bài được nhận của thầy cô ở mọi chủ đề; khi chọn một chủ đề, chỉ tính các bài được nhận trong chủ đề đó. Danh sách được sắp xếp theo điểm này (không tính bài bị từ chối hoặc rút)."
 [ch_all_topics]
 other = "Tất cả chủ đề"
 [ch_more_show]
-other = "Hiện thêm {n} giảng viên chưa có bài được nhận"
+other = "Hiện thêm {n} thầy cô chưa có bài được nhận"
 [ch_more_hide]
 other = "Ẩn đi"
 [ch_link]
@@ -677,6 +641,18 @@ other = "Nguồn chính thức của bài báo"
 [ch_openreview_tip]
 other = "Trang OpenReview của bài, kèm nhận xét phản biện công khai"
 [ch_line_tip]
-other = "Số bài trong chủ đề này (được nhận và bị từ chối), và điểm CSRankings của các bài được nhận"
-[topics_line_ch]
-other = "{{ .Count }} chủ đề trong danh sách chung ở trang Hướng nghiên cứu (gồm bài được nhận và bị từ chối, kèm điểm CSRankings của các bài được nhận); phần tóm tắt nghiên cứu và thách thức còn mở nằm ở <a href=\"{{ .URL }}\">trang Hướng nghiên cứu</a>."
+other = "Tổng số bài trong chủ đề này (gồm cả bài được nhận và bài bị từ chối) cùng điểm CSRankings của các bài được nhận"
+[fig_n]
+other = "Hình {{ . }}."
+[fig_scholar]
+other = "Số trích dẫn theo năm trên Google Scholar."
+[fig_pie]
+other = "Bài được nhận, bài bị từ chối có ghi nhận và bài bị từ chối ở nơi khác (ước tính), mọi năm."
+[fig_year]
+other = "Số bài nộp và được nhận theo năm."
+[fig_first]
+other = "Bài được nhận theo năm, theo trường của tác giả đầu."
+[fig_majority]
+other = "Bài được nhận theo năm, theo nơi công tác của đa số tác giả."
+[topics_none]
+other = "Chưa có chủ đề."

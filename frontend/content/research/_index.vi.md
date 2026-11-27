@@ -3,6 +3,6 @@ title: "Hướng nghiên cứu"
 layout: "research"
 ---
 
-Ai đang nghiên cứu gì. Chọn một chủ đề để xem những giảng viên ở Việt Nam làm về chủ đề đó, xếp theo điểm CSRankings của họ trong chủ đề, hoặc cuộn xuống để đọc tóm tắt theo chủ đề của từng giảng viên. Trang của mỗi giảng viên đi qua từng bài báo: bài toán, ý tưởng, kết quả bài báo nêu, những gì tác giả cho là còn bỏ ngỏ và các câu hỏi trong nhận xét phản biện công khai.
+Trang này tổng hợp các hướng nghiên cứu AI mà quý thầy cô tại Việt Nam đang theo đuổi. Bạn có thể chọn một chủ đề bên dưới để xem danh sách thầy cô nghiên cứu về hướng đó (sắp xếp theo điểm CSRankings trong chủ đề), hoặc cuộn xuống để đọc phần tóm tắt theo từng chủ đề của mỗi thầy cô. Khi bấm vào tên của thầy cô, bạn sẽ xem được tổng hợp chi tiết từng bài báo: bài toán đặt ra, ý tưởng tiếp cận, kết quả đạt được, những vấn đề mở được tác giả chỉ ra, cùng các câu hỏi từ nhận xét phản biện công khai.
 
-*Các trang này chỉ tóm tắt tài liệu công khai: bài báo và nhận xét phản biện công khai. Chuyên gia trong từng lĩnh vực có thể thấy điểm mạnh, điểm yếu khác, vì họ hiểu lĩnh vực đang đi về đâu và bài toán nào đáng theo đuổi.*
+*Các trang này được tổng hợp từ tài liệu công khai gồm bài báo và nhận xét phản biện mở. Mỗi chuyên gia trong ngành có thể có đánh giá khác nhau về điểm mạnh hay hạn chế của từng công trình, bởi thầy cô và các nhà nghiên cứu trong lĩnh vực luôn hiểu rõ xu hướng phát triển cũng như bài toán nào thực sự đáng theo đuổi.*
