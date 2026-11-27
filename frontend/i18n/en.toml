@@ -664,6 +664,8 @@ other = "Sum of 1/N over the topic's papers, N being each paper's number of auth
 [ch_read_more]
 other = "Topics, papers and open questions in detail"
 [ch_top_score]
-other = "top-topic score"
+other = "score (accepted papers)"
 [ch_top_score_tip]
-other = "CSRankings score (sum of 1/N authors) of the professor's highest-scoring topic; professors are grouped by the area of that topic"
+other = "CSRankings score (sum of 1/N authors) over the accepted papers of the professor's highest-scoring topic, or of the selected topic when filtering; the list is sorted by it. Rejected and withdrawn papers are not counted here"
+[ch_all_topics]
+other = "All topics"

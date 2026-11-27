@@ -461,8 +461,10 @@ def merge_papers(papers):
                            "papers": rest})
         fig = None
         credit = {x["id"]: x["credit"] for x in mine}
+        accepted = {x["id"] for x in mine if x["status"] == "accepted"}
         for g in groups:
             g["score"] = round(sum(credit[i] for i in g["papers"]), 2)
+            g["score_accepted"] = round(sum(credit[i] for i in g["papers"] if i in accepted), 2)
         if groups:
             cites = citations(mine)
             groups = order_topics(groups)
@@ -497,21 +499,32 @@ def merge_papers(papers):
     known = {paper_id(p): p for p in papers}
     for x in index:
         d = people[x["slug"]]
-        tops = [g["score"] for g in d["topics"] if not is_other(g)] or [g["score"] for g in d["topics"]]
-        x["score"] = max(tops) if tops else round(sum(p["credit"] for p in d["papers"]), 2)
+        tops = [g["score_accepted"] for g in d["topics"] if not is_other(g)] or [g["score_accepted"] for g in d["topics"]]
+        x["score"] = max(tops) if tops else round(sum(p["credit"] for p in d["papers"] if p["status"] == "accepted"), 2)
     areas_file = OUT / "areas.json"
     grouping = json.loads(areas_file.read_text(encoding="utf-8")) if areas_file.exists() else {"areas": [], "assign": {}}
     keys = {a["key"] for a in grouping["areas"]}
-    buckets = {a["key"]: {**a, "professors": []} for a in grouping["areas"]}
-    rest = {"key": "other", "title": "Other areas", "title_vi": "Các hướng khác", "professors": []}
+    labels = {}
+    lines_file, labels_file = OUT / "topic_lines.txt", OUT / "topic_areas.json"
+    if lines_file.exists() and labels_file.exists():
+        by_id = json.loads(labels_file.read_text(encoding="utf-8"))
+        for line in lines_file.read_text(encoding="utf-8").splitlines():
+            ident, title = line.split(" | ")[:2]
+            labels[(ident.split("#")[0], title)] = [k for k in by_id.get(ident, []) if k in keys]
     for x in index:
-        k = grouping["assign"].get(x["slug"])
-        (buckets[k] if k in keys else rest)["professors"].append(x)
-    areas = [b for b in buckets.values() if b["professors"]] + ([rest] if rest["professors"] else [])
-    for b in areas:
-        b["professors"].sort(key=lambda x: -x["score"])
-        b["score"] = round(sum(x["score"] for x in b["professors"]), 2)
-    areas.sort(key=lambda b: (b["key"] == "other", -b["score"]))
+        d = people[x["slug"]]
+        best = {}
+        for g in d["topics"]:
+            for k in labels.get((x["slug"], g["title"]), []):
+                best[k] = max(best.get(k, 0), g["score_accepted"])
+        fallback = grouping["assign"].get(x["slug"])
+        if not best and fallback in keys:
+            best[fallback] = x["score"]
+        x["areas"] = [{"key": k, "score": v} for k, v in sorted(best.items(), key=lambda kv: -kv[1])]
+    counts = {a["key"]: sum(1 for x in index if any(r["key"] == a["key"] for r in x["areas"])) for a in grouping["areas"]}
+    areas = [{**a, "count": counts[a["key"]]} for a in grouping["areas"] if counts[a["key"]]]
+    areas.sort(key=lambda a: -a["count"])
+    index.sort(key=lambda x: -x["score"])
     meta = {"professors": index, "areas": areas, "sources": {"papers": len(shown), "date": datetime.date.today().isoformat(),
                                              "with_text": sum(1 for i in shown if (PDF_DIR / AREA[known[i]["venue"]] / f"{i}.pdf").exists()),
                                              "with_reviews": sum(1 for i in shown if (PDF_DIR / AREA[known[i]["venue"]] / f"{i}.md").exists())}}

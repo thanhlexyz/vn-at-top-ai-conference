@@ -13,28 +13,35 @@ h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; 
 {{ .Content }}
 {{- with hugo.Data.challenges }}
 <p class="note">✅ {{ T "ch_done" }} · 🚧 {{ T "ch_building" }}</p>
-<p class="ch-filter">{{ range .areas }}<button type="button" data-area="{{ .key }}">{{ if $vi }}{{ .title_vi }}{{ else }}{{ .title }}{{ end }} ({{ len .professors }})</button> {{ end }}</p>
-{{- range .areas }}
-<section class="ch-area-box" data-area="{{ .key }}">
-<h2 class="ch-area">{{ if $vi }}{{ .title_vi }}{{ else }}{{ .title }}{{ end }} <span class="n">({{ len .professors }})</span></h2>
-<ul class="ch-index">
+<p class="ch-filter"><button type="button" data-area="" aria-pressed="true">{{ T "ch_all_topics" }} ({{ len .professors }})</button> {{ range .areas }}<button type="button" data-area="{{ .key }}" aria-pressed="false">{{ if $vi }}{{ .title_vi }}{{ else }}{{ .title }}{{ end }} ({{ .count }})</button> {{ end }}</p>
+<ul class="ch-index" id="ch-list">
 {{- range .professors }}
-	<li><span class="st" title="{{ cond .done (T "ch_done") (T "ch_building") }}">{{ if .done }}✅{{ else }}🚧{{ end }}</span> <a href="{{ printf "challenges/%s/" .slug | relLangURL }}"><strong>{{ if $vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end }}</strong></a> <span class="inst">({{ .institution }}{{ with .score }} · <span title="{{ T "ch_top_score_tip" }}">{{ T "ch_top_score" }} {{ printf "%.2f" . }}</span>{{ end }})</span> {{ if $vi }}{{ .focus_vi }}{{ else }}{{ .focus }}{{ end }}</li>
+	<li data-areas="{{ range .areas }}{{ .key }}:{{ .score }} {{ end }}" data-score="{{ .score }}"><span class="st" title="{{ cond .done (T "ch_done") (T "ch_building") }}">{{ if .done }}✅{{ else }}🚧{{ end }}</span> <a href="{{ printf "challenges/%s/" .slug | relLangURL }}"><strong>{{ if $vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end }}</strong></a> <span class="inst">({{ .institution }} · <span class="sc" title="{{ T "ch_top_score_tip" }}"><b>{{ printf "%.2f" .score }}</b></span>)</span> {{ if $vi }}{{ .focus_vi }}{{ else }}{{ .focus }}{{ end }}</li>
 {{- end }}
 </ul>
-</section>
-{{- end }}
 <script>
 (function () {
-	var buttons = document.querySelectorAll(".ch-filter button"), boxes = document.querySelectorAll(".ch-area-box");
-	buttons.forEach(function (b) {
-		b.addEventListener("click", function () {
-			var on = b.getAttribute("aria-pressed") !== "true";
-			buttons.forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
-			b.setAttribute("aria-pressed", on ? "true" : "false");
-			boxes.forEach(function (box) { box.hidden = on && box.dataset.area !== b.dataset.area; });
+	var list = document.getElementById("ch-list"), items = Array.prototype.slice.call(list.children);
+	var buttons = document.querySelectorAll(".ch-filter button");
+	function scoreIn(li, key) {
+		if (!key) return parseFloat(li.dataset.score) || 0;
+		var m = (" " + li.dataset.areas).match(new RegExp(" " + key + ":([0-9.]+)"));
+		return m ? parseFloat(m[1]) : -1;
+	}
+	function apply(key) {
+		buttons.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.area === key ? "true" : "false"); });
+		items.sort(function (a, b) { return scoreIn(b, key) - scoreIn(a, key); });
+		items.forEach(function (li) {
+			var v = scoreIn(li, key);
+			li.hidden = key && v < 0;
+			var sc = li.querySelector(".sc b");
+			if (sc && v >= 0) sc.textContent = v.toFixed(2);
+			list.appendChild(li);
 		});
-	});
+	}
+	buttons.forEach(function (b) { b.addEventListener("click", function () { apply(b.dataset.area); location.hash = b.dataset.area ? "topic-" + b.dataset.area : ""; }); });
+	var m = location.hash.match(/^#topic-([\w-]+)$/);
+	if (m) apply(m[1]);
 })();
 </script>
 <p class="note">{{ T "ch_sources" (dict "Papers" .sources.papers "Text" .sources.with_text "Reviews" .sources.with_reviews "Date" .sources.date) }}</p>
