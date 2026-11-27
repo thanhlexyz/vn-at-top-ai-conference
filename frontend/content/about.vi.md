@@ -74,7 +74,7 @@ Trang [Hướng nghiên cứu](../research/) trả lời câu hỏi mà bảng x
 
 ### Trang cho thấy gì
 
-- **Danh sách chủ đề.** Các chủ đề lấy từ một danh sách chung mà chúng tôi xây dựng từ thư mời bài (call for papers) của các hội nghị được theo dõi ở đây (những lĩnh vực mà mỗi hội nghị yêu cầu tác giả chọn), gộp thành 19 chủ đề. Chọn một chủ đề, danh sách sẽ cho biết ai làm về chủ đề đó, xếp theo [điểm CSRankings](#phương-pháp-tính-điểm) trong chủ đề (chỉ tính bài được nhận).
+- **Danh sách chủ đề.** Các chủ đề lấy từ một danh sách chung gồm 19 chủ đề, bao phủ các hội nghị được theo dõi ở đây. Chọn một chủ đề, danh sách sẽ cho biết ai làm về chủ đề đó, xếp theo [điểm CSRankings](#phương-pháp-tính-điểm) trong chủ đề (chỉ tính bài được nhận).
 - **Một trang cho mỗi giảng viên.** Trang mở đầu bằng phần tổng quan ngắn và tóm tắt các thách thức còn mở, rồi đi lần lượt từng chủ đề. Mỗi chủ đề có mô tả ngắn, các câu hỏi còn bỏ ngỏ (điều tác giả nói chưa giải quyết được, và trích nguyên văn từ nhận xét phản biện công khai) và các bài báo, mỗi bài có bài toán, ý tưởng, kết quả và liên kết đến bài báo, nguồn chính thức và OpenReview.
 - **Một hình cho mỗi giảng viên.** Mỗi chấm là một bài báo theo chủ đề và năm, có đường cong nối bài với một bài trước đó của cùng giảng viên mà nó trích dẫn, để thấy một hướng nghiên cứu đã phát triển ra sao.
 

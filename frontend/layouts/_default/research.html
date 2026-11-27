@@ -3,23 +3,25 @@
 <style>
 ul.ch-index { list-style: none ; padding: 0 ; }
 ul.ch-index > li { margin: 0 0 0.9em ; padding: 0.8em 1em ; line-height: 1.55 ; border: 1px solid var(--line) ; border-left: 4px solid var(--line) ; border-radius: 6px ; }
-ul.ch-index > li.odd { background: color-mix(in srgb, var(--link) 5%, var(--bg)) ; border-left-color: var(--link) ; }
+ul.ch-index > li.odd { background: color-mix(in srgb, var(--fg) 4%, var(--bg)) ; border-left-color: var(--muted) ; }
 ul.ch-index > li > a { font-size: 1.05em ; }
 ul.ch-index > li > a.lg { font-size: inherit ; }
 ul.ch-index a.lg, ul.ch-index .lgph { display: inline-flex ; align-items: center ; justify-content: center ; width: 2.6em ; height: 2.4em ; vertical-align: middle ; margin: 0 0.15em ; }
 ul.ch-index a.lg img.mini { max-width: 100% ; max-height: 100% ; width: auto ; height: auto ; object-fit: contain ; margin: 0 ; }
 ul.ch-index:not(.all) li.zero { display: none ; }
 ul.ch-index .gist { margin: 0.25em 0 0 0 ; }
-ul.ch-index .gist a { color: var(--topic) ; font-weight: 600 ; text-decoration-thickness: 1px ; }
+ul.ch-index .gist a { color: var(--fg) ; font-weight: normal ; text-decoration: underline ; text-decoration-color: var(--muted) ; text-decoration-thickness: 1px ; text-underline-offset: 2px ; }
+ul.ch-index .gist a:hover, ul.ch-index .gist a:focus-visible { color: var(--link) ; text-decoration-color: var(--link) ; }
+ul.ch-index > li > a:not(.lg) { font-weight: 700 ; }
 ul.ch-index ul.gl { margin: 0.2em 0 0 0 ; padding-left: 1.3em ; list-style: disc ; }
 ul.ch-index ul.gl li { margin: 0.2em 0 ; }
 ul.ch-index .cnt { color: var(--muted) ; font-size: 0.88em ; white-space: nowrap ; }
 ul.ch-index .inst { color: var(--muted) ; font-size: 0.9em ; }
 .ch-filter { display: flex ; flex-wrap: wrap ; gap: 0.4em ; position: sticky ; top: 0 ; z-index: 5 ; background: var(--bg) ; padding: 0.5em 0 ; border-bottom: 1px solid var(--line) ; }
-.ch-filter button.hl { background: color-mix(in srgb, var(--topic) 22%, var(--bg)) ; border-color: var(--topic) ; box-shadow: 0 0 0 2px color-mix(in srgb, var(--topic) 35%, transparent) ; }
-ul.ch-index ul.gl li:hover { background: color-mix(in srgb, var(--topic) 7%, var(--bg)) ; border-radius: 4px ; }
-.ch-filter button { font: inherit ; font-size: 0.88em ; color: var(--topic) ; background: none ; border: 1px solid var(--line) ; border-radius: 999px ; padding: 0.2em 0.8em ; cursor: pointer ; }
-.ch-filter button[aria-pressed="true"] { background: var(--topic) ; color: var(--bg) ; border-color: var(--topic) ; }
+.ch-filter button.hl { background: color-mix(in srgb, var(--fg) 12%, var(--bg)) ; border-color: var(--fg) ; }
+ul.ch-index ul.gl li:hover { background: color-mix(in srgb, var(--fg) 7%, var(--bg)) ; border-radius: 4px ; }
+.ch-filter button { font: inherit ; font-size: 0.88em ; color: var(--fg) ; background: none ; border: 1px solid var(--muted) ; border-radius: 999px ; padding: 0.2em 0.8em ; cursor: pointer ; }
+.ch-filter button[aria-pressed="true"] { background: var(--fg) ; color: var(--bg) ; border-color: var(--fg) ; }
 h2.ch-area { font-size: 1.15em ; margin: 1.6em 0 0.6em ; }
 h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; }
 </style>
@@ -28,7 +30,6 @@ h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; 
 {{- $pending := where .professors "done" false }}
 {{- if $pending }}<p class="note">✅ {{ T "ch_done" }} · 🚧 {{ T "ch_building" }}</p>{{ end }}
 <p class="ch-filter"><button type="button" data-area="" aria-pressed="true">{{ T "ch_all_topics" }} ({{ len .professors }})</button> {{ range .areas }}<button type="button" data-area="{{ .key }}" aria-pressed="false">{{ if $vi }}{{ .title_vi }}{{ else }}{{ .title }}{{ end }} ({{ .count }})</button> {{ end }}</p>
-<p class="note">{{ T "ch_topics_note" }} {{ range $k, $c := .cfp }}{{ if $k }}, {{ end }}<a href="{{ $c.url }}"{{ with $c.note }} title="{{ . }}"{{ end }}>{{ $c.name }} {{ $c.edition }}</a>{{ end }}.</p>
 <ul class="ch-index" id="ch-list">
 {{- range .professors }}{{ $p := . }}
 	<li data-areas="{{ range .areas }}{{ .key }}:{{ .score }} {{ end }}" data-score="{{ .score }}">{{ if $pending }}<span class="st" title="{{ cond .done (T "ch_done") (T "ch_building") }}">{{ if .done }}✅{{ else }}🚧{{ end }}</span>{{ end }}{{ with .logo }} <a class="lg" href="{{ printf "universities/%s/" $p.institution_slug | relLangURL }}" tabindex="-1"><img class="mini" src="{{ . | relURL }}" alt="{{ $p.institution }}" title="{{ $p.institution_name }}" loading="lazy"></a>{{ else }}<span class="lgph"></span>{{ end }} <a href="{{ printf "research/%s/" .slug | relLangURL }}"><strong>{{ if $vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end }}</strong></a> <span class="inst">({{ .institution }} · <span class="sc" title="{{ T "ch_top_score_tip" }}"><b>{{ printf "%.2f" .score }}</b></span>)</span> {{- $base := printf "href=\"%s#" (printf "research/%s/" .slug | relLangURL) }}

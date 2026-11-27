@@ -72,7 +72,7 @@ The [Research directions](../research/) page answers a question that rankings ca
 
 ### What it shows
 
-- **A list of topics.** The topics come from one shared list that we built from the calls for papers of the conferences tracked here (the subject areas each conference asks authors to choose from), merged into 19 topics. Pick a topic and the list shows who works on it, ranked by their [CSRankings score](#scoring-methodology) in that topic (accepted papers only).
+- **A list of topics.** The topics come from one shared list of 19 topics that covers all the conferences tracked here. Pick a topic and the list shows who works on it, ranked by their [CSRankings score](#scoring-methodology) in that topic (accepted papers only).
 - **A page per professor.** It opens with a short overview and a summary of the open challenges, then goes topic by topic. Each topic has a short description, the questions it leaves open (what the authors say they have not solved, and verbatim quotes from public reviews) and the papers, each with the problem, the idea, what it reports and links to the paper, its official source and OpenReview.
 - **A figure per professor.** One dot per paper by topic and year, with curves where a paper cites an earlier one of the same professor, so you can see how a line of work developed.
 

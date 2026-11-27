@@ -682,9 +682,7 @@ other = "Source"
 other = "The official source of the paper"
 [ch_openreview_tip]
 other = "The paper's page on OpenReview, with its public reviews"
-[ch_topics_note]
-other = "The topics above are the subject areas listed in the calls for papers of the conferences tracked on this site, merged into one list (RSS lists none; IJCAI lists only its special tracks):"
 [ch_line_tip]
 other = "Papers in this topic (accepted and rejected), and the CSRankings score of its accepted papers"
 [topics_line_ch]
-other = "{{ .Count }} topics from the shared list built from the calls for papers of the tracked conferences (accepted and rejected papers, with the CSRankings score of the accepted ones); the research summary and open challenges are on the <a href=\"{{ .URL }}\">Research directions page</a>."
+other = "{{ .Count }} topics from the shared list on the Research directions page (accepted and rejected papers, with the CSRankings score of the accepted ones); the research summary and open challenges are on the <a href=\"{{ .URL }}\">Research directions page</a>."
