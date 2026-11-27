@@ -8,7 +8,9 @@ ul.ch-index .gist { margin: 0.25em 0 0 0 ; }
 ul.ch-index ul.gl { margin: 0.2em 0 0 0 ; padding-left: 1.3em ; list-style: disc ; }
 ul.ch-index ul.gl li { margin: 0.2em 0 ; }
 ul.ch-index .inst { color: var(--muted) ; font-size: 0.9em ; }
-.ch-filter { display: flex ; flex-wrap: wrap ; gap: 0.4em ; }
+.ch-filter { display: flex ; flex-wrap: wrap ; gap: 0.4em ; position: sticky ; top: 0 ; z-index: 5 ; background: var(--bg) ; padding: 0.5em 0 ; border-bottom: 1px solid var(--line) ; }
+.ch-filter button.hl { background: color-mix(in srgb, var(--link) 22%, var(--bg)) ; border-color: var(--link) ; box-shadow: 0 0 0 2px color-mix(in srgb, var(--link) 35%, transparent) ; }
+ul.ch-index ul.gl li:hover { background: color-mix(in srgb, var(--link) 7%, var(--bg)) ; border-radius: 4px ; }
 .ch-filter button { font: inherit ; font-size: 0.88em ; color: var(--link) ; background: none ; border: 1px solid var(--line) ; border-radius: 999px ; padding: 0.2em 0.8em ; cursor: pointer ; }
 .ch-filter button[aria-pressed="true"] { background: var(--link) ; color: var(--bg) ; border-color: var(--link) ; }
 h2.ch-area { font-size: 1.15em ; margin: 1.6em 0 0.6em ; }
@@ -23,7 +25,7 @@ h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; 
 {{- range .professors }}
 	<li data-areas="{{ range .areas }}{{ .key }}:{{ .score }} {{ end }}" data-score="{{ .score }}"><span class="st" title="{{ cond .done (T "ch_done") (T "ch_building") }}">{{ if .done }}✅{{ else }}🚧{{ end }}</span> <a href="{{ printf "challenges/%s/" .slug | relLangURL }}"><strong>{{ if $vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end }}</strong></a> <span class="inst">({{ .institution }} · <span class="sc" title="{{ T "ch_top_score_tip" }}"><b>{{ printf "%.2f" .score }}</b></span>)</span> {{- $base := printf "href=\"%s#" (printf "challenges/%s/" .slug | relLangURL) }}
 	<div class="gist" data-area="">
-	{{- if .gist_list }}<ul class="gl">{{ range .gist_list }}<li>{{ replace (cond $vi .vi .en) "href=\"#" $base | safeHTML }}</li>{{ end }}</ul>
+	{{- if .gist_list }}<ul class="gl">{{ range .gist_list }}<li data-topic="{{ .key }}">{{ replace (cond $vi .vi .en) "href=\"#" $base | safeHTML }}</li>{{ end }}</ul>
 	{{- else }}{{ if $vi }}{{ .focus_vi }}{{ else }}{{ .focus }}{{ end }}{{ end }}</div>
 	{{- range $k, $v := .gists }}<div class="gist" data-area="{{ $k }}" hidden>{{ replace (cond $vi $v.vi $v.en) "href=\"#" $base | safeHTML }}</div>{{ end }}</li>
 {{- end }}
@@ -60,6 +62,16 @@ h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; 
 		});
 		label();
 	}
+	function mark(on, e) {
+		var li = e.target.closest ? e.target.closest("li[data-topic]") : null;
+		if (!li || !li.dataset.topic) return;
+		var b = document.querySelector('.ch-filter button[data-area="' + li.dataset.topic + '"]');
+		if (b) b.classList.toggle("hl", on);
+	}
+	list.addEventListener("mouseover", function (e) { mark(true, e); });
+	list.addEventListener("mouseout", function (e) { mark(false, e); });
+	list.addEventListener("focusin", function (e) { mark(true, e); });
+	list.addEventListener("focusout", function (e) { mark(false, e); });
 	buttons.forEach(function (b) { b.addEventListener("click", function () { apply(b.dataset.area); location.hash = b.dataset.area ? "topic-" + b.dataset.area : ""; }); });
 	var m = location.hash.match(/^#topic-([\w-]+)$/);
 	apply(m ? m[1] : "");
