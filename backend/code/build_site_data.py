@@ -29,7 +29,7 @@ TRACK_REASON = {"datasets_benchmarks": "Datasets & Benchmarks track", "position"
                 "tiny_papers": "Tiny Papers track"}
 MAX_CANDIDATES_ON_SITE = 250
 RANK_BASELINE = "potential"
-FOREIGN_MIN_PAPERS = 3
+FOREIGN_MIN_PAPERS = 4
 AREA_ALIAS = {"Miscellaneous Aspects of Machine Learning": "General Machine Learning"}
 
 

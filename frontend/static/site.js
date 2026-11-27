@@ -226,6 +226,7 @@
 			else { renumber(table); podium(table, start ? start[1] : undefined); }
 			window.dispatchEvent(new Event("resize"));
 		});
+		button.click();
 	});
 
 	document.querySelectorAll("button.graph-period").forEach(function (button) {
@@ -253,6 +254,7 @@
 				});
 			});
 		});
+		button.click();
 	});
 
 	document.querySelectorAll("table[data-page-size]").forEach(function (table) {
