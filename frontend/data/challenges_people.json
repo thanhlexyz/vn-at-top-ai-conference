@@ -337,8 +337,8 @@
     "year": 2026,
     "credit": 0.2,
     "status": "accepted",
-    "problem": "In pure exploration the goal is the best final decision after sampling, not reward collected while learning; the paper argues that existing methods mainly regulate the local estimation error of each stochastic component without quantifying how that uncertainty affects the final decision, which matters most in highly stochastic environments.",
-    "problem_vi": "Trong khám phá thuần túy (pure exploration), mục tiêu là quyết định cuối cùng tốt nhất sau khi lấy mẫu chứ không phải phần thưởng thu được trong lúc học; bài báo lập luận rằng các phương pháp hiện có chủ yếu kiểm soát sai số ước lượng cục bộ của từng thành phần ngẫu nhiên mà không định lượng ảnh hưởng của độ bất định đó lên quyết định cuối cùng, điều quan trọng nhất trong môi trường có độ ngẫu nhiên cao.",
+    "problem": "In pure exploration the goal is the best final decision after sampling, not reward collected while learning; the paper argues that existing methods mainly regulate the local estimation error of each stochastic component without quantifying how that uncertainty affects the final decision, and targets highly stochastic environments.",
+    "problem_vi": "Trong khám phá thuần túy (pure exploration), mục tiêu là quyết định cuối cùng tốt nhất sau khi lấy mẫu chứ không phải phần thưởng thu được trong lúc học; bài báo lập luận rằng các phương pháp hiện có chủ yếu kiểm soát sai số ước lượng cục bộ của từng thành phần ngẫu nhiên mà không định lượng ảnh hưởng của độ bất định đó lên quyết định cuối cùng, và nhắm tới môi trường có độ ngẫu nhiên cao.",
     "technique": "Variance Driven Exploration (VarDE) writes the final decision as a smooth function of the components' estimates and derives allocation rules that send samples where component noise most affects the reliability of the decision; it is applied to best-arm identification (BAI), MCTS and best-policy identification (BPI).",
     "technique_vi": "Variance Driven Exploration (VarDE) biểu diễn quyết định cuối cùng như một hàm trơn của các ước lượng thành phần và suy ra quy tắc phân bổ mẫu, dồn mẫu vào nơi nhiễu của thành phần ảnh hưởng nhiều nhất đến độ tin cậy của quyết định; phương pháp được áp dụng cho xác định nhánh tốt nhất (BAI), MCTS và xác định chính sách tốt nhất (best-policy identification, BPI).",
     "strength": "The paper gives theoretical guarantees on variance decay and simple regret for the three problems and reports consistent improvements over existing methods in experiments, with the largest gains in highly stochastic environments.",
@@ -9990,8 +9990,8 @@
       "quote_vi": "Trọng tâm thực nghiệm của bài báo chỉ là một tập dữ liệu và một bộ dự đoán logistic duy nhất."
      },
      {
-      "quote": "the key point raised seems elementary: the same-sign point estimates need not have confidence intervals that exclude zero",
-      "quote_vi": "luận điểm chính có vẻ sơ đẳng: các ước lượng điểm cùng dấu không nhất thiết có khoảng tin cậy loại trừ giá trị không"
+      "quote": "I would like to see how that count moves with the block length (Appendix A.1), the confidence level and the null subsample size",
+      "quote_vi": "tôi muốn thấy con số đó thay đổi thế nào theo độ dài khối (Phụ lục A.1), mức tin cậy và kích thước mẫu con của tập null"
      },
      {
       "quote": "It is well known that permutation approaches are not really meaningful when the goal is to learn something about the data / the model's behavior on realistic data",
@@ -10021,7 +10021,7 @@
     "reviewers": [
      {
       "quote": "No cross domain analysis beyond the toy testbed environment is conducted.",
-      "quote_vi": "Không có phân tích liên miền nào ngoài môi trường thử nghiệm đơn giản."
+      "quote_vi": "Không có phân tích liên miền nào ngoài môi trường thử nghiệm dạng đồ chơi (toy)."
      },
      {
       "quote": "Many market mechanisms important for studying market making, such as those related to limited order book, are missing from the testbed.",
@@ -10554,18 +10554,18 @@
    ],
    "edges": []
   },
-  "open_summary": "Open questions concern the runtime and memory cost of node sharing and its unstated assumptions, comparisons beyond the MCTS family, and how the approximations behind variance-driven sampling affect its guarantees. It remains open how to remove the assumption of a known anchor near each arm's mean and what the exact instance-dependent complexity of the problem is.",
-  "open_summary_vi": "Các câu hỏi còn mở liên quan đến chi phí thời gian chạy và bộ nhớ của việc dùng chung nút cùng các giả thiết chưa được nêu rõ, việc so sánh ngoài họ MCTS, và mức ảnh hưởng của các xấp xỉ trong cách lấy mẫu dựa trên phương sai lên các bảo đảm lý thuyết. Vẫn còn bỏ ngỏ cách loại bỏ giả thiết biết trước một điểm neo gần trung bình của mỗi nhánh và độ phức tạp chính xác phụ thuộc vào từng bài toán cụ thể là bao nhiêu.",
-  "overview": "Hoang Ta's papers study how a learner should spend a limited number of samples so that a final decision in a stochastic environment is reliable, with proved guarantees for each proposed algorithm. Two papers make Monte-Carlo planning and related pure-exploration methods use fewer samples, either by sharing search nodes across trajectories or by sampling where the final decision is most uncertain. One paper studies best-arm identification when each sample reveals only a single bit about the reward.",
-  "overview_vi": "Các bài báo của Tạ Duy Hoàng nghiên cứu cách người học nên sử dụng một số lượng mẫu có hạn để quyết định cuối cùng trong môi trường ngẫu nhiên đáng tin cậy, kèm bảo đảm được chứng minh cho từng thuật toán đề xuất. Hai bài báo giúp lập kế hoạch Monte-Carlo và các phương pháp khám phá thuần túy liên quan dùng ít mẫu hơn, bằng cách dùng chung nút tìm kiếm giữa các quỹ đạo hoặc bằng cách lấy mẫu ở nơi quyết định cuối cùng bất định nhất. Một bài báo nghiên cứu bài toán xác định nhánh tốt nhất khi mỗi mẫu chỉ cho biết một bit thông tin về phần thưởng.",
+  "open_summary": "Open questions concern the runtime and memory cost of node sharing, comparisons beyond the MCTS family, and how the approximations behind variance-driven sampling affect its guarantees. It remains open how to remove the assumption of a known anchor near each arm's mean and what the exact instance-dependent complexity of the problem is.",
+  "open_summary_vi": "Các câu hỏi còn mở liên quan đến chi phí thời gian chạy và bộ nhớ của việc dùng chung nút, việc so sánh ngoài họ MCTS, và mức ảnh hưởng của các xấp xỉ trong cách lấy mẫu dựa trên phương sai lên các bảo đảm lý thuyết. Vẫn còn bỏ ngỏ cách loại bỏ giả thiết biết trước một điểm neo gần trung bình của mỗi nhánh và độ phức tạp chính xác phụ thuộc vào từng bài toán cụ thể là bao nhiêu.",
+  "overview": "Hoang Ta's papers study how a learner should spend a limited number of samples so that a final decision in a stochastic environment is reliable, with proved guarantees for each proposed algorithm. Two papers propose ways for Monte-Carlo planning and related pure-exploration methods to spend fewer samples, either by sharing search nodes across trajectories or by sampling where the final decision is most uncertain. One paper studies best-arm identification when each sample reveals only a single bit about the reward.",
+  "overview_vi": "Các bài báo của Tạ Duy Hoàng nghiên cứu cách người học nên sử dụng một số lượng mẫu có hạn để quyết định cuối cùng trong môi trường ngẫu nhiên đáng tin cậy, kèm bảo đảm được chứng minh cho từng thuật toán đề xuất. Hai bài báo đề xuất cách để lập kế hoạch Monte-Carlo và các phương pháp khám phá thuần túy liên quan dùng ít mẫu hơn, bằng cách dùng chung nút tìm kiếm giữa các quỹ đạo hoặc bằng cách lấy mẫu ở nơi quyết định cuối cùng bất định nhất. Một bài báo nghiên cứu bài toán xác định nhánh tốt nhất khi mỗi mẫu chỉ cho biết một bit thông tin về phần thưởng.",
   "topics": [
    {
     "title": "Sample-efficient Monte-Carlo planning",
     "title_vi": "Lập kế hoạch Monte-Carlo hiệu quả về mẫu",
-    "gist": "Two papers make Monte-Carlo planning and related pure-exploration methods use fewer samples, either by sharing search nodes across trajectories or by sampling where the final decision is most uncertain.",
-    "gist_vi": "Hai bài báo giúp lập kế hoạch Monte-Carlo và các phương pháp khám phá thuần túy liên quan dùng ít mẫu hơn, bằng cách dùng chung nút tìm kiếm giữa các quỹ đạo hoặc bằng cách lấy mẫu ở nơi quyết định cuối cùng bất định nhất.",
-    "open_gist": "Open questions concern the runtime and memory cost of node sharing and its unstated assumptions, comparisons beyond the MCTS family, and how the approximations behind variance-driven sampling affect its guarantees.",
-    "open_gist_vi": "Các câu hỏi còn mở liên quan đến chi phí thời gian chạy và bộ nhớ của việc dùng chung nút cùng các giả thiết chưa được nêu rõ, việc so sánh ngoài họ MCTS, và mức ảnh hưởng của các xấp xỉ trong cách lấy mẫu dựa trên phương sai lên các bảo đảm lý thuyết.",
+    "gist": "Two papers propose ways for Monte-Carlo planning and related pure-exploration methods to spend fewer samples, either by sharing search nodes across trajectories or by sampling where the final decision is most uncertain.",
+    "gist_vi": "Hai bài báo đề xuất cách để lập kế hoạch Monte-Carlo và các phương pháp khám phá thuần túy liên quan dùng ít mẫu hơn, bằng cách dùng chung nút tìm kiếm giữa các quỹ đạo hoặc bằng cách lấy mẫu ở nơi quyết định cuối cùng bất định nhất.",
+    "open_gist": "Open questions concern the runtime and memory cost of node sharing, comparisons beyond the MCTS family, and how the approximations behind variance-driven sampling affect its guarantees.",
+    "open_gist_vi": "Các câu hỏi còn mở liên quan đến chi phí thời gian chạy và bộ nhớ của việc dùng chung nút, việc so sánh ngoài họ MCTS, và mức ảnh hưởng của các xấp xỉ trong cách lấy mẫu dựa trên phương sai lên các bảo đảm lý thuyết.",
     "summary": "GS-Power-UCT turns Monte-Carlo Tree Search (MCTS) into a graph search for stochastic Markov decision processes by sharing nodes for states reached at the same depth and backing up values with a power mean; the paper proves an O(n^-1/2) convergence rate at the root and reports better sample efficiency than tree and graph baselines. Variance Driven Exploration (VarDE) allocates samples to reduce the variance of the final decision and is applied to best-arm identification, MCTS and best-policy identification, with guarantees on variance decay and simple regret and reported gains that are largest in highly stochastic environments.",
     "summary_vi": "GS-Power-UCT chuyển tìm kiếm cây Monte-Carlo (MCTS) thành tìm kiếm trên đồ thị cho các quá trình quyết định Markov ngẫu nhiên, bằng cách dùng chung nút cho các trạng thái đạt tới ở cùng độ sâu và lan truyền ngược giá trị bằng trung bình lũy thừa; bài báo chứng minh tốc độ hội tụ O(n^-1/2) tại gốc và báo cáo hiệu quả mẫu tốt hơn các phương pháp nền dựa trên cây và đồ thị. Variance Driven Exploration (VarDE) phân bổ mẫu để giảm phương sai của quyết định cuối cùng và được áp dụng cho xác định nhánh tốt nhất, MCTS và xác định chính sách tốt nhất, với bảo đảm về tốc độ giảm phương sai và simple regret, cùng mức cải thiện được báo cáo là lớn nhất ở môi trường có độ ngẫu nhiên cao.",
     "open": [
@@ -10677,8 +10677,8 @@
       ]
      },
      {
-      "text": "A simple phased successive-elimination BAI wrapper around Lau–Scarlett’s fixed-target finite-variance 1-bit mean estimator appears to match the leading rate in Theorem 10.",
-      "text_vi": "Một lớp bao BAI loại trừ tuần tự chia pha đơn giản quanh bộ ước lượng trung bình 1-bit với mục tiêu cố định và phương sai hữu hạn của Lau–Scarlett dường như đạt được tốc độ chính trong Định lý 10.",
+      "text": "The assumption of known variance proxy seems common, but knowing an anchor point for each arm seems unrealistic.",
+      "text_vi": "Giả thiết biết trước cận phương sai có vẻ phổ biến, nhưng việc biết một điểm neo cho mỗi nhánh có vẻ không thực tế.",
       "source": "reviewers",
       "quote": true,
       "papers": [
@@ -10822,8 +10822,8 @@
     "year": 2026,
     "credit": 0.2,
     "status": "accepted",
-    "problem": "In pure exploration the goal is the best final decision after sampling, not reward collected while learning; the paper argues that existing methods mainly regulate the local estimation error of each stochastic component without quantifying how that uncertainty affects the final decision, which matters most in highly stochastic environments.",
-    "problem_vi": "Trong khám phá thuần túy (pure exploration), mục tiêu là quyết định cuối cùng tốt nhất sau khi lấy mẫu chứ không phải phần thưởng thu được trong lúc học; bài báo lập luận rằng các phương pháp hiện có chủ yếu kiểm soát sai số ước lượng cục bộ của từng thành phần ngẫu nhiên mà không định lượng ảnh hưởng của độ bất định đó lên quyết định cuối cùng, điều quan trọng nhất trong môi trường có độ ngẫu nhiên cao.",
+    "problem": "In pure exploration the goal is the best final decision after sampling, not reward collected while learning; the paper argues that existing methods mainly regulate the local estimation error of each stochastic component without quantifying how that uncertainty affects the final decision, and targets highly stochastic environments.",
+    "problem_vi": "Trong khám phá thuần túy (pure exploration), mục tiêu là quyết định cuối cùng tốt nhất sau khi lấy mẫu chứ không phải phần thưởng thu được trong lúc học; bài báo lập luận rằng các phương pháp hiện có chủ yếu kiểm soát sai số ước lượng cục bộ của từng thành phần ngẫu nhiên mà không định lượng ảnh hưởng của độ bất định đó lên quyết định cuối cùng, và nhắm tới môi trường có độ ngẫu nhiên cao.",
     "technique": "Variance Driven Exploration (VarDE) writes the final decision as a smooth function of the components' estimates and derives allocation rules that send samples where component noise most affects the reliability of the decision; it is applied to best-arm identification (BAI), MCTS and best-policy identification (BPI).",
     "technique_vi": "Variance Driven Exploration (VarDE) biểu diễn quyết định cuối cùng như một hàm trơn của các ước lượng thành phần và suy ra quy tắc phân bổ mẫu, dồn mẫu vào nơi nhiễu của thành phần ảnh hưởng nhiều nhất đến độ tin cậy của quyết định; phương pháp được áp dụng cho xác định nhánh tốt nhất (BAI), MCTS và xác định chính sách tốt nhất (best-policy identification, BPI).",
     "strength": "The paper gives theoretical guarantees on variance decay and simple regret for the three problems and reports consistent improvements over existing methods in experiments, with the largest gains in highly stochastic environments.",
@@ -15178,8 +15178,8 @@
   },
   "open_summary": "Reviewers point out that both were evaluated only in simulation and question the assumptions behind the guarantees and, for the dynamics model, whether it meets real-time control budgets. Open points include the dependence on an external grounding model, the risk of aligning with failed demonstrations, and the explicit future branch being switched off for synthetic videos.",
   "open_summary_vi": "Các phản biện chỉ ra rằng cả hai chỉ được đánh giá trong mô phỏng, đồng thời đặt câu hỏi về các giả thiết đằng sau bảo đảm lý thuyết và, với mô hình động lực học, liệu nó có đáp ứng ngân sách điều khiển thời gian thực hay không. Các điểm còn mở gồm sự phụ thuộc vào một mô hình định vị đối tượng bên ngoài, rủi ro khi căn chỉnh theo các minh họa thất bại, và việc nhánh dự đoán tương lai tường minh bị tắt khi dùng video tổng hợp.",
-  "overview": "Minh Nhat Vu's papers study how robots can model, decide and act reliably when they have little interaction data. Two papers use calibrated or epistemic uncertainty to decide when a robot has probed an object enough, or how far to trust a learned dynamics model over physics. One paper adapts pretrained vision-language-action models to new manipulation tasks from a few demonstrations by adding training objectives about future observations.",
-  "overview_vi": "Các bài báo của Vũ Nhật Minh nghiên cứu cách robot có thể mô hình hóa, ra quyết định và hành động một cách đáng tin cậy khi có ít dữ liệu tương tác. Hai bài báo dùng độ bất định đã hiệu chuẩn hoặc độ bất định nhận thức để quyết định khi nào robot đã thăm dò một vật đủ, hoặc nên tin mô hình động lực học học được hơn mô hình vật lý đến mức nào. Một bài báo thích nghi các mô hình thị giác-ngôn ngữ-hành động đã tiền huấn luyện sang nhiệm vụ thao tác mới từ một vài minh họa, bằng cách thêm các mục tiêu huấn luyện về quan sát tương lai.",
+  "overview": "Minh Nhat Vu's papers study how robots can model, decide and act reliably under uncertainty or with little interaction data. Two papers use calibrated or epistemic uncertainty to decide when a robot has probed an object enough, or how far to trust a learned dynamics model over physics. One paper adapts pretrained vision-language-action models to new manipulation tasks from a few demonstrations by adding training objectives about future observations.",
+  "overview_vi": "Các bài báo của Vũ Nhật Minh nghiên cứu cách robot có thể mô hình hóa, ra quyết định và hành động một cách đáng tin cậy khi môi trường bất định hoặc khi có ít dữ liệu tương tác. Hai bài báo dùng độ bất định đã hiệu chuẩn hoặc độ bất định nhận thức để quyết định khi nào robot đã thăm dò một vật đủ, hoặc nên tin mô hình động lực học học được hơn mô hình vật lý đến mức nào. Một bài báo thích nghi các mô hình thị giác-ngôn ngữ-hành động đã tiền huấn luyện sang nhiệm vụ thao tác mới từ một vài minh họa, bằng cách thêm các mục tiêu huấn luyện về quan sát tương lai.",
   "topics": [
    {
     "title": "Uncertainty-aware robot modeling and control",
@@ -15272,7 +15272,7 @@
     "summary_vi": "Theo thử nghiệm sức chịu đựng của bài báo, các mô hình Thị giác-Ngôn ngữ-Hành động (VLA) mất nhiều hiệu năng khi được thích nghi từ ít minh họa. FOCA thêm việc dự đoán tường minh embedding của vùng tương tác tương lai và căn chỉnh ngầm theo kiểu tương phản với quan sát mục tiêu tương lai, trong đó mục tiêu ngầm cho phép đồng huấn luyện trên video tổng hợp không có nhãn hành động. Phần tóm tắt báo cáo tỉ lệ thành công 95,7% với 20 minh họa trên LIBERO, cải thiện 7-12% trên RoboCasa và tăng tuyệt đối tới 26% trên robot thực.",
     "open": [
      {
-      "text": "Extending offline-RL-style guarantees against out-of-distribution value estimates to the representation-level occupancy estimation used by FOCA remains open.",
+      "text": "Extending offline reinforcement learning (RL) guarantees against out-of-distribution value estimates to the representation-level occupancy estimation used by FOCA remains open.",
       "text_vi": "Việc mở rộng các bảo đảm kiểu học tăng cường ngoại tuyến chống lại ước lượng giá trị ngoài phân phối sang ước lượng occupancy ở mức biểu diễn mà FOCA sử dụng vẫn còn bỏ ngỏ.",
       "source": "authors",
       "quote": false,
@@ -17400,8 +17400,8 @@
       "quote_vi": "Trọng tâm thực nghiệm của bài báo chỉ là một tập dữ liệu và một bộ dự đoán logistic duy nhất."
      },
      {
-      "quote": "the key point raised seems elementary: the same-sign point estimates need not have confidence intervals that exclude zero",
-      "quote_vi": "luận điểm chính có vẻ sơ đẳng: các ước lượng điểm cùng dấu không nhất thiết có khoảng tin cậy loại trừ giá trị không"
+      "quote": "I would like to see how that count moves with the block length (Appendix A.1), the confidence level and the null subsample size",
+      "quote_vi": "tôi muốn thấy con số đó thay đổi thế nào theo độ dài khối (Phụ lục A.1), mức tin cậy và kích thước mẫu con của tập null"
      },
      {
       "quote": "It is well known that permutation approaches are not really meaningful when the goal is to learn something about the data / the model's behavior on realistic data",
@@ -17431,7 +17431,7 @@
     "reviewers": [
      {
       "quote": "No cross domain analysis beyond the toy testbed environment is conducted.",
-      "quote_vi": "Không có phân tích liên miền nào ngoài môi trường thử nghiệm đơn giản."
+      "quote_vi": "Không có phân tích liên miền nào ngoài môi trường thử nghiệm dạng đồ chơi (toy)."
      },
      {
       "quote": "Many market mechanisms important for studying market making, such as those related to limited order book, are missing from the testbed.",
@@ -17585,7 +17585,7 @@
      },
      {
       "text": "No cross domain analysis beyond the toy testbed environment is conducted.",
-      "text_vi": "Không có phân tích liên miền nào ngoài môi trường thử nghiệm đơn giản.",
+      "text_vi": "Không có phân tích liên miền nào ngoài môi trường thử nghiệm dạng đồ chơi (toy).",
       "source": "reviewers",
       "quote": true,
       "papers": [
@@ -17663,8 +17663,8 @@
       "quote_vi": "Trọng tâm thực nghiệm của bài báo chỉ là một tập dữ liệu và một bộ dự đoán logistic duy nhất."
      },
      {
-      "quote": "the key point raised seems elementary: the same-sign point estimates need not have confidence intervals that exclude zero",
-      "quote_vi": "luận điểm chính có vẻ sơ đẳng: các ước lượng điểm cùng dấu không nhất thiết có khoảng tin cậy loại trừ giá trị không"
+      "quote": "I would like to see how that count moves with the block length (Appendix A.1), the confidence level and the null subsample size",
+      "quote_vi": "tôi muốn thấy con số đó thay đổi thế nào theo độ dài khối (Phụ lục A.1), mức tin cậy và kích thước mẫu con của tập null"
      },
      {
       "quote": "It is well known that permutation approaches are not really meaningful when the goal is to learn something about the data / the model's behavior on realistic data",
@@ -17694,7 +17694,7 @@
     "reviewers": [
      {
       "quote": "No cross domain analysis beyond the toy testbed environment is conducted.",
-      "quote_vi": "Không có phân tích liên miền nào ngoài môi trường thử nghiệm đơn giản."
+      "quote_vi": "Không có phân tích liên miền nào ngoài môi trường thử nghiệm dạng đồ chơi (toy)."
      },
      {
       "quote": "Many market mechanisms important for studying market making, such as those related to limited order book, are missing from the testbed.",
