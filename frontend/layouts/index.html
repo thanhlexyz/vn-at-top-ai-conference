@@ -6,7 +6,7 @@
 {{- $meta := hugo.Data.meta }}
 <div class="table-box">
 <p class="table-tools"><button type="button" class="more-columns" aria-expanded="false" data-names="{{ T "cols_hidden" }}" aria-controls="professors-table" data-show="{{ T "cols_show" }}" data-show-one="{{ T "cols_show_one" }}" data-hide="{{ T "cols_hide" }}">{{ T "cols_show" }}</button></p>
-{{ partial "professor-table.html" (dict "rows" hugo.Data.professors "compact" true "podium" true "brief" true) }}
+{{ partial "professor-table.html" (dict "rows" (sort hugo.Data.professors "recent_order") "compact" true "podium" true "brief" true) }}
 {{- $more := len (where hugo.Data.professors "accepted" 0) }}
 {{- if $more }}
 <p class="table-tools rows-tools"><button type="button" class="more-rows" hidden aria-expanded="false" aria-controls="professors-table" data-show="{{ T "rows_show" (dict "N" $more) }}" data-hide="{{ T "rows_hide" }}">{{ T "rows_show" (dict "N" $more) }}</button></p>
@@ -14,7 +14,7 @@
 {{- end }}
 </div>
 <p class="note">{{ T "rank_note" (dict "Base" hugo.Data.meta.rank_baseline) | safeHTML }}</p>
-<aside class="callout"><p>{{ T "home_score_callout" (dict "About" (relLangURL "about/")) | safeHTML }}</p></aside>
+<aside class="callout"><p>{{ T "home_score_callout" (dict "About" (relLangURL "about/") "From" (time.Format (T "recent_from_layout") (time.AsTime (printf "%s-01" $meta.recent_from)))) | safeHTML }}</p></aside>
 {{- range $meta.provisional }}
 <p class="note">{{ T "home_note_provisional" (dict "Name" .name "Year" .year) | safeHTML }}</p>
 {{- end }}

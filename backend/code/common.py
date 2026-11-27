@@ -83,6 +83,22 @@ DECISION_DATES = {
 }
 
 
+RECENT_MONTHS = 12
+
+
+def recent_from(today=None):
+    today = today or datetime.date.today()
+    month = today.year * 12 + today.month - 1 - RECENT_MONTHS
+    return f"{month // 12}-{month % 12 + 1:02d}-01"
+
+
+RECENT_FROM = recent_from()
+
+
+def is_recent(venue, year):
+    return DECISION_DATES.get(venue, {}).get(year, "9999") >= RECENT_FROM
+
+
 def held(venue, year):
     return not ((venue == "iccv" and year % 2 == 0) or (venue == "eccv" and year % 2 == 1))
 VENUE_NAME = {v["key"]: v["name"] for v in VENUES}

@@ -168,7 +168,7 @@ other = "Mới vào danh sách nhờ một bài có thể được nhận ở {{
 [rank_note]
 other = "<span class=\"rk up\">&#9650;</span> / <span class=\"rk down\">&#9660;</span> số bậc tăng hoặc giảm khi tính các bài có thể được nhận ở {{ .Base }} (+N); <span class=\"rk new\"></span> mới vào danh sách."
 [home_score_callout]
-other = "<strong>Cách tính điểm:</strong> Điểm số được tính theo phương pháp hiệu chỉnh của <a href=\"https://csrankings.org/\">CSRankings</a>: mỗi bài báo được nhận có giá trị <strong>1 chia cho tổng số tác giả</strong> (1/N). Điểm của mỗi giảng viên là tổng điểm đóng góp từ các bài báo của mình (ví dụ: bài có 4 tác giả đóng góp 0,25 điểm; bài có 10 tác giả đóng góp 0,1 điểm)."
+other = "<strong>Cách tính điểm:</strong> Điểm số được tính theo phương pháp hiệu chỉnh của <a href=\"https://csrankings.org/\">CSRankings</a>: mỗi bài báo được nhận có giá trị <strong>1 chia cho tổng số tác giả</strong> (1/N). Điểm của mỗi giảng viên là tổng điểm đóng góp từ các bài báo của mình (ví dụ: bài có 4 tác giả đóng góp 0,25 điểm; bài có 10 tác giả đóng góp 0,1 điểm). Bảng được xếp theo điểm trong 12 tháng qua, tính các bài có kết quả từ {{ .From }}; điểm trên mọi bài từ năm 2020 nằm ở các cột ẩn."
 [cols_hidden]
 other = "Đang ẩn: {names}"
 [cols_show_one]
@@ -606,3 +606,15 @@ other = "Đặt lại"
 other = "Xem toàn bộ đồ thị"
 [zoom_hint]
 other = "Ctrl/⌘ + cuộn chuột hoặc chụm hai ngón để phóng to, kéo để di chuyển"
+[recent_from_layout]
+other = "01/2006"
+[th_score_recent]
+other = "điểm CSRankings, 12 tháng qua"
+[th_score_all]
+other = "điểm CSRankings, toàn thời gian"
+[tip_score_recent]
+other = "Mỗi bài được nhận tính 1 / (số tác giả của bài), như CSRankings. Chỉ tính các bài có kết quả từ {{ .From }} (12 tháng qua), và bảng được xếp theo điểm này"
+[tip_score_all]
+other = "Cùng cách tính nhưng trên mọi bài từ năm 2020; bảng không xếp theo điểm này"
+[score_recent_cell]
+other = "{{ .Count }} bài được nhận từ {{ .From }}"

@@ -12,7 +12,7 @@ import sys
 import re
 import urllib.parse
 
-from common import (with_pdf_affiliations, ACCEPTED, DECISION_DATES, BACKEND, CSV_DIR, JSON_DIR, CANDIDATES, FRONTEND, LAST_YEAR, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
+from common import (with_pdf_affiliations, ACCEPTED, DECISION_DATES, RECENT_FROM, is_recent, BACKEND, CSV_DIR, JSON_DIR, CANDIDATES, FRONTEND, LAST_YEAR, NOT_ACCEPTED, OPENREVIEW_RAW, REVIEW,
                     STATUS_LABEL, VENUE_GROUPS, VENUE_KEYS, VENUE_NAME, VENUES, WORK, YEARS, classify_status, held, in_vietnam,
                     load_roster, name_key, norm_name, norm_title, openreview_venue, PARENT, post_class, presentation, read_csv,
                     read_jsonl_gz, same_institution, slugify, token_key, vn_institutions, write_json)
@@ -727,6 +727,7 @@ def rank_keys_without(counted, venue_year):
     acc = [r for r in rest if r["status"] == "accepted"]
     main = [r for r in rest if r.get("track", "main") == "main"]
     return {"score": round(sum(1 / max(len(r["authors"]), 1) for r in acc), 2), "accepted": len(acc),
+            "score_recent": round(sum(1 / max(len(r["authors"]), 1) for r in acc if is_recent(r["venue"], r["year"])), 2),
             "official": sum(1 for r in acc if not r.get("unofficial")),
             "shown": bool(acc),
             "iclr_submitted": sum(1 for r in main if r["venue"] == "iclr"), "submitted": len(main)}
@@ -1207,6 +1208,9 @@ def main():
             "openreview_ids": person["openreview_ids"], "openreview_source": source, "openreview_fetched": fetched,
             "links": person_links(person),
             "score": round(sum(1 / max(len(r["authors"]), 1) for r in counted if r["status"] == "accepted"), 2),
+            "score_recent": round(sum(1 / max(len(r["authors"]), 1) for r in counted
+                                      if r["status"] == "accepted" and is_recent(r["venue"], r["year"])), 2),
+            "accepted_recent": sum(1 for r in counted if r["status"] == "accepted" and is_recent(r["venue"], r["year"])),
             "score_areas": {g["name"]: round(sum(1 / max(len(r["authors"]), 1) for r in counted
                                                  if r["status"] == "accepted" and r["venue"] in g["venues"]), 4)
                             for g in VENUE_GROUPS},
@@ -1226,14 +1230,18 @@ def main():
                                    else -sum(v.get("submitted", 0) for v in p["venues"].values()), p["name"]))
 
     before = sorted((p for p in professors if p["_base"]["shown"]),
-                    key=lambda p: (-p["_base"]["score"], -p["_base"]["accepted"], -p["_base"]["official"],
+                    key=lambda p: (-p["_base"]["score_recent"], -p["_base"]["score"], -p["_base"]["accepted"],
+                                   -p["_base"]["official"],
                                    -p["_base"]["iclr_submitted"] if p["_base"]["accepted"] else -p["_base"]["submitted"],
                                    p["name"]))
     was = {p["slug"]: k + 1 for k, p in enumerate(before)}
-    for k, p in enumerate(professors):
-        p.pop("_base")
+    all_time = {p["slug"]: k for k, p in enumerate(professors)}
+    for k, p in enumerate(sorted(professors, key=lambda p: (-p["score_recent"], all_time[p["slug"]]))):
+        p["recent_order"] = k + 1
         p["rank_before"] = was.get(p["slug"])
         p["rank_change"] = (was[p["slug"]] - (k + 1)) if p["slug"] in was else None
+    for p in professors:
+        p.pop("_base")
 
     variants = {p["slug"]: p["variants"] for p in approved}
     lists = ("accepted_papers", "not_accepted_papers", "excluded_papers", "workshop_papers")
@@ -1570,6 +1578,7 @@ def main():
         "coverage_charts": coverage_charts,
         "generated_date": now.strftime("%Y-%m-%d"),
         "first_year": YEARS[0], "last_year": YEARS[-1], "years": YEARS,
+        "recent_from": RECENT_FROM[:7],
         "rank_baseline": f"ICLR'{LAST_YEAR % 100:02d}" if RANK_BASELINE == "potential" else
                          f"{VENUE_NAME[RANK_BASELINE[0]]}'{RANK_BASELINE[1] % 100:02d}",
         "venues": VENUES, "venue_keys": VENUE_KEYS, "venue_groups": VENUE_GROUPS, "coverage": coverage,

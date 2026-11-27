@@ -1,6 +1,7 @@
 {{- $rows := . }}{{ $compact := false }}{{ $podium := false }}{{ $rank := false }}{{ $brief := false }}
 {{- if reflect.IsMap . }}{{ $rows = .rows }}{{ $compact = .compact }}{{ $podium = .podium }}{{ $rank = or .rank .podium }}{{ $brief = .brief }}{{ end }}
 {{- $last := hugo.Data.meta.last_year }}
+{{- $from := time.Format (T "recent_from_layout") (time.AsTime (printf "%s-01" hugo.Data.meta.recent_from)) }}
 <div class="scroll pinned top">
 <table{{ if $podium }} class="podium{{ if $brief }} collapsed rows-collapsed{{ end }}"{{ else if $brief }} class="collapsed rows-collapsed"{{ end }}{{ if $brief }} id="professors-table" data-collapsible data-rows-collapsible{{ end }}>
 	<thead>
@@ -16,6 +17,9 @@
 		<th colspan="{{ len hugo.Data.meta.venue_groups }}">{{ T "th_accepted_at" }}</th>
 		{{- end }}
 		<th colspan="{{ cond $brief 5 8 }}">{{ T "th_total" }}</th>
+		{{- if $brief }}
+		<th rowspan="2" class="score" data-extra title="{{ T "tip_score_all" }}">{{ T "th_score_all" }}</th>
+		{{- end }}
 		<th rowspan="2" class="ws"{{ if $brief }} data-extra{{ end }} title="{{ T "tip_workshop" }}">{{ T "th_workshop" }}</th>
 		<th colspan="2"{{ if $brief }} data-extra{{ end }} title="{{ T "tip_own_institution" }}">{{ T "th_own_institution" }}</th>
 		<th colspan="{{ cond $brief 3 7 }}"{{ if $brief }} data-extra{{ end }}>{{ T "th_coauthors" }}</th>
@@ -32,7 +36,11 @@
 		{{- if $compact }}
 		{{ partial "group-heads.html" . }}
 		{{- end }}
+		{{- if $brief }}
+		<th class="score"{{ if $podium }} data-podium{{ end }} title="{{ T "tip_score_recent" (dict "From" $from) }}">{{ T "th_score_recent" }}</th>
+		{{- else }}
 		<th class="score"{{ if $podium }} data-podium{{ end }} title="{{ T "tip_score" }}">{{ T "th_score" }}</th>
+		{{- end }}
 		<th class="good">{{ T "th_accepted" }}</th>
 		{{- if not $brief }}{{ partial "split-heads.html" . }}{{ end }}
 		<th class="bad" title="{{ T "tip_rejected_total" }}">{{ T "th_rejected" }}</th>
@@ -85,7 +93,11 @@
 		{{- if $compact }}
 		{{ partial "group-cells.html" .venues }}
 		{{- end }}
+		{{- if $brief }}
+		<td class="score" title="{{ T "score_recent_cell" (dict "Count" .accepted_recent "From" $from) }}">{{ printf "%.2f" .score_recent }}</td>
+		{{- else }}
 		<td class="score">{{ printf "%.2f" .score }}</td>
+		{{- end }}
 		<td class="total good">{{ .official }}{{ if gt (int .own_page) 0 }} <span class="own" title="{{ T "own_page_more" (dict "Count" .own_page) }}">+{{ .own_page }}</span>{{ end }}</td>
 		{{- if not $brief }}{{ partial "split-cells.html" . }}{{ end }}
 		{{ partial "rejected-total.html" .venues }}
@@ -99,6 +111,9 @@
 		{{- if eq .acceptance_rate nil }}<td class="na rate">&ndash;</td>
 		{{- else if ne .projection.basis "own" }}<td class="rate trivial" data-last title="{{ T "tip_rate_trivial" }}">{{ .acceptance_rate }}%</td>
 		{{- else }}<td class="rate">{{ .acceptance_rate }}%</td>{{ end }}
+		{{- end }}
+		{{- if $brief }}
+		<td class="score">{{ printf "%.2f" .score }}</td>
 		{{- end }}
 		{{ partial "num.html" (len (.workshop_papers | default slice)) }}
 		{{- if eq (int .accepted) 0 }}
