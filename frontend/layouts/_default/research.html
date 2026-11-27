@@ -17,11 +17,11 @@ ul.ch-index ul.gl { margin: 0.2em 0 0 0 ; padding-left: 1.3em ; list-style: disc
 ul.ch-index ul.gl li { margin: 0.2em 0 ; }
 ul.ch-index .cnt { color: var(--muted) ; font-size: 0.88em ; white-space: nowrap ; }
 ul.ch-index .inst { color: var(--muted) ; font-size: 0.9em ; }
-.ch-filter { display: flex ; flex-wrap: wrap ; gap: 0.4em ; position: sticky ; top: 0 ; z-index: 5 ; background: var(--bg) ; padding: 0.5em 0 ; border-bottom: 1px solid var(--line) ; }
-.ch-filter button.hl { background: color-mix(in srgb, var(--fg) 12%, var(--bg)) ; border-color: var(--fg) ; }
+.ch-filter { display: flex ; flex-wrap: wrap ; gap: 0.4em ; position: sticky ; top: 0 ; z-index: 5 ; background: color-mix(in srgb, var(--link) 12%, var(--bg)) ; padding: 0.6em 0.8em ; border: 1px solid color-mix(in srgb, var(--link) 35%, var(--bg)) ; border-radius: 6px ; }
+.ch-filter button.hl { background: color-mix(in srgb, var(--link) 30%, var(--bg)) ; border-color: var(--link) ; }
 ul.ch-index ul.gl li:hover { background: color-mix(in srgb, var(--fg) 7%, var(--bg)) ; border-radius: 4px ; }
-.ch-filter button { font: inherit ; font-size: 0.88em ; color: var(--fg) ; background: none ; border: 1px solid var(--muted) ; border-radius: 999px ; padding: 0.2em 0.8em ; cursor: pointer ; }
-.ch-filter button[aria-pressed="true"] { background: var(--fg) ; color: var(--bg) ; border-color: var(--fg) ; }
+.ch-filter button { font: inherit ; font-size: 0.88em ; color: var(--fg) ; background: var(--bg) ; border: 1px solid var(--muted) ; border-radius: 999px ; padding: 0.2em 0.8em ; cursor: pointer ; }
+.ch-filter button[aria-pressed="true"] { background: var(--link) ; color: var(--bg) ; border-color: var(--link) ; }
 h2.ch-area { font-size: 1.15em ; margin: 1.6em 0 0.6em ; }
 h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; }
 </style>
