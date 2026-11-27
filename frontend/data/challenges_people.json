@@ -5446,6 +5446,21 @@
      "d": "M967.0,103.0 Q787.0,41.800000000000004 607.0,103.0"
     },
     {
+     "d": "M960.5,57.0 Q900.5,24.6 840.5,57.0"
+    },
+    {
+     "d": "M960.5,57.0 Q907.0,26.16 853.5,57.0"
+    },
+    {
+     "d": "M960.5,57.0 Q843.75,10.98 727.0,57.0"
+    },
+    {
+     "d": "M960.5,57.0 Q837.25,73.42 714.0,149.0"
+    },
+    {
+     "d": "M973.5,57.0 Q850.25,9.420000000000002 727.0,57.0"
+    },
+    {
      "d": "M727.0,103.0 Q667.0,70.6 607.0,103.0"
     }
    ]
@@ -13894,8 +13909,8 @@
     "strength_vi": "Bài báo báo cáo rằng không bộ kế toán nào trong bảy bộ kế toán quyền riêng tư thuộc sáu gói phần mềm phổ biến phát hiện được việc khởi động lại từ trạng thái cũ, rằng DP-SGD thông thường với lưu checkpoint, sập và tiếp tục chạy thực hiện 800 bước nhưng chỉ tính 600 bước, và rằng chỉ cần tua lại bộ kế toán là tăng được tới 54 điểm độ chính xác trên UCI digits với cùng giá trị ε công bố; bài báo chứng minh rằng, dưới các giả định đã nêu, chi phí quyền riêng tư được ghi nhận không bao giờ thấp hơn chi phí của những gì đã được giao ra.",
     "authors": [
      {
-      "text": "Where the actual privacy loss lies when a shuffling data loader is used is left open: the large ε values the paper reports are the accountant's conservative bound, not a measurement of the mechanism that ran.",
-      "text_vi": "Mức mất mát quyền riêng tư thực sự nằm ở đâu khi dùng bộ nạp dữ liệu có xáo trộn (shuffling loader) vẫn còn bỏ ngỏ: các giá trị ε lớn trong bài là cận bảo thủ của bộ kế toán, không phải phép đo của cơ chế đã thực sự chạy."
+      "text": "Where the actual privacy loss lies when a shuffling data loader is used is left open: the paper notes that its reported ε column is the accountant's bound at the conservative endpoint, not a measurement of the mechanism that ran.",
+      "text_vi": "Mức mất mát quyền riêng tư thực sự nằm ở đâu khi dùng bộ nạp dữ liệu có xáo trộn (shuffling loader) vẫn còn bỏ ngỏ: bài báo lưu ý rằng cột ε được báo cáo là cận của bộ kế toán tại đầu mút bảo thủ, không phải phép đo của cơ chế đã thực sự chạy."
      }
     ],
     "reviewers": [
@@ -13930,7 +13945,7 @@
     "technique": "The paper calls this migration-induced safety and privacy inversion and studies it as a property of an ordered pair of models, contributing a formal setting with three executable-outcome metrics, two structural results on what a target-agnostic transform can and cannot preserve, a typed memory compiler and a distribution-free selective-migration gate.",
     "technique_vi": "Bài báo gọi hiện tượng này là đảo ngược an toàn và quyền riêng tư do di chuyển mô hình (migration-induced inversion) và nghiên cứu nó như một thuộc tính của một cặp mô hình có thứ tự, đóng góp một khung hình thức với ba độ đo dựa trên kết quả thực thi được, hai kết quả cấu trúc về những gì một phép biến đổi không phụ thuộc mô hình đích có thể và không thể bảo toàn, một trình biên dịch bộ nhớ có kiểu (typed memory compiler) và một cổng di chuyển chọn lọc không phụ thuộc phân phối.",
     "strength": "The paper measures the full source–target matrix over six open-weight models twice, as a pilot and as a confirmatory replicate on a frozen benchmark with fresh decoding seeds, and reports that the pre-registered gate passes in both runs.",
-    "strength_vi": "Bài báo đo toàn bộ ma trận nguồn–đích trên sáu mô hình mã nguồn mở hai lần, một lần thử nghiệm sơ bộ và một lần lặp lại xác nhận trên benchmark cố định với seed giải mã mới, và báo cáo rằng cổng đã đăng ký trước đạt yêu cầu ở cả hai lần.",
+    "strength_vi": "Bài báo đo toàn bộ ma trận nguồn–đích trên sáu mô hình trọng số mở (open-weight) hai lần, một lần thử nghiệm sơ bộ và một lần lặp lại xác nhận trên benchmark cố định với seed giải mã mới, và báo cáo rằng cổng đã đăng ký trước đạt yêu cầu ở cả hai lần.",
     "authors": [],
     "reviewers": [
      {
@@ -14005,8 +14020,8 @@
       "text_vi": "Trong thí nghiệm với mô hình ngôn ngữ, giám khảo chính là mô hình trợ lý; tác giả báo cáo thêm một độ đo khớp nguyên văn và một đối chứng rỗng để phát hiện trường hợp giám khảo đồng ý với mọi thứ."
      },
      {
-      "text": "Every reported number comes from three seeds fixed before the study, so how much of the ordering between methods is a property of those three draws remains open until measured.",
-      "text_vi": "Mọi con số được báo cáo đều đến từ ba seed cố định trước nghiên cứu, nên thứ tự giữa các phương pháp phụ thuộc bao nhiêu vào ba lần lấy mẫu đó vẫn còn bỏ ngỏ cho đến khi được đo."
+      "text": "The numbers in the language-model results come from three seeds fixed before the study, so how much of the reported ordering is a property of those three draws remains open until measured.",
+      "text_vi": "Các con số trong phần kết quả với mô hình ngôn ngữ đến từ ba seed cố định trước nghiên cứu, nên thứ tự được báo cáo phụ thuộc bao nhiêu vào ba lần lấy mẫu đó vẫn còn bỏ ngỏ cho đến khi được đo."
      }
     ],
     "reviewers": [
@@ -14036,8 +14051,8 @@
     "year": 2027,
     "credit": 0.25,
     "status": "withdrawn",
-    "problem": "Content defences for LLM agents match suspicious strings, but rewriting such as summarisation, memory consolidation or cross-agent forwarding may remove the matched string while keeping its influence, a hypothesised failure the paper calls provenance laundering.",
-    "problem_vi": "Các cơ chế phòng thủ dựa trên nội dung cho agent LLM so khớp các chuỗi đáng ngờ, nhưng việc viết lại như tóm tắt, hợp nhất bộ nhớ hay chuyển tiếp giữa các agent có thể xóa chuỗi bị so khớp mà vẫn giữ ảnh hưởng của nó, một kiểu thất bại giả định mà bài báo gọi là tẩy nguồn gốc (provenance laundering).",
+    "problem": "Rewriting, such as summarisation, memory consolidation or cross-agent forwarding, may remove the string that content defences for LLM agents match while keeping its influence, a hypothesised failure the paper calls provenance laundering.",
+    "problem_vi": "Việc viết lại, như tóm tắt, hợp nhất bộ nhớ hay chuyển tiếp giữa các agent, có thể xóa chuỗi mà các cơ chế phòng thủ dựa trên nội dung cho agent LLM so khớp nhưng vẫn giữ ảnh hưởng của nó, một kiểu thất bại giả định mà bài báo gọi là tẩy nguồn gốc (provenance laundering).",
     "technique": "PROVACT is a split-conformal gate on per-action risk computed over trusted provenance graphs (records of where each input to an action came from), trained towards invariance to laundering, sensitivity to authority and amortised counterfactual influence.",
     "technique_vi": "PROVACT là một cổng split-conformal trên rủi ro của từng hành động, tính trên các đồ thị nguồn gốc đáng tin cậy (ghi lại mỗi đầu vào của hành động đến từ đâu), được huấn luyện hướng tới bất biến với việc tẩy nguồn gốc, nhạy với quyền hạn và ảnh hưởng phản thực được khấu hao.",
     "strength": "In a diagnostic AgentDojo study with a local 7B backbone, PROVACT reaches AUPRC 91.8 against a content classifier's 74.2, and at retrospective thresholds allowing at most 5% false interventions the paper reports pass-through rates of 39.1% against 71.5%, not distinguishable from post-hoc ancestor-MLP and plain-graph controls; the paper reports that the causal mechanism is not supported for this detector.",
@@ -14048,8 +14063,8 @@
       "text_vi": "Các nhãn dựa trên phát lại và oracle dùng để chấm khả năng phát hiện chưa được kiểm chứng độc lập: việc con người kiểm tra mẫu đồng thuận 200 dòng như dự kiến chưa được thực hiện, nên sai số của oracle, vốn giới hạn mọi nhãn trong bài, chưa được đo."
      },
      {
-      "text": "The influence head does not fit replay influence even on training data, rewrites succeed less often than their original sources, and no one-component ablation is resolved.",
-      "text_vi": "Đầu dự đoán ảnh hưởng không khớp với ảnh hưởng đo bằng phát lại ngay cả trên dữ liệu huấn luyện, các bản viết lại thành công ít hơn bản gốc, và không phép loại bỏ từng thành phần nào cho kết quả phân định được."
+      "text": "The influence head does not fit replay influence even on training data, rewrites succeed less often than own-source originals, and no one-component ablation is resolved.",
+      "text_vi": "Đầu dự đoán ảnh hưởng không khớp với ảnh hưởng đo bằng phát lại ngay cả trên dữ liệu huấn luyện, các bản viết lại thành công ít hơn các bản gốc từ chính nguồn của chúng, và không phép loại bỏ từng thành phần nào cho kết quả phân định được."
      }
     ],
     "reviewers": []
@@ -14335,8 +14350,8 @@
       ]
      },
      {
-      "text": "The paper states that baselines use their reported optimal epochs and learning rates, while only ControlJEPA-specific parameters are tuned (Sec. 5.1).",
-      "text_vi": "Bài báo cho biết các baseline dùng số epoch và tốc độ học tối ưu đã được công bố, trong khi chỉ các tham số riêng của ControlJEPA được tinh chỉnh (Mục 5.1).",
+      "text": "Baseline tuning fairness should be clarified. The paper states that baselines use their reported optimal epochs and learning rates, while only ControlJEPA-specific parameters are tuned (Sec. 5.1).",
+      "text_vi": "Cần làm rõ tính công bằng trong việc tinh chỉnh baseline. Bài báo cho biết các baseline dùng số epoch và tốc độ học tối ưu đã được công bố, trong khi chỉ các tham số riêng của ControlJEPA được tinh chỉnh (Mục 5.1).",
       "source": "reviewers",
       "quote": true,
       "papers": [
@@ -15965,8 +15980,8 @@
     "strength_vi": "Bài báo báo cáo rằng không bộ kế toán nào trong bảy bộ kế toán quyền riêng tư thuộc sáu gói phần mềm phổ biến phát hiện được việc khởi động lại từ trạng thái cũ, rằng DP-SGD thông thường với lưu checkpoint, sập và tiếp tục chạy thực hiện 800 bước nhưng chỉ tính 600 bước, và rằng chỉ cần tua lại bộ kế toán là tăng được tới 54 điểm độ chính xác trên UCI digits với cùng giá trị ε công bố; bài báo chứng minh rằng, dưới các giả định đã nêu, chi phí quyền riêng tư được ghi nhận không bao giờ thấp hơn chi phí của những gì đã được giao ra.",
     "authors": [
      {
-      "text": "Where the actual privacy loss lies when a shuffling data loader is used is left open: the large ε values the paper reports are the accountant's conservative bound, not a measurement of the mechanism that ran.",
-      "text_vi": "Mức mất mát quyền riêng tư thực sự nằm ở đâu khi dùng bộ nạp dữ liệu có xáo trộn (shuffling loader) vẫn còn bỏ ngỏ: các giá trị ε lớn trong bài là cận bảo thủ của bộ kế toán, không phải phép đo của cơ chế đã thực sự chạy."
+      "text": "Where the actual privacy loss lies when a shuffling data loader is used is left open: the paper notes that its reported ε column is the accountant's bound at the conservative endpoint, not a measurement of the mechanism that ran.",
+      "text_vi": "Mức mất mát quyền riêng tư thực sự nằm ở đâu khi dùng bộ nạp dữ liệu có xáo trộn (shuffling loader) vẫn còn bỏ ngỏ: bài báo lưu ý rằng cột ε được báo cáo là cận của bộ kế toán tại đầu mút bảo thủ, không phải phép đo của cơ chế đã thực sự chạy."
      }
     ],
     "reviewers": [
@@ -16001,7 +16016,7 @@
     "technique": "The paper calls this migration-induced safety and privacy inversion and studies it as a property of an ordered pair of models, contributing a formal setting with three executable-outcome metrics, two structural results on what a target-agnostic transform can and cannot preserve, a typed memory compiler and a distribution-free selective-migration gate.",
     "technique_vi": "Bài báo gọi hiện tượng này là đảo ngược an toàn và quyền riêng tư do di chuyển mô hình (migration-induced inversion) và nghiên cứu nó như một thuộc tính của một cặp mô hình có thứ tự, đóng góp một khung hình thức với ba độ đo dựa trên kết quả thực thi được, hai kết quả cấu trúc về những gì một phép biến đổi không phụ thuộc mô hình đích có thể và không thể bảo toàn, một trình biên dịch bộ nhớ có kiểu (typed memory compiler) và một cổng di chuyển chọn lọc không phụ thuộc phân phối.",
     "strength": "The paper measures the full source–target matrix over six open-weight models twice, as a pilot and as a confirmatory replicate on a frozen benchmark with fresh decoding seeds, and reports that the pre-registered gate passes in both runs.",
-    "strength_vi": "Bài báo đo toàn bộ ma trận nguồn–đích trên sáu mô hình mã nguồn mở hai lần, một lần thử nghiệm sơ bộ và một lần lặp lại xác nhận trên benchmark cố định với seed giải mã mới, và báo cáo rằng cổng đã đăng ký trước đạt yêu cầu ở cả hai lần.",
+    "strength_vi": "Bài báo đo toàn bộ ma trận nguồn–đích trên sáu mô hình trọng số mở (open-weight) hai lần, một lần thử nghiệm sơ bộ và một lần lặp lại xác nhận trên benchmark cố định với seed giải mã mới, và báo cáo rằng cổng đã đăng ký trước đạt yêu cầu ở cả hai lần.",
     "authors": [],
     "reviewers": [
      {
@@ -16076,8 +16091,8 @@
       "text_vi": "Trong thí nghiệm với mô hình ngôn ngữ, giám khảo chính là mô hình trợ lý; tác giả báo cáo thêm một độ đo khớp nguyên văn và một đối chứng rỗng để phát hiện trường hợp giám khảo đồng ý với mọi thứ."
      },
      {
-      "text": "Every reported number comes from three seeds fixed before the study, so how much of the ordering between methods is a property of those three draws remains open until measured.",
-      "text_vi": "Mọi con số được báo cáo đều đến từ ba seed cố định trước nghiên cứu, nên thứ tự giữa các phương pháp phụ thuộc bao nhiêu vào ba lần lấy mẫu đó vẫn còn bỏ ngỏ cho đến khi được đo."
+      "text": "The numbers in the language-model results come from three seeds fixed before the study, so how much of the reported ordering is a property of those three draws remains open until measured.",
+      "text_vi": "Các con số trong phần kết quả với mô hình ngôn ngữ đến từ ba seed cố định trước nghiên cứu, nên thứ tự được báo cáo phụ thuộc bao nhiêu vào ba lần lấy mẫu đó vẫn còn bỏ ngỏ cho đến khi được đo."
      }
     ],
     "reviewers": [
@@ -16150,8 +16165,8 @@
     "year": 2027,
     "credit": 0.25,
     "status": "withdrawn",
-    "problem": "Content defences for LLM agents match suspicious strings, but rewriting such as summarisation, memory consolidation or cross-agent forwarding may remove the matched string while keeping its influence, a hypothesised failure the paper calls provenance laundering.",
-    "problem_vi": "Các cơ chế phòng thủ dựa trên nội dung cho agent LLM so khớp các chuỗi đáng ngờ, nhưng việc viết lại như tóm tắt, hợp nhất bộ nhớ hay chuyển tiếp giữa các agent có thể xóa chuỗi bị so khớp mà vẫn giữ ảnh hưởng của nó, một kiểu thất bại giả định mà bài báo gọi là tẩy nguồn gốc (provenance laundering).",
+    "problem": "Rewriting, such as summarisation, memory consolidation or cross-agent forwarding, may remove the string that content defences for LLM agents match while keeping its influence, a hypothesised failure the paper calls provenance laundering.",
+    "problem_vi": "Việc viết lại, như tóm tắt, hợp nhất bộ nhớ hay chuyển tiếp giữa các agent, có thể xóa chuỗi mà các cơ chế phòng thủ dựa trên nội dung cho agent LLM so khớp nhưng vẫn giữ ảnh hưởng của nó, một kiểu thất bại giả định mà bài báo gọi là tẩy nguồn gốc (provenance laundering).",
     "technique": "PROVACT is a split-conformal gate on per-action risk computed over trusted provenance graphs (records of where each input to an action came from), trained towards invariance to laundering, sensitivity to authority and amortised counterfactual influence.",
     "technique_vi": "PROVACT là một cổng split-conformal trên rủi ro của từng hành động, tính trên các đồ thị nguồn gốc đáng tin cậy (ghi lại mỗi đầu vào của hành động đến từ đâu), được huấn luyện hướng tới bất biến với việc tẩy nguồn gốc, nhạy với quyền hạn và ảnh hưởng phản thực được khấu hao.",
     "strength": "In a diagnostic AgentDojo study with a local 7B backbone, PROVACT reaches AUPRC 91.8 against a content classifier's 74.2, and at retrospective thresholds allowing at most 5% false interventions the paper reports pass-through rates of 39.1% against 71.5%, not distinguishable from post-hoc ancestor-MLP and plain-graph controls; the paper reports that the causal mechanism is not supported for this detector.",
@@ -16162,8 +16177,8 @@
       "text_vi": "Các nhãn dựa trên phát lại và oracle dùng để chấm khả năng phát hiện chưa được kiểm chứng độc lập: việc con người kiểm tra mẫu đồng thuận 200 dòng như dự kiến chưa được thực hiện, nên sai số của oracle, vốn giới hạn mọi nhãn trong bài, chưa được đo."
      },
      {
-      "text": "The influence head does not fit replay influence even on training data, rewrites succeed less often than their original sources, and no one-component ablation is resolved.",
-      "text_vi": "Đầu dự đoán ảnh hưởng không khớp với ảnh hưởng đo bằng phát lại ngay cả trên dữ liệu huấn luyện, các bản viết lại thành công ít hơn bản gốc, và không phép loại bỏ từng thành phần nào cho kết quả phân định được."
+      "text": "The influence head does not fit replay influence even on training data, rewrites succeed less often than own-source originals, and no one-component ablation is resolved.",
+      "text_vi": "Đầu dự đoán ảnh hưởng không khớp với ảnh hưởng đo bằng phát lại ngay cả trên dữ liệu huấn luyện, các bản viết lại thành công ít hơn các bản gốc từ chính nguồn của chúng, và không phép loại bỏ từng thành phần nào cho kết quả phân định được."
      }
     ],
     "reviewers": []
@@ -16309,8 +16324,8 @@
   },
   "open_summary": "For agent memory, the reviews ask for evidence beyond synthetic records and simulators, and for controllers that keep the history they are meant to protect. For provenance gating, the labels used for evaluation are unvalidated and the hypothesised causal mechanism is not supported by the paper's own study. For code generation, it remains unclear whether switching languages lowers total inference cost beyond what a terser prompt achieves. For private training, the protocol depends on trust and hardware assumptions that, according to the reviews, current confidential machines do not provide. For synthetic data selection, the effect of quality filtering cannot yet be separated from the change in training-set size it causes, and each seed costs about one GPU-week of compute.",
   "open_summary_vi": "Với bộ nhớ của agent, các bản phản biện đòi hỏi bằng chứng vượt ra ngoài bản ghi tổng hợp và môi trường mô phỏng, cùng với các bộ điều khiển thực sự giữ lại phần lịch sử mà chúng được thiết kế để bảo vệ. Với cổng kiểm soát dựa trên nguồn gốc, các nhãn dùng để đánh giá chưa được kiểm chứng và cơ chế nhân quả được giả định không được chính nghiên cứu của bài báo ủng hộ. Với sinh mã, vẫn chưa rõ việc đổi ngôn ngữ có giảm tổng chi phí suy luận nhiều hơn so với chỉ dùng một prompt ngắn gọn hơn hay không. Với huấn luyện có bảo vệ quyền riêng tư, giao thức phụ thuộc vào các giả định về độ tin cậy và phần cứng mà theo các bản phản biện, máy bảo mật hiện nay chưa đáp ứng. Với việc chọn dữ liệu tổng hợp, tác động của việc lọc theo chất lượng chưa thể tách khỏi sự thay đổi kích thước tập huấn luyện mà nó gây ra, và mỗi seed tốn khoảng một tuần GPU tính toán.",
-  "overview": "Xuan-Bach Le's papers test whether the guarantees and metrics reported for machine-learning systems, mostly agents built on large language models (LLMs), hold up under closer measurement. Work on persistent memory in LLM agents asks whether stored records stay safe when a different model reads them, how to delete a record together with everything derived from it, and how to prune dialogue history without losing user commitments. For agent security, PROVACT tests whether tracking where an action's inputs came from can catch injected content that survives rewriting. For code generation, LangSelect routes each task to the programming language expected to give a shorter verified solution, falling back to another language on failure. In private training, DP-ATTEST makes differential-privacy accounting a precondition of every DP-SGD step, so that a restarted or misbehaving trainer cannot read data without its privacy cost being recorded. For synthetic training data, a controlled study tests whether quality ratings from an LLM judge predict how useful the data is for African-language classification.",
-  "overview_vi": "Các bài báo của Lê Xuân Bách kiểm tra xem những bảo đảm và độ đo được công bố cho các hệ thống học máy, phần lớn là agent xây dựng trên mô hình ngôn ngữ lớn (LLM), có còn đứng vững khi được đo đạc kỹ hơn hay không. Nhóm công trình về bộ nhớ lâu dài của agent LLM đặt câu hỏi liệu các bản ghi đã lưu có còn an toàn khi một mô hình khác đọc chúng, làm sao xóa một bản ghi cùng mọi thứ dẫn xuất từ nó, và làm sao cắt bớt lịch sử hội thoại mà không đánh mất các cam kết với người dùng. Về an ninh của agent, PROVACT kiểm tra xem việc theo dõi nguồn gốc các đầu vào của một hành động có bắt được nội dung bị chèn vẫn tồn tại sau khi được viết lại hay không. Với sinh mã, LangSelect định tuyến mỗi bài toán tới ngôn ngữ lập trình được kỳ vọng cho lời giải đã kiểm chứng ngắn hơn, và chuyển sang ngôn ngữ khác khi thất bại. Trong huấn luyện có bảo vệ quyền riêng tư, DP-ATTEST biến việc kế toán quyền riêng tư vi phân thành điều kiện tiên quyết của mỗi bước DP-SGD, để một trình huấn luyện bị khởi động lại hoặc hoạt động sai không thể đọc dữ liệu mà không bị ghi nhận chi phí quyền riêng tư. Với dữ liệu huấn luyện tổng hợp, một nghiên cứu có kiểm soát kiểm tra xem điểm chất lượng do giám khảo LLM chấm có dự đoán được mức hữu ích của dữ liệu cho bài toán phân loại ngôn ngữ châu Phi hay không.",
+  "overview": "Xuan-Bach Le's papers study the privacy, safety, evaluation and cost of machine-learning systems, most of them agents built on large language models (LLMs). Work on persistent memory in LLM agents asks whether stored records stay safe when a different model reads them, how to delete a record together with everything derived from it, and how to prune dialogue history without losing user commitments. For agent security, PROVACT tests whether tracking where an action's inputs came from can catch influence that survives when rewriting removes the string content defences match. For code generation, LangSelect routes each task to the programming language expected to give a shorter verified solution, falling back to another language on failure. In private training, DP-ATTEST makes differential-privacy accounting a precondition of every DP-SGD step, so that a restarted or misbehaving trainer cannot read data without its privacy cost being recorded. For synthetic training data, a controlled study tests whether quality ratings from an LLM judge predict how useful the data is for African-language classification.",
+  "overview_vi": "Các bài báo của Lê Xuân Bách nghiên cứu quyền riêng tư, độ an toàn, cách đánh giá và chi phí của các hệ thống học máy, phần lớn là agent xây dựng trên mô hình ngôn ngữ lớn (LLM). Nhóm công trình về bộ nhớ lâu dài của agent LLM đặt câu hỏi liệu các bản ghi đã lưu có còn an toàn khi một mô hình khác đọc chúng, làm sao xóa một bản ghi cùng mọi thứ dẫn xuất từ nó, và làm sao cắt bớt lịch sử hội thoại mà không đánh mất các cam kết với người dùng. Về an ninh của agent, PROVACT kiểm tra xem việc theo dõi nguồn gốc các đầu vào của một hành động có bắt được ảnh hưởng vẫn còn lại khi việc viết lại đã xóa chuỗi mà các cơ chế phòng thủ nội dung so khớp hay không. Với sinh mã, LangSelect định tuyến mỗi bài toán tới ngôn ngữ lập trình được kỳ vọng cho lời giải đã kiểm chứng ngắn hơn, và chuyển sang ngôn ngữ khác khi thất bại. Trong huấn luyện có bảo vệ quyền riêng tư, DP-ATTEST biến việc kế toán quyền riêng tư vi phân thành điều kiện tiên quyết của mỗi bước DP-SGD, để một trình huấn luyện bị khởi động lại hoặc hoạt động sai không thể đọc dữ liệu mà không bị ghi nhận chi phí quyền riêng tư. Với dữ liệu huấn luyện tổng hợp, một nghiên cứu có kiểm soát kiểm tra xem điểm chất lượng do giám khảo LLM chấm có dự đoán được mức hữu ích của dữ liệu cho bài toán phân loại ngôn ngữ châu Phi hay không.",
   "topics": [
    {
     "title": "Persistent memory in LLM agents",
@@ -16320,7 +16335,7 @@
     "open_gist": "For agent memory, the reviews ask for evidence beyond synthetic records and simulators, and for controllers that keep the history they are meant to protect.",
     "open_gist_vi": "Với bộ nhớ của agent, các bản phản biện đòi hỏi bằng chứng vượt ra ngoài bản ghi tổng hợp và môi trường mô phỏng, cùng với các bộ điều khiển thực sự giữ lại phần lịch sử mà chúng được thiết kế để bảo vệ.",
     "summary": "One paper measures migration-induced inversion, where memory written under one model triggers unauthorized actions under another, across a source–target matrix of six open-weight models and proposes a typed memory compiler and a selective-migration gate. DeleteCert defines deletion as matching an agent that never saw the record, builds an artifact-lineage graph with a risk-bounded closure and audit, and reports that deleting only the raw record leaves 0.45 excess risk on a synthetic benchmark. MACC learns to retain, summarize or prune dialogue segments and reports 62.9% acceptability on LoCoMo at 0.092 of the full-history cost, while a human-labelled diagnostic shows one checkpoint failing 78% of commitment probes.",
-    "summary_vi": "Một bài báo đo hiện tượng đảo ngược khi di chuyển mô hình, trong đó bộ nhớ được viết dưới một mô hình lại kích hoạt hành động trái phép dưới mô hình khác, trên ma trận nguồn–đích của sáu mô hình mã nguồn mở, và đề xuất một trình biên dịch bộ nhớ có kiểu cùng một cổng di chuyển chọn lọc. DeleteCert định nghĩa việc xóa là làm agent giống một agent chưa từng thấy bản ghi, xây dựng đồ thị phả hệ dữ liệu với bao đóng và bước kiểm toán có cận rủi ro, và báo cáo rằng chỉ xóa bản ghi gốc vẫn để lại rủi ro vượt trội 0,45 trên một benchmark tổng hợp. MACC học cách giữ, tóm tắt hoặc cắt bỏ các đoạn hội thoại và báo cáo mức chấp nhận 62,9% trên LoCoMo với chi phí bằng 0,092 lần so với giữ toàn bộ lịch sử, trong khi bộ chẩn đoán do người gán nhãn cho thấy một checkpoint thất bại ở 78% câu hỏi về cam kết.",
+    "summary_vi": "Một bài báo đo hiện tượng đảo ngược khi di chuyển mô hình, trong đó bộ nhớ được viết dưới một mô hình lại kích hoạt hành động trái phép dưới mô hình khác, trên ma trận nguồn–đích của sáu mô hình trọng số mở (open-weight), và đề xuất một trình biên dịch bộ nhớ có kiểu cùng một cổng di chuyển chọn lọc. DeleteCert định nghĩa việc xóa là làm agent giống một agent chưa từng thấy bản ghi, xây dựng đồ thị phả hệ dữ liệu với bao đóng và bước kiểm toán có cận rủi ro, và báo cáo rằng chỉ xóa bản ghi gốc vẫn để lại rủi ro vượt trội 0,45 trên một benchmark tổng hợp. MACC học cách giữ, tóm tắt hoặc cắt bỏ các đoạn hội thoại và báo cáo mức chấp nhận 62,9% trên LoCoMo với chi phí bằng 0,092 lần so với giữ toàn bộ lịch sử, trong khi bộ chẩn đoán do người gán nhãn cho thấy một checkpoint thất bại ở 78% câu hỏi về cam kết.",
     "open": [
      {
       "text": "the benchmark relies predominantly on synthetic memory artifacts rather than memories accumulated during actual agent execution.",
@@ -16396,12 +16411,12 @@
    {
     "title": "Provenance-based defences for LLM agents",
     "title_vi": "Phòng thủ dựa trên nguồn gốc cho agent LLM",
-    "gist": "For agent security, PROVACT tests whether tracking where an action's inputs came from can catch injected content that survives rewriting.",
-    "gist_vi": "Về an ninh của agent, PROVACT kiểm tra xem việc theo dõi nguồn gốc các đầu vào của một hành động có bắt được nội dung bị chèn vẫn tồn tại sau khi được viết lại hay không.",
+    "gist": "For agent security, PROVACT tests whether tracking where an action's inputs came from can catch influence that survives when rewriting removes the string content defences match.",
+    "gist_vi": "Về an ninh của agent, PROVACT kiểm tra xem việc theo dõi nguồn gốc các đầu vào của một hành động có bắt được ảnh hưởng vẫn còn lại khi việc viết lại đã xóa chuỗi mà các cơ chế phòng thủ nội dung so khớp hay không.",
     "open_gist": "For provenance gating, the labels used for evaluation are unvalidated and the hypothesised causal mechanism is not supported by the paper's own study.",
     "open_gist_vi": "Với cổng kiểm soát dựa trên nguồn gốc, các nhãn dùng để đánh giá chưa được kiểm chứng và cơ chế nhân quả được giả định không được chính nghiên cứu của bài báo ủng hộ.",
-    "summary": "Content-matching defences may miss injected text after summarisation or forwarding removes the matched string, a failure the paper calls provenance laundering. PROVACT places a split-conformal gate on per-action risk computed over provenance graphs. In a diagnostic AgentDojo study it reports AUPRC 91.8 against 74.2 for a content classifier, with pass-through rates not distinguishable from simpler graph controls and no support for the causal mechanism.",
-    "summary_vi": "Các cơ chế phòng thủ so khớp nội dung có thể bỏ sót văn bản bị chèn sau khi việc tóm tắt hoặc chuyển tiếp xóa mất chuỗi được so khớp, một kiểu thất bại mà bài báo gọi là tẩy nguồn gốc. PROVACT đặt một cổng split-conformal lên rủi ro của từng hành động, tính trên đồ thị nguồn gốc. Trong một nghiên cứu chẩn đoán trên AgentDojo, bài báo báo cáo AUPRC 91,8 so với 74,2 của một bộ phân loại nội dung, với tỉ lệ cho qua không phân biệt được với các đối chứng đồ thị đơn giản hơn và cơ chế nhân quả không được ủng hộ.",
+    "summary": "Rewriting such as summarisation or forwarding may remove the string that content defences match while keeping its influence, a failure the paper calls provenance laundering. PROVACT places a split-conformal gate on per-action risk computed over provenance graphs. In a diagnostic AgentDojo study it reports AUPRC 91.8 against 74.2 for a content classifier, with pass-through rates not distinguishable from simpler graph controls and no support for the causal mechanism.",
+    "summary_vi": "Việc viết lại như tóm tắt hoặc chuyển tiếp có thể xóa chuỗi mà các cơ chế phòng thủ nội dung so khớp nhưng vẫn giữ ảnh hưởng của nó, một kiểu thất bại mà bài báo gọi là tẩy nguồn gốc. PROVACT đặt một cổng split-conformal lên rủi ro của từng hành động, tính trên đồ thị nguồn gốc. Trong một nghiên cứu chẩn đoán trên AgentDojo, bài báo báo cáo AUPRC 91,8 so với 74,2 của một bộ phân loại nội dung, với tỉ lệ cho qua không phân biệt được với các đối chứng đồ thị đơn giản hơn và cơ chế nhân quả không được ủng hộ.",
     "open": [
      {
       "text": "The labels used to score detection come from replay and an oracle whose error is unmeasured, because the planned human audit of its agreement sample was not carried out.",
@@ -16413,8 +16428,8 @@
       ]
      },
      {
-      "text": "The influence head does not fit replay influence even on training data, and no one-component ablation is resolved, so which part of the design matters is unknown.",
-      "text_vi": "Đầu dự đoán ảnh hưởng không khớp với ảnh hưởng đo bằng phát lại ngay cả trên dữ liệu huấn luyện, và không phép loại bỏ từng thành phần nào cho kết quả phân định được, nên chưa rõ phần nào của thiết kế thực sự có tác dụng.",
+      "text": "The influence head does not fit replay influence even on training data, and no one-component ablation is resolved.",
+      "text_vi": "Đầu dự đoán ảnh hưởng không khớp với ảnh hưởng đo bằng phát lại ngay cả trên dữ liệu huấn luyện, và không phép loại bỏ từng thành phần nào cho kết quả phân định được.",
       "source": "authors",
       "quote": false,
       "papers": [
@@ -16461,8 +16476,8 @@
     "gist_vi": "Với sinh mã, LangSelect định tuyến mỗi bài toán tới ngôn ngữ lập trình được kỳ vọng cho lời giải đã kiểm chứng ngắn hơn, và chuyển sang ngôn ngữ khác khi thất bại.",
     "open_gist": "For code generation, it remains unclear whether switching languages lowers total inference cost beyond what a terser prompt achieves.",
     "open_gist_vi": "Với sinh mã, vẫn chưa rõ việc đổi ngôn ngữ có giảm tổng chi phí suy luận nhiều hơn so với chỉ dùng một prompt ngắn gọn hơn hay không.",
-    "summary": "When several languages pass the same unit tests, verified solutions of a task differ in token length, so the target language becomes a cost lever. LangSelect selects a language before generation and falls back on failure; on the 3,000-task, 8-language MultiLang-Bench it reports a 50.3% reduction in harness-proxy tokens at 92.9% pass with a fixed heuristic in live GPT-5 evaluation.",
-    "summary_vi": "Khi nhiều ngôn ngữ cùng vượt qua một bộ unit test, các lời giải đã kiểm chứng của một bài toán khác nhau về độ dài token, nên ngôn ngữ đích trở thành một đòn bẩy chi phí. LangSelect chọn ngôn ngữ trước khi sinh mã và chuyển dự phòng khi thất bại; trên MultiLang-Bench gồm 3.000 bài ở 8 ngôn ngữ, bài báo báo cáo mức giảm 50,3% token đo theo harness với tỉ lệ đạt 92,9% khi dùng một heuristic cố định trong đánh giá trực tiếp với GPT-5.",
+    "summary": "When several languages pass the same unit tests, verified solutions of a task differ in token length, so the target language becomes a cost lever. LangSelect selects a language before generation and falls back on failure; on the 3,000-task, 8-language MultiLang-Bench it reports a 50.3% reduction in harness-proxy tokens at 92.9% pass with a train-split Domain heuristic baseline in live GPT-5 evaluation.",
+    "summary_vi": "Khi nhiều ngôn ngữ cùng vượt qua một bộ unit test, các lời giải đã kiểm chứng của một bài toán khác nhau về độ dài token, nên ngôn ngữ đích trở thành một đòn bẩy chi phí. LangSelect chọn ngôn ngữ trước khi sinh mã và chuyển dự phòng khi thất bại; trên MultiLang-Bench gồm 3.000 bài ở 8 ngôn ngữ, bài báo báo cáo mức giảm 50,3% token đo theo harness với tỉ lệ đạt 92,9% khi dùng một baseline heuristic theo lĩnh vực (Domain) học từ tập huấn luyện trong đánh giá trực tiếp với GPT-5.",
     "open": [
      {
       "text": "The fixed order saves code tokens, but a terse Python prompt alone saves 41.6%, and the paper does not compare the two in the same experiment.",
@@ -16553,8 +16568,8 @@
       ]
      },
      {
-      "text": "Where the actual privacy loss lies when a shuffling data loader is used is left open; the paper's large ε values are conservative accountant bounds, not measurements of the mechanism that ran.",
-      "text_vi": "Mức mất mát quyền riêng tư thực sự khi dùng bộ nạp dữ liệu có xáo trộn vẫn còn bỏ ngỏ; các giá trị ε lớn trong bài là cận bảo thủ của bộ kế toán, không phải phép đo của cơ chế đã thực sự chạy.",
+      "text": "Where the actual privacy loss lies when a shuffling data loader is used is left open; the paper notes that its reported ε column is the accountant's bound at the conservative endpoint, not a measurement of the mechanism that ran.",
+      "text_vi": "Mức mất mát quyền riêng tư thực sự khi dùng bộ nạp dữ liệu có xáo trộn vẫn còn bỏ ngỏ; bài báo lưu ý rằng cột ε được báo cáo là cận của bộ kế toán tại đầu mút bảo thủ, không phải phép đo của cơ chế đã thực sự chạy.",
       "source": "authors",
       "quote": false,
       "papers": [
@@ -16673,8 +16688,8 @@
     "strength_vi": "Bài báo báo cáo rằng không bộ kế toán nào trong bảy bộ kế toán quyền riêng tư thuộc sáu gói phần mềm phổ biến phát hiện được việc khởi động lại từ trạng thái cũ, rằng DP-SGD thông thường với lưu checkpoint, sập và tiếp tục chạy thực hiện 800 bước nhưng chỉ tính 600 bước, và rằng chỉ cần tua lại bộ kế toán là tăng được tới 54 điểm độ chính xác trên UCI digits với cùng giá trị ε công bố; bài báo chứng minh rằng, dưới các giả định đã nêu, chi phí quyền riêng tư được ghi nhận không bao giờ thấp hơn chi phí của những gì đã được giao ra.",
     "authors": [
      {
-      "text": "Where the actual privacy loss lies when a shuffling data loader is used is left open: the large ε values the paper reports are the accountant's conservative bound, not a measurement of the mechanism that ran.",
-      "text_vi": "Mức mất mát quyền riêng tư thực sự nằm ở đâu khi dùng bộ nạp dữ liệu có xáo trộn (shuffling loader) vẫn còn bỏ ngỏ: các giá trị ε lớn trong bài là cận bảo thủ của bộ kế toán, không phải phép đo của cơ chế đã thực sự chạy."
+      "text": "Where the actual privacy loss lies when a shuffling data loader is used is left open: the paper notes that its reported ε column is the accountant's bound at the conservative endpoint, not a measurement of the mechanism that ran.",
+      "text_vi": "Mức mất mát quyền riêng tư thực sự nằm ở đâu khi dùng bộ nạp dữ liệu có xáo trộn (shuffling loader) vẫn còn bỏ ngỏ: bài báo lưu ý rằng cột ε được báo cáo là cận của bộ kế toán tại đầu mút bảo thủ, không phải phép đo của cơ chế đã thực sự chạy."
      }
     ],
     "reviewers": [
@@ -16709,7 +16724,7 @@
     "technique": "The paper calls this migration-induced safety and privacy inversion and studies it as a property of an ordered pair of models, contributing a formal setting with three executable-outcome metrics, two structural results on what a target-agnostic transform can and cannot preserve, a typed memory compiler and a distribution-free selective-migration gate.",
     "technique_vi": "Bài báo gọi hiện tượng này là đảo ngược an toàn và quyền riêng tư do di chuyển mô hình (migration-induced inversion) và nghiên cứu nó như một thuộc tính của một cặp mô hình có thứ tự, đóng góp một khung hình thức với ba độ đo dựa trên kết quả thực thi được, hai kết quả cấu trúc về những gì một phép biến đổi không phụ thuộc mô hình đích có thể và không thể bảo toàn, một trình biên dịch bộ nhớ có kiểu (typed memory compiler) và một cổng di chuyển chọn lọc không phụ thuộc phân phối.",
     "strength": "The paper measures the full source–target matrix over six open-weight models twice, as a pilot and as a confirmatory replicate on a frozen benchmark with fresh decoding seeds, and reports that the pre-registered gate passes in both runs.",
-    "strength_vi": "Bài báo đo toàn bộ ma trận nguồn–đích trên sáu mô hình mã nguồn mở hai lần, một lần thử nghiệm sơ bộ và một lần lặp lại xác nhận trên benchmark cố định với seed giải mã mới, và báo cáo rằng cổng đã đăng ký trước đạt yêu cầu ở cả hai lần.",
+    "strength_vi": "Bài báo đo toàn bộ ma trận nguồn–đích trên sáu mô hình trọng số mở (open-weight) hai lần, một lần thử nghiệm sơ bộ và một lần lặp lại xác nhận trên benchmark cố định với seed giải mã mới, và báo cáo rằng cổng đã đăng ký trước đạt yêu cầu ở cả hai lần.",
     "authors": [],
     "reviewers": [
      {
@@ -16827,8 +16842,8 @@
       "text_vi": "Trong thí nghiệm với mô hình ngôn ngữ, giám khảo chính là mô hình trợ lý; tác giả báo cáo thêm một độ đo khớp nguyên văn và một đối chứng rỗng để phát hiện trường hợp giám khảo đồng ý với mọi thứ."
      },
      {
-      "text": "Every reported number comes from three seeds fixed before the study, so how much of the ordering between methods is a property of those three draws remains open until measured.",
-      "text_vi": "Mọi con số được báo cáo đều đến từ ba seed cố định trước nghiên cứu, nên thứ tự giữa các phương pháp phụ thuộc bao nhiêu vào ba lần lấy mẫu đó vẫn còn bỏ ngỏ cho đến khi được đo."
+      "text": "The numbers in the language-model results come from three seeds fixed before the study, so how much of the reported ordering is a property of those three draws remains open until measured.",
+      "text_vi": "Các con số trong phần kết quả với mô hình ngôn ngữ đến từ ba seed cố định trước nghiên cứu, nên thứ tự được báo cáo phụ thuộc bao nhiêu vào ba lần lấy mẫu đó vẫn còn bỏ ngỏ cho đến khi được đo."
      }
     ],
     "reviewers": [
@@ -16858,8 +16873,8 @@
     "year": 2027,
     "credit": 0.25,
     "status": "withdrawn",
-    "problem": "Content defences for LLM agents match suspicious strings, but rewriting such as summarisation, memory consolidation or cross-agent forwarding may remove the matched string while keeping its influence, a hypothesised failure the paper calls provenance laundering.",
-    "problem_vi": "Các cơ chế phòng thủ dựa trên nội dung cho agent LLM so khớp các chuỗi đáng ngờ, nhưng việc viết lại như tóm tắt, hợp nhất bộ nhớ hay chuyển tiếp giữa các agent có thể xóa chuỗi bị so khớp mà vẫn giữ ảnh hưởng của nó, một kiểu thất bại giả định mà bài báo gọi là tẩy nguồn gốc (provenance laundering).",
+    "problem": "Rewriting, such as summarisation, memory consolidation or cross-agent forwarding, may remove the string that content defences for LLM agents match while keeping its influence, a hypothesised failure the paper calls provenance laundering.",
+    "problem_vi": "Việc viết lại, như tóm tắt, hợp nhất bộ nhớ hay chuyển tiếp giữa các agent, có thể xóa chuỗi mà các cơ chế phòng thủ dựa trên nội dung cho agent LLM so khớp nhưng vẫn giữ ảnh hưởng của nó, một kiểu thất bại giả định mà bài báo gọi là tẩy nguồn gốc (provenance laundering).",
     "technique": "PROVACT is a split-conformal gate on per-action risk computed over trusted provenance graphs (records of where each input to an action came from), trained towards invariance to laundering, sensitivity to authority and amortised counterfactual influence.",
     "technique_vi": "PROVACT là một cổng split-conformal trên rủi ro của từng hành động, tính trên các đồ thị nguồn gốc đáng tin cậy (ghi lại mỗi đầu vào của hành động đến từ đâu), được huấn luyện hướng tới bất biến với việc tẩy nguồn gốc, nhạy với quyền hạn và ảnh hưởng phản thực được khấu hao.",
     "strength": "In a diagnostic AgentDojo study with a local 7B backbone, PROVACT reaches AUPRC 91.8 against a content classifier's 74.2, and at retrospective thresholds allowing at most 5% false interventions the paper reports pass-through rates of 39.1% against 71.5%, not distinguishable from post-hoc ancestor-MLP and plain-graph controls; the paper reports that the causal mechanism is not supported for this detector.",
@@ -16870,8 +16885,8 @@
       "text_vi": "Các nhãn dựa trên phát lại và oracle dùng để chấm khả năng phát hiện chưa được kiểm chứng độc lập: việc con người kiểm tra mẫu đồng thuận 200 dòng như dự kiến chưa được thực hiện, nên sai số của oracle, vốn giới hạn mọi nhãn trong bài, chưa được đo."
      },
      {
-      "text": "The influence head does not fit replay influence even on training data, rewrites succeed less often than their original sources, and no one-component ablation is resolved.",
-      "text_vi": "Đầu dự đoán ảnh hưởng không khớp với ảnh hưởng đo bằng phát lại ngay cả trên dữ liệu huấn luyện, các bản viết lại thành công ít hơn bản gốc, và không phép loại bỏ từng thành phần nào cho kết quả phân định được."
+      "text": "The influence head does not fit replay influence even on training data, rewrites succeed less often than own-source originals, and no one-component ablation is resolved.",
+      "text_vi": "Đầu dự đoán ảnh hưởng không khớp với ảnh hưởng đo bằng phát lại ngay cả trên dữ liệu huấn luyện, các bản viết lại thành công ít hơn các bản gốc từ chính nguồn của chúng, và không phép loại bỏ từng thành phần nào cho kết quả phân định được."
      }
     ],
     "reviewers": []
@@ -19075,7 +19090,7 @@
     "technique": "The paper calls this migration-induced safety and privacy inversion and studies it as a property of an ordered pair of models, contributing a formal setting with three executable-outcome metrics, two structural results on what a target-agnostic transform can and cannot preserve, a typed memory compiler and a distribution-free selective-migration gate.",
     "technique_vi": "Bài báo gọi hiện tượng này là đảo ngược an toàn và quyền riêng tư do di chuyển mô hình (migration-induced inversion) và nghiên cứu nó như một thuộc tính của một cặp mô hình có thứ tự, đóng góp một khung hình thức với ba độ đo dựa trên kết quả thực thi được, hai kết quả cấu trúc về những gì một phép biến đổi không phụ thuộc mô hình đích có thể và không thể bảo toàn, một trình biên dịch bộ nhớ có kiểu (typed memory compiler) và một cổng di chuyển chọn lọc không phụ thuộc phân phối.",
     "strength": "The paper measures the full source–target matrix over six open-weight models twice, as a pilot and as a confirmatory replicate on a frozen benchmark with fresh decoding seeds, and reports that the pre-registered gate passes in both runs.",
-    "strength_vi": "Bài báo đo toàn bộ ma trận nguồn–đích trên sáu mô hình mã nguồn mở hai lần, một lần thử nghiệm sơ bộ và một lần lặp lại xác nhận trên benchmark cố định với seed giải mã mới, và báo cáo rằng cổng đã đăng ký trước đạt yêu cầu ở cả hai lần.",
+    "strength_vi": "Bài báo đo toàn bộ ma trận nguồn–đích trên sáu mô hình trọng số mở (open-weight) hai lần, một lần thử nghiệm sơ bộ và một lần lặp lại xác nhận trên benchmark cố định với seed giải mã mới, và báo cáo rằng cổng đã đăng ký trước đạt yêu cầu ở cả hai lần.",
     "authors": [],
     "reviewers": [
      {
