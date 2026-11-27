@@ -19,40 +19,23 @@
     "year": 2027,
     "credit": 0.25,
     "status": "withdrawn",
-    "problem": "Monte-Carlo graph search shares samples across paths that reach the same state, so an action chosen only a few times may lead to successor states that other paths have already explored thoroughly. Exploration bonuses based only on an action's own visit count ignore this shared evidence.",
-    "problem_vi": "Tìm kiếm đồ thị Monte-Carlo (Monte-Carlo graph search) dùng chung mẫu giữa các đường đi cùng tới một trạng thái, nên một hành động mới được chọn vài lần vẫn có thể dẫn tới các trạng thái kế tiếp đã được các đường khác khám phá kỹ. Các phần thưởng khám phá (exploration bonus) chỉ dựa trên số lần thăm của chính hành động bỏ qua bằng chứng dùng chung này.",
-    "technique": "An exploration rule motivated by effective resistance combines an action's own visit count with the visits pooled at its successor states, built on graph-based Power-UCT and extended to entropy-regularized graph search.",
-    "technique_vi": "Một quy tắc khám phá lấy cảm hứng từ điện trở hiệu dụng (effective resistance) kết hợp số lần thăm của chính hành động với số lần thăm gộp tại các trạng thái kế tiếp của nó, xây trên Power-UCT dạng đồ thị và mở rộng cho tìm kiếm đồ thị có điều chuẩn entropy.",
-    "strength": "The paper establishes conditions under which the rule preserves the O(n^-1/2) convergence rate of the root value estimate for a fixed planning horizon and quantifies how sample sharing reduces an upper bound on cumulative exploration bonuses.",
-    "strength_vi": "Bài báo chỉ ra các điều kiện để quy tắc này giữ được tốc độ hội tụ O(n^-1/2) của ước lượng giá trị tại gốc với tầm lập kế hoạch cố định, và định lượng việc dùng chung mẫu làm giảm cận trên của tổng các phần thưởng khám phá như thế nào.",
+    "problem": "Monte-Carlo graph search shares samples across different paths that reach the same state, so an action may have been tried only a few times even though its successor states are already well explored through other paths. Standard per-action exploration bonuses ignore this shared evidence when deciding what is still worth exploring in stochastic planning.",
+    "problem_vi": "Monte-Carlo graph search chia sẻ mẫu giữa các đường đi khác nhau dẫn tới cùng một trạng thái, nên một hành động có thể mới được thử vài lần dù các trạng thái kế tiếp của nó đã được khám phá kỹ qua các đường khác. Các thưởng khám phá (exploration bonus) tính riêng cho từng hành động bỏ qua thông tin dùng chung này khi quyết định còn nên khám phá gì trong lập kế hoạch ngẫu nhiên.",
+    "technique": "Motivated by effective resistance (a graph quantity, analogous to electrical resistance, that measures how strongly two nodes are connected), the paper proposes an exploration rule that combines an action's own visit count with the evidence pooled at its successor states, built on graph-based Power-UCT (a Monte-Carlo search algorithm that uses power-mean value backups and Upper Confidence bounds applied to Trees). It also extends the rule to entropy-regularized graph search.",
+    "technique_vi": "Lấy cảm hứng từ effective resistance (đại lượng trên đồ thị, tương tự điện trở, đo mức độ liên thông giữa hai nút), bài báo đề xuất một quy tắc khám phá kết hợp số lần thăm của chính hành động với bằng chứng gộp tại các trạng thái kế tiếp, xây dựng trên Power-UCT dạng đồ thị (thuật toán tìm kiếm Monte-Carlo dùng trung bình lũy thừa để cập nhật giá trị và cận tin cậy trên UCT). Quy tắc này cũng được mở rộng cho graph search có điều chuẩn entropy.",
+    "strength": "The theory gives conditions under which the rule keeps the O(n^-1/2) convergence rate of the root value estimate for a fixed planning horizon (n is the number of simulations) and quantifies how sample sharing lowers an upper bound on cumulative exploration bonuses.",
+    "strength_vi": "Phần lý thuyết đưa ra điều kiện để quy tắc giữ được tốc độ hội tụ O(n^-1/2) của ước lượng giá trị tại gốc với tầm lập kế hoạch cố định (n là số lần mô phỏng), và định lượng việc chia sẻ mẫu làm giảm cận trên của tổng thưởng khám phá như thế nào.",
     "authors": [
      {
-      "text": "Proving that shared-successor exploration gives an actual planning advantage remains open.",
-      "text_vi": "Việc chứng minh rằng khám phá dựa trên trạng thái kế tiếp dùng chung thực sự mang lại lợi thế khi lập kế hoạch vẫn còn bỏ ngỏ."
+      "text": "It is still unproven that exploring through shared successor states gives a provable planning advantage in Monte-Carlo graph search.",
+      "text_vi": "Việc khám phá qua các trạng thái kế tiếp dùng chung có mang lại lợi thế lập kế hoạch chứng minh được trong Monte-Carlo graph search hay không vẫn chưa được chứng minh."
      },
      {
-      "text": "It remains open whether clipping the bonus substantially affects planning, or whether an unclipped recursive bonus admits bounds whose constants scale with the smallest positive transition probability raised to the power -H.",
-      "text_vi": "Vẫn còn bỏ ngỏ việc cắt ngưỡng (clipping) phần thưởng có ảnh hưởng đáng kể tới việc lập kế hoạch hay không, hoặc liệu một phần thưởng đệ quy không cắt ngưỡng có cho các cận với hằng số tỉ lệ theo xác suất chuyển trạng thái dương nhỏ nhất mũ -H hay không."
+      "text": "It is unknown whether clipping the exploration bonus materially affects planning, or whether an unclipped recursive bonus admits bounds whose constants scale with the smallest positive transition probability.",
+      "text_vi": "Chưa rõ việc cắt ngưỡng (clipping) thưởng khám phá có ảnh hưởng đáng kể đến lập kế hoạch không, hay liệu thưởng đệ quy không cắt ngưỡng có các cận với hằng số phụ thuộc vào xác suất chuyển dương nhỏ nhất hay không."
      }
     ],
-    "reviewers": [
-     {
-      "quote": "the theoretical results establish preservation of existing convergence guarantees rather than an improved convergence rate or sample-complexity result. Consequently, the claimed efficiency benefit remains primarily an empirical observation.",
-      "quote_vi": "các kết quả lý thuyết chỉ chứng minh việc giữ nguyên các bảo đảm hội tụ hiện có chứ không phải một tốc độ hội tụ hay độ phức tạp mẫu tốt hơn. Do đó, lợi ích về hiệu quả được tuyên bố chủ yếu vẫn là một quan sát thực nghiệm."
-     },
-     {
-      "quote": "The strongest empirical results combine multiple design choices, including state merging, regularization, and ER-based exploration, making it difficult to determine how much of the observed gain is attributable to the proposed exploration mechanism itself.",
-      "quote_vi": "Các kết quả thực nghiệm tốt nhất kết hợp nhiều lựa chọn thiết kế, gồm gộp trạng thái, điều chuẩn và khám phá dựa trên ER, khiến khó xác định bao nhiêu phần cải thiện quan sát được là nhờ chính cơ chế khám phá đề xuất."
-     },
-     {
-      "quote": "Matched comparisons with the same representation and regularizer, including a bonus based only on the local action count, are needed to establish what the successor term contributes.",
-      "quote_vi": "Cần các so sánh đối chứng với cùng biểu diễn và cùng bộ điều chuẩn, kể cả một phần thưởng chỉ dựa trên số lần thăm cục bộ của hành động, để xác định thành phần trạng thái kế tiếp đóng góp gì."
-     },
-     {
-      "quote": "There are no significant empirical results or experiments with real-world applications or games.",
-      "quote_vi": "Không có kết quả thực nghiệm đáng kể hay thí nghiệm nào với ứng dụng thực tế hoặc trò chơi."
-     }
-    ]
+    "reviewers": []
    },
    {
     "id": "iclr2027-what-action-geometry-buys-a-design-space-for-optimal-transpo",
@@ -62,79 +45,19 @@
     "year": 2027,
     "credit": 0.3333,
     "status": "withdrawn",
-    "problem": "Many reinforcement-learning action spaces have geometry, meaning similar actions have similar effects, but maximum-entropy Bellman backups treat all actions as unrelated.",
-    "problem_vi": "Nhiều không gian hành động trong học tăng cường có cấu trúc hình học, tức các hành động giống nhau có tác động giống nhau, nhưng các phép cập nhật Bellman entropy cực đại (maximum-entropy) coi mọi hành động là không liên quan.",
-    "technique": "The paper starts from the closed form of Laplacian optimal-transport (LOT) regularized backups, an average of cost-shifted local softmaxes governed by an anchor-normalized action kernel, and maps which kernel property buys which guarantee: concentration for pruning and local planning, uniform cost stability for reward-free geometry learning and tabular Q-learning, Poisson truncation for local computation, and strictly positive couplings for an effective-resistance interpretation.",
-    "technique_vi": "Bài báo xuất phát từ dạng đóng của phép cập nhật có điều chuẩn vận chuyển tối ưu Laplacian (LOT), là trung bình của các softmax cục bộ dịch theo chi phí và được điều khiển bởi một nhân hành động chuẩn hóa theo điểm neo, rồi lập bản đồ tính chất nào của nhân mang lại bảo đảm nào: tính tập trung cho việc cắt tỉa và lập kế hoạch cục bộ, tính ổn định đều của chi phí cho việc học hình học không cần phần thưởng và Q-learning dạng bảng, phép cắt Poisson cho tính toán cục bộ, và các ghép nối dương ngặt cho cách diễn giải bằng điện trở hiệu dụng.",
-    "strength": "The paper proves that a localized planner replaces branching over K actions with an effective count d_ker while still targeting the unpruned regularized value, that a graph-local kernel reaches the exact heat-kernel value with no explicit K dependence under polynomial growth, and gives matched obstructions showing these properties are not free.",
-    "strength_vi": "Bài báo chứng minh một bộ lập kế hoạch cục bộ thay việc rẽ nhánh trên K hành động bằng một số lượng hiệu dụng d_ker mà vẫn nhắm tới giá trị điều chuẩn khi chưa cắt tỉa, rằng một nhân cục bộ trên đồ thị đạt đúng giá trị nhân nhiệt (heat kernel) mà không phụ thuộc tường minh vào K khi tăng trưởng đa thức, và đưa ra các vật cản tương ứng cho thấy những tính chất này không tự nhiên mà có.",
+    "problem": "Many reinforcement learning (RL) action spaces have geometry, with some actions similar to others, that standard maximum-entropy (softmax-style) Bellman backups ignore.",
+    "problem_vi": "Nhiều không gian hành động trong học tăng cường (RL) có cấu trúc hình học, tức một số hành động gần giống nhau, nhưng các phép cập nhật Bellman entropy cực đại (kiểu softmax) thông thường lại bỏ qua điều này.",
+    "technique": "Laplacian optimal-transport (LOT) regularization of the Bellman backup has a closed form, an average of cost-shifted local softmaxes governed by one anchor-normalized action kernel. The paper turns this into a design space and proves which kernel property buys which guarantee: concentration gives planning with exact pruning error over an effective action count, uniform cost stability gives reusable reward-free geometry and tabular Q-learning, Poisson truncation gives graph-local computation, and strictly positive couplings give an interpretation of policy curvature as effective resistance on a transport graph.",
+    "technique_vi": "Điều chuẩn vận tải tối ưu Laplacian (LOT) cho phép cập nhật Bellman có dạng đóng: trung bình của các softmax cục bộ đã dịch theo chi phí, được điều khiển bởi một kernel hành động chuẩn hóa theo điểm neo. Bài báo biến điều này thành một không gian thiết kế và chứng minh tính chất nào của kernel mang lại bảo đảm nào: tính tập trung cho phép lập kế hoạch với sai số cắt tỉa chính xác trên số hành động hiệu dụng, độ ổn định chi phí đều cho phép tái sử dụng hình học không phụ thuộc phần thưởng và Q-learning dạng bảng, cắt cụt Poisson cho phép tính toán cục bộ trên đồ thị, và liên kết dương chặt cho phép diễn giải độ cong chính sách như effective resistance trên một đồ thị vận tải.",
+    "strength": "It gives a clear map from kernel properties to planning, learning, computation and interpretation guarantees, with matching obstructions showing that none of these properties comes for free.",
+    "strength_vi": "Công trình đưa ra một bản đồ rõ ràng từ tính chất của kernel đến các bảo đảm về lập kế hoạch, học, tính toán và diễn giải, kèm các phản ví dụ tương ứng cho thấy không tính chất nào có được mà không phải trả giá.",
     "authors": [
      {
-      "text": "One local-computation conclusion is restricted to graph families and accuracy levels where the required radius stays in the Gaussian regime and before finite-graph neighbourhoods saturate.",
-      "text_vi": "Một kết luận về tính toán cục bộ chỉ áp dụng cho các họ đồ thị và mức độ chính xác mà bán kính cần thiết còn nằm trong chế độ Gauss và trước khi các lân cận trên đồ thị hữu hạn bị bão hòa."
+      "text": "Some conclusions hold only for graph families and accuracy sequences where the required radius stays in the Gaussian regime, before neighbourhoods saturate on a finite graph.",
+      "text_vi": "Một số kết luận chỉ đúng với các họ đồ thị và dãy độ chính xác mà bán kính cần thiết vẫn nằm trong chế độ Gaussian, trước khi các lân cận bị bão hòa trên đồ thị hữu hạn."
      }
     ],
-    "reviewers": [
-     {
-      "quote": "No learning agent, standard benchmark, or comparison with existing RL methods is reported, so it remains unknown whether action geometry \"buys\" anything in practice.",
-      "quote_vi": "Không có tác tử học, benchmark chuẩn hay so sánh nào với các phương pháp RL hiện có được báo cáo, nên vẫn chưa biết hình học hành động có \"mua\" được gì trong thực tế hay không."
-     },
-     {
-      "quote": "planning bounds target a scalar regularized root value rather than policy return, learning results are tabular, and the effective-resistance identity yields neither an algorithm nor a rate.",
-      "quote_vi": "các cận lập kế hoạch nhắm tới một giá trị gốc điều chuẩn vô hướng chứ không phải lợi nhuận của chính sách, các kết quả học chỉ ở dạng bảng, và đẳng thức điện trở hiệu dụng không cho ra thuật toán hay tốc độ nào."
-     },
-     {
-      "quote": "distinct actions may receive identical signatures despite having substantially different transition behavior.",
-      "quote_vi": "các hành động khác nhau có thể nhận cùng một chữ ký dù có hành vi chuyển trạng thái khác nhau đáng kể."
-     },
-     {
-      "quote": "The ring-control experiments use known transition probabilities and exact expected action values rather than sampled transitions from a generative model.",
-      "quote_vi": "Các thí nghiệm điều khiển trên vòng dùng xác suất chuyển trạng thái đã biết và giá trị hành động kỳ vọng chính xác thay vì các chuyển trạng thái được lấy mẫu từ một mô hình sinh."
-     }
-    ]
-   },
-   {
-    "id": "iclr2027-best-arm-identification-in-generalized-linear-bandits-with-1",
-    "title": "Best Arm Identification in Generalized Linear Bandits with 1-Bit Feedback",
-    "venue": "iclr",
-    "venue_name": "ICLR",
-    "year": 2027,
-    "credit": 0.25,
-    "status": "withdrawn",
-    "problem": "In IoT sensor networks, digital marketing or clinical trials, decisions may rely only on binary feedback or strict 1-bit communication. The paper asks how thresholding a latent reward from a generalized linear model (GLM) into one bit affects best-arm identification (BAI), the task of finding the best option with few samples.",
-    "problem_vi": "Trong mạng cảm biến IoT, tiếp thị số hay thử nghiệm lâm sàng, quyết định có thể chỉ dựa trên phản hồi nhị phân hoặc ràng buộc truyền thông 1 bit. Bài báo đặt câu hỏi việc phân ngưỡng một phần thưởng ẩn theo mô hình tuyến tính tổng quát (GLM) thành một bit ảnh hưởng thế nào tới bài toán xác định nhánh tốt nhất (best-arm identification, BAI), tức tìm lựa chọn tốt nhất với ít mẫu.",
-    "technique": "The algorithm, 1BIT-GLGAPE, builds confidence sets directly for the pairwise reward gaps between arms from the censored likelihood of thresholded observations and allocates samples by gap-based exploration informed by the censored Fisher information.",
-    "technique_vi": "Thuật toán 1BIT-GLGAPE xây trực tiếp các tập tin cậy cho chênh lệch phần thưởng giữa từng cặp nhánh từ hàm hợp lý bị kiểm duyệt (censored likelihood) của các quan sát đã phân ngưỡng, và phân bổ mẫu bằng khám phá dựa trên khoảng cách, có dùng thông tin Fisher bị kiểm duyệt.",
-    "strength": "Under regularity and identifiability assumptions, the paper states that the algorithm is (ε, δ)-PAC and gives upper and lower sample-complexity bounds governed by the same instance-dependent hardness up to logarithmic factors, with the cost of quantization entering through the censored Fisher information along reward-gap directions.",
-    "strength_vi": "Với các giả định về tính chính quy và khả năng nhận dạng, bài báo phát biểu rằng thuật toán là (ε, δ)-PAC và đưa ra cận trên và cận dưới cho độ phức tạp mẫu cùng được chi phối bởi một độ khó phụ thuộc bài toán, sai khác các thừa số logarit, trong đó chi phí lượng tử hóa thể hiện qua thông tin Fisher bị kiểm duyệt theo các hướng chênh lệch phần thưởng.",
-    "authors": [
-     {
-      "text": "The thresholds are fixed throughout the algorithm and may differ from the instance-optimal thresholds in the lower bound, which can inflate the sample-complexity constant; optimizing thresholds jointly with arm allocation remains open.",
-      "text_vi": "Các ngưỡng được giữ cố định suốt thuật toán và có thể khác các ngưỡng tối ưu theo bài toán trong cận dưới, khiến hằng số của độ phức tạp mẫu có thể bị phóng đại; việc tối ưu ngưỡng đồng thời với phân bổ mẫu vẫn còn bỏ ngỏ."
-     },
-     {
-      "text": "The experiments are limited to relatively simple environment designs.",
-      "text_vi": "Các thí nghiệm chỉ giới hạn ở những thiết kế môi trường tương đối đơn giản."
-     }
-    ],
-    "reviewers": [
-     {
-      "quote": "The main theoretical guarantees have substantial correctness problems. … Proposition 5 is false as stated.",
-      "quote_vi": "Các bảo đảm lý thuyết chính có vấn đề nghiêm trọng về tính đúng đắn. Mệnh đề 5 sai như đang được phát biểu."
-     },
-     {
-      "quote": "Lemma 8 uses asymptotic normality to assert finite-sample confidence probabilities and then takes a union bound over time. This does not establish the uniform confidence event needed for adaptive sampling and stopping.",
-      "quote_vi": "Bổ đề 8 dùng tính chuẩn tiệm cận để khẳng định xác suất tin cậy với mẫu hữu hạn rồi lấy cận hợp theo thời gian. Điều này không xác lập được biến cố tin cậy đều cần cho việc lấy mẫu thích ứng và dừng."
-     },
-     {
-      "quote": "No equivalence is established, so it is unclear why this analysis applies to Algorithm 3.",
-      "quote_vi": "Không có sự tương đương nào được chứng minh, nên không rõ vì sao phân tích này áp dụng được cho Thuật toán 3."
-     },
-     {
-      "quote": "The experiments report the standalone performance of 1BIT-GLGAPE without comparisons to existing methods.",
-      "quote_vi": "Các thí nghiệm chỉ báo cáo hiệu năng riêng của 1BIT-GLGAPE mà không so sánh với các phương pháp hiện có."
-     }
-    ]
+    "reviewers": []
    },
    {
     "id": "neurips2026-nearly-optimal-fixed-confidence-best-arm-identification-with",
@@ -144,38 +67,42 @@
     "year": 2026,
     "credit": 0.2,
     "status": "accepted",
-    "problem": "In fixed-confidence best-arm identification under strict 1-bit feedback, the learner picks an arm and a query set each round and only learns whether the sampled reward falls in that set. With only finite variance assumed, empirical means cannot be computed and clipping becomes unavoidable.",
-    "problem_vi": "Trong bài toán xác định nhánh tốt nhất với độ tin cậy cố định dưới phản hồi 1 bit ngặt, mỗi vòng người học chọn một nhánh và một tập truy vấn và chỉ biết phần thưởng lấy mẫu có rơi vào tập đó hay không. Khi chỉ giả định phương sai hữu hạn, không thể tính trung bình thực nghiệm và việc cắt ngưỡng (clipping) là không tránh khỏi.",
-    "technique": "A time-uniform 1-bit mean estimator built from randomized threshold queries and a clipped tail-integral identity is embedded into candidate-challenger BAI algorithms: one with a fixed clipping level and a phased one that adapts the clipping level to the current resolution.",
-    "technique_vi": "Một bộ ước lượng trung bình 1 bit đúng đều theo thời gian, xây từ các truy vấn ngưỡng ngẫu nhiên và một đẳng thức tích phân đuôi có cắt ngưỡng, được đưa vào các thuật toán BAI kiểu ứng viên–thách thức: một thuật toán với mức cắt cố định và một thuật toán theo pha điều chỉnh mức cắt theo độ phân giải hiện tại.",
-    "strength": "The paper proves an anytime (ε, δ)-PAC guarantee, a gap-adaptive sample complexity for the phased algorithm, and a K-arm worst-case lower bound showing that the logarithmic penalty of finite-variance 1-bit feedback is intrinsic and matched by the phased algorithm up to logarithmic factors.",
-    "strength_vi": "Bài báo chứng minh bảo đảm (ε, δ)-PAC tại mọi thời điểm, độ phức tạp mẫu thích ứng theo khoảng cách cho thuật toán theo pha, và một cận dưới trường hợp xấu nhất với K nhánh cho thấy cái giá logarit của phản hồi 1 bit với phương sai hữu hạn là bản chất, và thuật toán theo pha đạt cận này sai khác các thừa số logarit.",
+    "problem": "In best-arm identification (BAI), a learner must find, with confidence 1−δ, an arm whose mean reward is within ε of the best one; this paper studies the case where each sample returns only one bit saying whether the reward falls in a query set chosen by the learner, as under strict communication limits, so empirical means cannot be computed directly.",
+    "problem_vi": "Trong bài toán xác định nhánh tốt nhất (best-arm identification, BAI), người học phải tìm, với độ tin cậy 1−δ, một nhánh có phần thưởng trung bình cách nhánh tốt nhất không quá ε; bài báo xét trường hợp mỗi mẫu chỉ trả về một bit cho biết phần thưởng có thuộc tập truy vấn do người học chọn hay không, như khi kênh truyền thông bị giới hạn chặt, nên không thể tính trực tiếp trung bình thực nghiệm.",
+    "technique": "The paper builds a time-uniform 1-bit mean estimator from randomized threshold queries and a clipped tail-integral identity, and plugs it into candidate–challenger BAI algorithms: one with a fixed clipping level and a phased one that matches the clipping level to the current resolution.",
+    "technique_vi": "Bài báo xây dựng một bộ ước lượng trung bình 1-bit đúng đồng thời tại mọi thời điểm (time-uniform) từ các truy vấn ngưỡng ngẫu nhiên và một đẳng thức tích phân đuôi có cắt ngưỡng (clipping), rồi đưa nó vào các thuật toán BAI kiểu ứng viên–thách thức (candidate–challenger): một thuật toán với mức cắt cố định và một thuật toán chia pha có mức cắt khớp với độ phân giải hiện tại.",
+    "strength": "The paper proves an anytime (ε,δ)-PAC (probably approximately correct) guarantee for the fixed-clipping algorithm, a gap-adaptive sample complexity for the phased algorithm, and a K-arm worst-case lower bound that matches the phased algorithm's leading dependence up to logarithmic factors.",
+    "strength_vi": "Bài báo chứng minh bảo đảm (ε,δ)-PAC (probably approximately correct) tại mọi thời điểm cho thuật toán cắt cố định, độ phức tạp mẫu thích nghi theo khoảng cách giữa các nhánh (gap) cho thuật toán chia pha, và một cận dưới trường hợp xấu nhất cho K nhánh khớp với sự phụ thuộc chính của thuật toán chia pha đến các thừa số logarit.",
     "authors": [
      {
-      "text": "The algorithms rely on a localization assumption, an anchor point near each arm's mean; weakening or removing it is the next step.",
-      "text_vi": "Các thuật toán dựa vào một giả định định vị, tức một điểm neo gần trung bình của mỗi nhánh; làm yếu hoặc loại bỏ giả định này là bước tiếp theo."
+      "text": "The algorithms rely on a localization assumption (a known anchor point close to each arm's mean); the authors name weakening or removing it as a next step.",
+      "text_vi": "Các thuật toán dựa trên giả thiết định vị (biết trước một điểm neo gần trung bình của mỗi nhánh); các tác giả coi việc nới lỏng hoặc loại bỏ giả thiết này là bước tiếp theo."
      },
      {
-      "text": "Only a K-arm worst-case lower bound is proved, so the exact instance-dependent complexity of 1-bit BAI remains open.",
-      "text_vi": "Chỉ có cận dưới trường hợp xấu nhất với K nhánh được chứng minh, nên độ phức tạp chính xác phụ thuộc từng bài toán của BAI 1 bit vẫn còn bỏ ngỏ."
+      "text": "The analysis relies on a K-arm worst-case lower bound, so the exact instance-dependent complexity of 1-bit best-arm identification is left open.",
+      "text_vi": "Phân tích dựa trên cận dưới trường hợp xấu nhất cho K nhánh, nên độ phức tạp chính xác phụ thuộc vào từng bài toán cụ thể (instance-dependent) của BAI với phản hồi 1-bit vẫn còn bỏ ngỏ."
      },
      {
-      "text": "The authors plan to extend the time-uniform 1-bit primitive to broader pure-exploration tasks under communication constraints.",
-      "text_vi": "Các tác giả dự định mở rộng công cụ ước lượng 1 bit đúng đều theo thời gian cho các bài toán khám phá thuần túy rộng hơn dưới ràng buộc truyền thông."
+      "text": "The authors propose extending the time-uniform 1-bit estimator to broader pure-exploration tasks in communication-constrained learning.",
+      "text_vi": "Các tác giả đề xuất mở rộng bộ ước lượng 1-bit đúng tại mọi thời điểm sang các bài toán khám phá thuần túy (pure exploration) rộng hơn trong học có ràng buộc truyền thông."
      }
     ],
     "reviewers": [
      {
-      "quote": "A simple phased successive-elimination BAI wrapper around Lau–Scarlett’s fixed-target finite-variance 1-bit mean estimator appears to match the leading rate in Theorem 10.",
-      "quote_vi": "Một khung BAI loại bỏ tuần tự theo pha đơn giản bao quanh bộ ước lượng trung bình 1 bit với phương sai hữu hạn và độ chính xác mục tiêu cố định của Lau–Scarlett dường như đạt cùng tốc độ chính ở Định lý 10."
-     },
-     {
-      "quote": "The assumption of known variance proxy seems common, but knowing an anchor point for each arm seems unrealistic.",
-      "quote_vi": "Giả định biết trước đại lượng thay thế phương sai có vẻ phổ biến, nhưng việc biết một điểm neo cho mỗi nhánh có vẻ không thực tế."
+      "quote": "the authors give general examples of settings where feedback can be expressed using only 1-bit like duelling bandits and human approval/disapproval signals, that do not fit the proposed setting exactly",
+      "quote_vi": "các tác giả đưa ra những ví dụ chung về các bối cảnh mà phản hồi có thể biểu diễn chỉ bằng 1 bit, như duelling bandits và tín hiệu tán thành/không tán thành của con người, nhưng chúng không khớp chính xác với bối cảnh được đề xuất"
      },
      {
       "quote": "Even the bandwith-constrained communication has caveats as the learner needs to communicate the threshold (which is a real value and thus requires as much bandwith as the reward itself).",
-      "quote_vi": "Ngay cả kịch bản truyền thông giới hạn băng thông cũng có điểm cần lưu ý, vì người học phải truyền ngưỡng (là một số thực nên cần băng thông nhiều như chính phần thưởng)."
+      "quote_vi": "Ngay cả trường hợp truyền thông bị giới hạn băng thông cũng có điểm cần lưu ý, vì người học cần gửi đi ngưỡng (một giá trị thực, do đó cần băng thông nhiều như chính phần thưởng)."
+     },
+     {
+      "quote": "A simple phased successive-elimination BAI wrapper around Lau–Scarlett’s fixed-target finite-variance 1-bit mean estimator appears to match the leading rate in Theorem 10.",
+      "quote_vi": "Một lớp bao BAI loại trừ tuần tự chia pha đơn giản quanh bộ ước lượng trung bình 1-bit với mục tiêu cố định và phương sai hữu hạn của Lau–Scarlett dường như đạt được tốc độ chính trong Định lý 10."
+     },
+     {
+      "quote": "The assumption of known variance proxy seems common, but knowing an anchor point for each arm seems unrealistic.",
+      "quote_vi": "Giả thiết biết trước cận phương sai có vẻ phổ biến, nhưng việc biết một điểm neo cho mỗi nhánh có vẻ không thực tế."
      }
     ]
    },
@@ -187,38 +114,42 @@
     "year": 2026,
     "credit": 0.25,
     "status": "accepted",
-    "problem": "Tree-based Monte-Carlo Tree Search (MCTS) duplicates a state each time it is reached through a different trajectory, which wastes simulations in stochastic Markov decision processes (MDPs); prior Monte-Carlo graph search theory covered only deterministic MDPs.",
-    "problem_vi": "Tìm kiếm cây Monte-Carlo (MCTS) dạng cây nhân bản một trạng thái mỗi khi nó được đạt tới qua một quỹ đạo khác, gây lãng phí mô phỏng trong các quá trình quyết định Markov (MDP) ngẫu nhiên; lý thuyết tìm kiếm đồ thị Monte-Carlo trước đây chỉ bao quát MDP tất định.",
-    "technique": "GS-Power-UCT shares nodes for states reached at the same planning depth while keeping separate values across depths, with power-mean backups; GS-Power-UCT-F stores one node per physical state, and GS-Power-UCT-F+ uses an adaptive horizon to control the resulting bias.",
-    "technique_vi": "GS-Power-UCT dùng chung nút cho các trạng thái đạt tới ở cùng độ sâu lập kế hoạch nhưng giữ giá trị riêng cho các độ sâu khác nhau, với phép cập nhật trung bình lũy thừa (power mean); GS-Power-UCT-F lưu một nút cho mỗi trạng thái vật lý, còn GS-Power-UCT-F+ dùng tầm nhìn thích ứng để kiểm soát độ chệch phát sinh.",
-    "strength": "The paper proves that for a fixed planning horizon the root estimate converges to the finite-horizon value at rate O(n^-1/2), matching tree-based Stochastic-Power-UCT, that GS-Power-UCT-F+ converges to the optimal infinite-horizon value when the cross-depth gap vanishes, and reports improved sample efficiency on stochastic planning benchmarks.",
-    "strength_vi": "Bài báo chứng minh với tầm lập kế hoạch cố định, ước lượng tại gốc hội tụ về giá trị tầm hữu hạn với tốc độ O(n^-1/2), bằng Stochastic-Power-UCT dạng cây, rằng GS-Power-UCT-F+ hội tụ về giá trị tối ưu tầm vô hạn khi khoảng chênh giữa các độ sâu triệt tiêu, và báo cáo hiệu quả mẫu tốt hơn trên các benchmark lập kế hoạch ngẫu nhiên.",
+    "problem": "Monte-Carlo Tree Search (MCTS) creates a separate node each time the same state is reached through a different trajectory, which wastes simulations in stochastic Markov decision processes (MDPs); the paper notes that earlier Monte-Carlo Graph Search, which merges such states, has a theoretical analysis only for deterministic MDPs.",
+    "problem_vi": "Tìm kiếm cây Monte-Carlo (Monte-Carlo Tree Search, MCTS) tạo một nút riêng mỗi khi cùng một trạng thái được đạt tới qua một quỹ đạo khác, gây lãng phí mô phỏng trong các quá trình quyết định Markov (MDP) ngẫu nhiên; bài báo chỉ ra rằng phương pháp Monte-Carlo Graph Search trước đó, vốn gộp các trạng thái như vậy, chỉ có phân tích lý thuyết cho MDP tất định.",
+    "technique": "GS-Power-UCT shares one node among visits to a state reached at the same planning depth while keeping separate values across depths, and backs up values with a power mean (a generalized average lying between the mean and the maximum); two full-state variants store one node per physical state, one of them with an adaptive horizon to control the resulting bias.",
+    "technique_vi": "GS-Power-UCT dùng chung một nút cho các lần thăm một trạng thái ở cùng độ sâu lập kế hoạch nhưng giữ giá trị riêng cho các độ sâu khác nhau, và lan truyền ngược giá trị bằng trung bình lũy thừa (power mean, một dạng trung bình tổng quát nằm giữa giá trị trung bình và giá trị lớn nhất); hai biến thể toàn trạng thái lưu một nút cho mỗi trạng thái vật lý, trong đó một biến thể dùng tầm nhìn (horizon) thích nghi để kiểm soát độ chệch phát sinh.",
+    "strength": "The paper proves that, for a fixed planning horizon, the root estimate converges to the finite-horizon value at rate O(n^-1/2), that the adaptive-horizon variant converges to the optimal infinite-horizon discounted value when the remaining cross-depth gap vanishes, and reports improved sample efficiency over tree-based and graph-based baselines on stochastic planning benchmarks.",
+    "strength_vi": "Bài báo chứng minh rằng với tầm nhìn lập kế hoạch cố định, ước lượng tại gốc hội tụ về giá trị tầm nhìn hữu hạn với tốc độ O(n^-1/2), rằng biến thể tầm nhìn thích nghi hội tụ về giá trị chiết khấu tối ưu tầm nhìn vô hạn khi khoảng chênh lệch giữa các độ sâu còn lại tiến về không, và báo cáo hiệu quả mẫu tốt hơn các phương pháp nền dựa trên cây và dựa trên đồ thị trên các bài toán lập kế hoạch ngẫu nhiên.",
     "authors": [
      {
-      "text": "The power-mean backup assumes rewards in [0, Rmax]; signed rewards would need affine shifts or modified backup operators.",
-      "text_vi": "Phép cập nhật trung bình lũy thừa giả định phần thưởng nằm trong [0, Rmax]; phần thưởng có dấu sẽ cần phép dịch affine hoặc toán tử cập nhật được sửa đổi."
+      "text": "The power-mean backup assumes non-negative rewards in [0, Rmax]; environments with signed rewards would need affine shifts or modified backup operators.",
+      "text_vi": "Phép lan truyền ngược bằng trung bình lũy thừa giả thiết phần thưởng không âm trong [0, Rmax]; môi trường có phần thưởng mang dấu sẽ cần phép dịch affine hoặc toán tử lan truyền ngược được sửa đổi."
      },
      {
-      "text": "With few same-depth transpositions, sharing gives little reuse but keeps hash-table and graph-bookkeeping overhead, and depth augmentation can need up to |S|·H nodes of memory.",
-      "text_vi": "Khi ít trạng thái trùng ở cùng độ sâu, việc dùng chung mang lại ít tái sử dụng nhưng vẫn tốn chi phí bảng băm và quản lý đồ thị, và việc tăng cường theo độ sâu có thể cần tới |S|·H nút bộ nhớ."
+      "text": "With few same-depth transpositions, state sharing gives little reuse but keeps hash-table and graph-bookkeeping overhead, and with depth augmentation memory can grow to |S|·H nodes, which may raise wall-clock cost in large settings.",
+      "text_vi": "Khi ít trạng thái được đạt tới lặp lại ở cùng độ sâu, việc dùng chung trạng thái mang lại ít lợi ích tái sử dụng nhưng vẫn tốn chi phí bảng băm và quản lý đồ thị; khi tăng cường theo độ sâu, bộ nhớ có thể tăng tới |S|·H nút, có thể làm tăng thời gian chạy thực tế trong bài toán lớn."
      },
      {
-      "text": "Future work includes graph-dependent constants, approximate merging for continuous states, learned evaluators and adversarial planning.",
-      "text_vi": "Hướng tương lai gồm các hằng số phụ thuộc đồ thị, gộp xấp xỉ cho trạng thái liên tục, bộ đánh giá được học và lập kế hoạch đối kháng."
+      "text": "Future work listed by the authors: graph-dependent constants, approximate merging for continuous states, learned evaluators and adversarial planning.",
+      "text_vi": "Các hướng tương lai được tác giả nêu: hằng số phụ thuộc vào đồ thị, gộp xấp xỉ cho trạng thái liên tục, bộ đánh giá được học và lập kế hoạch đối kháng."
      }
     ],
     "reviewers": [
      {
+      "quote": "I think the assumption is not clearly stated. For example, I can find at least two assumptions in the appendix, positive Q function and the inequation of (A1).",
+      "quote_vi": "Tôi cho rằng giả thiết không được nêu rõ. Ví dụ, tôi tìm thấy ít nhất hai giả thiết trong phụ lục: hàm Q dương và bất đẳng thức (A1)."
+     },
+     {
+      "quote": "I think it is at least limited to discrete MDP.",
+      "quote_vi": "Tôi nghĩ ít nhất nó bị giới hạn ở MDP rời rạc."
+     },
+     {
       "quote": "I cannot find out a direct report of the runtime of the proposed method. This also applies to the memory overhead problem.",
-      "quote_vi": "Tôi không tìm thấy báo cáo trực tiếp nào về thời gian chạy của phương pháp đề xuất. Điều này cũng đúng với vấn đề chi phí bộ nhớ."
+      "quote_vi": "Tôi không tìm thấy báo cáo trực tiếp về thời gian chạy của phương pháp đề xuất. Điều này cũng đúng với vấn đề chi phí bộ nhớ."
      },
      {
       "quote": "Without comparison to these broader RL baselines, it is difficult to assess whether the method is competitive beyond the MCTS family.",
-      "quote_vi": "Không có so sánh với các baseline RL rộng hơn này thì khó đánh giá phương pháp có cạnh tranh được ngoài họ MCTS hay không."
-     },
-     {
-      "quote": "I think the assumption is not clearly stated. For example, I can find at least two assumptions in the appendix, positive Q function and the inequation of (A1).",
-      "quote_vi": "Tôi cho rằng giả định chưa được phát biểu rõ ràng. Ví dụ, tôi tìm thấy ít nhất hai giả định trong phụ lục: hàm Q dương và bất đẳng thức (A1)."
+      "quote_vi": "Nếu không so sánh với các phương pháp nền RL rộng hơn này, khó đánh giá liệu phương pháp có cạnh tranh được ngoài họ MCTS hay không."
      }
     ]
    },
@@ -230,42 +161,25 @@
     "year": 2026,
     "credit": 0.5,
     "status": "accepted",
-    "problem": "Prioritized Sweeping (PS) speeds up model-based reinforcement learning by ordering value backups by residual size, but after a localized reward shift the residuals spread only through backups already performed, so distant or blocked states can stay idle under a limited replanning budget.",
-    "problem_vi": "Quét ưu tiên (Prioritized Sweeping, PS) tăng tốc học tăng cường dựa trên mô hình bằng cách sắp xếp các phép cập nhật giá trị theo độ lớn phần dư, nhưng sau một thay đổi phần thưởng cục bộ, phần dư chỉ lan qua các phép cập nhật đã thực hiện, nên các trạng thái ở xa hoặc bị chặn có thể đứng yên khi ngân sách lập lại kế hoạch hạn chế.",
-    "technique": "GTA-PS adds to the residual priority key a mix of regularized directed-Laplacian potentials that diffuse residual information through the transition graph in both directions, with the topology weight scheduled by the second largest eigenvalue modulus (SLEM) of the chain.",
-    "technique_vi": "GTA-PS bổ sung vào khóa ưu tiên theo phần dư một tổ hợp các thế Laplacian có hướng được điều chuẩn, khuếch tán thông tin phần dư qua đồ thị chuyển trạng thái theo cả hai chiều, với trọng số tô-pô được điều độ theo mô-đun trị riêng lớn thứ hai (SLEM) của chuỗi.",
-    "strength": "The paper proves that the forward potential equals discounted residual propagation at a canonical regularization parameter, shows that GTA-PS gives nonzero priority to states standard PS can leave blocked after sparse reward shifts, and reports better replanning efficiency than PS on FourRooms and GARNET with DP and Dyna hosts.",
-    "strength_vi": "Bài báo chứng minh thế tiến trùng với sự lan truyền phần dư có chiết khấu tại một giá trị điều chuẩn chính tắc, chỉ ra GTA-PS gán ưu tiên khác không cho những trạng thái mà PS chuẩn có thể bỏ kẹt sau các thay đổi phần thưởng thưa, và báo cáo hiệu quả lập lại kế hoạch tốt hơn PS trên FourRooms và GARNET với bộ chủ DP và Dyna.",
-    "authors": [
-     {
-      "text": "Beyond small-to-medium tabular domains the scaling of the mechanism is unmeasured, the reward shifts studied are localized and positive, and adversarial or drift-heavy transitions can distort the topology signal.",
-      "text_vi": "Ngoài các miền dạng bảng nhỏ và vừa, khả năng mở rộng của cơ chế chưa được đo, các thay đổi phần thưởng được xét đều cục bộ và dương, và các chuyển trạng thái đối kháng hoặc trôi mạnh có thể làm méo tín hiệu tô-pô."
-     },
-     {
-      "text": "The analysis assumes an exact model; extending it to learned models would cover Dyna-style use under model noise.",
-      "text_vi": "Phân tích giả định mô hình chính xác; mở rộng cho mô hình được học sẽ bao quát cách dùng kiểu Dyna khi mô hình có nhiễu."
-     },
-     {
-      "text": "Because refreshes and queue maintenance take real time, the gain is replanning quality under fixed budgets, not lower wall-clock cost.",
-      "text_vi": "Vì việc làm mới và duy trì hàng đợi tốn thời gian thực, lợi ích là chất lượng lập lại kế hoạch với ngân sách cố định chứ không phải thời gian chạy thực thấp hơn."
-     }
-    ],
+    "problem": "In model-based reinforcement learning where the map of the world stays fixed but rewards change (for example a goal moving to another room), prioritized sweeping, which recomputes state values in order of their Bellman error and works backward from where a surprise occurred, spreads a reward change only one step at a time, so the information may be outdated by the time it reaches distant regions.",
+    "problem_vi": "Trong học tăng cường dựa trên mô hình, khi bản đồ thế giới giữ nguyên nhưng phần thưởng thay đổi (ví dụ đích chuyển sang phòng khác), kỹ thuật prioritized sweeping, vốn cập nhật giá trị trạng thái theo thứ tự độ lớn sai số Bellman và lan ngược từ nơi xảy ra bất ngờ, chỉ truyền thay đổi phần thưởng từng bước một, nên thông tin có thể đã lỗi thời khi tới các vùng xa.",
+    "technique": "The paper augments prioritized sweeping with the topology of the state graph: a forward graph potential built from graph Laplacians guides the update priorities, a two-queue architecture handles dense graphs, and a scheduler based on the second-largest eigenvalue modulus (SLEM) avoids overreacting to noisy signals early on.",
+    "technique_vi": "Bài báo bổ sung thông tin cấu trúc đồ thị trạng thái vào prioritized sweeping: một thế năng đồ thị hướng tới xây dựng từ ma trận Laplacian của đồ thị dẫn dắt thứ tự cập nhật, kiến trúc hai hàng đợi xử lý đồ thị dày, và một bộ lập lịch dựa trên mô-đun trị riêng lớn thứ hai (SLEM) tránh phản ứng thái quá với tín hiệu nhiễu ở giai đoạn đầu.",
+    "strength": "Reviewers found the approach interesting and its results promising, with supporting theory that links the forward graph potential to an infinite sum and clearly stated limitations.",
+    "strength_vi": "Các phản biện thấy cách tiếp cận thú vị và kết quả hứa hẹn, có lý thuyết hỗ trợ liên hệ thế năng đồ thị hướng tới với một tổng vô hạn, và các hạn chế được nêu rõ ràng.",
+    "authors": [],
     "reviewers": [
      {
-      "quote": "for distant or bottlenecked blocked states tau is exponentially small, very plausibly under the top-q cutoff and, at scale, near numerical zero.",
-      "quote_vi": "với các trạng thái bị chặn ở xa hoặc nằm sau nút thắt, tau nhỏ theo hàm mũ, rất có thể dưới ngưỡng cắt top-q và, khi quy mô lớn, gần bằng không về mặt số."
+      "text": "The method is compared only with standard prioritized sweeping and only on small tabular domains.",
+      "text_vi": "Phương pháp chỉ được so sánh với prioritized sweeping tiêu chuẩn và chỉ trên các môi trường dạng bảng nhỏ."
      },
      {
-      "quote": "The paper itself admits in C.4 that none of the Section-5 results carry to learned models, yet Fig. 2, the main recovery result, is entirely Dyna.",
-      "quote_vi": "Chính bài báo thừa nhận ở mục C.4 rằng không kết quả nào của Mục 5 áp dụng cho mô hình được học, vậy mà Hình 2, kết quả phục hồi chính, hoàn toàn dùng Dyna."
+      "text": "The graph Laplacians need an explicit, finite, integer-indexed list of states, and only rewards, not transitions, are allowed to change.",
+      "text_vi": "Ma trận Laplacian của đồ thị đòi hỏi danh sách trạng thái tường minh, hữu hạn và đánh chỉ số nguyên, và chỉ phần thưởng chứ không phải xác suất chuyển trạng thái được phép thay đổi."
      },
      {
-      "quote": "the work is reward-only nonstationarity with a fixed kernel and sparse positive shifts, which is narrower than what a reader would expect.",
-      "quote_vi": "công trình chỉ xét tính không dừng của phần thưởng với nhân chuyển trạng thái cố định và các thay đổi dương thưa, hẹp hơn những gì người đọc kỳ vọng."
-     },
-     {
-      "quote": "The paper shows promising results but only compares against standard PS and not any other related work.",
-      "quote_vi": "Bài báo cho kết quả hứa hẹn nhưng chỉ so sánh với PS chuẩn chứ không với công trình liên quan nào khác."
+      "text": "An adversarial transition matrix can make the topological guidance uninformative, and the behaviour with absorbing states is unclear.",
+      "text_vi": "Một ma trận chuyển trạng thái đối kháng có thể khiến thông tin cấu trúc mất tác dụng, và hành vi khi có trạng thái hấp thụ chưa rõ ràng."
      }
     ]
    },
@@ -277,34 +191,25 @@
     "year": 2026,
     "credit": 0.5,
     "status": "accepted",
-    "problem": "Top-two algorithms are simple and effective for fixed-confidence best-arm identification, but how many samples they need at a finite confidence level is not well understood.",
-    "problem_vi": "Các thuật toán top-two đơn giản và hiệu quả cho bài toán xác định nhánh tốt nhất với độ tin cậy cố định, nhưng số mẫu chúng cần ở một mức tin cậy hữu hạn vẫn chưa được hiểu rõ.",
-    "technique": "The paper analyses β-EB-TCI for Bernoulli bandits, whose challenger minimizes a Bernoulli transportation cost plus a logarithmic penalty in its pull count, by separating a stabilized regime, in which the empirical leader is the true best arm, from the time needed to reach it; an optional forced-exploration guard uses only O(√(Kt)) pulls up to time t.",
-    "technique_vi": "Bài báo phân tích β-EB-TCI cho bandit Bernoulli, trong đó nhánh thách thức được chọn bằng cách cực tiểu chi phí vận chuyển Bernoulli cộng một hình phạt logarit theo số lần kéo, bằng cách tách chế độ ổn định, khi nhánh dẫn đầu thực nghiệm là nhánh tốt nhất thật, khỏi thời gian cần để đạt tới chế độ đó; một cơ chế khám phá cưỡng bức tùy chọn chỉ dùng O(√(Kt)) lần kéo tới thời điểm t.",
-    "strength": "The paper proves that in the stabilized regime every suboptimal arm is sampled linearly often and the stopping time is at most T*_β(μ)log(1/δ) plus lower-order terms with the exact leading coefficient, gives a high-probability stopping bound for every Bernoulli instance with a unique best arm, and a self-contained sharp expected bound with the guard.",
-    "strength_vi": "Bài báo chứng minh trong chế độ ổn định mọi nhánh không tối ưu được lấy mẫu tuyến tính theo thời gian và thời điểm dừng không vượt quá T*_β(μ)log(1/δ) cộng các số hạng bậc thấp với hệ số dẫn đầu chính xác, đưa ra cận dừng với xác suất cao cho mọi bài toán Bernoulli có nhánh tốt nhất duy nhất, và một cận kỳ vọng sắc, tự chứa khi có cơ chế bảo vệ.",
-    "authors": [
-     {
-      "text": "Extensions to other reward distributions and to an adaptive β remain open.",
-      "text_vi": "Việc mở rộng cho các phân phối phần thưởng khác và cho β thích ứng vẫn còn bỏ ngỏ."
-     },
-     {
-      "text": "Finite-mean stabilization of the unguarded rule when suboptimal arms share equal means remains open, and the authors show that proofs relying on a single one-step index comparison cannot settle it.",
-      "text_vi": "Việc ổn định với kỳ vọng hữu hạn của quy tắc không có cơ chế bảo vệ khi các nhánh không tối ưu có trung bình bằng nhau vẫn còn bỏ ngỏ, và các tác giả chỉ ra rằng các chứng minh dựa trên một phép so sánh chỉ số một bước không thể giải quyết được điều này."
-     }
-    ],
+    "problem": "Top-two algorithms are simple and effective for fixed-confidence best-arm identification (finding the option with the highest mean reward with a guaranteed confidence using few samples), but their sharp non-asymptotic, finite-sample behaviour is still poorly understood.",
+    "problem_vi": "Các thuật toán top-two đơn giản và hiệu quả cho bài toán xác định nhánh tốt nhất với độ tin cậy cố định (tìm lựa chọn có phần thưởng trung bình cao nhất với độ tin cậy bảo đảm và ít mẫu), nhưng hành vi phi tiệm cận, với số mẫu hữu hạn, ở mức chặt của chúng vẫn chưa được hiểu rõ.",
+    "technique": "The paper analyses β-EB-TCI for Bernoulli bandits, a top-two rule that samples the empirical leader with probability β and otherwise a challenger minimizing a Bernoulli transportation cost plus a logarithmic penalty in its pull count. It first studies the stabilized regime where the leader is the true best arm, then bounds when that regime is reached, and also proposes a mild forced-exploration guard that uses only O(√(Kt)) pulls up to time t.",
+    "technique_vi": "Bài báo phân tích β-EB-TCI cho bandit Bernoulli, một quy tắc top-two lấy mẫu nhánh đang dẫn đầu thực nghiệm với xác suất β và nếu không thì chọn một nhánh thách thức có chi phí vận chuyển Bernoulli cộng hình phạt logarit theo số lần kéo nhỏ nhất. Trước hết bài báo xét chế độ đã ổn định khi nhánh dẫn đầu chính là nhánh tốt nhất thật, sau đó chặn thời điểm đạt được chế độ này, và đề xuất thêm một cơ chế ép khám phá nhẹ chỉ dùng O(√(Kt)) lần kéo đến thời điểm t.",
+    "strength": "It proves a high-probability stopping bound with the exact fixed-β leading coefficient for every Bernoulli instance with a unique best arm, and reviewers found the results sound and technical, noting that the analysis handles the algorithm's actual logarithmic penalty rather than a simplified surrogate.",
+    "strength_vi": "Bài báo chứng minh cận thời điểm dừng với xác suất cao có đúng hệ số dẫn đầu ứng với β cố định cho mọi bài toán Bernoulli có duy nhất một nhánh tốt nhất, và phản biện đánh giá kết quả chặt chẽ, có chiều sâu kỹ thuật, đặc biệt ở chỗ phân tích trực tiếp hình phạt logarit thật của thuật toán thay vì một phiên bản đơn giản hóa.",
+    "authors": [],
     "reviewers": [
      {
-      "quote": "The net contribution for the exact unguarded rule is therefore narrower than the abstract's framing initially suggests",
-      "quote_vi": "Vì vậy đóng góp thực sự cho đúng quy tắc không có cơ chế bảo vệ hẹp hơn so với cách tóm tắt ban đầu gợi ý"
+      "text": "The analysis is restricted to Bernoulli bandits.",
+      "text_vi": "Phân tích chỉ giới hạn ở bandit Bernoulli."
      },
      {
-      "quote": "The scope is restricted to Bernoulli bandits with a unique best arm.",
-      "quote_vi": "Phạm vi bị giới hạn ở bandit Bernoulli có một nhánh tốt nhất duy nhất."
+      "text": "The sharp expected stopping-time bound for the original rule relies on a sufficient-exploration property imported from prior work under a different tie-breaking convention than the algorithm studied.",
+      "text_vi": "Cận chặt về thời điểm dừng kỳ vọng cho quy tắc gốc dựa vào một tính chất khám phá đủ lấy từ công trình trước, vốn dùng quy ước phá thế hòa khác với thuật toán đang nghiên cứu."
      },
      {
-      "quote": "The relationship to optimal-allocation methods such as Track-and-Stop is underdeveloped.",
-      "quote_vi": "Mối liên hệ với các phương pháp phân bổ tối ưu như Track-and-Stop chưa được phát triển đầy đủ."
+      "text": "The motivation for non-asymptotic analysis, and for top-two rules over alternatives such as Track-and-Stop, could be stronger.",
+      "text_vi": "Động lực cho việc phân tích phi tiệm cận, cũng như cho việc chọn quy tắc top-two thay vì các lựa chọn khác như Track-and-Stop, có thể được trình bày thuyết phục hơn."
      }
     ]
    },
@@ -316,42 +221,25 @@
     "year": 2026,
     "credit": 0.25,
     "status": "accepted",
-    "problem": "MCTS usually stores only scalar mean estimates, which makes it poorly suited to tail-risk objectives such as conditional value-at-risk (CVaR), the expected return over the worst outcomes.",
-    "problem_vi": "MCTS thường chỉ lưu ước lượng trung bình vô hướng, nên không phù hợp với các mục tiêu về rủi ro đuôi như giá trị rủi ro có điều kiện (CVaR), tức lợi nhuận kỳ vọng trên các kết cục xấu nhất.",
-    "technique": "CATSO and PATSO keep finite-support empirical return distributions on Q-edges, as categorical atoms with Dirichlet Thompson sampling or as adaptive particles, choose actions by the CVaR of a Thompson-sampled distribution plus a polynomial optimism bonus, and keep V-nodes scalar through visit-weighted averages of child CVaR scores.",
-    "technique_vi": "CATSO và PATSO lưu các phân phối lợi nhuận thực nghiệm có giá hữu hạn trên các cạnh Q, dưới dạng các nguyên tử phân loại với lấy mẫu Thompson Dirichlet hoặc dạng hạt thích ứng, chọn hành động theo CVaR của một phân phối lấy mẫu Thompson cộng một phần thưởng lạc quan đa thức, và giữ các nút V vô hướng bằng trung bình có trọng số theo số lần thăm của điểm CVaR ở các con.",
-    "strength": "For the finite-depth nested CVaR target the paper proves an O(n^-1/2) bound on root value error after n rollouts, with a fixed-grid discretization bias for CATSO and a tunable Wasserstein compression bias for capped PATSO, and reports better lower-tail return and fewer catastrophic outcomes when mean-optimal and risk-sensitive behaviour differ.",
-    "strength_vi": "Với mục tiêu CVaR lồng nhau độ sâu hữu hạn, bài báo chứng minh cận O(n^-1/2) cho sai số giá trị tại gốc sau n lượt mô phỏng, kèm độ chệch rời rạc hóa lưới cố định cho CATSO và độ chệch nén Wasserstein điều chỉnh được cho PATSO có giới hạn hạt, và báo cáo lợi nhuận ở đuôi dưới tốt hơn cùng ít kết cục thảm họa hơn khi hành vi tối ưu theo trung bình và hành vi nhạy rủi ro khác nhau.",
-    "authors": [
-     {
-      "text": "The theory targets a finite-depth nested CVaR, which is not the same as the static CVaR of the full infinite-horizon trajectory return.",
-      "text_vi": "Lý thuyết nhắm tới CVaR lồng nhau độ sâu hữu hạn, không giống CVaR tĩnh của toàn bộ lợi nhuận quỹ đạo tầm vô hạn."
-     },
-     {
-      "text": "CATSO incurs discretization bias from its finite grid, while capped PATSO trades memory for a Wasserstein compression bias.",
-      "text_vi": "CATSO chịu độ chệch rời rạc hóa từ lưới hữu hạn, còn PATSO có giới hạn hạt đánh đổi bộ nhớ lấy độ chệch nén Wasserstein."
-     },
-     {
-      "text": "Future work includes distributional V-nodes, adaptive risk levels, learned model dynamics, and partially observed or continuous-control settings.",
-      "text_vi": "Hướng tương lai gồm nút V dạng phân phối, mức rủi ro thích ứng, động lực mô hình được học, và các bài toán quan sát một phần hoặc điều khiển liên tục."
-     }
-    ],
+    "problem": "Monte-Carlo Tree Search (MCTS), the planning algorithm that grows a search tree by repeated simulated rollouts, normally stores only the average return at each node, so it cannot plan for tail-risk objectives such as conditional value-at-risk (CVaR, the expected return over the worst outcomes). This matters in stochastic environments where the action that is best on average can still lead to catastrophic results.",
+    "problem_vi": "Monte-Carlo Tree Search (MCTS, thuật toán lập kế hoạch mở rộng cây tìm kiếm bằng các lần mô phỏng lặp lại) thường chỉ lưu giá trị trung bình của phần thưởng tại mỗi nút, nên không thể lập kế hoạch theo các mục tiêu nhạy với rủi ro đuôi như conditional value-at-risk (CVaR, kỳ vọng phần thưởng trên nhóm kết quả xấu nhất). Điều này quan trọng trong môi trường ngẫu nhiên, nơi hành động tốt nhất về trung bình vẫn có thể dẫn đến kết cục thảm họa.",
+    "technique": "The paper proposes two distributional MCTS algorithms, CATSO and PATSO, that keep an empirical distribution of returns on each state-action (Q) edge, using categorical atoms with Dirichlet Thompson sampling or adaptive particles respectively, while keeping value nodes scalar. Actions are chosen by the CVaR of a Thompson-sampled return distribution plus a polynomial optimism bonus, and the authors prove an O(n^{-1/2}) bound on the root value error after n rollouts for a nested CVaR planning target.",
+    "technique_vi": "Bài báo đề xuất hai thuật toán MCTS phân phối là CATSO và PATSO, lưu phân phối thực nghiệm của phần thưởng trên mỗi cạnh trạng thái-hành động (cạnh Q), lần lượt bằng các nguyên tử phân loại kết hợp lấy mẫu Thompson theo phân phối Dirichlet hoặc bằng các hạt (particle) thích nghi, trong khi các nút giá trị vẫn chỉ lưu một số vô hướng. Hành động được chọn theo CVaR của một phân phối được lấy mẫu Thompson cộng với một số hạng lạc quan dạng đa thức, và các tác giả chứng minh sai số giá trị tại gốc giảm theo O(n^{-1/2}) sau n lần mô phỏng cho mục tiêu CVaR lồng nhau.",
+    "strength": "Reviewers found the combination of distributional reinforcement learning and MCTS novel and well motivated, backed by convergence guarantees comparable to the state of the art and experiments showing better lower-tail returns and fewer catastrophic outcomes.",
+    "strength_vi": "Các nhà phản biện đánh giá việc kết hợp học tăng cường phân phối với MCTS là mới và có động cơ rõ ràng, được hỗ trợ bởi các đảm bảo hội tụ tương đương phương pháp tốt nhất hiện có và thí nghiệm cho thấy phần thưởng ở nhóm kết quả xấu được cải thiện, ít kết cục thảm họa hơn.",
+    "authors": [],
     "reviewers": [
      {
-      "quote": "The fixed-grid analysis also does not cover the adaptive-grid CATSO actually used in experiments, which introduces an unanalyzed projection bias.",
-      "quote_vi": "Phân tích với lưới cố định cũng không bao quát phiên bản CATSO lưới thích ứng thực sự được dùng trong thí nghiệm, vốn đưa vào một độ chệch chiếu chưa được phân tích."
+      "text": "The planner optimizes a nested, time-consistent CVaR target, which is not the same as a static CVaR computed over whole trajectories.",
+      "text_vi": "Thuật toán tối ưu một mục tiêu CVaR lồng nhau, nhất quán theo thời gian, khác với CVaR tĩnh tính trên toàn bộ quỹ đạo."
      },
      {
-      "quote": "there is no comparison against existing distributional or risk-sensitive MCTS baselines (only scalar UCT-style planners), weakening the practical case for the proposed representations.",
-      "quote_vi": "không có so sánh với các baseline MCTS dạng phân phối hoặc nhạy rủi ro hiện có (chỉ có các bộ lập kế hoạch vô hướng kiểu UCT), làm yếu lập luận thực tiễn cho các biểu diễn đề xuất."
+      "text": "CATSO depends heavily on the quality of its discretization grid, while PATSO needs careful tuning of its particle limits.",
+      "text_vi": "CATSO phụ thuộc nhiều vào chất lượng lưới rời rạc hóa, còn PATSO cần tinh chỉnh cẩn thận giới hạn số hạt."
      },
      {
-      "quote": "The theoretical analysis and current methodology are limited to tabular, finite-depth environments, requiring further work to integrate smoothly with deep functional approximations (like AlphaZero-style neural nets).",
-      "quote_vi": "Phân tích lý thuyết và phương pháp hiện tại bị giới hạn ở môi trường dạng bảng, độ sâu hữu hạn, cần thêm nghiên cứu để tích hợp trơn tru với xấp xỉ hàm sâu (như mạng nơ-ron kiểu AlphaZero)."
-     },
-     {
-      "quote": "The theoretical guarantees rest on several non-trivial assumptions that are stated rather than verified",
-      "quote_vi": "Các bảo đảm lý thuyết dựa trên một số giả định không tầm thường chỉ được phát biểu chứ không được kiểm chứng"
+      "text": "There is little guidance on choosing the planning horizon or on how sensitive the theory and the results are to it.",
+      "text_vi": "Bài báo chưa hướng dẫn cách chọn tầm nhìn lập kế hoạch (planning horizon) và mức độ nhạy của lý thuyết cũng như kết quả với lựa chọn này."
      }
     ]
    },
@@ -363,38 +251,25 @@
     "year": 2026,
     "credit": 0.1667,
     "status": "rejected",
-    "problem": "Sharpness-Aware Minimization (SAM) improves generalization by minimizing the worst-case loss in a neighbourhood of the weights, but it treats weights as one flattened vector, so its adversarial perturbation can be dominated by a few large singular directions of the weight matrices.",
-    "problem_vi": "Cực tiểu hóa nhận biết độ sắc (Sharpness-Aware Minimization, SAM) cải thiện khả năng tổng quát hóa bằng cách cực tiểu hàm mất mát xấu nhất trong một lân cận của trọng số, nhưng nó coi trọng số là một vector phẳng duy nhất, nên nhiễu đối kháng có thể bị chi phối bởi vài hướng kỳ dị lớn của các ma trận trọng số.",
-    "technique": "OrthoSAM constrains the perturbation of matrix-shaped weights to a set of approximately orthogonal matrices, computed with Newton–Schulz iterations instead of a singular value decomposition, so that flatness is explored more evenly across directions.",
-    "technique_vi": "OrthoSAM ràng buộc nhiễu của các trọng số dạng ma trận vào một tập các ma trận xấp xỉ trực giao, tính bằng phép lặp Newton–Schulz thay cho phân rã giá trị kỳ dị (SVD), để độ phẳng được khám phá đều hơn theo các hướng.",
-    "strength": "The paper reports experiments on several architectures and datasets, including CIFAR-10, CIFAR-100, Tiny-ImageNet and BERT fine-tuning on GLUE, with generalization gains over SAM and its variants and stronger robustness to label noise, alongside a PAC-Bayes-style bound and a convergence analysis.",
-    "strength_vi": "Bài báo báo cáo thí nghiệm trên nhiều kiến trúc và tập dữ liệu, gồm CIFAR-10, CIFAR-100, Tiny-ImageNet và fine-tune BERT trên GLUE, với khả năng tổng quát hóa tốt hơn SAM và các biến thể cùng khả năng chống nhiễu nhãn tốt hơn, kèm một cận kiểu PAC-Bayes và một phân tích hội tụ.",
-    "authors": [
-     {
-      "text": "OrthoSAM inherits SAM's two forward passes and adds two Newton–Schulz projections per iteration, one for the perturbation and one for the descent update.",
-      "text_vi": "OrthoSAM thừa hưởng hai lượt lan truyền xuôi của SAM và thêm hai phép chiếu Newton–Schulz mỗi vòng lặp, một cho nhiễu và một cho bước cập nhật giảm."
-     },
-     {
-      "text": "All image-classification experiments use SGD-based training; how orthogonal perturbations interact with adaptive optimizers such as AdamW, especially in large-scale pre-training, is left for future work.",
-      "text_vi": "Mọi thí nghiệm phân loại ảnh đều huấn luyện dựa trên SGD; cách nhiễu trực giao tương tác với các bộ tối ưu thích ứng như AdamW, nhất là trong tiền huấn luyện quy mô lớn, được để lại cho nghiên cứu sau."
-     }
-    ],
+    "problem": "Sharpness-Aware Minimization (SAM) improves generalization by training against a worst-case weight perturbation that seeks flat regions of the loss landscape, but it treats weights as flat vectors and ignores the matrix structure of each layer.",
+    "problem_vi": "Sharpness-Aware Minimization (SAM, cực tiểu hóa có xét độ sắc) cải thiện khả năng khái quát bằng cách huấn luyện với nhiễu trọng số xấu nhất nhằm tìm vùng phẳng của bề mặt hàm mất mát, nhưng nó coi trọng số như vector phẳng và bỏ qua cấu trúc ma trận của từng lớp.",
+    "technique": "Inspired by the Muon optimizer, OrthoSAM keeps the weight-matrix structure and constrains the perturbation to an orthogonal manifold, orthogonalizing the ascent gradient efficiently with approximate Newton-Schulz iterations so the landscape is explored more evenly across directions. The authors also extend SAM's theoretical bounds and prove convergence.",
+    "technique_vi": "Lấy cảm hứng từ bộ tối ưu Muon, OrthoSAM giữ nguyên cấu trúc ma trận trọng số và ràng buộc nhiễu nằm trên một đa tạp trực giao, trực giao hóa gradient đi lên một cách hiệu quả bằng phép lặp Newton-Schulz xấp xỉ, để bề mặt hàm mất mát được khám phá đều hơn theo mọi hướng. Các tác giả cũng mở rộng các cận lý thuyết của SAM và chứng minh tính hội tụ.",
+    "strength": "Experiments on image classification and NLP tasks show OrthoSAM is competitive with existing SAM variants and improves robustness to label noise, with a convergence analysis under standard assumptions.",
+    "strength_vi": "Thí nghiệm trên phân loại ảnh và các tác vụ xử lý ngôn ngữ tự nhiên cho thấy OrthoSAM cạnh tranh với các biến thể SAM hiện có và tăng độ bền vững trước nhãn nhiễu, kèm phân tích hội tụ dưới các giả định chuẩn.",
+    "authors": [],
     "reviewers": [
      {
-      "quote": "the actual algorithm also orthogonalizes the final descent update after the second backward pass. In other words, OrthoSAM is not just \"SAM with a different perturbation\"; it also uses a Muon-style matrix-orthogonalized update.",
-      "quote_vi": "thuật toán thực tế còn trực giao hóa bước cập nhật giảm cuối cùng sau lượt lan truyền ngược thứ hai. Nói cách khác, OrthoSAM không chỉ là \"SAM với một kiểu nhiễu khác\"; nó còn dùng một bước cập nhật trực giao hóa ma trận kiểu Muon."
+      "text": "The core claim that SAM perturbations concentrated along large singular directions push parameters away from flat regions and destabilize training lacks direct empirical support.",
+      "text_vi": "Luận điểm cốt lõi rằng nhiễu SAM tập trung theo các hướng kỳ dị lớn đẩy tham số ra khỏi vùng phẳng và làm bất ổn quá trình huấn luyện chưa có bằng chứng thực nghiệm trực tiếp."
      },
      {
-      "quote": "The convergence analysis assumes an exactly orthogonal projection and uses properties such as constant update norm and nuclear-norm descent. However, the actual method uses a finite number of Newton-Schulz iterations, typically K=5.",
-      "quote_vi": "Phân tích hội tụ giả định một phép chiếu trực giao chính xác và dùng các tính chất như chuẩn cập nhật không đổi và giảm theo chuẩn hạt nhân. Tuy nhiên, phương pháp thực tế chỉ dùng một số hữu hạn phép lặp Newton-Schulz, thường là K=5."
+      "text": "A Muon optimizer baseline and more comprehensive ablations are needed to support the claims.",
+      "text_vi": "Cần thêm phương pháp so sánh là bộ tối ưu Muon và các thí nghiệm loại bỏ thành phần đầy đủ hơn để củng cố các luận điểm."
      },
      {
-      "quote": "The authors claim that SAM's ascent step pushes parameters away from flat regions and destabilizes training, yet they provide no empirical or theoretical evidence for this claim.",
-      "quote_vi": "Các tác giả khẳng định bước tăng của SAM đẩy tham số ra khỏi vùng phẳng và làm mất ổn định huấn luyện, nhưng không đưa ra bằng chứng thực nghiệm hay lý thuyết nào cho khẳng định này."
-     },
-     {
-      "quote": "Equal-epoch comparisons are not enough because OrthoSAM is substantially slower than standard SAM and several efficient SAM variants.",
-      "quote_vi": "So sánh với cùng số epoch là chưa đủ vì OrthoSAM chậm hơn đáng kể so với SAM chuẩn và một số biến thể SAM hiệu quả."
+      "text": "The algorithmic complexity and extra cost of orthogonalizing the perturbation are not discussed.",
+      "text_vi": "Độ phức tạp thuật toán và chi phí phát sinh của việc trực giao hóa nhiễu chưa được thảo luận."
      }
     ]
    },
@@ -406,34 +281,25 @@
     "year": 2026,
     "credit": 0.1667,
     "status": "accepted",
-    "problem": "Conservation laws are quantities that stay constant while a network trains under gradient flow; they were characterized for linear and ReLU networks, but not for the blocks used in current models, and a complete characterization for multi-head attention was an open problem.",
-    "problem_vi": "Định luật bảo toàn là các đại lượng giữ nguyên trong khi mạng được huấn luyện theo dòng gradient (gradient flow); chúng đã được mô tả cho mạng tuyến tính và ReLU, nhưng chưa cho các khối dùng trong các mô hình hiện nay, và việc mô tả đầy đủ cho cơ chế chú ý đa đầu (multi-head attention) là một bài toán mở.",
-    "technique": "The paper reduces the conservation condition to partial differential equations on functions orthogonal to all possible gradients, removes the dependence on the input, and solves them with complex-analytic arguments for feed-forward networks with GELU, SiLU and SwiGLU, multi-head attention with sinusoidal or rotary position encoding, and dense or sparse mixture-of-experts.",
-    "technique_vi": "Bài báo đưa điều kiện bảo toàn về các phương trình đạo hàm riêng trên những hàm trực giao với mọi gradient có thể, loại bỏ sự phụ thuộc vào đầu vào, rồi giải bằng lập luận giải tích phức cho mạng truyền thẳng với GELU, SiLU và SwiGLU, chú ý đa đầu với mã hóa vị trí hình sin hoặc quay (rotary), và hỗn hợp chuyên gia (mixture-of-experts) dày hoặc thưa.",
-    "strength": "The paper gives complete characterizations for these blocks, including the multi-head attention case left open by Marcotte et al., and tracks the predicted invariants during training of ViT and Qwen-3-style models with full-batch gradient descent and mini-batch SGD.",
-    "strength_vi": "Bài báo đưa ra mô tả đầy đủ cho các khối này, kể cả trường hợp chú ý đa đầu mà Marcotte và cộng sự để ngỏ, và theo dõi các bất biến dự đoán trong quá trình huấn luyện các mô hình kiểu ViT và Qwen-3 với gradient descent toàn lô và SGD theo lô nhỏ.",
-    "authors": [
-     {
-      "text": "The approach relies on complex-analytic techniques that need further refinement to handle more complex structures.",
-      "text_vi": "Cách tiếp cận dựa vào các kỹ thuật giải tích phức, cần được tinh chỉnh thêm để xử lý các cấu trúc phức tạp hơn."
-     }
-    ],
+    "problem": "When a neural network is trained by gradient flow (the continuous-time limit of gradient descent), some functions of its parameters stay constant; such conservation laws help explain training dynamics, but they had not been characterized precisely for the architectures used in practice today.",
+    "problem_vi": "Khi mạng nơ-ron được huấn luyện bằng gradient flow (giới hạn liên tục theo thời gian của gradient descent), một số hàm của tham số được giữ nguyên; các định luật bảo toàn (conservation law) này giúp giải thích động lực học huấn luyện, nhưng trước đây chưa được mô tả chính xác cho các kiến trúc đang dùng phổ biến hiện nay.",
+    "technique": "The paper develops a unified framework showing that conservation laws must be constant on the level sets of certain characteristic invariants, and uses it to fully characterize the conservation laws of feed-forward networks with GELU, SiLU and SwiGLU activations, multi-head attention with sinusoidal or rotary position encoding, and Mixture-of-Experts layers.",
+    "technique_vi": "Bài báo xây dựng một khung lý thuyết thống nhất, chỉ ra rằng các định luật bảo toàn phải không đổi trên các tập mức (level set) của một số bất biến đặc trưng, rồi dùng nó để mô tả đầy đủ các định luật bảo toàn của mạng truyền thẳng với hàm kích hoạt GELU, SiLU và SwiGLU, multi-head attention với mã hóa vị trí dạng sin hoặc rotary, và các lớp Mixture-of-Experts (MoE).",
+    "strength": "Reviewers found the paper well written and its results interesting, and valued that it covers several modern architectures and clearly distinguishes itself from earlier Lie-theoretic approaches.",
+    "strength_vi": "Người phản biện đánh giá bài viết rõ ràng, kết quả thú vị, và đánh giá cao việc bao quát nhiều kiến trúc hiện đại cũng như phân biệt rõ với các cách tiếp cận dựa trên lý thuyết Lie trước đó.",
+    "authors": [],
     "reviewers": [
      {
-      "quote": "The paper explicitly acknowledges that the framework does not straightforwardly extend to additional components such as layer normalization or deep layer compositions, yet the empirical validation is performed on ViT and Qwen-3 style architectures",
-      "quote_vi": "Bài báo thừa nhận rõ rằng khung lý thuyết không mở rộng trực tiếp được cho các thành phần khác như chuẩn hóa tầng (layer normalization) hay việc ghép nhiều tầng sâu, vậy mà việc kiểm chứng thực nghiệm lại được thực hiện trên các kiến trúc kiểu ViT và Qwen-3"
+      "text": "Most of the nontrivial conservation laws found are differences of norms or Gram matrices, which only define invariant manifolds slightly smaller than the full parameter space.",
+      "text_vi": "Phần lớn các định luật bảo toàn không tầm thường tìm được là hiệu của các chuẩn (norm) hoặc ma trận Gram, nên chỉ xác định các đa tạp bất biến nhỏ hơn không đáng kể so với toàn bộ không gian tham số."
      },
      {
-      "quote": "The identified conservation laws are generally weak in the sense that it only defines invariant manifolds of dimensions slightly smaller than the ambient dimension in the parameter space.",
-      "quote_vi": "Các định luật bảo toàn tìm được nhìn chung yếu, theo nghĩa chúng chỉ xác định các đa tạp bất biến có số chiều nhỏ hơn một chút so với số chiều của không gian tham số."
+      "text": "It is unclear what practical insight these laws give about how modern architectures behave, since the experiments mainly check that the invariants are approximately preserved.",
+      "text_vi": "Chưa rõ các định luật này mang lại hiểu biết thực tiễn gì về hành vi của các kiến trúc hiện đại, vì thực nghiệm chủ yếu chỉ kiểm tra rằng các bất biến được bảo toàn xấp xỉ."
      },
      {
-      "quote": "The paper mainly establishes the existence of these conservation structures but does not go much further in explaining how they translate into a stronger understanding of modern architecture.",
-      "quote_vi": "Bài báo chủ yếu chứng minh sự tồn tại của các cấu trúc bảo toàn này nhưng không đi xa hơn nhiều trong việc giải thích chúng giúp hiểu sâu hơn các kiến trúc hiện đại như thế nào."
-     },
-     {
-      "quote": "The discussion at the end of Section 5 implies that stacking multiple layers breaks the proof methodology introducted in the paper.",
-      "quote_vi": "Phần thảo luận cuối Mục 5 ngụ ý rằng việc xếp chồng nhiều tầng làm phương pháp chứng minh được giới thiệu trong bài báo không còn áp dụng được."
+      "text": "Open questions remain on whether one architecture can have several conservation laws and whether a single unifying principle generates them.",
+      "text_vi": "Vẫn còn câu hỏi mở về việc một kiến trúc có thể có nhiều định luật bảo toàn hay không và liệu có một nguyên lý chung sinh ra tất cả chúng."
      }
     ]
    },
@@ -445,34 +311,21 @@
     "year": 2026,
     "credit": 1.0,
     "status": "accepted",
-    "problem": "Planning with a generative model aims to estimate the value of a state with as few simulator calls as possible. SmoothCruiser reaches O~(ε^-4) calls by exploiting the smoothness of the entropy-regularized Bellman backup, but its estimator is only first-order.",
-    "problem_vi": "Lập kế hoạch với mô hình sinh nhằm ước lượng giá trị của một trạng thái với càng ít lần gọi trình mô phỏng càng tốt. SmoothCruiser đạt O~(ε^-4) lần gọi nhờ tính trơn của phép cập nhật Bellman có điều chuẩn entropy, nhưng bộ ước lượng của nó chỉ là bậc một.",
-    "technique": "The paper shows that the complexity exponent of SmoothCruiser-type planners is set by the order β of the local Taylor remainder, giving O~(ε^-(2+2/(β-1))), and reaches β = 3 with an optimal-transport-smoothed Bellman backup over action distributions that has a closed form, a policy gradient, a Lipschitz Hessian and an unbiased cross-product estimator of its quadratic correction (SecondOrderSmoothCruiser).",
-    "technique_vi": "Bài báo chỉ ra số mũ độ phức tạp của các bộ lập kế hoạch kiểu SmoothCruiser được quyết định bởi bậc β của phần dư Taylor cục bộ, cho O~(ε^-(2+2/(β-1))), và đạt β = 3 bằng một phép cập nhật Bellman được làm trơn bằng vận chuyển tối ưu trên phân phối hành động, có dạng đóng, gradient chính sách, Hessian Lipschitz và một bộ ước lượng tích chéo không chệch cho số hạng hiệu chỉnh bậc hai (SecondOrderSmoothCruiser).",
-    "strength": "SecondOrderSmoothCruiser achieves O~(ε^-3) oracle complexity for fixed optimal-transport parameters, the first-order case β = 2 recovers SmoothCruiser, and explicit regularization-bias bounds relate the optimal-transport, entropy-regularized and unregularized objectives.",
-    "strength_vi": "SecondOrderSmoothCruiser đạt độ phức tạp gọi oracle O~(ε^-3) với tham số vận chuyển tối ưu cố định, trường hợp bậc một β = 2 khôi phục SmoothCruiser, và các cận độ chệch điều chuẩn tường minh nối mục tiêu vận chuyển tối ưu, mục tiêu điều chuẩn entropy và mục tiêu không điều chuẩn.",
-    "authors": [
-     {
-      "text": "The guarantees are oracle-complexity guarantees for finite action sets and fixed smoothing parameters.",
-      "text_vi": "Các bảo đảm là bảo đảm về độ phức tạp gọi oracle cho tập hành động hữu hạn và tham số làm trơn cố định."
-     },
-     {
-      "text": "For unregularized planning, choosing the smoothing parameters as a function of ε changes the hidden constants, so the authors treat this transfer as a regularization-bias trade-off rather than a parameter-free O~(ε^-3) theorem.",
-      "text_vi": "Với lập kế hoạch không điều chuẩn, việc chọn tham số làm trơn theo ε làm thay đổi các hằng số ẩn, nên các tác giả coi việc chuyển kết quả này là một sự đánh đổi độ chệch điều chuẩn chứ không phải một định lý O~(ε^-3) không phụ thuộc tham số."
-     }
-    ],
+    "problem": "Planning with a generative model (a simulator one can query) aims to estimate a state's value with as few simulator calls as possible; the SmoothCruiser planner needs on the order of epsilon^-4 calls because its estimator of the smoothed Bellman backup is only first-order.",
+    "problem_vi": "Lập kế hoạch với mô hình sinh (một bộ mô phỏng có thể truy vấn) nhằm ước lượng giá trị của một trạng thái với càng ít lần gọi mô phỏng càng tốt; thuật toán SmoothCruiser cần cỡ epsilon^-4 lần gọi vì bộ ước lượng phép cập nhật Bellman làm trơn của nó chỉ là bậc nhất.",
+    "technique": "The paper shows that the sample-complexity exponent of such planners is governed by the order of the local Taylor remainder, and introduces a Bellman backup smoothed by optimal transport (OT) over action distributions, which has a closed form, a policy gradient and a Lipschitz Hessian, so a second-order estimator with an unbiased cross-product correction becomes possible.",
+    "technique_vi": "Bài báo chỉ ra rằng số mũ của độ phức tạp mẫu ở các thuật toán này được quyết định bởi bậc của phần dư Taylor cục bộ, và đề xuất phép cập nhật Bellman được làm trơn bằng vận chuyển tối ưu (optimal transport, OT) trên phân phối hành động, có dạng đóng, gradient chính sách và Hessian Lipschitz, từ đó cho phép xây dựng bộ ước lượng bậc hai với hiệu chỉnh tích chéo không chệch.",
+    "strength": "The resulting SecondOrderSmoothCruiser improves the oracle complexity from epsilon^-4 to epsilon^-3, with explicit bounds relating the OT, entropy-regularized and unregularized objectives, and reviewers found the theory comprehensive with proof techniques useful for future work.",
+    "strength_vi": "Thuật toán SecondOrderSmoothCruiser thu được cải thiện độ phức tạp truy vấn từ epsilon^-4 xuống epsilon^-3, kèm các cận tường minh liên hệ giữa mục tiêu OT, mục tiêu điều chuẩn entropy và mục tiêu không điều chuẩn, và người phản biện đánh giá lý thuyết toàn diện với kỹ thuật chứng minh hữu ích cho nghiên cứu sau.",
+    "authors": [],
     "reviewers": [
      {
-      "quote": "It's very hard to see how to apply any of the theoreticaly results to practice, especially given the computational complexity of the algorithm is very high.",
-      "quote_vi": "Rất khó thấy cách áp dụng các kết quả lý thuyết vào thực tế, nhất là khi độ phức tạp tính toán của thuật toán rất cao."
+      "text": "It is unclear how the theoretical planner can be made efficient in practice, and one key theorem needs discrete settings.",
+      "text_vi": "Chưa rõ làm thế nào để thuật toán lập kế hoạch mang tính lý thuyết này chạy hiệu quả trong thực tế, và một định lý then chốt chỉ áp dụng cho thiết lập rời rạc."
      },
      {
-      "quote": "In Theorem 7.1, it requires the bounds to be computed exactly, which is only possible for discrete settings?",
-      "quote_vi": "Định lý 7.1 đòi hỏi các cận phải được tính chính xác, điều chỉ khả thi trong bối cảnh rời rạc?"
-     },
-     {
-      "quote": "It is not clear how the OT-regularized solutions are transferred to unregularized ones, or at least entropy-regularized, which are much more well-studied.",
-      "quote_vi": "Chưa rõ các nghiệm có điều chuẩn OT được chuyển sang nghiệm không điều chuẩn, hoặc ít nhất là nghiệm điều chuẩn entropy vốn được nghiên cứu nhiều hơn, như thế nào."
+      "text": "How the OT-regularized solutions relate to unregularized or entropy-regularized ones is not made clear enough.",
+      "text_vi": "Mối liên hệ giữa nghiệm điều chuẩn bằng OT với nghiệm không điều chuẩn hoặc điều chuẩn entropy chưa được làm rõ."
      }
     ]
    },
@@ -484,25 +337,29 @@
     "year": 2026,
     "credit": 0.2,
     "status": "accepted",
-    "problem": "In pure exploration the goal is the best final decision after a sampling budget, but optimism-based methods regulate the estimation error of each component without measuring how that error affects the final decision, which matters most when noise dominates.",
-    "problem_vi": "Trong khám phá thuần túy, mục tiêu là quyết định cuối cùng tốt nhất sau một ngân sách lấy mẫu, nhưng các phương pháp dựa trên sự lạc quan chỉ kiểm soát sai số ước lượng của từng thành phần mà không đo sai số đó ảnh hưởng tới quyết định cuối ra sao, điều quan trọng nhất khi nhiễu chiếm ưu thế.",
-    "technique": "Variance Driven Exploration (VarDE) writes the final decision as a smooth function of local estimates, decomposes its variance with a first-order Taylor expansion into influence weights times component variances, and samples the component whose reduction most lowers that variance, applied to best-arm identification, MCTS and best-policy identification.",
-    "technique_vi": "Khám phá dẫn dắt bởi phương sai (VarDE) viết quyết định cuối như một hàm trơn của các ước lượng cục bộ, phân rã phương sai của nó bằng khai triển Taylor bậc một thành trọng số ảnh hưởng nhân phương sai từng thành phần, rồi lấy mẫu thành phần mà việc giảm nó làm giảm phương sai đó nhiều nhất, áp dụng cho xác định nhánh tốt nhất, MCTS và xác định chính sách tốt nhất.",
-    "strength": "The paper gives guarantees on variance decay and simple regret for the three problems and reports consistent improvements over existing methods, with the largest gains in highly stochastic environments.",
-    "strength_vi": "Bài báo đưa ra bảo đảm về tốc độ giảm phương sai và hối tiếc đơn (simple regret) cho cả ba bài toán, và báo cáo cải thiện nhất quán so với các phương pháp hiện có, rõ nhất trong môi trường có tính ngẫu nhiên cao.",
+    "problem": "In pure exploration the goal is the best final decision after sampling, not reward collected while learning; the paper argues that existing methods mainly regulate the local estimation error of each stochastic component without quantifying how that uncertainty affects the final decision, and targets highly stochastic environments.",
+    "problem_vi": "Trong khám phá thuần túy (pure exploration), mục tiêu là quyết định cuối cùng tốt nhất sau khi lấy mẫu chứ không phải phần thưởng thu được trong lúc học; bài báo lập luận rằng các phương pháp hiện có chủ yếu kiểm soát sai số ước lượng cục bộ của từng thành phần ngẫu nhiên mà không định lượng ảnh hưởng của độ bất định đó lên quyết định cuối cùng, và nhắm tới môi trường có độ ngẫu nhiên cao.",
+    "technique": "Variance Driven Exploration (VarDE) writes the final decision as a smooth function of the components' estimates and derives allocation rules that send samples where component noise most affects the reliability of the decision; it is applied to best-arm identification (BAI), MCTS and best-policy identification (BPI).",
+    "technique_vi": "Variance Driven Exploration (VarDE) biểu diễn quyết định cuối cùng như một hàm trơn của các ước lượng thành phần và suy ra quy tắc phân bổ mẫu, dồn mẫu vào nơi nhiễu của thành phần ảnh hưởng nhiều nhất đến độ tin cậy của quyết định; phương pháp được áp dụng cho xác định nhánh tốt nhất (BAI), MCTS và xác định chính sách tốt nhất (best-policy identification, BPI).",
+    "strength": "The paper gives theoretical guarantees on variance decay and simple regret for the three problems and reports consistent improvements over existing methods in experiments, with the largest gains in highly stochastic environments.",
+    "strength_vi": "Bài báo đưa ra bảo đảm lý thuyết về tốc độ giảm phương sai và simple regret cho cả ba bài toán, và báo cáo cải thiện nhất quán so với các phương pháp hiện có trong thực nghiệm, với mức cải thiện lớn nhất ở môi trường có độ ngẫu nhiên cao.",
     "authors": [],
     "reviewers": [
      {
+      "quote": "the paper simplifies the decision variance via a first-order approximation, but it remains unclear how this approximation impacts convergence—either in the theoretical analysis (regret) or in the numerical experiments.",
+      "quote_vi": "bài báo đơn giản hóa phương sai của quyết định bằng xấp xỉ bậc nhất, nhưng vẫn chưa rõ xấp xỉ này ảnh hưởng thế nào đến sự hội tụ, cả trong phân tích lý thuyết (regret) lẫn trong thực nghiệm số."
+     },
+     {
       "quote": "Theorem 3.5 is the rate any reasonable allocation strategy achieves (including uniform sampling) … a more informative result would characterize the constant in the rate and show it is smaller for VarDE than for uniform or UCB-based allocation.",
-      "quote_vi": "Định lý 3.5 là tốc độ mà bất kỳ chiến lược phân bổ hợp lý nào cũng đạt được (kể cả lấy mẫu đều) … một kết quả có giá trị thông tin hơn sẽ mô tả hằng số trong tốc độ và chỉ ra nó nhỏ hơn với VarDE so với phân bổ đều hoặc dựa trên UCB."
+      "quote_vi": "Định lý 3.5 là tốc độ mà mọi chiến lược phân bổ hợp lý đều đạt được (kể cả lấy mẫu đều) … một kết quả có nhiều thông tin hơn sẽ mô tả hằng số trong tốc độ và chỉ ra rằng nó nhỏ hơn với VarDE so với phân bổ đều hoặc dựa trên UCB."
      },
      {
       "quote": "The first-order approximation has uncontrolled validity early in learning",
-      "quote_vi": "Tính đúng đắn của phép xấp xỉ bậc một không được kiểm soát ở giai đoạn đầu của quá trình học"
+      "quote_vi": "Tính đúng đắn của xấp xỉ bậc nhất không được kiểm soát ở giai đoạn đầu của quá trình học"
      },
      {
       "quote": "the BAI and MCTS sections give finite-sample guarantees, while the Q-learning result is asymptotic convergence.",
-      "quote_vi": "các phần BAI và MCTS đưa ra bảo đảm với mẫu hữu hạn, còn kết quả cho Q-learning chỉ là hội tụ tiệm cận."
+      "quote_vi": "các phần về BAI và MCTS đưa ra bảo đảm với số mẫu hữu hạn, trong khi kết quả cho Q-learning chỉ là hội tụ tiệm cận."
      }
     ]
    },
@@ -514,34 +371,25 @@
     "year": 2026,
     "credit": 1.0,
     "status": "desk_rejected",
-    "problem": "Monte Carlo Tree Search in continuous d-dimensional action spaces lacks guarantees that relate dimension, smoothness of the value function and sample efficiency, especially in stochastic environments.",
-    "problem_vi": "MCTS trong không gian hành động liên tục d chiều thiếu các bảo đảm liên hệ số chiều, độ trơn của hàm giá trị và hiệu quả mẫu, nhất là trong môi trường ngẫu nhiên.",
-    "technique": "PM-DA-MCTS discretizes the action space with an ε-net schedule adapted to the dimension d and the β-Hölder smoothness of the optimal action-value function, and combines it with power-mean backups and a polynomial exploration bonus.",
-    "technique_vi": "PM-DA-MCTS rời rạc hóa không gian hành động bằng một lịch trình lưới ε (ε-net) thích ứng theo số chiều d và độ trơn β-Hölder của hàm giá trị hành động tối ưu, kết hợp với phép cập nhật trung bình lũy thừa và phần thưởng khám phá đa thức.",
-    "strength": "The paper proves that the method finds an ε-optimal action in O~(σ² L^(d/β) ε^-(d/β+2)) simulations, matching standard continuum-armed lower bounds up to logarithms, and reports that it outperforms baseline methods on continuous control planning problems.",
-    "strength_vi": "Bài báo chứng minh phương pháp tìm được hành động ε-tối ưu sau O~(σ² L^(d/β) ε^-(d/β+2)) lần mô phỏng, khớp các cận dưới chuẩn cho bandit liên tục sai khác thừa số logarit, và báo cáo phương pháp vượt các baseline trên các bài toán lập kế hoạch điều khiển liên tục.",
-    "authors": [
-     {
-      "text": "The guarantee assumes that the optimal action-value function is β-Hölder continuous in the action, and practicality relies on on-demand, capped random nets.",
-      "text_vi": "Bảo đảm giả định hàm giá trị hành động tối ưu liên tục β-Hölder theo hành động, và tính khả thi thực tế dựa vào các lưới ngẫu nhiên tạo theo nhu cầu và có giới hạn kích thước."
-     }
-    ],
+    "problem": "Monte Carlo Tree Search (MCTS), a planning method that builds a search tree from simulated rollouts, is hard to extend to high-dimensional continuous action spaces: existing methods such as progressive widening work empirically but suffer exponential sample complexity and lack guarantees that relate dimension, smoothness and efficiency.",
+    "problem_vi": "Monte Carlo Tree Search (MCTS, phương pháp lập kế hoạch xây dựng cây tìm kiếm từ các lượt mô phỏng) khó mở rộng sang không gian hành động liên tục nhiều chiều: các phương pháp hiện có như progressive widening chạy được trong thực nghiệm nhưng có độ phức tạp mẫu tăng theo hàm mũ và thiếu bảo đảm lý thuyết liên hệ số chiều, độ trơn và hiệu quả.",
+    "technique": "PM-DA-MCTS assumes the value function is beta-Holder continuous (a standard smoothness condition) and combines an adaptive epsilon-net discretization of the d-dimensional action space whose resolution depends on d and the smoothness, a power-mean backup operator suited to stochastic environments, and a polynomial exploration bonus.",
+    "technique_vi": "PM-DA-MCTS giả định hàm giá trị liên tục Holder bậc beta (một điều kiện trơn chuẩn) và kết hợp: rời rạc hóa thích nghi không gian hành động d chiều bằng epsilon-net với độ phân giải phụ thuộc vào d và độ trơn, toán tử cập nhật ngược dạng trung bình lũy thừa (power mean) phù hợp với môi trường ngẫu nhiên, và một khoản thưởng khám phá dạng đa thức.",
+    "strength": "The algorithm comes with sound theorems showing it matches the minimax lower bound on sample complexity, extending power-mean estimator guarantees from discrete to continuous action spaces.",
+    "strength_vi": "Thuật toán đi kèm các định lý chặt chẽ cho thấy nó đạt cận dưới minimax về độ phức tạp mẫu, mở rộng các bảo đảm của bộ ước lượng trung bình lũy thừa từ không gian hành động rời rạc sang liên tục.",
+    "authors": [],
     "reviewers": [
      {
-      "quote": "The paper does not fully explain how a uniform grid can be \"lazily\" loaded in high-dimensional space while maintaining computational feasibility.",
-      "quote_vi": "Bài báo không giải thích đầy đủ cách một lưới đều có thể được nạp \"lười\" trong không gian nhiều chiều mà vẫn khả thi về tính toán."
+      "text": "The analysis relies on a uniform grid whose size grows exponentially with the action dimension, and how the method stays computationally feasible in high dimensions is not fully explained.",
+      "text_vi": "Phân tích dựa trên một lưới đều có kích thước tăng theo hàm mũ với số chiều hành động, và chưa giải thích đầy đủ làm sao phương pháp vẫn khả thi về tính toán ở số chiều cao."
      },
      {
-      "quote": "UCT is a very basic baseline, yet it performs comparably to PM-DA-MCTS in most domains.",
-      "quote_vi": "UCT là một baseline rất cơ bản, nhưng nó cho kết quả tương đương PM-DA-MCTS ở hầu hết các miền."
+      "text": "The on-demand capped random nets mentioned as the practical implementation are not described in detail.",
+      "text_vi": "Các lưới ngẫu nhiên có giới hạn, tạo theo nhu cầu, được nhắc đến như cách cài đặt thực tế, chưa được mô tả chi tiết."
      },
      {
-      "quote": "To better evaluate the discretization strategy, more high-dimensional environments are needed; only two are provided.",
-      "quote_vi": "Để đánh giá chiến lược rời rạc hóa tốt hơn, cần thêm các môi trường nhiều chiều; hiện chỉ có hai."
-     },
-     {
-      "quote": "since continuous control is often handled with policy-gradient methods (e.g., PPO, SAC), benchmarking against such baselines research would better contextualize practical usefulness.",
-      "quote_vi": "vì điều khiển liên tục thường được giải bằng các phương pháp gradient chính sách (như PPO, SAC), so sánh với các baseline như vậy sẽ giúp đặt tính hữu dụng thực tế vào đúng bối cảnh hơn."
+      "text": "Performance is close to plain UCT in most domains, and high-dimensional sparse-reward tasks such as goal-conditioned mazes are not tested.",
+      "text_vi": "Hiệu năng gần với UCT thông thường ở hầu hết các miền, và các tác vụ nhiều chiều có phần thưởng thưa như mê cung có điều kiện mục tiêu chưa được thử nghiệm."
      }
     ]
    },
@@ -553,38 +401,25 @@
     "year": 2026,
     "credit": 0.2,
     "status": "rejected",
-    "problem": "MCTS works well in deterministic settings but can struggle in highly stochastic domains, where random transitions and partial observability cause under-exploration and miscalibrated value estimates.",
-    "problem_vi": "MCTS hoạt động tốt trong môi trường tất định nhưng có thể gặp khó trong các miền có tính ngẫu nhiên cao, nơi chuyển trạng thái ngẫu nhiên và quan sát một phần gây khám phá chưa đủ và ước lượng giá trị lệch chuẩn.",
-    "technique": "CATSO and PATSO let each Q-node keep a return distribution, with fixed atoms or with capped particles merged on insertion, and choose actions by a Thompson sampling draw plus a polynomial optimism term.",
-    "technique_vi": "CATSO và PATSO cho mỗi nút Q giữ một phân phối lợi nhuận, bằng các nguyên tử cố định hoặc bằng các hạt có giới hạn số lượng được gộp khi chèn, và chọn hành động bằng một lần rút mẫu Thompson cộng một số hạng lạc quan đa thức.",
-    "strength": "The paper proves non-asymptotic, problem-dependent simple regret O(n^-1/2) at the root for both algorithms, links the tree policies to Wasserstein distributionally robust MDPs, and reports experiments on synthetic stochastic trees and 12 Atari games with ablations and runtime and memory measurements.",
-    "strength_vi": "Bài báo chứng minh hối tiếc đơn không tiệm cận, phụ thuộc bài toán O(n^-1/2) tại gốc cho cả hai thuật toán, nối các chính sách cây với MDP bền vững phân phối Wasserstein, và báo cáo thí nghiệm trên cây ngẫu nhiên tổng hợp và 12 trò chơi Atari kèm các phân tích loại bỏ (ablation) và đo thời gian chạy, bộ nhớ.",
-    "authors": [
-     {
-      "text": "V-nodes remain scalar for tractability; extending distributional backups to V-nodes is left open.",
-      "text_vi": "Các nút V vẫn là vô hướng để dễ tính toán; việc mở rộng phép cập nhật dạng phân phối cho nút V còn để ngỏ."
-     },
-     {
-      "text": "Scaling to larger or partially observed domains and integrating with deep models such as MuZero-style planning or sparse-reward robotics are future directions.",
-      "text_vi": "Mở rộng cho các miền lớn hơn hoặc quan sát một phần và tích hợp với mô hình sâu như lập kế hoạch kiểu MuZero hay robot với phần thưởng thưa là các hướng tương lai."
-     }
-    ],
+    "problem": "In stochastic environments, Monte Carlo Tree Search usually keeps only mean value estimates at its nodes, which limits robustness and exploration under uncertainty.",
+    "problem_vi": "Trong môi trường ngẫu nhiên, Monte Carlo Tree Search thường chỉ lưu ước lượng giá trị trung bình tại các nút, làm hạn chế tính bền vững và khả năng khám phá khi có bất định.",
+    "technique": "The paper proposes two distributional MCTS algorithms, CATSO (categorical) and PATSO (particle-based), that model the full return distribution at action nodes with the distributional Bellman operator and select actions by Thompson sampling (sampling from the belief over values) plus an optimistic exploration bonus.",
+    "technique_vi": "Bài báo đề xuất hai thuật toán MCTS phân phối, CATSO (dạng phân loại) và PATSO (dạng hạt), mô hình hóa toàn bộ phân phối lợi suất tại các nút hành động bằng toán tử Bellman phân phối và chọn hành động bằng Thompson sampling (lấy mẫu từ niềm tin về giá trị) cộng thêm khoản thưởng khám phá lạc quan.",
+    "strength": "Both algorithms come with non-asymptotic simple-regret bounds of order n to the power minus one half, linked to non-stationary bandit analysis and to a Wasserstein distributionally robust interpretation, with experiments on Atari games.",
+    "strength_vi": "Cả hai thuật toán có cận simple regret không tiệm cận bậc n mũ âm một phần hai, gắn với phân tích bandit không dừng và với cách hiểu bền vững theo phân phối Wasserstein, kèm thí nghiệm trên các trò chơi Atari.",
+    "authors": [],
     "reviewers": [
      {
-      "quote": "Isn't the robustness property a direct consequence of the optimism bonus term by Shah et al and has nothing to do with the new addition introduced in this paper?",
-      "quote_vi": "Phải chăng tính bền vững là hệ quả trực tiếp của số hạng thưởng lạc quan của Shah và cộng sự và không liên quan gì tới phần bổ sung mới của bài báo này?"
+      "text": "Sensitivity to the exploration constant, the number of atoms and the particle cap is not studied, and no ablation separates the optimism bonus from the distributional representation.",
+      "text_vi": "Chưa khảo sát độ nhạy theo hằng số khám phá, số nguyên tử phân phối và giới hạn số hạt, và chưa có ablation tách khoản thưởng lạc quan khỏi biểu diễn phân phối."
      },
      {
-      "quote": "While the results are promising, especially for environments with stochasticity, they are somewhat mixed compared to baseline approaches.",
-      "quote_vi": "Dù kết quả hứa hẹn, nhất là với môi trường ngẫu nhiên, chúng vẫn khá lẫn lộn khi so với các phương pháp baseline."
+      "text": "Value nodes still use point estimates, and it is not clear why this restriction is necessary.",
+      "text_vi": "Các nút giá trị vẫn dùng ước lượng điểm, và chưa rõ vì sao cần hạn chế này."
      },
      {
-      "quote": "Typically, we don't want to explore over noise, as this implies risk-seeking behavior.",
-      "quote_vi": "Thông thường, ta không muốn khám phá theo nhiễu, vì điều đó hàm ý hành vi ưa rủi ro."
-     },
-     {
-      "quote": "p in the power mean is a hyperparameter, but the paper does not explain how to choose it, or which value was used in the experiment.",
-      "quote_vi": "p trong trung bình lũy thừa là một siêu tham số, nhưng bài báo không giải thích cách chọn nó hay giá trị nào đã được dùng trong thí nghiệm."
+      "text": "Could the methods extend to deep MCTS or large partially observable problems that need state abstraction, beyond the 12 Atari games tested?",
+      "text_vi": "Các phương pháp có mở rộng được sang MCTS sâu hay các bài toán quan sát một phần quy mô lớn cần trừu tượng hóa trạng thái, ngoài 12 trò chơi Atari đã thử không?"
      }
     ]
    },
@@ -596,29 +431,25 @@
     "year": 2025,
     "credit": 1.0,
     "status": "accepted",
-    "problem": "Reinforcement learning in non-stationary communicating MDPs, where transition probabilities drift over time, had best known regret of order T^(3/4) for algorithms that assume no structure on the drift.",
-    "problem_vi": "Học tăng cường trong các MDP liên thông không dừng, nơi xác suất chuyển trạng thái trôi theo thời gian, có mức hối tiếc tốt nhất từng biết là bậc T^(3/4) với các thuật toán không giả định cấu trúc gì cho sự trôi.",
-    "technique": "According to the reviews, SVUCRL models transition drift as a low-rank component plus sparse shocks, tracks it with randomized SVD and incremental robust PCA, widens confidence sets where uncertainty is highest, blends estimates with James–Stein shrinkage forecasting, and plans with extended value iteration.",
-    "technique_vi": "Theo các bản nhận xét, SVUCRL mô hình hóa sự trôi của chuyển trạng thái như một thành phần hạng thấp cộng các cú sốc thưa, theo dõi nó bằng SVD ngẫu nhiên và PCA bền vững tăng dần, nới rộng tập tin cậy ở nơi bất định cao nhất, trộn các ước lượng bằng dự báo co rút James–Stein, và lập kế hoạch bằng lặp giá trị mở rộng.",
-    "strength": "Reviewers report a regret bound of order √T in the horizon T up to logarithmic factors, scaling with the drift rank, and an algorithm that does not need the rank in advance.",
-    "strength_vi": "Các nhà phản biện cho biết bài báo đạt cận hối tiếc bậc √T theo tầm thời gian T sai khác thừa số logarit, tỉ lệ theo hạng của sự trôi, với thuật toán không cần biết trước hạng.",
+    "problem": "Reinforcement learning in non-stationary environments, where the transition dynamics change over time, is hard to analyze in general; the paper studies a structured case in which the drift of the transition kernel is low-rank.",
+    "problem_vi": "Học tăng cường trong môi trường không dừng, nơi động lực chuyển trạng thái thay đổi theo thời gian, nhìn chung khó phân tích; bài báo nghiên cứu một trường hợp có cấu trúc trong đó độ trôi của nhân chuyển trạng thái có hạng thấp.",
+    "technique": "The proposed algorithm, SVUCRL, targets communicating Markov decision processes (MDPs) and combines randomized singular value decomposition (SVD) to track the low-rank structure, incremental robust principal component analysis (PCA), and time-series analysis.",
+    "technique_vi": "Thuật toán đề xuất, SVUCRL, nhắm tới các quá trình quyết định Markov (MDP) liên thông và kết hợp phân tích giá trị suy biến (SVD) ngẫu nhiên để theo dõi cấu trúc hạng thấp, phân tích thành phần chính bền vững (robust PCA) tăng dần, và phân tích chuỗi thời gian.",
+    "strength": "Its regret scales with the square root of the number of interactions and with the rank of the drift, and the theory is clean and builds up progressively from building blocks that are each interesting on their own.",
+    "strength_vi": "Regret (độ hối tiếc) của thuật toán tăng theo căn bậc hai số lần tương tác và theo hạng của độ trôi, và phần lý thuyết gọn gàng, được xây dựng dần từ các khối thành phần mà mỗi khối đều có giá trị riêng.",
     "authors": [],
     "reviewers": [
      {
-      "quote": "these results totally rely on a specific structural assumption about non-stationarity. However, the reasonableness of this assumption is not verified using experimental data.",
-      "quote_vi": "các kết quả này hoàn toàn dựa vào một giả định cấu trúc cụ thể về tính không dừng. Tuy nhiên, tính hợp lý của giả định này không được kiểm chứng bằng dữ liệu thực nghiệm."
+      "text": "All results rest on the low-rank assumption about non-stationarity, whose validity is not checked on real data, and concrete examples where it holds are needed.",
+      "text_vi": "Mọi kết quả dựa trên giả định hạng thấp về tính không dừng, nhưng tính hợp lý của giả định này chưa được kiểm chứng trên dữ liệu thực, và cần có ví dụ cụ thể nơi nó đúng."
      },
      {
-      "quote": "the authors do not provide any experiments, so I am concerned about the applicability of this method.",
-      "quote_vi": "các tác giả không đưa ra thí nghiệm nào, nên tôi lo ngại về khả năng áp dụng của phương pháp."
+      "text": "No experiments show how the algorithm performs in practice.",
+      "text_vi": "Chưa có thí nghiệm cho thấy thuật toán hoạt động ra sao trong thực tế."
      },
      {
-      "quote": "While the algorithm is theoretically polynomial time, the incorporation of SVD, RPCA, and forecasting adds significant computational overhead, especially for large state and action spaces.",
-      "quote_vi": "Dù về lý thuyết thuật toán chạy trong thời gian đa thức, việc kết hợp SVD, RPCA và dự báo làm tăng đáng kể chi phí tính toán, nhất là với không gian trạng thái và hành động lớn."
-     },
-     {
-      "quote": "Cheung et al. do not make any assumptions on the structure of the changes (i.e no low rank structure of transition probability drift)",
-      "quote_vi": "Cheung và cộng sự không đặt giả định nào về cấu trúc của các thay đổi (tức không có cấu trúc hạng thấp cho sự trôi xác suất chuyển trạng thái)"
+      "text": "The computational overhead of the randomized SVD step and the dependence on the window size and other hyperparameters are not discussed.",
+      "text_vi": "Chi phí tính toán của bước SVD ngẫu nhiên và sự phụ thuộc vào kích thước cửa sổ cùng các siêu tham số khác chưa được bàn tới."
      }
     ]
    },
@@ -630,36 +461,14 @@
     "year": 2025,
     "credit": 0.1667,
     "status": "accepted",
-    "problem": "In highly stochastic and partially observable MDPs, MCTS backups that keep only point estimates do not carry the uncertainty of child estimates up to the root.",
-    "problem_vi": "Trong các MDP có tính ngẫu nhiên cao và quan sát một phần, các phép cập nhật MCTS chỉ giữ ước lượng điểm không truyền được độ bất định của các ước lượng con lên tới gốc.",
-    "technique": "Wasserstein MCTS models value and action-value nodes as Gaussian distributions and computes each value node as the L1-Wasserstein barycenter of its children combined with an α-divergence, which connects to the generalized (power) mean backup, with optimistic selection or Thompson sampling.",
-    "technique_vi": "Wasserstein MCTS mô hình hóa nút giá trị và nút giá trị hành động bằng phân phối Gauss và tính mỗi nút giá trị là tâm Wasserstein L1 (barycenter) của các con kết hợp với α-phân kỳ, liên hệ với phép cập nhật trung bình tổng quát (lũy thừa), cùng chiến lược chọn lạc quan hoặc lấy mẫu Thompson.",
-    "strength": "The paper proves asymptotic convergence to the optimal policy and reports that the method outperforms related baselines on several stochastic and partially observable environments.",
-    "strength_vi": "Bài báo chứng minh hội tụ tiệm cận về chính sách tối ưu và báo cáo phương pháp vượt các baseline liên quan trên một số môi trường ngẫu nhiên và quan sát một phần.",
-    "authors": [
-     {
-      "text": "Value and action-value estimates are modelled as Gaussian distributions.",
-      "text_vi": "Các ước lượng giá trị và giá trị hành động được mô hình hóa bằng phân phối Gauss."
-     }
-    ],
-    "reviewers": [
-     {
-      "quote": "It is unclear what specifically enables W-MCTS to achieve superior performance. Is it the improved approximation of uncertainty, a more effective backup operation, or another factor?",
-      "quote_vi": "Chưa rõ cụ thể điều gì giúp W-MCTS đạt hiệu năng vượt trội. Đó là nhờ xấp xỉ độ bất định tốt hơn, phép cập nhật hiệu quả hơn, hay yếu tố khác?"
-     },
-     {
-      "quote": "The experimental evaluation could be strengthened further by evaluating against newer MCTS variants, e.g. one of those with exponential convergence rate, that are cited in Section 5.",
-      "quote_vi": "Phần đánh giá thực nghiệm có thể mạnh hơn nữa nếu so sánh với các biến thể MCTS mới hơn, chẳng hạn một biến thể có tốc độ hội tụ mũ được trích dẫn ở Mục 5."
-     },
-     {
-      "quote": "One exception being the results for river swim does not line up with the analysis provided. In this setting, DNG clearly converges faster than the other algorithms.",
-      "quote_vi": "Một ngoại lệ là kết quả trên river swim không khớp với phân tích đưa ra. Trong bối cảnh này, DNG hội tụ nhanh hơn rõ rệt so với các thuật toán khác."
-     },
-     {
-      "quote": "a comparison based on a fixed wall-clock timeout (e.g., 1 second per decision) or by reporting the time taken per search trial would provide a clearer picture of the expected performance.",
-      "quote_vi": "một so sánh dựa trên giới hạn thời gian thực cố định (ví dụ 1 giây mỗi quyết định) hoặc báo cáo thời gian cho mỗi lượt tìm kiếm sẽ cho bức tranh rõ hơn về hiệu năng kỳ vọng."
-     }
-    ]
+    "problem": "Monte-Carlo Tree Search (MCTS), a planning method that builds a search tree from simulated rollouts, struggles in highly stochastic and partially observable Markov decision processes, where the uncertainty of value estimates should be carried up the tree.",
+    "problem_vi": "Tìm kiếm cây Monte-Carlo (Monte-Carlo Tree Search, MCTS), phương pháp lập kế hoạch xây dựng cây tìm kiếm từ các lượt mô phỏng, gặp khó trong các quá trình quyết định Markov có tính ngẫu nhiên cao và quan sát không đầy đủ, nơi độ bất định của ước lượng giá trị cần được truyền lên trong cây.",
+    "technique": "Wasserstein MCTS models value and action-value nodes as Gaussian distributions and backs up each value node as the L1-Wasserstein barycenter of its children combined with an alpha-divergence, which connects to the generalized (power) mean backup and interpolates between averaging and maximization; it is paired with optimistic selection or Thompson sampling.",
+    "technique_vi": "Wasserstein MCTS mô hình hóa các nút giá trị và nút giá trị hành động bằng phân phối Gaussian, và cập nhật ngược (backup) mỗi nút giá trị bằng tâm Wasserstein (Wasserstein barycenter) L1 của các nút con kết hợp với alpha-divergence, liên hệ với phép backup trung bình lũy thừa tổng quát và nội suy giữa lấy trung bình và lấy cực đại; phương pháp đi kèm chiến lược chọn lạc quan hoặc Thompson sampling.",
+    "strength": "It comes with guarantees of asymptotic convergence to the optimal policy at a polynomial rate and outperforms standard and Bayesian MCTS variants on stochastic and partially observable planning benchmarks.",
+    "strength_vi": "Phương pháp có bảo đảm hội tụ tiệm cận về chính sách tối ưu với tốc độ đa thức và vượt các biến thể MCTS chuẩn lẫn Bayes trên các benchmark lập kế hoạch ngẫu nhiên và quan sát không đầy đủ.",
+    "authors": [],
+    "reviewers": []
    },
    {
     "id": "icml2025-online-robust-reinforcement-learning-through-monte-carlo-pla",
@@ -669,31 +478,14 @@
     "year": 2025,
     "credit": 0.25,
     "status": "accepted",
-    "problem": "MCTS usually assumes the simulator matches the real dynamics; with low-fidelity simulators, mismatches in transitions and rewards separate simulation-based planning from real-world deployment.",
-    "problem_vi": "MCTS thường giả định trình mô phỏng khớp với động lực thực; với các trình mô phỏng độ trung thực thấp, sự sai lệch về chuyển trạng thái và phần thưởng tạo khoảng cách giữa lập kế hoạch bằng mô phỏng và triển khai thực tế.",
-    "technique": "Robust-Power-UCT plans against ambiguity sets of transition and reward models, using a robust power-mean backup operator and exploration bonuses designed for finite-sample convergence at every node.",
-    "technique_vi": "Robust-Power-UCT lập kế hoạch trên các tập mơ hồ (ambiguity set) của mô hình chuyển trạng thái và phần thưởng, dùng toán tử cập nhật trung bình lũy thừa bền vững và các phần thưởng khám phá được thiết kế để hội tụ với mẫu hữu hạn tại mọi nút.",
-    "strength": "The paper proves an O(n^-1/2) convergence rate for the root value estimate, comparable to standard MCTS, and reports robust performance under significant ambiguity in rewards and transitions on Gambler's Problem and Frozen Lake.",
-    "strength_vi": "Bài báo chứng minh tốc độ hội tụ O(n^-1/2) cho ước lượng giá trị tại gốc, tương đương MCTS chuẩn, và báo cáo hiệu năng bền vững khi phần thưởng và chuyển trạng thái mơ hồ đáng kể trên Gambler's Problem và Frozen Lake.",
+    "problem": "Monte Carlo Tree Search (MCTS) assumes the simulator matches real-world dynamics, which holds in games like chess and Go but not when low-fidelity simulators leave ambiguity in transitions and rewards, creating a gap between simulated planning and real deployment.",
+    "problem_vi": "Tìm kiếm cây Monte Carlo (MCTS) giả định trình mô phỏng khớp với động lực thực tế, điều đúng với các trò chơi như cờ vua hay cờ vây nhưng không đúng khi trình mô phỏng độ chính xác thấp để lại sự mơ hồ về chuyển trạng thái và phần thưởng, tạo khoảng cách giữa lập kế hoạch trong mô phỏng và triển khai thực tế.",
+    "technique": "Robust-Power-UCT is a Monte Carlo Tree Search (MCTS) variant for robust Markov decision processes, where the true model lies in an ambiguity set around an approximate one; it uses a robust power-mean backup operator and carefully designed exploration bonuses to handle ambiguity in both transition dynamics and reward distributions.",
+    "technique_vi": "Robust-Power-UCT là biến thể MCTS cho quá trình quyết định Markov bền vững, trong đó mô hình thật nằm trong một tập mơ hồ quanh mô hình xấp xỉ; phương pháp dùng toán tử backup trung bình lũy thừa bền vững và phần thưởng khám phá được thiết kế cẩn thận để xử lý sự mơ hồ ở cả động lực chuyển trạng thái lẫn phân phối phần thưởng.",
+    "strength": "It has finite-sample convergence guarantees at every node, with an O(n^(-1/2)) rate for the root value estimate comparable to standard MCTS, and performs robustly in planning problems with significant model ambiguity.",
+    "strength_vi": "Phương pháp có bảo đảm hội tụ với số mẫu hữu hạn tại mọi nút, với tốc độ O(n^(-1/2)) cho ước lượng giá trị ở nút gốc, tương đương MCTS chuẩn, và hoạt động bền vững trong các bài toán lập kế hoạch có độ mơ hồ mô hình đáng kể.",
     "authors": [],
-    "reviewers": [
-     {
-      "quote": "The authors selected a baseline that does not seem to be used for robust RL.",
-      "quote_vi": "Các tác giả chọn một baseline dường như không được dùng cho RL bền vững."
-     },
-     {
-      "quote": "I would not agree with the claim that their approach is more robust --- I would say that this demonstrates that their approach makes the agent more cautious.",
-      "quote_vi": "Tôi không đồng ý với khẳng định rằng cách tiếp cận của họ bền vững hơn; tôi cho rằng điều này cho thấy cách tiếp cận khiến tác tử thận trọng hơn."
-     },
-     {
-      "quote": "The robustness comes from planning for the worst-case, but it is unclear whether this conservatism hurts performance in cases where the real-world dynamics are less adversarial than assumed.",
-      "quote_vi": "Tính bền vững đến từ việc lập kế hoạch cho trường hợp xấu nhất, nhưng chưa rõ sự thận trọng này có làm giảm hiệu năng khi động lực thực tế ít đối kháng hơn giả định hay không."
-     },
-     {
-      "quote": "The paper does not explore how different ambiguity set formulations (Total Variation, Chi-squared, Wasserstein) affect performance trade-offs.",
-      "quote_vi": "Bài báo không khảo sát các cách xây dựng tập mơ hồ khác nhau (Total Variation, Chi-bình phương, Wasserstein) ảnh hưởng thế nào tới các đánh đổi hiệu năng."
-     }
-    ]
+    "reviewers": []
    },
    {
     "id": "icml2025-power-mean-estimation-in-stochastic-continuous-monte-carlo-t",
@@ -703,31 +495,14 @@
     "year": 2025,
     "credit": 1.0,
     "status": "accepted",
-    "problem": "Adapting MCTS to stochastic MDPs with continuous state and action spaces lacks guarantees: HOOT's logarithmic exploration bonus has no theory in non-stationary stochastic settings, and POLY-HOOT's polynomial bonus is analysed only for deterministic MDPs.",
-    "problem_vi": "Việc đưa MCTS vào MDP ngẫu nhiên với không gian trạng thái và hành động liên tục còn thiếu bảo đảm: phần thưởng khám phá logarit của HOOT không có lý thuyết trong môi trường ngẫu nhiên không dừng, còn phần thưởng đa thức của POLY-HOOT chỉ được phân tích cho MDP tất định.",
-    "technique": "Stochastic-Power-HOOT combines a power-mean value backup with a polynomial exploration bonus inside HOO-style hierarchical partitioning of the continuous action space.",
-    "technique_vi": "Stochastic-Power-HOOT kết hợp phép cập nhật giá trị trung bình lũy thừa với phần thưởng khám phá đa thức bên trong cách phân hoạch phân cấp không gian hành động liên tục theo kiểu HOO.",
-    "strength": "The paper proves convergence at a polynomial rate O(n^-ζ) with ζ in (0, 1/2), extending POLY-HOOT's non-asymptotic guarantees to stochastic environments, and reports experiments on stochastic tasks that support the analysis.",
-    "strength_vi": "Bài báo chứng minh hội tụ với tốc độ đa thức O(n^-ζ), ζ thuộc (0, 1/2), mở rộng các bảo đảm không tiệm cận của POLY-HOOT cho môi trường ngẫu nhiên, và báo cáo thí nghiệm trên các tác vụ ngẫu nhiên ủng hộ phân tích.",
+    "problem": "Adapting Monte Carlo Tree Search to stochastic Markov decision processes with continuous states and actions remains hard: HOOT relies on a logarithmic exploration bonus without guarantees in such non-stationary settings, and POLY-HOOT's convergence theory covers only deterministic environments.",
+    "problem_vi": "Áp dụng tìm kiếm cây Monte Carlo cho các quá trình quyết định Markov ngẫu nhiên với trạng thái và hành động liên tục vẫn khó: HOOT dựa vào phần thưởng khám phá dạng logarit không có bảo đảm trong bối cảnh không dừng như vậy, còn lý thuyết hội tụ của POLY-HOOT chỉ áp dụng cho môi trường tất định.",
+    "technique": "Stochastic-Power-HOOT combines a power-mean value backup operator with a polynomial exploration bonus and a hierarchical optimistic partitioning of the continuous action space, to handle the non-stationarity of value estimates in stochastic environments.",
+    "technique_vi": "Stochastic-Power-HOOT kết hợp toán tử backup giá trị dạng trung bình lũy thừa (power mean) với phần thưởng khám phá dạng đa thức và cách phân hoạch phân cấp lạc quan không gian hành động liên tục, để xử lý tính không dừng của ước lượng giá trị trong môi trường ngẫu nhiên.",
+    "strength": "It provably converges at a polynomial rate O(n^(-zeta)) with zeta between 0 and 1/2, extending POLY-HOOT's non-asymptotic guarantees to stochastic environments, and experiments on stochastic tasks confirm the theory and show gains over previous methods.",
+    "strength_vi": "Thuật toán được chứng minh hội tụ với tốc độ đa thức O(n^(-zeta)), zeta nằm giữa 0 và 1/2, mở rộng bảo đảm phi tiệm cận của POLY-HOOT sang môi trường ngẫu nhiên, và thí nghiệm trên các tác vụ ngẫu nhiên xác nhận lý thuyết cũng như cho thấy cải thiện so với các phương pháp trước.",
     "authors": [],
-    "reviewers": [
-     {
-      "quote": "The experiments are conducted on toy domains with relatively simple dynamics.",
-      "quote_vi": "Các thí nghiệm được thực hiện trên các miền đồ chơi với động lực tương đối đơn giản."
-     },
-     {
-      "quote": "The baselines used for comparison are dated, with the most recent one being from 2013.",
-      "quote_vi": "Các baseline dùng để so sánh đã cũ, cái mới nhất là từ năm 2013."
-     },
-     {
-      "quote": "Insufficient justification is given for scaling the rewards of the continuous control tasks.",
-      "quote_vi": "Việc co giãn phần thưởng của các tác vụ điều khiển liên tục không được giải thích thỏa đáng."
-     },
-     {
-      "quote": "it obviously puts some practical limitations on negative or zero rewards which adds unnecessary complications.",
-      "quote_vi": "nó rõ ràng đặt ra một số hạn chế thực tế với phần thưởng âm hoặc bằng không, gây thêm phức tạp không cần thiết."
-     }
-    ]
+    "reviewers": []
    },
    {
     "id": "neurips2024-distributional-monte-carlo-planning-with-thompson-sampling-i",
@@ -737,29 +512,25 @@
     "year": 2024,
     "credit": 0.3333,
     "status": "rejected",
-    "problem": "According to the reviews, the paper targets value estimation in MCTS for highly stochastic environments, where point estimates of returns can be unreliable.",
-    "problem_vi": "Theo các bản nhận xét, bài báo nhắm tới việc ước lượng giá trị trong MCTS cho môi trường có tính ngẫu nhiên cao, nơi ước lượng điểm của lợi nhuận có thể không đáng tin cậy.",
-    "technique": "Categorical Thompson Sampling (CATS) and Particle Thompson Sampling (PATS) bring distributional reinforcement learning into MCTS by modelling values as categorical or particle distributions and selecting actions by Thompson sampling.",
-    "technique_vi": "Lấy mẫu Thompson phân loại (CATS) và lấy mẫu Thompson dạng hạt (PATS) đưa học tăng cường dạng phân phối vào MCTS bằng cách mô hình hóa giá trị bằng phân phối phân loại hoặc phân phối hạt và chọn hành động bằng lấy mẫu Thompson.",
-    "strength": "Reviewers summarize a stated non-asymptotic, problem-dependent simple-regret bound of O(n^-1) and experiments on a synthetic tree task and on Atari games with a pre-trained Q-network.",
-    "strength_vi": "Các nhà phản biện tóm tắt rằng bài báo nêu một cận hối tiếc đơn không tiệm cận, phụ thuộc bài toán O(n^-1), cùng thí nghiệm trên bài toán cây tổng hợp và các trò chơi Atari với mạng Q đã huấn luyện sẵn.",
+    "problem": "Monte-Carlo Tree Search (MCTS) plans by estimating the average value of actions, which works poorly in highly stochastic environments where the full distribution of returns matters.",
+    "problem_vi": "Tìm kiếm cây Monte-Carlo (MCTS) lập kế hoạch bằng cách ước lượng giá trị trung bình của các hành động, cách này kém hiệu quả trong môi trường ngẫu nhiên cao, nơi toàn bộ phân phối phần thưởng mới là điều quan trọng.",
+    "technique": "The paper brings distributional reinforcement learning into MCTS with two algorithms, Categorical Thompson Sampling (CATS) and Particle Thompson Sampling (PATS), which represent value estimates as categorical or particle distributions and adapt the value back-up and Thompson-sampling action selection accordingly.",
+    "technique_vi": "Bài báo đưa học tăng cường phân phối (distributional RL) vào MCTS với hai thuật toán Categorical Thompson Sampling (CATS) và Particle Thompson Sampling (PATS), biểu diễn ước lượng giá trị dưới dạng phân phối rời rạc theo hạng mục hoặc phân phối hạt, và điều chỉnh tương ứng bước lan truyền ngược giá trị cùng bước chọn hành động bằng Thompson sampling.",
+    "strength": "It comes with rigorous theoretical analysis, including regret and convergence guarantees, and is evaluated on synthetic planning tasks and on Atari with a pre-trained network.",
+    "strength_vi": "Phương pháp đi kèm phân tích lý thuyết chặt chẽ, gồm cả bảo đảm về regret và hội tụ, và được đánh giá trên các tác vụ lập kế hoạch tổng hợp cũng như trên Atari với một mạng tiền huấn luyện.",
     "authors": [],
     "reviewers": [
      {
-      "quote": "In the right most plot it appears as if the PATS approximates the root value almost correctly in under 100 simulations - at which point it could not even have tried all k = 200 actions available to it.",
-      "quote_vi": "Ở biểu đồ ngoài cùng bên phải, có vẻ PATS xấp xỉ gần đúng giá trị gốc chỉ sau chưa tới 100 lần mô phỏng, khi mà nó thậm chí chưa thể thử hết k = 200 hành động có sẵn."
+      "text": "On the synthetic tree task the proposed planners do not beat fixed-depth MCTS, and the reason is not explained.",
+      "text_vi": "Trên tác vụ cây tổng hợp, các thuật toán đề xuất không vượt được MCTS độ sâu cố định, và lý do chưa được giải thích."
      },
      {
-      "quote": "CATS never outperforms fixed depth MCTS on the synthetic tree task",
-      "quote_vi": "CATS chưa bao giờ vượt MCTS độ sâu cố định trên bài toán cây tổng hợp"
+      "text": "The computational and memory overhead of the distributional approach, and its scalability to large state or action spaces, are not addressed.",
+      "text_vi": "Chi phí tính toán và bộ nhớ của cách tiếp cận phân phối, cũng như khả năng mở rộng cho không gian trạng thái hoặc hành động lớn, chưa được xem xét."
      },
      {
-      "quote": "The paper does not sufficiently address the computational overhead or the scalability of these methods when applied to environments with larger state or action spaces.",
-      "quote_vi": "Bài báo chưa đề cập đầy đủ chi phí tính toán hay khả năng mở rộng của các phương pháp này khi áp dụng cho môi trường có không gian trạng thái hoặc hành động lớn hơn."
-     },
-     {
-      "quote": "Experiments are limited to a toy domain and results on the Atari benchmark reported in the appendix.",
-      "quote_vi": "Các thí nghiệm chỉ giới hạn ở một miền đồ chơi và kết quả trên benchmark Atari được báo cáo trong phụ lục."
+      "text": "The benchmarks lack diversity, and claims of better Atari performance are not backed by significance tests.",
+      "text_vi": "Các benchmark thiếu đa dạng, và nhận định về hiệu năng tốt hơn trên Atari chưa được hỗ trợ bằng kiểm định ý nghĩa thống kê."
      }
     ]
    }
@@ -4521,24 +4292,24 @@
       "share": 100
      },
      {
-      "word": "mage",
-      "share": 50
+      "word": "time series",
+      "share": 80
      },
      {
       "word": "foundation",
-      "share": 45
+      "share": 53
+     },
+     {
+      "word": "mage",
+      "share": 50
      },
      {
       "word": "temporal scales",
       "share": 40
      },
      {
-      "word": "multi-timescale",
-      "share": 38
-     },
-     {
-      "word": "timescales",
-      "share": 25
+      "word": "sampling strategy",
+      "share": 40
      }
     ]
    },
@@ -5917,12 +5688,12 @@
       "share": 98
      },
      {
-      "word": "face",
+      "word": "dataset",
       "share": 90
      },
      {
-      "word": "dataset",
-      "share": 77
+      "word": "face",
+      "share": 90
      }
     ]
    },
@@ -12706,38 +12477,42 @@
     "year": 2026,
     "credit": 0.2,
     "status": "accepted",
-    "problem": "In fixed-confidence best-arm identification under strict 1-bit feedback, the learner picks an arm and a query set each round and only learns whether the sampled reward falls in that set. With only finite variance assumed, empirical means cannot be computed and clipping becomes unavoidable.",
-    "problem_vi": "Trong bài toán xác định nhánh tốt nhất với độ tin cậy cố định dưới phản hồi 1 bit ngặt, mỗi vòng người học chọn một nhánh và một tập truy vấn và chỉ biết phần thưởng lấy mẫu có rơi vào tập đó hay không. Khi chỉ giả định phương sai hữu hạn, không thể tính trung bình thực nghiệm và việc cắt ngưỡng (clipping) là không tránh khỏi.",
-    "technique": "A time-uniform 1-bit mean estimator built from randomized threshold queries and a clipped tail-integral identity is embedded into candidate-challenger BAI algorithms: one with a fixed clipping level and a phased one that adapts the clipping level to the current resolution.",
-    "technique_vi": "Một bộ ước lượng trung bình 1 bit đúng đều theo thời gian, xây từ các truy vấn ngưỡng ngẫu nhiên và một đẳng thức tích phân đuôi có cắt ngưỡng, được đưa vào các thuật toán BAI kiểu ứng viên–thách thức: một thuật toán với mức cắt cố định và một thuật toán theo pha điều chỉnh mức cắt theo độ phân giải hiện tại.",
-    "strength": "The paper proves an anytime (ε, δ)-PAC guarantee, a gap-adaptive sample complexity for the phased algorithm, and a K-arm worst-case lower bound showing that the logarithmic penalty of finite-variance 1-bit feedback is intrinsic and matched by the phased algorithm up to logarithmic factors.",
-    "strength_vi": "Bài báo chứng minh bảo đảm (ε, δ)-PAC tại mọi thời điểm, độ phức tạp mẫu thích ứng theo khoảng cách cho thuật toán theo pha, và một cận dưới trường hợp xấu nhất với K nhánh cho thấy cái giá logarit của phản hồi 1 bit với phương sai hữu hạn là bản chất, và thuật toán theo pha đạt cận này sai khác các thừa số logarit.",
+    "problem": "In best-arm identification (BAI), a learner must find, with confidence 1−δ, an arm whose mean reward is within ε of the best one; this paper studies the case where each sample returns only one bit saying whether the reward falls in a query set chosen by the learner, as under strict communication limits, so empirical means cannot be computed directly.",
+    "problem_vi": "Trong bài toán xác định nhánh tốt nhất (best-arm identification, BAI), người học phải tìm, với độ tin cậy 1−δ, một nhánh có phần thưởng trung bình cách nhánh tốt nhất không quá ε; bài báo xét trường hợp mỗi mẫu chỉ trả về một bit cho biết phần thưởng có thuộc tập truy vấn do người học chọn hay không, như khi kênh truyền thông bị giới hạn chặt, nên không thể tính trực tiếp trung bình thực nghiệm.",
+    "technique": "The paper builds a time-uniform 1-bit mean estimator from randomized threshold queries and a clipped tail-integral identity, and plugs it into candidate–challenger BAI algorithms: one with a fixed clipping level and a phased one that matches the clipping level to the current resolution.",
+    "technique_vi": "Bài báo xây dựng một bộ ước lượng trung bình 1-bit đúng đồng thời tại mọi thời điểm (time-uniform) từ các truy vấn ngưỡng ngẫu nhiên và một đẳng thức tích phân đuôi có cắt ngưỡng (clipping), rồi đưa nó vào các thuật toán BAI kiểu ứng viên–thách thức (candidate–challenger): một thuật toán với mức cắt cố định và một thuật toán chia pha có mức cắt khớp với độ phân giải hiện tại.",
+    "strength": "The paper proves an anytime (ε,δ)-PAC (probably approximately correct) guarantee for the fixed-clipping algorithm, a gap-adaptive sample complexity for the phased algorithm, and a K-arm worst-case lower bound that matches the phased algorithm's leading dependence up to logarithmic factors.",
+    "strength_vi": "Bài báo chứng minh bảo đảm (ε,δ)-PAC (probably approximately correct) tại mọi thời điểm cho thuật toán cắt cố định, độ phức tạp mẫu thích nghi theo khoảng cách giữa các nhánh (gap) cho thuật toán chia pha, và một cận dưới trường hợp xấu nhất cho K nhánh khớp với sự phụ thuộc chính của thuật toán chia pha đến các thừa số logarit.",
     "authors": [
      {
-      "text": "The algorithms rely on a localization assumption, an anchor point near each arm's mean; weakening or removing it is the next step.",
-      "text_vi": "Các thuật toán dựa vào một giả định định vị, tức một điểm neo gần trung bình của mỗi nhánh; làm yếu hoặc loại bỏ giả định này là bước tiếp theo."
+      "text": "The algorithms rely on a localization assumption (a known anchor point close to each arm's mean); the authors name weakening or removing it as a next step.",
+      "text_vi": "Các thuật toán dựa trên giả thiết định vị (biết trước một điểm neo gần trung bình của mỗi nhánh); các tác giả coi việc nới lỏng hoặc loại bỏ giả thiết này là bước tiếp theo."
      },
      {
-      "text": "Only a K-arm worst-case lower bound is proved, so the exact instance-dependent complexity of 1-bit BAI remains open.",
-      "text_vi": "Chỉ có cận dưới trường hợp xấu nhất với K nhánh được chứng minh, nên độ phức tạp chính xác phụ thuộc từng bài toán của BAI 1 bit vẫn còn bỏ ngỏ."
+      "text": "The analysis relies on a K-arm worst-case lower bound, so the exact instance-dependent complexity of 1-bit best-arm identification is left open.",
+      "text_vi": "Phân tích dựa trên cận dưới trường hợp xấu nhất cho K nhánh, nên độ phức tạp chính xác phụ thuộc vào từng bài toán cụ thể (instance-dependent) của BAI với phản hồi 1-bit vẫn còn bỏ ngỏ."
      },
      {
-      "text": "The authors plan to extend the time-uniform 1-bit primitive to broader pure-exploration tasks under communication constraints.",
-      "text_vi": "Các tác giả dự định mở rộng công cụ ước lượng 1 bit đúng đều theo thời gian cho các bài toán khám phá thuần túy rộng hơn dưới ràng buộc truyền thông."
+      "text": "The authors propose extending the time-uniform 1-bit estimator to broader pure-exploration tasks in communication-constrained learning.",
+      "text_vi": "Các tác giả đề xuất mở rộng bộ ước lượng 1-bit đúng tại mọi thời điểm sang các bài toán khám phá thuần túy (pure exploration) rộng hơn trong học có ràng buộc truyền thông."
      }
     ],
     "reviewers": [
      {
-      "quote": "A simple phased successive-elimination BAI wrapper around Lau–Scarlett’s fixed-target finite-variance 1-bit mean estimator appears to match the leading rate in Theorem 10.",
-      "quote_vi": "Một khung BAI loại bỏ tuần tự theo pha đơn giản bao quanh bộ ước lượng trung bình 1 bit với phương sai hữu hạn và độ chính xác mục tiêu cố định của Lau–Scarlett dường như đạt cùng tốc độ chính ở Định lý 10."
-     },
-     {
-      "quote": "The assumption of known variance proxy seems common, but knowing an anchor point for each arm seems unrealistic.",
-      "quote_vi": "Giả định biết trước đại lượng thay thế phương sai có vẻ phổ biến, nhưng việc biết một điểm neo cho mỗi nhánh có vẻ không thực tế."
+      "quote": "the authors give general examples of settings where feedback can be expressed using only 1-bit like duelling bandits and human approval/disapproval signals, that do not fit the proposed setting exactly",
+      "quote_vi": "các tác giả đưa ra những ví dụ chung về các bối cảnh mà phản hồi có thể biểu diễn chỉ bằng 1 bit, như duelling bandits và tín hiệu tán thành/không tán thành của con người, nhưng chúng không khớp chính xác với bối cảnh được đề xuất"
      },
      {
       "quote": "Even the bandwith-constrained communication has caveats as the learner needs to communicate the threshold (which is a real value and thus requires as much bandwith as the reward itself).",
-      "quote_vi": "Ngay cả kịch bản truyền thông giới hạn băng thông cũng có điểm cần lưu ý, vì người học phải truyền ngưỡng (là một số thực nên cần băng thông nhiều như chính phần thưởng)."
+      "quote_vi": "Ngay cả trường hợp truyền thông bị giới hạn băng thông cũng có điểm cần lưu ý, vì người học cần gửi đi ngưỡng (một giá trị thực, do đó cần băng thông nhiều như chính phần thưởng)."
+     },
+     {
+      "quote": "A simple phased successive-elimination BAI wrapper around Lau–Scarlett’s fixed-target finite-variance 1-bit mean estimator appears to match the leading rate in Theorem 10.",
+      "quote_vi": "Một lớp bao BAI loại trừ tuần tự chia pha đơn giản quanh bộ ước lượng trung bình 1-bit với mục tiêu cố định và phương sai hữu hạn của Lau–Scarlett dường như đạt được tốc độ chính trong Định lý 10."
+     },
+     {
+      "quote": "The assumption of known variance proxy seems common, but knowing an anchor point for each arm seems unrealistic.",
+      "quote_vi": "Giả thiết biết trước cận phương sai có vẻ phổ biến, nhưng việc biết một điểm neo cho mỗi nhánh có vẻ không thực tế."
      }
     ]
    },
@@ -12749,38 +12524,42 @@
     "year": 2026,
     "credit": 0.25,
     "status": "accepted",
-    "problem": "Tree-based Monte-Carlo Tree Search (MCTS) duplicates a state each time it is reached through a different trajectory, which wastes simulations in stochastic Markov decision processes (MDPs); prior Monte-Carlo graph search theory covered only deterministic MDPs.",
-    "problem_vi": "Tìm kiếm cây Monte-Carlo (MCTS) dạng cây nhân bản một trạng thái mỗi khi nó được đạt tới qua một quỹ đạo khác, gây lãng phí mô phỏng trong các quá trình quyết định Markov (MDP) ngẫu nhiên; lý thuyết tìm kiếm đồ thị Monte-Carlo trước đây chỉ bao quát MDP tất định.",
-    "technique": "GS-Power-UCT shares nodes for states reached at the same planning depth while keeping separate values across depths, with power-mean backups; GS-Power-UCT-F stores one node per physical state, and GS-Power-UCT-F+ uses an adaptive horizon to control the resulting bias.",
-    "technique_vi": "GS-Power-UCT dùng chung nút cho các trạng thái đạt tới ở cùng độ sâu lập kế hoạch nhưng giữ giá trị riêng cho các độ sâu khác nhau, với phép cập nhật trung bình lũy thừa (power mean); GS-Power-UCT-F lưu một nút cho mỗi trạng thái vật lý, còn GS-Power-UCT-F+ dùng tầm nhìn thích ứng để kiểm soát độ chệch phát sinh.",
-    "strength": "The paper proves that for a fixed planning horizon the root estimate converges to the finite-horizon value at rate O(n^-1/2), matching tree-based Stochastic-Power-UCT, that GS-Power-UCT-F+ converges to the optimal infinite-horizon value when the cross-depth gap vanishes, and reports improved sample efficiency on stochastic planning benchmarks.",
-    "strength_vi": "Bài báo chứng minh với tầm lập kế hoạch cố định, ước lượng tại gốc hội tụ về giá trị tầm hữu hạn với tốc độ O(n^-1/2), bằng Stochastic-Power-UCT dạng cây, rằng GS-Power-UCT-F+ hội tụ về giá trị tối ưu tầm vô hạn khi khoảng chênh giữa các độ sâu triệt tiêu, và báo cáo hiệu quả mẫu tốt hơn trên các benchmark lập kế hoạch ngẫu nhiên.",
+    "problem": "Monte-Carlo Tree Search (MCTS) creates a separate node each time the same state is reached through a different trajectory, which wastes simulations in stochastic Markov decision processes (MDPs); the paper notes that earlier Monte-Carlo Graph Search, which merges such states, has a theoretical analysis only for deterministic MDPs.",
+    "problem_vi": "Tìm kiếm cây Monte-Carlo (Monte-Carlo Tree Search, MCTS) tạo một nút riêng mỗi khi cùng một trạng thái được đạt tới qua một quỹ đạo khác, gây lãng phí mô phỏng trong các quá trình quyết định Markov (MDP) ngẫu nhiên; bài báo chỉ ra rằng phương pháp Monte-Carlo Graph Search trước đó, vốn gộp các trạng thái như vậy, chỉ có phân tích lý thuyết cho MDP tất định.",
+    "technique": "GS-Power-UCT shares one node among visits to a state reached at the same planning depth while keeping separate values across depths, and backs up values with a power mean (a generalized average lying between the mean and the maximum); two full-state variants store one node per physical state, one of them with an adaptive horizon to control the resulting bias.",
+    "technique_vi": "GS-Power-UCT dùng chung một nút cho các lần thăm một trạng thái ở cùng độ sâu lập kế hoạch nhưng giữ giá trị riêng cho các độ sâu khác nhau, và lan truyền ngược giá trị bằng trung bình lũy thừa (power mean, một dạng trung bình tổng quát nằm giữa giá trị trung bình và giá trị lớn nhất); hai biến thể toàn trạng thái lưu một nút cho mỗi trạng thái vật lý, trong đó một biến thể dùng tầm nhìn (horizon) thích nghi để kiểm soát độ chệch phát sinh.",
+    "strength": "The paper proves that, for a fixed planning horizon, the root estimate converges to the finite-horizon value at rate O(n^-1/2), that the adaptive-horizon variant converges to the optimal infinite-horizon discounted value when the remaining cross-depth gap vanishes, and reports improved sample efficiency over tree-based and graph-based baselines on stochastic planning benchmarks.",
+    "strength_vi": "Bài báo chứng minh rằng với tầm nhìn lập kế hoạch cố định, ước lượng tại gốc hội tụ về giá trị tầm nhìn hữu hạn với tốc độ O(n^-1/2), rằng biến thể tầm nhìn thích nghi hội tụ về giá trị chiết khấu tối ưu tầm nhìn vô hạn khi khoảng chênh lệch giữa các độ sâu còn lại tiến về không, và báo cáo hiệu quả mẫu tốt hơn các phương pháp nền dựa trên cây và dựa trên đồ thị trên các bài toán lập kế hoạch ngẫu nhiên.",
     "authors": [
      {
-      "text": "The power-mean backup assumes rewards in [0, Rmax]; signed rewards would need affine shifts or modified backup operators.",
-      "text_vi": "Phép cập nhật trung bình lũy thừa giả định phần thưởng nằm trong [0, Rmax]; phần thưởng có dấu sẽ cần phép dịch affine hoặc toán tử cập nhật được sửa đổi."
+      "text": "The power-mean backup assumes non-negative rewards in [0, Rmax]; environments with signed rewards would need affine shifts or modified backup operators.",
+      "text_vi": "Phép lan truyền ngược bằng trung bình lũy thừa giả thiết phần thưởng không âm trong [0, Rmax]; môi trường có phần thưởng mang dấu sẽ cần phép dịch affine hoặc toán tử lan truyền ngược được sửa đổi."
      },
      {
-      "text": "With few same-depth transpositions, sharing gives little reuse but keeps hash-table and graph-bookkeeping overhead, and depth augmentation can need up to |S|·H nodes of memory.",
-      "text_vi": "Khi ít trạng thái trùng ở cùng độ sâu, việc dùng chung mang lại ít tái sử dụng nhưng vẫn tốn chi phí bảng băm và quản lý đồ thị, và việc tăng cường theo độ sâu có thể cần tới |S|·H nút bộ nhớ."
+      "text": "With few same-depth transpositions, state sharing gives little reuse but keeps hash-table and graph-bookkeeping overhead, and with depth augmentation memory can grow to |S|·H nodes, which may raise wall-clock cost in large settings.",
+      "text_vi": "Khi ít trạng thái được đạt tới lặp lại ở cùng độ sâu, việc dùng chung trạng thái mang lại ít lợi ích tái sử dụng nhưng vẫn tốn chi phí bảng băm và quản lý đồ thị; khi tăng cường theo độ sâu, bộ nhớ có thể tăng tới |S|·H nút, có thể làm tăng thời gian chạy thực tế trong bài toán lớn."
      },
      {
-      "text": "Future work includes graph-dependent constants, approximate merging for continuous states, learned evaluators and adversarial planning.",
-      "text_vi": "Hướng tương lai gồm các hằng số phụ thuộc đồ thị, gộp xấp xỉ cho trạng thái liên tục, bộ đánh giá được học và lập kế hoạch đối kháng."
+      "text": "Future work listed by the authors: graph-dependent constants, approximate merging for continuous states, learned evaluators and adversarial planning.",
+      "text_vi": "Các hướng tương lai được tác giả nêu: hằng số phụ thuộc vào đồ thị, gộp xấp xỉ cho trạng thái liên tục, bộ đánh giá được học và lập kế hoạch đối kháng."
      }
     ],
     "reviewers": [
      {
+      "quote": "I think the assumption is not clearly stated. For example, I can find at least two assumptions in the appendix, positive Q function and the inequation of (A1).",
+      "quote_vi": "Tôi cho rằng giả thiết không được nêu rõ. Ví dụ, tôi tìm thấy ít nhất hai giả thiết trong phụ lục: hàm Q dương và bất đẳng thức (A1)."
+     },
+     {
+      "quote": "I think it is at least limited to discrete MDP.",
+      "quote_vi": "Tôi nghĩ ít nhất nó bị giới hạn ở MDP rời rạc."
+     },
+     {
       "quote": "I cannot find out a direct report of the runtime of the proposed method. This also applies to the memory overhead problem.",
-      "quote_vi": "Tôi không tìm thấy báo cáo trực tiếp nào về thời gian chạy của phương pháp đề xuất. Điều này cũng đúng với vấn đề chi phí bộ nhớ."
+      "quote_vi": "Tôi không tìm thấy báo cáo trực tiếp về thời gian chạy của phương pháp đề xuất. Điều này cũng đúng với vấn đề chi phí bộ nhớ."
      },
      {
       "quote": "Without comparison to these broader RL baselines, it is difficult to assess whether the method is competitive beyond the MCTS family.",
-      "quote_vi": "Không có so sánh với các baseline RL rộng hơn này thì khó đánh giá phương pháp có cạnh tranh được ngoài họ MCTS hay không."
-     },
-     {
-      "quote": "I think the assumption is not clearly stated. For example, I can find at least two assumptions in the appendix, positive Q function and the inequation of (A1).",
-      "quote_vi": "Tôi cho rằng giả định chưa được phát biểu rõ ràng. Ví dụ, tôi tìm thấy ít nhất hai giả định trong phụ lục: hàm Q dương và bất đẳng thức (A1)."
+      "quote_vi": "Nếu không so sánh với các phương pháp nền RL rộng hơn này, khó đánh giá liệu phương pháp có cạnh tranh được ngoài họ MCTS hay không."
      }
     ]
    },
@@ -12792,25 +12571,29 @@
     "year": 2026,
     "credit": 0.2,
     "status": "accepted",
-    "problem": "In pure exploration the goal is the best final decision after a sampling budget, but optimism-based methods regulate the estimation error of each component without measuring how that error affects the final decision, which matters most when noise dominates.",
-    "problem_vi": "Trong khám phá thuần túy, mục tiêu là quyết định cuối cùng tốt nhất sau một ngân sách lấy mẫu, nhưng các phương pháp dựa trên sự lạc quan chỉ kiểm soát sai số ước lượng của từng thành phần mà không đo sai số đó ảnh hưởng tới quyết định cuối ra sao, điều quan trọng nhất khi nhiễu chiếm ưu thế.",
-    "technique": "Variance Driven Exploration (VarDE) writes the final decision as a smooth function of local estimates, decomposes its variance with a first-order Taylor expansion into influence weights times component variances, and samples the component whose reduction most lowers that variance, applied to best-arm identification, MCTS and best-policy identification.",
-    "technique_vi": "Khám phá dẫn dắt bởi phương sai (VarDE) viết quyết định cuối như một hàm trơn của các ước lượng cục bộ, phân rã phương sai của nó bằng khai triển Taylor bậc một thành trọng số ảnh hưởng nhân phương sai từng thành phần, rồi lấy mẫu thành phần mà việc giảm nó làm giảm phương sai đó nhiều nhất, áp dụng cho xác định nhánh tốt nhất, MCTS và xác định chính sách tốt nhất.",
-    "strength": "The paper gives guarantees on variance decay and simple regret for the three problems and reports consistent improvements over existing methods, with the largest gains in highly stochastic environments.",
-    "strength_vi": "Bài báo đưa ra bảo đảm về tốc độ giảm phương sai và hối tiếc đơn (simple regret) cho cả ba bài toán, và báo cáo cải thiện nhất quán so với các phương pháp hiện có, rõ nhất trong môi trường có tính ngẫu nhiên cao.",
+    "problem": "In pure exploration the goal is the best final decision after sampling, not reward collected while learning; the paper argues that existing methods mainly regulate the local estimation error of each stochastic component without quantifying how that uncertainty affects the final decision, and targets highly stochastic environments.",
+    "problem_vi": "Trong khám phá thuần túy (pure exploration), mục tiêu là quyết định cuối cùng tốt nhất sau khi lấy mẫu chứ không phải phần thưởng thu được trong lúc học; bài báo lập luận rằng các phương pháp hiện có chủ yếu kiểm soát sai số ước lượng cục bộ của từng thành phần ngẫu nhiên mà không định lượng ảnh hưởng của độ bất định đó lên quyết định cuối cùng, và nhắm tới môi trường có độ ngẫu nhiên cao.",
+    "technique": "Variance Driven Exploration (VarDE) writes the final decision as a smooth function of the components' estimates and derives allocation rules that send samples where component noise most affects the reliability of the decision; it is applied to best-arm identification (BAI), MCTS and best-policy identification (BPI).",
+    "technique_vi": "Variance Driven Exploration (VarDE) biểu diễn quyết định cuối cùng như một hàm trơn của các ước lượng thành phần và suy ra quy tắc phân bổ mẫu, dồn mẫu vào nơi nhiễu của thành phần ảnh hưởng nhiều nhất đến độ tin cậy của quyết định; phương pháp được áp dụng cho xác định nhánh tốt nhất (BAI), MCTS và xác định chính sách tốt nhất (best-policy identification, BPI).",
+    "strength": "The paper gives theoretical guarantees on variance decay and simple regret for the three problems and reports consistent improvements over existing methods in experiments, with the largest gains in highly stochastic environments.",
+    "strength_vi": "Bài báo đưa ra bảo đảm lý thuyết về tốc độ giảm phương sai và simple regret cho cả ba bài toán, và báo cáo cải thiện nhất quán so với các phương pháp hiện có trong thực nghiệm, với mức cải thiện lớn nhất ở môi trường có độ ngẫu nhiên cao.",
     "authors": [],
     "reviewers": [
      {
+      "quote": "the paper simplifies the decision variance via a first-order approximation, but it remains unclear how this approximation impacts convergence—either in the theoretical analysis (regret) or in the numerical experiments.",
+      "quote_vi": "bài báo đơn giản hóa phương sai của quyết định bằng xấp xỉ bậc nhất, nhưng vẫn chưa rõ xấp xỉ này ảnh hưởng thế nào đến sự hội tụ, cả trong phân tích lý thuyết (regret) lẫn trong thực nghiệm số."
+     },
+     {
       "quote": "Theorem 3.5 is the rate any reasonable allocation strategy achieves (including uniform sampling) … a more informative result would characterize the constant in the rate and show it is smaller for VarDE than for uniform or UCB-based allocation.",
-      "quote_vi": "Định lý 3.5 là tốc độ mà bất kỳ chiến lược phân bổ hợp lý nào cũng đạt được (kể cả lấy mẫu đều) … một kết quả có giá trị thông tin hơn sẽ mô tả hằng số trong tốc độ và chỉ ra nó nhỏ hơn với VarDE so với phân bổ đều hoặc dựa trên UCB."
+      "quote_vi": "Định lý 3.5 là tốc độ mà mọi chiến lược phân bổ hợp lý đều đạt được (kể cả lấy mẫu đều) … một kết quả có nhiều thông tin hơn sẽ mô tả hằng số trong tốc độ và chỉ ra rằng nó nhỏ hơn với VarDE so với phân bổ đều hoặc dựa trên UCB."
      },
      {
       "quote": "The first-order approximation has uncontrolled validity early in learning",
-      "quote_vi": "Tính đúng đắn của phép xấp xỉ bậc một không được kiểm soát ở giai đoạn đầu của quá trình học"
+      "quote_vi": "Tính đúng đắn của xấp xỉ bậc nhất không được kiểm soát ở giai đoạn đầu của quá trình học"
      },
      {
       "quote": "the BAI and MCTS sections give finite-sample guarantees, while the Q-learning result is asymptotic convergence.",
-      "quote_vi": "các phần BAI và MCTS đưa ra bảo đảm với mẫu hữu hạn, còn kết quả cho Q-learning chỉ là hội tụ tiệm cận."
+      "quote_vi": "các phần về BAI và MCTS đưa ra bảo đảm với số mẫu hữu hạn, trong khi kết quả cho Q-learning chỉ là hội tụ tiệm cận."
      }
     ]
    }
