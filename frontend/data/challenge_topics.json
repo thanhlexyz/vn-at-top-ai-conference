@@ -107,6 +107,34 @@
  ],
  "topics": [
   {
+   "key": "health-science",
+   "title": "AI for health and science",
+   "title_vi": "AI cho y tế và khoa học",
+   "conferences": [
+    "iclr",
+    "neurips",
+    "icml",
+    "aaai",
+    "ijcai",
+    "cvpr",
+    "iccv",
+    "eccv",
+    "acl",
+    "emnlp",
+    "icra",
+    "iros"
+   ],
+   "terms": 51,
+   "examples": [
+    "AI/ML for health and biotechnology",
+    "APP: Healthcare & Bioinformatics Applications",
+    "CV: Medical and Biological Imaging",
+    "AI and Health",
+    "AI Methods for Clinical Decision Support, Diagnosis, Prognosis & Treatment Planning",
+    "Knowledge-based, Agent-based, or Hybrid AI Systems in Medicine & Healthcare"
+   ]
+  },
+  {
    "key": "datasets-evaluation",
    "title": "Datasets, benchmarks, evaluation",
    "title_vi": "Bộ dữ liệu, benchmark và đánh giá",
@@ -134,35 +162,9 @@
    ]
   },
   {
-   "key": "health-biomed",
-   "title": "AI for health and medicine",
-   "title_vi": "AI cho y tế và y sinh",
-   "conferences": [
-    "neurips",
-    "aaai",
-    "ijcai",
-    "cvpr",
-    "iccv",
-    "eccv",
-    "acl",
-    "emnlp",
-    "icra",
-    "iros"
-   ],
-   "terms": 36,
-   "examples": [
-    "AI/ML for health and biotechnology",
-    "APP: Healthcare & Bioinformatics Applications",
-    "CV: Medical and Biological Imaging",
-    "AI and Health",
-    "AI Methods for Clinical Decision Support, Diagnosis, Prognosis & Treatment Planning",
-    "Knowledge-based, Agent-based, or Hybrid AI Systems in Medicine & Healthcare"
-   ]
-  },
-  {
-   "key": "robot-learning-manipulation",
-   "title": "Robot learning and manipulation",
-   "title_vi": "Học cho robot và thao tác",
+   "key": "robotics",
+   "title": "Robotics and autonomous systems",
+   "title_vi": "Robot và hệ thống tự hành",
    "conferences": [
     "iclr",
     "neurips",
@@ -175,7 +177,7 @@
     "icra",
     "iros"
    ],
-   "terms": 26,
+   "terms": 42,
    "examples": [
     "Robotics, embodied systems, and engineering",
     "applications to robotics, autonomy, planning",
@@ -186,9 +188,9 @@
    ]
   },
   {
-   "key": "ethics-fairness-privacy",
-   "title": "Ethics, fairness, privacy, society",
-   "title_vi": "Đạo đức, công bằng, quyền riêng tư và xã hội",
+   "key": "trustworthy-ai",
+   "title": "Trustworthy AI",
+   "title_vi": "AI đáng tin cậy",
    "conferences": [
     "iclr",
     "neurips",
@@ -201,7 +203,7 @@
     "acl",
     "emnlp"
    ],
-   "terms": 24,
+   "terms": 52,
    "examples": [
     "Socio-technical aspects of AI",
     "societal considerations including fairness, safety, privacy",
@@ -212,9 +214,9 @@
    ]
   },
   {
-   "key": "core-ml",
-   "title": "Core machine learning methods",
-   "title_vi": "Các phương pháp học máy cốt lõi",
+   "key": "deep-learning",
+   "title": "Deep learning and representation learning",
+   "title_vi": "Học sâu và học biểu diễn",
    "conferences": [
     "iclr",
     "neurips",
@@ -226,7 +228,7 @@
     "acl",
     "emnlp"
    ],
-   "terms": 21,
+   "terms": 49,
    "examples": [
     "General machine learning: core contributions in supervised and unsupervised methods",
     "metric learning, kernel learning",
@@ -259,55 +261,6 @@
     "hardware",
     "libraries",
     "distributed methods"
-   ]
-  },
-  {
-   "key": "science-sustainability",
-   "title": "AI for science and sustainability",
-   "title_vi": "AI cho khoa học và phát triển bền vững",
-   "conferences": [
-    "iclr",
-    "neurips",
-    "icml",
-    "aaai",
-    "ijcai",
-    "cvpr",
-    "iccv",
-    "eccv",
-    "emnlp"
-   ],
-   "terms": 15,
-   "examples": [
-    "AI/ML for physical sciences",
-    "AI/ML for sustainability",
-    "applications to physical sciences (physics, chemistry, biology, etc.)",
-    "innovative techniques, problems, and datasets that are of interest to the machine learning community and driven by the needs of end-users in applications such as healthcare, physical sciences, biosciences, social sciences, sustainability, and climate etc.",
-    "APP: AI for Science (Natural & Physical Sciences)",
-    "APP: Climate, Sustainability & Environment"
-   ]
-  },
-  {
-   "key": "representation-transfer",
-   "title": "Representation, transfer, self-supervised learning",
-   "title_vi": "Học biểu diễn, học chuyển giao và tự giám sát",
-   "conferences": [
-    "iclr",
-    "neurips",
-    "icml",
-    "aaai",
-    "cvpr",
-    "iccv",
-    "eccv",
-    "acl"
-   ],
-   "terms": 20,
-   "examples": [
-    "Generalization and multi-task learning",
-    "unsupervised, self-supervised, semi-supervised, and supervised representation learning",
-    "transfer learning, meta learning, and lifelong learning",
-    "representation learning for computer vision, audio, language, and other modalities",
-    "semi- and self-supervised learning",
-    "CV: Representation Learning & Vision Foundation Models"
    ]
   },
   {
@@ -359,27 +312,51 @@
    ]
   },
   {
-   "key": "interpretability",
-   "title": "Interpretability and explainability",
-   "title_vi": "Khả năng diễn giải và giải thích được",
+   "key": "vision-multimodal",
+   "title": "Computer vision and multimodal learning",
+   "title_vi": "Thị giác máy tính và học đa phương thức",
    "conferences": [
-    "iclr",
-    "icml",
+    "neurips",
     "aaai",
     "cvpr",
     "iccv",
     "eccv",
     "acl",
-    "emnlp"
+    "emnlp",
+    "icra"
    ],
-   "terms": 12,
+   "terms": 75,
    "examples": [
-    "visualization or interpretation of learned representations",
-    "interpretability",
-    "HAI: Explainable AI for Human Understanding",
-    "ML: Transparent, Interpretable & Explainable ML",
-    "NLP: Interpretability, Analysis & Evaluation (incl. Factuality & Hallucination)",
-    "PEAI: Accountability, Interpretability & Explainability"
+    "Computer vision",
+    "CV: Biometrics, Face, Gesture & Pose",
+    "CV: Image and Video Retrieval",
+    "CV: Motion, Tracking & Activity Analysis",
+    "CV: Object Detection, Segmentation & Scene Understanding",
+    "CV: Other Foundations of Computer Vision"
+   ]
+  },
+  {
+   "key": "rl-planning-agents",
+   "title": "Reinforcement learning, planning and agents",
+   "title_vi": "Học tăng cường, lập kế hoạch và tác tử",
+   "conferences": [
+    "iclr",
+    "neurips",
+    "icml",
+    "aaai",
+    "acl",
+    "emnlp",
+    "icra",
+    "iros"
+   ],
+   "terms": 53,
+   "examples": [
+    "GTEP: Coordination, Collaboration & Adversarial Interaction",
+    "MAS: Agent Theories, Architectures & Communication",
+    "MAS: Agent-Based Simulation & Emergent Behavior",
+    "MAS: LLM-based Agents & Agentic Systems",
+    "MAS: MAS under Uncertainty & Adversarial Agents",
+    "MAS: Multiagent Learning"
    ]
   },
   {
@@ -406,29 +383,6 @@
    ]
   },
   {
-   "key": "robustness-safety",
-   "title": "Robustness, safety, alignment",
-   "title_vi": "Độ bền vững, an toàn và căn chỉnh AI",
-   "conferences": [
-    "icml",
-    "aaai",
-    "ijcai",
-    "cvpr",
-    "iccv",
-    "eccv",
-    "acl"
-   ],
-   "terms": 16,
-   "examples": [
-    "reliability",
-    "robustness",
-    "safety",
-    "CV: Adversarial Attacks & Robustness",
-    "HAI: Learning Human Values & Preferences",
-    "MAS: Agentic Safety, Security & Alignment"
-   ]
-  },
-  {
    "key": "generative-models",
    "title": "Generative models",
    "title_vi": "Mô hình sinh",
@@ -452,84 +406,19 @@
    ]
   },
   {
-   "key": "recognition-video",
-   "title": "Visual recognition and video",
-   "title_vi": "Nhận dạng thị giác và video",
-   "conferences": [
-    "neurips",
-    "aaai",
-    "cvpr",
-    "iccv",
-    "eccv",
-    "icra"
-   ],
-   "terms": 34,
-   "examples": [
-    "Computer vision",
-    "CV: Biometrics, Face, Gesture & Pose",
-    "CV: Image and Video Retrieval",
-    "CV: Motion, Tracking & Activity Analysis",
-    "CV: Object Detection, Segmentation & Scene Understanding",
-    "CV: Other Foundations of Computer Vision"
-   ]
-  },
-  {
-   "key": "autonomous-navigation",
-   "title": "Autonomous vehicles and navigation",
-   "title_vi": "Phương tiện tự hành và định vị dẫn đường",
-   "conferences": [
-    "aaai",
-    "cvpr",
-    "iccv",
-    "eccv",
-    "icra",
-    "iros"
-   ],
-   "terms": 16,
-   "examples": [
-    "APP: Mobility, Transportation & Autonomous Systems",
-    "ROB: Localization, Mapping & Navigation",
-    "ROB: Perception, Sensor Fusion & State Estimation",
-    "Autonomous driving",
-    "Autonomous driving",
-    "Autonomous driving"
-   ]
-  },
-  {
-   "key": "multimodal-vision-language",
-   "title": "Multimodal and vision-language learning",
-   "title_vi": "Học đa phương thức và thị giác-ngôn ngữ",
-   "conferences": [
-    "aaai",
-    "cvpr",
-    "iccv",
-    "eccv",
-    "acl",
-    "emnlp"
-   ],
-   "terms": 13,
-   "examples": [
-    "AUD: Audio-Visual & Multimodal Learning",
-    "CV: Language, Vision & Multi-modal",
-    "CV: Visual Reasoning & Symbolic Representations",
-    "ML: Multimodal & Large Multimodal Models (LMMs)",
-    "NLP: Language Grounding & Multi-modal NLP",
-    "Multimodal learning"
-   ]
-  },
-  {
    "key": "learning-theory",
-   "title": "Learning theory",
-   "title_vi": "Lý thuyết học máy",
+   "title": "Learning theory and cognitive science",
+   "title_vi": "Lý thuyết học máy và khoa học nhận thức",
    "conferences": [
     "iclr",
     "neurips",
     "icml",
     "aaai",
     "cvpr",
-    "iccv"
+    "iccv",
+    "emnlp"
    ],
-   "terms": 10,
+   "terms": 18,
    "examples": [
     "Theory",
     "learning theory",
@@ -537,28 +426,6 @@
     "theory",
     "statistical learning theory",
     "bandits"
-   ]
-  },
-  {
-   "key": "deep-learning",
-   "title": "Deep learning and foundation models",
-   "title_vi": "Học sâu và mô hình nền tảng",
-   "conferences": [
-    "neurips",
-    "icml",
-    "aaai",
-    "cvpr",
-    "iccv",
-    "eccv"
-   ],
-   "terms": 8,
-   "examples": [
-    "Deep learning",
-    "architectures",
-    "CV: Learning & Optimization for CV",
-    "ML: Deep Learning Algorithms, Architectures & Foundation Models",
-    "ML: Mixture of Experts (MoE)",
-    "Deep learning architectures and techniques"
    ]
   },
   {
@@ -583,47 +450,6 @@
    ]
   },
   {
-   "key": "agents-multiagent",
-   "title": "Agents and multi-agent systems",
-   "title_vi": "Tác tử và hệ đa tác tử",
-   "conferences": [
-    "aaai",
-    "acl",
-    "emnlp",
-    "icra",
-    "iros"
-   ],
-   "terms": 16,
-   "examples": [
-    "GTEP: Coordination, Collaboration & Adversarial Interaction",
-    "MAS: Agent Theories, Architectures & Communication",
-    "MAS: Agent-Based Simulation & Emergent Behavior",
-    "MAS: LLM-based Agents & Agentic Systems",
-    "MAS: MAS under Uncertainty & Adversarial Agents",
-    "MAS: Multiagent Learning"
-   ]
-  },
-  {
-   "key": "geometry-imaging-graphics",
-   "title": "3D vision, imaging, graphics",
-   "title_vi": "Thị giác 3D, ảnh tính toán và đồ họa",
-   "conferences": [
-    "aaai",
-    "cvpr",
-    "iccv",
-    "eccv"
-   ],
-   "terms": 28,
-   "examples": [
-    "CV: 3D Computer Vision",
-    "CV: Computational Photography, Image & Video Synthesis",
-    "CV: Low-Level & Physics-based Vision",
-    "3D from multi-view and sensors",
-    "3D from single images",
-    "Computational imaging"
-   ]
-  },
-  {
    "key": "probabilistic-causal",
    "title": "Probabilistic methods and causality",
    "title_vi": "Phương pháp xác suất và nhân quả",
@@ -644,16 +470,16 @@
    ]
   },
   {
-   "key": "language-models-code",
-   "title": "Language models and code",
-   "title_vi": "Mô hình ngôn ngữ lớn và mã nguồn",
+   "key": "language-nlp",
+   "title": "Language models and NLP",
+   "title_vi": "Mô hình ngôn ngữ và xử lý ngôn ngữ tự nhiên",
    "conferences": [
     "neurips",
     "aaai",
     "acl",
     "emnlp"
    ],
-   "terms": 14,
+   "terms": 51,
    "examples": [
     "Language and multimodal language models",
     "APP: Software Engineering",
@@ -661,84 +487,6 @@
     "ML: Reasoning & Test-Time Compute",
     "NLP: (Large) Language Models",
     "NLP: Code Generation / Program Synthesis"
-   ]
-  },
-  {
-   "key": "reinforcement-learning",
-   "title": "Reinforcement learning and decisions",
-   "title_vi": "Học tăng cường và ra quyết định",
-   "conferences": [
-    "iclr",
-    "neurips",
-    "icml",
-    "aaai"
-   ],
-   "terms": 8,
-   "examples": [
-    "Decision-making, reinforcement learning, and control",
-    "reinforcement learning",
-    "decision theory",
-    "decision and control",
-    "hierarchical RL",
-    "ML: Reinforcement, Imitation & Inverse RL"
-   ]
-  },
-  {
-   "key": "cognitive-neuro",
-   "title": "Cognitive science and neuroscience",
-   "title_vi": "Khoa học nhận thức và thần kinh học",
-   "conferences": [
-    "iclr",
-    "neurips",
-    "aaai",
-    "emnlp"
-   ],
-   "terms": 8,
-   "examples": [
-    "Neuroscience and cognitive science",
-    "applications to neuroscience & cognitive science",
-    "CMS: Affective Computing & Social Cognition",
-    "CMS: Cognitive Architectures & Conceptual Reasoning",
-    "CMS: Other Foundations of Cognitive Modeling & Systems",
-    "CMS: Simulating Human Behavior"
-   ]
-  },
-  {
-   "key": "planning-search",
-   "title": "Planning, search, constraint solving",
-   "title_vi": "Lập kế hoạch, tìm kiếm và giải ràng buộc",
-   "conferences": [
-    "icml",
-    "aaai",
-    "icra"
-   ],
-   "terms": 22,
-   "examples": [
-    "planning",
-    "CSO: Constraint Optimization & Programming",
-    "CSO: Constraint Satisfaction & Learning",
-    "CSO: Other Foundations of Constraint Satisfaction",
-    "CSO: Satisfiability & SMT",
-    "CSO: Search, Solvers & Tools"
-   ]
-  },
-  {
-   "key": "language-structure",
-   "title": "Linguistics, semantics, text analysis",
-   "title_vi": "Ngôn ngữ học, ngữ nghĩa và phân tích văn bản",
-   "conferences": [
-    "aaai",
-    "acl",
-    "emnlp"
-   ],
-   "terms": 16,
-   "examples": [
-    "NLP: Other Foundations of Natural Language Processing",
-    "NLP: Semantics, Textual Inference & Discourse",
-    "NLP: Sentiment, Stylistic & Text Classification",
-    "NLP: Syntax, Morphology & Lexical Semantics",
-    "Discourse, Pragmatics, and Reasoning",
-    "Hierarchical Structure Prediction, Syntax, and Parsing"
    ]
   },
   {
@@ -761,25 +509,6 @@
    ]
   },
   {
-   "key": "text-generation-translation",
-   "title": "Text generation and translation",
-   "title_vi": "Sinh văn bản và dịch máy",
-   "conferences": [
-    "aaai",
-    "acl",
-    "emnlp"
-   ],
-   "terms": 11,
-   "examples": [
-    "NLP: Generation & Summarization",
-    "NLP: Machine Translation & Multilinguality",
-    "Low-resource Methods for NLP",
-    "Machine Translation",
-    "Multilinguality and Language Diversity",
-    "Natural Language Generation"
-   ]
-  },
-  {
    "key": "data-mining-graphs",
    "title": "Data mining and graph learning",
    "title_vi": "Khai phá dữ liệu và học trên đồ thị",
@@ -799,25 +528,6 @@
    ]
   },
   {
-   "key": "qa-retrieval",
-   "title": "Question answering and retrieval",
-   "title_vi": "Hỏi đáp và truy xuất thông tin",
-   "conferences": [
-    "aaai",
-    "acl",
-    "emnlp"
-   ],
-   "terms": 10,
-   "examples": [
-    "DMKM: Conversational, Query & Retrieval Systems",
-    "NLP: Fact-Checking & Misinformation Detection",
-    "NLP: Information Extraction & Question Answering",
-    "NLP: Retrieval-Augmented Generation & Knowledge-Grounded NLP",
-    "Information Extraction and Retrieval",
-    "Question Answering"
-   ]
-  },
-  {
    "key": "robot-design",
    "title": "Robot design and mechanisms",
    "title_vi": "Thiết kế và cơ cấu robot",
@@ -833,24 +543,6 @@
     "Mechanisms, Design, and Control",
     "Micro, Nano, and Biomimetic Systems",
     "Robotic Systems"
-   ]
-  },
-  {
-   "key": "game-theory",
-   "title": "Game theory and mechanism design",
-   "title_vi": "Lý thuyết trò chơi và thiết kế cơ chế",
-   "conferences": [
-    "icml",
-    "aaai"
-   ],
-   "terms": 7,
-   "examples": [
-    "game theory",
-    "GTEP: Cooperative & Behavioral Game Theory",
-    "GTEP: Game Theory, Equilibrium & Imperfect Information",
-    "GTEP: Mechanism Design & Auctions",
-    "GTEP: Other Foundations of Game Theory & Economic Paradigms",
-    "GTEP: Social Choice, Voting & Fair Division"
    ]
   }
  ]

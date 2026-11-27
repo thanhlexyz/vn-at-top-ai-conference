@@ -9,7 +9,9 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-from common import FRONTEND, VENUE_GROUPS, WORK, norm_title, slugify
+from pathlib import Path
+
+from common import BACKEND, FRONTEND, VENUE_GROUPS, WORK, norm_title, slugify
 
 
 def _timeouts():
@@ -393,6 +395,10 @@ def linkify(text, valid):
     return LINK.sub(lambda m: f'<a href="#{m.group(2)}">{m.group(1)}</a>' if m.group(2) in valid else m.group(1), html.escape(text or "", quote=False))
 
 
+def polite_text(text, title, name_vi, name):
+    return polite({"x_vi": text}, title, name_vi, name)["x_vi"]
+
+
 def polite(node, title, name_vi, name):
     if not title or not name_vi or name_vi == name:
         return node
@@ -417,6 +423,26 @@ def polite(node, title, name_vi, name):
     return node
 
 
+TEXT_FIELDS = ("gist", "gist_vi", "open_gist", "open_gist_vi", "summary", "summary_vi", "open")
+
+
+def unify(people):
+    by = {}
+    for slug, d in people.items():
+        for g in d["topics"]:
+            if g.get("key"):
+                by.setdefault((g["key"], tuple(sorted(g["papers"]))), []).append((slug, g))
+    for members in by.values():
+        if len(members) < 2:
+            continue
+        slug, canon = max(members, key=lambda m: (len(people[m[0]]["papers"]), len([g for g in people[m[0]]["topics"]]), m[0]))
+        for other, g in members:
+            if g is not canon:
+                for k in TEXT_FIELDS:
+                    if k in canon:
+                        g[k] = canon[k]
+
+
 def merge_papers(papers):
     entries = {}
     for f in sorted(FINAL.glob("chunk_*.json")):
@@ -431,6 +457,16 @@ def merge_papers(papers):
     topics = {}
     for f in sorted((OUT / "topics").glob("part_*.json")):
         topics.update(json.loads(f.read_text(encoding="utf-8")))
+    taxonomy_topics = {t["key"]: t for t in json.loads((FRONTEND / "data" / "challenge_topics.json").read_text(encoding="utf-8"))["topics"]}
+    merges = json.loads((BACKEND / "data" / "json" / "topic_merges.json").read_text(encoding="utf-8"))
+    into = {old: new for new, m in merges.items() for old in m["from"]}
+    raw_topic = {}
+    for f in sorted(OUT.glob("paper_labels_*.json")):
+        raw_topic.update({i: v["key"] for i, v in json.loads(f.read_text(encoding="utf-8")).items()})
+    paper_topic = {i: into.get(k, k) for i, k in raw_topic.items()}
+    topics2 = {}
+    for f in sorted((OUT / "topics2").glob("part_*.json")):
+        topics2.update(json.loads(f.read_text(encoding="utf-8")))
     fields = ("problem", "problem_vi", "technique", "technique_vi", "strength", "strength_vi")
     people, index = {}, []
     for prof in professors:
@@ -453,7 +489,33 @@ def merge_papers(papers):
         ids = [x["id"] for x in mine]
         groups, used = [], set()
         has_authors = {x["id"] for x in mine if x["authors"]}
-        for g in t.get("topics", []):
+        new = topics2.get(prof["slug"], {}).get("topics") if paper_topic else None
+        if new is not None:
+            by_key = {}
+            for i in ids:
+                k = paper_topic.get(i)
+                by_key.setdefault(k if k in taxonomy_topics else None, []).append(i)
+            for k, keep in by_key.items():
+                if k is None:
+                    continue
+                srcs = [ok for ok in merges.get(k, {}).get("from", [k]) if ok in new] or [k]
+                primary = max(srcs, key=lambda ok: sum(1 for i in keep if raw_topic.get(i) == ok))
+                g = new.get(primary, {})
+                pool = list(g.get("open", []))
+                for ok in srcs:
+                    if ok != primary:
+                        pool += [o for o in new[ok].get("open", []) if set(o.get("papers", [])) & set(keep)]
+                opens = []
+                for o in pool:
+                    if not o.get("text") or len(opens) == 4:
+                        continue
+                    if o.get("source") == "authors" and not has_authors & set(o.get("papers", [])):
+                        o = {**o, "source": "reviewers"}
+                    opens.append(o)
+                groups.append({**{kk: vv for kk, vv in g.items() if kk != "papers"}, "key": k, "title": taxonomy_topics[k]["title"],
+                               "title_vi": taxonomy_topics[k]["title_vi"], "papers": keep, "open": opens})
+            used = {i for g in groups for i in g["papers"]}
+        for g in ([] if new is not None else t.get("topics", [])):
             want = set(g.get("papers", [])) - used
             keep = [i for i in ids if i in want]
             used.update(keep)
@@ -494,12 +556,31 @@ def merge_papers(papers):
         people[prof["slug"]] = {"name": prof["name"], "name_vi": prof["name_vi"], "institution": prof["institution_short"],
                                 "image": prof.get("image") or "", "figure": fig,
                                 "open_summary": t.get("open_summary", ""), "open_summary_vi": t.get("open_summary_vi", ""),
+                                "intro": t.get("intro", ""), "intro_vi": t.get("intro_vi", ""),
                                 "overview": t.get("overview") or s.get("overview", ""),
                                 "overview_vi": t.get("overview_vi") or s.get("overview_vi", ""),
                                 "topics": groups, "papers": mine}
         index.append({"slug": prof["slug"], "done": prof["slug"] in done, "name": prof["name"], "name_vi": prof["name_vi"],
                       "institution": prof["institution_short"], "papers": len(mine),
                       **{k: s.get(k, "") for k in ("focus", "focus_vi")}})
+    harmonized = OUT / "harmonize_out.json"
+    if harmonized.exists():
+        for ident, text in json.loads(harmonized.read_text(encoding="utf-8")).items():
+            slug, _, key = ident.partition("#")
+            for g in people.get(slug, {}).get("topics", []):
+                if g.get("key") == key:
+                    for k in TEXT_FIELDS:
+                        if k in text:
+                            g[k] = text[k]
+    unify(people)
+    for d in people.values():
+        lead = [g for g in d["topics"] if not is_other(g)][:3] or d["topics"][:1]
+        if d.get("intro") and lead and all(g.get("gist") for g in lead):
+            d["overview"] = " ".join([d["intro"]] + [g["gist"] for g in lead])
+            d["overview_vi"] = " ".join([d.get("intro_vi", "")] + [g.get("gist_vi", "") for g in lead]).strip()
+        if lead and all(g.get("open_gist") for g in lead):
+            d["open_summary"] = " ".join(g["open_gist"] for g in lead)
+            d["open_summary_vi"] = " ".join(g.get("open_gist_vi", "") for g in lead).strip()
     honor = json.loads((OUT / "honorifics.json").read_text(encoding="utf-8")) if (OUT / "honorifics.json").exists() else {}
     for slug, d in people.items():
         polite(d, honor.get(slug), d["name_vi"], d["name"])
@@ -517,6 +598,8 @@ def merge_papers(papers):
         x["score"] = max(tops) if tops else round(sum(p["credit"] for p in d["papers"] if p["status"] == "accepted"), 2)
     taxonomy = json.loads((FRONTEND / "data" / "challenge_topics.json").read_text(encoding="utf-8"))
     keys = {t["key"] for t in taxonomy["topics"]}
+    merges = json.loads((BACKEND / "data" / "json" / "topic_merges.json").read_text(encoding="utf-8"))
+    into = {old: new for new, m in merges.items() for old in m["from"]}
     labels = {}
     lines_file, labels_file = OUT / "topic_lines.txt", OUT / "topic_areas.json"
     if lines_file.exists() and labels_file.exists():
@@ -524,17 +607,28 @@ def merge_papers(papers):
         for line in lines_file.read_text(encoding="utf-8").splitlines():
             ident = line.split(" | ")[0]
             slug, _, title = ident.partition("#")
-            labels[(slug, title)] = [k for k in by_id.get(ident, []) if k in keys]
+            labels[(slug, title)] = list(dict.fromkeys(into.get(k, k) for k in by_id.get(ident, []) if into.get(k, k) in keys))
     for x in index:
         d = people[x["slug"]]
         best = {}
         for g in d["topics"]:
-            for k in labels.get((x["slug"], g["title"]), []):
+            for k in ([g["key"]] if g.get("key") else labels.get((x["slug"], g["title"]), [])):
                 best[k] = max(best.get(k, 0), g["score_accepted"])
         if not best:
             for k in labels.get((x["slug"], "focus"), []):
                 best[k] = x["score"]
         x["areas"] = [{"key": k, "score": v} for k, v in sorted(best.items(), key=lambda kv: -kv[1])]
+        valid = {p["id"] for p in d["papers"]}
+        gists = {}
+        for g in sorted(d["topics"], key=lambda g: -g["score_accepted"]):
+            for k in ([g["key"]] if g.get("key") else labels.get((x["slug"], g["title"]), [])):
+                if k not in gists and g.get("gist"):
+                    gists[k] = {"en": linkify(g.get("gist", ""), valid),
+                                "vi": polite_text(linkify(g.get("gist_vi", ""), valid), honor.get(x["slug"]), x["name_vi"], x["name"])}
+        x["gists"] = gists
+        x["gist_list"] = [{"en": linkify(g["gist"], valid),
+                           "vi": polite_text(linkify(g.get("gist_vi", ""), valid), honor.get(x["slug"]), x["name_vi"], x["name"])}
+                          for g in d["topics"] if g.get("gist")]
     counts = {t["key"]: sum(1 for x in index if any(r["key"] == t["key"] and r["score"] > 0 for r in x["areas"])) for t in taxonomy["topics"]}
     areas = [{"key": t["key"], "title": t["title"], "title_vi": t["title_vi"], "count": counts[t["key"]]}
              for t in taxonomy["topics"] if counts[t["key"]]]
@@ -788,6 +882,66 @@ def full_bundle(papers, slug):
     return len(blocks)
 
 
+def build_taxonomy():
+    import glob
+
+    cfp = {}
+    for f in glob.glob(str(OUT.parent / "cfp" / "[a-z]*.json")):
+        if not f.endswith("topics.json"):
+            cfp.update(json.loads(Path(f).read_text(encoding="utf-8")))
+    base = json.loads((OUT.parent / "cfp" / "topics.json").read_text(encoding="utf-8"))["topics"]
+    merges = json.loads((BACKEND / "data" / "json" / "topic_merges.json").read_text(encoding="utf-8"))
+    into = {old: new for new, m in merges.items() for old in m["from"]}
+    order = ["iclr", "neurips", "icml", "aaai", "ijcai", "cvpr", "iccv", "eccv", "acl", "emnlp", "icra", "iros", "rss"]
+    topics = {}
+    for t in base:
+        key = into.get(t["key"], t["key"])
+        m = merges.get(key, {})
+        e = topics.setdefault(key, {"key": key, "title": m.get("title", t["title"]), "title_vi": m.get("title_vi", t["title_vi"]),
+                                    "terms": []})
+        e["terms"] += t["terms"]
+    out = {"sources": [{"key": k, "name": cfp[k]["name"], "edition": cfp[k]["edition"], "url": cfp[k]["url"],
+                        "note": cfp[k].get("note", ""), "terms": sum(len(g["items"]) for g in cfp[k]["groups"])}
+                       for k in order if k in cfp], "topics": []}
+    for e in sorted(topics.values(), key=lambda e: -len({x["conference"] for x in e["terms"]})):
+        out["topics"].append({"key": e["key"], "title": e["title"], "title_vi": e["title_vi"],
+                              "conferences": sorted({x["conference"] for x in e["terms"]}, key=order.index),
+                              "terms": len(e["terms"]), "examples": [x["term"] for x in e["terms"]][:6]})
+    (FRONTEND / "data" / "challenge_topics.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"{len(out['topics'])} topics", file=sys.stderr)
+
+
+def regroup():
+    taxonomy = {t["key"]: t for t in json.loads((FRONTEND / "data" / "challenge_topics.json").read_text(encoding="utf-8"))["topics"]}
+    paper_topic = {}
+    for f in sorted(OUT.glob("paper_labels_*.json")):
+        paper_topic.update({i: v["key"] for i, v in json.loads(f.read_text(encoding="utf-8")).items()})
+    people = json.loads((FRONTEND / "data" / "challenges_people.json").read_text(encoding="utf-8"))
+    done = {x["slug"] for x in json.loads((FRONTEND / "data" / "challenges.json").read_text(encoding="utf-8"))["professors"] if x["done"]}
+    out = OUT / "regroup"
+    out.mkdir(parents=True, exist_ok=True)
+    for f in out.glob("*.json"):
+        f.unlink()
+    for slug, d in people.items():
+        if slug not in done:
+            continue
+        groups = {}
+        for x in d["papers"]:
+            k = paper_topic.get(x["id"])
+            if k in taxonomy:
+                groups.setdefault(k, []).append({"id": x["id"], "title": x["title"], "status": x["status"], "problem": x.get("problem", ""),
+                                                 "technique": x.get("technique", ""), "strength": x.get("strength", ""),
+                                                 "authors": [a["text"] for a in x["authors"]],
+                                                 "reviewer_quotes": [r.get("quote") or r.get("text") for r in x["reviewers"]]})
+        data = {"slug": slug, "name": d["name"], "name_vi": d["name_vi"],
+                "groups": [{"key": k, "title": taxonomy[k]["title"], "title_vi": taxonomy[k]["title_vi"], "papers": ps}
+                           for k, ps in groups.items()],
+                "old_topics": [{kk: g.get(kk) for kk in ("title", "gist", "gist_vi", "open_gist", "open_gist_vi", "summary", "summary_vi", "open", "papers")}
+                               for g in d.get("topics", [])]}
+        (out / f"{slug}.json").write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"{len(list(out.glob('*.json')))} professors -> {out}", file=sys.stderr)
+
+
 def main():
     papers = json.loads((FRONTEND / "data" / "papers.json").read_text(encoding="utf-8"))
     papers = [p for p in papers if p["venue"] in AREA]
@@ -813,6 +967,10 @@ def main():
     if step == "full":
         for slug in sys.argv[2:]:
             print(slug, full_bundle(papers, slug), file=sys.stderr)
+    if step == "regroup":
+        regroup()
+    if step == "taxonomy":
+        build_taxonomy()
     if step == "merge":
         merge_papers(papers)
 

@@ -4,6 +4,9 @@
 ul.ch-index { list-style: none ; padding: 0 ; }
 ul.ch-index li { margin: 0 0 1.1em ; line-height: 1.55 ; }
 ul.ch-index:not(.all) li.zero { display: none ; }
+ul.ch-index .gist { margin: 0.25em 0 0 0 ; }
+ul.ch-index ul.gl { margin: 0.2em 0 0 0 ; padding-left: 1.3em ; list-style: disc ; }
+ul.ch-index ul.gl li { margin: 0.2em 0 ; }
 ul.ch-index .inst { color: var(--muted) ; font-size: 0.9em ; }
 .ch-filter { display: flex ; flex-wrap: wrap ; gap: 0.4em ; }
 .ch-filter button { font: inherit ; font-size: 0.88em ; color: var(--link) ; background: none ; border: 1px solid var(--line) ; border-radius: 999px ; padding: 0.2em 0.8em ; cursor: pointer ; }
@@ -18,7 +21,11 @@ h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; 
 <p class="note">{{ T "ch_topics_note" }} {{ range $k, $c := .cfp }}{{ if $k }}, {{ end }}<a href="{{ $c.url }}"{{ with $c.note }} title="{{ . }}"{{ end }}>{{ $c.name }} {{ $c.edition }}</a>{{ end }}.</p>
 <ul class="ch-index" id="ch-list">
 {{- range .professors }}
-	<li data-areas="{{ range .areas }}{{ .key }}:{{ .score }} {{ end }}" data-score="{{ .score }}"><span class="st" title="{{ cond .done (T "ch_done") (T "ch_building") }}">{{ if .done }}✅{{ else }}🚧{{ end }}</span> <a href="{{ printf "challenges/%s/" .slug | relLangURL }}"><strong>{{ if $vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end }}</strong></a> <span class="inst">({{ .institution }} · <span class="sc" title="{{ T "ch_top_score_tip" }}"><b>{{ printf "%.2f" .score }}</b></span>)</span> {{ if $vi }}{{ .focus_vi }}{{ else }}{{ .focus }}{{ end }}</li>
+	<li data-areas="{{ range .areas }}{{ .key }}:{{ .score }} {{ end }}" data-score="{{ .score }}"><span class="st" title="{{ cond .done (T "ch_done") (T "ch_building") }}">{{ if .done }}✅{{ else }}🚧{{ end }}</span> <a href="{{ printf "challenges/%s/" .slug | relLangURL }}"><strong>{{ if $vi }}{{ .name_vi }}{{ else }}{{ .name }}{{ end }}</strong></a> <span class="inst">({{ .institution }} · <span class="sc" title="{{ T "ch_top_score_tip" }}"><b>{{ printf "%.2f" .score }}</b></span>)</span> {{- $base := printf "href=\"%s#" (printf "challenges/%s/" .slug | relLangURL) }}
+	<div class="gist" data-area="">
+	{{- if .gist_list }}<ul class="gl">{{ range .gist_list }}<li>{{ replace (cond $vi .vi .en) "href=\"#" $base | safeHTML }}</li>{{ end }}</ul>
+	{{- else }}{{ if $vi }}{{ .focus_vi }}{{ else }}{{ .focus }}{{ end }}{{ end }}</div>
+	{{- range $k, $v := .gists }}<div class="gist" data-area="{{ $k }}" hidden>{{ replace (cond $vi $v.vi $v.en) "href=\"#" $base | safeHTML }}</div>{{ end }}</li>
 {{- end }}
 </ul>
 <p class="table-tools"><button type="button" class="ch-more" hidden data-show="{{ T "ch_more_show" }}" data-hide="{{ T "ch_more_hide" }}"></button></p>
@@ -44,6 +51,8 @@ h2.ch-area .n { color: var(--muted) ; font-weight: normal ; font-size: 0.85em ; 
 		items.forEach(function (li) {
 			var v = scoreIn(li, key);
 			li.hidden = key && v < 0;
+			var pick = li.querySelector('.gist[data-area="' + key + '"]') || li.querySelector('.gist[data-area=""]');
+			li.querySelectorAll(".gist").forEach(function (g) { g.hidden = g !== pick; });
 			li.classList.toggle("zero", v === 0);
 			var sc = li.querySelector(".sc b");
 			if (sc && v >= 0) sc.textContent = v.toFixed(2);

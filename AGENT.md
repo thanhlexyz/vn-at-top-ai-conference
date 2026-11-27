@@ -212,6 +212,14 @@ from under-review submissions).
   `topics.json` (every CFP term in exactly one topic), then labelling each professor topic (`topic_lines.txt` →
   `topic_areas.json`, 1-3 keys each); `merge` reads both. The list is sorted by the score of a professor's topics in the
   chosen filter, counting accepted papers only; professors with a zero score are folded behind a button.
+- A professor page's topics ARE the shared topic list (no free-form topics): each paper gets exactly one topic
+  (`paper_labels_*.json`, an agent reads title, problem and technique), a professor's topic section is the group of
+  their papers in that topic, scored by the sum of 1/N authors, sections ordered by score. Topic merges decided by the
+  maintainer live in `backend/data/json/topic_merges.json` (`open_challenges.py taxonomy` rebuilds the list,
+  `regroup` writes the per-professor inputs, agents write `topics2/part_<slug>.json`). Co-authors see the same text for
+  a shared paper: groups with identical paper sets are unified at merge (`unify`), overlapping ones are harmonized by an
+  agent (`harmonize_out.json`). `/challenges/` shows each professor's per-topic summary: all of them (best topic
+  first) with no filter, only the chosen topic's with a filter.
 - The summary paragraphs describe the work by topic ("Work on <what>" + one `[phrase](paper-id)` link marker per
   sentence, turned into `#paper-id` links by `linkify`), never naming papers or methods, so a reader with no context
   understands them.

@@ -1,0 +1,73 @@
+{
+ "language-nlp": {
+  "title": "Language models and NLP",
+  "title_vi": "Mô hình ngôn ngữ và xử lý ngôn ngữ tự nhiên",
+  "from": [
+   "language-models-code",
+   "qa-retrieval",
+   "language-structure",
+   "text-generation-translation"
+  ]
+ },
+ "vision-multimodal": {
+  "title": "Computer vision and multimodal learning",
+  "title_vi": "Thị giác máy tính và học đa phương thức",
+  "from": [
+   "multimodal-vision-language",
+   "recognition-video",
+   "geometry-imaging-graphics"
+  ]
+ },
+ "trustworthy-ai": {
+  "title": "Trustworthy AI",
+  "title_vi": "AI đáng tin cậy",
+  "from": [
+   "robustness-safety",
+   "ethics-fairness-privacy",
+   "interpretability"
+  ]
+ },
+ "rl-planning-agents": {
+  "title": "Reinforcement learning, planning and agents",
+  "title_vi": "Học tăng cường, lập kế hoạch và tác tử",
+  "from": [
+   "reinforcement-learning",
+   "planning-search",
+   "agents-multiagent",
+   "game-theory"
+  ]
+ },
+ "deep-learning": {
+  "title": "Deep learning and representation learning",
+  "title_vi": "Học sâu và học biểu diễn",
+  "from": [
+   "deep-learning",
+   "representation-transfer",
+   "core-ml"
+  ]
+ },
+ "health-science": {
+  "title": "AI for health and science",
+  "title_vi": "AI cho y tế và khoa học",
+  "from": [
+   "health-biomed",
+   "science-sustainability"
+  ]
+ },
+ "robotics": {
+  "title": "Robotics and autonomous systems",
+  "title_vi": "Robot và hệ thống tự hành",
+  "from": [
+   "robot-learning-manipulation",
+   "autonomous-navigation"
+  ]
+ },
+ "learning-theory": {
+  "title": "Learning theory and cognitive science",
+  "title_vi": "Lý thuyết học máy và khoa học nhận thức",
+  "from": [
+   "learning-theory",
+   "cognitive-neuro"
+  ]
+ }
+}
